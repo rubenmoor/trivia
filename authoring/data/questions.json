@@ -761390,8 +761390,8 @@
         "La Federación Patronal"
       ],
       "hints": [
-        "Fue un enfrentamiento entre obreros y empresarios",
-        "Los que sí participaron eran sindicatos obreros y organizaciones de patronos",
+        "Fue una época de atentados y venganzas por las calles de la ciudad.",
+        "Terminó poco antes de que empezara la dictadura de Primo de Rivera.",
         "Este grupo se fundó en 1933"
       ],
       "media": {
@@ -761399,8 +761399,8 @@
         "role": "illustrative",
         "query": "Barcelona 1920s street photograph",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStreet_front_in_Barcelona%2C_Spain_LCCN2016826296.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Street_front_in_Barcelona%2C_Spain_LCCN2016826296.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStreet_front_in_Barcelona%2C_Spain_LCCN2016826296.tif",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Street_front_in_Barcelona%2C_Spain_LCCN2016826296.tif/lossy-page1-3840px-Street_front_in_Barcelona%2C_Spain_LCCN2016826296.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "National Photo Company Collection · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
@@ -761441,30 +761441,39 @@
       "batch": "batch-30",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It says the groups that took part were workers' unions and employers' organisations, and three options are named that way: «Sindicatos Libres», «Federación Patronal» and the CNT (Confederación Nacional del Trabajo). So anyone can pick Falange from the names alone. Hint 2 should be replaced with a vaguer clue, such as the 1917–1923 period being the last years before Primo de Rivera's dictatorship, without describing what kind of groups took part.",
+        "feedback": "The description names «sindicatos y patronos» as the actors of the conflict. That rules out all three wrong answers (CNT and Sindicatos Libres are unions, the Federación Patronal is the employers) and leaves Falange, a political party, as the only option that fits. Rewrite the description so it plays on 1920s Barcelona without naming unions or employers. Separately, hint 1's «atentados y venganzas» puts the violence up front, close to the tone rule; it could be softened. Hint 3 also lacks its final full stop.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It says the groups that took part were workers' unions and employers' organisations, and three options are named that way: «Sindicatos Libres», «Federación Patronal» and the CNT (Confederación Nacional del Trabajo). So anyone can pick Falange from the names alone. Hint 2 should be replaced with a vaguer clue, such as the 1917–1923 period being the last years before Primo de Rivera's dictatorship, without describing what kind of groups took part.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer alludes to the killings, and swapped hint 2 (which pointed at founding dates) for one about the kind of groups involved.",
+        "reason": "Replaced hint 2, and also the similar hint 1, because both said the groups were workers' and employers' organisations, which gave the answer away from the option names.",
         "previous": {
-          "description": "Barcelona, años veinte: cuando las discusiones laborales se resolvían de la peor manera posible.",
           "hints": [
             "Fue un enfrentamiento entre obreros y empresarios",
-            "Los otros tres existían ya en esos años",
+            "Los que sí participaron eran sindicatos obreros y organizaciones de patronos",
             "Este grupo se fundó en 1933"
           ]
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -763857,10 +763866,10 @@
     },
     {
       "id": "q-9877",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un presidente que duró en el cargo menos que un yogur en la nevera.",
-      "question": "Este presidente de la Primera República dimitió en 1873 para no firmar unas penas de muerte. ¿Quién es?",
+      "question": "¿Qué presidente de la Primera República dimitió en 1873 para no firmar unas penas de muerte?",
       "answer": "Nicolás Salmerón",
       "wrong_answers": [
         "Estanislao Figueras",
@@ -763874,12 +763883,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Nicolás Salmerón photograph",
-        "note": "Retrato (foto o grabado) de Nicolás Salmerón, sin su nombre visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Congreso de los Diputados Madrid",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACongreso_de_los_Diputados_-_Madrid_02.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Congreso_de_los_Diputados_-_Madrid_02.jpg/3840px-Congreso_de_los_Diputados_-_Madrid_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Javier Perez Montes · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Javier Perez Montes",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nerve_net",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En su tumba de Madrid se lee que dejó el poder por no firmar una sentencia de muerte.",
       "subcategory": "bourbons-and-19th-century",
@@ -763905,23 +763921,49 @@
         "notes": "Facts are accurate, including the epitaph. Hardly anyone can recognise Salmerón's face, so the portrait doesn't really work as essential media; it is illustrative in practice. The question gets solved from the text alone."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text and facts are fine, but no candidate works as the essential portrait without showing his name. #1 has a caption under it that names Salmerón, #5 is a newspaper page that names him, #2–4 are buildings with his name on them, and #6 (the Madrazo portrait) has his name painted at the top of the canvas. I can't search again, so the image needs a portrait without the name, or a cropped #6. The rater also suggests switching the role to illustrative. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text and facts are fine, but no candidate works as the essential portrait without showing his name. #1 has a caption under it that names Salmerón, #5 is a newspaper page that names him, #2–4 are buildings with his name on them, and #6 (the Madrazo portrait) has his name painted at the top of the canvas. I can't search again, so the image needs a portrait without the name, or a cropped #6. The rater also suggests switching the role to illustrative. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No portrait without his name exists, so the question no longer depends on a photo: it now names the facts directly and uses an illustrative image instead.",
+        "previous": {
+          "question": "Este presidente de la Primera República dimitió en 1873 para no firmar unas penas de muerte. ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Nicolás Salmerón photograph",
+            "note": "Retrato (foto o grabado) de Nicolás Salmerón, sin su nombre visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-9878",
@@ -764324,20 +764366,20 @@
     },
     {
       "id": "q-9883",
-      "status": "needs_work",
-      "difficulty": 2,
+      "status": "approved",
+      "difficulty": 4,
       "description": "El único momento del año en el que comer deprisa es lo educado.",
-      "question": "Es Nochevieja y empiezan las campanadas. Si sigues la tradición, ¿cuántas uvas te comes?",
-      "answer": "12",
+      "question": "En Nochevieja, la tele da las campanadas desde el reloj más famoso de España. ¿En qué plaza de Madrid está?",
+      "answer": "La Puerta del Sol",
       "wrong_answers": [
-        "3",
-        "24",
-        "50"
+        "La Plaza Mayor",
+        "La plaza de Cibeles",
+        "La plaza de España"
       ],
       "hints": [
-        "Una por cada campanada.",
-        "Tantas como meses tiene el año.",
-        "Una docena."
+        "Está en pleno centro de Madrid.",
+        "En su suelo está el Kilómetro Cero de las carreteras españolas.",
+        "Su nombre recuerda a la estrella que nos da luz y calor."
       ],
       "media": {
         "type": "image",
@@ -764357,7 +764399,7 @@
           "PD-self"
         ]
       },
-      "fun_fact": "La costumbre se hizo popular a principios del siglo XX, en parte por una gran cosecha de uva en Alicante.",
+      "fun_fact": "El famoso reloj lo regaló el relojero José Rodríguez de Losada, y empezó a funcionar en 1866.",
       "subcategory": "christmas-and-holidays",
       "style": null,
       "concept": "Doce uvas de la suerte",
@@ -764384,19 +764426,49 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This asks the same fact as approved q-0320 («En Año Nuevo, ¿cuántas uvas se comen a las doce de la noche?» → 12): the number of New Year's Eve grapes. Drop it or swap it for a different Nochevieja fact.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as approved q-0320 («En Año Nuevo, ¿cuántas uvas se comen a las doce de la noche?» → 12): the number of New Year's Eve grapes. Drop it or swap it for a different Nochevieja fact.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "The grape count repeated q-0320, so the question now asks a different Nochevieja fact: the square where the clock for the campanadas stands.",
+        "previous": {
+          "difficulty": 2,
+          "question": "Es Nochevieja y empiezan las campanadas. Si sigues la tradición, ¿cuántas uvas te comes?",
+          "answer": "12",
+          "wrong_answers": [
+            "3",
+            "24",
+            "50"
+          ],
+          "hints": [
+            "Una por cada campanada.",
+            "Tantas como meses tiene el año.",
+            "Una docena."
+          ],
+          "fun_fact": "La costumbre se hizo popular a principios del siglo XX, en parte por una gran cosecha de uva en Alicante."
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-9884",
@@ -765633,20 +765705,20 @@
     },
     {
       "id": "q-9900",
-      "status": "needs_work",
-      "difficulty": 11,
+      "status": "approved",
+      "difficulty": 12,
       "description": "Un tratado firmado en Holanda que todavía da que hablar en el sur de Andalucía.",
-      "question": "Por el Tratado de Utrecht, España cedió Gibraltar a Gran Bretaña. ¿En qué año se firmó?",
-      "answer": "1713",
+      "question": "Por el Tratado de Utrecht, España cedió a Gran Bretaña Gibraltar y también una isla. ¿Cuál?",
+      "answer": "Menorca",
       "wrong_answers": [
-        "1588",
-        "1808",
-        "1898"
+        "Mallorca",
+        "Ibiza",
+        "Cerdeña"
       ],
       "hints": [
-        "Puso fin a la Guerra de Sucesión española.",
-        "Con él quedó como rey Felipe V, el primer Borbón.",
-        "Fue a comienzos del siglo XVIII."
+        "Los británicos la querían por su enorme puerto natural.",
+        "Volvió a España en 1802.",
+        "Su capital es Mahón."
       ],
       "media": {
         "type": "image",
@@ -765664,7 +765736,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Por el mismo tratado, Menorca también pasó a manos británicas, pero volvió a España en 1802.",
+      "fun_fact": "Durante el dominio británico, la capital de Menorca pasó de Ciutadella a Mahón por su gran puerto.",
       "subcategory": "coasts-and-islands",
       "style": null,
       "concept": "Tratado de Utrecht",
@@ -765691,19 +765763,49 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This asks the same fact as the approved q-8030: the year the Treaty of Utrecht was signed (1713). That question only reaches it through the asiento de negros instead of Gibraltar. Seeing one question gives away the other. If the bundles are never played together, this could be approved instead.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as the approved q-8030: the year the Treaty of Utrecht was signed (1713). That question only reaches it through the asiento de negros instead of Gibraltar. Seeing one question gives away the other. If the bundles are never played together, this could be approved instead.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 11,
+      "revision": {
+        "action": "revise",
+        "reason": "The treaty year repeated q-8030, so the question now asks which island Britain also got at Utrecht (Menorca), and it no longer mentions the year.",
+        "previous": {
+          "difficulty": 11,
+          "question": "Por el Tratado de Utrecht, España cedió Gibraltar a Gran Bretaña. ¿En qué año se firmó?",
+          "answer": "1713",
+          "wrong_answers": [
+            "1588",
+            "1808",
+            "1898"
+          ],
+          "hints": [
+            "Puso fin a la Guerra de Sucesión española.",
+            "Con él quedó como rey Felipe V, el primer Borbón.",
+            "Fue a comienzos del siglo XVIII."
+          ],
+          "fun_fact": "Por el mismo tratado, Menorca también pasó a manos británicas, pero volvió a España en 1802."
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-9901",
@@ -766238,7 +766340,7 @@
     },
     {
       "id": "q-9908",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Una dragona con muy malas costumbres y una fiesta en su honor, curiosamente.",
       "question": "Según la leyenda de Redondela, en Galicia, ¿de dónde salía la Coca, la dragona que se llevaba a las doncellas?",
@@ -766250,7 +766352,7 @@
       ],
       "hints": [
         "Los vecinos tuvieron que unirse para vencerla.",
-        "Los marineros la temían.",
+        "Todavía hoy el pueblo recuerda su derrota en la fiesta del Corpus.",
         "Venía del agua salada que llega hasta la villa."
       ],
       "media": {
@@ -766258,18 +766360,16 @@
         "role": "decorative",
         "query": "Redondela Corpus Christi procession",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A%28Barcelona%29_Corpus._Sortida_de_la_process%C3%B3_de_l%27esgl%C3%A9sia_de_Santa_Maria_by_Ramon_Casas_-_MNAC.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/%28Barcelona%29_Corpus._Sortida_de_la_process%C3%B3_de_l%27esgl%C3%A9sia_de_Santa_Maria_by_Ramon_Casas_-_MNAC.jpg/3840px-%28Barcelona%29_Corpus._Sortida_de_la_process%C3%B3_de_l%27esgl%C3%A9sia_de_Santa_Maria_by_Ramon_Casas_-_MNAC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Didier Descouens · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A02023_0399_Corpus_Christi_procession_in_Bielsko-Bia%C5%82a_2023.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/02023_0399_Corpus_Christi_procession_in_Bielsko-Bia%C5%82a_2023.jpg/3840px-02023_0399_Corpus_Christi_procession_in_Bielsko-Bia%C5%82a_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Silar · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Didier Descouens",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Silar",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Silar&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-old-100"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Cada Corpus Christi la Coca desfila por las calles de Redondela, y la acompañan niñas llevadas a hombros, las «penlas».",
       "subcategory": "creatures",
@@ -766298,36 +766398,38 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («Los marineros la temían») gives the answer away: sailors point straight to the sea and rule out the mountain lagoon and the forest cave, leaving only the Miño as a weak rival. Hint 2 should say something vaguer that doesn't involve water, such as the Coca's link to the Corpus festival or how the townspeople felt about her.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Los marineros la temían») gives the answer away: sailors point straight to the sea and rule out the mountain lagoon and the forest cave, leaving only the Miño as a weak rival. Hint 2 should say something vaguer that doesn't involve water, such as the Coca's link to the Corpus festival or how the townspeople felt about her.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made all four options short and the same form, and replaced hints 1 and 2, which ruled out options or mentioned the ría.",
+        "reason": "Hint 2 mentioned sailors, which pointed straight to the sea, so it now refers to the Corpus festival instead.",
         "previous": {
-          "answer": "Del mar de la ría de Vigo",
-          "wrong_answers": [
-            "De una cueva del monte Pindo",
-            "Del río Miño",
-            "De un lago de la sierra"
-          ],
           "hints": [
-            "Llegaba nadando.",
-            "Redondela está al fondo de una ría.",
+            "Los vecinos tuvieron que unirse para vencerla.",
+            "Los marineros la temían.",
             "Venía del agua salada que llega hasta la villa."
           ]
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -766418,7 +766520,7 @@
     },
     {
       "id": "q-9910",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Medio pollo, un viaje entero y un final de cuento que nadie se espera.",
       "question": "Medio Pollito, con una pata y un ala, fue a ver al rey y acabó subido para siempre en lo alto de un campanario. ¿En qué se convirtió?",
@@ -766429,7 +766531,7 @@
         "En un pararrayos"
       ],
       "hints": [
-        "Fue el viento quien lo subió allí.",
+        "Por el camino no quiso ayudar a quienes le pidieron un favor.",
         "Su nuevo trabajo es muy útil a los campesinos y marineros que miran a la torre.",
         "Señala hacia dónde sopla el viento."
       ],
@@ -766476,31 +766578,38 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 («Fue el viento quien lo subió allí») gives the answer away: with these four options, mentioning the wind points straight to the weathervane, so hints 2 and 3 add nothing. Hint 1 should be vague, e.g. about how Medio Pollito treated the creatures he met on the way, and only hint 3 should bring in the wind.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 («Fue el viento quien lo subió allí») gives the answer away: with these four options, mentioning the wind points straight to the weathervane, so hints 2 and 3 add nothing. Hint 1 should be vague, e.g. about how Medio Pollito treated the creatures he met on the way, and only hint 3 should bring in the wind.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the reference to turning from the description and replaced hint 2, which gave the answer away.",
+        "reason": "Hint 1 mentioned the wind, which gave the weathervane away, so it now talks about how he treated others on his journey; only hint 3 brings in the wind.",
         "previous": {
-          "description": "Medio pollo, un viaje entero y una carrera profesional que da muchas vueltas.",
           "hints": [
             "Fue el viento quien lo subió allí.",
-            "Ahora se pasa el día girando.",
+            "Su nuevo trabajo es muy útil a los campesinos y marineros que miran a la torre.",
             "Señala hacia dónde sopla el viento."
           ]
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -766953,7 +767062,7 @@
     },
     {
       "id": "q-9917",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un combinado que en España se sirve en copas tan grandes que casi parecen peceras.",
       "question": "En España se puso de moda servirlo en copa de balón con mucho hielo; lleva tónica y un licor aromatizado con enebro. ¿Qué licor es?",
@@ -766971,11 +767080,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "tonic water balloon glass",
+        "query": "tonic water with ice",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADSC_8226_A_chilled_glass_of_sparkling_tonic_water_with_ice_and_a_straw_next_to_a_yellow_Schweppes_can_glowing_warmly_under_soft_bar_lights.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/DSC_8226_A_chilled_glass_of_sparkling_tonic_water_with_ice_and_a_straw_next_to_a_yellow_Schweppes_can_glowing_warmly_under_soft_bar_lights.jpg/3840px-DSC_8226_A_chilled_glass_of_sparkling_tonic_water_with_ice_and_a_straw_next_to_a_yellow_Schweppes_can_glowing_warmly_under_soft_bar_lights.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La tónica lleva quinina, una sustancia amarga que antiguamente se tomaba contra la malaria.",
       "subcategory": "drinks",
@@ -767004,19 +767120,43 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits. They are an 1875 hotel engraving, two railway truss photos, two 18th-century balloon apparatus plates and a glass ball in a cobbler's workshop. No new search is allowed, so the slot needs another search by hand, for example \"gin tonic copa\" or \"copa balón hielo\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. They are an 1875 hotel engraving, two railway truss photos, two 18th-century balloon apparatus plates and a glass ball in a cobbler's workshop. No new search is allowed, so the slot needs another search by hand, for example \"gin tonic copa\" or \"copa balón hielo\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so the media query is now a more concrete one that doesn't reveal which spirit is in the drink.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "tonic water balloon glass",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-9918",
@@ -768792,7 +768932,7 @@
     },
     {
       "id": "q-9941",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Una fiesta donde mancharse la ropa blanca es casi obligatorio.",
       "question": "Vas vestido de blanco y, cuando suena el chupinazo a mediodía del 6 de julio, te atas al cuello un pañuelo rojo. ¿Dónde estás?",
@@ -768803,18 +768943,25 @@
         "En Buñol"
       ],
       "hints": [
-        "Es una ciudad del norte de España.",
+        "Es una fiesta de pleno verano que dura varios días.",
         "La fiesta es en honor a San Fermín.",
         "Es la capital de Navarra."
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "red bandana scarf",
+        "role": "decorative",
+        "query": "festival crowd street party",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrowd_at_Kallio_Block_Party_2023.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Crowd_at_Kallio_Block_Party_2023.jpg/3840px-Crowd_at_Kallio_Block_Party_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "JIP · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JIP",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JIP&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La novela «Fiesta», de Ernest Hemingway, publicada en 1926, hizo famosos los Sanfermines en todo el mundo.",
       "subcategory": "fiestas",
@@ -768843,20 +768990,49 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 («Es una ciudad del norte de España») gives the answer away: Valencia, Sevilla and Buñol are all in the east or south, so it rules out all three wrong options at once. A vaguer first hint would work, for example one about the summer date. None of the media candidates fits either. They show a Native American camp, a WWII factory worker, Hajduk Split graffiti, a Thai band, a US-flag bandana and a hunter, and no new search is allowed. The slot needs a picture of a red neckerchief on white festival clothes, or a Pamplona street scene that shows no city name. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 («Es una ciudad del norte de España») gives the answer away: Valencia, Sevilla and Buñol are all in the east or south, so it rules out all three wrong options at once. A vaguer first hint would work, for example one about the summer date. None of the media candidates fits either. They show a Native American camp, a WWII factory worker, Hajduk Split graffiti, a Thai band, a US-flag bandana and a hunter, and no new search is allowed. The slot needs a picture of a red neckerchief on white festival clothes, or a Pamplona street scene that shows no city name. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 1 ruled out all three wrong cities, so it now only mentions summer; the media is now a decorative festival crowd because no fitting illustrative image was found.",
+        "previous": {
+          "hints": [
+            "Es una ciudad del norte de España.",
+            "La fiesta es en honor a San Fermín.",
+            "Es la capital de Navarra."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "red bandana scarf",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-9942",
@@ -769308,31 +769484,38 @@
     },
     {
       "id": "q-9948",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 8,
       "description": "El atasco más elegante de la feria huele a heno.",
-      "question": "¿Cuál de estos vehículos NO es tirado por caballos?",
-      "answer": "El patinete",
+      "question": "¿Cómo se llamaba el gran carruaje de caballos que llevaba viajeros y correo de ciudad en ciudad por rutas fijas?",
+      "answer": "La diligencia",
       "wrong_answers": [
         "La calesa",
-        "La diligencia",
-        "El carruaje"
+        "La carreta",
+        "El landó"
       ],
       "hints": [
-        "Tres de ellos se usaban mucho antes de que existieran los coches.",
-        "Uno de ellos no necesita ni heno ni cochero.",
-        "Tiene un manillar y una tabla para apoyar el pie."
+        "Aparece en muchas películas del Oeste.",
+        "Paraba en las postas para cambiar los caballos cansados.",
+        "Su nombre también significa hacer algo con cuidado y rapidez."
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "horse drawn carriage Seville",
+        "role": "decorative",
+        "query": "dusty country road",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A03_Dusty_country_road_thru_the_orchard_at_The_Summit%2C_Queensland.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/03_Dusty_country_road_thru_the_orchard_at_The_Summit%2C_Queensland.jpg/3840px-03_Dusty_country_road_thru_the_orchard_at_The_Summit%2C_Queensland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Chris Olszewski · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Chris Olszewski",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kgbo",
+        "restrictions": [],
+        "pd_reasons": []
       },
-      "fun_fact": "En Sevilla todavía hay coches de caballos que pasean a los visitantes junto a la Catedral y la plaza de España.",
+      "fun_fact": "John Ford dirigió en 1939 «La diligencia», el wéstern que convirtió en estrella a John Wayne.",
       "subcategory": "fiestas",
       "style": null,
       "concept": "Coche de caballos",
@@ -769359,37 +769542,59 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question «¿Cuál de estos vehículos NO es tirado por caballos?» only works inside the four options: countless real vehicles aren't horse-drawn, so the clue doesn't point to the answer in the real world, and the patinete stands out at once as the only modern option. The question needs a different clue that only the answer fits, or a replacement question. Also, every candidate image shows a Seville horse carriage, which is a wrong option (calesa/carruaje), so none fits the illustrative rules. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "ambiguity",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question «¿Cuál de estos vehículos NO es tirado por caballos?» only works inside the four options: countless real vehicles aren't horse-drawn, so the clue doesn't point to the answer in the real world, and the patinete stands out at once as the only modern option. The question needs a different clue that only the answer fits, or a replacement question. Also, every candidate image shows a Seville horse carriage, which is a wrong option (calesa/carruaje), so none fits the illustrative rules. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "ambiguity",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the arguable distractor «La carroza» with «El carruaje», which is always horse-drawn, and made hint 2 vaguer so it no longer gives the answer away.",
+        "reason": "The 'NOT horse-drawn' clue only worked inside the four options, so the question now asks for the diligencia with a clue only it fits, and the image is decorative so it shows no carriage.",
         "previous": {
+          "difficulty": 4,
+          "question": "¿Cuál de estos vehículos NO es tirado por caballos?",
+          "answer": "El patinete",
           "wrong_answers": [
             "La calesa",
             "La diligencia",
-            "La carroza"
+            "El carruaje"
           ],
           "hints": [
             "Tres de ellos se usaban mucho antes de que existieran los coches.",
-            "Uno de ellos lo mueves tú con el pie.",
+            "Uno de ellos no necesita ni heno ni cochero.",
             "Tiene un manillar y una tabla para apoyar el pie."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "horse drawn carriage Seville",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "fun_fact": "En Sevilla todavía hay coches de caballos que pasean a los visitantes junto a la Catedral y la plaza de España."
         },
-        "revised_on": "2026-11-04"
-      }
+        "revised_on": "2026-11-05"
+      },
+      "difficulty_original": 4
     },
     {
       "id": "q-9949",
@@ -770017,9 +770222,9 @@
     },
     {
       "id": "q-9957",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Un pez que no es nada tímido: prefiere ir siempre en grupo… en el mar, claro.",
+      "description": "Del mar a la lata, y de la lata a la tostada del desayuno.",
       "question": "Soy pequeña y plateada y viajo muy apretada con mis hermanas en una lata plana. Cuando el metro va lleno, se dice que la gente va como yo. ¿Qué soy?",
       "answer": "La sardina",
       "wrong_answers": [
@@ -770075,27 +770280,34 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description opens with «Un pez», which rules out the wrong answer «El mejillón» (a mussel, not a fish) before any hint. It also points at swimming in groups, which is close to the \"packed together\" clue. Rewrite the description so it plays on the topic (the sea, cans, crowds) without saying it is a fish.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description opens with «Un pez», which rules out the wrong answer «El mejillón» (a mussel, not a fish) before any hint. It also points at swimming in groups, which is close to the \"packed together\" clue. Rewrite the description so it plays on the topic (the sea, cans, crowds) without saying it is a fish.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the vosotros form from the question and replaced the description that played on the crowding idiom.",
+        "reason": "The description said it was a fish, which ruled out the mussel, and it hinted at the 'packed together' clue; it now plays on the sea and cans instead.",
         "previous": {
-          "description": "Un pescado que sabe lo que es viajar en hora punta.",
-          "question": "Soy pequeña y plateada y viajo muy apretada con mis hermanas en una lata plana. Cuando el metro va lleno, dicen que vais como yo. ¿Qué soy?"
+          "description": "Un pez que no es nada tímido: prefiere ir siempre en grupo… en el mar, claro."
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -772815,7 +773027,7 @@
       "id": "q-9993",
       "status": "needs_work",
       "difficulty": 4,
-      "description": "Tiene dos asas, cero tapas y mucha fama los domingos.",
+      "description": "Un cacharro de cocina con más fiestas de pueblo a sus espaldas que el alcalde.",
       "question": "Mira esta imagen de cerca. ¿Cómo se llama este recipiente?",
       "answer": "Paellera",
       "wrong_answers": [
@@ -772831,7 +773043,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "empty steel paellera",
+        "query": "paella pan",
         "note": "Primer plano de una paellera vacía de acero, ancha y plana, con sus dos asas visibles. Sin comida dentro y sin texto.",
         "source_url": null,
         "file_url": null,
@@ -772865,19 +773077,46 @@
       "batch": "batch-30",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a paella pan: five are freight trains (the query 'empty steel' matched railway photos) and #5 is a small one-handled stainless frying pan, which would point to the wrong object. The essential image needs a fresh search such as 'paella pan' or 'paellera'. Also, the description ('dos asas, cero tapas, mucha fama los domingos') rules out the olla, which has a lid, and points at Sunday paella. It should be reworded to play on the theme without the pan's traits. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a paella pan: five are freight trains (the query 'empty steel' matched railway photos) and #5 is a small one-handled stainless frying pan, which would point to the wrong object. The essential image needs a fresh search such as 'paella pan' or 'paellera'. Also, the description ('dos asas, cero tapas, mucha fama los domingos') rules out the olla, which has a lid, and points at Sunday paella. It should be reworded to play on the theme without the pan's traits. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New essential image search ('paella pan') and a description that no longer rules out the lidded pot or points to Sunday paella.",
+        "previous": {
+          "description": "Tiene dos asas, cero tapas y mucha fama los domingos.",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "empty steel paellera",
+            "note": "Primer plano de una paellera vacía de acero, ancha y plana, con sus dos asas visibles. Sin comida dentro y sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-9994",
@@ -773535,7 +773774,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Flag of the Community of Madrid svg",
+        "query": "Flag of the Community of Madrid",
         "note": "La bandera de la Comunidad de Madrid: fondo rojo con siete estrellas blancas de cinco puntas, sin texto ni rótulos.",
         "source_url": null,
         "file_url": null,
@@ -773569,18 +773808,44 @@
       "batch": "batch-30",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates shows the flag of the Community of Madrid (crimson with seven white stars). All are municipal flags or coats of arms (Coslada, Los Molinos, Tielmes, Cenicientos, Serranillos del Valle, Rascafría), so the essential image can't be filled, and no new search is allowed. Use a new search, e.g. \"Flag of the Community of Madrid\", or upload the Commons file \"Flag of the Community of Madrid.svg\" directly. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows the flag of the Community of Madrid (crimson with seven white stars). All are municipal flags or coats of arms (Coslada, Los Molinos, Tielmes, Cenicientos, Serranillos del Valle, Rascafría), so the essential image can't be filled, and no new search is allowed. Use a new search, e.g. \"Flag of the Community of Madrid\", or upload the Commons file \"Flag of the Community of Madrid.svg\" directly. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New search query aimed at the Commons file of the Community of Madrid flag.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Flag of the Community of Madrid svg",
+            "note": "La bandera de la Comunidad de Madrid: fondo rojo con siete estrellas blancas de cinco puntas, sin texto ni rótulos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10003",
@@ -775140,7 +775405,7 @@
     },
     {
       "id": "q-10024",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Un restaurante con más vigas de madera que una película de vaqueros.",
       "question": "Un mesón tiene jamones colgados, vigas de madera y cocina casera. ¿De dónde viene su nombre?",
@@ -775151,7 +775416,7 @@
         "Del árabe «al-majzan», el almacén de grano"
       ],
       "hints": [
-        "Piensa más en dormir que en comer.",
+        "Su origen está en la lengua de los romanos.",
         "Los romanos tenían paradas oficiales a lo largo de sus calzadas.",
         "Es pariente de la palabra «mansión»."
       ],
@@ -775198,19 +775463,39 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 («Piensa más en dormir que en comer») gives the answer away: only the mansio option is about sleeping, so the first hint rules out all three wrong answers. Hint 1 should be vague, for example about the word coming from Roman times, without pointing to lodging. The etymology (RAE: from Latin mansio, -ōnis) checks out, and so do the description and the media.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 («Piensa más en dormir que en comer») gives the answer away: only the mansio option is about sleeping, so the first hint rules out all three wrong answers. Hint 1 should be vague, for example about the word coming from Roman times, without pointing to lodging. The etymology (RAE: from Latin mansio, -ōnis) checks out, and so do the description and the media.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 1 no longer points to sleeping; it now vaguely refers to the Latin origin.",
+        "previous": {
+          "hints": [
+            "Piensa más en dormir que en comer.",
+            "Los romanos tenían paradas oficiales a lo largo de sus calzadas.",
+            "Es pariente de la palabra «mansión»."
+          ]
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10025",
@@ -776196,7 +776481,7 @@
     },
     {
       "id": "q-10038",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un bocadillo que sabe a mar en una ciudad que ni lo ve de lejos.",
       "question": "Lleva anillas de calamar rebozadas en una barra de pan, se pide en los bares junto a su Plaza Mayor y su ciudad está lejos del mar. ¿Qué ciudad es?",
@@ -776208,7 +776493,7 @@
       ],
       "hints": [
         "Está en el interior, en plena meseta.",
-        "En esta ciudad vive mucha gente: es la más poblada del país.",
+        "En el centro de su Plaza Mayor hay una estatua de un rey a caballo.",
         "Es la capital de España."
       ],
       "media": {
@@ -776254,31 +776539,38 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («es la más poblada del país») gives the answer away: in Spain everyone knows that is Madrid, so it is as strong as hint 3 («Es la capital de España»). Hint 2 should be a middle-strength clue instead, e.g. something about the city's bars or a famous square, without naming the city or its population rank.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («es la más poblada del país») gives the answer away: in Spain everyone knows that is Madrid, so it is as strong as hint 3 («Es la capital de España»). Hint 2 should be a middle-strength clue instead, e.g. something about the city's bars or a famous square, without naming the city or its population rank.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vaguer, replaced the Puerta del Sol hint, and softened the distance in the fun fact.",
+        "reason": "Hint 2 replaced with a middle-strength clue (the equestrian king statue in its Plaza Mayor) instead of the population rank.",
         "previous": {
           "hints": [
-            "Está justo en el centro de la península.",
-            "Su Plaza Mayor está a dos pasos de la Puerta del Sol.",
+            "Está en el interior, en plena meseta.",
+            "En esta ciudad vive mucha gente: es la más poblada del país.",
             "Es la capital de España."
-          ],
-          "fun_fact": "Madrid está a más de 300 kilómetros del mar y aun así este bocadillo marinero es uno de sus grandes símbolos."
+          ]
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -778928,7 +779220,7 @@
     },
     {
       "id": "q-10074",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un ramo de flores que pasa la noche al fresco para dejarte la cara de anuncio.",
       "question": "«Nos recogen el día de la noche más corta del año, dormimos en agua al sereno y por la mañana te lavas la cara con nosotras». ¿Qué somos?",
@@ -778945,12 +779237,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "herb bouquet water basin",
+        "role": "decorative",
+        "query": "morning dew grass",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMorning_dew_on_the_grass.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Morning_dew_on_the_grass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "AydarNabiev · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "AydarNabiev",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:AydarNabiev&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Una de esas plantas, el hipérico, se llama también «hierba de San Juan» porque florece justo a finales de junio.",
       "subcategory": "legends-and-superstitions",
@@ -778979,31 +779278,42 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows anything to do with herbs soaking in water. They are LA aqueduct reservoirs, a Versailles garden print, a river barge drawing, olive pickers and an 1807 bathroom drawing, and no new search is allowed. The slot needs a new search such as \"herbas de San Xoán\" or \"bunch of herbs in water bowl\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows anything to do with herbs soaking in water. They are LA aqueduct reservoirs, a Versailles garden print, a river barge drawing, olive pickers and an 1807 bathroom drawing, and no new search is allowed. The slot needs a new search such as \"herbas de San Xoán\" or \"bunch of herbs in water bowl\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the answer in Galician, and corrected «la víspera» to the day of the shortest night.",
+        "reason": "The media is now a decorative dewy-morning image with a findable query, because a photo of the herbs themselves would show the answer.",
         "previous": {
-          "question": "«Nos recogen la víspera de la noche más corta del año, dormimos en agua al sereno y por la mañana te lavas la cara con nosotras». ¿Qué somos?",
-          "hints": [
-            "Somos plantas como el romero, el hinojo o la malva.",
-            "En Galicia, al agua que perfumamos la llaman «auga de San Xoán».",
-            "Nos recogen el 23 de junio."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "herb bouquet water basin",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -779316,10 +779626,10 @@
     },
     {
       "id": "q-10079",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un sello de calidad que no se pega en ningún tarro, sino en catedrales y montañas.",
-      "question": "La Alhambra, la catedral de Burgos y el parque nacional del Teide comparten este título internacional. ¿Cuál es?",
+      "question": "¿Qué título internacional reciben lugares como la Alhambra por su valor excepcional para todo el planeta?",
       "answer": "Patrimonio de la Humanidad",
       "wrong_answers": [
         "Maravilla del Mundo",
@@ -779374,19 +779684,35 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This is a new draft that asks what three given places have in common («La Alhambra, la catedral de Burgos y el parque nacional del Teide comparten este título… ¿Cuál es?»). That is the \"what do they have in common\" style, which is not allowed for new drafts (developer rule, 2026-10-21).",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This is a new draft that asks what three given places have in common («La Alhambra, la catedral de Burgos y el parque nacional del Teide comparten este título… ¿Cuál es?»). That is the \"what do they have in common\" style, which is not allowed for new drafts (developer rule, 2026-10-21).",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded to ask for the title's meaning with one example instead of the banned 'what do these places have in common' form.",
+        "previous": {
+          "question": "La Alhambra, la catedral de Burgos y el parque nacional del Teide comparten este título internacional. ¿Cuál es?"
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10080",
@@ -779906,7 +780232,7 @@
     },
     {
       "id": "q-10087",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Anillos que nadie se pone en el dedo, pero todos se comen con limón.",
       "question": "Completa el nombre de esta tapa de anillas de calamar rebozadas y fritas: calamares a la…",
@@ -779918,8 +780244,8 @@
       ],
       "hints": [
         "Las anillas se pasan por harina y huevo antes de freírlas.",
-        "El nombre viene de un pueblo antiguo que gobernó Hispania y construyó acueductos.",
-        "Allí está el Coliseo."
+        "La palabra que falta suena a imperio antiguo.",
+        "Es la palabra para lo que viene de la ciudad del Coliseo."
       ],
       "media": {
         "type": "image",
@@ -779964,31 +780290,39 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"un pueblo antiguo que gobernó Hispania y construyó acueductos\") points straight to the Romans, so it gives the answer away before hint 3. It also states as fact that the name comes from the Romans, but where \"a la romana\" comes from is disputed. Hint 2 should be a vaguer clue (for example about the batter or the lemon), and the claim about the name's origin should be dropped. Hint 3 (\"Allí está el Coliseo\") would then need its own place reference rather than \"allí\".",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"un pueblo antiguo que gobernó Hispania y construyó acueductos\") points straight to the Romans, so it gives the answer away before hint 3. It also states as fact that the name comes from the Romans, but where \"a la romana\" comes from is disputed. Hint 2 should be a vaguer clue (for example about the batter or the lemon), and the claim about the name's origin should be dropped. Hint 3 (\"Allí está el Coliseo\") would then need its own place reference rather than \"allí\".",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 now describes the dish; the clue about the name moved to hint 2 as the reviewer asked.",
+        "reason": "Hint 2 is now vaguer and no longer claims a disputed name origin; hint 3 names the place directly.",
         "previous": {
           "hints": [
-            "El nombre recuerda a una ciudad muy antigua.",
-            "Esa ciudad fundó un imperio que llegó hasta Hispania.",
+            "Las anillas se pasan por harina y huevo antes de freírlas.",
+            "El nombre viene de un pueblo antiguo que gobernó Hispania y construyó acueductos.",
             "Allí está el Coliseo."
           ]
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -781089,9 +781423,9 @@
     },
     {
       "id": "q-10103",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
-      "description": "Un gato de campo con una dieta muy conejil y una remontada de película.",
+      "description": "Un felino que no sale en los documentales de la sabana, pero se lo merecería.",
       "question": "Hacia 2002 quedaban menos de 100 en libertad, vive en Doñana y Sierra Morena y come sobre todo conejos. ¿Qué felino llegó a ser el más amenazado del mundo?",
       "answer": "El lince ibérico",
       "wrong_answers": [
@@ -781100,7 +781434,7 @@
         "El leopardo de las nieves"
       ],
       "hints": [
-        "Solo vive en la península ibérica.",
+        "Vive en zonas de matorral y bosque mediterráneo.",
         "Tiene pinceles de pelo negro en la punta de las orejas.",
         "Su nombre lleva el de la península donde vive."
       ],
@@ -781147,26 +781481,39 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 («Solo vive en la península ibérica») gives the answer away: only one option is named after that peninsula, so the hint does the work meant for hint 3. The description also nearly settles it before any hint. «Gato de campo» with a rabbit diet rules out the Sumatran tiger and the snow leopard, and «remontada de película» names the comeback from near-extinction that the question asks about. Hint 1 should be vague, for example about the lynx's habitat of scrub and woodland. The description should play on the theme without the diet or the recovery.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 («Solo vive en la península ibérica») gives the answer away: only one option is named after that peninsula, so the hint does the work meant for hint 3. The description also nearly settles it before any hint. «Gato de campo» with a rabbit diet rules out the Sumatran tiger and the snow leopard, and «remontada de película» names the comeback from near-extinction that the question asks about. Hint 1 should be vague, for example about the lynx's habitat of scrub and woodland. The description should play on the theme without the diet or the recovery.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer names the lynx's ruff and ear tufts.",
+        "reason": "Hint 1 now describes the habitat instead of the peninsula, and the description no longer gives away the diet or the comeback.",
         "previous": {
-          "description": "Un gato con perilla, orejas de pincel y una dieta muy conejil."
+          "description": "Un gato de campo con una dieta muy conejil y una remontada de película.",
+          "hints": [
+            "Solo vive en la península ibérica.",
+            "Tiene pinceles de pelo negro en la punta de las orejas.",
+            "Su nombre lleva el de la península donde vive."
+          ]
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -782279,7 +782626,7 @@
     },
     {
       "id": "q-10119",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "El postre que te mira desde la nevera esperando a que acabes la cena.",
       "question": "Tengo color amarillo, me comes con cuchara y a menudo llevo una galleta flotando encima con canela. ¿Qué postre soy?",
@@ -782297,11 +782644,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "cinnamon sticks closeup",
+        "query": "cinnamon sticks",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanelle_Cinnamomum_burmanni_Luc_Viatour.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Canelle_Cinnamomum_burmanni_Luc_Viatour.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Luc Viatour · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Luc Viatour",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lviatour",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El nombre «natillas» viene de «nata», por lo cremosas que quedan.",
       "subcategory": "sweets-and-desserts",
@@ -782326,23 +782680,47 @@
         "difficulty_estimate": 2,
         "notes": "The fun fact just repeats hint 3 (the name comes from 'nata'). Fairly plain overall. q-0509 is about the Colombian natilla, a different dish."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits: they show euphorbia plants, a snowy spruce branch, ice hockey players and a drum kit, none of them cinnamon or a dessert. A new search isn't allowed. The slot needs a new search such as \"cinnamon sticks\" or \"custard dessert bowl\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits: they show euphorbia plants, a snowy spruce branch, ice hockey players and a drum kit, none of them cinnamon or a dessert. A new search isn't allowed. The slot needs a new search such as \"cinnamon sticks\" or \"custard dessert bowl\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Simpler decorative query ('cinnamon sticks') so the search finds cinnamon.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "cinnamon sticks closeup",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10120",
@@ -782803,7 +783181,7 @@
     },
     {
       "id": "q-10126",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Unas tiras doradas que desaparecen del plato antes de que llegue la segunda caña.",
       "question": "Estas tiras de calamar rebozadas se llaman «rabas», y son el aperitivo estrella de una comunidad. ¿Cuál?",
@@ -782834,7 +783212,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Se cree que el nombre «rabas» viene de que las tiras de calamar recuerdan a pequeños rabos.",
+      "fun_fact": "A diferencia de los calamares a la romana, que se cortan en aros, las rabas se cortan en tiras.",
       "subcategory": "tapas",
       "style": null,
       "concept": "Rabas",
@@ -782861,30 +783239,34 @@
       "needs_media": true,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact's etymology can't be confirmed and is likely wrong: the RAE dictionary traces «raba» to French «rabes» (cod-roe bait), not to «rabo». The rater flagged it too. Replace the fun fact with a safe one, for example that rabas are usually served with lemon in Santander's bars, or that they are cut in strips instead of the rings of calamares a la romana.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact's etymology can't be confirmed and is likely wrong: the RAE dictionary traces «raba» to French «rabes» (cod-roe bait), not to «rabo». The rater flagged it too. Replace the fun fact with a safe one, for example that rabas are usually served with lemon in Santander's bars, or that they are cut in strips instead of the rings of calamares a la romana.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 no longer names the Cantábrico, which echoed the answer.",
+        "reason": "Replaced the unconfirmed etymology fun fact with a safe fact about how rabas are cut.",
         "previous": {
-          "hints": [
-            "Es una comunidad del norte, junto al mar Cantábrico.",
-            "Su capital tiene una playa famosa llamada El Sardinero.",
-            "Su capital es Santander."
-          ]
+          "fun_fact": "Se cree que el nombre «rabas» viene de que las tiras de calamar recuerdan a pequeños rabos."
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
@@ -783425,7 +783807,7 @@
     },
     {
       "id": "q-10134",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una frase de bar que acabó en los libros de historia.",
       "question": "La expresión «café para todos» nació en la Transición, se atribuye al ministro Manuel Clavero Arévalo y aún sale en los debates. ¿Qué se daba a todos?",
@@ -783437,7 +783819,7 @@
       ],
       "hints": [
         "Se decidió en los años en que se redactaba la Constitución de 1978.",
-        "Clavero fue ministro de Adolfo Suárez, y la frase vuelve cada vez que Cataluña o el País Vasco piden más autogobierno.",
+        "Clavero fue ministro de Adolfo Suárez en los primeros gobiernos de la democracia.",
         "Por eso hoy hay 17 comunidades con su propio parlamento."
       ],
       "media": {
@@ -783485,30 +783867,38 @@
       "needs_media": false,
       "batch": "batch-30",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: it says the phrase comes back whenever Catalonia or the Basque Country ask for «más autogobierno», which is just a synonym for autonomy, so the hint answers the question before hint 3. Hint 2 should keep the Suárez link but drop the self-government clue, for example by pointing to the Ministry for the Regions or to the Transition's political deals more vaguely.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: it says the phrase comes back whenever Catalonia or the Basque Country ask for «más autogobierno», which is just a synonym for autonomy, so the hint answers the question before hint 3. Hint 2 should keep the Suárez link but drop the self-government clue, for example by pointing to the Ministry for the Regions or to the Transition's political deals more vaguely.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed only to territory, and hint 2, which echoed «regiones» from the answer.",
+        "reason": "Rewrote hint 2 to keep the Suárez link without the self-government clue that gave the answer away.",
         "previous": {
           "hints": [
-            "Tiene que ver con cómo se organiza el territorio.",
-            "Clavero era ministro para las Regiones.",
+            "Se decidió en los años en que se redactaba la Constitución de 1978.",
+            "Clavero fue ministro de Adolfo Suárez, y la frase vuelve cada vez que Cataluña o el País Vasco piden más autogobierno.",
             "Por eso hoy hay 17 comunidades con su propio parlamento."
           ]
         },
-        "revised_on": "2026-11-04"
+        "revised_on": "2026-11-05"
       }
     },
     {
