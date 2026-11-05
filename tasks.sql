@@ -51008,12 +51008,12 @@ Failures in `media`:
 
 Stopped at `media` with 1 error(s). Run `qgen batch --bundle spain` again; if the same step fails three times in a row, stop and report the output.
 claude: run1 timed out at 1h (no line); run2 49 calls $6.72; run3 35 calls $6.81; runs 4-5 no claude calls', 'A batch of Spain-flavoured trivia questions stopped at the step that searches for pictures. One search kept timing out at an external image service, three runs in a row. The choice is whether to retry later, when the service may be back, or to look into the cause.', NULL, NULL, '2026-10-29T16:25:55Z', NULL, 1791, NULL, 'rule', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (478, 'Task 1795 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1954 of task 1795 closed the task but left 2 files unstaged. pm committed them on the branch `pm/task-1795-run-1954-left` and cleaned the tree.
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (478, 'Task 1795 left unstaged changes after `pm task done`: investigate', 'answered', '[]', 'Run 1954 of task 1795 closed the task but left 2 files unstaged. pm committed them on the branch `pm/task-1795-run-1954-left` and cleaned the tree.
 
      M app/data/pool.es-ES.json
      M authoring/data/questions.es-ES.json
 
-Look: `git show pm/task-1795-run-1954-left`. Keep: `git merge pm/task-1795-run-1954-left`. Then `git branch -D pm/task-1795-run-1954-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-29T17:21:13Z', NULL, NULL, NULL, 'once', NULL, '');
+Look: `git show pm/task-1795-run-1954-left`. Keep: `git merge pm/task-1795-run-1954-left`. Then `git branch -D pm/task-1795-run-1954-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', 'discard: already on main (no-viaja rejections and q-2049 pool removal; cause fixed by task 1843)', NULL, '2026-10-29T17:21:13Z', '2026-11-05T03:56:54Z', NULL, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (479, 'Task 1798 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1955 of task 1798 closed the task but left 2 files unstaged. pm committed them on the branch `pm/task-1798-run-1955-left` and cleaned the tree.
 
      M app/data/pool.es-ES.json
