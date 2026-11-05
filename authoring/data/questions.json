@@ -812014,7 +812014,7 @@
       "status": "needs_work",
       "difficulty": 2,
       "description": "A breakfast so strange, it took a whole book to talk someone into it.",
-      "question": "In the famous Dr. Seuss book, who keeps asking someone to try a dish like this one, “here or there”?",
+      "question": "In the Dr. Seuss book “Green Eggs and Ham,” who keeps asking his grumpy friend to try the dish, “here or there”?",
       "answer": "Sam-I-Am",
       "wrong_answers": [
         "The Cat in the Hat",
@@ -812028,9 +812028,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "green eggs ham breakfast",
-        "note": "A photo of a real plate of green-colored eggs and ham, with no book cover or character shown.",
+        "role": "illustrative",
+        "query": "green scrambled eggs ham",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -812058,23 +812058,51 @@
         "difficulty_estimate": 3,
         "notes": "Shares the book with q-1153 (Green Eggs and Ham) but asks about a different fact. A real photo of green eggs and ham should be findable, but it's not guaranteed."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the four candidates shows a plate of green eggs and ham, and this picture is essential to the question. Candidate 1 also shows Cat in the Hat hats, which points to a wrong option. A new search is needed, for example \"green scrambled eggs ham\", but searching again isn't allowed in this run. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the four candidates shows a plate of green eggs and ham, and this picture is essential to the question. Candidate 1 also shows Cat in the Hat hats, which points to a wrong option. A new search is needed, for example \"green scrambled eggs ham\", but searching again isn't allowed in this run. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No essential photo of green eggs and ham was found, so the question now names the dish and the image is illustrative.",
+        "previous": {
+          "question": "In the famous Dr. Seuss book, who keeps asking someone to try a dish like this one, “here or there”?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "green eggs ham breakfast",
+            "note": "A photo of a real plate of green-colored eggs and ham, with no book cover or character shown.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10506",
@@ -812153,7 +812181,7 @@
       "status": "needs_work",
       "difficulty": 2,
       "description": "Some people follow maps; she followed the road's paint job.",
-      "question": "In “The Wonderful Wizard of Oz,” which girl follows a road like this one to find the Wizard?",
+      "question": "In “The Wonderful Wizard of Oz,” which girl follows the yellow brick road to find the Wizard?",
       "answer": "Dorothy",
       "wrong_answers": [
         "Alice",
@@ -812167,9 +812195,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "yellow brick path",
-        "note": "A clear photo of a path or road made of yellow bricks.",
+        "role": "illustrative",
+        "query": "yellow paved path",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -812198,22 +812226,50 @@
         "notes": "Good. The silver-shoes fun fact is accurate and fun."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a clear yellow brick road: 1 and 2 are a Tel Aviv hostage memorial installation (yellow plaques with Hebrew handwriting on gravel), which isn't a brick road and brings in a sad context; 3 and 4 are grass and dirt paths. The essential image needs a new search, for example \"yellow brick road\" or \"yellow paved path\". Another option is to make the image illustrative or remove the \"like this one\" wording. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a clear yellow brick road: 1 and 2 are a Tel Aviv hostage memorial installation (yellow plaques with Hebrew handwriting on gravel), which isn't a brick road and brings in a sad context; 3 and 4 are grass and dirt paths. The essential image needs a new search, for example \"yellow brick road\" or \"yellow paved path\". Another option is to make the image illustrative or remove the \"like this one\" wording. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No essential yellow brick road photo was found, so the question names the road and the image is illustrative.",
+        "previous": {
+          "question": "In “The Wonderful Wizard of Oz,” which girl follows a road like this one to find the Wizard?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "yellow brick path",
+            "note": "A clear photo of a path or road made of yellow bricks.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10508",
@@ -812674,10 +812730,10 @@
     },
     {
       "id": "q-10514",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
-      "description": "A team photo where not everyone is smiling for the same reason.",
-      "question": "This is the 1919 Chicago White Sox. After the “Black Sox” scandal over a fixed World Series, how many of its players were banned for life?",
+      "description": "The year baseball found out that some losses were not exactly accidents.",
+      "question": "After the 1919 “Black Sox” scandal over a fixed World Series, how many Chicago White Sox players were banned for life?",
       "answer": "8",
       "wrong_answers": [
         "3",
@@ -812691,21 +812747,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "1919 Chicago White Sox team photo",
-        "note": "Show the 1919 Chicago White Sox team group photo.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_Sox.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Black_Sox.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Chicago Tribune · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "vintage baseball glove",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Leather_Baseball_Glove.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Vintage_Leather_Baseball_Glove.jpg/3840px-Vintage_Leather_Baseball_Glove.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Tessa Bury · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Chicago Tribune",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Tessa Bury",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chive_Cream_Cheese",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The players were found not guilty in court in 1921, but baseball's first commissioner banned them anyway.",
       "subcategory": "baseball",
@@ -812731,22 +812785,58 @@
         "notes": "Eight players, and the film “Eight Men Out” — correct. The team photo is illustrative, not essential, because the answer doesn't depend on it."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The team photo's licence is US-only, so the question no longer refers to a photo; the image is now an illustrative baseball glove and the description no longer mentions a photo.",
+        "previous": {
+          "description": "A team photo where not everyone is smiling for the same reason.",
+          "question": "This is the 1919 Chicago White Sox. After the “Black Sox” scandal over a fixed World Series, how many of its players were banned for life?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "1919 Chicago White Sox team photo",
+            "note": "Show the 1919 Chicago White Sox team group photo.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_Sox.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Black_Sox.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Chicago Tribune · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Chicago Tribune",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10515",
@@ -815030,7 +815120,7 @@
     },
     {
       "id": "q-10545",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Proof that the best stories come from staying in bed a little too long.",
       "question": "This boy starred in a giant, colorful Sunday newspaper strip starting in 1905, and each week ended with him waking up in bed. Who is he?",
@@ -815047,20 +815137,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Little Nemo in Slumberland panel",
-        "note": "A panel or part of a Little Nemo in Slumberland Sunday page showing the boy Nemo (in his nightgown, ideally in or near his bed), with no title lettering or name visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALittle_Nemo_in_Slumberland_%281908-07-26%29_panels_11_to_15.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Little_Nemo_in_Slumberland_%281908-07-26%29_panels_11_to_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Winsor McCay · Public domain · Wikimedia Commons",
+        "role": "decorative",
+        "query": "old newspaper stack",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AInterior_view_of_newspaper_delivery_room_showing_man_taking_stack_of_newspapers_from_machine%29_-_World-Telegram_photo_LCCN95506971.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Interior_view_of_newspaper_delivery_room_showing_man_taking_stack_of_newspapers_from_machine%29_-_World-Telegram_photo_LCCN95506971.jpg/3840px-Interior_view_of_newspaper_delivery_room_showing_man_taking_stack_of_newspapers_from_machine%29_-_World-Telegram_photo_LCCN95506971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Miscellaneous Items in High Demand, PPOC, Library of Congress · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Winsor McCay",
-        "author_url": "https://en.wikipedia.org/wiki/Winsor_McCay",
+        "author": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-old-70-1923",
+          "PD-old-70-expired"
         ]
       },
       "fun_fact": "Winsor McCay also made “Gertie the Dinosaur” in 1914, one of the first cartoon stars in film history.",
@@ -815087,22 +815178,56 @@
         "notes": "Commons has plenty of Little Nemo pages, but most of them carry the strip's title lettering, so the note asking for no visible name will be hard to meet. Sharing Nemo with the Pixar question q-6228 is fine: it's a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The comic panel's licence is US-only, and the text works without it, so the media is now a decorative newspaper image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Little Nemo in Slumberland panel",
+            "note": "A panel or part of a Little Nemo in Slumberland Sunday page showing the boy Nemo (in his nightgown, ideally in or near his bed), with no title lettering or name visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALittle_Nemo_in_Slumberland_%281908-07-26%29_panels_11_to_15.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Little_Nemo_in_Slumberland_%281908-07-26%29_panels_11_to_15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Winsor McCay · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Winsor McCay",
+            "author_url": "https://en.wikipedia.org/wiki/Winsor_McCay",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10546",
@@ -816144,7 +816269,7 @@
     },
     {
       "id": "q-10559",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A goodbye song so good it got a second life in a bodyguard movie.",
       "question": "Whitney Houston made “I Will Always Love You” a huge hit in 1992, but this country singer wrote and sang it first, in 1974. Who is she?",
@@ -816161,12 +816286,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "vintage stage microphone",
-        "note": "Clear portrait photo of Dolly Parton, with no captions or text showing her name.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_4829_A_smiling_musician_in_a_cowboy_hat_plays_electric_guitar_amid_a_cozy_cluttered_roadside_stage_of_amps_cables_and_vintage_gear_in_Ban_Nong_Hin_Chon_Buri.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/DFC_4829_A_smiling_musician_in_a_cowboy_hat_plays_electric_guitar_amid_a_cozy_cluttered_roadside_stage_of_amps_cables_and_vintage_gear_in_Ban_Nong_Hin_Chon_Buri.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Dolly Parton said no when Elvis wanted to record the song, because his manager asked for half the rights to it.",
       "subcategory": "country-and-folk",
@@ -816192,23 +816324,48 @@
         "notes": "Dolly's face is very easy to recognise, but the photo is the intended clue, so this is fine. The song was written in 1973 and released in 1974."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set up wrong. It is marked essential, and its note asks for a portrait of Dolly Parton. The question never refers to a photo, so a sharp picture of her face would just show the answer. Change the slot to illustrative (for example a vintage stage microphone), and choose candidate 4 or 6, the plain microphone shots. As the slot stands, no candidate fits, and no new search is allowed. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set up wrong. It is marked essential, and its note asks for a portrait of Dolly Parton. The question never refers to a photo, so a sharp picture of her face would just show the answer. Change the slot to illustrative (for example a vintage stage microphone), and choose candidate 4 or 6, the plain microphone shots. As the slot stands, no candidate fits, and no new search is allowed. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "An essential portrait would show the answer, so the media is now an illustrative vintage microphone.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "vintage stage microphone",
+            "note": "Clear portrait photo of Dolly Parton, with no captions or text showing her name.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10560",
@@ -816314,7 +816471,7 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "banjo bluegrass picking",
+        "query": "solo banjo recording",
         "note": "A clear solo banjo recording, picked in bluegrass style, with no other instruments.",
         "source_url": null,
         "file_url": null,
@@ -816348,14 +816505,24 @@
       "batch": "batch-32",
       "review": {
         "decision": "needs_work",
-        "feedback": "All six audio candidates are 3–4 second MIDI files of banjo roll patterns from Wikipedia, not recordings. How they sound depends on the synthesizer, so they may not sound like a real banjo, or may even sound like a guitar or harp. That doesn't work for an essential \"Listen: which instrument is this?\" question. A real solo banjo recording is needed, for example from Freesound with a search like \"banjo solo\". New searches are used up for this slot. The text itself is fine. No suitable picture found for this question.",
+        "feedback": "None of the three audio candidates is a banjo recording. All three are short (0.8–1.9 s) pronunciation clips from Commons: someone saying the word \"banjo\" in Swahili or German. They would speak the answer aloud. A real solo banjo recording is needed, for example from Freesound with a query like \"banjo picking solo\". A new search isn't allowed in this run. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All six audio candidates are 3–4 second MIDI files of banjo roll patterns from Wikipedia, not recordings. How they sound depends on the synthesizer, so they may not sound like a real banjo, or may even sound like a guitar or harp. That doesn't work for an essential \"Listen: which instrument is this?\" question. A real solo banjo recording is needed, for example from Freesound with a search like \"banjo solo\". New searches are used up for this slot. The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
@@ -818559,38 +818726,36 @@
     },
     {
       "id": "q-10591",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Running away from these chasers is like trying to outrun an encyclopedia.",
-      "question": "You face the chasers on ABC's The Chase in 2021: Ken Jennings, James Holzhauer and Brad Rutter. What are they all famous for?",
-      "answer": "Jeopardy! champions",
+      "question": "The three chasers on ABC's The Chase in 2021, Ken Jennings, James Holzhauer and Brad Rutter, became famous on which quiz show?",
+      "answer": "Jeopardy!",
       "wrong_answers": [
-        "Survivor winners",
-        "Wheel of Fortune winners",
-        "Millionaire winners"
+        "Survivor",
+        "Wheel of Fortune",
+        "Who Wants to Be a Millionaire"
       ],
       "hints": [
-        "They are known for record-breaking quiz wins.",
-        "One of them won 74 games in a row.",
-        "Their show gives the answers and wants questions back."
+        "They are known for record-breaking quiz wins there.",
+        "Ken Jennings won 74 games in a row on it.",
+        "On this show, you give the answers in the form of a question."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "stopwatch race",
+        "query": "television studio cameras",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A603rd_Military_Police_Company_Soldiers_participate_in_race_during_Dark_Knight_Best_Squad_Competition_in_Latvia_%289937411%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/603rd_Military_Police_Company_Soldiers_participate_in_race_during_Dark_Knight_Best_Squad_Competition_in_Latvia_%289937411%29.jpg/3840px-603rd_Military_Police_Company_Soldiers_participate_in_race_during_Dark_Knight_Best_Squad_Competition_in_Latvia_%289937411%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "U.S. Army photo by Staff Sgt. Nicodemus Taylor · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/QTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NJM2010 · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "U.S. Army photo by Staff Sgt. Nicodemus Taylor",
-        "author_url": "https://www.dvidshub.net/portfolio/1835049",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "NJM2010",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NJM2010&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-USGov-Military-Army"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Brad Rutter has won more money on Jeopardy! than anyone in the show's history.",
       "subcategory": "hosts-and-game-shows",
@@ -818619,19 +818784,46 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This is a new draft that asks what three named people have in common (\"What are they all famous for?\"). The developer rule of 2026-10-21 bans that style for new drafts. If the topic is kept, it needs a different question, for example one about a single chaser, or about which show the 2021 ABC chasers came from, asked about a fact rather than a shared trait.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This is a new draft that asks what three named people have in common (\"What are they all famous for?\"). The developer rule of 2026-10-21 bans that style for new drafts. If the topic is kept, it needs a different question, for example one about a single chaser, or about which show the 2021 ABC chasers came from, asked about a fact rather than a shared trait.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote it to ask which show the 2021 chasers came from instead of what three people have in common, which follows the developer's rule.",
+        "previous": {
+          "question": "You face the chasers on ABC's The Chase in 2021: Ken Jennings, James Holzhauer and Brad Rutter. What are they all famous for?",
+          "answer": "Jeopardy! champions",
+          "wrong_answers": [
+            "Survivor winners",
+            "Wheel of Fortune winners",
+            "Millionaire winners"
+          ],
+          "hints": [
+            "They are known for record-breaking quiz wins.",
+            "One of them won 74 games in a row.",
+            "Their show gives the answers and wants questions back."
+          ]
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10592",
@@ -819619,7 +819811,7 @@
     },
     {
       "id": "q-10605",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A pirate who's way more excited about a cartoon than about treasure.",
       "question": "A pirate captain shouts “Are you ready, kids?”, the kids answer “Aye aye, Captain!”, and the song begins. Which cartoon does it open?",
@@ -819637,11 +819829,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "underwater ocean coral",
+        "query": "vintage television set",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABush_TV62_television_set%2C_UK%2C_1956.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Bush_TV62_television_set%2C_UK%2C_1956.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "electromechanic812291 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "electromechanic812291",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The pirate in the theme song is called Painty the Pirate, and he is a painting with real moving lips.",
       "subcategory": "kids-tv",
@@ -819670,29 +819869,41 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media gives the answer away. Every candidate is an underwater coral-reef scene, and SpongeBob is the only one of the four options set under the sea, so even a blurred reef image points to it. A new search can't be run, so the slot needs a neutral decorative image, such as a pirate ship, a pirate hat or an old TV set. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media gives the answer away. Every candidate is an underwater coral-reef scene, and SpongeBob is the only one of the four options set under the sea, so even a blurred reef image points to it. A new search can't be run, so the slot needs a neutral decorative image, such as a pirate ship, a pirate hat or an old TV set. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave away the setting and quoted the theme song's line about the pineapple.",
+        "reason": "An underwater decorative image points to SpongeBob, so it is now a neutral old TV set.",
         "previous": {
-          "hints": [
-            "The show takes place under the sea.",
-            "The song asks who lives in a pineapple.",
-            "The star is yellow and works at the Krusty Krab."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "underwater ocean coral",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -820081,7 +820292,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "take a number dispenser",
+        "query": "queue ticket dispenser",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -820115,23 +820326,41 @@
       "batch": "batch-32",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits. They show a sacrament dispenser, coffee-bean bins (2 and 3), a pharmacy pill bag, a 1901 greenhouse plate and a handwritten letter. None shows a take-a-number dispenser or a supermarket counter, and no new search is allowed. The slot needs a new search, for example \"deli ticket dispenser\" or \"meat slicer\" (but no deli sign in the picture), or a decorative \"supermarket aisle\" image. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. They show a sacrament dispenser, coffee-bean bins (2 and 3), a pharmacy pill bag, a 1901 greenhouse plate and a handwritten letter. None shows a take-a-number dispenser or a supermarket counter, and no new search is allowed. The slot needs a new search, for example \"deli ticket dispenser\" or \"meat slicer\" (but no deli sign in the picture), or a decorative \"supermarket aisle\" image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed “this supermarket counter” to “a supermarket counter” so the text doesn't point to a picture of the counter.",
+        "reason": "No candidate fit, so the image query is now a plain queue ticket dispenser, which avoids deli signs and visible food.",
         "previous": {
-          "question": "At this supermarket counter, you take a number, ask for “half a pound, sliced thin,” and watch it go through a spinning blade. What do people mostly buy there?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "take a number dispenser",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -820384,10 +820613,10 @@
     },
     {
       "id": "q-10615",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Every dollar in your wallet carries a little note from its boss.",
-      "question": "Every US paper bill carries these words. What kind of institution is the Federal Reserve?",
+      "question": "Every US paper bill says “Federal Reserve Note” on it. What kind of institution is the Federal Reserve?",
       "answer": "The country's central bank",
       "wrong_answers": [
         "The country's tax office",
@@ -820401,12 +820630,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "\"Federal Reserve Note\" banknote text",
-        "note": "Close-up of the top of a US banknote where the words “Federal Reserve Note” are clearly readable.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "United States one dollar bill",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_one_dollar_bill%2C_obverse.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/United_States_one_dollar_bill%2C_obverse.jpg/3840px-United_States_one_dollar_bill%2C_obverse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-money"
+        ]
       },
       "fun_fact": "The Fed is not one bank but a system of 12 regional Federal Reserve Banks, with a board in Washington, D.C.",
       "subcategory": "money-and-shopping",
@@ -820432,22 +820670,48 @@
         "notes": "“Every US paper bill carries these words” relies on the image and reads awkwardly. It's a fairly dry civics question. The printing-plant distractor is plausible."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate clearly shows the words “Federal Reserve Note”, which the essential image must show because the question says “these words”. Candidate 1 crops the text to “…DERAL RESE…”, and candidate 2 mixes the dollars with Belarusian notes, with the text too small to read. 3 and 4 are stacks of cash, and 5 and 6 are not family-friendly. No new search is allowed, so the question needs a properly chosen image, for example a full US $1 bill with “FEDERAL RESERVE NOTE” readable at the top. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate clearly shows the words “Federal Reserve Note”, which the essential image must show because the question says “these words”. Candidate 1 crops the text to “…DERAL RESE…”, and candidate 2 mixes the dollars with Belarusian notes, with the text too small to read. 3 and 4 are stacks of cash, and 5 and 6 are not family-friendly. No new search is allowed, so the question needs a properly chosen image, for example a full US $1 bill with “FEDERAL RESERVE NOTE” readable at the top. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable essential image exists, so the question now names the printed words itself and uses an illustrative image of a full $1 bill.",
+        "previous": {
+          "question": "Every US paper bill carries these words. What kind of institution is the Federal Reserve?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "\"Federal Reserve Note\" banknote text",
+            "note": "Close-up of the top of a US banknote where the words “Federal Reserve Note” are clearly readable.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10616",
@@ -821995,7 +822259,7 @@
       ],
       "hints": [
         "Think of a map of the whole world.",
-        "Each one is much bigger than any country.",
+        "Africa and Europe are two of them.",
         "Asia is the biggest one."
       ],
       "media": {
@@ -822037,30 +822301,40 @@
         "difficulty_estimate": 4,
         "notes": "Rather dry completion; once you hear “seven seas and seven…”, the answer comes fast. The hair-salon description is weak."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-32",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 (\"Each one is much bigger than any country\") is false. Russia (about 17 million km²) is bigger than Australia and also bigger than Antarctica. Replace it with a true hint, for example \"Africa and Europe are two of them.\" The answer, the other hints and the fun fact are fine. Fact check: wrong. Hint 2, 'Each one is much bigger than any country', is false. Russia (about 17M km²) is bigger than Australia (about 7.7M km²) and also bigger than Antarctica (about 14M km²). The answer and the 162 steps are fine.",
+        "feedback": "Hint 2 (“Africa and Europe are two of them.”) gives the answer away. It names two continents, so anyone who hears it knows the answer before the final hint. Hint 2 should point to the idea more vaguely, for example that you can count them on a globe or that they are huge pieces of land, and leave naming continents to hint 3.",
         "problems": [
-          "fact"
+          "giveaway"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Each one is much bigger than any country\") is false. Russia (about 17 million km²) is bigger than Australia and also bigger than Antarctica. Replace it with a true hint, for example \"Africa and Europe are two of them.\" The answer, the other hints and the fun fact are fine. Fact check: wrong. Hint 2, 'Each one is much bigger than any country', is false. Russia (about 17M km²) is bigger than Australia (about 7.7M km²) and also bigger than Antarctica (about 14M km²). The answer and the 162 steps are fine.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named a continent, with a medium-strength hint.",
+        "reason": "Replaced the false hint 2 (Russia is bigger than some continents) with a true one.",
         "previous": {
           "hints": [
             "Think of a map of the whole world.",
-            "Africa is one of them.",
+            "Each one is much bigger than any country.",
             "Asia is the biggest one."
           ]
         },
@@ -822144,7 +822418,7 @@
       "status": "needs_work",
       "difficulty": 9,
       "description": "Folding a flag is like folding a fitted sheet, if the sheet were very, very important.",
-      "question": "The US flag is often folded into a triangle like this one. What is the shape said to recall?",
+      "question": "The US flag is often folded into a neat triangle. What is the shape said to recall?",
       "answer": "A three-cornered hat",
       "wrong_answers": [
         "A sailboat sail",
@@ -822158,12 +822432,22 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "folded flag triangle case",
-        "note": "A US flag folded into the traditional triangle with only the blue field and stars showing.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "folded American flag",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmbassador_Burns_hands_CG_Yun_folded_American_flag.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Ambassador_Burns_hands_CG_Yun_folded_American_flag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ambassador Nicholas Burns · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ambassador Nicholas Burns",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-State",
+          "PD-USGov-DOS"
+        ]
       },
       "fun_fact": "The flag is folded 13 times to make the triangle, one fold for each original colony.",
       "subcategory": "national-symbols",
@@ -822188,23 +822472,51 @@
         "difficulty_estimate": 9,
         "notes": "The fun fact's “13 folds, one per original colony” is a popular claim; ceremony scripts give the folds other meanings, so it is a little loose. Hint 3 nearly gives it away, which is allowed."
       },
-      "fact_checked": true,
-      "needs_media": true,
+      "fact_checked": false,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows a US flag folded into a triangle, which this essential image needs (\"like this one\"), and no new search is allowed. The slot needs a photo of a folded US flag (for example \"folded American flag\" or \"flag folding ceremony\"). The question text itself is fine. No suitable picture found for this question.",
+        "feedback": "The fun fact says the flag is folded 13 times with one fold for each original colony. That isn't established: traditional ceremony scripts give each fold a different meaning, and the colony link is only loose. Soften it to something like “The flag is folded 13 times, a number often linked to the original 13 colonies,” or replace it with a confirmed fact. Fact check: uncertain. The tricorn-hat meaning is folklore, which the question's 'said to' covers. The fun fact says each of the 13 folds stands for a colony. Traditional accounts give each fold a different meaning, and the 13 folds are only loosely linked to the colonies. This is not official.",
         "problems": [
-          "media"
+          "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a US flag folded into a triangle, which this essential image needs (\"like this one\"), and no new search is allowed. The slot needs a photo of a folded US flag (for example \"folded American flag\" or \"flag folding ceremony\"). The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No essential image of the folded flag was found, so I removed “like this one” and made the image illustrative.",
+        "previous": {
+          "question": "The US flag is often folded into a triangle like this one. What is the shape said to recall?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "folded flag triangle case",
+            "note": "A US flag folded into the traditional triangle with only the blue field and stars showing.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10639",
@@ -822450,10 +822762,10 @@
     },
     {
       "id": "q-10642",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "It has a big crack and still won't stop showing off.",
-      "question": "Which famous American bell has this shape, crack and all?",
+      "question": "Which famous bell is this, crack and all?",
       "answer": "The Liberty Bell",
       "wrong_answers": [
         "Big Ben",
@@ -822461,15 +822773,15 @@
         "The Pummerin"
       ],
       "hints": [
-        "It's in Philadelphia.",
+        "Long ago it was rung to call people together to hear important news.",
         "It's linked to the year 1776.",
-        "It sits across the street from Independence Hall."
+        "It sits across the street from Independence Hall in Philadelphia."
       ],
       "media": {
         "type": "image",
         "role": "essential",
         "query": "Liberty Bell Philadelphia",
-        "note": "A silhouette or outline drawing of the Liberty Bell with its crack visible, with no text.",
+        "note": "A clear photo of the Liberty Bell with its crack visible, with no readable signs naming it.",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/The_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "credit": "Vintage Fan 5678 · CC BY-SA 4.0 · Wikimedia Commons",
@@ -822508,33 +822820,53 @@
       "needs_media": true,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question asks for a \"famous American bell\", but none of the three wrong answers is American (Big Ben is in London, the Tsar Bell in Moscow, the Pummerin in Vienna), so the word \"American\" gives the answer away. Hints 1 and 2 (Philadelphia, 1776) do the same. Either drop \"American\" and make the hints vaguer, or replace the wrong answers with other famous US bells.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question asks for a \"famous American bell\", but none of the three wrong answers is American (Big Ben is in London, the Tsar Bell in Moscow, the Pummerin in Vienna), so the word \"American\" gives the answer away. Hints 1 and 2 (Philadelphia, 1776) do the same. Either drop \"American\" and make the hints vaguer, or replace the wrong answers with other famous US bells.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced “The Freedom Bell” (an American copy of the Liberty Bell) with the Pummerin, and replaced the wordplay in hint 3 with a location clue.",
+        "reason": "Dropped “American” and made hint 1 vaguer, so the non-US wrong answers are no longer ruled out at once.",
         "previous": {
-          "wrong_answers": [
-            "Big Ben",
-            "The Tsar Bell",
-            "The Freedom Bell"
-          ],
+          "question": "Which famous American bell has this shape, crack and all?",
           "hints": [
             "It's in Philadelphia.",
             "It's linked to the year 1776.",
-            "Its name means the same as “freedom”."
-          ]
+            "It sits across the street from Independence Hall."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Liberty Bell Philadelphia",
+            "note": "A silhouette or outline drawing of the Liberty Bell with its crack visible, with no text.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/The_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Vintage Fan 5678 · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Vintage Fan 5678",
+            "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Vintage_Fan_5678&action=edit&redlink=1",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -823475,10 +823807,10 @@
     },
     {
       "id": "q-10655",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "The only time a referee brings a ruler to a football game.",
-      "question": "These sideline poles, joined by a chain, show how far a team must go for a new first down. How many yards long is the chain?",
+      "question": "In American football, two sideline poles joined by a chain show how far a team must go for a new first down. How many yards long is the chain?",
       "answer": "10",
       "wrong_answers": [
         "5",
@@ -823492,12 +823824,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "first down chain markers",
-        "note": "Photo of the chain crew on an American football sideline holding the two orange poles joined by the chain; no score or text needed.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "American football helmet",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFoot_US_-_Ours_vs_Kangourous_-_2013-03-02_-_20.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Foot_US_-_Ours_vs_Kangourous_-_2013-03-02_-_20.jpg/3840px-Foot_US_-_Ours_vs_Kangourous_-_2013-03-02_-_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Pierre-Selim · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Pierre-Selim",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PierreSelim",
+        "restrictions": [
+          "personality"
+        ],
+        "pd_reasons": []
       },
       "fun_fact": "The chain crew is also called the “chain gang.” Since 2025 the NFL measures first downs mainly with cameras, and the chain stays as a backup.",
       "subcategory": "american-football",
@@ -823523,31 +823864,45 @@
         "notes": "Hint 3 is a bit off: yard lines run every 5 yards, with numbers every 10. It also nearly gives the answer away. A chain-crew photo on Commons is plausible. Lens 'history' doesn't fit."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the first-down chain crew: the three are a Virginia historical marker, a 1906 nursery catalogue page of pruned trees and an old sketch of colonial explorers. The essential image needs a photo of the chain crew holding the two poles and chain on a football sideline, for example from a search for \"football chain crew\" or \"down marker chain sideline\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the first-down chain crew: the three are a Virginia historical marker, a 1906 nursery catalogue page of pruned trees and an old sketch of colonial explorers. The essential image needs a photo of the chain crew holding the two poles and chain on a football sideline, for example from a search for \"football chain crew\" or \"down marker chain sideline\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected hint 3, since field lines run every 5 yards, not 10.",
+        "reason": "No chain-crew photo exists, so the question now describes the chain in words and uses an illustrative image that doesn't show yard numbers.",
         "previous": {
-          "hints": [
-            "It's a nice round number.",
-            "A team gets four tries, called downs, to cover this distance.",
-            "Football fields are marked with a line every 10 yards."
-          ]
+          "question": "These sideline poles, joined by a chain, show how far a team must go for a new first down. How many yards long is the chain?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "first down chain markers",
+            "note": "Photo of the chain crew on an American football sideline holding the two orange poles joined by the chain; no score or text needed.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-05"
       }
@@ -824133,7 +824488,7 @@
     },
     {
       "id": "q-10664",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "It carries hay, dogs, furniture and everyone's moving boxes.",
       "question": "It has a cab in front and an open bed in back, and the first factory-built one rolled out in 1925. In which country was the pickup truck born?",
@@ -824145,7 +824500,7 @@
       ],
       "hints": [
         "The country has a lot of farms and very long roads.",
-        "The country is in the Americas, but not in South America.",
+        "The carmaker that built it was famous for its early moving assembly line.",
         "It's the country of cowboys and the Fourth of July."
       ],
       "media": {
@@ -824191,26 +824546,34 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"in the Americas, but not in South America\") rules out Germany, Japan and Brazil at once, so it gives the answer away before hint 3. Replace it with a vaguer hint, e.g. about the carmaker being famous for its early assembly line, without naming the country or its continent.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"in the Americas, but not in South America\") rules out Germany, Japan and Brazil at once, so it gives the answer away before hint 3. Replace it with a vaguer hint, e.g. about the carmaker being famous for its early assembly line, without naming the country or its continent.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named Ford, with a continent clue.",
+        "reason": "Replaced hint 2, which ruled out all the wrong answers at once, with a vaguer hint about the assembly line.",
         "previous": {
           "hints": [
             "The country has a lot of farms and very long roads.",
-            "The first factory pickup was made by Ford.",
+            "The country is in the Americas, but not in South America.",
             "It's the country of cowboys and the Fourth of July."
           ]
         },
@@ -824363,7 +824726,7 @@
     },
     {
       "id": "q-10667",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A tough guy with horns whose favorite hobby is gardening, sort of.",
       "question": "In “The Story of Ferdinand”, Ferdinand is a bull who would rather sit under a cork tree smelling flowers than fight. In which country does he live?",
@@ -824381,11 +824744,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "bull lying in grass",
+        "query": "cork oak tree",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2018_Whistler_cork_oak_tree_PT.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/2018_Whistler_cork_oak_tree_PT.jpg/3840px-2018_Whistler_cork_oak_tree_PT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "UNAC - Union of the Mediterranean Forest / União da Floresta Mediterrânica · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "UNAC - Union of the Mediterranean Forest / União da Floresta Mediterrânica",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Disney turned the book into a short cartoon, “Ferdinand the Bull,” which won an Oscar for 1938.",
       "subcategory": "childrens-books",
@@ -824414,19 +824784,43 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but no media candidate works: 1–3 are pit bull dogs, 4 is an American bison, 5 is an elk skull and 6 is an old group photo of press people. No new search is allowed. The slot needs a photo of a domestic bull resting in a meadow, or of flowers under a cork oak (search \"bull meadow flowers\" or \"Quercus suber\"). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no media candidate works: 1–3 are pit bull dogs, 4 is an American bison, 5 is an elk skull and 6 is an old group photo of press people. No new search is allowed. The slot needs a photo of a domestic bull resting in a meadow, or of flowers under a cork oak (search \"bull meadow flowers\" or \"Quercus suber\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image search found only unusable pictures, so it now searches for the cork tree named in the question.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "bull lying in grass",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10668",
@@ -824898,10 +825292,10 @@
     },
     {
       "id": "q-10674",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "A shirt that opens with a pop instead of a fight with tiny holes.",
-      "question": "This close-up shows a shiny pearly snap on a shirt. What kind of shirt is it usually found on?",
+      "question": "Shiny pearly snaps instead of buttons are a classic feature of which kind of shirt?",
       "answer": "Western shirt",
       "wrong_answers": [
         "Guayabera",
@@ -824915,12 +825309,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "pearl snap western shirt",
-        "note": "Close-up of a pearly snap fastener on a Western-style shirt, without showing the whole shirt or any brand label.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "shirts on clothing rack",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_0796_A_woman_browsing_shirts_on_a_crowded_clothing_rack_in_a_busy_store_with_mannequins_and_folded_garments_nearby.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/DFC_0796_A_woman_browsing_shirts_on_a_crowded_clothing_rack_in_a_busy_store_with_mannequins_and_folded_garments_nearby.jpg/3840px-DFC_0796_A_woman_browsing_shirts_on_a_crowded_clothing_rack_in_a_busy_store_with_mannequins_and_folded_garments_nearby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "It's said that snaps let a cowboy rip his shirt free if it got caught on a fence or a cow's horn.",
       "subcategory": "country-and-folk",
@@ -824946,22 +825347,48 @@
         "notes": "Essential close-up of a pearl snap: likely available on Commons/Openverse but may be generic. The fun fact is lore and is hedged (“It's said”). Guayabera and aloha shirts use buttons, so the distractors are fair. Not very exciting to answer."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the essential image needs: a pearly snap on a shirt. The sheet has a portrait (1), a medieval painting (2), plain metal snaps on leather or a nylon jacket (3, 5, 6) and snap jewelry (4). Another search isn't allowed, so the slot needs a hand-picked close-up of a pearl snap on a Western shirt (e.g. a search for \"pearl snap button shirt\"). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the essential image needs: a pearly snap on a shirt. The sheet has a portrait (1), a medieval painting (2), plain metal snaps on leather or a nylon jacket (3, 5, 6) and snap jewelry (4). Another search isn't allowed, so the slot needs a hand-picked close-up of a pearl snap on a Western shirt (e.g. a search for \"pearl snap button shirt\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable pearl-snap close-up exists, so the question now describes the snaps in words, with a decorative image that gives nothing away.",
+        "previous": {
+          "question": "This close-up shows a shiny pearly snap on a shirt. What kind of shirt is it usually found on?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "pearl snap western shirt",
+            "note": "Close-up of a pearly snap fastener on a Western-style shirt, without showing the whole shirt or any brand label.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10675",
@@ -829874,7 +830301,7 @@
     },
     {
       "id": "q-10739",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "The muscle behind your great-great-grandpa's favorite way to travel.",
       "question": "I pushed the pistons of old trains and Mississippi riverboats. To go top speed, captains called for “full” me “ahead.” What am I?",
@@ -829886,7 +830313,7 @@
       ],
       "hints": [
         "I ruled the paddle-wheel and railroad era of the 1800s.",
-        "Coal was burned to make me.",
+        "The captain's command meant: give the engines all the power they have.",
         "I whistle out of a teapot."
       ],
       "media": {
@@ -829894,20 +830321,16 @@
         "role": "illustrative",
         "query": "Mississippi paddle steamer",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Cape_Girardeau_paddle_steamer_and_a_Benoist_flying_boat_on_the_Mississippi_river_%28cropped%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/The_Cape_Girardeau_paddle_steamer_and_a_Benoist_flying_boat_on_the_Mississippi_river_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Russell Froelich · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Paddle_Steamer_Mississippi_on_the_Seine_-_Paris_2013.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Paddle_Steamer_Mississippi_on_the_Seine_-_Paris_2013.jpg/3840px-The_Paddle_Steamer_Mississippi_on_the_Seine_-_Paris_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jim Linwood from London · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Russell Froelich",
-        "author_url": null,
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Jim Linwood from London",
+        "author_url": "https://www.flickr.com/people/54238124@N00",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-Art",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Coal was only the fuel: it boiled the water, and the steam did the pushing.",
       "subcategory": "sayings-and-idioms",
@@ -829936,27 +830359,34 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Coal was burned to make me.”) gives the answer away: it rules out Coal, and neither wind nor diesel is made by burning coal, so only Steam is left. Replace it with a vaguer hint that doesn't eliminate options, for example one about what the captain's command meant.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Coal was burned to make me.”) gives the answer away: it rules out Coal, and neither wind nor diesel is made by burning coal, so only Steam is left. Replace it with a vaguer hint that doesn't eliminate options, for example one about what the captain's command meant.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description to drop the hot-air clue and reordered the hints from vague to strong.",
+        "reason": "Replaced hint 2, which ruled out every wrong answer, with one about what the captain's command meant.",
         "previous": {
-          "description": "Old-fashioned power with a lot of hot air behind it.",
           "hints": [
-            "You can see me rising from a kettle.",
-            "I'm made when water boils.",
+            "I ruled the paddle-wheel and railroad era of the 1800s.",
+            "Coal was burned to make me.",
             "I whistle out of a teapot."
           ]
         },
@@ -830679,9 +831109,9 @@
     },
     {
       "id": "q-10749",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "No hard hats needed, but safety scissors are strongly recommended.",
+      "description": "Back-to-school shopping lists: longer than a grocery list and twice as confusing.",
       "question": "In American schools, what is “construction paper”?",
       "answer": "Thick colored paper for crafts",
       "wrong_answers": [
@@ -830737,28 +831167,32 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. With only the four options to go on, \"safety scissors are strongly recommended\" points straight to young kids cutting paper for crafts, which is the answer's defining trait. It also uses the same clue as hint 2. The description should play on the construction/school theme without hinting at cutting or kids' crafts.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. With only the four options to go on, \"safety scissors are strongly recommended\" points straight to young kids cutting paper for crafts, which is the answer's defining trait. It also uses the same clue as hint 2. The description should play on the construction/school theme without hinting at cutting or kids' crafts.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they build from vague to strong without restating the answer.",
+        "reason": "Rewrote the description so it no longer points to kids cutting paper for crafts.",
         "previous": {
-          "hints": [
-            "Elementary school kids use it in art class.",
-            "It comes in packs of many bright colors and is thicker than printer paper.",
-            "Kids cut it up to make cards, masks and paper chains."
-          ]
+          "description": "No hard hats needed, but safety scissors are strongly recommended."
         },
         "revised_on": "2026-11-05"
       }
@@ -830993,9 +831427,9 @@
     },
     {
       "id": "q-10753",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "A girl who learned the whole world through the palm of her hand.",
+      "description": "Proof that the right teacher can turn a whole life around.",
       "question": "This American girl could neither see nor hear. Her world opened up when her teacher spelled “water” into her hand. Who is she?",
       "answer": "Helen Keller",
       "wrong_answers": [
@@ -831054,31 +831488,39 @@
       "needs_media": true,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description, “A girl who learned the whole world through the palm of her hand”, gives away Helen Keller's defining trait (learning through words spelled into her hand). With only the four options showing, it rules out Earhart, Parks and Barton straight away. Rewrite it to play on school or learning without naming that trait.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description, “A girl who learned the whole world through the palm of her hand”, gives away Helen Keller's defining trait (learning through words spelled into her hand). With only the four options showing, it rules out Earhart, Parks and Barton straight away. Rewrite it to play on school or learning without naming that trait.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question so it no longer suggests she could see and hear after the “water” moment.",
+        "reason": "Rewrote the description so it no longer names her trait of learning through her hand.",
         "previous": {
-          "question": "This American girl could neither see nor hear, until her teacher spelled “water” into her hand. Who is she?"
+          "description": "A girl who learned the whole world through the palm of her hand."
         },
         "revised_on": "2026-11-05"
       }
     },
     {
       "id": "q-10754",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "The time of year when every store aisle suddenly smells like new erasers.",
       "question": "In the US, stores fill with new backpacks, pencils and binders for “back-to-school” sales. When does this happen?",
@@ -831096,11 +831538,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "school supplies aisle",
+        "query": "school supplies display",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchriever_Back-to-School_Bash_%289254752%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Schriever_Back-to-School_Bash_%289254752%29.jpg/3840px-Schriever_Back-to-School_Bash_%289254752%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "U.S. Space Force photo by Tiana Williams · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Space Force photo by Tiana Williams",
+        "author_url": "https://www.dvidshub.net/portfolio/1739841",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military-Space Force"
+        ]
       },
       "fun_fact": "Many US states have a sales-tax holiday in late summer, so families can buy school supplies without paying sales tax.",
       "subcategory": "school-life",
@@ -831129,23 +831580,47 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows school supplies or a back-to-school display; all are generic grocery or warehouse aisles (bread, oil, baking, desserts, a Tesco aisle with £ prices). A new search such as \"school supplies display\" or \"backpacks pencils binders\" is needed. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows school supplies or a back-to-school display; all are generic grocery or warehouse aisles (bread, oil, baking, desserts, a Tesco aisle with £ prices). A new search such as \"school supplies display\" or \"backpacks pencils binders\" is needed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image search to one that should find an actual back-to-school display.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "school supplies aisle",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10755",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A Latin motto with an attitude, worn proudly since 1776.",
       "question": "This state's motto is “Sic semper tyrannis”. Which state is it?",
@@ -831162,12 +831637,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Latin inscription carved stone",
-        "note": "A blank outline of the state of Virginia, with no labels, names or city markers.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKoscielniki_Wodzicki_palace_fountain_inscription_Poniatowski.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Koscielniki_Wodzicki_palace_fountain_inscription_Poniatowski.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Adrian Tync · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adrian Tync",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gower",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Virginia's seal shows a woman standing over a defeated tyrant, a scene picked to match the motto in 1776.",
       "subcategory": "state-symbols",
@@ -831193,22 +831675,47 @@
         "notes": "The essential outline lets anyone who knows US map shapes answer without knowing the motto, so it's a bit easier than 13. Maryland is a sly distractor, since its old state song quotes “Sic semper”. Dry motto recall."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set to essential, and its note asks for a blank outline of Virginia, but the search was for \"Latin inscription carved stone\". All six candidates are old Latin inscriptions from Europe and Libya, so none shows the outline, and a new search isn't allowed. The question doesn't refer to any picture, so the slot should become an illustrative or decorative image (for example a Latin inscription or a colonial courthouse). The question can't actually use an outline of the state either, since that would let players answer from the map shape without knowing the motto. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set to essential, and its note asks for a blank outline of Virginia, but the search was for \"Latin inscription carved stone\". All six candidates are old Latin inscriptions from Europe and Libya, so none shows the outline, and a new search isn't allowed. The question doesn't refer to any picture, so the slot should become an illustrative or decorative image (for example a Latin inscription or a colonial courthouse). The question can't actually use an outline of the state either, since that would let players answer from the map shape without knowing the motto. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media from an essential state outline, which would give the answer away, to an illustrative Latin inscription that matches the search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Latin inscription carved stone",
+            "note": "A blank outline of the state of Virginia, with no labels, names or city markers.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10756",
@@ -831743,7 +832250,7 @@
     },
     {
       "id": "q-10763",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Nobody is quite sure where this nickname came from, but the locals love it.",
       "question": "People from this state are called Hoosiers. Which state is it?",
@@ -831756,16 +832263,23 @@
       "hints": [
         "It's in the Midwest, next to Lake Michigan.",
         "A famous car race, the “500”, is held there every year.",
-        "Its capital is Indianapolis."
+        "It sits right between Ohio and Illinois."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Midwest cornfield red barn",
-        "note": "A blank outline of the state of Indiana, with no labels, names or city markers.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarn_with_Red_Roof_in_Cornfield_%284104643060%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Barn_with_Red_Roof_in_Cornfield_%284104643060%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Dan Zen from Dundas, Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dan Zen from Dundas, Canada",
+        "author_url": "https://www.flickr.com/people/16077535@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Nobody knows for sure where the word “Hoosier” comes from, and there are many competing stories.",
       "subcategory": "state-symbols",
@@ -831791,23 +832305,53 @@
         "notes": "The fun fact repeats what the description already says (nobody knows where the nickname comes from). It's plain nickname recall."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set up wrong. It is marked essential and its note asks for a blank outline of Indiana, but the question never refers to a picture, and an outline of the state would give the answer away anyway. None of the candidates is an Indiana outline, and no new search is allowed, so the slot should become illustrative or decorative (a Midwest barn in a cornfield, like candidate 1, would fit). Separately, hint 3 (“Its capital is Indianapolis.”) contains the answer word “Indiana”. The rules don't allow that even in the third hint, so swap it for another strong clue, such as the state's rival-free basketball fame or its spot between Ohio and Illinois. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set up wrong. It is marked essential and its note asks for a blank outline of Indiana, but the question never refers to a picture, and an outline of the state would give the answer away anyway. None of the candidates is an Indiana outline, and no new search is allowed, so the slot should become illustrative or decorative (a Midwest barn in a cornfield, like candidate 1, would fit). Separately, hint 3 (“Its capital is Indianapolis.”) contains the answer word “Indiana”. The rules don't allow that even in the third hint, so swap it for another strong clue, such as the state's rival-free basketball fame or its spot between Ohio and Illinois. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media to an illustrative Midwest barn and replaced hint 3, which contained the answer inside “Indianapolis”.",
+        "previous": {
+          "hints": [
+            "It's in the Midwest, next to Lake Michigan.",
+            "A famous car race, the “500”, is held there every year.",
+            "Its capital is Indianapolis."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Midwest cornfield red barn",
+            "note": "A blank outline of the state of Indiana, with no labels, names or city markers.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10764",
@@ -832550,20 +833094,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "George M. Cohan statue",
+        "query": "vintage piano sheet music",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGeorge_M._Cohan_by_Georg_Lober_-_DSC06435.JPG",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/George_M._Cohan_by_Georg_Lober_-_DSC06435.JPG/3840px-George_M._Cohan_by_Georg_Lober_-_DSC06435.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Daderot · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Daderot",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot",
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US-not renewed"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "In 1936 Congress gave Cohan a gold medal for “Over There” and another patriotic song, “You're a Grand Old Flag.”",
       "subcategory": "traditional-songs",
@@ -832593,18 +833128,53 @@
       "batch": "batch-32",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-not renewed).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-not renewed).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Picked a new image search because the old picture's licence only covers the US.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "George M. Cohan statue",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGeorge_M._Cohan_by_Georg_Lober_-_DSC06435.JPG",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/George_M._Cohan_by_Georg_Lober_-_DSC06435.JPG/3840px-George_M._Cohan_by_Georg_Lober_-_DSC06435.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Daderot · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Daderot",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Daderot",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-not renewed"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10774",
@@ -833955,7 +834525,7 @@
     },
     {
       "id": "q-10791",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A word that makes everything, like, extremely more.",
       "question": "I'm the American region where “hella”, meaning “very”, became everyday talk decades ago. My rappers spread it nationwide. What am I?",
@@ -833966,8 +834536,8 @@
         "The Texas Hill Country"
       ],
       "hints": [
-        "I'm on the West Coast.",
-        "Oakland is one of my cities.",
+        "I'm a cluster of cities around one big body of water.",
+        "My rappers made a wild party style called “hyphy” famous.",
         "A famous red bridge crosses my water."
       ],
       "media": {
@@ -834013,19 +834583,39 @@
       "needs_media": false,
       "batch": "batch-32",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“I'm on the West Coast.”) rules out all three wrong answers at once: Boston, New Orleans and the Texas Hill Country are not on the West Coast. Hint 2 (“Oakland is one of my cities.”) also gives the answer away directly. Hint 1 should be a vague clue that leaves several options open (for example about the era or the music scene). Hint 2 should not name a Bay Area city. One option would be to name the rappers' style without naming a place.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“I'm on the West Coast.”) rules out all three wrong answers at once: Boston, New Orleans and the Texas Hill Country are not on the West Coast. Hint 2 (“Oakland is one of my cities.”) also gives the answer away directly. Hint 1 should be a vague clue that leaves several options open (for example about the era or the music scene). Hint 2 should not name a Bay Area city. One option would be to name the rappers' style without naming a place.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote hints 1 and 2 so the first leaves the options open and neither one names a Bay Area city.",
+        "previous": {
+          "hints": [
+            "I'm on the West Coast.",
+            "Oakland is one of my cities.",
+            "A famous red bridge crosses my water."
+          ]
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10792",
