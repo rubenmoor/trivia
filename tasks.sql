@@ -10922,10 +10922,12 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - `earned()` ignores questions outside the loaded pool, and is derived, never stored (`decision 139: Achievement triggers derived without a save change (SW-11)`). That isn''t enough here: badges mustn''t vanish on a language switch, a content patch or a removed DLC.
 
 ## Parts
-1. **Career design:** subjects (every base category assigned), grades (elementary, high school, college, university) as difficulty bands, thresholds checked against supply per locale, badge list. Includes a badge for playing each age group often enough, so the lowest difficulty earns one. The developer approves subjects and the list as decisions. Needs Steam''s achievement limit: 28 + bundle achievements today; verify it from Valve''s docs (`--web`) and size the list to fit.
+1. **Career design:** subjects (every base category assigned), grades (elementary, high school, college, university) as difficulty bands, thresholds checked against supply per locale, badge list. Includes a badge for playing each age group often enough, so the lowest difficulty earns one. The developer approves subjects and the list as decisions. Sized for Steam''s limit after vetting (5,000 per app), not the 100 of an unvetted app: the badge count follows design and supply. Until vetted, at most 100 achievements are live in Steamworks (the 39 existing first, then career badges in a fixed order); the rest are earned in game only. Archived achievements still count: no trial badges.
 2. **Subjects in the data:** a `subject` on every category of base and all bundles, `qgen validate` refuses a missing or unknown one, `qgen taxonomy` proposes one for new bundles. Mod categories without one: settled here, default counts toward no subject.
 3. **Career engine and save:** per-player progress from qualifying games, badges kept once earned (with date), opt-out per player, celebrated marker, save version and upgrade including `authoring/tools/save_file.py`, backfill from existing games, what a deleted player loses. Survives language, pool and DLC changes.
 4. **Steam side:** badges as achievements: unlock through `lib/achievements.ts`, retroactive unlock on load, `steam-achievements.vdf`, icons (`app/desktop/achievements/`, `render.sh`), values in `plans/18-steam-integration.md`. Coordinates with `plan 86: Achievements (SW-11)`, which is still open. Replaces the rule «no on-screen achievement UI of our own» for badges only: the plan raises that with the developer if it reads as conflicting.
+   - Live-limit rule: until the app is vetted at most 100 achievements are live in Steamworks, the 39 existing first, then career badges in a fixed order up to 100; later badges are earned and shown in game only
+   - The plan holds the list of what is live in Steamworks and what is pending, and how a pending badge becomes live: VDF rows, icons, one release; the retroactive unlock on load then grants it to players who already have it
 5. **Badge page and celebration:** page reachable per player, opens by itself when a badge is new, after the game''s end screen; animation, sound (`sound.svelte.ts`, `Fireworks.svelte`), pad, keyboard and mouse, several badges at once, several players in a session, opt-out setting. Catalogs and style guides for all locales; gallery shots with a review decision (iterative feedback).
 6. **Progress between badges:** the fine grain that badges can''t be, since each one costs an achievement: per-subject progress bars, a career level or title, regular-play signals such as game nights, and a short «your progress» line at game end. No nagging, no punishing streaks.
 7. **Demo, mods and close-out:** career hidden in the demo while demo games in the shared save (`decision 336: Demo save: separate from the full game''s, or shared/imported on purchase?`) count later, or not; release-check and smoke coverage; docs (`plans/`); a family playtest as a decision.
@@ -10944,10 +10946,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Achievement Sets are in beta (ach_guide): "Steam will not unlock an achievement in a DLC set for a player who can''t play that DLC". Career badges stay in the base game set, also because every badge must be reachable with base alone.
 
 ## Budget
-- Design for 100: passing the threshold is outside our control and its date unknown, so the list must never depend on it.
+- Design for 5,000, Steam''s limit once the app is vetted. The badge count is set by the design and the supply of questions, not by the 100 an unvetted app gets.
 - Today: 28 in `ACHIEVEMENTS` (`app/client/src/engine/achievements.ts`) + 6 regional + 5 topic `BUNDLE_*` (`app/data/bundles.json`) = 39.
-- **Career: at most 40 badges.** Total 79, 21 left for future bundles and modes. A deleted achievement stays counted if archived, so entered badges are for good: no trial badges.
-- Example fit: 8 subjects × 4 grades + 4 age groups = 36, 4 spare. Fewer than 8 subjects, or a thin grade dropped per subject, is fine; more needs fewer badges per subject.
+- Until vetted, at most 100 achievements are live in Steamworks:
+  - the 39 existing ones first, then career badges in a fixed order, up to 100
+  - badges past that are earned and shown in game as usual; their Steam achievements are added once the app is vetted, and the retroactive unlock on load (`plan 192: masterplan` part 4) grants them to players who already have them
+- Archived achievements still count toward the limit: no trial badges, entered means for good.
+- The old cap of 40 career badges is dropped (developer, task 1890).
 
 ## Facts the proposals must face
 - Reach: age-group windows decide who can see a grade band (`app/data/age-groups.json` `levels`): adults start at difficulty 5, young_adults see 4 only on level 1, so a grown-up on their own age group gets nothing from 1–4 as an exact band. Kids stop at 6; 13–15 appears only on the top levels of adults and young_adults, reached in few games and with the lowest hit rate.
@@ -44743,7 +44748,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision add "Topic bundles below 2000 approved: ship or hold?"` (`decision 267: Bundle tiles: question count strings` promises «2000+»; `decision 110: Regional packs at launch (RG-5, OQ-46)` shipped `colombia` with what it had). Options: (1, recommended) a bundle × locale ships only from 2000 approved in that locale, below it its pool stays out of the build (the build or `stage` leaves the file out, not `qgen export`; follow-up task in `plan 89: Builds, depots and upload (SW-10, SW-6)` if no switch exists); (2) ship from a floor (developer names it, e.g. 500) with the tile showing the real rounded count below 2000 (follow-up in plan 185, decision 267 superseded in part); (3) ship whatever exists with «2000+». Body: the facts table, what a player sees per option, regional bundles follow the same answer unless the developer says otherwise. Then `pm task-pending-decision` and stop.
 - On the answer: `plans/22-bundles.md` a "Shipping non-base bundles" bullet list (rule, release vs. patch, per locale); `plans/11-steam.md` "Content updates (ST-5)": one bullet "a non-base bundle × locale reaching the bar: its pool, its `languages` entry, its DLC store language block (plan 187) in the next content patch; the patch notes count it"; `plans/16-content-target.md` topic bundles line (2000 per locale, shipping rule); `pm decision consequences`.
 - Ship table in the done text: per bundle × locale "release v<x>", "patch (when at bar)" or "not offered".', '2026-11-05T03:00:54Z', NULL, 1666, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1890, NULL, 'Career: design for Steam''s 5,000 achievement limit, not 100', 'exec', 'open', NULL, NULL, 'Developer''s call: the career is sized for Steam''s limit after vetting (5,000 per app), not the 100 an unvetted app gets. The «at most 40 badges» budget in `plan 193: Career design: subjects, grades and badge list` is dropped.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1890, NULL, 'Career: design for Steam''s 5,000 achievement limit, not 100', 'exec', 'done', NULL, '2026-11-05, plans 192 and 193 edited via pm (Budget, parts 1 and 4); task 1887 running so its body unchanged, revise task 1893 covers it', 'Developer''s call: the career is sized for Steam''s limit after vetting (5,000 per app), not the 100 an unvetted app gets. The «at most 40 badges» budget in `plan 193: Career design: subjects, grades and badge list` is dropped.
 
 - Plan 193 "Budget": replace the 40-badge cap with:
   - design for 5,000; badge count set by design and supply, not by the 100 limit
@@ -44752,7 +44757,54 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
   - archived achievements still count: no trial badges, entered means for good
 - Plan 192 part 1 and part 4: same rule. Part 4 also holds the list of what''s live in Steamworks vs pending, plus how a pending badge becomes live (VDF, icons, one release).
 - `task 1887: Propose the badge list with names and thresholds and raise the decision`: tell it the cap is gone (pm task set or a note). If decision 519''s follow-up already counts badges against 40, the re-ask says the cap no longer applies.
-- `rg` for "40 badges", "at most 40" and "budget" in `plans/` and `tasks.sql` text; fix every hit (decision 200).', '2026-11-05T03:57:10Z', NULL, NULL, 0, NULL, NULL);
+- `rg` for "40 badges", "at most 40" and "budget" in `plans/` and `tasks.sql` text; fix every hit (decision 200).', '2026-11-05T03:57:10Z', '2026-11-05T03:57:54Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1891, 193, 'create tasks for plan 193: Career design: subjects, grades and badge list', 'split', 'open', 1000, NULL, 'Split plan 193 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-05T03:57:42Z', NULL, 1890, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1892, 192, 'create tasks for plan 192: masterplan', 'split', 'open', 1000, NULL, 'Split plan 192 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-05T03:57:43Z', NULL, 1890, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1893, 193, 'revise plan 193: Career design: subjects, grades and badge list', 'revise', 'open', 1000, NULL, '`plan 192: masterplan`, the plan above `plan 193: Career design: subjects, grades and badge list`, changed; it is quoted below. Bring `plan 193: Career design: subjects, grades and badge list` in line with it
+(`pm plan edit 193 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 192: masterplan
+
+Masterplan of `milestone 20: give a player a sense of progress`. **Its own tasks are not implementation work: each of them writes the plan for one part** (`--kind plan`).
+
+## Binding constraints
+- Every badge is also a Steam achievement; not the reverse. So badges follow the achievement rules:
+  - Qualifying games only: `decision 19: Default mode: presets, checkpoints and won levels (OQ-30)?`, `qualifies()` in `app/client/src/engine/achievements.ts`
+  - Gamemaster mode earns nothing: `decision 74: Gamemaster mode earns no achievements`
+  - Mods stay allowed: `decision 123: Achievements in games with mods on: allowed or off?`
+  - Demo: no achievements, `decision 346: Achievements in the demo: off, as Valve recommends?`
+- Existing achievements (funny, per account) stay as they are; the career adds to them.
+- Career is per player (`PlayerRow`); Steam is per account, so any player''s badge unlocks for the account, in line with `decision 285: Achievements from multiplayer sessions: every seat earns for the save; tower achievements need a win at the top level`.
+- Sessions: each seat earns from its own answers (`history[].seat`, `rr-competitive` seat states); the part 3 plan settles shared `rr-coop` answers.
+- Enabled by default; a player can turn it off.
+- DLC adds no badges and changes none: fixed subject list, DLC categories map onto it, every badge reachable with base alone.
+
+## Known facts (2026-10-31)
+- Difficulty: one scale 1–15; age groups play windows of it (kids 1–6, young_teens 1–10, young_adults 4–13, adults 5–15). «Difficulty» for players = the age group (decision 19); custom difficulty doesn''t qualify.
+- Base `es` pool: 6151 questions, 28 categories; by difficulty 1–4 / 5–8 / 9–12 / 13–15: 1914 / 2026 / 1488 / 723. Other locales are similar (en 5661, de 6116, es-ES 6123).
+- Thin spots: many categories have under 20 questions at 13–15 (human-body 1, holidays 2, transport 3), so «100 correct per subject and grade» only works if subjects are broad and thresholds come from supply.
+- The seen list is per save, so a family shares supply: thresholds must hold after siblings have used questions.
+- `earned()` ignores questions outside the loaded pool, and is derived, never stored (`decision 139: Achievement triggers derived without a save change (SW-11)`). That isn''t enough here: badges mustn''t vanish on a language switch, a content patch or a removed DLC.
+
+## Parts
+1. **Career design:** subjects (every base category assigned), grades (elementary, high school, college, university) as difficulty bands, thresholds checked against supply per locale, badge list. Includes a badge for playing each age group often enough, so the lowest difficulty earns one. The developer approves subjects and the list as decisions. Sized for Steam''s limit after vetting (5,000 per app), not the 100 of an unvetted app: the badge count follows design and supply. Until vetted, at most 100 achievements are live in Steamworks (the 39 existing first, then career badges in a fixed order); the rest are earned in game only. Archived achievements still count: no trial badges.
+2. **Subjects in the data:** a `subject` on every category of base and all bundles, `qgen validate` refuses a missing or unknown one, `qgen taxonomy` proposes one for new bundles. Mod categories without one: settled here, default counts toward no subject.
+3. **Career engine and save:** per-player progress from qualifying games, badges kept once earned (with date), opt-out per player, celebrated marker, save version and upgrade including `authoring/tools/save_file.py`, backfill from existing games, what a deleted player loses. Survives language, pool and DLC changes.
+4. **Steam side:** badges as achievements: unlock through `lib/achievements.ts`, retroactive unlock on load, `steam-achievements.vdf`, icons (`app/desktop/achievements/`, `render.sh`), values in `plans/18-steam-integration.md`. Coordinates with `plan 86: Achievements (SW-11)`, which is still open. Replaces the rule «no on-screen achievement UI of our own» for badges only: the plan raises that with the developer if it reads as conflicting.
+   - Live-limit rule: until the app is vetted at most 100 achievements are live in Steamworks, the 39 existing first, then career badges in a fixed order up to 100; later badges are earned and shown in game only
+   - The plan holds the list of what is live in Steamworks and what is pending, and how a pending badge becomes live: VDF rows, icons, one release; the retroactive unlock on load then grants it to players who already have it
+5. **Badge page and celebration:** page reachable per player, opens by itself when a badge is new, after the game''s end screen; animation, sound (`sound.svelte.ts`, `Fireworks.svelte`), pad, keyboard and mouse, several badges at once, several players in a session, opt-out setting. Catalogs and style guides for all locales; gallery shots with a review decision (iterative feedback).
+6. **Progress between badges:** the fine grain that badges can''t be, since each one costs an achievement: per-subject progress bars, a career level or title, regular-play signals such as game nights, and a short «your progress» line at game end. No nagging, no punishing streaks.
+7. **Demo, mods and close-out:** career hidden in the demo while demo games in the shared save (`decision 336: Demo save: separate from the full game''s, or shared/imported on purchase?`) count later, or not; release-check and smoke coverage; docs (`plans/`); a family playtest as a decision.
+
+## Order
+Part 1 first; 2 and 3 need its answers; 4, 5 and 6 need 3; 7 last.
+
+## Done when
+A player earns a logically named badge from ordinary play, sees it celebrated on the badge page, gets the Steam achievement, can turn the career off, and buying a DLC changes no badge.', '2026-11-05T03:57:43Z', NULL, 1890, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -53458,6 +53510,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2049, 1667, '2026-11-05T03:01:05Z', '2026-11-05T03:01:27Z', 'blocked', NULL, 0, 'e8bae9f5a2104a4512e487e4888123fe0ea58f95', 'app', 'claude-sonnet-5-5', 'df1a144f-9090-4442-81e2-5a49379240de', NULL, 6, 14, 848, 232014, 32598, 0.16210140000000003, 47077, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2050, 1889, '2026-11-05T03:01:27Z', '2026-11-05T03:02:10Z', 'blocked', NULL, 0, 'e8bae9f5a2104a4512e487e4888123fe0ea58f95', 'app', 'claude-sonnet-5-5', 'b122204d-8f2b-44f9-8b23-999e476c2128', NULL, 10, 18, 3182, 360770, 35813, 0.21118499999999998, 50690, 60, 352740);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2051, 1887, '2026-11-05T03:11:11Z', NULL, 'running', NULL, NULL, '69c6b31205e07f918ebb19524ff0b8116d2ad076', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 352740);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2052, 1890, '2026-11-05T03:57:12Z', '2026-11-05T03:58:00Z', 'done', NULL, 0, '2af898f70e0a51bd2aee41268f71857dd4c84fd8', NULL, 'claude-sonnet-5-5', '81e436a3-b9b9-4218-93f1-372550edde3d', NULL, 13, 26, 4292, 619285, 45717, 0.28776850000000004, 60680, 60, 352740);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
