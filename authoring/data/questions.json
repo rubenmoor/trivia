@@ -883940,7 +883940,7 @@
     },
     {
       "id": "q-11429",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una frase que nació en la esquina del ring y terminó en la sala de tu casa.",
       "question": "Completa la frase que viene del box y usamos cuando alguien se rinde: \"Ya no puedo más, voy a tirar la…\"",
@@ -883958,20 +883958,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "empty boxing ring ropes",
+        "query": "empty boxing ring",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStereograph_of_two_American_boxers_fighting_in_an_outdoor_ring_in_Juarez%2C_Mexico%2C_ca.1900-1905_%28CHS-611%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Stereograph_of_two_American_boxers_fighting_in_an_outdoor_ring_in_Juarez%2C_Mexico%2C_ca.1900-1905_%28CHS-611%29.jpg/3840px-Stereograph_of_two_American_boxers_fighting_in_an_outdoor_ring_in_Juarez%2C_Mexico%2C_ca.1900-1905_%28CHS-611%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Pierce, C.C. (Charles C.), 1861-1946 · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASet-up_of_a_boxing_Ring.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Set-up_of_a_boxing_Ring.jpg/3840px-Set-up_of_a_boxing_Ring.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Micheal Kaluba · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Pierce, C.C. (Charles C.), 1861-1946",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Micheal Kaluba",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Micheal_Kaluba",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "En el box, cuando la esquina lanza ese objeto al ring, la pelea se detiene para proteger a su boxeador.",
       "subcategory": "boxing",
@@ -884000,28 +883998,48 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway hint 2 with what the corner does, and changed the kitchen reference in the description.",
+        "reason": "The image's license was only valid in the US, so I asked for a new image with a slightly different query; the text stays the same.",
         "previous": {
-          "description": "Una frase que nació en la esquina del ring y terminó en la cocina de tu casa.",
-          "hints": [
-            "Es algo que la esquina tiene a la mano.",
-            "Sirve para secar el sudor del boxeador.",
-            "También la usas al salir de bañarte."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "empty boxing ring ropes",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AStereograph_of_two_American_boxers_fighting_in_an_outdoor_ring_in_Juarez%2C_Mexico%2C_ca.1900-1905_%28CHS-611%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Stereograph_of_two_American_boxers_fighting_in_an_outdoor_ring_in_Juarez%2C_Mexico%2C_ca.1900-1905_%28CHS-611%29.jpg/3840px-Stereograph_of_two_American_boxers_fighting_in_an_outdoor_ring_in_Juarez%2C_Mexico%2C_ca.1900-1905_%28CHS-611%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Pierce, C.C. (Charles C.), 1861-1946 · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Pierce, C.C. (Charles C.), 1861-1946",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -884484,7 +884502,7 @@
     },
     {
       "id": "q-11436",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Un bicho que nadie quiere en la manzana, pero todos quieren en la mochila.",
       "question": "El Lucas Gusano es un dulce en una botellita que aprietas para que salga. ¿Qué trae adentro?",
@@ -884515,7 +884533,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Los dulces Lucas nacieron en México y desde 2004 pertenecen a la empresa Mars, la de los M&M's.",
+      "fun_fact": "Los dulces Lucas nacieron en México y hoy pertenecen a la empresa Mars, la de los M&M's.",
       "subcategory": "brands-and-snacks",
       "style": null,
       "concept": "Lucas Gusano",
@@ -884538,32 +884556,35 @@
         "difficulty_estimate": 2,
         "notes": "The answer is the only spicy, Mexican-candy-style option, so it stands out, and hint 1 makes that obvious. The fun fact is weak and rests on a doubtful claim (that the candy 'comes out like a worm')."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check marks the fun fact as wrong: it says Mars has owned Lucas since 2004, while the check's sources put the purchase in 2001 (2004 is the year of the lead-contamination case). I can't settle the year myself. Correct the year after checking it, or drop the year from the fun fact. Verificación de datos: wrong. The fun fact says Lucas has belonged to Mars since 2004. Sources date the purchase to 2001. 2004 is the year of the lead-contamination issue.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check marks the fun fact as wrong: it says Mars has owned Lucas since 2004, while the check's sources put the purchase in 2001 (2004 is the year of the lead-contamination case). I can't settle the year myself. Correct the year after checking it, or drop the year from the fun fact. Verificación de datos: wrong. The fun fact says Lucas has belonged to Mars since 2004. Sources date the purchase to 2001. 2004 is the year of the lead-contamination issue.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hints 1 and 2 singled out chamoy by spiciness and colour; replaced them and swapped the unchecked fun fact for the Mars acquisition.",
+        "reason": "I took the disputed purchase year out of the fun fact.",
         "previous": {
-          "hints": [
-            "Es un dulce de los que pican.",
-            "Es líquido y medio rojo.",
-            "Es agridulce y se le pone a la fruta y a los raspados."
-          ],
-          "fun_fact": "La botellita del Lucas Gusano se aprieta para que el dulce salga como si fuera un gusanito."
+          "fun_fact": "Los dulces Lucas nacieron en México y desde 2004 pertenecen a la empresa Mars, la de los M&M's."
         },
         "revised_on": "2026-11-05"
       }
@@ -884800,10 +884821,10 @@
     },
     {
       "id": "q-11440",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Unos chiles que se dieron un baño ácido y salieron más famosos que nunca.",
-      "question": "Mira la foto: chiles en vinagre, como los que vienen en lata. ¿Qué tipo de chile es el más usado para hacerlos?",
+      "question": "Los chiles en vinagre, como los que vienen en lata, acompañan muchos tacos. ¿Qué tipo de chile es el más usado para hacerlos?",
       "answer": "El jalapeño",
       "wrong_answers": [
         "El habanero",
@@ -884817,12 +884838,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "chiles en escabeche carrots",
-        "note": "Frasco o plato con rodajas de chile jalapeño en vinagre, de preferencia con zanahoria y cebolla; sin etiqueta de marca ni texto.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "tacos al pastor plate",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAl_pastor_tacos_%2834965815632%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Al_pastor_tacos_%2834965815632%29.jpg/3840px-Al_pastor_tacos_%2834965815632%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "T.Tseng · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "T.Tseng",
+        "author_url": "https://www.flickr.com/people/68147320@N02",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Cuando el jalapeño se seca y se ahúma se convierte en chipotle.",
       "subcategory": "brands-and-snacks",
@@ -884848,21 +884876,47 @@
         "notes": "Serrano chiles are also pickled, but jalapeño is clearly the most common, so the answer is fair. Hint 3 repeats the Xalapa fact from q-10312, a different question with the same answer. Telling pickled slices apart in a photo is hard, so an illustrative role would do just as well."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows pickled jalapeño slices, and the question says \"Mira la foto: chiles en vinagre\". #1 is roast chicken with carrots and onion, #2 is jars of pink pickled onions or radish, #3 is a jar of pickled onion on a restaurant table. A new search isn't allowed here, so the slot needs a real photo of jalapeños en escabeche (e.g. \"pickled jalapeño slices\"). Another option is to drop \"Mira la foto\" and make the image illustrative. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows pickled jalapeño slices, and the question says \"Mira la foto: chiles en vinagre\". #1 is roast chicken with carrots and onion, #2 is jars of pink pickled onions or radish, #3 is a jar of pickled onion on a restaurant table. A new search isn't allowed here, so the slot needs a real photo of jalapeños en escabeche (e.g. \"pickled jalapeño slices\"). Another option is to drop \"Mira la foto\" and make the image illustrative. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of pickled jalapeños was found, so I dropped 'Mira la foto' and made the image an illustrative taco plate.",
+        "previous": {
+          "question": "Mira la foto: chiles en vinagre, como los que vienen en lata. ¿Qué tipo de chile es el más usado para hacerlos?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "chiles en escabeche carrots",
+            "note": "Frasco o plato con rodajas de chile jalapeño en vinagre, de preferencia con zanahoria y cebolla; sin etiqueta de marca ni texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11441",
@@ -885160,7 +885214,7 @@
     },
     {
       "id": "q-11445",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "En el salón de la vecindad da clases un señor que no necesita escalera para borrar lo de arriba del pizarrón.",
       "question": "Lo grita el Profesor Jirafales y cada vez sube más la voz hasta el último «¡taaa!». ¿Qué siente cuando dice «¡Ta ta ta ta!»?",
@@ -885180,18 +885234,18 @@
         "role": "decorative",
         "query": "school chalkboard classroom",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Israel_Augustine_School_classroom_January_2011.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/The_Israel_Augustine_School_classroom_January_2011.jpg/3840px-The_Israel_Augustine_School_classroom_January_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Stephen Kennedy · CC BY 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChokai_JHS_2B_classroom_2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Chokai_JHS_2B_classroom_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Douglas P Perkins · CC BY 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Stephen Kennedy",
-        "author_url": "https://www.flickr.com/people/7752378@N03",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Douglas P Perkins",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Douglaspperkins",
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Muchas veces el Profesor Jirafales cerraba su «¡ta ta ta ta!» con un pisotón en el piso.",
+      "fun_fact": "Al Profesor Jirafales lo interpretó Rubén Aguirre, un actor tan alto que su apodo en la serie viene de la jirafa.",
       "subcategory": "chespirito",
       "style": null,
       "concept": "Ta ta ta ta",
@@ -885214,39 +885268,42 @@
         "difficulty_estimate": 2,
         "notes": "Very easy, with filler distractors (Hambre). The question text says his voice keeps rising, which already leans toward anger."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. The answer (enojo) fits. I couldn't verify the fun fact that he often ended the \"ta ta ta\" with a foot stomp.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. The answer (enojo) fits. I couldn't verify the fun fact that he often ended the \"ta ta ta\" with a foot stomp.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Description hinted at anger and hint 2 described an angry gesture; both replaced with neutral clues.",
+        "reason": "The foot-stomp detail couldn't be verified, so I replaced the fun fact with a safe one.",
         "previous": {
-          "description": "Cuatro sílabas que suben de tono como olla exprés.",
-          "hints": [
-            "Casi siempre es por culpa del Chavo.",
-            "A veces avienta el sombrero al piso.",
-            "Es lo contrario de estar contento y tranquilo."
-          ]
+          "fun_fact": "Muchas veces el Profesor Jirafales cerraba su «¡ta ta ta ta!» con un pisotón en el piso."
         },
         "revised_on": "2026-11-05"
       }
     },
     {
       "id": "q-11446",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un recuerdo que te deja la puerta de la cocina cuando la abres muy rápido.",
       "question": "Sale después de un golpe, se levanta en la cabeza y el Chapulín Colorado le puso su nombre a su martillo. ¿Qué es un «chipote»?",
@@ -885264,11 +885321,20 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "ice cubes in towel",
+        "query": "ice pack on forehead",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScene_from_the_Ladies%27_Cooling_Room_%286eb89b9b-5083-405c-82c4-4463a3ab3080%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Scene_from_the_Ladies%27_Cooling_Room_%286eb89b9b-5083-405c-82c4-4463a3ab3080%29.jpg/3840px-Scene_from_the_Ladies%27_Cooling_Room_%286eb89b9b-5083-405c-82c4-4463a3ab3080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "NPS Photo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NPS Photo",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NPS"
+        ]
       },
       "fun_fact": "El chipote chillón suena «¡chuic!» en cada golpe, pero no lastima a nadie de verdad.",
       "subcategory": "chespirito",
@@ -885293,22 +885359,46 @@
         "difficulty_estimate": 4,
         "notes": "Good regional vocabulary question. 'Se levanta en la cabeza' does most of the work, so it's probably easier than 6. The ice-pack image is fine."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "All six candidates are ice-hockey photos (players, rinks, the Stanley Cup). None has anything to do with a bump on the head, an ice pack or the Chapulín's world, so even a blurred decorative image doesn't fit. A new search isn't allowed, so the slot needs a new search by hand, for example \"ice pack on forehead\" or \"toy squeaky hammer\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All six candidates are ice-hockey photos (players, rinks, the Stanley Cup). None has anything to do with a bump on the head, an ice pack or the Chapulín's world, so even a blurred decorative image doesn't fit. A new search isn't allowed, so the slot needs a new search by hand, for example \"ice pack on forehead\" or \"toy squeaky hammer\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "All the image candidates were ice-hockey photos, so I changed the decorative query to an ice pack on a forehead.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "ice cubes in towel",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11447",
@@ -886613,7 +886703,7 @@
     },
     {
       "id": "q-11464",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Capas brillantes, botas altas y máscaras de todos los colores: así se viste un ídolo del ring.",
       "question": "Muchos luchadores mexicanos, como El Santo, pasaron casi toda su carrera sin quitarse la máscara. ¿Para qué la usaban?",
@@ -886625,8 +886715,8 @@
       ],
       "hints": [
         "Los héroes de los cómics a veces viven dos vidas.",
-        "Como los superhéroes que no quieren que sepan su nombre.",
-        "Nadie debía ver su verdadero rostro."
+        "Fuera del ring podían caminar por la calle como cualquier vecino.",
+        "Como los superhéroes, nadie debía ver su verdadero rostro ni saber su nombre."
       ],
       "media": {
         "type": "image",
@@ -886671,26 +886761,32 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Como los superhéroes que no quieren que sepan su nombre\") restates the answer, so it gives it away before hint 3. Hint 3 (\"Nadie debía ver su verdadero rostro\") is actually weaker than hint 2, so the hints don't build from vague to strong. Fix: make hint 2 vaguer (for example about a luchador's life outside the ring) and keep the near-answer for hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Como los superhéroes que no quieren que sepan su nombre\") restates the answer, so it gives it away before hint 3. Hint 3 (\"Nadie debía ver su verdadero rostro\") is actually weaker than hint 2, so the hints don't build from vague to strong. Fix: make hint 2 vaguer (for example about a luchador's life outside the ring) and keep the near-answer for hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed 'misterio' from the description and 'secreto' from hint 1, and softened the claim since El Santo partly unmasked in 1984.",
+        "reason": "Hint 2 gave the answer away, so I made it vaguer and moved the near-answer to hint 3.",
         "previous": {
-          "description": "El misterio más grande del ring está justo en la cara.",
-          "question": "Muchos luchadores mexicanos, como El Santo, nunca se quitaban la máscara en público. ¿Para qué la usaban?",
           "hints": [
-            "Tiene que ver con un secreto.",
+            "Los héroes de los cómics a veces viven dos vidas.",
             "Como los superhéroes que no quieren que sepan su nombre.",
             "Nadie debía ver su verdadero rostro."
           ]
@@ -887320,18 +887416,18 @@
         "role": "illustrative",
         "query": "elephant figurine",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AElephant_Figurine%2C_Neihua%2C_Tongshan_County.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Elephant_Figurine%2C_Neihua%2C_Tongshan_County.jpg/3840px-Elephant_Figurine%2C_Neihua%2C_Tongshan_County.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Huanokinhejo · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFigurine_%C3%A9l%C3%A9phant-Bafou_%28Cameroun%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Figurine_%C3%A9l%C3%A9phant-Bafou_%28Cameroun%29.jpg/3840px-Figurine_%C3%A9l%C3%A9phant-Bafou_%28Cameroun%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ji-Elle · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Huanokinhejo",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Huanokinhejo&action=edit&redlink=1",
+        "author": "Ji-Elle",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ji-Elle",
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "La creencia dice que el elefante debe ir con la trompa hacia arriba y, según muchos, de espaldas a la puerta, como si «recibiera» lo que entra.",
+      "fun_fact": "Según la creencia, la trompa del elefante debe ir hacia arriba: con la trompa hacia abajo, dicen, no trae la misma suerte.",
       "subcategory": "folk-beliefs",
       "style": null,
       "concept": "Elefante de la buena suerte",
@@ -887359,26 +887455,32 @@
       "batch": "batch-35",
       "review": {
         "decision": "needs_work",
-        "feedback": "The fun fact contradicts itself: an elephant \"de espaldas a la puerta\" can't be \"como si «recibiera» lo que entra\". Sources disagree on which way it should face, and the fact check is uncertain. Rewrite the fun fact without the door direction, or have it face the door to \"receive\" good luck. Keep only the trunk-up detail if you're unsure. Verificación de datos: uncertain. The answer (money and abundance) is fine, but the fun fact contradicts itself. An elephant with its back to the door can't 'receive' what comes in. Folk tradition usually says it should face the door, and sources disagree. The 'history' lens also looks odd for this question.",
+        "feedback": "Verificación de datos: uncertain. The elephant figurine with its trunk up is usually said to bring luck and prosperity in general. 'Money and abundance' is a common reading but not the only one. The 'history' lens is odd.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact contradicts itself: an elephant \"de espaldas a la puerta\" can't be \"como si «recibiera» lo que entra\". Sources disagree on which way it should face, and the fact check is uncertain. Rewrite the fun fact without the door direction, or have it face the door to \"receive\" good luck. Keep only the trunk-up detail if you're unsure. Verificación de datos: uncertain. The answer (money and abundance) is fine, but the fun fact contradicts itself. An elephant with its back to the door can't 'receive' what comes in. Folk tradition usually says it should face the door, and sources disagree. The 'history' lens also looks odd for this question.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the coins from hint 2 so it no longer gives away money.",
+        "reason": "The fun fact contradicted itself about the door, so I rewrote it to keep only the trunk-up detail.",
         "previous": {
-          "hints": [
-            "Es muy común verlo en tienditas y en la caja de los negocios.",
-            "Muchas veces lo adornan con un listón rojo y unas monedas.",
-            "A los comerciantes les interesa mucho que llegue esto."
-          ]
+          "fun_fact": "La creencia dice que el elefante debe ir con la trompa hacia arriba y, según muchos, de espaldas a la puerta, como si «recibiera» lo que entra."
         },
         "revised_on": "2026-11-05"
       }
@@ -888821,7 +888923,7 @@
     },
     {
       "id": "q-11494",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una temporada con dos capítulos, como las telenovelas que nunca se acaban.",
       "question": "Terminó el Apertura en diciembre y en enero arranca el otro torneo de la temporada de la Liga MX. ¿Cómo se llama?",
@@ -888879,15 +888981,23 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Related draft q-11495 (Matías Almeyda) literally says \"la final del Clausura\", so a player who sees it first gets this question's answer for free. Reword q-11495 (e.g. \"la final del torneo de 2017\" or \"la final de liga de 2017\") and this question can go in as it is.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Related draft q-11495 (Matías Almeyda) literally says \"la final del Clausura\", so a player who sees it first gets this question's answer for free. Reword q-11495 (e.g. \"la final del torneo de 2017\" or \"la final de liga de 2017\") and this question can go in as it is.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null
@@ -889850,10 +889960,10 @@
     },
     {
       "id": "q-11507",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Para cantar bajo un balcón hace falta una voz de terciopelo y un chal por si refresca.",
-      "question": "¿Qué cantante, conocido como «El Lujo de México», fue la primera voz de Los Tres Ases?",
+      "question": "¿Qué cantante, conocido como «El Lujo de México», integró el trío Los Tres Ases antes de su carrera solista?",
       "answer": "Marco Antonio Muñiz",
       "wrong_answers": [
         "Javier Solís",
@@ -889862,7 +889972,7 @@
       ],
       "hints": [
         "Es un bolerista cuya carrera despegó en los años cincuenta y sesenta.",
-        "Antes de su carrera solista cantó en un famoso trío de los años cincuenta.",
+        "Nació en Jalisco en los años treinta.",
         "Hizo famosa la canción «Luz y sombra»."
       ],
       "media": {
@@ -889904,33 +890014,40 @@
         "difficulty_estimate": 12,
         "notes": "Hint 3 literally contains 'Marco Antonio', most of the answer, so it gives the answer away. Hint 1 (born in Guadalajara) already rules out the other three. The serenata scenario is padding and adds nothing to the clue. Manzanero was not a trio singer, so he is a weaker distractor."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says Marco Antonio Muñiz was the \"primera voz\" of Los Tres Ases. The fact check marks this wrong: Juan Neri was the trio's first voice, requinto player and director, and Muñiz sang third and lead voice until 1960. Reword it to say he was a member of Los Tres Ases before going solo, for example \"¿Qué cantante, conocido como «El Lujo de México», integró el trío Los Tres Ases antes de su carrera solista?\". Verificación de datos: wrong. The question says Muñiz was the first voice (primera voz) of Los Tres Ases. Juan Neri was the first voice, requinto player and director. Muñiz joined in the 1950s, sang third and lead voice, and left in 1960 to go solo.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says Marco Antonio Muñiz was the \"primera voz\" of Los Tres Ases. The fact check marks this wrong: Juan Neri was the trio's first voice, requinto player and director, and Muñiz sang third and lead voice until 1960. Reword it to say he was a member of Los Tres Ases before going solo, for example \"¿Qué cantante, conocido como «El Lujo de México», integró el trío Los Tres Ases antes de su carrera solista?\". Verificación de datos: wrong. The question says Muñiz was the first voice (primera voz) of Los Tres Ases. Juan Neri was the first voice, requinto player and director. Muñiz joined in the 1950s, sang third and lead voice, and left in 1960 to go solo.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the serenata setup, replaced the birthplace hint and the name-revealing hint 3, and moved the birthplace to the fun fact.",
+        "reason": "Muñiz was not the trio's first voice, so the question now says he was a member before going solo, and hint 2 no longer repeats that.",
         "previous": {
-          "question": "Estás en una serenata con trío y piden canciones de «El Lujo de México», que fue la voz de Los Tres Ases. ¿Quién es?",
+          "question": "¿Qué cantante, conocido como «El Lujo de México», fue la primera voz de Los Tres Ases?",
           "hints": [
-            "Es un bolerista nacido en Guadalajara, Jalisco.",
+            "Es un bolerista cuya carrera despegó en los años cincuenta y sesenta.",
             "Antes de su carrera solista cantó en un famoso trío de los años cincuenta.",
-            "Su nombre empieza igual que el de un famoso general romano: Marco Antonio."
-          ],
-          "fun_fact": "Marco Antonio Muñiz hizo popular «Luz y sombra» y grabó durante más de cinco décadas."
+            "Hizo famosa la canción «Luz y sombra»."
+          ]
         },
         "revised_on": "2026-11-05"
       }
@@ -891684,12 +891801,12 @@
       "wrong_answers": [
         "Guadalajara",
         "Monterrey",
-        "Mérida"
+        "Mazatlán"
       ],
       "hints": [
-        "Es una ciudad de playa.",
+        "Es una ciudad que recibe muchísimos turistas.",
         "Está en el estado de Guerrero.",
-        "Es un puerto del Pacífico que en los años cincuenta fue el balneario favorito de las estrellas de cine."
+        "Es famosa por los clavadistas que se lanzan desde los acantilados de La Quebrada."
       ],
       "media": {
         "type": "image",
@@ -891735,25 +891852,40 @@
       "batch": "batch-35",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 (\"Es una ciudad de playa\") gives the answer away: Acapulco is the only coastal city among the options, since Guadalajara, Monterrey and Mérida are all inland. The surf clue in the question already points the same way. Hint 1 needs a clue that doesn't tell the coastal city apart, and ideally one wrong answer should be a beach city (e.g. Mazatlán or Cancún) so the surf clue doesn't rule out the other three.",
+        "feedback": "Hint 3 is the whole fact of approved question q-10395: La Quebrada cliff divers → Acapulco. Anyone who plays this question and opens hint 3 gets q-10395's answer. Replace hint 3 with another strong Acapulco clue, for example the Pacific bay and port in Guerrero that has been a famous resort since the 1950s, without La Quebrada or the divers.",
         "problems": [
-          "giveaway"
+          "overlap"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"Es una ciudad de playa\") gives the answer away: Acapulco is the only coastal city among the options, since Guadalajara, Monterrey and Mérida are all inland. The surf clue in the question already points the same way. Hint 1 needs a clue that doesn't tell the coastal city apart, and ideally one wrong answer should be a beach city (e.g. Mazatlán or Cancún) so the surf clue doesn't rule out the other three.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3 about La Quebrada (the answer of a related question) with a hint about the Pacific resort of film stars.",
+        "reason": "I swapped Mérida for the beach city Mazatlán so the surf clue doesn't rule out the other options, and replaced the giveaway first hint.",
         "previous": {
+          "wrong_answers": [
+            "Guadalajara",
+            "Monterrey",
+            "Mérida"
+          ],
           "hints": [
             "Es una ciudad de playa.",
             "Está en el estado de Guerrero.",
-            "Es famosa por los clavadistas de La Quebrada."
+            "Es un puerto del Pacífico que en los años cincuenta fue el balneario favorito de las estrellas de cine."
           ]
         },
         "revised_on": "2026-11-05"
@@ -894701,7 +894833,7 @@
     },
     {
       "id": "q-11571",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Para esta danza no bastan los buenos pies: también hace falta buen estómago.",
       "question": "¿Qué danza de la Sierra Norte de Puebla es famosa por terminar con cuatro danzantes girando en una gran cruz de madera vertical, como rueda de la fortuna?",
@@ -894755,19 +894887,27 @@
         "difficulty_estimate": 14,
         "notes": "The Huahuas/Guaguas spin on a vertical cross, which is correct, but the detail is obscure even for most Mexican adults. Most people would answer Voladores, so the question works mainly as a trap. The long question text is near the length limit."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. I did not search for this one. From memory, the Huahuas dance of Cuetzalan ends on a rotating cross, but I could not verify that detail or the hints.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. I did not search for this one. From memory, the Huahuas dance of Cuetzalan ends on a rotating cross, but I could not verify that detail or the hints.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
@@ -894967,7 +895107,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Mexico City metro empty platform tracks",
+        "query": "Mexico City Metro station platform",
         "note": "Foto clara del andén vacío de una estación del Metro de la CDMX, con la plataforma y las vías visibles; sin ningún tren ni vagón en la imagen y sin letreros que digan «andén».",
         "source_url": null,
         "file_url": null,
@@ -895001,22 +895141,40 @@
       "batch": "batch-35",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the four image candidates shows a metro platform. 1 and 2 are animated railway maps of French departments, and 3 and 4 are ESA satellite views of New Orleans and the Mississippi delta. The essential image has to be a clear photo of an empty CDMX Metro platform, with no train and no 'andén' sign. Another search isn't allowed here, so the image needs to be found by hand (try something like 'Metro CDMX andén' or 'Mexico City Metro station platform' on Commons). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the four image candidates shows a metro platform. 1 and 2 are animated railway maps of French departments, and 3 and 4 are ESA satellite views of New Orleans and the Mississippi delta. The essential image has to be a clear photo of an empty CDMX Metro platform, with no train and no 'andén' sign. Another search isn't allowed here, so the image needs to be found by hand (try something like 'Metro CDMX andén' or 'Mexico City Metro station platform' on Commons). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer describes waiting at the platform edge.",
+        "reason": "Changed the media query to find a real CDMX Metro platform photo, since none of the candidates showed one.",
         "previous": {
-          "description": "El lugar donde todos esperan muy cerca de la línea amarilla."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Mexico City metro empty platform tracks",
+            "note": "Foto clara del andén vacío de una estación del Metro de la CDMX, con la plataforma y las vías visibles; sin ningún tren ni vagón en la imagen y sin letreros que digan «andén».",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -895619,7 +895777,7 @@
     },
     {
       "id": "q-11583",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Le pagan por hacer garabatos en el periódico, y encima la gente se ríe.",
       "question": "Completa: en México, a quien dibuja historietas y caricaturas en el periódico se le llama «___».",
@@ -895637,19 +895795,19 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "comic strip drawing pen",
+        "query": "cartoonist drawing ink pen",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFoxy_Grampa_and_grandsons_1906.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Foxy_Grampa_and_grandsons_1906.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_White_Fleet_return2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Great_White_Fleet_return2.jpg/3840px-Great_White_Fleet_return2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "William Allen Rogers · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "The artist is en:Carl E. Schultze who used the pen name Bunny and signed his comic strips with that name.",
-        "author_url": "https://en.wikipedia.org/wiki/Carl_E._Schultze",
+        "author": "William Allen Rogers",
+        "author_url": "https://en.wikipedia.org/wiki/en:William_Allen_Rogers",
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-old-auto-expired"
         ]
       },
       "fun_fact": "Rius, uno de los moneros más famosos de México, publicó más de cien libros llenos de monitos.",
@@ -895679,27 +895837,48 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vague (political humour) and moved the 'monitos' etymology to hint 3, replacing the 'mon…' giveaway.",
+        "reason": "Changed the media query to replace the US-only public-domain image.",
         "previous": {
-          "hints": [
-            "La palabra viene de cómo se les dice en México a los dibujitos de las historietas.",
-            "Rius, Naranjo y El Fisgón son famosos con este oficio.",
-            "Empieza con «mon…»."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "comic strip drawing pen",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AFoxy_Grampa_and_grandsons_1906.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Foxy_Grampa_and_grandsons_1906.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "The artist is en:Carl E. Schultze who used the pen name Bunny and signed his comic strips with that name.",
+            "author_url": "https://en.wikipedia.org/wiki/Carl_E._Schultze",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -896167,7 +896346,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "ancient stone labyrinth ruins",
+        "query": "old stone maze garden",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -896201,17 +896380,43 @@
       "batch": "batch-35",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine (three tasks: the toad, the Pale Man's key and the brother's blood; the Doug Jones fact is correct), but none of the media candidates shows a stone labyrinth or anything from the film's world, and no new search is allowed. The slot needs a new search, for example \"stone hedge labyrinth\" or \"old stone maze garden\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine (three tasks: the toad, the Pale Man's key and the brother's blood; the Doug Jones fact is correct), but none of the media candidates shows a stone labyrinth or anything from the film's world, and no new search is allowed. The slot needs a new search, for example \"stone hedge labyrinth\" or \"old stone maze garden\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to find a stone maze, since no candidate fit.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "ancient stone labyrinth ruins",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11591",
@@ -896357,7 +896562,7 @@
     },
     {
       "id": "q-11593",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un santo con mucho trabajo: cuida la caja registradora de media ciudad.",
       "question": "En muchos negocios de México cuelgan una herradura de la suerte con la imagen de un santo para que lleguen clientes. ¿Qué santo es?",
@@ -896375,11 +896580,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "lucky horseshoe wall",
+        "query": "old horseshoe amulet",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHorseshoe_for_luck.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Horseshoe_for_luck.jpg/3840px-Horseshoe_for_luck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Przemek P · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Przemek P",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Según la leyenda, San Martín partió su capa a la mitad con su espada para dársela a un hombre que pasaba frío.",
       "subcategory": "folk-beliefs",
@@ -896408,27 +896620,39 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates works. 1–4 show a French château, a heron and English weirs. 6 is a Moscow garage plaque. 5 does show a horseshoe, but it's on the Route 91 shooting memorial in Las Vegas, with a US flag and a Chicago fire badge, which doesn't fit the topic or the tone. No new search is allowed, so this needs a manual media search, e.g. \"San Martín Caballero herradura\" or \"Mexican shop horseshoe amulet\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates works. 1–4 show a French château, a heron and English weirs. 6 is a Moscow garage plaque. 5 does show a horseshoe, but it's on the Route 91 shooting memorial in Las Vegas, with a US flag and a Chicago fire badge, which doesn't fit the topic or the tone. No new search is allowed, so this needs a manual media search, e.g. \"San Martín Caballero herradura\" or \"Mexican shop horseshoe amulet\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave away the 'Caballero' part of the answer, with the saint's feast day.",
+        "reason": "Changed the media query to a plain horseshoe amulet with no saint's image, which would give the answer away.",
         "previous": {
-          "hints": [
-            "Es el santo de los comerciantes en México.",
-            "Se le pinta montado en su caballo.",
-            "Fue un soldado romano que llegó a ser obispo de Tours, en Francia."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "lucky horseshoe wall",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -898101,7 +898325,7 @@
     },
     {
       "id": "q-11616",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un oro de 1984 que todavía se presume en las sobremesas mexicanas.",
       "question": "Ernesto Canto fue campeón mundial en 1983, rompió el récord mundial en 1984 y ese año ganó oro en Los Ángeles. ¿En qué prueba?",
@@ -898113,7 +898337,7 @@
       ],
       "hints": [
         "Su prueba se disputa por las calles, no dando vueltas en la pista.",
-        "En los mismos Juegos, otro mexicano ganó oro en una distancia más larga de la misma prueba.",
+        "Es una prueba en la que México ha ganado muchas medallas olímpicas.",
         "En su prueba siempre debe haber un pie tocando el suelo, y es la más corta de las dos que hubo."
       ],
       "media": {
@@ -898159,18 +898383,38 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It says another Mexican won gold in \"a longer distance of the same event\", and among the options only the walk comes in two distances. So hint 2 rules out the marathon and the 10 000 m, and it also tells players Canto's race was the shorter one: the 20 km. Hint 2 should be replaced with a vaguer clue, for example about the 1983 Helsinki world title or Mexico's walking tradition, and should not mention a longer version of his event.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It says another Mexican won gold in \"a longer distance of the same event\", and among the options only the walk comes in two distances. So hint 2 rules out the marathon and the 10 000 m, and it also tells players Canto's race was the shorter one: the 20 km. Hint 2 should be replaced with a vaguer clue, for example about the 1983 Helsinki world title or Mexico's walking tradition, and should not mention a longer version of his event.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which gave away the 20 km walk, with a vaguer clue about Mexico's medal tradition in the event.",
+        "previous": {
+          "hints": [
+            "Su prueba se disputa por las calles, no dando vueltas en la pista.",
+            "En los mismos Juegos, otro mexicano ganó oro en una distancia más larga de la misma prueba.",
+            "En su prueba siempre debe haber un pie tocando el suelo, y es la más corta de las dos que hubo."
+          ]
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11617",
@@ -898460,7 +898704,7 @@
     },
     {
       "id": "q-11621",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Los famosos no tienen nombre, tienen título nobiliario de farándula.",
       "question": "¿Con qué apodo conocen a la cantante Lucero desde hace décadas?",
@@ -898471,7 +898715,7 @@
         "La Reina del Tex-Mex"
       ],
       "hints": [
-        "«La Chica Dorada» es Paulina Rubio; el de Lucero es otro.",
+        "Lucero empezó a cantar y actuar de niña, y el apodo la acompaña desde muy joven.",
         "Es un apodo cariñoso que le pusieron sus fans y la prensa.",
         "Es como decir que todo un continente quiere casarse con ella."
       ],
@@ -898480,14 +898724,14 @@
         "role": "decorative",
         "query": "concert spotlight empty stage",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStage_in_sight_from_everywhere.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Stage_in_sight_from_everywhere.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Rita stirn · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMy_Chemical_Romance_%40_Wembley_Stadium%2C_11_July_2026_B-Stage_Post-Show.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/My_Chemical_Romance_%40_Wembley_Stadium%2C_11_July_2026_B-Stage_Post-Show.jpg/3840px-My_Chemical_Romance_%40_Wembley_Stadium%2C_11_July_2026_B-Stage_Post-Show.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Hullian111 · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Rita stirn",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rita_stirn&action=edit&redlink=1",
+        "author": "Hullian111",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hullian111",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -898518,30 +898762,33 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 says outright that «La Chica Dorada» is Paulina Rubio, which is the fact draft q-11546 asks for (\"…me dicen “La Chica Dorada”. ¿Quién soy?\" → Paulina Rubio). So this question gives away that one. Replace hint 1 with a vague hint that doesn't name any other singer's nickname, for example one about how long Lucero has carried the nickname or her career as a child star.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 says outright that «La Chica Dorada» is Paulina Rubio, which is the fact draft q-11546 asks for (\"…me dicen “La Chica Dorada”. ¿Quién soy?\" → Paulina Rubio). So this question gives away that one. Replace hint 1 with a vague hint that doesn't name any other singer's nickname, for example one about how long Lucero has carried the nickname or her career as a child star.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the continent hint with a vague one and swapped the defensible telenovela distractor for Selena's nickname.",
+        "reason": "Replaced hint 1, which revealed Paulina Rubio's nickname (the answer to another question), with a vague clue about Lucero's career.",
         "previous": {
-          "wrong_answers": [
-            "La Chica Dorada",
-            "La Diva de la Banda",
-            "La Reina de las Telenovelas"
-          ],
           "hints": [
             "«La Chica Dorada» es Paulina Rubio; el de Lucero es otro.",
-            "Su apodo abarca un continente entero.",
+            "Es un apodo cariñoso que le pusieron sus fans y la prensa.",
             "Es como decir que todo un continente quiere casarse con ella."
           ]
         },
@@ -899573,7 +899820,7 @@
     },
     {
       "id": "q-11636",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Un personaje que lleva décadas haciendo reír a México sin cobrar un solo peso.",
       "question": "Sus chistes se cuentan en todo México, pasan de abuelos a nietos y casi siempre lo meten en problemas. ¿Quién es Pepito?",
@@ -899591,11 +899838,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "school classroom chalkboard",
+        "query": "family laughing together table",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADSC_7089_Three_friends_laugh_and_toast_over_drinks_during_a_lively_evening_dinner_at_a_cozy_plant-filled_restaurant.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/DSC_7089_Three_friends_laugh_and_toast_over_drinks_during_a_lively_evening_dinner_at_a_cozy_plant-filled_restaurant.jpg/3840px-DSC_7089_Three_friends_laugh_and_toast_over_drinks_during_a_lively_evening_dinner_at_a_cozy_plant-filled_restaurant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En otros países existe un niño parecido: en España se llama Jaimito y en Italia, Pierino.",
       "subcategory": "slang",
@@ -899624,28 +899878,40 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Every candidate is a school classroom with a chalkboard, which points straight at the answer \"Un niño travieso de la escuela\", even blurred. None of the other options (dog, grandpa, clown) has anything to do with a classroom. The slot needs a neutral decorative image, such as a family get-together or people laughing, and no new search was allowed this round. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Every candidate is a school classroom with a chalkboard, which points straight at the answer \"Un niño travieso de la escuela\", even blurred. None of the other options (dog, grandpa, clown) has anything to do with a classroom. The slot needs a neutral decorative image, such as a family get-together or people laughing, and no new search was allowed this round. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they don't mention school; the teacher hint moved to hint 3.",
+        "reason": "Changed the decorative media query from a classroom (which pointed to the answer) to a neutral scene of people laughing.",
         "previous": {
-          "hints": [
-            "Va a la primaria.",
-            "Muchos de sus chistes empiezan con «La maestra le pregunta…».",
-            "Siempre contesta algo que nadie espera y se gana un regaño."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "school classroom chalkboard",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -900630,20 +900896,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "graduation ceremony caps gowns",
+        "query": "graduation caps thrown air",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGraduation_%28UHPC_6212%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Graduation_%28UHPC_6212%29.jpg/3840px-Graduation_%28UHPC_6212%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Unknown photographer · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown photographer",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "En México hasta los niños de kínder tienen graduación con toga y birrete.",
       "subcategory": "school-and-services",
@@ -900673,26 +900930,49 @@
       "batch": "batch-35",
       "review": {
         "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the baptism hint, which pointed to 'padrino', with a vaguer one.",
+        "reason": "Changed the media query to replace the US-only public-domain image.",
         "previous": {
-          "hints": [
-            "No soy alumno.",
-            "Me llaman igual que a quien te acompaña en un bautizo.",
-            "Me toca 'apadrinar' a toda la generación."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "graduation ceremony caps gowns",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGraduation_%28UHPC_6212%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Graduation_%28UHPC_6212%29.jpg/3840px-Graduation_%28UHPC_6212%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Unknown photographer · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown photographer",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -900770,10 +901050,10 @@
     },
     {
       "id": "q-11652",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Las filas más madrugadoras de la colonia, con bolsa y tarjeta en mano.",
-      "question": "¿Qué producto vende Liconsa a bajo precio a millones de familias mexicanas?",
+      "question": "Durante décadas, Liconsa ha vendido a bajo precio un producto a millones de familias mexicanas. ¿Cuál?",
       "answer": "Leche",
       "wrong_answers": [
         "Tortillas",
@@ -900782,7 +901062,7 @@
       ],
       "hints": [
         "Se vende en sus propias tienditas, en bolsa.",
-        "Es buena para los huesos de los niños.",
+        "Las familias inscritas reciben una tarjeta para comprar cada semana su dotación.",
         "Sus puntos de venta se llaman lecherías."
       ],
       "media": {
@@ -900828,18 +901108,39 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Es buena para los huesos de los niños\") gives the answer away among tortillas, frijol and huevo, because calcium for bones is milk's defining trait. Replace it with a vaguer clue, for example about the government programme or who can sign up for it. Also worth checking: in 2025 Liconsa was rebranded as \"Leche para el Bienestar\". Consider mentioning that, or wording the question so it doesn't depend on the current brand name.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Es buena para los huesos de los niños\") gives the answer away among tortillas, frijol and huevo, because calcium for bones is milk's defining trait. Replace it with a vaguer clue, for example about the government programme or who can sign up for it. Also worth checking: in 2025 Liconsa was rebranded as \"Leche para el Bienestar\". Consider mentioning that, or wording the question so it doesn't depend on the current brand name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which gave the answer away, with a clue about the programme's card, and reworded the question so it still holds after the 2025 rebrand.",
+        "previous": {
+          "question": "¿Qué producto vende Liconsa a bajo precio a millones de familias mexicanas?",
+          "hints": [
+            "Se vende en sus propias tienditas, en bolsa.",
+            "Es buena para los huesos de los niños.",
+            "Sus puntos de venta se llaman lecherías."
+          ]
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11653",
@@ -902151,10 +902452,10 @@
     },
     {
       "id": "q-11670",
-      "status": "needs_work",
-      "difficulty": 12,
+      "status": "approved",
+      "difficulty": 11,
       "description": "Un equipo con nombre de ave muy platicadora.",
-      "question": "Mira el contorno de este estado: su equipo de béisbol son los Pericos. ¿Qué estado es?",
+      "question": "El equipo de béisbol de este estado se llama los Pericos. ¿Qué estado es?",
       "answer": "Puebla",
       "wrong_answers": [
         "Tlaxcala",
@@ -902168,12 +902469,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Puebla in Mexico map",
-        "note": "Contorno del estado de Puebla solo, sin nombres ni etiquetas.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "green parrot perched",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreen_parrot_with_orange_beak_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Green_parrot_with_orange_beak_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Sven Scheuermeier sveninho · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Sven Scheuermeier sveninho",
+        "author_url": "https://unsplash.com/@sveninho",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Los Pericos de Puebla juegan en la Liga Mexicana de Béisbol.",
       "subcategory": "state-symbols",
@@ -902199,21 +902507,49 @@
         "notes": "A lone state outline with no labels may be hard to find in the media sources; locator maps are more common. Recognising a state from its outline is pure memorisation. The description just repeats 'Pericos' from the question. Rated 12, but for Mexican players it's more like 10."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image must be a plain outline of the state of Puebla, but no candidate shows one, and I can't search again. The candidates are city photos (cathedral, fountain, bus, park), an old city map labelled 'PUEBLA', and a black satellite tile. Either find a plain outline of the state of Puebla (e.g. 'Puebla state outline blank'), or drop the outline from the wording and use an illustrative image, since the Pericos clue already carries the question. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must be a plain outline of the state of Puebla, but no candidate shows one, and I can't search again. The candidates are city photos (cathedral, fountain, bus, park), an old city map labelled 'PUEBLA', and a black satellite tile. Either find a plain outline of the state of Puebla (e.g. 'Puebla state outline blank'), or drop the outline from the wording and use an illustrative image, since the Pericos clue already carries the question. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 12,
+      "revision": {
+        "action": "revise",
+        "reason": "No plain state outline exists in the sources, so I removed the outline from the wording, switched to an illustrative parrot image and lowered the difficulty slightly.",
+        "previous": {
+          "difficulty": 12,
+          "question": "Mira el contorno de este estado: su equipo de béisbol son los Pericos. ¿Qué estado es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Puebla in Mexico map",
+            "note": "Contorno del estado de Puebla solo, sin nombres ni etiquetas.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11671",
@@ -904117,7 +904453,7 @@
     },
     {
       "id": "q-11696",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "¡Fíjate, fíjate, fíjate! Esta pregunta es de la vecindad más famosa de la tele.",
       "question": "La Chilindrina, de «El Chavo del 8», es hija de don Ramón, tiene pecas y se peina con dos coletas. ¿Qué lleva siempre en la cara?",
@@ -904128,8 +904464,8 @@
         "Una nariz de payaso"
       ],
       "hints": [
-        "Es algo que se usa para ver mejor.",
-        "Son grandes y tienen armazón.",
+        "Es tan parte de su look como sus coletas.",
+        "No es un disfraz: lo lleva en todos los capítulos.",
         "Se apoyan en la nariz y en las orejas."
       ],
       "media": {
@@ -904175,18 +904511,38 @@
       "needs_media": false,
       "batch": "batch-35",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"Es algo que se usa para ver mejor\") gives the answer away: of the four options only the glasses help you see. Hint 2 (\"tienen armazón\") does too. Hint 1 should be vague, for example about her look or her character, and hint 2 should not describe glasses directly.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"Es algo que se usa para ver mejor\") gives the answer away: of the four options only the glasses help you see. Hint 2 (\"tienen armazón\") does too. Hint 1 should be vague, for example about her look or her character, and hint 2 should not describe glasses directly.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote hints 1 and 2 so they no longer describe glasses directly and give away the answer.",
+        "previous": {
+          "hints": [
+            "Es algo que se usa para ver mejor.",
+            "Son grandes y tienen armazón.",
+            "Se apoyan en la nariz y en las orejas."
+          ]
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11697",
@@ -904504,7 +904860,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "pile of gift boxes",
+        "query": "wrapped gift boxes",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -904538,26 +904894,40 @@
       "batch": "batch-35",
       "review": {
         "decision": "needs_work",
-        "feedback": "No image candidate is adequate: 1–2 are 1917 archival scans of soldiers' Christmas packets with typed catalogue labels, 3–5 are historical cartoons/prints/text pages, 6 is a Comic-Con panel. A new search (e.g. \"wrapped gift boxes\") is needed; the question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No image candidate is adequate: 1–2 are 1917 archival scans of soldiers' Christmas packets with typed catalogue labels, 3–5 are historical cartoons/prints/text pages, 6 is a Comic-Con panel. A new search (e.g. \"wrapped gift boxes\") is needed; the question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away against the everyday-word distractors.",
+        "reason": "Only the media query changed, to find a usable modern gift-box photo; the question text is fine.",
         "previous": {
-          "hints": [
-            "Es una palabra que casi solo existe gracias a ese programa.",
-            "Podías ganar un carro… o un montón de jabones.",
-            "Empieza con «cata»."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "pile of gift boxes",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
