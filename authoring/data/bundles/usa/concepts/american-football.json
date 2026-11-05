@@ -1,0 +1,1047 @@
+{
+  "subcategory": "american-football",
+  "facets": [
+    "Rules and scoring",
+    "Positions and plays",
+    "NFL teams and mascots",
+    "Legendary players",
+    "Famous coaches and trophies",
+    "The Super Bowl",
+    "College football and bowl games",
+    "Equipment and the field",
+    "Football words and slang",
+    "Game day traditions",
+    "History of the game",
+    "Football in movies and TV"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 3
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Touchdown",
+      "facet": "Rules and scoring",
+      "known_at": 2
+    },
+    {
+      "name": "Field goal",
+      "facet": "Rules and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Extra point",
+      "facet": "Rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Two-point conversion",
+      "facet": "Rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Safety (scoring)",
+      "facet": "Rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "First down",
+      "facet": "Rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Fumble",
+      "facet": "Rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Interception",
+      "facet": "Rules and scoring",
+      "known_at": 6
+    },
+    {
+      "name": "Holding",
+      "facet": "Rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "Pass interference",
+      "facet": "Rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Offside",
+      "facet": "Rules and scoring",
+      "known_at": 9
+    },
+    {
+      "name": "False start",
+      "facet": "Rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Delay of game",
+      "facet": "Rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Overtime",
+      "facet": "Rules and scoring",
+      "known_at": 5
+    },
+    {
+      "name": "Touchback",
+      "facet": "Rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Two-minute warning",
+      "facet": "Rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Fair catch",
+      "facet": "Rules and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Coach's challenge",
+      "facet": "Rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Roughing the passer",
+      "facet": "Rules and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Four downs",
+      "facet": "Rules and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Quarterback",
+      "facet": "Positions and plays",
+      "known_at": 3
+    },
+    {
+      "name": "Running back",
+      "facet": "Positions and plays",
+      "known_at": 6
+    },
+    {
+      "name": "Wide receiver",
+      "facet": "Positions and plays",
+      "known_at": 6
+    },
+    {
+      "name": "Tight end",
+      "facet": "Positions and plays",
+      "known_at": 8
+    },
+    {
+      "name": "Offensive line",
+      "facet": "Positions and plays",
+      "known_at": 8
+    },
+    {
+      "name": "Center",
+      "facet": "Positions and plays",
+      "known_at": 8
+    },
+    {
+      "name": "Linebacker",
+      "facet": "Positions and plays",
+      "known_at": 7
+    },
+    {
+      "name": "Cornerback",
+      "facet": "Positions and plays",
+      "known_at": 9
+    },
+    {
+      "name": "Kicker",
+      "facet": "Positions and plays",
+      "known_at": 4
+    },
+    {
+      "name": "Punter",
+      "facet": "Positions and plays",
+      "known_at": 7
+    },
+    {
+      "name": "Long snapper",
+      "facet": "Positions and plays",
+      "known_at": 12
+    },
+    {
+      "name": "Snap",
+      "facet": "Positions and plays",
+      "known_at": 7
+    },
+    {
+      "name": "Sack",
+      "facet": "Positions and plays",
+      "known_at": 7
+    },
+    {
+      "name": "Blitz",
+      "facet": "Positions and plays",
+      "known_at": 9
+    },
+    {
+      "name": "Punt",
+      "facet": "Positions and plays",
+      "known_at": 6
+    },
+    {
+      "name": "Onside kick",
+      "facet": "Positions and plays",
+      "known_at": 10
+    },
+    {
+      "name": "Hail Mary pass",
+      "facet": "Positions and plays",
+      "known_at": 8
+    },
+    {
+      "name": "Quarterback sneak",
+      "facet": "Positions and plays",
+      "known_at": 11
+    },
+    {
+      "name": "Shotgun formation",
+      "facet": "Positions and plays",
+      "known_at": 11
+    },
+    {
+      "name": "Play-action pass",
+      "facet": "Positions and plays",
+      "known_at": 12
+    },
+    {
+      "name": "Screen pass",
+      "facet": "Positions and plays",
+      "known_at": 12
+    },
+    {
+      "name": "New England Patriots",
+      "facet": "NFL teams and mascots",
+      "known_at": 5
+    },
+    {
+      "name": "San Francisco 49ers",
+      "facet": "NFL teams and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Chicago Bears",
+      "facet": "NFL teams and mascots",
+      "known_at": 4
+    },
+    {
+      "name": "New York Giants",
+      "facet": "NFL teams and mascots",
+      "known_at": 5
+    },
+    {
+      "name": "Baltimore Ravens",
+      "facet": "NFL teams and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Buffalo Bills",
+      "facet": "NFL teams and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Cleveland Browns",
+      "facet": "NFL teams and mascots",
+      "known_at": 7
+    },
+    {
+      "name": "New Orleans Saints",
+      "facet": "NFL teams and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Tampa Bay Buccaneers",
+      "facet": "NFL teams and mascots",
+      "known_at": 6
+    },
+    {
+      "name": "Tom Brady",
+      "facet": "Legendary players",
+      "known_at": 4
+    },
+    {
+      "name": "Patrick Mahomes",
+      "facet": "Legendary players",
+      "known_at": 5
+    },
+    {
+      "name": "Travis Kelce",
+      "facet": "Legendary players",
+      "known_at": 5
+    },
+    {
+      "name": "Jerry Rice",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Joe Montana",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Peyton Manning",
+      "facet": "Legendary players",
+      "known_at": 8
+    },
+    {
+      "name": "Walter Payton",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Jim Brown",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Barry Sanders",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Lawrence Taylor",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Dan Marino",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "John Elway",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Emmitt Smith",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Brett Favre",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Deion Sanders",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Joe Namath",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Johnny Unitas",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "Red Grange",
+      "facet": "Legendary players",
+      "known_at": 14
+    },
+    {
+      "name": "Reggie White",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "Randy Moss",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Ray Lewis",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Vince Lombardi",
+      "facet": "Famous coaches and trophies",
+      "known_at": 10
+    },
+    {
+      "name": "Vince Lombardi Trophy",
+      "facet": "Famous coaches and trophies",
+      "known_at": 8
+    },
+    {
+      "name": "Bill Belichick",
+      "facet": "Famous coaches and trophies",
+      "known_at": 9
+    },
+    {
+      "name": "Don Shula",
+      "facet": "Famous coaches and trophies",
+      "known_at": 12
+    },
+    {
+      "name": "Tom Landry",
+      "facet": "Famous coaches and trophies",
+      "known_at": 13
+    },
+    {
+      "name": "Bill Walsh",
+      "facet": "Famous coaches and trophies",
+      "known_at": 13
+    },
+    {
+      "name": "George Halas",
+      "facet": "Famous coaches and trophies",
+      "known_at": 13
+    },
+    {
+      "name": "Andy Reid",
+      "facet": "Famous coaches and trophies",
+      "known_at": 10
+    },
+    {
+      "name": "Knute Rockne",
+      "facet": "Famous coaches and trophies",
+      "known_at": 13
+    },
+    {
+      "name": "Bear Bryant",
+      "facet": "Famous coaches and trophies",
+      "known_at": 12
+    },
+    {
+      "name": "Nick Saban",
+      "facet": "Famous coaches and trophies",
+      "known_at": 10
+    },
+    {
+      "name": "Mike Ditka",
+      "facet": "Famous coaches and trophies",
+      "known_at": 12
+    },
+    {
+      "name": "Chuck Noll",
+      "facet": "Famous coaches and trophies",
+      "known_at": 14
+    },
+    {
+      "name": "Pete Carroll",
+      "facet": "Famous coaches and trophies",
+      "known_at": 11
+    },
+    {
+      "name": "Pro Football Hall of Fame",
+      "facet": "Famous coaches and trophies",
+      "known_at": 9
+    },
+    {
+      "name": "NFL Most Valuable Player Award",
+      "facet": "Famous coaches and trophies",
+      "known_at": 9
+    },
+    {
+      "name": "Walter Payton Man of the Year Award",
+      "facet": "Famous coaches and trophies",
+      "known_at": 13
+    },
+    {
+      "name": "Super Bowl halftime show",
+      "facet": "The Super Bowl",
+      "known_at": 4
+    },
+    {
+      "name": "Super Bowl Roman numerals",
+      "facet": "The Super Bowl",
+      "known_at": 8
+    },
+    {
+      "name": "Super Bowl ring",
+      "facet": "The Super Bowl",
+      "known_at": 7
+    },
+    {
+      "name": "Super Bowl MVP",
+      "facet": "The Super Bowl",
+      "known_at": 9
+    },
+    {
+      "name": "Puppy Bowl",
+      "facet": "The Super Bowl",
+      "known_at": 5
+    },
+    {
+      "name": "Helmet Catch",
+      "facet": "The Super Bowl",
+      "known_at": 13
+    },
+    {
+      "name": "28–3 comeback",
+      "facet": "The Super Bowl",
+      "known_at": 11
+    },
+    {
+      "name": "Philly Special",
+      "facet": "The Super Bowl",
+      "known_at": 12
+    },
+    {
+      "name": "Joe Namath's guarantee",
+      "facet": "The Super Bowl",
+      "known_at": 13
+    },
+    {
+      "name": "Wide Right",
+      "facet": "The Super Bowl",
+      "known_at": 14
+    },
+    {
+      "name": "Apple 1984 commercial",
+      "facet": "The Super Bowl",
+      "known_at": 12
+    },
+    {
+      "name": "Super Bowl Shuffle",
+      "facet": "The Super Bowl",
+      "known_at": 13
+    },
+    {
+      "name": "Malcolm Butler interception",
+      "facet": "The Super Bowl",
+      "known_at": 13
+    },
+    {
+      "name": "Notre Dame Fighting Irish",
+      "facet": "College football and bowl games",
+      "known_at": 8
+    },
+    {
+      "name": "Alabama Crimson Tide",
+      "facet": "College football and bowl games",
+      "known_at": 8
+    },
+    {
+      "name": "Ohio State Buckeyes",
+      "facet": "College football and bowl games",
+      "known_at": 9
+    },
+    {
+      "name": "Michigan–Ohio State rivalry",
+      "facet": "College football and bowl games",
+      "known_at": 11
+    },
+    {
+      "name": "Touchdown Jesus",
+      "facet": "College football and bowl games",
+      "known_at": 13
+    },
+    {
+      "name": "Michigan Stadium",
+      "facet": "College football and bowl games",
+      "known_at": 11
+    },
+    {
+      "name": "Ralphie the Buffalo",
+      "facet": "College football and bowl games",
+      "known_at": 13
+    },
+    {
+      "name": "Uga the Bulldog",
+      "facet": "College football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "National Signing Day",
+      "facet": "College football and bowl games",
+      "known_at": 12
+    },
+    {
+      "name": "Southeastern Conference",
+      "facet": "College football and bowl games",
+      "known_at": 10
+    },
+    {
+      "name": "The Play (1982)",
+      "facet": "College football and bowl games",
+      "known_at": 14
+    },
+    {
+      "name": "Football helmet",
+      "facet": "Equipment and the field",
+      "known_at": 2
+    },
+    {
+      "name": "Shoulder pads",
+      "facet": "Equipment and the field",
+      "known_at": 4
+    },
+    {
+      "name": "Face mask",
+      "facet": "Equipment and the field",
+      "known_at": 5
+    },
+    {
+      "name": "Goalposts",
+      "facet": "Equipment and the field",
+      "known_at": 3
+    },
+    {
+      "name": "End zone",
+      "facet": "Equipment and the field",
+      "known_at": 5
+    },
+    {
+      "name": "Yard line",
+      "facet": "Equipment and the field",
+      "known_at": 5
+    },
+    {
+      "name": "Fifty-yard line",
+      "facet": "Equipment and the field",
+      "known_at": 6
+    },
+    {
+      "name": "Hash marks",
+      "facet": "Equipment and the field",
+      "known_at": 11
+    },
+    {
+      "name": "Chain crew",
+      "facet": "Equipment and the field",
+      "known_at": 11
+    },
+    {
+      "name": "Kicking tee",
+      "facet": "Equipment and the field",
+      "known_at": 7
+    },
+    {
+      "name": "Mouthguard",
+      "facet": "Equipment and the field",
+      "known_at": 5
+    },
+    {
+      "name": "Eye black",
+      "facet": "Equipment and the field",
+      "known_at": 7
+    },
+    {
+      "name": "Penalty flag",
+      "facet": "Equipment and the field",
+      "known_at": 6
+    },
+    {
+      "name": "Pylon",
+      "facet": "Equipment and the field",
+      "known_at": 11
+    },
+    {
+      "name": "Cleats",
+      "facet": "Equipment and the field",
+      "known_at": 5
+    },
+    {
+      "name": "Football laces",
+      "facet": "Equipment and the field",
+      "known_at": 4
+    },
+    {
+      "name": "AstroTurf",
+      "facet": "Equipment and the field",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow first-down line",
+      "facet": "Equipment and the field",
+      "known_at": 8
+    },
+    {
+      "name": "Gridiron",
+      "facet": "Football words and slang",
+      "known_at": 9
+    },
+    {
+      "name": "Pigskin",
+      "facet": "Football words and slang",
+      "known_at": 7
+    },
+    {
+      "name": "Red zone",
+      "facet": "Football words and slang",
+      "known_at": 9
+    },
+    {
+      "name": "Monday morning quarterback",
+      "facet": "Football words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Audible",
+      "facet": "Football words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Pick-six",
+      "facet": "Football words and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Huddle",
+      "facet": "Football words and slang",
+      "known_at": 5
+    },
+    {
+      "name": "Hut",
+      "facet": "Football words and slang",
+      "known_at": 5
+    },
+    {
+      "name": "Hang time",
+      "facet": "Football words and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Juke",
+      "facet": "Football words and slang",
+      "known_at": 10
+    },
+    {
+      "name": "Garbage time",
+      "facet": "Football words and slang",
+      "known_at": 12
+    },
+    {
+      "name": "Three-and-out",
+      "facet": "Football words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Coffin corner",
+      "facet": "Football words and slang",
+      "known_at": 14
+    },
+    {
+      "name": "Move the chains",
+      "facet": "Football words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Turnover",
+      "facet": "Football words and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Spike",
+      "facet": "Football words and slang",
+      "known_at": 8
+    },
+    {
+      "name": "Trick play",
+      "facet": "Football words and slang",
+      "known_at": 7
+    },
+    {
+      "name": "Punt (everyday meaning)",
+      "facet": "Football words and slang",
+      "known_at": 11
+    },
+    {
+      "name": "Lambeau Leap",
+      "facet": "Game day traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Cheesehead",
+      "facet": "Game day traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Gatorade shower",
+      "facet": "Game day traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Coin toss",
+      "facet": "Game day traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Thanksgiving football",
+      "facet": "Game day traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Cheerleaders",
+      "facet": "Game day traditions",
+      "known_at": 3
+    },
+    {
+      "name": "Dallas Cowboys Cheerleaders",
+      "facet": "Game day traditions",
+      "known_at": 9
+    },
+    {
+      "name": "12th Man",
+      "facet": "Game day traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Touchdown dance",
+      "facet": "Game day traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Fantasy football",
+      "facet": "Game day traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Dawg Pound",
+      "facet": "Game day traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Foam finger",
+      "facet": "Game day traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Pregame flyover",
+      "facet": "Game day traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Rutgers vs. Princeton (1869)",
+      "facet": "History of the game",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Camp",
+      "facet": "History of the game",
+      "known_at": 14
+    },
+    {
+      "name": "Forward pass",
+      "facet": "History of the game",
+      "known_at": 11
+    },
+    {
+      "name": "Theodore Roosevelt and football reform",
+      "facet": "History of the game",
+      "known_at": 14
+    },
+    {
+      "name": "Canton Bulldogs",
+      "facet": "History of the game",
+      "known_at": 14
+    },
+    {
+      "name": "American Professional Football Association",
+      "facet": "History of the game",
+      "known_at": 14
+    },
+    {
+      "name": "AFL–NFL merger",
+      "facet": "History of the game",
+      "known_at": 12
+    },
+    {
+      "name": "1958 NFL Championship Game",
+      "facet": "History of the game",
+      "known_at": 14
+    },
+    {
+      "name": "Ice Bowl",
+      "facet": "History of the game",
+      "known_at": 13
+    },
+    {
+      "name": "Immaculate Reception",
+      "facet": "History of the game",
+      "known_at": 12
+    },
+    {
+      "name": "1972 Miami Dolphins perfect season",
+      "facet": "History of the game",
+      "known_at": 11
+    },
+    {
+      "name": "The Catch",
+      "facet": "History of the game",
+      "known_at": 13
+    },
+    {
+      "name": "Heidi Game",
+      "facet": "History of the game",
+      "known_at": 15
+    },
+    {
+      "name": "Music City Miracle",
+      "facet": "History of the game",
+      "known_at": 14
+    },
+    {
+      "name": "Tuck Rule Game",
+      "facet": "History of the game",
+      "known_at": 14
+    },
+    {
+      "name": "NFL Draft",
+      "facet": "History of the game",
+      "known_at": 8
+    },
+    {
+      "name": "Fritz Pollard",
+      "facet": "History of the game",
+      "known_at": 15
+    },
+    {
+      "name": "Leather helmet",
+      "facet": "History of the game",
+      "known_at": 9
+    },
+    {
+      "name": "XFL",
+      "facet": "History of the game",
+      "known_at": 12
+    },
+    {
+      "name": "Friday Night Lights",
+      "facet": "Football in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Any Given Sunday",
+      "facet": "Football in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "The Longest Yard",
+      "facet": "Football in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Jerry Maguire",
+      "facet": "Football in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "The Waterboy",
+      "facet": "Football in movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Varsity Blues",
+      "facet": "Football in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Brian's Song",
+      "facet": "Football in movies and TV",
+      "known_at": 14
+    },
+    {
+      "name": "Invincible",
+      "facet": "Football in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Monday Night Football",
+      "facet": "Football in movies and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Madden NFL",
+      "facet": "Football in movies and TV",
+      "known_at": 5
+    },
+    {
+      "name": "Hard Knocks",
+      "facet": "Football in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "The Replacements",
+      "facet": "Football in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Little Giants",
+      "facet": "Football in movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Air Bud: Golden Receiver",
+      "facet": "Football in movies and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Lucy and the football",
+      "facet": "Football in movies and TV",
+      "known_at": 5
+    },
+    {
+      "name": "We Are Marshall",
+      "facet": "Football in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Draft Day",
+      "facet": "Football in movies and TV",
+      "known_at": 13
+    }
+  ]
+}

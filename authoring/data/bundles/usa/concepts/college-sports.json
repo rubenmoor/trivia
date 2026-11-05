@@ -1,0 +1,977 @@
+{
+  "subcategory": "college-sports",
+  "facets": [
+    "College football bowls and rivalries",
+    "March Madness and college basketball",
+    "Legendary college coaches",
+    "College stars who turned pro",
+    "Mascots, nicknames and team colors",
+    "Conferences and famous universities",
+    "Game-day traditions and marching bands",
+    "High school football and Friday nights",
+    "High school sports and school spirit",
+    "NCAA rules, scholarships and Title IX",
+    "College sports in movies and TV",
+    "Olympic and other college sports"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bowl Championship Series",
+      "facet": "College football bowls and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Ohio State–Michigan rivalry",
+      "facet": "College football bowls and rivalries",
+      "known_at": 9
+    },
+    {
+      "name": "Red River Rivalry",
+      "facet": "College football bowls and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Notre Dame–USC rivalry",
+      "facet": "College football bowls and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "The Game (Harvard–Yale)",
+      "facet": "College football bowls and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Egg Bowl",
+      "facet": "College football bowls and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Apple Cup",
+      "facet": "College football bowls and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Little Brown Jug",
+      "facet": "College football bowls and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Bunyan's Axe",
+      "facet": "College football bowls and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Old Oaken Bucket",
+      "facet": "College football bowls and rivalries",
+      "known_at": 14
+    },
+    {
+      "name": "Bedlam Series",
+      "facet": "College football bowls and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Final Four",
+      "facet": "March Madness and college basketball",
+      "known_at": 5
+    },
+    {
+      "name": "Bracket",
+      "facet": "March Madness and college basketball",
+      "known_at": 5
+    },
+    {
+      "name": "Elite Eight",
+      "facet": "March Madness and college basketball",
+      "known_at": 8
+    },
+    {
+      "name": "Cinderella team",
+      "facet": "March Madness and college basketball",
+      "known_at": 8
+    },
+    {
+      "name": "Selection Sunday",
+      "facet": "March Madness and college basketball",
+      "known_at": 9
+    },
+    {
+      "name": "Cutting down the nets",
+      "facet": "March Madness and college basketball",
+      "known_at": 9
+    },
+    {
+      "name": "First Four",
+      "facet": "March Madness and college basketball",
+      "known_at": 11
+    },
+    {
+      "name": "One Shining Moment",
+      "facet": "March Madness and college basketball",
+      "known_at": 11
+    },
+    {
+      "name": "Bracketology",
+      "facet": "March Madness and college basketball",
+      "known_at": 11
+    },
+    {
+      "name": "UMBC upset of Virginia",
+      "facet": "March Madness and college basketball",
+      "known_at": 12
+    },
+    {
+      "name": "Christian Laettner's shot",
+      "facet": "March Madness and college basketball",
+      "known_at": 12
+    },
+    {
+      "name": "Duke Blue Devils",
+      "facet": "March Madness and college basketball",
+      "known_at": 7
+    },
+    {
+      "name": "Kentucky Wildcats",
+      "facet": "March Madness and college basketball",
+      "known_at": 7
+    },
+    {
+      "name": "UConn Huskies women's basketball",
+      "facet": "March Madness and college basketball",
+      "known_at": 9
+    },
+    {
+      "name": "Caitlin Clark",
+      "facet": "March Madness and college basketball",
+      "known_at": 7
+    },
+    {
+      "name": "National Invitation Tournament",
+      "facet": "March Madness and college basketball",
+      "known_at": 12
+    },
+    {
+      "name": "John Wooden",
+      "facet": "Legendary college coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Mike Krzyzewski",
+      "facet": "Legendary college coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Pat Summitt",
+      "facet": "Legendary college coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Geno Auriemma",
+      "facet": "Legendary college coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Dawn Staley",
+      "facet": "Legendary college coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Bobby Knight",
+      "facet": "Legendary college coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Joe Paterno",
+      "facet": "Legendary college coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Dean Smith",
+      "facet": "Legendary college coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Jim Valvano",
+      "facet": "Legendary college coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Lou Holtz",
+      "facet": "Legendary college coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Bobby Bowden",
+      "facet": "Legendary college coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Urban Meyer",
+      "facet": "Legendary college coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Woody Hayes",
+      "facet": "Legendary college coaches",
+      "known_at": 13
+    },
+    {
+      "name": "Eddie Robinson",
+      "facet": "Legendary college coaches",
+      "known_at": 13
+    },
+    {
+      "name": "Tom Osborne",
+      "facet": "Legendary college coaches",
+      "known_at": 13
+    },
+    {
+      "name": "Pop Warner",
+      "facet": "Legendary college coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Amos Alonzo Stagg",
+      "facet": "Legendary college coaches",
+      "known_at": 14
+    },
+    {
+      "name": "Phog Allen",
+      "facet": "Legendary college coaches",
+      "known_at": 14
+    },
+    {
+      "name": "One-and-done",
+      "facet": "College stars who turned pro",
+      "known_at": 11
+    },
+    {
+      "name": "Shaquille O'Neal",
+      "facet": "College stars who turned pro",
+      "known_at": 9
+    },
+    {
+      "name": "Zion Williamson",
+      "facet": "College stars who turned pro",
+      "known_at": 9
+    },
+    {
+      "name": "Tim Tebow",
+      "facet": "College stars who turned pro",
+      "known_at": 9
+    },
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "facet": "College stars who turned pro",
+      "known_at": 10
+    },
+    {
+      "name": "Magic Johnson",
+      "facet": "College stars who turned pro",
+      "known_at": 10
+    },
+    {
+      "name": "Joe Burrow",
+      "facet": "College stars who turned pro",
+      "known_at": 10
+    },
+    {
+      "name": "Bo Jackson",
+      "facet": "College stars who turned pro",
+      "known_at": 10
+    },
+    {
+      "name": "Larry Bird",
+      "facet": "College stars who turned pro",
+      "known_at": 11
+    },
+    {
+      "name": "Doug Flutie",
+      "facet": "College stars who turned pro",
+      "known_at": 11
+    },
+    {
+      "name": "Johnny Manziel",
+      "facet": "College stars who turned pro",
+      "known_at": 11
+    },
+    {
+      "name": "Sue Bird",
+      "facet": "College stars who turned pro",
+      "known_at": 11
+    },
+    {
+      "name": "Diana Taurasi",
+      "facet": "College stars who turned pro",
+      "known_at": 11
+    },
+    {
+      "name": "Archie Griffin",
+      "facet": "College stars who turned pro",
+      "known_at": 13
+    },
+    {
+      "name": "Pete Maravich",
+      "facet": "College stars who turned pro",
+      "known_at": 13
+    },
+    {
+      "name": "Fighting Irish",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 8
+    },
+    {
+      "name": "Notre Dame Leprechaun",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 8
+    },
+    {
+      "name": "Crimson Tide",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 9
+    },
+    {
+      "name": "Aggies",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 10
+    },
+    {
+      "name": "Mike the Tiger",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 11
+    },
+    {
+      "name": "Tar Heels",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 11
+    },
+    {
+      "name": "Sooners",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 11
+    },
+    {
+      "name": "Burnt orange",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 11
+    },
+    {
+      "name": "Bevo",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 12
+    },
+    {
+      "name": "Stanford Tree",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 12
+    },
+    {
+      "name": "Boilermakers",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 12
+    },
+    {
+      "name": "Jayhawk",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 12
+    },
+    {
+      "name": "Otto the Orange",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 12
+    },
+    {
+      "name": "Hokies",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 13
+    },
+    {
+      "name": "Banana Slugs",
+      "facet": "Mascots, nicknames and team colors",
+      "known_at": 13
+    },
+    {
+      "name": "Harvard University",
+      "facet": "Conferences and famous universities",
+      "known_at": 5
+    },
+    {
+      "name": "Yale University",
+      "facet": "Conferences and famous universities",
+      "known_at": 7
+    },
+    {
+      "name": "UCLA",
+      "facet": "Conferences and famous universities",
+      "known_at": 7
+    },
+    {
+      "name": "Stanford University",
+      "facet": "Conferences and famous universities",
+      "known_at": 8
+    },
+    {
+      "name": "Duke University",
+      "facet": "Conferences and famous universities",
+      "known_at": 8
+    },
+    {
+      "name": "University of Notre Dame",
+      "facet": "Conferences and famous universities",
+      "known_at": 8
+    },
+    {
+      "name": "University of Alabama",
+      "facet": "Conferences and famous universities",
+      "known_at": 8
+    },
+    {
+      "name": "Ohio State University",
+      "facet": "Conferences and famous universities",
+      "known_at": 8
+    },
+    {
+      "name": "University of Michigan",
+      "facet": "Conferences and famous universities",
+      "known_at": 8
+    },
+    {
+      "name": "University of Southern California",
+      "facet": "Conferences and famous universities",
+      "known_at": 8
+    },
+    {
+      "name": "Big Ten Conference",
+      "facet": "Conferences and famous universities",
+      "known_at": 9
+    },
+    {
+      "name": "Atlantic Coast Conference",
+      "facet": "Conferences and famous universities",
+      "known_at": 10
+    },
+    {
+      "name": "Big 12 Conference",
+      "facet": "Conferences and famous universities",
+      "known_at": 10
+    },
+    {
+      "name": "Pac-12 Conference",
+      "facet": "Conferences and famous universities",
+      "known_at": 10
+    },
+    {
+      "name": "Historically Black colleges and universities",
+      "facet": "Conferences and famous universities",
+      "known_at": 10
+    },
+    {
+      "name": "Big East Conference",
+      "facet": "Conferences and famous universities",
+      "known_at": 11
+    },
+    {
+      "name": "Service academies",
+      "facet": "Conferences and famous universities",
+      "known_at": 11
+    },
+    {
+      "name": "Power Four",
+      "facet": "Conferences and famous universities",
+      "known_at": 12
+    },
+    {
+      "name": "Conference realignment",
+      "facet": "Conferences and famous universities",
+      "known_at": 13
+    },
+    {
+      "name": "Cheerleading",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 4
+    },
+    {
+      "name": "Halftime show",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 5
+    },
+    {
+      "name": "Student section",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 7
+    },
+    {
+      "name": "College GameDay",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 10
+    },
+    {
+      "name": "HBCU Battle of the Bands",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 11
+    },
+    {
+      "name": "Victory bell",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 11
+    },
+    {
+      "name": "Jump Around",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 12
+    },
+    {
+      "name": "The Play (1982 Cal–Stanford)",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 12
+    },
+    {
+      "name": "Play Like a Champion Today sign",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 12
+    },
+    {
+      "name": "Lee Corso's mascot headgear",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 12
+    },
+    {
+      "name": "Dotting the i",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 13
+    },
+    {
+      "name": "Howard's Rock",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 13
+    },
+    {
+      "name": "Rolling Toomer's Corner",
+      "facet": "Game-day traditions and marching bands",
+      "known_at": 13
+    },
+    {
+      "name": "Football captain",
+      "facet": "High school football and Friday nights",
+      "known_at": 5
+    },
+    {
+      "name": "Flag football",
+      "facet": "High school football and Friday nights",
+      "known_at": 6
+    },
+    {
+      "name": "State championship",
+      "facet": "High school football and Friday nights",
+      "known_at": 6
+    },
+    {
+      "name": "Varsity",
+      "facet": "High school football and Friday nights",
+      "known_at": 7
+    },
+    {
+      "name": "Junior varsity",
+      "facet": "High school football and Friday nights",
+      "known_at": 8
+    },
+    {
+      "name": "Homecoming game",
+      "facet": "High school football and Friday nights",
+      "known_at": 7
+    },
+    {
+      "name": "Texas high school football",
+      "facet": "High school football and Friday nights",
+      "known_at": 9
+    },
+    {
+      "name": "Booster club",
+      "facet": "High school football and Friday nights",
+      "known_at": 10
+    },
+    {
+      "name": "Mercy rule",
+      "facet": "High school football and Friday nights",
+      "known_at": 10
+    },
+    {
+      "name": "Football recruiting",
+      "facet": "High school football and Friday nights",
+      "known_at": 10
+    },
+    {
+      "name": "Two-way player",
+      "facet": "High school football and Friday nights",
+      "known_at": 11
+    },
+    {
+      "name": "Odessa Permian Panthers",
+      "facet": "High school football and Friday nights",
+      "known_at": 12
+    },
+    {
+      "name": "Two-a-days",
+      "facet": "High school football and Friday nights",
+      "known_at": 12
+    },
+    {
+      "name": "Six-man football",
+      "facet": "High school football and Friday nights",
+      "known_at": 12
+    },
+    {
+      "name": "Scout team",
+      "facet": "High school football and Friday nights",
+      "known_at": 13
+    },
+    {
+      "name": "De La Salle Spartans",
+      "facet": "High school football and Friday nights",
+      "known_at": 14
+    },
+    {
+      "name": "Kansas overtime tiebreaker",
+      "facet": "High school football and Friday nights",
+      "known_at": 14
+    },
+    {
+      "name": "Gym class",
+      "facet": "High school sports and school spirit",
+      "known_at": 3
+    },
+    {
+      "name": "Dodgeball",
+      "facet": "High school sports and school spirit",
+      "known_at": 3
+    },
+    {
+      "name": "School mascot",
+      "facet": "High school sports and school spirit",
+      "known_at": 4
+    },
+    {
+      "name": "Track and field",
+      "facet": "High school sports and school spirit",
+      "known_at": 4
+    },
+    {
+      "name": "Wrestling",
+      "facet": "High school sports and school spirit",
+      "known_at": 6
+    },
+    {
+      "name": "Cross country",
+      "facet": "High school sports and school spirit",
+      "known_at": 7
+    },
+    {
+      "name": "Homecoming court",
+      "facet": "High school sports and school spirit",
+      "known_at": 8
+    },
+    {
+      "name": "Senior Night",
+      "facet": "High school sports and school spirit",
+      "known_at": 8
+    },
+    {
+      "name": "Sports physical",
+      "facet": "High school sports and school spirit",
+      "known_at": 9
+    },
+    {
+      "name": "Intramural sports",
+      "facet": "High school sports and school spirit",
+      "known_at": 9
+    },
+    {
+      "name": "Pep band",
+      "facet": "High school sports and school spirit",
+      "known_at": 9
+    },
+    {
+      "name": "LeBron James",
+      "facet": "High school sports and school spirit",
+      "known_at": 9
+    },
+    {
+      "name": "Athletic director",
+      "facet": "High school sports and school spirit",
+      "known_at": 10
+    },
+    {
+      "name": "Presidential Fitness Test",
+      "facet": "High school sports and school spirit",
+      "known_at": 10
+    },
+    {
+      "name": "Kobe Bryant",
+      "facet": "High school sports and school spirit",
+      "known_at": 11
+    },
+    {
+      "name": "Spirit stick",
+      "facet": "High school sports and school spirit",
+      "known_at": 12
+    },
+    {
+      "name": "Hoosier Hysteria",
+      "facet": "High school sports and school spirit",
+      "known_at": 13
+    },
+    {
+      "name": "Milan Miracle",
+      "facet": "High school sports and school spirit",
+      "known_at": 14
+    },
+    {
+      "name": "NCAA",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 7
+    },
+    {
+      "name": "Athletic scholarship",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 8
+    },
+    {
+      "name": "Student-athlete",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 9
+    },
+    {
+      "name": "Walk-on",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 9
+    },
+    {
+      "name": "Division I",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 9
+    },
+    {
+      "name": "Eligibility",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 9
+    },
+    {
+      "name": "Redshirt",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 10
+    },
+    {
+      "name": "Name, image and likeness",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 11
+    },
+    {
+      "name": "Transfer portal",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 11
+    },
+    {
+      "name": "Official visit",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 11
+    },
+    {
+      "name": "One foot in bounds",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 11
+    },
+    {
+      "name": "National Letter of Intent",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 12
+    },
+    {
+      "name": "Targeting",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 12
+    },
+    {
+      "name": "Bowl eligibility",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 12
+    },
+    {
+      "name": "College football overtime",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 12
+    },
+    {
+      "name": "SMU death penalty",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 14
+    },
+    {
+      "name": "Patsy Mink",
+      "facet": "NCAA rules, scholarships and Title IX",
+      "known_at": 14
+    },
+    {
+      "name": "Monsters University",
+      "facet": "College sports in movies and TV",
+      "known_at": 3
+    },
+    {
+      "name": "Glee",
+      "facet": "College sports in movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Bring It On",
+      "facet": "College sports in movies and TV",
+      "known_at": 9
+    },
+    {
+      "name": "Coach Carter",
+      "facet": "College sports in movies and TV",
+      "known_at": 10
+    },
+    {
+      "name": "All American",
+      "facet": "College sports in movies and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Glory Road",
+      "facet": "College sports in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "Last Chance U",
+      "facet": "College sports in movies and TV",
+      "known_at": 12
+    },
+    {
+      "name": "When the Game Stands Tall",
+      "facet": "College sports in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "Blue Chips",
+      "facet": "College sports in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "The Express",
+      "facet": "College sports in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "He Got Game",
+      "facet": "College sports in movies and TV",
+      "known_at": 13
+    },
+    {
+      "name": "College World Series",
+      "facet": "Olympic and other college sports",
+      "known_at": 9
+    },
+    {
+      "name": "Women's College World Series",
+      "facet": "Olympic and other college sports",
+      "known_at": 10
+    },
+    {
+      "name": "Katie Ledecky",
+      "facet": "Olympic and other college sports",
+      "known_at": 9
+    },
+    {
+      "name": "Livvy Dunne",
+      "facet": "Olympic and other college sports",
+      "known_at": 9
+    },
+    {
+      "name": "Suni Lee",
+      "facet": "Olympic and other college sports",
+      "known_at": 10
+    },
+    {
+      "name": "Ultimate frisbee",
+      "facet": "Olympic and other college sports",
+      "known_at": 10
+    },
+    {
+      "name": "College gymnastics",
+      "facet": "Olympic and other college sports",
+      "known_at": 10
+    },
+    {
+      "name": "Frozen Four",
+      "facet": "Olympic and other college sports",
+      "known_at": 12
+    },
+    {
+      "name": "Nebraska volleyball",
+      "facet": "Olympic and other college sports",
+      "known_at": 12
+    },
+    {
+      "name": "Harvard–Yale Regatta",
+      "facet": "Olympic and other college sports",
+      "known_at": 13
+    },
+    {
+      "name": "Penn Relays",
+      "facet": "Olympic and other college sports",
+      "known_at": 13
+    },
+    {
+      "name": "Dan Gable",
+      "facet": "Olympic and other college sports",
+      "known_at": 13
+    },
+    {
+      "name": "Beanpot",
+      "facet": "Olympic and other college sports",
+      "known_at": 14
+    }
+  ]
+}

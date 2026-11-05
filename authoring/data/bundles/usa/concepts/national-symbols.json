@@ -1,0 +1,507 @@
+{
+  "subcategory": "national-symbols",
+  "facets": [
+    "The flag and its history",
+    "Bald eagle and national animals",
+    "Great Seal and coat of arms",
+    "Statue of Liberty",
+    "National anthem and patriotic songs",
+    "Mottoes, pledge and oaths",
+    "Uncle Sam and personifications",
+    "Symbols on money and coins",
+    "Liberty Bell and founding documents",
+    "National monuments and memorials",
+    "State symbols: birds, flowers, nicknames",
+    "Official national emblems: tree, flower, mammal"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 3,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fifty stars",
+      "facet": "The flag and its history",
+      "known_at": 3
+    },
+    {
+      "name": "Thirteen stripes",
+      "facet": "The flag and its history",
+      "known_at": 4
+    },
+    {
+      "name": "Half-staff",
+      "facet": "The flag and its history",
+      "known_at": 6
+    },
+    {
+      "name": "Apollo 11 flag on the Moon",
+      "facet": "The flag and its history",
+      "known_at": 4
+    },
+    {
+      "name": "Triangle flag fold",
+      "facet": "The flag and its history",
+      "known_at": 8
+    },
+    {
+      "name": "Flag Code",
+      "facet": "The flag and its history",
+      "known_at": 11
+    },
+    {
+      "name": "Grand Union Flag",
+      "facet": "The flag and its history",
+      "known_at": 13
+    },
+    {
+      "name": "Flag Resolution of 1777",
+      "facet": "The flag and its history",
+      "known_at": 12
+    },
+    {
+      "name": "48-star flag",
+      "facet": "The flag and its history",
+      "known_at": 10
+    },
+    {
+      "name": "Robert G. Heft",
+      "facet": "The flag and its history",
+      "known_at": 14
+    },
+    {
+      "name": "Canton",
+      "facet": "The flag and its history",
+      "known_at": 13
+    },
+    {
+      "name": "Flag retirement ceremony",
+      "facet": "The flag and its history",
+      "known_at": 10
+    },
+    {
+      "name": "Old Glory",
+      "facet": "The flag and its history",
+      "known_at": 9
+    },
+    {
+      "name": "Benjamin Franklin's turkey letter",
+      "facet": "Bald eagle and national animals",
+      "known_at": 9
+    },
+    {
+      "name": "Golden eagle",
+      "facet": "Bald eagle and national animals",
+      "known_at": 7
+    },
+    {
+      "name": "Bald and Golden Eagle Protection Act",
+      "facet": "Bald eagle and national animals",
+      "known_at": 13
+    },
+    {
+      "name": "Sam the Eagle",
+      "facet": "Bald eagle and national animals",
+      "known_at": 6
+    },
+    {
+      "name": "Eaglet",
+      "facet": "Bald eagle and national animals",
+      "known_at": 5
+    },
+    {
+      "name": "Eyrie",
+      "facet": "Bald eagle and national animals",
+      "known_at": 13
+    },
+    {
+      "name": "Haliaeetus leucocephalus",
+      "facet": "Bald eagle and national animals",
+      "known_at": 14
+    },
+    {
+      "name": "Bald eagle national bird law",
+      "facet": "Bald eagle and national animals",
+      "known_at": 12
+    },
+    {
+      "name": "Olive branch",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 6
+    },
+    {
+      "name": "Thirteen arrows",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 8
+    },
+    {
+      "name": "Unfinished pyramid",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 8
+    },
+    {
+      "name": "Annuit coeptis",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 14
+    },
+    {
+      "name": "Novus ordo seclorum",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 14
+    },
+    {
+      "name": "Charles Thomson",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 15
+    },
+    {
+      "name": "Escutcheon",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 13
+    },
+    {
+      "name": "Reverse of the Great Seal",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 11
+    },
+    {
+      "name": "MDCCLXXVI",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 11
+    },
+    {
+      "name": "Great Seal committee",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 13
+    },
+    {
+      "name": "Secretary of State",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 12
+    },
+    {
+      "name": "Franklin's Moses seal design",
+      "facet": "Great Seal and coat of arms",
+      "known_at": 15
+    },
+    {
+      "name": "Gustave Eiffel",
+      "facet": "Statue of Liberty",
+      "known_at": 9
+    },
+    {
+      "name": "Liberty Island",
+      "facet": "Statue of Liberty",
+      "known_at": 7
+    },
+    {
+      "name": "Emma Lazarus",
+      "facet": "Statue of Liberty",
+      "known_at": 13
+    },
+    {
+      "name": "Liberty's torch",
+      "facet": "Statue of Liberty",
+      "known_at": 2
+    },
+    {
+      "name": "Liberty's tablet",
+      "facet": "Statue of Liberty",
+      "known_at": 6
+    },
+    {
+      "name": "Liberty's crown",
+      "facet": "Statue of Liberty",
+      "known_at": 4
+    },
+    {
+      "name": "Broken chains",
+      "facet": "Statue of Liberty",
+      "known_at": 10
+    },
+    {
+      "name": "Copper patina",
+      "facet": "Statue of Liberty",
+      "known_at": 6
+    },
+    {
+      "name": "Libertas",
+      "facet": "Statue of Liberty",
+      "known_at": 13
+    },
+    {
+      "name": "Bedloe's Island",
+      "facet": "Statue of Liberty",
+      "known_at": 14
+    },
+    {
+      "name": "Paris Statue of Liberty replica",
+      "facet": "Statue of Liberty",
+      "known_at": 11
+    },
+    {
+      "name": "Whitney Houston's Super Bowl anthem",
+      "facet": "National anthem and patriotic songs",
+      "known_at": 11
+    },
+    {
+      "name": "Under God",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 9
+    },
+    {
+      "name": "So help me God",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 10
+    },
+    {
+      "name": "Oath of Allegiance",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 12
+    },
+    {
+      "name": "Hand over heart",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 2
+    },
+    {
+      "name": "Bellamy salute",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 15
+    },
+    {
+      "name": "Liberty and justice for all",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 4
+    },
+    {
+      "name": "One nation, indivisible",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 5
+    },
+    {
+      "name": "Semper Fidelis",
+      "facet": "Mottoes, pledge and oaths",
+      "known_at": 11
+    },
+    {
+      "name": "Samuel Wilson",
+      "facet": "Uncle Sam and personifications",
+      "known_at": 13
+    },
+    {
+      "name": "Troy, New York",
+      "facet": "Uncle Sam and personifications",
+      "known_at": 14
+    },
+    {
+      "name": "James Montgomery Flagg",
+      "facet": "Uncle Sam and personifications",
+      "known_at": 14
+    },
+    {
+      "name": "Brother Jonathan",
+      "facet": "Uncle Sam and personifications",
+      "known_at": 15
+    },
+    {
+      "name": "Uncle Sam's top hat",
+      "facet": "Uncle Sam and personifications",
+      "known_at": 5
+    },
+    {
+      "name": "Columbia Pictures torch lady",
+      "facet": "Uncle Sam and personifications",
+      "known_at": 10
+    },
+    {
+      "name": "Lincoln penny",
+      "facet": "Symbols on money and coins",
+      "known_at": 3
+    },
+    {
+      "name": "Washington quarter",
+      "facet": "Symbols on money and coins",
+      "known_at": 4
+    },
+    {
+      "name": "Jefferson nickel",
+      "facet": "Symbols on money and coins",
+      "known_at": 6
+    },
+    {
+      "name": "Roosevelt dime",
+      "facet": "Symbols on money and coins",
+      "known_at": 8
+    },
+    {
+      "name": "Kennedy half dollar",
+      "facet": "Symbols on money and coins",
+      "known_at": 10
+    },
+    {
+      "name": "Washington $1 bill",
+      "facet": "Symbols on money and coins",
+      "known_at": 3
+    },
+    {
+      "name": "$2 bill",
+      "facet": "Symbols on money and coins",
+      "known_at": 8
+    },
+    {
+      "name": "Lincoln $5 bill",
+      "facet": "Symbols on money and coins",
+      "known_at": 7
+    },
+    {
+      "name": "Hamilton $10 bill",
+      "facet": "Symbols on money and coins",
+      "known_at": 7
+    },
+    {
+      "name": "Jackson $20 bill",
+      "facet": "Symbols on money and coins",
+      "known_at": 8
+    },
+    {
+      "name": "Grant $50 bill",
+      "facet": "Symbols on money and coins",
+      "known_at": 10
+    },
+    {
+      "name": "Franklin $100 bill",
+      "facet": "Symbols on money and coins",
+      "known_at": 6
+    },
+    {
+      "name": "Liberty Bell crack",
+      "facet": "Liberty Bell and founding documents",
+      "known_at": 5
+    },
+    {
+      "name": "Constitution",
+      "facet": "Liberty Bell and founding documents",
+      "known_at": 5
+    },
+    {
+      "name": "Whitechapel Bell Foundry",
+      "facet": "Liberty Bell and founding documents",
+      "known_at": 14
+    },
+    {
+      "name": "Proclaim liberty throughout all the land",
+      "facet": "Liberty Bell and founding documents",
+      "known_at": 13
+    },
+    {
+      "name": "Reflecting Pool",
+      "facet": "National monuments and memorials",
+      "known_at": 8
+    },
+    {
+      "name": "California poppy",
+      "facet": "State symbols: birds, flowers, nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "California Bear Flag",
+      "facet": "State symbols: birds, flowers, nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Alaska flag Big Dipper",
+      "facet": "State symbols: birds, flowers, nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Ohio swallowtail flag",
+      "facet": "State symbols: birds, flowers, nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Hawaii flag Union Jack",
+      "facet": "State symbols: birds, flowers, nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "National Bison Legacy Act",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 13
+    },
+    {
+      "name": "Ronald Reagan's rose proclamation",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 13
+    },
+    {
+      "name": "Marigold",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 14
+    },
+    {
+      "name": "Yellowstone bison herd",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 8
+    },
+    {
+      "name": "Arbor Day Foundation vote",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 14
+    },
+    {
+      "name": "Department of the Interior seal bison",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 13
+    },
+    {
+      "name": "White House Rose Garden",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 9
+    },
+    {
+      "name": "Plains bison",
+      "facet": "Official national emblems: tree, flower, mammal",
+      "known_at": 12
+    }
+  ]
+}

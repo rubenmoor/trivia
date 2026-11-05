@@ -1,0 +1,932 @@
+{
+  "subcategory": "kids-tv",
+  "facets": [
+    "Preschool and PBS learning shows",
+    "Muppets and puppet shows",
+    "Saturday morning cartoons",
+    "Nickelodeon cartoons and live action",
+    "Disney Channel sitcoms and movies",
+    "Cartoon Network originals",
+    "Kids' game shows and slime",
+    "Holiday TV specials",
+    "Hosts, puppeteers and creators",
+    "Theme songs and catchphrases",
+    "Channels, blocks and award shows",
+    "Teen sitcoms and Saturday live action"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Daniel Tiger's Neighborhood",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 2
+    },
+    {
+      "name": "Wild Kratts",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 4
+    },
+    {
+      "name": "Cyberchase",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 8
+    },
+    {
+      "name": "Dragon Tales",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 8
+    },
+    {
+      "name": "Super Why!",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 6
+    },
+    {
+      "name": "Mickey Mouse Clubhouse",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 2
+    },
+    {
+      "name": "Zoboomafoo",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 11
+    },
+    {
+      "name": "Odd Squad",
+      "facet": "Preschool and PBS learning shows",
+      "known_at": 6
+    },
+    {
+      "name": "Miss Piggy",
+      "facet": "Muppets and puppet shows",
+      "known_at": 2
+    },
+    {
+      "name": "Fozzie Bear",
+      "facet": "Muppets and puppet shows",
+      "known_at": 6
+    },
+    {
+      "name": "Gonzo",
+      "facet": "Muppets and puppet shows",
+      "known_at": 7
+    },
+    {
+      "name": "Animal",
+      "facet": "Muppets and puppet shows",
+      "known_at": 6
+    },
+    {
+      "name": "Bert and Ernie",
+      "facet": "Muppets and puppet shows",
+      "known_at": 3
+    },
+    {
+      "name": "Count von Count",
+      "facet": "Muppets and puppet shows",
+      "known_at": 3
+    },
+    {
+      "name": "Grover",
+      "facet": "Muppets and puppet shows",
+      "known_at": 4
+    },
+    {
+      "name": "Mr. Snuffleupagus",
+      "facet": "Muppets and puppet shows",
+      "known_at": 8
+    },
+    {
+      "name": "Statler and Waldorf",
+      "facet": "Muppets and puppet shows",
+      "known_at": 10
+    },
+    {
+      "name": "Swedish Chef",
+      "facet": "Muppets and puppet shows",
+      "known_at": 8
+    },
+    {
+      "name": "Scooby-Doo, Where Are You!",
+      "facet": "Saturday morning cartoons",
+      "known_at": 2
+    },
+    {
+      "name": "Wile E. Coyote and the Road Runner",
+      "facet": "Saturday morning cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "The Smurfs",
+      "facet": "Saturday morning cartoons",
+      "known_at": 3
+    },
+    {
+      "name": "Super Friends",
+      "facet": "Saturday morning cartoons",
+      "known_at": 12
+    },
+    {
+      "name": "Garfield and Friends",
+      "facet": "Saturday morning cartoons",
+      "known_at": 8
+    },
+    {
+      "name": "Pinky and the Brain",
+      "facet": "Saturday morning cartoons",
+      "known_at": 9
+    },
+    {
+      "name": "X-Men: The Animated Series",
+      "facet": "Saturday morning cartoons",
+      "known_at": 10
+    },
+    {
+      "name": "He-Man and the Masters of the Universe",
+      "facet": "Saturday morning cartoons",
+      "known_at": 10
+    },
+    {
+      "name": "The Transformers",
+      "facet": "Saturday morning cartoons",
+      "known_at": 5
+    },
+    {
+      "name": "Captain Planet and the Planeteers",
+      "facet": "Saturday morning cartoons",
+      "known_at": 11
+    },
+    {
+      "name": "Hanna-Barbera",
+      "facet": "Saturday morning cartoons",
+      "known_at": 11
+    },
+    {
+      "name": "Doug",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 11
+    },
+    {
+      "name": "The Fairly OddParents",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 4
+    },
+    {
+      "name": "Jimmy Neutron",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 7
+    },
+    {
+      "name": "Avatar: The Last Airbender",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 5
+    },
+    {
+      "name": "Invader Zim",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 10
+    },
+    {
+      "name": "Rocko's Modern Life",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 12
+    },
+    {
+      "name": "The Ren & Stimpy Show",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 12
+    },
+    {
+      "name": "The Wild Thornberrys",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 10
+    },
+    {
+      "name": "CatDog",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 9
+    },
+    {
+      "name": "The Loud House",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 4
+    },
+    {
+      "name": "iCarly",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 6
+    },
+    {
+      "name": "Drake & Josh",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 8
+    },
+    {
+      "name": "All That",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 12
+    },
+    {
+      "name": "Kenan & Kel",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 12
+    },
+    {
+      "name": "Are You Afraid of the Dark?",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 11
+    },
+    {
+      "name": "Victorious",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 8
+    },
+    {
+      "name": "Clarissa Explains It All",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 13
+    },
+    {
+      "name": "Henry Danger",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 6
+    },
+    {
+      "name": "Zoey 101",
+      "facet": "Nickelodeon cartoons and live action",
+      "known_at": 10
+    },
+    {
+      "name": "Hannah Montana",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 4
+    },
+    {
+      "name": "That's So Raven",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 8
+    },
+    {
+      "name": "Lizzie McGuire",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 10
+    },
+    {
+      "name": "The Suite Life of Zack & Cody",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 8
+    },
+    {
+      "name": "Wizards of Waverly Place",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 7
+    },
+    {
+      "name": "High School Musical",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 5
+    },
+    {
+      "name": "Phineas and Ferb",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 3
+    },
+    {
+      "name": "Perry the Platypus",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 4
+    },
+    {
+      "name": "Kim Possible",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 7
+    },
+    {
+      "name": "Even Stevens",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 13
+    },
+    {
+      "name": "Descendants",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 4
+    },
+    {
+      "name": "Zenon: Girl of the 21st Century",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 13
+    },
+    {
+      "name": "Camp Rock",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 8
+    },
+    {
+      "name": "Good Luck Charlie",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 7
+    },
+    {
+      "name": "Austin & Ally",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 7
+    },
+    {
+      "name": "The Proud Family",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 8
+    },
+    {
+      "name": "Disney Channel Original Movie",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 9
+    },
+    {
+      "name": "Cool Runnings",
+      "facet": "Disney Channel sitcoms and movies",
+      "known_at": 15
+    },
+    {
+      "name": "Johnny Bravo",
+      "facet": "Cartoon Network originals",
+      "known_at": 9
+    },
+    {
+      "name": "Courage the Cowardly Dog",
+      "facet": "Cartoon Network originals",
+      "known_at": 8
+    },
+    {
+      "name": "Ed, Edd n Eddy",
+      "facet": "Cartoon Network originals",
+      "known_at": 9
+    },
+    {
+      "name": "Samurai Jack",
+      "facet": "Cartoon Network originals",
+      "known_at": 10
+    },
+    {
+      "name": "Adventure Time",
+      "facet": "Cartoon Network originals",
+      "known_at": 5
+    },
+    {
+      "name": "Regular Show",
+      "facet": "Cartoon Network originals",
+      "known_at": 7
+    },
+    {
+      "name": "Steven Universe",
+      "facet": "Cartoon Network originals",
+      "known_at": 6
+    },
+    {
+      "name": "Ben 10",
+      "facet": "Cartoon Network originals",
+      "known_at": 4
+    },
+    {
+      "name": "Codename: Kids Next Door",
+      "facet": "Cartoon Network originals",
+      "known_at": 10
+    },
+    {
+      "name": "Foster's Home for Imaginary Friends",
+      "facet": "Cartoon Network originals",
+      "known_at": 9
+    },
+    {
+      "name": "Teen Titans",
+      "facet": "Cartoon Network originals",
+      "known_at": 5
+    },
+    {
+      "name": "Cow and Chicken",
+      "facet": "Cartoon Network originals",
+      "known_at": 12
+    },
+    {
+      "name": "The Grim Adventures of Billy & Mandy",
+      "facet": "Cartoon Network originals",
+      "known_at": 10
+    },
+    {
+      "name": "We Bare Bears",
+      "facet": "Cartoon Network originals",
+      "known_at": 4
+    },
+    {
+      "name": "Over the Garden Wall",
+      "facet": "Cartoon Network originals",
+      "known_at": 11
+    },
+    {
+      "name": "Craig of the Creek",
+      "facet": "Cartoon Network originals",
+      "known_at": 6
+    },
+    {
+      "name": "Space Ghost Coast to Coast",
+      "facet": "Cartoon Network originals",
+      "known_at": 14
+    },
+    {
+      "name": "Legends of the Hidden Temple",
+      "facet": "Kids' game shows and slime",
+      "known_at": 11
+    },
+    {
+      "name": "Figure It Out",
+      "facet": "Kids' game shows and slime",
+      "known_at": 13
+    },
+    {
+      "name": "Guts",
+      "facet": "Kids' game shows and slime",
+      "known_at": 13
+    },
+    {
+      "name": "Green slime",
+      "facet": "Kids' game shows and slime",
+      "known_at": 3
+    },
+    {
+      "name": "Where in the World Is Carmen Sandiego?",
+      "facet": "Kids' game shows and slime",
+      "known_at": 10
+    },
+    {
+      "name": "Fun House",
+      "facet": "Kids' game shows and slime",
+      "known_at": 14
+    },
+    {
+      "name": "Nick Arcade",
+      "facet": "Kids' game shows and slime",
+      "known_at": 14
+    },
+    {
+      "name": "Wild & Crazy Kids",
+      "facet": "Kids' game shows and slime",
+      "known_at": 14
+    },
+    {
+      "name": "Get the Picture",
+      "facet": "Kids' game shows and slime",
+      "known_at": 15
+    },
+    {
+      "name": "Olmec",
+      "facet": "Kids' game shows and slime",
+      "known_at": 13
+    },
+    {
+      "name": "Aggro Crag",
+      "facet": "Kids' game shows and slime",
+      "known_at": 14
+    },
+    {
+      "name": "Physical Challenge",
+      "facet": "Kids' game shows and slime",
+      "known_at": 13
+    },
+    {
+      "name": "Shrine of the Silver Monkey",
+      "facet": "Kids' game shows and slime",
+      "known_at": 14
+    },
+    {
+      "name": "Finders Keepers",
+      "facet": "Kids' game shows and slime",
+      "known_at": 15
+    },
+    {
+      "name": "Slime Time Live",
+      "facet": "Kids' game shows and slime",
+      "known_at": 13
+    },
+    {
+      "name": "The Year Without a Santa Claus",
+      "facet": "Holiday TV specials",
+      "known_at": 12
+    },
+    {
+      "name": "Island of Misfit Toys",
+      "facet": "Holiday TV specials",
+      "known_at": 8
+    },
+    {
+      "name": "Heat Miser and Snow Miser",
+      "facet": "Holiday TV specials",
+      "known_at": 12
+    },
+    {
+      "name": "Emmet Otter's Jug-Band Christmas",
+      "facet": "Holiday TV specials",
+      "known_at": 15
+    },
+    {
+      "name": "Mickey's Christmas Carol",
+      "facet": "Holiday TV specials",
+      "known_at": 9
+    },
+    {
+      "name": "Yukon Cornelius",
+      "facet": "Holiday TV specials",
+      "known_at": 12
+    },
+    {
+      "name": "The Bumble",
+      "facet": "Holiday TV specials",
+      "known_at": 10
+    },
+    {
+      "name": "Hermey the Elf",
+      "facet": "Holiday TV specials",
+      "known_at": 11
+    },
+    {
+      "name": "Charlie Brown Christmas tree",
+      "facet": "Holiday TV specials",
+      "known_at": 7
+    },
+    {
+      "name": "The Little Drummer Boy",
+      "facet": "Holiday TV specials",
+      "known_at": 13
+    },
+    {
+      "name": "Frank Oz",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 13
+    },
+    {
+      "name": "Caroll Spinney",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 14
+    },
+    {
+      "name": "Shari Lewis",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 14
+    },
+    {
+      "name": "Steve Burns",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 12
+    },
+    {
+      "name": "Marc Summers",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 14
+    },
+    {
+      "name": "Stephen Hillenburg",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 12
+    },
+    {
+      "name": "Genndy Tartakovsky",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 14
+    },
+    {
+      "name": "Craig McCracken",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 14
+    },
+    {
+      "name": "Bob Keeshan",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 14
+    },
+    {
+      "name": "Joan Ganz Cooney",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 15
+    },
+    {
+      "name": "Kevin Clash",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 14
+    },
+    {
+      "name": "Paul Reubens",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 13
+    },
+    {
+      "name": "Chuck Jones",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 13
+    },
+    {
+      "name": "Mel Blanc",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 13
+    },
+    {
+      "name": "Butch Hartman",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 13
+    },
+    {
+      "name": "Tom Kenny",
+      "facet": "Hosts, puppeteers and creators",
+      "known_at": 13
+    },
+    {
+      "name": "Can You Tell Me How to Get to Sesame Street?",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 5
+    },
+    {
+      "name": "I Love You, You Love Me",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 5
+    },
+    {
+      "name": "Swiper, no swiping!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 2
+    },
+    {
+      "name": "What's up, Doc?",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 3
+    },
+    {
+      "name": "That's all folks!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 4
+    },
+    {
+      "name": "I'm ready!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 2
+    },
+    {
+      "name": "Are you ready, kids?",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 2
+    },
+    {
+      "name": "It's Morphin' Time!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 9
+    },
+    {
+      "name": "Conjunction Junction",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 12
+    },
+    {
+      "name": "How rude!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 11
+    },
+    {
+      "name": "What's the sitch?",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 11
+    },
+    {
+      "name": "Curse you, Perry the Platypus!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 5
+    },
+    {
+      "name": "Meddling kids",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 6
+    },
+    {
+      "name": "Jinkies!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 7
+    },
+    {
+      "name": "Zoinks!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 7
+    },
+    {
+      "name": "Mathematical!",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 9
+    },
+    {
+      "name": "Sufferin' succotash",
+      "facet": "Theme songs and catchphrases",
+      "known_at": 9
+    },
+    {
+      "name": "Nickelodeon",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 2
+    },
+    {
+      "name": "Cartoon Network",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 2
+    },
+    {
+      "name": "Disney Channel",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 2
+    },
+    {
+      "name": "PBS Kids",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 3
+    },
+    {
+      "name": "Nick Jr.",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 3
+    },
+    {
+      "name": "Nick at Nite",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 11
+    },
+    {
+      "name": "Toonami",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 12
+    },
+    {
+      "name": "Kids' Choice Awards",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 6
+    },
+    {
+      "name": "Kids' Choice Awards blimp",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 8
+    },
+    {
+      "name": "Daytime Emmy Awards",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 12
+    },
+    {
+      "name": "TGIF",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 13
+    },
+    {
+      "name": "SNICK",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 14
+    },
+    {
+      "name": "Fox Kids",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 12
+    },
+    {
+      "name": "Kids' WB",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 12
+    },
+    {
+      "name": "One Saturday Morning",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 14
+    },
+    {
+      "name": "The Disney Afternoon",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 14
+    },
+    {
+      "name": "Boomerang",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 10
+    },
+    {
+      "name": "Cartoon Cartoon Fridays",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 14
+    },
+    {
+      "name": "TNBC",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 15
+    },
+    {
+      "name": "Nicktoons",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 10
+    },
+    {
+      "name": "Nickelodeon splat logo",
+      "facet": "Channels, blocks and award shows",
+      "known_at": 9
+    },
+    {
+      "name": "Zack Morris",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 12
+    },
+    {
+      "name": "Boy Meets World",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 11
+    },
+    {
+      "name": "Girl Meets World",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 9
+    },
+    {
+      "name": "Sabrina the Teenage Witch",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 10
+    },
+    {
+      "name": "Mighty Morphin Power Rangers",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 4
+    },
+    {
+      "name": "Sister, Sister",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 12
+    },
+    {
+      "name": "Beakman's World",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 14
+    },
+    {
+      "name": "Land of the Lost",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 13
+    },
+    {
+      "name": "H.R. Pufnstuf",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 15
+    },
+    {
+      "name": "Ghostwriter",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 14
+    },
+    {
+      "name": "California Dreams",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 15
+    },
+    {
+      "name": "Step by Step",
+      "facet": "Teen sitcoms and Saturday live action",
+      "known_at": 14
+    }
+  ]
+}

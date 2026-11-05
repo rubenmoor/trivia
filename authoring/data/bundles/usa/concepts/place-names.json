@@ -1,0 +1,662 @@
+{
+  "subcategory": "place-names",
+  "facets": [
+    "Tricky state names",
+    "Native American–origin names",
+    "Hawaiian and Alaskan place names",
+    "French-origin place names",
+    "Spanish-origin place names",
+    "European names said American-style",
+    "How locals say their big cities",
+    "Silent and surprising letters",
+    "Rivers, parks and natural landmarks",
+    "Local nicknames and short names",
+    "Pronunciation tests for outsiders",
+    "Official rulings and name disputes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 1,
+      "record": 2,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Illinois",
+      "facet": "Tricky state names",
+      "known_at": 6
+    },
+    {
+      "name": "Oregon",
+      "facet": "Tricky state names",
+      "known_at": 6
+    },
+    {
+      "name": "Iowa",
+      "facet": "Tricky state names",
+      "known_at": 7
+    },
+    {
+      "name": "Arizona",
+      "facet": "Tricky state names",
+      "known_at": 6
+    },
+    {
+      "name": "Michigan",
+      "facet": "Native American–origin names",
+      "known_at": 6
+    },
+    {
+      "name": "Wisconsin",
+      "facet": "Native American–origin names",
+      "known_at": 7
+    },
+    {
+      "name": "Alabama",
+      "facet": "Native American–origin names",
+      "known_at": 6
+    },
+    {
+      "name": "Poughkeepsie",
+      "facet": "Native American–origin names",
+      "known_at": 12
+    },
+    {
+      "name": "Spokane",
+      "facet": "Native American–origin names",
+      "known_at": 11
+    },
+    {
+      "name": "Tacoma",
+      "facet": "Native American–origin names",
+      "known_at": 11
+    },
+    {
+      "name": "Chattanooga",
+      "facet": "Native American–origin names",
+      "known_at": 11
+    },
+    {
+      "name": "Schenectady",
+      "facet": "Native American–origin names",
+      "known_at": 13
+    },
+    {
+      "name": "Topeka",
+      "facet": "Native American–origin names",
+      "known_at": 11
+    },
+    {
+      "name": "Oahu",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 9
+    },
+    {
+      "name": "Kauai",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 10
+    },
+    {
+      "name": "Maui",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 5
+    },
+    {
+      "name": "Waikiki",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 8
+    },
+    {
+      "name": "Molokai",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 12
+    },
+    {
+      "name": "Lanai",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 12
+    },
+    {
+      "name": "Kaneohe",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 14
+    },
+    {
+      "name": "Kona",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 10
+    },
+    {
+      "name": "Hilo",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 12
+    },
+    {
+      "name": "Kodiak",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 8
+    },
+    {
+      "name": "Sitka",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 12
+    },
+    {
+      "name": "Ketchikan",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 12
+    },
+    {
+      "name": "Nome",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 11
+    },
+    {
+      "name": "Valdez",
+      "facet": "Hawaiian and Alaskan place names",
+      "known_at": 12
+    },
+    {
+      "name": "Des Moines",
+      "facet": "French-origin place names",
+      "known_at": 9
+    },
+    {
+      "name": "Terre Haute",
+      "facet": "French-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Coeur d'Alene",
+      "facet": "French-origin place names",
+      "known_at": 13
+    },
+    {
+      "name": "Prairie du Chien",
+      "facet": "French-origin place names",
+      "known_at": 14
+    },
+    {
+      "name": "Duquesne",
+      "facet": "French-origin place names",
+      "known_at": 13
+    },
+    {
+      "name": "Eau Claire",
+      "facet": "French-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "St. Louis",
+      "facet": "French-origin place names",
+      "known_at": 6
+    },
+    {
+      "name": "Lafayette",
+      "facet": "French-origin place names",
+      "known_at": 10
+    },
+    {
+      "name": "Grosse Pointe",
+      "facet": "French-origin place names",
+      "known_at": 13
+    },
+    {
+      "name": "Joliet",
+      "facet": "French-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Dubuque",
+      "facet": "French-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Marquette",
+      "facet": "French-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Thibodaux",
+      "facet": "French-origin place names",
+      "known_at": 14
+    },
+    {
+      "name": "Natchitoches",
+      "facet": "French-origin place names",
+      "known_at": 14
+    },
+    {
+      "name": "Presque Isle",
+      "facet": "French-origin place names",
+      "known_at": 13
+    },
+    {
+      "name": "La Jolla",
+      "facet": "Spanish-origin place names",
+      "known_at": 11
+    },
+    {
+      "name": "San Joaquin Valley",
+      "facet": "Spanish-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Amarillo",
+      "facet": "Spanish-origin place names",
+      "known_at": 9
+    },
+    {
+      "name": "Boca Raton",
+      "facet": "Spanish-origin place names",
+      "known_at": 11
+    },
+    {
+      "name": "Vallejo",
+      "facet": "Spanish-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Los Gatos",
+      "facet": "Spanish-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Palo Alto",
+      "facet": "Spanish-origin place names",
+      "known_at": 10
+    },
+    {
+      "name": "Buena Vista",
+      "facet": "Spanish-origin place names",
+      "known_at": 12
+    },
+    {
+      "name": "Cairo, Illinois",
+      "facet": "European names said American-style",
+      "known_at": 12
+    },
+    {
+      "name": "Versailles, Kentucky",
+      "facet": "European names said American-style",
+      "known_at": 13
+    },
+    {
+      "name": "Milan, Tennessee",
+      "facet": "European names said American-style",
+      "known_at": 13
+    },
+    {
+      "name": "Lima, Ohio",
+      "facet": "European names said American-style",
+      "known_at": 12
+    },
+    {
+      "name": "Peru, Indiana",
+      "facet": "European names said American-style",
+      "known_at": 13
+    },
+    {
+      "name": "Moscow, Idaho",
+      "facet": "European names said American-style",
+      "known_at": 12
+    },
+    {
+      "name": "New Berlin, Wisconsin",
+      "facet": "European names said American-style",
+      "known_at": 13
+    },
+    {
+      "name": "Delhi, New York",
+      "facet": "European names said American-style",
+      "known_at": 13
+    },
+    {
+      "name": "Russia, Ohio",
+      "facet": "European names said American-style",
+      "known_at": 14
+    },
+    {
+      "name": "Calais, Maine",
+      "facet": "European names said American-style",
+      "known_at": 13
+    },
+    {
+      "name": "Houston Street",
+      "facet": "European names said American-style",
+      "known_at": 11
+    },
+    {
+      "name": "Vienna, Georgia",
+      "facet": "European names said American-style",
+      "known_at": 14
+    },
+    {
+      "name": "Madrid, New Mexico",
+      "facet": "European names said American-style",
+      "known_at": 14
+    },
+    {
+      "name": "Prague, Oklahoma",
+      "facet": "European names said American-style",
+      "known_at": 14
+    },
+    {
+      "name": "Norwich, Connecticut",
+      "facet": "European names said American-style",
+      "known_at": 13
+    },
+    {
+      "name": "Marseilles, Illinois",
+      "facet": "European names said American-style",
+      "known_at": 14
+    },
+    {
+      "name": "Cincinnati",
+      "facet": "How locals say their big cities",
+      "known_at": 10
+    },
+    {
+      "name": "Newark",
+      "facet": "How locals say their big cities",
+      "known_at": 10
+    },
+    {
+      "name": "Raleigh",
+      "facet": "How locals say their big cities",
+      "known_at": 11
+    },
+    {
+      "name": "Cleveland",
+      "facet": "How locals say their big cities",
+      "known_at": 9
+    },
+    {
+      "name": "Big Apple",
+      "facet": "Local nicknames and short names",
+      "known_at": 5
+    },
+    {
+      "name": "Frisco",
+      "facet": "Local nicknames and short names",
+      "known_at": 10
+    },
+    {
+      "name": "Philly",
+      "facet": "Local nicknames and short names",
+      "known_at": 7
+    },
+    {
+      "name": "SoCal",
+      "facet": "Local nicknames and short names",
+      "known_at": 9
+    },
+    {
+      "name": "NorCal",
+      "facet": "Local nicknames and short names",
+      "known_at": 11
+    },
+    {
+      "name": "Mile High City",
+      "facet": "Local nicknames and short names",
+      "known_at": 10
+    },
+    {
+      "name": "Big D",
+      "facet": "Local nicknames and short names",
+      "known_at": 12
+    },
+    {
+      "name": "Bay Area",
+      "facet": "Local nicknames and short names",
+      "known_at": 9
+    },
+    {
+      "name": "Tinseltown",
+      "facet": "Local nicknames and short names",
+      "known_at": 11
+    },
+    {
+      "name": "Upstate",
+      "facet": "Local nicknames and short names",
+      "known_at": 11
+    },
+    {
+      "name": "Worcester",
+      "facet": "Silent and surprising letters",
+      "known_at": 12
+    },
+    {
+      "name": "Gloucester",
+      "facet": "Silent and surprising letters",
+      "known_at": 12
+    },
+    {
+      "name": "Greenwich",
+      "facet": "Silent and surprising letters",
+      "known_at": 11
+    },
+    {
+      "name": "Leominster",
+      "facet": "Silent and surprising letters",
+      "known_at": 14
+    },
+    {
+      "name": "Woburn",
+      "facet": "Silent and surprising letters",
+      "known_at": 14
+    },
+    {
+      "name": "Haverhill",
+      "facet": "Silent and surprising letters",
+      "known_at": 14
+    },
+    {
+      "name": "Peabody",
+      "facet": "Silent and surprising letters",
+      "known_at": 13
+    },
+    {
+      "name": "Quincy",
+      "facet": "Silent and surprising letters",
+      "known_at": 13
+    },
+    {
+      "name": "Tucson",
+      "facet": "Silent and surprising letters",
+      "known_at": 9
+    },
+    {
+      "name": "Sequim",
+      "facet": "Silent and surprising letters",
+      "known_at": 14
+    },
+    {
+      "name": "Wilkes-Barre",
+      "facet": "Silent and surprising letters",
+      "known_at": 13
+    },
+    {
+      "name": "Ypsilanti",
+      "facet": "Silent and surprising letters",
+      "known_at": 13
+    },
+    {
+      "name": "Thames River",
+      "facet": "Silent and surprising letters",
+      "known_at": 14
+    },
+    {
+      "name": "Houghton",
+      "facet": "Silent and surprising letters",
+      "known_at": 14
+    },
+    {
+      "name": "Monongahela River",
+      "facet": "Rivers, parks and natural landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Ozarks",
+      "facet": "Rivers, parks and natural landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Puyallup",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 13
+    },
+    {
+      "name": "Kissimmee",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 10
+    },
+    {
+      "name": "Tchoupitoulas Street",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Pend Oreille",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Oconomowoc",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Lancaster",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 10
+    },
+    {
+      "name": "Chautauqua",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 13
+    },
+    {
+      "name": "Skaneateles",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Refugio",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Burnet",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Kosciusko",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Gnadenhutten",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 15
+    },
+    {
+      "name": "Tehachapi",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Port Hueneme",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Bexar County",
+      "facet": "Pronunciation tests for outsiders",
+      "known_at": 14
+    },
+    {
+      "name": "Arkansas",
+      "facet": "Official rulings and name disputes",
+      "known_at": 7
+    },
+    {
+      "name": "Okina",
+      "facet": "Official rulings and name disputes",
+      "known_at": 13
+    },
+    {
+      "name": "US Board on Geographic Names",
+      "facet": "Official rulings and name disputes",
+      "known_at": 14
+    },
+    {
+      "name": "Bde Maka Ska",
+      "facet": "Official rulings and name disputes",
+      "known_at": 14
+    },
+    {
+      "name": "Gulf of America",
+      "facet": "Official rulings and name disputes",
+      "known_at": 10
+    },
+    {
+      "name": "Cape Canaveral",
+      "facet": "Official rulings and name disputes",
+      "known_at": 9
+    },
+    {
+      "name": "Mount Blue Sky",
+      "facet": "Official rulings and name disputes",
+      "known_at": 14
+    },
+    {
+      "name": "Black Elk Peak",
+      "facet": "Official rulings and name disputes",
+      "known_at": 14
+    },
+    {
+      "name": "Martha's Vineyard",
+      "facet": "Official rulings and name disputes",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,1349 @@
+{
+  "subcategory": "roots-and-soul",
+  "facets": [
+    "Blues roots and the Delta",
+    "Chicago and electric blues",
+    "New Orleans and early jazz",
+    "Swing, big bands and bebop",
+    "Jazz legends and their instruments",
+    "Motown and Detroit soul",
+    "Southern soul, Stax and gospel roots",
+    "Funk and R&B stars",
+    "Hip-hop origins in the Bronx",
+    "Hip-hop coasts, crews and stars",
+    "Breakdance, DJing and hip-hop culture",
+    "Music cities, clubs and venues"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 3,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Robert Johnson",
+      "facet": "Blues roots and the Delta",
+      "known_at": 11
+    },
+    {
+      "name": "The Crossroads legend",
+      "facet": "Blues roots and the Delta",
+      "known_at": 11
+    },
+    {
+      "name": "Mississippi Delta",
+      "facet": "Blues roots and the Delta",
+      "known_at": 8
+    },
+    {
+      "name": "B.B. King",
+      "facet": "Blues roots and the Delta",
+      "known_at": 9
+    },
+    {
+      "name": "Lucille",
+      "facet": "Blues roots and the Delta",
+      "known_at": 13
+    },
+    {
+      "name": "W.C. Handy",
+      "facet": "Blues roots and the Delta",
+      "known_at": 13
+    },
+    {
+      "name": "Ma Rainey",
+      "facet": "Blues roots and the Delta",
+      "known_at": 12
+    },
+    {
+      "name": "John Lee Hooker",
+      "facet": "Blues roots and the Delta",
+      "known_at": 12
+    },
+    {
+      "name": "Son House",
+      "facet": "Blues roots and the Delta",
+      "known_at": 14
+    },
+    {
+      "name": "Charley Patton",
+      "facet": "Blues roots and the Delta",
+      "known_at": 15
+    },
+    {
+      "name": "Clarksdale",
+      "facet": "Blues roots and the Delta",
+      "known_at": 13
+    },
+    {
+      "name": "Highway 61",
+      "facet": "Blues roots and the Delta",
+      "known_at": 12
+    },
+    {
+      "name": "Twelve-bar blues",
+      "facet": "Blues roots and the Delta",
+      "known_at": 10
+    },
+    {
+      "name": "Blue note",
+      "facet": "Blues roots and the Delta",
+      "known_at": 11
+    },
+    {
+      "name": "Slide guitar",
+      "facet": "Blues roots and the Delta",
+      "known_at": 9
+    },
+    {
+      "name": "Blues harmonica",
+      "facet": "Blues roots and the Delta",
+      "known_at": 5
+    },
+    {
+      "name": "Juke joint",
+      "facet": "Blues roots and the Delta",
+      "known_at": 11
+    },
+    {
+      "name": "Field holler",
+      "facet": "Blues roots and the Delta",
+      "known_at": 12
+    },
+    {
+      "name": "Cigar box guitar",
+      "facet": "Blues roots and the Delta",
+      "known_at": 10
+    },
+    {
+      "name": "Blind Lemon Jefferson",
+      "facet": "Blues roots and the Delta",
+      "known_at": 14
+    },
+    {
+      "name": "Mississippi John Hurt",
+      "facet": "Blues roots and the Delta",
+      "known_at": 14
+    },
+    {
+      "name": "St. Louis Blues",
+      "facet": "Blues roots and the Delta",
+      "known_at": 12
+    },
+    {
+      "name": "Muddy Waters",
+      "facet": "Chicago and electric blues",
+      "known_at": 11
+    },
+    {
+      "name": "Howlin' Wolf",
+      "facet": "Chicago and electric blues",
+      "known_at": 12
+    },
+    {
+      "name": "Chess Records",
+      "facet": "Chicago and electric blues",
+      "known_at": 12
+    },
+    {
+      "name": "Willie Dixon",
+      "facet": "Chicago and electric blues",
+      "known_at": 14
+    },
+    {
+      "name": "Little Walter",
+      "facet": "Chicago and electric blues",
+      "known_at": 14
+    },
+    {
+      "name": "Buddy Guy",
+      "facet": "Chicago and electric blues",
+      "known_at": 12
+    },
+    {
+      "name": "Maxwell Street",
+      "facet": "Chicago and electric blues",
+      "known_at": 14
+    },
+    {
+      "name": "Great Migration",
+      "facet": "Chicago and electric blues",
+      "known_at": 10
+    },
+    {
+      "name": "Etta James",
+      "facet": "Chicago and electric blues",
+      "known_at": 10
+    },
+    {
+      "name": "At Last",
+      "facet": "Chicago and electric blues",
+      "known_at": 10
+    },
+    {
+      "name": "Bo Diddley",
+      "facet": "Chicago and electric blues",
+      "known_at": 12
+    },
+    {
+      "name": "Johnny B. Goode",
+      "facet": "Chicago and electric blues",
+      "known_at": 8
+    },
+    {
+      "name": "Koko Taylor",
+      "facet": "Chicago and electric blues",
+      "known_at": 14
+    },
+    {
+      "name": "Chicago Blues Festival",
+      "facet": "Chicago and electric blues",
+      "known_at": 12
+    },
+    {
+      "name": "Hoochie Coochie Man",
+      "facet": "Chicago and electric blues",
+      "known_at": 13
+    },
+    {
+      "name": "Elmore James",
+      "facet": "Chicago and electric blues",
+      "known_at": 15
+    },
+    {
+      "name": "Stevie Ray Vaughan",
+      "facet": "Chicago and electric blues",
+      "known_at": 12
+    },
+    {
+      "name": "The Blues Brothers",
+      "facet": "Chicago and electric blues",
+      "known_at": 10
+    },
+    {
+      "name": "Electric guitar amplifier",
+      "facet": "Chicago and electric blues",
+      "known_at": 6
+    },
+    {
+      "name": "Congo Square",
+      "facet": "New Orleans and early jazz",
+      "known_at": 13
+    },
+    {
+      "name": "Jelly Roll Morton",
+      "facet": "New Orleans and early jazz",
+      "known_at": 13
+    },
+    {
+      "name": "Buddy Bolden",
+      "facet": "New Orleans and early jazz",
+      "known_at": 14
+    },
+    {
+      "name": "Storyville",
+      "facet": "New Orleans and early jazz",
+      "known_at": 14
+    },
+    {
+      "name": "Second line",
+      "facet": "New Orleans and early jazz",
+      "known_at": 11
+    },
+    {
+      "name": "Jazz funeral",
+      "facet": "New Orleans and early jazz",
+      "known_at": 10
+    },
+    {
+      "name": "Brass band",
+      "facet": "New Orleans and early jazz",
+      "known_at": 6
+    },
+    {
+      "name": "Sidney Bechet",
+      "facet": "New Orleans and early jazz",
+      "known_at": 14
+    },
+    {
+      "name": "King Oliver",
+      "facet": "New Orleans and early jazz",
+      "known_at": 14
+    },
+    {
+      "name": "Dixieland",
+      "facet": "New Orleans and early jazz",
+      "known_at": 10
+    },
+    {
+      "name": "Ragtime",
+      "facet": "New Orleans and early jazz",
+      "known_at": 8
+    },
+    {
+      "name": "The Entertainer",
+      "facet": "New Orleans and early jazz",
+      "known_at": 7
+    },
+    {
+      "name": "Original Dixieland Jass Band",
+      "facet": "New Orleans and early jazz",
+      "known_at": 14
+    },
+    {
+      "name": "When the Saints Go Marching In",
+      "facet": "New Orleans and early jazz",
+      "known_at": 5
+    },
+    {
+      "name": "Trombone Shorty",
+      "facet": "New Orleans and early jazz",
+      "known_at": 13
+    },
+    {
+      "name": "Count Basie",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 11
+    },
+    {
+      "name": "Benny Goodman",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 12
+    },
+    {
+      "name": "Glenn Miller",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 11
+    },
+    {
+      "name": "Cab Calloway",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 12
+    },
+    {
+      "name": "Minnie the Moocher",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 12
+    },
+    {
+      "name": "Charlie Parker",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 12
+    },
+    {
+      "name": "Dizzy Gillespie",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 11
+    },
+    {
+      "name": "Thelonious Monk",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 13
+    },
+    {
+      "name": "Bebop",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 10
+    },
+    {
+      "name": "Swing era",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 9
+    },
+    {
+      "name": "Lindy Hop",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 11
+    },
+    {
+      "name": "Jitterbug",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 10
+    },
+    {
+      "name": "Savoy Ballroom",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 13
+    },
+    {
+      "name": "Big band",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 7
+    },
+    {
+      "name": "Take the A Train",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 12
+    },
+    {
+      "name": "In the Mood",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 11
+    },
+    {
+      "name": "Sing, Sing, Sing",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 12
+    },
+    {
+      "name": "Carnegie Hall Concert of 1938",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 14
+    },
+    {
+      "name": "Cool jazz",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 12
+    },
+    {
+      "name": "Hard bop",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 14
+    },
+    {
+      "name": "Artie Shaw",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 14
+    },
+    {
+      "name": "Chick Webb",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 14
+    },
+    {
+      "name": "Zoot suit",
+      "facet": "Swing, big bands and bebop",
+      "known_at": 11
+    },
+    {
+      "name": "Miles Davis",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 10
+    },
+    {
+      "name": "John Coltrane",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Billie Holiday",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 10
+    },
+    {
+      "name": "Nina Simone",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Sarah Vaughan",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Trumpet",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 1,
+      "retired": "used_up: The trumpet sound question has already been asked. None of the other options can reach difficulty 1 with the trumpet still at the center of the question."
+    },
+    {
+      "name": "Saxophone",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 2
+    },
+    {
+      "name": "Double bass",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 5
+    },
+    {
+      "name": "Vibraphone",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 9
+    },
+    {
+      "name": "Trumpet mute",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 8
+    },
+    {
+      "name": "Charles Mingus",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Herbie Hancock",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Art Blakey",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 14
+    },
+    {
+      "name": "Dave Brubeck",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Take Five",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 11
+    },
+    {
+      "name": "Kind of Blue",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 12
+    },
+    {
+      "name": "A Love Supreme",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Wynton Marsalis",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 12
+    },
+    {
+      "name": "Chet Baker",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Scat singing",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 7
+    },
+    {
+      "name": "Lionel Hampton",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 14
+    },
+    {
+      "name": "Sonny Rollins",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 14
+    },
+    {
+      "name": "What a Wonderful World",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 5
+    },
+    {
+      "name": "Strange Fruit",
+      "facet": "Jazz legends and their instruments",
+      "known_at": 13
+    },
+    {
+      "name": "Motown Records",
+      "facet": "Motown and Detroit soul",
+      "known_at": 6
+    },
+    {
+      "name": "Berry Gordy",
+      "facet": "Motown and Detroit soul",
+      "known_at": 11
+    },
+    {
+      "name": "Hitsville U.S.A.",
+      "facet": "Motown and Detroit soul",
+      "known_at": 12
+    },
+    {
+      "name": "The Supremes",
+      "facet": "Motown and Detroit soul",
+      "known_at": 9
+    },
+    {
+      "name": "Diana Ross",
+      "facet": "Motown and Detroit soul",
+      "known_at": 8
+    },
+    {
+      "name": "The Temptations",
+      "facet": "Motown and Detroit soul",
+      "known_at": 9
+    },
+    {
+      "name": "Stevie Wonder",
+      "facet": "Motown and Detroit soul",
+      "known_at": 5
+    },
+    {
+      "name": "Marvin Gaye",
+      "facet": "Motown and Detroit soul",
+      "known_at": 9
+    },
+    {
+      "name": "Smokey Robinson",
+      "facet": "Motown and Detroit soul",
+      "known_at": 11
+    },
+    {
+      "name": "The Jackson 5",
+      "facet": "Motown and Detroit soul",
+      "known_at": 6
+    },
+    {
+      "name": "The Four Tops",
+      "facet": "Motown and Detroit soul",
+      "known_at": 12
+    },
+    {
+      "name": "Martha and the Vandellas",
+      "facet": "Motown and Detroit soul",
+      "known_at": 13
+    },
+    {
+      "name": "The Funk Brothers",
+      "facet": "Motown and Detroit soul",
+      "known_at": 14
+    },
+    {
+      "name": "My Girl",
+      "facet": "Motown and Detroit soul",
+      "known_at": 7
+    },
+    {
+      "name": "What's Going On",
+      "facet": "Motown and Detroit soul",
+      "known_at": 11
+    },
+    {
+      "name": "I Heard It Through the Grapevine",
+      "facet": "Motown and Detroit soul",
+      "known_at": 10
+    },
+    {
+      "name": "Gladys Knight & the Pips",
+      "facet": "Motown and Detroit soul",
+      "known_at": 12
+    },
+    {
+      "name": "Please Mr. Postman",
+      "facet": "Motown and Detroit soul",
+      "known_at": 12
+    },
+    {
+      "name": "Holland–Dozier–Holland",
+      "facet": "Motown and Detroit soul",
+      "known_at": 15
+    },
+    {
+      "name": "Motown 25",
+      "facet": "Motown and Detroit soul",
+      "known_at": 13
+    },
+    {
+      "name": "Dancing in the Street",
+      "facet": "Motown and Detroit soul",
+      "known_at": 10
+    },
+    {
+      "name": "Superstition",
+      "facet": "Motown and Detroit soul",
+      "known_at": 8
+    },
+    {
+      "name": "Stax Records",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 12
+    },
+    {
+      "name": "Otis Redding",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 11
+    },
+    {
+      "name": "(Sittin' On) The Dock of the Bay",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 10
+    },
+    {
+      "name": "Sam Cooke",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 11
+    },
+    {
+      "name": "A Change Is Gonna Come",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 12
+    },
+    {
+      "name": "Respect",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 6
+    },
+    {
+      "name": "Booker T. & the M.G.'s",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 14
+    },
+    {
+      "name": "Green Onions",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 13
+    },
+    {
+      "name": "Isaac Hayes",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 11
+    },
+    {
+      "name": "Theme from Shaft",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 11
+    },
+    {
+      "name": "Al Green",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 12
+    },
+    {
+      "name": "Atlantic Records",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 12
+    },
+    {
+      "name": "Wilson Pickett",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 13
+    },
+    {
+      "name": "Sam & Dave",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 12
+    },
+    {
+      "name": "Mahalia Jackson",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 12
+    },
+    {
+      "name": "Sister Rosetta Tharpe",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas A. Dorsey",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 15
+    },
+    {
+      "name": "Gospel choir",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 4
+    },
+    {
+      "name": "Call and response",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 9
+    },
+    {
+      "name": "Hammond organ",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 11
+    },
+    {
+      "name": "Negro spiritual",
+      "facet": "Southern soul, Stax and gospel roots",
+      "known_at": 10
+    },
+    {
+      "name": "James Brown",
+      "facet": "Funk and R&B stars",
+      "known_at": 7
+    },
+    {
+      "name": "I Got You (I Feel Good)",
+      "facet": "Funk and R&B stars",
+      "known_at": 5
+    },
+    {
+      "name": "Prince",
+      "facet": "Funk and R&B stars",
+      "known_at": 7
+    },
+    {
+      "name": "Thriller",
+      "facet": "Funk and R&B stars",
+      "known_at": 4
+    },
+    {
+      "name": "Moonwalk",
+      "facet": "Funk and R&B stars",
+      "known_at": 2,
+      "retired": "used_up: The pool already has the Michael Jackson moonwalk question. Every option points back to the same easy fact."
+    },
+    {
+      "name": "George Clinton",
+      "facet": "Funk and R&B stars",
+      "known_at": 13
+    },
+    {
+      "name": "Parliament-Funkadelic",
+      "facet": "Funk and R&B stars",
+      "known_at": 13
+    },
+    {
+      "name": "Sly and the Family Stone",
+      "facet": "Funk and R&B stars",
+      "known_at": 12
+    },
+    {
+      "name": "Earth, Wind & Fire",
+      "facet": "Funk and R&B stars",
+      "known_at": 9
+    },
+    {
+      "name": "September",
+      "facet": "Funk and R&B stars",
+      "known_at": 7
+    },
+    {
+      "name": "Kool & the Gang",
+      "facet": "Funk and R&B stars",
+      "known_at": 10
+    },
+    {
+      "name": "Whitney Houston",
+      "facet": "Funk and R&B stars",
+      "known_at": 6
+    },
+    {
+      "name": "Tina Turner",
+      "facet": "Funk and R&B stars",
+      "known_at": 7
+    },
+    {
+      "name": "Chaka Khan",
+      "facet": "Funk and R&B stars",
+      "known_at": 12
+    },
+    {
+      "name": "Bootsy Collins",
+      "facet": "Funk and R&B stars",
+      "known_at": 14
+    },
+    {
+      "name": "Slap bass",
+      "facet": "Funk and R&B stars",
+      "known_at": 11
+    },
+    {
+      "name": "Beyoncé",
+      "facet": "Funk and R&B stars",
+      "known_at": 3
+    },
+    {
+      "name": "Destiny's Child",
+      "facet": "Funk and R&B stars",
+      "known_at": 8
+    },
+    {
+      "name": "Janet Jackson",
+      "facet": "Funk and R&B stars",
+      "known_at": 8
+    },
+    {
+      "name": "Soul Train",
+      "facet": "Funk and R&B stars",
+      "known_at": 10
+    },
+    {
+      "name": "Usher",
+      "facet": "Funk and R&B stars",
+      "known_at": 7
+    },
+    {
+      "name": "Alicia Keys",
+      "facet": "Funk and R&B stars",
+      "known_at": 7
+    },
+    {
+      "name": "Rick James",
+      "facet": "Funk and R&B stars",
+      "known_at": 12
+    },
+    {
+      "name": "DJ Kool Herc",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 11
+    },
+    {
+      "name": "1520 Sedgwick Avenue",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 14
+    },
+    {
+      "name": "Block party",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 6
+    },
+    {
+      "name": "Breakbeat",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 11
+    },
+    {
+      "name": "Grandmaster Flash",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 11
+    },
+    {
+      "name": "The Message",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 12
+    },
+    {
+      "name": "Afrika Bambaataa",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 13
+    },
+    {
+      "name": "Universal Zulu Nation",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 14
+    },
+    {
+      "name": "Planet Rock",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 14
+    },
+    {
+      "name": "The Sugarhill Gang",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 11
+    },
+    {
+      "name": "Rapper's Delight",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 10
+    },
+    {
+      "name": "Sugar Hill Records",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 14
+    },
+    {
+      "name": "Kurtis Blow",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 13
+    },
+    {
+      "name": "Grand Wizzard Theodore",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 15
+    },
+    {
+      "name": "Cold Crush Brothers",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 15
+    },
+    {
+      "name": "Grandmaster Caz",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 15
+    },
+    {
+      "name": "Wild Style",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 14
+    },
+    {
+      "name": "Universal Hip Hop Museum",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 13
+    },
+    {
+      "name": "Hip-hop's 50th anniversary",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 11
+    },
+    {
+      "name": "Funky drummer",
+      "facet": "Hip-hop origins in the Bronx",
+      "known_at": 14
+    },
+    {
+      "name": "East Coast–West Coast rivalry",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Tupac Shakur",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 7
+    },
+    {
+      "name": "The Notorious B.I.G.",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 9
+    },
+    {
+      "name": "Dr. Dre",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Snoop Dogg",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 4
+    },
+    {
+      "name": "N.W.A",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Ice Cube",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 8
+    },
+    {
+      "name": "Jay-Z",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Nas",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Wu-Tang Clan",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Run-DMC",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Walk This Way",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Beastie Boys",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 10
+    },
+    {
+      "name": "LL Cool J",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Public Enemy",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Missy Elliott",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 9
+    },
+    {
+      "name": "OutKast",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 9
+    },
+    {
+      "name": "Eminem",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 5
+    },
+    {
+      "name": "8 Mile",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Kendrick Lamar",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 7
+    },
+    {
+      "name": "Queen Latifah",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 8
+    },
+    {
+      "name": "Salt-N-Pepa",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 11
+    },
+    {
+      "name": "Def Jam Recordings",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Death Row Records",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Dirty South",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 12
+    },
+    {
+      "name": "Lauryn Hill",
+      "facet": "Hip-hop coasts, crews and stars",
+      "known_at": 10
+    },
+    {
+      "name": "Breakdancing",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 3
+    },
+    {
+      "name": "B-boy",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Headspin",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 4
+    },
+    {
+      "name": "Windmill",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 7
+    },
+    {
+      "name": "Toprock",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Freeze",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Rock Steady Crew",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 13
+    },
+    {
+      "name": "Breaking at the 2024 Paris Olympics",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 7
+    },
+    {
+      "name": "Turntables",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 4
+    },
+    {
+      "name": "Scratching",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 5
+    },
+    {
+      "name": "Technics SL-1200",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 14
+    },
+    {
+      "name": "Beatboxing",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 4
+    },
+    {
+      "name": "Graffiti",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 3
+    },
+    {
+      "name": "MC",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 7
+    },
+    {
+      "name": "Sampling",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Roland TR-808",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Freestyle rap",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 6
+    },
+    {
+      "name": "Rap battle",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 5
+    },
+    {
+      "name": "Popping",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 9
+    },
+    {
+      "name": "Locking",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Krumping",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Boombox",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 6
+    },
+    {
+      "name": "Adidas Superstar",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 10
+    },
+    {
+      "name": "Four elements of hip-hop",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Cypher",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 12
+    },
+    {
+      "name": "Mixtape",
+      "facet": "Breakdance, DJing and hip-hop culture",
+      "known_at": 8
+    },
+    {
+      "name": "Amateur Night at the Apollo",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 11
+    },
+    {
+      "name": "Village Vanguard",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Birdland",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 13
+    },
+    {
+      "name": "Blue Note Jazz Club",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 13
+    },
+    {
+      "name": "Minton's Playhouse",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 15
+    },
+    {
+      "name": "Kansas City jazz",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 13
+    },
+    {
+      "name": "18th and Vine",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 15
+    },
+    {
+      "name": "Chitlin' Circuit",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Monterey Jazz Festival",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Motown Museum",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 12
+    },
+    {
+      "name": "Stax Museum of American Soul Music",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 14
+    },
+    {
+      "name": "National Museum of African American Music",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Jazz at Lincoln Center",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 13
+    },
+    {
+      "name": "Compton",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 10
+    },
+    {
+      "name": "Queensbridge",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Tipitina's",
+      "facet": "Music cities, clubs and venues",
+      "known_at": 15
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "subcategory": "ghosts-and-superstitions",
+  "facets": [
+    "Haunted houses and mansions",
+    "Haunted hotels, ships and prisons",
+    "Ghosts of battlefields and landmarks",
+    "Folk ghost legends",
+    "Ghost towns and lost colonies",
+    "Witches, voodoo and Salem",
+    "Halloween customs in America",
+    "Regional folk superstitions",
+    "Lucky charms and New Year luck",
+    "Sports curses and jinxes",
+    "Spiritualism, Ouija and ghost hunting",
+    "Ghosts in American films and TV"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sarah Winchester",
+      "facet": "Haunted houses and mansions",
+      "known_at": 12
+    },
+    {
+      "name": "Haunted Mansion (Disneyland ride)",
+      "facet": "Haunted houses and mansions",
+      "known_at": 5
+    },
+    {
+      "name": "Amityville house",
+      "facet": "Haunted houses and mansions",
+      "known_at": 11
+    },
+    {
+      "name": "Lizzie Borden House",
+      "facet": "Haunted houses and mansions",
+      "known_at": 12
+    },
+    {
+      "name": "LaLaurie Mansion",
+      "facet": "Haunted houses and mansions",
+      "known_at": 13
+    },
+    {
+      "name": "Myrtles Plantation",
+      "facet": "Haunted houses and mansions",
+      "known_at": 13
+    },
+    {
+      "name": "Whaley House",
+      "facet": "Haunted houses and mansions",
+      "known_at": 13
+    },
+    {
+      "name": "Lemp Mansion",
+      "facet": "Haunted houses and mansions",
+      "known_at": 14
+    },
+    {
+      "name": "Franklin Castle",
+      "facet": "Haunted houses and mansions",
+      "known_at": 14
+    },
+    {
+      "name": "Molly Brown House",
+      "facet": "Haunted houses and mansions",
+      "known_at": 13
+    },
+    {
+      "name": "Octagon House",
+      "facet": "Haunted houses and mansions",
+      "known_at": 14
+    },
+    {
+      "name": "Joshua Ward House",
+      "facet": "Haunted houses and mansions",
+      "known_at": 15
+    },
+    {
+      "name": "Sorrel-Weed House",
+      "facet": "Haunted houses and mansions",
+      "known_at": 15
+    },
+    {
+      "name": "Merchant's House Museum",
+      "facet": "Haunted houses and mansions",
+      "known_at": 15
+    },
+    {
+      "name": "RMS Queen Mary",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 11
+    },
+    {
+      "name": "Eastern State Penitentiary",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 12
+    },
+    {
+      "name": "Hotel del Coronado",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 13
+    },
+    {
+      "name": "USS Hornet",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 13
+    },
+    {
+      "name": "USS Lexington",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 14
+    },
+    {
+      "name": "Crescent Hotel",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 14
+    },
+    {
+      "name": "Driskill Hotel",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 14
+    },
+    {
+      "name": "Hollywood Roosevelt Hotel",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 13
+    },
+    {
+      "name": "Ohio State Reformatory",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 13
+    },
+    {
+      "name": "West Virginia Penitentiary",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 14
+    },
+    {
+      "name": "Waverly Hills Sanatorium",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 14
+    },
+    {
+      "name": "Omni Parker House",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 15
+    },
+    {
+      "name": "Marshall House",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 15
+    },
+    {
+      "name": "Old Charleston Jail",
+      "facet": "Haunted hotels, ships and prisons",
+      "known_at": 15
+    },
+    {
+      "name": "Lincoln's ghost",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 10
+    },
+    {
+      "name": "Demon Cat of the Capitol",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Antietam",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Chickamauga",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Shiloh",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Little Bighorn",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 12
+    },
+    {
+      "name": "Fort Mifflin",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 15
+    },
+    {
+      "name": "St. Augustine Lighthouse",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 13
+    },
+    {
+      "name": "Point Lookout Lighthouse",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 15
+    },
+    {
+      "name": "Bachelor's Grove Cemetery",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 15
+    },
+    {
+      "name": "Poe Toaster",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 14
+    },
+    {
+      "name": "Fort Monroe",
+      "facet": "Ghosts of battlefields and landmarks",
+      "known_at": 15
+    },
+    {
+      "name": "Ichabod Crane",
+      "facet": "Folk ghost legends",
+      "known_at": 9
+    },
+    {
+      "name": "Washington Irving",
+      "facet": "Folk ghost legends",
+      "known_at": 11
+    },
+    {
+      "name": "Resurrection Mary",
+      "facet": "Folk ghost legends",
+      "known_at": 14
+    },
+    {
+      "name": "Vanishing hitchhiker",
+      "facet": "Folk ghost legends",
+      "known_at": 11
+    },
+    {
+      "name": "Bloody Mary (mirror legend)",
+      "facet": "Folk ghost legends",
+      "known_at": 7
+    },
+    {
+      "name": "La Llorona",
+      "facet": "Folk ghost legends",
+      "known_at": 10
+    },
+    {
+      "name": "Gray Man of Pawleys Island",
+      "facet": "Folk ghost legends",
+      "known_at": 15
+    },
+    {
+      "name": "Brown Mountain Lights",
+      "facet": "Folk ghost legends",
+      "known_at": 14
+    },
+    {
+      "name": "Night marchers",
+      "facet": "Folk ghost legends",
+      "known_at": 14
+    },
+    {
+      "name": "Bunny Man",
+      "facet": "Folk ghost legends",
+      "known_at": 14
+    },
+    {
+      "name": "Calico",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 13
+    },
+    {
+      "name": "Rhyolite",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 15
+    },
+    {
+      "name": "Jerome",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 14
+    },
+    {
+      "name": "Kennecott",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 15
+    },
+    {
+      "name": "Bannack",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 15
+    },
+    {
+      "name": "St. Elmo",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 15
+    },
+    {
+      "name": "Cahawba",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 15
+    },
+    {
+      "name": "Gold rush",
+      "facet": "Ghost towns and lost colonies",
+      "known_at": 7
+    },
+    {
+      "name": "Tituba",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 13
+    },
+    {
+      "name": "Cotton Mather",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 13
+    },
+    {
+      "name": "Giles Corey",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 14
+    },
+    {
+      "name": "Bridget Bishop",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 15
+    },
+    {
+      "name": "Rebecca Nurse",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 15
+    },
+    {
+      "name": "Spectral evidence",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 14
+    },
+    {
+      "name": "The Crucible",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 11
+    },
+    {
+      "name": "Arthur Miller",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 12
+    },
+    {
+      "name": "Witch House",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 14
+    },
+    {
+      "name": "Danvers",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 14
+    },
+    {
+      "name": "Marie Laveau",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 12
+    },
+    {
+      "name": "New Orleans Voodoo",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 9
+    },
+    {
+      "name": "Voodoo doll",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 6
+    },
+    {
+      "name": "Gris-gris",
+      "facet": "Witches, voodoo and Salem",
+      "known_at": 14
+    },
+    {
+      "name": "Haunted hayride",
+      "facet": "Halloween customs in America",
+      "known_at": 7
+    },
+    {
+      "name": "Haunted house attraction",
+      "facet": "Halloween customs in America",
+      "known_at": 4
+    },
+    {
+      "name": "Trick-or-Treat for UNICEF",
+      "facet": "Halloween customs in America",
+      "known_at": 11
+    },
+    {
+      "name": "Pumpkin spice",
+      "facet": "Halloween customs in America",
+      "known_at": 8
+    },
+    {
+      "name": "Halloween costume contest",
+      "facet": "Halloween customs in America",
+      "known_at": 4
+    },
+    {
+      "name": "Haint blue",
+      "facet": "Regional folk superstitions",
+      "known_at": 14
+    },
+    {
+      "name": "Bottle tree",
+      "facet": "Regional folk superstitions",
+      "known_at": 14
+    },
+    {
+      "name": "Hex sign",
+      "facet": "Regional folk superstitions",
+      "known_at": 13
+    },
+    {
+      "name": "Persimmon seed",
+      "facet": "Regional folk superstitions",
+      "known_at": 14
+    },
+    {
+      "name": "Holding your breath past a cemetery",
+      "facet": "Regional folk superstitions",
+      "known_at": 8
+    },
+    {
+      "name": "Step on a crack",
+      "facet": "Regional folk superstitions",
+      "known_at": 4
+    },
+    {
+      "name": "Pele's curse",
+      "facet": "Regional folk superstitions",
+      "known_at": 12
+    },
+    {
+      "name": "Thirteenth floor",
+      "facet": "Regional folk superstitions",
+      "known_at": 9
+    },
+    {
+      "name": "Itchy palm",
+      "facet": "Regional folk superstitions",
+      "known_at": 10
+    },
+    {
+      "name": "Lifting your feet over railroad tracks",
+      "facet": "Regional folk superstitions",
+      "known_at": 11
+    },
+    {
+      "name": "Ozark superstitions",
+      "facet": "Regional folk superstitions",
+      "known_at": 14
+    },
+    {
+      "name": "Gullah haint",
+      "facet": "Regional folk superstitions",
+      "known_at": 15
+    },
+    {
+      "name": "Powwow (Pennsylvania Dutch folk healing)",
+      "facet": "Regional folk superstitions",
+      "known_at": 15
+    },
+    {
+      "name": "Rabbit's foot",
+      "facet": "Lucky charms and New Year luck",
+      "known_at": 5,
+      "retired": "used_up: Identify already asked; the remaining options (word meaning, origin place) give forced or uncertain questions about folk origins."
+    },
+    {
+      "name": "Horseshoe",
+      "facet": "Lucky charms and New Year luck",
+      "known_at": 3
+    },
+    {
+      "name": "Lucky penny",
+      "facet": "Lucky charms and New Year luck",
+      "known_at": 4
+    },
+    {
+      "name": "Lucky Charms cereal",
+      "facet": "Lucky charms and New Year luck",
+      "known_at": 4
+    },
+    {
+      "name": "Midnight kiss",
+      "facet": "Lucky charms and New Year luck",
+      "known_at": 8
+    },
+    {
+      "name": "Mojo bag",
+      "facet": "Lucky charms and New Year luck",
+      "known_at": 14
+    },
+    {
+      "name": "Curse of the Bambino",
+      "facet": "Sports curses and jinxes",
+      "known_at": 11
+    },
+    {
+      "name": "Curse of the Billy Goat",
+      "facet": "Sports curses and jinxes",
+      "known_at": 12
+    },
+    {
+      "name": "Steve Bartman",
+      "facet": "Sports curses and jinxes",
+      "known_at": 13
+    },
+    {
+      "name": "Black cat at Shea Stadium (1969)",
+      "facet": "Sports curses and jinxes",
+      "known_at": 15
+    },
+    {
+      "name": "Madden curse",
+      "facet": "Sports curses and jinxes",
+      "known_at": 10
+    },
+    {
+      "name": "Sports Illustrated cover jinx",
+      "facet": "Sports curses and jinxes",
+      "known_at": 12
+    },
+    {
+      "name": "Curse of Rocky Colavito",
+      "facet": "Sports curses and jinxes",
+      "known_at": 15
+    },
+    {
+      "name": "Curse of Billy Penn",
+      "facet": "Sports curses and jinxes",
+      "known_at": 14
+    },
+    {
+      "name": "Curse of Bobby Layne",
+      "facet": "Sports curses and jinxes",
+      "known_at": 15
+    },
+    {
+      "name": "Playoff beard",
+      "facet": "Sports curses and jinxes",
+      "known_at": 11
+    },
+    {
+      "name": "Rally cap",
+      "facet": "Sports curses and jinxes",
+      "known_at": 10
+    },
+    {
+      "name": "Rally Monkey",
+      "facet": "Sports curses and jinxes",
+      "known_at": 13
+    },
+    {
+      "name": "No-hitter jinx",
+      "facet": "Sports curses and jinxes",
+      "known_at": 12
+    },
+    {
+      "name": "Octopus throwing",
+      "facet": "Sports curses and jinxes",
+      "known_at": 13
+    },
+    {
+      "name": "Terrible Towel",
+      "facet": "Sports curses and jinxes",
+      "known_at": 12
+    },
+    {
+      "name": "Wade Boggs",
+      "facet": "Sports curses and jinxes",
+      "known_at": 14
+    },
+    {
+      "name": "Ouija board",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 7
+    },
+    {
+      "name": "Planchette",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 12
+    },
+    {
+      "name": "Fox sisters",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 14
+    },
+    {
+      "name": "Hydesville",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 15
+    },
+    {
+      "name": "Lily Dale",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 14
+    },
+    {
+      "name": "Cassadaga",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 15
+    },
+    {
+      "name": "Spiritualism",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 12
+    },
+    {
+      "name": "Séance",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 9
+    },
+    {
+      "name": "Medium",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 8
+    },
+    {
+      "name": "Ectoplasm",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 11
+    },
+    {
+      "name": "Harry Houdini",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 8
+    },
+    {
+      "name": "William Mumler",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 15
+    },
+    {
+      "name": "Ed and Lorraine Warren",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 12
+    },
+    {
+      "name": "Annabelle doll",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 10
+    },
+    {
+      "name": "Ghost Hunters (TV series)",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 11
+    },
+    {
+      "name": "EMF meter",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 11
+    },
+    {
+      "name": "Electronic voice phenomenon",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 13
+    },
+    {
+      "name": "Magic 8 Ball",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 5
+    },
+    {
+      "name": "Edgar Cayce",
+      "facet": "Spiritualism, Ouija and ghost hunting",
+      "known_at": 15
+    },
+    {
+      "name": "Ghostbusters",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 4
+    },
+    {
+      "name": "Slimer",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 6
+    },
+    {
+      "name": "Stay Puft Marshmallow Man",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Casper the Friendly Ghost",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 3
+    },
+    {
+      "name": "Scooby-Doo",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 2
+    },
+    {
+      "name": "Beetlejuice",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Ghost (1990 film)",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 11
+    },
+    {
+      "name": "The Sixth Sense",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Poltergeist",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 10
+    },
+    {
+      "name": "The Conjuring",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 10
+    },
+    {
+      "name": "Paranormal Activity",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 11
+    },
+    {
+      "name": "The Haunting of Hill House",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Danny Phantom",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 7
+    },
+    {
+      "name": "Ghosts (American sitcom)",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Ghost Whisperer",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 11
+    },
+    {
+      "name": "Blackbeard's Ghost",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 14
+    },
+    {
+      "name": "Topper",
+      "facet": "Ghosts in American films and TV",
+      "known_at": 15
+    }
+  ]
+}

@@ -1,0 +1,973 @@
+{
+  "subcategory": "words-and-slang",
+  "facets": [
+    "Food and drink words",
+    "Regional words and dialects",
+    "Classic slang by decade",
+    "Teen and internet slang",
+    "Sports words and expressions",
+    "Everyday idioms and sayings",
+    "Money and shopping words",
+    "Words from Native American languages",
+    "Words from immigrant languages",
+    "School and college words",
+    "Cars, roads and travel words",
+    "Words born in movies, TV and music"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "French fries",
+      "facet": "Food and drink words",
+      "known_at": 1
+    },
+    {
+      "name": "Candy",
+      "facet": "Food and drink words",
+      "known_at": 2
+    },
+    {
+      "name": "Soda",
+      "facet": "Food and drink words",
+      "known_at": 3
+    },
+    {
+      "name": "Jelly",
+      "facet": "Food and drink words",
+      "known_at": 4
+    },
+    {
+      "name": "Ketchup",
+      "facet": "Food and drink words",
+      "known_at": 2,
+      "retired": "used_up: The photo, origin and inventor angles are already covered, or don't work at difficulty 1."
+    },
+    {
+      "name": "Zucchini",
+      "facet": "Food and drink words",
+      "known_at": 7
+    },
+    {
+      "name": "Eggplant",
+      "facet": "Food and drink words",
+      "known_at": 6
+    },
+    {
+      "name": "Cilantro",
+      "facet": "Food and drink words",
+      "known_at": 9
+    },
+    {
+      "name": "Sub sandwich",
+      "facet": "Food and drink words",
+      "known_at": 6
+    },
+    {
+      "name": "Doggy bag",
+      "facet": "Food and drink words",
+      "known_at": 7
+    },
+    {
+      "name": "Takeout",
+      "facet": "Food and drink words",
+      "known_at": 6
+    },
+    {
+      "name": "Brunch",
+      "facet": "Food and drink words",
+      "known_at": 7
+    },
+    {
+      "name": "Sunny-side up",
+      "facet": "Food and drink words",
+      "known_at": 7
+    },
+    {
+      "name": "Graham cracker",
+      "facet": "Food and drink words",
+      "known_at": 8
+    },
+    {
+      "name": "Hella",
+      "facet": "Regional words and dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Yinz",
+      "facet": "Regional words and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Bubbler",
+      "facet": "Regional words and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Ope",
+      "facet": "Regional words and dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Jawn",
+      "facet": "Regional words and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Lagniappe",
+      "facet": "Regional words and dialects",
+      "known_at": 14
+    },
+    {
+      "name": "Youse",
+      "facet": "Regional words and dialects",
+      "known_at": 11
+    },
+    {
+      "name": "Southern drawl",
+      "facet": "Regional words and dialects",
+      "known_at": 10
+    },
+    {
+      "name": "Pennsylvania Dutch",
+      "facet": "Regional words and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Appalachian English",
+      "facet": "Regional words and dialects",
+      "known_at": 13
+    },
+    {
+      "name": "Cajun French",
+      "facet": "Regional words and dialects",
+      "known_at": 12
+    },
+    {
+      "name": "Frappe",
+      "facet": "Regional words and dialects",
+      "known_at": 14
+    },
+    {
+      "name": "The bee's knees",
+      "facet": "Classic slang by decade",
+      "known_at": 10
+    },
+    {
+      "name": "The cat's pajamas",
+      "facet": "Classic slang by decade",
+      "known_at": 11
+    },
+    {
+      "name": "Swell",
+      "facet": "Classic slang by decade",
+      "known_at": 9
+    },
+    {
+      "name": "Hep cat",
+      "facet": "Classic slang by decade",
+      "known_at": 12
+    },
+    {
+      "name": "Daddy-O",
+      "facet": "Classic slang by decade",
+      "known_at": 11
+    },
+    {
+      "name": "Square",
+      "facet": "Classic slang by decade",
+      "known_at": 9
+    },
+    {
+      "name": "Groovy",
+      "facet": "Classic slang by decade",
+      "known_at": 6
+    },
+    {
+      "name": "Far out",
+      "facet": "Classic slang by decade",
+      "known_at": 8
+    },
+    {
+      "name": "Bummer",
+      "facet": "Classic slang by decade",
+      "known_at": 7
+    },
+    {
+      "name": "Jive",
+      "facet": "Classic slang by decade",
+      "known_at": 11
+    },
+    {
+      "name": "Rad",
+      "facet": "Classic slang by decade",
+      "known_at": 6
+    },
+    {
+      "name": "Gnarly",
+      "facet": "Classic slang by decade",
+      "known_at": 8
+    },
+    {
+      "name": "Totally tubular",
+      "facet": "Classic slang by decade",
+      "known_at": 10
+    },
+    {
+      "name": "Gag me with a spoon",
+      "facet": "Classic slang by decade",
+      "known_at": 12
+    },
+    {
+      "name": "Psych",
+      "facet": "Classic slang by decade",
+      "known_at": 8
+    },
+    {
+      "name": "As if",
+      "facet": "Classic slang by decade",
+      "known_at": 9
+    },
+    {
+      "name": "Talk to the hand",
+      "facet": "Classic slang by decade",
+      "known_at": 7
+    },
+    {
+      "name": "Da bomb",
+      "facet": "Classic slang by decade",
+      "known_at": 9
+    },
+    {
+      "name": "Phat",
+      "facet": "Classic slang by decade",
+      "known_at": 11
+    },
+    {
+      "name": "Cool",
+      "facet": "Classic slang by decade",
+      "known_at": 3
+    },
+    {
+      "name": "Rizz",
+      "facet": "Teen and internet slang",
+      "known_at": 6
+    },
+    {
+      "name": "No cap",
+      "facet": "Teen and internet slang",
+      "known_at": 6
+    },
+    {
+      "name": "Bussin",
+      "facet": "Teen and internet slang",
+      "known_at": 7
+    },
+    {
+      "name": "Bet",
+      "facet": "Teen and internet slang",
+      "known_at": 7
+    },
+    {
+      "name": "Sus",
+      "facet": "Teen and internet slang",
+      "known_at": 4
+    },
+    {
+      "name": "Lit",
+      "facet": "Teen and internet slang",
+      "known_at": 6
+    },
+    {
+      "name": "Slay",
+      "facet": "Teen and internet slang",
+      "known_at": 6
+    },
+    {
+      "name": "GOAT",
+      "facet": "Teen and internet slang",
+      "known_at": 5
+    },
+    {
+      "name": "Salty",
+      "facet": "Teen and internet slang",
+      "known_at": 6
+    },
+    {
+      "name": "Extra",
+      "facet": "Teen and internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "Low-key",
+      "facet": "Teen and internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "Stan",
+      "facet": "Teen and internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "Yeet",
+      "facet": "Teen and internet slang",
+      "known_at": 6
+    },
+    {
+      "name": "Ghosting",
+      "facet": "Teen and internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "FOMO",
+      "facet": "Teen and internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "OK boomer",
+      "facet": "Teen and internet slang",
+      "known_at": 9
+    },
+    {
+      "name": "Cheugy",
+      "facet": "Teen and internet slang",
+      "known_at": 12
+    },
+    {
+      "name": "Vibe check",
+      "facet": "Teen and internet slang",
+      "known_at": 8
+    },
+    {
+      "name": "TL;DR",
+      "facet": "Teen and internet slang",
+      "known_at": 10
+    },
+    {
+      "name": "LOL",
+      "facet": "Teen and internet slang",
+      "known_at": 4
+    },
+    {
+      "name": "Selfie",
+      "facet": "Teen and internet slang",
+      "known_at": 3
+    },
+    {
+      "name": "Skibidi",
+      "facet": "Teen and internet slang",
+      "known_at": 5
+    },
+    {
+      "name": "Slam dunk",
+      "facet": "Sports words and expressions",
+      "known_at": 4
+    },
+    {
+      "name": "Hail Mary",
+      "facet": "Sports words and expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Curveball",
+      "facet": "Sports words and expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Strike out",
+      "facet": "Sports words and expressions",
+      "known_at": 6
+    },
+    {
+      "name": "MVP",
+      "facet": "Sports words and expressions",
+      "known_at": 6
+    },
+    {
+      "name": "Buzzer beater",
+      "facet": "Sports words and expressions",
+      "known_at": 9
+    },
+    {
+      "name": "Benchwarmer",
+      "facet": "Sports words and expressions",
+      "known_at": 8
+    },
+    {
+      "name": "Bleachers",
+      "facet": "Sports words and expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Tailgate party",
+      "facet": "Sports words and expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Full-court press",
+      "facet": "Sports words and expressions",
+      "known_at": 12
+    },
+    {
+      "name": "Soccer",
+      "facet": "Sports words and expressions",
+      "known_at": 3
+    },
+    {
+      "name": "OK",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Take a rain check",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "The whole nine yards",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Pass the buck",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "The buck stops here",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Close but no cigar",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Keeping up with the Joneses",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "The real McCoy",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Cold turkey",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Spill the beans",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Bite the dust",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Kick the can down the road",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "My two cents",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Pull yourself up by your bootstraps",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Have a nice day",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Bring home the bacon",
+      "facet": "Everyday idioms and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Nickel",
+      "facet": "Money and shopping words",
+      "known_at": 4
+    },
+    {
+      "name": "Dime",
+      "facet": "Money and shopping words",
+      "known_at": 4
+    },
+    {
+      "name": "Quarter",
+      "facet": "Money and shopping words",
+      "known_at": 3
+    },
+    {
+      "name": "Greenback",
+      "facet": "Money and shopping words",
+      "known_at": 10
+    },
+    {
+      "name": "Benjamin",
+      "facet": "Money and shopping words",
+      "known_at": 10
+    },
+    {
+      "name": "Grand",
+      "facet": "Money and shopping words",
+      "known_at": 9
+    },
+    {
+      "name": "C-note",
+      "facet": "Money and shopping words",
+      "known_at": 12
+    },
+    {
+      "name": "Two bits",
+      "facet": "Money and shopping words",
+      "known_at": 13
+    },
+    {
+      "name": "Moolah",
+      "facet": "Money and shopping words",
+      "known_at": 9
+    },
+    {
+      "name": "Garage sale",
+      "facet": "Money and shopping words",
+      "known_at": 5
+    },
+    {
+      "name": "Mall",
+      "facet": "Money and shopping words",
+      "known_at": 3
+    },
+    {
+      "name": "Strip mall",
+      "facet": "Money and shopping words",
+      "known_at": 10
+    },
+    {
+      "name": "Dollar store",
+      "facet": "Money and shopping words",
+      "known_at": 5
+    },
+    {
+      "name": "Five-and-dime",
+      "facet": "Money and shopping words",
+      "known_at": 12
+    },
+    {
+      "name": "Coupon",
+      "facet": "Money and shopping words",
+      "known_at": 5
+    },
+    {
+      "name": "Checkout line",
+      "facet": "Money and shopping words",
+      "known_at": 4
+    },
+    {
+      "name": "Tipping",
+      "facet": "Money and shopping words",
+      "known_at": 7
+    },
+    {
+      "name": "Moccasin",
+      "facet": "Words from Native American languages",
+      "known_at": 8
+    },
+    {
+      "name": "Teepee",
+      "facet": "Words from Native American languages",
+      "known_at": 6
+    },
+    {
+      "name": "Canoe",
+      "facet": "Words from Native American languages",
+      "known_at": 9
+    },
+    {
+      "name": "Hammock",
+      "facet": "Words from Native American languages",
+      "known_at": 10
+    },
+    {
+      "name": "Barbecue",
+      "facet": "Words from Native American languages",
+      "known_at": 11
+    },
+    {
+      "name": "Cookie",
+      "facet": "Words from immigrant languages",
+      "known_at": 7
+    },
+    {
+      "name": "Boss",
+      "facet": "Words from immigrant languages",
+      "known_at": 10
+    },
+    {
+      "name": "Yankee",
+      "facet": "Words from immigrant languages",
+      "known_at": 10
+    },
+    {
+      "name": "Spook",
+      "facet": "Words from immigrant languages",
+      "known_at": 12
+    },
+    {
+      "name": "Kindergarten",
+      "facet": "Words from immigrant languages",
+      "known_at": 6
+    },
+    {
+      "name": "Pretzel",
+      "facet": "Words from immigrant languages",
+      "known_at": 7
+    },
+    {
+      "name": "Gesundheit",
+      "facet": "Words from immigrant languages",
+      "known_at": 8
+    },
+    {
+      "name": "Bagel",
+      "facet": "Words from immigrant languages",
+      "known_at": 8
+    },
+    {
+      "name": "Glitch",
+      "facet": "Words from immigrant languages",
+      "known_at": 10
+    },
+    {
+      "name": "Klutz",
+      "facet": "Words from immigrant languages",
+      "known_at": 10
+    },
+    {
+      "name": "Chutzpah",
+      "facet": "Words from immigrant languages",
+      "known_at": 12
+    },
+    {
+      "name": "Schmooze",
+      "facet": "Words from immigrant languages",
+      "known_at": 12
+    },
+    {
+      "name": "Kvetch",
+      "facet": "Words from immigrant languages",
+      "known_at": 13
+    },
+    {
+      "name": "Ranch",
+      "facet": "Words from immigrant languages",
+      "known_at": 9
+    },
+    {
+      "name": "Canyon",
+      "facet": "Words from immigrant languages",
+      "known_at": 9
+    },
+    {
+      "name": "Alligator",
+      "facet": "Words from immigrant languages",
+      "known_at": 9
+    },
+    {
+      "name": "Honcho",
+      "facet": "Words from immigrant languages",
+      "known_at": 12
+    },
+    {
+      "name": "Gung-ho",
+      "facet": "Words from immigrant languages",
+      "known_at": 13
+    },
+    {
+      "name": "Buckaroo",
+      "facet": "Words from immigrant languages",
+      "known_at": 12
+    },
+    {
+      "name": "Bodega",
+      "facet": "Words from immigrant languages",
+      "known_at": 11
+    },
+    {
+      "name": "Freshman",
+      "facet": "School and college words",
+      "known_at": 6
+    },
+    {
+      "name": "Sophomore",
+      "facet": "School and college words",
+      "known_at": 8
+    },
+    {
+      "name": "Senior",
+      "facet": "School and college words",
+      "known_at": 6
+    },
+    {
+      "name": "GPA",
+      "facet": "School and college words",
+      "known_at": 8
+    },
+    {
+      "name": "SAT",
+      "facet": "School and college words",
+      "known_at": 9
+    },
+    {
+      "name": "Alma mater",
+      "facet": "School and college words",
+      "known_at": 12
+    },
+    {
+      "name": "Commencement",
+      "facet": "School and college words",
+      "known_at": 11
+    },
+    {
+      "name": "Pop quiz",
+      "facet": "School and college words",
+      "known_at": 6
+    },
+    {
+      "name": "Community college",
+      "facet": "School and college words",
+      "known_at": 10
+    },
+    {
+      "name": "Gas",
+      "facet": "Cars, roads and travel words",
+      "known_at": 3
+    },
+    {
+      "name": "Trunk",
+      "facet": "Cars, roads and travel words",
+      "known_at": 5
+    },
+    {
+      "name": "Hood",
+      "facet": "Cars, roads and travel words",
+      "known_at": 6
+    },
+    {
+      "name": "Windshield",
+      "facet": "Cars, roads and travel words",
+      "known_at": 5
+    },
+    {
+      "name": "Freeway",
+      "facet": "Cars, roads and travel words",
+      "known_at": 7
+    },
+    {
+      "name": "Interstate",
+      "facet": "Cars, roads and travel words",
+      "known_at": 9
+    },
+    {
+      "name": "Sidewalk",
+      "facet": "Cars, roads and travel words",
+      "known_at": 3
+    },
+    {
+      "name": "Crosswalk",
+      "facet": "Cars, roads and travel words",
+      "known_at": 4
+    },
+    {
+      "name": "Jaywalking",
+      "facet": "Cars, roads and travel words",
+      "known_at": 10
+    },
+    {
+      "name": "Fender bender",
+      "facet": "Cars, roads and travel words",
+      "known_at": 10
+    },
+    {
+      "name": "Pickup truck",
+      "facet": "Cars, roads and travel words",
+      "known_at": 3
+    },
+    {
+      "name": "Eighteen-wheeler",
+      "facet": "Cars, roads and travel words",
+      "known_at": 7
+    },
+    {
+      "name": "Calling shotgun",
+      "facet": "Cars, roads and travel words",
+      "known_at": 7
+    },
+    {
+      "name": "Carpool",
+      "facet": "Cars, roads and travel words",
+      "known_at": 7
+    },
+    {
+      "name": "Stick shift",
+      "facet": "Cars, roads and travel words",
+      "known_at": 10
+    },
+    {
+      "name": "Rush hour",
+      "facet": "Cars, roads and travel words",
+      "known_at": 6
+    },
+    {
+      "name": "Parking lot",
+      "facet": "Cars, roads and travel words",
+      "known_at": 3
+    },
+    {
+      "name": "Nerd",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 10
+    },
+    {
+      "name": "Grinch",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 4
+    },
+    {
+      "name": "Regifting",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 11
+    },
+    {
+      "name": "Jump the shark",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 12
+    },
+    {
+      "name": "Gaslighting",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 12
+    },
+    {
+      "name": "Catfish",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 10
+    },
+    {
+      "name": "Bucket list",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 9
+    },
+    {
+      "name": "Truthiness",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 13
+    },
+    {
+      "name": "Bling",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 8
+    },
+    {
+      "name": "Bootylicious",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 11
+    },
+    {
+      "name": "Fetch",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 10
+    },
+    {
+      "name": "Party on",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 11
+    },
+    {
+      "name": "Meh",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 9
+    },
+    {
+      "name": "Embiggen",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 13
+    },
+    {
+      "name": "Hasta la vista, baby",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 8
+    },
+    {
+      "name": "Rock and roll",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 9
+    },
+    {
+      "name": "Binge-watch",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 8
+    },
+    {
+      "name": "Couch potato",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 7
+    },
+    {
+      "name": "Double-dog dare",
+      "facet": "Words born in movies, TV and music",
+      "known_at": 9
+    }
+  ]
+}

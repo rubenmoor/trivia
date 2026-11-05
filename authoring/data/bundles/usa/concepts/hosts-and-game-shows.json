@@ -1,0 +1,1043 @@
+{
+  "subcategory": "hosts-and-game-shows",
+  "facets": [
+    "Classic quiz shows",
+    "Price and shopping games",
+    "Wheel of Fortune and word games",
+    "Famous game show hosts",
+    "Late-night talk show hosts",
+    "Daytime talk shows and hosts",
+    "Kids' and family game shows",
+    "Catchphrases and show lingo",
+    "Reality competition shows",
+    "Game show history and scandals",
+    "Big winners and famous moments",
+    "Sets, props and prizes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Deal or No Deal",
+      "facet": "Classic quiz shows",
+      "known_at": 6
+    },
+    {
+      "name": "The $64,000 Question",
+      "facet": "Classic quiz shows",
+      "known_at": 12
+    },
+    {
+      "name": "Twenty-One",
+      "facet": "Classic quiz shows",
+      "known_at": 12
+    },
+    {
+      "name": "Card Sharks",
+      "facet": "Classic quiz shows",
+      "known_at": 12
+    },
+    {
+      "name": "What's My Line?",
+      "facet": "Classic quiz shows",
+      "known_at": 13
+    },
+    {
+      "name": "To Tell the Truth",
+      "facet": "Classic quiz shows",
+      "known_at": 12
+    },
+    {
+      "name": "Press Your Luck",
+      "facet": "Classic quiz shows",
+      "known_at": 10
+    },
+    {
+      "name": "Tic-Tac-Dough",
+      "facet": "Classic quiz shows",
+      "known_at": 13
+    },
+    {
+      "name": "1 vs. 100",
+      "facet": "Classic quiz shows",
+      "known_at": 9
+    },
+    {
+      "name": "The Chase",
+      "facet": "Classic quiz shows",
+      "known_at": 9
+    },
+    {
+      "name": "You Bet Your Life",
+      "facet": "Classic quiz shows",
+      "known_at": 13
+    },
+    {
+      "name": "Celebrity Jeopardy!",
+      "facet": "Classic quiz shows",
+      "known_at": 9
+    },
+    {
+      "name": "Win Ben Stein's Money",
+      "facet": "Classic quiz shows",
+      "known_at": 13
+    },
+    {
+      "name": "Sale of the Century",
+      "facet": "Classic quiz shows",
+      "known_at": 14
+    },
+    {
+      "name": "Concentration",
+      "facet": "Classic quiz shows",
+      "known_at": 13
+    },
+    {
+      "name": "The Joker's Wild",
+      "facet": "Classic quiz shows",
+      "known_at": 14
+    },
+    {
+      "name": "Plinko",
+      "facet": "Price and shopping games",
+      "known_at": 7
+    },
+    {
+      "name": "Showcase Showdown",
+      "facet": "Price and shopping games",
+      "known_at": 9
+    },
+    {
+      "name": "Cliffhangers",
+      "facet": "Price and shopping games",
+      "known_at": 10
+    },
+    {
+      "name": "Contestants' Row",
+      "facet": "Price and shopping games",
+      "known_at": 11
+    },
+    {
+      "name": "Zonk",
+      "facet": "Price and shopping games",
+      "known_at": 12
+    },
+    {
+      "name": "Supermarket Sweep",
+      "facet": "Price and shopping games",
+      "known_at": 9
+    },
+    {
+      "name": "Hole in One",
+      "facet": "Price and shopping games",
+      "known_at": 12
+    },
+    {
+      "name": "Punch a Bunch",
+      "facet": "Price and shopping games",
+      "known_at": 12
+    },
+    {
+      "name": "Range Game",
+      "facet": "Price and shopping games",
+      "known_at": 13
+    },
+    {
+      "name": "Clock Game",
+      "facet": "Price and shopping games",
+      "known_at": 12
+    },
+    {
+      "name": "Golden Road",
+      "facet": "Price and shopping games",
+      "known_at": 13
+    },
+    {
+      "name": "Shell Game",
+      "facet": "Price and shopping games",
+      "known_at": 12
+    },
+    {
+      "name": "Any Number",
+      "facet": "Price and shopping games",
+      "known_at": 13
+    },
+    {
+      "name": "Dice Game",
+      "facet": "Price and shopping games",
+      "known_at": 13
+    },
+    {
+      "name": "Lucky Seven",
+      "facet": "Price and shopping games",
+      "known_at": 13
+    },
+    {
+      "name": "Bankrupt",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 7
+    },
+    {
+      "name": "Buy a vowel",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 6
+    },
+    {
+      "name": "Wheel of Fortune Bonus Round",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 9
+    },
+    {
+      "name": "RSTLNE",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 11
+    },
+    {
+      "name": "Toss-Up",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 11
+    },
+    {
+      "name": "Lose a Turn",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 9
+    },
+    {
+      "name": "Million-dollar wedge",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 11
+    },
+    {
+      "name": "Free Play wedge",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 13
+    },
+    {
+      "name": "Puzzle board",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 8
+    },
+    {
+      "name": "Pyramid",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 11
+    },
+    {
+      "name": "Lingo",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 13
+    },
+    {
+      "name": "Chain Reaction",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 13
+    },
+    {
+      "name": "Catch Phrase",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 12
+    },
+    {
+      "name": "Scrabble (game show)",
+      "facet": "Wheel of Fortune and word games",
+      "known_at": 14
+    },
+    {
+      "name": "Howie Mandel",
+      "facet": "Famous game show hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Wink Martindale",
+      "facet": "Famous game show hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Chuck Woolery",
+      "facet": "Famous game show hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Gene Rayburn",
+      "facet": "Famous game show hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Bob Eubanks",
+      "facet": "Famous game show hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Meredith Vieira",
+      "facet": "Famous game show hosts",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Marshall",
+      "facet": "Famous game show hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Allen Ludden",
+      "facet": "Famous game show hosts",
+      "known_at": 14
+    },
+    {
+      "name": "Mayim Bialik",
+      "facet": "Famous game show hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Wayne Brady",
+      "facet": "Famous game show hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Jeff Foxworthy",
+      "facet": "Famous game show hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Groucho Marx",
+      "facet": "Famous game show hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Bill Cullen",
+      "facet": "Famous game show hosts",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Strahan",
+      "facet": "Famous game show hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Jane Lynch",
+      "facet": "Famous game show hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Peter Tomarken",
+      "facet": "Famous game show hosts",
+      "known_at": 14
+    },
+    {
+      "name": "Stephen Colbert",
+      "facet": "Late-night talk show hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Seth Meyers",
+      "facet": "Late-night talk show hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Jack Paar",
+      "facet": "Late-night talk show hosts",
+      "known_at": 14
+    },
+    {
+      "name": "Arsenio Hall",
+      "facet": "Late-night talk show hosts",
+      "known_at": 12
+    },
+    {
+      "name": "Craig Ferguson",
+      "facet": "Late-night talk show hosts",
+      "known_at": 12
+    },
+    {
+      "name": "James Corden",
+      "facet": "Late-night talk show hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Jon Stewart",
+      "facet": "Late-night talk show hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Late Show",
+      "facet": "Late-night talk show hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Late Night",
+      "facet": "Late-night talk show hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Carpool Karaoke",
+      "facet": "Late-night talk show hosts",
+      "known_at": 8
+    },
+    {
+      "name": "Mean Tweets",
+      "facet": "Late-night talk show hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Shaffer",
+      "facet": "Late-night talk show hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Carnac the Magnificent",
+      "facet": "Late-night talk show hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Ellen DeGeneres",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 6
+    },
+    {
+      "name": "Phil Donahue",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Jerry Springer",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Dr. Phil",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Maury Povich",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Rosie O'Donnell",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "The View",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Kelly Ripa",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Live with Kelly and Mark",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 12
+    },
+    {
+      "name": "Sally Jessy Raphael",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 14,
+      "retired": "unaskable: The options don't fit, and few facts about her are well known enough for a fair question."
+    },
+    {
+      "name": "Montel Williams",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Ricki Lake",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 13
+    },
+    {
+      "name": "Tyra Banks",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Drew Barrymore",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Wendy Williams",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Judge Judy",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Barbara Walters",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 11
+    },
+    {
+      "name": "Whoopi Goldberg",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 9
+    },
+    {
+      "name": "Dr. Oz",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 10
+    },
+    {
+      "name": "Tamron Hall",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 12
+    },
+    {
+      "name": "Mike Douglas",
+      "facet": "Daytime talk shows and hosts",
+      "known_at": 14
+    },
+    {
+      "name": "Nickelodeon Guts",
+      "facet": "Kids' and family game shows",
+      "known_at": 11
+    },
+    {
+      "name": "Are You Smarter Than a 5th Grader?",
+      "facet": "Kids' and family game shows",
+      "known_at": 7
+    },
+    {
+      "name": "Wipeout",
+      "facet": "Kids' and family game shows",
+      "known_at": 6
+    },
+    {
+      "name": "American Ninja Warrior",
+      "facet": "Kids' and family game shows",
+      "known_at": 6
+    },
+    {
+      "name": "Floor Is Lava",
+      "facet": "Kids' and family game shows",
+      "known_at": 6
+    },
+    {
+      "name": "Minute to Win It",
+      "facet": "Kids' and family game shows",
+      "known_at": 7
+    },
+    {
+      "name": "Slime",
+      "facet": "Kids' and family game shows",
+      "known_at": 3
+    },
+    {
+      "name": "Hole in the Wall",
+      "facet": "Kids' and family game shows",
+      "known_at": 8
+    },
+    {
+      "name": "Kirk Fogg",
+      "facet": "Kids' and family game shows",
+      "known_at": 14
+    },
+    {
+      "name": "Survey says!",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 8
+    },
+    {
+      "name": "Is that your final answer?",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 8
+    },
+    {
+      "name": "Phone a friend",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 6
+    },
+    {
+      "name": "Fifty-fifty",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 7
+    },
+    {
+      "name": "Ask the audience",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 7
+    },
+    {
+      "name": "Daily Double",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 9
+    },
+    {
+      "name": "Final Jeopardy!",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 9
+    },
+    {
+      "name": "Answer in the form of a question",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 9
+    },
+    {
+      "name": "Spay and neuter your pets",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Heeere's Johnny!",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 11
+    },
+    {
+      "name": "You're fired!",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 9
+    },
+    {
+      "name": "I'd like to solve the puzzle",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 9
+    },
+    {
+      "name": "Good answer!",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 11
+    },
+    {
+      "name": "Big money, no whammies!",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Whammy",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 11
+    },
+    {
+      "name": "The tribe has spoken",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 10
+    },
+    {
+      "name": "Will you accept this rose?",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 10
+    },
+    {
+      "name": "Pack your knives and go",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Seacrest out!",
+      "facet": "Catchphrases and show lingo",
+      "known_at": 12
+    },
+    {
+      "name": "Survivor",
+      "facet": "Reality competition shows",
+      "known_at": 7
+    },
+    {
+      "name": "Jeff Probst",
+      "facet": "Reality competition shows",
+      "known_at": 11
+    },
+    {
+      "name": "American Idol",
+      "facet": "Reality competition shows",
+      "known_at": 6
+    },
+    {
+      "name": "Simon Cowell",
+      "facet": "Reality competition shows",
+      "known_at": 8
+    },
+    {
+      "name": "Paula Abdul",
+      "facet": "Reality competition shows",
+      "known_at": 11
+    },
+    {
+      "name": "The Amazing Race",
+      "facet": "Reality competition shows",
+      "known_at": 9
+    },
+    {
+      "name": "Big Brother",
+      "facet": "Reality competition shows",
+      "known_at": 9
+    },
+    {
+      "name": "The Bachelor",
+      "facet": "Reality competition shows",
+      "known_at": 9
+    },
+    {
+      "name": "Dancing with the Stars",
+      "facet": "Reality competition shows",
+      "known_at": 7
+    },
+    {
+      "name": "The Voice",
+      "facet": "Reality competition shows",
+      "known_at": 6
+    },
+    {
+      "name": "America's Got Talent",
+      "facet": "Reality competition shows",
+      "known_at": 5
+    },
+    {
+      "name": "Project Runway",
+      "facet": "Reality competition shows",
+      "known_at": 11
+    },
+    {
+      "name": "Top Chef",
+      "facet": "Reality competition shows",
+      "known_at": 10
+    },
+    {
+      "name": "Hell's Kitchen",
+      "facet": "Reality competition shows",
+      "known_at": 9
+    },
+    {
+      "name": "Shark Tank",
+      "facet": "Reality competition shows",
+      "known_at": 7
+    },
+    {
+      "name": "The Apprentice",
+      "facet": "Reality competition shows",
+      "known_at": 10
+    },
+    {
+      "name": "MasterChef",
+      "facet": "Reality competition shows",
+      "known_at": 7
+    },
+    {
+      "name": "Nailed It!",
+      "facet": "Reality competition shows",
+      "known_at": 8
+    },
+    {
+      "name": "The Masked Singer",
+      "facet": "Reality competition shows",
+      "known_at": 6
+    },
+    {
+      "name": "Tribal Council",
+      "facet": "Reality competition shows",
+      "known_at": 10
+    },
+    {
+      "name": "Hidden immunity idol",
+      "facet": "Reality competition shows",
+      "known_at": 11
+    },
+    {
+      "name": "1950s quiz show scandals",
+      "facet": "Game show history and scandals",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Van Doren",
+      "facet": "Game show history and scandals",
+      "known_at": 14
+    },
+    {
+      "name": "Herb Stempel",
+      "facet": "Game show history and scandals",
+      "known_at": 15
+    },
+    {
+      "name": "Quiz Show (film)",
+      "facet": "Game show history and scandals",
+      "known_at": 13
+    },
+    {
+      "name": "Dotto",
+      "facet": "Game show history and scandals",
+      "known_at": 15
+    },
+    {
+      "name": "Michael Larson",
+      "facet": "Game show history and scandals",
+      "known_at": 14
+    },
+    {
+      "name": "Terry Kniess",
+      "facet": "Game show history and scandals",
+      "known_at": 15
+    },
+    {
+      "name": "Merv Griffin",
+      "facet": "Game show history and scandals",
+      "known_at": 12
+    },
+    {
+      "name": "Mark Goodson",
+      "facet": "Game show history and scandals",
+      "known_at": 14
+    },
+    {
+      "name": "Chuck Barris",
+      "facet": "Game show history and scandals",
+      "known_at": 13
+    },
+    {
+      "name": "The Gong Show",
+      "facet": "Game show history and scandals",
+      "known_at": 11
+    },
+    {
+      "name": "Game Show Network",
+      "facet": "Game show history and scandals",
+      "known_at": 11
+    },
+    {
+      "name": "Revlon",
+      "facet": "Game show history and scandals",
+      "known_at": 14
+    },
+    {
+      "name": "Ralph Edwards",
+      "facet": "Game show history and scandals",
+      "known_at": 15
+    },
+    {
+      "name": "Jack Barry",
+      "facet": "Game show history and scandals",
+      "known_at": 15
+    },
+    {
+      "name": "Johnny Olson",
+      "facet": "Game show history and scandals",
+      "known_at": 14
+    },
+    {
+      "name": "Don Pardo",
+      "facet": "Game show history and scandals",
+      "known_at": 13
+    },
+    {
+      "name": "Johnny Gilbert",
+      "facet": "Game show history and scandals",
+      "known_at": 13
+    },
+    {
+      "name": "Daytime Emmy Award",
+      "facet": "Game show history and scandals",
+      "known_at": 12
+    },
+    {
+      "name": "Brad Rutter",
+      "facet": "Big winners and famous moments",
+      "known_at": 12
+    },
+    {
+      "name": "James Holzhauer",
+      "facet": "Big winners and famous moments",
+      "known_at": 11
+    },
+    {
+      "name": "Amy Schneider",
+      "facet": "Big winners and famous moments",
+      "known_at": 12
+    },
+    {
+      "name": "Matt Amodio",
+      "facet": "Big winners and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "John Carpenter (Millionaire winner)",
+      "facet": "Big winners and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "Kevin Olmstead",
+      "facet": "Big winners and famous moments",
+      "known_at": 15
+    },
+    {
+      "name": "IBM Watson",
+      "facet": "Big winners and famous moments",
+      "known_at": 10
+    },
+    {
+      "name": "Jeopardy! The Greatest of All Time",
+      "facet": "Big winners and famous moments",
+      "known_at": 12
+    },
+    {
+      "name": "Jeopardy! Tournament of Champions",
+      "facet": "Big winners and famous moments",
+      "known_at": 11
+    },
+    {
+      "name": "Kelly Clarkson",
+      "facet": "Big winners and famous moments",
+      "known_at": 7
+    },
+    {
+      "name": "Fantasia Barrino",
+      "facet": "Big winners and famous moments",
+      "known_at": 11
+    },
+    {
+      "name": "Ruben Studdard",
+      "facet": "Big winners and famous moments",
+      "known_at": 12
+    },
+    {
+      "name": "Richard Hatch",
+      "facet": "Big winners and famous moments",
+      "known_at": 12
+    },
+    {
+      "name": "Boston Rob",
+      "facet": "Big winners and famous moments",
+      "known_at": 13
+    },
+    {
+      "name": "Oprah's car giveaway",
+      "facet": "Big winners and famous moments",
+      "known_at": 9
+    },
+    {
+      "name": "David Legler",
+      "facet": "Big winners and famous moments",
+      "known_at": 15
+    },
+    {
+      "name": "Big Wheel",
+      "facet": "Sets, props and prizes",
+      "known_at": 8
+    },
+    {
+      "name": "Jeopardy! game board",
+      "facet": "Sets, props and prizes",
+      "known_at": 6
+    },
+    {
+      "name": "Game show buzzer",
+      "facet": "Sets, props and prizes",
+      "known_at": 4
+    },
+    {
+      "name": "Family Feud survey board",
+      "facet": "Sets, props and prizes",
+      "known_at": 8
+    },
+    {
+      "name": "Fast Money",
+      "facet": "Sets, props and prizes",
+      "known_at": 9
+    },
+    {
+      "name": "Hollywood Squares board",
+      "facet": "Sets, props and prizes",
+      "known_at": 11
+    },
+    {
+      "name": "Gong",
+      "facet": "Sets, props and prizes",
+      "known_at": 10
+    },
+    {
+      "name": "New car",
+      "facet": "Sets, props and prizes",
+      "known_at": 5
+    },
+    {
+      "name": "Deal or No Deal briefcases",
+      "facet": "Sets, props and prizes",
+      "known_at": 8
+    },
+    {
+      "name": "Hot seat",
+      "facet": "Sets, props and prizes",
+      "known_at": 8
+    },
+    {
+      "name": "Money ladder",
+      "facet": "Sets, props and prizes",
+      "known_at": 10
+    },
+    {
+      "name": "Turtle Wax",
+      "facet": "Sets, props and prizes",
+      "known_at": 14
+    },
+    {
+      "name": "Consolation prize",
+      "facet": "Sets, props and prizes",
+      "known_at": 9
+    },
+    {
+      "name": "Home game",
+      "facet": "Sets, props and prizes",
+      "known_at": 11
+    },
+    {
+      "name": "Jeopardy! Think music",
+      "facet": "Sets, props and prizes",
+      "known_at": 9
+    },
+    {
+      "name": "Price Is Right name tag",
+      "facet": "Sets, props and prizes",
+      "known_at": 10
+    },
+    {
+      "name": "Golden buzzer",
+      "facet": "Sets, props and prizes",
+      "known_at": 8
+    }
+  ]
+}

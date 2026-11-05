@@ -1,0 +1,577 @@
+{
+  "subcategory": "state-symbols",
+  "facets": [
+    "State nicknames",
+    "State birds",
+    "State flowers and trees",
+    "State animals and insects",
+    "State flags and seals",
+    "State mottos and slogans",
+    "State foods and drinks",
+    "State songs",
+    "Names of state residents",
+    "Where state names come from",
+    "State quarters and license plates",
+    "State capitals and landmarks"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 4,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "The Last Frontier",
+      "facet": "State nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Beehive State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Bay State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Pelican State",
+      "facet": "State nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Granite State",
+      "facet": "State nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Centennial State",
+      "facet": "State nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Baltimore oriole",
+      "facet": "State birds",
+      "known_at": 7
+    },
+    {
+      "name": "Rhode Island Red",
+      "facet": "State birds",
+      "known_at": 10
+    },
+    {
+      "name": "Willow ptarmigan",
+      "facet": "State birds",
+      "known_at": 13
+    },
+    {
+      "name": "Cactus wren",
+      "facet": "State birds",
+      "known_at": 11
+    },
+    {
+      "name": "Yellowhammer",
+      "facet": "State birds",
+      "known_at": 12
+    },
+    {
+      "name": "California gull",
+      "facet": "State birds",
+      "known_at": 12
+    },
+    {
+      "name": "Scissor-tailed flycatcher",
+      "facet": "State birds",
+      "known_at": 12
+    },
+    {
+      "name": "Ring-necked pheasant",
+      "facet": "State birds",
+      "known_at": 10
+    },
+    {
+      "name": "Brown thrasher",
+      "facet": "State birds",
+      "known_at": 12
+    },
+    {
+      "name": "Southern live oak",
+      "facet": "State flowers and trees",
+      "known_at": 10
+    },
+    {
+      "name": "Pecan tree",
+      "facet": "State flowers and trees",
+      "known_at": 8
+    },
+    {
+      "name": "Tulip tree",
+      "facet": "State flowers and trees",
+      "known_at": 12
+    },
+    {
+      "name": "North American beaver",
+      "facet": "State animals and insects",
+      "known_at": 5
+    },
+    {
+      "name": "West Indian manatee",
+      "facet": "State animals and insects",
+      "known_at": 6
+    },
+    {
+      "name": "Morgan horse",
+      "facet": "State animals and insects",
+      "known_at": 12
+    },
+    {
+      "name": "Rocky Mountain elk",
+      "facet": "State animals and insects",
+      "known_at": 9
+    },
+    {
+      "name": "Flag of California",
+      "facet": "State flags and seals",
+      "known_at": 6
+    },
+    {
+      "name": "Flag of Texas",
+      "facet": "State flags and seals",
+      "known_at": 5
+    },
+    {
+      "name": "Flag of New Mexico",
+      "facet": "State flags and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Flag of Ohio",
+      "facet": "State flags and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Flag of Hawaii",
+      "facet": "State flags and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Flag of Alaska",
+      "facet": "State flags and seals",
+      "known_at": 9
+    },
+    {
+      "name": "Flag of South Carolina",
+      "facet": "State flags and seals",
+      "known_at": 11
+    },
+    {
+      "name": "Flag of Maryland",
+      "facet": "State flags and seals",
+      "known_at": 11
+    },
+    {
+      "name": "Flag of Colorado",
+      "facet": "State flags and seals",
+      "known_at": 10
+    },
+    {
+      "name": "Flag of Arizona",
+      "facet": "State flags and seals",
+      "known_at": 11
+    },
+    {
+      "name": "Flag of Mississippi",
+      "facet": "State flags and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Flag of Washington",
+      "facet": "State flags and seals",
+      "known_at": 11
+    },
+    {
+      "name": "Flag of Oregon",
+      "facet": "State flags and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of Wyoming",
+      "facet": "State flags and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Flag of Minnesota",
+      "facet": "State flags and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of Utah",
+      "facet": "State flags and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of Tennessee",
+      "facet": "State flags and seals",
+      "known_at": 12
+    },
+    {
+      "name": "Flag of Alabama",
+      "facet": "State flags and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Seal of California",
+      "facet": "State flags and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Seal of Florida",
+      "facet": "State flags and seals",
+      "known_at": 13
+    },
+    {
+      "name": "Virginia Is for Lovers",
+      "facet": "State mottos and slogans",
+      "known_at": 10
+    },
+    {
+      "name": "Sic semper tyrannis",
+      "facet": "State mottos and slogans",
+      "known_at": 14
+    },
+    {
+      "name": "North to the Future",
+      "facet": "State mottos and slogans",
+      "known_at": 13
+    },
+    {
+      "name": "Pure Michigan",
+      "facet": "State mottos and slogans",
+      "known_at": 11
+    },
+    {
+      "name": "Friendship",
+      "facet": "State mottos and slogans",
+      "known_at": 12
+    },
+    {
+      "name": "Dirigo",
+      "facet": "State mottos and slogans",
+      "known_at": 14
+    },
+    {
+      "name": "Esto perpetua",
+      "facet": "State mottos and slogans",
+      "known_at": 15
+    },
+    {
+      "name": "Montani semper liberi",
+      "facet": "State mottos and slogans",
+      "known_at": 14
+    },
+    {
+      "name": "Crossroads of America",
+      "facet": "State mottos and slogans",
+      "known_at": 12
+    },
+    {
+      "name": "Red or Green?",
+      "facet": "State mottos and slogans",
+      "known_at": 13
+    },
+    {
+      "name": "Industry",
+      "facet": "State mottos and slogans",
+      "known_at": 14
+    },
+    {
+      "name": "Labor omnia vincit",
+      "facet": "State mottos and slogans",
+      "known_at": 15
+    },
+    {
+      "name": "Al-Ki",
+      "facet": "State mottos and slogans",
+      "known_at": 15
+    },
+    {
+      "name": "Ua Mau ke Ea o ka ʻĀina i ka Pono",
+      "facet": "State mottos and slogans",
+      "known_at": 15
+    },
+    {
+      "name": "Orange juice",
+      "facet": "State foods and drinks",
+      "known_at": 4
+    },
+    {
+      "name": "Milk",
+      "facet": "State foods and drinks",
+      "known_at": 3
+    },
+    {
+      "name": "Fry bread",
+      "facet": "State foods and drinks",
+      "known_at": 11
+    },
+    {
+      "name": "Sweet potato",
+      "facet": "State foods and drinks",
+      "known_at": 6
+    },
+    {
+      "name": "Georgia on My Mind",
+      "facet": "State songs",
+      "known_at": 10
+    },
+    {
+      "name": "Rocky Mountain High",
+      "facet": "State songs",
+      "known_at": 12
+    },
+    {
+      "name": "On the Banks of the Wabash",
+      "facet": "State songs",
+      "known_at": 14
+    },
+    {
+      "name": "Missouri Waltz",
+      "facet": "State songs",
+      "known_at": 14
+    },
+    {
+      "name": "Hawaiʻi Ponoʻī",
+      "facet": "State songs",
+      "known_at": 14
+    },
+    {
+      "name": "Tennessee Waltz",
+      "facet": "State songs",
+      "known_at": 12
+    },
+    {
+      "name": "Texas, Our Texas",
+      "facet": "State songs",
+      "known_at": 12
+    },
+    {
+      "name": "Hang On Sloopy",
+      "facet": "State songs",
+      "known_at": 13
+    },
+    {
+      "name": "Roll On, Columbia",
+      "facet": "State songs",
+      "known_at": 14
+    },
+    {
+      "name": "I Love You, California",
+      "facet": "State songs",
+      "known_at": 14
+    },
+    {
+      "name": "Hoosier",
+      "facet": "Names of state residents",
+      "known_at": 9
+    },
+    {
+      "name": "Tar Heel",
+      "facet": "Names of state residents",
+      "known_at": 10
+    },
+    {
+      "name": "Sooner",
+      "facet": "Names of state residents",
+      "known_at": 10
+    },
+    {
+      "name": "Texan",
+      "facet": "Names of state residents",
+      "known_at": 3
+    },
+    {
+      "name": "Floridian",
+      "facet": "Names of state residents",
+      "known_at": 5
+    },
+    {
+      "name": "New Yorker",
+      "facet": "Names of state residents",
+      "known_at": 4
+    },
+    {
+      "name": "Michigander",
+      "facet": "Names of state residents",
+      "known_at": 9
+    },
+    {
+      "name": "Kamaʻāina",
+      "facet": "Names of state residents",
+      "known_at": 13
+    },
+    {
+      "name": "Alaskan",
+      "facet": "Names of state residents",
+      "known_at": 4
+    },
+    {
+      "name": "Bay Stater",
+      "facet": "Names of state residents",
+      "known_at": 12
+    },
+    {
+      "name": "Nutmegger",
+      "facet": "Names of state residents",
+      "known_at": 13
+    },
+    {
+      "name": "Mainer",
+      "facet": "Names of state residents",
+      "known_at": 10
+    },
+    {
+      "name": "Arkansan",
+      "facet": "Names of state residents",
+      "known_at": 11
+    },
+    {
+      "name": "Utahn",
+      "facet": "Names of state residents",
+      "known_at": 12
+    },
+    {
+      "name": "Jayhawker",
+      "facet": "Names of state residents",
+      "known_at": 12
+    },
+    {
+      "name": "Cornhusker",
+      "facet": "Names of state residents",
+      "known_at": 10
+    },
+    {
+      "name": "Granite Stater",
+      "facet": "Names of state residents",
+      "known_at": 13
+    },
+    {
+      "name": "Hoosier cabinet",
+      "facet": "Names of state residents",
+      "known_at": 15
+    },
+    {
+      "name": "North Carolina",
+      "facet": "Where state names come from",
+      "known_at": 12
+    },
+    {
+      "name": "Washington",
+      "facet": "Where state names come from",
+      "known_at": 5
+    },
+    {
+      "name": "New York",
+      "facet": "Where state names come from",
+      "known_at": 10
+    },
+    {
+      "name": "Idaho",
+      "facet": "Where state names come from",
+      "known_at": 14
+    },
+    {
+      "name": "America the Beautiful quarters",
+      "facet": "State quarters and license plates",
+      "known_at": 11
+    },
+    {
+      "name": "Caesar Rodney",
+      "facet": "State quarters and license plates",
+      "known_at": 13
+    },
+    {
+      "name": "First in Flight",
+      "facet": "State quarters and license plates",
+      "known_at": 9
+    },
+    {
+      "name": "Birthplace of Aviation",
+      "facet": "State quarters and license plates",
+      "known_at": 12
+    },
+    {
+      "name": "Famous Potatoes",
+      "facet": "State quarters and license plates",
+      "known_at": 10
+    },
+    {
+      "name": "America's Dairyland",
+      "facet": "State quarters and license plates",
+      "known_at": 10
+    },
+    {
+      "name": "Vacationland",
+      "facet": "State quarters and license plates",
+      "known_at": 11
+    },
+    {
+      "name": "Greatest Snow on Earth",
+      "facet": "State quarters and license plates",
+      "known_at": 12
+    },
+    {
+      "name": "Helen Keller quarter",
+      "facet": "State quarters and license plates",
+      "known_at": 12
+    },
+    {
+      "name": "Indianapolis 500 quarter",
+      "facet": "State quarters and license plates",
+      "known_at": 12
+    },
+    {
+      "name": "Rainbow license plate",
+      "facet": "State quarters and license plates",
+      "known_at": 12
+    }
+  ]
+}

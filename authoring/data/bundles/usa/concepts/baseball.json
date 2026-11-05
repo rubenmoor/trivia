@@ -1,0 +1,1172 @@
+{
+  "subcategory": "baseball",
+  "facets": [
+    "Rules and positions",
+    "Ballpark and equipment",
+    "Baseball slang and sayings",
+    "Legendary players",
+    "Teams and their nicknames",
+    "Famous ballparks",
+    "World Series and the postseason",
+    "Records and milestones",
+    "Ballpark food and traditions",
+    "Baseball history and integration",
+    "Baseball in movies and songs",
+    "Stats and scoring"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 5,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Pitcher",
+      "facet": "Rules and positions",
+      "known_at": 2
+    },
+    {
+      "name": "Catcher",
+      "facet": "Rules and positions",
+      "known_at": 3
+    },
+    {
+      "name": "Shortstop",
+      "facet": "Rules and positions",
+      "known_at": 7
+    },
+    {
+      "name": "First baseman",
+      "facet": "Rules and positions",
+      "known_at": 4
+    },
+    {
+      "name": "Outfielder",
+      "facet": "Rules and positions",
+      "known_at": 5
+    },
+    {
+      "name": "Umpire",
+      "facet": "Rules and positions",
+      "known_at": 4
+    },
+    {
+      "name": "Home run",
+      "facet": "Rules and positions",
+      "known_at": 2
+    },
+    {
+      "name": "Strikeout",
+      "facet": "Rules and positions",
+      "known_at": 4
+    },
+    {
+      "name": "Walk",
+      "facet": "Rules and positions",
+      "known_at": 6
+    },
+    {
+      "name": "Foul ball",
+      "facet": "Rules and positions",
+      "known_at": 5
+    },
+    {
+      "name": "Inning",
+      "facet": "Rules and positions",
+      "known_at": 5
+    },
+    {
+      "name": "Extra innings",
+      "facet": "Rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Strike zone",
+      "facet": "Rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Bunt",
+      "facet": "Rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Stolen base",
+      "facet": "Rules and positions",
+      "known_at": 7
+    },
+    {
+      "name": "Double play",
+      "facet": "Rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Designated hitter",
+      "facet": "Rules and positions",
+      "known_at": 10
+    },
+    {
+      "name": "Balk",
+      "facet": "Rules and positions",
+      "known_at": 12
+    },
+    {
+      "name": "Tagging up",
+      "facet": "Rules and positions",
+      "known_at": 12
+    },
+    {
+      "name": "Infield fly rule",
+      "facet": "Rules and positions",
+      "known_at": 13
+    },
+    {
+      "name": "Ground-rule double",
+      "facet": "Rules and positions",
+      "known_at": 12
+    },
+    {
+      "name": "Pitch clock",
+      "facet": "Rules and positions",
+      "known_at": 11
+    },
+    {
+      "name": "Baseball bat",
+      "facet": "Ballpark and equipment",
+      "known_at": 1
+    },
+    {
+      "name": "Baseball glove",
+      "facet": "Ballpark and equipment",
+      "known_at": 2
+    },
+    {
+      "name": "Baseball cap",
+      "facet": "Ballpark and equipment",
+      "known_at": 2
+    },
+    {
+      "name": "Home plate",
+      "facet": "Ballpark and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Scoreboard",
+      "facet": "Ballpark and equipment",
+      "known_at": 3
+    },
+    {
+      "name": "Baseball diamond",
+      "facet": "Ballpark and equipment",
+      "known_at": 4
+    },
+    {
+      "name": "Batting helmet",
+      "facet": "Ballpark and equipment",
+      "known_at": 4
+    },
+    {
+      "name": "Catcher's mitt",
+      "facet": "Ballpark and equipment",
+      "known_at": 5
+    },
+    {
+      "name": "Pitcher's mound",
+      "facet": "Ballpark and equipment",
+      "known_at": 5
+    },
+    {
+      "name": "Dugout",
+      "facet": "Ballpark and equipment",
+      "known_at": 5
+    },
+    {
+      "name": "Bullpen",
+      "facet": "Ballpark and equipment",
+      "known_at": 8
+    },
+    {
+      "name": "Batter's box",
+      "facet": "Ballpark and equipment",
+      "known_at": 8
+    },
+    {
+      "name": "Foul pole",
+      "facet": "Ballpark and equipment",
+      "known_at": 8
+    },
+    {
+      "name": "Chest protector",
+      "facet": "Ballpark and equipment",
+      "known_at": 8
+    },
+    {
+      "name": "Batting gloves",
+      "facet": "Ballpark and equipment",
+      "known_at": 8
+    },
+    {
+      "name": "Warning track",
+      "facet": "Ballpark and equipment",
+      "known_at": 10
+    },
+    {
+      "name": "On-deck circle",
+      "facet": "Ballpark and equipment",
+      "known_at": 10
+    },
+    {
+      "name": "Rosin bag",
+      "facet": "Ballpark and equipment",
+      "known_at": 13
+    },
+    {
+      "name": "Baseball stitches",
+      "facet": "Ballpark and equipment",
+      "known_at": 9
+    },
+    {
+      "name": "Three strikes and you're out",
+      "facet": "Baseball slang and sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Hit it out of the park",
+      "facet": "Baseball slang and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Rookie",
+      "facet": "Baseball slang and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Throw a curveball",
+      "facet": "Baseball slang and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Swing and a miss",
+      "facet": "Baseball slang and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Touch base",
+      "facet": "Baseball slang and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Step up to the plate",
+      "facet": "Baseball slang and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Big league",
+      "facet": "Baseball slang and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Dinger",
+      "facet": "Baseball slang and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Out of left field",
+      "facet": "Baseball slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Ballpark figure",
+      "facet": "Baseball slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Rain check",
+      "facet": "Baseball slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Off base",
+      "facet": "Baseball slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Play hardball",
+      "facet": "Baseball slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Screwball",
+      "facet": "Baseball slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Cleanup hitter",
+      "facet": "Baseball slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Southpaw",
+      "facet": "Baseball slang and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "It ain't over till it's over",
+      "facet": "Baseball slang and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Bush league",
+      "facet": "Baseball slang and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Wait till next year",
+      "facet": "Baseball slang and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Can of corn",
+      "facet": "Baseball slang and sayings",
+      "known_at": 14
+    },
+    {
+      "name": "Texas Leaguer",
+      "facet": "Baseball slang and sayings",
+      "known_at": 15
+    },
+    {
+      "name": "Shohei Ohtani",
+      "facet": "Legendary players",
+      "known_at": 8
+    },
+    {
+      "name": "Derek Jeter",
+      "facet": "Legendary players",
+      "known_at": 10
+    },
+    {
+      "name": "Cy Young",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Ichiro Suzuki",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Yogi Berra",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Barry Bonds",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Ken Griffey Jr.",
+      "facet": "Legendary players",
+      "known_at": 11
+    },
+    {
+      "name": "Willie Mays",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Mickey Mantle",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Ted Williams",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Roberto Clemente",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Nolan Ryan",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Cal Ripken Jr.",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Pete Rose",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Mariano Rivera",
+      "facet": "Legendary players",
+      "known_at": 12
+    },
+    {
+      "name": "Ty Cobb",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "Sandy Koufax",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "Satchel Paige",
+      "facet": "Legendary players",
+      "known_at": 13
+    },
+    {
+      "name": "San Francisco Giants",
+      "facet": "Teams and their nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "New York Mets",
+      "facet": "Teams and their nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Houston Astros",
+      "facet": "Teams and their nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Toronto Blue Jays",
+      "facet": "Teams and their nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Pittsburgh Pirates",
+      "facet": "Teams and their nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Detroit Tigers",
+      "facet": "Teams and their nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Atlanta Braves",
+      "facet": "Teams and their nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Seattle Mariners",
+      "facet": "Teams and their nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Milwaukee Brewers",
+      "facet": "Teams and their nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Colorado Rockies",
+      "facet": "Teams and their nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Tampa Bay Rays",
+      "facet": "Teams and their nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Philadelphia Phillies",
+      "facet": "Teams and their nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "San Diego Padres",
+      "facet": "Teams and their nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Cleveland Guardians",
+      "facet": "Teams and their nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Bronx Bombers",
+      "facet": "Teams and their nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Brooklyn Dodgers",
+      "facet": "Teams and their nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Big Red Machine",
+      "facet": "Teams and their nicknames",
+      "known_at": 14
+    },
+    {
+      "name": "Yankee Stadium",
+      "facet": "Famous ballparks",
+      "known_at": 7
+    },
+    {
+      "name": "Fenway Park",
+      "facet": "Famous ballparks",
+      "known_at": 8
+    },
+    {
+      "name": "Wrigley Field",
+      "facet": "Famous ballparks",
+      "known_at": 9
+    },
+    {
+      "name": "Dodger Stadium",
+      "facet": "Famous ballparks",
+      "known_at": 9
+    },
+    {
+      "name": "Green Monster",
+      "facet": "Famous ballparks",
+      "known_at": 10
+    },
+    {
+      "name": "Citi Field",
+      "facet": "Famous ballparks",
+      "known_at": 11
+    },
+    {
+      "name": "Rogers Centre",
+      "facet": "Famous ballparks",
+      "known_at": 11
+    },
+    {
+      "name": "Oracle Park",
+      "facet": "Famous ballparks",
+      "known_at": 12
+    },
+    {
+      "name": "Camden Yards",
+      "facet": "Famous ballparks",
+      "known_at": 12
+    },
+    {
+      "name": "Coors Field",
+      "facet": "Famous ballparks",
+      "known_at": 12
+    },
+    {
+      "name": "Busch Stadium",
+      "facet": "Famous ballparks",
+      "known_at": 12
+    },
+    {
+      "name": "Astrodome",
+      "facet": "Famous ballparks",
+      "known_at": 12
+    },
+    {
+      "name": "Petco Park",
+      "facet": "Famous ballparks",
+      "known_at": 12
+    },
+    {
+      "name": "Ebbets Field",
+      "facet": "Famous ballparks",
+      "known_at": 13
+    },
+    {
+      "name": "Tropicana Field",
+      "facet": "Famous ballparks",
+      "known_at": 13
+    },
+    {
+      "name": "Kauffman Stadium",
+      "facet": "Famous ballparks",
+      "known_at": 13
+    },
+    {
+      "name": "PNC Park",
+      "facet": "Famous ballparks",
+      "known_at": 13
+    },
+    {
+      "name": "Polo Grounds",
+      "facet": "Famous ballparks",
+      "known_at": 14
+    },
+    {
+      "name": "McCovey Cove",
+      "facet": "Famous ballparks",
+      "known_at": 14
+    },
+    {
+      "name": "World Series",
+      "facet": "World Series and the postseason",
+      "known_at": 5
+    },
+    {
+      "name": "Game 7",
+      "facet": "World Series and the postseason",
+      "known_at": 9
+    },
+    {
+      "name": "Wild card",
+      "facet": "World Series and the postseason",
+      "known_at": 10
+    },
+    {
+      "name": "Fall Classic",
+      "facet": "World Series and the postseason",
+      "known_at": 11
+    },
+    {
+      "name": "2016 World Series",
+      "facet": "World Series and the postseason",
+      "known_at": 11
+    },
+    {
+      "name": "American League Championship Series",
+      "facet": "World Series and the postseason",
+      "known_at": 11
+    },
+    {
+      "name": "National League pennant",
+      "facet": "World Series and the postseason",
+      "known_at": 11
+    },
+    {
+      "name": "2004 Red Sox comeback",
+      "facet": "World Series and the postseason",
+      "known_at": 12
+    },
+    {
+      "name": "Mr. October",
+      "facet": "World Series and the postseason",
+      "known_at": 12
+    },
+    {
+      "name": "World Series MVP",
+      "facet": "World Series and the postseason",
+      "known_at": 12
+    },
+    {
+      "name": "Subway Series",
+      "facet": "World Series and the postseason",
+      "known_at": 12
+    },
+    {
+      "name": "Commissioner's Trophy",
+      "facet": "World Series and the postseason",
+      "known_at": 13
+    },
+    {
+      "name": "Don Larsen's perfect game",
+      "facet": "World Series and the postseason",
+      "known_at": 14
+    },
+    {
+      "name": "Bill Buckner's error",
+      "facet": "World Series and the postseason",
+      "known_at": 14
+    },
+    {
+      "name": "Kirk Gibson's 1988 home run",
+      "facet": "World Series and the postseason",
+      "known_at": 14
+    },
+    {
+      "name": "Joe Carter's 1993 home run",
+      "facet": "World Series and the postseason",
+      "known_at": 14
+    },
+    {
+      "name": "Bill Mazeroski's 1960 home run",
+      "facet": "World Series and the postseason",
+      "known_at": 15
+    },
+    {
+      "name": "No-hitter",
+      "facet": "Records and milestones",
+      "known_at": 8
+    },
+    {
+      "name": "Perfect game",
+      "facet": "Records and milestones",
+      "known_at": 9
+    },
+    {
+      "name": "Shohei Ohtani's 50-50 season",
+      "facet": "Records and milestones",
+      "known_at": 10
+    },
+    {
+      "name": "Triple Crown",
+      "facet": "Records and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "3,000 hits",
+      "facet": "Records and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "500 home run club",
+      "facet": "Records and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "56-game hitting streak",
+      "facet": "Records and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Babe Ruth's 60 home runs",
+      "facet": "Records and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Hank Aaron's 715th home run",
+      "facet": "Records and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Barry Bonds's 73 home runs",
+      "facet": "Records and milestones",
+      "known_at": 11
+    },
+    {
+      "name": "Roger Maris's 61 home runs",
+      "facet": "Records and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Cal Ripken's consecutive games streak",
+      "facet": "Records and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Cy Young's 511 wins",
+      "facet": "Records and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Pete Rose's career hits record",
+      "facet": "Records and milestones",
+      "known_at": 12
+    },
+    {
+      "name": "Batting .400",
+      "facet": "Records and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Nolan Ryan's seven no-hitters",
+      "facet": "Records and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Rickey Henderson's stolen base record",
+      "facet": "Records and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Four home runs in one game",
+      "facet": "Records and milestones",
+      "known_at": 13
+    },
+    {
+      "name": "Unassisted triple play",
+      "facet": "Records and milestones",
+      "known_at": 14
+    },
+    {
+      "name": "Baseball card",
+      "facet": "Ballpark food and traditions",
+      "known_at": 6
+    },
+    {
+      "name": "National anthem",
+      "facet": "Ballpark food and traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Little League Baseball",
+      "facet": "Ballpark food and traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Kiss Cam",
+      "facet": "Ballpark food and traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Opening Day",
+      "facet": "Ballpark food and traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Ceremonial first pitch",
+      "facet": "Ballpark food and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Bobblehead night",
+      "facet": "Ballpark food and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Spring training",
+      "facet": "Ballpark food and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Ballpark organ",
+      "facet": "Ballpark food and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Phillie Phanatic",
+      "facet": "Ballpark food and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Mr. Met",
+      "facet": "Ballpark food and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Honus Wagner T206 card",
+      "facet": "Ballpark food and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Racing Sausages",
+      "facet": "Ballpark food and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Number 42",
+      "facet": "Baseball history and integration",
+      "known_at": 10
+    },
+    {
+      "name": "Baseball Hall of Fame",
+      "facet": "Baseball history and integration",
+      "known_at": 10
+    },
+    {
+      "name": "Negro leagues",
+      "facet": "Baseball history and integration",
+      "known_at": 11
+    },
+    {
+      "name": "Jackie Robinson Day",
+      "facet": "Baseball history and integration",
+      "known_at": 11
+    },
+    {
+      "name": "All-American Girls Professional Baseball League",
+      "facet": "Baseball history and integration",
+      "known_at": 11
+    },
+    {
+      "name": "Color line",
+      "facet": "Baseball history and integration",
+      "known_at": 12
+    },
+    {
+      "name": "Black Sox scandal",
+      "facet": "Baseball history and integration",
+      "known_at": 12
+    },
+    {
+      "name": "Steroid era",
+      "facet": "Baseball history and integration",
+      "known_at": 12
+    },
+    {
+      "name": "Dodgers' move to Los Angeles",
+      "facet": "Baseball history and integration",
+      "known_at": 12
+    },
+    {
+      "name": "Branch Rickey",
+      "facet": "Baseball history and integration",
+      "known_at": 13
+    },
+    {
+      "name": "Abner Doubleday",
+      "facet": "Baseball history and integration",
+      "known_at": 13
+    },
+    {
+      "name": "Cincinnati Red Stockings",
+      "facet": "Baseball history and integration",
+      "known_at": 13
+    },
+    {
+      "name": "Josh Gibson",
+      "facet": "Baseball history and integration",
+      "known_at": 13
+    },
+    {
+      "name": "Free agency",
+      "facet": "Baseball history and integration",
+      "known_at": 13
+    },
+    {
+      "name": "1994 baseball strike",
+      "facet": "Baseball history and integration",
+      "known_at": 13
+    },
+    {
+      "name": "Alexander Cartwright",
+      "facet": "Baseball history and integration",
+      "known_at": 14
+    },
+    {
+      "name": "Dead-ball era",
+      "facet": "Baseball history and integration",
+      "known_at": 14
+    },
+    {
+      "name": "Curt Flood",
+      "facet": "Baseball history and integration",
+      "known_at": 15
+    },
+    {
+      "name": "Rube Foster",
+      "facet": "Baseball history and integration",
+      "known_at": 15
+    },
+    {
+      "name": "Toni Stone",
+      "facet": "Baseball history and integration",
+      "known_at": 15
+    },
+    {
+      "name": "Charlie Brown's baseball team",
+      "facet": "Baseball in movies and songs",
+      "known_at": 8
+    },
+    {
+      "name": "42 (film)",
+      "facet": "Baseball in movies and songs",
+      "known_at": 11
+    },
+    {
+      "name": "Angels in the Outfield",
+      "facet": "Baseball in movies and songs",
+      "known_at": 11
+    },
+    {
+      "name": "Sweet Caroline",
+      "facet": "Baseball in movies and songs",
+      "known_at": 11
+    },
+    {
+      "name": "Who's on First?",
+      "facet": "Baseball in movies and songs",
+      "known_at": 12
+    },
+    {
+      "name": "The Rookie",
+      "facet": "Baseball in movies and songs",
+      "known_at": 12
+    },
+    {
+      "name": "Rookie of the Year (film)",
+      "facet": "Baseball in movies and songs",
+      "known_at": 12
+    },
+    {
+      "name": "The Bad News Bears",
+      "facet": "Baseball in movies and songs",
+      "known_at": 12
+    },
+    {
+      "name": "The Natural",
+      "facet": "Baseball in movies and songs",
+      "known_at": 13
+    },
+    {
+      "name": "Major League (film)",
+      "facet": "Baseball in movies and songs",
+      "known_at": 13
+    },
+    {
+      "name": "Bull Durham",
+      "facet": "Baseball in movies and songs",
+      "known_at": 13
+    },
+    {
+      "name": "Centerfield (song)",
+      "facet": "Baseball in movies and songs",
+      "known_at": 13
+    },
+    {
+      "name": "Mrs. Robinson",
+      "facet": "Baseball in movies and songs",
+      "known_at": 14
+    },
+    {
+      "name": "Damn Yankees",
+      "facet": "Baseball in movies and songs",
+      "known_at": 14
+    },
+    {
+      "name": "Error",
+      "facet": "Stats and scoring",
+      "known_at": 7
+    },
+    {
+      "name": "Batting average",
+      "facet": "Stats and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Win-loss record",
+      "facet": "Stats and scoring",
+      "known_at": 8
+    },
+    {
+      "name": "Runs batted in",
+      "facet": "Stats and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Most Valuable Player award",
+      "facet": "Stats and scoring",
+      "known_at": 10
+    },
+    {
+      "name": "Earned run average",
+      "facet": "Stats and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Save",
+      "facet": "Stats and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Cy Young Award",
+      "facet": "Stats and scoring",
+      "known_at": 11
+    },
+    {
+      "name": "Hit for the cycle",
+      "facet": "Stats and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "On-base percentage",
+      "facet": "Stats and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Box score",
+      "facet": "Stats and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Gold Glove Award",
+      "facet": "Stats and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Batting title",
+      "facet": "Stats and scoring",
+      "known_at": 12
+    },
+    {
+      "name": "Slugging percentage",
+      "facet": "Stats and scoring",
+      "known_at": 13
+    },
+    {
+      "name": "Line score",
+      "facet": "Stats and scoring",
+      "known_at": 13
+    },
+    {
+      "name": "Backwards K",
+      "facet": "Stats and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "OPS",
+      "facet": "Stats and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "Wins Above Replacement",
+      "facet": "Stats and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "Sabermetrics",
+      "facet": "Stats and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "Mendoza Line",
+      "facet": "Stats and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "Quality start",
+      "facet": "Stats and scoring",
+      "known_at": 14
+    },
+    {
+      "name": "Bill James",
+      "facet": "Stats and scoring",
+      "known_at": 15
+    }
+  ]
+}
