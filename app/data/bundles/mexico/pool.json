@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "a8cba201",
+  "hash": "d17a1de7",
   "questions": [
     {
       "id": "q-0711",
@@ -951,6 +951,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dahyana Yasada R. R.",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dahyana_Yasada_R.&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10172",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "antojitos-and-street-food",
+      "bundle": "mexico",
+      "description": "Ningún taco de la esquina está completo sin su compañero bien frío.",
+      "question": "Mira la foto: en México, ¿cómo se le dice de cariño a esta bebida en la calle?",
+      "answer": "Chesco",
+      "wrong_answers": [
+        "Tepache",
+        "Tejuino",
+        "Pozol"
+      ],
+      "hints": [
+        "Lo pides con tu torta o tus tacos.",
+        "Tiene burbujas y viene en botella o lata.",
+        "Es una forma corta de decir «refresco»."
+      ],
+      "fun_fact": "México es uno de los países donde más refresco se toma por persona en el mundo.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/ICE_IS_IN_THE_DELI_ASK_FOR_IT_AND_WE_WILL_GET_IT_FOR_YOU_THANK_YOU_%2830987264325%29.jpg/1920px-ICE_IS_IN_THE_DELI_ASK_FOR_IT_AND_WE_WILL_GET_IT_FOR_YOU_THANK_YOU_%2830987264325%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AICE_IS_IN_THE_DELI_ASK_FOR_IT_AND_WE_WILL_GET_IT_FOR_YOU_THANK_YOU_%2830987264325%29.jpg",
+        "credit": "dankeck · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "dankeck",
+        "author_url": "https://www.flickr.com/people/140641142@N05"
       },
       "background": null
     },
@@ -2213,6 +2247,40 @@
       "background": null
     },
     {
+      "id": "q-10213",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "conquest-and-colony",
+      "bundle": "mexico",
+      "description": "Palabras que llegaron antes que Cortés y se quedaron a vivir.",
+      "question": "¿Cuál de estos nombres de lugares NO viene del náhuatl?",
+      "answer": "Cenote",
+      "wrong_answers": [
+        "Tianguis",
+        "Temazcal",
+        "Chinampa"
+      ],
+      "hints": [
+        "Tres de ellos se usaban en el valle de México.",
+        "El intruso viene de otra lengua indígena, hablada lejos del valle de México.",
+        "Viene de una lengua de la península de Yucatán."
+      ],
+      "fun_fact": "«Tianguis» viene del náhuatl «tianquiztli», que significa mercado.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Historia_general_de_las_cosas_de_nueva_Espa%C3%B1a_page_406_2.png/3840px-Historia_general_de_las_cosas_de_nueva_Espa%C3%B1a_page_406_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHistoria_general_de_las_cosas_de_nueva_Espa%C3%B1a_page_406_2.png",
+        "credit": "Unnamed Nahua contributors under leadership of Bernardino de Sahagún · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unnamed Nahua contributors under leadership of Bernardino de Sahagún",
+        "author_url": "https://en.wikipedia.org/wiki/Bernardino_de_Sahag%C3%BAn"
+      },
+      "background": null
+    },
+    {
       "id": "q-10214",
       "status": "approved",
       "difficulty": 13,
@@ -2655,6 +2723,40 @@
       "background": null
     },
     {
+      "id": "q-10228",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "crafts-and-dress",
+      "bundle": "mexico",
+      "description": "Un mercado tan puntual que sólo trabaja un día de la semana.",
+      "question": "Cada sábado se pone en la Ciudad de México el Bazar Sábado, famoso por sus artesanías y pintores. ¿En qué barrio?",
+      "answer": "San Ángel",
+      "wrong_answers": [
+        "Coyoacán",
+        "Xochimilco",
+        "Tlalpan"
+      ],
+      "hints": [
+        "Está al sur de la ciudad, con calles empedradas.",
+        "Se pone en la Plaza San Jacinto.",
+        "Ahí está la casa-estudio de Diego Rivera y Frida Kahlo."
+      ],
+      "fun_fact": "Mientras el bazar está adentro de una casona, afuera los pintores exhiben sus cuadros en la plaza.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Tlacolula_Market_230122_63.jpg/3840px-Tlacolula_Market_230122_63.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATlacolula_Market_230122_63.jpg",
+        "credit": "Bluerasberry · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bluerasberry",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bluerasberry"
+      },
+      "background": null
+    },
+    {
       "id": "q-10229",
       "status": "approved",
       "difficulty": 10,
@@ -2855,6 +2957,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Joydeep",
         "author_url": "https://commons.wikimedia.org/wiki/User:Joydeep"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10235",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "day-of-the-dead",
+      "bundle": "mexico",
+      "description": "Trabaja de noche, no se queja y viene con su propio vaso.",
+      "question": "En México, ¿cómo se llama esta vela dentro de un vaso de vidrio que se pone en ofrendas y altares?",
+      "answer": "Veladora",
+      "wrong_answers": [
+        "Cirio",
+        "Farol",
+        "Quinqué"
+      ],
+      "hints": [
+        "Se consigue en la tienda de la esquina o en el mercado.",
+        "Puede quedarse encendida varios días seguidos.",
+        "Su nombre viene de «velar», que es cuidar a alguien de noche."
+      ],
+      "fun_fact": "El vidrio protege la flama del viento, por eso las veladoras aguantan encendidas toda la noche en el panteón.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Candle_in_glass_cylinder_with_inscription_%22Double_Action_Reversible%22_and_split-coloured_face_with_arrows.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACandle_in_glass_cylinder_with_inscription_%22Double_Action_Reversible%22_and_split-coloured_face_with_arrows.jpg",
+        "credit": "Pittigrilli · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pittigrilli",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pittigrilli"
       },
       "background": null
     },
@@ -3165,6 +3301,40 @@
       "background": null
     },
     {
+      "id": "q-10245",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "independence-and-19th-century",
+      "bundle": "mexico",
+      "description": "Uniforme planchado, botas brillantes y un castillo como dirección: así de elegante suena esta palabra.",
+      "question": "Cada 13 de septiembre se recuerda a los Niños Héroes, que en 1847 defendieron el Castillo de Chapultepec. Eran cadetes: ¿qué es un cadete?",
+      "answer": "Un alumno de una escuela militar",
+      "wrong_answers": [
+        "Un soldado de caballería",
+        "Un mensajero del ejército",
+        "Un tambor de la banda de guerra"
+      ],
+      "hints": [
+        "Defendieron el castillo durante la guerra contra Estados Unidos.",
+        "Eran adolescentes; el más joven tenía apenas 13 años.",
+        "Un cadete todavía estudia para llegar a ser oficial."
+      ],
+      "fun_fact": "El monumento a los Niños Héroes en Chapultepec tiene seis columnas, una por cada cadete.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Vista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg/3840px-Vista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg",
+        "credit": "Own work · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Own work",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10246",
       "status": "approved",
       "difficulty": 7,
@@ -3263,6 +3433,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "David Ratledge",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:David_Ratledge&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10249",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "indigenous-peoples",
+      "bundle": "mexico",
+      "description": "Vestido de gala, tacones y nervios de punta: así se vive la noche más elegante de Hollywood.",
+      "question": "¿Quién fue la primera mujer indígena mexicana nominada al Óscar a Mejor Actriz, por la película «Roma»?",
+      "answer": "Yalitza Aparicio",
+      "wrong_answers": [
+        "Marina de Tavira",
+        "Salma Hayek",
+        "Kate del Castillo"
+      ],
+      "hints": [
+        "Es de Tlaxiaco, Oaxaca.",
+        "Antes de actuar, estudió para ser maestra de preescolar.",
+        "En «Roma» interpretó a Cleo, una trabajadora del hogar."
+      ],
+      "fun_fact": "Yalitza nunca había actuado antes de «Roma» y llegó al casting casi por casualidad, gracias a su hermana.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Red_carpet_at_81st_Academy_Awards_in_Kodak_Theatre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed_carpet_at_81st_Academy_Awards_in_Kodak_Theatre.jpg",
+        "credit": "Greg in Hollywood (Greg Hernandez) · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Greg in Hollywood (Greg Hernandez)",
+        "author_url": "https://www.flickr.com/photos/greginhollywood/"
       },
       "background": null
     },
@@ -4219,6 +4423,40 @@
       "background": null
     },
     {
+      "id": "q-10279",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "landscapes",
+      "bundle": "mexico",
+      "description": "Un pez que se cree barco de vela y nadie le dice nada.",
+      "question": "Cada invierno, frente a Isla Mujeres, se juntan cientos de peces vela. ¿Para qué levantan su enorme aleta del lomo?",
+      "answer": "Para acorralar bancos de sardinas",
+      "wrong_answers": [
+        "Para volar sobre las olas",
+        "Para navegar con el viento",
+        "Para guardar aire y respirar"
+      ],
+      "hints": [
+        "Tiene que ver con la comida.",
+        "Varios lo hacen juntos, como pastores.",
+        "Así juntan a sus presas en una bola apretada."
+      ],
+      "fun_fact": "Cuando quiere nadar rapidísimo, el pez vela dobla su aleta y la guarda en una ranura del lomo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Canc%C3%BAn%2C_Mexico_-_51674516899.jpg/3840px-Canc%C3%BAn%2C_Mexico_-_51674516899.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanc%C3%BAn%2C_Mexico_-_51674516899.jpg",
+        "credit": "European Space Agency · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "European Space Agency",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10280",
       "status": "approved",
       "difficulty": 10,
@@ -4317,6 +4555,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Luis Alvaz",
         "author_url": "https://commons.wikimedia.org/wiki/User:Luisalvaz"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10283",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "legends",
+      "bundle": "mexico",
+      "description": "Una artesanía tan diabólicamente buena que hasta el chamuco presume su retrato.",
+      "question": "Las mujeres purépechas de Ocumicho, Michoacán, moldean coloridos diablitos de barro. Según uno de los relatos del pueblo, ¿por qué empezaron a hacerlos?",
+      "answer": "Para que el diablo tuviera dónde vivir y dejara en paz al pueblo",
+      "wrong_answers": [
+        "Para ganarle al diablo una apuesta que había hecho con el pueblo",
+        "Para asustar a los niños que no obedecían a sus papás",
+        "Para pedirle al diablo que trajera lluvia en tiempo de secas"
+      ],
+      "hints": [
+        "Tiene que ver con mantener tranquilo a alguien muy travieso.",
+        "Cuentan que antes el diablo andaba suelto por el pueblo haciendo travesuras.",
+        "Le dieron al chamuco su propia casita de barro para que no anduviera molestando."
+      ],
+      "fun_fact": "Muchos diablitos de Ocumicho muestran al diablo en escenas de la vida diaria: manejando, en el doctor o hasta jugando futbol.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Artesan%C3%ADa_t%C3%ADpica_de_Ocumicho%2C_Michoac%C3%A1n.jpg/3840px-Artesan%C3%ADa_t%C3%ADpica_de_Ocumicho%2C_Michoac%C3%A1n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtesan%C3%ADa_t%C3%ADpica_de_Ocumicho%2C_Michoac%C3%A1n.jpg",
+        "credit": "Fernando Hernández Ramírez · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Fernando Hernández Ramírez",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Fernando_Hern%C3%A1ndez_Ram%C3%ADrez&action=edit&redlink=1"
       },
       "background": null
     },
@@ -4623,6 +4895,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": null,
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10293",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "maya",
+      "bundle": "mexico",
+      "description": "El día que medio planeta revisó su agenda por si acaso.",
+      "question": "El 21 de diciembre de 2012 terminó un gran ciclo maya: el baktún que se escribe con dos rayas y tres puntos. ¿Qué número es?",
+      "answer": "13",
+      "wrong_answers": [
+        "8",
+        "11",
+        "20"
+      ],
+      "hints": [
+        "Los mayas escribían sus números con puntos y rayas.",
+        "En la numeración maya, cada punto vale 1.",
+        "Cada raya vale 5."
+      ],
+      "fun_fact": "Para los mayas, esa fecha (13.0.0.0.0) solo marcaba el cambio de ciclo de su calendario, como cuando un cuentakilómetros vuelve a empezar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/3840px-Chichen_Itza_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChichen_Itza_3.jpg",
+        "credit": "Daniel Schwen · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniel Schwen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dschwen"
       },
       "background": null
     },
@@ -5307,6 +5613,40 @@
       "background": null
     },
     {
+      "id": "q-10314",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "plants",
+      "bundle": "mexico",
+      "description": "Antes de ser la bebida de los dioses, fue un juguito con mucho futuro.",
+      "question": "Soy el jugo dulce que el tlachiquero raspa del corazón del maguey; si me dejan fermentar, me convierto en pulque. ¿Cómo me llamo?",
+      "answer": "Aguamiel",
+      "wrong_answers": [
+        "Tepache",
+        "Tejuino",
+        "Mezcal"
+      ],
+      "hints": [
+        "Me sacan fresco, todavía sin fermentar.",
+        "Mi sabor recuerda al de algo que hacen las abejas.",
+        "Mi nombre junta dos palabras: un líquido y algo dulce."
+      ],
+      "fun_fact": "Un buen maguey pulquero puede dar varios litros de aguamiel al día durante meses.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Agave_americana_Pune_05.jpg/3840px-Agave_americana_Pune_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAgave_americana_Pune_05.jpg",
+        "credit": "Ashwin Baindur (User:AshLin) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ashwin Baindur (User:AshLin)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:AshLin"
+      },
+      "background": null
+    },
+    {
       "id": "q-10315",
       "status": "approved",
       "difficulty": 10,
@@ -5643,6 +5983,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Simon Burchell",
         "author_url": "https://commons.wikimedia.org/wiki/User:Simon_Burchell"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10325",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "pre-hispanic-gods",
+      "bundle": "mexico",
+      "description": "Una era tan ventosa que ni el mejor peinado sobrevivió.",
+      "question": "Según los mexicas, el mundo pasó por varias eras o «soles». ¿Qué dios gobernó el Sol de Viento?",
+      "answer": "Quetzalcóatl",
+      "wrong_answers": [
+        "Tezcatlipoca",
+        "Tláloc",
+        "Chalchiuhtlicue"
+      ],
+      "hints": [
+        "Era uno de los dioses creadores más importantes.",
+        "Sus templos eran redondos, para que el viento corriera sin estorbos.",
+        "Los mayas lo conocían como Kukulcán."
+      ],
+      "fun_fact": "Según el mito, los humanos del Sol de Viento terminaron convertidos en monos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Monolito_de_la_Piedra_del_Sol.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonolito_de_la_Piedra_del_Sol.jpg",
+        "credit": "El Comandante · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "El Comandante",
+        "author_url": "https://commons.wikimedia.org/wiki/User:El_Comandante"
       },
       "background": null
     },
@@ -7245,6 +7619,40 @@
       "background": null
     },
     {
+      "id": "q-10373",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "reserves-and-climate",
+      "bundle": "mexico",
+      "description": "Una sierra que se volvió reserva por culpa de una plantita despeinada.",
+      "question": "La reserva de la biosfera Sierra de Manantlán, entre Jalisco y Colima, nació tras hallarse ahí un pariente silvestre de un cultivo. ¿De cuál?",
+      "answer": "Del maíz",
+      "wrong_answers": [
+        "Del frijol",
+        "Del chile",
+        "De la calabaza"
+      ],
+      "hints": [
+        "El hallazgo lo hizo un estudiante de la Universidad de Guadalajara a finales de los años 70.",
+        "Ese cultivo se domesticó en México hace miles de años.",
+        "La planta silvestre es un teocintle que vive varios años."
+      ],
+      "fun_fact": "Con ese teocintle perenne, los científicos sueñan con un maíz que no haya que sembrar cada año.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Puma_en_Bosque_de_Niebla%2C_Sierra_de_Manantlan.jpg/3840px-Puma_en_Bosque_de_Niebla%2C_Sierra_de_Manantlan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuma_en_Bosque_de_Niebla%2C_Sierra_de_Manantlan.jpg",
+        "credit": "Juan Pablo Esparza · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Pablo Esparza",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Juan_Pablo_Esparza&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-10374",
       "status": "approved",
       "difficulty": 7,
@@ -7751,6 +8159,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Nsaum75 at en.wikipedia",
         "author_url": "https://en.wikipedia.org/wiki/User:Nsaum75"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10389",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "christmas-season",
+      "bundle": "mexico",
+      "description": "Una fecha que no cae en día festivo, pero que da el banderazo a la temporada de ponche y piñatas.",
+      "question": "En México las posadas empiezan justo el 16 de diciembre. ¿Por qué ese día?",
+      "answer": "Para tener nueve noches, como los meses de embarazo",
+      "wrong_answers": [
+        "Para tener doce noches, como los apóstoles",
+        "Para tener siete noches, como los días de la Creación",
+        "Para tener cuarenta noches, como la Cuaresma"
+      ],
+      "hints": [
+        "Cada noche se pide posada cantando de puerta en puerta.",
+        "Las posadas terminan justo en Nochebuena.",
+        "Es el tiempo que tarda un bebé en nacer."
+      ],
+      "fun_fact": "Las posadas vienen de las “misas de aguinaldo” que los frailes celebraban en la Nueva España, como en el convento de Acolman a finales del siglo XVI.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Candles_in_the_night1.jpg/3840px-Candles_in_the_night1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACandles_in_the_night1.jpg",
+        "credit": "Donald Olszewski · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Donald Olszewski",
+        "author_url": null
       },
       "background": null
     },
@@ -8367,6 +8809,40 @@
       "background": null
     },
     {
+      "id": "q-10408",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "drinks",
+      "bundle": "mexico",
+      "description": "Un refresco que viaja al norte y regresa convertido en celebridad.",
+      "question": "En Estados Unidos muchos buscan la «Mexican Coke» en botella de vidrio porque dicen que sabe distinto. ¿Con qué se endulza?",
+      "answer": "Con azúcar de caña",
+      "wrong_answers": [
+        "Con jarabe de maíz",
+        "Con miel de agave",
+        "Con estevia"
+      ],
+      "hints": [
+        "Es un endulzante muy antiguo, mucho más que el refresco.",
+        "Sale de una planta alta que se cultiva en Veracruz.",
+        "Es el azúcar de toda la vida."
+      ],
+      "fun_fact": "En Estados Unidos la versión normal se endulza con jarabe de maíz de alta fructosa, por eso la mexicana se hizo famosa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/DZ3_1064_A_bustling_roadside_shop_in_Pattaya_filled_with_drinks_snacks_and_locals_chatting_at_a_small_table.jpg/3840px-DZ3_1064_A_bustling_roadside_shop_in_Pattaya_filled_with_drinks_snacks_and_locals_chatting_at_a_small_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADZ3_1064_A_bustling_roadside_shop_in_Pattaya_filled_with_drinks_snacks_and_locals_chatting_at_a_small_table.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
       "id": "q-10409",
       "status": "approved",
       "difficulty": 7,
@@ -8741,6 +9217,40 @@
       "background": null
     },
     {
+      "id": "q-10420",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "ingredients",
+      "bundle": "mexico",
+      "description": "Unos frijoles machacados que llegan al plato listos para acompañar unos buenos chilaquiles.",
+      "question": "Los frijoles refritos se machacan y se fríen en la sartén. ¿Cuántas veces se fríen normalmente?",
+      "answer": "Una vez",
+      "wrong_answers": [
+        "Dos veces",
+        "Tres veces",
+        "Cuatro veces"
+      ],
+      "hints": [
+        "Antes de llegar a la sartén, los frijoles ya vienen cocidos de la olla.",
+        "Piensa en qué significa el «re» de «rebueno» o «rebonito».",
+        "«Refritos» quiere decir «bien fritos»."
+      ],
+      "fun_fact": "En inglés los llamaron «refried beans», como si se frieran dos veces, por traducir el «re» al pie de la letra.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Tamale_Plate_at_Rancho_del_Zocalos_Restaurante.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATamale_Plate_at_Rancho_del_Zocalos_Restaurante.jpg",
+        "credit": "Ruth Hartnup · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Ruth Hartnup",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10421",
       "status": "approved",
       "difficulty": 3,
@@ -8809,6 +9319,40 @@
       "background": null
     },
     {
+      "id": "q-10423",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "landmarks",
+      "bundle": "mexico",
+      "description": "Una pirámide hecha para los que nunca se cansan de subir escalones.",
+      "question": "En Chichén Itzá, la gran pirámide de El Castillo tiene escaleras que suben hasta su templo. ¿Cuántas escaleras tiene?",
+      "answer": "4",
+      "wrong_answers": [
+        "2",
+        "3",
+        "6"
+      ],
+      "hints": [
+        "Es un número par.",
+        "Los mayas la construyeron como un gran calendario de piedra.",
+        "Su base es un cuadrado y cada lado tiene su propia escalera."
+      ],
+      "fun_fact": "Cada escalera tiene 91 escalones; con la plataforma de arriba suman 365, como los días del año.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Serpent_Head_-_Chichen_Itza_2024.jpg/3840px-Serpent_Head_-_Chichen_Itza_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASerpent_Head_-_Chichen_Itza_2024.jpg",
+        "credit": "edenpictures · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "edenpictures",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10424",
       "status": "approved",
       "difficulty": 9,
@@ -8839,6 +9383,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "AlejandroLinaresGarcia",
         "author_url": "https://commons.wikimedia.org/wiki/User:AlejandroLinaresGarcia"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10425",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "landmarks",
+      "bundle": "mexico",
+      "description": "Un pintor que se cansó de pintar paredes y decidió construirse unas muy, muy oscuras.",
+      "question": "Lo diseñó Diego Rivera, está hecho de piedra volcánica y parece una pirámide. ¿Para qué ideó el Anahuacalli?",
+      "answer": "Para exhibir su arte prehispánico",
+      "wrong_answers": [
+        "Para vivir ahí con Frida Kahlo",
+        "Para usarlo como observatorio",
+        "Para abrir una escuela de pintura"
+      ],
+      "hints": [
+        "Rivera era un coleccionista apasionado.",
+        "Juntó miles de piezas hechas mucho antes de la llegada de los españoles.",
+        "Ahí se exhiben figuras de barro y piedra de culturas antiguas de México."
+      ],
+      "fun_fact": "Rivera reunió más de 50 000 piezas prehispánicas para su colección.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Museo_Diego_Rivera_Anahuacalli_%282666014413%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuseo_Diego_Rivera_Anahuacalli_%282666014413%29.jpg",
+        "credit": "Randal Sheppard · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Randal Sheppard",
+        "author_url": "https://www.flickr.com/people/25222005@N08"
       },
       "background": null
     },
@@ -9519,6 +10097,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "J.Godinez",
         "author_url": "https://web.archive.org/web/20161017204338/http://www.panoramio.com/user/1956221?with_photo_id=45951788"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10446",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "revolution",
+      "bundle": "mexico",
+      "description": "Si lo ves a caballo y con cara de pocos amigos, mejor ni le pidas prestado el sombrero.",
+      "question": "¿Qué famoso revolucionario mexicano mandaba la División del Norte?",
+      "answer": "Pancho Villa",
+      "wrong_answers": [
+        "Emiliano Zapata",
+        "Francisco I. Madero",
+        "Venustiano Carranza"
+      ],
+      "hints": [
+        "Fue uno de los jefes más famosos de la Revolución Mexicana.",
+        "Era de Durango y lo acompañaban sus jinetes llamados «los Dorados».",
+        "Su nombre verdadero era Doroteo Arango."
+      ],
+      "fun_fact": "Pancho Villa firmó un contrato con una compañía de cine de Estados Unidos para que filmaran sus batallas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg/3840px-Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonumento_a_la_Revoluci%C3%B3n_Mexico.jpg",
+        "credit": "ismael villafranco · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "ismael villafranco",
+        "author_url": null
       },
       "background": null
     },
@@ -10709,6 +11321,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Karen and Brad Emerson",
         "author_url": "https://www.flickr.com/people/10293577@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10482",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "sweets-and-bread",
+      "bundle": "mexico",
+      "description": "Un pan tan amarillo que parece que desayunó puro huevo.",
+      "question": "Este pan de muerto es de pan de yema, lleva pegada una carita pintada y se moja en chocolate caliente. ¿De qué estado es típico?",
+      "answer": "Oaxaca",
+      "wrong_answers": [
+        "Yucatán",
+        "Sonora",
+        "Baja California"
+      ],
+      "hints": [
+        "Está en el sur de México",
+        "Es famoso por sus siete moles",
+        "Su capital tiene el mismo nombre que el estado"
+      ],
+      "fun_fact": "La carita del pan de muerto oaxaqueño se hace con pasta de harina y se pinta a mano.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Pan_Oaxaque%C3%B1o_en_mercado.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APan_Oaxaque%C3%B1o_en_mercado.JPG",
+        "credit": "Luisroj96 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Luisroj96",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Luisroj96"
       },
       "background": null
     },

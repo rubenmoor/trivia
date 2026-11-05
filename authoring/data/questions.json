@@ -786738,7 +786738,7 @@
     },
     {
       "id": "q-10172",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Ningún taco de la esquina está completo sin su compañero bien frío.",
       "question": "Mira la foto: en México, ¿cómo se le dice de cariño a esta bebida en la calle?",
@@ -786756,11 +786756,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "cold soda glass bottles",
+        "query": "soda bottles in ice",
         "note": "Primer plano de botellas de vidrio de refresco con burbujas y gotitas de frío, sin marcas ni etiquetas legibles.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AICE_IS_IN_THE_DELI_ASK_FOR_IT_AND_WE_WILL_GET_IT_FOR_YOU_THANK_YOU_%2830987264325%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/ICE_IS_IN_THE_DELI_ASK_FOR_IT_AND_WE_WILL_GET_IT_FOR_YOU_THANK_YOU_%2830987264325%29.jpg/1920px-ICE_IS_IN_THE_DELI_ASK_FOR_IT_AND_WE_WILL_GET_IT_FOR_YOU_THANK_YOU_%2830987264325%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "dankeck · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "dankeck",
+        "author_url": "https://www.flickr.com/people/140641142@N05",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "México es uno de los países donde más refresco se toma por persona en el mundo.",
       "subcategory": "antojitos-and-street-food",
@@ -786789,23 +786796,39 @@
       "needs_media": true,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates clearly shows what this essential image needs: a cold, fizzy soda. #1 is an unrelated book plate, #2 is a painting of an empty bottle with lettering, #4–6 are empty, rusty antique bottles photographed against a scale bar, and #3 shows Indian goli-soda bottles with lemons and a cloudy drink, which looks more like lemonade, plus Pepsi and Crush logos. The text itself is fine. The image needs a new search, for example 'soda bottles ice bucket' or 'refresco botella vidrio'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates clearly shows what this essential image needs: a cold, fizzy soda. #1 is an unrelated book plate, #2 is a painting of an empty bottle with lettering, #4–6 are empty, rusty antique bottles photographed against a scale bar, and #3 shows Indian goli-soda bottles with lemons and a cloudy drink, which looks more like lemonade, plus Pepsi and Crush logos. The text itself is fine. The image needs a new search, for example 'soda bottles ice bucket' or 'refresco botella vidrio'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it doesn't mention gas or bubbles.",
+        "reason": "No usable essential image was found, so the media query is changed to one more likely to return cold, unbranded soda bottles; the text stays as it was.",
         "previous": {
-          "description": "Una bebida con tanto gas que hasta su apodo hace burbujas."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "cold soda glass bottles",
+            "note": "Primer plano de botellas de vidrio de refresco con burbujas y gotitas de frío, sin marcas ni etiquetas legibles.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -787321,7 +787344,7 @@
       "id": "q-10180",
       "status": "needs_work",
       "difficulty": 3,
-      "description": "La pareja que inventó buscar hotel en plena temporada navideña.",
+      "description": "Ponche calientito, piñata y velitas: la fiesta más cantada de diciembre.",
       "question": "En las posadas mexicanas, los peregrinos cargan figuritas como estas mientras piden posada. ¿A quiénes representan?",
       "answer": "José y María",
       "wrong_answers": [
@@ -787337,7 +787360,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Holy Family donkey figurine",
+        "query": "posada pilgrims Mary donkey figurines",
         "note": "Figurines of Mary riding a donkey with Joseph walking beside her, as carried in a Mexican posada; no text or labels.",
         "source_url": null,
         "file_url": null,
@@ -787366,23 +787389,50 @@
         "difficulty_estimate": 2,
         "notes": "'Melchor y Gaspar' is a weak distractor because the Reyes Magos come as three, not two. Mary riding a donkey makes the image close to self-answering, which is fine at this level. Nativity figurines are easy to find in the media sources."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-31",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the essential subject (Mary on a donkey with Joseph, as posada pilgrims): the sheet has big nativity scenes, a Holy Family with an older child Jesus, a crèche with extra saints, and unrelated items; a new search (e.g. \"posada pilgrims Mary donkey figurines\") is needed. Also, the description (\"the couple who invented looking for a hotel at Christmas\") states the answer's defining trait and should play on the theme without it. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the essential subject (Mary on a donkey with Joseph, as posada pilgrims): the sheet has big nativity scenes, a Holy Family with an older child Jesus, a crèche with extra saints, and unrelated items; a new search (e.g. \"posada pilgrims Mary donkey figurines\") is needed. Also, the description (\"the couple who invented looking for a hotel at Christmas\") states the answer's defining trait and should play on the theme without it. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query for posada pilgrim figurines, and a new description that plays on the posada theme without giving away the search for lodging.",
+        "previous": {
+          "description": "La pareja que inventó buscar hotel en plena temporada navideña.",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Holy Family donkey figurine",
+            "note": "Figurines of Mary riding a donkey with Joseph walking beside her, as carried in a Mexican posada; no text or labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10181",
@@ -788513,7 +788563,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Templo Mayor ruins Mexico City",
+        "query": "Mexico coat of arms",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -788547,26 +788597,40 @@
       "batch": "batch-31",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question names a showable object (the Mexican coat of arms, the eagle on a nopal), but every candidate shows the Templo Mayor ruins, which is a related but different subject. Search again for \"Mexico coat of arms\" or \"Mexican flag eagle\". The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question names a showable object (the Mexican coat of arms, the eagle on a nopal), but every candidate shows the Templo Mayor ruins, which is a related but different subject. Search again for \"Mexico coat of arms\" or \"Mexican flag eagle\". The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 now covers the pilgrimage from Aztlán, and the 200-years-before-Cortés clue moved to hint 3.",
+        "reason": "The media query now searches for the coat of arms the question names instead of the Templo Mayor.",
         "previous": {
-          "hints": [
-            "Fue mucho antes de que llegaran los españoles.",
-            "Pasaron casi 200 años antes de que Hernán Cortés la viera.",
-            "El año termina en 25."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Templo Mayor ruins Mexico City",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -788719,7 +788783,7 @@
       "id": "q-10199",
       "status": "needs_work",
       "difficulty": 2,
-      "description": "El día en que media escuela llega dormida, pero bien peinada y con uniforme de gala.",
+      "description": "Uniforme de gala, escolta bien formada y el himno a todo pulmón.",
       "question": "¿Qué día de la semana se hacen los honores a la bandera en las escuelas de México?",
       "answer": "El lunes",
       "wrong_answers": [
@@ -788735,7 +788799,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "escolta bandera escuela México",
+        "query": "Mexican schoolchildren flag ceremony",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -788769,26 +788833,41 @@
       "batch": "batch-31",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits, and no new search is allowed. Candidates 1 and 2 show adults at an activist workshop table. Candidates 3 and 4 show a naval academy flag-oath ceremony with President Peña Nieto, not a school flag ceremony. A fitting image would be Mexican schoolchildren doing honores a la bandera, or a school escolta. Minor point for the revision: the description's \"media escuela llega dormida\" and hint 2 (people struggle to get up) both point strongly to Monday. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits, and no new search is allowed. Candidates 1 and 2 show adults at an activist workshop table. Candidates 3 and 4 show a naval academy flag-oath ceremony with President Peña Nieto, not a school flag ceremony. A fitting image would be Mexican schoolchildren doing honores a la bandera, or a school escolta. Minor point for the revision: the description's \"media escuela llega dormida\" and hint 2 (people struggle to get up) both point strongly to Monday. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which meant Monday outright, with a vaguer hint about the hardest day to wake up for.",
+        "reason": "New media query for schoolchildren at a flag ceremony, and a neutral description that no longer hints at Monday sleepiness.",
         "previous": {
-          "hints": [
-            "Es un día de clases.",
-            "Se hace al empezar la semana escolar.",
-            "Es el día después del domingo."
-          ]
+          "description": "El día en que media escuela llega dormida, pero bien peinada y con uniforme de gala.",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "escolta bandera escuela México",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -789740,7 +789819,7 @@
     },
     {
       "id": "q-10213",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Palabras que llegaron antes que Cortés y se quedaron a vivir.",
       "question": "¿Cuál de estos nombres de lugares NO viene del náhuatl?",
@@ -789752,7 +789831,7 @@
       ],
       "hints": [
         "Tres de ellos se usaban en el valle de México.",
-        "El intruso lo formó la naturaleza, no las personas.",
+        "El intruso viene de otra lengua indígena, hablada lejos del valle de México.",
         "Viene de una lengua de la península de Yucatán."
       ],
       "media": {
@@ -789801,25 +789880,33 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"El intruso lo formó la naturaleza, no las personas\") gives the answer away: of the four options only the cenote is natural, since a tianguis, a temazcal and a chinampa are all built by people. Players can pick the answer without knowing any etymology. Hint 2 should instead point vaguely to the word's origin, for example that it comes from a different Indigenous language than the other three, without naming the region or the trait that singles out the cenote.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"El intruso lo formó la naturaleza, no las personas\") gives the answer away: of the four options only the cenote is natural, since a tianguis, a temazcal and a chinampa are all built by people. Players can pick the answer without knowing any etymology. Hint 2 should instead point vaguely to the word's origin, for example that it comes from a different Indigenous language than the other three, without naming the region or the trait that singles out the cenote.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which also fit chinampas, with a clue only the cenote has (formed by nature).",
+        "reason": "Hint 2 gave the answer away (the only natural option), so it now points vaguely to the word coming from another region's language.",
         "previous": {
           "hints": [
             "Tres de ellos se usaban en el valle de México.",
-            "El intruso es un lugar con agua.",
+            "El intruso lo formó la naturaleza, no las personas.",
             "Viene de una lengua de la península de Yucatán."
           ]
         },
@@ -790220,7 +790307,7 @@
       "hints": [
         "La chaquira es tan pequeña que se ensarta en hilo con aguja.",
         "Los artesanos huicholes la usan para adornarse.",
-        "En la que sobra se calientan las tortillas."
+        "El intruso es un utensilio de cocina para calentar tortillas."
       ],
       "media": {
         "type": "image",
@@ -790238,7 +790325,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "La chaquira son cuentas de vidrio tan pequeñas que se ensartan con aguja.",
+      "fun_fact": "Artistas huicholes cubrieron un vocho entero con más de 2 millones de chaquiras: se llama el Vochol.",
       "subcategory": "crafts-and-dress",
       "style": null,
       "concept": "Pulsera de chaquira",
@@ -790261,31 +790348,42 @@
         "difficulty_estimate": 3,
         "notes": "The odd one out is obvious: three options are jewellery and the comal is a kitchen tool. Not much challenge."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-31",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 3 ('En la que sobra se calientan las tortillas') is confusing and reads as if tortillas were heated on leftover chaquira; the feminine 'la que sobra' doesn't fit 'un comal' either, and the fact check says 'wrong'. Rewrite hint 3 to say plainly that the odd one out is a kitchen tool for heating tortillas. Also give a fun fact that doesn't repeat hint 1 (for example the Huichol Vochol covered in beads). Verificación de datos: wrong. Answer (comal) is right, but hint 3 ('En la que sobra se calientan las tortillas') wrongly suggests tortillas are heated on leftover chaquira; it is nonsensical. Fun fact just repeats hint 1.",
+        "feedback": "The fun fact states that Huichol artists made the beaded Vochol, which is exactly the answer of the approved q-10225 ('El Vochol es un vocho cubierto de chaquira… ¿Cómo se le conoce también?' → Huicholes); replace the fun fact with another true bead fact that doesn't name the Vochol and its makers.",
         "problems": [
-          "fact"
+          "overlap"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 ('En la que sobra se calientan las tortillas') is confusing and reads as if tortillas were heated on leftover chaquira; the feminine 'la que sobra' doesn't fit 'un comal' either, and the fact check says 'wrong'. Rewrite hint 3 to say plainly that the odd one out is a kitchen tool for heating tortillas. Also give a fun fact that doesn't repeat hint 1 (for example the Huichol Vochol covered in beads). Verificación de datos: wrong. Answer (comal) is right, but hint 3 ('En la que sobra se calientan las tortillas') wrongly suggests tortillas are heated on leftover chaquira; it is nonsensical. Fun fact just repeats hint 1.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which sorted the options, with hints about chaquira itself.",
+        "reason": "Rewrote the confusing hint 3 plainly, and replaced the fun fact that repeated hint 1 with the beaded Vochol.",
         "previous": {
           "hints": [
-            "Tres de ellas te las pones encima.",
-            "La que sobra va en la cocina.",
+            "La chaquira es tan pequeña que se ensarta en hilo con aguja.",
+            "Los artesanos huicholes la usan para adornarse.",
             "En la que sobra se calientan las tortillas."
-          ]
+          ],
+          "fun_fact": "La chaquira son cuentas de vidrio tan pequeñas que se ensartan con aguja."
         },
         "revised_on": "2026-11-05"
       }
@@ -790873,7 +790971,7 @@
     },
     {
       "id": "q-10228",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un mercado tan puntual que sólo trabaja un día de la semana.",
       "question": "Cada sábado se pone en la Ciudad de México el Bazar Sábado, famoso por sus artesanías y pintores. ¿En qué barrio?",
@@ -790891,11 +790989,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Mexican folk art stall",
+        "query": "Mexican handicrafts market",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATlacolula_Market_230122_63.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Tlacolula_Market_230122_63.jpg/3840px-Tlacolula_Market_230122_63.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Bluerasberry · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bluerasberry",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bluerasberry",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Mientras el bazar está adentro de una casona, afuera los pintores exhiben sus cuadros en la plaza.",
       "subcategory": "crafts-and-dress",
@@ -790924,18 +791029,42 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates fit the question. They show contra dances, starlings, a dam, a Brazilian protest and a fiddler, which looks like a mismatched search for \"contra\". No new search is allowed, so the media slot needs a new search such as \"San Jacinto plaza painters\" or \"Mexican folk art stall\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fit the question. They show contra dances, starlings, a dam, a Brazilian protest and a fiddler, which looks like a mismatched search for \"contra\". No new search is allowed, so the media slot needs a new search such as \"San Jacinto plaza painters\" or \"Mexican folk art stall\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image candidates were unrelated, so the media query is changed to a clearer handicraft market search that doesn't name the neighbourhood.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Mexican folk art stall",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10229",
@@ -791393,7 +791522,7 @@
     },
     {
       "id": "q-10235",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Trabaja de noche, no se queja y viene con su propio vaso.",
       "question": "En México, ¿cómo se llama esta vela dentro de un vaso de vidrio que se pone en ofrendas y altares?",
@@ -791411,11 +791540,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "seven day candle lit",
+        "query": "lit candle in glass jar",
         "note": "Una veladora encendida: vela dentro de un vaso de vidrio, de preferencia sin texto impreso.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACandle_in_glass_cylinder_with_inscription_%22Double_Action_Reversible%22_and_split-coloured_face_with_arrows.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Candle_in_glass_cylinder_with_inscription_%22Double_Action_Reversible%22_and_split-coloured_face_with_arrows.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Pittigrilli · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pittigrilli",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pittigrilli",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El vidrio protege la flama del viento, por eso las veladoras aguantan encendidas toda la noche en el panteón.",
       "subcategory": "day-of-the-dead",
@@ -791440,22 +791576,46 @@
         "difficulty_estimate": 4,
         "notes": "Common veladora photos often carry printed saint images or labels, so text must be avoided. It's a plain naming question. 'Cirio' is a reasonable distractor."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a veladora (a candle in a glass). The sheet has a Hanukkah inflatable, a menorah, a clown, Swiss lantern hats, a Malta Good Friday collage and a mining engraving. A new search isn't allowed in this run, so the essential image slot stays empty. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a veladora (a candle in a glass). The sheet has a Hanukkah inflatable, a menorah, a clown, Swiss lantern hats, a Malta Good Friday collage and a mining engraving. A new search isn't allowed in this run, so the essential image slot stays empty. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No veladora image was found, so the essential media query now targets a lit candle in a glass jar.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "seven day candle lit",
+            "note": "Una veladora encendida: vela dentro de un vaso de vidrio, de preferencia sin texto impreso.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10236",
@@ -792111,7 +792271,7 @@
     },
     {
       "id": "q-10245",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Uniforme planchado, botas brillantes y un castillo como dirección: así de elegante suena esta palabra.",
       "question": "Cada 13 de septiembre se recuerda a los Niños Héroes, que en 1847 defendieron el Castillo de Chapultepec. Eran cadetes: ¿qué es un cadete?",
@@ -792122,7 +792282,7 @@
         "Un tambor de la banda de guerra"
       ],
       "hints": [
-        "Los Niños Héroes eran muy jóvenes y todavía estaban aprendiendo.",
+        "Defendieron el castillo durante la guerra contra Estados Unidos.",
         "Eran adolescentes; el más joven tenía apenas 13 años.",
         "Un cadete todavía estudia para llegar a ser oficial."
       ],
@@ -792169,26 +792329,33 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"todavía estaban aprendiendo\") gives the answer away: of the four options, only \"Un alumno de una escuela militar\" has anything to do with learning. Replace it with a vague hint, for example one about the 1847 war or about the Colegio Militar's location, that doesn't mention studying or learning.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"todavía estaban aprendiendo\") gives the answer away: of the four options, only \"Un alumno de una escuela militar\" has anything to do with learning. Replace it with a vague hint, for example one about the 1847 war or about the Colegio Militar's location, that doesn't mention studying or learning.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away, with an age clue and rewrote the description so it no longer relies on the pastry joke.",
+        "reason": "Hint 1 gave away the 'student' option, so it now refers to the 1847 war instead.",
         "previous": {
-          "description": "Una palabra que suena a pastel, pero que viene con uniforme y disciplina.",
           "hints": [
             "Los Niños Héroes eran muy jóvenes y todavía estaban aprendiendo.",
-            "En 1847 el Castillo de Chapultepec era la sede del Colegio Militar.",
+            "Eran adolescentes; el más joven tenía apenas 13 años.",
             "Un cadete todavía estudia para llegar a ser oficial."
           ]
         },
@@ -792436,7 +792603,7 @@
     },
     {
       "id": "q-10249",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Vestido de gala, tacones y nervios de punta: así se vive la noche más elegante de Hollywood.",
       "question": "¿Quién fue la primera mujer indígena mexicana nominada al Óscar a Mejor Actriz, por la película «Roma»?",
@@ -792467,7 +792634,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Yalitza nunca había actuado antes de «Roma»: fue a la audición en lugar de su hermana, que estaba embarazada.",
+      "fun_fact": "Yalitza nunca había actuado antes de «Roma» y llegó al casting casi por casualidad, gracias a su hermana.",
       "subcategory": "indigenous-peoples",
       "style": null,
       "concept": "Yalitza Aparicio",
@@ -792490,28 +792657,35 @@
         "difficulty_estimate": 7,
         "notes": "The fun fact is a bit loose. Most reports say she went to the casting in place of her pregnant sister, not to 'accompany' her. The description's preschool-teacher detail is a trait only the answer has, and hint 2 repeats it. Naming «Roma» makes the question easier."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Answer is right. Fun fact detail is disputed: sources say she went to the casting with or for her sister, but reasons differ (pregnancy vs. sister got cold feet).",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Answer is right. Fun fact detail is disputed: sources say she went to the casting with or for her sister, but reasons differ (pregnancy vs. sister got cold feet).",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer points to one actress, and corrected the casting story in the fun fact.",
+        "reason": "The fun fact gave a disputed reason (pregnancy), so it now only says, safely, that she came to the casting through her sister.",
         "previous": {
-          "description": "De maestra de preescolar a la alfombra roja, sin pasar por la escuela de actuación.",
-          "fun_fact": "Yalitza nunca había actuado antes de «Roma»: fue a la audición casi por acompañar a su hermana."
+          "fun_fact": "Yalitza nunca había actuado antes de «Roma»: fue a la audición en lugar de su hermana, que estaba embarazada."
         },
         "revised_on": "2026-11-05"
       }
@@ -794347,19 +794521,19 @@
     {
       "id": "q-10275",
       "status": "needs_work",
-      "difficulty": 4,
+      "difficulty": 8,
       "description": "Le dicen ballena, le dicen tiburón, y él nomás abre la boca para comer plancton.",
-      "question": "Mira este gigante de manchas blancas. ¿En qué lugar de México puedes nadar junto a él cada verano?",
-      "answer": "En Holbox, Quintana Roo",
+      "question": "Mira este gigante de manchas blancas. Cada verano llega a una isla mexicana donde casi no circulan carros. ¿Cuál es?",
+      "answer": "Holbox",
       "wrong_answers": [
-        "En el lago de Chapala",
-        "En el lago de Pátzcuaro",
-        "En el río Usumacinta"
+        "Cozumel",
+        "Isla Mujeres",
+        "Isla del Carmen"
       ],
       "hints": [
         "Es el pez más grande del mundo.",
-        "En sus calles de arena casi no hay carros y la gente se mueve en carritos de golf.",
-        "Está muy al norte de la península de Yucatán, cerca de Cancún."
+        "Está en Quintana Roo, muy al norte de la península de Yucatán.",
+        "Se llega en ferry desde el pueblo de Chiquilá, y ahí la gente anda en carritos de golf."
       ],
       "media": {
         "type": "image",
@@ -794400,34 +794574,54 @@
         "difficulty_estimate": 3,
         "notes": "All three distractors are fresh water (two lakes and a river), and hint 1 rules them all out. Players only need to know the animal lives in the sea. Isla Mujeres and La Paz also have whale-shark swims, but neither is among the options."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": true,
       "batch": "batch-31",
       "review": {
         "decision": "needs_work",
-        "feedback": "The clue (\"a place in Mexico where you can swim with whale sharks every summer\") also fits Isla Mujeres and the Cancún coast, which have equally famous summer whale-shark swims. So the question only points to Holbox because of the four options, not in the real world. It needs a clue only Holbox has (for example the island where golf carts replace cars), or a question about the animal's home sea instead.",
+        "feedback": "'Isla Mujeres' is a defensible second answer. Whale sharks gather off it every summer, it hosts Mexico's Festival del Tiburón Ballena, and it is famous for getting around by golf cart, so 'casi no circulan carros' doesn't clearly rule it out. Replace Isla Mujeres with an island without whale-shark tours (for example Isla Tiburón or Isla de Mezcalitos), or make the clue unique to Holbox, such as being reached by ferry from Chiquilá and having cars banned almost entirely. Verificación de datos: uncertain. Whale sharks also gather in summer off Isla Mujeres, where golf carts are the main transport. That makes the wrong answer 'Isla Mujeres' arguably valid. Only the 'casi no circulan carros' clue and the 'muy al norte' hint point to Holbox. I did not search this one.",
         "problems": [
+          "fact",
           "ambiguity"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The clue (\"a place in Mexico where you can swim with whale sharks every summer\") also fits Isla Mujeres and the Cancún coast, which have equally famous summer whale-shark swims. So the question only points to Holbox because of the four options, not in the real world. It needs a clue only Holbox has (for example the island where golf carts replace cars), or a question about the animal's home sea instead.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which mentioned the sea or an island and so ruled out the freshwater options.",
+        "reason": "Whale-shark summer swims also happen at Isla Mujeres, so the question now asks for the nearly car-free island. That clue only fits Holbox. The options are now islands and the hints were adjusted to match.",
         "previous": {
+          "difficulty": 4,
+          "question": "Mira este gigante de manchas blancas. ¿En qué lugar de México puedes nadar junto a él cada verano?",
+          "answer": "En Holbox, Quintana Roo",
+          "wrong_answers": [
+            "En el lago de Chapala",
+            "En el lago de Pátzcuaro",
+            "En el río Usumacinta"
+          ],
           "hints": [
-            "Vive en el mar, no en agua dulce.",
-            "Es una isla del Caribe mexicano.",
+            "Es el pez más grande del mundo.",
+            "En sus calles de arena casi no hay carros y la gente se mueve en carritos de golf.",
             "Está muy al norte de la península de Yucatán, cerca de Cancún."
           ]
         },
         "revised_on": "2026-11-05"
-      }
+      },
+      "difficulty_original": 4
     },
     {
       "id": "q-10276",
@@ -794663,10 +794857,10 @@
     },
     {
       "id": "q-10279",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un pez que se cree barco de vela y nadie le dice nada.",
-      "question": "Cada invierno, frente a Isla Mujeres, se juntan cientos de estos peces. ¿Para qué levantan su enorme aleta del lomo?",
+      "question": "Cada invierno, frente a Isla Mujeres, se juntan cientos de peces vela. ¿Para qué levantan su enorme aleta del lomo?",
       "answer": "Para acorralar bancos de sardinas",
       "wrong_answers": [
         "Para volar sobre las olas",
@@ -794680,12 +794874,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Istiophorus sailfish underwater",
-        "note": "Foto de un pez vela bajo el agua con la aleta dorsal levantada.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Isla Mujeres turquoise sea",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanc%C3%BAn%2C_Mexico_-_51674516899.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Canc%C3%BAn%2C_Mexico_-_51674516899.jpg/3840px-Canc%C3%BAn%2C_Mexico_-_51674516899.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "European Space Agency · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "European Space Agency",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Cuando quiere nadar rapidísimo, el pez vela dobla su aleta y la guarda en una ranura del lomo.",
       "subcategory": "landscapes",
@@ -794711,26 +794912,44 @@
         "notes": "Raising the sail to herd and corral prey is the accepted explanation; it may also help with stability when the fish strikes. q-5768 asks about the same fish, but its speed is a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows a sailfish, and no new search is allowed. The question says \"estos peces\", so it needs an essential photo of a sailfish underwater with its dorsal fin raised (e.g. search \"Istiophorus platypterus\" or \"sailfish bait ball\"). No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows a sailfish, and no new search is allowed. The question says \"estos peces\", so it needs an essential photo of a sailfish underwater with its dorsal fin raised (e.g. search \"Istiophorus platypterus\" or \"sailfish bait ball\"). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the hunting/group setting in the question with a neutral one so it no longer gives the answer away.",
+        "reason": "No sailfish photo is available, so the question now names the pez vela and the media is a non-essential Isla Mujeres image.",
         "previous": {
-          "question": "Frente a Isla Mujeres se ve a este pez cazar en grupo. ¿Para qué levanta su enorme aleta del lomo?"
+          "question": "Cada invierno, frente a Isla Mujeres, se juntan cientos de estos peces. ¿Para qué levantan su enorme aleta del lomo?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Istiophorus sailfish underwater",
+            "note": "Foto de un pez vela bajo el agua con la aleta dorsal levantada.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-05"
       }
@@ -794950,10 +795169,10 @@
     },
     {
       "id": "q-10283",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una artesanía tan diabólicamente buena que hasta el chamuco presume su retrato.",
-      "question": "Son de barro, muy coloridos, y los moldean las mujeres purépechas de Ocumicho, Michoacán. Según la leyenda del pueblo, ¿por qué empezaron a hacer diablitos?",
+      "question": "Las mujeres purépechas de Ocumicho, Michoacán, moldean coloridos diablitos de barro. Según uno de los relatos del pueblo, ¿por qué empezaron a hacerlos?",
       "answer": "Para que el diablo tuviera dónde vivir y dejara en paz al pueblo",
       "wrong_answers": [
         "Para ganarle al diablo una apuesta que había hecho con el pueblo",
@@ -795004,31 +795223,35 @@
         "difficulty_estimate": 14,
         "notes": "The legend matches the usual telling (they gave the devil figures to live in so he'd leave the village alone). The correct option is a bit longer than the others. Hint 3 comes very close to the answer. It's a niche fact even inside Mexico, so it may be closer to 14."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check is 'uncertain' and I can't confirm it either. Sources give different origins for the Ocumicho diablitos: the devil asked to be modelled, or Marcelino Vicente's 1960s encounter with the devil. The 'house so the devil leaves the village alone' version is one telling among several, not an established 'town legend'. Either base the question on a documented origin (e.g. Marcelino Vicente) or frame it as 'one of the stories told'. Verificación de datos: uncertain. No single 'town legend' is established. Sources give differing origins: the devil himself asked to be modeled, or Marcelino Vicente's 1960s ravine encounter with the devil. The 'house so the devil leaves the town in peace' story was not verified.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check is 'uncertain' and I can't confirm it either. Sources give different origins for the Ocumicho diablitos: the devil asked to be modelled, or Marcelino Vicente's 1960s encounter with the devil. The 'house so the devil leaves the village alone' version is one telling among several, not an established 'town legend'. Either base the question on a documented origin (e.g. Marcelino Vicente) or frame it as 'one of the stories told'. Verificación de datos: uncertain. No single 'town legend' is established. Sources give differing origins: the devil himself asked to be modeled, or Marcelino Vicente's 1960s ravine encounter with the devil. The 'house so the devil leaves the town in peace' story was not verified.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed only to the 'home' option, with a vaguer one about the devil's mischief.",
+        "reason": "The origin of the diablitos is told in several ways, so the question now asks about 'one of the stories told in the town' instead of 'the' town legend.",
         "previous": {
-          "hints": [
-            "Tiene que ver con mantener tranquilo a alguien muy travieso.",
-            "Cada figurita de barro funciona como un hogar.",
-            "Le dieron al chamuco su propia casita de barro para que no anduviera molestando."
-          ]
+          "question": "Son de barro, muy coloridos, y los moldean las mujeres purépechas de Ocumicho, Michoacán. Según la leyenda del pueblo, ¿por qué empezaron a hacer diablitos?"
         },
         "revised_on": "2026-11-05"
       }
@@ -795725,10 +795948,10 @@
     },
     {
       "id": "q-10293",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "El día que medio planeta revisó su agenda por si acaso.",
-      "question": "El 21 de diciembre de 2012 terminó un gran ciclo maya: el baktún que se escribe con este número. ¿Qué número es?",
+      "question": "El 21 de diciembre de 2012 terminó un gran ciclo maya: el baktún que se escribe con dos rayas y tres puntos. ¿Qué número es?",
       "answer": "13",
       "wrong_answers": [
         "8",
@@ -795736,18 +795959,25 @@
         "20"
       ],
       "hints": [
+        "Los mayas escribían sus números con puntos y rayas.",
         "En la numeración maya, cada punto vale 1.",
-        "Cada raya vale 5.",
-        "Hay dos rayas y tres puntos."
+        "Cada raya vale 5."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Maya numeral thirteen bars dots",
-        "note": "The Maya numeral 13 alone: two horizontal bars with three dots above. No Arabic numerals or labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Chichen Itza pyramid",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChichen_Itza_3.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Chichen_Itza_3.jpg/3840px-Chichen_Itza_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Daniel Schwen · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniel Schwen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dschwen",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Para los mayas, esa fecha (13.0.0.0.0) solo marcaba el cambio de ciclo de su calendario, como cuando un cuentakilómetros vuelve a empezar.",
       "subcategory": "maya",
@@ -795773,21 +796003,52 @@
         "notes": "The essential numeral image is available on Commons, but it must not carry an Arabic label. The image search may find charts with all the numerals labelled."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the Maya numeral 13 alone, and the essential image is what the question asks players to read. 1 and 4 are labelled glyph charts, 2 is a strip of bar shapes, 3 is a stela photo and 5 is a busy page from the Codex Cospi with many bar-and-dot numbers. No new search is allowed, so the media needs a manual source: for example, a clean drawing of two bars with three dots, made or found by hand. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the Maya numeral 13 alone, and the essential image is what the question asks players to read. 1 and 4 are labelled glyph charts, 2 is a strip of bar shapes, 3 is a stela photo and 5 is a busy page from the Codex Cospi with many bar-and-dot numbers. No new search is allowed, so the media needs a manual source: for example, a clean drawing of two bars with three dots, made or found by hand. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "There is no clean image of the Maya numeral 13, so the question now describes the numeral in words. The hints explain the bar-and-dot values and the media is an illustrative Maya ruin.",
+        "previous": {
+          "question": "El 21 de diciembre de 2012 terminó un gran ciclo maya: el baktún que se escribe con este número. ¿Qué número es?",
+          "hints": [
+            "En la numeración maya, cada punto vale 1.",
+            "Cada raya vale 5.",
+            "Hay dos rayas y tres puntos."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Maya numeral thirteen bars dots",
+            "note": "The Maya numeral 13 alone: two horizontal bars with three dots above. No Arabic numerals or labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10294",
@@ -797285,7 +797546,7 @@
     },
     {
       "id": "q-10314",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Antes de ser la bebida de los dioses, fue un juguito con mucho futuro.",
       "question": "Soy el jugo dulce que el tlachiquero raspa del corazón del maguey; si me dejan fermentar, me convierto en pulque. ¿Cómo me llamo?",
@@ -797303,20 +797564,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "maguey agave plant field",
+        "query": "agave americana plant",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaguey_%28Aguave%29_Plantation%2C_Aranguez%2C_Guaymas%2C_Mexico%2C_ca.1905_%28CHS-1536%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Maguey_%28Aguave%29_Plantation%2C_Aranguez%2C_Guaymas%2C_Mexico%2C_ca.1905_%28CHS-1536%29.jpg/3840px-Maguey_%28Aguave%29_Plantation%2C_Aranguez%2C_Guaymas%2C_Mexico%2C_ca.1905_%28CHS-1536%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAgave_americana_Pune_05.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Agave_americana_Pune_05.jpg/3840px-Agave_americana_Pune_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ashwin Baindur (User:AshLin) · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ashwin Baindur (User:AshLin)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:AshLin",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Un buen maguey pulquero puede dar varios litros de aguamiel al día durante meses.",
       "subcategory": "plants",
@@ -797345,18 +797604,51 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image was PD-US only, so the media gets a new search term for a properly licensed maguey photo.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "maguey agave plant field",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMaguey_%28Aguave%29_Plantation%2C_Aranguez%2C_Guaymas%2C_Mexico%2C_ca.1905_%28CHS-1536%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Maguey_%28Aguave%29_Plantation%2C_Aranguez%2C_Guaymas%2C_Mexico%2C_ca.1905_%28CHS-1536%29.jpg/3840px-Maguey_%28Aguave%29_Plantation%2C_Aranguez%2C_Guaymas%2C_Mexico%2C_ca.1905_%28CHS-1536%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10315",
@@ -798138,7 +798430,7 @@
     },
     {
       "id": "q-10325",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una era tan ventosa que ni el mejor peinado sobrevivió.",
       "question": "Según los mexicas, el mundo pasó por varias eras o «soles». ¿Qué dios gobernó el Sol de Viento?",
@@ -798156,11 +798448,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "wind bent palm trees",
+        "query": "Aztec sun stone",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonolito_de_la_Piedra_del_Sol.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Monolito_de_la_Piedra_del_Sol.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "El Comandante · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "El Comandante",
+        "author_url": "https://commons.wikimedia.org/wiki/User:El_Comandante",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Según el mito, los humanos del Sol de Viento terminaron convertidos en monos.",
       "subcategory": "pre-hispanic-gods",
@@ -798189,23 +798488,39 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits the topic of Mexica myth or a windy era. They are a William Blake painting of nude figures, an old photo of a crowd of florists, a botanical line drawing and a Strasbourg cathedral portal. No new search is allowed, so the slot needs a new decorative image, for example from 'Aztec sun stone' or 'Templo Mayor ruins'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits the topic of Mexica myth or a windy era. They are a William Blake painting of nude figures, an old photo of a crowd of florists, a botanical line drawing and a Strasbourg cathedral portal. No new search is allowed, so the slot needs a new decorative image, for example from 'Aztec sun stone' or 'Templo Mayor ruins'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the filler opening with mixed tenses and asked directly about the Sol de Viento.",
+        "reason": "No usable image was found, so the media now searches for the Aztec sun stone, which shows the Mexica world ages without naming the god.",
         "previous": {
-          "question": "Cuando sopla un ventarrón, un mexica podía acordarse del Sol de Viento. ¿Qué dios gobernó esa era?"
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "wind bent palm trees",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -801707,7 +802022,7 @@
     },
     {
       "id": "q-10373",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Una sierra que se volvió reserva por culpa de una plantita despeinada.",
       "question": "La reserva de la biosfera Sierra de Manantlán, entre Jalisco y Colima, nació tras hallarse ahí un pariente silvestre de un cultivo. ¿De cuál?",
@@ -801719,7 +802034,7 @@
       ],
       "hints": [
         "El hallazgo lo hizo un estudiante de la Universidad de Guadalajara a finales de los años 70.",
-        "La planta silvestre que hallaron es un pasto.",
+        "Ese cultivo se domesticó en México hace miles de años.",
         "La planta silvestre es un teocintle que vive varios años."
       ],
       "media": {
@@ -801727,14 +802042,14 @@
         "role": "illustrative",
         "query": "Sierra de Manantlan forest",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AParte_alta_de_la_Reserva_de_la_Bi%C3%B3sfera_Sierra_de_Manantl%C3%A1n_%22Capillas%22.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Parte_alta_de_la_Reserva_de_la_Bi%C3%B3sfera_Sierra_de_Manantl%C3%A1n_%22Capillas%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Sheys Peich · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuma_en_Bosque_de_Niebla%2C_Sierra_de_Manantlan.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Puma_en_Bosque_de_Niebla%2C_Sierra_de_Manantlan.jpg/3840px-Puma_en_Bosque_de_Niebla%2C_Sierra_de_Manantlan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Juan Pablo Esparza · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Sheys Peich",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Sheys_Peich&action=edit&redlink=1",
+        "author": "Juan Pablo Esparza",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Juan_Pablo_Esparza&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -801765,25 +802080,33 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"La planta silvestre que hallaron es un pasto\") gives the answer away: maize is the only grass among the four options (bean, chili and squash are not grasses), so hint 2 settles the question before hint 3. Replace it with a vaguer hint that doesn't rule out the other crops, e.g. that the plant was thought to be extinct in the wild, or that the crop was domesticated in Mexico about 9000 years ago.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"La planta silvestre que hallaron es un pasto\") gives the answer away: maize is the only grass among the four options (bean, chili and squash are not grasses), so hint 2 settles the question before hint 3. Replace it with a vaguer hint that doesn't rule out the other crops, e.g. that the plant was thought to be extinct in the wild, or that the crop was domesticated in Mexico about 9000 years ago.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named tortillas, with a grass clue that doesn't name a maize dish.",
+        "reason": "Hint 2 ('it is a grass') left only maize among the options, so it now gives a domestication fact that all four crops share.",
         "previous": {
           "hints": [
             "El hallazgo lo hizo un estudiante de la Universidad de Guadalajara a finales de los años 70.",
-            "Es el cultivo de las tortillas.",
+            "La planta silvestre que hallaron es un pasto.",
             "La planta silvestre es un teocintle que vive varios años."
           ]
         },
@@ -802915,7 +803238,7 @@
     },
     {
       "id": "q-10389",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una fecha que no cae en día festivo, pero que da el banderazo a la temporada de ponche y piñatas.",
       "question": "En México las posadas empiezan justo el 16 de diciembre. ¿Por qué ese día?",
@@ -802926,8 +803249,8 @@
         "Para tener cuarenta noches, como la Cuaresma"
       ],
       "hints": [
-        "Cuenta los días que faltan para Nochebuena.",
-        "Tiene que ver con María.",
+        "Cada noche se pide posada cantando de puerta en puerta.",
+        "Las posadas terminan justo en Nochebuena.",
         "Es el tiempo que tarda un bebé en nacer."
       ],
       "media": {
@@ -802973,27 +803296,34 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 each solve the question against the four options. Counting the nights from 16 to 24 December gives nine, which rules out 12, 7 and 40. \"Tiene que ver con María\" leaves only the pregnancy option, because the other three are about apostles, Creation and Lent. Hint 1 should become a vague hint, for example about the novena tradition in general without the date arithmetic. Hint 2 should not point to María or to pregnancy; at most hint 3 should.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 each solve the question against the four options. Counting the nights from 16 to 24 December gives nine, which rules out 12, 7 and 40. \"Tiene que ver con María\" leaves only the pregnancy option, because the other three are about apostles, Creation and Lent. Hint 1 should become a vague hint, for example about the novena tradition in general without the date arithmetic. Hint 2 should not point to María or to pregnancy; at most hint 3 should.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote all four options in the same count-based form so the answer no longer stands out.",
+        "reason": "Hints 1 and 2 each solved the question, so hint 1 is now about the custom itself and hint 2 gives only the end date. Only hint 3 points to pregnancy.",
         "previous": {
-          "answer": "Así son nueve noches, como nueve meses de embarazo",
-          "wrong_answers": [
-            "Es el día en que llegan los Reyes Magos",
-            "Es el aniversario de la Independencia",
-            "Es el día en que nació San José"
+          "hints": [
+            "Cuenta los días que faltan para Nochebuena.",
+            "Tiene que ver con María.",
+            "Es el tiempo que tarda un bebé en nacer."
           ]
         },
         "revised_on": "2026-11-05"
@@ -804319,7 +804649,7 @@
     },
     {
       "id": "q-10408",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Un refresco que viaja al norte y regresa convertido en celebridad.",
       "question": "En Estados Unidos muchos buscan la «Mexican Coke» en botella de vidrio porque dicen que sabe distinto. ¿Con qué se endulza?",
@@ -804337,20 +804667,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "glass soda bottle",
+        "query": "glass soda bottles crate",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGlass_Bottle_from_Cascade_Soda_Water_Company_-_DPLA_-_ceb51014393068da0e791c81c10969ae_%28page_2%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Glass_Bottle_from_Cascade_Soda_Water_Company_-_DPLA_-_ceb51014393068da0e791c81c10969ae_%28page_2%29.jpg/3840px-Glass_Bottle_from_Cascade_Soda_Water_Company_-_DPLA_-_ceb51014393068da0e791c81c10969ae_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADZ3_1064_A_bustling_roadside_shop_in_Pattaya_filled_with_drinks_snacks_and_locals_chatting_at_a_small_table.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/DZ3_1064_A_bustling_roadside_shop_in_Pattaya_filled_with_drinks_snacks_and_locals_chatting_at_a_small_table.jpg/3840px-DZ3_1064_A_bustling_roadside_shop_in_Pattaya_filled_with_drinks_snacks_and_locals_chatting_at_a_small_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "En Estados Unidos la versión normal se endulza con jarabe de maíz de alta fructosa, por eso la mexicana se hizo famosa.",
       "subcategory": "drinks",
@@ -804379,18 +804707,51 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image was PD-US only, so the media gets a new search term that doesn't show sugarcane.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "glass soda bottle",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGlass_Bottle_from_Cascade_Soda_Water_Company_-_DPLA_-_ceb51014393068da0e791c81c10969ae_%28page_2%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Glass_Bottle_from_Cascade_Soda_Water_Company_-_DPLA_-_ceb51014393068da0e791c81c10969ae_%28page_2%29.jpg/3840px-Glass_Bottle_from_Cascade_Soda_Water_Company_-_DPLA_-_ceb51014393068da0e791c81c10969ae_%28page_2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10409",
@@ -805204,9 +805565,9 @@
     },
     {
       "id": "q-10420",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Unos frijoles machacados que llegan al plato con un nombre que da mucho de qué platicar.",
+      "description": "Unos frijoles machacados que llegan al plato listos para acompañar unos buenos chilaquiles.",
       "question": "Los frijoles refritos se machacan y se fríen en la sartén. ¿Cuántas veces se fríen normalmente?",
       "answer": "Una vez",
       "wrong_answers": [
@@ -805215,8 +805576,8 @@
         "Cuatro veces"
       ],
       "hints": [
+        "Antes de llegar a la sartén, los frijoles ya vienen cocidos de la olla.",
         "Piensa en qué significa el «re» de «rebueno» o «rebonito».",
-        "Es el mismo «re» de «requetebién» o «retebonito».",
         "«Refritos» quiere decir «bien fritos»."
       ],
       "media": {
@@ -805262,25 +805623,34 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"what does the 're' in 'rebueno' or 'rebonito' mean\") already gives the answer away, because it tells players that 're' is an intensifier and not 'again', so refritos means fried once. Hint 2 says the same thing again. Hint 1 should be vague (for example about how the beans are cooked before frying), and hint 2 can then bring in the 're' idea. The description (\"un nombre que da mucho de qué platicar\") also hints that the name is misleading, which points away from 'Dos veces'. It should play on the beans without suggesting a trick in the name.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"what does the 're' in 'rebueno' or 'rebonito' mean\") already gives the answer away, because it tells players that 're' is an intensifier and not 'again', so refritos means fried once. Hint 2 says the same thing again. Hint 1 should be vague (for example about how the beans are cooked before frying), and hint 2 can then bring in the 're' idea. The description (\"un nombre que da mucho de qué platicar\") also hints that the name is misleading, which points away from 'Dos veces'. It should play on the beans without suggesting a trick in the name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 ruled out every option but one; I replaced it with a vaguer hint about other Mexican words where «re» makes things stronger.",
+        "reason": "Hint 1 gave the answer away and the description hinted at a trick name. Hint 1 is now about the cooking and the 're' idea moved to hint 2. The new description no longer suggests a misleading name.",
         "previous": {
+          "description": "Unos frijoles machacados que llegan al plato con un nombre que da mucho de qué platicar.",
           "hints": [
             "Piensa en qué significa el «re» de «rebueno» o «rebonito».",
-            "Aquí el «re» no quiere decir «otra vez».",
+            "Es el mismo «re» de «requetebién» o «retebonito».",
             "«Refritos» quiere decir «bien fritos»."
           ]
         },
@@ -805443,7 +805813,7 @@
     },
     {
       "id": "q-10423",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una pirámide hecha para los que nunca se cansan de subir escalones.",
       "question": "En Chichén Itzá, la gran pirámide de El Castillo tiene escaleras que suben hasta su templo. ¿Cuántas escaleras tiene?",
@@ -805455,7 +805825,7 @@
       ],
       "hints": [
         "Es un número par.",
-        "La rodees por donde la rodees, siempre ves una escalera subiendo por el centro.",
+        "Los mayas la construyeron como un gran calendario de piedra.",
         "Su base es un cuadrado y cada lado tiene su propia escalera."
       ],
       "media": {
@@ -805501,26 +805871,34 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"whichever way you walk around it, you always see a staircase up the centre\") means one staircase per face. Since everyone pictures a pyramid with four faces, that hands over the answer 4 before hint 3. Hint 2 should be vaguer, for example about the Maya, the temple at the top, or the steps' link to the calendar without giving the count.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"whichever way you walk around it, you always see a staircase up the centre\") means one staircase per face. Since everyone pictures a pyramid with four faces, that hands over the answer 4 before hint 3. Hint 2 should be vaguer, for example about the Maya, the temple at the top, or the steps' link to the calendar without giving the count.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hints 1 and 2 gave the count away; I rewrote them so they go from vague to strong, with no hint saying the number.",
+        "reason": "Replaced hint 2, which gave away one staircase per face, with a vaguer calendar hint.",
         "previous": {
           "hints": [
-            "Su base es un cuadrado.",
-            "Cuenta los lados de una caja de cereal vista desde arriba.",
-            "Es el mismo número que las patas de una mesa."
+            "Es un número par.",
+            "La rodees por donde la rodees, siempre ves una escalera subiendo por el centro.",
+            "Su base es un cuadrado y cada lado tiene su propia escalera."
           ]
         },
         "revised_on": "2026-11-05"
@@ -805612,7 +805990,7 @@
     },
     {
       "id": "q-10425",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Un pintor que se cansó de pintar paredes y decidió construirse unas muy, muy oscuras.",
       "question": "Lo diseñó Diego Rivera, está hecho de piedra volcánica y parece una pirámide. ¿Para qué ideó el Anahuacalli?",
@@ -805630,11 +806008,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Anahuacalli building exterior",
+        "query": "Museo Anahuacalli Diego Rivera",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuseo_Diego_Rivera_Anahuacalli_%282666014413%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Museo_Diego_Rivera_Anahuacalli_%282666014413%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Randal Sheppard · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Randal Sheppard",
+        "author_url": "https://www.flickr.com/people/25222005@N08",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Rivera reunió más de 50 000 piezas prehispánicas para su colección.",
       "subcategory": "landmarks",
@@ -805663,23 +806048,39 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates shows the Anahuacalli. They are unrelated buildings: Maison Hermès in Tokyo, a hotel in Laos, Hillman Library, Dulles State Office Building and the Hungarian Parliament. No new search is allowed, so the media slot can't be filled. A search like \"Museo Anahuacalli\" or \"Anahuacalli Diego Rivera\" would probably find a real photo. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows the Anahuacalli. They are unrelated buildings: Maison Hermès in Tokyo, a hotel in Laos, Hillman Library, Dulles State Office Building and the Hungarian Parliament. No new search is allowed, so the media slot can't be filled. A search like \"Museo Anahuacalli\" or \"Anahuacalli Diego Rivera\" would probably find a real photo. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "I removed «Museo» from the question text so it no longer suggests the answer.",
+        "reason": "Changed the image query to the reviewer's suggestion so a real Anahuacalli photo can be found.",
         "previous": {
-          "question": "Lo diseñó Diego Rivera, está hecho de piedra volcánica y parece una pirámide. ¿Para qué ideó el Museo Anahuacalli?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Anahuacalli building exterior",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -807170,10 +807571,10 @@
     },
     {
       "id": "q-10446",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 7,
       "description": "Si lo ves a caballo y con cara de pocos amigos, mejor ni le pidas prestado el sombrero.",
-      "question": "¿Quién es este famoso revolucionario mexicano?",
+      "question": "¿Qué famoso revolucionario mexicano mandaba la División del Norte?",
       "answer": "Pancho Villa",
       "wrong_answers": [
         "Emiliano Zapata",
@@ -807182,26 +807583,24 @@
       ],
       "hints": [
         "Fue uno de los jefes más famosos de la Revolución Mexicana.",
-        "Era del norte del país y mandaba la División del Norte.",
+        "Era de Durango y lo acompañaban sus jinetes llamados «los Dorados».",
         "Su nombre verdadero era Doroteo Arango."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Pancho Villa portrait photograph",
-        "note": "Una foto histórica clara de Pancho Villa (por ejemplo, un retrato de 1914 o una foto a caballo), sin texto con su nombre.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APancho_Villa_bandolier_%28cropped%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Pancho_Villa_bandolier_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Bain News Service, publisher. Photographer is unknown. · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "Monumento a la Revolución Mexico City",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonumento_a_la_Revoluci%C3%B3n_Mexico.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg/3840px-Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "ismael villafranco · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Bain News Service, publisher. Photographer is unknown.",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "ismael villafranco",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Pancho Villa firmó un contrato con una compañía de cine de Estados Unidos para que filmaran sus batallas.",
       "subcategory": "revolution",
@@ -807226,22 +807625,64 @@
         "difficulty_estimate": 5,
         "notes": "Telling Villa from Zapata in a photo is a bit harder than 4, even for Mexican kids. Commons photos sometimes carry captions, so the image needs to be checked for text."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 4,
+      "revision": {
+        "action": "revise",
+        "reason": "The essential photo's licence is PD-US only, so I turned it into a text question about the División del Norte with an illustrative image of the Monumento a la Revolución, and raised the difficulty.",
+        "previous": {
+          "difficulty": 4,
+          "question": "¿Quién es este famoso revolucionario mexicano?",
+          "hints": [
+            "Fue uno de los jefes más famosos de la Revolución Mexicana.",
+            "Era del norte del país y mandaba la División del Norte.",
+            "Su nombre verdadero era Doroteo Arango."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Pancho Villa portrait photograph",
+            "note": "Una foto histórica clara de Pancho Villa (por ejemplo, un retrato de 1914 o una foto a caballo), sin texto con su nombre.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APancho_Villa_bandolier_%28cropped%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Pancho_Villa_bandolier_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Bain News Service, publisher. Photographer is unknown. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Bain News Service, publisher. Photographer is unknown.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10447",
@@ -809831,7 +810272,7 @@
     },
     {
       "id": "q-10482",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un pan tan amarillo que parece que desayunó puro huevo.",
       "question": "Este pan de muerto es de pan de yema, lleva pegada una carita pintada y se moja en chocolate caliente. ¿De qué estado es típico?",
@@ -809849,11 +810290,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "pan de muerto carita",
+        "query": "pan de muerto oaxaqueño",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APan_Oaxaque%C3%B1o_en_mercado.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Pan_Oaxaque%C3%B1o_en_mercado.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Luisroj96 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Luisroj96",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Luisroj96",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La carita del pan de muerto oaxaqueño se hace con pasta de harina y se pinta a mano.",
       "subcategory": "sweets-and-bread",
@@ -809882,18 +810330,42 @@
       "needs_media": false,
       "batch": "batch-31",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No adequate image. The question says «Este pan de muerto…», so it needs a photo of Oaxacan pan de yema with its painted face. Candidate 1 shows only loose painted dough faces made for Peruvian tantawawas, without the bread, and candidates 2 and 3 are Portuguese newspaper scans about Empress Zita. Search again with something like \"pan de yema Oaxaca\" or \"pan de muerto oaxaqueño\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate image. The question says «Este pan de muerto…», so it needs a photo of Oaxacan pan de yema with its painted face. Candidate 1 shows only loose painted dough faces made for Peruvian tantawawas, without the bread, and candidates 2 and 3 are Portuguese newspaper scans about Empress Zita. Search again with something like \"pan de yema Oaxaca\" or \"pan de muerto oaxaqueño\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to find a real photo of Oaxacan pan de yema with its painted face.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "pan de muerto carita",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-10483",
