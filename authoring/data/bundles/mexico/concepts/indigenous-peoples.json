@@ -1,0 +1,617 @@
+{
+  "subcategory": "indigenous-peoples",
+  "facets": [
+    "Pueblos y dónde viven",
+    "Lenguas indígenas vivas",
+    "Palabras de origen náhuatl y maya",
+    "Vestimenta y textiles tradicionales",
+    "Artesanías y arte popular",
+    "Danzas y fiestas indígenas",
+    "Comida y cocina tradicional",
+    "Música e instrumentos tradicionales",
+    "Creencias, rituales y medicina tradicional",
+    "Personajes indígenas contemporáneos",
+    "Comunidades, territorio y organización"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nahuas",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 6
+    },
+    {
+      "name": "Zapotecos",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 6
+    },
+    {
+      "name": "Mixtecos",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 7
+    },
+    {
+      "name": "Otomíes",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 8
+    },
+    {
+      "name": "Tsotsiles",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 10
+    },
+    {
+      "name": "Tseltales",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 10
+    },
+    {
+      "name": "Wixárikas (huicholes)",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 6
+    },
+    {
+      "name": "Yaquis",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 7
+    },
+    {
+      "name": "Mazahuas",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 10
+    },
+    {
+      "name": "Seris (comcáac)",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 11
+    },
+    {
+      "name": "Mazatecos",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 11
+    },
+    {
+      "name": "Triquis",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 11
+    },
+    {
+      "name": "Coras (náayeri)",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 12
+    },
+    {
+      "name": "Mixes",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 12
+    },
+    {
+      "name": "Kikapúes",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 13
+    },
+    {
+      "name": "Tének (huastecos)",
+      "facet": "Pueblos y dónde viven",
+      "known_at": 11
+    },
+    {
+      "name": "Mixteco",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 8
+    },
+    {
+      "name": "Zapoteco",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 7
+    },
+    {
+      "name": "Otomí",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 9
+    },
+    {
+      "name": "Totonaco",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 10
+    },
+    {
+      "name": "Mazateco",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 12
+    },
+    {
+      "name": "Purépecha (lengua)",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 9
+    },
+    {
+      "name": "Rarámuri (lengua)",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 10
+    },
+    {
+      "name": "Wixárika (lengua)",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 11
+    },
+    {
+      "name": "Ayapaneco",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 14
+    },
+    {
+      "name": "Kiliwa",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 14
+    },
+    {
+      "name": "Instituto Nacional de Lenguas Indígenas (INALI)",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 12
+    },
+    {
+      "name": "Ley General de Derechos Lingüísticos de los Pueblos Indígenas",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 13
+    },
+    {
+      "name": "Día Internacional de la Lengua Materna",
+      "facet": "Lenguas indígenas vivas",
+      "known_at": 10
+    },
+    {
+      "name": "Pibil",
+      "facet": "Palabras de origen náhuatl y maya",
+      "known_at": 10
+    },
+    {
+      "name": "Quechquémitl",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Enredo",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Faja tejida",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Sarape",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Jorongo",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Traje de tehuana",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Terno yucateco",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Telar de cintura",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Bordado tenango",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Blusa de San Antonino",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Caracol púrpura",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Calzón de manta",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Traje wixárika",
+      "facet": "Vestimenta y textiles tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Barro negro de San Bartolo Coyotepec",
+      "facet": "Artesanías y arte popular",
+      "known_at": 9
+    },
+    {
+      "name": "Arte de chaquira wixárika",
+      "facet": "Artesanías y arte popular",
+      "known_at": 8
+    },
+    {
+      "name": "Tablas de estambre wixárika",
+      "facet": "Artesanías y arte popular",
+      "known_at": 11
+    },
+    {
+      "name": "Ojo de Dios",
+      "facet": "Artesanías y arte popular",
+      "known_at": 9
+    },
+    {
+      "name": "Barro verde de Atzompa",
+      "facet": "Artesanías y arte popular",
+      "known_at": 13
+    },
+    {
+      "name": "Máscaras de madera de Guerrero",
+      "facet": "Artesanías y arte popular",
+      "known_at": 10
+    },
+    {
+      "name": "Cestería de palma",
+      "facet": "Artesanías y arte popular",
+      "known_at": 8
+    },
+    {
+      "name": "Noche de Muertos en Pátzcuaro",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 9
+    },
+    {
+      "name": "Día de Muertos",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 1
+    },
+    {
+      "name": "Danza de la Pluma",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 10
+    },
+    {
+      "name": "Concheros",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 9
+    },
+    {
+      "name": "Danza de los Tlacololeros",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 13
+    },
+    {
+      "name": "Danza de los Quetzales",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Semana Santa yaqui",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 12
+    },
+    {
+      "name": "Lunes del Cerro",
+      "facet": "Danzas y fiestas indígenas",
+      "known_at": 11
+    },
+    {
+      "name": "Mole negro",
+      "facet": "Comida y cocina tradicional",
+      "known_at": 6
+    },
+    {
+      "name": "Tejate",
+      "facet": "Comida y cocina tradicional",
+      "known_at": 11
+    },
+    {
+      "name": "Pinole",
+      "facet": "Comida y cocina tradicional",
+      "known_at": 8
+    },
+    {
+      "name": "Tascalate",
+      "facet": "Comida y cocina tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Tejuino",
+      "facet": "Comida y cocina tradicional",
+      "known_at": 10
+    },
+    {
+      "name": "Quelites",
+      "facet": "Comida y cocina tradicional",
+      "known_at": 10
+    },
+    {
+      "name": "Caracol (instrumento)",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 6
+    },
+    {
+      "name": "Chirimía",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Pirekua",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Flauta de carrizo",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Violín wixárika",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Ayoyotes",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Raspador yaqui",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Tambor de agua yaqui",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Banda de viento mixe",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Ocarina de barro",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Jarana huasteca",
+      "facet": "Música e instrumentos tradicionales",
+      "known_at": 11
+    },
+    {
+      "name": "Limpia",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 6
+    },
+    {
+      "name": "Curandero",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 6
+    },
+    {
+      "name": "Tonal",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 13
+    },
+    {
+      "name": "Mal de ojo",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 5
+    },
+    {
+      "name": "Susto",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 8
+    },
+    {
+      "name": "Wirikuta",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 12
+    },
+    {
+      "name": "Chaneques",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 9
+    },
+    {
+      "name": "Partera tradicional",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 9
+    },
+    {
+      "name": "Graniceros",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 14
+    },
+    {
+      "name": "Sahumerio",
+      "facet": "Creencias, rituales y medicina tradicional",
+      "known_at": 10
+    },
+    {
+      "name": "Yalitza Aparicio",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 7
+    },
+    {
+      "name": "Lila Downs",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 10
+    },
+    {
+      "name": "María Sabina",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 12,
+      "retired": "unaskable: Her fame rests on ceremonies with psychedelic mushrooms, which doesn't fit a family game; none of the options gives a clean question."
+    },
+    {
+      "name": "Lorena Ramírez",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 9
+    },
+    {
+      "name": "Arnulfo Quimare",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Eufrosina Cruz",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Natalia Toledo",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Irma Pineda",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "María de Jesús Patricio (Marichuy)",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 12
+    },
+    {
+      "name": "Comandanta Ramona",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Mardonio Carballo",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Briceida Cuevas Cob",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 15
+    },
+    {
+      "name": "Abigail Mendoza",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 14
+    },
+    {
+      "name": "Nancy García García",
+      "facet": "Personajes indígenas contemporáneos",
+      "known_at": 13
+    },
+    {
+      "name": "Tequio",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 11
+    },
+    {
+      "name": "Usos y costumbres",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 11
+    },
+    {
+      "name": "Asamblea comunitaria",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 10
+    },
+    {
+      "name": "Sistema de cargos",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 13
+    },
+    {
+      "name": "Cherán",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 12
+    },
+    {
+      "name": "Policía comunitaria",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 11
+    },
+    {
+      "name": "Caracoles zapatistas",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 13
+    },
+    {
+      "name": "Sierra Tarahumara",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 7
+    },
+    {
+      "name": "Bienes comunales",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 13
+    },
+    {
+      "name": "Día Internacional de los Pueblos Indígenas",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 10
+    },
+    {
+      "name": "Instituto Nacional de los Pueblos Indígenas (INPI)",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 12
+    },
+    {
+      "name": "Meseta Purépecha",
+      "facet": "Comunidades, territorio y organización",
+      "known_at": 12
+    }
+  ]
+}

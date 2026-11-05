@@ -1,0 +1,717 @@
+{
+  "subcategory": "sweets-and-bread",
+  "facets": [
+    "Pan dulce de panadería",
+    "Pan de muerto y rosca de reyes",
+    "Dulces de leche y cajeta",
+    "Dulces de frutas y ates",
+    "Dulces de semillas y cacahuate",
+    "Calaveritas y figuras de azúcar",
+    "Dulces regionales por estado",
+    "Dulces conventuales y su historia",
+    "Dulces enchilados y de tamarindo",
+    "Chocolate y bebidas dulces",
+    "Postres caseros y de fonda",
+    "Dulcerías, ferias y piñatas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Polvorón",
+      "facet": "Pan dulce de panadería",
+      "known_at": 3
+    },
+    {
+      "name": "Mantecada",
+      "facet": "Pan dulce de panadería",
+      "known_at": 3
+    },
+    {
+      "name": "Dona",
+      "facet": "Pan dulce de panadería",
+      "known_at": 1
+    },
+    {
+      "name": "Marranito",
+      "facet": "Pan dulce de panadería",
+      "known_at": 3
+    },
+    {
+      "name": "Garibaldi",
+      "facet": "Pan dulce de panadería",
+      "known_at": 7
+    },
+    {
+      "name": "Bigote",
+      "facet": "Pan dulce de panadería",
+      "known_at": 7
+    },
+    {
+      "name": "Ojo de buey",
+      "facet": "Pan dulce de panadería",
+      "known_at": 8
+    },
+    {
+      "name": "Campechana",
+      "facet": "Pan dulce de panadería",
+      "known_at": 7
+    },
+    {
+      "name": "Cocol",
+      "facet": "Pan dulce de panadería",
+      "known_at": 10
+    },
+    {
+      "name": "Elote de panadería",
+      "facet": "Pan dulce de panadería",
+      "known_at": 8
+    },
+    {
+      "name": "Beso",
+      "facet": "Pan dulce de panadería",
+      "known_at": 8
+    },
+    {
+      "name": "Trenza",
+      "facet": "Pan dulce de panadería",
+      "known_at": 5
+    },
+    {
+      "name": "Panqué",
+      "facet": "Pan dulce de panadería",
+      "known_at": 3
+    },
+    {
+      "name": "Rol de canela",
+      "facet": "Pan dulce de panadería",
+      "known_at": 3
+    },
+    {
+      "name": "Pan de pulque",
+      "facet": "Pan dulce de panadería",
+      "known_at": 11
+    },
+    {
+      "name": "Charola y pinzas de panadería",
+      "facet": "Pan dulce de panadería",
+      "known_at": 2
+    },
+    {
+      "name": "Muñeco de la rosca",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 2
+    },
+    {
+      "name": "Día de Reyes",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 1
+    },
+    {
+      "name": "Reyes Magos",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 1
+    },
+    {
+      "name": "Huesitos del pan de muerto",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 3
+    },
+    {
+      "name": "Agua de azahar",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 9
+    },
+    {
+      "name": "Ofrenda de Día de Muertos",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 2
+    },
+    {
+      "name": "Pan de yema",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 8
+    },
+    {
+      "name": "Hojaldra",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 11
+    },
+    {
+      "name": "Megarosca del Zócalo",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 8
+    },
+    {
+      "name": "Ajonjolí del pan de muerto",
+      "facet": "Pan de muerto y rosca de reyes",
+      "known_at": 7
+    },
+    {
+      "name": "Celaya",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 7
+    },
+    {
+      "name": "Leche de cabra",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 6
+    },
+    {
+      "name": "Obleas con cajeta",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 3
+    },
+    {
+      "name": "Leche quemada",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 9
+    },
+    {
+      "name": "Morelianas",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 10
+    },
+    {
+      "name": "Borrachitos",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 9
+    },
+    {
+      "name": "Chiclosos",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 5
+    },
+    {
+      "name": "Natilla",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 8
+    },
+    {
+      "name": "Macarrón de leche",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 10
+    },
+    {
+      "name": "Leche condensada",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 3
+    },
+    {
+      "name": "Cajeta Coronado",
+      "facet": "Dulces de leche y cajeta",
+      "known_at": 6
+    },
+    {
+      "name": "Ate de membrillo",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 5
+    },
+    {
+      "name": "Ate de guayaba",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 5
+    },
+    {
+      "name": "Ate con queso",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 6
+    },
+    {
+      "name": "Fruta cristalizada",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 6
+    },
+    {
+      "name": "Rollo de guayaba",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 7
+    },
+    {
+      "name": "Limones rellenos de coco",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 8
+    },
+    {
+      "name": "Dulce de chilacayote",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 11
+    },
+    {
+      "name": "Tejocotes en almíbar",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 7
+    },
+    {
+      "name": "Dulce de papaya",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 8
+    },
+    {
+      "name": "Duraznos en almíbar",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 4
+    },
+    {
+      "name": "Higos en almíbar",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 7
+    },
+    {
+      "name": "Mango en almíbar",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 5
+    },
+    {
+      "name": "Ciruelas pasas",
+      "facet": "Dulces de frutas y ates",
+      "known_at": 5
+    },
+    {
+      "name": "Garapiñado",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 6
+    },
+    {
+      "name": "Pepitoria",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 9
+    },
+    {
+      "name": "Muégano",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 6
+    },
+    {
+      "name": "Cacahuate japonés",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 2
+    },
+    {
+      "name": "Charamusca",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 9
+    },
+    {
+      "name": "Jamoncillo de pepita",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 10
+    },
+    {
+      "name": "Piloncillo",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 5
+    },
+    {
+      "name": "Nuez pecana",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 8
+    },
+    {
+      "name": "Ajonjolí",
+      "facet": "Dulces de semillas y cacahuate",
+      "known_at": 4
+    },
+    {
+      "name": "Alfeñique",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 10
+    },
+    {
+      "name": "Feria del Alfeñique",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 10
+    },
+    {
+      "name": "Calaverita de chocolate",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 2
+    },
+    {
+      "name": "Calaverita de amaranto",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 5
+    },
+    {
+      "name": "Calaveras literarias",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 5
+    },
+    {
+      "name": "Animalitos de azúcar",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 5
+    },
+    {
+      "name": "Moldes de barro",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 9
+    },
+    {
+      "name": "Día de Todos los Santos",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 5
+    },
+    {
+      "name": "Azúcar glas",
+      "facet": "Calaveritas y figuras de azúcar",
+      "known_at": 4
+    },
+    {
+      "name": "Camote de Puebla",
+      "facet": "Dulces regionales por estado",
+      "known_at": 5
+    },
+    {
+      "name": "Calle de los Dulces de Puebla",
+      "facet": "Dulces regionales por estado",
+      "known_at": 10
+    },
+    {
+      "name": "Mercado de Dulces de Morelia",
+      "facet": "Dulces regionales por estado",
+      "known_at": 10
+    },
+    {
+      "name": "Marquesote",
+      "facet": "Dulces regionales por estado",
+      "known_at": 11
+    },
+    {
+      "name": "Chimbos",
+      "facet": "Dulces regionales por estado",
+      "known_at": 13
+    },
+    {
+      "name": "Gaznates",
+      "facet": "Dulces regionales por estado",
+      "known_at": 11
+    },
+    {
+      "name": "Nicuatole",
+      "facet": "Dulces regionales por estado",
+      "known_at": 13
+    },
+    {
+      "name": "Ponteduro",
+      "facet": "Dulces regionales por estado",
+      "known_at": 13
+    },
+    {
+      "name": "Dulce de papaya yucateco",
+      "facet": "Dulces regionales por estado",
+      "known_at": 11
+    },
+    {
+      "name": "Caballero pobre",
+      "facet": "Dulces regionales por estado",
+      "known_at": 13
+    },
+    {
+      "name": "Pemoles",
+      "facet": "Dulces regionales por estado",
+      "known_at": 14
+    },
+    {
+      "name": "Torta de cielo",
+      "facet": "Dulces regionales por estado",
+      "known_at": 13
+    },
+    {
+      "name": "Calvillo",
+      "facet": "Dulces regionales por estado",
+      "known_at": 12
+    },
+    {
+      "name": "Hojarascas",
+      "facet": "Dulces regionales por estado",
+      "known_at": 10
+    },
+    {
+      "name": "Pan de Acámbaro",
+      "facet": "Dulces regionales por estado",
+      "known_at": 11
+    },
+    {
+      "name": "Convento de Santa Clara de Puebla",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Tortitas de Santa Clara",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 11
+    },
+    {
+      "name": "Huevos reales",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Monjas clarisas",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Ante",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Yemitas",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 12
+    },
+    {
+      "name": "Huevos de faltriquera",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 14
+    },
+    {
+      "name": "Caña de azúcar",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 3
+    },
+    {
+      "name": "Trapiche",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 11
+    },
+    {
+      "name": "Suspiros de monja",
+      "facet": "Dulces conventuales y su historia",
+      "known_at": 13
+    },
+    {
+      "name": "Pelón Pelo Rico",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 1
+    },
+    {
+      "name": "Tamarindo",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 2
+    },
+    {
+      "name": "Miguelito",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 2
+    },
+    {
+      "name": "Rielitos",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 4
+    },
+    {
+      "name": "Pica Fresa",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 3
+    },
+    {
+      "name": "Paleta Vero Mango",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 2
+    },
+    {
+      "name": "Lucas Muecas",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 3
+    },
+    {
+      "name": "Banderilla de tamarindo",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 5
+    },
+    {
+      "name": "Bolitas de tamarindo",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 4
+    },
+    {
+      "name": "Cacahuate enchilado",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 3
+    },
+    {
+      "name": "Skwinkles",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 2
+    },
+    {
+      "name": "Chamoyada",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 4
+    },
+    {
+      "name": "Saladitos",
+      "facet": "Dulces enchilados y de tamarindo",
+      "known_at": 5
+    },
+    {
+      "name": "Chocolate Ibarra",
+      "facet": "Chocolate y bebidas dulces",
+      "known_at": 6
+    },
+    {
+      "name": "Chocolate oaxaqueño",
+      "facet": "Chocolate y bebidas dulces",
+      "known_at": 7
+    },
+    {
+      "name": "Carlos V",
+      "facet": "Chocolate y bebidas dulces",
+      "known_at": 3
+    },
+    {
+      "name": "Bubulubu",
+      "facet": "Chocolate y bebidas dulces",
+      "known_at": 2
+    },
+    {
+      "name": "Flan napolitano",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 3
+    },
+    {
+      "name": "Pastel de tres leches",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 2
+    },
+    {
+      "name": "Plátanos fritos",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 3
+    },
+    {
+      "name": "Chocoflan",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 3
+    },
+    {
+      "name": "Pay de limón",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 2
+    },
+    {
+      "name": "Fresas con crema",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 1
+    },
+    {
+      "name": "Ensalada de manzana navideña",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 4
+    },
+    {
+      "name": "Pan de elote",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 4
+    },
+    {
+      "name": "Cuaresma",
+      "facet": "Postres caseros y de fonda",
+      "known_at": 6
+    },
+    {
+      "name": "Bolo",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 2
+    },
+    {
+      "name": "Dulces de la Rosa",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 3
+    },
+    {
+      "name": "Ricolino",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 3
+    },
+    {
+      "name": "Sonric's",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 4
+    },
+    {
+      "name": "Feria de la Alegría de Tulyehualco",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 11
+    },
+    {
+      "name": "Acolman",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 11
+    },
+    {
+      "name": "Siete pecados capitales",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 9
+    },
+    {
+      "name": "La Michoacana",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 2
+    },
+    {
+      "name": "Dulcería Celaya",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 12
+    },
+    {
+      "name": "Duvalín",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 2
+    },
+    {
+      "name": "Paleta Payaso",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 1
+    },
+    {
+      "name": "Merengue de feria",
+      "facet": "Dulcerías, ferias y piñatas",
+      "known_at": 4
+    }
+  ]
+}

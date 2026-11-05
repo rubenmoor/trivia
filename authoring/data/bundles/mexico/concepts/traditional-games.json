@@ -1,0 +1,684 @@
+{
+  "subcategory": "traditional-games",
+  "facets": [
+    "Trompos, baleros y yoyos",
+    "Canicas y sus tiros",
+    "Lotería mexicana",
+    "Rondas y cantos infantiles",
+    "Piñatas y juegos de posada",
+    "Juegos de calle y patio",
+    "Juegos de mesa y azar",
+    "Juegos prehispánicos de pelota",
+    "Muñecas y juguetes artesanales",
+    "Papalotes, rehiletes y matracas",
+    "Palabras y frases del juego"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 1,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Yoyo",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 1
+    },
+    {
+      "name": "Púa del trompo",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 5,
+      "retired": "used_up: The earlier questions already define the púa and its use; nothing new fits these options."
+    },
+    {
+      "name": "Cordel del trompo",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 4
+    },
+    {
+      "name": "Uñita",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 9
+    },
+    {
+      "name": "El perrito",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 7
+    },
+    {
+      "name": "La vuelta al mundo",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 7
+    },
+    {
+      "name": "El columpio",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 9
+    },
+    {
+      "name": "Dormir el yoyo",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 8
+    },
+    {
+      "name": "Yoyo Coca-Cola",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 10
+    },
+    {
+      "name": "Duncan",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 12
+    },
+    {
+      "name": "Barril del balero",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 6
+    },
+    {
+      "name": "Palito del balero",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 5
+    },
+    {
+      "name": "Madera torneada",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 10
+    },
+    {
+      "name": "Trompo de hojalata",
+      "facet": "Trompos, baleros y yoyos",
+      "known_at": 9
+    },
+    {
+      "name": "Canica",
+      "facet": "Canicas y sus tiros",
+      "known_at": 1
+    },
+    {
+      "name": "Bombocha",
+      "facet": "Canicas y sus tiros",
+      "known_at": 7
+    },
+    {
+      "name": "Agüita",
+      "facet": "Canicas y sus tiros",
+      "known_at": 7
+    },
+    {
+      "name": "Ojo de gato",
+      "facet": "Canicas y sus tiros",
+      "known_at": 6
+    },
+    {
+      "name": "Ágata",
+      "facet": "Canicas y sus tiros",
+      "known_at": 10
+    },
+    {
+      "name": "Tréboles",
+      "facet": "Canicas y sus tiros",
+      "known_at": 11
+    },
+    {
+      "name": "Cuarta",
+      "facet": "Canicas y sus tiros",
+      "known_at": 9
+    },
+    {
+      "name": "Hoyito",
+      "facet": "Canicas y sus tiros",
+      "known_at": 6
+    },
+    {
+      "name": "Círculo de canicas",
+      "facet": "Canicas y sus tiros",
+      "known_at": 4
+    },
+    {
+      "name": "Tiro de uña",
+      "facet": "Canicas y sus tiros",
+      "known_at": 7
+    },
+    {
+      "name": "Tiro de huesito",
+      "facet": "Canicas y sus tiros",
+      "known_at": 10
+    },
+    {
+      "name": "Tirito",
+      "facet": "Canicas y sus tiros",
+      "known_at": 8
+    },
+    {
+      "name": "Ponchar",
+      "facet": "Canicas y sus tiros",
+      "known_at": 10
+    },
+    {
+      "name": "Ahogadito",
+      "facet": "Canicas y sus tiros",
+      "known_at": 11
+    },
+    {
+      "name": "Jugar de a de veras",
+      "facet": "Canicas y sus tiros",
+      "known_at": 10
+    },
+    {
+      "name": "Vidrio",
+      "facet": "Canicas y sus tiros",
+      "known_at": 3
+    },
+    {
+      "name": "Clemente Jacques",
+      "facet": "Lotería mexicana",
+      "known_at": 12
+    },
+    {
+      "name": "Tabla de lotería",
+      "facet": "Lotería mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "Gritón",
+      "facet": "Lotería mexicana",
+      "known_at": 9
+    },
+    {
+      "name": "Frijolitos",
+      "facet": "Lotería mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "El Gallo",
+      "facet": "Lotería mexicana",
+      "known_at": 3
+    },
+    {
+      "name": "El Diablito",
+      "facet": "Lotería mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "La Dama",
+      "facet": "Lotería mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "La Sirena",
+      "facet": "Lotería mexicana",
+      "known_at": 3
+    },
+    {
+      "name": "La Muerte",
+      "facet": "Lotería mexicana",
+      "known_at": 6
+    },
+    {
+      "name": "El Corazón",
+      "facet": "Lotería mexicana",
+      "known_at": 3
+    },
+    {
+      "name": "La Chalupa",
+      "facet": "Lotería mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "El Valiente",
+      "facet": "Lotería mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "El Cotorro",
+      "facet": "Lotería mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "La Calavera",
+      "facet": "Lotería mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "El Venado",
+      "facet": "Lotería mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "El Gorrito",
+      "facet": "Lotería mexicana",
+      "known_at": 7
+    },
+    {
+      "name": "El Paraguas",
+      "facet": "Lotería mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "La Escalera",
+      "facet": "Lotería mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "El Bandolón",
+      "facet": "Lotería mexicana",
+      "known_at": 11
+    },
+    {
+      "name": "Amo a to",
+      "facet": "Rondas y cantos infantiles",
+      "known_at": 9
+    },
+    {
+      "name": "Los maderos de San Juan",
+      "facet": "Rondas y cantos infantiles",
+      "known_at": 7
+    },
+    {
+      "name": "Un elefante se columpiaba",
+      "facet": "Rondas y cantos infantiles",
+      "known_at": 2
+    },
+    {
+      "name": "Caña",
+      "facet": "Piñatas y juegos de posada",
+      "known_at": 5
+    },
+    {
+      "name": "Avión",
+      "facet": "Juegos de calle y patio",
+      "known_at": 2
+    },
+    {
+      "name": "Stop",
+      "facet": "Juegos de calle y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Encantados",
+      "facet": "Juegos de calle y patio",
+      "known_at": 3
+    },
+    {
+      "name": "Las escondidas",
+      "facet": "Juegos de calle y patio",
+      "known_at": 1
+    },
+    {
+      "name": "Bote pateado",
+      "facet": "Juegos de calle y patio",
+      "known_at": 5
+    },
+    {
+      "name": "Resorte",
+      "facet": "Juegos de calle y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Saltar la cuerda",
+      "facet": "Juegos de calle y patio",
+      "known_at": 1
+    },
+    {
+      "name": "Burro castigado",
+      "facet": "Juegos de calle y patio",
+      "known_at": 7
+    },
+    {
+      "name": "Burro dieciséis",
+      "facet": "Juegos de calle y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Quemados",
+      "facet": "Juegos de calle y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Las traes",
+      "facet": "Juegos de calle y patio",
+      "known_at": 2
+    },
+    {
+      "name": "Gallinita ciega",
+      "facet": "Juegos de calle y patio",
+      "known_at": 3
+    },
+    {
+      "name": "Cascarita",
+      "facet": "Juegos de calle y patio",
+      "known_at": 5
+    },
+    {
+      "name": "Carrera de costales",
+      "facet": "Juegos de calle y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Policías y ladrones",
+      "facet": "Juegos de calle y patio",
+      "known_at": 3,
+      "retired": "used_up: The rules are already asked; the remaining options would just be filler."
+    },
+    {
+      "name": "Huevo podrido",
+      "facet": "Juegos de calle y patio",
+      "known_at": 4
+    },
+    {
+      "name": "Tamalito",
+      "facet": "Juegos de calle y patio",
+      "known_at": 9
+    },
+    {
+      "name": "Toma todo",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 4
+    },
+    {
+      "name": "Todos ponen",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 5
+    },
+    {
+      "name": "Serpientes y escaleras",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 2
+    },
+    {
+      "name": "Turista Mundial",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 8
+    },
+    {
+      "name": "Dominó",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 3
+    },
+    {
+      "name": "Damas chinas",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 5
+    },
+    {
+      "name": "Gato",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 2
+    },
+    {
+      "name": "Basta",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 4
+    },
+    {
+      "name": "Ahorcado",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 3
+    },
+    {
+      "name": "Conquián",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 13
+    },
+    {
+      "name": "Baraja española",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 8
+    },
+    {
+      "name": "Juego de la oca",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 7
+    },
+    {
+      "name": "Melate",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 10
+    },
+    {
+      "name": "Lotería Nacional",
+      "facet": "Juegos de mesa y azar",
+      "known_at": 8
+    },
+    {
+      "name": "Cadera",
+      "facet": "Juegos prehispánicos de pelota",
+      "known_at": 8
+    },
+    {
+      "name": "Yugo",
+      "facet": "Juegos prehispánicos de pelota",
+      "known_at": 14
+    },
+    {
+      "name": "Pelota mixteca",
+      "facet": "Juegos prehispánicos de pelota",
+      "known_at": 13
+    },
+    {
+      "name": "Pelota purépecha",
+      "facet": "Juegos prehispánicos de pelota",
+      "known_at": 13
+    },
+    {
+      "name": "Cancha en forma de I",
+      "facet": "Juegos prehispánicos de pelota",
+      "known_at": 12
+    },
+    {
+      "name": "Amealco",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 13
+    },
+    {
+      "name": "Muñeca de trapo",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 2
+    },
+    {
+      "name": "Muñeca de cartón",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 7
+    },
+    {
+      "name": "Cartonería",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 10
+    },
+    {
+      "name": "Juguetes de hojalata",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 8
+    },
+    {
+      "name": "Trastecitos de barro",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 6
+    },
+    {
+      "name": "Títere",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 2
+    },
+    {
+      "name": "Hermanos Rosete Aranda",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 14
+    },
+    {
+      "name": "Luchadores de juguete",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 4
+    },
+    {
+      "name": "Calaca articulada",
+      "facet": "Muñecas y juguetes artesanales",
+      "known_at": 6
+    },
+    {
+      "name": "Cola del papalote",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 4
+    },
+    {
+      "name": "Carrizo",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 9
+    },
+    {
+      "name": "Hilo de cáñamo",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 10
+    },
+    {
+      "name": "Matraca de Semana Santa",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 9
+    },
+    {
+      "name": "Silbato de barro",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 6
+    },
+    {
+      "name": "Pajarito de agua",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 7
+    },
+    {
+      "name": "Chicharra de juguete",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 9,
+      "retired": "unaskable: All options need an essential photo of a toy chicharra that the sources probably don't have clearly."
+    },
+    {
+      "name": "Globo de Cantoya",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 10
+    },
+    {
+      "name": "Zumbador",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 10
+    },
+    {
+      "name": "Viento",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 1
+    },
+    {
+      "name": "Tambor de juguete",
+      "facet": "Papalotes, rehiletes y matracas",
+      "known_at": 2
+    },
+    {
+      "name": "De tin marín",
+      "facet": "Palabras y frases del juego",
+      "known_at": 2
+    },
+    {
+      "name": "Chin chan pu",
+      "facet": "Palabras y frases del juego",
+      "known_at": 4
+    },
+    {
+      "name": "Echar un volado",
+      "facet": "Palabras y frases del juego",
+      "known_at": 5
+    },
+    {
+      "name": "Águila o sol",
+      "facet": "Palabras y frases del juego",
+      "known_at": 5
+    },
+    {
+      "name": "Un, dos, tres por mí",
+      "facet": "Palabras y frases del juego",
+      "known_at": 3
+    },
+    {
+      "name": "Va de nuez",
+      "facet": "Palabras y frases del juego",
+      "known_at": 9
+    },
+    {
+      "name": "Chiras pelas",
+      "facet": "Palabras y frases del juego",
+      "known_at": 9
+    },
+    {
+      "name": "Ser mano",
+      "facet": "Palabras y frases del juego",
+      "known_at": 10
+    },
+    {
+      "name": "Chapucero",
+      "facet": "Palabras y frases del juego",
+      "known_at": 6
+    },
+    {
+      "name": "Pares o nones",
+      "facet": "Palabras y frases del juego",
+      "known_at": 4
+    },
+    {
+      "name": "Papalotl",
+      "facet": "Palabras y frases del juego",
+      "known_at": 11
+    },
+    {
+      "name": "Ahí te voy",
+      "facet": "Palabras y frases del juego",
+      "known_at": 6
+    },
+    {
+      "name": "Tiempo fuera",
+      "facet": "Palabras y frases del juego",
+      "known_at": 5
+    },
+    {
+      "name": "Me pido",
+      "facet": "Palabras y frases del juego",
+      "known_at": 5
+    }
+  ]
+}

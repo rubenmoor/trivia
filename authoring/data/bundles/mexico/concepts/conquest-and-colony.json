@@ -1,0 +1,997 @@
+{
+  "subcategory": "conquest-and-colony",
+  "facets": [
+    "Hernán Cortés y la expedición",
+    "Personajes indígenas de la Conquista",
+    "Caída de México-Tenochtitlan",
+    "Batallas, alianzas y pueblos aliados",
+    "Gobierno virreinal y virreyes",
+    "Evangelización y frailes",
+    "Sociedad de castas y vida cotidiana",
+    "Minería, haciendas y economía novohispana",
+    "Arte y arquitectura virreinal",
+    "Sor Juana y las letras novohispanas",
+    "Nao de China y comercio",
+    "Mestizaje en comida y palabras"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hernán Cortés",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 3
+    },
+    {
+      "name": "Quema de las naves",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 8
+    },
+    {
+      "name": "Villa Rica de la Vera Cruz",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 9
+    },
+    {
+      "name": "Jerónimo de Aguilar",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 12
+    },
+    {
+      "name": "Gonzalo Guerrero",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro de Alvarado",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 10
+    },
+    {
+      "name": "Bernal Díaz del Castillo",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 11
+    },
+    {
+      "name": "Historia verdadera de la conquista de la Nueva España",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 13
+    },
+    {
+      "name": "Cartas de relación",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 13
+    },
+    {
+      "name": "Diego Velázquez de Cuéllar",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de Cozumel",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 8
+    },
+    {
+      "name": "Cempoala",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 11
+    },
+    {
+      "name": "Caballos de los conquistadores",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 6
+    },
+    {
+      "name": "Arcabuz",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 9
+    },
+    {
+      "name": "Pánfilo de Narváez",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 13
+    },
+    {
+      "name": "Gonzalo de Sandoval",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 14
+    },
+    {
+      "name": "Batalla de Centla",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 13
+    },
+    {
+      "name": "Juan de Grijalva",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Hernández de Córdoba",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 14
+    },
+    {
+      "name": "Martín Cortés",
+      "facet": "Hernán Cortés y la expedición",
+      "known_at": 11
+    },
+    {
+      "name": "Moctezuma Xocoyotzin",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 4
+    },
+    {
+      "name": "Cuauhtémoc",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 5
+    },
+    {
+      "name": "Cuitláhuac",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 9
+    },
+    {
+      "name": "Xicoténcatl Axayacatzin",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 12
+    },
+    {
+      "name": "Xicoténcatl el Viejo",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 13
+    },
+    {
+      "name": "Cacique gordo de Cempoala",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 13
+    },
+    {
+      "name": "Isabel Moctezuma",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 14
+    },
+    {
+      "name": "Ixtlilxóchitl",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 14
+    },
+    {
+      "name": "Cacama",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 14
+    },
+    {
+      "name": "Tlatoani",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 9
+    },
+    {
+      "name": "Tangáxuan II",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 14
+    },
+    {
+      "name": "Maxixcatzin",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 14
+    },
+    {
+      "name": "Penacho de Moctezuma",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 8
+    },
+    {
+      "name": "Tetlepanquetzal",
+      "facet": "Personajes indígenas de la Conquista",
+      "known_at": 15
+    },
+    {
+      "name": "México-Tenochtitlan",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 4
+    },
+    {
+      "name": "Noche Triste",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 7
+    },
+    {
+      "name": "13 de agosto de 1521",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 9
+    },
+    {
+      "name": "Sitio de Tenochtitlan",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 10
+    },
+    {
+      "name": "Bergantines de Cortés",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Viruela",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 9
+    },
+    {
+      "name": "Calzada de Tacuba",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Calzada de Iztapalapa",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de Axayácatl",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 13
+    },
+    {
+      "name": "Encuentro de Cortés y Moctezuma",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 8
+    },
+    {
+      "name": "Salto de Alvarado",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Tesoro de Moctezuma",
+      "facet": "Caída de México-Tenochtitlan",
+      "known_at": 10
+    },
+    {
+      "name": "Tlaxcaltecas",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 6
+    },
+    {
+      "name": "Batalla de Otumba",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 11
+    },
+    {
+      "name": "Totonacas",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 8
+    },
+    {
+      "name": "Huexotzingo",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 13
+    },
+    {
+      "name": "Lienzo de Tlaxcala",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 13
+    },
+    {
+      "name": "Purépechas",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 8
+    },
+    {
+      "name": "Conquista de Yucatán",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco de Montejo",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 14
+    },
+    {
+      "name": "Guerra del Mixtón",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 14
+    },
+    {
+      "name": "Chichimecas",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 8
+    },
+    {
+      "name": "Guerra Chichimeca",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 13
+    },
+    {
+      "name": "Triple Alianza",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 10
+    },
+    {
+      "name": "Nuño de Guzmán",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 13
+    },
+    {
+      "name": "Zapotecas",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 7
+    },
+    {
+      "name": "Mexicas",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 4
+    },
+    {
+      "name": "Mayas",
+      "facet": "Batallas, alianzas y pueblos aliados",
+      "known_at": 3
+    },
+    {
+      "name": "Nueva España",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 5
+    },
+    {
+      "name": "Virrey",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 6
+    },
+    {
+      "name": "Antonio de Mendoza",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 12
+    },
+    {
+      "name": "Luis de Velasco",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 14
+    },
+    {
+      "name": "Juan de Palafox y Mendoza",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 14
+    },
+    {
+      "name": "Bernardo de Gálvez",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 14
+    },
+    {
+      "name": "Segundo conde de Revillagigedo",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 13
+    },
+    {
+      "name": "Real Audiencia de México",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 13
+    },
+    {
+      "name": "Reformas borbónicas",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de Moneda de México",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 10
+    },
+    {
+      "name": "Inquisición",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 8
+    },
+    {
+      "name": "Consejo de Indias",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 13
+    },
+    {
+      "name": "Leyes de Indias",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 13
+    },
+    {
+      "name": "Intendencias",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 14
+    },
+    {
+      "name": "Palacio Virreinal",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 8
+    },
+    {
+      "name": "Capitanía General de Guatemala",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 14
+    },
+    {
+      "name": "José de Gálvez",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 14
+    },
+    {
+      "name": "Real y Pontificia Universidad de México",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 11
+    },
+    {
+      "name": "Corregidor",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 12
+    },
+    {
+      "name": "Nueva Galicia",
+      "facet": "Gobierno virreinal y virreyes",
+      "known_at": 13
+    },
+    {
+      "name": "Virgen de Guadalupe",
+      "facet": "Evangelización y frailes",
+      "known_at": 3
+    },
+    {
+      "name": "Fray Bartolomé de las Casas",
+      "facet": "Evangelización y frailes",
+      "known_at": 10
+    },
+    {
+      "name": "Fray Bernardino de Sahagún",
+      "facet": "Evangelización y frailes",
+      "known_at": 12
+    },
+    {
+      "name": "Códice Florentino",
+      "facet": "Evangelización y frailes",
+      "known_at": 13
+    },
+    {
+      "name": "Vasco de Quiroga",
+      "facet": "Evangelización y frailes",
+      "known_at": 11
+    },
+    {
+      "name": "Doce apóstoles de México",
+      "facet": "Evangelización y frailes",
+      "known_at": 13
+    },
+    {
+      "name": "Franciscanos",
+      "facet": "Evangelización y frailes",
+      "known_at": 8
+    },
+    {
+      "name": "Dominicos",
+      "facet": "Evangelización y frailes",
+      "known_at": 11
+    },
+    {
+      "name": "Agustinos",
+      "facet": "Evangelización y frailes",
+      "known_at": 11
+    },
+    {
+      "name": "Jesuitas",
+      "facet": "Evangelización y frailes",
+      "known_at": 9
+    },
+    {
+      "name": "Fray Juan de Zumárraga",
+      "facet": "Evangelización y frailes",
+      "known_at": 12
+    },
+    {
+      "name": "Fray Pedro de Gante",
+      "facet": "Evangelización y frailes",
+      "known_at": 13
+    },
+    {
+      "name": "Capilla abierta",
+      "facet": "Evangelización y frailes",
+      "known_at": 14
+    },
+    {
+      "name": "Fray Junípero Serra",
+      "facet": "Evangelización y frailes",
+      "known_at": 12
+    },
+    {
+      "name": "Misiones de la Sierra Gorda",
+      "facet": "Evangelización y frailes",
+      "known_at": 13
+    },
+    {
+      "name": "Eusebio Francisco Kino",
+      "facet": "Evangelización y frailes",
+      "known_at": 13
+    },
+    {
+      "name": "Colegio de la Santa Cruz de Tlatelolco",
+      "facet": "Evangelización y frailes",
+      "known_at": 14
+    },
+    {
+      "name": "Fray Diego de Landa",
+      "facet": "Evangelización y frailes",
+      "known_at": 13
+    },
+    {
+      "name": "Castas",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Pintura de castas",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 12
+    },
+    {
+      "name": "Criollos",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 8
+    },
+    {
+      "name": "Mestizos",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 6
+    },
+    {
+      "name": "Peninsulares",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Mulatos",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Castizo",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Zambo",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "República de indios",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 14
+    },
+    {
+      "name": "Afromexicanos",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 11
+    },
+    {
+      "name": "Gaspar Yanga",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Pulquería",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Parián",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Tumulto de 1692",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 15
+    },
+    {
+      "name": "Tributo indígena",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Gremios",
+      "facet": "Sociedad de castas y vida cotidiana",
+      "known_at": 13
+    },
+    {
+      "name": "Hacienda",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 7
+    },
+    {
+      "name": "Encomienda",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 11
+    },
+    {
+      "name": "Repartimiento",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 14
+    },
+    {
+      "name": "Real de a ocho",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 12
+    },
+    {
+      "name": "Beneficio de patio",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 14
+    },
+    {
+      "name": "Azogue",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 13
+    },
+    {
+      "name": "Bartolomé de Medina",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 15
+    },
+    {
+      "name": "Maguey",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 6
+    },
+    {
+      "name": "Ingenio azucarero",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 11
+    },
+    {
+      "name": "Charro",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 5
+    },
+    {
+      "name": "Obrajes",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 14
+    },
+    {
+      "name": "Arriero",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 10
+    },
+    {
+      "name": "Diezmo",
+      "facet": "Minería, haciendas y economía novohispana",
+      "known_at": 13
+    },
+    {
+      "name": "Catedral Metropolitana de la Ciudad de México",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 6
+    },
+    {
+      "name": "Barroco novohispano",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Estípite",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 14
+    },
+    {
+      "name": "Capilla del Rosario de Puebla",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Palacio de Cortés en Cuernavaca",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Tepotzotlán",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Retablo",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 10
+    },
+    {
+      "name": "Exvoto",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Miguel Cabrera",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 14
+    },
+    {
+      "name": "Cristóbal de Villalpando",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 15
+    },
+    {
+      "name": "Arte tequitqui",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 15
+    },
+    {
+      "name": "Biombo",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Puebla de los Ángeles",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 7
+    },
+    {
+      "name": "Valladolid de Michoacán",
+      "facet": "Arte y arquitectura virreinal",
+      "known_at": 12
+    },
+    {
+      "name": "Sor Juana Inés de la Cruz",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 5
+    },
+    {
+      "name": "Primero sueño",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 14
+    },
+    {
+      "name": "Hombres necios que acusáis",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 11
+    },
+    {
+      "name": "Respuesta a sor Filotea de la Cruz",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 14
+    },
+    {
+      "name": "Convento de San Jerónimo",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 13
+    },
+    {
+      "name": "Juan Ruiz de Alarcón",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 13
+    },
+    {
+      "name": "La verdad sospechosa",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 15
+    },
+    {
+      "name": "Carlos de Sigüenza y Góngora",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 14
+    },
+    {
+      "name": "Juan Pablos",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 13
+    },
+    {
+      "name": "Gaceta de México",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 14
+    },
+    {
+      "name": "San Miguel Nepantla",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 12
+    },
+    {
+      "name": "Décima Musa",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 12
+    },
+    {
+      "name": "Grandeza mexicana",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 15
+    },
+    {
+      "name": "El divino Narciso",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 15
+    },
+    {
+      "name": "Los empeños de una casa",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 15
+    },
+    {
+      "name": "Las trampas de la fe",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Javier Clavijero",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 14
+    },
+    {
+      "name": "El Periquillo Sarniento",
+      "facet": "Sor Juana y las letras novohispanas",
+      "known_at": 13
+    },
+    {
+      "name": "Nao de China",
+      "facet": "Nao de China y comercio",
+      "known_at": 9
+    },
+    {
+      "name": "Manila",
+      "facet": "Nao de China y comercio",
+      "known_at": 9
+    },
+    {
+      "name": "Filipinas",
+      "facet": "Nao de China y comercio",
+      "known_at": 8
+    },
+    {
+      "name": "Tornaviaje",
+      "facet": "Nao de China y comercio",
+      "known_at": 14
+    },
+    {
+      "name": "Andrés de Urdaneta",
+      "facet": "Nao de China y comercio",
+      "known_at": 14
+    },
+    {
+      "name": "Feria de Acapulco",
+      "facet": "Nao de China y comercio",
+      "known_at": 14
+    },
+    {
+      "name": "Mantón de Manila",
+      "facet": "Nao de China y comercio",
+      "known_at": 12
+    },
+    {
+      "name": "Seda",
+      "facet": "Nao de China y comercio",
+      "known_at": 5
+    },
+    {
+      "name": "Porcelana china",
+      "facet": "Nao de China y comercio",
+      "known_at": 7
+    },
+    {
+      "name": "Especias",
+      "facet": "Nao de China y comercio",
+      "known_at": 5
+    },
+    {
+      "name": "China poblana",
+      "facet": "Nao de China y comercio",
+      "known_at": 8
+    },
+    {
+      "name": "Mango de Manila",
+      "facet": "Nao de China y comercio",
+      "known_at": 8
+    },
+    {
+      "name": "Tuba de Colima",
+      "facet": "Nao de China y comercio",
+      "known_at": 13
+    },
+    {
+      "name": "Flota de Indias",
+      "facet": "Nao de China y comercio",
+      "known_at": 13
+    },
+    {
+      "name": "Francis Drake",
+      "facet": "Nao de China y comercio",
+      "known_at": 11
+    },
+    {
+      "name": "Lorencillo",
+      "facet": "Nao de China y comercio",
+      "known_at": 14
+    },
+    {
+      "name": "Camino de Asia",
+      "facet": "Nao de China y comercio",
+      "known_at": 13
+    },
+    {
+      "name": "Tamales",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 3
+    },
+    {
+      "name": "Rompope",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 10
+    },
+    {
+      "name": "Pan de muerto",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 4
+    },
+    {
+      "name": "Nahuatlismos",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 12
+    },
+    {
+      "name": "Mitote",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 11
+    },
+    {
+      "name": "Apapacho",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 9
+    },
+    {
+      "name": "Tianguis",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 7
+    },
+    {
+      "name": "Papalote",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 6
+    },
+    {
+      "name": "Champurrado",
+      "facet": "Mestizaje en comida y palabras",
+      "known_at": 8
+    }
+  ]
+}

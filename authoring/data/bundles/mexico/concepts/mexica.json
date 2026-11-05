@@ -1,0 +1,747 @@
+{
+  "subcategory": "mexica",
+  "facets": [
+    "Fundación de Tenochtitlan",
+    "Gobernantes y tlatoanis",
+    "Dioses y mitos mexicas",
+    "Templo Mayor y sitios",
+    "Piedra del Sol y calendario",
+    "Guerreros y ejército",
+    "Vida cotidiana y oficios",
+    "Comida y chinampas",
+    "Tianguis, tributo y cacao",
+    "Palabras del náhuatl",
+    "Arte, códices y artesanías",
+    "Conquista y caída de Tenochtitlan"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Águila sobre el nopal",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 2
+    },
+    {
+      "name": "Aztecas",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 3
+    },
+    {
+      "name": "Chapultepec",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 5
+    },
+    {
+      "name": "Peregrinación mexica",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 7
+    },
+    {
+      "name": "Aztlán",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 8
+    },
+    {
+      "name": "Año 1325",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 8
+    },
+    {
+      "name": "Tenoch",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 11
+    },
+    {
+      "name": "Azcapotzalco",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 11
+    },
+    {
+      "name": "Tepanecas",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Culhuacán",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 13
+    },
+    {
+      "name": "Chicomóztoc",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 13
+    },
+    {
+      "name": "Copil",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 13
+    },
+    {
+      "name": "Coatepec",
+      "facet": "Fundación de Tenochtitlan",
+      "known_at": 14
+    },
+    {
+      "name": "Moctezuma II",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 4
+    },
+    {
+      "name": "Nezahualcóyotl",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 5
+    },
+    {
+      "name": "Huey tlatoani",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 10
+    },
+    {
+      "name": "Moctezuma I",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 11
+    },
+    {
+      "name": "Acamapichtli",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 12
+    },
+    {
+      "name": "Itzcóatl",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 12
+    },
+    {
+      "name": "Axayácatl",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 12
+    },
+    {
+      "name": "Tízoc",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 13
+    },
+    {
+      "name": "Chimalpopoca",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 13
+    },
+    {
+      "name": "Huitzilíhuitl",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 13
+    },
+    {
+      "name": "Tlacaélel",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 13
+    },
+    {
+      "name": "Tlacopan",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 13
+    },
+    {
+      "name": "Cihuacóatl",
+      "facet": "Gobernantes y tlatoanis",
+      "known_at": 14
+    },
+    {
+      "name": "Mictlán",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 5
+    },
+    {
+      "name": "Leyenda del Popocatépetl y el Iztaccíhuatl",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 5
+    },
+    {
+      "name": "Mictlantecuhtli",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 8
+    },
+    {
+      "name": "Coyolxauhqui",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 10
+    },
+    {
+      "name": "Tonatiuh",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 10
+    },
+    {
+      "name": "Xipe Tótec",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 12
+    },
+    {
+      "name": "Chalchiuhtlicue",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 12
+    },
+    {
+      "name": "Tlaltecuhtli",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 13
+    },
+    {
+      "name": "Ometéotl",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 13
+    },
+    {
+      "name": "Xiuhtecuhtli",
+      "facet": "Dioses y mitos mexicas",
+      "known_at": 13
+    },
+    {
+      "name": "Museo del Templo Mayor",
+      "facet": "Templo Mayor y sitios",
+      "known_at": 8
+    },
+    {
+      "name": "Tzompantli",
+      "facet": "Templo Mayor y sitios",
+      "known_at": 11
+    },
+    {
+      "name": "Casa de las Águilas",
+      "facet": "Templo Mayor y sitios",
+      "known_at": 12
+    },
+    {
+      "name": "Cerro de la Estrella",
+      "facet": "Templo Mayor y sitios",
+      "known_at": 12
+    },
+    {
+      "name": "Templo de Ehécatl",
+      "facet": "Templo Mayor y sitios",
+      "known_at": 12
+    },
+    {
+      "name": "Tenayuca",
+      "facet": "Templo Mayor y sitios",
+      "known_at": 13
+    },
+    {
+      "name": "Acueducto de Chapultepec",
+      "facet": "Templo Mayor y sitios",
+      "known_at": 13
+    },
+    {
+      "name": "Quinto Sol",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 10
+    },
+    {
+      "name": "Tonalpohualli",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 12
+    },
+    {
+      "name": "Ceremonia del Fuego Nuevo",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 12
+    },
+    {
+      "name": "Xiuhpohualli",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Xiuhmolpilli",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Veintena",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Ollin",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Xiuhcóatl",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 13
+    },
+    {
+      "name": "Nemontemi",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Tonalámatl",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Ce Ácatl",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Portadores de año",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Cuauhxicalli",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio de León y Gama",
+      "facet": "Piedra del Sol y calendario",
+      "known_at": 15
+    },
+    {
+      "name": "Obsidiana",
+      "facet": "Guerreros y ejército",
+      "known_at": 6
+    },
+    {
+      "name": "Macuahuitl",
+      "facet": "Guerreros y ejército",
+      "known_at": 9
+    },
+    {
+      "name": "Chimalli",
+      "facet": "Guerreros y ejército",
+      "known_at": 11
+    },
+    {
+      "name": "Átlatl",
+      "facet": "Guerreros y ejército",
+      "known_at": 11
+    },
+    {
+      "name": "Guerras floridas",
+      "facet": "Guerreros y ejército",
+      "known_at": 11
+    },
+    {
+      "name": "Caracol de guerra",
+      "facet": "Guerreros y ejército",
+      "known_at": 12
+    },
+    {
+      "name": "Ichcahuipilli",
+      "facet": "Guerreros y ejército",
+      "known_at": 14
+    },
+    {
+      "name": "Guerreros otomíes",
+      "facet": "Guerreros y ejército",
+      "known_at": 14
+    },
+    {
+      "name": "Tlahuiztli",
+      "facet": "Guerreros y ejército",
+      "known_at": 14
+    },
+    {
+      "name": "Honda",
+      "facet": "Guerreros y ejército",
+      "known_at": 14
+    },
+    {
+      "name": "Cuachicqueh",
+      "facet": "Guerreros y ejército",
+      "known_at": 15
+    },
+    {
+      "name": "Tlacochcálcatl",
+      "facet": "Guerreros y ejército",
+      "known_at": 15
+    },
+    {
+      "name": "Petate",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 4
+    },
+    {
+      "name": "Juego de pelota",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 5
+    },
+    {
+      "name": "Calmécac",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 10
+    },
+    {
+      "name": "Telpochcalli",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 10
+    },
+    {
+      "name": "Patolli",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 12
+    },
+    {
+      "name": "Macehualtin",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 12
+    },
+    {
+      "name": "Calpulli",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 12
+    },
+    {
+      "name": "Maxtlatl",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 12
+    },
+    {
+      "name": "Tilmatli",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 12
+    },
+    {
+      "name": "Pipiltin",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 13
+    },
+    {
+      "name": "Tameme",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 13
+    },
+    {
+      "name": "Huehuetlatolli",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 14
+    },
+    {
+      "name": "Ticitl",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 14
+    },
+    {
+      "name": "Cuicacalli",
+      "facet": "Vida cotidiana y oficios",
+      "known_at": 14
+    },
+    {
+      "name": "Chile",
+      "facet": "Comida y chinampas",
+      "known_at": 1
+    },
+    {
+      "name": "Tortilla",
+      "facet": "Comida y chinampas",
+      "known_at": 1
+    },
+    {
+      "name": "Tamal",
+      "facet": "Comida y chinampas",
+      "known_at": 2
+    },
+    {
+      "name": "Comal",
+      "facet": "Comida y chinampas",
+      "known_at": 3
+    },
+    {
+      "name": "Molcajete",
+      "facet": "Comida y chinampas",
+      "known_at": 3
+    },
+    {
+      "name": "Atole",
+      "facet": "Comida y chinampas",
+      "known_at": 3
+    },
+    {
+      "name": "Metate",
+      "facet": "Comida y chinampas",
+      "known_at": 4
+    },
+    {
+      "name": "Escamoles",
+      "facet": "Comida y chinampas",
+      "known_at": 8
+    },
+    {
+      "name": "Tecuitlatl",
+      "facet": "Comida y chinampas",
+      "known_at": 13
+    },
+    {
+      "name": "Trueque",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 5
+    },
+    {
+      "name": "Algodón",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 6
+    },
+    {
+      "name": "Molinillo",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 6
+    },
+    {
+      "name": "Tributo",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 7
+    },
+    {
+      "name": "Plumas de quetzal",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 8
+    },
+    {
+      "name": "Jade",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 9
+    },
+    {
+      "name": "Mercado de Tlatelolco",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 10
+    },
+    {
+      "name": "Turquesa",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 10
+    },
+    {
+      "name": "Pochteca",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 11
+    },
+    {
+      "name": "Quachtli",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 13
+    },
+    {
+      "name": "Matrícula de Tributos",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 13
+    },
+    {
+      "name": "Calpixqui",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 14
+    },
+    {
+      "name": "Hachuelas de cobre",
+      "facet": "Tianguis, tributo y cacao",
+      "known_at": 14
+    },
+    {
+      "name": "Tomate",
+      "facet": "Palabras del náhuatl",
+      "known_at": 4
+    },
+    {
+      "name": "Guacamole",
+      "facet": "Palabras del náhuatl",
+      "known_at": 4
+    },
+    {
+      "name": "Náhuatl",
+      "facet": "Palabras del náhuatl",
+      "known_at": 6
+    },
+    {
+      "name": "Apapachar",
+      "facet": "Palabras del náhuatl",
+      "known_at": 6
+    },
+    {
+      "name": "Esquite",
+      "facet": "Palabras del náhuatl",
+      "known_at": 7
+    },
+    {
+      "name": "Chapopote",
+      "facet": "Palabras del náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Itacate",
+      "facet": "Palabras del náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Tlapalería",
+      "facet": "Palabras del náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Tocayo",
+      "facet": "Palabras del náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Pepenar",
+      "facet": "Palabras del náhuatl",
+      "known_at": 9
+    },
+    {
+      "name": "Achichincle",
+      "facet": "Palabras del náhuatl",
+      "known_at": 10
+    },
+    {
+      "name": "Papel amate",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 6
+    },
+    {
+      "name": "Chac Mool",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 7
+    },
+    {
+      "name": "Glifos",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 10
+    },
+    {
+      "name": "Arte plumario",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 10
+    },
+    {
+      "name": "Códice Mendoza",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 11
+    },
+    {
+      "name": "Bernardino de Sahagún",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 11
+    },
+    {
+      "name": "Códice Boturini",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 12
+    },
+    {
+      "name": "Tlacuilo",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 12
+    },
+    {
+      "name": "Máscara de mosaico de turquesa",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 12
+    },
+    {
+      "name": "Códice Borbónico",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 13
+    },
+    {
+      "name": "Piedra de Tízoc",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 13
+    },
+    {
+      "name": "Flor y canto",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 13
+    },
+    {
+      "name": "Amanteca",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 14
+    },
+    {
+      "name": "Teocalli de la Guerra Sagrada",
+      "facet": "Arte, códices y artesanías",
+      "known_at": 15
+    },
+    {
+      "name": "Caballos de los españoles",
+      "facet": "Conquista y caída de Tenochtitlan",
+      "known_at": 6
+    },
+    {
+      "name": "Caída de Tenochtitlan",
+      "facet": "Conquista y caída de Tenochtitlan",
+      "known_at": 7
+    },
+    {
+      "name": "Hundimiento de las naves",
+      "facet": "Conquista y caída de Tenochtitlan",
+      "known_at": 9
+    },
+    {
+      "name": "Bergantines",
+      "facet": "Conquista y caída de Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Xicoténcatl",
+      "facet": "Conquista y caída de Tenochtitlan",
+      "known_at": 12
+    },
+    {
+      "name": "Diego Velázquez",
+      "facet": "Conquista y caída de Tenochtitlan",
+      "known_at": 13
+    },
+    {
+      "name": "Visión de los vencidos",
+      "facet": "Conquista y caída de Tenochtitlan",
+      "known_at": 13
+    }
+  ]
+}

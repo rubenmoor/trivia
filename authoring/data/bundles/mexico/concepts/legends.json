@@ -1,0 +1,576 @@
+{
+  "subcategory": "legends",
+  "facets": [
+    "La Llorona y mujeres espectrales",
+    "Nahuales, brujas y lechuzas",
+    "Duendes, aluxes y chaneques",
+    "Bestias y criaturas misteriosas",
+    "Charros negros y pactos con el diablo",
+    "Callejones y leyendas coloniales",
+    "Casas, hospitales y lugares embrujados",
+    "Ánimas, muertos y Día de Muertos",
+    "Presagios y espantos prehispánicos",
+    "Aparecidos de caminos y carreteras",
+    "Espantos en cine, televisión y cómics"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "¡Ay, mis hijos!",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 3
+    },
+    {
+      "name": "La Planchada",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 9
+    },
+    {
+      "name": "Xkeban",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 14
+    },
+    {
+      "name": "La Mulata de Córdoba",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 11
+    },
+    {
+      "name": "La Monja emparedada",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 11
+    },
+    {
+      "name": "La Pascualita",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 10
+    },
+    {
+      "name": "La Matlacíhuatl",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 12
+    },
+    {
+      "name": "Cihuateteo",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 13
+    },
+    {
+      "name": "La Siguanaba",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 12
+    },
+    {
+      "name": "La Tlanchana",
+      "facet": "La Llorona y mujeres espectrales",
+      "known_at": 12
+    },
+    {
+      "name": "Lechuza",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 4
+    },
+    {
+      "name": "Tlahuelpuchi",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 12
+    },
+    {
+      "name": "Huay Chivo",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 11
+    },
+    {
+      "name": "Congreso de Brujos de Catemaco",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 11
+    },
+    {
+      "name": "Limpia con huevo",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 5
+    },
+    {
+      "name": "Bolas de fuego",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 10
+    },
+    {
+      "name": "Tona",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 13
+    },
+    {
+      "name": "Ojo de venado",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 8
+    },
+    {
+      "name": "Mal aire",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 8
+    },
+    {
+      "name": "Tecuani",
+      "facet": "Nahuales, brujas y lechuzas",
+      "known_at": 13
+    },
+    {
+      "name": "Duende",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 2
+    },
+    {
+      "name": "Tlaloques",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 12
+    },
+    {
+      "name": "Casita del alux",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 12
+    },
+    {
+      "name": "Enano de Uxmal",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 10
+    },
+    {
+      "name": "Balames",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 13
+    },
+    {
+      "name": "El Sombrerón",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 12
+    },
+    {
+      "name": "Ikal",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 14
+    },
+    {
+      "name": "Pukuj",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 14
+    },
+    {
+      "name": "Kakasbal",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 14
+    },
+    {
+      "name": "Sip",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 14
+    },
+    {
+      "name": "Trenzas en las crines",
+      "facet": "Duendes, aluxes y chaneques",
+      "known_at": 12
+    },
+    {
+      "name": "Cadejo",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 11
+    },
+    {
+      "name": "Mano peluda",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 7
+    },
+    {
+      "name": "El Viejo del Costal",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 3
+    },
+    {
+      "name": "Perro negro",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 6
+    },
+    {
+      "name": "Gato negro",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 3
+    },
+    {
+      "name": "Víbora chirrionera",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 11
+    },
+    {
+      "name": "Mazacuate",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 12
+    },
+    {
+      "name": "Alien de Metepec",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 12
+    },
+    {
+      "name": "Bruja de Monterrey",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 11
+    },
+    {
+      "name": "Ovnis del Popocatépetl",
+      "facet": "Bestias y criaturas misteriosas",
+      "known_at": 11
+    },
+    {
+      "name": "Charro Negro",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 5
+    },
+    {
+      "name": "Pacto con el diablo",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 6
+    },
+    {
+      "name": "Chamuco",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 6
+    },
+    {
+      "name": "Pingo",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 10
+    },
+    {
+      "name": "El diablo en el baile",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 10
+    },
+    {
+      "name": "Diablitos de Ocumicho",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 13
+    },
+    {
+      "name": "Entierro (tesoro enterrado)",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 11
+    },
+    {
+      "name": "Pedro de Urdemalas",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 13
+    },
+    {
+      "name": "Callejón del Diablo",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 12
+    },
+    {
+      "name": "Puente del Diablo",
+      "facet": "Charros negros y pactos con el diablo",
+      "known_at": 11
+    },
+    {
+      "name": "Don Juan Manuel de Solórzano",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 12
+    },
+    {
+      "name": "Calle de la Quemada",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Calle del Indio Triste",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Callejón del Muerto",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "La Mujer Herrada",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Puente de Alvarado",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Calle del Niño Perdido",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio de la Inquisición",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 11
+    },
+    {
+      "name": "Puente del Clérigo",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Señor del Veneno",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 13
+    },
+    {
+      "name": "Luis González Obregón",
+      "facet": "Callejones y leyendas coloniales",
+      "known_at": 14
+    },
+    {
+      "name": "Lecumberri",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 11
+    },
+    {
+      "name": "Hotel Posada del Sol",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 14
+    },
+    {
+      "name": "Panteón de San Fernando",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 12
+    },
+    {
+      "name": "Panteón de Belén",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 11
+    },
+    {
+      "name": "Casa de las Brujas",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 12
+    },
+    {
+      "name": "Túneles de Puebla",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 12
+    },
+    {
+      "name": "Panteón Inglés de Real del Monte",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 13
+    },
+    {
+      "name": "Casa de los Muñecos",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 13
+    },
+    {
+      "name": "Hospital Juárez",
+      "facet": "Casas, hospitales y lugares embrujados",
+      "known_at": 12
+    },
+    {
+      "name": "Calaveritas literarias",
+      "facet": "Ánimas, muertos y Día de Muertos",
+      "known_at": 7
+    },
+    {
+      "name": "Ánima de Sayula",
+      "facet": "Ánimas, muertos y Día de Muertos",
+      "known_at": 12
+    },
+    {
+      "name": "Ocho presagios funestos",
+      "facet": "Presagios y espantos prehispánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Tzitzimime",
+      "facet": "Presagios y espantos prehispánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Leyenda de los volcanes",
+      "facet": "Presagios y espantos prehispánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Profecía maya de 2012",
+      "facet": "Presagios y espantos prehispánicos",
+      "known_at": 9
+    },
+    {
+      "name": "Muchacha de la curva",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 9
+    },
+    {
+      "name": "Jinete sin cabeza",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 7
+    },
+    {
+      "name": "Autobús fantasma",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 10
+    },
+    {
+      "name": "Tren fantasma",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 8
+    },
+    {
+      "name": "La Rumorosa",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 12
+    },
+    {
+      "name": "Espinazo del Diablo (carretera)",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 12
+    },
+    {
+      "name": "La Marquesa",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 12
+    },
+    {
+      "name": "Mil Cumbres",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 13
+    },
+    {
+      "name": "Cumbres de Maltrata",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 13
+    },
+    {
+      "name": "Fraile sin cabeza",
+      "facet": "Aparecidos de caminos y carreteras",
+      "known_at": 12
+    },
+    {
+      "name": "La Leyenda de la Llorona (película)",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 6
+    },
+    {
+      "name": "La Leyenda de las Momias de Guanajuato",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 7
+    },
+    {
+      "name": "La Leyenda del Chupacabras",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 8
+    },
+    {
+      "name": "La Leyenda del Charro Negro (película)",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 8
+    },
+    {
+      "name": "La Leyenda de los Chaneques",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 10
+    },
+    {
+      "name": "Leo San Juan",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 6
+    },
+    {
+      "name": "Teodora Villavicencio",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 8
+    },
+    {
+      "name": "Don Andrés y Alebrije",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 9
+    },
+    {
+      "name": "Cronos",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 13
+    },
+    {
+      "name": "El espinazo del diablo (película)",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 13
+    },
+    {
+      "name": "El Monje Loco",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 13
+    },
+    {
+      "name": "Kalimán",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 12
+    },
+    {
+      "name": "Hasta el viento tiene miedo",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 12
+    },
+    {
+      "name": "El Vampiro (1957)",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 14
+    },
+    {
+      "name": "La Hora Marcada",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 13
+    },
+    {
+      "name": "Maya y los tres",
+      "facet": "Espantos en cine, televisión y cómics",
+      "known_at": 11
+    }
+  ]
+}

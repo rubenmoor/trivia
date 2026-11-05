@@ -1,0 +1,807 @@
+{
+  "subcategory": "other-cultures",
+  "facets": [
+    "Olmecas y cabezas colosales",
+    "Teotihuacan y sus pirámides",
+    "Zapotecas y Monte Albán",
+    "Mixtecas: códices y orfebrería",
+    "Toltecas, Tula y los atlantes",
+    "Totonacas y El Tajín",
+    "Purépechas y Occidente de México",
+    "Culturas del norte y Paquimé",
+    "Cholula, Xochicalco y otras ciudades",
+    "Dioses compartidos de Mesoamérica",
+    "Juego de pelota, calendario y vida diaria",
+    "Arqueología, museos y legado vivo"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 5,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cabeza colosal olmeca",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 4
+    },
+    {
+      "name": "Olmecas",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 5
+    },
+    {
+      "name": "La Venta",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 9
+    },
+    {
+      "name": "San Lorenzo Tenochtitlán",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 12
+    },
+    {
+      "name": "Tres Zapotes",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 12
+    },
+    {
+      "name": "Parque-Museo La Venta",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 10
+    },
+    {
+      "name": "El Luchador olmeca",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 11
+    },
+    {
+      "name": "Señor de las Limas",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 13
+    },
+    {
+      "name": "Altar 4 de La Venta",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 14
+    },
+    {
+      "name": "Ofrenda 4 de La Venta",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 14
+    },
+    {
+      "name": "Jade olmeca",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 9
+    },
+    {
+      "name": "Hombre jaguar",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 10
+    },
+    {
+      "name": "Cultura madre",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 8
+    },
+    {
+      "name": "Basalto",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 9
+    },
+    {
+      "name": "Sierra de los Tuxtlas",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 11
+    },
+    {
+      "name": "Hachas votivas olmecas",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 13
+    },
+    {
+      "name": "Figurillas de bebés olmecas",
+      "facet": "Olmecas y cabezas colosales",
+      "known_at": 13
+    },
+    {
+      "name": "Calzada de los Muertos",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 6
+    },
+    {
+      "name": "Templo de la Serpiente Emplumada",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 9
+    },
+    {
+      "name": "Palacio de Quetzalpapálotl",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 11
+    },
+    {
+      "name": "Tepantitla",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 13
+    },
+    {
+      "name": "Mural del Tlalocan",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 13
+    },
+    {
+      "name": "Atetelco",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Diosa de Teotihuacan",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 13
+    },
+    {
+      "name": "Túnel bajo el Templo de la Serpiente Emplumada",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 13
+    },
+    {
+      "name": "Máscaras teotihuacanas",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 11
+    },
+    {
+      "name": "Talud-tablero",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 12
+    },
+    {
+      "name": "Equinoccio de primavera en Teotihuacan",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 5
+    },
+    {
+      "name": "Globos aerostáticos de Teotihuacan",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 6
+    },
+    {
+      "name": "San Juan Teotihuacán",
+      "facet": "Teotihuacan y sus pirámides",
+      "known_at": 8
+    },
+    {
+      "name": "Los Danzantes",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 10
+    },
+    {
+      "name": "Grecas de Mitla",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 11
+    },
+    {
+      "name": "Edificio J de Monte Albán",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 13
+    },
+    {
+      "name": "Gran Plaza de Monte Albán",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 10
+    },
+    {
+      "name": "Lambityeco",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 14
+    },
+    {
+      "name": "Yagul",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 14
+    },
+    {
+      "name": "Dainzú",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 14
+    },
+    {
+      "name": "Zaachila",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 12
+    },
+    {
+      "name": "Cocijo",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 13
+    },
+    {
+      "name": "Urnas funerarias zapotecas",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 12
+    },
+    {
+      "name": "Tumba 104 de Monte Albán",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 14
+    },
+    {
+      "name": "Escritura zapoteca",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 12
+    },
+    {
+      "name": "Lengua zapoteca",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 7
+    },
+    {
+      "name": "Valles Centrales de Oaxaca",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 8
+    },
+    {
+      "name": "Juchitán",
+      "facet": "Zapotecas y Monte Albán",
+      "known_at": 10
+    },
+    {
+      "name": "Mixtecas",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 7
+    },
+    {
+      "name": "Tumba 7 de Monte Albán",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 11
+    },
+    {
+      "name": "Alfonso Caso",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 12
+    },
+    {
+      "name": "Ocho Venado Garra de Jaguar",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 13
+    },
+    {
+      "name": "Códice Nuttall",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 14
+    },
+    {
+      "name": "Códice Vindobonensis",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 14
+    },
+    {
+      "name": "Códice Bodley",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 15
+    },
+    {
+      "name": "Códice de piel de venado",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 11
+    },
+    {
+      "name": "Códice en biombo",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 12
+    },
+    {
+      "name": "Orfebrería mixteca",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 10
+    },
+    {
+      "name": "Cera perdida",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 13
+    },
+    {
+      "name": "Pectoral de oro de la Tumba 7",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 13
+    },
+    {
+      "name": "Cráneo con mosaico de turquesa",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 12
+    },
+    {
+      "name": "Mixteca Alta",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 12
+    },
+    {
+      "name": "Tilantongo",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 14
+    },
+    {
+      "name": "Ñuu Savi",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 13
+    },
+    {
+      "name": "Lengua mixteca",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 8
+    },
+    {
+      "name": "Estilo Mixteca-Puebla",
+      "facet": "Mixtecas: códices y orfebrería",
+      "known_at": 14
+    },
+    {
+      "name": "Toltecas",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 7
+    },
+    {
+      "name": "Tula",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 7
+    },
+    {
+      "name": "Tollan",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 11
+    },
+    {
+      "name": "Ce Ácatl Topiltzin Quetzalcóatl",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 12
+    },
+    {
+      "name": "Coatepantli",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 13
+    },
+    {
+      "name": "Pirámide de Tlahuizcalpantecuhtli",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 13
+    },
+    {
+      "name": "Palacio Quemado",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 13
+    },
+    {
+      "name": "Mixcóatl",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 14
+    },
+    {
+      "name": "Huémac",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 14
+    },
+    {
+      "name": "Toltecáyotl",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 14
+    },
+    {
+      "name": "Templo de los Guerreros de Chichén Itzá",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 11
+    },
+    {
+      "name": "Atlas (titán)",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 9
+    },
+    {
+      "name": "Pectoral de mariposa",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 13
+    },
+    {
+      "name": "Guerreros toltecas",
+      "facet": "Toltecas, Tula y los atlantes",
+      "known_at": 9
+    },
+    {
+      "name": "Pirámide de los Nichos",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 8
+    },
+    {
+      "name": "Papantla",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 7
+    },
+    {
+      "name": "Juego de Pelota Sur de El Tajín",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 13
+    },
+    {
+      "name": "Tajín Chico",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 13
+    },
+    {
+      "name": "Caritas sonrientes",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 11
+    },
+    {
+      "name": "Yugos y palmas",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 14
+    },
+    {
+      "name": "Totonacapan",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 13
+    },
+    {
+      "name": "Lengua totonaca",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 10
+    },
+    {
+      "name": "Danza de los Negritos",
+      "facet": "Totonacas y El Tajín",
+      "known_at": 13
+    },
+    {
+      "name": "Tarascos",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 9
+    },
+    {
+      "name": "Yácatas",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 11
+    },
+    {
+      "name": "Ihuatzio",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 13
+    },
+    {
+      "name": "Cazonci",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 12
+    },
+    {
+      "name": "Relación de Michoacán",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 13
+    },
+    {
+      "name": "Curicaueri",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 14
+    },
+    {
+      "name": "Metalurgia purépecha del cobre",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 12
+    },
+    {
+      "name": "Tumbas de tiro",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 12
+    },
+    {
+      "name": "Perros de Colima",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 8
+    },
+    {
+      "name": "Guachimontones",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 11
+    },
+    {
+      "name": "Maquetas de Nayarit",
+      "facet": "Purépechas y Occidente de México",
+      "known_at": 14
+    },
+    {
+      "name": "Casas Grandes",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 10
+    },
+    {
+      "name": "Puertas en forma de T",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 12
+    },
+    {
+      "name": "Guacamayas de Paquimé",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 11
+    },
+    {
+      "name": "Cerámica de Mata Ortiz",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 11
+    },
+    {
+      "name": "Juan Quezada",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 14
+    },
+    {
+      "name": "Cuarenta Casas",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 12
+    },
+    {
+      "name": "Cueva de la Olla",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 14
+    },
+    {
+      "name": "La Quemada",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 12
+    },
+    {
+      "name": "Chalchihuites",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Mogollón",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 14
+    },
+    {
+      "name": "Cultura Trincheras",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 14
+    },
+    {
+      "name": "Aridoamérica",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 9
+    },
+    {
+      "name": "Oasisamérica",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 11
+    },
+    {
+      "name": "Rarámuris",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 7
+    },
+    {
+      "name": "Seris",
+      "facet": "Culturas del norte y Paquimé",
+      "known_at": 10
+    },
+    {
+      "name": "Santuario de la Virgen de los Remedios",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Tlachihualtépetl",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Pirámide de las Serpientes Emplumadas de Xochicalco",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Observatorio de Xochicalco",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Mural de la Batalla de Cacaxtla",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Cantona",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Volcán Xitle",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 12
+    },
+    {
+      "name": "Tlatilco",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Tepozteco",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 8
+    },
+    {
+      "name": "Teotenango",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Tamtoc",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 13
+    },
+    {
+      "name": "Huastecos",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 9
+    },
+    {
+      "name": "Plazuelas",
+      "facet": "Cholula, Xochicalco y otras ciudades",
+      "known_at": 14
+    },
+    {
+      "name": "Huehuetéotl",
+      "facet": "Dioses compartidos de Mesoamérica",
+      "known_at": 11
+    },
+    {
+      "name": "Ehécatl",
+      "facet": "Dioses compartidos de Mesoamérica",
+      "known_at": 11
+    },
+    {
+      "name": "Huehuecóyotl",
+      "facet": "Dioses compartidos de Mesoamérica",
+      "known_at": 13
+    },
+    {
+      "name": "Juego de pelota mesoamericano",
+      "facet": "Juego de pelota, calendario y vida diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Tlachtli",
+      "facet": "Juego de pelota, calendario y vida diaria",
+      "known_at": 12
+    },
+    {
+      "name": "Anillo del juego de pelota",
+      "facet": "Juego de pelota, calendario y vida diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Ciclo de 52 años",
+      "facet": "Juego de pelota, calendario y vida diaria",
+      "known_at": 12
+    },
+    {
+      "name": "Numeración vigesimal",
+      "facet": "Juego de pelota, calendario y vida diaria",
+      "known_at": 11
+    },
+    {
+      "name": "El Paraguas del Museo de Antropología",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 10
+    },
+    {
+      "name": "INAH",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 9
+    },
+    {
+      "name": "Leopoldo Batres",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 14
+    },
+    {
+      "name": "Manuel Gamio",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 14
+    },
+    {
+      "name": "Matthew Stirling",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 14
+    },
+    {
+      "name": "Museo de Antropología de Xalapa",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 11
+    },
+    {
+      "name": "Museo de las Culturas de Oaxaca",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 13
+    },
+    {
+      "name": "Zona arqueológica",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 5
+    },
+    {
+      "name": "Patrimonio Mundial de la UNESCO",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 8
+    },
+    {
+      "name": "Mesoamérica",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 8
+    },
+    {
+      "name": "Arqueoastronomía",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 13
+    },
+    {
+      "name": "Datación por radiocarbono",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 12
+    },
+    {
+      "name": "Lidar",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 13
+    },
+    {
+      "name": "Repatriación de piezas arqueológicas",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 12
+    },
+    {
+      "name": "Lenguas indígenas de México",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 7
+    },
+    {
+      "name": "Danza de los Concheros",
+      "facet": "Arqueología, museos y legado vivo",
+      "known_at": 11
+    }
+  ]
+}

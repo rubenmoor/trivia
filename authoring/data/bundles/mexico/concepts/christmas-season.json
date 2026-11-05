@@ -1,0 +1,752 @@
+{
+  "subcategory": "christmas-season",
+  "facets": [
+    "Las posadas y sus letanías",
+    "Piñatas y aguinaldos",
+    "Pastorelas y teatro navideño",
+    "Nacimientos y figuras del belén",
+    "Cena de Nochebuena",
+    "Ponche, buñuelos y dulces navideños",
+    "Flor de Nochebuena y plantas de temporada",
+    "Rosca de Reyes y Día de Reyes",
+    "Día de la Candelaria y tamales",
+    "Villancicos y música navideña",
+    "Fechas del calendario decembrino",
+    "Historia y origen de las tradiciones"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Posada",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 3
+    },
+    {
+      "name": "Pedir posada",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 4
+    },
+    {
+      "name": "Letanía",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 10
+    },
+    {
+      "name": "Mesoneros",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 11
+    },
+    {
+      "name": "Entren santos peregrinos",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 6
+    },
+    {
+      "name": "No sean inhumanos",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 10
+    },
+    {
+      "name": "Velitas",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 3
+    },
+    {
+      "name": "Farolitos de papel",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 6
+    },
+    {
+      "name": "Nueve posadas",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 5
+    },
+    {
+      "name": "Ora pro nobis",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 12
+    },
+    {
+      "name": "Rosario",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 8
+    },
+    {
+      "name": "Posada de la oficina",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 8
+    },
+    {
+      "name": "Matracas",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 9
+    },
+    {
+      "name": "Procesión",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 5
+    },
+    {
+      "name": "Andas de los peregrinos",
+      "facet": "Las posadas y sus letanías",
+      "known_at": 12
+    },
+    {
+      "name": "Venda",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 3
+    },
+    {
+      "name": "Palo de la piñata",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 2
+    },
+    {
+      "name": "No quiero oro ni quiero plata",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 7
+    },
+    {
+      "name": "Cacahuates",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 3
+    },
+    {
+      "name": "Piñata de estrella",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 5
+    },
+    {
+      "name": "Aguinaldo navideño (bolsita de dulces)",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 5
+    },
+    {
+      "name": "Aguinaldo de fin de año (prestación laboral)",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 10
+    },
+    {
+      "name": "Ley Federal del Trabajo",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 13
+    },
+    {
+      "name": "Piñatero",
+      "facet": "Piñatas y aguinaldos",
+      "known_at": 9
+    },
+    {
+      "name": "Pastores",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 4
+    },
+    {
+      "name": "Luzbel",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 11
+    },
+    {
+      "name": "Arcángel San Miguel",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 8
+    },
+    {
+      "name": "Bato",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 11
+    },
+    {
+      "name": "Gila",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 11
+    },
+    {
+      "name": "Bras",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 12
+    },
+    {
+      "name": "Ermitaño",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 12
+    },
+    {
+      "name": "Bartolo",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 12
+    },
+    {
+      "name": "Pastorela de Tepotzotlán",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 12
+    },
+    {
+      "name": "Teatro de evangelización",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 13
+    },
+    {
+      "name": "Auto sacramental",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 13
+    },
+    {
+      "name": "Cayado",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 10
+    },
+    {
+      "name": "Pastorela política",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 11
+    },
+    {
+      "name": "Coloquio de pastores",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 14
+    },
+    {
+      "name": "Danza de pastoras",
+      "facet": "Pastorelas y teatro navideño",
+      "known_at": 12
+    },
+    {
+      "name": "Nacimiento",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 2
+    },
+    {
+      "name": "Niño Dios",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 2
+    },
+    {
+      "name": "Virgen María",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 3
+    },
+    {
+      "name": "San José",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 3
+    },
+    {
+      "name": "Pesebre",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 4
+    },
+    {
+      "name": "Mula y buey",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 5
+    },
+    {
+      "name": "Ángel del nacimiento",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 3
+    },
+    {
+      "name": "Estrella de Belén",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 3
+    },
+    {
+      "name": "Portal de Belén",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 4
+    },
+    {
+      "name": "Heno",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 8
+    },
+    {
+      "name": "Musgo",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 6
+    },
+    {
+      "name": "Río de papel aluminio",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 7
+    },
+    {
+      "name": "Figuras de barro de Tlaquepaque",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 12
+    },
+    {
+      "name": "Diablo del nacimiento",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 10
+    },
+    {
+      "name": "Acostar al Niño Dios",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 8
+    },
+    {
+      "name": "Esferas de Tlalpujahua",
+      "facet": "Nacimientos y figuras del belén",
+      "known_at": 11
+    },
+    {
+      "name": "Pavo",
+      "facet": "Cena de Nochebuena",
+      "known_at": 3
+    },
+    {
+      "name": "Pierna de cerdo",
+      "facet": "Cena de Nochebuena",
+      "known_at": 5
+    },
+    {
+      "name": "Lomo en ciruela",
+      "facet": "Cena de Nochebuena",
+      "known_at": 9
+    },
+    {
+      "name": "Revoltijo",
+      "facet": "Cena de Nochebuena",
+      "known_at": 10
+    },
+    {
+      "name": "Ensalada de manzana",
+      "facet": "Cena de Nochebuena",
+      "known_at": 5
+    },
+    {
+      "name": "Espagueti blanco",
+      "facet": "Cena de Nochebuena",
+      "known_at": 6
+    },
+    {
+      "name": "Puré de papa",
+      "facet": "Cena de Nochebuena",
+      "known_at": 3
+    },
+    {
+      "name": "Recalentado",
+      "facet": "Cena de Nochebuena",
+      "known_at": 6
+    },
+    {
+      "name": "Chiles güeros",
+      "facet": "Cena de Nochebuena",
+      "known_at": 10
+    },
+    {
+      "name": "Mole",
+      "facet": "Cena de Nochebuena",
+      "known_at": 3
+    },
+    {
+      "name": "Buñuelos de viento",
+      "facet": "Ponche, buñuelos y dulces navideños",
+      "known_at": 11
+    },
+    {
+      "name": "Piquete",
+      "facet": "Ponche, buñuelos y dulces navideños",
+      "known_at": 8
+    },
+    {
+      "name": "Turrón",
+      "facet": "Ponche, buñuelos y dulces navideños",
+      "known_at": 5
+    },
+    {
+      "name": "Polvorones",
+      "facet": "Ponche, buñuelos y dulces navideños",
+      "known_at": 6
+    },
+    {
+      "name": "Jarrito de barro",
+      "facet": "Ponche, buñuelos y dulces navideños",
+      "known_at": 6
+    },
+    {
+      "name": "Flor de Nochebuena",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 2
+    },
+    {
+      "name": "Cuetlaxóchitl",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 12
+    },
+    {
+      "name": "Poinsettia",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 11
+    },
+    {
+      "name": "Brácteas",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 13
+    },
+    {
+      "name": "Euphorbia pulcherrima",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 15
+    },
+    {
+      "name": "Árbol de Navidad",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 1
+    },
+    {
+      "name": "Pino",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 2
+    },
+    {
+      "name": "Muérdago",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 6
+    },
+    {
+      "name": "Día Nacional de la Flor de Nochebuena",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 14
+    },
+    {
+      "name": "Nochebuena blanca",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 8
+    },
+    {
+      "name": "Corona de Adviento",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 6
+    },
+    {
+      "name": "Amecameca",
+      "facet": "Flor de Nochebuena y plantas de temporada",
+      "known_at": 13
+    },
+    {
+      "name": "Muñequito de la rosca",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 4
+    },
+    {
+      "name": "Melchor",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 5
+    },
+    {
+      "name": "Gaspar",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 5
+    },
+    {
+      "name": "Baltasar",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 5
+    },
+    {
+      "name": "Carta a los Reyes Magos",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 3
+    },
+    {
+      "name": "Globo con la carta",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 6
+    },
+    {
+      "name": "Zapatos para los Reyes",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 4
+    },
+    {
+      "name": "Oro, incienso y mirra",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 6
+    },
+    {
+      "name": "Mirra",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 8
+    },
+    {
+      "name": "Camello",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 3
+    },
+    {
+      "name": "Rey Herodes",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 9
+    },
+    {
+      "name": "Rosca monumental del Zócalo",
+      "facet": "Rosca de Reyes y Día de Reyes",
+      "known_at": 11
+    },
+    {
+      "name": "Tamal de rajas con queso",
+      "facet": "Día de la Candelaria y tamales",
+      "known_at": 5
+    },
+    {
+      "name": "Manteca",
+      "facet": "Día de la Candelaria y tamales",
+      "known_at": 7
+    },
+    {
+      "name": "Presentación de Jesús en el Templo",
+      "facet": "Día de la Candelaria y tamales",
+      "known_at": 12
+    },
+    {
+      "name": "Vestir al Niño Dios",
+      "facet": "Día de la Candelaria y tamales",
+      "known_at": 8
+    },
+    {
+      "name": "Padrinos del Niño Dios",
+      "facet": "Día de la Candelaria y tamales",
+      "known_at": 9
+    },
+    {
+      "name": "Villancico",
+      "facet": "Villancicos y música navideña",
+      "known_at": 7
+    },
+    {
+      "name": "Noche de paz",
+      "facet": "Villancicos y música navideña",
+      "known_at": 3
+    },
+    {
+      "name": "A la nanita nana",
+      "facet": "Villancicos y música navideña",
+      "known_at": 6
+    },
+    {
+      "name": "Los pastores a Belén",
+      "facet": "Villancicos y música navideña",
+      "known_at": 7
+    },
+    {
+      "name": "El niño del tambor",
+      "facet": "Villancicos y música navideña",
+      "known_at": 4
+    },
+    {
+      "name": "Blanca Navidad",
+      "facet": "Villancicos y música navideña",
+      "known_at": 4
+    },
+    {
+      "name": "Feliz Navidad (canción)",
+      "facet": "Villancicos y música navideña",
+      "known_at": 3
+    },
+    {
+      "name": "Rodolfo el reno",
+      "facet": "Villancicos y música navideña",
+      "known_at": 3
+    },
+    {
+      "name": "Navidad, Navidad (Cascabel)",
+      "facet": "Villancicos y música navideña",
+      "known_at": 3
+    },
+    {
+      "name": "La Rama",
+      "facet": "Villancicos y música navideña",
+      "known_at": 12
+    },
+    {
+      "name": "Navidades (álbum de Luis Miguel)",
+      "facet": "Villancicos y música navideña",
+      "known_at": 10
+    },
+    {
+      "name": "Las mañanitas a la Virgen de Guadalupe",
+      "facet": "Villancicos y música navideña",
+      "known_at": 7
+    },
+    {
+      "name": "Día de la Virgen de Guadalupe",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 4
+    },
+    {
+      "name": "16 de diciembre",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 6
+    },
+    {
+      "name": "Navidad",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 1
+    },
+    {
+      "name": "Misa de Gallo",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 8
+    },
+    {
+      "name": "Día de los Santos Inocentes",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 7
+    },
+    {
+      "name": "Inocente palomita",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 7
+    },
+    {
+      "name": "Fin de Año",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 1
+    },
+    {
+      "name": "Doce uvas",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 5
+    },
+    {
+      "name": "Salir con la maleta",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 6
+    },
+    {
+      "name": "Ropa interior roja o amarilla",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 7
+    },
+    {
+      "name": "Lentejas en la cartera",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 9
+    },
+    {
+      "name": "Maratón Guadalupe-Reyes",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 7
+    },
+    {
+      "name": "Adviento",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 9
+    },
+    {
+      "name": "Inmaculada Concepción",
+      "facet": "Fechas del calendario decembrino",
+      "known_at": 12
+    },
+    {
+      "name": "Fray Diego de Soria",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 14
+    },
+    {
+      "name": "Convento de San Agustín de Acolman",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 12
+    },
+    {
+      "name": "Misas de aguinaldo",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Panquetzaliztli",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 14
+    },
+    {
+      "name": "Frailes franciscanos",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 11
+    },
+    {
+      "name": "Frailes agustinos",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 12
+    },
+    {
+      "name": "Papa Sixto V",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 15
+    },
+    {
+      "name": "Marco Polo",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 9
+    },
+    {
+      "name": "Pignatta",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 12
+    },
+    {
+      "name": "Domingo de piñata",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 13
+    },
+    {
+      "name": "Santa Claus",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 1
+    },
+    {
+      "name": "Tonantzin",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 12
+    },
+    {
+      "name": "San Francisco de Asís",
+      "facet": "Historia y origen de las tradiciones",
+      "known_at": 10
+    }
+  ]
+}

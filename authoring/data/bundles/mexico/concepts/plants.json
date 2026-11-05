@@ -1,0 +1,1057 @@
+{
+  "subcategory": "plants",
+  "facets": [
+    "Cactáceas y suculentas",
+    "Agaves y magueyes",
+    "Flores de Día de Muertos",
+    "Flores mexicanas que conquistaron el mundo",
+    "Plantas de la milpa",
+    "Chiles y especias nativas",
+    "Frutos nativos de México",
+    "Árboles emblemáticos mexicanos",
+    "Plantas medicinales tradicionales",
+    "Bosques, selvas y manglares",
+    "Plantas en símbolos y leyendas",
+    "Nombres náhuatl de plantas"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 5,
+      "made_of": 3,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nopal",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 1
+    },
+    {
+      "name": "Tuna",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 2
+    },
+    {
+      "name": "Nopalitos",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 3
+    },
+    {
+      "name": "Biznaga",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 6
+    },
+    {
+      "name": "Acitrón",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 10
+    },
+    {
+      "name": "Saguaro",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 7
+    },
+    {
+      "name": "Órgano",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 6
+    },
+    {
+      "name": "Cardón",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 11
+    },
+    {
+      "name": "Garambullo",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 12
+    },
+    {
+      "name": "Viejito",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 10
+    },
+    {
+      "name": "Xoconostle",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 10
+    },
+    {
+      "name": "Choya",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 12
+    },
+    {
+      "name": "Echeveria",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 11
+    },
+    {
+      "name": "Cola de burro",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 9
+    },
+    {
+      "name": "Candelilla",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 13
+    },
+    {
+      "name": "Ocotillo",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 12
+    },
+    {
+      "name": "Reserva de la Biosfera Tehuacán-Cuicatlán",
+      "facet": "Cactáceas y suculentas",
+      "known_at": 13
+    },
+    {
+      "name": "Agave azul",
+      "facet": "Agaves y magueyes",
+      "known_at": 7
+    },
+    {
+      "name": "Pulque",
+      "facet": "Agaves y magueyes",
+      "known_at": 8
+    },
+    {
+      "name": "Aguamiel",
+      "facet": "Agaves y magueyes",
+      "known_at": 10
+    },
+    {
+      "name": "Maguey pulquero",
+      "facet": "Agaves y magueyes",
+      "known_at": 8
+    },
+    {
+      "name": "Chinicuil",
+      "facet": "Agaves y magueyes",
+      "known_at": 12
+    },
+    {
+      "name": "Jimador",
+      "facet": "Agaves y magueyes",
+      "known_at": 11
+    },
+    {
+      "name": "Piña de agave",
+      "facet": "Agaves y magueyes",
+      "known_at": 9
+    },
+    {
+      "name": "Mixiote",
+      "facet": "Agaves y magueyes",
+      "known_at": 9
+    },
+    {
+      "name": "Quiote",
+      "facet": "Agaves y magueyes",
+      "known_at": 12
+    },
+    {
+      "name": "Sotol",
+      "facet": "Agaves y magueyes",
+      "known_at": 13
+    },
+    {
+      "name": "Bacanora",
+      "facet": "Agaves y magueyes",
+      "known_at": 13
+    },
+    {
+      "name": "Raicilla",
+      "facet": "Agaves y magueyes",
+      "known_at": 14
+    },
+    {
+      "name": "Barbacoa en penca",
+      "facet": "Agaves y magueyes",
+      "known_at": 7
+    },
+    {
+      "name": "Paisaje agavero de Tequila",
+      "facet": "Agaves y magueyes",
+      "known_at": 12
+    },
+    {
+      "name": "Ixtle",
+      "facet": "Agaves y magueyes",
+      "known_at": 12
+    },
+    {
+      "name": "Tinacal",
+      "facet": "Agaves y magueyes",
+      "known_at": 14
+    },
+    {
+      "name": "Cempasúchil",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 2
+    },
+    {
+      "name": "Mano de león",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 9
+    },
+    {
+      "name": "Flor de nube",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 8
+    },
+    {
+      "name": "Gladiola",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 7
+    },
+    {
+      "name": "Crisantemo",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 8
+    },
+    {
+      "name": "Alhelí",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 11
+    },
+    {
+      "name": "Copal",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 7
+    },
+    {
+      "name": "Ofrenda de muertos",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 2
+    },
+    {
+      "name": "Arco floral de la ofrenda",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 6
+    },
+    {
+      "name": "Camino de pétalos",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 4
+    },
+    {
+      "name": "San Andrés Mixquic",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 12
+    },
+    {
+      "name": "Clavel",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 5
+    },
+    {
+      "name": "Rosa",
+      "facet": "Flores de Día de Muertos",
+      "known_at": 2
+    },
+    {
+      "name": "Nochebuena",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 2
+    },
+    {
+      "name": "Dalia",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 7
+    },
+    {
+      "name": "Cosmos",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Zinnia",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Tigridia",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 13
+    },
+    {
+      "name": "Girasol",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 2
+    },
+    {
+      "name": "Nardo",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 10
+    },
+    {
+      "name": "Flor de mayo",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Manto de la Virgen",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 11
+    },
+    {
+      "name": "Maravilla",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Joel Roberts Poinsett",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Francisco Hernández",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 14
+    },
+    {
+      "name": "Vicente Cervantes",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 15
+    },
+    {
+      "name": "Flor de izote",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 12
+    },
+    {
+      "name": "Orquídea",
+      "facet": "Flores mexicanas que conquistaron el mundo",
+      "known_at": 4
+    },
+    {
+      "name": "Maíz",
+      "facet": "Plantas de la milpa",
+      "known_at": 1
+    },
+    {
+      "name": "Frijol",
+      "facet": "Plantas de la milpa",
+      "known_at": 1
+    },
+    {
+      "name": "Calabaza",
+      "facet": "Plantas de la milpa",
+      "known_at": 1
+    },
+    {
+      "name": "Milpa",
+      "facet": "Plantas de la milpa",
+      "known_at": 7
+    },
+    {
+      "name": "Elote",
+      "facet": "Plantas de la milpa",
+      "known_at": 1
+    },
+    {
+      "name": "Mazorca",
+      "facet": "Plantas de la milpa",
+      "known_at": 3
+    },
+    {
+      "name": "Huitlacoche",
+      "facet": "Plantas de la milpa",
+      "known_at": 8
+    },
+    {
+      "name": "Flor de calabaza",
+      "facet": "Plantas de la milpa",
+      "known_at": 4
+    },
+    {
+      "name": "Teocintle",
+      "facet": "Plantas de la milpa",
+      "known_at": 12
+    },
+    {
+      "name": "Quelite",
+      "facet": "Plantas de la milpa",
+      "known_at": 9
+    },
+    {
+      "name": "Quintonil",
+      "facet": "Plantas de la milpa",
+      "known_at": 12
+    },
+    {
+      "name": "Verdolaga",
+      "facet": "Plantas de la milpa",
+      "known_at": 8
+    },
+    {
+      "name": "Huauzontle",
+      "facet": "Plantas de la milpa",
+      "known_at": 10
+    },
+    {
+      "name": "Pápalo",
+      "facet": "Plantas de la milpa",
+      "known_at": 10
+    },
+    {
+      "name": "Amaranto",
+      "facet": "Plantas de la milpa",
+      "known_at": 7
+    },
+    {
+      "name": "Chía",
+      "facet": "Plantas de la milpa",
+      "known_at": 6
+    },
+    {
+      "name": "Jitomate",
+      "facet": "Plantas de la milpa",
+      "known_at": 1
+    },
+    {
+      "name": "Tomate verde",
+      "facet": "Plantas de la milpa",
+      "known_at": 4
+    },
+    {
+      "name": "Chilacayote",
+      "facet": "Plantas de la milpa",
+      "known_at": 12
+    },
+    {
+      "name": "Nixtamalización",
+      "facet": "Plantas de la milpa",
+      "known_at": 11
+    },
+    {
+      "name": "Maíz azul",
+      "facet": "Plantas de la milpa",
+      "known_at": 5
+    },
+    {
+      "name": "Coa",
+      "facet": "Plantas de la milpa",
+      "known_at": 12
+    },
+    {
+      "name": "Chile jalapeño",
+      "facet": "Chiles y especias nativas",
+      "known_at": 3
+    },
+    {
+      "name": "Chile habanero",
+      "facet": "Chiles y especias nativas",
+      "known_at": 4
+    },
+    {
+      "name": "Chile poblano",
+      "facet": "Chiles y especias nativas",
+      "known_at": 5
+    },
+    {
+      "name": "Chile chipotle",
+      "facet": "Chiles y especias nativas",
+      "known_at": 6
+    },
+    {
+      "name": "Chile ancho",
+      "facet": "Chiles y especias nativas",
+      "known_at": 9
+    },
+    {
+      "name": "Chile guajillo",
+      "facet": "Chiles y especias nativas",
+      "known_at": 8
+    },
+    {
+      "name": "Chile serrano",
+      "facet": "Chiles y especias nativas",
+      "known_at": 5
+    },
+    {
+      "name": "Chiltepín",
+      "facet": "Chiles y especias nativas",
+      "known_at": 11
+    },
+    {
+      "name": "Chile pasilla",
+      "facet": "Chiles y especias nativas",
+      "known_at": 9
+    },
+    {
+      "name": "Chile de árbol",
+      "facet": "Chiles y especias nativas",
+      "known_at": 7
+    },
+    {
+      "name": "Chile chilaca",
+      "facet": "Chiles y especias nativas",
+      "known_at": 11
+    },
+    {
+      "name": "Vainilla",
+      "facet": "Chiles y especias nativas",
+      "known_at": 3
+    },
+    {
+      "name": "Achiote",
+      "facet": "Chiles y especias nativas",
+      "known_at": 8
+    },
+    {
+      "name": "Epazote",
+      "facet": "Chiles y especias nativas",
+      "known_at": 7
+    },
+    {
+      "name": "Hoja santa",
+      "facet": "Chiles y especias nativas",
+      "known_at": 11
+    },
+    {
+      "name": "Pimienta gorda",
+      "facet": "Chiles y especias nativas",
+      "known_at": 11
+    },
+    {
+      "name": "Orégano mexicano",
+      "facet": "Chiles y especias nativas",
+      "known_at": 9
+    },
+    {
+      "name": "Capsaicina",
+      "facet": "Chiles y especias nativas",
+      "known_at": 11
+    },
+    {
+      "name": "Escala Scoville",
+      "facet": "Chiles y especias nativas",
+      "known_at": 11
+    },
+    {
+      "name": "Chile en nogada",
+      "facet": "Chiles y especias nativas",
+      "known_at": 7
+    },
+    {
+      "name": "Aguacate",
+      "facet": "Frutos nativos de México",
+      "known_at": 1
+    },
+    {
+      "name": "Cacao",
+      "facet": "Frutos nativos de México",
+      "known_at": 4
+    },
+    {
+      "name": "Papaya",
+      "facet": "Frutos nativos de México",
+      "known_at": 2
+    },
+    {
+      "name": "Guayaba",
+      "facet": "Frutos nativos de México",
+      "known_at": 3
+    },
+    {
+      "name": "Zapote negro",
+      "facet": "Frutos nativos de México",
+      "known_at": 8
+    },
+    {
+      "name": "Mamey",
+      "facet": "Frutos nativos de México",
+      "known_at": 6
+    },
+    {
+      "name": "Chicozapote",
+      "facet": "Frutos nativos de México",
+      "known_at": 9
+    },
+    {
+      "name": "Tejocote",
+      "facet": "Frutos nativos de México",
+      "known_at": 6
+    },
+    {
+      "name": "Capulín",
+      "facet": "Frutos nativos de México",
+      "known_at": 10
+    },
+    {
+      "name": "Ciruela mexicana",
+      "facet": "Frutos nativos de México",
+      "known_at": 10
+    },
+    {
+      "name": "Pitahaya",
+      "facet": "Frutos nativos de México",
+      "known_at": 6
+    },
+    {
+      "name": "Guanábana",
+      "facet": "Frutos nativos de México",
+      "known_at": 6
+    },
+    {
+      "name": "Nanche",
+      "facet": "Frutos nativos de México",
+      "known_at": 9
+    },
+    {
+      "name": "Anona",
+      "facet": "Frutos nativos de México",
+      "known_at": 12
+    },
+    {
+      "name": "Zapote blanco",
+      "facet": "Frutos nativos de México",
+      "known_at": 12
+    },
+    {
+      "name": "Guaje",
+      "facet": "Frutos nativos de México",
+      "known_at": 11
+    },
+    {
+      "name": "Cuajinicuil",
+      "facet": "Frutos nativos de México",
+      "known_at": 13
+    },
+    {
+      "name": "Pitaya",
+      "facet": "Frutos nativos de México",
+      "known_at": 10
+    },
+    {
+      "name": "Ahuehuete",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Ceiba",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Oyamel",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Ocote",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Jacaranda",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 5
+    },
+    {
+      "name": "Chicle",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 4
+    },
+    {
+      "name": "Mezquite",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 8
+    },
+    {
+      "name": "Primavera",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Caoba",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Cedro rojo",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Encino",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Parota",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Palo verde",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Árbol de las manitas",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Ramón",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Palo mulato",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Tatsugoro Matsumoto",
+      "facet": "Árboles emblemáticos mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Árnica mexicana",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Gordolobo",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 9
+    },
+    {
+      "name": "Toronjil",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Ruda",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Estafiate",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Cuachalalate",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Sábila",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Té de limón",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 4
+    },
+    {
+      "name": "Manzanilla",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 2
+    },
+    {
+      "name": "Hierbabuena",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 3
+    },
+    {
+      "name": "Damiana",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 13
+    },
+    {
+      "name": "Muicle",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Tila",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 7
+    },
+    {
+      "name": "Chaya",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 12
+    },
+    {
+      "name": "Herbolaria",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Códice de la Cruz-Badiano",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 14
+    },
+    {
+      "name": "Temazcal",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 8
+    },
+    {
+      "name": "Cola de caballo",
+      "facet": "Plantas medicinales tradicionales",
+      "known_at": 10
+    },
+    {
+      "name": "Selva Lacandona",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 8
+    },
+    {
+      "name": "Mangle rojo",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 10
+    },
+    {
+      "name": "Reserva de la Biosfera El Cielo",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 13
+    },
+    {
+      "name": "Bosque mesófilo de montaña",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 12
+    },
+    {
+      "name": "Los Chimalapas",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 14
+    },
+    {
+      "name": "Los Tuxtlas",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 12
+    },
+    {
+      "name": "Marismas Nacionales",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 14
+    },
+    {
+      "name": "Pantanos de Centla",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 13
+    },
+    {
+      "name": "Desierto de los Leones",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 9
+    },
+    {
+      "name": "Montes Azules",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 13
+    },
+    {
+      "name": "Bosque La Primavera",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 12
+    },
+    {
+      "name": "Ría Lagartos",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 11
+    },
+    {
+      "name": "Selva Maya",
+      "facet": "Bosques, selvas y manglares",
+      "known_at": 9
+    },
+    {
+      "name": "Fundación de Tenochtitlan",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 6
+    },
+    {
+      "name": "Leyenda del cempasúchil",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 9
+    },
+    {
+      "name": "Leyenda de la nochebuena",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Mayahuel",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 12
+    },
+    {
+      "name": "Xochipilli",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Xochiquétzal",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Centéotl",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Árbol de la Noche Triste",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 10
+    },
+    {
+      "name": "Hombres de maíz",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Popol Vuh",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Quetzalcóatl y las hormigas",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 11
+    },
+    {
+      "name": "Rosas de la Virgen de Guadalupe",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 6
+    },
+    {
+      "name": "Juan Diego",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 6
+    },
+    {
+      "name": "Cruz de pericón",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Tlalocan",
+      "facet": "Plantas en símbolos y leyendas",
+      "known_at": 13
+    },
+    {
+      "name": "Xóchitl",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 8
+    },
+    {
+      "name": "Cacahuate",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 2
+    },
+    {
+      "name": "Ejote",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 4
+    },
+    {
+      "name": "Camote",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 3
+    },
+    {
+      "name": "Jícama",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 4
+    },
+    {
+      "name": "Chayote",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 4
+    },
+    {
+      "name": "Zacate",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 6
+    },
+    {
+      "name": "Huizache",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 11
+    },
+    {
+      "name": "Tule",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 9
+    },
+    {
+      "name": "Popote",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 3
+    },
+    {
+      "name": "Jícara",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 7
+    },
+    {
+      "name": "Mecate",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 7
+    },
+    {
+      "name": "Metl",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 13
+    },
+    {
+      "name": "Chocolate",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 1
+    },
+    {
+      "name": "Totomoxtle",
+      "facet": "Nombres náhuatl de plantas",
+      "known_at": 13
+    }
+  ]
+}

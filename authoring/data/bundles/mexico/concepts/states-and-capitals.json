@@ -1,0 +1,1187 @@
+{
+  "subcategory": "states-and-capitals",
+  "facets": [
+    "Capitales de los estados",
+    "Gentilicios estatales y de capitales",
+    "Origen de los nombres de los estados",
+    "Ubicación, regiones y estados vecinos",
+    "Apodos de las ciudades capitales",
+    "Costas, mares y fronteras estatales",
+    "Récords y datos de los estados",
+    "Platillos típicos de cada estado",
+    "Fiestas y tradiciones de cada estado",
+    "Artesanías y productos estatales",
+    "Monumentos y centros históricos capitalinos",
+    "Historia de la formación de los estados"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 5,
+      "odd_one_out": 5,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 5,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Guadalajara",
+      "facet": "Capitales de los estados",
+      "known_at": 3
+    },
+    {
+      "name": "Monterrey",
+      "facet": "Capitales de los estados",
+      "known_at": 3
+    },
+    {
+      "name": "Mérida",
+      "facet": "Capitales de los estados",
+      "known_at": 5
+    },
+    {
+      "name": "Toluca",
+      "facet": "Capitales de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Cuernavaca",
+      "facet": "Capitales de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Chilpancingo",
+      "facet": "Capitales de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "Saltillo",
+      "facet": "Capitales de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Hermosillo",
+      "facet": "Capitales de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Culiacán",
+      "facet": "Capitales de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Tuxtla Gutiérrez",
+      "facet": "Capitales de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Villahermosa",
+      "facet": "Capitales de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Chetumal",
+      "facet": "Capitales de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "Xalapa",
+      "facet": "Capitales de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Morelia",
+      "facet": "Capitales de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Pachuca",
+      "facet": "Capitales de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Ciudad Victoria",
+      "facet": "Capitales de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "La Paz",
+      "facet": "Capitales de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Mexicali",
+      "facet": "Capitales de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Tepic",
+      "facet": "Capitales de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "San Francisco de Campeche",
+      "facet": "Capitales de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "Tapatío",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Regiomontano",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Jarocho",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Chilango",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 3
+    },
+    {
+      "name": "Yucateco",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Poblano",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Oaxaqueño",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 4
+    },
+    {
+      "name": "Sinaloense",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Hidrocálido",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Potosino",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 8
+    },
+    {
+      "name": "Queretano",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Chiapaneco",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 6
+    },
+    {
+      "name": "Tabasqueño",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Michoacano",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 5
+    },
+    {
+      "name": "Guanajuatense",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Mexiquense",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Sudcaliforniano",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Neoleonés",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Tlaxcalteca",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 7
+    },
+    {
+      "name": "Saltillense",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 10
+    },
+    {
+      "name": "Moreliano",
+      "facet": "Gentilicios estatales y de capitales",
+      "known_at": 9
+    },
+    {
+      "name": "Michoacán",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Jalisco",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Zacatecas",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Tamaulipas",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Oaxaca",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Chiapas",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Tlaxcala",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Chihuahua",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Guanajuato",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 10
+    },
+    {
+      "name": "Querétaro",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Yucatán",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Nayarit",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Quintana Roo",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "Morelos",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Hidalgo",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Guerrero",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Durango",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Aguascalientes",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Nuevo León",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Coahuila",
+      "facet": "Origen de los nombres de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Península de Yucatán",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 6
+    },
+    {
+      "name": "El Bajío",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 9
+    },
+    {
+      "name": "La Huasteca",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 10
+    },
+    {
+      "name": "Península de Baja California",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 5
+    },
+    {
+      "name": "Sierra Madre Occidental",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 9
+    },
+    {
+      "name": "Sierra Madre Oriental",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 9
+    },
+    {
+      "name": "Istmo de Tehuantepec",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 10
+    },
+    {
+      "name": "Comarca Lagunera",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 11
+    },
+    {
+      "name": "Los Altos de Jalisco",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 12
+    },
+    {
+      "name": "La Mixteca",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 11
+    },
+    {
+      "name": "Tierra Caliente",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 11
+    },
+    {
+      "name": "Valle de México",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 7
+    },
+    {
+      "name": "Eje Neovolcánico",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 11
+    },
+    {
+      "name": "Desierto de Sonora",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 8
+    },
+    {
+      "name": "Barrancas del Cobre",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 9
+    },
+    {
+      "name": "Los Altos de Chiapas",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 12
+    },
+    {
+      "name": "Sierra Gorda",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 12
+    },
+    {
+      "name": "Costa Chica",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 11
+    },
+    {
+      "name": "Soconusco",
+      "facet": "Ubicación, regiones y estados vecinos",
+      "known_at": 13
+    },
+    {
+      "name": "La Perla de Occidente",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 9
+    },
+    {
+      "name": "La Sultana del Norte",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 9
+    },
+    {
+      "name": "La Ciudad Blanca",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 9
+    },
+    {
+      "name": "La Ciudad de la Eterna Primavera",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 8
+    },
+    {
+      "name": "La Ciudad de la Cantera Rosa",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 11
+    },
+    {
+      "name": "La Ciudad de los Ángeles",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 9
+    },
+    {
+      "name": "La Bella Airosa",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 11
+    },
+    {
+      "name": "La Atenas de México",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 13
+    },
+    {
+      "name": "La Atenas Veracruzana",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 11
+    },
+    {
+      "name": "La Verde Antequera",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 12
+    },
+    {
+      "name": "La Ciudad del Sol",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 12
+    },
+    {
+      "name": "La Ciudad de las Palmeras",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 12
+    },
+    {
+      "name": "La ciudad que capturó el sol",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 12
+    },
+    {
+      "name": "La Perla del Guadiana",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 12
+    },
+    {
+      "name": "La Esmeralda del Sureste",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 12
+    },
+    {
+      "name": "La Ciudad de los Jardines",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 13
+    },
+    {
+      "name": "La Ciudad de los Tres Ríos",
+      "facet": "Apodos de las ciudades capitales",
+      "known_at": 12
+    },
+    {
+      "name": "Golfo de México",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 3
+    },
+    {
+      "name": "Mar de Cortés",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 7
+    },
+    {
+      "name": "Océano Pacífico",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 2
+    },
+    {
+      "name": "Mar Caribe",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 4
+    },
+    {
+      "name": "Río Bravo",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 6
+    },
+    {
+      "name": "Río Suchiate",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Río Usumacinta",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Río Hondo",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 13
+    },
+    {
+      "name": "Bahía de Banderas",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Bahía de Campeche",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna de Términos",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Isla Tiburón",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Cozumel",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 6
+    },
+    {
+      "name": "Isla Mujeres",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 7
+    },
+    {
+      "name": "Islas Marías",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Isla Guadalupe",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Arrecife Mesoamericano",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Garita de San Ysidro",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Golfo de Tehuantepec",
+      "facet": "Costas, mares y fronteras estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Chihuahua (estado más grande)",
+      "facet": "Récords y datos de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Tlaxcala (estado más pequeño)",
+      "facet": "Récords y datos de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Estado de México (estado más poblado)",
+      "facet": "Récords y datos de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Baja California Sur (estado menos poblado)",
+      "facet": "Récords y datos de los estados",
+      "known_at": 10
+    },
+    {
+      "name": "Popocatépetl",
+      "facet": "Récords y datos de los estados",
+      "known_at": 5
+    },
+    {
+      "name": "Lago de Chapala",
+      "facet": "Récords y datos de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Volcán de Colima",
+      "facet": "Récords y datos de los estados",
+      "known_at": 10
+    },
+    {
+      "name": "Paricutín",
+      "facet": "Récords y datos de los estados",
+      "known_at": 9
+    },
+    {
+      "name": "Sistema Sac Actun",
+      "facet": "Récords y datos de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Cañón del Sumidero",
+      "facet": "Récords y datos de los estados",
+      "known_at": 7
+    },
+    {
+      "name": "Sótano de las Golondrinas",
+      "facet": "Récords y datos de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Cueva de los Cristales",
+      "facet": "Récords y datos de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Árbol del Tule",
+      "facet": "Récords y datos de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Ciudad de México (entidad número 32)",
+      "facet": "Récords y datos de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "Mole poblano",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 3
+    },
+    {
+      "name": "Cochinita pibil",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 4
+    },
+    {
+      "name": "Chiles en nogada",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 5
+    },
+    {
+      "name": "Birria",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 4
+    },
+    {
+      "name": "Torta ahogada",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 6
+    },
+    {
+      "name": "Cabrito",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 7
+    },
+    {
+      "name": "Tlayuda",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 6
+    },
+    {
+      "name": "Pozole",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 3
+    },
+    {
+      "name": "Pan de cazón",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 11
+    },
+    {
+      "name": "Papadzules",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 10
+    },
+    {
+      "name": "Pejelagarto asado",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 10
+    },
+    {
+      "name": "Pastes",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 8
+    },
+    {
+      "name": "Machaca",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 8
+    },
+    {
+      "name": "Aguachile",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 8
+    },
+    {
+      "name": "Chilorio",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 10
+    },
+    {
+      "name": "Huachinango a la veracruzana",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 7
+    },
+    {
+      "name": "Enchiladas potosinas",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 9
+    },
+    {
+      "name": "Corundas",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 10
+    },
+    {
+      "name": "Carnitas",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 4
+    },
+    {
+      "name": "Cecina de Yecapixtla",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 11
+    },
+    {
+      "name": "Chapulines",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 5
+    },
+    {
+      "name": "Tacos de pescado de Ensenada",
+      "facet": "Platillos típicos de cada estado",
+      "known_at": 8
+    },
+    {
+      "name": "Guelaguetza",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 6
+    },
+    {
+      "name": "Feria Nacional de San Marcos",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 8
+    },
+    {
+      "name": "Festival Internacional Cervantino",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 9
+    },
+    {
+      "name": "Carnaval de Veracruz",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 7
+    },
+    {
+      "name": "Carnaval de Mazatlán",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 9
+    },
+    {
+      "name": "Noche de Muertos en Janitzio",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 7
+    },
+    {
+      "name": "Voladores de Papantla",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 6
+    },
+    {
+      "name": "Parachicos",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 10
+    },
+    {
+      "name": "Fiestas de Octubre",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 10
+    },
+    {
+      "name": "Hanal Pixán",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 10
+    },
+    {
+      "name": "Xantolo",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 11
+    },
+    {
+      "name": "Danza del Venado",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 9
+    },
+    {
+      "name": "Equinoccio en Chichén Itzá",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 7
+    },
+    {
+      "name": "Noche de Rábanos",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 9
+    },
+    {
+      "name": "Fiesta de la Candelaria de Tlacotalpan",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 11
+    },
+    {
+      "name": "Danza de los Viejitos",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 7
+    },
+    {
+      "name": "Festival Internacional del Globo",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 9
+    },
+    {
+      "name": "Carnaval de Huejotzingo",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 12
+    },
+    {
+      "name": "Feria Internacional del Caballo de Texcoco",
+      "facet": "Fiestas y tradiciones de cada estado",
+      "known_at": 11
+    },
+    {
+      "name": "Talavera poblana",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 7
+    },
+    {
+      "name": "Alebrijes",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 4
+    },
+    {
+      "name": "Barro negro",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 8
+    },
+    {
+      "name": "Plata de Taxco",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 8
+    },
+    {
+      "name": "Tequila",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 5
+    },
+    {
+      "name": "Mezcal",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 7
+    },
+    {
+      "name": "Arte huichol de chaquira",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 9
+    },
+    {
+      "name": "Rebozo de Santa María del Río",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Hamaca yucateca",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 7
+    },
+    {
+      "name": "Guitarras de Paracho",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Laca de Olinalá",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Sarape de Saltillo",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 9
+    },
+    {
+      "name": "Ámbar de Chiapas",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Cajeta de Celaya",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 8
+    },
+    {
+      "name": "Vainilla de Papantla",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 9
+    },
+    {
+      "name": "Sombrero de jipi",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 12
+    },
+    {
+      "name": "Árbol de la vida de Metepec",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Cobre martillado de Santa Clara del Cobre",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 11
+    },
+    {
+      "name": "Henequén",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 10
+    },
+    {
+      "name": "Café de Chiapas",
+      "facet": "Artesanías y productos estatales",
+      "known_at": 8
+    },
+    {
+      "name": "Hospicio Cabañas",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 10
+    },
+    {
+      "name": "Catedral de Guadalajara",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 7
+    },
+    {
+      "name": "Macroplaza",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 9
+    },
+    {
+      "name": "Cerro de la Silla",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 7
+    },
+    {
+      "name": "Acueducto de Querétaro",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 8
+    },
+    {
+      "name": "Acueducto de Morelia",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 10
+    },
+    {
+      "name": "Callejón del Beso",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 7
+    },
+    {
+      "name": "Alhóndiga de Granaditas",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 8
+    },
+    {
+      "name": "Capilla del Rosario",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 11
+    },
+    {
+      "name": "Paseo de Montejo",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 9
+    },
+    {
+      "name": "Palacio de Cortés",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 10
+    },
+    {
+      "name": "Murallas de Campeche",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 9
+    },
+    {
+      "name": "Cerro de la Bufa",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 10
+    },
+    {
+      "name": "Faro del Comercio",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 11
+    },
+    {
+      "name": "Templo de Santo Domingo de Guzmán",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 10
+    },
+    {
+      "name": "Teatro Juárez",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 11
+    },
+    {
+      "name": "Malecón de La Paz",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 11
+    },
+    {
+      "name": "Monumento a la Revolución",
+      "facet": "Monumentos y centros históricos capitalinos",
+      "known_at": 6
+    },
+    {
+      "name": "Constitución de 1824",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 10
+    },
+    {
+      "name": "Tratado de Guadalupe Hidalgo",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 10
+    },
+    {
+      "name": "Independencia de Texas",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 8
+    },
+    {
+      "name": "República de Yucatán",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Estado de Occidente",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Territorio de Quintana Roo",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Distrito Federal",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 6
+    },
+    {
+      "name": "Reforma política de la Ciudad de México",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Territorio de Baja California",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Anexión de Chiapas",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Provincias Internas",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Intendencias de la Nueva España",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Venta de La Mesilla",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 12
+    },
+    {
+      "name": "Coahuila y Texas",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 11
+    },
+    {
+      "name": "Nuevo Santander",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 13
+    },
+    {
+      "name": "Separación de Campeche",
+      "facet": "Historia de la formación de los estados",
+      "known_at": 12
+    }
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "subcategory": "day-of-the-dead",
+  "facets": [
+    "La ofrenda y sus elementos",
+    "Pan de muerto y dulces típicos",
+    "Comida y bebida de la temporada",
+    "La Catrina y José Guadalupe Posada",
+    "Calaveritas literarias y dichos",
+    "Flor de cempasúchil y adornos",
+    "Panteones, velas y la noche de vigilia",
+    "Orígenes prehispánicos y Mictlán",
+    "Calendario: días y ánimas",
+    "Celebraciones regionales (Pátzcuaro, Mixquic)",
+    "Día de Muertos en el cine y la tele",
+    "Desfiles, disfraces y celebración actual"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 5,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fotografía del difunto",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 3
+    },
+    {
+      "name": "Comida favorita del difunto",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 3
+    },
+    {
+      "name": "Agua en la ofrenda",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 6
+    },
+    {
+      "name": "Sal en la ofrenda",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 8
+    },
+    {
+      "name": "Niveles de la ofrenda",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 8
+    },
+    {
+      "name": "Arco de la ofrenda",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 9
+    },
+    {
+      "name": "Cruz de ceniza",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 12
+    },
+    {
+      "name": "Juguetes para los niños difuntos",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 6
+    },
+    {
+      "name": "Imágenes de santos",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 8
+    },
+    {
+      "name": "Mantel blanco",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 9
+    },
+    {
+      "name": "Jabón y toalla para las ánimas",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 12
+    },
+    {
+      "name": "Bebida favorita del difunto",
+      "facet": "La ofrenda y sus elementos",
+      "known_at": 5
+    },
+    {
+      "name": "Bolita del pan de muerto",
+      "facet": "Pan de muerto y dulces típicos",
+      "known_at": 8
+    },
+    {
+      "name": "Azahar",
+      "facet": "Pan de muerto y dulces típicos",
+      "known_at": 11
+    },
+    {
+      "name": "Feria del Alfeñique de Toluca",
+      "facet": "Pan de muerto y dulces típicos",
+      "known_at": 12
+    },
+    {
+      "name": "Dulce de camote",
+      "facet": "Pan de muerto y dulces típicos",
+      "known_at": 8
+    },
+    {
+      "name": "Mandarina",
+      "facet": "Comida y bebida de la temporada",
+      "known_at": 5
+    },
+    {
+      "name": "Calabaza de Castilla",
+      "facet": "Comida y bebida de la temporada",
+      "known_at": 11
+    },
+    {
+      "name": "La Calavera Garbancera",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 12
+    },
+    {
+      "name": "Garbancera",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 13
+    },
+    {
+      "name": "Festival de Calaveras de Aguascalientes",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 11
+    },
+    {
+      "name": "Museo José Guadalupe Posada",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 13
+    },
+    {
+      "name": "Grabado",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 10
+    },
+    {
+      "name": "Litografía",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 12
+    },
+    {
+      "name": "Antonio Vanegas Arroyo",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 14
+    },
+    {
+      "name": "Catrín",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 8
+    },
+    {
+      "name": "Hojas volantes",
+      "facet": "La Catrina y José Guadalupe Posada",
+      "known_at": 13
+    },
+    {
+      "name": "Rima",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 5
+    },
+    {
+      "name": "El muerto al pozo y el vivo al gozo",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 9
+    },
+    {
+      "name": "Estirar la pata",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 6
+    },
+    {
+      "name": "Colgar los tenis",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 8
+    },
+    {
+      "name": "Chupar faros",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 11
+    },
+    {
+      "name": "Petatearse",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 11
+    },
+    {
+      "name": "Pasar a mejor vida",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 8
+    },
+    {
+      "name": "Entregar el equipo",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 12
+    },
+    {
+      "name": "Se lo cargó el payaso",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 10
+    },
+    {
+      "name": "La Flaca",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 9
+    },
+    {
+      "name": "La Huesuda",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 8
+    },
+    {
+      "name": "La Pelona",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 9
+    },
+    {
+      "name": "Calaca",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 7
+    },
+    {
+      "name": "El laberinto de la soledad",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 13
+    },
+    {
+      "name": "La muerte tiene permiso",
+      "facet": "Calaveritas literarias y dichos",
+      "known_at": 12
+    },
+    {
+      "name": "Flor de terciopelo",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 11
+    },
+    {
+      "name": "Tagetes erecta",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 14
+    },
+    {
+      "name": "Papel de china",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 6
+    },
+    {
+      "name": "Papel maché",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 8
+    },
+    {
+      "name": "Coronas de flores",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 7
+    },
+    {
+      "name": "Catrinas de barro",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 10
+    },
+    {
+      "name": "Color naranja",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 2
+    },
+    {
+      "name": "Color morado",
+      "facet": "Flor de cempasúchil y adornos",
+      "known_at": 9
+    },
+    {
+      "name": "Panteón",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 5
+    },
+    {
+      "name": "Velas",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 2
+    },
+    {
+      "name": "Veladoras",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 5
+    },
+    {
+      "name": "Cirio",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 10
+    },
+    {
+      "name": "Velación",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 9
+    },
+    {
+      "name": "Alumbrada",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 11
+    },
+    {
+      "name": "Tumba",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 3
+    },
+    {
+      "name": "Lápida",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 7
+    },
+    {
+      "name": "Mausoleo",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 10
+    },
+    {
+      "name": "Limpieza de tumbas",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 8
+    },
+    {
+      "name": "Mariachi en el panteón",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 6
+    },
+    {
+      "name": "Doblar de campanas",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 10
+    },
+    {
+      "name": "Rezo del rosario",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 8
+    },
+    {
+      "name": "Medianoche",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 4
+    },
+    {
+      "name": "Panteón de Dolores",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 12
+    },
+    {
+      "name": "Rotonda de las Personas Ilustres",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 12
+    },
+    {
+      "name": "La Llorona",
+      "facet": "Panteones, velas y la noche de vigilia",
+      "known_at": 6
+    },
+    {
+      "name": "Mictecacíhuatl",
+      "facet": "Orígenes prehispánicos y Mictlán",
+      "known_at": 12
+    },
+    {
+      "name": "Nueve niveles del Mictlán",
+      "facet": "Orígenes prehispánicos y Mictlán",
+      "known_at": 10
+    },
+    {
+      "name": "Chiconahuapan",
+      "facet": "Orígenes prehispánicos y Mictlán",
+      "known_at": 14
+    },
+    {
+      "name": "Huey Miccailhuitl",
+      "facet": "Orígenes prehispánicos y Mictlán",
+      "known_at": 14
+    },
+    {
+      "name": "Conquista española",
+      "facet": "Orígenes prehispánicos y Mictlán",
+      "known_at": 8
+    },
+    {
+      "name": "Sincretismo",
+      "facet": "Orígenes prehispánicos y Mictlán",
+      "known_at": 12
+    },
+    {
+      "name": "1 de noviembre",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 5
+    },
+    {
+      "name": "2 de noviembre",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 4
+    },
+    {
+      "name": "31 de octubre",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 6
+    },
+    {
+      "name": "28 de octubre",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 12
+    },
+    {
+      "name": "Día de los Fieles Difuntos",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 9
+    },
+    {
+      "name": "Angelitos",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 8
+    },
+    {
+      "name": "Muertos chiquitos",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 11
+    },
+    {
+      "name": "Muertos grandes",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 11
+    },
+    {
+      "name": "Ánimas",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 10
+    },
+    {
+      "name": "Ánimas del Purgatorio",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 11
+    },
+    {
+      "name": "Ánima sola",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 13
+    },
+    {
+      "name": "Misa de difuntos",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 9
+    },
+    {
+      "name": "Halloween",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 2
+    },
+    {
+      "name": "Patrimonio Cultural Inmaterial de la Humanidad",
+      "facet": "Calendario: días y ánimas",
+      "known_at": 10
+    },
+    {
+      "name": "Redes de mariposa",
+      "facet": "Celebraciones regionales (Pátzcuaro, Mixquic)",
+      "known_at": 10
+    },
+    {
+      "name": "Comparsas de Oaxaca",
+      "facet": "Celebraciones regionales (Pátzcuaro, Mixquic)",
+      "known_at": 12
+    },
+    {
+      "name": "Huaquechula",
+      "facet": "Celebraciones regionales (Pátzcuaro, Mixquic)",
+      "known_at": 13
+    },
+    {
+      "name": "Miguel Rivera",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 3
+    },
+    {
+      "name": "Héctor",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 3
+    },
+    {
+      "name": "Mamá Coco",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 3
+    },
+    {
+      "name": "Mamá Imelda",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 5
+    },
+    {
+      "name": "Ernesto de la Cruz",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 4
+    },
+    {
+      "name": "Recuérdame",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 3
+    },
+    {
+      "name": "Tierra de los Muertos",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 5
+    },
+    {
+      "name": "Gael García Bernal",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 10
+    },
+    {
+      "name": "El libro de la vida",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 7
+    },
+    {
+      "name": "Manolo Sánchez",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 9
+    },
+    {
+      "name": "Guillermo del Toro",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 9
+    },
+    {
+      "name": "Jorge R. Gutiérrez",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 13
+    },
+    {
+      "name": "La leyenda de la Nahuala",
+      "facet": "Día de Muertos en el cine y la tele",
+      "known_at": 11
+    },
+    {
+      "name": "Desfile de Día de Muertos de la Ciudad de México",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 8
+    },
+    {
+      "name": "Ofrenda monumental del Zócalo",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 9
+    },
+    {
+      "name": "Maquillaje de Catrina",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 4
+    },
+    {
+      "name": "Mega Procesión de Catrinas",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 11
+    },
+    {
+      "name": "Desfile de Alebrijes Monumentales",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 10
+    },
+    {
+      "name": "Pedro Linares",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 13
+    },
+    {
+      "name": "Pedir calaverita",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 6
+    },
+    {
+      "name": "Concurso de ofrendas",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 8
+    },
+    {
+      "name": "Mexicráneos",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 13
+    },
+    {
+      "name": "Mojigangas",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 12
+    },
+    {
+      "name": "La Llorona de Xochimilco",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 12
+    },
+    {
+      "name": "Disfraz de calavera",
+      "facet": "Desfiles, disfraces y celebración actual",
+      "known_at": 3
+    }
+  ]
+}

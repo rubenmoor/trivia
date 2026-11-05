@@ -1,0 +1,412 @@
+{
+  "subcategory": "ingredients",
+  "facets": [
+    "Chiles frescos y sus nombres",
+    "Chiles secos y ahumados",
+    "Picor y salsas de mesa",
+    "Maíz, milpa y variedades",
+    "Nixtamal, masa y tortilla",
+    "Frijol, calabaza y quelites",
+    "Jitomate, tomatillo y aguacate",
+    "Cacao, vainilla y endulzantes",
+    "Hierbas, especias y condimentos",
+    "Frutas y nopal mexicanos",
+    "Insectos y productos prehispánicos",
+    "Mercados, tianguis y origen regional"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 1,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jalapeño",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 2
+    },
+    {
+      "name": "Chile manzano",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 8
+    },
+    {
+      "name": "Chile güero",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 7
+    },
+    {
+      "name": "Chilaca",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 11
+    },
+    {
+      "name": "Chile de agua",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 12
+    },
+    {
+      "name": "Chile xcatic",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Chile cera",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Pimiento morrón",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 4
+    },
+    {
+      "name": "Chile mirasol",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 14
+    },
+    {
+      "name": "Chile relleno",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 4
+    },
+    {
+      "name": "Rajas de poblano",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 6
+    },
+    {
+      "name": "Capsicum",
+      "facet": "Chiles frescos y sus nombres",
+      "known_at": 13
+    },
+    {
+      "name": "Chipotle",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 4
+    },
+    {
+      "name": "Chile cascabel",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 10
+    },
+    {
+      "name": "Chile morita",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 11
+    },
+    {
+      "name": "Chilhuacle",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 14
+    },
+    {
+      "name": "Chile pasilla oaxaqueño",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 13
+    },
+    {
+      "name": "Chile puya",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 11
+    },
+    {
+      "name": "Chile meco",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 14
+    },
+    {
+      "name": "Chile costeño",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 13
+    },
+    {
+      "name": "Chipotles en adobo",
+      "facet": "Chiles secos y ahumados",
+      "known_at": 6
+    },
+    {
+      "name": "Salsa borracha",
+      "facet": "Picor y salsas de mesa",
+      "known_at": 12
+    },
+    {
+      "name": "Chile toreado",
+      "facet": "Picor y salsas de mesa",
+      "known_at": 7
+    },
+    {
+      "name": "Salsa de cacahuate",
+      "facet": "Picor y salsas de mesa",
+      "known_at": 10
+    },
+    {
+      "name": "Carolina Reaper",
+      "facet": "Picor y salsas de mesa",
+      "known_at": 11
+    },
+    {
+      "name": "Enchilarse",
+      "facet": "Picor y salsas de mesa",
+      "known_at": 3
+    },
+    {
+      "name": "Salsa taquera",
+      "facet": "Picor y salsas de mesa",
+      "known_at": 5
+    },
+    {
+      "name": "Olote",
+      "facet": "Maíz, milpa y variedades",
+      "known_at": 7
+    },
+    {
+      "name": "Jilote",
+      "facet": "Maíz, milpa y variedades",
+      "known_at": 12
+    },
+    {
+      "name": "Maíz criollo",
+      "facet": "Maíz, milpa y variedades",
+      "known_at": 10
+    },
+    {
+      "name": "Valle de Tehuacán",
+      "facet": "Maíz, milpa y variedades",
+      "known_at": 14
+    },
+    {
+      "name": "Totopo",
+      "facet": "Nixtamal, masa y tortilla",
+      "known_at": 4
+    },
+    {
+      "name": "Frijol negro",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 2
+    },
+    {
+      "name": "Frijol pinto",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 6
+    },
+    {
+      "name": "Frijol bayo",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 8
+    },
+    {
+      "name": "Ayocote",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 13
+    },
+    {
+      "name": "Frijoles refritos",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 3
+    },
+    {
+      "name": "Pepita",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 4
+    },
+    {
+      "name": "Chepil",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 13
+    },
+    {
+      "name": "Pipián",
+      "facet": "Frijol, calabaza y quelites",
+      "known_at": 9
+    },
+    {
+      "name": "Xitomatl",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 11
+    },
+    {
+      "name": "Miltomate",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 13
+    },
+    {
+      "name": "Jitomate saladet",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 8
+    },
+    {
+      "name": "Jitomate bola",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 8
+    },
+    {
+      "name": "Aguacate Hass",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 7
+    },
+    {
+      "name": "Aguacate criollo",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 10
+    },
+    {
+      "name": "Ahuacatl",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 11
+    },
+    {
+      "name": "Hoja de aguacate",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 10
+    },
+    {
+      "name": "Uruapan",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 9
+    },
+    {
+      "name": "Hueso de aguacate",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 3
+    },
+    {
+      "name": "Entomatadas",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 7
+    },
+    {
+      "name": "Cáscara de tomate verde",
+      "facet": "Jitomate, tomatillo y aguacate",
+      "known_at": 10
+    },
+    {
+      "name": "Miel de agave",
+      "facet": "Cacao, vainilla y endulzantes",
+      "known_at": 7
+    },
+    {
+      "name": "Semillas de cacao como moneda",
+      "facet": "Cacao, vainilla y endulzantes",
+      "known_at": 9
+    },
+    {
+      "name": "Cilantro",
+      "facet": "Hierbas, especias y condimentos",
+      "known_at": 2
+    },
+    {
+      "name": "Comino",
+      "facet": "Hierbas, especias y condimentos",
+      "known_at": 6
+    },
+    {
+      "name": "Sal de Colima",
+      "facet": "Hierbas, especias y condimentos",
+      "known_at": 13
+    },
+    {
+      "name": "Tequesquite",
+      "facet": "Hierbas, especias y condimentos",
+      "known_at": 13
+    },
+    {
+      "name": "Pericón",
+      "facet": "Hierbas, especias y condimentos",
+      "known_at": 14
+    },
+    {
+      "name": "Cebolla morada",
+      "facet": "Hierbas, especias y condimentos",
+      "known_at": 4
+    },
+    {
+      "name": "Limón",
+      "facet": "Hierbas, especias y condimentos",
+      "known_at": 1
+    },
+    {
+      "name": "Granada china",
+      "facet": "Frutas y nopal mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Mulli",
+      "facet": "Insectos y productos prehispánicos",
+      "known_at": 13
+    },
+    {
+      "name": "Central de Abasto",
+      "facet": "Mercados, tianguis y origen regional",
+      "known_at": 7
+    },
+    {
+      "name": "Siete moles de Oaxaca",
+      "facet": "Mercados, tianguis y origen regional",
+      "known_at": 10
+    },
+    {
+      "name": "Milpa Alta",
+      "facet": "Mercados, tianguis y origen regional",
+      "known_at": 11
+    },
+    {
+      "name": "Regateo",
+      "facet": "Mercados, tianguis y origen regional",
+      "known_at": 5
+    },
+    {
+      "name": "Cocina tradicional mexicana Patrimonio de la UNESCO",
+      "facet": "Mercados, tianguis y origen regional",
+      "known_at": 11
+    },
+    {
+      "name": "Cacao de Tabasco",
+      "facet": "Mercados, tianguis y origen regional",
+      "known_at": 9
+    },
+    {
+      "name": "Habanero de la Península de Yucatán",
+      "facet": "Mercados, tianguis y origen regional",
+      "known_at": 11
+    }
+  ]
+}

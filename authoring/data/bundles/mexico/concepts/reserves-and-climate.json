@@ -1,0 +1,728 @@
+{
+  "subcategory": "reserves-and-climate",
+  "facets": [
+    "Reservas de la biosfera",
+    "Parques nacionales y áreas protegidas",
+    "Volcanes y actividad volcánica",
+    "Sismos y placas tectónicas",
+    "Huracanes y tormentas tropicales",
+    "Climas y regiones naturales",
+    "Lluvias, sequías y temporadas",
+    "Cenotes, cuevas y cráteres",
+    "Costas, arrecifes y mares",
+    "Espectáculos y migraciones naturales",
+    "El clima en el habla diaria",
+    "Protección civil y prevención"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 5,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 1,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "El Pinacate y Gran Desierto de Altar",
+      "facet": "Reservas de la biosfera",
+      "known_at": 11
+    },
+    {
+      "name": "El Triunfo",
+      "facet": "Reservas de la biosfera",
+      "known_at": 14
+    },
+    {
+      "name": "Ría Celestún",
+      "facet": "Reservas de la biosfera",
+      "known_at": 10
+    },
+    {
+      "name": "Alto Golfo de California y Delta del Río Colorado",
+      "facet": "Reservas de la biosfera",
+      "known_at": 13
+    },
+    {
+      "name": "Tehuacán-Cuicatlán",
+      "facet": "Reservas de la biosfera",
+      "known_at": 13
+    },
+    {
+      "name": "Mapimí",
+      "facet": "Reservas de la biosfera",
+      "known_at": 13
+    },
+    {
+      "name": "Sierra de Manantlán",
+      "facet": "Reservas de la biosfera",
+      "known_at": 14
+    },
+    {
+      "name": "La Encrucijada",
+      "facet": "Reservas de la biosfera",
+      "known_at": 14
+    },
+    {
+      "name": "Sierra de la Laguna",
+      "facet": "Reservas de la biosfera",
+      "known_at": 14
+    },
+    {
+      "name": "Programa El Hombre y la Biosfera",
+      "facet": "Reservas de la biosfera",
+      "known_at": 14
+    },
+    {
+      "name": "Zona núcleo",
+      "facet": "Reservas de la biosfera",
+      "known_at": 13
+    },
+    {
+      "name": "Cumbres de Monterrey",
+      "facet": "Parques nacionales y áreas protegidas",
+      "known_at": 11
+    },
+    {
+      "name": "Sierra de San Pedro Mártir",
+      "facet": "Parques nacionales y áreas protegidas",
+      "known_at": 13
+    },
+    {
+      "name": "El Chico",
+      "facet": "Parques nacionales y áreas protegidas",
+      "known_at": 13
+    },
+    {
+      "name": "Constitución de 1857",
+      "facet": "Parques nacionales y áreas protegidas",
+      "known_at": 14
+    },
+    {
+      "name": "Islas del Golfo de California",
+      "facet": "Parques nacionales y áreas protegidas",
+      "known_at": 13
+    },
+    {
+      "name": "Tacaná",
+      "facet": "Volcanes y actividad volcánica",
+      "known_at": 13
+    },
+    {
+      "name": "La Malinche",
+      "facet": "Volcanes y actividad volcánica",
+      "known_at": 10
+    },
+    {
+      "name": "Jorullo",
+      "facet": "Volcanes y actividad volcánica",
+      "known_at": 14
+    },
+    {
+      "name": "Pedregal de San Ángel",
+      "facet": "Volcanes y actividad volcánica",
+      "known_at": 11
+    },
+    {
+      "name": "Sismo de 1985",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 6
+    },
+    {
+      "name": "Sismo de 2017",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 5
+    },
+    {
+      "name": "Sismo de Chiapas de 2017",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Placa de Cocos",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 9
+    },
+    {
+      "name": "Placa de Norteamérica",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 8
+    },
+    {
+      "name": "Placa del Pacífico",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 9
+    },
+    {
+      "name": "Placa de Rivera",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Placa del Caribe",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Fosa Mesoamericana",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 13
+    },
+    {
+      "name": "Falla de San Andrés",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 10
+    },
+    {
+      "name": "Subducción",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 10
+    },
+    {
+      "name": "Epicentro",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 6
+    },
+    {
+      "name": "Magnitud",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 7
+    },
+    {
+      "name": "Sismógrafo",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 6
+    },
+    {
+      "name": "Réplica",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 6
+    },
+    {
+      "name": "Tsunami",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 4
+    },
+    {
+      "name": "Servicio Sismológico Nacional",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 9
+    },
+    {
+      "name": "Suelo lacustre",
+      "facet": "Sismos y placas tectónicas",
+      "known_at": 11
+    },
+    {
+      "name": "Huracán Otis",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 7
+    },
+    {
+      "name": "Huracán Patricia",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 11
+    },
+    {
+      "name": "Huracán Paulina",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 12
+    },
+    {
+      "name": "Huracán Odile",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 12
+    },
+    {
+      "name": "Huracán Stan",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 13
+    },
+    {
+      "name": "Huracán Janet",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 14
+    },
+    {
+      "name": "Huracanes Ingrid y Manuel",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 13
+    },
+    {
+      "name": "Escala Saffir-Simpson",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 11
+    },
+    {
+      "name": "Ojo del huracán",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 5
+    },
+    {
+      "name": "Temporada de huracanes",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 5
+    },
+    {
+      "name": "Tormenta tropical",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 6
+    },
+    {
+      "name": "Depresión tropical",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 9
+    },
+    {
+      "name": "Marejada",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 9
+    },
+    {
+      "name": "Hurakán",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 12
+    },
+    {
+      "name": "Servicio Meteorológico Nacional",
+      "facet": "Huracanes y tormentas tropicales",
+      "known_at": 9
+    },
+    {
+      "name": "Desierto de Chihuahua",
+      "facet": "Climas y regiones naturales",
+      "known_at": 7
+    },
+    {
+      "name": "Trópico de Cáncer",
+      "facet": "Climas y regiones naturales",
+      "known_at": 8
+    },
+    {
+      "name": "Sierra Madre del Sur",
+      "facet": "Climas y regiones naturales",
+      "known_at": 9
+    },
+    {
+      "name": "Altiplano Mexicano",
+      "facet": "Climas y regiones naturales",
+      "known_at": 9
+    },
+    {
+      "name": "Selva baja caducifolia",
+      "facet": "Climas y regiones naturales",
+      "known_at": 13
+    },
+    {
+      "name": "Matorral xerófilo",
+      "facet": "Climas y regiones naturales",
+      "known_at": 13
+    },
+    {
+      "name": "Bosque de pino-encino",
+      "facet": "Climas y regiones naturales",
+      "known_at": 11
+    },
+    {
+      "name": "Megadiversidad",
+      "facet": "Climas y regiones naturales",
+      "known_at": 10
+    },
+    {
+      "name": "Clima templado",
+      "facet": "Climas y regiones naturales",
+      "known_at": 6
+    },
+    {
+      "name": "Temporada de lluvias",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 3
+    },
+    {
+      "name": "Temporada de secas",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 5
+    },
+    {
+      "name": "Canícula",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 8
+    },
+    {
+      "name": "Monzón mexicano",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 13
+    },
+    {
+      "name": "Granizo",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 2
+    },
+    {
+      "name": "Norte",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 9
+    },
+    {
+      "name": "Frente frío",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 6
+    },
+    {
+      "name": "Viento tehuano",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 13
+    },
+    {
+      "name": "Sistema Cutzamala",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 9
+    },
+    {
+      "name": "Sequía",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 4
+    },
+    {
+      "name": "Helada",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 6
+    },
+    {
+      "name": "Onda de calor",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 5
+    },
+    {
+      "name": "Tromba",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 8
+    },
+    {
+      "name": "Tolvanera",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 9
+    },
+    {
+      "name": "Nevada de 1967 en la Ciudad de México",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 12
+    },
+    {
+      "name": "Chaac",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 9
+    },
+    {
+      "name": "El Niño",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 9
+    },
+    {
+      "name": "Inundación",
+      "facet": "Lluvias, sequías y temporadas",
+      "known_at": 3
+    },
+    {
+      "name": "Cenote Zací",
+      "facet": "Cenotes, cuevas y cráteres",
+      "known_at": 13
+    },
+    {
+      "name": "Cenote Suytun",
+      "facet": "Cenotes, cuevas y cráteres",
+      "known_at": 12
+    },
+    {
+      "name": "Naia",
+      "facet": "Cenotes, cuevas y cráteres",
+      "known_at": 14
+    },
+    {
+      "name": "Cráter El Elegante",
+      "facet": "Cenotes, cuevas y cráteres",
+      "known_at": 14
+    },
+    {
+      "name": "Río subterráneo",
+      "facet": "Cenotes, cuevas y cráteres",
+      "known_at": 6
+    },
+    {
+      "name": "Isla Holbox",
+      "facet": "Costas, arrecifes y mares",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía de Acapulco",
+      "facet": "Costas, arrecifes y mares",
+      "known_at": 6
+    },
+    {
+      "name": "Playa Zicatela",
+      "facet": "Costas, arrecifes y mares",
+      "known_at": 13
+    },
+    {
+      "name": "Isla del Carmen",
+      "facet": "Costas, arrecifes y mares",
+      "known_at": 11
+    },
+    {
+      "name": "Arrecife de Veracruz",
+      "facet": "Costas, arrecifes y mares",
+      "known_at": 12
+    },
+    {
+      "name": "Flamenco rosa",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 5
+    },
+    {
+      "name": "Luciérnagas de Nanacamilpa",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 10
+    },
+    {
+      "name": "Volcán de los Murciélagos",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 12
+    },
+    {
+      "name": "Bioluminiscencia de Manialtepec",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 12
+    },
+    {
+      "name": "Ballena azul de Loreto",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 12
+    },
+    {
+      "name": "Mantarraya móbula",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 12
+    },
+    {
+      "name": "Eclipse total de 1991",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 11
+    },
+    {
+      "name": "Eclipse total de 2024",
+      "facet": "Espectáculos y migraciones naturales",
+      "known_at": 7
+    },
+    {
+      "name": "Aguacero",
+      "facet": "El clima en el habla diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Chipichipi",
+      "facet": "El clima en el habla diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Llovizna",
+      "facet": "El clima en el habla diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Sereno",
+      "facet": "El clima en el habla diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Resolana",
+      "facet": "El clima en el habla diaria",
+      "known_at": 9
+    },
+    {
+      "name": "Chiflón",
+      "facet": "El clima en el habla diaria",
+      "known_at": 10
+    },
+    {
+      "name": "Bochorno",
+      "facet": "El clima en el habla diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Calorón",
+      "facet": "El clima en el habla diaria",
+      "known_at": 3
+    },
+    {
+      "name": "Friazo",
+      "facet": "El clima en el habla diaria",
+      "known_at": 4
+    },
+    {
+      "name": "Ventarrón",
+      "facet": "El clima en el habla diaria",
+      "known_at": 6
+    },
+    {
+      "name": "Nubarrón",
+      "facet": "El clima en el habla diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Chubasco",
+      "facet": "El clima en el habla diaria",
+      "known_at": 8
+    },
+    {
+      "name": "Neblina",
+      "facet": "El clima en el habla diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Remolino",
+      "facet": "El clima en el habla diaria",
+      "known_at": 5
+    },
+    {
+      "name": "Te va a dar un aire",
+      "facet": "El clima en el habla diaria",
+      "known_at": 7
+    },
+    {
+      "name": "Aguas de mayo",
+      "facet": "El clima en el habla diaria",
+      "known_at": 10
+    },
+    {
+      "name": "Alerta Sísmica",
+      "facet": "Protección civil y prevención",
+      "known_at": 3
+    },
+    {
+      "name": "Simulacro Nacional",
+      "facet": "Protección civil y prevención",
+      "known_at": 4
+    },
+    {
+      "name": "No corro, no grito, no empujo",
+      "facet": "Protección civil y prevención",
+      "known_at": 3
+    },
+    {
+      "name": "Mochila de emergencia",
+      "facet": "Protección civil y prevención",
+      "known_at": 5
+    },
+    {
+      "name": "Punto de reunión",
+      "facet": "Protección civil y prevención",
+      "known_at": 4
+    },
+    {
+      "name": "Zona de menor riesgo",
+      "facet": "Protección civil y prevención",
+      "known_at": 5
+    },
+    {
+      "name": "Ruta de evacuación",
+      "facet": "Protección civil y prevención",
+      "known_at": 4
+    },
+    {
+      "name": "Topos",
+      "facet": "Protección civil y prevención",
+      "known_at": 8
+    },
+    {
+      "name": "Frida",
+      "facet": "Protección civil y prevención",
+      "known_at": 6
+    },
+    {
+      "name": "CENAPRED",
+      "facet": "Protección civil y prevención",
+      "known_at": 12
+    },
+    {
+      "name": "Plan DN-III-E",
+      "facet": "Protección civil y prevención",
+      "known_at": 11
+    },
+    {
+      "name": "Plan Marina",
+      "facet": "Protección civil y prevención",
+      "known_at": 12
+    },
+    {
+      "name": "Sistema de Alerta Temprana para Ciclones Tropicales",
+      "facet": "Protección civil y prevención",
+      "known_at": 13
+    },
+    {
+      "name": "Albergue temporal",
+      "facet": "Protección civil y prevención",
+      "known_at": 7
+    },
+    {
+      "name": "Atlas Nacional de Riesgos",
+      "facet": "Protección civil y prevención",
+      "known_at": 13,
+      "retired": "unaskable: El Atlas Nacional de Riesgos es una herramienta web; con estas opciones (récord o lugar en foto) no sale una pregunta justa sobre él."
+    },
+    {
+      "name": "911",
+      "facet": "Protección civil y prevención",
+      "known_at": 3
+    },
+    {
+      "name": "Día Nacional de Protección Civil",
+      "facet": "Protección civil y prevención",
+      "known_at": 10
+    },
+    {
+      "name": "Triángulo de la vida",
+      "facet": "Protección civil y prevención",
+      "known_at": 10
+    },
+    {
+      "name": "Radio de pilas",
+      "facet": "Protección civil y prevención",
+      "known_at": 6
+    }
+  ]
+}

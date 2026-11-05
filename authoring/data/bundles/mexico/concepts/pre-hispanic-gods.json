@@ -1,0 +1,412 @@
+{
+  "subcategory": "pre-hispanic-gods",
+  "facets": [
+    "Dioses mexicas principales",
+    "Dioses mayas y el Popol Vuh",
+    "Quetzalcóatl, la Serpiente Emplumada",
+    "Mitos de creación y los Cinco Soles",
+    "Fundación de Tenochtitlan y Aztlán",
+    "El Mictlán y el viaje de los muertos",
+    "Animales sagrados y nahuales",
+    "Calendario y rituales prehispánicos",
+    "Pirámides y templos de los dioses",
+    "Leyendas de amor y del cielo",
+    "Dioses de otros pueblos mesoamericanos",
+    "Palabras nahuas de los mitos"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Chicomecóatl",
+      "facet": "Dioses mexicas principales",
+      "known_at": 13
+    },
+    {
+      "name": "Tlazoltéotl",
+      "facet": "Dioses mexicas principales",
+      "known_at": 13
+    },
+    {
+      "name": "Tepeyóllotl",
+      "facet": "Dioses mexicas principales",
+      "known_at": 14
+    },
+    {
+      "name": "Hunahpú",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 10
+    },
+    {
+      "name": "Ixbalanqué",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 10
+    },
+    {
+      "name": "Ixmucané",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 13
+    },
+    {
+      "name": "Tepeu",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 13
+    },
+    {
+      "name": "Vucub Caquix",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 13
+    },
+    {
+      "name": "Zipacná",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 14
+    },
+    {
+      "name": "Kinich Ahau",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 12
+    },
+    {
+      "name": "Hun Camé",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 14
+    },
+    {
+      "name": "Ek Chuah",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 14
+    },
+    {
+      "name": "Ce Ácatl Topiltzin",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 13
+    },
+    {
+      "name": "Estrella de la mañana",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 11
+    },
+    {
+      "name": "Regreso de Quetzalcóatl",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 10
+    },
+    {
+      "name": "Descenso de la serpiente en el equinoccio",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 7
+    },
+    {
+      "name": "Tlahuizcalpantecuhtli",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 14
+    },
+    {
+      "name": "Tlillan Tlapallan",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 14
+    },
+    {
+      "name": "Engaño del espejo de Tezcatlipoca",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 13
+    },
+    {
+      "name": "Templo circular de Ehécatl",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 13
+    },
+    {
+      "name": "Quetzalcóatl convertido en hormiga",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 10
+    },
+    {
+      "name": "Leyenda de los Cinco Soles",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 9
+    },
+    {
+      "name": "Nanahuatzin",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 11
+    },
+    {
+      "name": "Tecciztécatl",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Cuatro Tezcatlipocas",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 13
+    },
+    {
+      "name": "Sol de Jaguar",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Sol de Viento",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Sol de Lluvia de Fuego",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Sol de Agua",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Nahui Ollin",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 11
+    },
+    {
+      "name": "Gigantes del primer sol",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Hombres convertidos en monos",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Hombres convertidos en peces",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 12
+    },
+    {
+      "name": "Hoguera divina de Teotihuacan",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 11
+    },
+    {
+      "name": "Águila devorando una serpiente",
+      "facet": "Fundación de Tenochtitlan y Aztlán",
+      "known_at": 3
+    },
+    {
+      "name": "Malinalxóchitl",
+      "facet": "Fundación de Tenochtitlan y Aztlán",
+      "known_at": 14
+    },
+    {
+      "name": "Tira de la Peregrinación",
+      "facet": "Fundación de Tenochtitlan y Aztlán",
+      "known_at": 12
+    },
+    {
+      "name": "Siete tribus nahuatlacas",
+      "facet": "Fundación de Tenochtitlan y Aztlán",
+      "known_at": 13
+    },
+    {
+      "name": "Flor de cempasúchil",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 4
+    },
+    {
+      "name": "Casa del Sol",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 13
+    },
+    {
+      "name": "Chichihuacuauhco",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 14
+    },
+    {
+      "name": "Huesos preciosos",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 12
+    },
+    {
+      "name": "Itzehecayan",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 13
+    },
+    {
+      "name": "Cerros que chocan",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 13
+    },
+    {
+      "name": "Cuenta de jade del difunto",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 14
+    },
+    {
+      "name": "Serpiente de cascabel",
+      "facet": "Animales sagrados y nahuales",
+      "known_at": 5
+    },
+    {
+      "name": "Guerreros águila",
+      "facet": "Animales sagrados y nahuales",
+      "known_at": 9
+    },
+    {
+      "name": "Guerreros jaguar",
+      "facet": "Animales sagrados y nahuales",
+      "known_at": 9
+    },
+    {
+      "name": "Danza de los Voladores",
+      "facet": "Calendario y rituales prehispánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Códice Borgia",
+      "facet": "Calendario y rituales prehispánicos",
+      "known_at": 13
+    },
+    {
+      "name": "El Castillo",
+      "facet": "Pirámides y templos de los dioses",
+      "known_at": 7
+    },
+    {
+      "name": "Pakal",
+      "facet": "Pirámides y templos de los dioses",
+      "known_at": 9
+    },
+    {
+      "name": "Cenote sagrado",
+      "facet": "Pirámides y templos de los dioses",
+      "known_at": 8
+    },
+    {
+      "name": "Popocatépetl e Iztaccíhuatl",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 4
+    },
+    {
+      "name": "Leyenda maya del colibrí",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 8
+    },
+    {
+      "name": "Sac Nicté",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 13
+    },
+    {
+      "name": "Xóchitl y Huitzilin",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 8
+    },
+    {
+      "name": "Citlalicue",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 14
+    },
+    {
+      "name": "Centzon Huitznáhuac",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 13
+    },
+    {
+      "name": "Pájaro Dziú",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 13
+    },
+    {
+      "name": "Ceiba sagrada",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 10
+    },
+    {
+      "name": "Matlalcueye",
+      "facet": "Leyendas de amor y del cielo",
+      "known_at": 13
+    },
+    {
+      "name": "Cabezas colosales olmecas",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 6
+    },
+    {
+      "name": "Xaratanga",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 14
+    },
+    {
+      "name": "Hombre-jaguar olmeca",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 12
+    },
+    {
+      "name": "Wixárikas",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 9
+    },
+    {
+      "name": "Onorúame",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 14
+    },
+    {
+      "name": "Pitao Cozobi",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 14
+    },
+    {
+      "name": "Hachäkyum",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 14
+    },
+    {
+      "name": "Teotl",
+      "facet": "Palabras nahuas de los mitos",
+      "known_at": 12
+    }
+  ]
+}

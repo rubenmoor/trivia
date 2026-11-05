@@ -1,0 +1,522 @@
+{
+  "subcategory": "civic-holidays",
+  "facets": [
+    "El Grito de Independencia",
+    "Héroes de la Independencia",
+    "Símbolos patrios",
+    "Desfile y ceremonias cívicas",
+    "Comida de la noche mexicana",
+    "Revolución y 20 de noviembre",
+    "Cinco de Mayo en Puebla",
+    "Efemérides del calendario escolar",
+    "Trajes y adornos tricolores",
+    "Monumentos y lugares patrios",
+    "Música, gritos y frases patrias"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "16 de septiembre de 1810",
+      "facet": "El Grito de Independencia",
+      "known_at": 4
+    },
+    {
+      "name": "Parroquia de Nuestra Señora de los Dolores",
+      "facet": "El Grito de Independencia",
+      "known_at": 11
+    },
+    {
+      "name": "Arenga del Grito",
+      "facet": "El Grito de Independencia",
+      "known_at": 8
+    },
+    {
+      "name": "Grito en los municipios",
+      "facet": "El Grito de Independencia",
+      "known_at": 7
+    },
+    {
+      "name": "Consumación de la Independencia",
+      "facet": "El Grito de Independencia",
+      "known_at": 10
+    },
+    {
+      "name": "Miguel Domínguez",
+      "facet": "Héroes de la Independencia",
+      "known_at": 12
+    },
+    {
+      "name": "Leyenda de la fundación de Tenochtitlan",
+      "facet": "Símbolos patrios",
+      "known_at": 7
+    },
+    {
+      "name": "Verde, blanco y rojo",
+      "facet": "Símbolos patrios",
+      "known_at": 2
+    },
+    {
+      "name": "Significado de los colores de la bandera",
+      "facet": "Símbolos patrios",
+      "known_at": 8
+    },
+    {
+      "name": "Ley sobre el Escudo, la Bandera y el Himno Nacionales",
+      "facet": "Símbolos patrios",
+      "known_at": 14
+    },
+    {
+      "name": "Estrofas del Himno Nacional",
+      "facet": "Símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Bandera del Ejército Trigarante",
+      "facet": "Símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Ramas de encino y laurel",
+      "facet": "Símbolos patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Peso mexicano",
+      "facet": "Símbolos patrios",
+      "known_at": 3
+    },
+    {
+      "name": "Escolta de bandera",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 4
+    },
+    {
+      "name": "Banda de guerra",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 4
+    },
+    {
+      "name": "Ceremonia de los lunes",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 3
+    },
+    {
+      "name": "Toque de bandera",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 8
+    },
+    {
+      "name": "Abanderado",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 6
+    },
+    {
+      "name": "Saludo a la bandera",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 4
+    },
+    {
+      "name": "Pase de lista de honor",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 10
+    },
+    {
+      "name": "Desfile deportivo del 20 de noviembre",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 6
+    },
+    {
+      "name": "Heroico Colegio Militar",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 8
+    },
+    {
+      "name": "Paso de aviones de la Fuerza Aérea",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 7
+    },
+    {
+      "name": "Secretaría de la Defensa Nacional",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 10
+    },
+    {
+      "name": "Secretaría de Marina",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 10
+    },
+    {
+      "name": "Guardia Nacional",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 8
+    },
+    {
+      "name": "Tablas rítmicas",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 7
+    },
+    {
+      "name": "Pirámides humanas",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 6
+    },
+    {
+      "name": "Izamiento de la bandera monumental",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 6
+    },
+    {
+      "name": "Salva de 21 cañonazos",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 11
+    },
+    {
+      "name": "Mano en el pecho",
+      "facet": "Desfile y ceremonias cívicas",
+      "known_at": 4
+    },
+    {
+      "name": "Tostadas",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 3
+    },
+    {
+      "name": "Sopes",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "Pambazos",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 6
+    },
+    {
+      "name": "Chalupas",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 6
+    },
+    {
+      "name": "Gorditas",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "Quesadillas",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 2,
+      "retired": "used_up: Ya se preguntó qué es una quesadilla; con un acercamiento o un conteo solo saldría una pregunta de relleno."
+    },
+    {
+      "name": "Granada",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 8
+    },
+    {
+      "name": "Antojitos mexicanos",
+      "facet": "Comida de la noche mexicana",
+      "known_at": 4
+    },
+    {
+      "name": "Revolución Mexicana",
+      "facet": "Revolución y 20 de noviembre",
+      "known_at": 4
+    },
+    {
+      "name": "20 de noviembre de 1910",
+      "facet": "Revolución y 20 de noviembre",
+      "known_at": 5
+    },
+    {
+      "name": "5 de mayo de 1862",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 5
+    },
+    {
+      "name": "Ejército francés",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 6
+    },
+    {
+      "name": "Segunda Intervención Francesa",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 10
+    },
+    {
+      "name": "Carlota de México",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 11
+    },
+    {
+      "name": "Segundo Imperio Mexicano",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 10
+    },
+    {
+      "name": "Desfile del 5 de mayo en Puebla",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 7
+    },
+    {
+      "name": "Charles de Lorencez",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 13
+    },
+    {
+      "name": "Sitio de Puebla de 1863",
+      "facet": "Cinco de Mayo en Puebla",
+      "known_at": 13
+    },
+    {
+      "name": "Natalicio de Benito Juárez",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 5
+    },
+    {
+      "name": "Día de las Madres",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 2
+    },
+    {
+      "name": "Día del Maestro",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 4
+    },
+    {
+      "name": "12 de octubre",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 6
+    },
+    {
+      "name": "Día del Trabajo",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 4
+    },
+    {
+      "name": "Día del Ejército",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 11
+    },
+    {
+      "name": "Día de la Marina",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 10
+    },
+    {
+      "name": "Día de la Primavera",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 3
+    },
+    {
+      "name": "Día del Estudiante",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 10
+    },
+    {
+      "name": "Puente",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 5
+    },
+    {
+      "name": "Periódico mural",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 5
+    },
+    {
+      "name": "Día de la Libertad de Expresión",
+      "facet": "Efemérides del calendario escolar",
+      "known_at": 13
+    },
+    {
+      "name": "Traje de charro",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 4
+    },
+    {
+      "name": "Bigote postizo",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 4
+    },
+    {
+      "name": "Banderitas tricolores",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 3
+    },
+    {
+      "name": "Rehilete",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 5
+    },
+    {
+      "name": "Serpentinas",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 3
+    },
+    {
+      "name": "Cascarones",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 4
+    },
+    {
+      "name": "Espantasuegras",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 7
+    },
+    {
+      "name": "Listones tricolores",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 4
+    },
+    {
+      "name": "Moño tricolor",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 4
+    },
+    {
+      "name": "Rebozo de Santa María",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 13
+    },
+    {
+      "name": "Traje jarocho",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 8
+    },
+    {
+      "name": "Maquillaje tricolor",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 3
+    },
+    {
+      "name": "Iluminación tricolor del Zócalo",
+      "facet": "Trajes y adornos tricolores",
+      "known_at": 7
+    },
+    {
+      "name": "Altar a la Patria",
+      "facet": "Monumentos y lugares patrios",
+      "known_at": 9
+    },
+    {
+      "name": "Museo Nacional de Historia",
+      "facet": "Monumentos y lugares patrios",
+      "known_at": 9
+    },
+    {
+      "name": "Bandera monumental",
+      "facet": "Monumentos y lugares patrios",
+      "known_at": 6
+    },
+    {
+      "name": "Museo Casa de Hidalgo",
+      "facet": "Monumentos y lugares patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Casa de la Corregidora",
+      "facet": "Monumentos y lugares patrios",
+      "known_at": 12
+    },
+    {
+      "name": "Museo Nacional de las Intervenciones",
+      "facet": "Monumentos y lugares patrios",
+      "known_at": 13
+    },
+    {
+      "name": "Murales de Diego Rivera en Palacio Nacional",
+      "facet": "Monumentos y lugares patrios",
+      "known_at": 9
+    },
+    {
+      "name": "Cielito lindo",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 4
+    },
+    {
+      "name": "Mariachi",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 2
+    },
+    {
+      "name": "México lindo y querido",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 7
+    },
+    {
+      "name": "El Son de la Negra",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 8
+    },
+    {
+      "name": "La Adelita",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 8
+    },
+    {
+      "name": "Huapango de Moncayo",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 12
+    },
+    {
+      "name": "José Pablo Moncayo",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 14
+    },
+    {
+      "name": "Grito mexicano",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 4
+    },
+    {
+      "name": "El Rey",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 6
+    },
+    {
+      "name": "Vicente Fernández",
+      "facet": "Música, gritos y frases patrias",
+      "known_at": 6
+    }
+  ]
+}

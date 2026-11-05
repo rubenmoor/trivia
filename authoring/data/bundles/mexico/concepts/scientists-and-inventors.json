@@ -1,0 +1,808 @@
+{
+  "subcategory": "scientists-and-inventors",
+  "facets": [
+    "Inventos mexicanos famosos",
+    "Inventos de la vida cotidiana",
+    "Química, medicina y salud",
+    "Astronomía y astronautas mexicanos",
+    "Ciencia y saberes prehispánicos",
+    "Sabios de la Nueva España y el siglo XIX",
+    "Pioneras de la ciencia mexicana",
+    "Ingeniería y arquitectura mexicana",
+    "Empresarios y marcas mexicanas",
+    "Universidades, institutos y museos de ciencia",
+    "Divulgadores y ciencia en los medios",
+    "Naturalistas, biólogos y ciencias de la Tierra"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 4,
+      "science_news": 4,
+      "educational_media": 4,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 3,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Píldora anticonceptiva",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Luis Ernesto Miramontes",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Molino de nixtamal",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Máquina tortilladora",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Cacahuates japoneses",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Yoshigei Nakatani",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Nachos",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Ignacio Anaya",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Ensalada César",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Telesecundaria",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 6
+    },
+    {
+      "name": "Fusil Mondragón",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Tacos al pastor",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Chamoy",
+      "facet": "Inventos mexicanos famosos",
+      "known_at": 5
+    },
+    {
+      "name": "Prensa para tortillas",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 4
+    },
+    {
+      "name": "Huarache",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 4
+    },
+    {
+      "name": "Balero",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 3
+    },
+    {
+      "name": "Trompo",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 2
+    },
+    {
+      "name": "Chiquihuite",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 9
+    },
+    {
+      "name": "Tinaco",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 5
+    },
+    {
+      "name": "Olla de barro",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 3
+    },
+    {
+      "name": "Anafre",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 10
+    },
+    {
+      "name": "Mecapal",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 11
+    },
+    {
+      "name": "Tortillero",
+      "facet": "Inventos de la vida cotidiana",
+      "known_at": 3
+    },
+    {
+      "name": "Mario Molina",
+      "facet": "Química, medicina y salud",
+      "known_at": 7
+    },
+    {
+      "name": "Capa de ozono",
+      "facet": "Química, medicina y salud",
+      "known_at": 6
+    },
+    {
+      "name": "Vanadio",
+      "facet": "Química, medicina y salud",
+      "known_at": 11
+    },
+    {
+      "name": "Barbasco",
+      "facet": "Química, medicina y salud",
+      "known_at": 13
+    },
+    {
+      "name": "Syntex",
+      "facet": "Química, medicina y salud",
+      "known_at": 14
+    },
+    {
+      "name": "Vida Suero Oral",
+      "facet": "Química, medicina y salud",
+      "known_at": 4
+    },
+    {
+      "name": "Cartilla Nacional de Vacunación",
+      "facet": "Química, medicina y salud",
+      "known_at": 5
+    },
+    {
+      "name": "Real Expedición Filantrópica de la Vacuna",
+      "facet": "Química, medicina y salud",
+      "known_at": 13
+    },
+    {
+      "name": "Influenza AH1N1",
+      "facet": "Química, medicina y salud",
+      "known_at": 7
+    },
+    {
+      "name": "Jesús Kumate",
+      "facet": "Química, medicina y salud",
+      "known_at": 13
+    },
+    {
+      "name": "Ignacio Chávez",
+      "facet": "Química, medicina y salud",
+      "known_at": 12
+    },
+    {
+      "name": "Salvador Zubirán",
+      "facet": "Química, medicina y salud",
+      "known_at": 12
+    },
+    {
+      "name": "Federico Gómez",
+      "facet": "Química, medicina y salud",
+      "known_at": 13
+    },
+    {
+      "name": "Rafael Lucio",
+      "facet": "Química, medicina y salud",
+      "known_at": 14
+    },
+    {
+      "name": "Ricardo Miledi",
+      "facet": "Química, medicina y salud",
+      "known_at": 14
+    },
+    {
+      "name": "Suero antialacrán",
+      "facet": "Química, medicina y salud",
+      "known_at": 6
+    },
+    {
+      "name": "Rodolfo Neri Vela",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 7
+    },
+    {
+      "name": "Katya Echazarreta",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "José Hernández",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Guillermo Haro",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Objetos Herbig-Haro",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Observatorio Astrofísico Nacional de Tonantzintla",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Observatorio de San Pedro Mártir",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Gran Telescopio Milimétrico",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 11
+    },
+    {
+      "name": "Agencia Espacial Mexicana",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 9
+    },
+    {
+      "name": "Luis Enrique Erro",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 12
+    },
+    {
+      "name": "Manuel Peimbert",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 14,
+      "retired": "unaskable: Manuel Peimbert es demasiado especializado para estas opciones (no hay foto libre confiable, y ni la de completar frase ni la de cuál no pertenece encajan)."
+    },
+    {
+      "name": "Observatorio HAWC",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 14
+    },
+    {
+      "name": "Meteorito de Bacubirito",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Meteorito Allende",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "AztechSat-1",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Transbordador Atlantis",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 10
+    },
+    {
+      "name": "Miguel Alcubierre",
+      "facet": "Astronomía y astronautas mexicanos",
+      "known_at": 13
+    },
+    {
+      "name": "Calendario maya",
+      "facet": "Ciencia y saberes prehispánicos",
+      "known_at": 5
+    },
+    {
+      "name": "Chinampas",
+      "facet": "Ciencia y saberes prehispánicos",
+      "known_at": 6
+    },
+    {
+      "name": "El Caracol de Chichén Itzá",
+      "facet": "Ciencia y saberes prehispánicos",
+      "known_at": 11
+    },
+    {
+      "name": "Descenso de Kukulcán",
+      "facet": "Ciencia y saberes prehispánicos",
+      "known_at": 7
+    },
+    {
+      "name": "Domesticación del maíz",
+      "facet": "Ciencia y saberes prehispánicos",
+      "known_at": 8
+    },
+    {
+      "name": "José Antonio Alzate",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Andrés Manuel del Río",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 12
+    },
+    {
+      "name": "Real Seminario de Minería",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "Fausto Elhuyar",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Joaquín Velázquez de León",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Alexander von Humboldt",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 10
+    },
+    {
+      "name": "Leopoldo Río de la Loza",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 13
+    },
+    {
+      "name": "José Mariano Mociño",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Real Expedición Botánica a Nueva España",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Díaz Covarrubias",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Francisco Hernández de Toledo",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 14
+    },
+    {
+      "name": "Gaceta de Literatura de México",
+      "facet": "Sabios de la Nueva España y el siglo XIX",
+      "known_at": 15
+    },
+    {
+      "name": "Matilde Montoya",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 10
+    },
+    {
+      "name": "Helia Bravo Hollis",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 12
+    },
+    {
+      "name": "Paris Pişmiş",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "Silvia Torres-Peimbert",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Ana María Cetto",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "Rosaura Ruiz",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Susana Lizano",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "María Elena Álvarez-Buylla",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Esther Chapa",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "Columba Rivera",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "Enriqueta González Baz",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 15
+    },
+    {
+      "name": "Esther Orozco",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "Graciela Salicrup",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 15
+    },
+    {
+      "name": "Patricia Ostrosky",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 15
+    },
+    {
+      "name": "Ruth Gall",
+      "facet": "Pioneras de la ciencia mexicana",
+      "known_at": 15
+    },
+    {
+      "name": "Félix Candela",
+      "facet": "Ingeniería y arquitectura mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Restaurante Los Manantiales",
+      "facet": "Ingeniería y arquitectura mexicana",
+      "known_at": 14
+    },
+    {
+      "name": "Tren Maya",
+      "facet": "Ingeniería y arquitectura mexicana",
+      "known_at": 5
+    },
+    {
+      "name": "Túnel Emisor Oriente",
+      "facet": "Ingeniería y arquitectura mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Mario Pani",
+      "facet": "Ingeniería y arquitectura mexicana",
+      "known_at": 13
+    },
+    {
+      "name": "Bimbo",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 2
+    },
+    {
+      "name": "Lorenzo Servitje",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 11
+    },
+    {
+      "name": "Carlos Slim",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 6
+    },
+    {
+      "name": "Telcel",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 4
+    },
+    {
+      "name": "Cemex",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 9
+    },
+    {
+      "name": "OXXO",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 2
+    },
+    {
+      "name": "Jarritos",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 4
+    },
+    {
+      "name": "Sanborns",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 6
+    },
+    {
+      "name": "Gamesa",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 4
+    },
+    {
+      "name": "Maseca",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "KidZania",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Cinépolis",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Mazapán de la Rosa",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 2
+    },
+    {
+      "name": "Pulparindo",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Chocolate Abuelita",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Marinela",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Sidral Mundet",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 5
+    },
+    {
+      "name": "Dr. Simi",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 3
+    },
+    {
+      "name": "Rotoplas",
+      "facet": "Empresarios y marcas mexicanas",
+      "known_at": 8
+    },
+    {
+      "name": "UNAM",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 4
+    },
+    {
+      "name": "Tec de Monterrey",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 7
+    },
+    {
+      "name": "Universum",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 6
+    },
+    {
+      "name": "Museo de Historia Natural de la Ciudad de México",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 7
+    },
+    {
+      "name": "Cinvestav",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 12
+    },
+    {
+      "name": "Conacyt",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 10
+    },
+    {
+      "name": "Instituto Nacional de Cardiología",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 11
+    },
+    {
+      "name": "Museo del Desierto",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 8
+    },
+    {
+      "name": "Explora",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 9
+    },
+    {
+      "name": "El Trompo Museo Interactivo",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 9
+    },
+    {
+      "name": "Museo Laberinto de las Ciencias y las Artes",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 10
+    },
+    {
+      "name": "MIDE",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 9
+    },
+    {
+      "name": "Planetario Luis Enrique Erro",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 10
+    },
+    {
+      "name": "El Colegio Nacional",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 12
+    },
+    {
+      "name": "Academia Mexicana de Ciencias",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 12
+    },
+    {
+      "name": "Olimpiada Mexicana de Matemáticas",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 9
+    },
+    {
+      "name": "Universidad de Guadalajara",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 7
+    },
+    {
+      "name": "Instituto Mexicano del Seguro Social",
+      "facet": "Universidades, institutos y museos de ciencia",
+      "known_at": 5
+    },
+    {
+      "name": "Julieta Fierro",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 10
+    },
+    {
+      "name": "René Drucker Colín",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 13
+    },
+    {
+      "name": "Luis Estrada",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 14
+    },
+    {
+      "name": "Antonio Lazcano",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 13
+    },
+    {
+      "name": "Marcelino Cereijido",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 14
+    },
+    {
+      "name": "¿Cómo ves?",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 10
+    },
+    {
+      "name": "Muy Interesante",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 8
+    },
+    {
+      "name": "Noche de las Estrellas",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 9
+    },
+    {
+      "name": "Semana Nacional de Ciencia y Tecnología",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 10
+    },
+    {
+      "name": "Alejandro Frank",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 14
+    },
+    {
+      "name": "Gaceta UNAM",
+      "facet": "Divulgadores y ciencia en los medios",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán Paricutín",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 7
+    },
+    {
+      "name": "Faustino Miranda",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 14
+    },
+    {
+      "name": "Alfonso L. Herrera",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 14
+    },
+    {
+      "name": "Enrique Beltrán",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 14
+    },
+    {
+      "name": "José Sarukhán",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 13
+    },
+    {
+      "name": "Conabio",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 12
+    },
+    {
+      "name": "Gerardo Ceballos",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 14
+    },
+    {
+      "name": "País megadiverso",
+      "facet": "Naturalistas, biólogos y ciencias de la Tierra",
+      "known_at": 9
+    }
+  ]
+}

@@ -1,0 +1,1077 @@
+{
+  "subcategory": "landscapes",
+  "facets": [
+    "Volcanes activos y famosos",
+    "Leyendas y nombres de volcanes",
+    "Ríos y sus cuencas",
+    "Ríos fronterizos y cascadas",
+    "Lagos, lagunas y presas",
+    "Lagos del Valle de México",
+    "Cenotes, ríos subterráneos y cuevas",
+    "Playas y destinos de costa",
+    "Mar de Cortés y Baja California",
+    "Golfo de México y Caribe mexicano",
+    "Islas, arrecifes y lagunas costeras",
+    "Fauna de agua y costa"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 5,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 3
+    },
+    "lens": {
+      "school": 5,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 2,
+      "science_news": 3,
+      "educational_media": 3,
+      "nature": 5,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Nevado de Toluca",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 6
+    },
+    {
+      "name": "El Chichón",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 11
+    },
+    {
+      "name": "Volcán Tacaná",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Ceboruco",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 13
+    },
+    {
+      "name": "Cofre de Perote",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 10
+    },
+    {
+      "name": "Xitle",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Ajusco",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Volcán Bárcena",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Volcán Jorullo",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Sierra El Pinacate",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 12
+    },
+    {
+      "name": "Volcán San Martín Tuxtla",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 14
+    },
+    {
+      "name": "Eje Neovolcánico Transversal",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Cinturón de Fuego del Pacífico",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 8
+    },
+    {
+      "name": "Ceniza volcánica",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 4
+    },
+    {
+      "name": "Fumarola",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 9
+    },
+    {
+      "name": "Cráter",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 3
+    },
+    {
+      "name": "Semáforo de alerta volcánica",
+      "facet": "Volcanes activos y famosos",
+      "known_at": 7
+    },
+    {
+      "name": "Iztaccíhuatl",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 5
+    },
+    {
+      "name": "Leyenda de Popocatépetl e Iztaccíhuatl",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 5
+    },
+    {
+      "name": "Don Goyo",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 7
+    },
+    {
+      "name": "La Mujer Dormida",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 6
+    },
+    {
+      "name": "La Malinche (volcán)",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 9
+    },
+    {
+      "name": "Citlaltépetl",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 10
+    },
+    {
+      "name": "Xinantécatl",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 12
+    },
+    {
+      "name": "Dionisio Pulido",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 13
+    },
+    {
+      "name": "Dr. Atl",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 12
+    },
+    {
+      "name": "Jesús Helguera",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 12
+    },
+    {
+      "name": "Iglesia de San Juan Parangaricutiro",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 10
+    },
+    {
+      "name": "Cuicuilco",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 11
+    },
+    {
+      "name": "Paso de Cortés",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 10
+    },
+    {
+      "name": "Tláloc",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 6
+    },
+    {
+      "name": "Monte Tláloc",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 13
+    },
+    {
+      "name": "Tépetl",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 11
+    },
+    {
+      "name": "Tlamacas",
+      "facet": "Leyendas y nombres de volcanes",
+      "known_at": 13
+    },
+    {
+      "name": "Río Lerma",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 8
+    },
+    {
+      "name": "Río Santiago",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 11
+    },
+    {
+      "name": "Río Balsas",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 9
+    },
+    {
+      "name": "Río Pánuco",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 10
+    },
+    {
+      "name": "Río Papaloapan",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 10
+    },
+    {
+      "name": "Río Grijalva",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 9
+    },
+    {
+      "name": "Río Yaqui",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 10
+    },
+    {
+      "name": "Río Fuerte",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Río Conchos",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 11
+    },
+    {
+      "name": "Río Nazas",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Río Coatzacoalcos",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 11
+    },
+    {
+      "name": "Río Tula",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Río Mayo",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 13
+    },
+    {
+      "name": "Río Moctezuma",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 13
+    },
+    {
+      "name": "Río Magdalena (Ciudad de México)",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Río Atoyac",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Río Tuxpan",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 13
+    },
+    {
+      "name": "Cuenca Lerma-Santiago",
+      "facet": "Ríos y sus cuencas",
+      "known_at": 12
+    },
+    {
+      "name": "Río Colorado",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 9
+    },
+    {
+      "name": "El Chamizal",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 13
+    },
+    {
+      "name": "Delta del río Colorado",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 13
+    },
+    {
+      "name": "Cascada de Basaseachi",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 10
+    },
+    {
+      "name": "Cascada de Piedra Volteada",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 13
+    },
+    {
+      "name": "Cascadas de Agua Azul",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 8
+    },
+    {
+      "name": "Cascada El Chiflón",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 11
+    },
+    {
+      "name": "Cascada de Tamul",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 10
+    },
+    {
+      "name": "Hierve el Agua",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 9
+    },
+    {
+      "name": "Cascada Cola de Caballo",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 8
+    },
+    {
+      "name": "Cascada de Misol-Ha",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 11
+    },
+    {
+      "name": "Cascada de Tzaráracua",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 12
+    },
+    {
+      "name": "Salto de Eyipantla",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 12
+    },
+    {
+      "name": "Cascadas de Micos",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 11
+    },
+    {
+      "name": "Cascadas de Roberto Barrios",
+      "facet": "Ríos fronterizos y cascadas",
+      "known_at": 13
+    },
+    {
+      "name": "Lago de Pátzcuaro",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 7
+    },
+    {
+      "name": "Isla de Janitzio",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 8
+    },
+    {
+      "name": "Lago de Cuitzeo",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 11
+    },
+    {
+      "name": "Laguna de Bacalar",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 8
+    },
+    {
+      "name": "Lagunas de Montebello",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 10
+    },
+    {
+      "name": "Lago de Catemaco",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 9
+    },
+    {
+      "name": "Lago de Zirahuén",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 12
+    },
+    {
+      "name": "Laguna de Santa María del Oro",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 13
+    },
+    {
+      "name": "Lago de Camécuaro",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 13
+    },
+    {
+      "name": "Lagos del Sol y la Luna",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 10
+    },
+    {
+      "name": "Laguna de Alchichica",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 14
+    },
+    {
+      "name": "Laguna de Yuriria",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 13
+    },
+    {
+      "name": "Presa de Valle de Bravo",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 9
+    },
+    {
+      "name": "Presa Chicoasén",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 12
+    },
+    {
+      "name": "Presa La Angostura",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 13
+    },
+    {
+      "name": "Presa El Infiernillo",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 12
+    },
+    {
+      "name": "Presa Malpaso",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 13
+    },
+    {
+      "name": "Presa de la Amistad",
+      "facet": "Lagos, lagunas y presas",
+      "known_at": 13
+    },
+    {
+      "name": "Lago de Texcoco",
+      "facet": "Lagos del Valle de México",
+      "known_at": 7
+    },
+    {
+      "name": "Lago de Xochimilco",
+      "facet": "Lagos del Valle de México",
+      "known_at": 6
+    },
+    {
+      "name": "Lago de Chalco",
+      "facet": "Lagos del Valle de México",
+      "known_at": 10
+    },
+    {
+      "name": "Lago de Zumpango",
+      "facet": "Lagos del Valle de México",
+      "known_at": 11
+    },
+    {
+      "name": "Lago de Xaltocan",
+      "facet": "Lagos del Valle de México",
+      "known_at": 12
+    },
+    {
+      "name": "Trajinera",
+      "facet": "Lagos del Valle de México",
+      "known_at": 4
+    },
+    {
+      "name": "Chinampa",
+      "facet": "Lagos del Valle de México",
+      "known_at": 7
+    },
+    {
+      "name": "Albarradón de Nezahualcóyotl",
+      "facet": "Lagos del Valle de México",
+      "known_at": 12
+    },
+    {
+      "name": "Tajo de Nochistongo",
+      "facet": "Lagos del Valle de México",
+      "known_at": 14
+    },
+    {
+      "name": "Gran Canal del Desagüe",
+      "facet": "Lagos del Valle de México",
+      "known_at": 12
+    },
+    {
+      "name": "Inundación de 1629",
+      "facet": "Lagos del Valle de México",
+      "known_at": 13
+    },
+    {
+      "name": "Embarcadero de Cuemanco",
+      "facet": "Lagos del Valle de México",
+      "known_at": 10
+    },
+    {
+      "name": "Isla de las Muñecas",
+      "facet": "Lagos del Valle de México",
+      "known_at": 8
+    },
+    {
+      "name": "Canal Nacional",
+      "facet": "Lagos del Valle de México",
+      "known_at": 12
+    },
+    {
+      "name": "Lago de Chapultepec",
+      "facet": "Lagos del Valle de México",
+      "known_at": 5
+    },
+    {
+      "name": "Lago Nabor Carrillo",
+      "facet": "Lagos del Valle de México",
+      "known_at": 14
+    },
+    {
+      "name": "Leyenda del águila sobre el nopal",
+      "facet": "Lagos del Valle de México",
+      "known_at": 3
+    },
+    {
+      "name": "Tlatelolco",
+      "facet": "Lagos del Valle de México",
+      "known_at": 9
+    },
+    {
+      "name": "Acalli",
+      "facet": "Lagos del Valle de México",
+      "known_at": 13
+    },
+    {
+      "name": "Cenote",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 5
+    },
+    {
+      "name": "Cenote Ik Kil",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Cenote Sagrado de Chichén Itzá",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 9
+    },
+    {
+      "name": "Anillo de cenotes",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 12
+    },
+    {
+      "name": "Cráter de Chicxulub",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 9
+    },
+    {
+      "name": "Cenote Dos Ojos",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 12
+    },
+    {
+      "name": "Grutas de Cacahuamilpa",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 9
+    },
+    {
+      "name": "Grutas de García",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 10
+    },
+    {
+      "name": "Cueva de los Cristales de Naica",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Grutas de Tolantongo",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 8
+    },
+    {
+      "name": "Río Secreto",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 12
+    },
+    {
+      "name": "Xibalbá",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 11
+    },
+    {
+      "name": "Cenote Xkekén",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 13
+    },
+    {
+      "name": "Cenote Angelita",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 13
+    },
+    {
+      "name": "Naia de Hoyo Negro",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 14
+    },
+    {
+      "name": "Grutas de Loltún",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 13
+    },
+    {
+      "name": "Grutas de Juxtlahuaca",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 14
+    },
+    {
+      "name": "Sistema Huautla",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 14
+    },
+    {
+      "name": "Estalactita",
+      "facet": "Cenotes, ríos subterráneos y cuevas",
+      "known_at": 6
+    },
+    {
+      "name": "Cancún",
+      "facet": "Playas y destinos de costa",
+      "known_at": 3
+    },
+    {
+      "name": "Ixtapa",
+      "facet": "Playas y destinos de costa",
+      "known_at": 8
+    },
+    {
+      "name": "Playa del Carmen",
+      "facet": "Playas y destinos de costa",
+      "known_at": 6
+    },
+    {
+      "name": "Manzanillo",
+      "facet": "Playas y destinos de costa",
+      "known_at": 7
+    },
+    {
+      "name": "Zipolite",
+      "facet": "Playas y destinos de costa",
+      "known_at": 11
+    },
+    {
+      "name": "Puerto Peñasco",
+      "facet": "Playas y destinos de costa",
+      "known_at": 9
+    },
+    {
+      "name": "Riviera Maya",
+      "facet": "Playas y destinos de costa",
+      "known_at": 6
+    },
+    {
+      "name": "Riviera Nayarit",
+      "facet": "Playas y destinos de costa",
+      "known_at": 10
+    },
+    {
+      "name": "Xcaret",
+      "facet": "Playas y destinos de costa",
+      "known_at": 5
+    },
+    {
+      "name": "Malecón de Mazatlán",
+      "facet": "Playas y destinos de costa",
+      "known_at": 10
+    },
+    {
+      "name": "Los Cabos",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 6
+    },
+    {
+      "name": "El Arco de Cabo San Lucas",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 7
+    },
+    {
+      "name": "Laguna Ojo de Liebre",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 11
+    },
+    {
+      "name": "Laguna San Ignacio",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 12
+    },
+    {
+      "name": "Isla Espíritu Santo",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 11
+    },
+    {
+      "name": "Bahía de La Paz",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 9
+    },
+    {
+      "name": "Playa Balandra",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 11
+    },
+    {
+      "name": "La Bufadora",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 10
+    },
+    {
+      "name": "Bahía de los Ángeles",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 12
+    },
+    {
+      "name": "Bahía Concepción",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 13
+    },
+    {
+      "name": "Bahía Magdalena",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 13
+    },
+    {
+      "name": "Cabo Pulmo",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 12
+    },
+    {
+      "name": "Jacques Cousteau",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 10
+    },
+    {
+      "name": "San Felipe",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 12
+    },
+    {
+      "name": "Rosarito",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 10
+    },
+    {
+      "name": "San Carlos (Guaymas)",
+      "facet": "Mar de Cortés y Baja California",
+      "known_at": 12
+    },
+    {
+      "name": "Sargazo",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 7
+    },
+    {
+      "name": "Sonda de Campeche",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Cantarell",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Ciudad del Carmen",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Puerto de Veracruz",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 5
+    },
+    {
+      "name": "Tampico",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 8
+    },
+    {
+      "name": "Celestún",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Río Lagartos",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Las Coloradas",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Puerto Progreso",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Mahahual",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 12
+    },
+    {
+      "name": "Huracán Gilberto",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Huracán Wilma",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 11
+    },
+    {
+      "name": "Norte (viento)",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 9
+    },
+    {
+      "name": "Coatzacoalcos",
+      "facet": "Golfo de México y Caribe mexicano",
+      "known_at": 10
+    },
+    {
+      "name": "Banco Chinchorro",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Islas Marietas",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 9
+    },
+    {
+      "name": "Archipiélago de Revillagigedo",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Isla Contoy",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Arrecife Alacranes",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Sistema Arrecifal Veracruzano",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Laguna Madre",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Laguna de Tamiahua",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Lagunas de Chacahua",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Sian Ka'an",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 11
+    },
+    {
+      "name": "Isla de Sacrificios",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 12
+    },
+    {
+      "name": "Isla Cedros",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Isla Clipperton",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 13
+    },
+    {
+      "name": "Isla de Jaina",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 14
+    },
+    {
+      "name": "Museo Subacuático de Arte",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 10
+    },
+    {
+      "name": "Manglar",
+      "facet": "Islas, arrecifes y lagunas costeras",
+      "known_at": 6
+    },
+    {
+      "name": "Ajolote",
+      "facet": "Fauna de agua y costa",
+      "known_at": 3
+    },
+    {
+      "name": "Vaquita marina",
+      "facet": "Fauna de agua y costa",
+      "known_at": 6
+    },
+    {
+      "name": "Totoaba",
+      "facet": "Fauna de agua y costa",
+      "known_at": 11
+    },
+    {
+      "name": "Ballena gris",
+      "facet": "Fauna de agua y costa",
+      "known_at": 6
+    },
+    {
+      "name": "Ballena jorobada",
+      "facet": "Fauna de agua y costa",
+      "known_at": 5
+    },
+    {
+      "name": "Tiburón ballena",
+      "facet": "Fauna de agua y costa",
+      "known_at": 4
+    },
+    {
+      "name": "Tiburón blanco",
+      "facet": "Fauna de agua y costa",
+      "known_at": 3
+    },
+    {
+      "name": "Tortuga golfina",
+      "facet": "Fauna de agua y costa",
+      "known_at": 8
+    },
+    {
+      "name": "Tortuga laúd",
+      "facet": "Fauna de agua y costa",
+      "known_at": 10
+    },
+    {
+      "name": "Arribada",
+      "facet": "Fauna de agua y costa",
+      "known_at": 11
+    },
+    {
+      "name": "Manatí",
+      "facet": "Fauna de agua y costa",
+      "known_at": 4
+    },
+    {
+      "name": "Cocodrilo de pantano",
+      "facet": "Fauna de agua y costa",
+      "known_at": 8
+    },
+    {
+      "name": "Flamenco rosado",
+      "facet": "Fauna de agua y costa",
+      "known_at": 3
+    },
+    {
+      "name": "Mantarraya gigante",
+      "facet": "Fauna de agua y costa",
+      "known_at": 6
+    },
+    {
+      "name": "Lobo marino de California",
+      "facet": "Fauna de agua y costa",
+      "known_at": 5
+    },
+    {
+      "name": "Pelícano café",
+      "facet": "Fauna de agua y costa",
+      "known_at": 6
+    },
+    {
+      "name": "Bobo de patas azules",
+      "facet": "Fauna de agua y costa",
+      "known_at": 7
+    },
+    {
+      "name": "Pescado blanco de Pátzcuaro",
+      "facet": "Fauna de agua y costa",
+      "known_at": 10
+    },
+    {
+      "name": "Charal",
+      "facet": "Fauna de agua y costa",
+      "known_at": 9
+    },
+    {
+      "name": "Achoque",
+      "facet": "Fauna de agua y costa",
+      "known_at": 13
+    },
+    {
+      "name": "Calamar de Humboldt",
+      "facet": "Fauna de agua y costa",
+      "known_at": 12
+    },
+    {
+      "name": "Pez vela",
+      "facet": "Fauna de agua y costa",
+      "known_at": 8
+    },
+    {
+      "name": "Pez ciego de cueva",
+      "facet": "Fauna de agua y costa",
+      "known_at": 12
+    }
+  ]
+}
