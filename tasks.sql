@@ -51039,12 +51039,12 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
      M authoring/data/questions.es-ES.json
 
 Look: `git show pm/task-1809-run-1963-left`. Keep: `git merge pm/task-1809-run-1963-left`. Then `git branch -D pm/task-1809-run-1963-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', 'discard: already on main (no-viaja rejections and q-2049 pool removal; cause fixed by task 1843)', NULL, '2026-10-29T21:53:30Z', '2026-11-05T03:56:56Z', NULL, NULL, 'once', NULL, '');
-INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (484, 'Task 1811 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1965 of task 1811 closed the task but left 2 files unstaged. pm committed them on the branch `pm/task-1811-run-1965-left` and cleaned the tree.
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (484, 'Task 1811 left unstaged changes after `pm task done`: investigate', 'answered', '[]', 'Run 1965 of task 1811 closed the task but left 2 files unstaged. pm committed them on the branch `pm/task-1811-run-1965-left` and cleaned the tree.
 
      M app/data/pool.es-ES.json
      M authoring/data/questions.es-ES.json
 
-Look: `git show pm/task-1811-run-1965-left`. Keep: `git merge pm/task-1811-run-1965-left`. Then `git branch -D pm/task-1811-run-1965-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', NULL, NULL, '2026-10-29T23:33:38Z', NULL, NULL, NULL, 'once', NULL, '');
+Look: `git show pm/task-1811-run-1965-left`. Keep: `git merge pm/task-1811-run-1965-left`. Then `git branch -D pm/task-1811-run-1965-left`.', 'A piece of automated work finished but left changes behind that it didn''t hand in. They were set aside, nothing is lost. Decide whether to keep them or throw them away.', 'discard: already on main (no-viaja rejections and q-2049 pool removal; cause fixed by task 1843)', NULL, '2026-10-29T23:33:38Z', '2026-11-05T03:56:56Z', NULL, NULL, 'once', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (485, 'Task 1812 left unstaged changes after `pm task done`: investigate', 'pending', '[]', 'Run 1967 of task 1812 closed the task but left 2 files unstaged. pm committed them on the branch `pm/task-1812-run-1967-left` and cleaned the tree.
 
      M app/data/pool.es-ES.json
