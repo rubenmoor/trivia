@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "39c47c01",
+  "hash": "669b2653",
   "questions": [
     {
       "id": "q-8833",
@@ -10203,6 +10203,40 @@
       "background": null
     },
     {
+      "id": "q-10514",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "baseball",
+      "bundle": "usa",
+      "description": "The year baseball found out that some losses were not exactly accidents.",
+      "question": "After the 1919 “Black Sox” scandal over a fixed World Series, how many Chicago White Sox players were banned for life?",
+      "answer": "8",
+      "wrong_answers": [
+        "3",
+        "5",
+        "11"
+      ],
+      "hints": [
+        "It was more than a handful.",
+        "“Shoeless” Joe Jackson was one of them.",
+        "A 1988 movie about the scandal put the number in its title."
+      ],
+      "fun_fact": "The players were found not guilty in court in 1921, but baseball's first commissioner banned them anyway.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Vintage_Leather_Baseball_Glove.jpg/3840px-Vintage_Leather_Baseball_Glove.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Leather_Baseball_Glove.jpg",
+        "credit": "Tessa Bury · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Tessa Bury",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chive_Cream_Cheese"
+      },
+      "background": null
+    },
+    {
       "id": "q-10515",
       "status": "approved",
       "difficulty": 5,
@@ -11223,6 +11257,40 @@
       "background": null
     },
     {
+      "id": "q-10545",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "comics-and-art",
+      "bundle": "usa",
+      "description": "Proof that the best stories come from staying in bed a little too long.",
+      "question": "This boy starred in a giant, colorful Sunday newspaper strip starting in 1905, and each week ended with him waking up in bed. Who is he?",
+      "answer": "Little Nemo",
+      "wrong_answers": [
+        "Buster Brown",
+        "The Yellow Kid",
+        "Skippy"
+      ],
+      "hints": [
+        "His adventures all happen while he is asleep.",
+        "His creator, Winsor McCay, later made the cartoon “Gertie the Dinosaur.”",
+        "His first name matches a famous little Pixar clownfish."
+      ],
+      "fun_fact": "Winsor McCay also made “Gertie the Dinosaur” in 1914, one of the first cartoon stars in film history.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Interior_view_of_newspaper_delivery_room_showing_man_taking_stack_of_newspapers_from_machine%29_-_World-Telegram_photo_LCCN95506971.jpg/3840px-Interior_view_of_newspaper_delivery_room_showing_man_taking_stack_of_newspapers_from_machine%29_-_World-Telegram_photo_LCCN95506971.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AInterior_view_of_newspaper_delivery_room_showing_man_taking_stack_of_newspapers_from_machine%29_-_World-Telegram_photo_LCCN95506971.jpg",
+        "credit": "Miscellaneous Items in High Demand, PPOC, Library of Congress · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10546",
       "status": "approved",
       "difficulty": 4,
@@ -11661,6 +11729,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Z28scrambler",
         "author_url": "https://commons.wikimedia.org/wiki/User:Z28scrambler"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10559",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "A goodbye song so good it got a second life in a bodyguard movie.",
+      "question": "Whitney Houston made “I Will Always Love You” a huge hit in 1992, but this country singer wrote and sang it first, in 1974. Who is she?",
+      "answer": "Dolly Parton",
+      "wrong_answers": [
+        "Reba McEntire",
+        "Loretta Lynn",
+        "Tammy Wynette"
+      ],
+      "hints": [
+        "She also wrote “Jolene.”",
+        "She has her own theme park in the Smoky Mountains of Tennessee.",
+        "Her park is called Dollywood."
+      ],
+      "fun_fact": "Dolly Parton said no when Elvis wanted to record the song, because his manager asked for half the rights to it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/DFC_4829_A_smiling_musician_in_a_cowboy_hat_plays_electric_guitar_amid_a_cozy_cluttered_roadside_stage_of_amps_cables_and_vintage_gear_in_Ban_Nong_Hin_Chon_Buri.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_4829_A_smiling_musician_in_a_cowboy_hat_plays_electric_guitar_amid_a_cozy_cluttered_roadside_stage_of_amps_cables_and_vintage_gear_in_Ban_Nong_Hin_Chon_Buri.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
       },
       "background": null
     },
@@ -12651,6 +12753,40 @@
       "background": null
     },
     {
+      "id": "q-10591",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "hosts-and-game-shows",
+      "bundle": "usa",
+      "description": "Running away from these chasers is like trying to outrun an encyclopedia.",
+      "question": "The three chasers on ABC's The Chase in 2021, Ken Jennings, James Holzhauer and Brad Rutter, became famous on which quiz show?",
+      "answer": "Jeopardy!",
+      "wrong_answers": [
+        "Survivor",
+        "Wheel of Fortune",
+        "Who Wants to Be a Millionaire"
+      ],
+      "hints": [
+        "They are known for record-breaking quiz wins there.",
+        "Ken Jennings won 74 games in a row on it.",
+        "On this show, you give the answers in the form of a question."
+      ],
+      "fun_fact": "Brad Rutter has won more money on Jeopardy! than anyone in the show's history.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/QTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg",
+        "credit": "NJM2010 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "NJM2010",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NJM2010&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-10592",
       "status": "approved",
       "difficulty": 6,
@@ -13093,6 +13229,40 @@
       "background": null
     },
     {
+      "id": "q-10605",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "kids-tv",
+      "bundle": "usa",
+      "description": "A pirate who's way more excited about a cartoon than about treasure.",
+      "question": "A pirate captain shouts “Are you ready, kids?”, the kids answer “Aye aye, Captain!”, and the song begins. Which cartoon does it open?",
+      "answer": "SpongeBob SquarePants",
+      "wrong_answers": [
+        "The Fairly OddParents",
+        "Rugrats",
+        "Jake and the Never Land Pirates"
+      ],
+      "hints": [
+        "It first aired on Nickelodeon in 1999.",
+        "Its main character lives next door to a grumpy neighbor who plays the clarinet.",
+        "The star is yellow and works at the Krusty Krab."
+      ],
+      "fun_fact": "The pirate in the theme song is called Painty the Pirate, and he is a painting with real moving lips.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Bush_TV62_television_set%2C_UK%2C_1956.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABush_TV62_television_set%2C_UK%2C_1956.jpg",
+        "credit": "electromechanic812291 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "electromechanic812291",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10606",
       "status": "approved",
       "difficulty": 7,
@@ -13360,6 +13530,40 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Rick Obst",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10615",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "money-and-shopping",
+      "bundle": "usa",
+      "description": "Every dollar in your wallet carries a little note from its boss.",
+      "question": "Every US paper bill says “Federal Reserve Note” on it. What kind of institution is the Federal Reserve?",
+      "answer": "The country's central bank",
+      "wrong_answers": [
+        "The country's tax office",
+        "The Treasury's printing plant",
+        "The army's payroll office"
+      ],
+      "hints": [
+        "Americans often just call it “the Fed.”",
+        "It was created by Congress in 1913.",
+        "It sets interest rates and controls how much money is in the economy."
+      ],
+      "fun_fact": "The Fed is not one bank but a system of 12 regional Federal Reserve Banks, with a board in Washington, D.C.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/United_States_one_dollar_bill%2C_obverse.jpg/3840px-United_States_one_dollar_bill%2C_obverse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_one_dollar_bill%2C_obverse.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
         "author_url": null
       },
       "background": null
@@ -14181,6 +14385,40 @@
       "background": null
     },
     {
+      "id": "q-10642",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "national-symbols",
+      "bundle": "usa",
+      "description": "It has a big crack and still won't stop showing off.",
+      "question": "Which famous bell is this, crack and all?",
+      "answer": "The Liberty Bell",
+      "wrong_answers": [
+        "Big Ben",
+        "The Tsar Bell",
+        "The Pummerin"
+      ],
+      "hints": [
+        "Long ago it was rung to call people together to hear important news.",
+        "It's linked to the year 1776.",
+        "It sits across the street from Independence Hall in Philadelphia."
+      ],
+      "fun_fact": "Nobody knows for sure when the Liberty Bell first cracked.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/The_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg",
+        "credit": "Vintage Fan 5678 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Vintage Fan 5678",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Vintage_Fan_5678&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-10643",
       "status": "approved",
       "difficulty": 3,
@@ -14589,6 +14827,40 @@
       "background": null
     },
     {
+      "id": "q-10655",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "american-football",
+      "bundle": "usa",
+      "description": "The only time a referee brings a ruler to a football game.",
+      "question": "In American football, two sideline poles joined by a chain show how far a team must go for a new first down. How many yards long is the chain?",
+      "answer": "10",
+      "wrong_answers": [
+        "5",
+        "15",
+        "20"
+      ],
+      "hints": [
+        "It's a nice round number.",
+        "A team gets four tries, called downs, to cover this distance.",
+        "The big numbers painted on the field go up by this amount."
+      ],
+      "fun_fact": "The chain crew is also called the “chain gang.” Since 2025 the NFL measures first downs mainly with cameras, and the chain stays as a backup.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Foot_US_-_Ours_vs_Kangourous_-_2013-03-02_-_20.jpg/3840px-Foot_US_-_Ours_vs_Kangourous_-_2013-03-02_-_20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFoot_US_-_Ours_vs_Kangourous_-_2013-03-02_-_20.jpg",
+        "credit": "Pierre-Selim · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Pierre-Selim",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PierreSelim"
+      },
+      "background": null
+    },
+    {
       "id": "q-10656",
       "status": "approved",
       "difficulty": 12,
@@ -14861,6 +15133,40 @@
       "background": null
     },
     {
+      "id": "q-10664",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "words-and-slang",
+      "bundle": "usa",
+      "description": "It carries hay, dogs, furniture and everyone's moving boxes.",
+      "question": "It has a cab in front and an open bed in back, and the first factory-built one rolled out in 1925. In which country was the pickup truck born?",
+      "answer": "The United States",
+      "wrong_answers": [
+        "Germany",
+        "Japan",
+        "Brazil"
+      ],
+      "hints": [
+        "The country has a lot of farms and very long roads.",
+        "The carmaker that built it was famous for its early moving assembly line.",
+        "It's the country of cowboys and the Fourth of July."
+      ],
+      "fun_fact": "The Ford F-Series has been the best-selling truck in the US for over 40 years.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Field_of_Hay_Bales_near_Priestwood_Farm_-_geograph.org.uk_-_3581386.jpg/3840px-Field_of_Hay_Bales_near_Priestwood_Farm_-_geograph.org.uk_-_3581386.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AField_of_Hay_Bales_near_Priestwood_Farm_-_geograph.org.uk_-_3581386.jpg",
+        "credit": "Jonathan Clitheroe · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Jonathan Clitheroe",
+        "author_url": "https://www.geograph.org.uk/profile/19028"
+      },
+      "background": null
+    },
+    {
       "id": "q-10665",
       "status": "approved",
       "difficulty": 7,
@@ -14925,6 +15231,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "ArtOfHappiness",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:ArtOfHappiness&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10667",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "childrens-books",
+      "bundle": "usa",
+      "description": "A tough guy with horns whose favorite hobby is gardening, sort of.",
+      "question": "In “The Story of Ferdinand”, Ferdinand is a bull who would rather sit under a cork tree smelling flowers than fight. In which country does he live?",
+      "answer": "Spain",
+      "wrong_answers": [
+        "Mexico",
+        "Portugal",
+        "Argentina"
+      ],
+      "hints": [
+        "The book was written by Munro Leaf in 1936.",
+        "The country is in Europe.",
+        "Men come from the big city of Madrid to find the fiercest bull."
+      ],
+      "fun_fact": "Disney turned the book into a short cartoon, “Ferdinand the Bull,” which won an Oscar for 1938.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/2018_Whistler_cork_oak_tree_PT.jpg/3840px-2018_Whistler_cork_oak_tree_PT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2018_Whistler_cork_oak_tree_PT.jpg",
+        "credit": "UNAC - Union of the Mediterranean Forest / União da Floresta Mediterrânica · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "UNAC - Union of the Mediterranean Forest / União da Floresta Mediterrânica",
+        "author_url": null
       },
       "background": null
     },
@@ -15129,6 +15469,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Begnaud",
         "author_url": "https://500px.com/begnaudjake"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10674",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "A shirt that opens with a pop instead of a fight with tiny holes.",
+      "question": "Shiny pearly snaps instead of buttons are a classic feature of which kind of shirt?",
+      "answer": "Western shirt",
+      "wrong_answers": [
+        "Guayabera",
+        "Aloha shirt",
+        "Bowling shirt"
+      ],
+      "hints": [
+        "You'd see a lot of them at a rodeo.",
+        "The shirt often has pointed yokes across the chest and back.",
+        "Cowboys wear them with jeans and boots."
+      ],
+      "fun_fact": "It's said that snaps let a cowboy rip his shirt free if it got caught on a fence or a cow's horn.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/DFC_0796_A_woman_browsing_shirts_on_a_crowded_clothing_rack_in_a_busy_store_with_mannequins_and_folded_garments_nearby.jpg/3840px-DFC_0796_A_woman_browsing_shirts_on_a_crowded_clothing_rack_in_a_busy_store_with_mannequins_and_folded_garments_nearby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_0796_A_woman_browsing_shirts_on_a_crowded_clothing_rack_in_a_busy_store_with_mannequins_and_folded_garments_nearby.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
       },
       "background": null
     },
@@ -17309,6 +17683,40 @@
       "background": null
     },
     {
+      "id": "q-10739",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "usa",
+      "description": "The muscle behind your great-great-grandpa's favorite way to travel.",
+      "question": "I pushed the pistons of old trains and Mississippi riverboats. To go top speed, captains called for “full” me “ahead.” What am I?",
+      "answer": "Steam",
+      "wrong_answers": [
+        "Coal",
+        "Wind",
+        "Diesel"
+      ],
+      "hints": [
+        "I ruled the paddle-wheel and railroad era of the 1800s.",
+        "The captain's command meant: give the engines all the power they have.",
+        "I whistle out of a teapot."
+      ],
+      "fun_fact": "Coal was only the fuel: it boiled the water, and the steam did the pushing.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Paddle_Steamer_Mississippi_on_the_Seine_-_Paris_2013.jpg/3840px-The_Paddle_Steamer_Mississippi_on_the_Seine_-_Paris_2013.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Paddle_Steamer_Mississippi_on_the_Seine_-_Paris_2013.jpg",
+        "credit": "Jim Linwood from London · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Jim Linwood from London",
+        "author_url": "https://www.flickr.com/people/54238124@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-10740",
       "status": "approved",
       "difficulty": 7,
@@ -17615,6 +18023,40 @@
       "background": null
     },
     {
+      "id": "q-10749",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "school-life",
+      "bundle": "usa",
+      "description": "Back-to-school shopping lists: longer than a grocery list and twice as confusing.",
+      "question": "In American schools, what is “construction paper”?",
+      "answer": "Thick colored paper for crafts",
+      "wrong_answers": [
+        "Blueprints for buildings",
+        "Sandpaper for woodshop",
+        "Folded paper hard hats"
+      ],
+      "hints": [
+        "Teachers keep big stacks of it in the classroom supply closet.",
+        "Elementary school kids use it far more than high school students.",
+        "Kids cut it up to make cards, masks and paper chains."
+      ],
+      "fun_fact": "Construction paper fades quickly in sunlight, which is why old classroom art often turns pale on the walls.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hitane_Elementary_School_classroom_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHitane_Elementary_School_classroom_2.jpg",
+        "credit": "Douglas P Perkins · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Douglas P Perkins",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Douglaspperkins"
+      },
+      "background": null
+    },
+    {
       "id": "q-10750",
       "status": "approved",
       "difficulty": 5,
@@ -17713,6 +18155,108 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "ChadPerez49",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:ChadPerez49&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10753",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "school-life",
+      "bundle": "usa",
+      "description": "Proof that the right teacher can turn a whole life around.",
+      "question": "This American girl could neither see nor hear. Her world opened up when her teacher spelled “water” into her hand. Who is she?",
+      "answer": "Helen Keller",
+      "wrong_answers": [
+        "Amelia Earhart",
+        "Rosa Parks",
+        "Clara Barton"
+      ],
+      "hints": [
+        "She was born in Alabama in 1880.",
+        "Her teacher was Anne Sullivan.",
+        "Her story is told in the play and film “The Miracle Worker”."
+      ],
+      "fun_fact": "Helen Keller graduated from Radcliffe College in 1904, the first deafblind person to earn a bachelor's degree.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Helen_Keller_and_Anne_Sullivan_LCCN2004672077.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelen_Keller_and_Anne_Sullivan_LCCN2004672077.jpg",
+        "credit": "Miscellaneous Items in High Demand, PPOC, Library of Congress · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10754",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "school-life",
+      "bundle": "usa",
+      "description": "The time of year when every store aisle suddenly smells like new erasers.",
+      "question": "In the US, stores fill with new backpacks, pencils and binders for “back-to-school” sales. When does this happen?",
+      "answer": "Late summer",
+      "wrong_answers": [
+        "Early spring",
+        "Midwinter",
+        "Late fall"
+      ],
+      "hints": [
+        "It happens right before the new school year begins.",
+        "American kids have a long break from school before it.",
+        "It's usually in August."
+      ],
+      "fun_fact": "Many US states have a sales-tax holiday in late summer, so families can buy school supplies without paying sales tax.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Schriever_Back-to-School_Bash_%289254752%29.jpg/3840px-Schriever_Back-to-School_Bash_%289254752%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchriever_Back-to-School_Bash_%289254752%29.jpg",
+        "credit": "U.S. Space Force photo by Tiana Williams · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Space Force photo by Tiana Williams",
+        "author_url": "https://www.dvidshub.net/portfolio/1739841"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10755",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "A Latin motto with an attitude, worn proudly since 1776.",
+      "question": "This state's motto is “Sic semper tyrannis”. Which state is it?",
+      "answer": "Virginia",
+      "wrong_answers": [
+        "Massachusetts",
+        "Pennsylvania",
+        "Maryland"
+      ],
+      "hints": [
+        "The motto means “Thus always to tyrants”.",
+        "It was one of the original 13 colonies, and eight presidents were born there.",
+        "Its neighbor to the west broke away in 1863 and kept part of its name."
+      ],
+      "fun_fact": "Virginia's seal shows a woman standing over a defeated tyrant, a scene picked to match the motto in 1776.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Koscielniki_Wodzicki_palace_fountain_inscription_Poniatowski.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKoscielniki_Wodzicki_palace_fountain_inscription_Poniatowski.jpg",
+        "credit": "Adrian Tync · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adrian Tync",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gower"
       },
       "background": null
     },
@@ -17951,6 +18495,40 @@
         "license_url": null,
         "author": "Mary Lewandowski",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10763",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "Nobody is quite sure where this nickname came from, but the locals love it.",
+      "question": "People from this state are called Hoosiers. Which state is it?",
+      "answer": "Indiana",
+      "wrong_answers": [
+        "Ohio",
+        "Illinois",
+        "Iowa"
+      ],
+      "hints": [
+        "It's in the Midwest, next to Lake Michigan.",
+        "A famous car race, the “500”, is held there every year.",
+        "It sits right between Ohio and Illinois."
+      ],
+      "fun_fact": "Nobody knows for sure where the word “Hoosier” comes from, and there are many competing stories.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Barn_with_Red_Roof_in_Cornfield_%284104643060%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarn_with_Red_Roof_in_Cornfield_%284104643060%29.jpg",
+        "credit": "Dan Zen from Dundas, Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dan Zen from Dundas, Canada",
+        "author_url": "https://www.flickr.com/people/16077535@N00"
       },
       "background": null
     },
@@ -18835,6 +19413,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PattayaPatrol",
         "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10791",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "words-and-slang",
+      "bundle": "usa",
+      "description": "A word that makes everything, like, extremely more.",
+      "question": "I'm the American region where “hella”, meaning “very”, became everyday talk decades ago. My rappers spread it nationwide. What am I?",
+      "answer": "The San Francisco Bay Area",
+      "wrong_answers": [
+        "The Boston area",
+        "New Orleans",
+        "The Texas Hill Country"
+      ],
+      "hints": [
+        "I'm a cluster of cities around one big body of water.",
+        "My rappers made a wild party style called “hyphy” famous.",
+        "A famous red bridge crosses my water."
+      ],
+      "fun_fact": "Students once asked to make “hella” the official prefix for 10 to the power of 27.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Blake_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlake_1.jpg",
+        "credit": "Floydum · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Floydum",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Floydum&action=edit&redlink=1"
       },
       "background": null
     },
