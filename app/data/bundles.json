@@ -93,7 +93,8 @@
       "icon": "flask",
       "languages": [
         "en",
-        "es"
+        "es",
+        "es-ES"
       ],
       "name": "Paquete de preguntas de ciencia",
       "description": "Más preguntas sobre naturaleza, espacio, inventos, ingeniería y matemáticas.",
