@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "1c4bad1e",
+  "hash": "a0c6c68a",
   "questions": [
     {
       "id": "q-0711",
@@ -11733,6 +11733,40 @@
       "background": null
     },
     {
+      "id": "q-11429",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "boxing",
+      "bundle": "mexico",
+      "description": "Una frase que nació en la esquina del ring y terminó en la sala de tu casa.",
+      "question": "Completa la frase que viene del box y usamos cuando alguien se rinde: \"Ya no puedo más, voy a tirar la…\"",
+      "answer": "Toalla",
+      "wrong_answers": [
+        "Campana",
+        "Cuerda",
+        "Gorra"
+      ],
+      "hints": [
+        "Es algo que la esquina tiene a la mano.",
+        "La esquina la lanza al ring para detener la pelea.",
+        "También la usas al salir de bañarte."
+      ],
+      "fun_fact": "En el box, cuando la esquina lanza ese objeto al ring, la pelea se detiene para proteger a su boxeador.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Set-up_of_a_boxing_Ring.jpg/3840px-Set-up_of_a_boxing_Ring.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASet-up_of_a_boxing_Ring.jpg",
+        "credit": "Micheal Kaluba · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Micheal Kaluba",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Micheal_Kaluba"
+      },
+      "background": null
+    },
+    {
       "id": "q-11430",
       "status": "approved",
       "difficulty": 14,
@@ -11937,6 +11971,40 @@
       "background": null
     },
     {
+      "id": "q-11436",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "brands-and-snacks",
+      "bundle": "mexico",
+      "description": "Un bicho que nadie quiere en la manzana, pero todos quieren en la mochila.",
+      "question": "El Lucas Gusano es un dulce en una botellita que aprietas para que salga. ¿Qué trae adentro?",
+      "answer": "Chamoy enchilado",
+      "wrong_answers": [
+        "Leche condensada",
+        "Cajeta",
+        "Miel de abeja"
+      ],
+      "hints": [
+        "Es un sabor que también encuentras en muchas otras botanas y dulces mexicanos.",
+        "Se prepara con fruta, como chabacano o ciruela.",
+        "Es agridulce y se le pone a la fruta y a los raspados."
+      ],
+      "fun_fact": "Los dulces Lucas nacieron en México y hoy pertenecen a la empresa Mars, la de los M&M's.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/Pick-a-mix_%28bulk_candy_sold_by_weight%29_at_candy_department_at_Liverpool_department_store%2C_Polanco%2C_Mexico_City.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APick-a-mix_%28bulk_candy_sold_by_weight%29_at_candy_department_at_Liverpool_department_store%2C_Polanco%2C_Mexico_City.jpg",
+        "credit": "Keizers · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Keizers",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Keizers"
+      },
+      "background": null
+    },
+    {
       "id": "q-11437",
       "status": "approved",
       "difficulty": 1,
@@ -12035,6 +12103,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "MIKI Yoshihito from Sapporo City,Hokkaido., JAPAN",
         "author_url": "https://www.flickr.com/people/7940758@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11440",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "brands-and-snacks",
+      "bundle": "mexico",
+      "description": "Unos chiles que se dieron un baño ácido y salieron más famosos que nunca.",
+      "question": "Los chiles en vinagre, como los que vienen en lata, acompañan muchos tacos. ¿Qué tipo de chile es el más usado para hacerlos?",
+      "answer": "El jalapeño",
+      "wrong_answers": [
+        "El habanero",
+        "El poblano",
+        "El chile de árbol"
+      ],
+      "hints": [
+        "Es verde y de tamaño mediano.",
+        "Muchas veces vienen en rodajas con zanahoria y cebolla.",
+        "Su nombre viene de Xalapa, la capital de Veracruz."
+      ],
+      "fun_fact": "Cuando el jalapeño se seca y se ahúma se convierte en chipotle.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Al_pastor_tacos_%2834965815632%29.jpg/3840px-Al_pastor_tacos_%2834965815632%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAl_pastor_tacos_%2834965815632%29.jpg",
+        "credit": "T.Tseng · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "T.Tseng",
+        "author_url": "https://www.flickr.com/people/68147320@N02"
       },
       "background": null
     },
@@ -12171,6 +12273,74 @@
         "license_url": null,
         "author": "Methem (Mikko J. Putkonen)",
         "author_url": "https://commons.wikimedia.org/wiki/User:Methem"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11445",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "chespirito",
+      "bundle": "mexico",
+      "description": "En el salón de la vecindad da clases un señor que no necesita escalera para borrar lo de arriba del pizarrón.",
+      "question": "Lo grita el Profesor Jirafales y cada vez sube más la voz hasta el último «¡taaa!». ¿Qué siente cuando dice «¡Ta ta ta ta!»?",
+      "answer": "Enojo",
+      "wrong_answers": [
+        "Alegría",
+        "Hambre",
+        "Miedo"
+      ],
+      "hints": [
+        "Casi siempre es por culpa del Chavo.",
+        "Suele pasar en el salón de clases, después de que un alumno hace una travesura.",
+        "Es lo contrario de estar contento y tranquilo."
+      ],
+      "fun_fact": "Al Profesor Jirafales lo interpretó Rubén Aguirre, un actor tan alto que su apodo en la serie viene de la jirafa.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Chokai_JHS_2B_classroom_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChokai_JHS_2B_classroom_2.jpg",
+        "credit": "Douglas P Perkins · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Douglas P Perkins",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Douglaspperkins"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11446",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "chespirito",
+      "bundle": "mexico",
+      "description": "Un recuerdo que te deja la puerta de la cocina cuando la abres muy rápido.",
+      "question": "Sale después de un golpe, se levanta en la cabeza y el Chapulín Colorado le puso su nombre a su martillo. ¿Qué es un «chipote»?",
+      "answer": "Un chichón",
+      "wrong_answers": [
+        "Un raspón",
+        "Una cortada",
+        "Un calambre"
+      ],
+      "hints": [
+        "Duele, pero casi nunca sangra.",
+        "Se nota como una bolita.",
+        "Se baja poniéndole hielo."
+      ],
+      "fun_fact": "El chipote chillón suena «¡chuic!» en cada golpe, pero no lastima a nadie de verdad.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Scene_from_the_Ladies%27_Cooling_Room_%286eb89b9b-5083-405c-82c4-4463a3ab3080%29.jpg/3840px-Scene_from_the_Ladies%27_Cooling_Room_%286eb89b9b-5083-405c-82c4-4463a3ab3080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScene_from_the_Ladies%27_Cooling_Room_%286eb89b9b-5083-405c-82c4-4463a3ab3080%29.jpg",
+        "credit": "NPS Photo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NPS Photo",
+        "author_url": null
       },
       "background": null
     },
@@ -12749,6 +12919,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Tatsuo Yamashita",
         "author_url": "https://www.flickr.com/people/27983255@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11464",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "comics",
+      "bundle": "mexico",
+      "description": "Capas brillantes, botas altas y máscaras de todos los colores: así se viste un ídolo del ring.",
+      "question": "Muchos luchadores mexicanos, como El Santo, pasaron casi toda su carrera sin quitarse la máscara. ¿Para qué la usaban?",
+      "answer": "Para mantener en secreto quiénes eran",
+      "wrong_answers": [
+        "Para respirar mejor",
+        "Para no tener frío",
+        "Para ver en la oscuridad"
+      ],
+      "hints": [
+        "Los héroes de los cómics a veces viven dos vidas.",
+        "Fuera del ring podían caminar por la calle como cualquier vecino.",
+        "Como los superhéroes, nadie debía ver su verdadero rostro ni saber su nombre."
+      ],
+      "fun_fact": "El Santo fue enterrado con su máscara puesta, como él lo pidió.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lucha_libre_m%C3%A1scaras.JPG/3840px-Lucha_libre_m%C3%A1scaras.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALucha_libre_m%C3%A1scaras.JPG",
+        "credit": "Jonathan McIntosh · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jonathan McIntosh",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Thehero"
       },
       "background": null
     },
@@ -13705,6 +13909,40 @@
       "background": null
     },
     {
+      "id": "q-11494",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "liga-mx",
+      "bundle": "mexico",
+      "description": "Una temporada con dos capítulos, como las telenovelas que nunca se acaban.",
+      "question": "Terminó el Apertura en diciembre y en enero arranca el otro torneo de la temporada de la Liga MX. ¿Cómo se llama?",
+      "answer": "Clausura",
+      "wrong_answers": [
+        "Cierre",
+        "Revancha",
+        "Finalización"
+      ],
+      "hints": [
+        "También termina con una Liguilla, pero en primavera",
+        "Es una palabra que se usa cuando se termina un evento o un congreso",
+        "Es lo contrario de «apertura»"
+      ],
+      "fun_fact": "La Liga MX usa los nombres Apertura y Clausura desde 2002.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/NMSU_AggieMemorialStadium.jpg/3840px-NMSU_AggieMemorialStadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANMSU_AggieMemorialStadium.jpg",
+        "credit": "Terry Umbenhaur · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Terry Umbenhaur",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tumbenhaur"
+      },
+      "background": null
+    },
+    {
       "id": "q-11495",
       "status": "approved",
       "difficulty": 12,
@@ -14109,6 +14347,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Sebastian Carlosena",
         "author_url": "https://web.archive.org/web/20161030080104/http://www.panoramio.com/user/8067902?with_photo_id=100726249"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11507",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "mariachi-and-ranchera",
+      "bundle": "mexico",
+      "description": "Para cantar bajo un balcón hace falta una voz de terciopelo y un chal por si refresca.",
+      "question": "¿Qué cantante, conocido como «El Lujo de México», integró el trío Los Tres Ases antes de su carrera solista?",
+      "answer": "Marco Antonio Muñiz",
+      "wrong_answers": [
+        "Javier Solís",
+        "Armando Manzanero",
+        "José José"
+      ],
+      "hints": [
+        "Es un bolerista cuya carrera despegó en los años cincuenta y sesenta.",
+        "Nació en Jalisco en los años treinta.",
+        "Hizo famosa la canción «Luz y sombra»."
+      ],
+      "fun_fact": "Marco Antonio Muñiz nació en Guadalajara en 1933 y grabó durante más de cinco décadas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Stauffer_Guitars_%26_early_Martin_Guitars_-_C.F._Martin_Guitar_Factory_2012-08-06_-_004.jpg/3840px-Stauffer_Guitars_%26_early_Martin_Guitars_-_C.F._Martin_Guitar_Factory_2012-08-06_-_004.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStauffer_Guitars_%26_early_Martin_Guitars_-_C.F._Martin_Guitar_Factory_2012-08-06_-_004.jpg",
+        "credit": "Joseph Brent from New York, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joseph Brent from New York, USA",
+        "author_url": "https://www.flickr.com/people/33251718@N00"
       },
       "background": null
     },
@@ -16221,6 +16493,40 @@
       "background": null
     },
     {
+      "id": "q-11571",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "traditional-dances",
+      "bundle": "mexico",
+      "description": "Para esta danza no bastan los buenos pies: también hace falta buen estómago.",
+      "question": "¿Qué danza de la Sierra Norte de Puebla es famosa por terminar con cuatro danzantes girando en una gran cruz de madera vertical, como rueda de la fortuna?",
+      "answer": "La danza de los Huahuas",
+      "wrong_answers": [
+        "La danza de los Voladores",
+        "La danza de los Negritos",
+        "La danza de los Santiagueros"
+      ],
+      "hints": [
+        "La bailan pueblos totonacos y nahuas.",
+        "Igual que otra danza famosa de la región, termina en las alturas.",
+        "No vuelan colgados de un palo: la cruz entera gira con ellos encima, como un molino."
+      ],
+      "fun_fact": "Sus vecinos, los Voladores de Papantla, son Patrimonio Cultural Inmaterial de la Humanidad de la UNESCO desde 2009.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Iglesia_de_Cuetzalan_%28Centro%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIglesia_de_Cuetzalan_%28Centro%29.jpg",
+        "credit": "CDGJ965commons · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "CDGJ965commons",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:CDGJ965commons&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-11572",
       "status": "approved",
       "difficulty": 4,
@@ -16561,6 +16867,40 @@
       "background": null
     },
     {
+      "id": "q-11583",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "comics",
+      "bundle": "mexico",
+      "description": "Le pagan por hacer garabatos en el periódico, y encima la gente se ríe.",
+      "question": "Completa: en México, a quien dibuja historietas y caricaturas en el periódico se le llama «___».",
+      "answer": "monero",
+      "wrong_answers": [
+        "titiritero",
+        "rotulista",
+        "muralista"
+      ],
+      "hints": [
+        "Este oficio suele burlarse de los políticos con mucho humor.",
+        "Rius, Naranjo y El Fisgón son famosos con este oficio.",
+        "La palabra viene de cómo se les dice en México a los dibujitos de las historietas: «monitos»."
+      ],
+      "fun_fact": "Rius, uno de los moneros más famosos de México, publicó más de cien libros llenos de monitos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Great_White_Fleet_return2.jpg/3840px-Great_White_Fleet_return2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_White_Fleet_return2.jpg",
+        "credit": "William Allen Rogers · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "William Allen Rogers",
+        "author_url": "https://en.wikipedia.org/wiki/en:William_Allen_Rogers"
+      },
+      "background": null
+    },
+    {
       "id": "q-11584",
       "status": "approved",
       "difficulty": 5,
@@ -16829,6 +17169,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "ProtoplasmaKid",
         "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11593",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "folk-beliefs",
+      "bundle": "mexico",
+      "description": "Un santo con mucho trabajo: cuida la caja registradora de media ciudad.",
+      "question": "En muchos negocios de México cuelgan una herradura de la suerte con la imagen de un santo para que lleguen clientes. ¿Qué santo es?",
+      "answer": "San Martín Caballero",
+      "wrong_answers": [
+        "San Judas Tadeo",
+        "San Antonio de Padua",
+        "San Isidro Labrador"
+      ],
+      "hints": [
+        "Es el santo de los comerciantes en México.",
+        "Su fiesta se celebra el 11 de noviembre.",
+        "Fue un soldado romano que llegó a ser obispo de Tours, en Francia."
+      ],
+      "fun_fact": "Según la leyenda, San Martín partió su capa a la mitad con su espada para dársela a un hombre que pasaba frío.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Horseshoe_for_luck.jpg/3840px-Horseshoe_for_luck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHorseshoe_for_luck.jpg",
+        "credit": "Przemek P · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Przemek P",
+        "author_url": null
       },
       "background": null
     },
@@ -17581,6 +17955,40 @@
       "background": null
     },
     {
+      "id": "q-11616",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "other-sports",
+      "bundle": "mexico",
+      "description": "Un oro de 1984 que todavía se presume en las sobremesas mexicanas.",
+      "question": "Ernesto Canto fue campeón mundial en 1983, rompió el récord mundial en 1984 y ese año ganó oro en Los Ángeles. ¿En qué prueba?",
+      "answer": "Marcha de 20 km",
+      "wrong_answers": [
+        "Marcha de 50 km",
+        "Maratón",
+        "10 000 metros"
+      ],
+      "hints": [
+        "Su prueba se disputa por las calles, no dando vueltas en la pista.",
+        "Es una prueba en la que México ha ganado muchas medallas olímpicas.",
+        "En su prueba siempre debe haber un pie tocando el suelo, y es la más corta de las dos que hubo."
+      ],
+      "fun_fact": "En Los Ángeles 1984, Raúl González ganó el oro en 50 km de marcha, así que México se llevó las dos pruebas de marcha.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Los_Angeles_Memorial_Coliseum.png/3840px-Los_Angeles_Memorial_Coliseum.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALos_Angeles_Memorial_Coliseum.png",
+        "credit": "Quintin Soloviev · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Quintin Soloviev",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Quintinsoloviev"
+      },
+      "background": null
+    },
+    {
       "id": "q-11617",
       "status": "approved",
       "difficulty": 10,
@@ -17713,6 +18121,40 @@
         "license_url": null,
         "author": "NPS",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11621",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "pop-and-rock",
+      "bundle": "mexico",
+      "description": "Los famosos no tienen nombre, tienen título nobiliario de farándula.",
+      "question": "¿Con qué apodo conocen a la cantante Lucero desde hace décadas?",
+      "answer": "La Novia de América",
+      "wrong_answers": [
+        "La Chica Dorada",
+        "La Diva de la Banda",
+        "La Reina del Tex-Mex"
+      ],
+      "hints": [
+        "Lucero empezó a cantar y actuar de niña, y el apodo la acompaña desde muy joven.",
+        "Es un apodo cariñoso que le pusieron sus fans y la prensa.",
+        "Es como decir que todo un continente quiere casarse con ella."
+      ],
+      "fun_fact": "Lucero es de las pocas estrellas que pasan del pop a las rancheras con mariachi sin despeinarse.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/My_Chemical_Romance_%40_Wembley_Stadium%2C_11_July_2026_B-Stage_Post-Show.jpg/3840px-My_Chemical_Romance_%40_Wembley_Stadium%2C_11_July_2026_B-Stage_Post-Show.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMy_Chemical_Romance_%40_Wembley_Stadium%2C_11_July_2026_B-Stage_Post-Show.jpg",
+        "credit": "Hullian111 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Hullian111",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hullian111"
       },
       "background": null
     },
@@ -18193,6 +18635,40 @@
       "background": null
     },
     {
+      "id": "q-11636",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "slang",
+      "bundle": "mexico",
+      "description": "Un personaje que lleva décadas haciendo reír a México sin cobrar un solo peso.",
+      "question": "Sus chistes se cuentan en todo México, pasan de abuelos a nietos y casi siempre lo meten en problemas. ¿Quién es Pepito?",
+      "answer": "Un niño travieso de la escuela",
+      "wrong_answers": [
+        "Un perro que habla",
+        "Un abuelito despistado",
+        "Un payaso de circo"
+      ],
+      "hints": [
+        "Sus chistes se cuentan en las reuniones familiares y entre amigos.",
+        "Sus papás siempre terminan regañándolo por lo que dice.",
+        "Muchos de sus chistes empiezan con «La maestra le pregunta…»."
+      ],
+      "fun_fact": "En otros países existe un niño parecido: en España se llama Jaimito y en Italia, Pierino.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/DSC_7089_Three_friends_laugh_and_toast_over_drinks_during_a_lively_evening_dinner_at_a_cozy_plant-filled_restaurant.jpg/3840px-DSC_7089_Three_friends_laugh_and_toast_over_drinks_during_a_lively_evening_dinner_at_a_cozy_plant-filled_restaurant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADSC_7089_Three_friends_laugh_and_toast_over_drinks_during_a_lively_evening_dinner_at_a_cozy_plant-filled_restaurant.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
       "id": "q-11637",
       "status": "approved",
       "difficulty": 4,
@@ -18665,6 +19141,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Mk2010",
         "author_url": "https://commons.wikimedia.org/wiki/User:Mk2010"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11652",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "school-and-services",
+      "bundle": "mexico",
+      "description": "Las filas más madrugadoras de la colonia, con bolsa y tarjeta en mano.",
+      "question": "Durante décadas, Liconsa ha vendido a bajo precio un producto a millones de familias mexicanas. ¿Cuál?",
+      "answer": "Leche",
+      "wrong_answers": [
+        "Tortillas",
+        "Frijol",
+        "Huevo"
+      ],
+      "hints": [
+        "Se vende en sus propias tienditas, en bolsa.",
+        "Las familias inscritas reciben una tarjeta para comprar cada semana su dotación.",
+        "Sus puntos de venta se llaman lecherías."
+      ],
+      "fun_fact": "La leche de Liconsa viene fortificada con hierro, zinc y vitaminas para combatir la anemia infantil.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Flores_en_Avenida_%C3%81lvaro_Obreg%C3%B3n%2C_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlores_en_Avenida_%C3%81lvaro_Obreg%C3%B3n%2C_Ciudad_de_M%C3%A9xico.jpg",
+        "credit": "Raul21940 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Raul21940",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Raul21940"
       },
       "background": null
     },
@@ -19243,6 +19753,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Isidro sx16",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Isidro_sx16&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11670",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "state-symbols",
+      "bundle": "mexico",
+      "description": "Un equipo con nombre de ave muy platicadora.",
+      "question": "El equipo de béisbol de este estado se llama los Pericos. ¿Qué estado es?",
+      "answer": "Puebla",
+      "wrong_answers": [
+        "Tlaxcala",
+        "Hidalgo",
+        "Morelos"
+      ],
+      "hints": [
+        "Está en el centro del país, cerca de la capital.",
+        "El volcán Popocatépetl está en su frontera.",
+        "Es famoso por el mole y los chiles en nogada."
+      ],
+      "fun_fact": "Los Pericos de Puebla juegan en la Liga Mexicana de Béisbol.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Green_parrot_with_orange_beak_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreen_parrot_with_orange_beak_%28Unsplash%29.jpg",
+        "credit": "Sven Scheuermeier sveninho · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Sven Scheuermeier sveninho",
+        "author_url": "https://unsplash.com/@sveninho"
       },
       "background": null
     },
@@ -20093,6 +20637,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Takajarru",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Takajarru&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11696",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "tv-shows-and-hosts",
+      "bundle": "mexico",
+      "description": "¡Fíjate, fíjate, fíjate! Esta pregunta es de la vecindad más famosa de la tele.",
+      "question": "La Chilindrina, de «El Chavo del 8», es hija de don Ramón, tiene pecas y se peina con dos coletas. ¿Qué lleva siempre en la cara?",
+      "answer": "Unos lentes",
+      "wrong_answers": [
+        "Un parche",
+        "Un bigote",
+        "Una nariz de payaso"
+      ],
+      "hints": [
+        "Es tan parte de su look como sus coletas.",
+        "No es un disfraz: lo lleva en todos los capítulos.",
+        "Se apoyan en la nariz y en las orejas."
+      ],
+      "fun_fact": "María Antonieta de las Nieves interpretó a la Chilindrina durante décadas, incluso ya de adulta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Secondary_Courtyard_-_Museo_de_la_Ciudad_de_Mexico_-_Mexico_2024.jpg/3840px-Secondary_Courtyard_-_Museo_de_la_Ciudad_de_Mexico_-_Mexico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASecondary_Courtyard_-_Museo_de_la_Ciudad_de_Mexico_-_Mexico_2024.jpg",
+        "credit": "José Luiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "José Luiz",
+        "author_url": null
       },
       "background": null
     },
