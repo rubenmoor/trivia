@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "4639b6d7",
+  "hash": "b1938d58",
   "questions": [
     {
       "id": "q-9120",
@@ -12694,6 +12694,40 @@
       "background": null
     },
     {
+      "id": "q-10813",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "athletes-and-other-sports",
+      "bundle": "germany",
+      "description": "Drei von vier ist super – außer man ist Tennisprofi und will alles.",
+      "question": "Angelique Kerber gewann drei verschiedene Grand-Slam-Turniere. Welches fehlt ihr?",
+      "answer": "French Open",
+      "wrong_answers": [
+        "Australian Open",
+        "US Open",
+        "Wimbledon"
+      ],
+      "hints": [
+        "Ihre großen Titel holte sie 2016 und 2018.",
+        "2018 schlug sie Serena Williams in einem Finale auf Rasen.",
+        "Das fehlende Turnier wird auf rotem Sand gespielt."
+      ],
+      "fun_fact": "2016 wurde Kerber als erste Deutsche seit Steffi Graf die Nummer eins der Tennis-Weltrangliste.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Tennis_Racket_and_Balls.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATennis_Racket_and_Balls.jpg",
+        "credit": "Vladsinger at English Wikipedia · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Vladsinger at English Wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:Vladsinger"
+      },
+      "background": null
+    },
+    {
       "id": "q-10814",
       "status": "approved",
       "difficulty": 10,
@@ -13642,6 +13676,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Didier Descouens",
         "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10842",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "childrens-books-and-comics",
+      "bundle": "germany",
+      "description": "Der fleißigste Briefeschreiber der Welt hat zwei lange Ohren und keine Briefmarkensammlung.",
+      "question": "Ich bin ein kleiner Stoffhase. Meine Freundin Sophie hat mich verloren, und nun schicke ich ihr Briefe aus aller Welt. Wer bin ich?",
+      "answer": "Felix",
+      "wrong_answers": [
+        "Hasenhans",
+        "Mümmelmann",
+        "Fridolin"
+      ],
+      "hints": [
+        "In meinen Büchern stecken echte Briefe zum Herausnehmen.",
+        "Mein Name bedeutet auf Latein „der Glückliche“.",
+        "Mein Name klingt wie eine berühmte Comic-Katze."
+      ],
+      "fun_fact": "In den Felix-Büchern kleben echte Umschläge, aus denen man die Briefe des Hasen herausziehen kann.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/USSR_1932-09-15_registered_postal_cover_Leningrad-Berlin.jpg/3840px-USSR_1932-09-15_registered_postal_cover_Leningrad-Berlin.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUSSR_1932-09-15_registered_postal_cover_Leningrad-Berlin.jpg",
+        "credit": "Ministry of Communications of the USSR · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ministry of Communications of the USSR",
+        "author_url": null
       },
       "background": null
     },
@@ -15006,6 +15074,40 @@
       "background": null
     },
     {
+      "id": "q-10884",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "dialects-and-regional-words",
+      "bundle": "germany",
+      "description": "Ein Gesetzbuch, das man am besten mit einem Kölsch in der Hand liest.",
+      "question": "Was ist das „Rheinische Grundgesetz“?",
+      "answer": "Sammlung kölscher Lebensweisheiten",
+      "wrong_answers": [
+        "Landesverfassung von Nordrhein-Westfalen",
+        "Verkehrsregeln für Rheinschiffe",
+        "Satzung des Kölner Karnevals"
+      ],
+      "hints": [
+        "Kein Gericht der Welt hat es je beschlossen.",
+        "Es ist in Kölsch geschrieben und hat elf Artikel.",
+        "Ein Artikel lautet: „Et hätt noch immer jot jejange.“"
+      ],
+      "fun_fact": "Artikel 1 lautet „Et es wie et es“ – „Es ist, wie es ist“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Cologne_-_panoramic_image_of_the_old_town_at_dusk_%28cropped1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACologne_-_panoramic_image_of_the_old_town_at_dusk_%28cropped1%29.jpg",
+        "credit": "Cologne_-_Panoramic_Image_of_the_old_town_at_dusk.jpg: Ahgee ASR688 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Cologne_-_Panoramic_Image_of_the_old_town_at_dusk.jpg: Ahgee ASR688\nderivative work: ZH2010 (talk)",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Cologne_-_Panoramic_Image_of_the_old_town_at_dusk.jpg"
+      },
+      "background": null
+    },
+    {
       "id": "q-10885",
       "status": "approved",
       "difficulty": 8,
@@ -15380,6 +15482,40 @@
       "background": null
     },
     {
+      "id": "q-10896",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Klirrende Taschen durchs ganze Viertel schleppen – und am Ende klimpert das Taschengeld.",
+      "question": "„Ich nahm Altpapier, Flaschen und Gläser an, Pioniere brachten mir ganze Handwagen voll, und dafür gab es Pfennige.“ Wer bin ich?",
+      "answer": "SERO",
+      "wrong_answers": [
+        "Intershop",
+        "Konsum",
+        "Exquisit"
+      ],
+      "hints": [
+        "Meine Stellen gab es in fast jeder Stadt und jedem Wohnviertel der DDR.",
+        "Schulklassen wetteiferten bei Sammelaktionen, wer mir am meisten brachte.",
+        "Ausgeschrieben heiße ich Sekundärrohstofferfassung."
+      ],
+      "fun_fact": "Für Altstoffe zahlte der Staat so gut, dass viele Kinder ihr Taschengeld mit Flaschensammeln aufbesserten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Michael_Mandibergs_Old_news_at_postmasters_nyc.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMichael_Mandibergs_Old_news_at_postmasters_nyc.jpg",
+        "credit": "m_mandiberg · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "m_mandiberg",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10897",
       "status": "approved",
       "difficulty": 8,
@@ -15682,6 +15818,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Kicior99",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kicior99"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10906",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Ein Streik auf der Baustelle, der ganz anders endete als mit einer Lohnerhöhung.",
+      "question": "Bauarbeiter an der Ost-Berliner Stalinallee streikten, bald protestierten Hunderttausende in der ganzen DDR. Was geschah dann?",
+      "answer": "Sowjetische Panzer rückten an",
+      "wrong_answers": [
+        "Die Regierung trat zurück",
+        "Die Grenze zum Westen ging auf",
+        "Die Berliner Mauer wurde gebaut"
+      ],
+      "hints": [
+        "Die Bauarbeiter protestierten zuerst gegen höhere Arbeitsnormen.",
+        "Die DDR-Führung blieb an der Macht, und die Proteste wurden mit Gewalt beendet.",
+        "Schweres Militärgerät aus Moskaus Armee fuhr durch die Straßen."
+      ],
+      "fun_fact": "Die Stalinallee heißt seit 1961 Karl-Marx-Allee und steht heute unter Denkmalschutz.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Berlin-Friedrichshain%2C_zicht_op_de_Karl_Marx_Allee_bij_de_Friedrichs_Strasse_Dm09085173_IMG_5358_2024-09-05_09.28.jpg/3840px-Berlin-Friedrichshain%2C_zicht_op_de_Karl_Marx_Allee_bij_de_Friedrichs_Strasse_Dm09085173_IMG_5358_2024-09-05_09.28.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABerlin-Friedrichshain%2C_zicht_op_de_Karl_Marx_Allee_bij_de_Friedrichs_Strasse_Dm09085173_IMG_5358_2024-09-05_09.28.jpg",
+        "credit": "Michielverbeek · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Michielverbeek",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Michielverbeek"
       },
       "background": null
     },
@@ -17726,6 +17896,40 @@
       "background": null
     },
     {
+      "id": "q-10970",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "art-architecture-and-museums",
+      "bundle": "germany",
+      "description": "Ein Tier in Ritterrüstung, gezeichnet nach Hörensagen.",
+      "question": "Welcher Künstler schuf 1515 einen berühmten Nashorn-Holzschnitt, ohne je ein Nashorn gesehen zu haben?",
+      "answer": "Albrecht Dürer",
+      "wrong_answers": [
+        "Lucas Cranach der Ältere",
+        "Hans Holbein der Jüngere",
+        "Albrecht Altdorfer"
+      ],
+      "hints": [
+        "Er lebte in Nürnberg.",
+        "Er malte ein berühmtes Selbstbildnis im Pelzrock.",
+        "Sein Monogramm besteht aus den Buchstaben A und D."
+      ],
+      "fun_fact": "Das echte Nashorn war als Geschenk für den Papst unterwegs, doch Anfang 1516 sank sein Schiff vor der italienischen Küste.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Indian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg/3840px-Indian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIndian_rhinoceros_%28Rhinoceros_unicornis%29_4.jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charles J. Sharp",
+        "author_url": "https://www.wikidata.org/wiki/Q54800218"
+      },
+      "background": null
+    },
+    {
       "id": "q-10971",
       "status": "approved",
       "difficulty": 13,
@@ -17858,6 +18062,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bonoahx",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Bonoahx&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10975",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "brands-and-products",
+      "bundle": "germany",
+      "description": "Ein Klassiker aus dem Werkzeugkasten, gleich neben dem verschollenen Inbusschlüssel.",
+      "question": "Pattex gibt es seit Jahrzehnten, es gehört zu Henkel und liegt als Tube in vielen Werkzeugkästen. Wofür benutzt man es?",
+      "answer": "Zum Kleben",
+      "wrong_answers": [
+        "Zum Putzen",
+        "Zum Streichen",
+        "Zum Schmieren"
+      ],
+      "hints": [
+        "Man braucht es oft, wenn etwas kaputtgegangen ist.",
+        "Bastler nehmen es für Holz, Leder oder Gummi.",
+        "Es ist ein Verwandter des Pritt-Stifts, nur viel stärker."
+      ],
+      "fun_fact": "Auch der Pritt-Stift und das Waschmittel Persil gehören zu Henkel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Minnesota_State_Capitol_Woodworkers_Toolbox_Historical_Society.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMinnesota_State_Capitol_Woodworkers_Toolbox_Historical_Society.jpg",
+        "credit": "Minnesota Historical Society · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Minnesota Historical Society",
+        "author_url": null
       },
       "background": null
     },
@@ -18096,6 +18334,40 @@
         "license_url": null,
         "author": "U.S. Army 105MPAD by Pfc. Joshua Linfoot",
         "author_url": "https://www.dvidshub.net/portfolio/1708781"
+      },
+      "background": null
+    },
+    {
+      "id": "q-10984",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "bundesliga-and-clubs",
+      "bundle": "germany",
+      "description": "Ein Weltmeister, der beruflich ständig im Blickpunkt von 22 Leuten steht.",
+      "question": "Manuel Neuer wurde 2014 Weltmeister und gilt als einer der Besten auf seiner Position. Auf welcher Position wurde er berühmt?",
+      "answer": "Torwart",
+      "wrong_answers": [
+        "Stürmer",
+        "Verteidiger",
+        "Mittelfeldspieler"
+      ],
+      "hints": [
+        "Er steht meistens weit hinten.",
+        "Er ist sehr groß, fast 1,93 Meter.",
+        "Sein Platz ist direkt vor dem Netz."
+      ],
+      "fun_fact": "Manuel Neuer kam oft weit aus seinem Tor heraus und spielte fast wie ein zusätzlicher Feldspieler mit.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Mbombela_Stadium_crowd_leaving.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMbombela_Stadium_crowd_leaving.jpg",
+        "credit": "Tadpolefarm · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tadpolefarm",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tadpolefarm"
       },
       "background": null
     },
@@ -18406,6 +18678,40 @@
       "background": null
     },
     {
+      "id": "q-10994",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "dialects-and-regional-words",
+      "bundle": "germany",
+      "description": "Ein Spruch aus der Stadt, in der sogar der Dom im Karneval heimlich mitschunkelt.",
+      "question": "Was bedeutet der kölsche Spruch „Et kütt wie et kütt“?",
+      "answer": "Es kommt, wie es kommt",
+      "wrong_answers": [
+        "Es kühlt, wie es kühlt",
+        "Es klappt, wie es klappt",
+        "Es kocht, wie es kocht"
+      ],
+      "hints": [
+        "Der Spruch ist eine Lebenseinstellung: gelassen bleiben.",
+        "Er steht im sogenannten „Kölschen Grundgesetz“.",
+        "Gemeint ist: Was passiert, passiert eben."
+      ],
+      "fun_fact": "Im Kölschen wird aus „g“ oft ein „j“: „gut“ heißt dort „jot“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Kranh%C3%A4user_Cologne%2C_April_2018_-01.jpg/3840px-Kranh%C3%A4user_Cologne%2C_April_2018_-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKranh%C3%A4user_Cologne%2C_April_2018_-01.jpg",
+        "credit": "Martin Falbisoner · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Martin Falbisoner",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10995",
       "status": "approved",
       "difficulty": 6,
@@ -18678,6 +18984,40 @@
       "background": null
     },
     {
+      "id": "q-11004",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Ein Star, der die Mauer von der falschen Seite aus überquerte – zumindest aus Sicht der meisten.",
+      "question": "Der Sänger und Schauspieler Dean Reed lebte ab den 1970er-Jahren in der DDR. Was stimmt über ihn NICHT?",
+      "answer": "Er gewann den Eurovision Song Contest.",
+      "wrong_answers": [
+        "Er stammte aus den USA.",
+        "Er spielte in DEFA-Indianerfilmen.",
+        "Man nannte ihn den „Roten Elvis“."
+      ],
+      "hints": [
+        "Er war in Osteuropa ein Star, im Westen kaum bekannt.",
+        "Er drehte unter anderem „Blutsbrüder“ mit Gojko Mitić.",
+        "Die DDR nahm nie an dem Wettbewerb teil, um den es in einer Antwort geht."
+      ],
+      "fun_fact": "Dean Reed wurde in Denver geboren und war in der Sowjetunion so berühmt, dass er dort vor riesigen Stadien auftrat.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Display_of_guitars_and_clothing_related_to_Alabama%2C_a_Grammy_Award-winning_country_music_and_southern_rock_band_that_originated_in_Fort_Payne%2C_Alabama_LCCN2010639498.tif/lossy-page1-3840px-thumbnail.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADisplay_of_guitars_and_clothing_related_to_Alabama%2C_a_Grammy_Award-winning_country_music_and_southern_rock_band_that_originated_in_Fort_Payne%2C_Alabama_LCCN2010639498.tif",
+        "credit": "Carol M. Highsmith · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Carol M. Highsmith",
+        "author_url": "https://en.wikipedia.org/wiki/en:Carol_M._Highsmith"
+      },
+      "background": null
+    },
+    {
       "id": "q-11005",
       "status": "approved",
       "difficulty": 7,
@@ -18742,6 +19082,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Michael Brooks",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11007",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Ein Polizist, der dein Treppenhaus besser kannte als der Hausmeister.",
+      "question": "In der DDR war für jedes Wohnviertel ein bestimmter Volkspolizist zuständig, der seine Leute genau kannte. Welchen Titel trug er?",
+      "answer": "Abschnittsbevollmächtigter",
+      "wrong_answers": [
+        "Wohnbezirkskommissar",
+        "Revierbeauftragter",
+        "Stadtteilwachtmeister"
+      ],
+      "hints": [
+        "Sein Titel war so lang, dass fast alle nur drei Buchstaben sagten.",
+        "Er lief durch sein Gebiet, kannte die Hausgemeinschaften und prüfte die Anmeldungen.",
+        "Kurz nannte man ihn „ABV“."
+      ],
+      "fun_fact": "Der ABV kontrollierte auch die Hausbücher, in die sich Gäste eintragen mussten, die länger als drei Tage blieben.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/19860503100AR_Berlin_Petersburger_Stra%C3%9Fe_78_Bersarinplatz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A19860503100AR_Berlin_Petersburger_Stra%C3%9Fe_78_Bersarinplatz.jpg",
+        "credit": "Jörg Blobelt · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jörg Blobelt",
+        "author_url": "https://www.wikidata.org/wiki/Q28598952"
       },
       "background": null
     },
@@ -19426,6 +19800,40 @@
       "background": null
     },
     {
+      "id": "q-11029",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "series-and-crime",
+      "bundle": "germany",
+      "description": "Ein kleiner Mann mit Spitzbart, der seit Jahrzehnten pünktlicher ist als jeder Zug.",
+      "question": "Das Sandmännchen kommt jeden Abend im Fernsehen. Was ist danach für viele Kinder dran?",
+      "answer": "Schlafenszeit",
+      "wrong_answers": [
+        "Frühstückszeit",
+        "Mittagszeit",
+        "Schulzeit"
+      ],
+      "hints": [
+        "Draußen ist es meistens schon dunkel.",
+        "Vorher putzt man die Zähne.",
+        "Sein Sand soll müde machen."
+      ],
+      "fun_fact": "„Unser Sandmännchen“ startete 1959 im DDR-Fernsehen und läuft bis heute.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Vintage_television_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_television_%28Unsplash%29.jpg",
+        "credit": "Sven Scheuermeier sveninho · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Sven Scheuermeier sveninho",
+        "author_url": "https://unsplash.com/@sveninho"
+      },
+      "background": null
+    },
+    {
       "id": "q-11030",
       "status": "approved",
       "difficulty": 10,
@@ -19864,6 +20272,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Txllxt TxllxT",
         "author_url": "https://commons.wikimedia.org/wiki/User:Txllxt_TxllxT"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11043",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "rivers-lakes-and-coasts",
+      "bundle": "germany",
+      "description": "Ein Ingenieur, der einem Fluss das Schlängeln abgewöhnen wollte.",
+      "question": "Der badische Ingenieur Johann Gottfried Tulla ließ im 19. Jahrhundert den Oberrhein begradigen. Was war eine Folge?",
+      "answer": "Das Sumpffieber im Rheintal verschwand",
+      "wrong_answers": [
+        "Der Rhein wurde dadurch länger",
+        "Hochwasser flussabwärts wurden seltener",
+        "Der Lachs wurde im Rhein häufiger"
+      ],
+      "hints": [
+        "Viele Seitenarme und Inseln der alten Flusslandschaft verschwanden.",
+        "Aus feuchten Auen und Sümpfen wurde trockenes Ackerland.",
+        "Mücken fanden kaum noch Brutplätze, und eine Krankheit, die man heute aus den Tropen kennt, ging zurück."
+      ],
+      "fun_fact": "Durch Tullas Begradigung wurde der Rhein zwischen Basel und Worms um rund 80 Kilometer kürzer.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Strasbourg_and_the_Rhine_corridor%2C_France_%28P-070208-00-07%29.jpg/3840px-Strasbourg_and_the_Rhine_corridor%2C_France_%28P-070208-00-07%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStrasbourg_and_the_Rhine_corridor%2C_France_%28P-070208-00-07%29.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Copernicus Sentinel-2 imagery, EK - GD DEFIS, EC - DG DEFIS, SPACETEC PARTNERS, CE - DG DEFIS",
+        "author_url": null
       },
       "background": null
     },
@@ -20446,6 +20888,40 @@
       "background": null
     },
     {
+      "id": "q-11061",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "germany",
+      "description": "Der Brei ist heiß, die Geduld kurz, und keiner traut sich ran.",
+      "question": "Wer nicht zur Sache kommt, schleicht laut Redewendung wie welches Tier um den heißen Brei?",
+      "answer": "Katze",
+      "wrong_answers": [
+        "Fuchs",
+        "Hund",
+        "Maus"
+      ],
+      "hints": [
+        "Das Tier lebt oft bei Menschen im Haus.",
+        "Es putzt sich gern und ausgiebig selbst.",
+        "Es schnurrt."
+      ],
+      "fun_fact": "Im Englischen schleicht man nicht um Brei, sondern schlägt um den Busch: „to beat around the bush“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Oatmeal_porridge_1-minute_with_additional_ingredients.jpg/3840px-Oatmeal_porridge_1-minute_with_additional_ingredients.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOatmeal_porridge_1-minute_with_additional_ingredients.jpg",
+        "credit": "UserTwoSix · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "UserTwoSix",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:UserTwoSix&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-11062",
       "status": "approved",
       "difficulty": 6,
@@ -20854,6 +21330,40 @@
       "background": null
     },
     {
+      "id": "q-11074",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "series-and-crime",
+      "bundle": "germany",
+      "description": "Liebe, Intrigen und Hochzeiten in einem Hotel, in dem nie jemand einfach nur Urlaub macht.",
+      "question": "„Sturm der Liebe“ läuft seit 2005 fast jeden Werktag in der ARD. Wie viele Folgen gibt es inzwischen ungefähr?",
+      "answer": "über 4000",
+      "wrong_answers": [
+        "rund 450",
+        "rund 1500",
+        "über 20 000"
+      ],
+      "hints": [
+        "Ein Jahr hat etwa 250 Werktage.",
+        "Die Serie läuft seit rund 20 Jahren.",
+        "Rechne etwa 20 mal 220."
+      ],
+      "fun_fact": "Gedreht wird „Sturm der Liebe“ in den Bavaria Studios bei München, die Außenaufnahmen des Hotels Fürstenhof entstehen an einem echten Schloss in Bayern.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/QTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg",
+        "credit": "NJM2010 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "NJM2010",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NJM2010&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-11075",
       "status": "approved",
       "difficulty": 13,
@@ -20918,6 +21428,40 @@
         "license_url": "https://www.flickr.com/commons/usage/",
         "author": "Tyne & Wear Archives & Museums",
         "author_url": "https://www.flickr.com/people/29295370@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11077",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "series-and-crime",
+      "bundle": "germany",
+      "description": "Eine Serie, die beweist, dass man im Krankenhaus mehr lachen kann als gedacht.",
+      "question": "„Club der roten Bänder“ lief ab 2015 bei VOX und zeigt Jugendliche auf einer Kinderstation. Was war ihr Vorbild?",
+      "answer": "eine Serie aus Spanien",
+      "wrong_answers": [
+        "ein Roman aus den USA",
+        "ein Film aus Großbritannien",
+        "ein Manga aus Japan"
+      ],
+      "hints": [
+        "Die Vorlage beruht auf den echten Erlebnissen ihres Autors.",
+        "Das Original wurde in mehreren Ländern neu verfilmt, in den USA etwa als „Red Band Society“.",
+        "Der Autor stammt aus Barcelona."
+      ],
+      "fun_fact": "Albert Espinosa verarbeitete in der Vorlage seine eigene Krebserkrankung, die er als Jugendlicher überstand.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/A_Modern_Hospital_Bed_in_Pok_Oi_Hospital.jpg/3840px-A_Modern_Hospital_Bed_in_Pok_Oi_Hospital.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Modern_Hospital_Bed_in_Pok_Oi_Hospital.jpg",
+        "credit": "Peachyeung316 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peachyeung316",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316"
       },
       "background": null
     },
@@ -22108,6 +22652,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Managementboy",
         "author_url": "https://commons.wikimedia.org/wiki/User:Managementboy"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11115",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "winter-sports",
+      "bundle": "germany",
+      "description": "Wer im Winter rutschen will, braucht keine Ausrede, nur einen Hügel und das richtige Gerät.",
+      "question": "Wie heißt die kleine, flache Plastikscheibe, auf die man sich setzt, um einen Schneehang hinunterzurutschen?",
+      "answer": "Poporutscher",
+      "wrong_answers": [
+        "Holzschlitten",
+        "Rennrodel",
+        "Hörnerschlitten"
+      ],
+      "hints": [
+        "Es ist viel leichter als jeder Schlitten.",
+        "Unten hat es keine Kufen.",
+        "Der Name verrät, mit welchem Körperteil du darauf sitzt."
+      ],
+      "fun_fact": "Viele Poporutscher haben vorne einen Griff zum Festhalten, aber richtig lenken kann man damit kaum.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Richmond_Hill_Public_Library_Winter_2025.jpg/3840px-Richmond_Hill_Public_Library_Winter_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARichmond_Hill_Public_Library_Winter_2025.jpg",
+        "credit": "TBJ10RH · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "TBJ10RH",
+        "author_url": "https://commons.wikimedia.org/wiki/User:TBJ10RH"
       },
       "background": null
     },
