@@ -1,0 +1,857 @@
+{
+  "subcategory": "national-team",
+  "facets": [
+    "Weltmeistertitel der Männer",
+    "Europameisterschaften",
+    "Legendäre Nationalspieler",
+    "Bundestrainer",
+    "Frauen-Nationalmannschaft",
+    "Berühmte Spiele und Tore",
+    "Heim-WM 2006 und Sommermärchen",
+    "Trikot, Adler und Sterne",
+    "Fans, Hymne und Rituale",
+    "Rekorde und Statistiken",
+    "Sprüche und Zitate",
+    "Spielorte und Stadien"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "WM 1974",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 9
+    },
+    {
+      "name": "WM 1990",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 9
+    },
+    {
+      "name": "WM 2014",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 4
+    },
+    {
+      "name": "Toni Turek",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 13
+    },
+    {
+      "name": "Max Morlock",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 13
+    },
+    {
+      "name": "Ferenc Puskás",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 12
+    },
+    {
+      "name": "Guido Buchwald",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 12
+    },
+    {
+      "name": "Pierre Littbarski",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 12
+    },
+    {
+      "name": "Bodo Illgner",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 12
+    },
+    {
+      "name": "Paul Breitner",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 11
+    },
+    {
+      "name": "André Schürrle",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 9
+    },
+    {
+      "name": "Christoph Kramer",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 10
+    },
+    {
+      "name": "Benedikt Höwedes",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 11
+    },
+    {
+      "name": "Lionel Messi",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 3
+    },
+    {
+      "name": "Johan Cruyff",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 11
+    },
+    {
+      "name": "Diego Maradona",
+      "facet": "Weltmeistertitel der Männer",
+      "known_at": 8
+    },
+    {
+      "name": "EM 1972",
+      "facet": "Europameisterschaften",
+      "known_at": 12
+    },
+    {
+      "name": "EM 1980",
+      "facet": "Europameisterschaften",
+      "known_at": 12
+    },
+    {
+      "name": "EM 1996",
+      "facet": "Europameisterschaften",
+      "known_at": 10
+    },
+    {
+      "name": "Golden Goal",
+      "facet": "Europameisterschaften",
+      "known_at": 10
+    },
+    {
+      "name": "Oliver Bierhoff",
+      "facet": "Europameisterschaften",
+      "known_at": 9
+    },
+    {
+      "name": "Matthias Sammer",
+      "facet": "Europameisterschaften",
+      "known_at": 11
+    },
+    {
+      "name": "Andreas Köpke",
+      "facet": "Europameisterschaften",
+      "known_at": 11
+    },
+    {
+      "name": "Antonín Panenka",
+      "facet": "Europameisterschaften",
+      "known_at": 13
+    },
+    {
+      "name": "EM 2008",
+      "facet": "Europameisterschaften",
+      "known_at": 11
+    },
+    {
+      "name": "Fernando Torres",
+      "facet": "Europameisterschaften",
+      "known_at": 11
+    },
+    {
+      "name": "EM 2016",
+      "facet": "Europameisterschaften",
+      "known_at": 10
+    },
+    {
+      "name": "EM 2024",
+      "facet": "Europameisterschaften",
+      "known_at": 4
+    },
+    {
+      "name": "Marc Cucurella",
+      "facet": "Europameisterschaften",
+      "known_at": 8
+    },
+    {
+      "name": "Albärt",
+      "facet": "Europameisterschaften",
+      "known_at": 6
+    },
+    {
+      "name": "Gareth Southgate",
+      "facet": "Europameisterschaften",
+      "known_at": 11
+    },
+    {
+      "name": "Dietmar Hamann",
+      "facet": "Europameisterschaften",
+      "known_at": 12
+    },
+    {
+      "name": "Wolfgang Overath",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 13
+    },
+    {
+      "name": "Harald Schumacher",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 12
+    },
+    {
+      "name": "Jürgen Kohler",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 13
+    },
+    {
+      "name": "Toni Kroos",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 4
+    },
+    {
+      "name": "Mesut Özil",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 6
+    },
+    {
+      "name": "Lukas Podolski",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 5
+    },
+    {
+      "name": "Per Mertesacker",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 9
+    },
+    {
+      "name": "Joshua Kimmich",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 3
+    },
+    {
+      "name": "İlkay Gündoğan",
+      "facet": "Legendäre Nationalspieler",
+      "known_at": 6
+    },
+    {
+      "name": "Otto Nerz",
+      "facet": "Bundestrainer",
+      "known_at": 15
+    },
+    {
+      "name": "Helmut Schön",
+      "facet": "Bundestrainer",
+      "known_at": 12
+    },
+    {
+      "name": "Jupp Derwall",
+      "facet": "Bundestrainer",
+      "known_at": 13
+    },
+    {
+      "name": "Teamchef",
+      "facet": "Bundestrainer",
+      "known_at": 12
+    },
+    {
+      "name": "Berti Vogts",
+      "facet": "Bundestrainer",
+      "known_at": 10
+    },
+    {
+      "name": "Erich Ribbeck",
+      "facet": "Bundestrainer",
+      "known_at": 13
+    },
+    {
+      "name": "Joachim Löw",
+      "facet": "Bundestrainer",
+      "known_at": 4
+    },
+    {
+      "name": "Hansi Flick",
+      "facet": "Bundestrainer",
+      "known_at": 5
+    },
+    {
+      "name": "Horst Hrubesch",
+      "facet": "Bundestrainer",
+      "known_at": 11
+    },
+    {
+      "name": "Rudi Gutendorf",
+      "facet": "Bundestrainer",
+      "known_at": 15
+    },
+    {
+      "name": "Dettmar Cramer",
+      "facet": "Bundestrainer",
+      "known_at": 15
+    },
+    {
+      "name": "Tina Theune",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 13
+    },
+    {
+      "name": "Gero Bisanz",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 15
+    },
+    {
+      "name": "Christian Wück",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 11
+    },
+    {
+      "name": "Steffi Jones",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 12
+    },
+    {
+      "name": "Inka Grings",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 13
+    },
+    {
+      "name": "Dzsenifer Marozsán",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 10
+    },
+    {
+      "name": "Ann-Katrin Berger",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 8
+    },
+    {
+      "name": "Frauen-WM 2003",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 11
+    },
+    {
+      "name": "Frauen-WM 2007",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 11
+    },
+    {
+      "name": "Frauen-WM 2011",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 10
+    },
+    {
+      "name": "Olympiasieg 2016",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 11
+    },
+    {
+      "name": "Frauen-EM 2022",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 7
+    },
+    {
+      "name": "Kaffeeservice",
+      "facet": "Frauen-Nationalmannschaft",
+      "known_at": 11
+    },
+    {
+      "name": "Wembley-Tor",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 10
+    },
+    {
+      "name": "Geoff Hurst",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 13
+    },
+    {
+      "name": "Jahrhundertspiel",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 12
+    },
+    {
+      "name": "Schande von Gijón",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 13
+    },
+    {
+      "name": "Nacht von Sevilla",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 13
+    },
+    {
+      "name": "Schmach von Córdoba",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 12
+    },
+    {
+      "name": "Sparwasser-Tor",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 12
+    },
+    {
+      "name": "7:1 gegen Brasilien",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 4
+    },
+    {
+      "name": "WM-Finale 2002",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 10
+    },
+    {
+      "name": "Lampard-Phantomtor",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 11
+    },
+    {
+      "name": "4:0 gegen Argentinien 2010",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 10
+    },
+    {
+      "name": "4:4 gegen Schweden",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 11
+    },
+    {
+      "name": "Kroos-Freistoß gegen Schweden",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 8
+    },
+    {
+      "name": "WM-Aus gegen Südkorea",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 7
+    },
+    {
+      "name": "Niederlage gegen Japan 2022",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 6
+    },
+    {
+      "name": "Halbfinale gegen England 1990",
+      "facet": "Berühmte Spiele und Tore",
+      "known_at": 12
+    },
+    {
+      "name": "Sommermärchen",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 8
+    },
+    {
+      "name": "Goleo",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 9
+    },
+    {
+      "name": "Teamgeist",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 12
+    },
+    {
+      "name": "Fanmeile",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 5
+    },
+    {
+      "name": "Public Viewing",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 4
+    },
+    {
+      "name": "Lehmanns Spickzettel",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 10
+    },
+    {
+      "name": "Jens Lehmann",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 9
+    },
+    {
+      "name": "Eröffnungsspiel gegen Costa Rica",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 11
+    },
+    {
+      "name": "Halbfinale gegen Italien 2006",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 10
+    },
+    {
+      "name": "Fabio Grosso",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 13
+    },
+    {
+      "name": "Weltmeister der Herzen",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 10
+    },
+    {
+      "name": "Die Welt zu Gast bei Freunden",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 10
+    },
+    {
+      "name": "David Odonkor",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 12
+    },
+    {
+      "name": "Oliver Neuville",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 12
+    },
+    {
+      "name": "Autofahne",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 5
+    },
+    {
+      "name": "Dieser Weg",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 10
+    },
+    {
+      "name": "Sommermärchen-Affäre",
+      "facet": "Heim-WM 2006 und Sommermärchen",
+      "known_at": 12
+    },
+    {
+      "name": "Vier Sterne",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 5
+    },
+    {
+      "name": "DFB-Wappen",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 5
+    },
+    {
+      "name": "Schwarz-Weiß",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 3
+    },
+    {
+      "name": "Grünes Auswärtstrikot",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 9
+    },
+    {
+      "name": "Pinkes Trikot",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 4
+    },
+    {
+      "name": "Trikot von 1990",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 10
+    },
+    {
+      "name": "Nike",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 5
+    },
+    {
+      "name": "Kapitänsbinde",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 3
+    },
+    {
+      "name": "Rückennummer 13",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 8
+    },
+    {
+      "name": "Rückennummer 10",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 5
+    },
+    {
+      "name": "Torwarttrikot",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 3
+    },
+    {
+      "name": "Trikottausch",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 5
+    },
+    {
+      "name": "Zwei Sterne der Frauen",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 9
+    },
+    {
+      "name": "Die Mannschaft",
+      "facet": "Trikot, Adler und Sterne",
+      "known_at": 7
+    },
+    {
+      "name": "Autokorso",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 6
+    },
+    {
+      "name": "Fan Club Nationalmannschaft",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 10
+    },
+    {
+      "name": "Gaucho-Tanz",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 11
+    },
+    {
+      "name": "Paul der Krake",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 7
+    },
+    {
+      "name": "Klose-Salto",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 8
+    },
+    {
+      "name": "54, 74, 90, 2010",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 10
+    },
+    {
+      "name": "Fanmarsch",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 8
+    },
+    {
+      "name": "Tippspiel",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 5
+    },
+    {
+      "name": "Schminke in Schwarz-Rot-Gold",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 3
+    },
+    {
+      "name": "Mannschaftsbus",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 4
+    },
+    {
+      "name": "Trainingslager",
+      "facet": "Fans, Hymne und Rituale",
+      "known_at": 5
+    },
+    {
+      "name": "Rekordnationalspieler",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 8
+    },
+    {
+      "name": "Rekordtorschütze",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 7
+    },
+    {
+      "name": "Gottfried Fuchs",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 15
+    },
+    {
+      "name": "16:0 gegen Russland",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 14
+    },
+    {
+      "name": "Erstes Länderspiel",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 13
+    },
+    {
+      "name": "Ehrenspielführer",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 12
+    },
+    {
+      "name": "Goldener Schuh",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 8
+    },
+    {
+      "name": "Ballon d'Or",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 7
+    },
+    {
+      "name": "Weltfußballer",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 6
+    },
+    {
+      "name": "Länderspiel",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 4
+    },
+    {
+      "name": "WM-Teilnahmen",
+      "facet": "Rekorde und Statistiken",
+      "known_at": 9
+    },
+    {
+      "name": "Das Spiel dauert 90 Minuten",
+      "facet": "Sprüche und Zitate",
+      "known_at": 5
+    },
+    {
+      "name": "Nach dem Spiel ist vor dem Spiel",
+      "facet": "Sprüche und Zitate",
+      "known_at": 6
+    },
+    {
+      "name": "Das Runde muss ins Eckige",
+      "facet": "Sprüche und Zitate",
+      "known_at": 5
+    },
+    {
+      "name": "Elf Freunde müsst ihr sein",
+      "facet": "Sprüche und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Aus dem Hintergrund müsste Rahn schießen",
+      "facet": "Sprüche und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Herbert Zimmermann",
+      "facet": "Sprüche und Zitate",
+      "known_at": 13
+    },
+    {
+      "name": "Geht's raus und spielt's Fußball",
+      "facet": "Sprüche und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Lineker-Zitat",
+      "facet": "Sprüche und Zitate",
+      "known_at": 10
+    },
+    {
+      "name": "Völlers Wutrede",
+      "facet": "Sprüche und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Waldemar Hartmann",
+      "facet": "Sprüche und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Eistonne",
+      "facet": "Sprüche und Zitate",
+      "known_at": 10
+    },
+    {
+      "name": "Weiter, immer weiter",
+      "facet": "Sprüche und Zitate",
+      "known_at": 9
+    },
+    {
+      "name": "Mach ihn, er macht ihn",
+      "facet": "Sprüche und Zitate",
+      "known_at": 9
+    },
+    {
+      "name": "Tom Bartels",
+      "facet": "Sprüche und Zitate",
+      "known_at": 12
+    },
+    {
+      "name": "Béla Réthy",
+      "facet": "Sprüche und Zitate",
+      "known_at": 11
+    },
+    {
+      "name": "Der nächste Gegner ist immer der schwerste",
+      "facet": "Sprüche und Zitate",
+      "known_at": 9
+    },
+    {
+      "name": "Wankdorfstadion",
+      "facet": "Spielorte und Stadien",
+      "known_at": 11
+    },
+    {
+      "name": "Maracanã",
+      "facet": "Spielorte und Stadien",
+      "known_at": 8
+    },
+    {
+      "name": "Mineirão",
+      "facet": "Spielorte und Stadien",
+      "known_at": 13
+    },
+    {
+      "name": "Wembley-Stadion",
+      "facet": "Spielorte und Stadien",
+      "known_at": 6
+    },
+    {
+      "name": "Stadio Olimpico",
+      "facet": "Spielorte und Stadien",
+      "known_at": 11
+    },
+    {
+      "name": "Campo Bahia",
+      "facet": "Spielorte und Stadien",
+      "known_at": 11
+    },
+    {
+      "name": "DFB-Campus",
+      "facet": "Spielorte und Stadien",
+      "known_at": 10
+    },
+    {
+      "name": "Malente",
+      "facet": "Spielorte und Stadien",
+      "known_at": 13
+    },
+    {
+      "name": "Lusail-Stadion",
+      "facet": "Spielorte und Stadien",
+      "known_at": 12
+    }
+  ]
+}

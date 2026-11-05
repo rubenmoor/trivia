@@ -1,0 +1,792 @@
+{
+  "subcategory": "state-and-city-emblems",
+  "facets": [
+    "Bundesadler und Bundeswappen",
+    "Wappen der Flächenländer",
+    "Wappen der Stadtstaaten",
+    "Wappen der Großstädte",
+    "Wappentiere und Fabelwesen",
+    "Heilige und Figuren im Wappen",
+    "Redende Wappen und Namensbilder",
+    "Heraldische Begriffe und Tinkturen",
+    "Landesfarben und Flaggen",
+    "Wappensagen und Legenden",
+    "Geschichte der Wappen",
+    "Wappen im Alltag und Sport"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 1,
+      "record": 2,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Ludwig Gies",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 15
+    },
+    {
+      "name": "Bundesdienstflagge",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 12
+    },
+    {
+      "name": "Standarte des Bundespräsidenten",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 13
+    },
+    {
+      "name": "Plenarsaal des Bundestags",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 8
+    },
+    {
+      "name": "1-Euro-Münze",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 3
+    },
+    {
+      "name": "Fränkischer Rechen",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 13
+    },
+    {
+      "name": "Württembergische Hirschstangen",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 11
+    },
+    {
+      "name": "Badisches Wappen",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 11
+    },
+    {
+      "name": "Westfalenpferd",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 10
+    },
+    {
+      "name": "Lippische Rose",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 12
+    },
+    {
+      "name": "Wappen von Nordrhein-Westfalen",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 10
+    },
+    {
+      "name": "Trierer Kreuz",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 13
+    },
+    {
+      "name": "Wappen von Rheinland-Pfalz",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 11
+    },
+    {
+      "name": "Pfälzer Löwe",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 12
+    },
+    {
+      "name": "Wappen des Saarlandes",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 12
+    },
+    {
+      "name": "Rautenkranz",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 11
+    },
+    {
+      "name": "Wappen von Sachsen-Anhalt",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 12
+    },
+    {
+      "name": "Thüringer Löwe",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 11
+    },
+    {
+      "name": "Märkischer Adler",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 10
+    },
+    {
+      "name": "Pommerscher Greif",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 12
+    },
+    {
+      "name": "Schleswiger Löwen",
+      "facet": "Wappen der Flächenländer",
+      "known_at": 12
+    },
+    {
+      "name": "Berliner Landeswappen",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 5
+    },
+    {
+      "name": "Berliner Landesflagge",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 6
+    },
+    {
+      "name": "Laubkrone",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 13
+    },
+    {
+      "name": "Buddy Bären",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 7
+    },
+    {
+      "name": "Hamburger Wappen",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 6
+    },
+    {
+      "name": "Torburg",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 9
+    },
+    {
+      "name": "Mariensterne",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 13
+    },
+    {
+      "name": "Hamburger Flagge",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 7
+    },
+    {
+      "name": "Hamburger Admiralitätsflagge",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 14
+    },
+    {
+      "name": "Hamburger Rathaus",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 7
+    },
+    {
+      "name": "Bremer Speckflagge",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 12
+    },
+    {
+      "name": "Bremer Rathaus",
+      "facet": "Wappen der Stadtstaaten",
+      "known_at": 9
+    },
+    {
+      "name": "Kölner Kronen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 9
+    },
+    {
+      "name": "Kölner Flammen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Frankfurter Adler",
+      "facet": "Wappen der Großstädte",
+      "known_at": 8
+    },
+    {
+      "name": "Düsseldorfer Wappen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Dortmunder Adler",
+      "facet": "Wappen der Großstädte",
+      "known_at": 10
+    },
+    {
+      "name": "Leipziger Wappen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Dresdner Wappen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Hannoversches Kleeblatt",
+      "facet": "Wappen der Großstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Nürnberger Wappen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Erfurter Rad",
+      "facet": "Wappen der Großstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Augsburger Zirbelnuss",
+      "facet": "Wappen der Großstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Rostocker Greif",
+      "facet": "Wappen der Großstädte",
+      "known_at": 11
+    },
+    {
+      "name": "Kieler Wappen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Wiesbadener Lilien",
+      "facet": "Wappen der Großstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Freiburger Georgskreuz",
+      "facet": "Wappen der Großstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Bonner Wappen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Lübecker Doppeladler",
+      "facet": "Wappen der Großstädte",
+      "known_at": 12
+    },
+    {
+      "name": "Heidelberger Löwe",
+      "facet": "Wappen der Großstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Karlsruher Wappen",
+      "facet": "Wappen der Großstädte",
+      "known_at": 13
+    },
+    {
+      "name": "Löwe",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 1
+    },
+    {
+      "name": "Bär",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 1
+    },
+    {
+      "name": "Greif",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 7
+    },
+    {
+      "name": "Drache",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 1
+    },
+    {
+      "name": "Einhorn",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 1
+    },
+    {
+      "name": "Basilisk",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 7
+    },
+    {
+      "name": "Jungfrauenadler",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 14
+    },
+    {
+      "name": "Leopard (Heraldik)",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 12
+    },
+    {
+      "name": "Pferd",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 1
+    },
+    {
+      "name": "Hirsch",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 2
+    },
+    {
+      "name": "Stier",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 2
+    },
+    {
+      "name": "Eber",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 4
+    },
+    {
+      "name": "Schwan",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 2
+    },
+    {
+      "name": "Hahn",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 1
+    },
+    {
+      "name": "Fisch",
+      "facet": "Wappentiere und Fabelwesen",
+      "known_at": 1
+    },
+    {
+      "name": "Heiliger Petrus",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 8
+    },
+    {
+      "name": "Heiliger Georg",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 9
+    },
+    {
+      "name": "Coburger Mohr",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 14
+    },
+    {
+      "name": "Heilige Ursula",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 12
+    },
+    {
+      "name": "Magdeburger Jungfrau",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 13
+    },
+    {
+      "name": "Wilder Mann",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 12
+    },
+    {
+      "name": "Engel",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 1
+    },
+    {
+      "name": "Muttergottes",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 8
+    },
+    {
+      "name": "Krummstab",
+      "facet": "Heilige und Figuren im Wappen",
+      "known_at": 12
+    },
+    {
+      "name": "Redendes Wappen",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 12
+    },
+    {
+      "name": "Ochsenfurt",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 12
+    },
+    {
+      "name": "Rosenheim",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 8
+    },
+    {
+      "name": "Eberswalde",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 12
+    },
+    {
+      "name": "Ebersberg",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 13
+    },
+    {
+      "name": "Eberbach",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 13
+    },
+    {
+      "name": "Biberach an der Riß",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 12
+    },
+    {
+      "name": "Hirschhorn",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 14
+    },
+    {
+      "name": "Bocholt",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 12
+    },
+    {
+      "name": "Kranichfeld",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 14
+    },
+    {
+      "name": "Glückstadt",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 13
+    },
+    {
+      "name": "Henneberg",
+      "facet": "Redende Wappen und Namensbilder",
+      "known_at": 15
+    },
+    {
+      "name": "Tinktur",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 13
+    },
+    {
+      "name": "Farbregel",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 14
+    },
+    {
+      "name": "Gold (Heraldik)",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 8
+    },
+    {
+      "name": "Silber (Heraldik)",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 9
+    },
+    {
+      "name": "Hermelin",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 12
+    },
+    {
+      "name": "Feh",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 15
+    },
+    {
+      "name": "Herold",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 10
+    },
+    {
+      "name": "Blasonierung",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 15
+    },
+    {
+      "name": "Wappenschild",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 6
+    },
+    {
+      "name": "Helmzier",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 13
+    },
+    {
+      "name": "Helmdecke",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 14
+    },
+    {
+      "name": "Schildhalter",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 12
+    },
+    {
+      "name": "Wappenspruch",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 10
+    },
+    {
+      "name": "Herzschild",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 14
+    },
+    {
+      "name": "Geviert",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 14
+    },
+    {
+      "name": "Heroldsbild",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 15
+    },
+    {
+      "name": "Gemeine Figur",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 15
+    },
+    {
+      "name": "Heraldisch rechts",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 14
+    },
+    {
+      "name": "Mauerkrone",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 13
+    },
+    {
+      "name": "Schrägbalken",
+      "facet": "Heraldische Begriffe und Tinkturen",
+      "known_at": 13
+    },
+    {
+      "name": "Landesflagge Sachsens",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 11
+    },
+    {
+      "name": "Landesflagge Baden-Württembergs",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 10
+    },
+    {
+      "name": "Landesflagge Niedersachsens",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 10
+    },
+    {
+      "name": "Landesflagge Nordrhein-Westfalens",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 10
+    },
+    {
+      "name": "Landesflagge Hessens",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 11
+    },
+    {
+      "name": "Landesflagge Schleswig-Holsteins",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 11
+    },
+    {
+      "name": "Landesflagge Thüringens",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 12
+    },
+    {
+      "name": "Landesflagge Mecklenburg-Vorpommerns",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 12
+    },
+    {
+      "name": "Landesflagge Brandenburgs",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 11
+    },
+    {
+      "name": "Badische Landesfarben",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 12
+    },
+    {
+      "name": "Friesenflagge",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 13
+    },
+    {
+      "name": "Sorbische Flagge",
+      "facet": "Landesfarben und Flaggen",
+      "known_at": 14
+    },
+    {
+      "name": "Albrecht der Bär",
+      "facet": "Wappensagen und Legenden",
+      "known_at": 11
+    },
+    {
+      "name": "Frankfurter Furt-Sage",
+      "facet": "Wappensagen und Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Lüneburger Salzsau",
+      "facet": "Wappensagen und Legenden",
+      "known_at": 14
+    },
+    {
+      "name": "Dreikönigenschrein",
+      "facet": "Wappensagen und Legenden",
+      "known_at": 12
+    },
+    {
+      "name": "Elftausend Jungfrauen",
+      "facet": "Wappensagen und Legenden",
+      "known_at": 14
+    },
+    {
+      "name": "Hildesheimer Rosenstock",
+      "facet": "Wappensagen und Legenden",
+      "known_at": 14
+    },
+    {
+      "name": "Wittelsbacher",
+      "facet": "Geschichte der Wappen",
+      "known_at": 11
+    },
+    {
+      "name": "Welfen",
+      "facet": "Geschichte der Wappen",
+      "known_at": 12
+    },
+    {
+      "name": "Wettiner",
+      "facet": "Geschichte der Wappen",
+      "known_at": 13
+    },
+    {
+      "name": "Ritterturnier",
+      "facet": "Geschichte der Wappen",
+      "known_at": 4
+    },
+    {
+      "name": "Topfhelm",
+      "facet": "Geschichte der Wappen",
+      "known_at": 12
+    },
+    {
+      "name": "Siegel",
+      "facet": "Geschichte der Wappen",
+      "known_at": 7
+    },
+    {
+      "name": "Siebmachers Wappenbuch",
+      "facet": "Geschichte der Wappen",
+      "known_at": 15
+    },
+    {
+      "name": "Wappenbrief",
+      "facet": "Geschichte der Wappen",
+      "known_at": 14
+    },
+    {
+      "name": "Bürgerwappen",
+      "facet": "Geschichte der Wappen",
+      "known_at": 13
+    },
+    {
+      "name": "Zunftwappen",
+      "facet": "Geschichte der Wappen",
+      "known_at": 12
+    },
+    {
+      "name": "Hausmarke",
+      "facet": "Geschichte der Wappen",
+      "known_at": 14
+    },
+    {
+      "name": "DFB-Adler",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 4
+    },
+    {
+      "name": "Nationaltrikot",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 3
+    },
+    {
+      "name": "Vereinswappen",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 5
+    },
+    {
+      "name": "Hennes",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 9
+    },
+    {
+      "name": "Porsche-Wappen",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 9
+    },
+    {
+      "name": "Stempelplakette",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 11
+    },
+    {
+      "name": "Polizeistern",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 8
+    },
+    {
+      "name": "Löwenbräu",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 11
+    },
+    {
+      "name": "Ortseingangsschild",
+      "facet": "Wappen im Alltag und Sport",
+      "known_at": 5
+    }
+  ]
+}

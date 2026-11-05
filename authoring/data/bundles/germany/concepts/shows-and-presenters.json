@@ -1,0 +1,1057 @@
+{
+  "subcategory": "shows-and-presenters",
+  "facets": [
+    "Samstagabendshows und Spielshows",
+    "Quizsendungen",
+    "Moderatorinnen und Moderatoren",
+    "Kindersendungen und Kinderfernsehen",
+    "Castingshows und Talentshows",
+    "Realityshows und Dschungelcamp",
+    "Talkshows und Late-Night",
+    "Comedy und Satire im Fernsehen",
+    "Nachrichten und Infosendungen",
+    "YouTuber und Streamer",
+    "Influencer auf TikTok und Instagram",
+    "Fernsehgeschichte und Kultmomente"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Schlag den Raab",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 8
+    },
+    {
+      "name": "Schlag den Star",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 8
+    },
+    {
+      "name": "Verstehen Sie Spaß?",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 7
+    },
+    {
+      "name": "Am laufenden Band",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 13
+    },
+    {
+      "name": "Der große Preis",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 13
+    },
+    {
+      "name": "Herzblatt",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 11
+    },
+    {
+      "name": "Geld oder Liebe",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 13
+    },
+    {
+      "name": "Glücksrad",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 10
+    },
+    {
+      "name": "Der Preis ist heiß",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 12
+    },
+    {
+      "name": "Geh aufs Ganze!",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 12
+    },
+    {
+      "name": "Familien-Duell",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 11
+    },
+    {
+      "name": "Joko & Klaas gegen ProSieben",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 8
+    },
+    {
+      "name": "Wer stiehlt mir die Show?",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 9
+    },
+    {
+      "name": "Wok-WM",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 9
+    },
+    {
+      "name": "Die Pyramide",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 13
+    },
+    {
+      "name": "Ruck Zuck",
+      "facet": "Samstagabendshows und Spielshows",
+      "known_at": 13
+    },
+    {
+      "name": "Wer wird Millionär?",
+      "facet": "Quizsendungen",
+      "known_at": 4
+    },
+    {
+      "name": "Telefonjoker",
+      "facet": "Quizsendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Publikumsjoker",
+      "facet": "Quizsendungen",
+      "known_at": 7
+    },
+    {
+      "name": "50:50-Joker",
+      "facet": "Quizsendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Gefragt – Gejagt",
+      "facet": "Quizsendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Wer weiß denn sowas?",
+      "facet": "Quizsendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Der Quiz-Champion",
+      "facet": "Quizsendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Quizduell",
+      "facet": "Quizsendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Das Quiz mit Jörg Pilawa",
+      "facet": "Quizsendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Was bin ich?",
+      "facet": "Quizsendungen",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Lembke",
+      "facet": "Quizsendungen",
+      "known_at": 14
+    },
+    {
+      "name": "Erkennen Sie die Melodie?",
+      "facet": "Quizsendungen",
+      "known_at": 14
+    },
+    {
+      "name": "Jeopardy!",
+      "facet": "Quizsendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Da kommst du nie drauf!",
+      "facet": "Quizsendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Frag doch mal die Maus",
+      "facet": "Quizsendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Hirschhausens Quiz des Menschen",
+      "facet": "Quizsendungen",
+      "known_at": 11
+    },
+    {
+      "name": "500 – Die Quiz-Arena",
+      "facet": "Quizsendungen",
+      "known_at": 13
+    },
+    {
+      "name": "Quiz Taxi",
+      "facet": "Quizsendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Günther Jauch",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 6
+    },
+    {
+      "name": "Barbara Schöneberger",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 9
+    },
+    {
+      "name": "Kai Pflaume",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 8
+    },
+    {
+      "name": "Joko Winterscheidt",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 8
+    },
+    {
+      "name": "Klaas Heufer-Umlauf",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 8
+    },
+    {
+      "name": "Markus Lanz",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 10
+    },
+    {
+      "name": "Jörg Pilawa",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 10
+    },
+    {
+      "name": "Johannes B. Kerner",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 11
+    },
+    {
+      "name": "Frank Elstner",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 12
+    },
+    {
+      "name": "Hans-Joachim Kulenkampff",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 14
+    },
+    {
+      "name": "Hans Rosenthal",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Frankenfeld",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 15
+    },
+    {
+      "name": "Wim Thoelke",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 14
+    },
+    {
+      "name": "Elton",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 9
+    },
+    {
+      "name": "Steven Gätjen",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Hartwich",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 11
+    },
+    {
+      "name": "Sonja Zietlow",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 10
+    },
+    {
+      "name": "Ina Müller",
+      "facet": "Moderatorinnen und Moderatoren",
+      "known_at": 12
+    },
+    {
+      "name": "Germany's Next Topmodel",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 6
+    },
+    {
+      "name": "Das Supertalent",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 5
+    },
+    {
+      "name": "The Voice Kids",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 5
+    },
+    {
+      "name": "Heidi Klum",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 6
+    },
+    {
+      "name": "Let's Dance",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 7
+    },
+    {
+      "name": "Joachim Llambi",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 10
+    },
+    {
+      "name": "Motsi Mabuse",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 10
+    },
+    {
+      "name": "The Masked Singer",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 5
+    },
+    {
+      "name": "Bruce Darnell",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 10
+    },
+    {
+      "name": "Alexander Klaws",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 12
+    },
+    {
+      "name": "Pietro Lombardi",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 9
+    },
+    {
+      "name": "Unser Star für Oslo",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 13
+    },
+    {
+      "name": "Detlef D! Soost",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 12
+    },
+    {
+      "name": "Monrose",
+      "facet": "Castingshows und Talentshows",
+      "known_at": 13
+    },
+    {
+      "name": "Ich bin ein Star – Holt mich hier raus!",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 7
+    },
+    {
+      "name": "Dschungelprüfung",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 8
+    },
+    {
+      "name": "Dschungelkönig",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 9
+    },
+    {
+      "name": "Big Brother",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 9
+    },
+    {
+      "name": "Zlatko",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 13
+    },
+    {
+      "name": "Promi Big Brother",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 10
+    },
+    {
+      "name": "Bauer sucht Frau",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 8
+    },
+    {
+      "name": "Inka Bause",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 10
+    },
+    {
+      "name": "Der Bachelor",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 9
+    },
+    {
+      "name": "Frauentausch",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 10
+    },
+    {
+      "name": "Goodbye Deutschland",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 11
+    },
+    {
+      "name": "Die Geissens",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 10
+    },
+    {
+      "name": "Das perfekte Dinner",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 9
+    },
+    {
+      "name": "Shopping Queen",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 9
+    },
+    {
+      "name": "Guido Maria Kretschmer",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 10
+    },
+    {
+      "name": "Die Super Nanny",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 10
+    },
+    {
+      "name": "Das Sommerhaus der Stars",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 11
+    },
+    {
+      "name": "Zuhause im Glück",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 11
+    },
+    {
+      "name": "Raus aus den Schulden",
+      "facet": "Realityshows und Dschungelcamp",
+      "known_at": 12
+    },
+    {
+      "name": "TV total",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 8
+    },
+    {
+      "name": "Die Harald Schmidt Show",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 12
+    },
+    {
+      "name": "Harald Schmidt",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 12
+    },
+    {
+      "name": "Hart aber fair",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 11
+    },
+    {
+      "name": "Anne Will",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 11
+    },
+    {
+      "name": "Maischberger",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 12
+    },
+    {
+      "name": "Maybrit Illner",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 12
+    },
+    {
+      "name": "Sabine Christiansen",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "3nach9",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "NDR Talk Show",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 12
+    },
+    {
+      "name": "Kölner Treff",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "Zimmer frei!",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "Inas Nacht",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 12
+    },
+    {
+      "name": "Arabella",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Meiser",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "Vera am Mittag",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 12
+    },
+    {
+      "name": "Domian",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "Neo Magazin Royale",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 11
+    },
+    {
+      "name": "Late Night Berlin",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 11
+    },
+    {
+      "name": "Riverboat",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 13
+    },
+    {
+      "name": "Alfred Biolek",
+      "facet": "Talkshows und Late-Night",
+      "known_at": 14
+    },
+    {
+      "name": "heute-show",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Oliver Welke",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "extra 3",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Die Anstalt",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "ZDF Magazin Royale",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Jan Böhmermann",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Hape Kerkeling",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Horst Schlämmer",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Anke Engelke",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Bastian Pastewka",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Die Wochenshow",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "RTL Samstag Nacht",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "Switch reloaded",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Genial daneben",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Kalkofes Mattscheibe",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "Carolin Kebekus",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Mario Barth",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Quatsch Comedy Club",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "Scheibenwischer",
+      "facet": "Comedy und Satire im Fernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "Tagesthemen",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 10
+    },
+    {
+      "name": "heute journal",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 11
+    },
+    {
+      "name": "RTL Aktuell",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Jan Hofer",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Judith Rakers",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Susanne Daubner",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Ingo Zamperoni",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Marietta Slomka",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Claus Kleber",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Kloeppel",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 13
+    },
+    {
+      "name": "Karl-Heinz Köpcke",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 14
+    },
+    {
+      "name": "Ulrich Wickert",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 13
+    },
+    {
+      "name": "Sportschau",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Das aktuelle Sportstudio",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Torwandschießen",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Galileo",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Quarks",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Terra X",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Wissen vor acht",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 13
+    },
+    {
+      "name": "Das Wort zum Sonntag",
+      "facet": "Nachrichten und Infosendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Gronkh",
+      "facet": "YouTuber und Streamer",
+      "known_at": 8
+    },
+    {
+      "name": "LeFloid",
+      "facet": "YouTuber und Streamer",
+      "known_at": 10
+    },
+    {
+      "name": "Rezo",
+      "facet": "YouTuber und Streamer",
+      "known_at": 10
+    },
+    {
+      "name": "Julien Bam",
+      "facet": "YouTuber und Streamer",
+      "known_at": 8
+    },
+    {
+      "name": "Dagi Bee",
+      "facet": "YouTuber und Streamer",
+      "known_at": 8
+    },
+    {
+      "name": "BibisBeautyPalace",
+      "facet": "YouTuber und Streamer",
+      "known_at": 9
+    },
+    {
+      "name": "Die Lochis",
+      "facet": "YouTuber und Streamer",
+      "known_at": 10
+    },
+    {
+      "name": "Y-Titty",
+      "facet": "YouTuber und Streamer",
+      "known_at": 12
+    },
+    {
+      "name": "Paluten",
+      "facet": "YouTuber und Streamer",
+      "known_at": 6
+    },
+    {
+      "name": "Unge",
+      "facet": "YouTuber und Streamer",
+      "known_at": 10
+    },
+    {
+      "name": "Knossi",
+      "facet": "YouTuber und Streamer",
+      "known_at": 9
+    },
+    {
+      "name": "Papaplatte",
+      "facet": "YouTuber und Streamer",
+      "known_at": 8
+    },
+    {
+      "name": "Trymacs",
+      "facet": "YouTuber und Streamer",
+      "known_at": 9
+    },
+    {
+      "name": "HandOfBlood",
+      "facet": "YouTuber und Streamer",
+      "known_at": 10
+    },
+    {
+      "name": "MontanaBlack",
+      "facet": "YouTuber und Streamer",
+      "known_at": 9
+    },
+    {
+      "name": "MrWissen2go",
+      "facet": "YouTuber und Streamer",
+      "known_at": 9
+    },
+    {
+      "name": "Kelly MissesVlog",
+      "facet": "YouTuber und Streamer",
+      "known_at": 9
+    },
+    {
+      "name": "Joyce Ilg",
+      "facet": "YouTuber und Streamer",
+      "known_at": 11
+    },
+    {
+      "name": "Freshtorge",
+      "facet": "YouTuber und Streamer",
+      "known_at": 11
+    },
+    {
+      "name": "Coldmirror",
+      "facet": "YouTuber und Streamer",
+      "known_at": 13
+    },
+    {
+      "name": "Rewinside",
+      "facet": "YouTuber und Streamer",
+      "known_at": 10
+    },
+    {
+      "name": "Inscope21",
+      "facet": "YouTuber und Streamer",
+      "known_at": 11
+    },
+    {
+      "name": "Lisa und Lena",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 7
+    },
+    {
+      "name": "Younes Zarou",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 8
+    },
+    {
+      "name": "Pamela Reif",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 9
+    },
+    {
+      "name": "Caroline Daur",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 12
+    },
+    {
+      "name": "Riccardo Simonetti",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 11
+    },
+    {
+      "name": "Stefanie Giesinger",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 11
+    },
+    {
+      "name": "Twenty4Tim",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 9
+    },
+    {
+      "name": "Leonie Hanne",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 13
+    },
+    {
+      "name": "Diana zur Löwen",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 12
+    },
+    {
+      "name": "Sami Slimani",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 12
+    },
+    {
+      "name": "Cathy Hummels",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 11
+    },
+    {
+      "name": "Julia Beautx",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 9
+    },
+    {
+      "name": "Herr Anwalt",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 10
+    },
+    {
+      "name": "Kayla Shyx",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 10
+    },
+    {
+      "name": "Jonas Ems",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 11
+    },
+    {
+      "name": "Ischtar Isik",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 12
+    },
+    {
+      "name": "Paola Maria",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 12
+    },
+    {
+      "name": "Lea Elui",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 11
+    },
+    {
+      "name": "Lukas Rieger",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 11
+    },
+    {
+      "name": "Sophia Thiel",
+      "facet": "Influencer auf TikTok und Instagram",
+      "known_at": 12
+    },
+    {
+      "name": "Farbfernsehen in Deutschland",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 13
+    },
+    {
+      "name": "Raumpatrouille Orion",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 14
+    },
+    {
+      "name": "Das Millionenspiel",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 15
+    },
+    {
+      "name": "Einer wird gewinnen",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 14
+    },
+    {
+      "name": "Der Blaue Bock",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 14
+    },
+    {
+      "name": "Beat-Club",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 14
+    },
+    {
+      "name": "Disco mit Ilja Richter",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 14
+    },
+    {
+      "name": "Schabowskis Pressekonferenz",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 12
+    },
+    {
+      "name": "RTL plus",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 13
+    },
+    {
+      "name": "Start des Privatfernsehens",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 13
+    },
+    {
+      "name": "Straßenfeger",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 13
+    },
+    {
+      "name": "Tagesschau-Gong",
+      "facet": "Fernsehgeschichte und Kultmomente",
+      "known_at": 10
+    }
+  ]
+}

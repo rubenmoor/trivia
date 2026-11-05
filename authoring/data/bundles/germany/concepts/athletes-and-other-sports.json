@@ -1,0 +1,1168 @@
+{
+  "subcategory": "athletes-and-other-sports",
+  "facets": [
+    "Fußballstars der Nationalmannschaft",
+    "Fußballerinnen und Frauen-EM-Heldinnen",
+    "Tennislegenden",
+    "Formel 1 und Motorsport",
+    "Wintersport-Stars",
+    "Leichtathletik-Größen",
+    "Schwimmen und Wassersport",
+    "Boxen und Kampfsport",
+    "Radsport und Ausdauersport",
+    "Handball, Basketball und Hockey",
+    "Olympiasiegerinnen und Paralympics-Stars",
+    "Spitznamen und Kultmomente"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sara Däbritz",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 10
+    },
+    {
+      "name": "Renate Lingor",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 12
+    },
+    {
+      "name": "Nadine Keßler",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 12
+    },
+    {
+      "name": "Merle Frohms",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 10
+    },
+    {
+      "name": "Sjoeke Nüsken",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 9
+    },
+    {
+      "name": "Heidi Mohr",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Silke Rottenberg",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Ariane Hingst",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Kerstin Garefrekes",
+      "facet": "Fußballerinnen und Frauen-EM-Heldinnen",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Stich",
+      "facet": "Tennislegenden",
+      "known_at": 10
+    },
+    {
+      "name": "Angelique Kerber",
+      "facet": "Tennislegenden",
+      "known_at": 8
+    },
+    {
+      "name": "Alexander Zverev",
+      "facet": "Tennislegenden",
+      "known_at": 6
+    },
+    {
+      "name": "Andrea Petkovic",
+      "facet": "Tennislegenden",
+      "known_at": 10
+    },
+    {
+      "name": "Tommy Haas",
+      "facet": "Tennislegenden",
+      "known_at": 10
+    },
+    {
+      "name": "Sabine Lisicki",
+      "facet": "Tennislegenden",
+      "known_at": 11
+    },
+    {
+      "name": "Anke Huber",
+      "facet": "Tennislegenden",
+      "known_at": 12
+    },
+    {
+      "name": "Nicolas Kiefer",
+      "facet": "Tennislegenden",
+      "known_at": 12
+    },
+    {
+      "name": "Rainer Schüttler",
+      "facet": "Tennislegenden",
+      "known_at": 12
+    },
+    {
+      "name": "Julia Görges",
+      "facet": "Tennislegenden",
+      "known_at": 11
+    },
+    {
+      "name": "Gottfried von Cramm",
+      "facet": "Tennislegenden",
+      "known_at": 14
+    },
+    {
+      "name": "Barbara Rittner",
+      "facet": "Tennislegenden",
+      "known_at": 12
+    },
+    {
+      "name": "Philipp Kohlschreiber",
+      "facet": "Tennislegenden",
+      "known_at": 11
+    },
+    {
+      "name": "Laura Siegemund",
+      "facet": "Tennislegenden",
+      "known_at": 12
+    },
+    {
+      "name": "Tatjana Maria",
+      "facet": "Tennislegenden",
+      "known_at": 12
+    },
+    {
+      "name": "Carl-Uwe Steeb",
+      "facet": "Tennislegenden",
+      "known_at": 14
+    },
+    {
+      "name": "Cilly Aussem",
+      "facet": "Tennislegenden",
+      "known_at": 14
+    },
+    {
+      "name": "Davis-Cup-Sieg 1988",
+      "facet": "Tennislegenden",
+      "known_at": 12
+    },
+    {
+      "name": "Sebastian Vettel",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 6
+    },
+    {
+      "name": "Nico Rosberg",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 7
+    },
+    {
+      "name": "Ralf Schumacher",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 8
+    },
+    {
+      "name": "Mick Schumacher",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 7
+    },
+    {
+      "name": "Nico Hülkenberg",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 8
+    },
+    {
+      "name": "Heinz-Harald Frentzen",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 11
+    },
+    {
+      "name": "Nick Heidfeld",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 11
+    },
+    {
+      "name": "Timo Glock",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 11
+    },
+    {
+      "name": "Pascal Wehrlein",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 12
+    },
+    {
+      "name": "Wolfgang Graf Berghe von Trips",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 14
+    },
+    {
+      "name": "Hans-Joachim Stuck",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Röhrl",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 12
+    },
+    {
+      "name": "Sabine Schmitz",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 12
+    },
+    {
+      "name": "Sophia Flörsch",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 12
+    },
+    {
+      "name": "Bernd Rosemeyer",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 14
+    },
+    {
+      "name": "Rudolf Caracciola",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 14
+    },
+    {
+      "name": "Toni Mang",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 14
+    },
+    {
+      "name": "Stefan Bradl",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 13
+    },
+    {
+      "name": "Nürburgring",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 7
+    },
+    {
+      "name": "Hockenheimring",
+      "facet": "Formel 1 und Motorsport",
+      "known_at": 8
+    },
+    {
+      "name": "Magdalena Neuner",
+      "facet": "Wintersport-Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Laura Dahlmeier",
+      "facet": "Wintersport-Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Maria Höfl-Riesch",
+      "facet": "Wintersport-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Felix Neureuther",
+      "facet": "Wintersport-Stars",
+      "known_at": 8
+    },
+    {
+      "name": "Georg Hackl",
+      "facet": "Wintersport-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Natalie Geisenberger",
+      "facet": "Wintersport-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Felix Loch",
+      "facet": "Wintersport-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Claudia Pechstein",
+      "facet": "Wintersport-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Sven Hannawald",
+      "facet": "Wintersport-Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Martin Schmitt",
+      "facet": "Wintersport-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Jens Weißflog",
+      "facet": "Wintersport-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Francesco Friedrich",
+      "facet": "Wintersport-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Aljona Savchenko",
+      "facet": "Wintersport-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Eric Frenzel",
+      "facet": "Wintersport-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Andreas Wellinger",
+      "facet": "Wintersport-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Karl Geiger",
+      "facet": "Wintersport-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Viktoria Rebensburg",
+      "facet": "Wintersport-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Gunda Niemann-Stirnemann",
+      "facet": "Wintersport-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Ricco Groß",
+      "facet": "Wintersport-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Uschi Disl",
+      "facet": "Wintersport-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Ruhpolding",
+      "facet": "Wintersport-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Malaika Mihambo",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 7
+    },
+    {
+      "name": "Heike Drechsler",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 11
+    },
+    {
+      "name": "Gesa Krause",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 9
+    },
+    {
+      "name": "Konstanze Klosterhalfen",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 11
+    },
+    {
+      "name": "Robert Harting",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 9
+    },
+    {
+      "name": "Christoph Harting",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 12
+    },
+    {
+      "name": "Christina Obergföll",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 12
+    },
+    {
+      "name": "Johannes Vetter",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Röhler",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 12
+    },
+    {
+      "name": "Niklas Kaul",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 10
+    },
+    {
+      "name": "Leo Neugebauer",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 11
+    },
+    {
+      "name": "Jürgen Hingsen",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 13
+    },
+    {
+      "name": "Dieter Baumann",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 12
+    },
+    {
+      "name": "Armin Hary",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 13
+    },
+    {
+      "name": "Heike Henkel",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 12
+    },
+    {
+      "name": "Gina Lückenkemper",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 9
+    },
+    {
+      "name": "Yemisi Ogunleye",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 9
+    },
+    {
+      "name": "Dietmar Mögenburg",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 14
+    },
+    {
+      "name": "Marita Koch",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 13
+    },
+    {
+      "name": "Jürgen Schult",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 14
+    },
+    {
+      "name": "Ruth Fuchs",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 14
+    },
+    {
+      "name": "Lilli Schwarzkopf",
+      "facet": "Leichtathletik-Größen",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Groß",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 11
+    },
+    {
+      "name": "Franziska van Almsick",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 8
+    },
+    {
+      "name": "Britta Steffen",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Biedermann",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 10
+    },
+    {
+      "name": "Florian Wellbrock",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 10
+    },
+    {
+      "name": "Lukas Märtens",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 9
+    },
+    {
+      "name": "Kristin Otto",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 12
+    },
+    {
+      "name": "Sandra Völker",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 13
+    },
+    {
+      "name": "Antje Buschschulte",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 13,
+      "retired": "unaskable: Antje Buschschulte ist für fast alle Spieler zu unbekannt; über sie gibt es keine faire Frage zu einer Zahl."
+    },
+    {
+      "name": "Thomas Rupprath",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 13
+    },
+    {
+      "name": "Angelina Köhler",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 11
+    },
+    {
+      "name": "Isabel Gose",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 12
+    },
+    {
+      "name": "Leonie Beck",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 12
+    },
+    {
+      "name": "Birgit Fischer",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 10
+    },
+    {
+      "name": "Sebastian Brendel",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 12
+    },
+    {
+      "name": "Max Rendschmidt",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 13
+    },
+    {
+      "name": "Boris Herrmann",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 9
+    },
+    {
+      "name": "Jochen Schümann",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 14
+    },
+    {
+      "name": "Patrick Hausding",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 11
+    },
+    {
+      "name": "Tina Punzel",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 13
+    },
+    {
+      "name": "Deutschland-Achter",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 9
+    },
+    {
+      "name": "Oliver Zeidler",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Lange",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 13
+    },
+    {
+      "name": "Hagen Stamm",
+      "facet": "Schwimmen und Wassersport",
+      "known_at": 13
+    },
+    {
+      "name": "Axel Schulz",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 10
+    },
+    {
+      "name": "Dariusz Michalczewski",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 11
+    },
+    {
+      "name": "Sven Ottke",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 12
+    },
+    {
+      "name": "Regina Halmich",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 9
+    },
+    {
+      "name": "Arthur Abraham",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 10
+    },
+    {
+      "name": "Felix Sturm",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 11
+    },
+    {
+      "name": "Marco Huck",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 11
+    },
+    {
+      "name": "Agit Kabayel",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 9
+    },
+    {
+      "name": "Bubi Scholz",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 13
+    },
+    {
+      "name": "Graciano Rocchigiani",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 12
+    },
+    {
+      "name": "René Weller",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 13
+    },
+    {
+      "name": "Ina Menzer",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 12
+    },
+    {
+      "name": "Susianna Kentikian",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 11
+    },
+    {
+      "name": "Christine Theiss",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 11
+    },
+    {
+      "name": "Ole Bischof",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 13
+    },
+    {
+      "name": "Yvonne Bönisch",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 13
+    },
+    {
+      "name": "Udo Quellmalz",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 14
+    },
+    {
+      "name": "Frank Stäbler",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 12
+    },
+    {
+      "name": "Aline Rotter-Focken",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 13
+    },
+    {
+      "name": "Wilfried Dietrich",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 14
+    },
+    {
+      "name": "Helena Fromm",
+      "facet": "Boxen und Kampfsport",
+      "known_at": 13
+    },
+    {
+      "name": "Jan Ullrich",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 8
+    },
+    {
+      "name": "Erik Zabel",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 10
+    },
+    {
+      "name": "Jens Voigt",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 11
+    },
+    {
+      "name": "André Greipel",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 11
+    },
+    {
+      "name": "Marcel Kittel",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 11
+    },
+    {
+      "name": "Tony Martin",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 11
+    },
+    {
+      "name": "Rudi Altig",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 13
+    },
+    {
+      "name": "Täve Schur",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 13
+    },
+    {
+      "name": "Jan Frodeno",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 9
+    },
+    {
+      "name": "Patrick Lange",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastian Kienle",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 12
+    },
+    {
+      "name": "Anne Haug",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 12
+    },
+    {
+      "name": "Laura Philipp",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 13
+    },
+    {
+      "name": "Lennard Kämna",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 12
+    },
+    {
+      "name": "Emanuel Buchmann",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 12
+    },
+    {
+      "name": "John Degenkolb",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 12
+    },
+    {
+      "name": "Pascal Ackermann",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 13
+    },
+    {
+      "name": "Kristina Vogel",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 10
+    },
+    {
+      "name": "Lisa Brennauer",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 12
+    },
+    {
+      "name": "Miriam Welte",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 13
+    },
+    {
+      "name": "Hanka Kupfernagel",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 13
+    },
+    {
+      "name": "Sabine Spitz",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 13
+    },
+    {
+      "name": "Joey Kelly",
+      "facet": "Radsport und Ausdauersport",
+      "known_at": 9
+    },
+    {
+      "name": "Dennis Schröder",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 8
+    },
+    {
+      "name": "Franz Wagner",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 8
+    },
+    {
+      "name": "Moritz Wagner",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 10
+    },
+    {
+      "name": "Daniel Theis",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 11
+    },
+    {
+      "name": "Detlef Schrempf",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 12
+    },
+    {
+      "name": "Satou Sabally",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 10
+    },
+    {
+      "name": "Andreas Wolff",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 9
+    },
+    {
+      "name": "Uwe Gensheimer",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 10
+    },
+    {
+      "name": "Juri Knorr",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 9
+    },
+    {
+      "name": "Stefan Kretzschmar",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 9
+    },
+    {
+      "name": "Heiner Brand",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 10
+    },
+    {
+      "name": "Pascal Hens",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 11
+    },
+    {
+      "name": "Henning Fritz",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 12
+    },
+    {
+      "name": "Dominik Klein",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 12
+    },
+    {
+      "name": "Johannes Bitter",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 11
+    },
+    {
+      "name": "Moritz Fürste",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 12
+    },
+    {
+      "name": "Natascha Keller",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 13
+    },
+    {
+      "name": "Tobias Hauke",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 13
+    },
+    {
+      "name": "Leon Draisaitl",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 8
+    },
+    {
+      "name": "Moritz Seider",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 11
+    },
+    {
+      "name": "Dennis Seidenberg",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 12
+    },
+    {
+      "name": "Marco Sturm",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 12
+    },
+    {
+      "name": "Uwe Krupp",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 13
+    },
+    {
+      "name": "Erich Kühnhackl",
+      "facet": "Handball, Basketball und Hockey",
+      "known_at": 13
+    },
+    {
+      "name": "Isabell Werth",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Reiner Klimke",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Jung",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Ludger Beerbaum",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Hans Günter Winkler",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Fabian Hambüchen",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Elisabeth Seitz",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Eberhard Gienger",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Laura Ludwig",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Kira Walkenhorst",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Ricarda Funk",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Ronald Rauhe",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Christian Reitz",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Lisa Unruh",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Markus Rehm",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Heinrich Popow",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Anna Schaffelhuber",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Verena Bentele",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Kirsten Bruhn",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Andrea Eskau",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Vanessa Low",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Niko Kappel",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Léon Schäfer",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Anna-Lena Forster",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Johannes Floors",
+      "facet": "Olympiasiegerinnen und Paralympics-Stars",
+      "known_at": 12
+    },
+    {
+      "name": "WM-Finale 2014",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 7
+    },
+    {
+      "name": "Schmach von Gijón",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 13
+    },
+    {
+      "name": "Golden Goal 1996",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 12
+    },
+    {
+      "name": "Lehmanns Elfmeter-Zettel",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 11
+    },
+    {
+      "name": "Kahns Patzer im WM-Finale 2002",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 12
+    },
+    {
+      "name": "Netzers Selbsteinwechslung",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 14
+    },
+    {
+      "name": "Klinsmanns Schwalben-Jubel",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 11
+    },
+    {
+      "name": "Didi Senft",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 10
+    },
+    {
+      "name": "Bad Boys",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 12
+    },
+    {
+      "name": "Silberpfeile",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 8
+    },
+    {
+      "name": "Becker-Faust",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 11
+    },
+    {
+      "name": "Schumachers Jubelsprung",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 10
+    },
+    {
+      "name": "Hannawalds Grand Slam",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 12
+    },
+    {
+      "name": "Sportler des Jahres",
+      "facet": "Spitznamen und Kultmomente",
+      "known_at": 10
+    }
+  ]
+}

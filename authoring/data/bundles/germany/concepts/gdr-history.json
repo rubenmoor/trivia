@@ -1,0 +1,753 @@
+{
+  "subcategory": "gdr-history",
+  "facets": [
+    "Gründung und Nachkriegszeit",
+    "Staats- und Parteiführung",
+    "SED, Massenorganisationen und Volkskammer",
+    "Volksaufstand vom 17. Juni 1953",
+    "Mauerbau und innerdeutsche Grenze",
+    "Staatssicherheit und Überwachung",
+    "Flucht, Ausreise und Freikauf",
+    "Planwirtschaft, Betriebe und Kollektivierung",
+    "DDR im Ostblock und in der Welt",
+    "Friedliche Revolution 1989",
+    "Mauerfall und Wiedervereinigung",
+    "Erinnerungsorte und Aufarbeitung"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 5,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Gründung der DDR",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 8
+    },
+    {
+      "name": "Sowjetische Besatzungszone",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 9
+    },
+    {
+      "name": "Zwangsvereinigung von KPD und SPD",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Bodenreform",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Demontage",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 12
+    },
+    {
+      "name": "Berlin-Blockade",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 10
+    },
+    {
+      "name": "Gruppe Ulbricht",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Sowjetische Militäradministration in Deutschland",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 14
+    },
+    {
+      "name": "Speziallager",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 14,
+      "retired": "unaskable: Sowjetische Internierungslager mit vielen Toten; im Ton einer Familienspielshow nicht gut zu fragen (der Hausstil verlangt eine humorvolle Beschreibung)."
+    },
+    {
+      "name": "Verfassung der DDR von 1949",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 13
+    },
+    {
+      "name": "Ost-Berlin",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 6
+    },
+    {
+      "name": "Stalin-Note",
+      "facet": "Gründung und Nachkriegszeit",
+      "known_at": 14
+    },
+    {
+      "name": "Otto Grotewohl",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 13
+    },
+    {
+      "name": "Willi Stoph",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 14
+    },
+    {
+      "name": "Margot Honecker",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 12
+    },
+    {
+      "name": "Sabine Bergmann-Pohl",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 15
+    },
+    {
+      "name": "Horst Sindermann",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 15
+    },
+    {
+      "name": "Politbüro",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 12
+    },
+    {
+      "name": "Staatsrat",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 13
+    },
+    {
+      "name": "Generalsekretär",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 12
+    },
+    {
+      "name": "Ministerrat",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 14
+    },
+    {
+      "name": "Waldsiedlung Wandlitz",
+      "facet": "Staats- und Parteiführung",
+      "known_at": 13
+    },
+    {
+      "name": "Thälmann-Pioniere",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 11
+    },
+    {
+      "name": "Blauhemd",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 11
+    },
+    {
+      "name": "Pioniertuch",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 10
+    },
+    {
+      "name": "Seid bereit – Immer bereit",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 11
+    },
+    {
+      "name": "Ernst Thälmann",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 10
+    },
+    {
+      "name": "FDGB",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 13
+    },
+    {
+      "name": "Gesellschaft für Deutsch-Sowjetische Freundschaft",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 14
+    },
+    {
+      "name": "Demokratischer Frauenbund Deutschlands",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 14
+    },
+    {
+      "name": "Gesellschaft für Sport und Technik",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 14
+    },
+    {
+      "name": "Kampfgruppen der Arbeiterklasse",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 14
+    },
+    {
+      "name": "Nationale Front",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 13
+    },
+    {
+      "name": "Blockparteien",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 13
+    },
+    {
+      "name": "Einheitsliste",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 12
+    },
+    {
+      "name": "Neues Deutschland",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 11
+    },
+    {
+      "name": "Parteiabzeichen „Bonbon“",
+      "facet": "SED, Massenorganisationen und Volkskammer",
+      "known_at": 14
+    },
+    {
+      "name": "17. Juni 1953",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 9
+    },
+    {
+      "name": "Stalinallee",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 11
+    },
+    {
+      "name": "Normerhöhung",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 12
+    },
+    {
+      "name": "Sowjetische Panzer",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 8
+    },
+    {
+      "name": "Ausnahmezustand",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 12
+    },
+    {
+      "name": "Generalstreik",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 12
+    },
+    {
+      "name": "Tag der deutschen Einheit am 17. Juni",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 11
+    },
+    {
+      "name": "Die Lösung (Brecht)",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 13
+    },
+    {
+      "name": "RIAS",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 12
+    },
+    {
+      "name": "Neuer Kurs",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 14
+    },
+    {
+      "name": "Bitterfeld",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 14
+    },
+    {
+      "name": "Faschistischer Putschversuch",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 13
+    },
+    {
+      "name": "Stalins Tod",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 11
+    },
+    {
+      "name": "Haus der Ministerien",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 14
+    },
+    {
+      "name": "Kasernierte Volkspolizei",
+      "facet": "Volksaufstand vom 17. Juni 1953",
+      "known_at": 14
+    },
+    {
+      "name": "Antifaschistischer Schutzwall",
+      "facet": "Mauerbau und innerdeutsche Grenze",
+      "known_at": 12
+    },
+    {
+      "name": "Grenzstreifen",
+      "facet": "Mauerbau und innerdeutsche Grenze",
+      "known_at": 10
+    },
+    {
+      "name": "Grenztruppen der DDR",
+      "facet": "Mauerbau und innerdeutsche Grenze",
+      "known_at": 11
+    },
+    {
+      "name": "Mödlareuth",
+      "facet": "Mauerbau und innerdeutsche Grenze",
+      "known_at": 13
+    },
+    {
+      "name": "Sperrgebiet",
+      "facet": "Mauerbau und innerdeutsche Grenze",
+      "known_at": 13
+    },
+    {
+      "name": "Grenzübergang Helmstedt-Marienborn",
+      "facet": "Mauerbau und innerdeutsche Grenze",
+      "known_at": 12
+    },
+    {
+      "name": "Transitstrecke",
+      "facet": "Mauerbau und innerdeutsche Grenze",
+      "known_at": 13
+    },
+    {
+      "name": "Erich Mielke",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 12
+    },
+    {
+      "name": "Ich liebe doch alle Menschen",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 13
+    },
+    {
+      "name": "Inoffizieller Mitarbeiter",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 12
+    },
+    {
+      "name": "Stasi-Zentrale Normannenstraße",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 13
+    },
+    {
+      "name": "Hohenschönhausen",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 12
+    },
+    {
+      "name": "Bautzen",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 13
+    },
+    {
+      "name": "Geruchsproben",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 12
+    },
+    {
+      "name": "Wanze",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 8
+    },
+    {
+      "name": "Stasi-Akten",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 10
+    },
+    {
+      "name": "Zersetzung",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 14
+    },
+    {
+      "name": "Markus Wolf",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 14
+    },
+    {
+      "name": "Hauptverwaltung Aufklärung",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 15
+    },
+    {
+      "name": "Postkontrolle",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 12
+    },
+    {
+      "name": "Schild und Schwert der Partei",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 13
+    },
+    {
+      "name": "Wachregiment Feliks Dzierzynski",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 15
+    },
+    {
+      "name": "Volkspolizei",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 10
+    },
+    {
+      "name": "Abschnittsbevollmächtigter",
+      "facet": "Staatssicherheit und Überwachung",
+      "known_at": 14
+    },
+    {
+      "name": "Republikflucht",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 11
+    },
+    {
+      "name": "Tunnel 57",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 13
+    },
+    {
+      "name": "Fluchthelfer",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 12
+    },
+    {
+      "name": "Ausreiseantrag",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 12
+    },
+    {
+      "name": "Häftlingsfreikauf",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 13
+    },
+    {
+      "name": "Genschers Balkonrede",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 12
+    },
+    {
+      "name": "Ungarns Grenzöffnung 1989",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 12
+    },
+    {
+      "name": "Notaufnahmelager Marienfelde",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 13
+    },
+    {
+      "name": "Wolfgang Vogel",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 15
+    },
+    {
+      "name": "Übersiedler",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 13
+    },
+    {
+      "name": "Flucht über die Ostsee",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 13
+    },
+    {
+      "name": "Reisefreiheit",
+      "facet": "Flucht, Ausreise und Freikauf",
+      "known_at": 10
+    },
+    {
+      "name": "Fünfjahrplan",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 11
+    },
+    {
+      "name": "Volkseigener Betrieb",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 11
+    },
+    {
+      "name": "LPG",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 12
+    },
+    {
+      "name": "Kombinat",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 13
+    },
+    {
+      "name": "Delikat-Laden",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 14
+    },
+    {
+      "name": "Robotron",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 13
+    },
+    {
+      "name": "Eisenhüttenstadt",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 13
+    },
+    {
+      "name": "Leuna",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 13
+    },
+    {
+      "name": "Wismut",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 14
+    },
+    {
+      "name": "Hennecke-Bewegung",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 14
+    },
+    {
+      "name": "Held der Arbeit",
+      "facet": "Planwirtschaft, Betriebe und Kollektivierung",
+      "known_at": 14
+    },
+    {
+      "name": "Warschauer Pakt",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 11
+    },
+    {
+      "name": "Rat für gegenseitige Wirtschaftshilfe",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 13
+    },
+    {
+      "name": "Sowjetunion",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 6
+    },
+    {
+      "name": "Bruderkuss",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 12
+    },
+    {
+      "name": "Prager Frühling",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 12
+    },
+    {
+      "name": "UNO-Beitritt 1973",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 14
+    },
+    {
+      "name": "Staatsdoping",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 13
+    },
+    {
+      "name": "Vertragsarbeiter",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 13
+    },
+    {
+      "name": "Erfurter Gipfeltreffen 1970",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 13
+    },
+    {
+      "name": "Neue Ostpolitik",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 12
+    },
+    {
+      "name": "Nationale Volksarmee",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 11
+    },
+    {
+      "name": "Weltfestspiele 1973",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 14
+    },
+    {
+      "name": "Leonid Breschnew",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 12
+    },
+    {
+      "name": "Ständige Vertretung",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 14
+    },
+    {
+      "name": "Honeckers Besuch in Bonn 1987",
+      "facet": "DDR im Ostblock und in der Welt",
+      "known_at": 13
+    },
+    {
+      "name": "9. Oktober 1989",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 13
+    },
+    {
+      "name": "Alexanderplatz-Demonstration",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 13
+    },
+    {
+      "name": "Keine Gewalt",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 12
+    },
+    {
+      "name": "Kommunalwahl 1989",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 13
+    },
+    {
+      "name": "Gethsemanekirche",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 14
+    },
+    {
+      "name": "Christian Führer",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 14
+    },
+    {
+      "name": "Bärbel Bohley",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 14
+    },
+    {
+      "name": "Kurt Masur",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 14
+    },
+    {
+      "name": "40. Jahrestag der DDR",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 12
+    },
+    {
+      "name": "Wer zu spät kommt, den bestraft das Leben",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 11
+    },
+    {
+      "name": "Umweltbibliothek",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 15
+    },
+    {
+      "name": "Wende",
+      "facet": "Friedliche Revolution 1989",
+      "known_at": 8
+    },
+    {
+      "name": "Mauerspecht",
+      "facet": "Mauerfall und Wiedervereinigung",
+      "known_at": 10
+    },
+    {
+      "name": "Wir sind ein Volk",
+      "facet": "Mauerfall und Wiedervereinigung",
+      "known_at": 10
+    },
+    {
+      "name": "Ossi und Wessi",
+      "facet": "Mauerfall und Wiedervereinigung",
+      "known_at": 8
+    },
+    {
+      "name": "DDR-Museum Berlin",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 11
+    },
+    {
+      "name": "Museum in der Runden Ecke",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 14
+    },
+    {
+      "name": "Marianne Birthler",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 15
+    },
+    {
+      "name": "Roland Jahn",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 14
+    },
+    {
+      "name": "Mauerschützenprozesse",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 14
+    },
+    {
+      "name": "Berliner Mauerweg",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 13
+    },
+    {
+      "name": "Doppelte Pflastersteinreihe",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 13
+    },
+    {
+      "name": "Karl-Marx-Monument Chemnitz",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 12
+    },
+    {
+      "name": "Freiheits- und Einheitsdenkmal",
+      "facet": "Erinnerungsorte und Aufarbeitung",
+      "known_at": 14
+    }
+  ]
+}

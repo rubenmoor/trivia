@@ -1,0 +1,597 @@
+{
+  "subcategory": "art-architecture-and-museums",
+  "facets": [
+    "Deutsche Maler und Gemälde",
+    "Bildhauerei und Denkmäler",
+    "Bauhaus und Design",
+    "Burgen, Schlösser und Residenzen",
+    "Dome, Kirchen und Klöster",
+    "Moderne Architektur und Wahrzeichen",
+    "Museen und Museumsinseln",
+    "Kunstepochen und Stile in Deutschland",
+    "Fachwerk, Stadtbild und Baukultur",
+    "Grafik, Druck und Illustration",
+    "Kunstschätze, Raubkunst und Kunstskandale",
+    "Gegenwartskunst und Ausstellungen"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Betende Hände",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 7
+    },
+    {
+      "name": "Carl Spitzweg",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 11
+    },
+    {
+      "name": "Der arme Poet",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 11
+    },
+    {
+      "name": "Hans Holbein der Jüngere",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 13
+    },
+    {
+      "name": "Franz Marc",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 9
+    },
+    {
+      "name": "Blaues Pferd",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 8
+    },
+    {
+      "name": "August Macke",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 12
+    },
+    {
+      "name": "Paula Modersohn-Becker",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 12
+    },
+    {
+      "name": "Max Liebermann",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 12
+    },
+    {
+      "name": "Ernst Ludwig Kirchner",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 13
+    },
+    {
+      "name": "Emil Nolde",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 12
+    },
+    {
+      "name": "Gerhard Richter",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 12
+    },
+    {
+      "name": "Bremer Stadtmusikanten (Bronzefigur)",
+      "facet": "Bildhauerei und Denkmäler",
+      "known_at": 4
+    },
+    {
+      "name": "Ernst Barlach",
+      "facet": "Bildhauerei und Denkmäler",
+      "known_at": 13
+    },
+    {
+      "name": "Molecule Man",
+      "facet": "Bildhauerei und Denkmäler",
+      "known_at": 12
+    },
+    {
+      "name": "Ludwig Mies van der Rohe",
+      "facet": "Bauhaus und Design",
+      "known_at": 12
+    },
+    {
+      "name": "Bauhausgebäude Dessau",
+      "facet": "Bauhaus und Design",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Klee",
+      "facet": "Bauhaus und Design",
+      "known_at": 10
+    },
+    {
+      "name": "Marcel Breuer",
+      "facet": "Bauhaus und Design",
+      "known_at": 13
+    },
+    {
+      "name": "Freischwinger",
+      "facet": "Bauhaus und Design",
+      "known_at": 13
+    },
+    {
+      "name": "Wagenfeld-Leuchte",
+      "facet": "Bauhaus und Design",
+      "known_at": 13
+    },
+    {
+      "name": "Marianne Brandt",
+      "facet": "Bauhaus und Design",
+      "known_at": 14
+    },
+    {
+      "name": "Oskar Schlemmer",
+      "facet": "Bauhaus und Design",
+      "known_at": 14
+    },
+    {
+      "name": "Triadisches Ballett",
+      "facet": "Bauhaus und Design",
+      "known_at": 14
+    },
+    {
+      "name": "Frankfurter Küche",
+      "facet": "Bauhaus und Design",
+      "known_at": 13
+    },
+    {
+      "name": "Dieter Rams",
+      "facet": "Bauhaus und Design",
+      "known_at": 13
+    },
+    {
+      "name": "Braun (Elektrogeräte)",
+      "facet": "Bauhaus und Design",
+      "known_at": 11
+    },
+    {
+      "name": "Hochschule für Gestaltung Ulm",
+      "facet": "Bauhaus und Design",
+      "known_at": 14
+    },
+    {
+      "name": "Albrechtsburg Meißen",
+      "facet": "Burgen, Schlösser und Residenzen",
+      "known_at": 13
+    },
+    {
+      "name": "Regensburger Dom",
+      "facet": "Dome, Kirchen und Klöster",
+      "known_at": 12
+    },
+    {
+      "name": "Frei Otto",
+      "facet": "Moderne Architektur und Wahrzeichen",
+      "known_at": 14
+    },
+    {
+      "name": "Messeturm Frankfurt",
+      "facet": "Moderne Architektur und Wahrzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Mainhattan",
+      "facet": "Moderne Architektur und Wahrzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Grüne Zitadelle Magdeburg",
+      "facet": "Moderne Architektur und Wahrzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "BMW-Vierzylinder",
+      "facet": "Moderne Architektur und Wahrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Rheinturm Düsseldorf",
+      "facet": "Moderne Architektur und Wahrzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Museumsinsel Berlin",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 8
+    },
+    {
+      "name": "Ischtar-Tor",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 11
+    },
+    {
+      "name": "Neues Museum",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 11
+    },
+    {
+      "name": "Sixtinische Madonna",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 12
+    },
+    {
+      "name": "Germanisches Nationalmuseum",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 12
+    },
+    {
+      "name": "Museum für Naturkunde Berlin",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 10
+    },
+    {
+      "name": "Brachiosaurus-Skelett in Berlin",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 8
+    },
+    {
+      "name": "Städel Museum",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 12
+    },
+    {
+      "name": "Museumsufer Frankfurt",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 12
+    },
+    {
+      "name": "Deutsches Historisches Museum",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 11
+    },
+    {
+      "name": "Hamburger Kunsthalle",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 12
+    },
+    {
+      "name": "Backsteingotik",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Renaissance",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Weserrenaissance",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Klassizismus",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Romantik",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Historismus",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Gründerzeit",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Jugendstil",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Expressionismus",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Die Brücke",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Der Blaue Reiter",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Dada",
+      "facet": "Kunstepochen und Stile in Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Deutsche Fachwerkstraße",
+      "facet": "Fachwerk, Stadtbild und Baukultur",
+      "known_at": 12
+    },
+    {
+      "name": "Altbau",
+      "facet": "Fachwerk, Stadtbild und Baukultur",
+      "known_at": 7
+    },
+    {
+      "name": "Friesenhaus",
+      "facet": "Fachwerk, Stadtbild und Baukultur",
+      "known_at": 11
+    },
+    {
+      "name": "Treppengiebel",
+      "facet": "Fachwerk, Stadtbild und Baukultur",
+      "known_at": 12
+    },
+    {
+      "name": "Kopfsteinpflaster",
+      "facet": "Fachwerk, Stadtbild und Baukultur",
+      "known_at": 6
+    },
+    {
+      "name": "Berliner Hinterhof",
+      "facet": "Fachwerk, Stadtbild und Baukultur",
+      "known_at": 11
+    },
+    {
+      "name": "Holzschnitt",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 11
+    },
+    {
+      "name": "Kupferstich",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 12
+    },
+    {
+      "name": "Melencolia I",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 14
+    },
+    {
+      "name": "Dürers Rhinocerus",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 12
+    },
+    {
+      "name": "Käthe Kollwitz",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 12
+    },
+    {
+      "name": "Fraktur",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 10
+    },
+    {
+      "name": "Fotomontage",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 12
+    },
+    {
+      "name": "Hannah Höch",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 14
+    },
+    {
+      "name": "Alois Senefelder",
+      "facet": "Grafik, Druck und Illustration",
+      "known_at": 14
+    },
+    {
+      "name": "Himmelsscheibe von Nebra",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 10
+    },
+    {
+      "name": "Bernsteinzimmer",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 10
+    },
+    {
+      "name": "Büste der Nofretete",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 9
+    },
+    {
+      "name": "Welfenschatz",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 14
+    },
+    {
+      "name": "Juwelendiebstahl von Dresden 2019",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 12
+    },
+    {
+      "name": "Big Maple Leaf",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 12
+    },
+    {
+      "name": "Schwabinger Kunstfund",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 13
+    },
+    {
+      "name": "Entartete Kunst",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 12
+    },
+    {
+      "name": "Wolfgang Beltracchi",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 13
+    },
+    {
+      "name": "Monuments Men",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 11
+    },
+    {
+      "name": "Berliner Goldhut",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 14
+    },
+    {
+      "name": "Beuys' Fettecke",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 13
+    },
+    {
+      "name": "Hildesheimer Silberfund",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 14
+    },
+    {
+      "name": "Quedlinburger Domschatz",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 14
+    },
+    {
+      "name": "Eberswalder Goldschatz",
+      "facet": "Kunstschätze, Raubkunst und Kunstskandale",
+      "known_at": 14
+    },
+    {
+      "name": "documenta",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 11
+    },
+    {
+      "name": "Joseph Beuys",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 11
+    },
+    {
+      "name": "7000 Eichen",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Anselm Kiefer",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Georg Baselitz",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Neo Rauch",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 14
+    },
+    {
+      "name": "Markus Lüpertz",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 14
+    },
+    {
+      "name": "Andreas Gursky",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 14
+    },
+    {
+      "name": "Rhein II",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 14
+    },
+    {
+      "name": "Rebecca Horn",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 14
+    },
+    {
+      "name": "Wolfgang Tillmans",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 14
+    },
+    {
+      "name": "Ottmar Hörl",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Skulptur Projekte Münster",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Art Cologne",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Berlin Biennale",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Ruhrtriennale",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    },
+    {
+      "name": "Hamburger Bahnhof",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 12
+    },
+    {
+      "name": "Jonathan Meese",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 14
+    }
+  ]
+}

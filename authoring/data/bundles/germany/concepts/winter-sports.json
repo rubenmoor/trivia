@@ -1,0 +1,936 @@
+{
+  "subcategory": "winter-sports",
+  "facets": [
+    "Biathlon und seine Stars",
+    "Skispringen und Vierschanzentournee",
+    "Rodeln, Bob und Skeleton",
+    "Ski alpin und Skirennläufer",
+    "Langlauf und Nordische Kombination",
+    "Eiskunstlauf und Eisschnelllauf",
+    "Eishockey in Deutschland",
+    "Deutschland bei Olympischen Winterspielen",
+    "Wintersportorte und Schanzen",
+    "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+    "Ausrüstung und Fachbegriffe"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 5,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sven Fischer",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Michael Greis",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Kati Wilhelm",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Andrea Henkel",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Frank Luck",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Arnd Peiffer",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Benedikt Doll",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Denise Herrmann-Wick",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 10
+    },
+    {
+      "name": "Franziska Preuß",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Simon Schempp",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Erik Lesser",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 11
+    },
+    {
+      "name": "Frank Ullrich",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Angerer",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 14
+    },
+    {
+      "name": "Biathlon auf Schalke",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Strafrunde",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 6
+    },
+    {
+      "name": "Liegendschießen",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 6
+    },
+    {
+      "name": "Massenstart",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 8
+    },
+    {
+      "name": "Verfolgung",
+      "facet": "Biathlon und seine Stars",
+      "known_at": 9
+    },
+    {
+      "name": "Dieter Thoma",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 11
+    },
+    {
+      "name": "Markus Eisenbichler",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 10
+    },
+    {
+      "name": "Richard Freitag",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 12
+    },
+    {
+      "name": "Severin Freund",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 11
+    },
+    {
+      "name": "Helmut Recknagel",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 14
+    },
+    {
+      "name": "Katharina Schmid",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 11
+    },
+    {
+      "name": "Carina Vogt",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 12
+    },
+    {
+      "name": "Selina Freitag",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 12
+    },
+    {
+      "name": "Goldener Adler",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 10
+    },
+    {
+      "name": "Grand Slam der Vierschanzentournee",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 12
+    },
+    {
+      "name": "Telemark-Landung",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 9
+    },
+    {
+      "name": "V-Stil",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 7
+    },
+    {
+      "name": "Skifliegen",
+      "facet": "Skispringen und Vierschanzentournee",
+      "known_at": 8
+    },
+    {
+      "name": "Tatjana Hüfner",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 12
+    },
+    {
+      "name": "Tobias Wendl und Tobias Arlt",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Silke Kraushaar-Pielach",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 14
+    },
+    {
+      "name": "André Lange",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 12
+    },
+    {
+      "name": "Wolfgang Hoppe",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 14
+    },
+    {
+      "name": "Mariama Jamanka",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 12
+    },
+    {
+      "name": "Laura Nolte",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 12
+    },
+    {
+      "name": "Christopher Grotheer",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 12
+    },
+    {
+      "name": "Hannah Neise",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 13
+    },
+    {
+      "name": "Jacqueline Lölling",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 13
+    },
+    {
+      "name": "Kunsteisbahn am Königssee",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Viererbob",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 6
+    },
+    {
+      "name": "Doppelsitzer",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 9
+    },
+    {
+      "name": "Skeleton",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 7
+    },
+    {
+      "name": "Hornschlitten",
+      "facet": "Rodeln, Bob und Skeleton",
+      "known_at": 11
+    },
+    {
+      "name": "Christian Neureuther",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 12
+    },
+    {
+      "name": "Markus Wasmeier",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 12
+    },
+    {
+      "name": "Hilde Gerg",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 12
+    },
+    {
+      "name": "Katja Seizinger",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 13
+    },
+    {
+      "name": "Martina Ertl",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 13
+    },
+    {
+      "name": "Christa Kinshofer",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Dreßen",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 11
+    },
+    {
+      "name": "Linus Straßer",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 11
+    },
+    {
+      "name": "Lena Dürr",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 11
+    },
+    {
+      "name": "Kira Weidle",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 12
+    },
+    {
+      "name": "Emma Aicher",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 11
+    },
+    {
+      "name": "Josef Ferstl",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 13
+    },
+    {
+      "name": "Kandahar-Abfahrt",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 12
+    },
+    {
+      "name": "Riesenslalom",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 7
+    },
+    {
+      "name": "Super-G",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 8
+    },
+    {
+      "name": "Abfahrt",
+      "facet": "Ski alpin und Skirennläufer",
+      "known_at": 5
+    },
+    {
+      "name": "Johannes Rydzek",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 11
+    },
+    {
+      "name": "Ronny Ackermann",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 12
+    },
+    {
+      "name": "Georg Hettich",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 13
+    },
+    {
+      "name": "Hermann Weinbuch",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 13
+    },
+    {
+      "name": "Fabian Rießle",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 13
+    },
+    {
+      "name": "Vinzenz Geiger",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 11
+    },
+    {
+      "name": "Nathalie Armbruster",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 12
+    },
+    {
+      "name": "Ulrich Wehling",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 14
+    },
+    {
+      "name": "Axel Teichmann",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 12
+    },
+    {
+      "name": "Tobias Angerer",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 12
+    },
+    {
+      "name": "Evi Sachenbacher-Stehle",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 12
+    },
+    {
+      "name": "Claudia Nystad",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 13
+    },
+    {
+      "name": "Katharina Hennig",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 12
+    },
+    {
+      "name": "Victoria Carl",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 12
+    },
+    {
+      "name": "Jochen Behle",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 13
+    },
+    {
+      "name": "Gundersen-Methode",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 13
+    },
+    {
+      "name": "Skating-Technik",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 8
+    },
+    {
+      "name": "Teamsprint",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 10
+    },
+    {
+      "name": "Tour de Ski",
+      "facet": "Langlauf und Nordische Kombination",
+      "known_at": 11
+    },
+    {
+      "name": "Robin Szolkowy",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 12
+    },
+    {
+      "name": "Bruno Massot",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 12
+    },
+    {
+      "name": "Marika Kilius",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 13
+    },
+    {
+      "name": "Hans-Jürgen Bäumler",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 13
+    },
+    {
+      "name": "Norbert Schramm",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 14
+    },
+    {
+      "name": "Tanja Szewczenko",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 13
+    },
+    {
+      "name": "Anni Friesinger",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 10
+    },
+    {
+      "name": "Uwe-Jens Mey",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 14
+    },
+    {
+      "name": "Christa Luding-Rothenburger",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 14
+    },
+    {
+      "name": "Monique Garbrecht",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 14
+    },
+    {
+      "name": "Erhard Keller",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 14
+    },
+    {
+      "name": "Jenny Wolf",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 14
+    },
+    {
+      "name": "Eisstadion Inzell",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 12
+    },
+    {
+      "name": "Klappschlittschuh",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 12
+    },
+    {
+      "name": "Dreifacher Axel",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 10
+    },
+    {
+      "name": "Pirouette",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 4
+    },
+    {
+      "name": "Holiday on Ice",
+      "facet": "Eiskunstlauf und Eisschnelllauf",
+      "known_at": 9
+    },
+    {
+      "name": "Deutsche Eishockey Liga",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Tim Stützle",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Philipp Grubauer",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Eisbären Berlin",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 7
+    },
+    {
+      "name": "Adler Mannheim",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Kölner Haie",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 7
+    },
+    {
+      "name": "EHC Red Bull München",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Düsseldorfer EG",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Krefeld Pinguine",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "EV Füssen",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Olympia-Silber im Eishockey 2018",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "WM-Silber im Eishockey 2023",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Puck",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 4
+    },
+    {
+      "name": "Bully",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Powerplay",
+      "facet": "Eishockey in Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "Olympische Winterspiele 1936 in Garmisch-Partenkirchen",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 11
+    },
+    {
+      "name": "Gesamtdeutsche Mannschaft",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 13
+    },
+    {
+      "name": "DDR-Olympiamannschaft",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 11
+    },
+    {
+      "name": "Olympische Winterspiele 2018 in Pyeongchang",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 10
+    },
+    {
+      "name": "Olympische Winterspiele 2022 in Peking",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 9
+    },
+    {
+      "name": "Olympische Winterspiele 2026 in Mailand und Cortina",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 9
+    },
+    {
+      "name": "Olympische Winterspiele 2014 in Sotschi",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 10
+    },
+    {
+      "name": "Olympische Winterspiele 2010 in Vancouver",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 11
+    },
+    {
+      "name": "Olympische Winterspiele 2006 in Turin",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 12
+    },
+    {
+      "name": "Olympische Winterspiele 1994 in Lillehammer",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 12
+    },
+    {
+      "name": "Olympische Winterspiele 1976 in Innsbruck",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 13
+    },
+    {
+      "name": "Bewerbung München 2018",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 13
+    },
+    {
+      "name": "Medaillenspiegel",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 7
+    },
+    {
+      "name": "Fahnenträger",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 8
+    },
+    {
+      "name": "Deutsches Haus",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 13
+    },
+    {
+      "name": "Sportfördergruppe der Bundeswehr",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 12
+    },
+    {
+      "name": "Olympiastützpunkt",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 12
+    },
+    {
+      "name": "Deutsche Sporthilfe",
+      "facet": "Deutschland bei Olympischen Winterspielen",
+      "known_at": 12
+    },
+    {
+      "name": "Titisee-Neustadt",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 11
+    },
+    {
+      "name": "Schönau am Königssee",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 12
+    },
+    {
+      "name": "Oberwiesenthal",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 12
+    },
+    {
+      "name": "Große Olympiaschanze",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 11
+    },
+    {
+      "name": "Schattenbergschanze",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 12
+    },
+    {
+      "name": "Heini-Klopfer-Skiflugschanze",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 13
+    },
+    {
+      "name": "Mühlenkopfschanze",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 13
+    },
+    {
+      "name": "Hochfirstschanze",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 14
+    },
+    {
+      "name": "Skihalle Neuss",
+      "facet": "Wintersportorte und Schanzen",
+      "known_at": 11
+    },
+    {
+      "name": "Schlitten",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 1
+    },
+    {
+      "name": "Rodelberg",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 2
+    },
+    {
+      "name": "Poporutscher",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 2
+    },
+    {
+      "name": "Après-Ski",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Skihütte",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 5
+    },
+    {
+      "name": "Skilift",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 3
+    },
+    {
+      "name": "Sessellift",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 3
+    },
+    {
+      "name": "Pistenraupe",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 4
+    },
+    {
+      "name": "Skischule",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 4
+    },
+    {
+      "name": "Skipass",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 6
+    },
+    {
+      "name": "Schneekanone",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 5
+    },
+    {
+      "name": "Eisstockschießen",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Winterferien",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 4
+    },
+    {
+      "name": "Eurosport",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "ZDF-Sportstudio",
+      "facet": "Rodelberg, Skiurlaub und Wintersport im Fernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Skiwachs",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 7
+    },
+    {
+      "name": "Skibindung",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 6
+    },
+    {
+      "name": "Skistock",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 2
+    },
+    {
+      "name": "Schlittschuh",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 1
+    },
+    {
+      "name": "Kufe",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 6
+    },
+    {
+      "name": "Carving-Ski",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 9
+    },
+    {
+      "name": "Schanzentisch",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 11
+    },
+    {
+      "name": "K-Punkt",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 11
+    },
+    {
+      "name": "Hillsize",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 13
+    },
+    {
+      "name": "Fischgrätenschritt",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 8
+    },
+    {
+      "name": "Schneepflug",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 4
+    },
+    {
+      "name": "Stemmbogen",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 10
+    },
+    {
+      "name": "Schussfahrt",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 6
+    },
+    {
+      "name": "Torstange",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 6
+    },
+    {
+      "name": "Kleinkalibergewehr",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 11
+    },
+    {
+      "name": "Steigfelle",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 12
+    },
+    {
+      "name": "Loipe",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 7
+    },
+    {
+      "name": "Piste",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 3
+    },
+    {
+      "name": "Buckelpiste",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 7
+    },
+    {
+      "name": "Halfpipe",
+      "facet": "Ausrüstung und Fachbegriffe",
+      "known_at": 7
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+{
+  "subcategory": "classic-literature",
+  "facets": [
+    "Märchen der Brüder Grimm",
+    "Sagen und Volksbücher",
+    "Mittelalterliche Dichtung",
+    "Goethe, Schiller und Weimar",
+    "Romantik und Vormärz",
+    "Gedichte und Balladen",
+    "Theater und Dramen",
+    "Romane des 20. Jahrhunderts",
+    "Nachkriegs- und Gegenwartsliteratur",
+    "Kinder- und Jugendbücher",
+    "Bildergeschichten und Kinderverse",
+    "Abenteuer, Krimis und Unterhaltung",
+    "Buchmessen, Preise und Literaturorte"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Schneewittchen",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 1
+    },
+    {
+      "name": "Rapunzel",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 1
+    },
+    {
+      "name": "Aschenputtel",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 2
+    },
+    {
+      "name": "Dornröschen",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 2
+    },
+    {
+      "name": "Der Wolf und die sieben jungen Geißlein",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 3
+    },
+    {
+      "name": "Tischlein deck dich",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 5
+    },
+    {
+      "name": "Das tapfere Schneiderlein",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 5
+    },
+    {
+      "name": "Sterntaler",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 5
+    },
+    {
+      "name": "Hans im Glück",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 6
+    },
+    {
+      "name": "Schneeweißchen und Rosenrot",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 6
+    },
+    {
+      "name": "Brüderchen und Schwesterchen",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 6
+    },
+    {
+      "name": "Jacob Grimm",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 7
+    },
+    {
+      "name": "Wilhelm Grimm",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 8
+    },
+    {
+      "name": "Das Wasser des Lebens",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 11
+    },
+    {
+      "name": "Dorothea Viehmann",
+      "facet": "Märchen der Brüder Grimm",
+      "known_at": 14
+    },
+    {
+      "name": "Die Heinzelmännchen zu Köln",
+      "facet": "Sagen und Volksbücher",
+      "known_at": 8
+    },
+    {
+      "name": "Walpurgisnacht auf dem Brocken",
+      "facet": "Sagen und Volksbücher",
+      "known_at": 9
+    },
+    {
+      "name": "Der Fliegende Holländer",
+      "facet": "Sagen und Volksbücher",
+      "known_at": 9
+    },
+    {
+      "name": "Historia von D. Johann Fausten",
+      "facet": "Sagen und Volksbücher",
+      "known_at": 13
+    },
+    {
+      "name": "Die Weiber von Weinsberg",
+      "facet": "Sagen und Volksbücher",
+      "known_at": 13
+    },
+    {
+      "name": "Fortunatus",
+      "facet": "Sagen und Volksbücher",
+      "known_at": 15
+    },
+    {
+      "name": "Die schöne Magelone",
+      "facet": "Sagen und Volksbücher",
+      "known_at": 15
+    },
+    {
+      "name": "Codex Manesse",
+      "facet": "Mittelalterliche Dichtung",
+      "known_at": 13
+    },
+    {
+      "name": "Der arme Heinrich",
+      "facet": "Mittelalterliche Dichtung",
+      "known_at": 14
+    },
+    {
+      "name": "Gottfried von Straßburg",
+      "facet": "Mittelalterliche Dichtung",
+      "known_at": 14
+    },
+    {
+      "name": "Meier Helmbrecht",
+      "facet": "Mittelalterliche Dichtung",
+      "known_at": 15
+    },
+    {
+      "name": "Iwein",
+      "facet": "Mittelalterliche Dichtung",
+      "known_at": 15
+    },
+    {
+      "name": "Gretchen",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 11
+    },
+    {
+      "name": "Weimarer Klassik",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 11
+    },
+    {
+      "name": "Kabale und Liebe",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 12
+    },
+    {
+      "name": "Herzogin Anna Amalia Bibliothek",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 12
+    },
+    {
+      "name": "Maria Stuart",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 13
+    },
+    {
+      "name": "Iphigenie auf Tauris",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 13
+    },
+    {
+      "name": "Charlotte von Stein",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 14
+    },
+    {
+      "name": "Christoph Martin Wieland",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 14
+    },
+    {
+      "name": "Wilhelm Meisters Lehrjahre",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 14
+    },
+    {
+      "name": "Die Wahlverwandtschaften",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 14
+    },
+    {
+      "name": "Dichtung und Wahrheit",
+      "facet": "Goethe, Schiller und Weimar",
+      "known_at": 14
+    },
+    {
+      "name": "Annette von Droste-Hülshoff",
+      "facet": "Romantik und Vormärz",
+      "known_at": 11
+    },
+    {
+      "name": "Heinrich von Kleist",
+      "facet": "Romantik und Vormärz",
+      "known_at": 11
+    },
+    {
+      "name": "Nussknacker und Mausekönig",
+      "facet": "Romantik und Vormärz",
+      "known_at": 10
+    },
+    {
+      "name": "Woyzeck",
+      "facet": "Romantik und Vormärz",
+      "known_at": 12
+    },
+    {
+      "name": "Die Judenbuche",
+      "facet": "Romantik und Vormärz",
+      "known_at": 12
+    },
+    {
+      "name": "Michael Kohlhaas",
+      "facet": "Romantik und Vormärz",
+      "known_at": 12
+    },
+    {
+      "name": "Aus dem Leben eines Taugenichts",
+      "facet": "Romantik und Vormärz",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Schlemihls wundersame Geschichte",
+      "facet": "Romantik und Vormärz",
+      "known_at": 14
+    },
+    {
+      "name": "Junges Deutschland",
+      "facet": "Romantik und Vormärz",
+      "known_at": 14
+    },
+    {
+      "name": "Ballade",
+      "facet": "Gedichte und Balladen",
+      "known_at": 7
+    },
+    {
+      "name": "Abendlied (Der Mond ist aufgegangen)",
+      "facet": "Gedichte und Balladen",
+      "known_at": 8
+    },
+    {
+      "name": "Herr von Ribbeck auf Ribbeck im Havelland",
+      "facet": "Gedichte und Balladen",
+      "known_at": 10
+    },
+    {
+      "name": "John Maynard",
+      "facet": "Gedichte und Balladen",
+      "known_at": 11
+    },
+    {
+      "name": "Die Bürgschaft",
+      "facet": "Gedichte und Balladen",
+      "known_at": 11
+    },
+    {
+      "name": "Theodor Fontane",
+      "facet": "Gedichte und Balladen",
+      "known_at": 11
+    },
+    {
+      "name": "Das Lied von der Glocke",
+      "facet": "Gedichte und Balladen",
+      "known_at": 12
+    },
+    {
+      "name": "Der Handschuh",
+      "facet": "Gedichte und Balladen",
+      "known_at": 12
+    },
+    {
+      "name": "Der Knabe im Moor",
+      "facet": "Gedichte und Balladen",
+      "known_at": 12
+    },
+    {
+      "name": "Wandrers Nachtlied",
+      "facet": "Gedichte und Balladen",
+      "known_at": 12
+    },
+    {
+      "name": "Er ist's",
+      "facet": "Gedichte und Balladen",
+      "known_at": 12
+    },
+    {
+      "name": "Joachim Ringelnatz",
+      "facet": "Gedichte und Balladen",
+      "known_at": 12
+    },
+    {
+      "name": "Christian Morgenstern",
+      "facet": "Gedichte und Balladen",
+      "known_at": 12
+    },
+    {
+      "name": "Der Taucher",
+      "facet": "Gedichte und Balladen",
+      "known_at": 13
+    },
+    {
+      "name": "Belsazar",
+      "facet": "Gedichte und Balladen",
+      "known_at": 13
+    },
+    {
+      "name": "Stufen",
+      "facet": "Gedichte und Balladen",
+      "known_at": 13
+    },
+    {
+      "name": "Die Kraniche des Ibykus",
+      "facet": "Gedichte und Balladen",
+      "known_at": 14
+    },
+    {
+      "name": "Mackie Messer",
+      "facet": "Theater und Dramen",
+      "known_at": 12
+    },
+    {
+      "name": "Mutter Courage und ihre Kinder",
+      "facet": "Theater und Dramen",
+      "known_at": 12
+    },
+    {
+      "name": "Der zerbrochne Krug",
+      "facet": "Theater und Dramen",
+      "known_at": 12
+    },
+    {
+      "name": "Gerhart Hauptmann",
+      "facet": "Theater und Dramen",
+      "known_at": 12
+    },
+    {
+      "name": "Leben des Galilei",
+      "facet": "Theater und Dramen",
+      "known_at": 13
+    },
+    {
+      "name": "Episches Theater",
+      "facet": "Theater und Dramen",
+      "known_at": 13
+    },
+    {
+      "name": "Ringparabel",
+      "facet": "Theater und Dramen",
+      "known_at": 13
+    },
+    {
+      "name": "Minna von Barnhelm",
+      "facet": "Theater und Dramen",
+      "known_at": 13
+    },
+    {
+      "name": "Carl Zuckmayer",
+      "facet": "Theater und Dramen",
+      "known_at": 13
+    },
+    {
+      "name": "Berliner Ensemble",
+      "facet": "Theater und Dramen",
+      "known_at": 13
+    },
+    {
+      "name": "Frühlings Erwachen",
+      "facet": "Theater und Dramen",
+      "known_at": 13
+    },
+    {
+      "name": "Emilia Galotti",
+      "facet": "Theater und Dramen",
+      "known_at": 14
+    },
+    {
+      "name": "Der kaukasische Kreidekreis",
+      "facet": "Theater und Dramen",
+      "known_at": 14
+    },
+    {
+      "name": "Des Teufels General",
+      "facet": "Theater und Dramen",
+      "known_at": 14
+    },
+    {
+      "name": "Buddenbrooks",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 11
+    },
+    {
+      "name": "Hermann Hesse",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 11
+    },
+    {
+      "name": "Siddhartha",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 11
+    },
+    {
+      "name": "Erich Maria Remarque",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 11
+    },
+    {
+      "name": "Der Steppenwolf",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 12
+    },
+    {
+      "name": "Kurt Tucholsky",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 12
+    },
+    {
+      "name": "Der Tod in Venedig",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Unterm Rad",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Alfred Döblin",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Fallada",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Heinrich Mann",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Der Untertan",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Anna Seghers",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Jeder stirbt für sich allein",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 14
+    },
+    {
+      "name": "Professor Unrat",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 14
+    },
+    {
+      "name": "Das siebte Kreuz",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 14
+    },
+    {
+      "name": "Fabian",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 14
+    },
+    {
+      "name": "Lion Feuchtwanger",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 14
+    },
+    {
+      "name": "Irmgard Keun",
+      "facet": "Romane des 20. Jahrhunderts",
+      "known_at": 15
+    },
+    {
+      "name": "Tschick",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 7
+    },
+    {
+      "name": "Die Känguru-Chroniken",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 8
+    },
+    {
+      "name": "Marc-Uwe Kling",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 9
+    },
+    {
+      "name": "Das Parfum",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 9
+    },
+    {
+      "name": "Günter Grass",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 11
+    },
+    {
+      "name": "Die Blechtrommel",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 11
+    },
+    {
+      "name": "Patrick Süskind",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 11
+    },
+    {
+      "name": "Der Vorleser",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 11
+    },
+    {
+      "name": "Wolfgang Herrndorf",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 11
+    },
+    {
+      "name": "Heinrich Böll",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Wolfgang Borchert",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Bernhard Schlink",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Juli Zeh",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Kehlmann",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Die Vermessung der Welt",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Siegfried Lenz",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Sonnenallee",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 12
+    },
+    {
+      "name": "Oskar Matzerath",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 13
+    },
+    {
+      "name": "Die verlorene Ehre der Katharina Blum",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 13
+    },
+    {
+      "name": "Gruppe 47",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 13
+    },
+    {
+      "name": "Draußen vor der Tür",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 13
+    },
+    {
+      "name": "Christa Wolf",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 13
+    },
+    {
+      "name": "Herta Müller",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 13
+    },
+    {
+      "name": "Deutschstunde",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 13
+    },
+    {
+      "name": "Die neuen Leiden des jungen W.",
+      "facet": "Nachkriegs- und Gegenwartsliteratur",
+      "known_at": 14
+    },
+    {
+      "name": "Jim Knopf und Lukas der Lokomotivführer",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 4
+    },
+    {
+      "name": "Janosch",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 4
+    },
+    {
+      "name": "Oh, wie schön ist Panama",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 4
+    },
+    {
+      "name": "Der kleine Drache Kokosnuss",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 4
+    },
+    {
+      "name": "Die unendliche Geschichte",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 6
+    },
+    {
+      "name": "Das doppelte Lottchen",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 6
+    },
+    {
+      "name": "Die Schule der magischen Tiere",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 6
+    },
+    {
+      "name": "Michael Ende",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 7
+    },
+    {
+      "name": "Momo",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 7
+    },
+    {
+      "name": "Paul Maar",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 7
+    },
+    {
+      "name": "Cornelia Funke",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 8
+    },
+    {
+      "name": "Tintenherz",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 8
+    },
+    {
+      "name": "Pünktchen und Anton",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 9
+    },
+    {
+      "name": "Die Vorstadtkrokodile",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 9
+    },
+    {
+      "name": "Rico, Oskar und die Tieferschatten",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 9
+    },
+    {
+      "name": "Die Welle",
+      "facet": "Kinder- und Jugendbücher",
+      "known_at": 10
+    },
+    {
+      "name": "Der Suppen-Kaspar",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 9
+    },
+    {
+      "name": "Zappel-Philipp",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 9
+    },
+    {
+      "name": "Hans Guck-in-die-Luft",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 10
+    },
+    {
+      "name": "Fix und Foxi",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 10
+    },
+    {
+      "name": "Paulinchen und das Feuerzeug",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 11
+    },
+    {
+      "name": "Werner",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 11
+    },
+    {
+      "name": "James Krüss",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 11
+    },
+    {
+      "name": "Heinrich Hoffmann",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 12
+    },
+    {
+      "name": "Vater und Sohn",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 12
+    },
+    {
+      "name": "Lurchi",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 12
+    },
+    {
+      "name": "Die fromme Helene",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 13
+    },
+    {
+      "name": "Plisch und Plum",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 13
+    },
+    {
+      "name": "Nick Knatterton",
+      "facet": "Bildergeschichten und Kinderverse",
+      "known_at": 13
+    },
+    {
+      "name": "Winnetou",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 6
+    },
+    {
+      "name": "TKKG",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 6
+    },
+    {
+      "name": "Karl May",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 8
+    },
+    {
+      "name": "Old Shatterhand",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 8
+    },
+    {
+      "name": "Der Schatz im Silbersee",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 9
+    },
+    {
+      "name": "Karl-May-Spiele Bad Segeberg",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 9
+    },
+    {
+      "name": "Ich bin dann mal weg",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 10
+    },
+    {
+      "name": "Rubinrot",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 10
+    },
+    {
+      "name": "Perry Rhodan",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 11
+    },
+    {
+      "name": "Sebastian Fitzek",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 11
+    },
+    {
+      "name": "Franz Eberhofer",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 11
+    },
+    {
+      "name": "Groschenroman",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 11
+    },
+    {
+      "name": "Kara Ben Nemsi",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 12
+    },
+    {
+      "name": "Kommissar Kluftinger",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 12
+    },
+    {
+      "name": "Der Schwarm",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 12
+    },
+    {
+      "name": "Jerry Cotton",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 13
+    },
+    {
+      "name": "Nele Neuhaus",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 13
+    },
+    {
+      "name": "Rebecca Gablé",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 13
+    },
+    {
+      "name": "Die Wanderhure",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 13
+    },
+    {
+      "name": "Johannes Mario Simmel",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 14
+    },
+    {
+      "name": "Friedrich Gerstäcker",
+      "facet": "Abenteuer, Krimis und Unterhaltung",
+      "known_at": 15
+    },
+    {
+      "name": "Duden",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 6
+    },
+    {
+      "name": "Welttag des Buches",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 8
+    },
+    {
+      "name": "Frankfurter Buchmesse",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 9
+    },
+    {
+      "name": "Leipziger Buchmesse",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 10
+    },
+    {
+      "name": "Gutenberg-Museum Mainz",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 10
+    },
+    {
+      "name": "Bücherverbrennung 1933",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 11
+    },
+    {
+      "name": "Marcel Reich-Ranicki",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 11
+    },
+    {
+      "name": "Reclam-Hefte",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 11
+    },
+    {
+      "name": "Das Literarische Quartett",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 12
+    },
+    {
+      "name": "Deutscher Buchpreis",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 12
+    },
+    {
+      "name": "Goethes Wohnhaus am Frauenplan",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 13
+    },
+    {
+      "name": "Grimmwelt Kassel",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 12
+    },
+    {
+      "name": "Georg-Büchner-Preis",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 13
+    },
+    {
+      "name": "Friedenspreis des Deutschen Buchhandels",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 13
+    },
+    {
+      "name": "Deutscher Jugendliteraturpreis",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 13
+    },
+    {
+      "name": "Buddenbrookhaus",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 13
+    },
+    {
+      "name": "Deutsche Nationalbibliothek",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 13
+    },
+    {
+      "name": "Buchpreisbindung",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 13
+    },
+    {
+      "name": "Deutsches Literaturarchiv Marbach",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 14
+    },
+    {
+      "name": "Börsenverein des Deutschen Buchhandels",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 14
+    },
+    {
+      "name": "Kleist-Preis",
+      "facet": "Buchmessen, Preise und Literaturorte",
+      "known_at": 15
+    }
+  ]
+}

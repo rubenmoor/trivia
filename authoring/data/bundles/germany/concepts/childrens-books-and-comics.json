@@ -1,0 +1,899 @@
+{
+  "subcategory": "childrens-books-and-comics",
+  "facets": [
+    "Klassiker des 19. Jahrhunderts",
+    "Erich Kästner und seine Bücher",
+    "Michael Ende und Otfried Preußler",
+    "Bilderbücher und Pappbilderbücher",
+    "Kinderbuchfiguren und Tierhelden",
+    "Detektiv- und Abenteuerreihen",
+    "Comics und Zeichner aus Deutschland",
+    "Comicmagazine und Kinderzeitschriften",
+    "Kinderbuchautorinnen der Gegenwart",
+    "Verfilmungen und Hörspiele",
+    "Erstlesebücher und Kinderlyrik",
+    "Preise, Verlage und Lesekultur"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Der Suppenkasper",
+      "facet": "Klassiker des 19. Jahrhunderts",
+      "known_at": 7
+    },
+    {
+      "name": "Der Zappelphilipp",
+      "facet": "Klassiker des 19. Jahrhunderts",
+      "known_at": 6
+    },
+    {
+      "name": "Witwe Bolte",
+      "facet": "Klassiker des 19. Jahrhunderts",
+      "known_at": 10
+    },
+    {
+      "name": "Lehrer Lämpel",
+      "facet": "Klassiker des 19. Jahrhunderts",
+      "known_at": 9
+    },
+    {
+      "name": "Hans Huckebein",
+      "facet": "Klassiker des 19. Jahrhunderts",
+      "known_at": 13
+    },
+    {
+      "name": "Der kleine Muck",
+      "facet": "Klassiker des 19. Jahrhunderts",
+      "known_at": 8
+    },
+    {
+      "name": "Konferenz der Tiere",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 9
+    },
+    {
+      "name": "Der 35. Mai",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 10
+    },
+    {
+      "name": "Emil und die drei Zwillinge",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 11
+    },
+    {
+      "name": "Als ich ein kleiner Junge war",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 12
+    },
+    {
+      "name": "Gustav mit der Hupe",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 8
+    },
+    {
+      "name": "Pony Hütchen",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 10
+    },
+    {
+      "name": "Herr Grundeis",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 10
+    },
+    {
+      "name": "Luise und Lotte",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 6
+    },
+    {
+      "name": "Walter Trier",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 13
+    },
+    {
+      "name": "Der Nichtraucher",
+      "facet": "Erich Kästner und seine Bücher",
+      "known_at": 12,
+      "retired": "unaskable: Not sure what Kästner's „Der Nichtraucher“ is or which facts about it are reliable."
+    },
+    {
+      "name": "Emma (Lokomotive)",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 6
+    },
+    {
+      "name": "Fuchur",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 6
+    },
+    {
+      "name": "Bastian Balthasar Bux",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 8
+    },
+    {
+      "name": "Atréju",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 8
+    },
+    {
+      "name": "Phantásien",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 8
+    },
+    {
+      "name": "Die Kindliche Kaiserin",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 10
+    },
+    {
+      "name": "Die grauen Herren",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 8
+    },
+    {
+      "name": "Meister Hora",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 11
+    },
+    {
+      "name": "Kassiopeia",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 10
+    },
+    {
+      "name": "Der satanarchäolügenialkohöllische Wunschpunsch",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 8
+    },
+    {
+      "name": "Herr Tur Tur",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 8
+    },
+    {
+      "name": "Frau Mahlzahn",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 9
+    },
+    {
+      "name": "Kasperl und Seppel",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 5
+    },
+    {
+      "name": "Abraxas (Rabe)",
+      "facet": "Michael Ende und Otfried Preußler",
+      "known_at": 9
+    },
+    {
+      "name": "Der kleine Bär und der kleine Tiger",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 4
+    },
+    {
+      "name": "Günter Kastenfrosch",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 10
+    },
+    {
+      "name": "Vom kleinen Maulwurf, der wissen wollte, wer ihm auf den Kopf gemacht hat",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 5
+    },
+    {
+      "name": "Wolf Erlbruch",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 13
+    },
+    {
+      "name": "Ali Mitgutsch",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 9
+    },
+    {
+      "name": "Wimmelbuch",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 5
+    },
+    {
+      "name": "Rotraut Susanne Berner",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 11
+    },
+    {
+      "name": "Die Häschenschule",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 7
+    },
+    {
+      "name": "Helme Heine",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 11
+    },
+    {
+      "name": "Franz von Hahn, Johnny Mauser und der dicke Waldemar",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 11
+    },
+    {
+      "name": "Pixi-Bücher",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 3
+    },
+    {
+      "name": "Wieso? Weshalb? Warum?",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 4
+    },
+    {
+      "name": "Leo Lausemaus",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 5
+    },
+    {
+      "name": "Nulli und Priesemut",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 9
+    },
+    {
+      "name": "Die kleine Hummel Bommel",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 8
+    },
+    {
+      "name": "Lieselotte (Kuh)",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 7
+    },
+    {
+      "name": "Ritter Rost",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 6
+    },
+    {
+      "name": "Die kleine Spinne Widerlich",
+      "facet": "Bilderbücher und Pappbilderbücher",
+      "known_at": 8
+    },
+    {
+      "name": "Herr Taschenbier",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 9
+    },
+    {
+      "name": "Die Olchis",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 5
+    },
+    {
+      "name": "Conni",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 3
+    },
+    {
+      "name": "Urmel",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 6
+    },
+    {
+      "name": "Max Kruse",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 12
+    },
+    {
+      "name": "Ellis Kaut",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 11
+    },
+    {
+      "name": "Waldemar Bonsels",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 12
+    },
+    {
+      "name": "Lauras Stern",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 4
+    },
+    {
+      "name": "Das Neinhorn",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 5
+    },
+    {
+      "name": "Der kleine Rabe Socke",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 4
+    },
+    {
+      "name": "Petronella Apfelmus",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 8
+    },
+    {
+      "name": "Rennschwein Rudi Rüssel",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 8
+    },
+    {
+      "name": "Hexe Lilli",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 6
+    },
+    {
+      "name": "Felix (Hase)",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 7
+    },
+    {
+      "name": "Ritter Trenk",
+      "facet": "Kinderbuchfiguren und Tierhelden",
+      "known_at": 8
+    },
+    {
+      "name": "Justus Jonas",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 7
+    },
+    {
+      "name": "Rocky Beach",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 8
+    },
+    {
+      "name": "Klößchen",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 8
+    },
+    {
+      "name": "Stefan Wolf",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 13
+    },
+    {
+      "name": "Die Wilden Kerle",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 6
+    },
+    {
+      "name": "Joachim Masannek",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 12
+    },
+    {
+      "name": "Die Wilden Hühner",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 7
+    },
+    {
+      "name": "Die Teufelskicker",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 8
+    },
+    {
+      "name": "Die Zeitdetektive",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 9
+    },
+    {
+      "name": "Kommissar Kugelblitz",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 8
+    },
+    {
+      "name": "Die Pfefferkörner",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 8
+    },
+    {
+      "name": "Die Vampirschwestern",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 8
+    },
+    {
+      "name": "Andreas Steinhöfel",
+      "facet": "Detektiv- und Abenteuerreihen",
+      "known_at": 12
+    },
+    {
+      "name": "Rolf Kauka",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Lupo",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Brösel",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Wum und Wendelin",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 10
+    },
+    {
+      "name": "e.o.plauen",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Walter Moers",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Käpt'n Blaubär",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 5
+    },
+    {
+      "name": "Hein Blöd",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 8
+    },
+    {
+      "name": "Die Digedags",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Hannes Hegen",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 14
+    },
+    {
+      "name": "Die Abrafaxe",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 9
+    },
+    {
+      "name": "Erika Fuchs",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Erikativ",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Uli Stein",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 11
+    },
+    {
+      "name": "Mecki",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 12
+    },
+    {
+      "name": "Flix",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Ralf König",
+      "facet": "Comics und Zeichner aus Deutschland",
+      "known_at": 13
+    },
+    {
+      "name": "Micky Maus Magazin",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 5
+    },
+    {
+      "name": "Lustiges Taschenbuch",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 6
+    },
+    {
+      "name": "Yps",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 10
+    },
+    {
+      "name": "Urzeitkrebse",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 10
+    },
+    {
+      "name": "Gimmick",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 8
+    },
+    {
+      "name": "Mosaik",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 10
+    },
+    {
+      "name": "Dr. Sommer",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 12
+    },
+    {
+      "name": "Bravo Otto",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 12
+    },
+    {
+      "name": "Starschnitt",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 13
+    },
+    {
+      "name": "Geolino",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 7
+    },
+    {
+      "name": "Bussi Bär",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 8
+    },
+    {
+      "name": "Wendy",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 9
+    },
+    {
+      "name": "Bummi",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 12
+    },
+    {
+      "name": "Frösi",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 13
+    },
+    {
+      "name": "Dein Spiegel",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 11
+    },
+    {
+      "name": "Zeit Leo",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 11
+    },
+    {
+      "name": "Flohkiste",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 10,
+      "retired": "unaskable: Too little reliable, well-known knowledge about the magazine „Flohkiste“ for a fair question."
+    },
+    {
+      "name": "Zack",
+      "facet": "Comicmagazine und Kinderzeitschriften",
+      "known_at": 13
+    },
+    {
+      "name": "Drachenreiter",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 9
+    },
+    {
+      "name": "Kirsten Boie",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 9
+    },
+    {
+      "name": "Die Kinder aus dem Möwenweg",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 9
+    },
+    {
+      "name": "Kerstin Gier",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 11
+    },
+    {
+      "name": "Margit Auer",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 11
+    },
+    {
+      "name": "Alice Pantermüller",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Mein Lotta-Leben",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 6
+    },
+    {
+      "name": "Isabel Abedi",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Lola (Isabel Abedi)",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 9
+    },
+    {
+      "name": "Mirjam Pressler",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Katja Brandis",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Woodwalkers",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 8
+    },
+    {
+      "name": "Liane Schneider",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Sabine Städing",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Frauke Scheunemann",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Franziska Gehm",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 13
+    },
+    {
+      "name": "Gudrun Pausewang",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Die Wolke",
+      "facet": "Kinderbuchautorinnen der Gegenwart",
+      "known_at": 11
+    },
+    {
+      "name": "Karla Kolumna",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 6
+    },
+    {
+      "name": "Bibi und Tina",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Elfie Donnelly",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 13
+    },
+    {
+      "name": "Meister Eder und sein Pumuckl",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Peter Lustig",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 8
+    },
+    {
+      "name": "Herr Fuchs und Frau Elster",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 11
+    },
+    {
+      "name": "Europa (Hörspiellabel)",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 11
+    },
+    {
+      "name": "Hörspielkassette",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 7
+    },
+    {
+      "name": "Toniebox",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 3
+    },
+    {
+      "name": "Ohrenbär",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 12
+    },
+    {
+      "name": "Ostwind",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 7
+    },
+    {
+      "name": "Wolfgang Petersen",
+      "facet": "Verfilmungen und Hörspiele",
+      "known_at": 12
+    },
+    {
+      "name": "Leserabe",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 8
+    },
+    {
+      "name": "Leselöwen",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 9
+    },
+    {
+      "name": "Bücherbär",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 10
+    },
+    {
+      "name": "Lesemaus",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 6
+    },
+    {
+      "name": "Fibel",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 8
+    },
+    {
+      "name": "Josef Guggenmos",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 13
+    },
+    {
+      "name": "Das ästhetische Wiesel",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 14
+    },
+    {
+      "name": "Heinrich Hoffmann von Fallersleben",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 11
+    },
+    {
+      "name": "Abzählreim",
+      "facet": "Erstlesebücher und Kinderlyrik",
+      "known_at": 5
+    },
+    {
+      "name": "Luchs (Preis)",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 14
+    },
+    {
+      "name": "Oetinger Verlag",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 11
+    },
+    {
+      "name": "Carlsen Verlag",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 11
+    },
+    {
+      "name": "Thienemann Verlag",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 13
+    },
+    {
+      "name": "Arena Verlag",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 13
+    },
+    {
+      "name": "Loewe Verlag",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 13
+    },
+    {
+      "name": "Bücherwurm",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 4
+    },
+    {
+      "name": "Bundesweiter Vorlesetag",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 10
+    },
+    {
+      "name": "Stiftung Lesen",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 12
+    },
+    {
+      "name": "Stadtbücherei",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 5
+    },
+    {
+      "name": "Internationale Jugendbibliothek München",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 14
+    },
+    {
+      "name": "Antolin",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 8
+    },
+    {
+      "name": "Lesepass",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 7
+    },
+    {
+      "name": "Lesenacht",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 6
+    },
+    {
+      "name": "Gute-Nacht-Geschichte",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 2
+    },
+    {
+      "name": "Bilderbuchkino",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 9
+    },
+    {
+      "name": "Thalia",
+      "facet": "Preise, Verlage und Lesekultur",
+      "known_at": 8
+    }
+  ]
+}

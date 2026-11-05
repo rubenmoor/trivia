@@ -1,0 +1,713 @@
+{
+  "subcategory": "dialects-and-regional-words",
+  "facets": [
+    "Brötchen und Backwaren regional",
+    "Begrüßungen und Abschiedsformeln",
+    "Essen und Trinken im Dialekt",
+    "Bairisch und Fränkisch",
+    "Schwäbisch und Badisch",
+    "Sächsisch und Thüringisch",
+    "Berlinerisch und Plattdeutsch",
+    "Kölsch, Pfälzisch und Hessisch",
+    "Ruhrdeutsch und Rheinland",
+    "Regionale Schimpfwörter und Kosenamen",
+    "Dialekt in Film, Musik und Comedy",
+    "Dialektgrenzen und Sprachgeschichte"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 2,
+      "record": 2,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 3,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Laugenbrezel",
+      "facet": "Brötchen und Backwaren regional",
+      "known_at": 2
+    },
+    {
+      "name": "Kreppel",
+      "facet": "Brötchen und Backwaren regional",
+      "known_at": 10
+    },
+    {
+      "name": "Seele",
+      "facet": "Brötchen und Backwaren regional",
+      "known_at": 11
+    },
+    {
+      "name": "Stutenkerl",
+      "facet": "Brötchen und Backwaren regional",
+      "known_at": 9
+    },
+    {
+      "name": "Griaß di",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 8
+    },
+    {
+      "name": "Tschüss",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 1
+    },
+    {
+      "name": "Tschüssikowski",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 8
+    },
+    {
+      "name": "Ade",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 7
+    },
+    {
+      "name": "Tschö",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 8
+    },
+    {
+      "name": "Pfiat di",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 11
+    },
+    {
+      "name": "Hallöchen",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 4,
+      "retired": "unaskable: „Hallöchen“ ist kein regionales Wort, und keine der Optionen (wer, Foto einer Person, Herkunftsort) ergibt eine eindeutige, faire Frage."
+    },
+    {
+      "name": "Tach",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 6
+    },
+    {
+      "name": "Ahoi",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 5
+    },
+    {
+      "name": "Bis denne",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 9
+    },
+    {
+      "name": "Petri Heil",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 10
+    },
+    {
+      "name": "Adschüss",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 11
+    },
+    {
+      "name": "Habedere",
+      "facet": "Begrüßungen und Abschiedsformeln",
+      "known_at": 12
+    },
+    {
+      "name": "Erdapfel",
+      "facet": "Essen und Trinken im Dialekt",
+      "known_at": 8
+    },
+    {
+      "name": "Schorle",
+      "facet": "Essen und Trinken im Dialekt",
+      "known_at": 6
+    },
+    {
+      "name": "Topfen",
+      "facet": "Essen und Trinken im Dialekt",
+      "known_at": 9
+    },
+    {
+      "name": "Gelbe Rübe",
+      "facet": "Essen und Trinken im Dialekt",
+      "known_at": 10
+    },
+    {
+      "name": "Schwammerl",
+      "facet": "Essen und Trinken im Dialekt",
+      "known_at": 9
+    },
+    {
+      "name": "Zwetschge",
+      "facet": "Essen und Trinken im Dialekt",
+      "known_at": 7
+    },
+    {
+      "name": "Oachkatzlschwoaf",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 9
+    },
+    {
+      "name": "Gaudi",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 6
+    },
+    {
+      "name": "Fesch",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 8
+    },
+    {
+      "name": "Bua",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 7
+    },
+    {
+      "name": "Schmankerl",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 9
+    },
+    {
+      "name": "Gschmarri",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 11
+    },
+    {
+      "name": "Grantler",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 11
+    },
+    {
+      "name": "Schmarrn",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 8
+    },
+    {
+      "name": "Hendl",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 6
+    },
+    {
+      "name": "Dahoam",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 8
+    },
+    {
+      "name": "Fei",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 11
+    },
+    {
+      "name": "Bassd scho",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 10
+    },
+    {
+      "name": "Kini",
+      "facet": "Bairisch und Fränkisch",
+      "known_at": 12
+    },
+    {
+      "name": "Muggeseggele",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 10
+    },
+    {
+      "name": "Schaffe, schaffe, Häusle baue",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 9
+    },
+    {
+      "name": "Bruddeln",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 12
+    },
+    {
+      "name": "Gsälz",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 11
+    },
+    {
+      "name": "Viertele",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 11
+    },
+    {
+      "name": "Ha noi",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 10
+    },
+    {
+      "name": "Mädle",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 7
+    },
+    {
+      "name": "Bobbele",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 11
+    },
+    {
+      "name": "Hajo",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 11
+    },
+    {
+      "name": "Breschdling",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 13
+    },
+    {
+      "name": "Schwäbische Hausfrau",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 9
+    },
+    {
+      "name": "Grasdackel",
+      "facet": "Schwäbisch und Badisch",
+      "known_at": 12
+    },
+    {
+      "name": "Ei verbibbsch",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 11
+    },
+    {
+      "name": "Nu",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 9
+    },
+    {
+      "name": "Rostbrätel",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 13
+    },
+    {
+      "name": "Hitsche",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 13
+    },
+    {
+      "name": "Nischel",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 11
+    },
+    {
+      "name": "Plaste",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 11
+    },
+    {
+      "name": "Kaufhalle",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 12
+    },
+    {
+      "name": "Ditschen",
+      "facet": "Sächsisch und Thüringisch",
+      "known_at": 11
+    },
+    {
+      "name": "Icke",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 8
+    },
+    {
+      "name": "Kiez",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 7
+    },
+    {
+      "name": "Atze",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 11
+    },
+    {
+      "name": "Berliner Schnauze",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 9
+    },
+    {
+      "name": "Dufte",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 10
+    },
+    {
+      "name": "Molle",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 12
+    },
+    {
+      "name": "Klönschnack",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 10
+    },
+    {
+      "name": "Büx",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 12
+    },
+    {
+      "name": "Lütt",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 10
+    },
+    {
+      "name": "Deern",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 9
+    },
+    {
+      "name": "Feudel",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 12
+    },
+    {
+      "name": "Tüdelig",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 10
+    },
+    {
+      "name": "Schnacken",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 8
+    },
+    {
+      "name": "Fofftein",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 11
+    },
+    {
+      "name": "Ick bün all hier",
+      "facet": "Berlinerisch und Plattdeutsch",
+      "known_at": 12
+    },
+    {
+      "name": "Et kütt wie et kütt",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 10
+    },
+    {
+      "name": "Et hätt noch immer jot jejange",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 11
+    },
+    {
+      "name": "Rheinisches Grundgesetz",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 12
+    },
+    {
+      "name": "Veedel",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 11
+    },
+    {
+      "name": "Kölle",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 8
+    },
+    {
+      "name": "Dubbeglas",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 10
+    },
+    {
+      "name": "Ei gude wie",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 10
+    },
+    {
+      "name": "Ebbelwoi",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 9
+    },
+    {
+      "name": "Babbeln",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 10
+    },
+    {
+      "name": "Fassenacht",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 10
+    },
+    {
+      "name": "Pittermännchen",
+      "facet": "Kölsch, Pfälzisch und Hessisch",
+      "known_at": 14
+    },
+    {
+      "name": "Kumpel",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 6
+    },
+    {
+      "name": "Pott",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 8
+    },
+    {
+      "name": "Malochen",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 9
+    },
+    {
+      "name": "Bude",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 9
+    },
+    {
+      "name": "Omma",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 10
+    },
+    {
+      "name": "Hömma",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 10
+    },
+    {
+      "name": "Pütt",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 12
+    },
+    {
+      "name": "Plörre",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 11
+    },
+    {
+      "name": "Kappes",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 12
+    },
+    {
+      "name": "Klüngel",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 11
+    },
+    {
+      "name": "Getz",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 10
+    },
+    {
+      "name": "Fritten",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 8
+    },
+    {
+      "name": "Spökes",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 12
+    },
+    {
+      "name": "Driss",
+      "facet": "Ruhrdeutsch und Rheinland",
+      "known_at": 11
+    },
+    {
+      "name": "Fischkopp",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 8
+    },
+    {
+      "name": "Bazi",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 11
+    },
+    {
+      "name": "Depp",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 5
+    },
+    {
+      "name": "Dappes",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 12
+    },
+    {
+      "name": "Dulli",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 9
+    },
+    {
+      "name": "Schatzi",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 5
+    },
+    {
+      "name": "Schätzle",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 8
+    },
+    {
+      "name": "Spatzl",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 9
+    },
+    {
+      "name": "Mausi",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 4
+    },
+    {
+      "name": "Herzbobbele",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 12
+    },
+    {
+      "name": "Lausbub",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 6
+    },
+    {
+      "name": "Rotzlöffel",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 8
+    },
+    {
+      "name": "Dösbaddel",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 11
+    },
+    {
+      "name": "Schlawiner",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 9
+    },
+    {
+      "name": "Bagage",
+      "facet": "Regionale Schimpfwörter und Kosenamen",
+      "known_at": 11
+    },
+    {
+      "name": "Dahoam is Dahoam",
+      "facet": "Dialekt in Film, Musik und Comedy",
+      "known_at": 11
+    },
+    {
+      "name": "Eberhofer-Krimis",
+      "facet": "Dialekt in Film, Musik und Comedy",
+      "known_at": 11
+    },
+    {
+      "name": "Cindy aus Marzahn",
+      "facet": "Dialekt in Film, Musik und Comedy",
+      "known_at": 10
+    },
+    {
+      "name": "Badesalz",
+      "facet": "Dialekt in Film, Musik und Comedy",
+      "known_at": 13
+    },
+    {
+      "name": "Benrather Linie",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Speyerer Linie",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 15
+    },
+    {
+      "name": "Mainlinie",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Zweite Lautverschiebung",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Hochdeutsch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 6
+    },
+    {
+      "name": "Althochdeutsch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Mittelhochdeutsch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Konrad Duden",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Deutsches Wörterbuch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Friesisch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Jiddisch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Rotwelsch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Missingsch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Alemannisch",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Georg Wenker",
+      "facet": "Dialektgrenzen und Sprachgeschichte",
+      "known_at": 15
+    }
+  ]
+}

@@ -1,0 +1,767 @@
+{
+  "subcategory": "childrens-tv-and-audio-dramas",
+  "facets": [
+    "Die Sendung mit der Maus",
+    "Sandmännchen und DDR-Kinderfernsehen",
+    "Wissensmagazine für Kinder",
+    "Puppen und Marionetten im Fernsehen",
+    "Detektiv-Hörspiele",
+    "Hörspielhelden für die Kleinen",
+    "Zeichentrickklassiker aus Koproduktionen",
+    "Kinder- und Jugendserien",
+    "Kindersender und Mitmachshows",
+    "Moderatoren, Sprecher und Erfinder",
+    "Kinderfilme und Märchenverfilmungen",
+    "Kassette, Labels und Hörspielgeschichte"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Der blaue Elefant",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 3
+    },
+    {
+      "name": "Die Ente",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 4
+    },
+    {
+      "name": "Christoph Biemann",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 10
+    },
+    {
+      "name": "Ralph Caspers",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 8
+    },
+    {
+      "name": "Johannes Büchs",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 9
+    },
+    {
+      "name": "Lachgeschichten",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 6
+    },
+    {
+      "name": "Sachgeschichten",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 5
+    },
+    {
+      "name": "Türöffner-Tag",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 10
+    },
+    {
+      "name": "Isolde Schmitt-Menzel",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 14
+    },
+    {
+      "name": "Friedrich Streich",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 15
+    },
+    {
+      "name": "Die Sendung mit dem Elefanten",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 5
+    },
+    {
+      "name": "Maus-Titelmelodie",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 4
+    },
+    {
+      "name": "Maus-Spot",
+      "facet": "Die Sendung mit der Maus",
+      "known_at": 8
+    },
+    {
+      "name": "Meister Nadelöhr",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Plumps",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Abendgruß",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Gerhard Behrendt",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "„Sandmann, lieber Sandmann“",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 7
+    },
+    {
+      "name": "Professor Flimmrich",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "Frau Puppendoktor Pille",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "Alfons Zitterbacke",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Sandmann-Fahrzeuge",
+      "facet": "Sandmännchen und DDR-Kinderfernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Bauwagen",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 7
+    },
+    {
+      "name": "Herr Paschulke",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 10
+    },
+    {
+      "name": "Fritz Fuchs",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 8
+    },
+    {
+      "name": "Guido Hammesfahr",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 10
+    },
+    {
+      "name": "Checker Tobi",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 4
+    },
+    {
+      "name": "Checker Can",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 6
+    },
+    {
+      "name": "Willi wills wissen",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 6
+    },
+    {
+      "name": "Willi Weitzel",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 8
+    },
+    {
+      "name": "Wissen macht Ah!",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 6
+    },
+    {
+      "name": "Eric Mayer",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 10
+    },
+    {
+      "name": "Neuneinhalb",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 10
+    },
+    {
+      "name": "Kopfball",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 13
+    },
+    {
+      "name": "Anna und die wilden Tiere",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 9
+    },
+    {
+      "name": "Planet Schule",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 11
+    },
+    {
+      "name": "„Abschalten!“",
+      "facet": "Wissensmagazine für Kinder",
+      "known_at": 9
+    },
+    {
+      "name": "Kater Mikesch",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Kalle Wirsch",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Walter Oehmichen",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 15
+    },
+    {
+      "name": "Chili das Schaf",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 9
+    },
+    {
+      "name": "Briegel der Busch",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Ernie und Bert",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 2
+    },
+    {
+      "name": "Samson",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 6
+    },
+    {
+      "name": "Tiffy",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 8
+    },
+    {
+      "name": "Herr von Bödefeld",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Hallo Spencer",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Kasper",
+      "facet": "Puppen und Marionetten im Fernsehen",
+      "known_at": 3
+    },
+    {
+      "name": "Peter Shaw",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 8
+    },
+    {
+      "name": "Bob Andrews",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 8
+    },
+    {
+      "name": "Alfred Hitchcock",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 10
+    },
+    {
+      "name": "Tante Mathilda",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 10
+    },
+    {
+      "name": "Onkel Titus",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 10
+    },
+    {
+      "name": "Kommissar Reynolds",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 11
+    },
+    {
+      "name": "Gebrauchtwarencenter T. Jonas",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 12
+    },
+    {
+      "name": "Gaby Glockner",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 9
+    },
+    {
+      "name": "Oskar",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 9
+    },
+    {
+      "name": "Kommissar Glockner",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 10
+    },
+    {
+      "name": "Fünf Freunde",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Timmy",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 6
+    },
+    {
+      "name": "Oliver Rohrbeck",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 12
+    },
+    {
+      "name": "Jens Wawrczeck",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 13
+    },
+    {
+      "name": "Andreas Fröhlich",
+      "facet": "Detektiv-Hörspiele",
+      "known_at": 13
+    },
+    {
+      "name": "Otto",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 6
+    },
+    {
+      "name": "Neustadt",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 8
+    },
+    {
+      "name": "Herr Tierlieb",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 9
+    },
+    {
+      "name": "„Hex-hex“",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 3
+    },
+    {
+      "name": "„Törööö“",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 3
+    },
+    {
+      "name": "Kartoffelbrei",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 5
+    },
+    {
+      "name": "Amadeus und Sabrina",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 7
+    },
+    {
+      "name": "Hexe Schrubbel",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 9
+    },
+    {
+      "name": "Schloss Burgeck",
+      "facet": "Hörspielhelden für die Kleinen",
+      "known_at": 10
+    },
+    {
+      "name": "Willi",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 4
+    },
+    {
+      "name": "Flip",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 7
+    },
+    {
+      "name": "Thekla",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 11
+    },
+    {
+      "name": "Halvar",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 8
+    },
+    {
+      "name": "Alm-Öhi",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 6
+    },
+    {
+      "name": "Geißenpeter",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 7
+    },
+    {
+      "name": "Martin",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 10
+    },
+    {
+      "name": "Akka von Kebnekaise",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 12
+    },
+    {
+      "name": "Alfred J. Kwak",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 10
+    },
+    {
+      "name": "Tao Tao",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 12
+    },
+    {
+      "name": "Niklaas, ein Junge aus Flandern",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 14
+    },
+    {
+      "name": "Arktos",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 9
+    },
+    {
+      "name": "Der kleine Maulwurf",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 3
+    },
+    {
+      "name": "Es war einmal … das Leben",
+      "facet": "Zeichentrickklassiker aus Koproduktionen",
+      "known_at": 9
+    },
+    {
+      "name": "Pan Tau",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 12
+    },
+    {
+      "name": "Luzie, der Schrecken der Straße",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 13
+    },
+    {
+      "name": "Die Märchenbraut",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 13
+    },
+    {
+      "name": "Anna",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 13
+    },
+    {
+      "name": "Silas",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 13
+    },
+    {
+      "name": "Die rote Zora",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 12
+    },
+    {
+      "name": "Patrik Pacard",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 14
+    },
+    {
+      "name": "Neues vom Süderhof",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 13
+    },
+    {
+      "name": "Mia and Me",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 5
+    },
+    {
+      "name": "Tiere bis unters Dach",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 9
+    },
+    {
+      "name": "Fluch des Falken",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 13
+    },
+    {
+      "name": "Der kleine Vampir",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 9
+    },
+    {
+      "name": "Super RTL",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 7
+    },
+    {
+      "name": "Toggo",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 7
+    },
+    {
+      "name": "ZDFtivi",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 9
+    },
+    {
+      "name": "1, 2 oder 3",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 6
+    },
+    {
+      "name": "Piff",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 9
+    },
+    {
+      "name": "„Ob ihr wirklich richtig steht …“",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 8
+    },
+    {
+      "name": "Disney Club",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 11
+    },
+    {
+      "name": "Tabaluga tivi",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 11
+    },
+    {
+      "name": "Dingsda",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 12
+    },
+    {
+      "name": "Kikaninchen",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 4
+    },
+    {
+      "name": "Spaß am Dienstag",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 14
+    },
+    {
+      "name": "Kinderquatsch mit Michael",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 12
+    },
+    {
+      "name": "Klein gegen Groß",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 9
+    },
+    {
+      "name": "KiKA LIVE",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 9
+    },
+    {
+      "name": "KiKA-Baumhaus",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 6
+    },
+    {
+      "name": "Confetti TiVi",
+      "facet": "Kindersender und Mitmachshows",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Schanze",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 12
+    },
+    {
+      "name": "Shary Reeves",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 10
+    },
+    {
+      "name": "Fritz Egner",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 13
+    },
+    {
+      "name": "Juri Tetzlaff",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 12
+    },
+    {
+      "name": "Heikedine Körting",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 14
+    },
+    {
+      "name": "Hans Clarin",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 13
+    },
+    {
+      "name": "Christian Bruhn",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 15
+    },
+    {
+      "name": "Wolfgang Völz",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Paetsch",
+      "facet": "Moderatoren, Sprecher und Erfinder",
+      "known_at": 15
+    },
+    {
+      "name": "Die Geschichte vom kleinen Muck",
+      "facet": "Kinderfilme und Märchenverfilmungen",
+      "known_at": 11
+    },
+    {
+      "name": "Das singende, klingende Bäumchen",
+      "facet": "Kinderfilme und Märchenverfilmungen",
+      "known_at": 12
+    },
+    {
+      "name": "Sechs auf einen Streich",
+      "facet": "Kinderfilme und Märchenverfilmungen",
+      "known_at": 11
+    },
+    {
+      "name": "Hände weg von Mississippi",
+      "facet": "Kinderfilme und Märchenverfilmungen",
+      "known_at": 11
+    },
+    {
+      "name": "Robbi, Tobbi und das Fliewatüüt",
+      "facet": "Kinderfilme und Märchenverfilmungen",
+      "known_at": 11
+    },
+    {
+      "name": "Kassette",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 5
+    },
+    {
+      "name": "Kassettenrekorder",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 6
+    },
+    {
+      "name": "Walkman",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 9
+    },
+    {
+      "name": "Bandsalat",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 8
+    },
+    {
+      "name": "Bleistift zum Zurückspulen",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Schallplatte",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 6
+    },
+    {
+      "name": "CD-Player",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 6
+    },
+    {
+      "name": "Europa",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Kiddinx",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Philips",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Hörbuch",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 5
+    },
+    {
+      "name": "Hörspiel",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 4
+    },
+    {
+      "name": "Geräuschemacher",
+      "facet": "Kassette, Labels und Hörspielgeschichte",
+      "known_at": 9
+    }
+  ]
+}

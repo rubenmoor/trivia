@@ -1,0 +1,1036 @@
+{
+  "subcategory": "series-and-crime",
+  "facets": [
+    "Tatort-Teams und Städte",
+    "Krimiklassiker im Fernsehen",
+    "Regional- und Vorabendkrimis",
+    "Familien- und Arztserien",
+    "Daily Soaps und Telenovelas",
+    "Comedy- und Kultserien",
+    "Kinder- und Jugendserien",
+    "Deutsche Streaming-Serien",
+    "DDR-Fernsehen und Polizeiruf 110",
+    "Titelmusik, Sender und Sendeplätze",
+    "Krimibegriffe und Polizeialltag"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Frank Thiel",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 8
+    },
+    {
+      "name": "Karl-Friedrich Boerne",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 8
+    },
+    {
+      "name": "Silke Haller",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Horst Schimanski",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Lena Odenthal",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Max Ballauf",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Freddy Schenk",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Ivo Batic",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Franz Leitmayr",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Peter Faber",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Felix Murot",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Klaus Borowski",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Charlotte Lindholm",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 11
+    },
+    {
+      "name": "Thorsten Falke",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Nick Tschiller",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Inga Lürsen",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Thorsten Lannert",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Lessing und Dorn",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Bruno Ehrlicher",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Stoever",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 13
+    },
+    {
+      "name": "Taxi nach Leipzig",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 14
+    },
+    {
+      "name": "Kommissar Trimmel",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 14
+    },
+    {
+      "name": "Rubin und Karow",
+      "facet": "Tatort-Teams und Städte",
+      "known_at": 13
+    },
+    {
+      "name": "Derrick",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 8
+    },
+    {
+      "name": "Harry Klein",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Horst Tappert",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Ein Fall für zwei",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 10
+    },
+    {
+      "name": "Josef Matula",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Der Kommissar",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "Erik Ode",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "Stahlnetz",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "Aktenzeichen XY … ungelöst",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 8
+    },
+    {
+      "name": "Eduard Zimmermann",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Das Halstuch",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "Francis Durbridge",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 14
+    },
+    {
+      "name": "Alarm für Cobra 11",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 6
+    },
+    {
+      "name": "SOKO München",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 11
+    },
+    {
+      "name": "Der Fahnder",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 13
+    },
+    {
+      "name": "Wolffs Revier",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Der Kriminalist",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Edgar-Wallace-Filme",
+      "facet": "Krimiklassiker im Fernsehen",
+      "known_at": 12
+    },
+    {
+      "name": "Die Rosenheim-Cops",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 7
+    },
+    {
+      "name": "Hubert und Staller",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 9
+    },
+    {
+      "name": "SOKO Leipzig",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 10
+    },
+    {
+      "name": "SOKO Wismar",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 11
+    },
+    {
+      "name": "SOKO Köln",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 11
+    },
+    {
+      "name": "Großstadtrevier",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 9
+    },
+    {
+      "name": "Der Bulle von Tölz",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 9
+    },
+    {
+      "name": "Ottfried Fischer",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 12
+    },
+    {
+      "name": "Mord mit Aussicht",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 10
+    },
+    {
+      "name": "Morden im Norden",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 11
+    },
+    {
+      "name": "WaPo Bodensee",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 11
+    },
+    {
+      "name": "Wilsberg",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 11
+    },
+    {
+      "name": "Nord bei Nordwest",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 12
+    },
+    {
+      "name": "Der Usedom-Krimi",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 12
+    },
+    {
+      "name": "Watzmann ermittelt",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 11
+    },
+    {
+      "name": "Heiter bis tödlich",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 13
+    },
+    {
+      "name": "Friesland",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 12
+    },
+    {
+      "name": "Marie Brand",
+      "facet": "Regional- und Vorabendkrimis",
+      "known_at": 12
+    },
+    {
+      "name": "Die Schwarzwaldklinik",
+      "facet": "Familien- und Arztserien",
+      "known_at": 9
+    },
+    {
+      "name": "Professor Brinkmann",
+      "facet": "Familien- und Arztserien",
+      "known_at": 11
+    },
+    {
+      "name": "Mutter Beimer",
+      "facet": "Familien- und Arztserien",
+      "known_at": 11
+    },
+    {
+      "name": "In aller Freundschaft",
+      "facet": "Familien- und Arztserien",
+      "known_at": 9
+    },
+    {
+      "name": "Der Bergdoktor",
+      "facet": "Familien- und Arztserien",
+      "known_at": 8
+    },
+    {
+      "name": "Die Bergretter",
+      "facet": "Familien- und Arztserien",
+      "known_at": 9
+    },
+    {
+      "name": "Um Himmels Willen",
+      "facet": "Familien- und Arztserien",
+      "known_at": 9
+    },
+    {
+      "name": "Diese Drombuschs",
+      "facet": "Familien- und Arztserien",
+      "known_at": 13
+    },
+    {
+      "name": "Forsthaus Falkenau",
+      "facet": "Familien- und Arztserien",
+      "known_at": 12
+    },
+    {
+      "name": "Der Landarzt",
+      "facet": "Familien- und Arztserien",
+      "known_at": 12
+    },
+    {
+      "name": "Das Erbe der Guldenburgs",
+      "facet": "Familien- und Arztserien",
+      "known_at": 13
+    },
+    {
+      "name": "Ich heirate eine Familie",
+      "facet": "Familien- und Arztserien",
+      "known_at": 13
+    },
+    {
+      "name": "Unser Lehrer Doktor Specht",
+      "facet": "Familien- und Arztserien",
+      "known_at": 13
+    },
+    {
+      "name": "Charité",
+      "facet": "Familien- und Arztserien",
+      "known_at": 11
+    },
+    {
+      "name": "Club der roten Bänder",
+      "facet": "Familien- und Arztserien",
+      "known_at": 8
+    },
+    {
+      "name": "Praxis Bülowbogen",
+      "facet": "Familien- und Arztserien",
+      "known_at": 14
+    },
+    {
+      "name": "Dr. Stefan Frank",
+      "facet": "Familien- und Arztserien",
+      "known_at": 13
+    },
+    {
+      "name": "Gute Zeiten, schlechte Zeiten",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 6
+    },
+    {
+      "name": "Jo Gerner",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 9
+    },
+    {
+      "name": "Verbotene Liebe",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Marienhof",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Unter uns",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 9
+    },
+    {
+      "name": "Alles was zählt",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 9
+    },
+    {
+      "name": "Sturm der Liebe",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 9
+    },
+    {
+      "name": "Fürstenhof",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 12
+    },
+    {
+      "name": "Rote Rosen",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Verliebt in Berlin",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 9
+    },
+    {
+      "name": "Lisa Plenske",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Anna und die Liebe",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Bianca – Wege zum Glück",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 13
+    },
+    {
+      "name": "Berlin – Tag & Nacht",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 7
+    },
+    {
+      "name": "Köln 50667",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 8
+    },
+    {
+      "name": "Telenovela",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 8
+    },
+    {
+      "name": "Jeanette Biedermann",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 10
+    },
+    {
+      "name": "Yvonne Catterfeld",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 11
+    },
+    {
+      "name": "Cliffhanger",
+      "facet": "Daily Soaps und Telenovelas",
+      "known_at": 8
+    },
+    {
+      "name": "Ekel Alfred",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 12
+    },
+    {
+      "name": "Stromberg",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 9
+    },
+    {
+      "name": "Christoph Maria Herbst",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 10
+    },
+    {
+      "name": "Pastewka",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 10
+    },
+    {
+      "name": "Der Tatortreiniger",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 11
+    },
+    {
+      "name": "Hausmeister Krause",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 11
+    },
+    {
+      "name": "Ritas Welt",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 12
+    },
+    {
+      "name": "Die Camper",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 12
+    },
+    {
+      "name": "Switch",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 12
+    },
+    {
+      "name": "Ladykracher",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 11
+    },
+    {
+      "name": "Bullyparade",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 9
+    },
+    {
+      "name": "Kir Royal",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 14
+    },
+    {
+      "name": "Monaco Franze",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 14
+    },
+    {
+      "name": "Familie Heinz Becker",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 13
+    },
+    {
+      "name": "Klimbim",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 14
+    },
+    {
+      "name": "Türkisch für Anfänger",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 10
+    },
+    {
+      "name": "Berlin, Berlin",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 11
+    },
+    {
+      "name": "Doctor's Diary",
+      "facet": "Comedy- und Kultserien",
+      "known_at": 11
+    },
+    {
+      "name": "Armin Maiwald",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 9
+    },
+    {
+      "name": "Schloss Einstein",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 5
+    },
+    {
+      "name": "Siebenstein",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 5
+    },
+    {
+      "name": "Jim Knopf",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 4
+    },
+    {
+      "name": "Timm Thaler",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 11
+    },
+    {
+      "name": "Neues aus Uhlenbusch",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 14
+    },
+    {
+      "name": "Rappelkiste",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 14
+    },
+    {
+      "name": "logo!",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 5
+    },
+    {
+      "name": "Tigerenten Club",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 6
+    },
+    {
+      "name": "Die Kinder vom Alstertal",
+      "facet": "Kinder- und Jugendserien",
+      "known_at": 13
+    },
+    {
+      "name": "Dark",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 9
+    },
+    {
+      "name": "Winden",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "How to Sell Drugs Online (Fast)",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 10
+    },
+    {
+      "name": "Barbaren",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 10
+    },
+    {
+      "name": "Der Pass",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "4 Blocks",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 11
+    },
+    {
+      "name": "Dogs of Berlin",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Die Kaiserin",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 10
+    },
+    {
+      "name": "Kleo",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Liebes Kind",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Deutschland 83",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Jerks",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Biohackers",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Wir sind die Welle",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Druck",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 10
+    },
+    {
+      "name": "Die Discounter",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 11
+    },
+    {
+      "name": "Achtsam Morden",
+      "facet": "Deutsche Streaming-Serien",
+      "known_at": 12
+    },
+    {
+      "name": "Polizeiruf 110",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 10
+    },
+    {
+      "name": "Unser Sandmännchen",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 2
+    },
+    {
+      "name": "Deutscher Fernsehfunk",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 13
+    },
+    {
+      "name": "Adlershof",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Aktuelle Kamera",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 12
+    },
+    {
+      "name": "Der schwarze Kanal",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 13
+    },
+    {
+      "name": "Karl-Eduard von Schnitzler",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Oberleutnant Peter Fuchs",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Das unsichtbare Visier",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Zur See",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Rentner haben niemals Zeit",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Mach mit, mach's nach, mach's besser",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Hanns von Meuffels",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Bukow und König",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 13
+    },
+    {
+      "name": "Doreen Brasch",
+      "facet": "DDR-Fernsehen und Polizeiruf 110",
+      "known_at": 14
+    },
+    {
+      "name": "Tatort-Vorspann",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 8
+    },
+    {
+      "name": "Klaus Doldinger",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 13
+    },
+    {
+      "name": "Tatort-Sonntag",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 7
+    },
+    {
+      "name": "20:15 Uhr",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 7
+    },
+    {
+      "name": "Vorabendprogramm",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 10
+    },
+    {
+      "name": "Tagesschau",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 4
+    },
+    {
+      "name": "ARD",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 5
+    },
+    {
+      "name": "ZDF",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 5
+    },
+    {
+      "name": "RTL",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 5
+    },
+    {
+      "name": "ProSieben",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 6
+    },
+    {
+      "name": "Sat.1",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 7
+    },
+    {
+      "name": "KiKA",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 2
+    },
+    {
+      "name": "WDR",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 9
+    },
+    {
+      "name": "Dritte Programme",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 12
+    },
+    {
+      "name": "Mediathek",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 8
+    },
+    {
+      "name": "Rundfunkbeitrag",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 11
+    },
+    {
+      "name": "Testbild",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 11
+    },
+    {
+      "name": "Sendeschluss",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 12
+    },
+    {
+      "name": "Einschaltquote",
+      "facet": "Titelmusik, Sender und Sendeplätze",
+      "known_at": 10
+    },
+    {
+      "name": "Mordkommission",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 8
+    },
+    {
+      "name": "Sonderkommission",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 9
+    },
+    {
+      "name": "Spurensicherung",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 7
+    },
+    {
+      "name": "Rechtsmedizin",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 9
+    },
+    {
+      "name": "Obduktion",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 11
+    },
+    {
+      "name": "Alibi",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 6
+    },
+    {
+      "name": "Phantombild",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 7
+    },
+    {
+      "name": "Verhör",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 6
+    },
+    {
+      "name": "Staatsanwalt",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 9
+    },
+    {
+      "name": "Durchsuchungsbeschluss",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 10
+    },
+    {
+      "name": "Fingerabdruck",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 3
+    },
+    {
+      "name": "DNA-Spur",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 8
+    },
+    {
+      "name": "Kriminaltechnik",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 10
+    },
+    {
+      "name": "Streifenwagen",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 4
+    },
+    {
+      "name": "Martinshorn",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 8
+    },
+    {
+      "name": "Blaulicht",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 2
+    },
+    {
+      "name": "Landeskriminalamt",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 11
+    },
+    {
+      "name": "Bundeskriminalamt",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 10
+    },
+    {
+      "name": "Untersuchungshaft",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 11
+    },
+    {
+      "name": "Kronzeuge",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 12
+    },
+    {
+      "name": "Tatwaffe",
+      "facet": "Krimibegriffe und Polizeialltag",
+      "known_at": 7
+    }
+  ]
+}

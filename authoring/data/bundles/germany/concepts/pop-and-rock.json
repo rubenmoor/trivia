@@ -1,0 +1,1083 @@
+{
+  "subcategory": "pop-and-rock",
+  "facets": [
+    "Neue Deutsche Welle der 80er",
+    "Deutschrock-Legenden",
+    "Liedermacher und Singer-Songwriter",
+    "Deutschpop-Stars seit 2000",
+    "Punk und Ostrock",
+    "Berühmte Songtexte und Refrains",
+    "Bandnamen und Spitznamen",
+    "Alben, Hits und Chartrekorde",
+    "Mundart- und Regionalbands",
+    "Festivals, Konzerte und Bühnen",
+    "Instrumente, Sound und Studiotechnik",
+    "Musik im Fernsehen und Wettbewerben"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "99 Luftballons",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 7
+    },
+    {
+      "name": "Trio",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Da Da Da",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 10
+    },
+    {
+      "name": "Markus",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Ich will Spaß",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 11
+    },
+    {
+      "name": "Peter Schilling",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Major Tom (völlig losgelöst)",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 9
+    },
+    {
+      "name": "Spider Murphy Gang",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Skandal im Sperrbezirk",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 11
+    },
+    {
+      "name": "Geier Sturzflug",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Bruttosozialprodukt",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Joachim Witt",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Goldener Reiter",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 12
+    },
+    {
+      "name": "Ideal",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Annette Humpe",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Extrabreit",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Hubert Kah",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 13
+    },
+    {
+      "name": "Fehlfarben",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 14
+    },
+    {
+      "name": "Deutsch Amerikanische Freundschaft",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 14
+    },
+    {
+      "name": "Eisbär (Grauzone)",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 14,
+      "retired": "unaskable: Grauzone war eine Schweizer Band aus Bern; Schweizer Themen gehören nicht ins Bundle germany."
+    },
+    {
+      "name": "Fred vom Jupiter",
+      "facet": "Neue Deutsche Welle der 80er",
+      "known_at": 14
+    },
+    {
+      "name": "Peter Maffay",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 8
+    },
+    {
+      "name": "Marius Müller-Westernhagen",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 11
+    },
+    {
+      "name": "Scorpions",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 9
+    },
+    {
+      "name": "Rammstein",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 9
+    },
+    {
+      "name": "Ton Steine Scherben",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 14
+    },
+    {
+      "name": "Rio Reiser",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Klaus Lage",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Pur",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 11
+    },
+    {
+      "name": "Fury in the Slaughterhouse",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Helloween",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 14
+    },
+    {
+      "name": "Accept",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 14
+    },
+    {
+      "name": "Selig",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Heinz Rudolf Kunze",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Unheilig",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 11
+    },
+    {
+      "name": "In Extremo",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Guano Apes",
+      "facet": "Deutschrock-Legenden",
+      "known_at": 13
+    },
+    {
+      "name": "Reinhard Mey",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 11
+    },
+    {
+      "name": "Über den Wolken",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 10
+    },
+    {
+      "name": "Liedermacher",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 11
+    },
+    {
+      "name": "Wolf Biermann",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 13
+    },
+    {
+      "name": "Konstantin Wecker",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 13
+    },
+    {
+      "name": "Hannes Wader",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 13
+    },
+    {
+      "name": "Franz Josef Degenhardt",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 14
+    },
+    {
+      "name": "Fredrik Vahle",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 13
+    },
+    {
+      "name": "Gerhard Gundermann",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 14
+    },
+    {
+      "name": "Gerhard Schöne",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 14
+    },
+    {
+      "name": "Bettina Wegner",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 14
+    },
+    {
+      "name": "Sven Regener",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 13
+    },
+    {
+      "name": "Funny van Dannen",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 14
+    },
+    {
+      "name": "Gisbert zu Knyphausen",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 14
+    },
+    {
+      "name": "Philipp Poisel",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 12
+    },
+    {
+      "name": "Bosse",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 12
+    },
+    {
+      "name": "Clueso",
+      "facet": "Liedermacher und Singer-Songwriter",
+      "known_at": 11
+    },
+    {
+      "name": "Mark Forster",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 6
+    },
+    {
+      "name": "Tim Bendzko",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 8
+    },
+    {
+      "name": "Max Giesinger",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Andreas Bourani",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Silbermond",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Juli",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Wir sind Helden",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Tokio Hotel",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Sarah Connor",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 8
+    },
+    {
+      "name": "Adel Tawil",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 10
+    },
+    {
+      "name": "Cro",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 8
+    },
+    {
+      "name": "Revolverheld",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Johannes Oerding",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Lea",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 10
+    },
+    {
+      "name": "Wincent Weiss",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Namika",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 10
+    },
+    {
+      "name": "Peter Fox",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Seeed",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Sportfreunde Stiller",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 10
+    },
+    {
+      "name": "Apache 207",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Nina Chuba",
+      "facet": "Deutschpop-Stars seit 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Die Ärzte",
+      "facet": "Punk und Ostrock",
+      "known_at": 8
+    },
+    {
+      "name": "Die Toten Hosen",
+      "facet": "Punk und Ostrock",
+      "known_at": 8
+    },
+    {
+      "name": "Campino",
+      "facet": "Punk und Ostrock",
+      "known_at": 10
+    },
+    {
+      "name": "Farin Urlaub",
+      "facet": "Punk und Ostrock",
+      "known_at": 11
+    },
+    {
+      "name": "Bela B",
+      "facet": "Punk und Ostrock",
+      "known_at": 12
+    },
+    {
+      "name": "Nina Hagen",
+      "facet": "Punk und Ostrock",
+      "known_at": 11
+    },
+    {
+      "name": "Slime",
+      "facet": "Punk und Ostrock",
+      "known_at": 14
+    },
+    {
+      "name": "Die Goldenen Zitronen",
+      "facet": "Punk und Ostrock",
+      "known_at": 14
+    },
+    {
+      "name": "WIZO",
+      "facet": "Punk und Ostrock",
+      "known_at": 13
+    },
+    {
+      "name": "Broilers",
+      "facet": "Punk und Ostrock",
+      "known_at": 12
+    },
+    {
+      "name": "Feine Sahne Fischfilet",
+      "facet": "Punk und Ostrock",
+      "known_at": 12
+    },
+    {
+      "name": "Ostrock",
+      "facet": "Punk und Ostrock",
+      "known_at": 12
+    },
+    {
+      "name": "Karat",
+      "facet": "Punk und Ostrock",
+      "known_at": 11
+    },
+    {
+      "name": "Über sieben Brücken musst du gehn",
+      "facet": "Punk und Ostrock",
+      "known_at": 12
+    },
+    {
+      "name": "City",
+      "facet": "Punk und Ostrock",
+      "known_at": 12
+    },
+    {
+      "name": "Am Fenster",
+      "facet": "Punk und Ostrock",
+      "known_at": 13
+    },
+    {
+      "name": "Silly",
+      "facet": "Punk und Ostrock",
+      "known_at": 13
+    },
+    {
+      "name": "Tamara Danz",
+      "facet": "Punk und Ostrock",
+      "known_at": 14
+    },
+    {
+      "name": "Keimzeit",
+      "facet": "Punk und Ostrock",
+      "known_at": 14
+    },
+    {
+      "name": "Feeling B",
+      "facet": "Punk und Ostrock",
+      "known_at": 14
+    },
+    {
+      "name": "Auf uns",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 8
+    },
+    {
+      "name": "Tage wie diese",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 8
+    },
+    {
+      "name": "Männer",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Bochum",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Sonderzug nach Pankow",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 12
+    },
+    {
+      "name": "Alt wie ein Baum",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 12
+    },
+    {
+      "name": "Junge",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 10
+    },
+    {
+      "name": "Schrei nach Liebe",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Mensch",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Haus am See",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 9
+    },
+    {
+      "name": "Applaus, Applaus",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 10
+    },
+    {
+      "name": "Chöre",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 9
+    },
+    {
+      "name": "Nur noch kurz die Welt retten",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 8
+    },
+    {
+      "name": "Symphonie",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 10
+    },
+    {
+      "name": "Durch den Monsun",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 9
+    },
+    {
+      "name": "Hier kommt Alex",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Westerland",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Komet",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 9
+    },
+    {
+      "name": "Du hast",
+      "facet": "Berühmte Songtexte und Refrains",
+      "known_at": 11
+    },
+    {
+      "name": "Der Graf",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Panikrocker",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Die Fantastischen Vier",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "Smudo",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 11
+    },
+    {
+      "name": "Die Prinzen",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Fettes Brot",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 11
+    },
+    {
+      "name": "Wise Guys",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Kraftklub",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 10
+    },
+    {
+      "name": "AnnenMayKantereit",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 11
+    },
+    {
+      "name": "Element of Crime",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 13
+    },
+    {
+      "name": "Tocotronic",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 13
+    },
+    {
+      "name": "Echt",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "2raumwohnung",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Deichkind",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 10
+    },
+    {
+      "name": "Culcha Candela",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 10
+    },
+    {
+      "name": "Söhne Mannheims",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Polarkreis 18",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Madsen",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Jennifer Rostock",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Frida Gold",
+      "facet": "Bandnamen und Spitznamen",
+      "known_at": 12
+    },
+    {
+      "name": "Bravo Hits",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 8
+    },
+    {
+      "name": "Goldene Schallplatte",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 10
+    },
+    {
+      "name": "Offizielle Deutsche Charts",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 12
+    },
+    {
+      "name": "Echo (Musikpreis)",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 11
+    },
+    {
+      "name": "Lemon Tree",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 10
+    },
+    {
+      "name": "Mambo No. 5",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 8
+    },
+    {
+      "name": "Das Boot (U96)",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 12
+    },
+    {
+      "name": "Rivers of Babylon",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 11
+    },
+    {
+      "name": "Moskau",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 11
+    },
+    {
+      "name": "Modern Talking",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 9
+    },
+    {
+      "name": "Schnappi, das kleine Krokodil",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 5
+    },
+    {
+      "name": "Ab in den Süden",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 10
+    },
+    {
+      "name": "Ein Kompliment",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 11
+    },
+    {
+      "name": "Sehnsucht (Rammstein-Album)",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 13
+    },
+    {
+      "name": "Farbenspiel",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 12
+    },
+    {
+      "name": "Kernkraft 400",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 10
+    },
+    {
+      "name": "Was soll das?",
+      "facet": "Alben, Hits und Chartrekorde",
+      "known_at": 12
+    },
+    {
+      "name": "BAP",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 12
+    },
+    {
+      "name": "Wolfgang Niedecken",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 13
+    },
+    {
+      "name": "Verdamp lang her",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 13
+    },
+    {
+      "name": "Querbeat",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 12
+    },
+    {
+      "name": "Django 3000",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 13
+    },
+    {
+      "name": "Rodgau Monotones",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 13
+    },
+    {
+      "name": "Torfrock",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 12
+    },
+    {
+      "name": "Klaus & Klaus",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 11
+    },
+    {
+      "name": "An der Nordseeküste",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 9
+    },
+    {
+      "name": "Truck Stop",
+      "facet": "Mundart- und Regionalbands",
+      "known_at": 13
+    },
+    {
+      "name": "Rock am Ring",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 9
+    },
+    {
+      "name": "Rock im Park",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 12
+    },
+    {
+      "name": "Hurricane Festival",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 12
+    },
+    {
+      "name": "Southside Festival",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 12
+    },
+    {
+      "name": "Fusion Festival",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 13
+    },
+    {
+      "name": "Parookaville",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 12
+    },
+    {
+      "name": "Loveparade",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 10
+    },
+    {
+      "name": "Melt Festival",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 13
+    },
+    {
+      "name": "Splash Festival",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 13
+    },
+    {
+      "name": "Summer Breeze",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 14
+    },
+    {
+      "name": "Burg Waldeck",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 14
+    },
+    {
+      "name": "Rudolstadt-Festival",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 14
+    },
+    {
+      "name": "Waldbühne Berlin",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 13
+    },
+    {
+      "name": "Westfalenhalle",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 13
+    },
+    {
+      "name": "Lanxess Arena",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 12
+    },
+    {
+      "name": "Tempodrom",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 14
+    },
+    {
+      "name": "#wirsindmehr",
+      "facet": "Festivals, Konzerte und Bühnen",
+      "known_at": 13
+    },
+    {
+      "name": "Autobahn (Kraftwerk)",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 13
+    },
+    {
+      "name": "Krautrock",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 13
+    },
+    {
+      "name": "Synthesizer",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 9
+    },
+    {
+      "name": "Vocoder",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 13
+    },
+    {
+      "name": "Drumcomputer",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 11
+    },
+    {
+      "name": "E-Gitarre",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 3
+    },
+    {
+      "name": "Schlagzeug",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 2
+    },
+    {
+      "name": "E-Bass",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 7
+    },
+    {
+      "name": "Neumann-Mikrofon",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 14
+    },
+    {
+      "name": "Hansa Studios",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 13
+    },
+    {
+      "name": "Tangerine Dream",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 14
+    },
+    {
+      "name": "Can",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 14
+    },
+    {
+      "name": "Conny Plank",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 15
+    },
+    {
+      "name": "Autotune",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 10
+    },
+    {
+      "name": "Mischpult",
+      "facet": "Instrumente, Sound und Studiotechnik",
+      "known_at": 10
+    },
+    {
+      "name": "Eurovision Song Contest",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 6
+    },
+    {
+      "name": "Deutschland sucht den Superstar",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 7
+    },
+    {
+      "name": "Dieter Bohlen",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 6
+    },
+    {
+      "name": "The Voice of Germany",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 7
+    },
+    {
+      "name": "Popstars",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 11
+    },
+    {
+      "name": "No Angels",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 11
+    },
+    {
+      "name": "Bundesvision Song Contest",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 12
+    },
+    {
+      "name": "Formel Eins",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 13
+    },
+    {
+      "name": "VIVA",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 12
+    },
+    {
+      "name": "Sing meinen Song – Das Tauschkonzert",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 11
+    },
+    {
+      "name": "Rockpalast",
+      "facet": "Musik im Fernsehen und Wettbewerben",
+      "known_at": 13
+    }
+  ]
+}

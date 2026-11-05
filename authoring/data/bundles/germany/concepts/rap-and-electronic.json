@@ -1,0 +1,1103 @@
+{
+  "subcategory": "rap-and-electronic",
+  "facets": [
+    "Deutschrap-Pioniere der 90er",
+    "Rapstars der Gegenwart",
+    "Rapper-Künstlernamen und Herkunft",
+    "Hip-Hop-Szene der Städte",
+    "Rap-Slang und Jugendsprache",
+    "Kraftwerk und Elektronik-Pioniere",
+    "Techno und Berliner Clubkultur",
+    "Love Parade und Festivals",
+    "Dance-Hits und Eurodance",
+    "DJs und Produzenten",
+    "Synthesizer und DJ-Technik",
+    "Labels, Charts und Musikpreise"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "„Die da!?!“",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas D",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 11
+    },
+    {
+      "name": "Advanced Chemistry",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 13
+    },
+    {
+      "name": "„Fremd im eigenen Land“",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 14
+    },
+    {
+      "name": "Torch",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 14
+    },
+    {
+      "name": "„Nordisch by Nature“",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 12
+    },
+    {
+      "name": "Absolute Beginner",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 11
+    },
+    {
+      "name": "Freundeskreis",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 12
+    },
+    {
+      "name": "„A-N-N-A“",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 12
+    },
+    {
+      "name": "Max Herre",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 12
+    },
+    {
+      "name": "Moses Pelham",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 12
+    },
+    {
+      "name": "Rödelheim Hartreim Projekt",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 13
+    },
+    {
+      "name": "Sabrina Setlur",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 12
+    },
+    {
+      "name": "Massive Töne",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 13
+    },
+    {
+      "name": "Cora E.",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 14
+    },
+    {
+      "name": "Blumentopf",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 13
+    },
+    {
+      "name": "Fünf Sterne deluxe",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 13
+    },
+    {
+      "name": "Die Firma",
+      "facet": "Deutschrap-Pioniere der 90er",
+      "known_at": 14
+    },
+    {
+      "name": "Capital Bra",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 7
+    },
+    {
+      "name": "Bushido",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 8
+    },
+    {
+      "name": "Sido",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 7
+    },
+    {
+      "name": "Kool Savas",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Haftbefehl",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Shirin David",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 7
+    },
+    {
+      "name": "Ufo361",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Bonez MC",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Luciano",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Kollegah",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Marteria",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 9
+    },
+    {
+      "name": "Casper",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Jan Delay",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "K.I.Z",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 11
+    },
+    {
+      "name": "Ski Aggu",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 8
+    },
+    {
+      "name": "Badmómzjay",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Juju",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Trettmann",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 12
+    },
+    {
+      "name": "Kontra K",
+      "facet": "Rapstars der Gegenwart",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Würdig",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 12
+    },
+    {
+      "name": "Carlo Waibel",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 13
+    },
+    {
+      "name": "Volkan Yaman",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 12
+    },
+    {
+      "name": "Anis Ferchichi",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 11
+    },
+    {
+      "name": "Aykut Anhan",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 13
+    },
+    {
+      "name": "Vladislav Balovatsky",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 12
+    },
+    {
+      "name": "Benjamin Griffey",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 14
+    },
+    {
+      "name": "Marten Laciny",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 14
+    },
+    {
+      "name": "Felix Blume",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 13
+    },
+    {
+      "name": "Jan Phillip Eißfeldt",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 14
+    },
+    {
+      "name": "Savaş Yurderi",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 13
+    },
+    {
+      "name": "Pandamaske",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 5
+    },
+    {
+      "name": "Totenkopfmaske",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 9
+    },
+    {
+      "name": "Marsimoto",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 11
+    },
+    {
+      "name": "Skibrille",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 8
+    },
+    {
+      "name": "Künstlername",
+      "facet": "Rapper-Künstlernamen und Herkunft",
+      "known_at": 5
+    },
+    {
+      "name": "Hamburg St. Pauli",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 11
+    },
+    {
+      "name": "187 Strassenbande",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Berlin-Kreuzberg",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 10
+    },
+    {
+      "name": "Märkisches Viertel",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 13
+    },
+    {
+      "name": "Berlin-Wedding",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Rödelheim",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 13
+    },
+    {
+      "name": "Ludwigshafen am Rhein",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 12
+    },
+    {
+      "name": "Kolchose",
+      "facet": "Hip-Hop-Szene der Städte",
+      "known_at": 15
+    },
+    {
+      "name": "Digga",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Wallah",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Cringe",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Lost",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Ehrenmann",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Sheesh",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 6
+    },
+    {
+      "name": "Babo",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Yolo",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Läuft bei dir",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 6
+    },
+    {
+      "name": "Bre",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Wyld",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Smash",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 8,
+      "retired": "unaskable: „Smash“ hat im Jugendslang („Smash or Pass“) eine Bedeutung für Erwachsene; die Hulk-Bedeutung gibt es schon im Pool."
+    },
+    {
+      "name": "Diss",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Beef",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Punchline",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 9
+    },
+    {
+      "name": "Flow",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Freestyle",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 6
+    },
+    {
+      "name": "Battle-Rap",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Jugendwort des Jahres",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Rizz",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Aura",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Sus",
+      "facet": "Rap-Slang und Jugendsprache",
+      "known_at": 6
+    },
+    {
+      "name": "Ralf Hütter",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Florian Schneider",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Wolfgang Flür",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 15
+    },
+    {
+      "name": "„Autobahn“",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 11
+    },
+    {
+      "name": "„Die Roboter“",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 11
+    },
+    {
+      "name": "„Das Model“",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 12
+    },
+    {
+      "name": "„Trans Europa Express“",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "„Computerwelt“",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "„Tour de France“",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "Kling Klang Studio",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Karlheinz Stockhausen",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "Studio für elektronische Musik des WDR",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Oskar Sala",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Klaus Schulze",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Neu!",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Michael Rother",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 15
+    },
+    {
+      "name": "Giorgio Moroder",
+      "facet": "Kraftwerk und Elektronik-Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "Berghain",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 9
+    },
+    {
+      "name": "Panorama Bar",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 13
+    },
+    {
+      "name": "Sven Marquardt",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "Türsteher",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 6
+    },
+    {
+      "name": "Fotoverbot im Club",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 10
+    },
+    {
+      "name": "Tresor",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "E-Werk",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 14
+    },
+    {
+      "name": "Watergate",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 13
+    },
+    {
+      "name": "KitKatClub",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "Sisyphos",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "Kater Blau",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 13
+    },
+    {
+      "name": "Bar 25",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 13
+    },
+    {
+      "name": "Detroit-Techno",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "Acid House",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "House",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 9
+    },
+    {
+      "name": "Minimal Techno",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "Hard Techno",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 10
+    },
+    {
+      "name": "Afterhour",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 11
+    },
+    {
+      "name": "Immaterielles Kulturerbe",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 11
+    },
+    {
+      "name": "„Berlin Calling“",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 12
+    },
+    {
+      "name": "Omen (Frankfurt)",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 14
+    },
+    {
+      "name": "Rave",
+      "facet": "Techno und Berliner Clubkultur",
+      "known_at": 8
+    },
+    {
+      "name": "Love Parade",
+      "facet": "Love Parade und Festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Dr. Motte",
+      "facet": "Love Parade und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "„Friede, Freude, Eierkuchen“",
+      "facet": "Love Parade und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Rave The Planet",
+      "facet": "Love Parade und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Mayday",
+      "facet": "Love Parade und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Nature One",
+      "facet": "Love Parade und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Time Warp",
+      "facet": "Love Parade und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "World Club Dome",
+      "facet": "Love Parade und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Airbeat One",
+      "facet": "Love Parade und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Lollapalooza Berlin",
+      "facet": "Love Parade und Festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Juicy Beats",
+      "facet": "Love Parade und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Scooter",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 7
+    },
+    {
+      "name": "H.P. Baxxter",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 10
+    },
+    {
+      "name": "„How Much Is the Fish?“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 9
+    },
+    {
+      "name": "„Hyper Hyper“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 11
+    },
+    {
+      "name": "„Maria (I Like It Loud)“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 9
+    },
+    {
+      "name": "Snap!",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 12
+    },
+    {
+      "name": "„Rhythm Is a Dancer“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 11
+    },
+    {
+      "name": "Culture Beat",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 13
+    },
+    {
+      "name": "„Mr. Vain“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 12
+    },
+    {
+      "name": "Haddaway",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 10
+    },
+    {
+      "name": "La Bouche",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 13
+    },
+    {
+      "name": "Mr. President",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 12
+    },
+    {
+      "name": "„Coco Jamboo“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 11
+    },
+    {
+      "name": "Captain Jack",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 13
+    },
+    {
+      "name": "Masterboy",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 14
+    },
+    {
+      "name": "Cascada",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 11
+    },
+    {
+      "name": "„Everytime We Touch“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 11
+    },
+    {
+      "name": "ATB",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 12
+    },
+    {
+      "name": "„9 PM (Till I Come)“",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 13
+    },
+    {
+      "name": "Sash!",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 13
+    },
+    {
+      "name": "Mark 'Oh",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 14
+    },
+    {
+      "name": "Boney M.",
+      "facet": "Dance-Hits und Eurodance",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Kalkbrenner",
+      "facet": "DJs und Produzenten",
+      "known_at": 11
+    },
+    {
+      "name": "Fritz Kalkbrenner",
+      "facet": "DJs und Produzenten",
+      "known_at": 13
+    },
+    {
+      "name": "Sven Väth",
+      "facet": "DJs und Produzenten",
+      "known_at": 12
+    },
+    {
+      "name": "Westbam",
+      "facet": "DJs und Produzenten",
+      "known_at": 12
+    },
+    {
+      "name": "Paul van Dyk",
+      "facet": "DJs und Produzenten",
+      "known_at": 12
+    },
+    {
+      "name": "Marusha",
+      "facet": "DJs und Produzenten",
+      "known_at": 13
+    },
+    {
+      "name": "Robin Schulz",
+      "facet": "DJs und Produzenten",
+      "known_at": 9
+    },
+    {
+      "name": "Felix Jaehn",
+      "facet": "DJs und Produzenten",
+      "known_at": 10
+    },
+    {
+      "name": "Alle Farben",
+      "facet": "DJs und Produzenten",
+      "known_at": 10
+    },
+    {
+      "name": "Zedd",
+      "facet": "DJs und Produzenten",
+      "known_at": 10
+    },
+    {
+      "name": "Topic",
+      "facet": "DJs und Produzenten",
+      "known_at": 12
+    },
+    {
+      "name": "Purple Disco Machine",
+      "facet": "DJs und Produzenten",
+      "known_at": 12
+    },
+    {
+      "name": "Boris Brejcha",
+      "facet": "DJs und Produzenten",
+      "known_at": 12
+    },
+    {
+      "name": "Ellen Allien",
+      "facet": "DJs und Produzenten",
+      "known_at": 14
+    },
+    {
+      "name": "Monika Kruse",
+      "facet": "DJs und Produzenten",
+      "known_at": 14
+    },
+    {
+      "name": "Ben Klock",
+      "facet": "DJs und Produzenten",
+      "known_at": 14
+    },
+    {
+      "name": "Chris Liebing",
+      "facet": "DJs und Produzenten",
+      "known_at": 14
+    },
+    {
+      "name": "Moderat",
+      "facet": "DJs und Produzenten",
+      "known_at": 13
+    },
+    {
+      "name": "Booka Shade",
+      "facet": "DJs und Produzenten",
+      "known_at": 14
+    },
+    {
+      "name": "Frank Farian",
+      "facet": "DJs und Produzenten",
+      "known_at": 13
+    },
+    {
+      "name": "Plattenspieler",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 4
+    },
+    {
+      "name": "Technics SL-1200",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 14
+    },
+    {
+      "name": "Crossfader",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 12
+    },
+    {
+      "name": "Kopfhörer",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 1
+    },
+    {
+      "name": "Vinyl",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 7
+    },
+    {
+      "name": "Scratching",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 7
+    },
+    {
+      "name": "Beatmatching",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 12
+    },
+    {
+      "name": "BPM",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 9
+    },
+    {
+      "name": "Roland TR-808",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 13
+    },
+    {
+      "name": "Roland TB-303",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 14
+    },
+    {
+      "name": "Moog-Synthesizer",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 13
+    },
+    {
+      "name": "Sampler",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 11
+    },
+    {
+      "name": "Sequenzer",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 12
+    },
+    {
+      "name": "Loop",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 7
+    },
+    {
+      "name": "Drop",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 8
+    },
+    {
+      "name": "Trautonium",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 15
+    },
+    {
+      "name": "Theremin",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 13
+    },
+    {
+      "name": "Ableton Live",
+      "facet": "Synthesizer und DJ-Technik",
+      "known_at": 13
+    },
+    {
+      "name": "Echo",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 9
+    },
+    {
+      "name": "1Live Krone",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 12
+    },
+    {
+      "name": "Preis für Popkultur",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 13
+    },
+    {
+      "name": "GfK Entertainment",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 14
+    },
+    {
+      "name": "Aggro Berlin",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 11
+    },
+    {
+      "name": "Ersguterjunge",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 12
+    },
+    {
+      "name": "Selfmade Records",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 13
+    },
+    {
+      "name": "Chimperator",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 14
+    },
+    {
+      "name": "Four Music",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 14
+    },
+    {
+      "name": "Banger Musik",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 13
+    },
+    {
+      "name": "Kompakt",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 15
+    },
+    {
+      "name": "Ostgut Ton",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 15
+    },
+    {
+      "name": "BPitch Control",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 15
+    },
+    {
+      "name": "Tresor Records",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 14
+    },
+    {
+      "name": "Juice",
+      "facet": "Labels, Charts und Musikpreise",
+      "known_at": 13
+    }
+  ]
+}

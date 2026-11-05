@@ -1,0 +1,1017 @@
+{
+  "subcategory": "transport",
+  "facets": [
+    "Deutsche Bahn und Zuggattungen",
+    "Bahnhöfe und Bahngeschichte",
+    "Autobahn und Raststätten",
+    "Verkehrsregeln und Verkehrszeichen",
+    "Führerschein, TÜV und Kfz-Kennzeichen",
+    "Deutsche Automarken und Autoklassiker",
+    "Bus, S-Bahn, U-Bahn und Tickets",
+    "Fahrrad und Radverkehr",
+    "Stau, Baustellen und Verkehrsfunk",
+    "Polizei, ADAC und Pannenhilfe",
+    "Verkehrswörter und Redensarten",
+    "Flughäfen, Fähren und Kanäle"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 4,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 2,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Intercity",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 6
+    },
+    {
+      "name": "Regionalexpress",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 6
+    },
+    {
+      "name": "Regionalbahn",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 6
+    },
+    {
+      "name": "BahnCard",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 8
+    },
+    {
+      "name": "Sparpreis",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 10
+    },
+    {
+      "name": "Bordbistro",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 7
+    },
+    {
+      "name": "DB Navigator",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 9
+    },
+    {
+      "name": "Nachtzug",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 5
+    },
+    {
+      "name": "Zugbegleiter",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 4
+    },
+    {
+      "name": "Verspätung",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 3
+    },
+    {
+      "name": "Sitzplatzreservierung",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 7
+    },
+    {
+      "name": "Ruhebereich",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 8
+    },
+    {
+      "name": "Schienenersatzverkehr",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 8
+    },
+    {
+      "name": "Flixtrain",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 9
+    },
+    {
+      "name": "Transrapid",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 11
+    },
+    {
+      "name": "Güterzug",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 3
+    },
+    {
+      "name": "GDL-Streik",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 10
+    },
+    {
+      "name": "Wagenstandsanzeiger",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 11
+    },
+    {
+      "name": "Fahrgastrechte",
+      "facet": "Deutsche Bahn und Zuggattungen",
+      "known_at": 11
+    },
+    {
+      "name": "Adler (Lokomotive)",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Ludwigseisenbahn Nürnberg–Fürth",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Berlin Hauptbahnhof",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 6
+    },
+    {
+      "name": "Hamburg Hauptbahnhof",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 8
+    },
+    {
+      "name": "Leipzig Hauptbahnhof",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Köln Hauptbahnhof",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 7
+    },
+    {
+      "name": "Stuttgart 21",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Deutsche Reichsbahn",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Deutsche Bundesbahn",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Bahnreform 1994",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Fliegender Hamburger",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Dampflok",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 2
+    },
+    {
+      "name": "Bahnhofsmission",
+      "facet": "Bahnhöfe und Bahngeschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Richtgeschwindigkeit",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 9
+    },
+    {
+      "name": "A7",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 11
+    },
+    {
+      "name": "Raststätte",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 4
+    },
+    {
+      "name": "Autohof",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 9
+    },
+    {
+      "name": "Rastplatz",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 5
+    },
+    {
+      "name": "Autobahnkreuz",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 7
+    },
+    {
+      "name": "Autobahndreieck",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 8
+    },
+    {
+      "name": "Standstreifen",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 7
+    },
+    {
+      "name": "Leitplanke",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 5
+    },
+    {
+      "name": "Autobahnmeisterei",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 11
+    },
+    {
+      "name": "Kamener Kreuz",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 12
+    },
+    {
+      "name": "Kasseler Berge",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 12
+    },
+    {
+      "name": "Autobahnkirche",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 11
+    },
+    {
+      "name": "Sanifair",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 8
+    },
+    {
+      "name": "Lkw-Maut",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 10
+    },
+    {
+      "name": "Blaues Autobahnschild",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 5
+    },
+    {
+      "name": "Autobahnausfahrt",
+      "facet": "Autobahn und Raststätten",
+      "known_at": 4
+    },
+    {
+      "name": "Rechts vor links",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 6
+    },
+    {
+      "name": "Stoppschild",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 2
+    },
+    {
+      "name": "Vorfahrtsstraße",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Rettungsgasse",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Reißverschlussverfahren",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Verkehrsberuhigter Bereich",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Zebrastreifen",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 1
+    },
+    {
+      "name": "Tempo 30",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 5
+    },
+    {
+      "name": "Promillegrenze",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Grüner Pfeil",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Warndreieck",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 6
+    },
+    {
+      "name": "Anschnallpflicht",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 3
+    },
+    {
+      "name": "Winterreifenpflicht",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Umweltzone",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Blitzer",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 5
+    },
+    {
+      "name": "Bußgeldkatalog",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Andreaskreuz",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Halteverbot",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 7
+    },
+    {
+      "name": "Kreisverkehr",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 4
+    },
+    {
+      "name": "Straßenverkehrs-Ordnung",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Einbahnstraße",
+      "facet": "Verkehrsregeln und Verkehrszeichen",
+      "known_at": 4
+    },
+    {
+      "name": "Fahrschule",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 4
+    },
+    {
+      "name": "Führerschein Klasse B",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Probezeit",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Begleitetes Fahren ab 17",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Theorieprüfung",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Erste-Hilfe-Kurs",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Sehtest",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "HU-Plakette",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Kfz-Kennzeichen",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 4
+    },
+    {
+      "name": "Punkte in Flensburg",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 8
+    },
+    {
+      "name": "Kraftfahrt-Bundesamt",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "MPU",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "Saisonkennzeichen",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "H-Kennzeichen",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "E-Kennzeichen",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 10
+    },
+    {
+      "name": "Wunschkennzeichen",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 9
+    },
+    {
+      "name": "Kfz-Steuer",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Zulassungsstelle",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Rosa Führerschein",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 12
+    },
+    {
+      "name": "DEKRA",
+      "facet": "Führerschein, TÜV und Kfz-Kennzeichen",
+      "known_at": 11
+    },
+    {
+      "name": "Wartburg (Auto)",
+      "facet": "Deutsche Automarken und Autoklassiker",
+      "known_at": 12
+    },
+    {
+      "name": "Mercedes-Benz 300 SL Flügeltürer",
+      "facet": "Deutsche Automarken und Autoklassiker",
+      "known_at": 13
+    },
+    {
+      "name": "Audi quattro",
+      "facet": "Deutsche Automarken und Autoklassiker",
+      "known_at": 13
+    },
+    {
+      "name": "9-Euro-Ticket",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 8
+    },
+    {
+      "name": "S-Bahn",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 4
+    },
+    {
+      "name": "U-Bahn",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 2
+    },
+    {
+      "name": "Straßenbahn",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 3
+    },
+    {
+      "name": "Monatskarte",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 6
+    },
+    {
+      "name": "Fahrkartenkontrolle",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 5
+    },
+    {
+      "name": "Entwerter",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 8
+    },
+    {
+      "name": "Verkehrsverbund",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 11
+    },
+    {
+      "name": "BVG",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 10
+    },
+    {
+      "name": "HVV",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 11
+    },
+    {
+      "name": "Nachtbus",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 7
+    },
+    {
+      "name": "Schülerticket",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 5
+    },
+    {
+      "name": "Haltestelle",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 1
+    },
+    {
+      "name": "Gelenkbus",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 6
+    },
+    {
+      "name": "Berliner Ringbahn",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 12
+    },
+    {
+      "name": "Hamburger Hochbahn",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 12
+    },
+    {
+      "name": "Kurzstrecke",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 9
+    },
+    {
+      "name": "Rufbus",
+      "facet": "Bus, S-Bahn, U-Bahn und Tickets",
+      "known_at": 11
+    },
+    {
+      "name": "Laufrad",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 2
+    },
+    {
+      "name": "Fahrradhelm",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 1
+    },
+    {
+      "name": "Radweg",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 3
+    },
+    {
+      "name": "Fahrradstraße",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 9
+    },
+    {
+      "name": "Lastenrad",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 6
+    },
+    {
+      "name": "E-Bike",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 4
+    },
+    {
+      "name": "Fahrradprüfung",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 4
+    },
+    {
+      "name": "Fahrradklingel",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 1
+    },
+    {
+      "name": "Katzenauge",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 5
+    },
+    {
+      "name": "ADFC",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 12
+    },
+    {
+      "name": "Radschnellweg",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 11
+    },
+    {
+      "name": "Hollandrad",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 9
+    },
+    {
+      "name": "Münster (Fahrradstadt)",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 10
+    },
+    {
+      "name": "Leeze",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 13
+    },
+    {
+      "name": "Stadtradeln",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 11
+    },
+    {
+      "name": "Gepäckträger",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 3
+    },
+    {
+      "name": "Bonanzarad",
+      "facet": "Fahrrad und Radverkehr",
+      "known_at": 12
+    },
+    {
+      "name": "Stau aus dem Nichts",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 9
+    },
+    {
+      "name": "Autobahnbaustelle",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 5
+    },
+    {
+      "name": "Verkehrsfunk",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 8
+    },
+    {
+      "name": "Ferienreiseverkehr",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 6
+    },
+    {
+      "name": "Geisterfahrer",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 8
+    },
+    {
+      "name": "Elbtunnel",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 9
+    },
+    {
+      "name": "Navigationsgerät",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 4
+    },
+    {
+      "name": "Umleitung",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 4
+    },
+    {
+      "name": "Leitbake",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 10
+    },
+    {
+      "name": "Pylone",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 7
+    },
+    {
+      "name": "Stop-and-go",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 8
+    },
+    {
+      "name": "Pendler",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 7
+    },
+    {
+      "name": "Berufsverkehr",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 7
+    },
+    {
+      "name": "Schleichweg",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 8
+    },
+    {
+      "name": "Wanderbaustelle",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 12
+    },
+    {
+      "name": "Vollsperrung",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 9
+    },
+    {
+      "name": "Rahmedetalbrücke",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 13
+    },
+    {
+      "name": "Stauende",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 7
+    },
+    {
+      "name": "Gelbe Baustellenmarkierung",
+      "facet": "Stau, Baustellen und Verkehrsfunk",
+      "known_at": 10
+    },
+    {
+      "name": "Gelber Engel",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 8
+    },
+    {
+      "name": "Abschleppwagen",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 3
+    },
+    {
+      "name": "Polizeikelle",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 8
+    },
+    {
+      "name": "Notruf 110",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 2
+    },
+    {
+      "name": "Notruf 112",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 3
+    },
+    {
+      "name": "Rettungshubschrauber Christoph",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 12
+    },
+    {
+      "name": "Verkehrskontrolle",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 6
+    },
+    {
+      "name": "Alkoholtest",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 8
+    },
+    {
+      "name": "Starthilfe",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 9
+    },
+    {
+      "name": "Reifenpanne",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 4
+    },
+    {
+      "name": "Ersatzrad",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 5
+    },
+    {
+      "name": "Notrufsäule",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 9
+    },
+    {
+      "name": "Autobahnpolizei",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 6
+    },
+    {
+      "name": "Verbandskasten",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 5
+    },
+    {
+      "name": "Warnweste",
+      "facet": "Polizei, ADAC und Pannenhilfe",
+      "known_at": 4
+    },
+    {
+      "name": "Sonntagsfahrer",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 10
+    },
+    {
+      "name": "Drängler",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Freie Fahrt für freie Bürger",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 13
+    },
+    {
+      "name": "Nur Bahnhof verstehen",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 6
+    },
+    {
+      "name": "Der Zug ist abgefahren",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 6
+    },
+    {
+      "name": "Auf den Zug aufspringen",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Gas geben",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 4
+    },
+    {
+      "name": "Kavaliersstart",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 12
+    },
+    {
+      "name": "Elefantenrennen",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Brummi",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Die Kurve kriegen",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 8
+    },
+    {
+      "name": "Auf der Strecke bleiben",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Grüne Welle",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 8
+    },
+    {
+      "name": "Bleifuß",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Raser",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 6
+    },
+    {
+      "name": "Auf dem Holzweg",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 8
+    },
+    {
+      "name": "Bahnhof (Empfang)",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 10
+    },
+    {
+      "name": "Rote Laterne",
+      "facet": "Verkehrswörter und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Flughafen BER",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 8
+    },
+    {
+      "name": "Frankfurter Flughafen",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 7
+    },
+    {
+      "name": "Flughafen München",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 8
+    },
+    {
+      "name": "Flughafen Tegel",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 10
+    },
+    {
+      "name": "Lufthansa",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 5
+    },
+    {
+      "name": "Condor",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 10
+    },
+    {
+      "name": "Fehmarnbelttunnel",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 12
+    },
+    {
+      "name": "Helgoland-Fähre",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 9
+    },
+    {
+      "name": "Sylt Shuttle",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 11
+    },
+    {
+      "name": "HADAG-Hafenfähre",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 12
+    },
+    {
+      "name": "Vogelfluglinie",
+      "facet": "Flughäfen, Fähren und Kanäle",
+      "known_at": 13
+    }
+  ]
+}

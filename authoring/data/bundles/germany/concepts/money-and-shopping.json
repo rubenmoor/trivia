@@ -1,0 +1,781 @@
+{
+  "subcategory": "money-and-shopping",
+  "facets": [
+    "Euro-Münzen und -Scheine",
+    "D-Mark und Geldgeschichte",
+    "Supermärkte und Discounter",
+    "Pfand und Leergut",
+    "Bezahlen, Karten und Banken",
+    "Sparen und Taschengeld",
+    "Märkte, Bäcker und Kioske",
+    "Ladenöffnung und Kundenrechte",
+    "Redewendungen rund ums Geld",
+    "Kaufhäuser, Marken und Werbung",
+    "Preise, Steuern und Haushaltskasse"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bundesadler auf der Euro-Münze",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 5
+    },
+    {
+      "name": "Eichenzweig auf der Cent-Münze",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 8
+    },
+    {
+      "name": "Brandenburger Tor auf der Cent-Münze",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 7
+    },
+    {
+      "name": "2-Euro-Gedenkmünze",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 7
+    },
+    {
+      "name": "Bundesländer-Serie",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 10
+    },
+    {
+      "name": "Prägezeichen",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 12
+    },
+    {
+      "name": "Münzprägestätte",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 11
+    },
+    {
+      "name": "Europäische Zentralbank in Frankfurt",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 9
+    },
+    {
+      "name": "1-Cent-Münze",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 2
+    },
+    {
+      "name": "5-Euro-Schein",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 2
+    },
+    {
+      "name": "500-Euro-Schein",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 6
+    },
+    {
+      "name": "Euro-Bargeldeinführung 2002",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 8
+    },
+    {
+      "name": "Euro-Starterkit",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 12
+    },
+    {
+      "name": "Wasserzeichen",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 7
+    },
+    {
+      "name": "Hologramm auf dem Geldschein",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 7
+    },
+    {
+      "name": "Falschgeld",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 5
+    },
+    {
+      "name": "10-Euro-Sammlermünze",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 11
+    },
+    {
+      "name": "Münzrolle",
+      "facet": "Euro-Münzen und -Scheine",
+      "known_at": 8
+    },
+    {
+      "name": "Deutsche Mark",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 5
+    },
+    {
+      "name": "Kopfgeld von 40 D-Mark",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Alu-Chip",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Taler",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 7
+    },
+    {
+      "name": "Gulden",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Clara Schumann auf dem 100-D-Mark-Schein",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Carl Friedrich Gauß auf dem 10-D-Mark-Schein",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Goldmark",
+      "facet": "D-Mark und Geldgeschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Norma",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 9
+    },
+    {
+      "name": "Tengelmann",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 13
+    },
+    {
+      "name": "dm-drogerie markt",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 4
+    },
+    {
+      "name": "Karl und Theo Albrecht",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 12
+    },
+    {
+      "name": "Warentrenner",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 6
+    },
+    {
+      "name": "Einkaufswagen-Chip",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 4
+    },
+    {
+      "name": "Kassenband",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 3
+    },
+    {
+      "name": "Eigenmarke",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 9
+    },
+    {
+      "name": "Aktionsware",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 8
+    },
+    {
+      "name": "Selbstbedienungskasse",
+      "facet": "Supermärkte und Discounter",
+      "known_at": 5
+    },
+    {
+      "name": "25 Cent Pfand",
+      "facet": "Pfand und Leergut",
+      "known_at": 5
+    },
+    {
+      "name": "Getränkekiste",
+      "facet": "Pfand und Leergut",
+      "known_at": 3
+    },
+    {
+      "name": "Dosenpfand",
+      "facet": "Pfand und Leergut",
+      "known_at": 9
+    },
+    {
+      "name": "Jürgen Trittin",
+      "facet": "Pfand und Leergut",
+      "known_at": 13
+    },
+    {
+      "name": "DPG-Pfandlogo",
+      "facet": "Pfand und Leergut",
+      "known_at": 10
+    },
+    {
+      "name": "Pfandring",
+      "facet": "Pfand und Leergut",
+      "known_at": 11
+    },
+    {
+      "name": "Pfandsammler",
+      "facet": "Pfand und Leergut",
+      "known_at": 6
+    },
+    {
+      "name": "Glascontainer",
+      "facet": "Pfand und Leergut",
+      "known_at": 4
+    },
+    {
+      "name": "Bügelflasche",
+      "facet": "Pfand und Leergut",
+      "known_at": 9
+    },
+    {
+      "name": "Pfandbecher",
+      "facet": "Pfand und Leergut",
+      "known_at": 6
+    },
+    {
+      "name": "Joghurtglas mit Pfand",
+      "facet": "Pfand und Leergut",
+      "known_at": 9
+    },
+    {
+      "name": "Girocard",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 7
+    },
+    {
+      "name": "Sparkasse",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 4
+    },
+    {
+      "name": "Volksbank",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 7
+    },
+    {
+      "name": "Deutsche Bank",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 8
+    },
+    {
+      "name": "Commerzbank",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 10
+    },
+    {
+      "name": "Postbank",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 9
+    },
+    {
+      "name": "Überweisung",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 7
+    },
+    {
+      "name": "Lastschrift",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 11
+    },
+    {
+      "name": "Kontoauszug",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 9
+    },
+    {
+      "name": "PIN",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 5
+    },
+    {
+      "name": "Geldautomat",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 3
+    },
+    {
+      "name": "Kontaktloses Bezahlen",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 6
+    },
+    {
+      "name": "Schufa",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 12
+    },
+    {
+      "name": "IBAN",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 10
+    },
+    {
+      "name": "Bankleitzahl",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 12
+    },
+    {
+      "name": "Dispokredit",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 12
+    },
+    {
+      "name": "Frankfurter Wertpapierbörse",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 11
+    },
+    {
+      "name": "DAX",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 11
+    },
+    {
+      "name": "Bausparkasse",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 12
+    },
+    {
+      "name": "Bargeld",
+      "facet": "Bezahlen, Karten und Banken",
+      "known_at": 2
+    },
+    {
+      "name": "Sparschwein",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 1
+    },
+    {
+      "name": "Taschengeldparagraf",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 12
+    },
+    {
+      "name": "Weltspartag",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 9
+    },
+    {
+      "name": "Knax-Club",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 9
+    },
+    {
+      "name": "Bausparvertrag",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 12
+    },
+    {
+      "name": "Sparstrumpf",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 8
+    },
+    {
+      "name": "Zinsen",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 7
+    },
+    {
+      "name": "Zinseszins",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 11
+    },
+    {
+      "name": "Spardose",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 2
+    },
+    {
+      "name": "Riester-Rente",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 13
+    },
+    {
+      "name": "Haushaltsbuch",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 10
+    },
+    {
+      "name": "Ferienjob",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 7
+    },
+    {
+      "name": "Dagobert Duck",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 3
+    },
+    {
+      "name": "Notgroschen",
+      "facet": "Sparen und Taschengeld",
+      "known_at": 10
+    },
+    {
+      "name": "Wochenmarkt",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 3
+    },
+    {
+      "name": "Flohmarkt",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 4
+    },
+    {
+      "name": "Bäckerei",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 1
+    },
+    {
+      "name": "Trinkhalle",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 11
+    },
+    {
+      "name": "Kiosk",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 3
+    },
+    {
+      "name": "Gemischte Tüte",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 3
+    },
+    {
+      "name": "Wundertüte",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 4
+    },
+    {
+      "name": "Tante-Emma-Laden",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 8
+    },
+    {
+      "name": "Metzgerei",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 4
+    },
+    {
+      "name": "Scheibe Wurst beim Metzger",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 4
+    },
+    {
+      "name": "Marktschreier",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 8
+    },
+    {
+      "name": "Hamburger Fischmarkt",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 10
+    },
+    {
+      "name": "Hofladen",
+      "facet": "Märkte, Bäcker und Kioske",
+      "known_at": 7
+    },
+    {
+      "name": "Ladenschlussgesetz",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 11
+    },
+    {
+      "name": "Verkaufsoffener Sonntag",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 7
+    },
+    {
+      "name": "Langer Donnerstag",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 13
+    },
+    {
+      "name": "Umtausch",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 5
+    },
+    {
+      "name": "Widerrufsrecht",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 11
+    },
+    {
+      "name": "Gewährleistung",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 12
+    },
+    {
+      "name": "Garantie",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 7
+    },
+    {
+      "name": "Kassenbon",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 4
+    },
+    {
+      "name": "Bonpflicht",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 12
+    },
+    {
+      "name": "Reklamation",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 9
+    },
+    {
+      "name": "Verbraucherzentrale",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 11
+    },
+    {
+      "name": "Stiftung Warentest",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 9
+    },
+    {
+      "name": "Öko-Test",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 11
+    },
+    {
+      "name": "Mindesthaltbarkeitsdatum",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 7
+    },
+    {
+      "name": "Preisauszeichnung",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 10
+    },
+    {
+      "name": "Sommerschlussverkauf",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 10
+    },
+    {
+      "name": "Winterschlussverkauf",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 10
+    },
+    {
+      "name": "Heiligabend-Ladenschluss",
+      "facet": "Ladenöffnung und Kundenrechte",
+      "known_at": 8
+    },
+    {
+      "name": "Kies",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 12
+    },
+    {
+      "name": "„Ohne Moos nix los“",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 8
+    },
+    {
+      "name": "„Geld wie Heu“",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 8
+    },
+    {
+      "name": "„Für einen Appel und ein Ei“",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 9
+    },
+    {
+      "name": "„Das Geld zum Fenster hinauswerfen“",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 7
+    },
+    {
+      "name": "„Jemanden über den Tisch ziehen“",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 10
+    },
+    {
+      "name": "„Nur Bares ist Wahres“",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 9
+    },
+    {
+      "name": "Teuro",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 11
+    },
+    {
+      "name": "Peanuts",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 13
+    },
+    {
+      "name": "Schnäppchen",
+      "facet": "Redewendungen rund ums Geld",
+      "known_at": 6
+    },
+    {
+      "name": "Karstadt",
+      "facet": "Kaufhäuser, Marken und Werbung",
+      "known_at": 9
+    },
+    {
+      "name": "Hertie",
+      "facet": "Kaufhäuser, Marken und Werbung",
+      "known_at": 13
+    },
+    {
+      "name": "Werbeprospekt",
+      "facet": "Kaufhäuser, Marken und Werbung",
+      "known_at": 5
+    },
+    {
+      "name": "„Bitte keine Werbung“-Aufkleber",
+      "facet": "Kaufhäuser, Marken und Werbung",
+      "known_at": 7
+    },
+    {
+      "name": "Mehrwertsteuer",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 9
+    },
+    {
+      "name": "Regelsteuersatz 19 Prozent",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 12
+    },
+    {
+      "name": "Ermäßigter Steuersatz 7 Prozent",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 13
+    },
+    {
+      "name": "Finanzamt",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 8
+    },
+    {
+      "name": "Steuererklärung",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 10
+    },
+    {
+      "name": "Lohnsteuer",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 11
+    },
+    {
+      "name": "Kirchensteuer",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 12
+    },
+    {
+      "name": "Hundesteuer",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 10
+    },
+    {
+      "name": "Kaffeesteuer",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 14
+    },
+    {
+      "name": "Brutto und Netto",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 10
+    },
+    {
+      "name": "Kindergeld",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 8
+    },
+    {
+      "name": "Bürgergeld",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 11
+    },
+    {
+      "name": "Inflation",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 9
+    },
+    {
+      "name": "Warenkorb",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 12
+    },
+    {
+      "name": "Grundpreis",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 10
+    },
+    {
+      "name": "Preis mit 99 Cent",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 5
+    },
+    {
+      "name": "Nebenkosten",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 11
+    },
+    {
+      "name": "Haushaltsgeld",
+      "facet": "Preise, Steuern und Haushaltskasse",
+      "known_at": 8
+    }
+  ]
+}
