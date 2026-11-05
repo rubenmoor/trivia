@@ -39,6 +39,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
   - Cost: `qgen report --cost` rows per theme × en (drafting) and es, es-ES, de (translations), base's rates until its own runs exist.
   - Media: see "Media for theme bundles" below.
   - Progress `stem` (content runs, plan 188): 2026-10-28 en 317, es 299 (tr-es-13, $0.08 per approved), es-ES 299 (tr-es-ES-24, $0.08 per approved), de 0, of 2000 each; `es`, `es-ES` joined `languages`.
+  - Progress `stem` (content runs, plan 188): 2026-11-04 en 317, es 299, es-ES 299, de 299 (tr-de-24, $0.09 per approved), of 2000 each; `de` joined `languages`.
 - **House style:** base questions follow its "International angle" (well-known facts about any country, Colombia's included); anything more goes into `colombia`.
 
 ## Batches per bundle (D-41)
