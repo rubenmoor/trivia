@@ -1,0 +1,1072 @@
+{
+  "subcategory": "school-and-education",
+  "facets": [
+    "Schulformen und Schulsystem",
+    "Einschulung und Grundschulalltag",
+    "Noten, Zeugnisse und Abschlüsse",
+    "Schulsachen und Schulranzen",
+    "Pausen, Pausenbrot und Schulhof",
+    "Ferien und Schuljahr",
+    "Schulsprache und Schülerjargon",
+    "Schule in Büchern, Filmen und Serien",
+    "Duale Ausbildung und Berufe",
+    "Studium und Hochschulen",
+    "Schulgeschichte und Bildungsreformen",
+    "Schulbräuche: Klassenfahrt, Abiball, Abistreich"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 4,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Grundschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 1
+    },
+    {
+      "name": "Gymnasium",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 4
+    },
+    {
+      "name": "Realschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 5
+    },
+    {
+      "name": "Hauptschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 6
+    },
+    {
+      "name": "Gesamtschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 6
+    },
+    {
+      "name": "Förderschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 8
+    },
+    {
+      "name": "Gemeinschaftsschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 9
+    },
+    {
+      "name": "Oberschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 9
+    },
+    {
+      "name": "Waldorfschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 9
+    },
+    {
+      "name": "Montessori-Schule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 10
+    },
+    {
+      "name": "Fachoberschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 10
+    },
+    {
+      "name": "Kultusministerium",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 11
+    },
+    {
+      "name": "Schulpflicht",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 4
+    },
+    {
+      "name": "Bildungsföderalismus",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 12
+    },
+    {
+      "name": "Ganztagsschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 6
+    },
+    {
+      "name": "Privatschule",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 6
+    },
+    {
+      "name": "Internat",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 5
+    },
+    {
+      "name": "Orientierungsstufe",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 11
+    },
+    {
+      "name": "Hort",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 4
+    },
+    {
+      "name": "Gymnasiale Oberstufe",
+      "facet": "Schulformen und Schulsystem",
+      "known_at": 9
+    },
+    {
+      "name": "Einschulungsfeier",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 2
+    },
+    {
+      "name": "Erstklässler",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 1
+    },
+    {
+      "name": "Sachunterricht",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 3
+    },
+    {
+      "name": "Füllerführerschein",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 4
+    },
+    {
+      "name": "Morgenkreis",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 3
+    },
+    {
+      "name": "Stuhlkreis",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 3
+    },
+    {
+      "name": "Hausaufgabenheft",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 3
+    },
+    {
+      "name": "Schulweg",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 1
+    },
+    {
+      "name": "Schülerlotse",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 5
+    },
+    {
+      "name": "Anlauttabelle",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 6
+    },
+    {
+      "name": "Lesen durch Schreiben",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 11
+    },
+    {
+      "name": "Schreibschrift",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 4
+    },
+    {
+      "name": "Einmaleins",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 2
+    },
+    {
+      "name": "Schuleingangsuntersuchung",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 9
+    },
+    {
+      "name": "VERA-Vergleichsarbeiten",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 10
+    },
+    {
+      "name": "Tafeldienst",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 3
+    },
+    {
+      "name": "Gelbe Schülerkappe",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 5
+    },
+    {
+      "name": "Lesepate",
+      "facet": "Einschulung und Grundschulalltag",
+      "known_at": 8
+    },
+    {
+      "name": "Note 1",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 2
+    },
+    {
+      "name": "Note 6",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 4
+    },
+    {
+      "name": "Notenpunkte",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 9
+    },
+    {
+      "name": "Mittlere Reife",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 8
+    },
+    {
+      "name": "Hauptschulabschluss",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 8
+    },
+    {
+      "name": "Fachabitur",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 10
+    },
+    {
+      "name": "Zeugnis",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 2
+    },
+    {
+      "name": "Halbjahreszeugnis",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 5
+    },
+    {
+      "name": "Kopfnoten",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 9
+    },
+    {
+      "name": "Sitzenbleiben",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 4
+    },
+    {
+      "name": "Versetzung",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 7
+    },
+    {
+      "name": "Blauer Brief",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 10
+    },
+    {
+      "name": "Zentralabitur",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 11
+    },
+    {
+      "name": "Abiturdurchschnitt",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 9
+    },
+    {
+      "name": "Klassenarbeit",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 3
+    },
+    {
+      "name": "Klausur",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 7
+    },
+    {
+      "name": "Mündliche Prüfung",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 7
+    },
+    {
+      "name": "Elternsprechtag",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 4
+    },
+    {
+      "name": "Notenspiegel",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 7
+    },
+    {
+      "name": "Leistungskurs",
+      "facet": "Noten, Zeugnisse und Abschlüsse",
+      "known_at": 9
+    },
+    {
+      "name": "Federmäppchen",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 1
+    },
+    {
+      "name": "Füller",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 2
+    },
+    {
+      "name": "Tintenpatrone",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 3
+    },
+    {
+      "name": "Geodreieck",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 4
+    },
+    {
+      "name": "Zirkel",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 3
+    },
+    {
+      "name": "Radiergummi",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 1
+    },
+    {
+      "name": "Anspitzer",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 1
+    },
+    {
+      "name": "Wasserfarbkasten",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 2
+    },
+    {
+      "name": "Turnbeutel",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 2
+    },
+    {
+      "name": "Heftumschlag",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 4
+    },
+    {
+      "name": "Collegeblock",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 7
+    },
+    {
+      "name": "Karopapier",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 3
+    },
+    {
+      "name": "Lineatur",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 8
+    },
+    {
+      "name": "Diercke Weltatlas",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 9
+    },
+    {
+      "name": "Scout",
+      "facet": "Schulsachen und Schulranzen",
+      "known_at": 7
+    },
+    {
+      "name": "Schulgong",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 2
+    },
+    {
+      "name": "Hofpause",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 2
+    },
+    {
+      "name": "Pausenaufsicht",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 4
+    },
+    {
+      "name": "Schulkiosk",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 4
+    },
+    {
+      "name": "Schulmilch",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 5
+    },
+    {
+      "name": "Gummitwist",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 5
+    },
+    {
+      "name": "Himmel und Hölle",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 4
+    },
+    {
+      "name": "Murmeln",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 3
+    },
+    {
+      "name": "Fangen",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 1
+    },
+    {
+      "name": "Panini-Sammelbilder",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 4
+    },
+    {
+      "name": "Schulobstprogramm",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 9
+    },
+    {
+      "name": "Klettergerüst",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 1
+    },
+    {
+      "name": "Tischtennisplatte",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 3
+    },
+    {
+      "name": "Rundlauf",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 6
+    },
+    {
+      "name": "Regenpause",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 5
+    },
+    {
+      "name": "Pausenhalle",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 5
+    },
+    {
+      "name": "Bolzplatz",
+      "facet": "Pausen, Pausenbrot und Schulhof",
+      "known_at": 5
+    },
+    {
+      "name": "Sommerferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 1
+    },
+    {
+      "name": "Herbstferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 2
+    },
+    {
+      "name": "Weihnachtsferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 1
+    },
+    {
+      "name": "Osterferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 2
+    },
+    {
+      "name": "Pfingstferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 5
+    },
+    {
+      "name": "Faschingsferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 6
+    },
+    {
+      "name": "Kartoffelferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 11
+    },
+    {
+      "name": "Ferienkalender",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 6
+    },
+    {
+      "name": "Rollierendes Feriensystem",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 12
+    },
+    {
+      "name": "Erster Schultag",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 1
+    },
+    {
+      "name": "Schulhalbjahr",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 5
+    },
+    {
+      "name": "Zeugnisferien",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 8
+    },
+    {
+      "name": "Ferienstau",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 6
+    },
+    {
+      "name": "Beweglicher Ferientag",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 9
+    },
+    {
+      "name": "Ferienpass",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 7
+    },
+    {
+      "name": "Ferienlager",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 4
+    },
+    {
+      "name": "Schneefrei",
+      "facet": "Ferien und Schuljahr",
+      "known_at": 5
+    },
+    {
+      "name": "Petzen",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 3
+    },
+    {
+      "name": "Schwänzen",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 5
+    },
+    {
+      "name": "Ehrenrunde",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 8
+    },
+    {
+      "name": "Hausi",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 5
+    },
+    {
+      "name": "Klassenbuch",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 5
+    },
+    {
+      "name": "Lehrerzimmer",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 2
+    },
+    {
+      "name": "Freistunde",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 5
+    },
+    {
+      "name": "Vertretungsplan",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 5
+    },
+    {
+      "name": "Doppelstunde",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 5
+    },
+    {
+      "name": "Penne",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 12
+    },
+    {
+      "name": "Ex",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 11
+    },
+    {
+      "name": "Nachsitzen",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 4
+    },
+    {
+      "name": "Strafarbeit",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 5
+    },
+    {
+      "name": "Die Schulbank drücken",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 7
+    },
+    {
+      "name": "Pauken",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 7
+    },
+    {
+      "name": "Klassensprecher",
+      "facet": "Schulsprache und Schülerjargon",
+      "known_at": 4
+    },
+    {
+      "name": "Zeki Müller",
+      "facet": "Schule in Büchern, Filmen und Serien",
+      "known_at": 10
+    },
+    {
+      "name": "Hanni und Nanni",
+      "facet": "Schule in Büchern, Filmen und Serien",
+      "known_at": 5
+    },
+    {
+      "name": "Die Lümmel von der ersten Bank",
+      "facet": "Schule in Büchern, Filmen und Serien",
+      "known_at": 13
+    },
+    {
+      "name": "Der Lehrer",
+      "facet": "Schule in Büchern, Filmen und Serien",
+      "known_at": 11
+    },
+    {
+      "name": "Doktor Specht",
+      "facet": "Schule in Büchern, Filmen und Serien",
+      "known_at": 13
+    },
+    {
+      "name": "Duale Ausbildung",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 10
+    },
+    {
+      "name": "Berufsschule",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 7
+    },
+    {
+      "name": "Ausbildungsvertrag",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 10
+    },
+    {
+      "name": "Gesellenprüfung",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 10
+    },
+    {
+      "name": "Industrie- und Handelskammer",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 11
+    },
+    {
+      "name": "Ausbildungsvergütung",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 10
+    },
+    {
+      "name": "Kaufmann im Einzelhandel",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 10
+    },
+    {
+      "name": "Kfz-Mechatroniker",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 8
+    },
+    {
+      "name": "Bankkaufmann",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 9
+    },
+    {
+      "name": "Elektroniker",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 8
+    },
+    {
+      "name": "Bäckerlehre",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 7
+    },
+    {
+      "name": "Schülerpraktikum",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 6
+    },
+    {
+      "name": "Berufsinformationszentrum",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 11
+    },
+    {
+      "name": "Bundesagentur für Arbeit",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 10
+    },
+    {
+      "name": "Girls' Day",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 7
+    },
+    {
+      "name": "Freiwilliges Soziales Jahr",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 9
+    },
+    {
+      "name": "Duales Studium",
+      "facet": "Duale Ausbildung und Berufe",
+      "known_at": 11
+    },
+    {
+      "name": "Universität Heidelberg",
+      "facet": "Studium und Hochschulen",
+      "known_at": 10
+    },
+    {
+      "name": "Ludwig-Maximilians-Universität München",
+      "facet": "Studium und Hochschulen",
+      "known_at": 11
+    },
+    {
+      "name": "Humboldt-Universität zu Berlin",
+      "facet": "Studium und Hochschulen",
+      "known_at": 11
+    },
+    {
+      "name": "Technische Universität München",
+      "facet": "Studium und Hochschulen",
+      "known_at": 11
+    },
+    {
+      "name": "Fachhochschule",
+      "facet": "Studium und Hochschulen",
+      "known_at": 9
+    },
+    {
+      "name": "Diplom",
+      "facet": "Studium und Hochschulen",
+      "known_at": 10
+    },
+    {
+      "name": "Magister",
+      "facet": "Studium und Hochschulen",
+      "known_at": 12
+    },
+    {
+      "name": "Bologna-Prozess",
+      "facet": "Studium und Hochschulen",
+      "known_at": 12
+    },
+    {
+      "name": "Studiengebühren",
+      "facet": "Studium und Hochschulen",
+      "known_at": 10
+    },
+    {
+      "name": "Semesterticket",
+      "facet": "Studium und Hochschulen",
+      "known_at": 11
+    },
+    {
+      "name": "Mensa",
+      "facet": "Studium und Hochschulen",
+      "known_at": 5
+    },
+    {
+      "name": "Erstsemester",
+      "facet": "Studium und Hochschulen",
+      "known_at": 9
+    },
+    {
+      "name": "Wohngemeinschaft",
+      "facet": "Studium und Hochschulen",
+      "known_at": 7
+    },
+    {
+      "name": "Hörsaal",
+      "facet": "Studium und Hochschulen",
+      "known_at": 7
+    },
+    {
+      "name": "Vorlesung",
+      "facet": "Studium und Hochschulen",
+      "known_at": 8
+    },
+    {
+      "name": "Numerus clausus",
+      "facet": "Studium und Hochschulen",
+      "known_at": 10
+    },
+    {
+      "name": "Exzellenzinitiative",
+      "facet": "Studium und Hochschulen",
+      "known_at": 13
+    },
+    {
+      "name": "Studentenwerk",
+      "facet": "Studium und Hochschulen",
+      "known_at": 11
+    },
+    {
+      "name": "Doktorarbeit",
+      "facet": "Studium und Hochschulen",
+      "known_at": 8
+    },
+    {
+      "name": "Wintersemester",
+      "facet": "Studium und Hochschulen",
+      "known_at": 9
+    },
+    {
+      "name": "FernUniversität in Hagen",
+      "facet": "Studium und Hochschulen",
+      "known_at": 13
+    },
+    {
+      "name": "Akademisches Viertel",
+      "facet": "Studium und Hochschulen",
+      "known_at": 12
+    },
+    {
+      "name": "Wilhelm von Humboldt",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 11
+    },
+    {
+      "name": "Humboldtsches Bildungsideal",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 13
+    },
+    {
+      "name": "Allgemeine Schulpflicht in Preußen",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 13
+    },
+    {
+      "name": "Rohrstock",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 7
+    },
+    {
+      "name": "Schiefertafel",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 6
+    },
+    {
+      "name": "Griffel",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 8
+    },
+    {
+      "name": "Sütterlinschrift",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 10
+    },
+    {
+      "name": "Volksschule",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 10
+    },
+    {
+      "name": "PISA-Schock",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 11
+    },
+    {
+      "name": "G8",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 9
+    },
+    {
+      "name": "Rechtschreibreform von 1996",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 10
+    },
+    {
+      "name": "Polytechnische Oberschule",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 12
+    },
+    {
+      "name": "Erweiterte Oberschule",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 13
+    },
+    {
+      "name": "Zwergschule",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 12
+    },
+    {
+      "name": "Prügelstrafe in der Schule",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 9
+    },
+    {
+      "name": "Georg Picht",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 15
+    },
+    {
+      "name": "Inklusion",
+      "facet": "Schulgeschichte und Bildungsreformen",
+      "known_at": 10
+    },
+    {
+      "name": "Klassenfahrt",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 2
+    },
+    {
+      "name": "Abizeitung",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 10
+    },
+    {
+      "name": "Abimotto",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 9
+    },
+    {
+      "name": "Abschlussfahrt",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 7
+    },
+    {
+      "name": "Landschulheim",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 8
+    },
+    {
+      "name": "Jugendherberge",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 4
+    },
+    {
+      "name": "Wandertag",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 3
+    },
+    {
+      "name": "Schulfest",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 2
+    },
+    {
+      "name": "Bundesjugendspiele",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 4
+    },
+    {
+      "name": "Projektwoche",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 5
+    },
+    {
+      "name": "Tag der offenen Tür",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 5
+    },
+    {
+      "name": "Schülerzeitung",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 6
+    },
+    {
+      "name": "Theater-AG",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 5
+    },
+    {
+      "name": "Weihnachtsbasar",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 4
+    },
+    {
+      "name": "Sponsorenlauf",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 5
+    },
+    {
+      "name": "Abipulli",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 9
+    },
+    {
+      "name": "Klassenfoto",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 2
+    },
+    {
+      "name": "Bunter Abend",
+      "facet": "Schulbräuche: Klassenfahrt, Abiball, Abistreich",
+      "known_at": 6
+    }
+  ]
+}

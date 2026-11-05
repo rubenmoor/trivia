@@ -1,0 +1,642 @@
+{
+  "subcategory": "brands-and-products",
+  "facets": [
+    "Süßigkeiten und Snacks",
+    "Getränke und Limonaden",
+    "Lebensmittel im Supermarktregal",
+    "Autos und Fahrzeugmarken",
+    "Haushalt und Putzmittel",
+    "Spielzeug und Spiele",
+    "Schreibwaren und Schulbedarf",
+    "Kosmetik und Pflegeprodukte",
+    "Supermärkte und Ladenketten",
+    "Werbung, Slogans und Maskottchen",
+    "Erfindungen und Markengeschichte",
+    "Sportartikel und Mode"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 5,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Haribo Goldbären",
+      "facet": "Süßigkeiten und Snacks",
+      "known_at": 1
+    },
+    {
+      "name": "Maoam",
+      "facet": "Süßigkeiten und Snacks",
+      "known_at": 3
+    },
+    {
+      "name": "Nimm2",
+      "facet": "Süßigkeiten und Snacks",
+      "known_at": 4
+    },
+    {
+      "name": "Dickmann's",
+      "facet": "Süßigkeiten und Snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Funny-frisch",
+      "facet": "Süßigkeiten und Snacks",
+      "known_at": 6
+    },
+    {
+      "name": "Lambertz",
+      "facet": "Süßigkeiten und Snacks",
+      "known_at": 10
+    },
+    {
+      "name": "Caro Kaffee",
+      "facet": "Getränke und Limonaden",
+      "known_at": 12
+    },
+    {
+      "name": "Knorr",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 6
+    },
+    {
+      "name": "Kölln Haferflocken",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 7
+    },
+    {
+      "name": "Seitenbacher",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 10
+    },
+    {
+      "name": "Löwensenf",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 11
+    },
+    {
+      "name": "Miracoli",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 7
+    },
+    {
+      "name": "Erasco",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 10
+    },
+    {
+      "name": "Pfanni",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 9
+    },
+    {
+      "name": "Müller Milchreis",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 5
+    },
+    {
+      "name": "Zott Monte",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 4
+    },
+    {
+      "name": "Landliebe",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 9
+    },
+    {
+      "name": "Fruchtzwerge",
+      "facet": "Lebensmittel im Supermarktregal",
+      "known_at": 3
+    },
+    {
+      "name": "Volkswagen",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 3
+    },
+    {
+      "name": "VW Golf",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 6
+    },
+    {
+      "name": "VW Bulli",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 7
+    },
+    {
+      "name": "Mercedes-Benz",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 3
+    },
+    {
+      "name": "BMW",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 3
+    },
+    {
+      "name": "Audi",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 3
+    },
+    {
+      "name": "Opel",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 5
+    },
+    {
+      "name": "Opel Manta",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 12
+    },
+    {
+      "name": "Unimog",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 10
+    },
+    {
+      "name": "Borgward",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 13
+    },
+    {
+      "name": "Maybach",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 11
+    },
+    {
+      "name": "Smart",
+      "facet": "Autos und Fahrzeugmarken",
+      "known_at": 6
+    },
+    {
+      "name": "Tesa",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 4
+    },
+    {
+      "name": "Pril",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 8
+    },
+    {
+      "name": "Frosch",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 8
+    },
+    {
+      "name": "Melitta",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 7
+    },
+    {
+      "name": "Pattex",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 10
+    },
+    {
+      "name": "Fit Spülmittel",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 11
+    },
+    {
+      "name": "Sagrotan",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 9
+    },
+    {
+      "name": "Weißer Riese",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 10
+    },
+    {
+      "name": "Zewa",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 7
+    },
+    {
+      "name": "Fissler",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 12
+    },
+    {
+      "name": "Leifheit",
+      "facet": "Haushalt und Putzmittel",
+      "known_at": 12
+    },
+    {
+      "name": "Siku",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 5
+    },
+    {
+      "name": "Catan",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 8
+    },
+    {
+      "name": "Carcassonne",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 10
+    },
+    {
+      "name": "Carrera",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 8
+    },
+    {
+      "name": "Tiptoi",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 3
+    },
+    {
+      "name": "Haba",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 7
+    },
+    {
+      "name": "Kosmos",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 10
+    },
+    {
+      "name": "Das verrückte Labyrinth",
+      "facet": "Spielzeug und Spiele",
+      "known_at": 5
+    },
+    {
+      "name": "Lamy",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 7
+    },
+    {
+      "name": "Stabilo Boss",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 6
+    },
+    {
+      "name": "Staedtler",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 6
+    },
+    {
+      "name": "Edding",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 5
+    },
+    {
+      "name": "Herlitz",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 8
+    },
+    {
+      "name": "McNeill",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 8
+    },
+    {
+      "name": "Scout Schulranzen",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 7
+    },
+    {
+      "name": "Geha",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 12
+    },
+    {
+      "name": "Leitz-Ordner",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 11
+    },
+    {
+      "name": "Brunnen",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 11
+    },
+    {
+      "name": "Tintenkiller",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 5
+    },
+    {
+      "name": "Soennecken",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 14
+    },
+    {
+      "name": "Tipp-Ex",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 7
+    },
+    {
+      "name": "Kaweco",
+      "facet": "Schreibwaren und Schulbedarf",
+      "known_at": 13
+    },
+    {
+      "name": "Penaten",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 9
+    },
+    {
+      "name": "4711",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 11
+    },
+    {
+      "name": "Fa",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 10
+    },
+    {
+      "name": "Schauma",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 9
+    },
+    {
+      "name": "Schwarzkopf",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 9
+    },
+    {
+      "name": "Balea",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 7
+    },
+    {
+      "name": "Sebamed",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 10
+    },
+    {
+      "name": "Kneipp",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 11
+    },
+    {
+      "name": "Elmex",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 5
+    },
+    {
+      "name": "Wella",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 11
+    },
+    {
+      "name": "Hansaplast",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 4
+    },
+    {
+      "name": "Florena",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 12
+    },
+    {
+      "name": "Bübchen",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 10
+    },
+    {
+      "name": "Eucerin",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 11
+    },
+    {
+      "name": "Alverde",
+      "facet": "Kosmetik und Pflegeprodukte",
+      "known_at": 10
+    },
+    {
+      "name": "Rewe",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 4
+    },
+    {
+      "name": "Kaufland",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 5
+    },
+    {
+      "name": "Netto",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 5
+    },
+    {
+      "name": "Penny",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 5
+    },
+    {
+      "name": "MediaMarkt",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 5
+    },
+    {
+      "name": "Galeria Kaufhof",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 9
+    },
+    {
+      "name": "Hornbach",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 8
+    },
+    {
+      "name": "Deichmann",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 6
+    },
+    {
+      "name": "Douglas",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 9
+    },
+    {
+      "name": "Konsum",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 13
+    },
+    {
+      "name": "Schlecker",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 12
+    },
+    {
+      "name": "Kaiser's Tengelmann",
+      "facet": "Supermärkte und Ladenketten",
+      "known_at": 13
+    },
+    {
+      "name": "HB-Männchen",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 14
+    },
+    {
+      "name": "Lila Kuh",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 2
+    },
+    {
+      "name": "Herr Kaiser",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 14
+    },
+    {
+      "name": "Klementine",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 13
+    },
+    {
+      "name": "Meister Proper",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 8
+    },
+    {
+      "name": "Onkel Dittmeyer",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 14
+    },
+    {
+      "name": "Haribo macht Kinder froh",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 3
+    },
+    {
+      "name": "Quadratisch. Praktisch. Gut.",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 7
+    },
+    {
+      "name": "Freude am Fahren",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 11
+    },
+    {
+      "name": "Vorsprung durch Technik",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 11
+    },
+    {
+      "name": "Das Beste oder nichts",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 12
+    },
+    {
+      "name": "Ich bin doch nicht blöd",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 8
+    },
+    {
+      "name": "Hier bin ich Mensch, hier kauf ich ein",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 10
+    },
+    {
+      "name": "Wir lieben Lebensmittel",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 9
+    },
+    {
+      "name": "Geiz ist geil",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 11
+    },
+    {
+      "name": "Die zarteste Versuchung",
+      "facet": "Werbung, Slogans und Maskottchen",
+      "known_at": 10
+    },
+    {
+      "name": "Adolf Dassler",
+      "facet": "Erfindungen und Markengeschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Oscar Troplowitz",
+      "facet": "Erfindungen und Markengeschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Uhlsport",
+      "facet": "Sportartikel und Mode",
+      "known_at": 11
+    },
+    {
+      "name": "Jako",
+      "facet": "Sportartikel und Mode",
+      "known_at": 9
+    },
+    {
+      "name": "Tom Tailor",
+      "facet": "Sportartikel und Mode",
+      "known_at": 10
+    },
+    {
+      "name": "Bogner",
+      "facet": "Sportartikel und Mode",
+      "known_at": 13
+    },
+    {
+      "name": "Salamander",
+      "facet": "Sportartikel und Mode",
+      "known_at": 12
+    },
+    {
+      "name": "Trigema",
+      "facet": "Sportartikel und Mode",
+      "known_at": 12
+    },
+    {
+      "name": "Escada",
+      "facet": "Sportartikel und Mode",
+      "known_at": 13
+    },
+    {
+      "name": "Erima",
+      "facet": "Sportartikel und Mode",
+      "known_at": 10
+    }
+  ]
+}

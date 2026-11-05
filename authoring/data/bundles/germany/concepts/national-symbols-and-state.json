@@ -1,0 +1,722 @@
+{
+  "subcategory": "national-symbols-and-state",
+  "facets": [
+    "Bundesflagge und Schwarz-Rot-Gold",
+    "Bundesadler und Bundeswappen",
+    "Nationalhymne und Deutschlandlied",
+    "Entstehung des Grundgesetzes",
+    "Grundrechte und Menschenwürde",
+    "Staatsprinzipien und Ewigkeitsklausel",
+    "Verfassungsorgane und ihre Aufgaben",
+    "Wahlen und Wahlrecht",
+    "Bundesländer und Landessymbole",
+    "Nationalfeiertag und Gedenktage",
+    "Regierungssitze und Staatsgebäude",
+    "Orden, Pass und staatliche Insignien"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 2,
+      "map_outline": 3,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bundesflagge",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 4
+    },
+    {
+      "name": "Außenspiegel-Fahne",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 5
+    },
+    {
+      "name": "Halbmast",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 8
+    },
+    {
+      "name": "Flagge der DDR",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 9
+    },
+    {
+      "name": "Beflaggungstage",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 11
+    },
+    {
+      "name": "Schwarz-Weiß-Rot",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 12
+    },
+    {
+      "name": "Dienstflagge der Bundesbehörden",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 12
+    },
+    {
+      "name": "Deutscher Bund",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 12
+    },
+    {
+      "name": "Artikel 22 Grundgesetz",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 13
+    },
+    {
+      "name": "Wendeflagge mit ausgeschnittenem Wappen",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 13
+    },
+    {
+      "name": "Flaggenstreit der Weimarer Republik",
+      "facet": "Bundesflagge und Schwarz-Rot-Gold",
+      "known_at": 14
+    },
+    {
+      "name": "Adler auf dem Nationaltrikot",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 4
+    },
+    {
+      "name": "Bundeswappen",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 6
+    },
+    {
+      "name": "Wappentier",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 6
+    },
+    {
+      "name": "Deutsche Euromünzen",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 6
+    },
+    {
+      "name": "Eichenlaub",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 9
+    },
+    {
+      "name": "Reichsadler",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 10
+    },
+    {
+      "name": "Doppeladler",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 11
+    },
+    {
+      "name": "Preußischer Adler",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 11
+    },
+    {
+      "name": "Hammer und Zirkel",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 11
+    },
+    {
+      "name": "Heraldik",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 12
+    },
+    {
+      "name": "Bundesschild",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 13
+    },
+    {
+      "name": "Bundessiegel",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 13
+    },
+    {
+      "name": "Schwarz-Gold als Reichsfarben",
+      "facet": "Bundesadler und Bundeswappen",
+      "known_at": 13
+    },
+    {
+      "name": "Nationalhymne vor Länderspielen",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 4
+    },
+    {
+      "name": "Dritte Strophe",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 9
+    },
+    {
+      "name": "„Deutschland, Deutschland über alles“",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 10
+    },
+    {
+      "name": "Auferstanden aus Ruinen",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 11
+    },
+    {
+      "name": "Kaiserhymne „Gott erhalte Franz den Kaiser“",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 14
+    },
+    {
+      "name": "Kaiserquartett",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 14
+    },
+    {
+      "name": "Hanns Eisler",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 14
+    },
+    {
+      "name": "Johannes R. Becher",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 14
+    },
+    {
+      "name": "Kinderhymne",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 14
+    },
+    {
+      "name": "Heil dir im Siegerkranz",
+      "facet": "Nationalhymne und Deutschlandlied",
+      "known_at": 14
+    },
+    {
+      "name": "Verkündung des Grundgesetzes",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 9
+    },
+    {
+      "name": "Westalliierte",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 10
+    },
+    {
+      "name": "Präambel",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 11
+    },
+    {
+      "name": "Mütter des Grundgesetzes",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 12
+    },
+    {
+      "name": "Provisorium",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 12
+    },
+    {
+      "name": "Carlo Schmid",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 13
+    },
+    {
+      "name": "Museum Koenig",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 13
+    },
+    {
+      "name": "Frankfurter Dokumente",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 14
+    },
+    {
+      "name": "Artikel 146 Grundgesetz",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 14
+    },
+    {
+      "name": "Bayerns Nein zum Grundgesetz",
+      "facet": "Entstehung des Grundgesetzes",
+      "known_at": 14
+    },
+    {
+      "name": "Meinungsfreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 7
+    },
+    {
+      "name": "Religionsfreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 8
+    },
+    {
+      "name": "Gleichberechtigung von Mann und Frau",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 8
+    },
+    {
+      "name": "Pressefreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 9
+    },
+    {
+      "name": "Briefgeheimnis",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 9
+    },
+    {
+      "name": "Gleichheit vor dem Gesetz",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 9
+    },
+    {
+      "name": "Wehrpflicht",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 9
+    },
+    {
+      "name": "Versammlungsfreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 10
+    },
+    {
+      "name": "Asylrecht",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 10
+    },
+    {
+      "name": "Diskriminierungsverbot",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 10
+    },
+    {
+      "name": "Unverletzlichkeit der Wohnung",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 11
+    },
+    {
+      "name": "Recht auf Leben und körperliche Unversehrtheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 11
+    },
+    {
+      "name": "Abschaffung der Todesstrafe",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 11
+    },
+    {
+      "name": "Kriegsdienstverweigerung",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 11
+    },
+    {
+      "name": "Kunstfreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 11
+    },
+    {
+      "name": "Berufsfreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 12
+    },
+    {
+      "name": "„Eigentum verpflichtet“",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 12
+    },
+    {
+      "name": "Petitionsrecht",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 12
+    },
+    {
+      "name": "Freizügigkeit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 12
+    },
+    {
+      "name": "Vereinigungsfreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 13
+    },
+    {
+      "name": "Allgemeine Handlungsfreiheit",
+      "facet": "Grundrechte und Menschenwürde",
+      "known_at": 13
+    },
+    {
+      "name": "Demokratie",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 6
+    },
+    {
+      "name": "Republik",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 8
+    },
+    {
+      "name": "Rechtsstaat",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 9
+    },
+    {
+      "name": "Gewaltenteilung",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 9
+    },
+    {
+      "name": "Sozialstaat",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 10
+    },
+    {
+      "name": "Zweidrittelmehrheit",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 11
+    },
+    {
+      "name": "Verfassungsschutz",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 11
+    },
+    {
+      "name": "Volkssouveränität",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 12
+    },
+    {
+      "name": "Parteiverbot",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 12
+    },
+    {
+      "name": "Verfassungsänderung",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 12
+    },
+    {
+      "name": "Widerstandsrecht",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 13
+    },
+    {
+      "name": "Wehrhafte Demokratie",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 13
+    },
+    {
+      "name": "Artikel 20 Grundgesetz",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 13
+    },
+    {
+      "name": "Freiheitlich-demokratische Grundordnung",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 13
+    },
+    {
+      "name": "Subsidiarität",
+      "facet": "Staatsprinzipien und Ewigkeitsklausel",
+      "known_at": 14
+    },
+    {
+      "name": "Bundeskanzler",
+      "facet": "Verfassungsorgane und ihre Aufgaben",
+      "known_at": 6
+    },
+    {
+      "name": "Bundesregierung",
+      "facet": "Verfassungsorgane und ihre Aufgaben",
+      "known_at": 8
+    },
+    {
+      "name": "Bundesminister",
+      "facet": "Verfassungsorgane und ihre Aufgaben",
+      "known_at": 9
+    },
+    {
+      "name": "Opposition",
+      "facet": "Verfassungsorgane und ihre Aufgaben",
+      "known_at": 10
+    },
+    {
+      "name": "Fraktion",
+      "facet": "Verfassungsorgane und ihre Aufgaben",
+      "known_at": 11
+    },
+    {
+      "name": "Verfassungsbeschwerde",
+      "facet": "Verfassungsorgane und ihre Aufgaben",
+      "known_at": 12
+    },
+    {
+      "name": "Vermittlungsausschuss",
+      "facet": "Verfassungsorgane und ihre Aufgaben",
+      "known_at": 13
+    },
+    {
+      "name": "Wahlurne",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 5
+    },
+    {
+      "name": "Wahlkabine",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 6
+    },
+    {
+      "name": "Stimmzettel",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 6
+    },
+    {
+      "name": "Bundestagswahl",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 8
+    },
+    {
+      "name": "Wahlalter",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 8
+    },
+    {
+      "name": "Briefwahl",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 8
+    },
+    {
+      "name": "Koalition",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 9
+    },
+    {
+      "name": "Wahlhelfer",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 9
+    },
+    {
+      "name": "Wahlbenachrichtigung",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 10
+    },
+    {
+      "name": "Frauenwahlrecht 1918",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 10
+    },
+    {
+      "name": "Landtagswahl",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 10
+    },
+    {
+      "name": "Europawahl",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 10
+    },
+    {
+      "name": "Wahlkreis",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 11
+    },
+    {
+      "name": "Wahlrechtsgrundsätze",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 11
+    },
+    {
+      "name": "Wahl-O-Mat",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 11
+    },
+    {
+      "name": "Kommunalwahl",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 11
+    },
+    {
+      "name": "Direktmandat",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 12
+    },
+    {
+      "name": "Überhangmandat",
+      "facet": "Wahlen und Wahlrecht",
+      "known_at": 13
+    },
+    {
+      "name": "Bundesland",
+      "facet": "Bundesländer und Landessymbole",
+      "known_at": 5
+    },
+    {
+      "name": "Landeshauptstadt",
+      "facet": "Bundesländer und Landessymbole",
+      "known_at": 8
+    },
+    {
+      "name": "Schweigeminute",
+      "facet": "Nationalfeiertag und Gedenktage",
+      "known_at": 6
+    },
+    {
+      "name": "Tag der Befreiung",
+      "facet": "Nationalfeiertag und Gedenktage",
+      "known_at": 10
+    },
+    {
+      "name": "Reichspogromnacht",
+      "facet": "Nationalfeiertag und Gedenktage",
+      "known_at": 11
+    },
+    {
+      "name": "Schicksalstag 9. November",
+      "facet": "Nationalfeiertag und Gedenktage",
+      "known_at": 12
+    },
+    {
+      "name": "Verfassungstag",
+      "facet": "Nationalfeiertag und Gedenktage",
+      "known_at": 12
+    },
+    {
+      "name": "Gedenkstunde im Bundestag",
+      "facet": "Nationalfeiertag und Gedenktage",
+      "known_at": 13
+    },
+    {
+      "name": "„Dem Deutschen Volke“",
+      "facet": "Regierungssitze und Staatsgebäude",
+      "known_at": 9
+    },
+    {
+      "name": "Regierungsviertel",
+      "facet": "Regierungssitze und Staatsgebäude",
+      "known_at": 10
+    },
+    {
+      "name": "Norman Foster",
+      "facet": "Regierungssitze und Staatsgebäude",
+      "known_at": 13
+    },
+    {
+      "name": "Preußisches Herrenhaus",
+      "facet": "Regierungssitze und Staatsgebäude",
+      "known_at": 14
+    },
+    {
+      "name": "Paul-Löbe-Haus",
+      "facet": "Regierungssitze und Staatsgebäude",
+      "known_at": 14
+    },
+    {
+      "name": "Langer Eugen",
+      "facet": "Regierungssitze und Staatsgebäude",
+      "known_at": 14
+    },
+    {
+      "name": "Euro-Kennzeichen mit D",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 7
+    },
+    {
+      "name": "Staatsbesuch",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 9
+    },
+    {
+      "name": "Staatsangehörigkeit",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 10
+    },
+    {
+      "name": "Einbürgerungstest",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 11
+    },
+    {
+      "name": "Dienstsiegel",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 11
+    },
+    {
+      "name": "Großer Zapfenstreich",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 11
+    },
+    {
+      "name": "Reichsinsignien",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 12
+    },
+    {
+      "name": "Silbernes Lorbeerblatt",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 12
+    },
+    {
+      "name": "Wachbataillon",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 12
+    },
+    {
+      "name": "Diplomatenpass",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 12
+    },
+    {
+      "name": "Bundesdruckerei",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 12
+    },
+    {
+      "name": "Pour le Mérite",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 13
+    },
+    {
+      "name": "Heilige Lanze",
+      "facet": "Orden, Pass und staatliche Insignien",
+      "known_at": 13
+    }
+  ]
+}

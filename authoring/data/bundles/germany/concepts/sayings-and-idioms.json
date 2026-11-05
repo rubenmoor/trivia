@@ -1,0 +1,932 @@
+{
+  "subcategory": "sayings-and-idioms",
+  "facets": [
+    "Tierische Redewendungen",
+    "Redewendungen rund ums Essen",
+    "Körperteile in Redewendungen",
+    "Klassische Sprichwörter",
+    "Redensarten aus der Geschichte",
+    "Redewendungen aus Handwerk und Arbeit",
+    "Bibel und Märchen als Quelle",
+    "Wetter, Natur und Jahreszeiten",
+    "Geld, Glück und Pech",
+    "Zahlen und Farben in Redewendungen",
+    "Geflügelte Worte aus Literatur und Film",
+    "Moderne Sprüche und Jugendsprache"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wie ein Elefant im Porzellanladen",
+      "facet": "Tierische Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Einen Vogel haben",
+      "facet": "Tierische Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Bärenhunger",
+      "facet": "Tierische Redewendungen",
+      "known_at": 3
+    },
+    {
+      "name": "Zwei Fliegen mit einer Klappe schlagen",
+      "facet": "Tierische Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Das ist für die Katz",
+      "facet": "Tierische Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Krokodilstränen",
+      "facet": "Tierische Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Da lachen ja die Hühner",
+      "facet": "Tierische Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Mit einem Affenzahn",
+      "facet": "Tierische Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Den Braten riechen",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 10
+    },
+    {
+      "name": "Seinen Senf dazugeben",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 8
+    },
+    {
+      "name": "In den sauren Apfel beißen",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Jemandem Honig ums Maul schmieren",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Das ist nicht mein Bier",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Sich freuen wie ein Schnitzel",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 10
+    },
+    {
+      "name": "Eine Extrawurst bekommen",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 7
+    },
+    {
+      "name": "Viele Köche verderben den Brei",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 7
+    },
+    {
+      "name": "Um den heißen Brei herumreden",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 8
+    },
+    {
+      "name": "Das Gelbe vom Ei",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 8
+    },
+    {
+      "name": "Quark erzählen",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 8
+    },
+    {
+      "name": "Nicht die Bohne",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Jemandem die Suppe versalzen",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 10
+    },
+    {
+      "name": "Äpfel mit Birnen vergleichen",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 6
+    },
+    {
+      "name": "Für einen Apfel und ein Ei",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 9
+    },
+    {
+      "name": "Den Kohl fett machen",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 13
+    },
+    {
+      "name": "Jemandem reinen Wein einschenken",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 11
+    },
+    {
+      "name": "Abwarten und Tee trinken",
+      "facet": "Redewendungen rund ums Essen",
+      "known_at": 7
+    },
+    {
+      "name": "Die Nase voll haben",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Jemandem auf der Nase herumtanzen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Ein Auge zudrücken",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Etwas auf die leichte Schulter nehmen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Jemandem die kalte Schulter zeigen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Haare auf den Zähnen haben",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Sich kein Bein ausreißen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Jemanden um den Finger wickeln",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Lange Finger machen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Etwas übers Knie brechen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Die Ohren spitzen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Sich etwas hinter die Ohren schreiben",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Ein Brett vor dem Kopf haben",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Auf großem Fuß leben",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Das Herz auf der Zunge tragen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 12
+    },
+    {
+      "name": "Den Mund zu voll nehmen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Kalte Füße bekommen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Auf Herz und Nieren prüfen",
+      "facet": "Körperteile in Redewendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Morgenstund hat Gold im Mund",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 6
+    },
+    {
+      "name": "Ohne Fleiß kein Preis",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Wer zuletzt lacht, lacht am besten",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 6
+    },
+    {
+      "name": "Lügen haben kurze Beine",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Übung macht den Meister",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 4
+    },
+    {
+      "name": "Reden ist Silber, Schweigen ist Gold",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 7
+    },
+    {
+      "name": "Was Hänschen nicht lernt, lernt Hans nimmermehr",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Aller Anfang ist schwer",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 6
+    },
+    {
+      "name": "Der frühe Vogel fängt den Wurm",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Ende gut, alles gut",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Wer rastet, der rostet",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Kommt Zeit, kommt Rat",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Hunde, die bellen, beißen nicht",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 7
+    },
+    {
+      "name": "Ordnung ist das halbe Leben",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 8
+    },
+    {
+      "name": "Probieren geht über Studieren",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 8
+    },
+    {
+      "name": "Gut Ding will Weile haben",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Wer A sagt, muss auch B sagen",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Doppelt hält besser",
+      "facet": "Klassische Sprichwörter",
+      "known_at": 6
+    },
+    {
+      "name": "Den Rubikon überschreiten",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Pyrrhussieg",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Das geht auf keine Kuhhaut",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Jemanden an den Pranger stellen",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Spießrutenlaufen",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Unter einer Decke stecken",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Bis in die Puppen",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Aus dem Stegreif",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Hinter schwedischen Gardinen",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Alter Schwede",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Damoklesschwert",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Mit Kind und Kegel",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Sein Waterloo erleben",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Ich verstehe nur Bahnhof",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 8
+    },
+    {
+      "name": "Das Ei des Kolumbus",
+      "facet": "Redensarten aus der Geschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Jemandem nicht das Wasser reichen können",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 11
+    },
+    {
+      "name": "Aus dem Ruder laufen",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 11
+    },
+    {
+      "name": "Die Werbetrommel rühren",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 11
+    },
+    {
+      "name": "Ins Fettnäpfchen treten",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 8
+    },
+    {
+      "name": "Alles über einen Kamm scheren",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 10
+    },
+    {
+      "name": "Unter Dach und Fach",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 11
+    },
+    {
+      "name": "Mit allen Wassern gewaschen",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 12
+    },
+    {
+      "name": "Jemanden über den Löffel balbieren",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 14
+    },
+    {
+      "name": "Einen Zahn zulegen",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 10
+    },
+    {
+      "name": "Den Stein ins Rollen bringen",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 8
+    },
+    {
+      "name": "Etwas aus dem Effeff können",
+      "facet": "Redewendungen aus Handwerk und Arbeit",
+      "known_at": 12
+    },
+    {
+      "name": "Perlen vor die Säue werfen",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 11
+    },
+    {
+      "name": "Wer anderen eine Grube gräbt, fällt selbst hinein",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 8
+    },
+    {
+      "name": "Sein Licht unter den Scheffel stellen",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 13
+    },
+    {
+      "name": "Ein Buch mit sieben Siegeln",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 11
+    },
+    {
+      "name": "Tohuwabohu",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 11
+    },
+    {
+      "name": "Ungläubiger Thomas",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 11
+    },
+    {
+      "name": "Auge um Auge, Zahn um Zahn",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 10
+    },
+    {
+      "name": "Seine Hände in Unschuld waschen",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 12
+    },
+    {
+      "name": "Ein Wolf im Schafspelz",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 10
+    },
+    {
+      "name": "Der verlorene Sohn",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 11
+    },
+    {
+      "name": "Von Pontius zu Pilatus",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 12
+    },
+    {
+      "name": "Hiobsbotschaft",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 12
+    },
+    {
+      "name": "Sündenbock",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 11
+    },
+    {
+      "name": "Im Adamskostüm",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 10
+    },
+    {
+      "name": "Alle Jubeljahre",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 12
+    },
+    {
+      "name": "Die Guten ins Töpfchen, die Schlechten ins Kröpfchen",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 6
+    },
+    {
+      "name": "Spieglein, Spieglein an der Wand",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 3
+    },
+    {
+      "name": "Und wenn sie nicht gestorben sind",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 4
+    },
+    {
+      "name": "Ach, wie gut, dass niemand weiß",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 6
+    },
+    {
+      "name": "Knusper, knusper, Knäuschen",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 5
+    },
+    {
+      "name": "Rapunzel, lass dein Haar herunter",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 6
+    },
+    {
+      "name": "Dornröschenschlaf",
+      "facet": "Bibel und Märchen als Quelle",
+      "known_at": 8
+    },
+    {
+      "name": "Eine Schwalbe macht noch keinen Sommer",
+      "facet": "Wetter, Natur und Jahreszeiten",
+      "known_at": 10
+    },
+    {
+      "name": "Wie aus heiterem Himmel",
+      "facet": "Wetter, Natur und Jahreszeiten",
+      "known_at": 8
+    },
+    {
+      "name": "Gras über die Sache wachsen lassen",
+      "facet": "Wetter, Natur und Jahreszeiten",
+      "known_at": 10
+    },
+    {
+      "name": "Jemandem den Wind aus den Segeln nehmen",
+      "facet": "Wetter, Natur und Jahreszeiten",
+      "known_at": 10
+    },
+    {
+      "name": "Steter Tropfen höhlt den Stein",
+      "facet": "Wetter, Natur und Jahreszeiten",
+      "known_at": 10
+    },
+    {
+      "name": "Hinter dem Mond leben",
+      "facet": "Wetter, Natur und Jahreszeiten",
+      "known_at": 8
+    },
+    {
+      "name": "Wer den Pfennig nicht ehrt, ist des Talers nicht wert",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 10
+    },
+    {
+      "name": "Zeit ist Geld",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 6
+    },
+    {
+      "name": "Geld stinkt nicht",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 10
+    },
+    {
+      "name": "Glück im Unglück",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 7
+    },
+    {
+      "name": "Schornsteinfeger als Glücksbringer",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 5
+    },
+    {
+      "name": "Den Gürtel enger schnallen",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 9
+    },
+    {
+      "name": "Der Groschen ist gefallen",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 9
+    },
+    {
+      "name": "Ebbe in der Kasse",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 10
+    },
+    {
+      "name": "Etwas auf die hohe Kante legen",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 11
+    },
+    {
+      "name": "Geld wie Heu haben",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 9
+    },
+    {
+      "name": "Mehr Glück als Verstand",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 8
+    },
+    {
+      "name": "Sich nicht lumpen lassen",
+      "facet": "Geld, Glück und Pech",
+      "known_at": 12
+    },
+    {
+      "name": "Das Blaue vom Himmel versprechen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Grün hinter den Ohren",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Schwarzfahren",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Blau sein",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Ins Schwarze treffen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Alles im grünen Bereich",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Rot sehen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Mit einem blauen Auge davonkommen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Wie ein rotes Tuch",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Eine weiße Weste haben",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Sich schwarzärgern",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Fünf gerade sein lassen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 11
+    },
+    {
+      "name": "Das fünfte Rad am Wagen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Unter vier Augen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Nicht bis drei zählen können",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 6
+    },
+    {
+      "name": "Siebensachen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Der rote Faden",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Pi mal Daumen",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 9
+    },
+    {
+      "name": "Auf allen vieren",
+      "facet": "Zahlen und Farben in Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Da steh ich nun, ich armer Tor",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 12
+    },
+    {
+      "name": "Das also war des Pudels Kern",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 12
+    },
+    {
+      "name": "Grau, teurer Freund, ist alle Theorie",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 14
+    },
+    {
+      "name": "Zwei Seelen wohnen, ach! in meiner Brust",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 13
+    },
+    {
+      "name": "Die Axt im Haus erspart den Zimmermann",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 12
+    },
+    {
+      "name": "Durch diese hohle Gasse muss er kommen",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 13
+    },
+    {
+      "name": "Drum prüfe, wer sich ewig bindet",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 12
+    },
+    {
+      "name": "Dieses war der erste Streich",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 9
+    },
+    {
+      "name": "Vater werden ist nicht schwer",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 12
+    },
+    {
+      "name": "Wer reitet so spät durch Nacht und Wind",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 11
+    },
+    {
+      "name": "Das ist ein weites Feld",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 14
+    },
+    {
+      "name": "Mehr Licht",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 13
+    },
+    {
+      "name": "Denk ich an Deutschland in der Nacht",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 13
+    },
+    {
+      "name": "Ein Klavier, ein Klavier",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 12
+    },
+    {
+      "name": "Chantal, heul leise",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 10
+    },
+    {
+      "name": "Ich glaub, mich tritt ein Pferd",
+      "facet": "Geflügelte Worte aus Literatur und Film",
+      "known_at": 9
+    },
+    {
+      "name": "Goofy",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 9
+    },
+    {
+      "name": "Alter!",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Krass",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 5
+    },
+    {
+      "name": "LOL",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 6
+    },
+    {
+      "name": "Isso",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Ich bin raus",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Gönn dir",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Null Bock",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Chillen",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Denglisch",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 10
+    },
+    {
+      "name": "Ich habe fertig",
+      "facet": "Moderne Sprüche und Jugendsprache",
+      "known_at": 11
+    }
+  ]
+}

@@ -1,0 +1,932 @@
+{
+  "subcategory": "slang-and-everyday-words",
+  "facets": [
+    "Jugendwörter des Jahres",
+    "Aktuelle Jugendsprache",
+    "Jugendsprache früherer Jahrzehnte",
+    "Anglizismen im Alltag",
+    "Chat- und Internetsprache",
+    "Abkürzungen und Akronyme",
+    "Alltägliche Redewendungen",
+    "Schimpfwörter und Neckereien",
+    "Ausrufe und Füllwörter",
+    "Umgangssprache zu Geld, Essen und Alltag",
+    "Kiezdeutsch und Mehrsprachigkeit",
+    "Umgangssprache in Film, Musik und Medien"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 2,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Gammelfleischparty",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 13
+    },
+    {
+      "name": "hartzen",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 13
+    },
+    {
+      "name": "Niveaulimbo",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 12
+    },
+    {
+      "name": "Swag",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 8
+    },
+    {
+      "name": "Smombie",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 10
+    },
+    {
+      "name": "fly sein",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 12
+    },
+    {
+      "name": "I bims",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 9
+    },
+    {
+      "name": "das crazy",
+      "facet": "Jugendwörter des Jahres",
+      "known_at": 6
+    },
+    {
+      "name": "Bro",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 4
+    },
+    {
+      "name": "slay",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "no cap",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "lowkey",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "bodenlos",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "tuff",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "NPC",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Side Eye",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Sigma",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Six Seven",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Brainrot",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Skibidi",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 4
+    },
+    {
+      "name": "delulu",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Red Flag",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 7
+    },
+    {
+      "name": "ghosten",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Schere",
+      "facet": "Aktuelle Jugendsprache",
+      "known_at": 9
+    },
+    {
+      "name": "knorke",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 11
+    },
+    {
+      "name": "Halbstarke",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 12
+    },
+    {
+      "name": "töfte",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 13
+    },
+    {
+      "name": "geil",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 7
+    },
+    {
+      "name": "fetzig",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 11
+    },
+    {
+      "name": "abgefahren",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 9
+    },
+    {
+      "name": "Spießer",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 9
+    },
+    {
+      "name": "korrekt",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 8
+    },
+    {
+      "name": "astrein",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 10
+    },
+    {
+      "name": "oberaffengeil",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 11
+    },
+    {
+      "name": "urst",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 14
+    },
+    {
+      "name": "Schnitte",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 12
+    },
+    {
+      "name": "tote Hose",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 10
+    },
+    {
+      "name": "Fete",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 10
+    },
+    {
+      "name": "Schickimicki",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 11
+    },
+    {
+      "name": "ätzend",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 9
+    },
+    {
+      "name": "Proll",
+      "facet": "Jugendsprache früherer Jahrzehnte",
+      "known_at": 11
+    },
+    {
+      "name": "Handy",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 3
+    },
+    {
+      "name": "Homeoffice",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Beamer",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 8
+    },
+    {
+      "name": "Oldtimer",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 8
+    },
+    {
+      "name": "Smoking",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Showmaster",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 12
+    },
+    {
+      "name": "Meeting",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 8
+    },
+    {
+      "name": "Deadline",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Coffee to go",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 8
+    },
+    {
+      "name": "Laptop",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Wellness",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Babysitter",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Feedback",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 8
+    },
+    {
+      "name": "Mobbing",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 6
+    },
+    {
+      "name": "Influencer",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Selfie",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 3
+    },
+    {
+      "name": "shoppen",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Body Bag",
+      "facet": "Anglizismen im Alltag",
+      "known_at": 13
+    },
+    {
+      "name": "Emoji",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 3
+    },
+    {
+      "name": "Hashtag",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Meme",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Troll",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Noob",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 5
+    },
+    {
+      "name": "GG",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 6
+    },
+    {
+      "name": "AFK",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Spoiler",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 6
+    },
+    {
+      "name": "Clickbait",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 8
+    },
+    {
+      "name": "Hater",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Follower",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 5
+    },
+    {
+      "name": "Lag",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Let's Play",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 6
+    },
+    {
+      "name": "OMG",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 5
+    },
+    {
+      "name": "XD",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 7
+    },
+    {
+      "name": "Lurker",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 12
+    },
+    {
+      "name": "Story",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 6
+    },
+    {
+      "name": "Stan",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 10
+    },
+    {
+      "name": "Shitstorm",
+      "facet": "Chat- und Internetsprache",
+      "known_at": 9
+    },
+    {
+      "name": "LG",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 6
+    },
+    {
+      "name": "MfG",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 9
+    },
+    {
+      "name": "HDL",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 7
+    },
+    {
+      "name": "HDGDL",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 9
+    },
+    {
+      "name": "vllt",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 7
+    },
+    {
+      "name": "ka",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 8
+    },
+    {
+      "name": "z. B.",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 4
+    },
+    {
+      "name": "usw.",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 5
+    },
+    {
+      "name": "Azubi",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 8
+    },
+    {
+      "name": "Kita",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 4
+    },
+    {
+      "name": "Abi",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 6
+    },
+    {
+      "name": "Kripo",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 10
+    },
+    {
+      "name": "GmbH",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 11
+    },
+    {
+      "name": "ADAC",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 9
+    },
+    {
+      "name": "TÜV",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 9
+    },
+    {
+      "name": "ICE",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 7
+    },
+    {
+      "name": "BAföG",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 12
+    },
+    {
+      "name": "Kfz",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 10
+    },
+    {
+      "name": "WG",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 9
+    },
+    {
+      "name": "Lkw",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 7
+    },
+    {
+      "name": "Navi",
+      "facet": "Abkürzungen und Akronyme",
+      "known_at": 5
+    },
+    {
+      "name": "Ich glaub, mein Schwein pfeift",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Tomaten auf den Augen",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 5
+    },
+    {
+      "name": "Einen Bären aufbinden",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Blaumachen",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Alles in Butter",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 8
+    },
+    {
+      "name": "Ein Hühnchen rupfen",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 10
+    },
+    {
+      "name": "Jetzt geht es um die Wurst",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Sich zum Affen machen",
+      "facet": "Alltägliche Redewendungen",
+      "known_at": 7
+    },
+    {
+      "name": "Warmduscher",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 9
+    },
+    {
+      "name": "Weichei",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 7
+    },
+    {
+      "name": "Schlafmütze",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 4
+    },
+    {
+      "name": "Trantüte",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 10
+    },
+    {
+      "name": "Hosenscheißer",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 8
+    },
+    {
+      "name": "Spaßbremse",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 7
+    },
+    {
+      "name": "Erbsenzähler",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 10
+    },
+    {
+      "name": "Lappen",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 8
+    },
+    {
+      "name": "Quatschkopf",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 4
+    },
+    {
+      "name": "Besserwisser",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 6
+    },
+    {
+      "name": "Frechdachs",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 4
+    },
+    {
+      "name": "Pfeife",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 9
+    },
+    {
+      "name": "Streber",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 6
+    },
+    {
+      "name": "Petze",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 5
+    },
+    {
+      "name": "Schattenparker",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 12
+    },
+    {
+      "name": "Dumpfbacke",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 9
+    },
+    {
+      "name": "Stinkstiefel",
+      "facet": "Schimpfwörter und Neckereien",
+      "known_at": 8
+    },
+    {
+      "name": "Hä",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 3
+    },
+    {
+      "name": "Boah",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 3
+    },
+    {
+      "name": "Ätsch",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 3
+    },
+    {
+      "name": "Igitt",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 2
+    },
+    {
+      "name": "Aua",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 1
+    },
+    {
+      "name": "Juhu",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 2
+    },
+    {
+      "name": "Hoppla",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 3
+    },
+    {
+      "name": "Na",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Halt stopp",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 8
+    },
+    {
+      "name": "Potzblitz",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 9
+    },
+    {
+      "name": "Heidewitzka",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 13
+    },
+    {
+      "name": "Nö",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 3
+    },
+    {
+      "name": "Hau rein",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 8
+    },
+    {
+      "name": "Ach du Schreck",
+      "facet": "Ausrufe und Füllwörter",
+      "known_at": 5
+    },
+    {
+      "name": "Kohle",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 6
+    },
+    {
+      "name": "Knete",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Moneten",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Kröten",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Zaster",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Mäuse",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Pleite",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Kohldampf",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Drahtesel",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Klamotten",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 4
+    },
+    {
+      "name": "Glotze",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 6
+    },
+    {
+      "name": "Pauker",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Spickzettel",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 5
+    },
+    {
+      "name": "Knöllchen",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "Späti",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 10
+    },
+    {
+      "name": "schnorren",
+      "facet": "Umgangssprache zu Geld, Essen und Alltag",
+      "known_at": 9
+    },
+    {
+      "name": "Kiezdeutsch",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 10
+    },
+    {
+      "name": "Yalla",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 6
+    },
+    {
+      "name": "Lan",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 9
+    },
+    {
+      "name": "Moruk",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 10
+    },
+    {
+      "name": "Habibi",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 7
+    },
+    {
+      "name": "Akh",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 9
+    },
+    {
+      "name": "Isch schwör",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 7
+    },
+    {
+      "name": "Lass ma Kino gehen",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 11
+    },
+    {
+      "name": "Kanak Sprak",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 14
+    },
+    {
+      "name": "Feridun Zaimoglu",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 14
+    },
+    {
+      "name": "Heike Wiese",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 15
+    },
+    {
+      "name": "Alman",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 8
+    },
+    {
+      "name": "Tamam",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 9
+    },
+    {
+      "name": "Talahon",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 9
+    },
+    {
+      "name": "Bratan",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 11
+    },
+    {
+      "name": "Inschallah",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 9
+    },
+    {
+      "name": "Çüş",
+      "facet": "Kiezdeutsch und Mehrsprachigkeit",
+      "known_at": 13
+    },
+    {
+      "name": "Was guckst du?!",
+      "facet": "Umgangssprache in Film, Musik und Medien",
+      "known_at": 11
+    },
+    {
+      "name": "Erkan & Stefan",
+      "facet": "Umgangssprache in Film, Musik und Medien",
+      "known_at": 13
+    },
+    {
+      "name": "Die Atzen",
+      "facet": "Umgangssprache in Film, Musik und Medien",
+      "known_at": 11
+    }
+  ]
+}

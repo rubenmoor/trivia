@@ -1,0 +1,1247 @@
+{
+  "subcategory": "bundesliga-and-clubs",
+  "facets": [
+    "Traditionsvereine und Spitznamen",
+    "Stadien und Spielstätten",
+    "Meisterschaften und Rekorde",
+    "Legendäre Spieler und Torjäger",
+    "Trainer und Vereinsbosse",
+    "Maskottchen, Wappen und Vereinsfarben",
+    "Derbys und Rivalitäten",
+    "Fankultur und Vereinslieder",
+    "DFB-Pokal und Europapokal-Abende",
+    "Geschichte der Bundesliga",
+    "Regeln, Spielbetrieb und Fußballbegriffe",
+    "Frauen-Bundesliga und Nachwuchs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 3,
+      "record": 5,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "FC Bayern München",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 2
+    },
+    {
+      "name": "Borussia Dortmund",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 3
+    },
+    {
+      "name": "FC Schalke 04",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 5
+    },
+    {
+      "name": "Hamburger SV",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Werder Bremen",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "1. FC Köln",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Borussia Mönchengladbach",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 7
+    },
+    {
+      "name": "VfB Stuttgart",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Eintracht Frankfurt",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Bayer 04 Leverkusen",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "1. FC Kaiserslautern",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "1. FC Nürnberg",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "Hertha BSC",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 7
+    },
+    {
+      "name": "FC St. Pauli",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "1. FC Union Berlin",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "VfL Wolfsburg",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 7
+    },
+    {
+      "name": "SC Freiburg",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 7
+    },
+    {
+      "name": "RB Leipzig",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 6
+    },
+    {
+      "name": "Fortuna Düsseldorf",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "TSV 1860 München",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 9
+    },
+    {
+      "name": "Hannover 96",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 8
+    },
+    {
+      "name": "Dynamo Dresden",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 10
+    },
+    {
+      "name": "MSV Duisburg",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 11
+    },
+    {
+      "name": "Eintracht Braunschweig",
+      "facet": "Traditionsvereine und Spitznamen",
+      "known_at": 11
+    },
+    {
+      "name": "Südtribüne Dortmund",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 7
+    },
+    {
+      "name": "Veltins-Arena",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 8
+    },
+    {
+      "name": "Volksparkstadion",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 9
+    },
+    {
+      "name": "Weserstadion",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 9
+    },
+    {
+      "name": "RheinEnergieStadion",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 10
+    },
+    {
+      "name": "Borussia-Park",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 10
+    },
+    {
+      "name": "Fritz-Walter-Stadion",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 10
+    },
+    {
+      "name": "Millerntor-Stadion",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 10
+    },
+    {
+      "name": "Stadion An der Alten Försterei",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 10
+    },
+    {
+      "name": "Waldstadion Frankfurt",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 10
+    },
+    {
+      "name": "MHPArena",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 11
+    },
+    {
+      "name": "BayArena",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 10
+    },
+    {
+      "name": "Red Bull Arena Leipzig",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 9
+    },
+    {
+      "name": "Volkswagen Arena",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 11
+    },
+    {
+      "name": "Max-Morlock-Stadion",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 12
+    },
+    {
+      "name": "Grünwalder Stadion",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 12
+    },
+    {
+      "name": "Bökelberg",
+      "facet": "Stadien und Spielstätten",
+      "known_at": 13
+    },
+    {
+      "name": "Meisterschale",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 5
+    },
+    {
+      "name": "Deutscher Meister",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 4
+    },
+    {
+      "name": "Rekordmeister",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 6
+    },
+    {
+      "name": "Torschützenkönig",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 6
+    },
+    {
+      "name": "Torjägerkanone",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 9
+    },
+    {
+      "name": "Herbstmeister",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 7
+    },
+    {
+      "name": "Double",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 8
+    },
+    {
+      "name": "Triple",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 7
+    },
+    {
+      "name": "Meister der Herzen",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 11
+    },
+    {
+      "name": "Bierdusche",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 6
+    },
+    {
+      "name": "Meisterfeier am Marienplatz",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 8
+    },
+    {
+      "name": "Torrekord in einer Bundesliga-Saison",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 8
+    },
+    {
+      "name": "Ungeschlagene Meistersaison",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 10
+    },
+    {
+      "name": "Aufsteiger als Meister",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 12
+    },
+    {
+      "name": "Bundesliga-Dino",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 10
+    },
+    {
+      "name": "Fußballer des Jahres",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 9
+    },
+    {
+      "name": "Tor des Monats",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 8
+    },
+    {
+      "name": "Ewige Tabelle der Bundesliga",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 11
+    },
+    {
+      "name": "Höchster Bundesligasieg",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 14
+    },
+    {
+      "name": "Rekordspieler der Bundesliga",
+      "facet": "Meisterschaften und Rekorde",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Müller",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 4
+    },
+    {
+      "name": "Manuel Neuer",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 3
+    },
+    {
+      "name": "Philipp Lahm",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 6
+    },
+    {
+      "name": "Oliver Kahn",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 6
+    },
+    {
+      "name": "Uwe Seeler",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 10
+    },
+    {
+      "name": "Robert Lewandowski",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 5
+    },
+    {
+      "name": "Marco Reus",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 6
+    },
+    {
+      "name": "Miroslav Klose",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 6
+    },
+    {
+      "name": "Bastian Schweinsteiger",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 6
+    },
+    {
+      "name": "Karl-Heinz Rummenigge",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 11
+    },
+    {
+      "name": "Jürgen Klinsmann",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 9
+    },
+    {
+      "name": "Michael Ballack",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 9
+    },
+    {
+      "name": "Sepp Maier",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 11
+    },
+    {
+      "name": "Günter Netzer",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 12
+    },
+    {
+      "name": "Klaus Fischer",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 13
+    },
+    {
+      "name": "Charly Körbel",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 13
+    },
+    {
+      "name": "Rudi Völler",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 9
+    },
+    {
+      "name": "Jamal Musiala",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 3
+    },
+    {
+      "name": "Florian Wirtz",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 4
+    },
+    {
+      "name": "Arjen Robben",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 7
+    },
+    {
+      "name": "Franck Ribéry",
+      "facet": "Legendäre Spieler und Torjäger",
+      "known_at": 8
+    },
+    {
+      "name": "Jürgen Klopp",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 4
+    },
+    {
+      "name": "Julian Nagelsmann",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 6
+    },
+    {
+      "name": "Vincent Kompany",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 6
+    },
+    {
+      "name": "Pep Guardiola",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 6
+    },
+    {
+      "name": "Thomas Tuchel",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 7
+    },
+    {
+      "name": "Xabi Alonso",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 8
+    },
+    {
+      "name": "Uli Hoeneß",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 8
+    },
+    {
+      "name": "Ottmar Hitzfeld",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 10
+    },
+    {
+      "name": "Jupp Heynckes",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 10
+    },
+    {
+      "name": "Felix Magath",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 10
+    },
+    {
+      "name": "Christian Streich",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 10
+    },
+    {
+      "name": "Giovanni Trapattoni",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 10
+    },
+    {
+      "name": "Otto Rehhagel",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 11
+    },
+    {
+      "name": "Hans-Joachim Watzke",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 11
+    },
+    {
+      "name": "Urs Fischer",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 11
+    },
+    {
+      "name": "Rudi Assauer",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 12
+    },
+    {
+      "name": "Huub Stevens",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 12
+    },
+    {
+      "name": "Udo Lattek",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Neururer",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 13
+    },
+    {
+      "name": "Dragoslav Stepanović",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 13
+    },
+    {
+      "name": "Hennes Weisweiler",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 14
+    },
+    {
+      "name": "Ernst Happel",
+      "facet": "Trainer und Vereinsbosse",
+      "known_at": 14
+    },
+    {
+      "name": "Berni",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 8
+    },
+    {
+      "name": "Geißbock Hennes",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 7
+    },
+    {
+      "name": "Attila",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 10
+    },
+    {
+      "name": "Dino Hermann",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 10
+    },
+    {
+      "name": "Fritzle",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 11
+    },
+    {
+      "name": "Erwin",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 11
+    },
+    {
+      "name": "Jünter",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 11
+    },
+    {
+      "name": "Herthinho",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 11
+    },
+    {
+      "name": "Wölfi",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 11
+    },
+    {
+      "name": "Brian the Lion",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 11
+    },
+    {
+      "name": "Betzi",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 12
+    },
+    {
+      "name": "Königsblau",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 8
+    },
+    {
+      "name": "Grün-Weiß",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 7
+    },
+    {
+      "name": "Weiß-blaue Rauten",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 7
+    },
+    {
+      "name": "HSV-Raute",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 9
+    },
+    {
+      "name": "Totenkopf-Flagge",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 8
+    },
+    {
+      "name": "Eintracht-Adler",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 9
+    },
+    {
+      "name": "Bayer-Kreuz",
+      "facet": "Maskottchen, Wappen und Vereinsfarben",
+      "known_at": 10
+    },
+    {
+      "name": "Revierderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 6
+    },
+    {
+      "name": "Der Klassiker",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 5
+    },
+    {
+      "name": "Nordderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 9
+    },
+    {
+      "name": "Rheinisches Derby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Rheinderby Köln–Düsseldorf",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Münchner Stadtderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 10
+    },
+    {
+      "name": "Berliner Stadtderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Hamburger Stadtderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 11
+    },
+    {
+      "name": "Südderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Frankenderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Niedersachsenderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Hessenderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Baden-Württemberg-Derby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 12
+    },
+    {
+      "name": "Sachsenderby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 13
+    },
+    {
+      "name": "Rhein-Neckar-Derby",
+      "facet": "Derbys und Rivalitäten",
+      "known_at": 13
+    },
+    {
+      "name": "You'll Never Walk Alone",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 6
+    },
+    {
+      "name": "Stern des Südens",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 9
+    },
+    {
+      "name": "Blau und Weiß, wie lieb ich dich",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Mer stonn zo dir, FC Kölle",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 11
+    },
+    {
+      "name": "Hamburg, meine Perle",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 12
+    },
+    {
+      "name": "Steh auf, wenn du Schalker bist",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 11
+    },
+    {
+      "name": "Nur nach Hause",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 13
+    },
+    {
+      "name": "Humba",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 11
+    },
+    {
+      "name": "Fanschal",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 3
+    },
+    {
+      "name": "Stadionwurst",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 4
+    },
+    {
+      "name": "La Ola",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 5
+    },
+    {
+      "name": "Fankurve",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 6
+    },
+    {
+      "name": "Dauerkarte",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 7
+    },
+    {
+      "name": "Stadionsprecher",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 7
+    },
+    {
+      "name": "Choreografie",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 8
+    },
+    {
+      "name": "Ultras",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 8
+    },
+    {
+      "name": "Pyrotechnik",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 8
+    },
+    {
+      "name": "Auswärtsfahrt",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 8
+    },
+    {
+      "name": "Kutte",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 11
+    },
+    {
+      "name": "Weihnachtssingen an der Alten Försterei",
+      "facet": "Fankultur und Vereinslieder",
+      "known_at": 11
+    },
+    {
+      "name": "DFB-Pokal",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 4
+    },
+    {
+      "name": "Pokalfinale in Berlin",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 7
+    },
+    {
+      "name": "Pokalschreck",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 10
+    },
+    {
+      "name": "Supercup",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 9
+    },
+    {
+      "name": "Henkelpott",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 8
+    },
+    {
+      "name": "Champions-League-Finale 2013",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 8
+    },
+    {
+      "name": "Finale dahoam",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 10
+    },
+    {
+      "name": "Champions-League-Sieg 2001",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 10
+    },
+    {
+      "name": "Champions-League-Sieg des BVB 1997",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 9
+    },
+    {
+      "name": "Eurofighter",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 11
+    },
+    {
+      "name": "Europa-League-Sieg 2022",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 8
+    },
+    {
+      "name": "Europa-League-Sieg 2024",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 11
+    },
+    {
+      "name": "Sextuple",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 10
+    },
+    {
+      "name": "Europapokal der Landesmeister",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 12
+    },
+    {
+      "name": "Europapokal der Pokalsieger",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 13
+    },
+    {
+      "name": "UEFA-Pokal",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 10
+    },
+    {
+      "name": "Wunder von der Weser",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 12
+    },
+    {
+      "name": "Landesmeister-Titel des HSV 1983",
+      "facet": "DFB-Pokal und Europapokal-Abende",
+      "known_at": 13
+    },
+    {
+      "name": "Gründung der Bundesliga",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 9
+    },
+    {
+      "name": "Erste Bundesliga-Saison 1963/64",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 11
+    },
+    {
+      "name": "Timo Konietzka",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 14
+    },
+    {
+      "name": "Tasmania Berlin",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 13
+    },
+    {
+      "name": "Bundesliga-Skandal 1971",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 13
+    },
+    {
+      "name": "Einführung der 2. Bundesliga",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 13
+    },
+    {
+      "name": "DDR-Oberliga",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 11
+    },
+    {
+      "name": "BFC Dynamo",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 13
+    },
+    {
+      "name": "Hansa Rostock",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 11
+    },
+    {
+      "name": "Drei-Punkte-Regel",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 12
+    },
+    {
+      "name": "Bosman-Urteil",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 13
+    },
+    {
+      "name": "Konferenzschaltung",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 9
+    },
+    {
+      "name": "Phantomtor",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 12
+    },
+    {
+      "name": "Geisterspiele",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 6
+    },
+    {
+      "name": "Abstieg des HSV 2018",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 9
+    },
+    {
+      "name": "Gründung des DFB",
+      "facet": "Geschichte der Bundesliga",
+      "known_at": 13
+    },
+    {
+      "name": "Elfmeter",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 2
+    },
+    {
+      "name": "Gelbe Karte",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 2
+    },
+    {
+      "name": "Rote Karte",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 2
+    },
+    {
+      "name": "Schiedsrichter",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 2
+    },
+    {
+      "name": "Eckstoß",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 3
+    },
+    {
+      "name": "Freistoß",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 3
+    },
+    {
+      "name": "Handspiel",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 3
+    },
+    {
+      "name": "Eigentor",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 4
+    },
+    {
+      "name": "Abseits",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 5
+    },
+    {
+      "name": "Nachspielzeit",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 5
+    },
+    {
+      "name": "Abstieg",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 5
+    },
+    {
+      "name": "Tabellenführer",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 5
+    },
+    {
+      "name": "Gelb-Rote Karte",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 6
+    },
+    {
+      "name": "Hattrick",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 6
+    },
+    {
+      "name": "Videoassistent",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 6
+    },
+    {
+      "name": "Elfmeterschießen",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 4
+    },
+    {
+      "name": "Winterpause",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 7
+    },
+    {
+      "name": "Doppelpass",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 8
+    },
+    {
+      "name": "Relegation",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 9
+    },
+    {
+      "name": "Transferfenster",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 9
+    },
+    {
+      "name": "Torlinientechnik",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 9
+    },
+    {
+      "name": "Viererkette",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 10
+    },
+    {
+      "name": "Englische Woche",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 10
+    },
+    {
+      "name": "50+1-Regel",
+      "facet": "Regeln, Spielbetrieb und Fußballbegriffe",
+      "known_at": 11
+    },
+    {
+      "name": "VfL Wolfsburg Frauen",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 8
+    },
+    {
+      "name": "FC Bayern München Frauen",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 9
+    },
+    {
+      "name": "1. FFC Frankfurt",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "Turbine Potsdam",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "Alexandra Popp",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 8
+    },
+    {
+      "name": "Giulia Gwinn",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 9
+    },
+    {
+      "name": "Lena Oberdorf",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 10
+    },
+    {
+      "name": "Klara Bühl",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 10
+    },
+    {
+      "name": "Lea Schüller",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 11
+    },
+    {
+      "name": "Birgit Prinz",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 11
+    },
+    {
+      "name": "Nadine Angerer",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "Lina Magull",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "Silvia Neid",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "Martina Voss-Tecklenburg",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "DFB-Pokal der Frauen",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 11
+    },
+    {
+      "name": "Frauenfußballverbot des DFB",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 13
+    },
+    {
+      "name": "Bambini",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 6
+    },
+    {
+      "name": "E-Jugend",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 6
+    },
+    {
+      "name": "A-Jugend",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 9
+    },
+    {
+      "name": "Nachwuchsleistungszentrum",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "FC Bayern Campus",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 12
+    },
+    {
+      "name": "Fritz-Walter-Medaille",
+      "facet": "Frauen-Bundesliga und Nachwuchs",
+      "known_at": 14
+    }
+  ]
+}

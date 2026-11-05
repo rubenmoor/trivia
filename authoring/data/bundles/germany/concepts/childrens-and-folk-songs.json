@@ -1,0 +1,642 @@
+{
+  "subcategory": "childrens-and-folk-songs",
+  "facets": [
+    "Tierlieder für Kinder",
+    "Abzähl- und Fingerspiele",
+    "Schlaf- und Wiegenlieder",
+    "Weihnachtslieder",
+    "Martins- und Jahreszeitenlieder",
+    "Wander- und Heimatlieder",
+    "Liedermacher fürs Kinderzimmer",
+    "Kinderlieder aus Film und Fernsehen",
+    "Volkslieder der Romantik",
+    "Sagen und Orte in Liedern",
+    "Liedtexte und ihre Wörter",
+    "Geburtstags- und Festlieder"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 5,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 4,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Die Vogelhochzeit",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 5
+    },
+    {
+      "name": "Kuckuck, Kuckuck, ruft's aus dem Wald",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 2
+    },
+    {
+      "name": "Summ, summ, summ, Bienchen summ herum",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 2
+    },
+    {
+      "name": "Der Kuckuck und der Esel",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 5
+    },
+    {
+      "name": "Hopp, hopp, hopp, Pferdchen lauf Galopp",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 3
+    },
+    {
+      "name": "Widewidewenne heißt meine Puthenne",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 10
+    },
+    {
+      "name": "Auf unsrer Wiese gehet was",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 7
+    },
+    {
+      "name": "Ein Hund kam in die Küche",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 9
+    },
+    {
+      "name": "Die Affen rasen durch den Wald",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 5
+    },
+    {
+      "name": "Wer hat die Kokosnuss geklaut",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 4
+    },
+    {
+      "name": "Zwei kleine Wölfe",
+      "facet": "Tierlieder für Kinder",
+      "known_at": 6
+    },
+    {
+      "name": "Ene, mene, muh",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 2
+    },
+    {
+      "name": "Das ist der Daumen",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 2
+    },
+    {
+      "name": "Himpelchen und Pimpelchen",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 6
+    },
+    {
+      "name": "Zehn kleine Zappelmänner",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 4
+    },
+    {
+      "name": "Eins, zwei, Polizei",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 3
+    },
+    {
+      "name": "Hoppe, hoppe Reiter",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 2
+    },
+    {
+      "name": "Ri-ra-rutsch",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 4
+    },
+    {
+      "name": "Ringel, Ringel, Reihe",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 3
+    },
+    {
+      "name": "Taler, Taler, du musst wandern",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 6
+    },
+    {
+      "name": "Kommt ein Mäuschen",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Ene, mene, miste",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 4
+    },
+    {
+      "name": "Eine kleine Dickmadam",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 6
+    },
+    {
+      "name": "Zeigt her eure Füße",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 4
+    },
+    {
+      "name": "Dornröschen war ein schönes Kind",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Wer will fleißige Handwerker sehn",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Ein Hut, ein Stock, ein Regenschirm",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 6
+    },
+    {
+      "name": "Dreht euch nicht um, der Plumpsack geht um",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Fischer, Fischer, wie tief ist das Wasser",
+      "facet": "Abzähl- und Fingerspiele",
+      "known_at": 5
+    },
+    {
+      "name": "Schlaf, Kindlein, schlaf",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 3
+    },
+    {
+      "name": "Müde bin ich, geh zur Ruh",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 8
+    },
+    {
+      "name": "Schlafe, mein Prinzchen, schlaf ein",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 11
+    },
+    {
+      "name": "Die Blümelein, sie schlafen",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 10
+    },
+    {
+      "name": "Matthias Claudius",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 11
+    },
+    {
+      "name": "Abendstille überall",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 8
+    },
+    {
+      "name": "Der Sandmann",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 3
+    },
+    {
+      "name": "Guter Mond, du gehst so stille",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 9
+    },
+    {
+      "name": "Wilhelm Hey",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 14
+    },
+    {
+      "name": "Gute Nacht, Freunde",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 11
+    },
+    {
+      "name": "Schlaf, mein Kindchen, schlaf ein",
+      "facet": "Schlaf- und Wiegenlieder",
+      "known_at": 12
+    },
+    {
+      "name": "Sei gegrüßt, lieber Nikolaus",
+      "facet": "Weihnachtslieder",
+      "known_at": 6
+    },
+    {
+      "name": "Fröhliche Weihnacht überall",
+      "facet": "Weihnachtslieder",
+      "known_at": 6
+    },
+    {
+      "name": "Am Weihnachtsbaume die Lichter brennen",
+      "facet": "Weihnachtslieder",
+      "known_at": 9
+    },
+    {
+      "name": "Laterne, Laterne, Sonne, Mond und Sterne",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 2
+    },
+    {
+      "name": "Sankt Martin ritt durch Schnee und Wind",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 3
+    },
+    {
+      "name": "Komm, lieber Mai, und mache",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 9
+    },
+    {
+      "name": "Der Mai ist gekommen",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 8
+    },
+    {
+      "name": "Winter ade, Scheiden tut weh",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 5
+    },
+    {
+      "name": "Es tönen die Lieder",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 7
+    },
+    {
+      "name": "Im Märzen der Bauer",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 6
+    },
+    {
+      "name": "Trarira, der Sommer, der ist da",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 7
+    },
+    {
+      "name": "Es war eine Mutter, die hatte vier Kinder",
+      "facet": "Martins- und Jahreszeitenlieder",
+      "known_at": 6
+    },
+    {
+      "name": "Der fröhliche Wanderer",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 7
+    },
+    {
+      "name": "Auf, du junger Wandersmann",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 11
+    },
+    {
+      "name": "Kein schöner Land in dieser Zeit",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 10
+    },
+    {
+      "name": "Wem Gott will rechte Gunst erweisen",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 12
+    },
+    {
+      "name": "Wenn alle Brünnlein fließen",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 11
+    },
+    {
+      "name": "Auf der Lüneburger Heide",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 8
+    },
+    {
+      "name": "Wo die Nordseewellen",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 10
+    },
+    {
+      "name": "Frankenlied",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 12
+    },
+    {
+      "name": "Schleswig-Holstein meerumschlungen",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 13
+    },
+    {
+      "name": "Hamburger Veermaster",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 12
+    },
+    {
+      "name": "Wilhelm Müller",
+      "facet": "Wander- und Heimatlieder",
+      "known_at": 13
+    },
+    {
+      "name": "Volker Rosin",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 5
+    },
+    {
+      "name": "Reinhard Lakomy",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 9
+    },
+    {
+      "name": "Klaus W. Hoffmann",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 11
+    },
+    {
+      "name": "Simone Sommerland",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 5
+    },
+    {
+      "name": "Deine Freunde",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 6
+    },
+    {
+      "name": "Lichterkinder",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 4
+    },
+    {
+      "name": "Dikka",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 6
+    },
+    {
+      "name": "Bummelkasten",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 8
+    },
+    {
+      "name": "Stephen Janetzko",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 8
+    },
+    {
+      "name": "Der Traumzauberbaum",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 7
+    },
+    {
+      "name": "Anne Kaffeekanne",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 8
+    },
+    {
+      "name": "Rolfs Vogelhochzeit",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 7
+    },
+    {
+      "name": "1, 2, 3 im Sauseschritt",
+      "facet": "Liedermacher fürs Kinderzimmer",
+      "known_at": 5
+    },
+    {
+      "name": "Hey, Pippi Langstrumpf",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 2
+    },
+    {
+      "name": "Heidi",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 3
+    },
+    {
+      "name": "Wickie und die starken Männer",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 4
+    },
+    {
+      "name": "Das Lied der Schlümpfe",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 5
+    },
+    {
+      "name": "Sesamstraße",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 3
+    },
+    {
+      "name": "La-Le-Lu",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 8
+    },
+    {
+      "name": "Nils Holgersson",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 6
+    },
+    {
+      "name": "Wer hat an der Uhr gedreht",
+      "facet": "Kinderlieder aus Film und Fernsehen",
+      "known_at": 6
+    },
+    {
+      "name": "Heideröslein",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 9
+    },
+    {
+      "name": "Achim von Arnim",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 14
+    },
+    {
+      "name": "In einem kühlen Grunde",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "Ludwig Uhland",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Friedrich Silcher",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Es waren zwei Königskinder",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "Kein Feuer, keine Kohle",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 12
+    },
+    {
+      "name": "August Heinrich Hoffmann von Fallersleben",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 11
+    },
+    {
+      "name": "Johann Gottfried Herder",
+      "facet": "Volkslieder der Romantik",
+      "known_at": 13
+    },
+    {
+      "name": "Auf de schwäbsche Eisebahne",
+      "facet": "Sagen und Orte in Liedern",
+      "known_at": 8
+    },
+    {
+      "name": "Ich hab mein Herz in Heidelberg verloren",
+      "facet": "Sagen und Orte in Liedern",
+      "known_at": 10
+    },
+    {
+      "name": "Der alte Barbarossa",
+      "facet": "Sagen und Orte in Liedern",
+      "known_at": 13
+    },
+    {
+      "name": "Drei Chinesen mit dem Kontrabass",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 5
+    },
+    {
+      "name": "Es klappert die Mühle am rauschenden Bach",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 5
+    },
+    {
+      "name": "Es tanzt ein Bi-Ba-Butzemann",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 6
+    },
+    {
+      "name": "Brüderchen, komm tanz mit mir",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 6
+    },
+    {
+      "name": "Ein Loch ist im Eimer",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 6
+    },
+    {
+      "name": "Kanon",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 7
+    },
+    {
+      "name": "Ich bin ein Musikante",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 7
+    },
+    {
+      "name": "Spannenlanger Hansel",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 10
+    },
+    {
+      "name": "Fiderallala",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 8
+    },
+    {
+      "name": "Laurentia, liebe Laurentia mein",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 6
+    },
+    {
+      "name": "Volkslied",
+      "facet": "Liedtexte und ihre Wörter",
+      "known_at": 6
+    },
+    {
+      "name": "Hoch soll er leben",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 4
+    },
+    {
+      "name": "Viel Glück und viel Segen",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 4
+    },
+    {
+      "name": "Heute kann es regnen, stürmen oder schneien",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 5
+    },
+    {
+      "name": "Wer soll das bezahlen",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 9
+    },
+    {
+      "name": "So ein Tag, so wunderschön wie heute",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 8
+    },
+    {
+      "name": "Ein Hoch auf uns",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 7
+    },
+    {
+      "name": "Danke für diesen guten Morgen",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 9
+    },
+    {
+      "name": "Nun danket alle Gott",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 12
+    },
+    {
+      "name": "Großer Gott, wir loben dich",
+      "facet": "Geburtstags- und Festlieder",
+      "known_at": 11
+    }
+  ]
+}

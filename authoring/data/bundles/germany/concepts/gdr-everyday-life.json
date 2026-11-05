@@ -1,0 +1,667 @@
+{
+  "subcategory": "gdr-everyday-life",
+  "facets": [
+    "Essen und Trinken in der DDR",
+    "Einkaufen und Mangelwirtschaft",
+    "Autos und Verkehr",
+    "Wohnen und Plattenbau",
+    "Kindheit, Schule und Pioniere",
+    "Jugend, FDJ und Freizeit",
+    "Fernsehen, Radio und Sandmännchen",
+    "Musik, Kino und Stars",
+    "Arbeit, Betrieb und Brigade",
+    "Urlaub, Camping und FKK",
+    "Feste, Feiertage und Rituale",
+    "DDR-Wörter und Redensarten"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Grilletta",
+      "facet": "Essen und Trinken in der DDR",
+      "known_at": 13
+    },
+    {
+      "name": "Knusperflocken",
+      "facet": "Essen und Trinken in der DDR",
+      "known_at": 12
+    },
+    {
+      "name": "Tote Oma",
+      "facet": "Essen und Trinken in der DDR",
+      "known_at": 12
+    },
+    {
+      "name": "Pfeffi",
+      "facet": "Essen und Trinken in der DDR",
+      "known_at": 13
+    },
+    {
+      "name": "Radeberger Pilsner",
+      "facet": "Essen und Trinken in der DDR",
+      "known_at": 11
+    },
+    {
+      "name": "Russisch Brot",
+      "facet": "Essen und Trinken in der DDR",
+      "known_at": 8
+    },
+    {
+      "name": "Handelsorganisation (HO)",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 12
+    },
+    {
+      "name": "Exquisit-Laden",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 13
+    },
+    {
+      "name": "Bückware",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 13
+    },
+    {
+      "name": "Schlange stehen",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 7
+    },
+    {
+      "name": "Forum-Scheck",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 14
+    },
+    {
+      "name": "Genex",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 14
+    },
+    {
+      "name": "Westgeld",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 10
+    },
+    {
+      "name": "Bananen",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 7
+    },
+    {
+      "name": "SERO-Annahmestelle",
+      "facet": "Einkaufen und Mangelwirtschaft",
+      "known_at": 13
+    },
+    {
+      "name": "Barkas",
+      "facet": "Autos und Verkehr",
+      "known_at": 13
+    },
+    {
+      "name": "Simson Schwalbe",
+      "facet": "Autos und Verkehr",
+      "known_at": 10
+    },
+    {
+      "name": "Simson S51",
+      "facet": "Autos und Verkehr",
+      "known_at": 11
+    },
+    {
+      "name": "MZ-Motorrad",
+      "facet": "Autos und Verkehr",
+      "known_at": 12
+    },
+    {
+      "name": "Lada",
+      "facet": "Autos und Verkehr",
+      "known_at": 10
+    },
+    {
+      "name": "Wartezeit auf ein Auto",
+      "facet": "Autos und Verkehr",
+      "known_at": 10
+    },
+    {
+      "name": "Mitropa",
+      "facet": "Autos und Verkehr",
+      "known_at": 12
+    },
+    {
+      "name": "Interflug",
+      "facet": "Autos und Verkehr",
+      "known_at": 12
+    },
+    {
+      "name": "Ikarus-Bus",
+      "facet": "Autos und Verkehr",
+      "known_at": 12
+    },
+    {
+      "name": "Tatra-Straßenbahn",
+      "facet": "Autos und Verkehr",
+      "known_at": 13
+    },
+    {
+      "name": "Multicar",
+      "facet": "Autos und Verkehr",
+      "known_at": 13
+    },
+    {
+      "name": "Diamant-Fahrrad",
+      "facet": "Autos und Verkehr",
+      "known_at": 13
+    },
+    {
+      "name": "WBS 70",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 14
+    },
+    {
+      "name": "Berlin-Marzahn",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 11
+    },
+    {
+      "name": "Halle-Neustadt",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 12
+    },
+    {
+      "name": "Leipzig-Grünau",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 13
+    },
+    {
+      "name": "Schrankwand",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 9
+    },
+    {
+      "name": "Kohleofen",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 8
+    },
+    {
+      "name": "Fernwärme",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 10
+    },
+    {
+      "name": "Durchreiche",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 11
+    },
+    {
+      "name": "Hausgemeinschaft",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 12
+    },
+    {
+      "name": "Hausbuch",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 14
+    },
+    {
+      "name": "Sprelacart",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 14
+    },
+    {
+      "name": "Neubaugebiet",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 10
+    },
+    {
+      "name": "Kleingarten",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 7
+    },
+    {
+      "name": "Fernsehturm Berlin",
+      "facet": "Wohnen und Plattenbau",
+      "known_at": 5
+    },
+    {
+      "name": "Thälmannpioniere",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 12
+    },
+    {
+      "name": "Pionierhalstuch",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 10
+    },
+    {
+      "name": "Pioniergruß",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 12
+    },
+    {
+      "name": "Kinderkrippe",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 8
+    },
+    {
+      "name": "Polytechnische Oberschule (POS)",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 12
+    },
+    {
+      "name": "Erweiterte Oberschule (EOS)",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "Schulspeisung",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 10
+    },
+    {
+      "name": "Altstoffsammlung",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 12
+    },
+    {
+      "name": "Staatsbürgerkunde",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "Wehrkunde",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 13
+    },
+    {
+      "name": "Russischunterricht",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 9
+    },
+    {
+      "name": "Unterrichtstag in der Produktion",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Pionierrepublik Wilhelm Pieck",
+      "facet": "Kindheit, Schule und Pioniere",
+      "known_at": 14
+    },
+    {
+      "name": "Freie Deutsche Jugend (FDJ)",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 10
+    },
+    {
+      "name": "Gesellschaft für Sport und Technik (GST)",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 14
+    },
+    {
+      "name": "Jugendclub",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 11
+    },
+    {
+      "name": "Kulturhaus",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 12
+    },
+    {
+      "name": "Nationale Volksarmee (NVA)",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 10
+    },
+    {
+      "name": "Bausoldat",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 14
+    },
+    {
+      "name": "Spartakiade",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 13
+    },
+    {
+      "name": "Turn- und Sportfest Leipzig",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 14
+    },
+    {
+      "name": "Friedensfahrt",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 12
+    },
+    {
+      "name": "Westjeans",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 10
+    },
+    {
+      "name": "Junge Gemeinde",
+      "facet": "Jugend, FDJ und Freizeit",
+      "known_at": 14
+    },
+    {
+      "name": "Deutscher Fernsehfunk (DFF)",
+      "facet": "Fernsehen, Radio und Sandmännchen",
+      "known_at": 13
+    },
+    {
+      "name": "Westfernsehen",
+      "facet": "Fernsehen, Radio und Sandmännchen",
+      "known_at": 10
+    },
+    {
+      "name": "Tal der Ahnungslosen",
+      "facet": "Fernsehen, Radio und Sandmännchen",
+      "known_at": 13
+    },
+    {
+      "name": "DT64",
+      "facet": "Fernsehen, Radio und Sandmännchen",
+      "known_at": 14
+    },
+    {
+      "name": "Spuk unterm Riesenrad",
+      "facet": "Fernsehen, Radio und Sandmännchen",
+      "known_at": 13
+    },
+    {
+      "name": "Frank Schöbel",
+      "facet": "Musik, Kino und Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Ute Freudenberg",
+      "facet": "Musik, Kino und Stars",
+      "known_at": 14
+    },
+    {
+      "name": "Dean Reed",
+      "facet": "Musik, Kino und Stars",
+      "known_at": 14
+    },
+    {
+      "name": "Amiga",
+      "facet": "Musik, Kino und Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Gojko Mitić",
+      "facet": "Musik, Kino und Stars",
+      "known_at": 12
+    },
+    {
+      "name": "Spur der Steine",
+      "facet": "Musik, Kino und Stars",
+      "known_at": 14
+    },
+    {
+      "name": "Jakob der Lügner",
+      "facet": "Musik, Kino und Stars",
+      "known_at": 13
+    },
+    {
+      "name": "Volkseigener Betrieb (VEB)",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 11
+    },
+    {
+      "name": "Brigade",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 12
+    },
+    {
+      "name": "Brigadetagebuch",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 14
+    },
+    {
+      "name": "Adolf Hennecke",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 14
+    },
+    {
+      "name": "Plansoll",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 12
+    },
+    {
+      "name": "Subbotnik",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 13
+    },
+    {
+      "name": "Neuerervorschlag",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 14
+    },
+    {
+      "name": "Sozialistischer Wettbewerb",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 13
+    },
+    {
+      "name": "Carl Zeiss Jena",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 11
+    },
+    {
+      "name": "Leuna-Werke",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 13
+    },
+    {
+      "name": "Dederon",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 13
+    },
+    {
+      "name": "Kittelschürze",
+      "facet": "Arbeit, Betrieb und Brigade",
+      "known_at": 10
+    },
+    {
+      "name": "FKK",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 8
+    },
+    {
+      "name": "Prerow",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 13
+    },
+    {
+      "name": "FDGB-Feriendienst",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 13
+    },
+    {
+      "name": "Ferienplatz",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 12
+    },
+    {
+      "name": "Interhotel",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 14
+    },
+    {
+      "name": "Balaton",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 11
+    },
+    {
+      "name": "Goldstrand",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 13
+    },
+    {
+      "name": "Hohe Tatra",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 12
+    },
+    {
+      "name": "Zeltplatz",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 6
+    },
+    {
+      "name": "Klappfix",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 14
+    },
+    {
+      "name": "MS Völkerfreundschaft",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 14
+    },
+    {
+      "name": "Strandburg",
+      "facet": "Urlaub, Camping und FKK",
+      "known_at": 8
+    },
+    {
+      "name": "Tag der Republik",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 12
+    },
+    {
+      "name": "Maidemonstration",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 11
+    },
+    {
+      "name": "Internationaler Kindertag",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 6
+    },
+    {
+      "name": "Tag des Lehrers",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 13
+    },
+    {
+      "name": "Männertag",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 8
+    },
+    {
+      "name": "Pfingsttreffen der FDJ",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 14
+    },
+    {
+      "name": "Leipziger Messe",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 12
+    },
+    {
+      "name": "Namensweihe",
+      "facet": "Feste, Feiertage und Rituale",
+      "known_at": 14
+    },
+    {
+      "name": "Winkelement",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 13
+    },
+    {
+      "name": "Rennpappe",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Plaste und Elaste",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Nicki",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 12
+    },
+    {
+      "name": "Kosmonaut",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 9
+    },
+    {
+      "name": "Aluchips",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 12
+    },
+    {
+      "name": "Sättigungsbeilage",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 12
+    },
+    {
+      "name": "Zweiraumwohnung",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Feierabendheim",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 13
+    },
+    {
+      "name": "Abschnittsbevollmächtigter (ABV)",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 14
+    },
+    {
+      "name": "Westverwandtschaft",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 11
+    },
+    {
+      "name": "Erichs Lampenladen",
+      "facet": "DDR-Wörter und Redensarten",
+      "known_at": 13
+    }
+  ]
+}

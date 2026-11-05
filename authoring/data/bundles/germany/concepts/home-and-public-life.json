@@ -1,0 +1,832 @@
+{
+  "subcategory": "home-and-public-life",
+  "facets": [
+    "Mülltrennung und Pfand",
+    "Behörden und Ämter",
+    "Ausweise und Dokumente",
+    "Ruhezeiten und Nachbarschaft",
+    "Wohnen und Mietvertrag",
+    "Post, Briefe und Pakete",
+    "Steuern, Beiträge und Versicherungen",
+    "Einkaufen und Ladenöffnung",
+    "Verkehrsregeln im Alltag",
+    "Putzen, Lüften und Hausarbeit",
+    "Familie, Kita und Schulpflicht",
+    "Notruf und Sicherheit zu Hause"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 3,
+      "estimate": 3,
+      "record": 1,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 5,
+      "cause_effect": 4,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 2,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Gelbe Tonne",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 3
+    },
+    {
+      "name": "Biotonne",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 3
+    },
+    {
+      "name": "Blaue Tonne",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 4
+    },
+    {
+      "name": "Restmüll",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 4
+    },
+    {
+      "name": "Altglascontainer",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 4
+    },
+    {
+      "name": "Leergut",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 6
+    },
+    {
+      "name": "Wertstoffhof",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 8
+    },
+    {
+      "name": "Batteriesammelbox",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 5
+    },
+    {
+      "name": "Elektroschrott",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 7
+    },
+    {
+      "name": "Altkleidercontainer",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 5
+    },
+    {
+      "name": "Komposthaufen",
+      "facet": "Mülltrennung und Pfand",
+      "known_at": 4
+    },
+    {
+      "name": "Bürgeramt",
+      "facet": "Behörden und Ämter",
+      "known_at": 8
+    },
+    {
+      "name": "Jobcenter",
+      "facet": "Behörden und Ämter",
+      "known_at": 9
+    },
+    {
+      "name": "Agentur für Arbeit",
+      "facet": "Behörden und Ämter",
+      "known_at": 9
+    },
+    {
+      "name": "Ordnungsamt",
+      "facet": "Behörden und Ämter",
+      "known_at": 9
+    },
+    {
+      "name": "Jugendamt",
+      "facet": "Behörden und Ämter",
+      "known_at": 8
+    },
+    {
+      "name": "Ausländerbehörde",
+      "facet": "Behörden und Ämter",
+      "known_at": 10
+    },
+    {
+      "name": "Gesundheitsamt",
+      "facet": "Behörden und Ämter",
+      "known_at": 8
+    },
+    {
+      "name": "Kfz-Zulassungsstelle",
+      "facet": "Behörden und Ämter",
+      "known_at": 10
+    },
+    {
+      "name": "Fundbüro",
+      "facet": "Behörden und Ämter",
+      "known_at": 4
+    },
+    {
+      "name": "Bauamt",
+      "facet": "Behörden und Ämter",
+      "known_at": 10
+    },
+    {
+      "name": "Rathaus",
+      "facet": "Behörden und Ämter",
+      "known_at": 3
+    },
+    {
+      "name": "Bürgermeister",
+      "facet": "Behörden und Ämter",
+      "known_at": 3
+    },
+    {
+      "name": "Wartenummer",
+      "facet": "Behörden und Ämter",
+      "known_at": 6
+    },
+    {
+      "name": "Antragsformular",
+      "facet": "Behörden und Ämter",
+      "known_at": 8
+    },
+    {
+      "name": "Amtsdeutsch",
+      "facet": "Behörden und Ämter",
+      "known_at": 11
+    },
+    {
+      "name": "Amtsgericht",
+      "facet": "Behörden und Ämter",
+      "known_at": 11
+    },
+    {
+      "name": "Passierschein A38",
+      "facet": "Behörden und Ämter",
+      "known_at": 10
+    },
+    {
+      "name": "Personalausweis",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 5
+    },
+    {
+      "name": "Reisepass",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 4
+    },
+    {
+      "name": "Führerschein",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 4
+    },
+    {
+      "name": "Geburtsurkunde",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 7
+    },
+    {
+      "name": "Meldebescheinigung",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 11
+    },
+    {
+      "name": "Fahrzeugschein",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 10
+    },
+    {
+      "name": "Gesundheitskarte",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 6
+    },
+    {
+      "name": "Steuer-Identifikationsnummer",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 12
+    },
+    {
+      "name": "Sozialversicherungsausweis",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 12
+    },
+    {
+      "name": "Führungszeugnis",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 11
+    },
+    {
+      "name": "Heiratsurkunde",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 9
+    },
+    {
+      "name": "Schufa-Auskunft",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 11
+    },
+    {
+      "name": "Impfpass",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 6
+    },
+    {
+      "name": "Biometrisches Passfoto",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 8
+    },
+    {
+      "name": "Familienstammbuch",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 12
+    },
+    {
+      "name": "Aufenthaltstitel",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 12
+    },
+    {
+      "name": "Kinderreisepass",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 6
+    },
+    {
+      "name": "Schülerausweis",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 4
+    },
+    {
+      "name": "Organspendeausweis",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 9
+    },
+    {
+      "name": "Bibliotheksausweis",
+      "facet": "Ausweise und Dokumente",
+      "known_at": 4
+    },
+    {
+      "name": "Nachtruhe",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 5
+    },
+    {
+      "name": "Ruhestörung",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 7
+    },
+    {
+      "name": "Hausordnung",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 7
+    },
+    {
+      "name": "Rasenmäher",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 2
+    },
+    {
+      "name": "Laubbläser",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 5
+    },
+    {
+      "name": "Bohrmaschine",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 3
+    },
+    {
+      "name": "Grillen auf dem Balkon",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 8
+    },
+    {
+      "name": "Nachbarschaftsstreit",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 8
+    },
+    {
+      "name": "Jägerzaun",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 11
+    },
+    {
+      "name": "Hecke",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 3
+    },
+    {
+      "name": "Klingelschild",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 5
+    },
+    {
+      "name": "Hausflur",
+      "facet": "Ruhezeiten und Nachbarschaft",
+      "known_at": 4
+    },
+    {
+      "name": "Kaltmiete",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 10
+    },
+    {
+      "name": "Warmmiete",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 10
+    },
+    {
+      "name": "Nebenkostenabrechnung",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 11
+    },
+    {
+      "name": "Mietkaution",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 10
+    },
+    {
+      "name": "Wohnungsgeberbestätigung",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 13
+    },
+    {
+      "name": "Vermieter",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 6
+    },
+    {
+      "name": "Hausverwaltung",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 10
+    },
+    {
+      "name": "Kündigungsfrist",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 11
+    },
+    {
+      "name": "Schönheitsreparaturen",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 13
+    },
+    {
+      "name": "Wohnungsbesichtigung",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 8
+    },
+    {
+      "name": "Mietspiegel",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 12
+    },
+    {
+      "name": "Mietpreisbremse",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 12
+    },
+    {
+      "name": "Wohnberechtigungsschein",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 13
+    },
+    {
+      "name": "Einbauküche",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 9
+    },
+    {
+      "name": "Untermiete",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 10
+    },
+    {
+      "name": "Übergabeprotokoll",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 13
+    },
+    {
+      "name": "Makler",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 9
+    },
+    {
+      "name": "Kellerabteil",
+      "facet": "Wohnen und Mietvertrag",
+      "known_at": 7
+    },
+    {
+      "name": "Deutsche Post",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 3
+    },
+    {
+      "name": "DHL",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 4
+    },
+    {
+      "name": "Briefmarke",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 2
+    },
+    {
+      "name": "Postleitzahl",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 5
+    },
+    {
+      "name": "Briefkasten",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 1
+    },
+    {
+      "name": "Packstation",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 6
+    },
+    {
+      "name": "Einschreiben",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 10
+    },
+    {
+      "name": "Benachrichtigungskarte",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 8
+    },
+    {
+      "name": "Postfiliale",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 5
+    },
+    {
+      "name": "Paketshop",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 7
+    },
+    {
+      "name": "Postbote",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 1
+    },
+    {
+      "name": "Postkarte",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 2
+    },
+    {
+      "name": "Porto",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 8
+    },
+    {
+      "name": "Nachnahme",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 12
+    },
+    {
+      "name": "Absender",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 4
+    },
+    {
+      "name": "Posthorn",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 7
+    },
+    {
+      "name": "Nachsendeauftrag",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 12
+    },
+    {
+      "name": "Päckchen",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 5
+    },
+    {
+      "name": "Paket beim Nachbarn",
+      "facet": "Post, Briefe und Pakete",
+      "known_at": 5
+    },
+    {
+      "name": "Einkommensteuer",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 10
+    },
+    {
+      "name": "Steuerklasse",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 12
+    },
+    {
+      "name": "Krankenkasse",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 7
+    },
+    {
+      "name": "Haftpflichtversicherung",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 11
+    },
+    {
+      "name": "Hausratversicherung",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 12
+    },
+    {
+      "name": "Rentenversicherung",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 10
+    },
+    {
+      "name": "Pflegeversicherung",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 12
+    },
+    {
+      "name": "Arbeitslosenversicherung",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 11
+    },
+    {
+      "name": "Grundsteuer",
+      "facet": "Steuern, Beiträge und Versicherungen",
+      "known_at": 12
+    },
+    {
+      "name": "Einkaufswagenchip",
+      "facet": "Einkaufen und Ladenöffnung",
+      "known_at": 4
+    },
+    {
+      "name": "dm-Drogeriemarkt",
+      "facet": "Einkaufen und Ladenöffnung",
+      "known_at": 4
+    },
+    {
+      "name": "Tankstelle",
+      "facet": "Einkaufen und Ladenöffnung",
+      "known_at": 2
+    },
+    {
+      "name": "Payback",
+      "facet": "Einkaufen und Ladenöffnung",
+      "known_at": 8
+    },
+    {
+      "name": "Jutebeutel",
+      "facet": "Einkaufen und Ladenöffnung",
+      "known_at": 6
+    },
+    {
+      "name": "Fußgängerampel",
+      "facet": "Verkehrsregeln im Alltag",
+      "known_at": 1
+    },
+    {
+      "name": "Spielstraße",
+      "facet": "Verkehrsregeln im Alltag",
+      "known_at": 6
+    },
+    {
+      "name": "Tempo-30-Zone",
+      "facet": "Verkehrsregeln im Alltag",
+      "known_at": 6
+    },
+    {
+      "name": "Parkscheibe",
+      "facet": "Verkehrsregeln im Alltag",
+      "known_at": 8
+    },
+    {
+      "name": "Winterreifen",
+      "facet": "Verkehrsregeln im Alltag",
+      "known_at": 7
+    },
+    {
+      "name": "Stoßlüften",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 8
+    },
+    {
+      "name": "Frühjahrsputz",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 5
+    },
+    {
+      "name": "Kippfenster",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 7
+    },
+    {
+      "name": "Schimmel",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 5
+    },
+    {
+      "name": "Heizkörper",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 4
+    },
+    {
+      "name": "Wäscheständer",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 3
+    },
+    {
+      "name": "Bügeleisen",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 2
+    },
+    {
+      "name": "Entkalken",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 8
+    },
+    {
+      "name": "Spülmaschine",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 2
+    },
+    {
+      "name": "Staubsauger",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 1
+    },
+    {
+      "name": "Fensterputzen",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 3
+    },
+    {
+      "name": "Teppichklopfer",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 8
+    },
+    {
+      "name": "Handfeger",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 3
+    },
+    {
+      "name": "Putzplan",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 6
+    },
+    {
+      "name": "Wischmopp",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 3
+    },
+    {
+      "name": "Gardinen",
+      "facet": "Putzen, Lüften und Hausarbeit",
+      "known_at": 6
+    },
+    {
+      "name": "Kita-Platz",
+      "facet": "Familie, Kita und Schulpflicht",
+      "known_at": 10
+    },
+    {
+      "name": "Elternzeit",
+      "facet": "Familie, Kita und Schulpflicht",
+      "known_at": 10
+    },
+    {
+      "name": "Elterngeld",
+      "facet": "Familie, Kita und Schulpflicht",
+      "known_at": 11
+    },
+    {
+      "name": "Mutterschutz",
+      "facet": "Familie, Kita und Schulpflicht",
+      "known_at": 11
+    },
+    {
+      "name": "Elternabend",
+      "facet": "Familie, Kita und Schulpflicht",
+      "known_at": 6
+    },
+    {
+      "name": "Tagesmutter",
+      "facet": "Familie, Kita und Schulpflicht",
+      "known_at": 7
+    },
+    {
+      "name": "Rauchmelder",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 4
+    },
+    {
+      "name": "Feuerlöscher",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 3
+    },
+    {
+      "name": "Freiwillige Feuerwehr",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 6
+    },
+    {
+      "name": "Giftnotruf",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 10
+    },
+    {
+      "name": "Ärztlicher Bereitschaftsdienst 116117",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 12
+    },
+    {
+      "name": "Verbandkasten",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 5
+    },
+    {
+      "name": "Stabile Seitenlage",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 8
+    },
+    {
+      "name": "Warn-App NINA",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 11
+    },
+    {
+      "name": "Bundesweiter Warntag",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 9
+    },
+    {
+      "name": "Kohlenmonoxidmelder",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 11
+    },
+    {
+      "name": "Rettungswagen",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 2
+    },
+    {
+      "name": "FI-Schalter",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 12
+    },
+    {
+      "name": "Kindersicherung für Steckdosen",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 4
+    },
+    {
+      "name": "Schlüsseldienst",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 7
+    },
+    {
+      "name": "Hausnotruf",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 10
+    },
+    {
+      "name": "Sirene",
+      "facet": "Notruf und Sicherheit zu Hause",
+      "known_at": 3
+    }
+  ]
+}

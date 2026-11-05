@@ -1,0 +1,923 @@
+{
+  "subcategory": "films-and-actors",
+  "facets": [
+    "Kinderfilme und Kinderbuchverfilmungen",
+    "Komödien und Kinohits",
+    "Filmklassiker und Stummfilm",
+    "Filme über deutsche Geschichte",
+    "Schauspielerinnen und Schauspieler",
+    "Komiker und Kabarettisten",
+    "Sketche und Kultsprüche",
+    "Regisseure und Filmemacher",
+    "Filmpreise und Festivals",
+    "Drehorte und Filmstudios",
+    "Synchronstimmen und Animationsfilme",
+    "Deutsche Stars in Hollywood"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bibi & Tina",
+      "facet": "Kinderfilme und Kinderbuchverfilmungen",
+      "known_at": 3
+    },
+    {
+      "name": "Der Schuh des Manitu",
+      "facet": "Komödien und Kinohits",
+      "known_at": 7
+    },
+    {
+      "name": "(T)Raumschiff Surprise",
+      "facet": "Komödien und Kinohits",
+      "known_at": 9
+    },
+    {
+      "name": "Fack ju Göhte",
+      "facet": "Komödien und Kinohits",
+      "known_at": 6
+    },
+    {
+      "name": "Keinohrhasen",
+      "facet": "Komödien und Kinohits",
+      "known_at": 10
+    },
+    {
+      "name": "Kokowääh",
+      "facet": "Komödien und Kinohits",
+      "known_at": 10
+    },
+    {
+      "name": "Otto – Der Film",
+      "facet": "Komödien und Kinohits",
+      "known_at": 11
+    },
+    {
+      "name": "Werner – Beinhart!",
+      "facet": "Komödien und Kinohits",
+      "known_at": 11
+    },
+    {
+      "name": "Manta Manta",
+      "facet": "Komödien und Kinohits",
+      "known_at": 12
+    },
+    {
+      "name": "Der bewegte Mann",
+      "facet": "Komödien und Kinohits",
+      "known_at": 12
+    },
+    {
+      "name": "Wer früher stirbt ist länger tot",
+      "facet": "Komödien und Kinohits",
+      "known_at": 11
+    },
+    {
+      "name": "Honig im Kopf",
+      "facet": "Komödien und Kinohits",
+      "known_at": 9
+    },
+    {
+      "name": "Willkommen bei den Hartmanns",
+      "facet": "Komödien und Kinohits",
+      "known_at": 10
+    },
+    {
+      "name": "Das perfekte Geheimnis",
+      "facet": "Komödien und Kinohits",
+      "known_at": 11
+    },
+    {
+      "name": "Der Vorname",
+      "facet": "Komödien und Kinohits",
+      "known_at": 12
+    },
+    {
+      "name": "Er ist wieder da",
+      "facet": "Komödien und Kinohits",
+      "known_at": 11,
+      "retired": "unaskable: Eine Satire mit Hitler als Hauptfigur passt im Ton schlecht zu einem Familienspiel, und die Fragen nach Jahreszahlen sind unsicher (Roman und Film unterscheiden sich)."
+    },
+    {
+      "name": "Schtonk!",
+      "facet": "Komödien und Kinohits",
+      "known_at": 13
+    },
+    {
+      "name": "Knockin' on Heaven's Door",
+      "facet": "Komödien und Kinohits",
+      "known_at": 12
+    },
+    {
+      "name": "Dampfnudelblues",
+      "facet": "Komödien und Kinohits",
+      "known_at": 12
+    },
+    {
+      "name": "Lammbock",
+      "facet": "Komödien und Kinohits",
+      "known_at": 13
+    },
+    {
+      "name": "M – Eine Stadt sucht einen Mörder",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 13
+    },
+    {
+      "name": "Die Drei von der Tankstelle",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 13
+    },
+    {
+      "name": "Der Himmel über Berlin",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 13
+    },
+    {
+      "name": "Lola rennt",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 11
+    },
+    {
+      "name": "Das Wirtshaus im Spessart",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 13
+    },
+    {
+      "name": "Fitzcarraldo",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 14
+    },
+    {
+      "name": "Die Nibelungen",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 13
+    },
+    {
+      "name": "Der Golem, wie er in die Welt kam",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 14
+    },
+    {
+      "name": "Münchhausen",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 12
+    },
+    {
+      "name": "Die Legende von Paul und Paula",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 13
+    },
+    {
+      "name": "Expressionismus im Film",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 13
+    },
+    {
+      "name": "Gebrüder Skladanowsky",
+      "facet": "Filmklassiker und Stummfilm",
+      "known_at": 15
+    },
+    {
+      "name": "Das Leben der Anderen",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Der Untergang",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Der Baader Meinhof Komplex",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Sophie Scholl – Die letzten Tage",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 10
+    },
+    {
+      "name": "Der Tunnel",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Ballon",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 11
+    },
+    {
+      "name": "Nirgendwo in Afrika",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 12
+    },
+    {
+      "name": "Der Turm",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Der Staat gegen Fritz Bauer",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Das weiße Band",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 13
+    },
+    {
+      "name": "Werk ohne Autor",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Barbara",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Rosenstraße",
+      "facet": "Filme über deutsche Geschichte",
+      "known_at": 14
+    },
+    {
+      "name": "Til Schweiger",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 8
+    },
+    {
+      "name": "Matthias Schweighöfer",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 8
+    },
+    {
+      "name": "Elyas M'Barek",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 7
+    },
+    {
+      "name": "Götz George",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Mario Adorf",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Iris Berben",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Hannelore Elsner",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 12
+    },
+    {
+      "name": "Veronica Ferres",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Katja Riemann",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 12
+    },
+    {
+      "name": "Moritz Bleibtreu",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Nora Tschirner",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Karoline Herfurth",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 10
+    },
+    {
+      "name": "Jella Haase",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 9
+    },
+    {
+      "name": "Jan Josef Liefers",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 10
+    },
+    {
+      "name": "Axel Prahl",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Tom Schilling",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 12
+    },
+    {
+      "name": "Ulrich Mühe",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 13
+    },
+    {
+      "name": "Uwe Ochsenknecht",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 11
+    },
+    {
+      "name": "Manfred Krug",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 13
+    },
+    {
+      "name": "Sandra Hüller",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 12
+    },
+    {
+      "name": "Klaus Kinski",
+      "facet": "Schauspielerinnen und Schauspieler",
+      "known_at": 12
+    },
+    {
+      "name": "Michael Bully Herbig",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 8
+    },
+    {
+      "name": "Helge Schneider",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 11
+    },
+    {
+      "name": "Dieter Hallervorden",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 10
+    },
+    {
+      "name": "Heinz Erhardt",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 11
+    },
+    {
+      "name": "Karl Valentin",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 13
+    },
+    {
+      "name": "Dieter Hildebrandt",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 13
+    },
+    {
+      "name": "Gerhard Polt",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 13
+    },
+    {
+      "name": "Atze Schröder",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 11
+    },
+    {
+      "name": "Kaya Yanar",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 10
+    },
+    {
+      "name": "Bülent Ceylan",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 10
+    },
+    {
+      "name": "Olaf Schubert",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 12
+    },
+    {
+      "name": "Torsten Sträter",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 12
+    },
+    {
+      "name": "Michael Mittermeier",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 11
+    },
+    {
+      "name": "Dieter Nuhr",
+      "facet": "Komiker und Kabarettisten",
+      "known_at": 12
+    },
+    {
+      "name": "Die Ente bleibt draußen",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 11
+    },
+    {
+      "name": "Kosakenzipfel",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 13
+    },
+    {
+      "name": "Jodeldiplom",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 12
+    },
+    {
+      "name": "Früher war mehr Lametta",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 10
+    },
+    {
+      "name": "Die Nudel",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 12
+    },
+    {
+      "name": "Das Bild hängt schief",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 12
+    },
+    {
+      "name": "Ja, wo laufen sie denn?",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 12
+    },
+    {
+      "name": "Hurz!",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 12
+    },
+    {
+      "name": "Palim Palim",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 11
+    },
+    {
+      "name": "Chantal",
+      "facet": "Sketche und Kultsprüche",
+      "known_at": 7
+    },
+    {
+      "name": "Friedrich Wilhelm Murnau",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Ernst Lubitsch",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 14
+    },
+    {
+      "name": "Wim Wenders",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 12
+    },
+    {
+      "name": "Werner Herzog",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 12
+    },
+    {
+      "name": "Rainer Werner Fassbinder",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Volker Schlöndorff",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Roland Emmerich",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 11
+    },
+    {
+      "name": "Tom Tykwer",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 12
+    },
+    {
+      "name": "Fatih Akin",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 12
+    },
+    {
+      "name": "Florian Henckel von Donnersmarck",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Bora Dagtekin",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 12
+    },
+    {
+      "name": "Margarethe von Trotta",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 14
+    },
+    {
+      "name": "Doris Dörrie",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Edward Berger",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Caroline Link",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Sönke Wortmann",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 12
+    },
+    {
+      "name": "Detlev Buck",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Marcus H. Rosenmüller",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Leander Haußmann",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Christian Petzold",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 14
+    },
+    {
+      "name": "Maren Ade",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 14
+    },
+    {
+      "name": "Bernd Eichinger",
+      "facet": "Regisseure und Filmemacher",
+      "known_at": 13
+    },
+    {
+      "name": "Berlinale",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 9
+    },
+    {
+      "name": "Goldener Bär",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Silberner Bär",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Deutscher Filmpreis",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Bambi",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 8
+    },
+    {
+      "name": "Goldene Kamera",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 10
+    },
+    {
+      "name": "Grimme-Preis",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Bayerischer Filmpreis",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Max Ophüls Preis",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Filmfest München",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Hofer Filmtage",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Oberhausener Kurzfilmtage",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 14
+    },
+    {
+      "name": "DOK Leipzig",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Deutscher Fernsehpreis",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Deutscher Comedypreis",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Jupiter Award",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 14
+    },
+    {
+      "name": "Goldene Leinwand",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Europäischer Filmpreis",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 13
+    },
+    {
+      "name": "Goldener Spatz",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 12
+    },
+    {
+      "name": "Oscar für den besten internationalen Film",
+      "facet": "Filmpreise und Festivals",
+      "known_at": 11
+    },
+    {
+      "name": "Studio Babelsberg",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 11
+    },
+    {
+      "name": "Filmpark Babelsberg",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 10
+    },
+    {
+      "name": "Bavaria Filmstadt",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 10
+    },
+    {
+      "name": "UFA",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 12
+    },
+    {
+      "name": "DEFA",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 12
+    },
+    {
+      "name": "Studio Hamburg",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 13
+    },
+    {
+      "name": "MMC Studios",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 14
+    },
+    {
+      "name": "Plitvicer Seen",
+      "facet": "Drehorte und Filmstudios",
+      "known_at": 12
+    },
+    {
+      "name": "Synchronsprecher",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 7
+    },
+    {
+      "name": "Christian Brückner",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 13
+    },
+    {
+      "name": "Manfred Lehmann",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 14
+    },
+    {
+      "name": "Thomas Danneberg",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 14
+    },
+    {
+      "name": "Arne Elsholtz",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 15
+    },
+    {
+      "name": "Wolfgang Pampel",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 15
+    },
+    {
+      "name": "Daniela Hoffmann",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 15
+    },
+    {
+      "name": "Norbert Gastell",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 14
+    },
+    {
+      "name": "Santiago Ziesmer",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 13
+    },
+    {
+      "name": "Marge Simpson",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 8
+    },
+    {
+      "name": "Sid (Ice Age)",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 5
+    },
+    {
+      "name": "Lotte Reiniger",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 14
+    },
+    {
+      "name": "Die Abenteuer des Prinzen Achmed",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 14
+    },
+    {
+      "name": "Ooops! Die Arche ist weg",
+      "facet": "Synchronstimmen und Animationsfilme",
+      "known_at": 7
+    },
+    {
+      "name": "Emil Jannings",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 14
+    },
+    {
+      "name": "Diane Kruger",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Brühl",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 11
+    },
+    {
+      "name": "Hans Zimmer",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 10
+    },
+    {
+      "name": "Harold Faltermeyer",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 14
+    },
+    {
+      "name": "Jürgen Prochnow",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 13
+    },
+    {
+      "name": "Gert Fröbe",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 12
+    },
+    {
+      "name": "Michael Fassbender",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 12
+    },
+    {
+      "name": "Armin Mueller-Stahl",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Kretschmann",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 14
+    },
+    {
+      "name": "Nastassja Kinski",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 13
+    },
+    {
+      "name": "Franka Potente",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 12
+    },
+    {
+      "name": "Carl Laemmle",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 15
+    },
+    {
+      "name": "Udo Kier",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 14
+    },
+    {
+      "name": "Heike Makatsch",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 12
+    },
+    {
+      "name": "Sandra Bullock",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 11
+    },
+    {
+      "name": "Horst Buchholz",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 14
+    },
+    {
+      "name": "Hardy Krüger",
+      "facet": "Deutsche Stars in Hollywood",
+      "known_at": 14
+    }
+  ]
+}
