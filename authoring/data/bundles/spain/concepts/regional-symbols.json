@@ -145,7 +145,8 @@
     {
       "name": "Corona real",
       "facet": "Escudos autonómicos y sus figuras",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: La corona sobre el escudo de España ya está preguntada, y con estas opciones no sale otra pregunta fácil distinta."
     },
     {
       "name": "Escudo de Andalucía",
@@ -375,7 +376,8 @@
     {
       "name": "Bandera de Formentera",
       "facet": "Banderas insulares y comarcales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: La bandera de Formentera es demasiado poco conocida, y no tengo datos fiables sobre ella."
     },
     {
       "name": "Bandera del Bierzo",

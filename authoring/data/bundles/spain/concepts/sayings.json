@@ -166,7 +166,8 @@
     {
       "name": "«Más vale pájaro en mano que ciento volando»",
       "facet": "Dichos con animales",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Its meaning (the bird in hand = something sure) has already been asked; a new meaning question would repeat it."
     },
     {
       "name": "«Dar gato por liebre»",
@@ -226,7 +227,8 @@
     {
       "name": "«Ser un gallina»",
       "facet": "Dichos con animales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Its meaning has already been asked in a riddle; the origin and counting options don't fit."
     },
     {
       "name": "«Hacer el ganso»",
@@ -403,7 +405,8 @@
     {
       "name": "«Ojos que no ven, corazón que no siente»",
       "facet": "Expresiones con partes del cuerpo",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Its ending and meaning are covered; there is no reliable date or origin to ask about."
     },
     {
       "name": "«Con el corazón en un puño»",
@@ -810,7 +813,8 @@
     {
       "name": "«Más vale tarde que nunca»",
       "facet": "Refranes de consejos y sabiduría",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Its meaning has already been asked; none of the options (who said it, era, origin object) gives a fair question at level 4."
     },
     {
       "name": "«Dime con quién andas y te diré quién eres»",
@@ -820,7 +824,8 @@
     {
       "name": "«En boca cerrada no entran moscas»",
       "facet": "Refranes de consejos y sabiduría",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Its meaning has already been asked; counting, sequence and odd-one-out-of-places options don't fit."
     },
     {
       "name": "«Quien mucho abarca, poco aprieta»",

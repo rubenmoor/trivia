@@ -457,7 +457,8 @@
     {
       "name": "Antonio Recio",
       "facet": "Personajes y actores míticos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Lo más conocido de Antonio Recio (mayorista de marisco) ya está en el pool; no hay otro hecho a nivel 2."
     },
     {
       "name": "Emilio Delgado",
@@ -662,12 +663,14 @@
     {
       "name": "Hache",
       "facet": "Éxitos internacionales en plataformas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: La serie trata del tráfico de heroína; tema poco apropiado para la familia."
     },
     {
       "name": "Feria: la luz más oscura",
       "facet": "Éxitos internacionales en plataformas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Serie demasiado minoritaria y las opciones exigen reconocer actores en foto; no da una pregunta justa."
     },
     {
       "name": "Las de la última fila",

@@ -286,7 +286,8 @@
     {
       "name": "Juan Carlos Ortega",
       "facet": "Locutores y presentadores de radio",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Demasiado específico, y no tengo datos seguros para estas opciones."
     },
     {
       "name": "Tony Aguilar",
@@ -531,7 +532,8 @@
     {
       "name": "Knekro",
       "facet": "Streamers y Twitch en España",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Solo hay opciones de récord o significado, y no tengo datos fiables sobre Knekro."
     },
     {
       "name": "Cristinini",
@@ -602,7 +604,8 @@
     {
       "name": "Skin de TheGrefg en Fortnite",
       "facet": "Eventos y fenómenos de internet",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Una pregunta del grupo ya dice «skin» en el texto; las otras opciones quedan forzadas."
     },
     {
       "name": "Mundial de Globos",
@@ -657,7 +660,8 @@
     {
       "name": "Pero eso es otra historia",
       "facet": "Divulgadores y youtubers educativos",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No tengo datos seguros del canal, y las opciones no encajan."
     },
     {
       "name": "Antroporama",
@@ -822,7 +826,8 @@
     {
       "name": "Unboxing",
       "facet": "Jerga de youtubers y streamers",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El nombre ya se ha preguntado; las otras opciones son forzadas o no tienen relación con España."
     },
     {
       "name": "Gameplay",
