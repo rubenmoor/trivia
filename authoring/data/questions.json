@@ -926255,7 +926255,7 @@
     },
     {
       "id": "q-11974",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Ein Familienname so lang, dass die Firma ihn auf vier Buchstaben eingekocht hat.",
       "question": "Haba sitzt in Bad Rodach in Oberfranken, wurde 1938 gegründet und heißt nach der Familie Habermaaß. Was für eine Firma ist das?",
@@ -926266,8 +926266,8 @@
         "Fahrradhersteller"
       ],
       "hints": [
-        "Die Firma macht sehr vieles aus Holz.",
-        "Ihre Produkte findet man in vielen Kindergärten.",
+        "Der Firmensitz liegt ganz nah an der Grenze zu Thüringen.",
+        "Vor allem Kinder freuen sich über ihre Produkte.",
         "„Obstgarten“ und „Tier auf Tier“ stammen von ihr."
       ],
       "media": {
@@ -926313,32 +926313,34 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"macht sehr vieles aus Holz\") rules out all three wrong answers at once: porcelain, baby food and bicycles aren't made of wood, so the first hint gives the answer away. Hint 2 (products in kindergartens) does the same. Hint 1 should be vague (e.g. about the family business or the region), and hint 2 should narrow the options without settling it.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"macht sehr vieles aus Holz\") rules out all three wrong answers at once: porcelain, baby food and bicycles aren't made of wood, so the first hint gives the answer away. Hint 2 (products in kindergartens) does the same. Hint 1 should be vague (e.g. about the family business or the region), and hint 2 should narrow the options without settling it.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "New description without the children hint, replaced the defensible furniture option with porcelain, and made hint 2 vaguer.",
+        "reason": "Rewrote hints 1 and 2 so they no longer rule out all wrong answers at once.",
         "previous": {
-          "description": "Eine Firma, die ihr Geld mit Kundschaft verdient, die selbst noch gar keins hat.",
-          "wrong_answers": [
-            "Möbelhersteller",
-            "Babykosthersteller",
-            "Fahrradhersteller"
-          ],
           "hints": [
             "Die Firma macht sehr vieles aus Holz.",
-            "Ihre wichtigste Kundschaft sind kleine Kinder.",
+            "Ihre Produkte findet man in vielen Kindergärten.",
             "„Obstgarten“ und „Tier auf Tier“ stammen von ihr."
           ]
         },
@@ -926875,7 +926877,7 @@
     },
     {
       "id": "q-11982",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Ein Spruch, so bayerisch, dass ihn nur Weißwürste ganz verstehen.",
       "question": "Fans des FC Bayern rufen gern „Mia san …“. Was bedeutet der ganze Spruch auf Hochdeutsch?",
@@ -926887,7 +926889,7 @@
       ],
       "hints": [
         "Auf Bayerisch heißt „mia“ so viel wie „wir“.",
-        "Der Spruch steht für Selbstbewusstsein: Wir bleiben, wie wir sind.",
+        "Der Spruch steht für bayerischen Stolz und das Selbstbewusstsein des Vereins.",
         "Der Spruch heißt komplett „Mia san mia“."
       ],
       "media": {
@@ -926933,26 +926935,34 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 („Wir bleiben, wie wir sind“) paraphrases the answer „Wir sind wir“ almost word for word, so it gives the answer away before hint 3. It should instead describe the spirit of the motto (e.g. Bavarian pride, the club's identity) without the \"we stay who we are\" wording.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („Wir bleiben, wie wir sind“) paraphrases the answer „Wir sind wir“ almost word for word, so it gives the answer away before hint 3. It should instead describe the spirit of the motto (e.g. Bavarian pride, the club's identity) without the \"we stay who we are\" wording.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which revealed the word structure, with a hint about the slogan's meaning.",
+        "reason": "Hint 2 paraphrased the answer; now describes the motto's spirit without the wording.",
         "previous": {
           "hints": [
             "Auf Bayerisch heißt „mia“ so viel wie „wir“.",
-            "Das letzte Wort ist dasselbe wie das erste.",
+            "Der Spruch steht für Selbstbewusstsein: Wir bleiben, wie wir sind.",
             "Der Spruch heißt komplett „Mia san mia“."
           ]
         },
@@ -928340,7 +928350,7 @@
     },
     {
       "id": "q-12001",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Ein Kleiderschrank, der aussieht wie ein Malkasten.",
       "question": "Ich habe Knöpfe und einen immer gleichen Schnitt. Angela Merkel trug mich in fast allen Farben des Regenbogens. Was bin ich?",
@@ -928371,7 +928381,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Eine niederländische Designerin hat 2013 aus Fotos ihrer Jacken eine Farbtafel gebastelt, die aussieht wie ein Farbfächer aus dem Baumarkt.",
+      "fun_fact": "Eine niederländische Designerin hat aus Fotos ihrer Jacken eine Farbtafel gebastelt, die aussieht wie ein Farbfächer aus dem Baumarkt.",
       "subcategory": "chancellors-and-presidents",
       "style": null,
       "concept": "Merkels Blazer",
@@ -928394,33 +928404,36 @@
         "difficulty_estimate": 7,
         "notes": "Kids may not know the word 'Blazer', so 6 is a little low. Hint 2 is very strong. The fun fact says 'Fans', but the colour chart was made by one person (a Dutch designer) in 2013, which is a slight simplification. A trenchcoat and a Strickweste also have buttons, but Merkel's jacket clearly points to the blazer. The Bundestag decorative image might show Merkel in a blazer."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check marks the fun fact as wrong: Noortje van Eekelen's 'Pantone Merkel' chart dates from 2012, not 2013. Since I can't confirm 2013, change the year to 2012 or drop the year from the fun fact. Fact check: wrong. Fun fact date is off: the Dutch designer Noortje van Eekelen made the 'Pantone Merkel' colour chart in 2012, not 2013.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check marks the fun fact as wrong: Noortje van Eekelen's 'Pantone Merkel' chart dates from 2012, not 2013. Since I can't confirm 2013, change the year to 2012 or drop the year from the fun fact. Fact check: wrong. Fun fact date is off: the Dutch designer Noortje van Eekelen made the 'Pantone Merkel' colour chart in 2012, not 2013.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 defined the blazer; replaced with an office/job-interview hint, and corrected the fun fact's subject.",
+        "reason": "Removed the disputed year from the fun fact.",
         "previous": {
-          "hints": [
-            "Ich werde über einer Bluse oder einem Shirt getragen.",
-            "Ich bin eine kurze Jacke, oft zu einem Anzug.",
-            "Mein Name klingt englisch und beginnt mit B."
-          ],
-          "fun_fact": "Fans haben aus Fotos ihrer Jacken eine Farbtafel gebastelt, die aussieht wie ein Farbfächer aus dem Baumarkt."
+          "fun_fact": "Eine niederländische Designerin hat 2013 aus Fotos ihrer Jacken eine Farbtafel gebastelt, die aussieht wie ein Farbfächer aus dem Baumarkt."
         },
         "revised_on": "2026-11-05"
       }
@@ -929500,7 +929513,7 @@
     },
     {
       "id": "q-12016",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Hier ist so viel los, dass selbst der Hund auf Seite drei seinen eigenen Fanclub hat.",
       "question": "Welches Merkmal passt NICHT zu einem typischen Wimmelbuch?",
@@ -929518,21 +929531,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "busy town square crowd",
+        "query": "crowded market square",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeighton_Buzzard._A_street_conjuror_%28NBY_443508%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Leighton_Buzzard._A_street_conjuror_%28NBY_443508%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Market_Square_at_Tall_Ships%27_Races_2024.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Helsinki_Market_Square_at_Tall_Ships%27_Races_2024.jpg/3840px-Helsinki_Market_Square_at_Tall_Ships%27_Races_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "JIP · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JIP",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JIP&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Als Vater des deutschen Wimmelbuchs gilt Ali Mitgutsch, dessen erstes Wimmelbuch 1968 erschien.",
       "subcategory": "childrens-books-and-comics",
@@ -929561,33 +929571,50 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the text-related wrong answer with „Feste Pappseiten“ and made hint 1 about discovering things instead of text.",
+        "reason": "Picture had a US-only public-domain licence; new media query for a fresh search.",
         "previous": {
-          "wrong_answers": [
-            "Viele kleine Figuren",
-            "Große Doppelseiten",
-            "Kaum oder gar kein Text"
-          ],
-          "hints": [
-            "Bei einem Wimmelbuch sind die Augen beschäftigter als der Mund beim Vorlesen.",
-            "Man sucht, entdeckt und erzählt sich die Geschichten selbst.",
-            "Ein Wimmelbuch kann man schon anschauen, bevor man lesen kann."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "busy town square crowd",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALeighton_Buzzard._A_street_conjuror_%28NBY_443508%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Leighton_Buzzard._A_street_conjuror_%28NBY_443508%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -929890,11 +929917,11 @@
       "wrong_answers": [
         "Hühnerfeder als Bandenzeichen",
         "Wohnwagen als Hauptquartier",
-        "Hühner von Sprottes Oma"
+        "Sprotte als Anführerin"
       ],
       "hints": [
         "Die Mädchen sind stolz auf ihr eigenes Hauptquartier und ihr Bandenzeichen.",
-        "Sprottes Oma spielt in der Geschichte eine große Rolle.",
+        "Die Anführerin der Bande trägt den Namen eines kleinen Fisches.",
         "Die Pygmäen treffen sich hoch oben zwischen Ästen."
       ],
       "media": {
@@ -929939,31 +929966,45 @@
         "difficulty_estimate": 8,
         "notes": "Hint 1 is misleading: the Pygmäen's treehouse also appears in the books. Hint 2 basically gives the answer. Detail-heavy."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "\"Hühner von Sprottes Oma\" is a defensible second answer to \"Was gehört NICHT zur Bande?\": the hens are Oma Slättberg's, not members or property of the gang (the girls only want to save them), so a player could reasonably pick it as well as the treehouse. The question needs a frame where only the treehouse is wrong, e.g. asking which of these is the gang's headquarters, or replacing that option with an actual gang feature.",
+        "feedback": "Fact check: uncertain. I couldn't confirm that the Pygmäen's hideout is a treehouse, which the answer and hint 3 rely on. Wohnwagen as the Hühner's HQ, the feather sign and Sprotte as leader are right.",
         "problems": [
-          "ambiguity"
+          "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "\"Hühner von Sprottes Oma\" is a defensible second answer to \"Was gehört NICHT zur Bande?\": the hens are Oma Slättberg's, not members or property of the gang (the girls only want to save them), so a player could reasonably pick it as well as the treehouse. The question needs a frame where only the treehouse is wrong, e.g. asking which of these is the gang's headquarters, or replacing that option with an actual gang feature.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed „Welches Ding“ to „Was“, replaced misleading hint 1 and the giveaway hint 2 with milder ones.",
+        "reason": "Replaced the arguably-also-correct grandma's-hens option with a real gang feature (Sprotte as leader) and adjusted hint 2.",
         "previous": {
-          "question": "Welches Ding gehört NICHT zur Bande „Die Wilden Hühner“ von Cornelia Funke?",
+          "wrong_answers": [
+            "Hühnerfeder als Bandenzeichen",
+            "Wohnwagen als Hauptquartier",
+            "Hühner von Sprottes Oma"
+          ],
           "hints": [
-            "Drei Dinge stammen direkt aus den Büchern.",
-            "Das gesuchte Ding gehört der gegnerischen Jungenbande.",
+            "Die Mädchen sind stolz auf ihr eigenes Hauptquartier und ihr Bandenzeichen.",
+            "Sprottes Oma spielt in der Geschichte eine große Rolle.",
             "Die Pygmäen treffen sich hoch oben zwischen Ästen."
           ]
         },
@@ -931803,7 +931844,7 @@
     },
     {
       "id": "q-12046",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Westernhelden mit Föhnfrisur und einer großen Schwäche für Wortwitze.",
       "question": "Ich bin Apachenhäuptling, mein Blutsbruder heißt Ranger, und mein Zwillingsbruder führt die Puder-Rosa-Ranch. Wer bin ich?",
@@ -931821,20 +931862,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "western desert landscape",
+        "query": "desert canyon cactus",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AWestern_Publishing_%26_Novelty_Co._688_%281A-H451%29_-_A_Desert_Landscape_in_the_Southwest_front.tif",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Western_Publishing_%26_Novelty_Co._688_%281A-H451%29_-_A_Desert_Landscape_in_the_Southwest_front.tif/lossy-page1-3840px-Western_Publishing_%26_Novelty_Co._688_%281A-H451%29_-_A_Desert_Landscape_in_the_Southwest_front.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Western Publishing & Novelty Co. · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOrgan_Pipe_Cactus_Pictures_of_Desert_sunset_%2849408454148%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Organ_Pipe_Cactus_Pictures_of_Desert_sunset_%2849408454148%29.jpg/3840px-Organ_Pipe_Cactus_Pictures_of_Desert_sunset_%2849408454148%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "daveynin from United States · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Western Publishing & Novelty Co.",
-        "author_url": null,
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "daveynin from United States",
+        "author_url": "https://www.flickr.com/people/44124370018@N01",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Mit fast 12 Millionen Zuschauern gehört „Der Schuh des Manitu“ zu den erfolgreichsten deutschen Kinofilmen überhaupt.",
       "subcategory": "films-and-actors",
@@ -931863,19 +931902,52 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Picture had a US-only public-domain licence; new media query for a fresh search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "western desert landscape",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AWestern_Publishing_%26_Novelty_Co._688_%281A-H451%29_-_A_Desert_Landscape_in_the_Southwest_front.tif",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Western_Publishing_%26_Novelty_Co._688_%281A-H451%29_-_A_Desert_Landscape_in_the_Southwest_front.tif/lossy-page1-3840px-Western_Publishing_%26_Novelty_Co._688_%281A-H451%29_-_A_Desert_Landscape_in_the_Southwest_front.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Western Publishing & Novelty Co. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Western Publishing & Novelty Co.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12047",
@@ -932901,10 +932973,10 @@
     },
     {
       "id": "q-12060",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Das erste Auto, für das man keinen Führerschein, aber zwei kräftige Füße braucht.",
-      "question": "Wie heißt dieses rote Rutschauto für kleine Kinder?",
+      "question": "Wie heißt dieses Rutschauto für kleine Kinder?",
       "answer": "Bobby-Car",
       "wrong_answers": [
         "Kettcar",
@@ -932920,10 +932992,17 @@
         "type": "image",
         "role": "essential",
         "query": "Bobby Car toddler toy",
-        "note": "Klares Foto eines klassischen roten Bobby-Cars, ohne Kind, möglichst ohne Schrift.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": "Klares Foto eines Bobby-Cars in beliebiger Farbe (auch Sonderedition); ein Kind darauf ist in Ordnung.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVivien_thw_bobbycar.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Vivien_thw_bobbycar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Thiemo Schuff · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thiemo Schuff",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Starwhooper",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Das Bobby-Car gibt es seit 1972, und es ist seitdem durch unzählige Kinderzimmer geflitzt.",
       "subcategory": "founders-and-entrepreneurs",
@@ -932952,19 +933031,44 @@
       "needs_media": true,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a red Bobby-Car. The only real Bobby-Car (#1) is a blue THW special edition with a child on it, which contradicts the question's 'rote Rutschauto'. The other candidates show a toy car in sand, a pink ride-on, a white VW ride-on, a toy train and a street scene. A new search isn't allowed, so this needs a manual search for a plain red Bobby-Car photo. The other option is to drop 'rote' from the question and use #1. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a red Bobby-Car. The only real Bobby-Car (#1) is a blue THW special edition with a child on it, which contradicts the question's 'rote Rutschauto'. The other candidates show a toy car in sand, a pink ride-on, a white VW ride-on, a toy train and a street scene. A new search isn't allowed, so this needs a manual search for a plain red Bobby-Car photo. The other option is to drop 'rote' from the question and use #1. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No red Bobby-Car photo exists; dropped 'rote' so any-colour Bobby-Car photo (e.g. the blue edition) works, and loosened the media note.",
+        "previous": {
+          "question": "Wie heißt dieses rote Rutschauto für kleine Kinder?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Bobby Car toddler toy",
+            "note": "Klares Foto eines klassischen roten Bobby-Cars, ohne Kind, möglichst ohne Schrift.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12061",
@@ -933523,7 +933627,7 @@
     },
     {
       "id": "q-12068",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Eine Zimmermannsbrigade, die lieber nach eigenen Regeln baut als nach Plan.",
       "question": "Was stimmt NICHT über den DEFA-Film „Spur der Steine“ von 1966?",
@@ -933535,7 +933639,7 @@
       ],
       "hints": [
         "Der DEFA-Film erzählt von einer Brigade auf einer Großbaustelle.",
-        "Die Romanvorlage stammt von einem Mann, der selbst über Großbaustellen schrieb.",
+        "Die Staatsführung der DDR war von dem Film alles andere als begeistert.",
         "Der Roman stammt von Erik Neutsch."
       ],
       "media": {
@@ -933581,27 +933685,34 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It says the source novel was written \"von einem Mann\", which rules out Christa Wolf at once and so solves this \"what is NOT true\" question. Hint 2 needs to be rewritten so it says nothing about the author's gender or identity, for example a vague hint about the film's fate or its setting.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It says the source novel was written \"von einem Mann\", which rules out Christa Wolf at once and so solves this \"what is NOT true\" question. Hint 2 needs to be rewritten so it says nothing about the author's gender or identity, for example a vague hint about the film's fate or its setting.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the censorship joke from the description and replaced hints 1 and 2, which confirmed wrong options.",
+        "reason": "Hint 2 revealed the author's gender; replaced with a hint about the film's reception.",
         "previous": {
-          "description": "Ein Film über eine Baustelle, auf der am Ende vor allem die Zensur fleißig war.",
           "hints": [
-            "Der Film wurde erst ab 1989 wieder öffentlich gezeigt.",
-            "Hauptdarsteller und Regisseur sind richtig genannt.",
+            "Der DEFA-Film erzählt von einer Brigade auf einer Großbaustelle.",
+            "Die Romanvorlage stammt von einem Mann, der selbst über Großbaustellen schrieb.",
             "Der Roman stammt von Erik Neutsch."
           ]
         },
@@ -933774,7 +933885,7 @@
     },
     {
       "id": "q-12071",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Ein Laden, in dem schon der Name teurer klang als das halbe Monatsgehalt.",
       "question": "In den „Exquisit“-Läden der DDR zahlte man mit DDR-Mark statt mit Westgeld, aber zu sehr hohen Preisen. Was wurde dort vor allem verkauft?",
@@ -933785,7 +933896,7 @@
         "Autos ohne Wartezeit"
       ],
       "hints": [
-        "Wer dort einkaufte, wollte vor allem gut aussehen.",
+        "Schon der Name sollte nach westlichem Luxus klingen.",
         "Für Lebensmittel gab es eigene Läden mit anderem Namen.",
         "Zu Hause landete die Ware im Kleiderschrank oder im Schuhregal."
       ],
@@ -933832,27 +933943,35 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 („Wer dort einkaufte, wollte vor allem gut aussehen.“) gives the answer away: of the four options, only clothing and shoes are about looking good, so it rules out all three wrong answers at once. It is as strong as hint 3. Replace it with a vague hint, e.g. about the shops' look, prices or when they opened, that doesn't point at what they sold.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 („Wer dort einkaufte, wollte vor allem gut aussehen.“) gives the answer away: of the four options, only clothing and shoes are about looking good, so it rules out all three wrong answers at once. It is as strong as hint 3. Replace it with a vague hint, e.g. about the shops' look, prices or when they opened, that doesn't point at what they sold.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the ungrammatical hint 3 as a clear sentence.",
+        "reason": "Replaced hint 1, which gave the answer away, with a vague hint about the shops' name.",
         "previous": {
           "hints": [
             "Wer dort einkaufte, wollte vor allem gut aussehen.",
             "Für Lebensmittel gab es eigene Läden mit anderem Namen.",
-            "Man nahm die Ware im Schrank mit nach Hause."
+            "Zu Hause landete die Ware im Kleiderschrank oder im Schuhregal."
           ]
         },
         "revised_on": "2026-11-05"
@@ -934012,7 +934131,7 @@
     },
     {
       "id": "q-12074",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Ein Feiertag, an dem das Winken von oben Chefsache war.",
       "question": "Bei der Maidemonstration 1985 in Ost-Berlin zogen Tausende an der Ehrentribüne vorbei. Welcher SED-Chef winkte ihnen von dort zu?",
@@ -934029,12 +934148,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "1. Mai Demonstration Ost-Berlin",
-        "note": "Foto eines Demonstrationszugs am 1. Mai in Ost-Berlin mit Fahnen und Transparenten, ohne erkennbare Politiker auf der Tribüne und ohne lesbare Namen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Bundesarchiv 1. Mai Berlin Demonstration",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABundesarchiv_Bild_183-R0501-0025%2C_Berlin%2C_Palast_der_Republik%2C_1._Mai-Demonstration.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Bundesarchiv_Bild_183-R0501-0025%2C_Berlin%2C_Palast_der_Republik%2C_1._Mai-Demonstration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Klaus Franke · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Klaus Franke",
+        "author_url": "https://www.wikidata.org/wiki/Q112939733",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Der 1. Mai hieß in der DDR offiziell „Kampf- und Feiertag der Werktätigen“.",
       "subcategory": "gdr-everyday-life",
@@ -934060,29 +934186,54 @@
         "notes": "Media is marked essential, but the parade photo isn't needed to answer, so it should be illustrative. The question is fairly straightforward. Honecker appears in other questions, but they ask different facts."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a May Day parade in East Berlin. They show a 1987 city council meeting, a modern climate speaker, 1990 tenant and conscientious-objector protests, and a squatted house on Mainzer Straße. A new search isn't allowed. The slot should become illustrative and get a real 1. Mai DDR parade photo, for example 'Bundesarchiv 1. Mai Berlin Demonstration'. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a May Day parade in East Berlin. They show a 1987 city council meeting, a modern climate speaker, 1990 tenant and conscientious-objector protests, and a squatted house on Mainzer Straße. A new search isn't allowed. The slot should become illustrative and get a real 1. Mai DDR parade photo, for example 'Bundesarchiv 1. Mai Berlin Demonstration'. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The question doesn't need the photo, so the media is now a decorative May Day parade image (blurred, since parade photos often showed Honecker portraits).",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "1. Mai Demonstration Ost-Berlin",
+            "note": "Foto eines Demonstrationszugs am 1. Mai in Ost-Berlin mit Fahnen und Transparenten, ohne erkennbare Politiker auf der Tribüne und ohne lesbare Namen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12075",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Ein Stück Stoff, das man vor dem Fahnenappell auf keinen Fall zu Hause vergessen durfte.",
-      "question": "Wer trug in den 1980er-Jahren in der DDR dieses blaue Halstuch?",
+      "question": "Wer trug in den 1980er-Jahren in der DDR ein blaues Pionierhalstuch?",
       "answer": "Jungpioniere der Klassen 1 bis 3",
       "wrong_answers": [
         "Thälmann-Pioniere ab Klasse 4",
@@ -934096,12 +934247,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Jungpioniere blaues Halstuch",
-        "note": "Farbfoto eines blauen Pionierhalstuchs der DDR (allein oder getragen), ohne rotes Halstuch und ohne Beschriftung.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "East German school classroom",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1988-07-01_Berlin_Mahlsdorf_S%C3%BCd_Erich-Baron_Weg_106_%28Ostberlin%29_b.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/1988-07-01_Berlin_Mahlsdorf_S%C3%BCd_Erich-Baron_Weg_106_%28Ostberlin%29_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Lothar Weber · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lothar Weber",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Throttle_lever",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Ab 1973 trugen die älteren Thälmann-Pioniere ein rotes Halstuch, die Jüngeren blieben beim blauen.",
       "subcategory": "gdr-everyday-life",
@@ -934127,27 +934285,45 @@
         "notes": "The text already says 'blaue', so the essential image is redundant. The description says the colour shows the age, which hints at the age-based split. The question is dry."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a blue DDR pioneer neckerchief, but the essential image has to show one. Another search isn't allowed, so the slot needs a suitable image, for example a Commons photo of a 'Pionierhalstuch blau'. The other option is to rework the question so it doesn't depend on 'dieses' Halstuch. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a blue DDR pioneer neckerchief, but the essential image has to show one. Another search isn't allowed, so the slot needs a suitable image, for example a Commons photo of a 'Pionierhalstuch blau'. The other option is to rework the question so it doesn't depend on 'dieses' Halstuch. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says the colour showed age.",
+        "reason": "Reworded the question so it no longer depends on a photo of the neckerchief, and made the media decorative.",
         "previous": {
-          "description": "Ein Stück Stoff, bei dem die Farbe verriet, wie alt man war."
+          "question": "Wer trug in den 1980er-Jahren in der DDR dieses blaue Halstuch?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Jungpioniere blaues Halstuch",
+            "note": "Farbfoto eines blauen Pionierhalstuchs der DDR (allein oder getragen), ohne rotes Halstuch und ohne Beschriftung.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-05"
       }
@@ -934767,7 +934943,7 @@
     },
     {
       "id": "q-12084",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Ein Spion, der so gut war, dass nicht mal sein Gesicht bekannt war.",
       "question": "Er leitete über 30 Jahre die HVA, die Auslandsspionage der Stasi, und galt im Westen lange als „Mann ohne Gesicht“. Wer ist er?",
@@ -934784,12 +934960,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Stasi headquarters Normannenstrasse",
-        "note": "Porträtfoto von Markus Wolf (z. B. Bundesarchiv), ohne Namensbeschriftung.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEhemalige-Stasi-Zentrale-Frankfurter-Allee-Ruschestr-Berlin-Lichtenberg.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Ehemalige-Stasi-Zentrale-Frankfurter-Allee-Ruschestr-Berlin-Lichtenberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Gunnar Klack · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Gunnar Klack",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gunnar_Klack",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Erst 1978 erkannte der Westen Wolf auf einem heimlich in Stockholm aufgenommenen Foto.",
       "subcategory": "gdr-history",
@@ -934815,22 +934998,47 @@
         "notes": "The description just repeats the 'Mann ohne Gesicht' clue from the question. Showing his portrait is somewhat ironic, but OK. Many German adults know the name, so 13 fits better than 14."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is marked essential and its note asks for a portrait of Markus Wolf, but the search ran for the Stasi headquarters, so no candidate matches. The question doesn't need his face, though. Setting the role to illustrative and using candidate 2 (the former Stasi headquarters in Lichtenberg, no visible text) would work. As it stands, no candidate fits the essential note, and no new search is allowed. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is marked essential and its note asks for a portrait of Markus Wolf, but the search ran for the Stasi headquarters, so no candidate matches. The question doesn't need his face, though. Setting the role to illustrative and using candidate 2 (the former Stasi headquarters in Lichtenberg, no visible text) would work. As it stands, no candidate fits the essential note, and no new search is allowed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The question doesn't need Wolf's face, so the media is now an illustrative image of the Stasi headquarters, as the reviewer suggested.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Stasi headquarters Normannenstrasse",
+            "note": "Porträtfoto von Markus Wolf (z. B. Bundesarchiv), ohne Namensbeschriftung.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12085",
@@ -935130,7 +935338,7 @@
       "status": "needs_work",
       "difficulty": 3,
       "description": "Ein Mülleimer in Schokoladenbraun – leider ist keine Schokolade drin.",
-      "question": "Was gehört in Deutschland in diese braune Tonne?",
+      "question": "Was gehört in Deutschland in die braune Tonne?",
       "answer": "Obst- und Gemüsereste",
       "wrong_answers": [
         "Plastikverpackungen",
@@ -935144,9 +935352,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Biotonne",
-        "note": "Eine braune Mülltonne (Biotonne) vor einem Haus, möglichst ohne lesbare Aufschrift wie „Bio“ oder „Bioabfall“.",
+        "role": "decorative",
+        "query": "German suburban street houses",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -935174,23 +935382,51 @@
         "difficulty_estimate": 4,
         "notes": "Solid but dry everyday question. The essential photo of a brown bin is easy to find, but many real Biotonnen have 'Bio' printed on them, so the note matters. Rules on the bin's colour differ slightly between regions. Fun is only moderate."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a German brown Biotonne without a giveaway: 4 is brown but labelled 'BIOJÄTE' next to bins labelled for metal and glass, 1–2 are black Spanish containers with brown lids (2 says 'ORGÁNICA'), and 3, 5 and 6 aren't brown bins. A new search, e.g. 'brown wheelie bin Germany', is needed but not allowed in this run. No suitable picture found for this question.",
+        "feedback": "The text is fine, but no media candidate fits. The candidates show a US house, an Austrian shopping street, a US church, a London high street, a 1914 book scan and a memorial plaque. None shows a German household or waste-collection setting. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a German brown Biotonne without a giveaway: 4 is brown but labelled 'BIOJÄTE' next to bins labelled for metal and glass, 1–2 are black Spanish containers with brown lids (2 says 'ORGÁNICA'), and 3, 5 and 6 aren't brown bins. A new search, e.g. 'brown wheelie bin Germany', is needed but not allowed in this run. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable bin photo exists, so the question now names the brown bin directly and gets a decorative image, avoiding labelled bins.",
+        "previous": {
+          "question": "Was gehört in Deutschland in diese braune Tonne?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Biotonne",
+            "note": "Eine braune Mülltonne (Biotonne) vor einem Haus, möglichst ohne lesbare Aufschrift wie „Bio“ oder „Bioabfall“.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12090",
@@ -936304,7 +936540,7 @@
       "status": "needs_work",
       "difficulty": 6,
       "description": "Ein Mann, der 15 Jahre lang am Spielfeldrand stand und dabei fast nie die Frisur verlor.",
-      "question": "Dieser Mann war 15 Jahre lang Bundestrainer der Männer. Wer ist es?",
+      "question": "Wer war 15 Jahre lang Bundestrainer der deutschen Männer-Nationalmannschaft?",
       "answer": "Joachim Löw",
       "wrong_answers": [
         "Hansi Flick",
@@ -936318,9 +936554,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Joachim Loew coach",
-        "note": "Clear portrait photo of Joachim Löw, without caption or name visible",
+        "role": "illustrative",
+        "query": "football tactics board",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -936349,22 +936585,50 @@
         "notes": "Wikimedia very likely has a clear portrait photo. Younger kids may not know Löw any more, since he left in 2021. The '15 years' clue points strongly to him for adults."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six media candidates shows Joachim Löw. They are all Library of Congress photos of early-1900s carriages that matched the surname \"Loew\", and no new search is allowed. The essential slot needs a clear portrait of Löw without any caption, for example from the search \"Joachim Löw Bundestrainer\" or \"Joachim Löw 2018\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six media candidates shows Joachim Löw. They are all Library of Congress photos of early-1900s carriages that matched the surname \"Loew\", and no new search is allowed. The essential slot needs a clear portrait of Löw without any caption, for example from the search \"Joachim Löw Bundestrainer\" or \"Joachim Löw 2018\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No portrait of Löw is available, so the question no longer refers to a photo and gets an illustrative football image.",
+        "previous": {
+          "question": "Dieser Mann war 15 Jahre lang Bundestrainer der Männer. Wer ist es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Joachim Loew coach",
+            "note": "Clear portrait photo of Joachim Löw, without caption or name visible",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12105",
@@ -936631,7 +936895,7 @@
           "PD-author-FlickrPDM"
         ]
       },
-      "fun_fact": "Die Sportfreunde Stiller sind nach ihrem früheren Jugend-Fußballtrainer Hans Stiller benannt.",
+      "fun_fact": "Die Sportfreunde Stiller sind nach Hans Stiller benannt, ihrem früheren Fußballtrainer beim SV Germering.",
       "subcategory": "pop-and-rock",
       "style": null,
       "concept": "Applaus, Applaus",
@@ -936654,32 +936918,38 @@
         "difficulty_estimate": 10,
         "notes": "Sportfreunde Stiller come from Germering near Munich. Overlap candidates only share the city as an answer, not the fact. Fine."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The answer München is right: Sportfreunde Stiller come from Germering near Munich, and 'Applaus, Applaus' is from 2013. Sources disagree on the role of the namesake Hans Stiller. One calls him a former football manager at SV Germering, while the fun fact says youth coach.",
+        "feedback": "The fun fact says Hans Stiller coached the band members at \"SV Germering\"; to my knowledge he was their youth coach at TSV Alling (a village near Germering), so the club name is likely wrong. Correct it to TSV Alling or drop the club name (\"ihrem früheren Jugend-Fußballtrainer\").",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The answer München is right: Sportfreunde Stiller come from Germering near Munich, and 'Applaus, Applaus' is from 2013. Sources disagree on the role of the namesake Hans Stiller. One calls him a former football manager at SV Germering, while the fun fact says youth coach.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 (Bavaria), which singled out München, with the band's 2006 World Cup hit.",
+        "reason": "Reworded the fun fact so it calls Hans Stiller their former football coach at SV Germering, which the sources agree on, instead of the disputed 'youth coach'.",
         "previous": {
-          "hints": [
-            "Die Band hat sich nach einem Fußballtrainer benannt.",
-            "Die Band kommt aus Bayern.",
-            "In dieser Stadt findet das Oktoberfest statt."
-          ]
+          "fun_fact": "Die Sportfreunde Stiller sind nach ihrem früheren Jugend-Fußballtrainer Hans Stiller benannt."
         },
         "revised_on": "2026-11-05"
       }
@@ -939110,7 +939380,7 @@
     },
     {
       "id": "q-12141",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Wer ein Grundgesetz schreiben will, braucht Ruhe, Seeluft und am besten keinen Brückenzugang.",
       "question": "Im August 1948 entwarfen Fachleute zwei Wochen lang auf einer Insel in einem bayerischen See die Grundlagen des Grundgesetzes. Welche Insel?",
@@ -939128,11 +939398,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "German Basic Law book",
+        "query": "Grundgesetz book",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConstitui%C3%A7%C3%A3o_da_Alemanha_de_1949.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Constitui%C3%A7%C3%A3o_da_Alemanha_de_1949.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Almanaque Lusofonista · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Almanaque Lusofonista",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Almanaque_Lusofonista&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Der Konvent tagte im Alten Schloss, nicht im prächtigen Neuen Schloss von Ludwig II. nebenan.",
       "subcategory": "federal-republic-and-reunification",
@@ -939161,19 +939438,43 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates works: none shows the Grundgesetz. Most show Nazi-era material (police uniform plates, an Organisation Todt Dienstbuch, a völkisch pamphlet), which is wrong for this topic and the tone, and no new search is allowed. Use a new search, such as \"Grundgesetz Parlamentarischer Rat\" or \"Grundgesetz book\", for an illustrative image that doesn't show Chiemsee or its islands. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates works: none shows the Grundgesetz. Most show Nazi-era material (police uniform plates, an Organisation Todt Dienstbuch, a völkisch pamphlet), which is wrong for this topic and the tone, and no new search is allowed. Use a new search, such as \"Grundgesetz Parlamentarischer Rat\" or \"Grundgesetz book\", for an illustrative image that doesn't show Chiemsee or its islands. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query so it finds the Grundgesetz itself, not unrelated or unsuitable images, and doesn't show Chiemsee.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "German Basic Law book",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12142",
@@ -939709,20 +940010,20 @@
     },
     {
       "id": "q-12149",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Ein Vogel aus Suhl, für den das Gesetz bis heute eine kleine Ausnahme macht.",
-      "question": "Die Simson Schwalbe aus der DDR hat einen Zweitaktmotor. Welche Sonderregel aus der Zeit der Wiedervereinigung gilt für sie bis heute?",
-      "answer": "Bis zu 60 km/h fahren",
+      "question": "Die Simson Schwalbe aus der DDR hat einen Zweitaktmotor. Wie schnell darf sie dank einer Sonderregel aus der Wendezeit bis heute fahren?",
+      "answer": "Bis zu 60 km/h",
       "wrong_answers": [
-        "Ohne Helm fahren",
-        "Ohne Kennzeichen fahren",
-        "Ohne Führerschein fahren"
+        "Bis zu 45 km/h",
+        "Bis zu 50 km/h",
+        "Bis zu 70 km/h"
       ],
       "hints": [
-        "Einen Helm braucht man auf der Schwalbe trotzdem.",
+        "Die Sonderregel hat mit dem Tacho zu tun.",
         "Die Regel geht auf den Einigungsvertrag zurück, der bestimmte DDR-Fahrzeugregeln übernahm.",
-        "Neue Mopeds mit dem gleichen Führerschein sind auf 45 km/h gedrosselt – die Schwalbe nicht."
+        "Neue Mopeds mit dem gleichen Führerschein sind auf 45 km/h gedrosselt – die Schwalbe darf 15 km/h mehr."
       ],
       "media": {
         "type": "image",
@@ -939767,28 +940068,42 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The correct option stands out by its form. It is the only one not phrased as „Ohne …“, and it is longer, so players can pick it as the odd one out without knowing the fact. Rephrase all four options in one parallel form: either four permissions like „Bis zu 60 km/h fahren“ / „Ohne Helm fahren“ / … written the same way, or four speed limits such as „Bis zu 60 km/h“, „Bis zu 45 km/h“, „Bis zu 50 km/h“, „Bis zu 70 km/h“, adjusting hints 1 and 3 to match.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The correct option stands out by its form. It is the only one not phrased as „Ohne …“, and it is longer, so players can pick it as the odd one out without knowing the fact. Rephrase all four options in one parallel form: either four permissions like „Bis zu 60 km/h fahren“ / „Ohne Helm fahren“ / … written the same way, or four speed limits such as „Bis zu 60 km/h“, „Bis zu 45 km/h“, „Bis zu 50 km/h“, „Bis zu 70 km/h“, adjusting hints 1 and 3 to match.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made the options parallel, replaced the giveaway hint 2 and reworded hint 3 so it doesn't contain the answer's wording.",
+        "reason": "Made the options four parallel speed limits so the answer no longer stands out, and changed the question and hints 1 and 3 to match.",
         "previous": {
-          "answer": "Schneller als neue Mopeds fahren",
+          "question": "Die Simson Schwalbe aus der DDR hat einen Zweitaktmotor. Welche Sonderregel aus der Zeit der Wiedervereinigung gilt für sie bis heute?",
+          "answer": "Bis zu 60 km/h fahren",
+          "wrong_answers": [
+            "Ohne Helm fahren",
+            "Ohne Kennzeichen fahren",
+            "Ohne Führerschein fahren"
+          ],
           "hints": [
             "Einen Helm braucht man auf der Schwalbe trotzdem.",
-            "Neue Mopeds dürfen mit dem gleichen Führerschein nur 45 km/h fahren.",
-            "Die Schwalbe darf ihre gebauten 60 km/h voll ausfahren."
+            "Die Regel geht auf den Einigungsvertrag zurück, der bestimmte DDR-Fahrzeugregeln übernahm.",
+            "Neue Mopeds mit dem gleichen Führerschein sind auf 45 km/h gedrosselt – die Schwalbe nicht."
           ]
         },
         "revised_on": "2026-11-05"
@@ -940699,7 +941014,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "public viewing crowd screen",
+        "query": "Fanmeile Berlin public viewing",
         "note": "Large crowd of football fans with German flags outdoors watching a giant video screen (public viewing / Fanmeile), no stadium visible",
         "source_url": null,
         "file_url": null,
@@ -940733,18 +941048,44 @@
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates shows what the essential image needs: football fans with German flags in the open air, watching a giant screen. Without that photo the question can't be answered, and no new search is allowed. A Fanmeile or public-viewing photo needs to be found on Commons (e.g. \"Fanmeile Berlin\" or \"Public Viewing Deutschland\") and attached by hand. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows what the essential image needs: football fans with German flags in the open air, watching a giant screen. Without that photo the question can't be answered, and no new search is allowed. A Fanmeile or public-viewing photo needs to be found on Commons (e.g. \"Fanmeile Berlin\" or \"Public Viewing Deutschland\") and attached by hand. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable essential photo was found, so I changed the search term to target a German Fanmeile or public-viewing crowd.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "public viewing crowd screen",
+            "note": "Large crowd of football fans with German flags outdoors watching a giant video screen (public viewing / Fanmeile), no stadium visible",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12163",
@@ -942719,7 +943060,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Fahrschule car roof sign",
+        "query": "Fahrschule car",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -942753,18 +943094,44 @@
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits: they show a parking-payment sign, an Irish car-park sign, Wiesmann company signs, an old hotel postcard and a tram. None shows a driving-school car. Another search isn't allowed, so the slot needs a new search such as \"Fahrschule car\" or \"driving school car exterior\" (outside of the car only, so the dual pedals don't show). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits: they show a parking-payment sign, an Irish car-park sign, Wiesmann company signs, an old hotel postcard and a tram. None shows a driving-school car. Another search isn't allowed, so the slot needs a new search such as \"Fahrschule car\" or \"driving school car exterior\" (outside of the car only, so the dual pedals don't show). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I changed the image search to the outside of a driving-school car, so the dual pedals don't show.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Fahrschule car roof sign",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12190",
@@ -943284,7 +943651,7 @@
     },
     {
       "id": "q-12197",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Ein Lied, bei dem am Ende nur noch die Hände singen.",
       "question": "„Ich habe drei Ecken, sitze auf dem Kopf, und in meinem Lied lässt man nach und nach Wörter weg und zeigt sie nur mit den Händen.“ Wer bin ich?",
@@ -943302,20 +943669,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "children singing kindergarten",
+        "query": "kindergarten music circle",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_playing_ball_-_%22Singing_As_We_Go%22_%281925%29_-_Mabel_Betsy_Hill.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Children_playing_ball_-_%22Singing_As_We_Go%22_%281925%29_-_Mabel_Betsy_Hill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Mabel Betsy Hill · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARhythmic_action_plays_and_dances%3B_a_book_of_original_games_and_dances%2C_arranged_progressively%2C_to_Mother_Goose_and_other_action_songs%2C_with_a_teaching_introductory%3B_for_the_kindergarten%2C_primary_%2814789224193%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Rhythmic_action_plays_and_dances%3B_a_book_of_original_games_and_dances%2C_arranged_progressively%2C_to_Mother_Goose_and_other_action_songs%2C_with_a_teaching_introductory%3B_for_the_kindergarten%2C_primary_%2814789224193%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Mabel Betsy Hill",
-        "author_url": null,
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Die Melodie des Liedes stammt aus Italien: Sie ist als „Karneval von Venedig“ bekannt.",
       "subcategory": "schlager-and-folk-music",
@@ -943344,30 +943709,49 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description, reworded the question and replaced the confusing hint 2, as the reviewer asked.",
+        "reason": "The image had a PD-US-only licence, so I changed the search term to get a new decorative picture that shows no hat.",
         "previous": {
-          "description": "Ein Kopfschmuck mit sehr vielen Kanten und einem ganz eigenen Lied.",
-          "question": "„Ich habe drei Ecken, sitze auf dem Kopf, und im Lied lässt man meine Wörter nach und nach weg und zeigt sie nur mit den Händen.“ Wer bin ich?",
-          "hints": [
-            "Ich bin etwas zum Anziehen.",
-            "Ich gehöre einem gewissen „Mein“.",
-            "Im Lied heißt es: „Und hätt er nicht drei Ecken, so wär er nicht mein …“"
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "children singing kindergarten",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_playing_ball_-_%22Singing_As_We_Go%22_%281925%29_-_Mabel_Betsy_Hill.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Children_playing_ball_-_%22Singing_As_We_Go%22_%281925%29_-_Mabel_Betsy_Hill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Mabel Betsy Hill · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Mabel Betsy Hill",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -943607,9 +943991,9 @@
     },
     {
       "id": "q-12201",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Wenn du nicht weiterweißt, frag einfach alle – klappt im Leben selten, im Fernsehen manchmal.",
+      "description": "Eine Million vor Augen, und plötzlich fällt dir nicht mal mehr die Hauptstadt von Frankreich ein.",
       "question": "Du sitzt bei „Wer wird Millionär?“ und nimmst den Publikumsjoker. Was passiert dann?",
       "answer": "Die Leute im Studio stimmen ab",
       "wrong_answers": [
@@ -943661,23 +944045,39 @@
         "difficulty_estimate": 4,
         "notes": "The answer is easy to reason out from the name „Publikumsjoker“, so it is fairly flat as a question. Probably easier than 6."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description „Wenn du nicht weiterweißt, frag einfach alle“ states the answer's defining trait (asking everyone at once). With only the four options, that leaves just „Die Leute im Studio stimmen ab“ and rules out the moderator, the expert and the extra time. Rewrite it so it plays on the quiz-show theme without saying that many people are asked.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description „Wenn du nicht weiterweißt, frag einfach alle“ states the answer's defining trait (asking everyone at once). With only the four options, that leaves just „Die Leute im Studio stimmen ab“ and rules out the moderator, the expert and the extra time. Rewrite it so it plays on the quiz-show theme without saying that many people are asked.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I rewrote the description so it plays on quiz-show pressure without saying that many people are asked.",
+        "previous": {
+          "description": "Wenn du nicht weiterweißt, frag einfach alle – klappt im Leben selten, im Fernsehen manchmal."
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12202",
@@ -945259,15 +945659,15 @@
     },
     {
       "id": "q-12223",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Ein Fabelwesen, das es aus alten Sagen bis in die Umgangssprache geschafft hat.",
       "question": "Was für ein Blick ist ein „Basiliskenblick“?",
-      "answer": "Einen bösen, stechenden Blick",
+      "answer": "Ein böser, stechender Blick",
       "wrong_answers": [
-        "Einen verliebten Blick",
-        "Einen verschlafenen Blick",
-        "Einen neugierigen Blick"
+        "Ein verliebter Blick",
+        "Ein verschlafener Blick",
+        "Ein neugieriger Blick"
       ],
       "hints": [
         "Das Wort kommt von einem Fabelwesen.",
@@ -945277,11 +945677,21 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "empty classroom",
+        "query": "medieval bestiary basilisk",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAberdeen_Bestiary_Basilisk.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Aberdeen_Bestiary_Basilisk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Art",
+          "PD-old-100-expired"
+        ]
       },
       "fun_fact": "Im Mittelalter glaubte man, ein Basilisk schlüpfe aus einem Ei, das ein Hahn gelegt und eine Kröte ausgebrütet hat.",
       "subcategory": "state-and-city-emblems",
@@ -945310,30 +945720,46 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits. The search term \"empty classroom\" has nothing to do with a basilisk or a medieval fable creature, and candidate 6 is an October 7 massacre memorial, which is unsuitable for a family game. The text itself is fine. The image needs a new search for a decorative picture of a medieval basilisk or bestiary, e.g. \"medieval bestiary basilisk\" or \"basilisk woodcut\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. The search term \"empty classroom\" has nothing to do with a basilisk or a medieval fable creature, and candidate 6 is an October 7 massacre memorial, which is unsuitable for a family game. The text itself is fine. The image needs a new search for a decorative picture of a medieval basilisk or bestiary, e.g. \"medieval bestiary basilisk\" or \"basilisk woodcut\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the late-to-school scenario from the question and hint 3, and rewrote the description so it no longer suggests a dangerous look.",
+        "reason": "I changed the image search to a medieval basilisk, and changed the options to the nominative so they fit the question's grammar („Was für ein Blick ist …“).",
         "previous": {
-          "description": "Ein Blick, gegen den nicht mal eine Sonnenbrille hilft.",
-          "question": "Du kommst zu spät, und die Lehrerin wirft dir einen „Basiliskenblick“ zu. Was bedeutet das?",
-          "hints": [
-            "Das Wort kommt von einem Fabelwesen.",
-            "Diesem Wesen sagte man nach, es könne mit den Augen töten.",
-            "Gut gelaunt ist die Lehrerin damit sicher nicht."
-          ]
+          "answer": "Einen bösen, stechenden Blick",
+          "wrong_answers": [
+            "Einen verliebten Blick",
+            "Einen verschlafenen Blick",
+            "Einen neugierigen Blick"
+          ],
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "empty classroom",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -945917,7 +946343,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "France silhouette map",
+        "query": "France blank outline map",
         "note": "Nur der Umriss des französischen Festlands (ohne Korsika ist okay), ohne Beschriftung, ohne Städtenamen und ohne Nachbarländer.",
         "source_url": null,
         "file_url": null,
@@ -945951,27 +946377,41 @@
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates is a map or outline of France. They are all silhouettes of people, a statue or a museum building, so the essential image is missing, and no new search is allowed. Getting a usable image will take a search like \"France outline map blank\" or \"France blank map\" on Commons. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates is a map or outline of France. They are all silhouettes of people, a statue or a museum building, so the essential image is missing, and no new search is allowed. Getting a usable image will take a search like \"France outline map blank\" or \"France blank map\" on Commons. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints so they go from vague to strong: shape, then the two coasts, and the Eiffel Tower clue moved to hint 3.",
+        "reason": "No usable outline map was found, so I changed the search term to a blank outline map of France.",
         "previous": {
-          "hints": [
-            "Das Land grenzt an das Saarland und an Baden-Württemberg.",
-            "In seiner Hauptstadt steht ein berühmter eiserner Turm.",
-            "Dort isst man zum Frühstück gern Croissants und Baguette."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "France silhouette map",
+            "note": "Nur der Umriss des französischen Festlands (ohne Korsika ist okay), ohne Beschriftung, ohne Städtenamen und ohne Nachbarländer.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -946050,19 +946490,19 @@
     },
     {
       "id": "q-12233",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Pflaster, Schere, Mullbinde: der kleinste Erste-Hilfe-Laden der Welt fährt im Kofferraum mit.",
-      "question": "Auf der Straße ist ein Unfall passiert. Wer muss jetzt den Verbandskasten holen und Erste Hilfe leisten?",
-      "answer": "Jeder, der dazukommt",
+      "question": "Was gilt laut Gesetz in Deutschland, wenn man an einen Unfall mit Verletzten kommt?",
+      "answer": "Man muss Hilfe leisten",
       "wrong_answers": [
-        "Nur ein Arzt",
-        "Nur die Polizei",
-        "Nur der ADAC-Helfer"
+        "Man darf nichts anfassen",
+        "Man muss erst die Polizei fragen",
+        "Man darf nur Profis helfen lassen"
       ],
       "hints": [
         "Im deutschen Gesetz gibt es dazu eine klare Regel.",
-        "Deshalb macht man vor dem Führerschein einen Erste-Hilfe-Kurs.",
+        "Dafür liegt in jedem Auto ein Verbandskasten.",
         "Es betrifft alle, die an der Unfallstelle helfen können."
       ],
       "media": {
@@ -946108,25 +946548,40 @@
       "needs_media": false,
       "batch": "batch-37",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The answer is the only option that doesn't start with \"Nur …\", so it gives itself away by form alone. Every option needs the same form. One way is to make the answer specific, e.g. \"Jeder Ersthelfer vor Ort\", against wrong answers like \"Ein Arzt\", \"Die Polizei\" and \"Der Pannendienst\". Hint 2 (the first-aid course for the driving licence) also nearly gives the answer away at hint 2. Facts are fine (§ 323c StGB), and candidate 4 works as the image.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The answer is the only option that doesn't start with \"Nur …\", so it gives itself away by form alone. Every option needs the same form. One way is to make the answer specific, e.g. \"Jeder Ersthelfer vor Ort\", against wrong answers like \"Ein Arzt\", \"Die Polizei\" and \"Der Pannendienst\". Hint 2 (the first-aid course for the driving licence) also nearly gives the answer away at hint 2. Facts are fine (§ 323c StGB), and candidate 4 works as the image.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out all wrong options, with a vague hint about German law.",
+        "reason": "I rephrased the question so all four options share the form „Man …“, and replaced hint 2 because it gave the answer away too early.",
         "previous": {
+          "question": "Auf der Straße ist ein Unfall passiert. Wer muss jetzt den Verbandskasten holen und Erste Hilfe leisten?",
+          "answer": "Jeder, der dazukommt",
+          "wrong_answers": [
+            "Nur ein Arzt",
+            "Nur die Polizei",
+            "Nur der ADAC-Helfer"
+          ],
           "hints": [
-            "Man muss dafür keinen besonderen Beruf haben.",
+            "Im deutschen Gesetz gibt es dazu eine klare Regel.",
             "Deshalb macht man vor dem Führerschein einen Erste-Hilfe-Kurs.",
             "Es betrifft alle, die an der Unfallstelle helfen können."
           ]
@@ -946878,7 +947333,7 @@
       "id": "q-12244",
       "status": "needs_work",
       "difficulty": 10,
-      "description": "Ein Münchner, der lieber um Stangen kurvt als geradeaus zu fahren.",
+      "description": "Ein Münchner Löwe, der im Winter lieber auf Skiern als auf dem Rasen unterwegs ist.",
       "question": "Linus Straßer gewann 2024 die Rennen in Kitzbühel und Schladming auf einer Strecke wie dieser. In welcher Disziplin ist er Spezialist?",
       "answer": "Slalom",
       "wrong_answers": [
@@ -946894,7 +947349,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "slalom skier cross-blocking gate",
+        "query": "slalom race gates skier",
         "note": "Eine Slalomstrecke mit vielen dicht hintereinander stehenden, kurzen Torstangen (Kippstangen), möglichst ohne Schrift oder Ortsnamen.",
         "source_url": null,
         "file_url": null,
@@ -946928,18 +947383,45 @@
       "batch": "batch-37",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a slalom course. They are a Fra Angelico altarpiece, a photo of the Loggia dei Lanzi in Florence and two 1856 ILN ship engravings. The question says \"auf einer Strecke wie dieser\", so it needs an essential image of a slalom course with closely spaced gates, and no new search is allowed. Separately, the description (\"um Stangen kurvt\") already rules out Abfahrt; consider rewording it to play on the theme without the gates. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a slalom course. They are a Fra Angelico altarpiece, a photo of the Loggia dei Lanzi in Florence and two 1856 ILN ship engravings. The question says \"auf einer Strecke wie dieser\", so it needs an essential image of a slalom course with closely spaced gates, and no new search is allowed. Separately, the description (\"um Stangen kurvt\") already rules out Abfahrt; consider rewording it to play on the theme without the gates. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I gave the essential image a new slalom-gates search and reworded the description so it no longer mentions the gates, which ruled out Abfahrt.",
+        "previous": {
+          "description": "Ein Münchner, der lieber um Stangen kurvt als geradeaus zu fahren.",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "slalom skier cross-blocking gate",
+            "note": "Eine Slalomstrecke mit vielen dicht hintereinander stehenden, kurzen Torstangen (Kippstangen), möglichst ohne Schrift oder Ortsnamen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-12245",
