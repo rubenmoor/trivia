@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "d2a193aa",
+  "hash": "aaf346a6",
   "questions": [
     {
       "id": "q-8833",
@@ -35780,6 +35780,40 @@
       "background": null
     },
     {
+      "id": "q-13731",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "childrens-books",
+      "bundle": "usa",
+      "description": "Proof that some friendships are best served with a hot cup of tea.",
+      "question": "In Cynthia Rylant's easy readers, lonely old Mr. Putter goes to adopt a pet. What does he bring home?",
+      "answer": "An old cat",
+      "wrong_answers": [
+        "A tiny kitten",
+        "A young puppy",
+        "A talking parrot"
+      ],
+      "hints": [
+        "He went to the animal shelter all on his own.",
+        "His new pet likes the same quiet things he does, like naps in the sun and soft music.",
+        "Its bones creak, just like his."
+      ],
+      "fun_fact": "Mr. Putter and his pet like to drink tea and listen to music together, and the series has more than 20 books.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Meakin_%27Impact%27_tableware_-_2025-04-22_-_Andy_Mabbett_-_02.jpg/3840px-Meakin_%27Impact%27_tableware_-_2025-04-22_-_Andy_Mabbett_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMeakin_%27Impact%27_tableware_-_2025-04-22_-_Andy_Mabbett_-_02.jpg",
+        "credit": "Andy Mabbett · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andy Mabbett",
+        "author_url": "https://en.wikipedia.org/wiki/en:Andy_Mabbett"
+      },
+      "background": null
+    },
+    {
       "id": "q-13732",
       "status": "approved",
       "difficulty": 7,
@@ -36188,6 +36222,74 @@
       "background": null
     },
     {
+      "id": "q-13744",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "Its voice is so deep it could narrate every movie trailer ever made.",
+      "question": "This tall instrument thumps out the beat in bluegrass bands and old rockabilly songs. Which one is it?",
+      "answer": "The upright bass",
+      "wrong_answers": [
+        "The cello",
+        "The harp",
+        "The tuba"
+      ],
+      "hints": [
+        "It has four thick strings.",
+        "It's taller than most of the people who play it.",
+        "Players pluck it, or sometimes slap it, while standing next to it; it's also called the double bass."
+      ],
+      "fun_fact": "In rockabilly, players often slap the strings against the bass's neck so it clicks like a drum while it plays the low notes.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Spotlight_stage_August_Wilson_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpotlight_stage_August_Wilson_Center.jpg",
+        "credit": "daveynin from United States · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "daveynin from United States",
+        "author_url": "https://www.flickr.com/people/44124370018@N01"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13745",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "A jacket that waves goodbye to you every time you move your arms.",
+      "question": "Fringed suede jackets, like the ones American frontiersmen wore, became a big hippie fashion favorite in which decade?",
+      "answer": "The 1960s",
+      "wrong_answers": [
+        "The 1940s",
+        "The 1980s",
+        "The 2000s"
+      ],
+      "hints": [
+        "Think flower power and peace signs.",
+        "It's the same decade as the Woodstock festival.",
+        "Dennis Hopper wore one in the 1969 biker film “Easy Rider.”"
+      ],
+      "fun_fact": "Many people say the fringe on buckskin clothes helped rain drip off, so the jacket dried faster.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/MAPElNorte099.JPG/3840px-MAPElNorte099.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMAPElNorte099.JPG",
+        "credit": "AlejandroLinaresGarcia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "AlejandroLinaresGarcia",
+        "author_url": "https://commons.wikimedia.org/wiki/User:AlejandroLinaresGarcia"
+      },
+      "background": null
+    },
+    {
       "id": "q-13746",
       "status": "approved",
       "difficulty": 3,
@@ -36358,6 +36460,40 @@
       "background": null
     },
     {
+      "id": "q-13751",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "She looked at clouds from both sides now, and also wrote it down.",
+      "question": "Which Canadian singer wrote “Big Yellow Taxi” and “Both Sides, Now” and became a folk star in 1960s America?",
+      "answer": "Joni Mitchell",
+      "wrong_answers": [
+        "Joan Baez",
+        "Carole King",
+        "Judy Collins"
+      ],
+      "hints": [
+        "She also painted the covers of many of her own albums.",
+        "She wrote the song “Woodstock” even though she missed the festival.",
+        "“They paved paradise and put up a parking lot” is her line."
+      ],
+      "fun_fact": "Joni Mitchell had polio as a child and later made up her own guitar tunings, partly because her hand had grown weak.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Close-up_Acoustic_Guitar.jpg/3840px-Close-up_Acoustic_Guitar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClose-up_Acoustic_Guitar.jpg",
+        "credit": "Pisethinfo · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Pisethinfo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pisethinfo"
+      },
+      "background": null
+    },
+    {
       "id": "q-13752",
       "status": "approved",
       "difficulty": 3,
@@ -36388,6 +36524,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "James St. John",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13753",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "A necktie for people who think regular neckties are just too much fabric.",
+      "question": "Which of these US states has NOT made the bolo tie its official state neckwear?",
+      "answer": "California",
+      "wrong_answers": [
+        "Arizona",
+        "New Mexico",
+        "Texas"
+      ],
+      "hints": [
+        "The bolo tie is a Southwest favorite.",
+        "The bolo's silver-and-turquoise clasps are famous work of Navajo, Zuni and Hopi silversmiths.",
+        "The odd one out is on the Pacific coast."
+      ],
+      "fun_fact": "Arizona made the bolo its official neckwear back in 1971, years before New Mexico and Texas did the same.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Turquoise_Bolo_Tie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATurquoise_Bolo_Tie.jpg",
+        "credit": "PLBechly · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PLBechly",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PLBechly"
       },
       "background": null
     },
@@ -37106,6 +37276,40 @@
       "background": null
     },
     {
+      "id": "q-13776",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "A man who said more with his squint than most actors do with a script.",
+      "question": "Which actor starred in the Westerns “Stagecoach” (1939) and “True Grit” (1969) and became America's ultimate cowboy hero?",
+      "answer": "John Wayne",
+      "wrong_answers": [
+        "Clint Eastwood",
+        "Gary Cooper",
+        "Henry Fonda"
+      ],
+      "hints": [
+        "He won an Oscar for playing a one-eyed marshal.",
+        "His nickname was “the Duke.”",
+        "An airport in Orange County, California, carries his name."
+      ],
+      "fun_fact": "John Wayne's real name was Marion Morrison.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Monument_Valley_Sunset_MC.jpg/3840px-Monument_Valley_Sunset_MC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonument_Valley_Sunset_MC.jpg",
+        "credit": "Christian Mehlführer, User:Chmehl · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Christian Mehlführer, User:Chmehl",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chmehl"
+      },
+      "background": null
+    },
+    {
       "id": "q-13778",
       "status": "approved",
       "difficulty": 4,
@@ -37272,6 +37476,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Thong Vo titi_wanderer",
         "author_url": "https://unsplash.com/@titi_wanderer"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13783",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "ghosts-and-superstitions",
+      "bundle": "usa",
+      "description": "Salem in 1692: a town where you were one rumor away from a very bad day.",
+      "question": "It's February 1692 in Salem Village, and the first three women are accused of witchcraft. Which one, enslaved in Reverend Parris's home, confessed?",
+      "answer": "Tituba",
+      "wrong_answers": [
+        "Sarah Good",
+        "Sarah Osborne",
+        "Rebecca Nurse"
+      ],
+      "hints": [
+        "Her confession, full of stories about the Devil, made the panic much worse.",
+        "She is a character in Arthur Miller's play “The Crucible.”",
+        "Her name starts with a T."
+      ],
+      "fun_fact": "Tituba was never put on trial for her confession. She was later released from jail, and history loses track of her after that.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/The_witch_house_salem_2009.JPG/3840px-The_witch_house_salem_2009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_witch_house_salem_2009.JPG",
+        "credit": "chensiyuan · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "chensiyuan",
+        "author_url": null
       },
       "background": null
     },
@@ -38432,6 +38670,40 @@
       "background": null
     },
     {
+      "id": "q-13820",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "national-parks",
+      "bundle": "usa",
+      "description": "A golden ticket, but for geysers instead of chocolate.",
+      "question": "The America the Beautiful pass gets a carload into every US national park for a year. Which kids can get one for free?",
+      "answer": "Fourth graders",
+      "wrong_answers": [
+        "Kindergartners",
+        "High school seniors",
+        "Eagle Scouts"
+      ],
+      "hints": [
+        "It's tied to a school grade.",
+        "The program is called Every Kid Outdoors.",
+        "These kids are usually about 9 or 10 years old."
+      ],
+      "fun_fact": "US seniors aged 62 and over can buy a lifetime version of the pass.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Yellowstone_National_Park_%28WY%2C_USA%29%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg/3840px-Yellowstone_National_Park_%28WY%2C_USA%29%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYellowstone_National_Park_%28WY%2C_USA%29%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
       "id": "q-13821",
       "status": "approved",
       "difficulty": 13,
@@ -38462,6 +38734,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "FF23-fr",
         "author_url": "https://commons.wikimedia.org/wiki/User:FF23-fr"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13822",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "A town so fancy it doesn't even bother saying all of its letters.",
+      "question": "Greenwich, a town founded in 1640 that locals say “GREN-itch,” is in which US state?",
+      "answer": "Connecticut",
+      "wrong_answers": [
+        "New Jersey",
+        "Massachusetts",
+        "Rhode Island"
+      ],
+      "hints": [
+        "It's one of the six New England states.",
+        "It borders New York to the west.",
+        "Its capital is Hartford."
+      ],
+      "fun_fact": "Greenwich, Connecticut, is named after Greenwich in London, which also leaves out the W when people say it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/White_Sailboat_in_Long_Island_Sound_MET_DP113900.jpg/3840px-White_Sailboat_in_Long_Island_Sound_MET_DP113900.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhite_Sailboat_in_Long_Island_Sound_MET_DP113900.jpg",
+        "credit": "Charles Edwin Bolles · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Charles Edwin Bolles",
+        "author_url": "https://www.wikidata.org/wiki/Q42313510"
       },
       "background": null
     },
@@ -38670,6 +38976,40 @@
       "background": null
     },
     {
+      "id": "q-13829",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "The only state whose own lawmakers gave everyone pronunciation homework.",
+      "question": "In 1881, lawmakers in which US state passed an official ruling on how to say the state's name?",
+      "answer": "Arkansas",
+      "wrong_answers": [
+        "Missouri",
+        "Louisiana",
+        "Oklahoma"
+      ],
+      "hints": [
+        "It lies just west of the Mississippi River.",
+        "Its capital is Little Rock.",
+        "Its name ends with the name of another state, but sounds nothing like it."
+      ],
+      "fun_fact": "The 1881 ruling says the final S is silent and the name is said “AR-kan-saw.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Looking_out_into_the_Ozark_forest_from_the_Bluff_Shelter.jpg/3840px-Looking_out_into_the_Ozark_forest_from_the_Bluff_Shelter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALooking_out_into_the_Ozark_forest_from_the_Bluff_Shelter.jpg",
+        "credit": "Brandonrush · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Brandonrush",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Brandonrush"
+      },
+      "background": null
+    },
+    {
       "id": "q-13830",
       "status": "approved",
       "difficulty": 6,
@@ -38768,6 +39108,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Amy Aletheia Cahill",
         "author_url": "https://commons.wikimedia.org/wiki/User:Elvenjewel777"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13833",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "plants-and-trees",
+      "bundle": "usa",
+      "description": "A plant that gives high-fives nobody wants.",
+      "question": "I grow along trails all over America. My tiny hairs make your skin burn and itch, but Native Americans twisted my stems into fishing line. What am I?",
+      "answer": "Stinging nettle",
+      "wrong_answers": [
+        "Poison ivy",
+        "Thistle",
+        "Cattail"
+      ],
+      "hints": [
+        "Cooking or drying my leaves makes them safe to eat.",
+        "My toothed leaves grow in pairs on a square stem.",
+        "My name says exactly what I do to your skin."
+      ],
+      "fun_fact": "A nettle's hairs work like tiny needles: their tips snap off and inject chemicals that cause the sting.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Woodland_path_-_Flickr_-_Frank_Shepherd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoodland_path_-_Flickr_-_Frank_Shepherd.jpg",
+        "credit": "Frank Shepherd · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Frank Shepherd",
+        "author_url": "https://www.flickr.com/people/142252831@N04"
       },
       "background": null
     },
@@ -39311,6 +39685,40 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Anonyme, dessinateur",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13850",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "The boat equivalent of pedaling really, really hard.",
+      "question": "Old Mississippi steamboats were pushed by a big spinning part with flat boards, at the back or side. What is it called?",
+      "answer": "A paddle wheel",
+      "wrong_answers": [
+        "A propeller",
+        "A rudder",
+        "A keel"
+      ],
+      "hints": [
+        "The boards push the water backward as they spin.",
+        "Boats with one of these at the back were called sternwheelers.",
+        "Its first word is also what you use to row a canoe."
+      ],
+      "fun_fact": "Mark Twain was a steamboat pilot on the Mississippi before he became a famous writer.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Mississippi_River_Sunset.jpg/3840px-Mississippi_River_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMississippi_River_Sunset.jpg",
+        "credit": "nearly almost · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "nearly almost",
         "author_url": null
       },
       "background": null
@@ -40617,6 +41025,40 @@
       "background": null
     },
     {
+      "id": "q-13890",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "weather-and-seasons",
+      "bundle": "usa",
+      "description": "Everyone remembers her first name, but this question wants the rest.",
+      "question": "In The Wizard of Oz, a twister carries Dorothy and her little dog from a Kansas farm to Oz. What is her last name?",
+      "answer": "Gale",
+      "wrong_answers": [
+        "Baker",
+        "Miller",
+        "Turner"
+      ],
+      "hints": [
+        "Her Aunt Em and Uncle Henry share this last name.",
+        "Her last name is a perfect fit for a girl swept away by a storm.",
+        "It's also a word for a very strong wind that sailors fear."
+      ],
+      "fun_fact": "In L. Frank Baum's first Oz book from 1900, Dorothy has no last name at all; “Gale” first shows up in a 1902 stage play.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Konza_Prairie%2C_Geary_County%2C_%28Ashland%29_Kansas_2005_%286550732639%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKonza_Prairie%2C_Geary_County%2C_%28Ashland%29_Kansas_2005_%286550732639%29.jpg",
+        "credit": "inkknife_2000 (7.5 million views +) · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "inkknife_2000 (7.5 million views +)",
+        "author_url": "https://www.flickr.com/people/23155134@N06"
+      },
+      "background": null
+    },
+    {
       "id": "q-13891",
       "status": "approved",
       "difficulty": 5,
@@ -41535,6 +41977,40 @@
       "background": null
     },
     {
+      "id": "q-13918",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "A state with a nickname that sounds like a nice place to park your boat.",
+      "question": "Which US state is nicknamed “the Bay State”?",
+      "answer": "Massachusetts",
+      "wrong_answers": [
+        "Maryland",
+        "Connecticut",
+        "New Hampshire"
+      ],
+      "hints": [
+        "It's in New England.",
+        "It has a hook-shaped cape sticking out into the ocean.",
+        "Its capital is Boston."
+      ],
+      "fun_fact": "The nickname comes from the Massachusetts Bay Colony, founded by English settlers in 1630.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/New_England_leaves_%284105916616%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_England_leaves_%284105916616%29.jpg",
+        "credit": "DearEdward from New York, NY, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "DearEdward from New York, NY, USA",
+        "author_url": "https://www.flickr.com/people/69502324@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-13919",
       "status": "approved",
       "difficulty": 12,
@@ -41701,6 +42177,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Holger Krisp",
         "author_url": "https://commons.wikimedia.org/wiki/User:Holleday"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13924",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "trailblazers",
+      "bundle": "usa",
+      "description": "A chemist who couldn't stop collecting gold medals from Sweden and Norway.",
+      "question": "Linus Pauling won the 1954 Nobel Prize in Chemistry and the 1962 Nobel Peace Prize. What did he campaign against?",
+      "answer": "Nuclear weapons tests",
+      "wrong_answers": [
+        "Child labor in factories",
+        "Tobacco advertising",
+        "Air pollution from cars"
+      ],
+      "hints": [
+        "His Peace Prize was announced on the same day a Cold War treaty took effect.",
+        "He handed the United Nations a petition signed by thousands of scientists from many countries.",
+        "Think of mushroom clouds in the desert and the Pacific."
+      ],
+      "fun_fact": "Pauling is still the only person to win two Nobel Prizes that he didn't share with anyone.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Left_to_right-_Thomas_Hunt_Morgan_%281866-1945%29%2C_Linus_Carl_Pauling_%281901-1994%29%2C_and_Marian_Irwin_Osterhout_%281889-1973%29_%2812483976133%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeft_to_right-_Thomas_Hunt_Morgan_%281866-1945%29%2C_Linus_Carl_Pauling_%281901-1994%29%2C_and_Marian_Irwin_Osterhout_%281889-1973%29_%2812483976133%29.jpg",
+        "credit": "Smithsonian Institution from United States · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Smithsonian Institution from United States",
+        "author_url": "https://www.flickr.com/people/25053835@N03"
       },
       "background": null
     },
@@ -42045,6 +42555,40 @@
       "background": null
     },
     {
+      "id": "q-13935",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "tv-shows",
+      "bundle": "usa",
+      "description": "A theme song that sounds like a recipe and a skipping game had a baby.",
+      "question": "In the opening credits of Laverne & Shirley, the two skip down the street chanting “Schlemiel! Schlimazel! ___ Incorporated!” What's the missing word?",
+      "answer": "Hasenpfeffer",
+      "wrong_answers": [
+        "Sauerbraten",
+        "Pumpernickel",
+        "Liverwurst"
+      ],
+      "hints": [
+        "It's a German dish.",
+        "It's a stew made with rabbit.",
+        "The first half is the German word for hares."
+      ],
+      "fun_fact": "Laverne & Shirley was a spin-off of Happy Days, where the two first appeared as dates of Fonzie and Richie.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Milwaukee_March_2024_4_%28Milwaukee_skyline_and_Milwaukee_River%29.jpg/3840px-Milwaukee_March_2024_4_%28Milwaukee_skyline_and_Milwaukee_River%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMilwaukee_March_2024_4_%28Milwaukee_skyline_and_Milwaukee_River%29.jpg",
+        "credit": "Michael Barera · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Michael Barera",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Michael_Barera"
+      },
+      "background": null
+    },
+    {
       "id": "q-13936",
       "status": "approved",
       "difficulty": 6,
@@ -42279,6 +42823,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Carol (vanhookc)",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13943",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "winter-holidays",
+      "bundle": "usa",
+      "description": "Hope you have a very long fireplace mantel.",
+      "question": "You're hanging one stocking for each reindeer on Santa's team, Rudolph included. How many stockings do you need?",
+      "answer": "9",
+      "wrong_answers": [
+        "8",
+        "7",
+        "12"
+      ],
+      "hints": [
+        "Santa's team comes from a famous 1823 poem, “A Visit from St. Nicholas.”",
+        "The poem lists them in pairs: Dasher and Dancer, Prancer and Vixen…",
+        "Add the one with the shiny red nose to the poem's eight."
+      ],
+      "fun_fact": "Rudolph was created in 1939 for a free storybook given out by the Montgomery Ward department store.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/A_frightened_reindeer_on_snow_-_panoramio.jpg/3840px-A_frightened_reindeer_on_snow_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_frightened_reindeer_on_snow_-_panoramio.jpg",
+        "credit": "Vojife · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Vojife",
+        "author_url": "https://web.archive.org/web/20161102120415/http://www.panoramio.com/user/1012111?with_photo_id=110503767"
       },
       "background": null
     },

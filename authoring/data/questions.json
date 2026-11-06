@@ -1062360,9 +1062360,9 @@
     },
     {
       "id": "q-13731",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
-      "description": "Proof that the best friends come with a teapot and very little noise.",
+      "description": "Proof that some friendships are best served with a hot cup of tea.",
       "question": "In Cynthia Rylant's easy readers, lonely old Mr. Putter goes to adopt a pet. What does he bring home?",
       "answer": "An old cat",
       "wrong_answers": [
@@ -1062418,29 +1062418,32 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (“the best friends come with a teapot and very little noise”) rules out options before any hint: “very little noise” excludes the talking parrot and the young puppy, and it states the answer's defining trait (a quiet, calm companion). Rewrite it to play on the theme, for example tea or Mr. Putter's routines, without saying the pet is quiet or calm.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (“the best friends come with a teapot and very little noise”) rules out options before any hint: “very little noise” excludes the talking parrot and the young puppy, and it states the answer's defining trait (a quiet, calm companion). Rewrite it to play on the theme, for example tea or Mr. Putter's routines, without saying the pet is quiet or calm.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1–2 and the description, which pointed at old age, the trait only the correct option has.",
+        "reason": "Rewrote the description so it plays on tea and no longer says the pet is quiet, which ruled out options.",
         "previous": {
-          "description": "A tale for anyone whose knees creak louder than the floorboards.",
-          "hints": [
-            "He wanted a pet just like himself.",
-            "Babies and youngsters were too lively for him.",
-            "Its bones creak, just like his."
-          ]
+          "description": "Proof that the best friends come with a teapot and very little noise."
         },
         "revised_on": "2026-11-06"
       }
@@ -1063360,10 +1063363,10 @@
     },
     {
       "id": "q-13744",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Its voice is so deep it could narrate every movie trailer ever made.",
-      "question": "Listen: this tall instrument thumps out the beat in bluegrass bands and old rockabilly songs. Which one is it?",
+      "question": "This tall instrument thumps out the beat in bluegrass bands and old rockabilly songs. Which one is it?",
       "answer": "The upright bass",
       "wrong_answers": [
         "The cello",
@@ -1063376,13 +1063379,20 @@
         "Players pluck it, or sometimes slap it, while standing next to it; it's also called the double bass."
       ],
       "media": {
-        "type": "audio",
-        "role": "essential",
-        "query": "double bass solo pizzicato",
-        "note": "A clear solo recording of a plucked (pizzicato) upright double bass playing a walking bass line; no other instruments.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "type": "image",
+        "role": "decorative",
+        "query": "wooden stage spotlight",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpotlight_stage_August_Wilson_Center.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Spotlight_stage_August_Wilson_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "daveynin from United States · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "daveynin from United States",
+        "author_url": "https://www.flickr.com/people/44124370018@N01",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In rockabilly, players often slap the strings against the bass's neck so it clicks like a drum while it plays the low notes.",
       "subcategory": "country-and-folk",
@@ -1063408,51 +1063418,65 @@
         "notes": "Hint 3 calls the bass the biggest member of the violin family. That is commonly said, but some place it in the viol family. Telling a bass from a cello by sound is a bit harder than level 5."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the audio candidates is a solo upright bass: #1 is a tango MIDI file, #2 is a Kevin MacLeod march, #3 is a song draft. The question's essential audio needs a clear recording of a plucked double bass, and no new search is allowed here. The text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the audio candidates is a solo upright bass: #1 is a tango MIDI file, #2 is a Kevin MacLeod march, #3 is a song draft. The question's essential audio needs a clear recording of a plucked double bass, and no new search is allowed here. The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": {
-        "query": "wooden stage spotlight",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpotlight_stage_August_Wilson_Center.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Spotlight_stage_August_Wilson_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "daveynin from United States · CC BY 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "daveynin from United States",
-        "author_url": "https://www.flickr.com/people/44124370018@N01",
-        "restrictions": [],
-        "pd_reasons": []
-      },
+      "background": null,
       "revision": {
         "action": "revise",
-        "reason": "I rewrote the description so it no longer talks about standing, and replaced hint 3 (the disputed violin-family claim) with a clearly true one.",
+        "reason": "No solo bass recording exists in the sources, so I made it a text question with a decorative image.",
         "previous": {
-          "description": "An instrument so big you have to stand up just to say hello to it.",
-          "hints": [
-            "It has four thick strings.",
-            "It's taller than most of the people who play it.",
-            "It's the biggest and lowest member of the violin family."
-          ]
+          "question": "Listen: this tall instrument thumps out the beat in bluegrass bands and old rockabilly songs. Which one is it?",
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "double bass solo pizzicato",
+            "note": "A clear solo recording of a plucked (pizzicato) upright double bass playing a walking bass line; no other instruments.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true,
+          "background": {
+            "query": "wooden stage spotlight",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASpotlight_stage_August_Wilson_Center.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Spotlight_stage_August_Wilson_Center.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "daveynin from United States · CC BY 2.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY 2.0",
+            "license_url": "https://creativecommons.org/licenses/by/2.0",
+            "author": "daveynin from United States",
+            "author_url": "https://www.flickr.com/people/44124370018@N01",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-11-06"
       }
     },
     {
       "id": "q-13745",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "A jacket that waves goodbye to you every time you move your arms.",
       "question": "Fringed suede jackets, like the ones American frontiersmen wore, became a big hippie fashion favorite in which decade?",
@@ -1063470,20 +1063494,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "buckskin fringe jacket",
+        "query": "fringed suede jacket",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AWilliam_F._%22Buffalo_Bill%22_studio_portrait_with_western_gear%2C_circa_1880-1899_-_DPLA_-_d78f3d233738f0d85090d6d52101e7f9.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/William_F._%22Buffalo_Bill%22_studio_portrait_with_western_gear%2C_circa_1880-1899_-_DPLA_-_d78f3d233738f0d85090d6d52101e7f9.jpg/3840px-William_F._%22Buffalo_Bill%22_studio_portrait_with_western_gear%2C_circa_1880-1899_-_DPLA_-_d78f3d233738f0d85090d6d52101e7f9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMAPElNorte099.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/MAPElNorte099.JPG/3840px-MAPElNorte099.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "AlejandroLinaresGarcia · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "AlejandroLinaresGarcia",
+        "author_url": "https://commons.wikimedia.org/wiki/User:AlejandroLinaresGarcia",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Many people say the fringe on buckskin clothes helped rain drip off, so the jacket dried faster.",
       "subcategory": "country-and-folk",
@@ -1063512,24 +1063534,49 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "I hedged the fun fact, because the rain-drip idea is only a popular theory.",
+        "reason": "Changed the image query to find a modern fringed jacket instead of the PD-US-only Buffalo Bill portrait.",
         "previous": {
-          "fun_fact": "Fringe on buckskin clothes wasn't just for looks: the strips helped rain drip off so the jacket dried faster."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "buckskin fringe jacket",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AWilliam_F._%22Buffalo_Bill%22_studio_portrait_with_western_gear%2C_circa_1880-1899_-_DPLA_-_d78f3d233738f0d85090d6d52101e7f9.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/William_F._%22Buffalo_Bill%22_studio_portrait_with_western_gear%2C_circa_1880-1899_-_DPLA_-_d78f3d233738f0d85090d6d52101e7f9.jpg/3840px-William_F._%22Buffalo_Bill%22_studio_portrait_with_western_gear%2C_circa_1880-1899_-_DPLA_-_d78f3d233738f0d85090d6d52101e7f9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1063924,10 +1063971,10 @@
     },
     {
       "id": "q-13751",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "She looked at clouds from both sides now, and also wrote it down.",
-      "question": "This Canadian singer wrote “Big Yellow Taxi” and “Both Sides, Now” and became a folk star in 1960s America. Who is she?",
+      "question": "Which Canadian singer wrote “Big Yellow Taxi” and “Both Sides, Now” and became a folk star in 1960s America?",
       "answer": "Joni Mitchell",
       "wrong_answers": [
         "Joan Baez",
@@ -1063941,12 +1063988,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Joni Mitchell portrait",
-        "note": "A photo of Joni Mitchell, ideally from the 1970s, without any caption or name.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "acoustic guitar close-up",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClose-up_Acoustic_Guitar.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Close-up_Acoustic_Guitar.jpg/3840px-Close-up_Acoustic_Guitar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Pisethinfo · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Pisethinfo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pisethinfo",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Joni Mitchell had polio as a child and later made up her own guitar tunings, partly because her hand had grown weak.",
       "subcategory": "country-and-folk",
@@ -1063972,22 +1064026,48 @@
         "notes": "The description borrows a song title that is also in the question, which is fine. Commons has usable photos of Joni Mitchell."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows Joni Mitchell, and a new search isn't allowed. Also, the question asks only about her songs, so a photo isn't really needed to answer it. Switch the slot to an illustrative image, like an acoustic guitar or a 1960s folk club scene, or to a decorative one, and search again. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows Joni Mitchell, and a new search isn't allowed. Also, the question asks only about her songs, so a photo isn't really needed to answer it. Switch the slot to an illustrative image, like an acoustic guitar or a 1960s folk club scene, or to a decorative one, and search again. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of her exists, so I reworded the question without “this” and switched to an illustrative guitar image.",
+        "previous": {
+          "question": "This Canadian singer wrote “Big Yellow Taxi” and “Both Sides, Now” and became a folk star in 1960s America. Who is she?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Joni Mitchell portrait",
+            "note": "A photo of Joni Mitchell, ideally from the 1970s, without any caption or name.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13752",
@@ -1064063,7 +1064143,7 @@
     },
     {
       "id": "q-13753",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A necktie for people who think regular neckties are just too much fabric.",
       "question": "Which of these US states has NOT made the bolo tie its official state neckwear?",
@@ -1064094,7 +1064174,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Arizona made the bolo its official neckwear in 1971, and New Mexico and Texas followed in 2007.",
+      "fun_fact": "Arizona made the bolo its official neckwear back in 1971, years before New Mexico and Texas did the same.",
       "subcategory": "country-and-folk",
       "style": null,
       "concept": "Bolo tie",
@@ -1064117,32 +1064197,36 @@
         "difficulty_estimate": 10,
         "notes": "Hint 2 (“the three states are all in the desert Southwest”) nearly gives the answer away. Players can reason that California is the odd one out, which pulls the difficulty slightly below 11."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: wrong. The fun fact is wrong about New Mexico. New Mexico named the bolo tie its official state tie in 1987, not 2007. Arizona (1971) and Texas (2007) are right. I checked this from memory, not with a search.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. The fun fact is wrong about New Mexico. New Mexico named the bolo tie its official state tie in 1987, not 2007. Arizona (1971) and Texas (2007) are right. I checked this from memory, not with a search.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "I replaced hint 2, which ruled options in or out by region, with a hint about Native American silversmiths.",
+        "reason": "Rewrote the fun fact so it stays true whether New Mexico's date is the 1987 memorial or the 2007 law.",
         "previous": {
-          "hints": [
-            "The bolo tie is a Southwest favorite.",
-            "The three states that chose it are all in the desert Southwest.",
-            "The odd one out is on the Pacific coast."
-          ]
+          "fun_fact": "Arizona made the bolo its official neckwear in 1971, and New Mexico and Texas followed in 2007."
         },
         "revised_on": "2026-11-06"
       }
@@ -1065757,7 +1065841,7 @@
       "status": "needs_work",
       "difficulty": 6,
       "description": "Bunk beds, beans and a very early wake-up call.",
-      "question": "Old lumber camps like this one, where the first Paul Bunyan tales were told, filled the forests of which states?",
+      "question": "Old lumber camps, where the first Paul Bunyan tales were told, filled the forests of which states?",
       "answer": "Michigan, Wisconsin and Minnesota",
       "wrong_answers": [
         "Arizona, Nevada and Utah",
@@ -1065771,9 +1065855,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Michigan logging camp 1880s",
-        "note": "A historic black-and-white photo of a 19th-century lumber camp with log cabins, loggers and stacked logs, no captions naming a state.",
+        "role": "illustrative",
+        "query": "logging camp bunkhouse historic",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1065802,29 +1065886,57 @@
         "notes": "The distractors are treeless or desert states, so the answer is easy to spot. The photo doesn't help identify the states, so it is better as illustrative than essential. Some also trace the tales to the Pacific Northwest, but the Great Lakes origin is standard."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the lumber camp the question names (\"like this one\"). Candidate 2 is a \"Lumbering in Minnesota\" sign that names part of the answer, candidate 1 is a \"Canada Lumberman\" masthead, and 3 and 4 are engravings of Columbia River rock formations. A new search can't run, so the slot needs a real 19th-century lumber camp photo, for example \"lumber camp loggers 1890s\" or \"logging camp bunkhouse historic\", with no state named in a caption. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the lumber camp the question names (\"like this one\"). Candidate 2 is a \"Lumbering in Minnesota\" sign that names part of the answer, candidate 1 is a \"Canada Lumberman\" masthead, and 3 and 4 are engravings of Columbia River rock formations. A new search can't run, so the slot needs a real 19th-century lumber camp photo, for example \"lumber camp loggers 1890s\" or \"logging camp bunkhouse historic\", with no state named in a caption. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable camp photo was found, so I dropped “like this one” and made the image an illustrative historic logging camp.",
+        "previous": {
+          "question": "Old lumber camps like this one, where the first Paul Bunyan tales were told, filled the forests of which states?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Michigan logging camp 1880s",
+            "note": "A historic black-and-white photo of a 19th-century lumber camp with log cabins, loggers and stacked logs, no captions naming a state.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13776",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A man who said more with his squint than most actors do with a script.",
-      "question": "This actor starred in the Westerns “Stagecoach” (1939) and “True Grit” (1969) and became America's ultimate cowboy hero. Who is he?",
+      "question": "Which actor starred in the Westerns “Stagecoach” (1939) and “True Grit” (1969) and became America's ultimate cowboy hero?",
       "answer": "John Wayne",
       "wrong_answers": [
         "Clint Eastwood",
@@ -1065838,21 +1065950,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "John Wayne publicity photo",
-        "note": "A clear, public-domain publicity portrait of John Wayne, ideally in cowboy hat, with no caption.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AJohn_Wayne_Publicity_Photo_1952_%28squared%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/John_Wayne_Publicity_Photo_1952_%28squared%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "Monument Valley buttes",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonument_Valley_Sunset_MC.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Monument_Valley_Sunset_MC.jpg/3840px-Monument_Valley_Sunset_MC.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Christian Mehlführer, User:Chmehl · CC BY 2.5 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Christian Mehlführer, User:Chmehl",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chmehl",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "John Wayne's real name was Marion Morrison.",
       "subcategory": "folk-heroes-and-tall-tales",
@@ -1065878,22 +1065988,57 @@
         "notes": "All facts are correct. Public-domain portraits of John Wayne, such as trailer stills, likely exist on Commons."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The portrait's licence is PD-US only, so I reworded the question without “this” and used an illustrative Monument Valley image.",
+        "previous": {
+          "question": "This actor starred in the Westerns “Stagecoach” (1939) and “True Grit” (1969) and became America's ultimate cowboy hero. Who is he?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "John Wayne publicity photo",
+            "note": "A clear, public-domain publicity portrait of John Wayne, ideally in cowboy hat, with no caption.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AJohn_Wayne_Publicity_Photo_1952_%28squared%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/John_Wayne_Publicity_Photo_1952_%28squared%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13777",
@@ -1066369,7 +1066514,7 @@
     },
     {
       "id": "q-13783",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Salem in 1692: a town where you were one rumor away from a very bad day.",
       "question": "It's February 1692 in Salem Village, and the first three women are accused of witchcraft. Which one, enslaved in Reverend Parris's home, confessed?",
@@ -1066387,20 +1066532,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Salem Village witch trials engraving",
+        "query": "Salem Witch House",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AWitchcraft_at_Salem_Village.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Witchcraft_at_Salem_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "unattributed · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_witch_house_salem_2009.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/The_witch_house_salem_2009.JPG/3840px-The_witch_house_salem_2009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "chensiyuan · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "unattributed",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "chensiyuan",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Tituba was never put on trial for her confession. She was later released from jail, and history loses track of her after that.",
       "subcategory": "ghosts-and-superstitions",
@@ -1066429,19 +1066572,52 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The engraving's licence is PD-US only, so I changed the query to a photo of Salem's historic Witch House.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Salem Village witch trials engraving",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AWitchcraft_at_Salem_Village.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Witchcraft_at_Salem_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "unattributed · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "unattributed",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13784",
@@ -1067228,8 +1067404,8 @@
       "id": "q-13794",
       "status": "needs_work",
       "difficulty": 1,
-      "description": "A flat friend that's great at turning things over.",
-      "question": "Which food is a round, flat patty that people flip on the grill with this tool and then put in a bun?",
+      "description": "A sandwich that was doing flips long before skateboards were invented.",
+      "question": "Which food is a round, flat patty that people flip on the grill and then put in a bun?",
       "answer": "A burger",
       "wrong_answers": [
         "A bowl of soup",
@@ -1067243,12 +1067419,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "grill spatula turner",
-        "note": "A clear photo of a flat metal kitchen spatula (turner) on its own, no food on it.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "backyard picnic table",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQuinteIsle03_%282412115898%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/QuinteIsle03_%282412115898%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "rdoroshenko · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "rdoroshenko",
+        "author_url": "https://www.flickr.com/people/12452304@N08",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Americans eat billions of burgers every year, and many of them are flipped on backyard grills in summer.",
       "subcategory": "home-cooking",
@@ -1067273,33 +1067456,50 @@
         "difficulty_estimate": 1,
         "notes": "The distractors (soup, milk, ice cream) can't physically be flipped, so they are absurd even at difficulty 1. Pancakes would also fit the clue in the real world. The essential spatula photo is easy to find."
       },
-      "fact_checked": true,
-      "needs_media": true,
+      "fact_checked": false,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a grill spatula. The search for \"turner\" returned ducks of the genus Spatula, Ike & Tina Turner and J. M. W. Turner paintings. The only utensil is an 1814 silver fish slice, which doesn't look like a grill tool. The question says \"this tool\", so the essential image needs a clear photo of a metal grill spatula or turner. Searching again isn't allowed, so the developer needs to supply one by hand (for example from \"barbecue spatula\" or \"metal kitchen turner\"). No suitable picture found for this question.",
+        "feedback": "The description calls the food \"a sandwich\", and none of the wrong options (soup, milk, ice cream) is a sandwich, so it gives the answer away before any hint. Rewrite the description so it plays on cookouts or grilling without naming the food type. The fact check also flagged a mismatch: the question describes the patty, but the answer is the whole burger. One way to fix it is to ask \"Which food is made with a round, flat patty that people flip on the grill and serve in a bun?\" Fact check: wrong. The description calls it a 'sandwich', but the question asks about a patty. The answer 'A burger' is ambiguous: a burger is the whole sandwich (patty plus bun), while the question describes the patty put in a bun. The description's skateboard joke is also loose. The wrong answers (soup, milk, ice cream) are clearly wrong. The hints and fun fact are plausible and generally true (burgers are usually beef, often have cheese, and are popular at summer cookouts). The 'billions of burgers' claim is widely cited, e.g. about 50 billion a year in the US, though I did not verify it with a search.",
         "problems": [
-          "media"
+          "giveaway",
+          "fact"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a grill spatula. The search for \"turner\" returned ducks of the genus Spatula, Ike & Tina Turner and J. M. W. Turner paintings. The only utensil is an 1814 silver fish slice, which doesn't look like a grill tool. The question says \"this tool\", so the essential image needs a clear photo of a metal grill spatula or turner. Searching again isn't allowed, so the developer needs to supply one by hand (for example from \"barbecue spatula\" or \"metal kitchen turner\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question so the clue (a round, flat patty that goes in a bun) fits only the burger, and rewrote the hints so they don't repeat it.",
+        "reason": "No spatula photo was found, so I removed “this tool”, used a decorative cookout image and rewrote the description, which was about the tool.",
         "previous": {
-          "question": "Which food do people flip over on the grill with this tool?",
-          "hints": [
-            "The food is flat and round.",
-            "It cooks on one side, then needs to cook on the other.",
-            "It goes in a bun with ketchup."
-          ]
+          "description": "A flat friend that's great at turning things over.",
+          "question": "Which food is a round, flat patty that people flip on the grill with this tool and then put in a bun?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "grill spatula turner",
+            "note": "A clear photo of a flat metal kitchen spatula (turner) on its own, no food on it.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -1067639,18 +1067839,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "sealed envelopes stack",
+        "query": "sealed white envelope",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStack_of_Envelopes_by_Martin_Vorel.jpeg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Stack_of_Envelopes_by_Martin_Vorel.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Martin Vorel · Public Domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public Domain",
-        "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
-        "author": "Martin Vorel",
-        "author_url": "https://libreshot.com/about-libreshot/",
-        "restrictions": [],
-        "pd_reasons": []
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "The envelopes were said to have been kept “hermetically sealed in a mayonnaise jar on Funk & Wagnalls' porch.”",
       "subcategory": "hosts-and-game-shows",
@@ -1067680,27 +1067873,48 @@
       "batch": "batch-44",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 3 named the wrong speaker for the intro line, so it now names no one.",
+        "reason": "Changed the image search term so a picture with a suitable licence gets picked.",
         "previous": {
-          "hints": [
-            "Ed McMahon handed me my envelopes.",
-            "A very famous late-night host put on the turban to play me.",
-            "Johnny Carson called me a seer from the East."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "sealed envelopes stack",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AStack_of_Envelopes_by_Martin_Vorel.jpeg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Stack_of_Envelopes_by_Martin_Vorel.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Martin Vorel · Public Domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public Domain",
+            "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+            "author": "Martin Vorel",
+            "author_url": "https://libreshot.com/about-libreshot/",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1069209,10 +1069423,10 @@
     },
     {
       "id": "q-13820",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A golden ticket, but for geysers instead of chocolate.",
-      "question": "This card gets a carload into every US national park for a year. Which kids can get one for free?",
+      "question": "The America the Beautiful pass gets a carload into every US national park for a year. Which kids can get one for free?",
       "answer": "Fourth graders",
       "wrong_answers": [
         "Kindergartners",
@@ -1069226,12 +1069440,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "interagency annual pass card",
-        "note": "Photo of the America the Beautiful national parks annual pass card.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Old Faithful geyser eruption",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYellowstone_National_Park_%28WY%2C_USA%29%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Yellowstone_National_Park_%28WY%2C_USA%29%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg/3840px-Yellowstone_National_Park_%28WY%2C_USA%29%2C_Old_Faithful_Geyser_--_2022_--_2599.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "US seniors aged 62 and over can buy a lifetime version of the pass.",
       "subcategory": "national-parks",
@@ -1069257,22 +1069478,48 @@
         "notes": "Program details can change over time. The photo isn't really essential (illustrative would do), and a good image of the pass card may not be in the sources. Fairly dry fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows the America the Beautiful pass card. All six are scanned pages from old \"American Annual of Photography\" volumes, and no new search is allowed. The slot also doesn't need to be essential: an illustrative national-park scene, such as a family car at a park entrance sign or Old Faithful erupting, would work and is easy to find. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows the America the Beautiful pass card. All six are scanned pages from old \"American Annual of Photography\" volumes, and no new search is allowed. The slot also doesn't need to be essential: an illustrative national-park scene, such as a family car at a park entrance sign or Old Faithful erupting, would work and is easy to find. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of the pass card exists, so the question now names the pass and uses an illustrative Old Faithful photo instead of the essential card image.",
+        "previous": {
+          "question": "This card gets a carload into every US national park for a year. Which kids can get one for free?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "interagency annual pass card",
+            "note": "Photo of the America the Beautiful national parks annual pass card.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13821",
@@ -1069356,10 +1069603,10 @@
     },
     {
       "id": "q-13822",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "A town so fancy it doesn't even bother saying all of its letters.",
-      "question": "Greenwich, a town founded in 1640 that locals say “GREN-itch,” lies in the state outlined here. Which state is it?",
+      "question": "Greenwich, a town founded in 1640 that locals say “GREN-itch,” is in which US state?",
       "answer": "Connecticut",
       "wrong_answers": [
         "New Jersey",
@@ -1069373,12 +1069620,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Connecticut state outline",
-        "note": "Blank outline map of Connecticut, no labels or city names.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Long Island Sound sailboats",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhite_Sailboat_in_Long_Island_Sound_MET_DP113900.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/White_Sailboat_in_Long_Island_Sound_MET_DP113900.jpg/3840px-White_Sailboat_in_Long_Island_Sound_MET_DP113900.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Charles Edwin Bolles · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Charles Edwin Bolles",
+        "author_url": "https://www.wikidata.org/wiki/Q42313510",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Greenwich, Connecticut, is named after Greenwich in London, which also leaves out the W when people say it.",
       "subcategory": "place-names",
@@ -1069404,22 +1069658,48 @@
         "notes": "Accurate: Greenwich was settled in 1640, and London's Greenwich also drops the W. A clean outline of Connecticut is easy to find. Some players may already know Greenwich is in Connecticut, which makes the map unnecessary. Hint 3 (Hartford) almost gives the answer, which is allowed."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate is a clean, unlabeled outline of Connecticut: #1 shows three states covered in place names, #4 and #6 print \"Connecticut\" in large text, and #2, #3 and #5 show other subjects. The essential map needs a new source, for example a blank outline file of Connecticut from Commons (\"Connecticut blank map\" or a US Census outline). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is a clean, unlabeled outline of Connecticut: #1 shows three states covered in place names, #4 and #6 print \"Connecticut\" in large text, and #2, #3 and #5 show other subjects. The essential map needs a new source, for example a blank outline file of Connecticut from Commons (\"Connecticut blank map\" or a US Census outline). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No blank Connecticut outline map exists, so the question no longer refers to a map and uses an illustrative image.",
+        "previous": {
+          "question": "Greenwich, a town founded in 1640 that locals say “GREN-itch,” lies in the state outlined here. Which state is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Connecticut state outline",
+            "note": "Blank outline map of Connecticut, no labels or city names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13823",
@@ -1069912,10 +1070192,10 @@
     },
     {
       "id": "q-13829",
-      "status": "needs_work",
-      "difficulty": 8,
+      "status": "approved",
+      "difficulty": 9,
       "description": "The only state whose own lawmakers gave everyone pronunciation homework.",
-      "question": "In 1881, this state's lawmakers passed an official ruling on how to say the state's name. Which state is outlined here?",
+      "question": "In 1881, lawmakers in which US state passed an official ruling on how to say the state's name?",
       "answer": "Arkansas",
       "wrong_answers": [
         "Missouri",
@@ -1069929,12 +1070209,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Arkansas blank outline",
-        "note": "Blank outline map of Arkansas, no labels or city names.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Ozark mountains forest",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALooking_out_into_the_Ozark_forest_from_the_Bluff_Shelter.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Looking_out_into_the_Ozark_forest_from_the_Bluff_Shelter.jpg/3840px-Looking_out_into_the_Ozark_forest_from_the_Bluff_Shelter.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Brandonrush · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Brandonrush",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Brandonrush",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The 1881 ruling says the final S is silent and the name is said “AR-kan-saw.”",
       "subcategory": "place-names",
@@ -1069960,22 +1070247,50 @@
         "notes": "The description calls Arkansas the “only state” with an official pronunciation; that's the common claim, but I can't fully confirm it is unique. The 1881 resolution is correct. A blank outline of Arkansas is easy to find. Hint 3 points at Kansas, and that's fine."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows an outline of Arkansas, and no new search is allowed, so the essential media slot can't be filled. It needs a blank Arkansas outline map, for example a Commons file of the state's outline with no labels. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows an outline of Arkansas, and no new search is allowed, so the essential media slot can't be filled. It needs a blank Arkansas outline map, for example a Commons file of the state's outline with no labels. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 8,
+      "revision": {
+        "action": "revise",
+        "reason": "No Arkansas outline map exists, so the question no longer refers to a map, uses an illustrative Ozarks image, and is slightly harder without the map.",
+        "previous": {
+          "difficulty": 8,
+          "question": "In 1881, this state's lawmakers passed an official ruling on how to say the state's name. Which state is outlined here?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Arkansas blank outline",
+            "note": "Blank outline map of Arkansas, no labels or city names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13830",
@@ -1070220,7 +1070535,7 @@
     },
     {
       "id": "q-13833",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "A plant that gives high-fives nobody wants.",
       "question": "I grow along trails all over America. My tiny hairs make your skin burn and itch, but Native Americans twisted my stems into fishing line. What am I?",
@@ -1070238,16 +1070553,16 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "forest hiking trail",
+        "query": "woodland hiking path",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoodland_path_-_Flickr_-_Frank_Shepherd.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Woodland_path_-_Flickr_-_Frank_Shepherd.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Frank Shepherd · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public Domain",
-        "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
-        "author": "Yinan Chen",
-        "author_url": "http://www.goodfreephotos.com",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Frank Shepherd",
+        "author_url": "https://www.flickr.com/people/142252831@N04",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1070278,29 +1070593,47 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took the word “sting” out of the question and hint 1 so they don't echo the answer.",
+        "reason": "Changed the image search term so a picture with a suitable licence gets picked.",
         "previous": {
-          "question": "I grow along trails all over America. My tiny hairs make your skin sting, but Native Americans twisted my stems into fishing line. What am I?",
-          "hints": [
-            "Cooking or drying my leaves takes away my sting.",
-            "My toothed leaves grow in pairs on a square stem.",
-            "My name says exactly what I do to your skin."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "forest hiking trail",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Gfp-minnesota-superior-national-forest-hiking-trail-to-eagle-mountain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public Domain",
+            "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+            "author": "Yinan Chen",
+            "author_url": "http://www.goodfreephotos.com",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1071542,7 +1071875,7 @@
     },
     {
       "id": "q-13850",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "The boat equivalent of pedaling really, really hard.",
       "question": "Old Mississippi steamboats were pushed by a big spinning part with flat boards, at the back or side. What is it called?",
@@ -1071560,20 +1071893,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Mississippi River steamboat",
+        "query": "Mississippi River sunset",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACabin_of_a_Mississippi_River_Steamboat_-_DPLA_-_02989aeaad4ff20edb14d327f1e864bf.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Cabin_of_a_Mississippi_River_Steamboat_-_DPLA_-_02989aeaad4ff20edb14d327f1e864bf.jpg/3840px-Cabin_of_a_Mississippi_River_Steamboat_-_DPLA_-_02989aeaad4ff20edb14d327f1e864bf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Bromley, Edward A · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMississippi_River_Sunset.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Mississippi_River_Sunset.jpg/3840px-Mississippi_River_Sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "nearly almost · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Bromley, Edward A",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "nearly almost",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Mark Twain was a steamboat pilot on the Mississippi before he became a famous writer.",
       "subcategory": "folk-heroes-and-tall-tales",
@@ -1071602,24 +1071933,49 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took the word \"wheel\" out of the question, since it matched only the correct option.",
+        "reason": "Changed the image search term so a picture with a suitable licence gets picked and no paddle wheel is shown.",
         "previous": {
-          "question": "Old Mississippi River steamboats moved with a big turning wheel covered in flat boards, at the back or side. What is it called?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Mississippi River steamboat",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ACabin_of_a_Mississippi_River_Steamboat_-_DPLA_-_02989aeaad4ff20edb14d327f1e864bf.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Cabin_of_a_Mississippi_River_Steamboat_-_DPLA_-_02989aeaad4ff20edb14d327f1e864bf.jpg/3840px-Cabin_of_a_Mississippi_River_Steamboat_-_DPLA_-_02989aeaad4ff20edb14d327f1e864bf.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Bromley, Edward A · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Bromley, Edward A",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1074613,10 +1074969,10 @@
     },
     {
       "id": "q-13890",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Everyone remembers her first name, but this question wants the rest.",
-      "question": "I'm a farm girl from Kansas, and a twister carried me and my little dog to Oz. What is my last name?",
+      "question": "In The Wizard of Oz, a twister carries Dorothy and her little dog from a Kansas farm to Oz. What is her last name?",
       "answer": "Gale",
       "wrong_answers": [
         "Baker",
@@ -1074624,8 +1074980,8 @@
         "Turner"
       ],
       "hints": [
-        "My Aunt Em and Uncle Henry share this last name.",
-        "My last name is a perfect fit for someone swept away by a storm.",
+        "Her Aunt Em and Uncle Henry share this last name.",
+        "Her last name is a perfect fit for a girl swept away by a storm.",
         "It's also a word for a very strong wind that sailors fear."
       ],
       "media": {
@@ -1074671,27 +1075027,36 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question is a first-person riddle (“I'm a farm girl from Kansas…”) that asks for a fact other than the speaker's identity (her last name), which house style rule 6 rules out. Rewrite it as a direct question, e.g. “In The Wizard of Oz, a twister carries Dorothy and her dog from a Kansas farm to Oz. What is her last name?”, and turn the hints from “My…” into third person (“Her Aunt Em and Uncle Henry…”).",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question is a first-person riddle (“I'm a farm girl from Kansas…”) that asks for a fact other than the speaker's identity (her last name), which house style rule 6 rules out. Rewrite it as a direct question, e.g. “In The Wizard of Oz, a twister carries Dorothy and her dog from a Kansas farm to Oz. What is her last name?”, and turn the hints from “My…” into third person (“Her Aunt Em and Uncle Henry…”).",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Moved the wind clue to hint 3, dropped the sound-alike hint and added a vaguer hint 2.",
+        "reason": "Rewrote the first-person riddle as a direct question and put the hints in third person, as the reviewer asked.",
         "previous": {
+          "question": "I'm a farm girl from Kansas, and a twister carried me and my little dog to Oz. What is my last name?",
           "hints": [
             "My Aunt Em and Uncle Henry share this last name.",
-            "It's also a word for a very strong wind that sailors fear.",
-            "It sounds like the name “Gail.”"
+            "My last name is a perfect fit for someone swept away by a storm.",
+            "It's also a word for a very strong wind that sailors fear."
           ]
         },
         "revised_on": "2026-11-06"
@@ -1076789,10 +1077154,10 @@
     },
     {
       "id": "q-13918",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "A state with a nickname that sounds like a nice place to park your boat.",
-      "question": "The state shown on this map is nicknamed “the Bay State.” Which state is it?",
+      "question": "Which US state is nicknamed “the Bay State”?",
       "answer": "Massachusetts",
       "wrong_answers": [
         "Maryland",
@@ -1076801,17 +1077166,24 @@
       ],
       "hints": [
         "It's in New England.",
-        "Look for the hook-shaped cape sticking out into the ocean.",
+        "It has a hook-shaped cape sticking out into the ocean.",
         "Its capital is Boston."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Map of USA MA",
-        "note": "A map of the United States (or New England) with only Massachusetts highlighted and no state names or labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "New England fall foliage",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_England_leaves_%284105916616%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/New_England_leaves_%284105916616%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "DearEdward from New York, NY, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "DearEdward from New York, NY, USA",
+        "author_url": "https://www.flickr.com/people/69502324@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The nickname comes from the Massachusetts Bay Colony, founded by English settlers in 1630.",
       "subcategory": "state-symbols",
@@ -1076837,27 +1077209,50 @@
         "notes": "Essential locator map: Commons has many, but many carry labels, so the query has to be checked. The description's bay/barking pun only works in English and isn't very funny. The question is a fairly dry geography ID, and the 'Bay State' nickname plus the map makes it easier than 10 for US families."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates is a locator map of Massachusetts. They show the Denver skyline, a ferry off Hyannis, a geological map of the northwest US, Denver's Mile High steps and a New Bedford road. A new search isn't allowed, so this essential slot can't be filled. It needs an unlabeled locator map of Massachusetts, for example a Commons search for \"Massachusetts locator map\", checked for state-name labels. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is a locator map of Massachusetts. They show the Denver skyline, a ferry off Hyannis, a geological map of the northwest US, Denver's Mile High steps and a New Bedford road. A new search isn't allowed, so this essential slot can't be filled. It needs an unlabeled locator map of Massachusetts, for example a Commons search for \"Massachusetts locator map\", checked for state-name labels. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the description's false claim about where the state's name comes from with a playful line about bays.",
+        "reason": "No unlabeled Massachusetts locator map exists, so the question no longer refers to a map, the map hint now describes the cape, and the image is illustrative.",
         "previous": {
-          "description": "A state named for its coastline, not for barking dogs."
+          "question": "The state shown on this map is nicknamed “the Bay State.” Which state is it?",
+          "hints": [
+            "It's in New England.",
+            "Look for the hook-shaped cape sticking out into the ocean.",
+            "Its capital is Boston."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Map of USA MA",
+            "note": "A map of the United States (or New England) with only Massachusetts highlighted and no state names or labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -1077253,7 +1077648,7 @@
     },
     {
       "id": "q-13924",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A chemist who couldn't stop collecting gold medals from Sweden and Norway.",
       "question": "Linus Pauling won the 1954 Nobel Prize in Chemistry and the 1962 Nobel Peace Prize. What did he campaign against?",
@@ -1077271,20 +1077666,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Linus Pauling portrait",
+        "query": "Linus Pauling chemist",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALinusPaulingGraduation1922.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinusPaulingGraduation1922.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "unknown university portrait photographer · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeft_to_right-_Thomas_Hunt_Morgan_%281866-1945%29%2C_Linus_Carl_Pauling_%281901-1994%29%2C_and_Marian_Irwin_Osterhout_%281889-1973%29_%2812483976133%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Left_to_right-_Thomas_Hunt_Morgan_%281866-1945%29%2C_Linus_Carl_Pauling_%281901-1994%29%2C_and_Marian_Irwin_Osterhout_%281889-1973%29_%2812483976133%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Smithsonian Institution from United States · No restrictions · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "unknown university portrait photographer",
-        "author_url": null,
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Smithsonian Institution from United States",
+        "author_url": "https://www.flickr.com/people/25053835@N03",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Pauling is still the only person to win two Nobel Prizes that he didn't share with anyone.",
       "subcategory": "trailblazers",
@@ -1077313,29 +1077706,49 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question and replaced hint 2 so it no longer mentions radioactive fallout.",
+        "reason": "Changed the image search term so a picture with a suitable licence gets picked.",
         "previous": {
-          "question": "Linus Pauling won the 1954 Nobel Prize in Chemistry, alone. In 1962 he won the Nobel Peace Prize, also alone. What did he campaign against?",
-          "hints": [
-            "His Peace Prize was announced on the same day a Cold War treaty took effect.",
-            "He gathered thousands of scientists' signatures warning about radioactive fallout.",
-            "Think of mushroom clouds in the desert and the Pacific."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Linus Pauling portrait",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALinusPaulingGraduation1922.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/LinusPaulingGraduation1922.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "unknown university portrait photographer · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "unknown university portrait photographer",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1078104,7 +1078517,7 @@
     },
     {
       "id": "q-13935",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A theme song that sounds like a recipe and a skipping game had a baby.",
       "question": "In the opening credits of Laverne & Shirley, the two skip down the street chanting “Schlemiel! Schlimazel! ___ Incorporated!” What's the missing word?",
@@ -1078122,20 +1078535,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Milwaukee vintage downtown",
+        "query": "Milwaukee skyline river",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMilwaukee_Mitchell_and_Chamber_of_Commerce_Buildings.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Milwaukee_Mitchell_and_Chamber_of_Commerce_Buildings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "file: James Steakley; postcard: unknown · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMilwaukee_March_2024_4_%28Milwaukee_skyline_and_Milwaukee_River%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Milwaukee_March_2024_4_%28Milwaukee_skyline_and_Milwaukee_River%29.jpg/3840px-Milwaukee_March_2024_4_%28Milwaukee_skyline_and_Milwaukee_River%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Michael Barera · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "file: James Steakley; postcard: unknown",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Jdsteakley",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Michael Barera",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Michael_Barera",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Laverne & Shirley was a spin-off of Happy Days, where the two first appeared as dates of Fonzie and Richie.",
       "subcategory": "tv-shows",
@@ -1078164,24 +1078575,49 @@
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the invented setup with a direct statement of the clue.",
+        "reason": "Changed the image query to a modern skyline so the system picks a new picture instead of the PD-US-only postcard.",
         "previous": {
-          "question": "You're skipping down the street like Laverne and Shirley in the opening credits, chanting “Schlemiel! Schlimazel! ___ Incorporated!” What's the missing word?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Milwaukee vintage downtown",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMilwaukee_Mitchell_and_Chamber_of_Commerce_Buildings.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Milwaukee_Mitchell_and_Chamber_of_Commerce_Buildings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "file: James Steakley; postcard: unknown · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "file: James Steakley; postcard: unknown",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Jdsteakley",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1078733,7 +1079169,7 @@
     },
     {
       "id": "q-13943",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Hope you have a very long fireplace mantel.",
       "question": "You're hanging one stocking for each reindeer on Santa's team, Rudolph included. How many stockings do you need?",
@@ -1078764,7 +1079200,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Rudolph was created in 1939 for a free coloring booklet given out by the Montgomery Ward department store.",
+      "fun_fact": "Rudolph was created in 1939 for a free storybook given out by the Montgomery Ward department store.",
       "subcategory": "winter-holidays",
       "style": null,
       "concept": "Reindeer",
@@ -1078787,32 +1079223,36 @@
         "difficulty_estimate": 4,
         "notes": "Hint 2 basically gives the answer (8+1). It's related to q-11868 (Rudolph isn't in the poem), but it asks a different fact."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-44",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact is wrong: Rudolph was created in 1939 for a free illustrated storybook from Montgomery Ward, not a coloring booklet. The store wrote the story so it could stop buying coloring books to give away. Change the fun fact to: “Rudolph was created in 1939 for a free storybook given out by the Montgomery Ward department store.” Fact check: wrong. Fun fact is inaccurate. The 1939 Rudolph booklet was an illustrated storybook, not a coloring booklet. Montgomery Ward wrote it to replace the coloring books it used to buy and give away.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact is wrong: Rudolph was created in 1939 for a free illustrated storybook from Montgomery Ward, not a coloring booklet. The store wrote the story so it could stop buying coloring books to give away. Change the fun fact to: “Rudolph was created in 1939 for a free storybook given out by the Montgomery Ward department store.” Fact check: wrong. Fun fact is inaccurate. The 1939 Rudolph booklet was an illustrated storybook, not a coloring booklet. Montgomery Ward wrote it to replace the coloring books it used to buy and give away.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer give away the count of eight or the +1 step.",
+        "reason": "Corrected the fun fact: the 1939 Rudolph booklet was a free storybook, not a coloring booklet.",
         "previous": {
-          "hints": [
-            "Santa's team comes from a famous 1823 poem, and one more reindeer joined later.",
-            "The poem names eight reindeer.",
-            "Add the one with the shiny red nose to the poem's eight."
-          ]
+          "fun_fact": "Rudolph was created in 1939 for a free coloring booklet given out by the Montgomery Ward department store."
         },
         "revised_on": "2026-11-06"
       }
@@ -1079358,7 +1079798,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Rose Parade float flowers",
+        "query": "Pasadena Rose Parade float closeup",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AHorse-pulled_float_in_the_Pasadena_Tournament_of_Roses_parade%2C_1905_%28CHS-1189%29.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Horse-pulled_float_in_the_Pasadena_Tournament_of_Roses_parade%2C_1905_%28CHS-1189%29.jpg/3840px-Horse-pulled_float_in_the_Pasadena_Tournament_of_Roses_parade%2C_1905_%28CHS-1189%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1079408,11 +1079848,46 @@
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to a modern Rose Parade float photo so the system picks a new picture instead of the PD-US-only 1905 photo.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Rose Parade float flowers",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AHorse-pulled_float_in_the_Pasadena_Tournament_of_Roses_parade%2C_1905_%28CHS-1189%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Horse-pulled_float_in_the_Pasadena_Tournament_of_Roses_parade%2C_1905_%28CHS-1189%29.jpg/3840px-Horse-pulled_float_in_the_Pasadena_Tournament_of_Roses_parade%2C_1905_%28CHS-1189%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13952",
