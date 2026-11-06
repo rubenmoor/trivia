@@ -67,7 +67,8 @@
     {
       "name": "Violín",
       "facet": "Instrumentos del mariachi",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The violin sound and the violin's use are already asked; the remaining options don't fit."
     },
     {
       "name": "Arpa de mariachi",
@@ -577,7 +578,8 @@
     {
       "name": "Estribillo",
       "facet": "Grito, versos y palabras del género",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The word origin and the parts of the song are already asked; song sounds aren't allowed."
     },
     {
       "name": "Museo del Tequila y el Mezcal",

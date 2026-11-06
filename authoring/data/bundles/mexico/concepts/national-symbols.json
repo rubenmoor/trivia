@@ -297,7 +297,8 @@
     {
       "name": "Lunes cívico",
       "facet": "Día de la Bandera y honores",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La pregunta que ya existe (honores a la bandera el lunes) cubre el concepto, y la escolta sale en el slot 3."
     },
     {
       "name": "Benito Ramírez Fernández",

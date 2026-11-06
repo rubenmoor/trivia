@@ -276,7 +276,8 @@
     {
       "name": "Pesebre",
       "facet": "Nacimientos y figuras del belén",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El pesebre, el establo y el nacimiento ya están cubiertos en la reserva; no queda un dato distinto."
     },
     {
       "name": "Mula y buey",
@@ -456,7 +457,8 @@
     {
       "name": "Nochebuena blanca",
       "facet": "Flor de Nochebuena y plantas de temporada",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: No hay un dato justo sobre una persona y la Nochebuena blanca que las familias puedan razonar."
     },
     {
       "name": "Corona de Adviento",
