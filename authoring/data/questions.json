@@ -984360,7 +984360,7 @@
     },
     {
       "id": "q-12725",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Where 80,000 fans show up on Sundays to yell at the same team.",
       "question": "This stadium is the home field of the New York Giants. In which state is it?",
@@ -984371,7 +984371,7 @@
         "Pennsylvania"
       ],
       "hints": [
-        "It sits in a marshy area called the Meadowlands, about 5 miles (8 km) from New York City.",
+        "It sits in a marshy area called the Meadowlands, about 8 miles (13 km) from Midtown Manhattan.",
         "The New York Jets play their home games here too.",
         "This state's nickname is “the Garden State.”"
       ],
@@ -984380,14 +984380,14 @@
         "role": "essential",
         "query": "MetLife Stadium exterior",
         "note": "A close-up of MetLife Stadium's outside wall or seating bowl; no state name, map or road signs visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_Meadowlands_stadium_exterior.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/New_Meadowlands_stadium_exterior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Donnie · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetLife_Stadium_Exterior.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/MetLife_Stadium_Exterior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "gargudojr · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Donnie",
-        "author_url": "https://www.flickr.com/photos/21992612@N03",
+        "author": "gargudojr",
+        "author_url": "https://www.flickr.com/people/gargudojr/",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -984414,19 +984414,27 @@
         "difficulty_estimate": 7,
         "notes": "Facts are right. Hint 1 (just across the Hudson from Manhattan) nearly settles it already, and the word “actually” in the question rules out New York. The essential image isn't really needed, since the question names the stadium's team anyway; illustrative would fit better. Stadium signage reads MetLife, not the state, so the image is safe."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: wrong. Hint 1 says the stadium is about 5 miles (8 km) from New York City. MetLife Stadium in East Rutherford is about 8 miles (13 km) from Midtown Manhattan. The answer, New Jersey, is correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. Hint 1 says the stadium is about 5 miles (8 km) from New York City. MetLife Stadium in East Rutherford is about 8 miles (13 km) from Midtown Manhattan. The answer, New Jersey, is correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
@@ -984434,13 +984442,10 @@
       "difficulty_original": 6,
       "revision": {
         "action": "revise",
-        "reason": "Took out “actually”, swapped the river hint for a vaguer Meadowlands hint, rewrote the description so it no longer gives the answer away, and raised the difficulty because the question is now harder.",
+        "reason": "Fixed hint 1: the stadium is about 8 miles (13 km) from Midtown Manhattan, not 5.",
         "previous": {
-          "difficulty": 6,
-          "description": "A team with a big-city name and a commute to match.",
-          "question": "This stadium is the home field of the New York Giants. In which state does it actually stand?",
           "hints": [
-            "It's just across the Hudson River from Manhattan.",
+            "It sits in a marshy area called the Meadowlands, about 5 miles (8 km) from New York City.",
             "The New York Jets play their home games here too.",
             "This state's nickname is “the Garden State.”"
           ]
@@ -985085,10 +985090,10 @@
     },
     {
       "id": "q-12734",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Wild things happen when the grown-ups leave the house on a rainy day.",
-      "question": "A famous Dr. Seuss character wears a tall striped hat like this one. What kind of animal is he?",
+      "question": "A famous Dr. Seuss character wears a tall red-and-white striped hat. What kind of animal is he?",
       "answer": "A cat",
       "wrong_answers": [
         "A dog",
@@ -985102,12 +985107,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "striped top hat",
-        "note": "A tall red-and-white striped top hat on its own, with no character, book cover or text.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "rain on window",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARain_on_a_window_pane.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Rain_on_a_window_pane.jpg/3840px-Rain_on_a_window_pane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Theactivistuk · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Theactivistuk",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Theactivistuk",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Dr. Seuss wrote “The Cat in the Hat” in 1957 using only about 236 different words, so beginners could read it alone.",
       "subcategory": "american-literature",
@@ -985133,22 +985145,48 @@
         "notes": "The image isn't really needed to answer, so 'illustrative' would be the more honest role. The hat itself is fine, and a sharp striped hat makes it easy, which suits difficulty 2."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows what the question needs, a tall striped top hat on its own (\"like this one\"). They are 18th-century fashion prints with plain black top hats (1, 2, 4, 6), a traffic cone on a pavement (3) and a parade zombie in a striped shirt with a plain brown hat (5). No new search is allowed, so the media slot can't be filled. The text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows what the question needs, a tall striped top hat on its own (\"like this one\"). They are 18th-century fashion prints with plain black top hats (1, 2, 4, 6), a traffic cone on a pavement (3) and a parade zombie in a striped shirt with a plain brown hat (5). No new search is allowed, so the media slot can't be filled. The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable hat photo exists, so the question no longer refers to a picture and gets a decorative rainy-day image.",
+        "previous": {
+          "question": "A famous Dr. Seuss character wears a tall striped hat like this one. What kind of animal is he?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "striped top hat",
+            "note": "A tall red-and-white striped top hat on its own, with no character, book cover or text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12735",
@@ -988655,10 +988693,10 @@
     },
     {
       "id": "q-12780",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Step right up, step right up: that giant stuffed bear won't win itself!",
-      "question": "Look at this close-up from a fair. You pick one up and check the number underneath to see your prize. Which game is it?",
+      "question": "At a fair, you pick a floating toy out of the water and check the number underneath to see your prize. Which game is it?",
       "answer": "Duck pond",
       "wrong_answers": [
         "Balloon darts",
@@ -988666,18 +988704,25 @@
         "Whack-a-mole"
       ],
       "hints": [
-        "The game floats on water.",
+        "Little kids almost always win a prize at this game.",
         "The little toys bob along in a moving stream.",
         "They are yellow and say “quack.”"
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "rubber ducks carnival game",
-        "note": "Close-up of yellow rubber ducks floating in a carnival duck pond game, no sign naming the game.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "carnival prizes stuffed animals",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrize_Wall_%2867289713%29.jpeg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Prize_Wall_%2867289713%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Nate Pagel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Nate Pagel",
+        "author_url": "https://500px.com/nate_pagel",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The duck pond is a favorite game for toddlers because every player usually wins a prize.",
       "subcategory": "fairs-and-festivals",
@@ -988702,28 +988747,51 @@
         "difficulty_estimate": 1,
         "notes": "Fine for difficulty 1. The essential photo of yellow rubber ducks makes it trivial, which is acceptable at this level. A clear photo is likely available."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a duck pond game. Candidate 1 is a shooting gallery with rubber ducks as targets, which is the wrong game and would mislead players. Candidates 2–6 are baseball players. Another search isn't allowed, so the essential image slot needs a close-up of rubber ducks floating in a carnival duck pond, for example from the query \"hook a duck game\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a duck pond game. Candidate 1 is a shooting gallery with rubber ducks as targets, which is the wrong game and would mislead players. Candidates 2–6 are baseball players. Another search isn't allowed, so the essential image slot needs a close-up of rubber ducks floating in a carnival duck pond, for example from the query \"hook a duck game\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer rules out the games that need aim or quick reactions.",
+        "reason": "No duck pond photo was found, so the clue moves into the text, the hints are adjusted and the image becomes decorative.",
         "previous": {
-          "description": "No skill, no aim, just luck, and everybody wins something."
+          "question": "Look at this close-up from a fair. You pick one up and check the number underneath to see your prize. Which game is it?",
+          "hints": [
+            "The game floats on water.",
+            "The little toys bob along in a moving stream.",
+            "They are yellow and say “quack.”"
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "rubber ducks carnival game",
+            "note": "Close-up of yellow rubber ducks floating in a carnival duck pond game, no sign naming the game.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -989499,7 +989567,7 @@
     },
     {
       "id": "q-12791",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "The backyard weapon that ended more summer arguments than it started.",
       "question": "The Super Soaker water gun, a huge hit in the 1990s, was invented by Lonnie Johnson. What was his job?",
@@ -989510,7 +989578,7 @@
         "A plumber"
       ],
       "hints": [
-        "He studied engineering and holds dozens of patents.",
+        "Before the water gun, he also worked for the US Air Force.",
         "He was testing a new kind of cooling pump when water shot across the room.",
         "He helped build a spacecraft that flew all the way to Jupiter."
       ],
@@ -989559,27 +989627,35 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"He studied engineering and holds dozens of patents\") gives the answer away: only one option is an engineer, so the first and vaguest hint already solves it. Rewrite hint 1 as a vague hint that doesn't point to engineering, e.g. about his Alabama childhood of building robots and rockets, or that he had worked for the US Air Force.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"He studied engineering and holds dozens of patents\") gives the answer away: only one option is an engineer, so the first and vaguest hint already solves it. Rewrite hint 1 as a vague hint that doesn't point to engineering, e.g. about his Alabama childhood of building robots and rockets, or that he had worked for the US Air Force.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vague and moved the Jupiter spacecraft clue to hint 3 in place of the pun.",
+        "reason": "Hint 1 pointed straight at engineering; replaced it with a vague fact about his Air Force work.",
         "previous": {
           "hints": [
-            "He had worked on a spacecraft sent to Jupiter.",
+            "He studied engineering and holds dozens of patents.",
             "He was testing a new kind of cooling pump when water shot across the room.",
-            "His job was out of this world."
+            "He helped build a spacecraft that flew all the way to Jupiter."
           ]
         },
         "revised_on": "2026-11-06"
@@ -991440,9 +991516,9 @@
     },
     {
       "id": "q-12816",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
-      "description": "A road trip with no snacks and 66 days of seasickness.",
+      "description": "A road trip with no snacks and months of seasickness.",
       "question": "The Mayflower Pilgrims arrived in 1620, but they weren't the first lasting English colony in America. Which settlement, founded in 1607, was?",
       "answer": "Jamestown",
       "wrong_answers": [
@@ -991452,22 +991528,22 @@
       ],
       "hints": [
         "It was named after the English king of the time.",
-        "Pocahontas and John Smith are linked to it.",
-        "It lies on a river named after the same king, in Virginia."
+        "Pocahontas is linked to it.",
+        "It lies on a river named after the same king."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "Mayflower II ship",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMayflower_II_B.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Mayflower_II_B.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Ringer · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMayflower_II%2C_Water_St%2C_Plymouth_%28493627%29_%2811108952073%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Mayflower_II%2C_Water_St%2C_Plymouth_%28493627%29_%2811108952073%29.jpg/3840px-Mayflower_II%2C_Water_St%2C_Plymouth_%28493627%29_%2811108952073%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Robert Linsdell from St. Andrews, Canada · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Ringer",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Ringer",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Robert Linsdell from St. Andrews, Canada",
+        "author_url": "https://www.flickr.com/people/92487715@N03",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -991498,15 +991574,23 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This question overlaps two drafts in the same subcategory. Hint 3 says the colony is in Virginia, which answers q-12808 (\"first lasting English colony… which present-day state?\" → Virginia). Hint 2 names John Smith, the answer to q-12813. Drop or rework one of the overlapping questions, or change hints 2 and 3 so they don't reveal those answers. One minor point: the description's \"66 days\" is the length of the Mayflower crossing, not the Jamestown one.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This question overlaps two drafts in the same subcategory. Hint 3 says the colony is in Virginia, which answers q-12808 (\"first lasting English colony… which present-day state?\" → Virginia). Hint 2 names John Smith, the answer to q-12813. Drop or rework one of the overlapping questions, or change hints 2 and 3 so they don't reveal those answers. One minor point: the description's \"66 days\" is the length of the Mayflower crossing, not the Jamestown one.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
@@ -991514,21 +991598,14 @@
       "difficulty_original": 8,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the odd-one-out question as a direct question about the first lasting English colony, with new options, hints and a fun fact that doesn't repeat a hint.",
+        "reason": "Took Virginia and John Smith out of the hints so they don't answer other questions, and dropped the Mayflower-only “66 days” from the description.",
         "previous": {
-          "difficulty": 8,
-          "question": "Which of these places did the Mayflower Pilgrims never live in or visit?",
-          "wrong_answers": [
-            "Leiden",
-            "Plymouth",
-            "Cape Cod"
-          ],
+          "description": "A road trip with no snacks and 66 days of seasickness.",
           "hints": [
-            "Before sailing, many Pilgrims lived in the Netherlands.",
-            "They first landed on a hook-shaped piece of land in Massachusetts.",
-            "The place you want was founded in Virginia 13 years earlier."
-          ],
-          "fun_fact": "Before sailing to America, many Pilgrims lived for about 11 years in Leiden, in the Netherlands."
+            "It was named after the English king of the time.",
+            "Pocahontas and John Smith are linked to it.",
+            "It lies on a river named after the same king, in Virginia."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -991629,10 +991706,10 @@
     },
     {
       "id": "q-12818",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Five bucks says you know this face.",
-      "question": "Whose portrait is on the front of the US five-dollar bill, like this one?",
+      "description": "Five bucks says you get this one right.",
+      "question": "Whose portrait is on the front of the US five-dollar bill?",
       "answer": "Abraham Lincoln",
       "wrong_answers": [
         "George Washington",
@@ -991646,12 +991723,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "2008 series five dollar bill",
-        "note": "Front of a US $5 bill showing the portrait; crop or cover any printed name under the portrait.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "piggy bank",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiggy_banks.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Piggy_banks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Pauloleong2002 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pauloleong2002",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pauloleong2002",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The back of the five-dollar bill shows the Lincoln Memorial in Washington, D.C.",
       "subcategory": "nineteenth-century",
@@ -991676,24 +991760,51 @@
         "difficulty_estimate": 5,
         "notes": "Related candidates (q-3107: Lincoln on the penny; q-3102: Lincoln Memorial) ask other facts. The fun fact repeats the Lincoln Memorial topic. The printed name under the portrait must be cropped out. Fairly plain question."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The only usable front image (candidate 2, the Series 2006 obverse) has the name “Lincoln” printed under the portrait. At this resolution it can be read on a TV, which gives the answer away, and the pipeline can't crop it. Every US $5 front has the name printed, so the slot needs a cropped version of candidate 2 that cuts off the name, or a hand-made crop of the portrait. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The only usable front image (candidate 2, the Series 2006 obverse) has the name “Lincoln” printed under the portrait. At this resolution it can be read on a TV, which gives the answer away, and the pipeline can't crop it. Every US $5 front has the name printed, so the slot needs a cropped version of candidate 2 that cuts off the name, or a hand-made crop of the portrait. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Every bill photo shows the printed name, so the question drops “like this one” and uses a decorative image.",
+        "previous": {
+          "description": "Five bucks says you know this face.",
+          "question": "Whose portrait is on the front of the US five-dollar bill, like this one?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "2008 series five dollar bill",
+            "note": "Front of a US $5 bill showing the portrait; crop or cover any printed name under the portrait.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12819",
@@ -992304,18 +992415,18 @@
     },
     {
       "id": "q-12827",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Spelled one way, said another, and nobody in town is sorry.",
       "question": "Valdez, Alaska, which locals say “val-DEEZ,” was named in 1790 by a Spanish explorer. Whom did he name it after?",
       "answer": "Spain's minister of the navy",
       "wrong_answers": [
-        "A Mexican army general",
+        "A Spanish army general",
         "A Russian fur trader",
-        "A gold rush miner"
+        "A local Alaska Native chief"
       ],
       "hints": [
-        "The explorer wanted to honor a powerful man back in Europe.",
+        "The name was given more than 75 years before the United States bought Alaska.",
         "Spain was exploring the Alaska coast to keep an eye on Russian traders.",
         "The man was in charge of Spain's ships and sailors."
       ],
@@ -992362,24 +992473,41 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"a powerful man back in Europe\") gives the answer away: among the four options, only Spain's navy minister was a powerful man in Europe. The Mexican general, the Russian fur trader and the gold rush miner all drop out at once. Hint 1 should stay vague, for example about the era or about Spanish naming customs. Separately, the distractors are weak: there was no Mexico and no gold rush in 1790. That alone isn't a reason to send it back, but it makes the question easy to solve by elimination.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"a powerful man back in Europe\") gives the answer away: among the four options, only Spain's navy minister was a powerful man in Europe. The Mexican general, the Russian fur trader and the gold rush miner all drop out at once. Hint 1 should stay vague, for example about the era or about Spanish naming customs. Separately, the distractors are weak: there was no Mexico and no gold rush in 1790. That alone isn't a reason to send it back, but it makes the question easy to solve by elimination.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says the name came from Europe, which ruled out options.",
+        "reason": "Hint 1 ruled out every wrong option, so I made it vague, and replaced the out-of-period distractors (Mexico, gold rush) with ones that fit 1790.",
         "previous": {
-          "description": "A name that sailed in from Europe, picked up an Alaskan accent, and stayed."
+          "wrong_answers": [
+            "A Mexican army general",
+            "A Russian fur trader",
+            "A gold rush miner"
+          ],
+          "hints": [
+            "The explorer wanted to honor a powerful man back in Europe.",
+            "Spain was exploring the Alaska coast to keep an eye on Russian traders.",
+            "The man was in charge of Spain's ships and sailors."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -993202,7 +993330,7 @@
     },
     {
       "id": "q-12839",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A burger so small it could fit in your pocket.",
       "question": "White Castle's tiny square burgers have five holes and are steamed on onions. What word do Americans use for small burgers like these?",
@@ -993213,23 +993341,23 @@
         "Dippers"
       ],
       "hints": [
-        "The name is close to a word for something kids ride down at the playground.",
-        "It sounds like how they go down: fast and easy.",
-        "Baseball pitchers throw a pitch with this name."
+        "Today, restaurants also use the word for mini sandwiches filled with pulled pork or chicken.",
+        "Baseball pitchers throw a pitch with this name.",
+        "The name is close to a word for something kids ride down at the playground."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "grilled onions on griddle",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_XP-ert_489502412--Cheeseburgers_on_grill.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Flickr_XP-ert_489502412--Cheeseburgers_on_grill.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "XP-ert · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHot_dog_vendor_-_September_2024_-_Sarah_Stierch_01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Hot_dog_vendor_-_September_2024_-_Sarah_Stierch_01.jpg/3840px-Hot_dog_vendor_-_September_2024_-_Sarah_Stierch_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Missvain · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "XP-ert",
-        "author_url": "https://www.flickr.com/photos/xp-ert/",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Missvain",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Missvain",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -993260,25 +993388,33 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"close to a word for something kids ride down at the playground\") points straight to \"slide\". None of the other options sounds like that, so the first hint already gives the answer away. Hint 2 gives it away too. Hint 1 should be vague, for example about where the nickname came from or about eating several at once, and the wordplay should only come in hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"close to a word for something kids ride down at the playground\") points straight to \"slide\". None of the other options sounds like that, so the first hint already gives the answer away. Hint 2 gives it away too. Hint 1 should be vague, for example about where the nickname came from or about eating several at once, and the wordplay should only come in hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded hint 1 so it accurately refers to the playground slide.",
+        "reason": "Hints 1 and 2 gave the answer away, so hint 1 is now vague and the playground wordplay comes last.",
         "previous": {
           "hints": [
-            "The word also describes something at a playground.",
+            "The name is close to a word for something kids ride down at the playground.",
             "It sounds like how they go down: fast and easy.",
             "Baseball pitchers throw a pitch with this name."
           ]
@@ -993755,7 +993891,7 @@
     },
     {
       "id": "q-12846",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Three of these sports love to swing a big stick. The fourth would rather swing something else.",
       "question": "Which of these sports is NOT played with a bat?",
@@ -993773,20 +993909,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "wooden baseball bats",
+        "query": "cricket bats",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APH003_N846_Roy_C._Andrews_photographs_-_DPLA_-_2c46f09f62691a8fdda680f17d155c07.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/PH003_N846_Roy_C._Andrews_photographs_-_DPLA_-_2c46f09f62691a8fdda680f17d155c07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGandM_Flare_DXM_bat-Purist_156g_ball.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/GandM_Flare_DXM_bat-Purist_156g_ball.jpg/3840px-GandM_Flare_DXM_bat-Purist_156g_ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Marie-Lan Nguyen · CC BY 2.5 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Marie-Lan Nguyen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jastrow",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Wooden baseball bats in the big leagues are usually made from maple, ash or birch trees.",
       "subcategory": "baseball",
@@ -993815,19 +993949,52 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image had an unsuitable licence, so I changed the decorative query to get a new picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "wooden baseball bats",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APH003_N846_Roy_C._Andrews_photographs_-_DPLA_-_2c46f09f62691a8fdda680f17d155c07.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/PH003_N846_Roy_C._Andrews_photographs_-_DPLA_-_2c46f09f62691a8fdda680f17d155c07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12847",
@@ -994581,7 +994748,7 @@
     },
     {
       "id": "q-12857",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "The rodeo event where the cowboys still need help tying their shoes.",
       "question": "In mutton busting, young kids at a rodeo hang on to a running sheep as long as they can. Most contests set a top weight for riders. About how much?",
@@ -994599,20 +994766,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "rodeo arena crowd",
+        "query": "mutton busting rodeo",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APH036_3332_Lee_Moorhouse_Photographs_-_DPLA_-_753bae087c953ccaa0b6af87e3a38e76.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/PH036_3332_Lee_Moorhouse_Photographs_-_DPLA_-_753bae087c953ccaa0b6af87e3a38e76.jpg/3840px-PH036_3332_Lee_Moorhouse_Photographs_-_DPLA_-_753bae087c953ccaa0b6af87e3a38e76.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARodeo%2C_Texas%2C_USA_%2814475290072%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Rodeo%2C_Texas%2C_USA_%2814475290072%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "M M from Switzerland · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "M M from Switzerland",
+        "author_url": "https://www.flickr.com/people/43423301@N07",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Mutton busters wear helmets and padded vests, and many hold on lying flat with their arms wrapped around the sheep's neck.",
       "subcategory": "fairs-and-festivals",
@@ -994641,19 +994806,52 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image had an unsuitable licence, so I changed the illustrative query to get a new picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "rodeo arena crowd",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APH036_3332_Lee_Moorhouse_Photographs_-_DPLA_-_753bae087c953ccaa0b6af87e3a38e76.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/PH036_3332_Lee_Moorhouse_Photographs_-_DPLA_-_753bae087c953ccaa0b6af87e3a38e76.jpg/3840px-PH036_3332_Lee_Moorhouse_Photographs_-_DPLA_-_753bae087c953ccaa0b6af87e3a38e76.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12858",
@@ -997113,10 +997311,10 @@
     },
     {
       "id": "q-12890",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Drivers, please slow down for very large, very hairy pedestrians.",
-      "question": "Signs like this one appear in Pacific Northwest forests. Bigfoot's other name, “Sasquatch,” comes from which kind of language?",
+      "question": "Bigfoot's other name, “Sasquatch,” comes from which kind of language?",
       "answer": "A First Nations language from Canada",
       "wrong_answers": [
         "Spanish from California's missions",
@@ -997131,11 +997329,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Sasquatch crossing sign",
+        "query": "Pacific Northwest rainforest",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APacific-Northwest_Rainforest_%289464219807%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Pacific-Northwest_Rainforest_%289464219807%29.jpg/3840px-Pacific-Northwest_Rainforest_%289464219807%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Scott Darbey from Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Scott Darbey from Canada",
+        "author_url": "https://www.flickr.com/people/78129892@N05",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "“Sasquatch” comes from the Halkomelem word “sásq'ets”, made popular by a Canadian teacher in the 1920s.",
       "subcategory": "rivers-lakes-and-mountains",
@@ -997164,28 +997369,41 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says “Signs like this one”, so the picture has to show a Sasquatch/Bigfoot crossing sign. None of the candidates does, and no new search is allowed. Find a Bigfoot crossing sign photo by hand (for example search Commons for “Bigfoot crossing sign”), or reword the question so it doesn't point at a sign. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says “Signs like this one”, so the picture has to show a Sasquatch/Bigfoot crossing sign. None of the candidates does, and no new search is allowed. Find a Bigfoot crossing sign photo by hand (for example search Commons for “Bigfoot crossing sign”), or reword the question so it doesn't point at a sign. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which ruled out all European options at once, with a vaguer one about the Fraser River valley.",
+        "reason": "No Bigfoot sign photo was available, so I took the sign out of the question and changed the image to a Pacific Northwest forest.",
         "previous": {
-          "hints": [
-            "The word comes from British Columbia, just north of Washington State.",
-            "The name is older than any European settlers in the area.",
-            "It comes from a Salish people's word for a wild, hairy man of the woods."
-          ]
+          "question": "Signs like this one appear in Pacific Northwest forests. Bigfoot's other name, “Sasquatch,” comes from which kind of language?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Sasquatch crossing sign",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -999440,10 +999658,10 @@
     },
     {
       "id": "q-12921",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A tiny bird that decided the spikiest plant in town was the comfiest place to build a home.",
-      "question": "The cactus wren, a loud desert bird that nests in cactus, is the state bird of the state on this map. Which state is it?",
+      "question": "The cactus wren, a loud desert bird that nests in cactus, is the state bird of which US state?",
       "answer": "Arizona",
       "wrong_answers": [
         "New Mexico",
@@ -999457,12 +999675,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Arizona state outline",
-        "note": "A plain outline of the state of Arizona with no labels, names or city markers.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "cactus wren bird",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACactus_Wren_Sandia_Mountains.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Cactus_Wren_Sandia_Mountains.jpg/3840px-Cactus_Wren_Sandia_Mountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Polinova · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Polinova",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Polinova",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The cactus wren is the largest wren in the United States.",
       "subcategory": "state-symbols",
@@ -999488,31 +999713,45 @@
         "notes": "The cactus wren fact is just decoration: really this is \"name the state from its outline\", which is a dry test. Hint 2 (Phoenix) all but gives the answer away. Rated 11, but Arizona's outline is fairly well known in the US, so 9 is closer. It also shares a topic with the saguaro and Grand Canyon questions, but asks a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works as the essential unlabeled outline of Arizona, and no new search is allowed. #2 and #6 print \"Arizona\" on the map, #1 is a labeled regional map, #3 is a faded military-division map, and #4 and #5 are Moon photos. The slot needs a plain, unlabeled Arizona outline (for example a blank Arizona locator or outline map from Commons). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works as the essential unlabeled outline of Arizona, and no new search is allowed. #2 and #6 print \"Arizona\" on the map, #1 is a labeled regional map, #3 is a faded military-division map, and #4 and #5 are Moon photos. The slot needs a plain, unlabeled Arizona outline (for example a blank Arizona locator or outline map from Commons). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 (Phoenix) with a Mexico-border hint that still leaves New Mexico open.",
+        "reason": "No unlabeled Arizona outline was available, so I rewrote the question to work without a map and used an illustrative cactus wren photo.",
         "previous": {
-          "hints": [
-            "This state is in the dry Southwest.",
-            "Its capital is Phoenix.",
-            "The Grand Canyon is here."
-          ]
+          "question": "The cactus wren, a loud desert bird that nests in cactus, is the state bird of the state on this map. Which state is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Arizona state outline",
+            "note": "A plain outline of the state of Arizona with no labels, names or city markers.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -999767,7 +1000006,7 @@
     },
     {
       "id": "q-12925",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Somebody tried to sneak a made-up word into the big list of Americans.",
       "question": "Which of these is NOT a real name for people from a US state?",
@@ -999785,11 +1000024,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "kids sports stadium",
+        "query": "US state flags",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Flags_on_OK_State_Capitol_for_child_abuse.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/US_Flags_on_OK_State_Capitol_for_child_abuse.jpg/3840px-US_Flags_on_OK_State_Capitol_for_child_abuse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "15299 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "15299",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "People from New York City are New Yorkers too, and a famous magazine is named after them.",
       "subcategory": "state-symbols",
@@ -999818,24 +1000064,40 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fit the question. The search term \"kids sports stadium\" came from the sports-meet scene that was cut, and the results are stadiums in Australia, Mexico City and Ohio, plus a galaxy (#6). The decorative image should show the question's world, for example \"US state flags\" or \"map of United States\". A new search isn't allowed here, so the slot needs a manual search. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fit the question. The search term \"kids sports stadium\" came from the sports-meet scene that was cut, and the results are stadiums in Australia, Mexico City and Ohio, plus a galaxy (#6). The decorative image should show the question's world, for example \"US state flags\" or \"map of United States\". A new search isn't allowed here, so the slot needs a manual search. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the invented sports-meet setting and asked the question directly.",
+        "reason": "Changed the decorative image search, which came from a cut sports scene, to one that shows the question's world (US states).",
         "previous": {
-          "question": "You're at a sports meet with kids from all over the US. Which of these is NOT a real name for people from a state?"
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "kids sports stadium",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1001866,7 +1002128,7 @@
     },
     {
       "id": "q-12952",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "The one time of year it's fine to hang laundry over the fireplace.",
       "question": "It hangs by the fireplace, it often has your name on it, and Santa fills it with small gifts. It looks like a giant what?",
@@ -1001878,7 +1002140,7 @@
       ],
       "hints": [
         "You wear this piece of clothing on your body.",
-        "It's shaped like a long tube with a bend near one end.",
+        "Most people keep a whole drawer full of these at home.",
         "You usually wear them in pairs, one on each foot."
       ],
       "media": {
@@ -1001926,26 +1002188,34 @@
       "needs_media": false,
       "batch": "batch-40",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"shaped like a long tube with a bend near one end\") describes a sock so exactly that it gives the answer away: none of the other options (glove, hat, scarf) has that shape. Hint 2 should be a vaguer hint, for example about clothing in general, and not describe the sock's shape.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"shaped like a long tube with a bend near one end\") describes a sock so exactly that it gives the answer away: none of the other options (glove, hat, scarf) has that shape. Hint 2 should be a vaguer hint, for example about clothing in general, and not describe the sock's shape.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which fit only the sock, with a shape hint that is stronger than hint 1 but doesn't give the answer away.",
+        "reason": "Made hint 2 vaguer so it no longer describes the shape of a sock.",
         "previous": {
           "hints": [
             "You wear this piece of clothing on your body.",
-            "It goes inside your shoe.",
+            "It's shaped like a long tube with a bend near one end.",
             "You usually wear them in pairs, one on each foot."
           ]
         },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f47d69ab",
+  "hash": "e440ea1a",
   "questions": [
     {
       "id": "q-8833",
@@ -27611,6 +27611,40 @@
       "background": null
     },
     {
+      "id": "q-12725",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "american-football",
+      "bundle": "usa",
+      "description": "Where 80,000 fans show up on Sundays to yell at the same team.",
+      "question": "This stadium is the home field of the New York Giants. In which state is it?",
+      "answer": "New Jersey",
+      "wrong_answers": [
+        "New York",
+        "Connecticut",
+        "Pennsylvania"
+      ],
+      "hints": [
+        "It sits in a marshy area called the Meadowlands, about 8 miles (13 km) from Midtown Manhattan.",
+        "The New York Jets play their home games here too.",
+        "This state's nickname is “the Garden State.”"
+      ],
+      "fun_fact": "The Giants and the Jets share the same stadium, which changes its colors and end zone paint depending on which team is home that day.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/MetLife_Stadium_Exterior.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetLife_Stadium_Exterior.jpg",
+        "credit": "gargudojr · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "gargudojr",
+        "author_url": "https://www.flickr.com/people/gargudojr/"
+      },
+      "background": null
+    },
+    {
       "id": "q-12726",
       "status": "approved",
       "difficulty": 4,
@@ -27879,6 +27913,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "All-Pro Reels",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12734",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "american-literature",
+      "bundle": "usa",
+      "description": "Wild things happen when the grown-ups leave the house on a rainy day.",
+      "question": "A famous Dr. Seuss character wears a tall red-and-white striped hat. What kind of animal is he?",
+      "answer": "A cat",
+      "wrong_answers": [
+        "A dog",
+        "A fox",
+        "A bear"
+      ],
+      "hints": [
+        "He visits two kids at home on a rainy day while their mom is out.",
+        "He brings along two helpers called Thing One and Thing Two.",
+        "His animal is right in the book's title, just before the hat."
+      ],
+      "fun_fact": "Dr. Seuss wrote “The Cat in the Hat” in 1957 using only about 236 different words, so beginners could read it alone.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/Rain_on_a_window_pane.jpg/3840px-Rain_on_a_window_pane.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARain_on_a_window_pane.jpg",
+        "credit": "Theactivistuk · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Theactivistuk",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Theactivistuk"
       },
       "background": null
     },
@@ -29413,6 +29481,40 @@
       "background": null
     },
     {
+      "id": "q-12780",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "fairs-and-festivals",
+      "bundle": "usa",
+      "description": "Step right up, step right up: that giant stuffed bear won't win itself!",
+      "question": "At a fair, you pick a floating toy out of the water and check the number underneath to see your prize. Which game is it?",
+      "answer": "Duck pond",
+      "wrong_answers": [
+        "Balloon darts",
+        "Ring toss",
+        "Whack-a-mole"
+      ],
+      "hints": [
+        "Little kids almost always win a prize at this game.",
+        "The little toys bob along in a moving stream.",
+        "They are yellow and say “quack.”"
+      ],
+      "fun_fact": "The duck pond is a favorite game for toddlers because every player usually wins a prize.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Prize_Wall_%2867289713%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APrize_Wall_%2867289713%29.jpeg",
+        "credit": "Nate Pagel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Nate Pagel",
+        "author_url": "https://500px.com/nate_pagel"
+      },
+      "background": null
+    },
+    {
       "id": "q-12781",
       "status": "approved",
       "difficulty": 4,
@@ -29748,6 +29850,40 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Per source. Please credit \"Family photos of Infrogmation\"",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12791",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "household-brands",
+      "bundle": "usa",
+      "description": "The backyard weapon that ended more summer arguments than it started.",
+      "question": "The Super Soaker water gun, a huge hit in the 1990s, was invented by Lonnie Johnson. What was his job?",
+      "answer": "A NASA engineer",
+      "wrong_answers": [
+        "A firefighter",
+        "A swimming coach",
+        "A plumber"
+      ],
+      "hints": [
+        "Before the water gun, he also worked for the US Air Force.",
+        "He was testing a new kind of cooling pump when water shot across the room.",
+        "He helped build a spacecraft that flew all the way to Jupiter."
+      ],
+      "fun_fact": "Lonnie Johnson got the idea in 1982 while working on a heat pump that used water, and the Super Soaker went on to earn hundreds of millions of dollars.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Just_Keep_Swimming_140813-M-AZ394-008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJust_Keep_Swimming_140813-M-AZ394-008.jpg",
+        "credit": "Lance Cpl. Tyler Ngiraswei · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Lance Cpl. Tyler Ngiraswei",
         "author_url": null
       },
       "background": null
@@ -30569,6 +30705,40 @@
       "background": null
     },
     {
+      "id": "q-12816",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "native-nations",
+      "bundle": "usa",
+      "description": "A road trip with no snacks and months of seasickness.",
+      "question": "The Mayflower Pilgrims arrived in 1620, but they weren't the first lasting English colony in America. Which settlement, founded in 1607, was?",
+      "answer": "Jamestown",
+      "wrong_answers": [
+        "Plymouth",
+        "Roanoke",
+        "St. Augustine"
+      ],
+      "hints": [
+        "It was named after the English king of the time.",
+        "Pocahontas is linked to it.",
+        "It lies on a river named after the same king."
+      ],
+      "fun_fact": "The first settlers of this colony arrived on three ships: the Susan Constant, the Godspeed and the Discovery.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Mayflower_II%2C_Water_St%2C_Plymouth_%28493627%29_%2811108952073%29.jpg/3840px-Mayflower_II%2C_Water_St%2C_Plymouth_%28493627%29_%2811108952073%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMayflower_II%2C_Water_St%2C_Plymouth_%28493627%29_%2811108952073%29.jpg",
+        "credit": "Robert Linsdell from St. Andrews, Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Robert Linsdell from St. Andrews, Canada",
+        "author_url": "https://www.flickr.com/people/92487715@N03"
+      },
+      "background": null
+    },
+    {
       "id": "q-12817",
       "status": "approved",
       "difficulty": 8,
@@ -30599,6 +30769,40 @@
         "license_url": null,
         "author": "Alexander Gardner",
         "author_url": "https://en.wikipedia.org/wiki/en:Alexander_Gardner_(photographer)"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12818",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "nineteenth-century",
+      "bundle": "usa",
+      "description": "Five bucks says you get this one right.",
+      "question": "Whose portrait is on the front of the US five-dollar bill?",
+      "answer": "Abraham Lincoln",
+      "wrong_answers": [
+        "George Washington",
+        "Thomas Jefferson",
+        "Andrew Jackson"
+      ],
+      "hints": [
+        "He was president during the Civil War.",
+        "He was famous for his beard and his tall stovepipe hat.",
+        "He is called “Honest Abe.”"
+      ],
+      "fun_fact": "The back of the five-dollar bill shows the Lincoln Memorial in Washington, D.C.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Piggy_banks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiggy_banks.jpg",
+        "credit": "Pauloleong2002 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pauloleong2002",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pauloleong2002"
       },
       "background": null
     },
@@ -30871,6 +31075,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "WClarke",
         "author_url": "https://commons.wikimedia.org/wiki/User:WClarke"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12827",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "Spelled one way, said another, and nobody in town is sorry.",
+      "question": "Valdez, Alaska, which locals say “val-DEEZ,” was named in 1790 by a Spanish explorer. Whom did he name it after?",
+      "answer": "Spain's minister of the navy",
+      "wrong_answers": [
+        "A Spanish army general",
+        "A Russian fur trader",
+        "A local Alaska Native chief"
+      ],
+      "hints": [
+        "The name was given more than 75 years before the United States bought Alaska.",
+        "Spain was exploring the Alaska coast to keep an eye on Russian traders.",
+        "The man was in charge of Spain's ships and sailors."
+      ],
+      "fun_fact": "Explorer Salvador Fidalgo honored Antonio Valdés y Fernández Bazán, and on the same trip he named nearby Cordova too.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Valdez_Harbor_%283872421743%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AValdez_Harbor_%283872421743%29.jpg",
+        "credit": "Joseph from Cabin On The Road, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joseph from Cabin On The Road, USA",
+        "author_url": "https://www.flickr.com/people/11376383@N00"
       },
       "background": null
     },
@@ -31249,6 +31487,40 @@
       "background": null
     },
     {
+      "id": "q-12839",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "restaurant-chains",
+      "bundle": "usa",
+      "description": "A burger so small it could fit in your pocket.",
+      "question": "White Castle's tiny square burgers have five holes and are steamed on onions. What word do Americans use for small burgers like these?",
+      "answer": "Sliders",
+      "wrong_answers": [
+        "Whoppers",
+        "Poppers",
+        "Dippers"
+      ],
+      "hints": [
+        "Today, restaurants also use the word for mini sandwiches filled with pulled pork or chicken.",
+        "Baseball pitchers throw a pitch with this name.",
+        "The name is close to a word for something kids ride down at the playground."
+      ],
+      "fun_fact": "White Castle, opened in 1921 in Wichita, Kansas, is often called America's first fast-food burger chain.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Hot_dog_vendor_-_September_2024_-_Sarah_Stierch_01.jpg/3840px-Hot_dog_vendor_-_September_2024_-_Sarah_Stierch_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHot_dog_vendor_-_September_2024_-_Sarah_Stierch_01.jpg",
+        "credit": "Missvain · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Missvain",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Missvain"
+      },
+      "background": null
+    },
+    {
       "id": "q-12840",
       "status": "approved",
       "difficulty": 9,
@@ -31449,6 +31721,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Mabel Dwight",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12846",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "baseball",
+      "bundle": "usa",
+      "description": "Three of these sports love to swing a big stick. The fourth would rather swing something else.",
+      "question": "Which of these sports is NOT played with a bat?",
+      "answer": "Tennis",
+      "wrong_answers": [
+        "Baseball",
+        "Cricket",
+        "Softball"
+      ],
+      "hints": [
+        "In three of these sports, you hit the ball with a long, solid piece of wood or metal.",
+        "The odd one out is played on a court, not a field.",
+        "Players in this sport use a racket."
+      ],
+      "fun_fact": "Wooden baseball bats in the big leagues are usually made from maple, ash or birch trees.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/GandM_Flare_DXM_bat-Purist_156g_ball.jpg/3840px-GandM_Flare_DXM_bat-Purist_156g_ball.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGandM_Flare_DXM_bat-Purist_156g_ball.jpg",
+        "credit": "Marie-Lan Nguyen · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Marie-Lan Nguyen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jastrow"
       },
       "background": null
     },
@@ -31789,6 +32095,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "The-Wuje",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:The-Wuje&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12857",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "fairs-and-festivals",
+      "bundle": "usa",
+      "description": "The rodeo event where the cowboys still need help tying their shoes.",
+      "question": "In mutton busting, young kids at a rodeo hang on to a running sheep as long as they can. Most contests set a top weight for riders. About how much?",
+      "answer": "About 60 pounds (27 kg)",
+      "wrong_answers": [
+        "About 10 pounds (5 kg)",
+        "About 150 pounds (68 kg)",
+        "About 300 pounds (136 kg)"
+      ],
+      "hints": [
+        "The riders are usually about 4 to 7 years old.",
+        "The sheep has to be able to carry the rider without trouble.",
+        "Think of what a first-grader weighs."
+      ],
+      "fun_fact": "Mutton busters wear helmets and padded vests, and many hold on lying flat with their arms wrapped around the sheep's neck.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/Rodeo%2C_Texas%2C_USA_%2814475290072%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARodeo%2C_Texas%2C_USA_%2814475290072%29.jpg",
+        "credit": "M M from Switzerland · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "M M from Switzerland",
+        "author_url": "https://www.flickr.com/people/43423301@N07"
       },
       "background": null
     },
@@ -32881,6 +33221,40 @@
       "background": null
     },
     {
+      "id": "q-12890",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "rivers-lakes-and-mountains",
+      "bundle": "usa",
+      "description": "Drivers, please slow down for very large, very hairy pedestrians.",
+      "question": "Bigfoot's other name, “Sasquatch,” comes from which kind of language?",
+      "answer": "A First Nations language from Canada",
+      "wrong_answers": [
+        "Spanish from California's missions",
+        "Russian from Alaska's fur traders",
+        "French from Canadian trappers"
+      ],
+      "hints": [
+        "The word comes from British Columbia, just north of Washington State.",
+        "The word was used by people living along the Fraser River valley.",
+        "It comes from a Salish people's word for a wild, hairy man of the woods."
+      ],
+      "fun_fact": "“Sasquatch” comes from the Halkomelem word “sásq'ets”, made popular by a Canadian teacher in the 1920s.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Pacific-Northwest_Rainforest_%289464219807%29.jpg/3840px-Pacific-Northwest_Rainforest_%289464219807%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APacific-Northwest_Rainforest_%289464219807%29.jpg",
+        "credit": "Scott Darbey from Canada · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Scott Darbey from Canada",
+        "author_url": "https://www.flickr.com/people/78129892@N05"
+      },
+      "background": null
+    },
+    {
       "id": "q-12891",
       "status": "approved",
       "difficulty": 11,
@@ -33901,6 +34275,40 @@
       "background": null
     },
     {
+      "id": "q-12921",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "A tiny bird that decided the spikiest plant in town was the comfiest place to build a home.",
+      "question": "The cactus wren, a loud desert bird that nests in cactus, is the state bird of which US state?",
+      "answer": "Arizona",
+      "wrong_answers": [
+        "New Mexico",
+        "Nevada",
+        "Utah"
+      ],
+      "hints": [
+        "This state is in the dry Southwest.",
+        "It shares a border with Mexico.",
+        "The Grand Canyon is here."
+      ],
+      "fun_fact": "The cactus wren is the largest wren in the United States.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Cactus_Wren_Sandia_Mountains.jpg/3840px-Cactus_Wren_Sandia_Mountains.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACactus_Wren_Sandia_Mountains.jpg",
+        "credit": "Polinova · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Polinova",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Polinova"
+      },
+      "background": null
+    },
+    {
       "id": "q-12922",
       "status": "approved",
       "difficulty": 5,
@@ -33999,6 +34407,40 @@
         "license_url": null,
         "author": "USFWS Mountain Prairie",
         "author_url": "https://www.flickr.com/people/usfwsmtnprairie/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12925",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "Somebody tried to sneak a made-up word into the big list of Americans.",
+      "question": "Which of these is NOT a real name for people from a US state?",
+      "answer": "New Yorkian",
+      "wrong_answers": [
+        "Floridian",
+        "Californian",
+        "Ohioan"
+      ],
+      "hints": [
+        "Only one of these is made up.",
+        "“Ohioan” sounds odd, but it's real.",
+        "People from the Big Apple's state have a name that ends in “-er.”"
+      ],
+      "fun_fact": "People from New York City are New Yorkers too, and a famous magazine is named after them.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/US_Flags_on_OK_State_Capitol_for_child_abuse.jpg/3840px-US_Flags_on_OK_State_Capitol_for_child_abuse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Flags_on_OK_State_Capitol_for_child_abuse.jpg",
+        "credit": "15299 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "15299",
+        "author_url": null
       },
       "background": null
     },
@@ -34892,6 +35334,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "VCCmatt",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:VCCmatt&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12952",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "winter-holidays",
+      "bundle": "usa",
+      "description": "The one time of year it's fine to hang laundry over the fireplace.",
+      "question": "It hangs by the fireplace, it often has your name on it, and Santa fills it with small gifts. It looks like a giant what?",
+      "answer": "Sock",
+      "wrong_answers": [
+        "Glove",
+        "Hat",
+        "Scarf"
+      ],
+      "hints": [
+        "You wear this piece of clothing on your body.",
+        "Most people keep a whole drawer full of these at home.",
+        "You usually wear them in pairs, one on each foot."
+      ],
+      "fun_fact": "One old story says the custom began when gold coins fell into socks that were hung up by the fire to dry.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Agriculture_Research_Service_%28ARS%29_%288412891362%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAgriculture_Research_Service_%28ARS%29_%288412891362%29.jpg",
+        "credit": "USDAgov · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDAgov",
+        "author_url": "https://www.flickr.com/people/usdagov/"
       },
       "background": null
     }
