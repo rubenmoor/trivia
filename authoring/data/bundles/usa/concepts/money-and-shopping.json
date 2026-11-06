@@ -371,7 +371,8 @@
     {
       "name": "Self-checkout",
       "facet": "Supermarkets and grocery habits",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The pool already has a question that identifies the self-checkout; the options don't allow a new fact that's fun."
     },
     {
       "name": "Express lane",

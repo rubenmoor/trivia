@@ -665,7 +665,8 @@
     {
       "name": "Gas station",
       "facet": "Roadside attractions and road trip culture",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already has two gas station questions, and none of the options gives a clear question with a US connection."
     },
     {
       "name": "On the Road",
@@ -885,7 +886,8 @@
     {
       "name": "Cinderella Castle",
       "facet": "Landmarks in movies and TV",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: An earlier question already says the castle is in Walt Disney World in Florida, which gives away the Disney and Florida answers; the opening year is too hard for a 3."
     },
     {
       "name": "Cheers bar",
