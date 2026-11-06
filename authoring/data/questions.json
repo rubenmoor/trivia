@@ -1043745,7 +1043745,7 @@
       "status": "needs_work",
       "difficulty": 6,
       "description": "Un cerro con un inquilino muy saltarín.",
-      "question": "Mira este glifo mexica: un chapulín sobre un cerro. ¿Qué lugar de la Ciudad de México representa?",
+      "question": "El glifo mexica de un lugar de la Ciudad de México es un chapulín sobre un cerro. ¿Qué lugar es?",
       "answer": "Chapultepec",
       "wrong_answers": [
         "Coyoacán",
@@ -1043759,12 +1043759,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Chapultepec toponymic glyph",
-        "note": "El glifo mexica de Chapultepec (un chapulín sobre un cerro), sin el nombre escrito.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "grasshopper on rock",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrasshopper_on_High_Rocks_Loop_trail%2C_Capen_Hill_Nature_Sanctuary_2026-07-10.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Grasshopper_on_High_Rocks_Loop_trail%2C_Capen_Hill_Nature_Sanctuary_2026-07-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Peter Cooper Jr. · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Peter Cooper Jr.",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PeterCooperJr",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Coyoacán, otra de las opciones, significa «lugar de coyotes».",
       "subcategory": "animals",
@@ -1043790,27 +1043797,55 @@
         "notes": "A satisfying chapulín→Chapultepec deduction. Images of the glyph on Commons may have 'Chapultepec' written on them (Codex Mendoza scans have labels); the note asks for one without the name. q-10192 asks about the forest/castle, which is a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-43",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates can serve as the essential image. All three are full pages of the Matrícula de tributos or a tribute roll, with dozens of small glyphs and Spanish notes, and none clearly shows the Chapultepec glyph (a grasshopper on a hill). A new search isn't allowed in this run. The slot needs a clear, cropped image of the Chapultepec glyph with no name written on it, for example a crop from the Codex Mendoza or the Chapultepec metro station logo without its label. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "Hints 1 and 2 each give the answer away. Hint 1 (a huge forest and a castle in Mexico City) can only be Chapultepec and repeats the fact of q-10192. Hint 2 («tepec» = «en el cerro») rules out all three wrong options, since only Chapultepec ends in -tepec. Hint 1 needs to be vague (for example the glyph's Mexica origin or that the place was a spring for Tenochtitlan... though that overlaps q-13674, so better something about chapulines being eaten). Hint 2 should not point to a suffix only the answer has.",
         "problems": [
-          "media"
+          "giveaway"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates can serve as the essential image. All three are full pages of the Matrícula de tributos or a tribute roll, with dozens of small glyphs and Spanish notes, and none clearly shows the Chapultepec glyph (a grasshopper on a hill). A new search isn't allowed in this run. The slot needs a clear, cropped image of the Chapultepec glyph with no name written on it, for example a crop from the Codex Mendoza or the Chapultepec metro station logo without its label. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No clean glyph image exists, so the glyph is now described in the text and the image is an illustrative grasshopper.",
+        "previous": {
+          "question": "Mira este glifo mexica: un chapulín sobre un cerro. ¿Qué lugar de la Ciudad de México representa?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Chapultepec toponymic glyph",
+            "note": "El glifo mexica de Chapultepec (un chapulín sobre un cerro), sin el nombre escrito.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13490",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
-      "description": "Es tan esponjoso que dan ganas de untarle mantequilla.",
+      "description": "Una mascota tan tierna que dan ganas de abrazar el empaque.",
       "question": "Soy blanco y peludo, llevo gorro y delantal de panadero, y salgo en las bolsas de pan de caja. ¿Quién soy?",
       "answer": "El Osito Bimbo",
       "wrong_answers": [
@@ -1043828,14 +1043863,14 @@
         "role": "illustrative",
         "query": "sliced white bread loaf",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhite_bread.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/White_bread.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "ElinorD · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATin_Loaf_-_one_slash_in_the_crust.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Tin_Loaf_-_one_slash_in_the_crust.jpg/3840px-Tin_Loaf_-_one_slash_in_the_crust.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Mike Finn · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "author": "ElinorD",
-        "author_url": "https://commons.wikimedia.org/wiki/User:ElinorD",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Mike Finn",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1043866,27 +1043901,31 @@
       "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"tan esponjoso que dan ganas de untarle mantequilla\") points straight at bread. Read with only the four options, that leaves the Osito Bimbo as the one bread mascot and rules out the cereal and snack mascots (Toño, Chester, Cornelio). Rewrite it to play on the mascot or packaging theme without mentioning bread.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"tan esponjoso que dan ganas de untarle mantequilla\") points straight at bread. Read with only the four options, that leaves the Osito Bimbo as the one bread mascot and rules out the cereal and snack mascots (Toño, Chester, Cornelio). Rewrite it to play on the mascot or packaging theme without mentioning bread.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 (honey-loving animal = bear) with a hint about the mascot's long time on the packaging.",
+        "reason": "Rewrote the description so it no longer points at bread.",
         "previous": {
-          "hints": [
-            "Mi marca hace pan, pastelitos y mucho más.",
-            "Soy un animal que en los cuentos ama la miel.",
-            "Mi marca empieza con B y su nombre rima con «Mimbo»."
-          ]
+          "description": "Es tan esponjoso que dan ganas de untarle mantequilla."
         },
         "revised_on": "2026-11-06"
       }
@@ -1045074,20 +1045113,11 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "three burning candles",
-        "note": "Exactamente tres velas encendidas, bien separadas y fáciles de contar; sin otras velas en la imagen.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurning_candle.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Burning_candle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Photos public domain.com · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Photos public domain.com",
-        "author_url": "http://www.photos-public-domain.com",
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-author"
-        ]
+        "query": "three lit candles row",
+        "note": "Exactamente tres velas encendidas, bien separadas y fáciles de contar; sin otras velas en la imagen. Revisar a mano que sean tres.",
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "En algunas ofrendas se pone una vela por cada difunto que se recuerda.",
       "subcategory": "day-of-the-dead",
@@ -1045112,22 +1045142,57 @@
         "difficulty_estimate": 1,
         "notes": "Simple counting, fine for small kids but not very fun. The image must show exactly three lit candles; reflections or extra candles would make it ambiguous."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-43",
       "review": {
         "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. The answer depends on the image. The image must show exactly 3 lit candles, and I can't check that.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "fact"
+          "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. The answer depends on the image. The image must show exactly 3 lit candles, and I can't check that.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked file ('Burning_candle.jpg') probably shows a single candle, so I changed the query to get a new image with exactly three lit candles.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "three burning candles",
+            "note": "Exactamente tres velas encendidas, bien separadas y fáciles de contar; sin otras velas en la imagen.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ABurning_candle.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Burning_candle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Photos public domain.com · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Photos public domain.com",
+            "author_url": "http://www.photos-public-domain.com",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-author"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13507",
@@ -1045773,7 +1045838,7 @@
     },
     {
       "id": "q-13515",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Hay quienes dejan sus raíces en el pueblo, y otros, literalmente, el ombligo.",
       "question": "En muchos pueblos de México entierran el ombligo de las niñas junto al fogón para que sean hogareñas. ¿De qué época viene esta costumbre?",
@@ -1045785,7 +1045850,7 @@
       ],
       "hints": [
         "Es mucho más antigua que la llegada del tren a México.",
-        "Es más antigua que las catedrales de México.",
+        "El fogón ha sido el corazón de las cocinas mexicanas durante siglos.",
         "Los mexicas lo hacían: el ombligo de los niños se llevaba al campo de batalla."
       ],
       "media": {
@@ -1045831,26 +1045896,33 @@
       "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Es más antigua que las catedrales de México\") effectively gives the answer away: Mexico's cathedrals were built from the 16th century on, during the Virreinato, so a custom older than them must be pre-Hispanic. Together with hint 1 it rules out every wrong option. Hint 2 should be a vaguer clue that doesn't settle the era, for example one about the hearth's long role in Mesoamerican homes that still leaves the Virreinato possible.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Es más antigua que las catedrales de México\") effectively gives the answer away: Mexico's cathedrals were built from the 16th century on, during the Virreinato, so a custom older than them must be pre-Hispanic. Together with hint 1 it rules out every wrong option. Hint 2 should be a vaguer clue that doesn't settle the era, for example one about the hearth's long role in Mesoamerican homes that still leaves the Virreinato possible.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "The question now asks where the custom comes from, and hint 2 no longer says the friars recorded it.",
+        "reason": "Replaced hint 2, which settled the era, with a vaguer clue about the hearth.",
         "previous": {
-          "question": "En muchos pueblos de México entierran el ombligo de las niñas junto al fogón para que sean hogareñas. ¿Desde qué época se registra esta costumbre?",
           "hints": [
             "Es mucho más antigua que la llegada del tren a México.",
-            "Los frailes que llegaron con los conquistadores ya la anotaron en sus libros.",
+            "Es más antigua que las catedrales de México.",
             "Los mexicas lo hacían: el ombligo de los niños se llevaba al campo de batalla."
           ]
         },
@@ -1046025,10 +1046097,10 @@
     },
     {
       "id": "q-13518",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Uno cuenta hasta cien y los demás desaparecen como calcetín en la lavadora.",
-      "question": "Mira la foto: un niño se tapa los ojos y cuenta mientras los demás corren. ¿Cómo se llama en México este juego?",
+      "question": "En este juego, uno se tapa los ojos y cuenta mientras los demás corren, y luego sale a buscarlos. ¿Cómo se llama en México?",
       "answer": "Las escondidillas",
       "wrong_answers": [
         "Las traes",
@@ -1046042,12 +1046114,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "child covering eyes counting",
-        "note": "Primer plano de un niño tapándose los ojos con las manos contra una pared o un árbol, como el que cuenta en el juego de esconderse. Sin texto.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "children playing park",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_Playing_at_Baoqing_Park_20160405.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Children_Playing_at_Baoqing_Park_20160405.jpg/3840px-Children_Playing_at_Baoqing_Park_20160405.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "玄史生 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "玄史生",
+        "author_url": "https://commons.wikimedia.org/wiki/User:%E7%8E%84%E5%8F%B2%E7%94%9F",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Hay campeonatos de escondidillas para adultos: en Italia se organiza desde hace años un mundial de este juego.",
       "subcategory": "home-and-street",
@@ -1046073,21 +1046152,47 @@
         "notes": "Solid. The question text already describes the game, so the essential photo adds little; it's easy even for 6-year-olds in Mexico. The Italian Nascondino world championship is real."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a child covering their eyes and counting. The sheet has old book scans (optical instruments, an anatomy drawing, a tribal dance, an Arthurian illustration, a hut under palm trees) and a golden mole. The question says «Mira la foto», so it needs that exact photo. No new search is allowed, so the media slot needs a manual search (e.g. \"hide and seek counting\") or the question should drop «Mira la foto» and use an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a child covering their eyes and counting. The sheet has old book scans (optical instruments, an anatomy drawing, a tribal dance, an Arthurian illustration, a hut under palm trees) and a golden mole. The question says «Mira la foto», so it needs that exact photo. No new search is allowed, so the media slot needs a manual search (e.g. \"hide and seek counting\") or the question should drop «Mira la foto» and use an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No matching photo exists, so I dropped «Mira la foto», described the game in the text and switched to a decorative image.",
+        "previous": {
+          "question": "Mira la foto: un niño se tapa los ojos y cuenta mientras los demás corren. ¿Cómo se llama en México este juego?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "child covering eyes counting",
+            "note": "Primer plano de un niño tapándose los ojos con las manos contra una pared o un árbol, como el que cuenta en el juego de esconderse. Sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13519",
@@ -1046383,7 +1046488,7 @@
     },
     {
       "id": "q-13523",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un oasis en el desierto que resultó ser la peor parada del viaje.",
       "question": "Fui insurgente y me pasé al bando realista. En marzo de 1811, en Acatita de Baján, Coahuila, embosqué y capturé a Hidalgo y Allende. ¿Quién soy?",
@@ -1046401,16 +1046506,16 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Coahuila desert landscape",
+        "query": "Chihuahuan desert landscape",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Gfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADesert_Chihuahuan_Big_Bend.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Desert_Chihuahuan_Big_Bend.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Cqui · CC BY-SA 2.5 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public Domain",
-        "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
-        "author": "Yinan Chen",
-        "author_url": "http://www.goodfreephotos.com",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Cqui",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cqui",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1046441,18 +1046546,49 @@
       "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-no-reason: public domain without a template).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image had an unusable license, so I changed the query to get a new decorative desert image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "Coahuila desert landscape",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Gfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public Domain",
+            "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+            "author": "Yinan Chen",
+            "author_url": "http://www.goodfreephotos.com",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13524",
@@ -1046540,10 +1046676,10 @@
     },
     {
       "id": "q-13525",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Antes de que se pusiera de moda, él ya traía su paliacate.",
-      "question": "Este héroe de la Independencia, famoso por su pañuelo en la cabeza, salía en el antiguo billete de 50 pesos. ¿Quién es?",
+      "question": "¿Qué héroe de la Independencia, famoso por su pañuelo en la cabeza, salía en el antiguo billete de 50 pesos?",
       "answer": "José María Morelos",
       "wrong_answers": [
         "Miguel Hidalgo",
@@ -1046553,16 +1046689,23 @@
       "hints": [
         "Fue cura, igual que Hidalgo.",
         "Escribió los «Sentimientos de la Nación».",
-        "Un estado cuya capital es Cuernavaca lleva su apellido."
+        "Nació en Valladolid, una ciudad que hoy lleva su apellido en su honor."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Morelos headscarf painting",
-        "note": "Retrato clásico de Morelos con el pañuelo en la cabeza, sin nombre ni texto visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Mexican flag waving",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMexican_flag.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mexican_flag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Jorge Mendoza · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jorge Mendoza",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bibliothecamex",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Se cuenta que Morelos usaba el pañuelo para aliviar sus fuertes dolores de cabeza.",
       "subcategory": "independence-and-19th-century",
@@ -1046588,21 +1046731,52 @@
         "notes": "The description repeats the headscarf clue from the question, so it adds no joke of its own. The headache story is only legend, but the fun fact hedges it with 'se cuenta'. Estimated difficulty is a bit higher than the stated 4."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows Morelos. They are all generic women with headscarves, and #1 is a nude, so it isn't family-friendly. No new search is allowed, so the essential image slot can't be filled. Search for a portrait of Morelos with his headscarf instead, e.g. \"José María Morelos portrait\". A smaller point for the developer: hint 3 (the state whose capital is Cuernavaca) almost repeats related question q-10244, whose answer is the state of Morelos. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows Morelos. They are all generic women with headscarves, and #1 is a nude, so it isn't family-friendly. No new search is allowed, so the essential image slot can't be filled. Search for a portrait of Morelos with his headscarf instead, e.g. \"José María Morelos portrait\". A smaller point for the developer: hint 3 (the state whose capital is Cuernavaca) almost repeats related question q-10244, whose answer is the state of Morelos. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No portrait was found, so the question is now text-only with a decorative image, and hint 3 no longer repeats q-10244.",
+        "previous": {
+          "question": "Este héroe de la Independencia, famoso por su pañuelo en la cabeza, salía en el antiguo billete de 50 pesos. ¿Quién es?",
+          "hints": [
+            "Fue cura, igual que Hidalgo.",
+            "Escribió los «Sentimientos de la Nación».",
+            "Un estado cuya capital es Cuernavaca lleva su apellido."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Morelos headscarf painting",
+            "note": "Retrato clásico de Morelos con el pañuelo en la cabeza, sin nombre ni texto visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13526",
@@ -1046829,10 +1047003,10 @@
     },
     {
       "id": "q-13529",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Una bandera que llevó su propio instrumento musical al campo de batalla.",
-      "question": "Una bandera verde con un arpa, como esta, ondeó del lado mexicano en la guerra contra Estados Unidos de 1846 a 1848. ¿Quiénes la llevaban?",
+      "question": "Una bandera verde con un arpa ondeó del lado mexicano en la guerra contra Estados Unidos de 1846 a 1848. ¿Quiénes la llevaban?",
       "answer": "Soldados irlandeses",
       "wrong_answers": [
         "Soldados franceses",
@@ -1046846,12 +1047020,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "San Patricios green harp flag",
-        "note": "Parte de la bandera reconstruida del Batallón de San Patricio: fondo verde con arpa dorada, sin texto legible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "San Angel Mexico City plaza",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_San_Jacinto%2C_San_%C3%81ngel_-_Mexico_2024.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Plaza_San_Jacinto%2C_San_%C3%81ngel_-_Mexico_2024.jpg/3840px-Plaza_San_Jacinto%2C_San_%C3%81ngel_-_Mexico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "José Luiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "José Luiz",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Cada 12 de septiembre se les rinde homenaje en San Ángel, en la Ciudad de México.",
       "subcategory": "independence-and-19th-century",
@@ -1046877,26 +1047058,44 @@
         "notes": "Reconstructions of the flag often carry the text 'Erin go Bragh' or 'San Patricio', so the photo must be cropped. The exact date of the homage in San Ángel is unverified, but plausible."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the San Patricio Battalion flag: 1 and 2 are Civil War-era Irish-American flags with US stars, stripes and an eagle (\"E Pluribus Unum\" on 1), and 3 and 4 are US county tax maps. The question says \"como esta\", so the image must be the green harp flag of the Batallón de San Patricio, cropped so no text can be read. Try a search such as \"Batallón de San Patricio flag\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the San Patricio Battalion flag: 1 and 2 are Civil War-era Irish-American flags with US stars, stripes and an eagle (\"E Pluribus Unum\" on 1), and 3 and 4 are US county tax maps. The question says \"como esta\", so the image must be the green harp flag of the Batallón de San Patricio, cropped so no text can be read. Try a search such as \"Batallón de San Patricio flag\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints that the bearers were foreigners.",
+        "reason": "No flag image was found, so I removed «como esta» and used an illustrative image of San Ángel, where the battalion is honoured.",
         "previous": {
-          "description": "Una bandera que ondeaba muy lejos de casa."
+          "question": "Una bandera verde con un arpa, como esta, ondeó del lado mexicano en la guerra contra Estados Unidos de 1846 a 1848. ¿Quiénes la llevaban?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "San Patricios green harp flag",
+            "note": "Parte de la bandera reconstruida del Batallón de San Patricio: fondo verde con arpa dorada, sin texto legible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -1053221,10 +1053420,10 @@
     },
     {
       "id": "q-13614",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un dios con el que nadie quería quedar mal en temporada de siembra.",
-      "question": "Mira el video: cuando caía algo así sobre la selva, los antiguos mayas se lo agradecían a un dios. ¿A cuál?",
+      "question": "Cuando caía la lluvia sobre la selva, los antiguos mayas se la agradecían a un dios. ¿A cuál?",
       "answer": "Chaac",
       "wrong_answers": [
         "Kukulkán",
@@ -1053237,13 +1053436,20 @@
         "Su nombre es corto y empieza con «Ch»."
       ],
       "media": {
-        "type": "video",
-        "role": "essential",
-        "query": "rain falling rainforest",
-        "note": "Clip corto de un aguacero fuerte cayendo sobre una selva tropical, idealmente con truenos; sin texto ni personas.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "type": "image",
+        "role": "illustrative",
+        "query": "rain tropical rainforest",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACheow_Lan_Lake%2C_Rainforest%2C_Khao_Sok%2C_Thailand.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Cheow_Lan_Lake%2C_Rainforest%2C_Khao_Sok%2C_Thailand.jpg/3840px-Cheow_Lan_Lake%2C_Rainforest%2C_Khao_Sok%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En el Codz Poop de Kabah, Yucatán, toda una fachada está cubierta por cientos de máscaras de Chaac.",
       "subcategory": "reserves-and-climate",
@@ -1053269,21 +1053475,47 @@
         "notes": "A rain video is a fair essential clue. Hint 2 (the masks at Uxmal and Kabah) is very strong. The fun fact repeats the Codz Poop masks from q-12565, but that question asks about the site, not the god."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the video candidates shows rain falling on a forest, and the question depends on that video ('Mira el video: cuando caía algo así'). No new search is allowed. The slot needs real footage of a heavy downpour on tropical forest, from a search such as 'tropical rain downpour' or 'heavy rain jungle'. Another option is to reword the question so it no longer depends on a rain video. The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the video candidates shows rain falling on a forest, and the question depends on that video ('Mira el video: cuando caía algo así'). No new search is allowed. The slot needs real footage of a heavy downpour on tropical forest, from a search such as 'tropical rain downpour' or 'heavy rain jungle'. Another option is to reword the question so it no longer depends on a rain video. The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No rain video was found, so the rain is now named in the text and the media is an illustrative image.",
+        "previous": {
+          "question": "Mira el video: cuando caía algo así sobre la selva, los antiguos mayas se lo agradecían a un dios. ¿A cuál?",
+          "media": {
+            "type": "video",
+            "role": "essential",
+            "query": "rain falling rainforest",
+            "note": "Clip corto de un aguacero fuerte cayendo sobre una selva tropical, idealmente con truenos; sin texto ni personas.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13615",
@@ -1056784,7 +1057016,7 @@
       "id": "q-13662",
       "status": "needs_work",
       "difficulty": 6,
-      "description": "Una fila tan larga que vale más que cualquier selfie en la Casa Azul.",
+      "description": "Una fila tan larga que hasta Frida habría pintado un autorretrato mientras esperaba.",
       "question": "El Mercado de Coyoacán está a unas cuadras de la Casa Azul de Frida Kahlo, y sus puestos más famosos tienen fila. ¿Qué venden?",
       "answer": "Tostadas y antojitos",
       "wrong_answers": [
@@ -1056794,7 +1057026,7 @@
       ],
       "hints": [
         "Es un mercado tradicional de barrio al que los vecinos van desde hace décadas.",
-        "Los puestos más famosos tienen montañas de cosas crujientes.",
+        "La fila más larga se forma a la hora de la comida.",
         "Se comen con crema, salsa y, a veces, ceviche o pata."
       ],
       "media": {
@@ -1056841,24 +1057073,34 @@
       "batch": "batch-43",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 (\"montañas de cosas crujientes\") rules out books, crafts and flowers at once, so it gives the answer away before hint 3. Rewrite it as a vaguer clue, e.g. that people go there mostly at lunchtime or eat standing at the counter. Separately, the description's \"vale más que cualquier selfie\" points toward something you consume on the spot and could be made more neutral.",
+        "feedback": "Hint 2 (\"La fila más larga se forma a la hora de la comida\") gives the answer away: a line at lunchtime only fits food, so it rules out the other three options before hint 3. Hint 2 should be replaced with something that doesn't point to food, such as the market's age or its covered hall.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"montañas de cosas crujientes\") rules out books, crafts and flowers at once, so it gives the answer away before hint 3. Rewrite it as a vaguer clue, e.g. that people go there mostly at lunchtime or eat standing at the counter. Separately, the description's \"vale más que cualquier selfie\" points toward something you consume on the spot and could be made more neutral.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the mealtime hint 1 with a neutral one and shortened the question.",
+        "reason": "Made hint 2 vaguer so it no longer gives the answer away, and made the description more neutral.",
         "previous": {
-          "question": "El Mercado de Coyoacán está a unas cuadras de la Casa Azul de Frida Kahlo, y los turistas hacen fila en sus puestos más famosos. ¿Qué venden?",
+          "description": "Una fila tan larga que vale más que cualquier selfie en la Casa Azul.",
           "hints": [
-            "Mucha gente llega ahí a la hora de la comida, después de visitar el museo.",
+            "Es un mercado tradicional de barrio al que los vecinos van desde hace décadas.",
             "Los puestos más famosos tienen montañas de cosas crujientes.",
             "Se comen con crema, salsa y, a veces, ceviche o pata."
           ]
@@ -1056951,10 +1057193,10 @@
     },
     {
       "id": "q-13664",
-      "status": "needs_work",
-      "difficulty": 6,
+      "status": "approved",
+      "difficulty": 7,
       "description": "El mar estornuda tan fuerte que los turistas le pagan por verlo.",
-      "question": "La Bufadora, que lanza chorros de agua de mar de varios metros, está en el estado marcado en el mapa. ¿Cuál es?",
+      "question": "La Bufadora lanza chorros de agua de mar de varios metros de altura. ¿En qué estado de México está?",
       "answer": "Baja California",
       "wrong_answers": [
         "Baja California Sur",
@@ -1056968,12 +1057210,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Baja California in Mexico (location map scheme)",
-        "note": "Mapa en blanco de México con el estado de Baja California (mitad norte de la península) resaltado, sin nombres ni rótulos.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "La Bufadora blowhole",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Bufadora%2C_Ensenada_BC_-_panoramio.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/La_Bufadora%2C_Ensenada_BC_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Luis Enrique Cruz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Luis Enrique Cruz",
+        "author_url": "https://web.archive.org/web/20161029095512/http://www.panoramio.com/user/550801?with_photo_id=108442566",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La Bufadora ruge porque las olas entran a una cueva marina y el aire comprimido avienta el agua hacia arriba.",
       "subcategory": "landscapes",
@@ -1056999,21 +1057248,49 @@
         "notes": "Locator maps for this exist on Wikimedia, though they need to be blank (no labels). landmarks-11 has Baja California Sur as its answer, which is only nearby."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a map that highlights only the state of Baja California, and the question can't work without one. Candidates 1 and 3 are photos of military aircraft. Candidate 2 is a map of the historical Californias, and its red area covers US California and the whole peninsula, Baja California Sur included. It's not possible to search again, so the slot needs a blank Mexico locator map with only Baja California highlighted (e.g. Commons 'Baja California in Mexico (location map scheme).svg'). No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a map that highlights only the state of Baja California, and the question can't work without one. Candidates 1 and 3 are photos of military aircraft. Candidate 2 is a map of the historical Californias, and its red area covers US California and the whole peninsula, Baja California Sur included. It's not possible to search again, so the slot needs a blank Mexico locator map with only Baja California highlighted (e.g. Commons 'Baja California in Mexico (location map scheme).svg'). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 6,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable locator map exists, so the question now asks for the state directly, with an illustrative photo of La Bufadora; difficulty raised slightly because the map no longer helps.",
+        "previous": {
+          "difficulty": 6,
+          "question": "La Bufadora, que lanza chorros de agua de mar de varios metros, está en el estado marcado en el mapa. ¿Cuál es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Baja California in Mexico (location map scheme)",
+            "note": "Mapa en blanco de México con el estado de Baja California (mitad norte de la península) resaltado, sin nombres ni rótulos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13665",
@@ -1057374,7 +1057651,7 @@
     },
     {
       "id": "q-13670",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "El único objeto de la cocina que se lleva mejor con las tortillas que con cualquier persona.",
       "question": "Soy redondo y plano, de barro o de metal. Me ponen sobre el fuego y en mí se calientan las tortillas. ¿Qué soy?",
@@ -1057392,11 +1057669,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "tortilla masa balls",
+        "query": "corn masa dough",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMasa_para_tortillas.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Masa_para_tortillas.JPG/3840px-Masa_para_tortillas.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "GABIEGUIN · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "GABIEGUIN",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GABIEGUIN",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La palabra «comal» viene del náhuatl «comalli», y los mexicas ya cocinaban sus tortillas en comales de barro.",
       "subcategory": "mexica",
@@ -1057425,18 +1057709,42 @@
       "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates fits: all six show billiards (a pool hall front, pool balls, old billiards prints), nothing about tortillas or a Mexican kitchen. A new search for something like \"tortilla masa balls\" or \"handmade corn tortillas\" is needed, and it must not show a comal. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates fits: all six show billiards (a pool hall front, pool balls, old billiards prints), nothing about tortillas or a Mexican kitchen. A new search for something like \"tortilla masa balls\" or \"handmade corn tortillas\" is needed, and it must not show a comal. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query so the new search finds corn masa rather than billiard balls, and a comal is unlikely to show up.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "tortilla masa balls",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13671",
@@ -1057619,7 +1057927,7 @@
     },
     {
       "id": "q-13673",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "La palabra favorita de las abuelas cuando llegas de visita.",
       "question": "«Apapachar» viene del náhuatl «papachoa» y hoy en México es abrazar con cariño. ¿Qué significaba originalmente «papachoa»?",
@@ -1057631,7 +1057939,7 @@
       ],
       "hints": [
         "Era una palabra de todos los días, no solo de cariño.",
-        "Al principio no tenía nada que ver con bebés ni con personas.",
+        "También se usaba en la cocina.",
         "Se hacía con los dedos, como cuando sobas algo."
       ],
       "media": {
@@ -1057680,26 +1057988,33 @@
       "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Al principio no tenía nada que ver con bebés ni con personas\") rules out all three wrong answers at once, since each one is about a person or a baby (arrullar, dar de comer, besar). That leaves only the correct answer after hint 2. Replace it with a vaguer hint that doesn't eliminate options, for example one about the word being used for materials or for cooking.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Al principio no tenía nada que ver con bebés ni con personas\") rules out all three wrong answers at once, since each one is about a person or a baby (arrullar, dar de comer, besar). That leaves only the correct answer after hint 2. Replace it with a vaguer hint that doesn't eliminate options, for example one about the word being used for materials or for cooking.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the softness hint 2 with a vaguer one and rewrote the description so it no longer plays on softness.",
+        "reason": "Replaced hint 2, which ruled out all three wrong answers, with a vaguer hint about cooking.",
         "previous": {
-          "description": "Una palabra tan suave que da ganas de dársela a alguien.",
           "hints": [
             "Era una palabra de todos los días, no solo de cariño.",
-            "Se usaba con cosas blandas, como el algodón o la masa.",
+            "Al principio no tenía nada que ver con bebés ni con personas.",
             "Se hacía con los dedos, como cuando sobas algo."
           ]
         },
@@ -1058239,20 +1058554,11 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "vintage magazine illustration ink",
+        "query": "pen and ink drawing desk",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AP_146_Short_Stories_%28US%29_1926-02-10--George%2C_Tete-Beche--Title_illus.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/P_146_Short_Stories_%28US%29_1926-02-10--George%2C_Tete-Beche--Title_illus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "García Cabral estudió en París con una beca del gobierno de Francisco I. Madero.",
       "subcategory": "painters-and-muralists",
@@ -1058282,17 +1058588,52 @@
       "batch": "batch-43",
       "review": {
         "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image's license (PD only in the US) doesn't work, so the decorative image gets a new query for a fresh search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "vintage magazine illustration ink",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AP_146_Short_Stories_%28US%29_1926-02-10--George%2C_Tete-Beche--Title_illus.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/P_146_Short_Stories_%28US%29_1926-02-10--George%2C_Tete-Beche--Title_illus.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13682",
@@ -1058375,7 +1058716,7 @@
     },
     {
       "id": "q-13683",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Una pintora que se despidió con fruta en vez de flores.",
       "question": "En 1954, Frida Kahlo pintó unas sandías y escribió una frase en una de ellas; es una de sus últimas obras. ¿Qué frase escribió?",
@@ -1058387,7 +1058728,7 @@
       ],
       "hints": [
         "La escribió sobre la pulpa roja de una de las sandías.",
-        "Es un brindis por la existencia.",
+        "Junto a la frase escribió Coyoacán y el año.",
         "Coldplay la usó como título de su disco de 2008."
       ],
       "media": {
@@ -1058433,25 +1058774,32 @@
       "needs_media": false,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Es un brindis por la existencia\") just paraphrases «Viva la vida». It is the only option that is a toast to life, so the answer is given away before hint 3. Replace hint 2 with a vaguer clue, for example that the phrase is short and full of optimism even though she was very ill, or that she wrote her city and the year next to it, without describing what the phrase means.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Es un brindis por la existencia\") just paraphrases «Viva la vida». It is the only option that is a toast to life, so the answer is given away before hint 3. Replace hint 2 with a vaguer clue, for example that the phrase is short and full of optimism even though she was very ill, or that she wrote her city and the year next to it, without describing what the phrase means.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the word-count hint that excluded options and softened 'su última obra', since its exact dating is debated.",
+        "reason": "Replaced hint 2, which paraphrased the answer, with the inscription of her city and the year.",
         "previous": {
-          "question": "En 1954, Frida Kahlo pintó unas sandías y escribió una frase en una de ellas; fue su última obra. ¿Qué frase escribió?",
           "hints": [
-            "Son tres palabras.",
+            "La escribió sobre la pulpa roja de una de las sandías.",
             "Es un brindis por la existencia.",
             "Coldplay la usó como título de su disco de 2008."
           ]
@@ -1059411,7 +1059759,7 @@
       "status": "needs_work",
       "difficulty": 9,
       "description": "Un turista que no se conformó con la foto: se subió hasta el cráter.",
-      "question": "Este es el volcán Jorullo, en Michoacán. En 1803 lo subió un famoso naturalista europeo que recorría la Nueva España. ¿Quién?",
+      "question": "En 1803, un famoso naturalista europeo que recorría la Nueva España subió al volcán Jorullo, en Michoacán. ¿Quién?",
       "answer": "Alexander von Humboldt",
       "wrong_answers": [
         "Charles Darwin",
@@ -1059425,9 +1059773,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Volcán Jorullo",
-        "note": "Foto del volcán Jorullo en Michoacán, sin letreros ni texto.",
+        "role": "illustrative",
+        "query": "Michoacan volcanic landscape",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1059456,22 +1059804,50 @@
         "notes": "The media role should be illustrative, not essential: the question already names the volcano. q-7850 also involves Humboldt, but it asks a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-43",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates works for the media slot, and no new search is allowed. Candidates 1–4 are engraved maps and cross-sections of Jorullo, not photos, and their captions name the answer (\"par A. de Humboldt\", \"d'après A. de Humboldt\"). Candidate 5 is a blank book page. The slot needs a real photo of Jorullo volcano with no text; failing that, switch to an illustrative or decorative Michoacán landscape and reword \"Este es el volcán Jorullo\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works for the media slot, and no new search is allowed. Candidates 1–4 are engraved maps and cross-sections of Jorullo, not photos, and their captions name the answer (\"par A. de Humboldt\", \"d'après A. de Humboldt\"). Candidate 5 is a blank book page. The slot needs a real photo of Jorullo volcano with no text; failing that, switch to an illustrative or decorative Michoacán landscape and reword \"Este es el volcán Jorullo\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No text-free photo of Jorullo exists, so the question no longer points to a photo and the media is now an illustrative Michoacán volcanic landscape.",
+        "previous": {
+          "question": "Este es el volcán Jorullo, en Michoacán. En 1803 lo subió un famoso naturalista europeo que recorría la Nueva España. ¿Quién?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Volcán Jorullo",
+            "note": "Foto del volcán Jorullo en Michoacán, sin letreros ni texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13698",
@@ -1060072,7 +1060448,7 @@
     },
     {
       "id": "q-13706",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Una canción que es mapa, ruta y nostalgia, todo en una.",
       "question": "En «Camino de Guanajuato», José Alfredo Jiménez canta que se queda en su «pueblo adorado», el de esta foto. ¿Cuál es?",
@@ -1060126,19 +1060502,27 @@
         "difficulty_estimate": 10,
         "notes": "The lyric 'Dolores Hidalgo… ahí es mi pueblo adorado' is correct. The famous Parroquia photo helps people who know the Grito. The tomb fun fact is true. Salamanca is a clever distractor because it is also in the song."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-43",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. José Alfredo was born in Dolores Hidalgo and his tomb is hat-shaped, but I couldn't confirm that the lyric of \"Camino de Guanajuato\" has him staying in his \"pueblo adorado\" meaning Dolores Hidalgo. The sources I found list León, San Felipe, San Miguel de Allende and Cubilete, and tie the song to Salamanca. None of them showed the lyric.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. José Alfredo was born in Dolores Hidalgo and his tomb is hat-shaped, but I couldn't confirm that the lyric of \"Camino de Guanajuato\" has him staying in his \"pueblo adorado\" meaning Dolores Hidalgo. The sources I found list León, San Felipe, San Miguel de Allende and Cubilete, and tie the song to Salamanca. None of them showed the lyric.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null
@@ -1060518,7 +1060902,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "sugarcane stalks cut",
+        "query": "sugarcane pieces",
         "note": "Cut pieces of sugarcane stalk, showing the segmented stalk and the fibrous inside, no text.",
         "source_url": null,
         "file_url": null,
@@ -1060552,17 +1060936,43 @@
       "batch": "batch-43",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows sugarcane. The sheet has a banana plant, cassava stalks, tobacco fields and patent drawings. The question says \"estos trozos\", so its essential image has to show cut sugarcane pieces, and no new search is allowed. Search again for something like \"Saccharum officinarum stalks\" or \"sugarcane pieces\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows sugarcane. The sheet has a banana plant, cassava stalks, tobacco fields and patent drawings. The question says \"estos trozos\", so its essential image has to show cut sugarcane pieces, and no new search is allowed. Search again for something like \"Saccharum officinarum stalks\" or \"sugarcane pieces\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the essential image query so the new search finds cut sugarcane pieces.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "sugarcane stalks cut",
+            "note": "Cut pieces of sugarcane stalk, showing the segmented stalk and the fibrous inside, no text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13713",
