@@ -919,7 +919,8 @@
     {
       "name": "Block party",
       "facet": "Hip-hop origins in the Bronx",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The existing riddle already covers what a block party is; the sound and made_of options give no new, clear fact."
     },
     {
       "name": "Breakbeat",
@@ -1199,7 +1200,8 @@
     {
       "name": "Graffiti",
       "facet": "Breakdance, DJing and hip-hop culture",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Graffiti is already asked twice, including identifying it from spray cans; a spray-can sound question would repeat that fact, and graffiti itself needs no US connection."
     },
     {
       "name": "MC",

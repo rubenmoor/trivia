@@ -181,7 +181,8 @@
     {
       "name": "Baseball cap",
       "facet": "Ballpark and equipment",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Baseball cap is heavily covered already; none of the options gives a fresh, fair question at difficulty 2."
     },
     {
       "name": "Home plate",

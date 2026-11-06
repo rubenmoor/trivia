@@ -636,7 +636,8 @@
     {
       "name": "NEXRAD",
       "facet": "Forecasting, NOAA and storm chasers",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Radar network acronym, too technical for a fair multiple-choice question for families."
     },
     {
       "name": "Weather balloon",

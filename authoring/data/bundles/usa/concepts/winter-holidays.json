@@ -147,7 +147,8 @@
     {
       "name": "Gift receipt",
       "facet": "Black Friday and holiday shopping",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The pool already asks what a gift receipt is. The other options need dates or numbers I'm not sure of."
     },
     {
       "name": "Furby",
@@ -162,7 +163,8 @@
     {
       "name": "Santa Claus",
       "facet": "American Santa Claus lore",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Seven Santa questions are already in the pool, and the existing Christmas Eve snack question gives away the easy answer about when he comes."
     },
     {
       "name": "North Pole",

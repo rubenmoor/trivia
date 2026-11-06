@@ -96,7 +96,8 @@
     {
       "name": "Rhode Island Red",
       "facet": "State birds",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already asks for the breed's name. The other options (egg counts, a person behind the name) are either obscure or too similar to that question."
     },
     {
       "name": "Willow ptarmigan",
@@ -406,7 +407,8 @@
     {
       "name": "I Love You, California",
       "facet": "State songs",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Facts about this state song are too obscure for any fair multiple-choice question."
     },
     {
       "name": "Hoosier",
