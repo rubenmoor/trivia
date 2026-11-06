@@ -1002440,19 +1002440,19 @@
     },
     {
       "id": "q-12956",
-      "status": "needs_work",
-      "difficulty": 2,
+      "status": "approved",
+      "difficulty": 3,
       "description": "Der Moment, in dem Geschenkpapier seine kurze Karriere beendet.",
       "question": "Wann ist in den meisten deutschen Familien die Bescherung?",
       "answer": "am Abend des 24. Dezember",
       "wrong_answers": [
+        "am Morgen des 24. Dezember",
         "am Morgen des 25. Dezember",
-        "am Abend des 6. Dezember",
-        "am Morgen des 1. Januar"
+        "am Abend des 25. Dezember"
       ],
       "hints": [
         "Draußen ist es schon dunkel.",
-        "Es ist der Tag vor dem ersten Weihnachtsfeiertag.",
+        "Vorher gehen viele Familien in die Kirche zum Krippenspiel.",
         "Man nennt diesen Tag Heiligabend."
       ],
       "media": {
@@ -1002498,19 +1002498,46 @@
       "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlaps the approved q-9122 („Wozu kommt das Christkind an Heiligabend?“ → um Geschenke zu bringen). That question already says presents arrive on Heiligabend, so seeing it answers this one: the 24th is the only option on that day. Hint 2 also repeats the fact from q-9123 (Heiligabend is the eve of the first Weihnachtsfeiertag).",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlaps the approved q-9122 („Wozu kommt das Christkind an Heiligabend?“ → um Geschenke zu bringen). That question already says presents arrive on Heiligabend, so seeing it answers this one: the 24th is the only option on that day. Hint 2 also repeats the fact from q-9123 (Heiligabend is the eve of the first Weihnachtsfeiertag).",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "Swapped in a second 24 December option so the overlapping q-9122 no longer gives the answer away, and replaced hint 2, which repeated q-9123.",
+        "previous": {
+          "difficulty": 2,
+          "wrong_answers": [
+            "am Morgen des 25. Dezember",
+            "am Abend des 6. Dezember",
+            "am Morgen des 1. Januar"
+          ],
+          "hints": [
+            "Draußen ist es schon dunkel.",
+            "Es ist der Tag vor dem ersten Weihnachtsfeiertag.",
+            "Man nennt diesen Tag Heiligabend."
+          ]
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12957",
@@ -1002730,7 +1002757,7 @@
     },
     {
       "id": "q-12960",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Ein Kompliment für eine Tanne war selten so lohnend.",
       "question": "Bei einem bayerischen Brauch zieht man zwischen Weihnachten und Dreikönig von Haus zu Haus und lobt den Christbaum der Gastgeber. Was bekommt man dafür?",
@@ -1002742,7 +1002769,7 @@
       ],
       "hints": [
         "Je dicker man mit dem Lob aufträgt, desto mehr lohnt es sich.",
-        "Der Gastgeber holt es meist aus dem Schrank und füllt bei besonders schönem Lob nach.",
+        "Der Gastgeber hat die Belohnung meist schon im Schrank bereitstehen.",
         "Danach sagt man „Prost“, und Kinder bekommen keinen."
       ],
       "media": {
@@ -1002788,26 +1002815,34 @@
       "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: the host \"füllt nach\" (tops it up), which only fits a drink, so among the four options only Schnaps is left, and hint 3 then adds nothing. Hint 2 should stay vague, e.g. about where the reward is kept or how the host shows his thanks, without suggesting pouring or refilling.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: the host \"füllt nach\" (tops it up), which only fits a drink, so among the four options only Schnaps is left, and hint 3 then adds nothing. Hint 2 should stay vague, e.g. about where the reward is kept or how the host shows his thanks, without suggesting pouring or refilling.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which pointed to the only drink among the options, with hints that don't give it away.",
+        "reason": "Hint 2 no longer mentions refilling, which pointed to a drink.",
         "previous": {
           "hints": [
-            "Man bekommt es in kleinen Gläsern.",
-            "Oft ist es aus Obst gebrannt.",
+            "Je dicker man mit dem Lob aufträgt, desto mehr lohnt es sich.",
+            "Der Gastgeber holt es meist aus dem Schrank und füllt bei besonders schönem Lob nach.",
             "Danach sagt man „Prost“, und Kinder bekommen keinen."
           ]
         },
@@ -1003423,7 +1003458,7 @@
     },
     {
       "id": "q-12969",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Der einzige Tag im Jahr, an dem man auf der Straße lautstark um Süßes betteln darf.",
       "question": "Beim Rosenmontagszug ruft man am Straßenrand laut „Kamelle!“. Wer wirft daraufhin Süßigkeiten?",
@@ -1003441,11 +1003476,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Kamelle carnival sweets",
+        "query": "wrapped hard candies",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AButterscotch-Candies.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Butterscotch-Candies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Evan-Amos · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Evan-Amos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Evan-Amos",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Beim Kölner Rosenmontagszug fliegen jedes Jahr Hunderte Tonnen Süßigkeiten in die Menge.",
       "subcategory": "carnival-and-fairs",
@@ -1003474,19 +1003516,43 @@
       "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No adequate image: candidate 1 shows a carnival float (the answer), the others show Italian/Maltese carnival pastries or a Russian Maslenitsa scene, none of which depicts Kamelle or a German Rosenmontag setting. A new search (e.g. \"wrapped hard candies\" or \"carnival crowd Cologne\", avoiding floats) is needed. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate image: candidate 1 shows a carnival float (the answer), the others show Italian/Maltese carnival pastries or a Russian Maslenitsa scene, none of which depicts Kamelle or a German Rosenmontag setting. A new search (e.g. \"wrapped hard candies\" or \"carnival crowd Cologne\", avoiding floats) is needed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image search for wrapped candies that doesn't show a carnival float.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Kamelle carnival sweets",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12970",
@@ -1003508,13 +1003574,13 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Dosenwerfen stacked cans",
+        "query": "tin can pyramid fair game",
         "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
       },
-      "fun_fact": "Wer die unterste Reihe der Pyramide trifft, räumt meist am meisten ab.",
+      "fun_fact": "Die Wurfbälle sind oft mit Granulat oder Sägespänen gefüllt, damit sie schwer genug für die Dosen sind.",
       "subcategory": "carnival-and-fairs",
       "style": null,
       "concept": "Dosenwerfen",
@@ -1003537,24 +1003603,51 @@
         "difficulty_estimate": 2,
         "notes": "The question's own clues (soft, breaks nothing) rule out glass, wood and stone straight away; rubber or foam would be fairer distractors. Some stalls do use rubber or foam balls. The fun-fact claim about the bottom row is plausible but not certain. Low fun."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-41",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate fits: the sheet shows bee-eaters, rose and ground-ivy flowers, a beetle in a magnolia and lobster traps, nothing from a can-throwing stall, and no new search is allowed. Also, the fun fact (hitting the bottom row knocks down the most) is unverified; drop it or swap in a confirmed fact, e.g. that the balls are sewn fabric filled with granules or sawdust. No suitable picture found for this question.",
+        "feedback": "None of the media candidates shows a fair can-throwing stall. A new search is needed. No suitable picture found for this question.",
         "problems": [
-          "fact",
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits: the sheet shows bee-eaters, rose and ground-ivy flowers, a beetle in a magnolia and lobster traps, nothing from a can-throwing stall, and no new search is allowed. Also, the fun fact (hitting the bottom row knocks down the most) is unverified; drop it or swap in a confirmed fact, e.g. that the balls are sewn fabric filled with granules or sawdust. No suitable picture found for this question.",
+          "problems": [
+            "fact",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image search, and the unverified fun fact replaced with one about how the balls are made.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Dosenwerfen stacked cans",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "fun_fact": "Wer die unterste Reihe der Pyramide trifft, räumt meist am meisten ab."
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12971",
@@ -1003570,13 +1003663,13 @@
       ],
       "hints": [
         "Es ist eine Belohnung für die Leute auf der Bühne.",
-        "Dabei wird getrommelt, gepfiffen und geklatscht.",
+        "Auf ein Zeichen hin macht der ganze Saal gleichzeitig mit.",
         "Es klingt wie ein Feuerwerk, das man mit den Händen macht."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Karnevalssitzung Saal Publikum",
+        "query": "Prunksitzung Karneval",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AAuditorium_in_the_Frick_Fine_Arts_Building.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Auditorium_in_the_Frick_Fine_Arts_Building.jpg/3840px-Auditorium_in_the_Frick_Fine_Arts_Building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1003617,34 +1003710,37 @@
       "batch": "batch-41",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 („Dabei wird getrommelt, gepfiffen und geklatscht.“) gives the answer away: clapping is the answer („Besonders laut Beifall spenden“), and none of the other options involves it. Hint 2 should stay vaguer, e.g. say that the whole hall joins in on a set signal without naming clapping. The tabletop drumming and whistling can stay for hint 3 or the fun fact.",
+        "feedback": "The text is fine, but no media candidate fits. Candidates 1 and 2 show a band rehearsing in a New Orleans room, and 3 is an old Havana carnival-parade postcard with a printed caption. None shows a German carnival session hall. A new search (for example \"Karnevalssitzung Saal\" or \"Elferrat Bühne\") is needed, but searching again isn't allowed in this run. No suitable picture found for this question.",
         "problems": [
-          "giveaway"
+          "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („Dabei wird getrommelt, gepfiffen und geklatscht.“) gives the answer away: clapping is the answer („Besonders laut Beifall spenden“), and none of the other options involves it. Hint 2 should stay vaguer, e.g. say that the whole hall joins in on a set signal without naming clapping. The tabletop drumming and whistling can stay for hint 3 or the fun fact.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer rules out the fireworks option, dropped „wie dieser“ and made the media illustrative.",
+        "reason": "Hint 2 no longer names clapping, which gave the answer away.",
         "previous": {
-          "description": "Hier fliegt nichts in die Luft – höchstens die Stimmung.",
-          "question": "Bei einer Karnevalssitzung wie dieser fordert der Präsident „eine Rakete“. Was soll das Publikum tun?",
-          "media": {
-            "type": "image",
-            "role": "essential",
-            "query": "Karnevalssitzung Saal Publikum",
-            "note": "Foto einer Karnevalssitzung im Saal: kostümiertes Publikum an Tischen, Bühne mit Elferrat.",
-            "source_url": null,
-            "file_url": null,
-            "credit": null
-          },
-          "needs_media": true
+          "hints": [
+            "Es ist eine Belohnung für die Leute auf der Bühne.",
+            "Dabei wird getrommelt, gepfiffen und geklatscht.",
+            "Es klingt wie ein Feuerwerk, das man mit den Händen macht."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -1003795,7 +1003891,7 @@
     },
     {
       "id": "q-12974",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Ein Zauberbuch, das garantiert nicht in der Schulbibliothek steht.",
       "question": "Ein Mädchen liest in einem magischen Buch, wird zur Elfe mit Flügeln und reitet auf Einhörnern. Wie heißt die Welt in „Mia and Me“?",
@@ -1003813,11 +1003909,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "white unicorn figurine",
+        "query": "unicorn fantasy illustration",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnicorn-2001372_1920.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Unicorn-2001372_1920.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Pixabay · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Pixabay",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "„Mia and Me“ wurde von Gerhard Hahn aus Berlin erfunden und mischt echte Schauspielszenen mit Computeranimation.",
       "subcategory": "childrens-tv-and-audio-dramas",
@@ -1003842,23 +1003945,47 @@
         "difficulty_estimate": 5,
         "notes": ""
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but no media candidate fits. Candidates 1 and 6 show an ancient bronze 'unicorn carrying vases' that reads as an odd archaic animal rather than a unicorn, and candidates 2–5 are fragments of post-medieval lead toys. A new search is not allowed, so the slot needs a different image (e.g. 'unicorn fantasy illustration' or 'fairy wings costume'). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no media candidate fits. Candidates 1 and 6 show an ancient bronze 'unicorn carrying vases' that reads as an odd archaic animal rather than a unicorn, and candidates 2–5 are fragments of post-medieval lead toys. A new search is not allowed, so the slot needs a different image (e.g. 'unicorn fantasy illustration' or 'fairy wings costume'). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image search for a clear unicorn picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "white unicorn figurine",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12975",
@@ -1006093,7 +1006220,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "raspberry syrup glass",
+        "query": "red beer goblet straw",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1006127,27 +1006254,41 @@
       "batch": "batch-41",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows anything to do with the question. They show maple syrup bottles, an ice-cream sundae, honey and maple syrup jars at a buffet, an old cherry syrup jug, a Rijksmuseum print and a vineyard. Another search isn't allowed. The image slot needs a new search such as \"Berliner Weisse glass\" or \"red beer goblet straw\". A red Berliner Weiße with a straw is fine as an illustrative image, as long as no glass, sign or label shows the word \"Berliner\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows anything to do with the question. They show maple syrup bottles, an ice-cream sundae, honey and maple syrup jars at a buffet, an old cherry syrup jug, a Rijksmuseum print and a vineyard. Another search isn't allowed. The image slot needs a new search such as \"Berliner Weisse glass\" or \"red beer goblet straw\". A red Berliner Weiße with a straw is fine as an illustrative image, as long as no glass, sign or label shows the word \"Berliner\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed to the only eastern city, with a hint about the beer itself.",
+        "reason": "New image search for a red beer goblet with a straw instead of syrup bottles.",
         "previous": {
-          "hints": [
-            "Die Stadt liegt im Osten Deutschlands.",
-            "Statt rot gibt es sie dort auch grün, mit Waldmeister.",
-            "Das Bier ist nach der Hauptstadt benannt."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "raspberry syrup glass",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1007144,7 +1007285,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "felt house slippers",
+        "query": "house slippers pair",
         "note": "Ein Paar gewöhnliche Hausschuhe/Pantoffeln, deutlich erkennbar, ohne Text.",
         "source_url": null,
         "file_url": null,
@@ -1007173,23 +1007314,49 @@
         "difficulty_estimate": 2,
         "notes": "Distractors are easy to rule out (Badewanne, Bettdecke). The question is a little flat. Fine for difficulty 2."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-41",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates works as the essential image. Candidates 1 and 2 are museum photos of embroidered Chinese silk slippers, not the ordinary German felt Hausschuhe the question and note call for. Candidates 3–6 are manuscript pages, a book page and a hospital ward. The question needs a clear photo of ordinary felt or plush house slippers, for example with the query 'felt slippers pair' or 'house slippers'. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works as the essential image. Candidates 1 and 2 are museum photos of embroidered Chinese silk slippers, not the ordinary German felt Hausschuhe the question and note call for. Candidates 3–6 are manuscript pages, a book page and a hospital ward. The question needs a clear photo of ordinary felt or plush house slippers, for example with the query 'felt slippers pair' or 'house slippers'. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New, simpler search for ordinary house slippers for the essential image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "felt house slippers",
+            "note": "Ein Paar gewöhnliche Hausschuhe/Pantoffeln, deutlich erkennbar, ohne Text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13019",
@@ -1007411,7 +1007578,7 @@
     },
     {
       "id": "q-13022",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Bei der Taufe gibt es Kuchen, Kerzen und eine Person, die besonders feierlich guckt.",
       "question": "Was ist die eigentliche Aufgabe eines Taufpaten?",
@@ -1007423,7 +1007590,7 @@
       ],
       "hints": [
         "Meist ist der Pate ein enger Verwandter oder Freund der Familie.",
-        "Die Aufgabe geht weit über den Tag der Taufe hinaus.",
+        "Während der Taufe gibt der Pate ein feierliches Versprechen ab.",
         "Er soll ein Leben lang Ansprechpartner und Vorbild für das Kind sein."
       ],
       "media": {
@@ -1007469,28 +1007636,35 @@
       "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 („Die Aufgabe geht weit über den Tag der Taufe hinaus“) gives the answer away. All three wrong answers are tasks for the baptism day, or at most one-off tasks (leading the service, choosing the name, filling the font). The hint rules out every one of them, so only the answer is left. Replace hint 2 with a vague hint that doesn't separate lifelong tasks from one-off ones, for example one about the Pate's promise during the ceremony.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („Die Aufgabe geht weit über den Tag der Taufe hinaus“) gives the answer away. All three wrong answers are tasks for the baptism day, or at most one-off tasks (leading the service, choosing the name, filling the font). The hint rules out every one of them, so only the answer is left. Replace hint 2 with a vague hint that doesn't separate lifelong tasks from one-off ones, for example one about the Pate's promise during the ceremony.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hints 1–2 so they no longer rule out the one-off wrong answers, and toned down hint 3.",
+        "reason": "Replaced hint 2, which ruled out every one-off option, with a vaguer hint about the Pate's promise.",
         "previous": {
-          "description": "Ein Job ohne Gehalt, aber mit lebenslanger Geschenkpflicht.",
           "hints": [
-            "Diese Aufgabe endet nicht nach dem Gottesdienst.",
-            "Den Gottesdienst leitet der Pfarrer, den Namen wählen die Eltern.",
-            "Er soll für das Kind da sein, wie ein zusätzlicher Elternteil."
+            "Meist ist der Pate ein enger Verwandter oder Freund der Familie.",
+            "Die Aufgabe geht weit über den Tag der Taufe hinaus.",
+            "Er soll ein Leben lang Ansprechpartner und Vorbild für das Kind sein."
           ]
         },
         "revised_on": "2026-11-06"
@@ -1008203,10 +1008377,10 @@
     },
     {
       "id": "q-13032",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Ein Mann, der wusste: Mit dem Teufel macht man keine Geschäfte – aber man kann darüber dichten.",
-      "question": "Dieser Dichter machte die Sage vom Doktor Faust weltberühmt, der einen Pakt mit dem Teufel schließt. Wer ist er?",
+      "question": "Welcher Dichter machte die Sage vom Doktor Faust weltberühmt, der einen Pakt mit dem Teufel schließt?",
       "answer": "Johann Wolfgang von Goethe",
       "wrong_answers": [
         "Friedrich Schiller",
@@ -1008220,12 +1008394,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Faust Mephisto statue Leipzig",
-        "note": "Bekanntes Porträt von Johann Wolfgang von Goethe (z. B. Joseph Karl Stieler, 1828), ohne Namensbeschriftung.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMephisto_verzaubert_die_Studenten_%282%29_-_Auerbachs_Keller.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Mephisto_verzaubert_die_Studenten_%282%29_-_Auerbachs_Keller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Xxlfussel · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Xxlfussel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Xxlfussel",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Goethe arbeitete rund 60 Jahre lang immer wieder an seinem „Faust“.",
       "subcategory": "legends-and-figures",
@@ -1008251,22 +1008432,48 @@
         "notes": "Plain 'who wrote' question, so fun is low. The essential portrait isn't needed because the text already identifies Goethe, and anyone who knows his face gets it from the picture. An illustrative or decorative image would fit better. Same answer as q-9336 (Zauberlehrling), but it asks about a different work."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot doesn't fit together: its role is essential and its note asks for a Goethe portrait, but the search term and all four candidates show the Faust/Mephisto statues at Auerbachs Keller in Leipzig. No candidate matches the note, and a new search isn't allowed. A Goethe portrait would give the answer away anyway. Set the role to illustrative and use candidate 1 (the Faust and Mephisto statue). The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot doesn't fit together: its role is essential and its note asks for a Goethe portrait, but the search term and all four candidates show the Faust/Mephisto statues at Auerbachs Keller in Leipzig. No candidate matches the note, and a new search isn't allowed. A Goethe portrait would give the answer away anyway. Set the role to illustrative and use candidate 1 (the Faust and Mephisto statue). The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media changed to an illustrative Faust/Mephisto statue, as the reviewer asked, and the wording changed from „Dieser Dichter“ because no portrait is shown.",
+        "previous": {
+          "question": "Dieser Dichter machte die Sage vom Doktor Faust weltberühmt, der einen Pakt mit dem Teufel schließt. Wer ist er?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Faust Mephisto statue Leipzig",
+            "note": "Bekanntes Porträt von Johann Wolfgang von Goethe (z. B. Joseph Karl Stieler, 1828), ohne Namensbeschriftung.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13033",
@@ -1010050,10 +1010257,10 @@
     },
     {
       "id": "q-13057",
-      "status": "needs_work",
-      "difficulty": 9,
+      "status": "approved",
+      "difficulty": 10,
       "description": "Hier ist man mit 16 alt genug für die Wahlurne, aber noch zu jung für den Führerschein.",
-      "question": "Das markierte Bundesland ließ als erstes 16-Jährige das Landesparlament mitwählen. Welches ist es?",
+      "question": "Welches Bundesland ließ als erstes 16-Jährige das Landesparlament mitwählen?",
       "answer": "Bremen",
       "wrong_answers": [
         "Hamburg",
@@ -1010067,12 +1010274,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Deutschland Lage von Bremen",
-        "note": "Unbeschriftete Deutschlandkarte mit allen Bundesländern, auf der nur Bremen (beide Teile: Bremen und Bremerhaven) farbig markiert ist; keine Namen oder Beschriftungen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "ballot box voting",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABallot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Ballot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad.jpg/3840px-Ballot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "W.carter · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "W.carter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Bei der Bürgerschaftswahl 2011 durften in Bremen erstmals in Deutschland 16-Jährige ein Landesparlament mitwählen.",
       "subcategory": "national-symbols-and-state",
@@ -1010098,22 +1010312,50 @@
         "notes": "Bremen was first (2011 Bürgerschaftswahl). Commons has a locator map. The two marked pieces on the map are distinctive, which makes it easier. Shares the answer with q-10799 but asks a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a Germany map with only Bremen (both Bremen and Bremerhaven) marked. Candidates 1–4 mark Lower Saxony, northern Germany or the Bremen-Oldenburg region instead, and the stamp (5) prints \"BREMEN\". No new search is allowed, so the essential map needs to be supplied another way, e.g. a Commons locator map such as \"Locator map Bremen in Germany.svg\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a Germany map with only Bremen (both Bremen and Bremerhaven) marked. Candidates 1–4 mark Lower Saxony, northern Germany or the Bremen-Oldenburg region instead, and the stamp (5) prints \"BREMEN\". No new search is allowed, so the essential map needs to be supplied another way, e.g. a Commons locator map such as \"Locator map Bremen in Germany.svg\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "difficulty_original": 9,
+      "revision": {
+        "action": "revise",
+        "reason": "The essential locator map couldn't be supplied, so I rewrote the question to work without a map, used an illustrative ballot-box image and raised the difficulty slightly.",
+        "previous": {
+          "difficulty": 9,
+          "question": "Das markierte Bundesland ließ als erstes 16-Jährige das Landesparlament mitwählen. Welches ist es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Deutschland Lage von Bremen",
+            "note": "Unbeschriftete Deutschlandkarte mit allen Bundesländern, auf der nur Bremen (beide Teile: Bremen und Bremerhaven) farbig markiert ist; keine Namen oder Beschriftungen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13058",
@@ -1010189,7 +1010431,7 @@
     },
     {
       "id": "q-13059",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Post mit Vogel drauf: Entweder wichtig oder vom Taubenzüchterverein.",
       "question": "Du bekommst einen Brief mit dem Bundesadler im Briefkopf. Von wem kann er NICHT stammen?",
@@ -1010206,21 +1010448,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "letter envelope desk",
+        "role": "illustrative",
+        "query": "Bundesadler coat of arms Germany",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALetter_signed_Sara%2C_London%2C_to_Ernst%2C_New_York_City%2C_July_22%2C_1927_-_DPLA_-_c71ef4bc0eea2b0c49fb567f54557f52_%28page_10%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Letter_signed_Sara%2C_London%2C_to_Ernst%2C_New_York_City%2C_July_22%2C_1927_-_DPLA_-_c71ef4bc0eea2b0c49fb567f54557f52_%28page_10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Teasdale, Sara, 1884-1933 · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABundesadler-R%C3%BCckseite-65.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Bundesadler-R%C3%BCckseite-65.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Times · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Teasdale, Sara, 1884-1933",
-        "author_url": null,
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Times",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Times",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Bundestag, Bundesrat und Bundesverfassungsgericht nutzen jeweils eine eigene, leicht unterschiedliche Version des Adlers.",
       "subcategory": "national-symbols-and-state",
@@ -1010245,23 +1010485,56 @@
         "difficulty_estimate": 6,
         "notes": "Good everyday reasoning question. A slight nitpick: a city-state's mayor (Berlin, Hamburg) also heads a Land, but still uses the Land's own arms, not the Bundesadler, so the answer holds."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image had an unsuitable licence, so I switched the media to an illustrative picture of the Bundesadler, which the question names but which isn't the answer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "letter envelope desk",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALetter_signed_Sara%2C_London%2C_to_Ernst%2C_New_York_City%2C_July_22%2C_1927_-_DPLA_-_c71ef4bc0eea2b0c49fb567f54557f52_%28page_10%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/83/Letter_signed_Sara%2C_London%2C_to_Ernst%2C_New_York_City%2C_July_22%2C_1927_-_DPLA_-_c71ef4bc0eea2b0c49fb567f54557f52_%28page_10%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Teasdale, Sara, 1884-1933 · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Teasdale, Sara, 1884-1933",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13060",
@@ -1010972,10 +1011245,10 @@
     },
     {
       "id": "q-13069",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 5,
       "description": "Ein Land, das aus vielen kleinen Ländern zusammengepuzzelt ist.",
-      "question": "Zähl mal nach: Aus wie vielen Bundesländern besteht Deutschland auf dieser Karte?",
+      "question": "Aus wie vielen Bundesländern besteht Deutschland?",
       "answer": "16",
       "wrong_answers": [
         "12",
@@ -1010989,12 +1011262,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Germany federal states blank map",
-        "note": "Unbeschriftete Karte Deutschlands mit klar erkennbaren Grenzen aller Bundesländer, keine Namen oder Zahlen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "German flag waving",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorderney%2C_Tonnenleger_%22Norden%22_--_2025_--_9137.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Norderney%2C_Tonnenleger_%22Norden%22_--_2025_--_9137.jpg/3840px-Norderney%2C_Tonnenleger_%22Norden%22_--_2025_--_9137.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Bremen besteht aus zwei getrennten Teilen: der Stadt Bremen und dem rund 60 Kilometer entfernten Bremerhaven.",
       "subcategory": "national-symbols-and-state",
@@ -1011020,22 +1011300,50 @@
         "notes": "Bremen's two parts on the map could tempt a count of 17. Many kids know 16 without counting. Hint 3 basically states the answer."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a map of Germany with its federal states. The question says \"auf dieser Karte\" and needs an essential blank map of the 16 Länder, and no new search is allowed. A suitable file is a blank Länder map from Commons, e.g. \"Germany states blank map\" or \"Deutschland Bundesländer leer\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a map of Germany with its federal states. The question says \"auf dieser Karte\" and needs an essential blank map of the 16 Länder, and no new search is allowed. A suitable file is a blank Länder map from Commons, e.g. \"Germany states blank map\" or \"Deutschland Bundesländer leer\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "difficulty_original": 4,
+      "revision": {
+        "action": "revise",
+        "reason": "No blank Länder map was available, so I rewrote the question as plain knowledge without a map, used a decorative flag image and raised the difficulty a little.",
+        "previous": {
+          "difficulty": 4,
+          "question": "Zähl mal nach: Aus wie vielen Bundesländern besteht Deutschland auf dieser Karte?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Germany federal states blank map",
+            "note": "Unbeschriftete Karte Deutschlands mit klar erkennbaren Grenzen aller Bundesländer, keine Namen oder Zahlen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13070",
@@ -1011284,8 +1011592,8 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "car window flags football",
+        "role": "decorative",
+        "query": "German flag waving",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1011319,18 +1011627,44 @@
       "batch": "batch-41",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates shows car flags or German fan flags: they show a Scottish saltire in a house window, a historic army football crowd, English flags at Rugby School and a Danish team bus. A new search such as \"Germany car flag\" or \"car flag Germany fan\" is needed, but a new search isn't available for this slot. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows car flags or German fan flags: they show a Scottish saltire in a house window, a historic army football crowd, English flags at Rugby School and a Danish team bus. A new search such as \"Germany car flag\" or \"car flag Germany fan\" is needed, but a new search isn't available for this slot. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No fitting car-flag image was found, so I switched to a decorative German-flag image that likely exists.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "car window flags football",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13074",
@@ -1017568,7 +1017902,7 @@
     },
     {
       "id": "q-13156",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Ostern ohne dieses Ding? Für viele Familien undenkbar.",
       "question": "Er steht zu Ostern in vielen deutschen Wohnungen. Was ist ein „Osterstrauß“?",
@@ -1017580,7 +1017914,7 @@
       ],
       "hints": [
         "Man schmückt ihn selbst.",
-        "Man stellt ihn oft schon Wochen vor Ostern ins Wasser.",
+        "Er bleibt oft bis nach den Feiertagen als Deko stehen.",
         "Man hängt ausgeblasene, bemalte Eier daran."
       ],
       "media": {
@@ -1017626,31 +1017960,34 @@
       "needs_media": false,
       "batch": "batch-41",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 („Man stellt ihn oft schon Wochen vor Ostern ins Wasser.“) gives the answer away: only the branches option can stand in water, so the other three are ruled out at the second hint. Hint 2 needs to be a vaguer clue, e.g. about the custom or the season, that leaves the chocolate flowers, the Hefezopf and the basket possible.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („Man stellt ihn oft schon Wochen vor Ostern ins Wasser.“) gives the answer away: only the branches option can stand in water, so the other three are ruled out at the second hint. Hint 2 needs to be a vaguer clue, e.g. about the custom or the season, that leaves the chocolate flowers, the Hefezopf and the basket possible.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away by mentioning branches, and removed the articles from the wrong answers so no option stands out.",
+        "reason": "Hint 2 gave the answer away (only branches stand in water), so I replaced it with a vaguer clue that still leaves all four options possible.",
         "previous": {
-          "wrong_answers": [
-            "Blumen aus Schokolade in Folie",
-            "Ein Hefezopf in Blütenform",
-            "Ein Korb voller Schokohasen"
-          ],
           "hints": [
             "Man schmückt ihn selbst.",
-            "Oft nimmt man dafür Forsythien- oder Weidenzweige.",
+            "Man stellt ihn oft schon Wochen vor Ostern ins Wasser.",
             "Man hängt ausgeblasene, bemalte Eier daran."
           ]
         },

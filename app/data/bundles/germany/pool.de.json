@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "4d237ef5",
+  "hash": "c9be30ba",
   "questions": [
     {
       "id": "q-9120",
@@ -32482,6 +32482,40 @@
       "background": null
     },
     {
+      "id": "q-12956",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "advent-and-christmas",
+      "bundle": "germany",
+      "description": "Der Moment, in dem Geschenkpapier seine kurze Karriere beendet.",
+      "question": "Wann ist in den meisten deutschen Familien die Bescherung?",
+      "answer": "am Abend des 24. Dezember",
+      "wrong_answers": [
+        "am Morgen des 24. Dezember",
+        "am Morgen des 25. Dezember",
+        "am Abend des 25. Dezember"
+      ],
+      "hints": [
+        "Draußen ist es schon dunkel.",
+        "Vorher gehen viele Familien in die Kirche zum Krippenspiel.",
+        "Man nennt diesen Tag Heiligabend."
+      ],
+      "fun_fact": "In Großbritannien und den USA packen Kinder ihre Geschenke meist erst am Morgen des 25. Dezember aus.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Wraxall_2013_MMB_97_Christmas.jpg/3840px-Wraxall_2013_MMB_97_Christmas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWraxall_2013_MMB_97_Christmas.jpg",
+        "credit": "mattbuck (category) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "mattbuck (category)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mattbuck"
+      },
+      "background": null
+    },
+    {
       "id": "q-12957",
       "status": "approved",
       "difficulty": 3,
@@ -32580,6 +32614,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Kakučan",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kaku%C4%8Dan&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12960",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "advent-and-christmas",
+      "bundle": "germany",
+      "description": "Ein Kompliment für eine Tanne war selten so lohnend.",
+      "question": "Bei einem bayerischen Brauch zieht man zwischen Weihnachten und Dreikönig von Haus zu Haus und lobt den Christbaum der Gastgeber. Was bekommt man dafür?",
+      "answer": "einen Schnaps",
+      "wrong_answers": [
+        "ein Lebkuchenherz",
+        "eine Christbaumkugel",
+        "ein Stück Stollen"
+      ],
+      "hints": [
+        "Je dicker man mit dem Lob aufträgt, desto mehr lohnt es sich.",
+        "Der Gastgeber hat die Belohnung meist schon im Schrank bereitstehen.",
+        "Danach sagt man „Prost“, und Kinder bekommen keinen."
+      ],
+      "fun_fact": "Das „Christbaumloben“ ist vor allem in Altbayern verbreitet, etwa im Bayerischen Wald und in der Oberpfalz.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Hut_in_Val_Canali_near_farmhouse_Valtegnarich.jpg/3840px-Hut_in_Val_Canali_near_farmhouse_Valtegnarich.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHut_in_Val_Canali_near_farmhouse_Valtegnarich.jpg",
+        "credit": "Marco Ober · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marco Ober",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lion-hearted85"
       },
       "background": null
     },
@@ -32856,6 +32924,40 @@
       "background": null
     },
     {
+      "id": "q-12969",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "carnival-and-fairs",
+      "bundle": "germany",
+      "description": "Der einzige Tag im Jahr, an dem man auf der Straße lautstark um Süßes betteln darf.",
+      "question": "Beim Rosenmontagszug ruft man am Straßenrand laut „Kamelle!“. Wer wirft daraufhin Süßigkeiten?",
+      "answer": "Die Leute auf den Festwagen",
+      "wrong_answers": [
+        "Die Polizisten an der Absperrung",
+        "Die Bäcker aus den Läden",
+        "Der Bürgermeister vom Rathaus"
+      ],
+      "hints": [
+        "Diese Leute ziehen mit dem Zug durch die Straßen.",
+        "Sie sind verkleidet und stehen weiter oben als du.",
+        "Sie fahren auf großen, bunt geschmückten Wagen mit."
+      ],
+      "fun_fact": "Beim Kölner Rosenmontagszug fliegen jedes Jahr Hunderte Tonnen Süßigkeiten in die Menge.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Butterscotch-Candies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AButterscotch-Candies.jpg",
+        "credit": "Evan-Amos · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Evan-Amos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Evan-Amos"
+      },
+      "background": null
+    },
+    {
       "id": "q-12972",
       "status": "approved",
       "difficulty": 7,
@@ -32920,6 +33022,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Oertherdb",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Oertherdb&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12974",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "childrens-tv-and-audio-dramas",
+      "bundle": "germany",
+      "description": "Ein Zauberbuch, das garantiert nicht in der Schulbibliothek steht.",
+      "question": "Ein Mädchen liest in einem magischen Buch, wird zur Elfe mit Flügeln und reitet auf Einhörnern. Wie heißt die Welt in „Mia and Me“?",
+      "answer": "Centopia",
+      "wrong_answers": [
+        "Phantásien",
+        "Narnia",
+        "Lummerland"
+      ],
+      "hints": [
+        "Dort leben Elfen, Einhörner und fiese Munculus.",
+        "Der Name klingt ein bisschen nach der Zahl Hundert.",
+        "Er beginnt mit „Cento…“."
+      ],
+      "fun_fact": "„Mia and Me“ wurde von Gerhard Hahn aus Berlin erfunden und mischt echte Schauspielszenen mit Computeranimation.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Unicorn-2001372_1920.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnicorn-2001372_1920.png",
+        "credit": "Pixabay · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Pixabay",
+        "author_url": null
       },
       "background": null
     },
@@ -34454,6 +34590,40 @@
       "background": null
     },
     {
+      "id": "q-13022",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "family-customs-and-dress",
+      "bundle": "germany",
+      "description": "Bei der Taufe gibt es Kuchen, Kerzen und eine Person, die besonders feierlich guckt.",
+      "question": "Was ist die eigentliche Aufgabe eines Taufpaten?",
+      "answer": "Das Kind im Leben und Glauben begleiten",
+      "wrong_answers": [
+        "Den Taufgottesdienst leiten",
+        "Den Vornamen des Kindes aussuchen",
+        "Das Taufbecken mit Wasser füllen"
+      ],
+      "hints": [
+        "Meist ist der Pate ein enger Verwandter oder Freund der Familie.",
+        "Während der Taufe gibt der Pate ein feierliches Versprechen ab.",
+        "Er soll ein Leben lang Ansprechpartner und Vorbild für das Kind sein."
+      ],
+      "fun_fact": "Das Wort „Pate“ stammt vom lateinischen „pater“, das heißt „Vater“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Baptismal_font_%26_paschal_candle%2C_Sacred_Heart_Church%2C_Ponsonby.jpg/3840px-Baptismal_font_%26_paschal_candle%2C_Sacred_Heart_Church%2C_Ponsonby.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABaptismal_font_%26_paschal_candle%2C_Sacred_Heart_Church%2C_Ponsonby.jpg",
+        "credit": "Bjankuloski06 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Bjankuloski06",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bjankuloski06"
+      },
+      "background": null
+    },
+    {
       "id": "q-13023",
       "status": "approved",
       "difficulty": 1,
@@ -34756,6 +34926,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "traveljunction",
         "author_url": "https://www.flickr.com/people/128012202@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13032",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "legends-and-figures",
+      "bundle": "germany",
+      "description": "Ein Mann, der wusste: Mit dem Teufel macht man keine Geschäfte – aber man kann darüber dichten.",
+      "question": "Welcher Dichter machte die Sage vom Doktor Faust weltberühmt, der einen Pakt mit dem Teufel schließt?",
+      "answer": "Johann Wolfgang von Goethe",
+      "wrong_answers": [
+        "Friedrich Schiller",
+        "Gotthold Ephraim Lessing",
+        "Heinrich Heine"
+      ],
+      "hints": [
+        "Er war auch Minister in Weimar.",
+        "Er schrieb auch „Die Leiden des jungen Werthers“.",
+        "Sein Nachname beginnt mit G."
+      ],
+      "fun_fact": "Goethe arbeitete rund 60 Jahre lang immer wieder an seinem „Faust“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Mephisto_verzaubert_die_Studenten_%282%29_-_Auerbachs_Keller.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMephisto_verzaubert_die_Studenten_%282%29_-_Auerbachs_Keller.jpg",
+        "credit": "Xxlfussel · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Xxlfussel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Xxlfussel"
       },
       "background": null
     },
@@ -35576,6 +35780,40 @@
       "background": null
     },
     {
+      "id": "q-13057",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "national-symbols-and-state",
+      "bundle": "germany",
+      "description": "Hier ist man mit 16 alt genug für die Wahlurne, aber noch zu jung für den Führerschein.",
+      "question": "Welches Bundesland ließ als erstes 16-Jährige das Landesparlament mitwählen?",
+      "answer": "Bremen",
+      "wrong_answers": [
+        "Hamburg",
+        "Berlin",
+        "Brandenburg"
+      ],
+      "hints": [
+        "Es ist ein Stadtstaat.",
+        "Es besteht aus zwei voneinander getrennten Städten.",
+        "Hierhin wollten die Stadtmusikanten aus dem Märchen."
+      ],
+      "fun_fact": "Bei der Bürgerschaftswahl 2011 durften in Bremen erstmals in Deutschland 16-Jährige ein Landesparlament mitwählen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Ballot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad.jpg/3840px-Ballot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABallot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad.jpg",
+        "credit": "W.carter · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "W.carter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter"
+      },
+      "background": null
+    },
+    {
       "id": "q-13058",
       "status": "approved",
       "difficulty": 8,
@@ -35606,6 +35844,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Radomianin",
         "author_url": "https://commons.wikimedia.org/wiki/User:Radomianin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13059",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "national-symbols-and-state",
+      "bundle": "germany",
+      "description": "Post mit Vogel drauf: Entweder wichtig oder vom Taubenzüchterverein.",
+      "question": "Du bekommst einen Brief mit dem Bundesadler im Briefkopf. Von wem kann er NICHT stammen?",
+      "answer": "Vom Bürgermeister deiner Stadt",
+      "wrong_answers": [
+        "Vom Bundespräsidenten",
+        "Vom Bundeskanzler",
+        "Von der Bundestagspräsidentin"
+      ],
+      "hints": [
+        "Der Bundesadler steht für den Bund, also ganz Deutschland.",
+        "Gemeinden, Städte und Länder haben ihre eigenen Wappen.",
+        "Gesucht ist jemand aus dem Rathaus."
+      ],
+      "fun_fact": "Bundestag, Bundesrat und Bundesverfassungsgericht nutzen jeweils eine eigene, leicht unterschiedliche Version des Adlers.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Bundesadler-R%C3%BCckseite-65.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABundesadler-R%C3%BCckseite-65.jpg",
+        "credit": "Times · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Times",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Times"
       },
       "background": null
     },
@@ -35912,6 +36184,40 @@
         "license_url": null,
         "author": "Bundeswahlleiter",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13069",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-symbols-and-state",
+      "bundle": "germany",
+      "description": "Ein Land, das aus vielen kleinen Ländern zusammengepuzzelt ist.",
+      "question": "Aus wie vielen Bundesländern besteht Deutschland?",
+      "answer": "16",
+      "wrong_answers": [
+        "12",
+        "14",
+        "18"
+      ],
+      "hints": [
+        "Es sind mehr als zehn.",
+        "Berlin, Hamburg und Bremen zählen auch dazu.",
+        "Es sind doppelt so viele wie acht."
+      ],
+      "fun_fact": "Bremen besteht aus zwei getrennten Teilen: der Stadt Bremen und dem rund 60 Kilometer entfernten Bremerhaven.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Norderney%2C_Tonnenleger_%22Norden%22_--_2025_--_9137.jpg/3840px-Norderney%2C_Tonnenleger_%22Norden%22_--_2025_--_9137.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorderney%2C_Tonnenleger_%22Norden%22_--_2025_--_9137.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
       },
       "background": null
     },
@@ -38786,6 +39092,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Yercaud-elango",
         "author_url": "https://commons.wikimedia.org/wiki/User:Yercaud-elango"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13156",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "plants-and-forests",
+      "bundle": "germany",
+      "description": "Ostern ohne dieses Ding? Für viele Familien undenkbar.",
+      "question": "Er steht zu Ostern in vielen deutschen Wohnungen. Was ist ein „Osterstrauß“?",
+      "answer": "Zweige, behängt mit bunten Eiern",
+      "wrong_answers": [
+        "Blumen aus Schokolade in Folie",
+        "Hefezopf in Blütenform",
+        "Korb voller Schokohasen"
+      ],
+      "hints": [
+        "Man schmückt ihn selbst.",
+        "Er bleibt oft bis nach den Feiertagen als Deko stehen.",
+        "Man hängt ausgeblasene, bemalte Eier daran."
+      ],
+      "fun_fact": "Stellt man die Zweige früh genug in die warme Wohnung, treiben sie bis Ostern oft grüne Blätter oder Blüten aus.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Aschaffenburg_Schoental_Meadow_Flowers.jpg/3840px-Aschaffenburg_Schoental_Meadow_Flowers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAschaffenburg_Schoental_Meadow_Flowers.jpg",
+        "credit": "KaiBorgeest · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "KaiBorgeest",
+        "author_url": "https://commons.wikimedia.org/wiki/User:KaiBorgeest"
       },
       "background": null
     },
