@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e15fedf3",
+  "hash": "a5dfd91d",
   "questions": [
     {
       "id": "q-0975",
@@ -21033,6 +21033,40 @@
       "background": null
     },
     {
+      "id": "q-12254",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "20th-century",
+      "bundle": "spain",
+      "description": "Una semana que ningún calendario de Barcelona quiere volver a marcar en rojo.",
+      "question": "En julio de 1909 estalló en Barcelona la llamada Semana Trágica. ¿Qué desató la revuelta?",
+      "answer": "El envío de reservistas a la guerra de Marruecos",
+      "wrong_answers": [
+        "La subida del precio del pan",
+        "La pérdida de Cuba y Filipinas",
+        "La caída de la monarquía de Alfonso XIII"
+      ],
+      "hints": [
+        "En aquella época España combatía en una guerra colonial.",
+        "Muchos de esos soldados eran padres de familia ya licenciados.",
+        "Los mandaban a luchar al norte de África."
+      ],
+      "fun_fact": "La revuelta acabó haciendo caer el Gobierno de Antonio Maura pocos meses después.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/TragicWeekroundup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATragicWeekroundup.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12255",
       "status": "approved",
       "difficulty": 13,
@@ -21097,6 +21131,40 @@
         "license_url": null,
         "author": "P. Luis Torrents",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12257",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "20th-century",
+      "bundle": "spain",
+      "description": "Un dulce que se come con mango, como las cosas importantes.",
+      "question": "Nació en 1958 en Cataluña, tiene forma de bola y su inventor, Enric Bernat, le puso un palo. ¿Para qué?",
+      "answer": "Para que los niños no se mancharan las manos",
+      "wrong_answers": [
+        "Para que el caramelo durara más",
+        "Para poder colgarlo en el árbol",
+        "Para venderlo más caro en las tiendas"
+      ],
+      "hints": [
+        "Bernat se fijó en cómo se comía la gente los caramelos de entonces.",
+        "Quería resolver un problema muy práctico de cada día.",
+        "Así se acabaron los dedos pegajosos de azúcar."
+      ],
+      "fun_fact": "En 1995 unos Chupa Chups viajaron al espacio con los cosmonautas de la estación Mir.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Large_multi-coloured_lollipops%2C_2009.jpg/3840px-Large_multi-coloured_lollipops%2C_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALarge_multi-coloured_lollipops%2C_2009.jpg",
+        "credit": "Beth · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Beth",
+        "author_url": "https://flickr.com/people/54547540@N00"
       },
       "background": null
     },
@@ -21815,6 +21883,40 @@
       "background": null
     },
     {
+      "id": "q-12279",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "cities-and-towns",
+      "bundle": "spain",
+      "description": "Una escultura de hormigón que mira al mar como quien espera el autobús.",
+      "question": "Esta gran escultura de Chillida, el «Elogio del Horizonte», corona un cerro junto al mar. ¿En qué ciudad está?",
+      "answer": "Gijón",
+      "wrong_answers": [
+        "San Sebastián",
+        "Santander",
+        "A Coruña"
+      ],
+      "hints": [
+        "Está en el norte de España, frente al Cantábrico.",
+        "Es la ciudad más poblada de su comunidad autónoma, aunque no es la capital.",
+        "Tiene la playa de San Lorenzo y el barrio de Cimadevilla."
+      ],
+      "fun_fact": "Si te pones en el centro, bajo la escultura, el hormigón amplifica el sonido del viento y de las olas.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Gijon_-_Elogio_del_horizonte_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGijon_-_Elogio_del_horizonte_2.jpg",
+        "credit": "Zarateman · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Zarateman",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zarateman"
+      },
+      "background": null
+    },
+    {
       "id": "q-12280",
       "status": "approved",
       "difficulty": 4,
@@ -22427,6 +22529,40 @@
       "background": null
     },
     {
+      "id": "q-12298",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "comics-and-childrens-books",
+      "bundle": "spain",
+      "description": "El mejor remedio contra el «¿cuánto queda?» en el asiento de atrás del coche.",
+      "question": "Es un texto breve, a menudo con rima, que describe algo sin decir su nombre para que lo aciertes. ¿Cómo se llama?",
+      "answer": "Una adivinanza",
+      "wrong_answers": [
+        "Un trabalenguas",
+        "Un refrán",
+        "Una retahíla"
+      ],
+      "hints": [
+        "Se juega mucho en el colegio y en los viajes en coche.",
+        "Al final siempre preguntan «¿qué es?».",
+        "Muchas empiezan con «Adivina, adivina…»."
+      ],
+      "fun_fact": "Las adivinanzas son tan antiguas que ya aparecen en mitos griegos, como el famoso acertijo de la Esfinge.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Nepalese_Children.JPG/3840px-Nepalese_Children.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANepalese_Children.JPG",
+        "credit": "Nirmal Dulal · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nirmal Dulal",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nirmal_Dulal"
+      },
+      "background": null
+    },
+    {
       "id": "q-12299",
       "status": "approved",
       "difficulty": 13,
@@ -22729,6 +22865,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "kilezz/QuiRóH",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12308",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "creatures",
+      "bundle": "spain",
+      "description": "Las patronas también tienen su comunidad autónoma de cabecera.",
+      "question": "La Virgen de Covadonga es a Asturias como la Virgen de Montserrat es a…",
+      "answer": "Cataluña",
+      "wrong_answers": [
+        "Aragón",
+        "Valencia",
+        "Baleares"
+      ],
+      "hints": [
+        "Su santuario está en una montaña de rocas con formas muy curiosas.",
+        "Su monasterio tiene un famoso coro de niños, la Escolanía.",
+        "La llaman cariñosamente «la Moreneta» y su montaña está cerca de Barcelona."
+      ],
+      "fun_fact": "La Escolanía de Montserrat es uno de los coros de niños más antiguos de Europa, con más de 700 años de historia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Covadonga%2C_basilica_03.jpg/3840px-Covadonga%2C_basilica_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACovadonga%2C_basilica_03.jpg",
+        "credit": "Luis Fermín TURIEL PEREDO · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Luis Fermín TURIEL PEREDO",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Luis_Ferm%C3%ADn_TURIEL_PEREDO"
       },
       "background": null
     },
@@ -26133,6 +26303,40 @@
       "background": null
     },
     {
+      "id": "q-12411",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "dress-crafts-and-games",
+      "bundle": "spain",
+      "description": "La forma más justa de decidir algo sin votaciones ni abogados.",
+      "question": "Estás en el patio echando a suertes quién se la queda con «Pito, pito, gorgorito». ¿Cuál de estas NO es otra retahíla para echar a suertes?",
+      "answer": "«Al pasar la barca»",
+      "wrong_answers": [
+        "«Una, dola, tela, catola»",
+        "«En un café se rifa un gato»",
+        "«En la casa de Pinocho»"
+      ],
+      "hints": [
+        "Tres de ellas se dicen señalando a cada niño por turnos.",
+        "La que sobra se canta mientras alguien salta.",
+        "Es una canción para saltar a la comba con un barquero."
+      ],
+      "fun_fact": "«Pito, pito, gorgorito» termina con «pim, pam, pum, fuera», y al que le toca el «fuera» queda libre.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Speelplaats_van_een_Rooms-Katholieke_school_-_Schoolyard_of_a_Roman_Catholic_school_%283915530371%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpeelplaats_van_een_Rooms-Katholieke_school_-_Schoolyard_of_a_Roman_Catholic_school_%283915530371%29.jpg",
+        "credit": "Wiel van der Randen · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Wiel van der Randen",
+        "author_url": "https://www.wikidata.org/wiki/Q18065666"
+      },
+      "background": null
+    },
+    {
       "id": "q-12412",
       "status": "approved",
       "difficulty": 2,
@@ -26605,6 +26809,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Javier Perez Montes",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nerve_net"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12427",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "monuments",
+      "bundle": "spain",
+      "description": "Un monasterio navarro con unas vistas al embalse que ya quisiera cualquier hotel.",
+      "question": "El monasterio de Leyre, en Navarra, fue muy importante para los primeros reyes de Pamplona. ¿Para qué les sirvió?",
+      "answer": "Como panteón real",
+      "wrong_answers": [
+        "Como cárcel de nobles",
+        "Como residencia de verano",
+        "Como sede de las Cortes"
+      ],
+      "hints": [
+        "Su cripta románica es del siglo XI y está junto al embalse de Yesa.",
+        "Los reyes de Pamplona lo llenaron de donaciones y privilegios.",
+        "En su iglesia, una arqueta de madera guarda los restos de aquellos reyes."
+      ],
+      "fun_fact": "Según la leyenda, el abad San Virila se quedó escuchando a un pájaro en el bosque de Leyre y, al volver, habían pasado 300 años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/WLM14ES_-_Cripta_del_monasterio_de_Leyre%2C_Navarra_-_alepheli.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWLM14ES_-_Cripta_del_monasterio_de_Leyre%2C_Navarra_-_alepheli.jpg",
+        "credit": "Ángel M. Felicísimo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ángel M. Felicísimo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Amfeli"
       },
       "background": null
     },
@@ -27221,6 +27459,40 @@
       "background": null
     },
     {
+      "id": "q-12446",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "scientists-and-explorers",
+      "bundle": "spain",
+      "description": "Subir hasta donde vuelan los aviones y respirar lo justo: la definición de «mal plan» para cualquiera menos para ella.",
+      "question": "¿Qué alpinista fue la primera española en subir al Everest sin oxígeno embotellado, en 1999?",
+      "answer": "Chus Lago",
+      "wrong_answers": [
+        "Edurne Pasaban",
+        "Araceli Segarra",
+        "Rosa Fernández"
+      ],
+      "hints": [
+        "Es gallega.",
+        "Llegó a la cima por la cara norte, desde el Tíbet.",
+        "Su apellido también es el nombre de una masa de agua dulce."
+      ],
+      "fun_fact": "Chus Lago también ha cruzado en solitario grandes extensiones de hielo polar arrastrando su propio trineo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMount_Everest_as_seen_from_Drukair2_PLW_edit.jpg",
+        "credit": "Mount_Everest_as_seen_from_Drukair2.jpg: shrimpo1967 · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Mount_Everest_as_seen_from_Drukair2.jpg: shrimpo1967\nderivative work: Papa Lima Whiskey 2 (talk)",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Mount_Everest_as_seen_from_Drukair2.jpg"
+      },
+      "background": null
+    },
+    {
       "id": "q-12447",
       "status": "approved",
       "difficulty": 12,
@@ -27285,6 +27557,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "多多123",
         "author_url": "https://commons.wikimedia.org/wiki/User:%E5%A4%9A%E5%A4%9A123"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12449",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "scientists-and-explorers",
+      "bundle": "spain",
+      "description": "Un hombre que no sabe quedarse quieto ni en el sofá.",
+      "question": "Karlos Arguiñano es a la cocina como Jesús Calleja es a…",
+      "answer": "la aventura",
+      "wrong_answers": [
+        "la magia",
+        "las noticias",
+        "el baile"
+      ],
+      "hints": [
+        "Sale en programas de televisión muy lejos de un plató.",
+        "Ha subido al Everest.",
+        "En «Planeta Calleja» lleva a famosos a lugares extremos."
+      ],
+      "fun_fact": "Jesús Calleja nació en Madrid, pero se crió en León, la tierra que siempre presenta como suya.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Cooks_in_kitchen%2C_1930_%2820981103874%29.jpg/3840px-Cooks_in_kitchen%2C_1930_%2820981103874%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACooks_in_kitchen%2C_1930_%2820981103874%29.jpg",
+        "credit": "Seattle Municipal Archives from Seattle, WA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Seattle Municipal Archives from Seattle, WA",
+        "author_url": "https://www.flickr.com/people/24256351@N04"
       },
       "background": null
     },
@@ -27455,6 +27761,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "B.H. Dhiaeddine",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:B.H._Dhiaeddine&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12455",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "tapas",
+      "bundle": "spain",
+      "description": "Una pierna que se pasa años colgada del techo y nadie se queja.",
+      "question": "Mira la pezuña de este jamón. ¿De qué animal suele ser el jamón que la tiene así?",
+      "answer": "Del cerdo ibérico",
+      "wrong_answers": [
+        "Del cerdo blanco de granja",
+        "Del jabalí",
+        "Del cerdo vietnamita"
+      ],
+      "hints": [
+        "Es un cerdo que se cría sobre todo en el suroeste de la península.",
+        "Muchos pasan el otoño en el campo comiendo bellotas bajo las encinas.",
+        "Por esa pezuña se le llama «pata negra»."
+      ],
+      "fun_fact": "Un buen jamón ibérico puede pasar más de tres años curándose antes de llegar a la mesa.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Jam%C3%B3n_ib%C3%A9rico%2C_Set%C3%BAbal%2C_Portugal%2C_2012-05-11%2C_DD_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJam%C3%B3n_ib%C3%A9rico%2C_Set%C3%BAbal%2C_Portugal%2C_2012-05-11%2C_DD_02.JPG",
+        "credit": "Diego Delso · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777"
       },
       "background": null
     },
@@ -28101,6 +28441,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Alan Hughes",
         "author_url": "https://www.geograph.org.uk/profile/121420"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12475",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "tapas",
+      "bundle": "spain",
+      "description": "Un sótano fresco y oscuro del que los mayores nunca tienen prisa por salir.",
+      "question": "Entras en una bodega de La Rioja y huele a barricas de roble. ¿Qué se hace allí?",
+      "answer": "Vino",
+      "wrong_answers": [
+        "Sidra",
+        "Cerveza",
+        "Aceite de oliva"
+      ],
+      "hints": [
+        "Se hace con fruta.",
+        "A menudo se deja envejecer durante años antes de venderlo.",
+        "Se hace con uvas."
+      ],
+      "fun_fact": "«Bodega» viene del griego «apothēkē», almacén, la misma raíz que «botica».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Porto_Cal%C3%A9m_Cellar_Age-Old_Casks_and_Tasting_Experience_%2855243068528%29.jpg/3840px-Porto_Cal%C3%A9m_Cellar_Age-Old_Casks_and_Tasting_Experience_%2855243068528%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APorto_Cal%C3%A9m_Cellar_Age-Old_Casks_and_Tasting_Experience_%2855243068528%29.jpg",
+        "credit": "Michael Gaylard from Horsham, UK · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Michael Gaylard from Horsham, UK",
+        "author_url": "https://www.flickr.com/people/16564965@N04"
       },
       "background": null
     },
