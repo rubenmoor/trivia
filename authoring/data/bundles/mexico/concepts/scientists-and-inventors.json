@@ -156,7 +156,8 @@
     {
       "name": "Olla de barro",
       "facet": "Inventos de la vida cotidiana",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El material y la identificación de la olla de barro ya están preguntados; las opciones restantes (lugar, estimación) quedan forzadas."
     },
     {
       "name": "Anafre",

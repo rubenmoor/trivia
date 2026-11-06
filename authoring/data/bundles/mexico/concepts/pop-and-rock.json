@@ -66,12 +66,14 @@
     {
       "name": "Los Amantes de Lola",
       "facet": "Rock en tu idioma de los ochenta",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No tengo datos confiables sobre la discografía ni los récords de la banda."
     },
     {
       "name": "Kenny y los Eléctricos",
       "facet": "Rock en tu idioma de los ochenta",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tengo datos confiables sobre el origen ni la historia del grupo."
     },
     {
       "name": "Ritmo Peligroso",
@@ -102,7 +104,8 @@
     {
       "name": "Cecilia Toussaint",
       "facet": "Rock en tu idioma de los ochenta",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Los datos que tengo de su carrera son muy pocos y no confío en ellos."
     },
     {
       "name": "Rockdrigo González",
@@ -192,7 +195,8 @@
     {
       "name": "Alex Lora",
       "facet": "Bandas de rock mexicano clásico",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Las preguntas buenas (El Tri, Three Souls in My Mind) ya están en el pool o se responden con la pregunta que ya existe."
     },
     {
       "name": "Saúl Hernández",

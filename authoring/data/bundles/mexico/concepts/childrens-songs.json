@@ -375,7 +375,8 @@
     {
       "name": "Señora Santa Ana",
       "facet": "Canciones de cuna y arrullos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La manzana perdida ya está preguntada; las opciones que quedan (origen o lugar) no dan una pregunta clara sin repetirse."
     },
     {
       "name": "A la rorro niño",
@@ -540,7 +541,8 @@
     {
       "name": "Debajo de un botón",
       "facet": "Canciones de escuela y de animalitos",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Las opciones piden el lugar, y el título de la canción ya lo dice; la rima ya está preguntada."
     },
     {
       "name": "La Cucaracha",
