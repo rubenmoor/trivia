@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "5da182a1",
+  "hash": "050f971b",
   "questions": [
     {
       "id": "q-0711",
@@ -29338,6 +29338,40 @@
       "background": null
     },
     {
+      "id": "q-13490",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "brands-and-snacks",
+      "bundle": "mexico",
+      "description": "Una mascota tan tierna que dan ganas de abrazar el empaque.",
+      "question": "Soy blanco y peludo, llevo gorro y delantal de panadero, y salgo en las bolsas de pan de caja. ¿Quién soy?",
+      "answer": "El Osito Bimbo",
+      "wrong_answers": [
+        "El Tigre Toño",
+        "Chester Cheetos",
+        "El Gallo Cornelio"
+      ],
+      "hints": [
+        "Mi marca hace pan, pastelitos y mucho más.",
+        "Llevo décadas saliendo en los empaques de mi marca.",
+        "Mi marca empieza con B y su nombre rima con «Mimbo»."
+      ],
+      "fun_fact": "Bimbo nació en la Ciudad de México en 1945 y hoy es una de las panaderías más grandes del mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Tin_Loaf_-_one_slash_in_the_crust.jpg/3840px-Tin_Loaf_-_one_slash_in_the_crust.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATin_Loaf_-_one_slash_in_the_crust.jpg",
+        "credit": "Mike Finn · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Mike Finn",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13491",
       "status": "approved",
       "difficulty": 2,
@@ -30120,6 +30154,40 @@
       "background": null
     },
     {
+      "id": "q-13515",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "folk-beliefs",
+      "bundle": "mexico",
+      "description": "Hay quienes dejan sus raíces en el pueblo, y otros, literalmente, el ombligo.",
+      "question": "En muchos pueblos de México entierran el ombligo de las niñas junto al fogón para que sean hogareñas. ¿De qué época viene esta costumbre?",
+      "answer": "Desde la época prehispánica",
+      "wrong_answers": [
+        "Desde el Virreinato",
+        "Desde el Porfiriato",
+        "Desde la Revolución Mexicana"
+      ],
+      "hints": [
+        "Es mucho más antigua que la llegada del tren a México.",
+        "El fogón ha sido el corazón de las cocinas mexicanas durante siglos.",
+        "Los mexicas lo hacían: el ombligo de los niños se llevaba al campo de batalla."
+      ],
+      "fun_fact": "De ahí viene el dicho mexicano «ahí tengo enterrado el ombligo» para hablar de la tierra donde uno nació.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/ComalWoodFire.JPG/3840px-ComalWoodFire.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AComalWoodFire.JPG",
+        "credit": "Thelmadatter · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thelmadatter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Thelmadatter"
+      },
+      "background": null
+    },
+    {
       "id": "q-13516",
       "status": "approved",
       "difficulty": 6,
@@ -30184,6 +30252,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "vastateparksstaff",
         "author_url": "https://www.flickr.com/people/37922399@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13518",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "home-and-street",
+      "bundle": "mexico",
+      "description": "Uno cuenta hasta cien y los demás desaparecen como calcetín en la lavadora.",
+      "question": "En este juego, uno se tapa los ojos y cuenta mientras los demás corren, y luego sale a buscarlos. ¿Cómo se llama en México?",
+      "answer": "Las escondidillas",
+      "wrong_answers": [
+        "Las traes",
+        "Los encantados",
+        "El avión"
+      ],
+      "hints": [
+        "Al final, el que cuenta grita «¡Ahí voy!» o «¡Listos o no, ahí voy!».",
+        "Los que corren buscan dónde no los vean: detrás de un carro, bajo la mesa…",
+        "En otros países le dicen «el escondite»."
+      ],
+      "fun_fact": "Hay campeonatos de escondidillas para adultos: en Italia se organiza desde hace años un mundial de este juego.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Children_Playing_at_Baoqing_Park_20160405.jpg/3840px-Children_Playing_at_Baoqing_Park_20160405.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_Playing_at_Baoqing_Park_20160405.jpg",
+        "credit": "玄史生 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "玄史生",
+        "author_url": "https://commons.wikimedia.org/wiki/User:%E7%8E%84%E5%8F%B2%E7%94%9F"
       },
       "background": null
     },
@@ -30324,6 +30426,40 @@
       "background": null
     },
     {
+      "id": "q-13523",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "independence-and-19th-century",
+      "bundle": "mexico",
+      "description": "Un oasis en el desierto que resultó ser la peor parada del viaje.",
+      "question": "Fui insurgente y me pasé al bando realista. En marzo de 1811, en Acatita de Baján, Coahuila, embosqué y capturé a Hidalgo y Allende. ¿Quién soy?",
+      "answer": "Ignacio Elizondo",
+      "wrong_answers": [
+        "Félix María Calleja",
+        "Juan Aldama",
+        "Agustín de Iturbide"
+      ],
+      "hints": [
+        "Mi apellido quedó en la historia como sinónimo de traición.",
+        "Era capitán en las provincias del norte, no un gran general del virreinato.",
+        "Comparto nombre de pila con Allende."
+      ],
+      "fun_fact": "Acatita de Baján era un lugar con norias en pleno desierto: los insurgentes se detuvieron ahí a buscar agua.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Desert_Chihuahuan_Big_Bend.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADesert_Chihuahuan_Big_Bend.JPG",
+        "credit": "Cqui · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Cqui",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cqui"
+      },
+      "background": null
+    },
+    {
       "id": "q-13524",
       "status": "approved",
       "difficulty": 6,
@@ -30354,6 +30490,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "ProtoplasmaKid",
         "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13525",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "independence-and-19th-century",
+      "bundle": "mexico",
+      "description": "Antes de que se pusiera de moda, él ya traía su paliacate.",
+      "question": "¿Qué héroe de la Independencia, famoso por su pañuelo en la cabeza, salía en el antiguo billete de 50 pesos?",
+      "answer": "José María Morelos",
+      "wrong_answers": [
+        "Miguel Hidalgo",
+        "Vicente Guerrero",
+        "Ignacio Allende"
+      ],
+      "hints": [
+        "Fue cura, igual que Hidalgo.",
+        "Escribió los «Sentimientos de la Nación».",
+        "Nació en Valladolid, una ciudad que hoy lleva su apellido en su honor."
+      ],
+      "fun_fact": "Se cuenta que Morelos usaba el pañuelo para aliviar sus fuertes dolores de cabeza.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mexican_flag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMexican_flag.jpg",
+        "credit": "Jorge Mendoza · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jorge Mendoza",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bibliothecamex"
       },
       "background": null
     },
@@ -30456,6 +30626,40 @@
         "license_url": null,
         "author": "Kajuy-FUO-3365",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kajuy-FUO-3365"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13529",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "independence-and-19th-century",
+      "bundle": "mexico",
+      "description": "Una bandera que llevó su propio instrumento musical al campo de batalla.",
+      "question": "Una bandera verde con un arpa ondeó del lado mexicano en la guerra contra Estados Unidos de 1846 a 1848. ¿Quiénes la llevaban?",
+      "answer": "Soldados irlandeses",
+      "wrong_answers": [
+        "Soldados franceses",
+        "Voluntarios cubanos",
+        "Guerreros yaquis"
+      ],
+      "hints": [
+        "Muchos habían desertado del ejército estadounidense.",
+        "Eran católicos, como los mexicanos.",
+        "Su batallón llevaba el nombre del santo del trébol."
+      ],
+      "fun_fact": "Cada 12 de septiembre se les rinde homenaje en San Ángel, en la Ciudad de México.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Plaza_San_Jacinto%2C_San_%C3%81ngel_-_Mexico_2024.jpg/3840px-Plaza_San_Jacinto%2C_San_%C3%81ngel_-_Mexico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_San_Jacinto%2C_San_%C3%81ngel_-_Mexico_2024.jpg",
+        "credit": "José Luiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "José Luiz",
+        "author_url": null
       },
       "background": null
     },
@@ -33316,6 +33520,40 @@
       "background": null
     },
     {
+      "id": "q-13614",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "reserves-and-climate",
+      "bundle": "mexico",
+      "description": "Un dios con el que nadie quería quedar mal en temporada de siembra.",
+      "question": "Cuando caía la lluvia sobre la selva, los antiguos mayas se la agradecían a un dios. ¿A cuál?",
+      "answer": "Chaac",
+      "wrong_answers": [
+        "Kukulkán",
+        "Itzamná",
+        "Kinich Ahau"
+      ],
+      "hints": [
+        "Lo pintaban con un hacha de piedra o un rayo en la mano.",
+        "Sus máscaras de nariz larga y curva cubren fachadas de Uxmal y Kabah.",
+        "Su nombre es corto y empieza con «Ch»."
+      ],
+      "fun_fact": "En el Codz Poop de Kabah, Yucatán, toda una fachada está cubierta por cientos de máscaras de Chaac.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Cheow_Lan_Lake%2C_Rainforest%2C_Khao_Sok%2C_Thailand.jpg/3840px-Cheow_Lan_Lake%2C_Rainforest%2C_Khao_Sok%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACheow_Lan_Lake%2C_Rainforest%2C_Khao_Sok%2C_Thailand.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
       "id": "q-13615",
       "status": "approved",
       "difficulty": 4,
@@ -34948,6 +35186,40 @@
       "background": null
     },
     {
+      "id": "q-13664",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "landscapes",
+      "bundle": "mexico",
+      "description": "El mar estornuda tan fuerte que los turistas le pagan por verlo.",
+      "question": "La Bufadora lanza chorros de agua de mar de varios metros de altura. ¿En qué estado de México está?",
+      "answer": "Baja California",
+      "wrong_answers": [
+        "Baja California Sur",
+        "Sonora",
+        "Sinaloa"
+      ],
+      "hints": [
+        "Está en el Pacífico, en el noroeste de México.",
+        "Es parte de una península larga y angosta.",
+        "Es la mitad norte de esa península, donde está Ensenada."
+      ],
+      "fun_fact": "La Bufadora ruge porque las olas entran a una cueva marina y el aire comprimido avienta el agua hacia arriba.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/La_Bufadora%2C_Ensenada_BC_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Bufadora%2C_Ensenada_BC_-_panoramio.jpg",
+        "credit": "Luis Enrique Cruz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Luis Enrique Cruz",
+        "author_url": "https://web.archive.org/web/20161029095512/http://www.panoramio.com/user/550801?with_photo_id=108442566"
+      },
+      "background": null
+    },
+    {
       "id": "q-13665",
       "status": "approved",
       "difficulty": 3,
@@ -35084,6 +35356,40 @@
       "background": null
     },
     {
+      "id": "q-13670",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "mexica",
+      "bundle": "mexico",
+      "description": "El único objeto de la cocina que se lleva mejor con las tortillas que con cualquier persona.",
+      "question": "Soy redondo y plano, de barro o de metal. Me ponen sobre el fuego y en mí se calientan las tortillas. ¿Qué soy?",
+      "answer": "El comal",
+      "wrong_answers": [
+        "El molcajete",
+        "El metate",
+        "El jarro"
+      ],
+      "hints": [
+        "Mi nombre viene del náhuatl.",
+        "También en mí se doran quesadillas y se tuestan chiles.",
+        "Mi nombre empieza con «co»."
+      ],
+      "fun_fact": "La palabra «comal» viene del náhuatl «comalli», y los mexicas ya cocinaban sus tortillas en comales de barro.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Masa_para_tortillas.JPG/3840px-Masa_para_tortillas.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMasa_para_tortillas.JPG",
+        "credit": "GABIEGUIN · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "GABIEGUIN",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GABIEGUIN"
+      },
+      "background": null
+    },
+    {
       "id": "q-13671",
       "status": "approved",
       "difficulty": 13,
@@ -35148,6 +35454,40 @@
         "license_url": null,
         "author": "Luis Coto",
         "author_url": "https://www.wikidata.org/wiki/Q5983130"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13673",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "mexica",
+      "bundle": "mexico",
+      "description": "La palabra favorita de las abuelas cuando llegas de visita.",
+      "question": "«Apapachar» viene del náhuatl «papachoa» y hoy en México es abrazar con cariño. ¿Qué significaba originalmente «papachoa»?",
+      "answer": "Ablandar algo apretándolo",
+      "wrong_answers": [
+        "Arrullar a un bebé",
+        "Dar de comer a alguien",
+        "Besar en la frente"
+      ],
+      "hints": [
+        "Era una palabra de todos los días, no solo de cariño.",
+        "También se usaba en la cocina.",
+        "Se hacía con los dedos, como cuando sobas algo."
+      ],
+      "fun_fact": "Dicen por ahí que «apapachar» significa «abrazar con el alma», pero eso es un mito moderno: el náhuatl hablaba de apretar algo con los dedos.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Historia_general_de_las_cosas_de_nueva_Espa%C3%B1a_page_406_2.png/3840px-Historia_general_de_las_cosas_de_nueva_Espa%C3%B1a_page_406_2.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHistoria_general_de_las_cosas_de_nueva_Espa%C3%B1a_page_406_2.png",
+        "credit": "Unnamed Nahua contributors under leadership of Bernardino de Sahagún · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unnamed Nahua contributors under leadership of Bernardino de Sahagún",
+        "author_url": "https://en.wikipedia.org/wiki/Bernardino_de_Sahag%C3%BAn"
       },
       "background": null
     },
@@ -35420,6 +35760,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "AlejandroLinaresGarcia",
         "author_url": "https://commons.wikimedia.org/wiki/User:AlejandroLinaresGarcia"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13683",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "painters-and-muralists",
+      "bundle": "mexico",
+      "description": "Una pintora que se despidió con fruta en vez de flores.",
+      "question": "En 1954, Frida Kahlo pintó unas sandías y escribió una frase en una de ellas; es una de sus últimas obras. ¿Qué frase escribió?",
+      "answer": "«Viva la vida»",
+      "wrong_answers": [
+        "«Pies para qué los quiero»",
+        "«Árbol de la esperanza, mantente firme»",
+        "«Diego en mi pensamiento»"
+      ],
+      "hints": [
+        "La escribió sobre la pulpa roja de una de las sandías.",
+        "Junto a la frase escribió Coyoacán y el año.",
+        "Coldplay la usó como título de su disco de 2008."
+      ],
+      "fun_fact": "Chris Martin, de Coldplay, contó que vio la frase en el cuadro de Frida y le encantó para su disco.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Slice_of_Watermelon_from_Wilson_Farm%2C_Lexington_MA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASlice_of_Watermelon_from_Wilson_Farm%2C_Lexington_MA.jpg",
+        "credit": "John Phelan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "John Phelan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Faolin42"
       },
       "background": null
     },
@@ -36134,6 +36508,40 @@
         "license_url": null,
         "author": "mypubliclands",
         "author_url": "https://www.flickr.com/people/mypubliclands/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13706",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "state-symbols",
+      "bundle": "mexico",
+      "description": "Una canción que es mapa, ruta y nostalgia, todo en una.",
+      "question": "En «Camino de Guanajuato», José Alfredo Jiménez canta que se queda en su «pueblo adorado», el de esta foto. ¿Cuál es?",
+      "answer": "Dolores Hidalgo",
+      "wrong_answers": [
+        "San Miguel de Allende",
+        "Salamanca",
+        "Silao"
+      ],
+      "hints": [
+        "Es el pueblo natal del compositor.",
+        "En su iglesia empezó un gran momento de la historia de México.",
+        "Ahí dio el Grito el cura Miguel Hidalgo."
+      ],
+      "fun_fact": "La tumba de José Alfredo Jiménez en Dolores Hidalgo tiene forma de sombrero de charro y un sarape.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Parroquia_de_Nuestra_Se%C3%B1ora_de_los_Dolores_-_Dolores_Hidalgo%2C_Guanajuato%2C_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AParroquia_de_Nuestra_Se%C3%B1ora_de_los_Dolores_-_Dolores_Hidalgo%2C_Guanajuato%2C_M%C3%A9xico.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
       },
       "background": null
     },
