@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "bd2f2a0e",
+  "hash": "9ee2746e",
   "questions": [
     {
       "id": "q-0975",
@@ -29091,6 +29091,40 @@
       "background": null
     },
     {
+      "id": "q-13213",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "ancient-hispania",
+      "bundle": "spain",
+      "description": "El primer grafiti de la historia, y nadie lo multó.",
+      "question": "En 1879 alguien vio por primera vez los bisontes pintados en el techo de la cueva de Altamira. ¿Quién fue?",
+      "answer": "Una niña de 8 años",
+      "wrong_answers": [
+        "Un pastor con su perro",
+        "Un grupo de mineros",
+        "Unos soldados franceses"
+      ],
+      "hints": [
+        "Fue alguien que entró en la cueva acompañando a un familiar.",
+        "Su padre buscaba restos prehistóricos en el suelo, y no miró hacia arriba.",
+        "Se llamaba María y era muy pequeña."
+      ],
+      "fun_fact": "Según la historia, María gritó «¡Mira, papá, bueyes!» al ver los bisontes del techo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Altamira_bisons.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAltamira_bisons.jpg",
+        "credit": "Thomas Quine · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Thomas Quine",
+        "author_url": "https://www.flickr.com/people/91994044@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-13214",
       "status": "approved",
       "difficulty": 5,
@@ -30111,6 +30145,40 @@
       "background": null
     },
     {
+      "id": "q-13247",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "co-official-languages",
+      "bundle": "spain",
+      "description": "Compartir es vivir, también cuando se trata de idiomas en un mismo cartel.",
+      "question": "En sus comunidades, el catalán, el gallego y el euskera tienen el mismo rango que el castellano, como permite la Constitución de 1978. ¿Cómo se llaman?",
+      "answer": "Lenguas cooficiales",
+      "wrong_answers": [
+        "Lenguas muertas",
+        "Dialectos",
+        "Lenguas criollas"
+      ],
+      "hints": [
+        "Por eso ves carteles y señales escritos en dos idiomas.",
+        "Se pueden usar con la Administración y en las escuelas igual que el castellano.",
+        "Lleva el prefijo «co-», como «copiloto»."
+      ],
+      "fun_fact": "El artículo 3 de la Constitución dice que la riqueza de las modalidades lingüísticas de España es un patrimonio cultural que será objeto de especial respeto y protección.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Constitucion_espanola_1978.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConstitucion_espanola_1978.JPG",
+        "credit": "miguelazo84 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "miguelazo84",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13248",
       "status": "approved",
       "difficulty": 3,
@@ -30209,6 +30277,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Steffen Mokosch",
         "author_url": "https://commons.wikimedia.org/wiki/User:Steffen_Mokosch"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13251",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "coasts-and-islands",
+      "bundle": "spain",
+      "description": "Tanta agua que ni la abuela con su bañera más llena podría superarlo.",
+      "question": "¿Qué océano baña las costas de Galicia y Portugal?",
+      "answer": "El océano Atlántico",
+      "wrong_answers": [
+        "El océano Pacífico",
+        "El océano Índico",
+        "El océano Ártico"
+      ],
+      "hints": [
+        "Cristóbal Colón lo cruzó para llegar a América",
+        "Está entre Europa y América",
+        "Su nombre empieza por «A»"
+      ],
+      "fun_fact": "El Atlántico es el segundo océano más grande del mundo; solo el Pacífico lo supera.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Vista_del_faro_del_cabo_Vil%C3%A1n.jpg/3840px-Vista_del_faro_del_cabo_Vil%C3%A1n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVista_del_faro_del_cabo_Vil%C3%A1n.jpg",
+        "credit": "SusoRedondo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SusoRedondo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SusoRedondo"
       },
       "background": null
     },
@@ -30417,6 +30519,40 @@
       "background": null
     },
     {
+      "id": "q-13258",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "coasts-and-islands",
+      "bundle": "spain",
+      "description": "Aquí las toallas se colocan a las ocho de la mañana para reservar sitio.",
+      "question": "¿Cómo se llama la costa de la provincia de Málaga, famosa por sus playas?",
+      "answer": "La Costa del Sol",
+      "wrong_answers": [
+        "La Costa Blanca",
+        "La Costa Brava",
+        "La Costa Verde"
+      ],
+      "hints": [
+        "Está en Andalucía",
+        "Allí están Marbella y Torremolinos",
+        "Su nombre es el de la estrella que nos calienta"
+      ],
+      "fun_fact": "Málaga presume de tener unos 300 días de sol al año.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/This_Fish_Eats_Plastic.jpg/3840px-This_Fish_Eats_Plastic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThis_Fish_Eats_Plastic.jpg",
+        "credit": "Daniel Capilla · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniel Capilla",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dcapillae"
+      },
+      "background": null
+    },
+    {
       "id": "q-13259",
       "status": "approved",
       "difficulty": 7,
@@ -30515,6 +30651,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Basotxerri",
         "author_url": "https://commons.wikimedia.org/wiki/User:Basotxerri"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13262",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "coasts-and-islands",
+      "bundle": "spain",
+      "description": "Acantilados, calas y pinos que se asoman al agua como si quisieran bañarse.",
+      "question": "¿Cómo se llama la costa de la provincia de Girona, que llega hasta la frontera con Francia?",
+      "answer": "La Costa Brava",
+      "wrong_answers": [
+        "La Costa Dorada",
+        "La Costa del Azahar",
+        "La Costa Cálida"
+      ],
+      "hints": [
+        "Da al mar Mediterráneo",
+        "Allí están Tossa de Mar y Cadaqués",
+        "Su nombre significa «salvaje», por sus acantilados"
+      ],
+      "fun_fact": "El nombre «Costa Brava» lo inventó el periodista Ferran Agulló en 1908.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Tossa_de_Mar_%2832443073814%29.jpg/3840px-Tossa_de_Mar_%2832443073814%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATossa_de_Mar_%2832443073814%29.jpg",
+        "credit": "Speed Kore · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Speed Kore",
+        "author_url": "https://www.flickr.com/people/128395852@N03"
       },
       "background": null
     },
@@ -30821,6 +30991,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Gochy5",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Gochy5&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13272",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "current-music",
+      "bundle": "spain",
+      "description": "Una canción que pide que te quedes, desde una isla de la que nadie se quiere ir.",
+      "question": "El cantante de «Quédate», su gran éxito con Bizarrap, se crio en la isla de esta foto. ¿En cuál?",
+      "answer": "Gran Canaria",
+      "wrong_answers": [
+        "Tenerife",
+        "Lanzarote",
+        "Fuerteventura"
+      ],
+      "hints": [
+        "Es la tercera isla más grande del archipiélago.",
+        "Vista desde el aire, tiene una forma casi redonda.",
+        "Su capital es Las Palmas."
+      ],
+      "fun_fact": "Quevedo nació en Madrid, pero se mudó de muy pequeño a Gran Canaria, y por eso canta con acento canario.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Roque_Nublo_-_Gran_Canaria.JPG/3840px-Roque_Nublo_-_Gran_Canaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoque_Nublo_-_Gran_Canaria.JPG",
+        "credit": "H. Zell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "H. Zell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Llez"
       },
       "background": null
     },
@@ -32491,6 +32695,40 @@
       "background": null
     },
     {
+      "id": "q-13322",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-symbols",
+      "bundle": "spain",
+      "description": "Un escritor tan famoso que cabe en el monedero.",
+      "question": "¿Qué escritor aparece en las monedas españolas de 10, 20 y 50 céntimos?",
+      "answer": "Miguel de Cervantes",
+      "wrong_answers": [
+        "Lope de Vega",
+        "Federico García Lorca",
+        "Antonio Machado"
+      ],
+      "hints": [
+        "Vivió hace más de 400 años.",
+        "En su retrato lleva un cuello blanco con pliegues llamado gola.",
+        "Escribió las aventuras de un caballero y su escudero Sancho."
+      ],
+      "fun_fact": "Las monedas españolas de 1 y 2 euros llevan la cara del rey, y las de 1, 2 y 5 céntimos, la catedral de Santiago de Compostela.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Leather_coin_purse.jpg/3840px-Leather_coin_purse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeather_coin_purse.jpg",
+        "credit": "Tarasna0922 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tarasna0922",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Tarasna0922&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-13323",
       "status": "approved",
       "difficulty": 6,
@@ -32929,6 +33167,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Matt and Nayoung Wilson from Atlanta and surrounding, US",
         "author_url": "https://www.flickr.com/people/98502473@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13336",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "regional-symbols",
+      "bundle": "spain",
+      "description": "Una bandera que juega al ajedrez con triángulos en vez de casillas.",
+      "question": "Hay una ciudad española cuya bandera de triángulos blancos y negros es casi igual que la de Lisboa. ¿Cuál es?",
+      "answer": "Ceuta",
+      "wrong_answers": [
+        "Melilla",
+        "Cádiz",
+        "Badajoz"
+      ],
+      "hints": [
+        "Es una ciudad con puerto.",
+        "Fue portuguesa antes que española, hasta el siglo XVII.",
+        "Está en el norte de África, frente a Gibraltar."
+      ],
+      "fun_fact": "Ceuta conserva la bandera y el escudo de su época portuguesa, que empezó en 1415, y por eso se parece tanto a la de Lisboa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Bandeira_municipal_de_Lisboa.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABandeira_municipal_de_Lisboa.png",
+        "credit": "Sérgio Horta, a partir de orginal de Ornellas e outros · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Sérgio Horta, a partir de orginal de Ornellas e outros",
+        "author_url": null
       },
       "background": null
     },
@@ -33554,6 +33826,40 @@
       "background": null
     },
     {
+      "id": "q-13355",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "comics-and-childrens-books",
+      "bundle": "spain",
+      "description": "Un chaval de uniforme que reparte más desastres que cartas.",
+      "question": "El botones Sacarino, de Francisco Ibáñez, siempre está liándola en su trabajo. ¿Dónde trabaja?",
+      "answer": "En la redacción de un periódico",
+      "wrong_answers": [
+        "En un hotel de lujo",
+        "En un banco",
+        "En unos grandes almacenes"
+      ],
+      "hints": [
+        "Allí hay mesas llenas de papeles y máquinas de escribir.",
+        "Su jefe es el director.",
+        "Allí se escriben noticias."
+      ],
+      "fun_fact": "Sacarino nació en 1963, y sus inventos y travesuras acaban casi siempre con el director furioso.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fan_Expo_2014_-_Stacks_%289669608946%29.jpg/3840px-Fan_Expo_2014_-_Stacks_%289669608946%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFan_Expo_2014_-_Stacks_%289669608946%29.jpg",
+        "credit": "jareed from London, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "jareed from London, UK",
+        "author_url": "https://www.flickr.com/people/48254827@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-13356",
       "status": "approved",
       "difficulty": 7,
@@ -33686,6 +33992,40 @@
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "No machine-readable author provided. MatthiasKabel assumed (based on copyright claims).",
         "author_url": "https://commons.wikimedia.org/wiki/User:MatthiasKabel"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13360",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "comics-and-childrens-books",
+      "bundle": "spain",
+      "description": "Un caballero que viaja más que una maleta y nunca va solo.",
+      "question": "¿Cuál de estos personajes NO es compañero de aventuras del Capitán Trueno?",
+      "answer": "Robin",
+      "wrong_answers": [
+        "Goliath",
+        "Crispín",
+        "Sigrid"
+      ],
+      "hints": [
+        "Los compañeros de verdad acompañan a Trueno desde sus primeros tebeos, en los años 50.",
+        "El intruso tiene nombre de pájaro en inglés.",
+        "Es el ayudante de Batman."
+      ],
+      "fun_fact": "Sigrid, la novia del Capitán Trueno, es la reina de la isla de Thule.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Leeds_Castle%2C_Kent%2C_England_3_-_May_09.jpg/3840px-Leeds_Castle%2C_Kent%2C_England_3_-_May_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeeds_Castle%2C_Kent%2C_England_3_-_May_09.jpg",
+        "credit": "Diliff · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diliff",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Diliff"
       },
       "background": null
     },
@@ -33856,6 +34196,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13366",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "famous-figures",
+      "bundle": "spain",
+      "description": "Los premios también tienen primos, y algunos están todavía más estrellados.",
+      "question": "Si el Goya es al cine, la estrella Michelin es a…",
+      "answer": "Los restaurantes",
+      "wrong_answers": [
+        "Las bodegas de vino",
+        "Las librerías",
+        "Los gimnasios"
+      ],
+      "hints": [
+        "La guía que las reparte es de color rojo.",
+        "Sus inspectores van de incógnito y nunca dicen quiénes son.",
+        "Allí te sientas a comer."
+      ],
+      "fun_fact": "La guía Michelin la crearon en 1900 unos fabricantes de neumáticos para animar a la gente a viajar en coche.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Presentaci%C3%B3n_Premios_Goya_2013_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APresentaci%C3%B3n_Premios_Goya_2013_-_02.jpg",
+        "credit": "Carlos Delgado · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Carlos Delgado",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kadellar"
       },
       "background": null
     },
@@ -34298,6 +34672,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "StockyPics",
         "author_url": "https://www.flickr.com/people/135371437@N04"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13380",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "ham-cheese-and-produce",
+      "bundle": "spain",
+      "description": "Un traje a medida que el chorizo lleva puesto desde el primer día.",
+      "question": "Mira este chorizo hecho a la manera tradicional. ¿De qué está hecha su piel?",
+      "answer": "De tripa",
+      "wrong_answers": [
+        "De papel",
+        "De cera",
+        "De plástico"
+      ],
+      "hints": [
+        "Se hace así desde hace siglos, igual que lo hacían los abuelos.",
+        "Es lo mismo que llevan las salchichas tradicionales.",
+        "Viene del intestino."
+      ],
+      "fun_fact": "Muchos embutidos industriales usan hoy tripas de colágeno, pero los tradicionales siguen usando tripa natural.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Chorizo_sausage.JPG/3840px-Chorizo_sausage.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChorizo_sausage.JPG",
+        "credit": "Jaydoo · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jaydoo",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jaydoo&action=edit&redlink=1"
       },
       "background": null
     },
@@ -34948,6 +35356,74 @@
       "background": null
     },
     {
+      "id": "q-13400",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "rivers-and-mountains",
+      "bundle": "spain",
+      "description": "Un sitio donde siempre es de noche y el techo gotea muy, muy despacio.",
+      "question": "La Cueva de Nerja, en Málaga, se descubrió en 1959. ¿Quién la encontró?",
+      "answer": "Cinco chicos del pueblo",
+      "wrong_answers": [
+        "Dos arqueólogos franceses",
+        "Un pastor y su perro",
+        "Tres mineros de carbón"
+      ],
+      "hints": [
+        "Ocurrió en pleno invierno, un 12 de enero.",
+        "Entraron por un agujero siguiendo a unos murciélagos.",
+        "Eran jóvenes de la zona que habían salido de aventura."
+      ],
+      "fun_fact": "En la Cueva de Nerja se celebra un festival de música y danza dentro de una de sus enormes salas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Cueva_de_Nerja_2020.jpg/3840px-Cueva_de_Nerja_2020.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACueva_de_Nerja_2020.jpg",
+        "credit": "Fernando · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Fernando",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Fernando"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13401",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "sayings",
+      "bundle": "spain",
+      "description": "Una frase con gorra de chulapo y clavel en la solapa.",
+      "question": "Según la explicación más popular, ¿qué era el «ocho» de la expresión «más chulo que un ocho»?",
+      "answer": "Un tranvía",
+      "wrong_answers": [
+        "Un caballo",
+        "Un naipe",
+        "Un toro"
+      ],
+      "hints": [
+        "La historia se sitúa en el Madrid de principios del siglo XX.",
+        "Era algo a lo que la gente se subía.",
+        "Según la historia, llevaba a los madrileños vestidos de chulapos a las verbenas."
+      ],
+      "fun_fact": "El último tranvía clásico de Madrid dejó de circular en 1972, aunque la expresión sigue más viva que nunca.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/15052023_DSF8352_150523_Wiki_Loves_Folklore_2025_San_Isidro_Armentanophoto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A15052023_DSF8352_150523_Wiki_Loves_Folklore_2025_San_Isidro_Armentanophoto.jpg",
+        "credit": "Arment mad · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Arment mad",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Arment_mad&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-13402",
       "status": "approved",
       "difficulty": 5,
@@ -34978,6 +35454,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Dwight Sipler from Stow, MA, USA",
         "author_url": "https://www.flickr.com/people/62528187@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13403",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "scientists-and-explorers",
+      "bundle": "spain",
+      "description": "Una manchega que ya hablaba de estrés cuatro siglos antes de que existiera la palabra.",
+      "question": "«Soy de Alcaraz y en 1587 se publicó con mi nombre un libro que decía que las penas y las alegrías afectan a la salud.» ¿Quién soy?",
+      "answer": "Oliva Sabuco",
+      "wrong_answers": [
+        "Beatriz Galindo",
+        "Luisa Roldán",
+        "María de Zayas"
+      ],
+      "hints": [
+        "Mi libro se titulaba «Nueva filosofía de la naturaleza del hombre».",
+        "Durante siglos se discutió si el libro era mío o de mi padre.",
+        "Mi nombre de pila es el mismo que el del fruto que da el olivo."
+      ],
+      "fun_fact": "Su libro defendía que la tristeza podía enfermar el cuerpo, una idea que hoy estudia la medicina psicosomática.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Alcaraz_Plaza.-Albacete.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlcaraz_Plaza.-Albacete.JPG",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null
       },
       "background": null
     },
@@ -35148,6 +35658,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Nan Palmero from San Antonio, TX, USA",
         "author_url": "https://www.flickr.com/people/97402086@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13409",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "sportspeople",
+      "bundle": "spain",
+      "description": "Una tabla, una montaña y un donostiarra: lo raro es que no haya olas.",
+      "question": "El donostiarra Lucas Eguibar fue campeón del mundo de snowboard en 2017, en Sierra Nevada. ¿En qué modalidad?",
+      "answer": "Snowboard cross",
+      "wrong_answers": [
+        "Halfpipe",
+        "Slopestyle",
+        "Eslalon paralelo"
+      ],
+      "hints": [
+        "No compite solo contra el reloj: baja a la vez que sus rivales.",
+        "El circuito tiene saltos, peraltes y curvas cerradas, y gana el primero que llega abajo.",
+        "Es la versión del motocross en la nieve, con tabla."
+      ],
+      "fun_fact": "Eguibar ganó aquel título mundial en casa, en Sierra Nevada (Granada).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Sierra_Nevada_Laguna_skilift_6.jpg/3840px-Sierra_Nevada_Laguna_skilift_6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASierra_Nevada_Laguna_skilift_6.jpg",
+        "credit": "kallerna · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "kallerna",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kallerna"
       },
       "background": null
     },
@@ -35628,6 +36172,40 @@
       "background": null
     },
     {
+      "id": "q-13425",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings",
+      "bundle": "spain",
+      "description": "Las tormentas nocturnas tienen un talento especial para despertar a toda la casa.",
+      "question": "Oyes un trueno enorme en mitad de la noche y se te ponen los… de punta. ¿Qué completa la frase?",
+      "answer": "Pelos",
+      "wrong_answers": [
+        "Dientes",
+        "Dedos",
+        "Ojos"
+      ],
+      "hints": [
+        "Es algo que tienes por casi todo el cuerpo.",
+        "Los gatos los erizan cuando se asustan.",
+        "Cuando se levantan, se te pone la piel de gallina."
+      ],
+      "fun_fact": "Unos músculos diminutos levantan el pelo: a nuestros antepasados peludos les servía para parecer más grandes o abrigarse.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg/3840px-Port_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APort_and_lighthouse_overnight_storm_with_lightning_in_Port-la-Nouvelle.jpg",
+        "credit": "Maxime Raynal from France · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Maxime Raynal from France",
+        "author_url": "https://www.flickr.com/people/108892623@N02"
+      },
+      "background": null
+    },
+    {
       "id": "q-13426",
       "status": "approved",
       "difficulty": 5,
@@ -35900,6 +36478,40 @@
       "background": null
     },
     {
+      "id": "q-13435",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "scientists-and-explorers",
+      "bundle": "spain",
+      "description": "Cuatro poetas con versos de oro, pero solo uno se llevó a casa la medalla de verdad.",
+      "question": "¿Qué poeta español ganó el Premio Nobel de Literatura en 1956?",
+      "answer": "Juan Ramón Jiménez",
+      "wrong_answers": [
+        "Federico García Lorca",
+        "Antonio Machado",
+        "Miguel Hernández"
+      ],
+      "hints": [
+        "Cuando le dieron el premio vivía exiliado en Puerto Rico.",
+        "Nació en Moguer, en Huelva.",
+        "Escribió la historia de un burrito «pequeño, peludo, suave»."
+      ],
+      "fun_fact": "«Platero y yo» se ha traducido a decenas de idiomas y es uno de los libros españoles más leídos en todo el mundo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/A_Book_of_old_English_love_songs_%281897%29_%2814596138198%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Book_of_old_English_love_songs_%281897%29_%2814596138198%29.jpg",
+        "credit": "Mabie, Hamilton Wright, 1846-1916, ed; · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Mabie, Hamilton Wright, 1846-1916, ed;\n\nEdwards, George Wharton, 1859-1950, illus",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13436",
       "status": "approved",
       "difficulty": 13,
@@ -35964,6 +36576,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "www.viajar24h.com",
         "author_url": "https://www.flickr.com/people/67471595@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13438",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "slang",
+      "bundle": "spain",
+      "description": "Una palabra que lleva siglos saliendo de la boca de los abuelos sin pedir permiso.",
+      "question": "Cuando alguien exclama «¡Caramba!», ¿qué está mostrando normalmente?",
+      "answer": "Sorpresa",
+      "wrong_answers": [
+        "Sueño",
+        "Hambre",
+        "Frío"
+      ],
+      "hints": [
+        "Se suele decir con los ojos muy abiertos.",
+        "Es lo que sientes cuando ves algo que no te esperabas.",
+        "Es parecido a decir «¡Anda!» o «¡Vaya!»."
+      ],
+      "fun_fact": "«¡Caramba!» es una forma suavizada de otra exclamación más malsonante, y por eso se ha usado tanto en tebeos y dibujos animados.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Classic_Comics_%28Unsplash%29.jpg/3840px-Classic_Comics_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClassic_Comics_%28Unsplash%29.jpg",
+        "credit": "Mitch Rosen focusmitch · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mitch Rosen focusmitch",
+        "author_url": "https://unsplash.com/@focusmitch"
       },
       "background": null
     },
@@ -36644,6 +37290,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Schwimmschule Steiner",
         "author_url": "https://www.schwimmschule-steiner.at"
+      },
+      "background": null
+    },
+    {
+      "id": "q-13459",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "sweets-and-desserts",
+      "bundle": "spain",
+      "description": "El postre que convierte el horno en una sauna para fruta.",
+      "question": "Estás preparando manzanas asadas y les quitas el corazón antes de meterlas al horno. ¿Para qué es ese hueco?",
+      "answer": "Para rellenarlo de azúcar y mantequilla",
+      "wrong_answers": [
+        "Para que se pongan más rojas",
+        "Para colgarlas de una cuerda",
+        "Para que floten en el agua"
+      ],
+      "hints": [
+        "Piensa en el sabor del postre, no en su aspecto.",
+        "Lo que metes en ese hueco se derrite con el calor del horno.",
+        "Muchas recetas añaden también canela o un chorrito de vino dulce."
+      ],
+      "fun_fact": "Las manzanas asadas eran un postre de aprovechamiento: a menudo se hacían con las manzanas que empezaban a arrugarse, para no tirarlas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/20171027-AMS-LSC-1609_%2838014652586%29.jpg/3840px-20171027-AMS-LSC-1609_%2838014652586%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20171027-AMS-LSC-1609_%2838014652586%29.jpg",
+        "credit": "U.S. Department of Agriculture · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Department of Agriculture",
+        "author_url": "https://www.flickr.com/people/41284017@N08"
       },
       "background": null
     },
