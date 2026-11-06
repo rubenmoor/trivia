@@ -156,7 +156,8 @@
     {
       "name": "Aguamiel",
       "facet": "Agaves y magueyes",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: La pregunta que ya existe cubre de dónde sale el aguamiel y que se vuelve pulque."
     },
     {
       "name": "Maguey pulquero",
@@ -226,7 +227,8 @@
     {
       "name": "Cempasúchil",
       "facet": "Flores de Día de Muertos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: El acertijo que ya existe revela el nombre, el uso en la ofrenda y el origen náhuatl; no queda un dato fácil distinto."
     },
     {
       "name": "Mano de león",
@@ -791,7 +793,8 @@
     {
       "name": "Manzanilla",
       "facet": "Plantas medicinales tradicionales",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Su uso medicinal, cómo reconocerla y su familia de plantas ya están preguntados."
     },
     {
       "name": "Hierbabuena",

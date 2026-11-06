@@ -297,7 +297,8 @@
     {
       "name": "Pata de conejo",
       "facet": "Amuletos y objetos de protección",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: La pregunta con la foto repetiría la del acertijo que ya existe, y no tiene una conexión clara con México."
     },
     {
       "name": "Ristra de ajos",
@@ -400,7 +401,8 @@
     {
       "name": "Barrer los pies",
       "facet": "Supersticiones del hogar y la vida diaria",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: El agüero ya está preguntado; la variante mexicana sobre con quién te casas cambia de una familia a otra."
     },
     {
       "name": "Comezón en la mano",
