@@ -420,7 +420,8 @@
     {
       "name": "Lay's",
       "facet": "Chips, pretzels and salty snacks",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The potato fact is already asked, and Lay's sells worldwide, so none of the options gives a good US-only question at difficulty 2."
     },
     {
       "name": "Pringles",
@@ -510,7 +511,8 @@
     {
       "name": "Ho Hos",
       "facet": "Cookies, snack cakes and pastries",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: How Ho Hos started and who made them is too obscure for a fair question."
     },
     {
       "name": "Oatmeal Creme Pie",

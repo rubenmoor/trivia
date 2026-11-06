@@ -297,7 +297,8 @@
     {
       "name": "Ford Motor Company",
       "facet": "Cars and assembly lines",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The Model T/assembly-line question already covers it; asking who founded Ford or using an analogy would be too easy or overlap."
     },
     {
       "name": "Five-dollar day",
@@ -492,7 +493,8 @@
     {
       "name": "Colonel Sanders",
       "facet": "Food and drink brand founders",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The face, Kentucky and the honorary colonel title are already asked; a photo ID would repeat the face question."
     },
     {
       "name": "Dave Thomas",
@@ -852,7 +854,8 @@
     {
       "name": "Band-Aid",
       "facet": "Medicine and health innovators",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The inventor, his wife and 1920 are already asked; the other options don't give a fair difficulty-2 question."
     },
     {
       "name": "Earle Dickson",
