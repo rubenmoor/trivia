@@ -906433,10 +906433,10 @@
     },
     {
       "id": "q-11722",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "A party name that sounds like it was chosen so nobody could complain.",
-      "question": "This face on Mount Rushmore belongs to the man who founded the Democratic-Republican Party with James Madison. Who is he?",
+      "question": "One of the four faces on Mount Rushmore belongs to the man who founded the Democratic-Republican Party with James Madison. Who is he?",
       "answer": "Thomas Jefferson",
       "wrong_answers": [
         "George Washington",
@@ -906450,12 +906450,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Jefferson Rushmore close-up",
-        "note": "A close-up of only Thomas Jefferson's carved face on Mount Rushmore (second from left); no other faces or labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Mount Rushmore four faces",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMount_Rushmore_2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Mount_Rushmore_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Post office monthly income scheme · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Post office monthly income scheme",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Post_office_monthly_income_scheme&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Jefferson's face was first carved on Washington's other side, but the rock was too cracked, so it was blasted off and started again.",
       "subcategory": "civics",
@@ -906481,22 +906488,48 @@
         "notes": "A close-up of only Jefferson's face is possible but harder to find; many Rushmore photos show the faces next to it. Recognizing the face plus the hints makes this easier than 12. All four options are Rushmore faces, which is a nice touch."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image needs a close-up of only Jefferson's carved face, and no candidate shows that. #1 shows Washington, who is one of the wrong options. #2, #3, #4 and #6 show all four faces, so they don't show which face \"this face\" means. #5 shows rubble. A new search isn't allowed, so the question needs a Jefferson-only image (e.g. \"Thomas Jefferson Mount Rushmore detail\") found by hand. Another option is to reword the question so it doesn't point at one face. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image needs a close-up of only Jefferson's carved face, and no candidate shows that. #1 shows Washington, who is one of the wrong options. #2, #3, #4 and #6 show all four faces, so they don't show which face \"this face\" means. #5 shows rubble. A new search isn't allowed, so the question needs a Jefferson-only image (e.g. \"Thomas Jefferson Mount Rushmore detail\") found by hand. Another option is to reword the question so it doesn't point at one face. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded so the question no longer points at one face, and changed the image to an illustrative photo of the whole monument; all four options are carved there, so it rules nothing out.",
+        "previous": {
+          "question": "This face on Mount Rushmore belongs to the man who founded the Democratic-Republican Party with James Madison. Who is he?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Jefferson Rushmore close-up",
+            "note": "A close-up of only Thomas Jefferson's carved face on Mount Rushmore (second from left); no other faces or labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11723",
@@ -906807,7 +906840,7 @@
     },
     {
       "id": "q-11727",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "He painted skies so blue that the color ended up with his name on it.",
       "question": "Maxfield Parrish, the painter of “Daybreak,” was born in 1870 in which city? His father was a painter and etcher there too.",
@@ -906825,20 +906858,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Maxfield Parrish Daybreak",
+        "query": "artist oil paint palette",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADaybreak_by_Parrish_%281922%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Daybreak_by_Parrish_%281922%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Maxfield Parrish · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtist_paint_tubes_studio_trolley.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Artist_paint_tubes_studio_trolley.jpg/3840px-Artist_paint_tubes_studio_trolley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vadim Cole · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Maxfield Parrish",
-        "author_url": "https://en.wikipedia.org/wiki/en:Maxfield_Parrish",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Vadim Cole",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Vadim_Cole",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Parrish's 1922 print “Daybreak” became one of the most reproduced art prints of the 20th century.",
       "subcategory": "comics-and-art",
@@ -906867,23 +906898,56 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The painting's licence is PD-US only, so the image is now a painter's palette, which belongs to the question and gives nothing away.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Maxfield Parrish Daybreak",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ADaybreak_by_Parrish_%281922%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Daybreak_by_Parrish_%281922%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Maxfield Parrish · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Maxfield Parrish",
+            "author_url": "https://en.wikipedia.org/wiki/en:Maxfield_Parrish",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11728",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A comic strip that went from the student newspaper to the front of the line at the Pulitzers.",
       "question": "Garry Trudeau's “Doonesbury” became the first daily comic strip to win a Pulitzer Prize, in 1975. At which university did it start as a student strip?",
@@ -906901,20 +906965,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "newspaper comics page",
+        "query": "stack of newspapers",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APittsburgh_Gazette_Times_comics_1908.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Pittsburgh_Gazette_Times_comics_1908.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Pittsburgh Gazette Times · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AASC_Leiden_-_Library_-_South_African_newspaper_stack_of_Die_Burger_-_2012.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/ASC_Leiden_-_Library_-_South_African_newspaper_stack_of_Die_Burger_-_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "African Studies Centre Leiden · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Pittsburgh Gazette Times",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "African Studies Centre Leiden",
+        "author_url": "https://en.wikipedia.org/wiki/en:African_Studies_Centre_Leiden",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The name mixes “doone,” student slang for a goof, with Pillsbury, the last name of Trudeau's college roommate.",
       "subcategory": "comics-and-art",
@@ -906943,28 +907005,49 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Swapped hints 2 and 3 so the New Haven giveaway comes last.",
+        "reason": "The old image's licence is PD-US only, so the query now asks for a different newspaper image.",
         "previous": {
-          "hints": [
-            "It's an Ivy League school.",
-            "It's in New Haven, Connecticut.",
-            "Its sports teams are the Bulldogs."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "newspaper comics page",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APittsburgh_Gazette_Times_comics_1908.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Pittsburgh_Gazette_Times_comics_1908.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Pittsburgh Gazette Times · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Pittsburgh Gazette Times",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -907916,7 +907999,7 @@
     },
     {
       "id": "q-11741",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Cowboy bling with one very practical job.",
       "question": "Rodeo champions often win a big shiny one of these instead of a medal or a trophy cup. What is it?",
@@ -907933,12 +908016,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "rodeo bronc riding",
-        "note": "A close-up of the engraved silver front of a rodeo trophy belt buckle, cropped so the belt itself is not clearly visible; no readable text naming the object.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "saddle bronc riding rodeo",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMethow_Valley_Rodeo%2C_Saddle_Bronc%2C_August_31st_2025.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Methow_Valley_Rodeo%2C_Saddle_Bronc%2C_August_31st_2025.jpg/3840px-Methow_Valley_Rodeo%2C_Saddle_Bronc%2C_August_31st_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Guywelch2000 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Guywelch2000",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Guywelch2000",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Top rodeo cowboys can own dozens of trophy buckles, and the grandest ones are made of silver and gold.",
       "subcategory": "country-and-folk",
@@ -907963,23 +908053,48 @@
         "difficulty_estimate": 6,
         "notes": "The essential media is risky. A cropped close-up of a buckle's front with no visible belt is unlikely to exist in the media sources. A normal photo would show the answer, while the question doesn't really need an image. An illustrative rodeo photo would work better."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set to 'essential' with a note asking for a cropped buckle close-up, but the question doesn't need an image, and a buckle close-up would show the answer anyway. All candidates are bronc-riding photos, and none matches the essential note. Change the role to 'illustrative' and use a rodeo action shot. Candidate 1 (Methow Valley saddle bronc, landscape, CC0, no buckle visible) would fit. The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set to 'essential' with a note asking for a cropped buckle close-up, but the question doesn't need an image, and a buckle close-up would show the answer anyway. All candidates are bronc-riding photos, and none matches the essential note. Change the role to 'illustrative' and use a rodeo action shot. Candidate 1 (Methow Valley saddle bronc, landscape, CC0, no buckle visible) would fit. The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media to an illustrative rodeo action shot, as the reviewer asked, because the question doesn't need an essential image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "rodeo bronc riding",
+            "note": "A close-up of the engraved silver front of a rodeo trophy belt buckle, cropped so the belt itself is not clearly visible; no readable text naming the object.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11742",
@@ -908144,7 +908259,7 @@
       "status": "needs_work",
       "difficulty": 7,
       "description": "Someone left a very big shoe size behind, and it wasn't a basketball player.",
-      "question": "This plaster cast shows a giant footprint said to be from Bigfoot. In which region of the US are most Bigfoot sightings reported?",
+      "question": "Bigfoot is said to leave giant, human-like footprints in the woods. In which region of the US are most Bigfoot sightings reported?",
       "answer": "The Pacific Northwest",
       "wrong_answers": [
         "New England",
@@ -908158,21 +908273,12 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Bigfoot footprint plaster cast",
-        "note": "A clear photo of a plaster cast of a giant, human-like Bigfoot footprint. No map or place names visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrover_Krantz_shows_plaster_casts_of_Bigfoot_footprints.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Grover_Krantz_shows_plaster_casts_of_Bigfoot_footprints.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Alan King · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Alan King",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "role": "illustrative",
+        "query": "large footprint in mud",
+        "note": null,
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Washington state has more reported Bigfoot sightings than any other state, according to fan groups that keep count.",
       "subcategory": "cryptids-and-ufos",
@@ -908198,22 +908304,59 @@
         "notes": "The media is marked essential, but you can answer without the cast photo, so illustrative would be the better role. A clear cast photo should be easy to find. The 'most sightings in Washington' figure comes from fan databases (BFRO), and the fun fact says as much."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-36",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The cast photo's licence is PD-US only, so the question no longer depends on that photo and now uses an illustrative footprint image.",
+        "previous": {
+          "question": "This plaster cast shows a giant footprint said to be from Bigfoot. In which region of the US are most Bigfoot sightings reported?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Bigfoot footprint plaster cast",
+            "note": "A clear photo of a plaster cast of a giant, human-like Bigfoot footprint. No map or place names visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGrover_Krantz_shows_plaster_casts_of_Bigfoot_footprints.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Grover_Krantz_shows_plaster_casts_of_Bigfoot_footprints.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Alan King · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Alan King",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11745",
@@ -908784,7 +908927,7 @@
     },
     {
       "id": "q-11752",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Two men, one freezer and a very expensive costume shop receipt.",
       "question": "Two men from Georgia held a press conference claiming they had a Bigfoot body in a freezer. It turned out to be a rubber costume. In which year?",
@@ -908792,11 +908935,11 @@
       "wrong_answers": [
         "1967",
         "1985",
-        "2020"
+        "2011"
       ],
       "hints": [
         "The story spread fast across the internet and YouTube.",
-        "It happened in the same decade the iPhone first came out.",
+        "It happened within a few years of the first iPhone.",
         "It was in the late 2000s."
       ],
       "media": {
@@ -908842,29 +908985,41 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. \"The same decade the iPhone first came out\" means the 2000s, and 2008 is the only option in that decade, so hint 3 is never needed. Hint 1 (YouTube) already rules out 1967 and 1985. Hint 2 should only narrow things down without leaving one option, for example by making one wrong answer 2002 or 2004, or by changing the hint itself.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. \"The same decade the iPhone first came out\" means the 2000s, and 2008 is the only option in that decade, so hint 3 is never needed. Hint 1 (YouTube) already rules out 1967 and 1985. Hint 2 should only narrow things down without leaving one option, for example by making one wrong answer 2002 or 2004, or by changing the hint itself.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pinned the exact year, and swapped the fun fact that repeated the question's reveal.",
+        "reason": "Replaced 2020 with 2011 and loosened hint 2, so it narrows the options to two and doesn't leave only the answer.",
         "previous": {
+          "wrong_answers": [
+            "1967",
+            "1985",
+            "2020"
+          ],
           "hints": [
             "The story spread fast across the internet and YouTube.",
-            "It happened the same year Barack Obama was first elected president.",
+            "It happened in the same decade the iPhone first came out.",
             "It was in the late 2000s."
-          ],
-          "fun_fact": "When the block of ice finally melted, the “body” turned out to be a rubber gorilla suit."
+          ]
         },
         "revised_on": "2026-11-05"
       }
@@ -909201,20 +909356,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Fig Newton cookies",
+        "query": "fresh figs cut open",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A247_Soldiers_Parceling_Out_Fig_Newton_Cookies%2C_1970s_-_DPLA_-_749e0108d833884263373a33a8ff7138.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/247_Soldiers_Parceling_Out_Fig_Newton_Cookies%2C_1970s_-_DPLA_-_749e0108d833884263373a33a8ff7138.jpg/3840px-247_Soldiers_Parceling_Out_Fig_Newton_Cookies%2C_1970s_-_DPLA_-_749e0108d833884263373a33a8ff7138.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Department of Defense. Department of the Army. Office of the Surgeon General. U.S. Army Medical Command. Fitzsimons Army Medical Center. (10/2/1994 - 1999)",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "The Kennedy Biscuit Company named its cookies after towns near Boston, and Newton is the name that stuck.",
       "subcategory": "desserts-and-baking",
@@ -909244,27 +909390,50 @@
       "batch": "batch-36",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out all wrong options, with the thirteen-colonies hint.",
+        "reason": "The cookie photo's licence is PD-US only, so the image is now cut figs, which belong to the question.",
         "previous": {
-          "hints": [
-            "The state is in New England.",
-            "The town of Newton is just outside its capital.",
-            "Its capital is Boston."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Fig Newton cookies",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3A247_Soldiers_Parceling_Out_Fig_Newton_Cookies%2C_1970s_-_DPLA_-_749e0108d833884263373a33a8ff7138.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/247_Soldiers_Parceling_Out_Fig_Newton_Cookies%2C_1970s_-_DPLA_-_749e0108d833884263373a33a8ff7138.jpg/3840px-247_Soldiers_Parceling_Out_Fig_Newton_Cookies%2C_1970s_-_DPLA_-_749e0108d833884263373a33a8ff7138.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Department of Defense. Department of the Army. Office of the Surgeon General. U.S. Army Medical Command. Fitzsimons Army Medical Center. (10/2/1994 - 1999)",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -910797,10 +910966,10 @@
     },
     {
       "id": "q-11778",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "He could get out of anything except this question.",
-      "question": "In the 1920s, Harry Houdini went to séances in disguise to unmask fakes. Who was he trying to expose?",
+      "question": "In the 1920s, Harry Houdini went to secret meetings in disguise to unmask fakes. Who was he trying to expose?",
       "answer": "Fake spirit mediums",
       "wrong_answers": [
         "Card cheats at casinos",
@@ -910855,15 +911024,23 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text gives the answer away. It says Houdini went to “séances” to unmask fakes, and séances are run by spirit mediums. Only one option has anything to do with séances, so card cheats, rival escape artists and medicine sellers are ruled out at once. Remove “séances” from the question, for example “went to secret meetings in disguise”, so the setting no longer names the answer.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text gives the answer away. It says Houdini went to “séances” to unmask fakes, and séances are run by spirit mediums. Only one option has anything to do with séances, so card cheats, rival escape artists and medicine sellers are ruled out at once. Remove “séances” from the question, for example “went to secret meetings in disguise”, so the setting no longer names the answer.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
@@ -910871,21 +911048,9 @@
       "difficulty_original": 8,
       "revision": {
         "action": "revise",
-        "reason": "Houdini did stage fake séances when he was young, so I rewrote it to ask who he exposed in the 1920s, with new options and hints; the fun fact is kept.",
+        "reason": "Replaced “séances” with “secret meetings” so the question text no longer points straight to spirit mediums.",
         "previous": {
-          "difficulty": 8,
-          "question": "Harry Houdini had many jobs in his life. Which of these was he NOT?",
-          "answer": "A spirit medium",
-          "wrong_answers": [
-            "A magician",
-            "An escape artist",
-            "A silent-film actor"
-          ],
-          "hints": [
-            "He loved to show how tricks were done.",
-            "He went to séances to catch people faking it.",
-            "He said nobody could really talk to the dead."
-          ]
+          "question": "In the 1920s, Harry Houdini went to séances in disguise to unmask fakes. Who was he trying to expose?"
         },
         "revised_on": "2026-11-05"
       }
@@ -911052,9 +911217,9 @@
     },
     {
       "id": "q-11781",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
-      "description": "Razors go on vacation every spring for this one.",
+      "description": "Razors get benched while the beards play on.",
       "question": "Players stop shaving when the playoffs begin and keep the beard until their team is out or wins. In which sport did this good-luck habit start, around 1980?",
       "answer": "Ice hockey",
       "wrong_answers": [
@@ -911110,19 +911275,35 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description \"Razors go on vacation every spring\" gives away the playoff season. Adults know baseball playoffs are in October and American football's are in January, so it rules out two of the four options before any hint, leaving only ice hockey and basketball. Rewrite it to joke about beards or razors without naming a season, e.g. \"Razors get benched while the beards play on.\"",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description \"Razors go on vacation every spring\" gives away the playoff season. Adults know baseball playoffs are in October and American football's are in January, so it rules out two of the four options before any hint, leaving only ice hockey and basketball. Rewrite it to joke about beards or razors without naming a season, e.g. \"Razors get benched while the beards play on.\"",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer names the season, which ruled out two options.",
+        "previous": {
+          "description": "Razors go on vacation every spring for this one."
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11782",
@@ -912039,7 +912220,7 @@
     },
     {
       "id": "q-11794",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A memory game for grown-ups, with a twist hiding behind every square.",
       "question": "On NBC's Concentration, players matched prizes on a 30-square board, and each match uncovered part of a hidden puzzle. What kind of puzzle?",
@@ -912057,20 +912238,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "vintage television game show",
+        "query": "retro television set",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Name%27s_the_Same-Robert_Q_Lewis_and_Dagmar.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/The_Name%27s_the_Same-Robert_Q_Lewis_and_Dagmar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "American Broadcasting Company-ABC-TV · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASzentendre%2C_Retro_Design_Center_27.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Szentendre%2C_Retro_Design_Center_27.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Christo · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "American Broadcasting Company-ABC-TV",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Christo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Christo",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The original Concentration ran on NBC from 1958 to 1973.",
       "subcategory": "hosts-and-game-shows",
@@ -912099,28 +912278,49 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hints 1 and 2 defined a rebus, so I made them vaguer and moved the eye-for-“I” example to hint 3.",
+        "reason": "The old image's licence is PD-US only, so the decorative query now asks for a retro TV set.",
         "previous": {
-          "hints": [
-            "It used pictures and symbols to stand for sounds.",
-            "A drawing of an eye could mean the word “I.”",
-            "Its name comes from the Latin for “by things.”"
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "vintage television game show",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Name%27s_the_Same-Robert_Q_Lewis_and_Dagmar.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/The_Name%27s_the_Same-Robert_Q_Lewis_and_Dagmar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "American Broadcasting Company-ABC-TV · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "American Broadcasting Company-ABC-TV",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
         },
         "revised_on": "2026-11-05"
       }
@@ -912801,7 +913001,7 @@
     },
     {
       "id": "q-11804",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "They say he doesn't do much. They've clearly never seen him put on a hat.",
       "question": "At home I'm a pet who just makes a chattering noise. In secret I wear a fedora and stop Dr. Doofenshmirtz's evil plans. What's my secret agent name?",
@@ -912819,20 +913019,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "brown fedora hat",
+        "query": "felt fedora hat",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADark_Brown_Wool_Felt_Fedora_-_DPLA_-_a84e2a73a91274369de61778dc544f44_%28page_1%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Dark_Brown_Wool_Felt_Fedora_-_DPLA_-_a84e2a73a91274369de61778dc544f44_%28page_1%29.jpg/3840px-Dark_Brown_Wool_Felt_Fedora_-_DPLA_-_a84e2a73a91274369de61778dc544f44_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Knox Hat Company · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_fedora_hat%2C_made_by_Borsalino.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/A_fedora_hat%2C_made_by_Borsalino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Kjetil Ree · CC BY 2.5 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Knox Hat Company",
-        "author_url": null,
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Kjetil Ree",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kjetil_r",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Perry's famous chattering sound is made by voice actor Dee Bradley Baker.",
       "subcategory": "kids-tv",
@@ -912861,19 +913059,52 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed only the media query so a new fedora picture with a suitable licence gets picked.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "brown fedora hat",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ADark_Brown_Wool_Felt_Fedora_-_DPLA_-_a84e2a73a91274369de61778dc544f44_%28page_1%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Dark_Brown_Wool_Felt_Fedora_-_DPLA_-_a84e2a73a91274369de61778dc544f44_%28page_1%29.jpg/3840px-Dark_Brown_Wool_Felt_Fedora_-_DPLA_-_a84e2a73a91274369de61778dc544f44_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Knox Hat Company · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Knox Hat Company",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11805",
@@ -913401,7 +913632,7 @@
     },
     {
       "id": "q-11812",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Back when the dollar had a very shiny best friend.",
       "question": "From 1934 until 1971, the US government fixed the official price of one ounce of gold. How many dollars was it?",
@@ -913419,20 +913650,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Fort Knox gold vault",
+        "query": "gold bars stack",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGold_Vault%2C_U._S._Depository%2C_Fort_Knox%2C_Ky_%2878762%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Gold_Vault%2C_U._S._Depository%2C_Fort_Knox%2C_Ky_%2878762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Tichnor Bros. Inc., Boston, Mass. · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGold_bullion_bars.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/3840px-Gold_bullion_bars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Stevebidmead · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Tichnor Bros. Inc., Boston, Mass.",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Stevebidmead",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "In 1971, President Nixon stopped trading dollars for gold, and today an ounce of gold costs thousands of dollars.",
       "subcategory": "money-and-shopping",
@@ -913461,26 +913690,59 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed only the media query so a new picture with a suitable licence gets picked.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Fort Knox gold vault",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGold_Vault%2C_U._S._Depository%2C_Fort_Knox%2C_Ky_%2878762%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Gold_Vault%2C_U._S._Depository%2C_Fort_Knox%2C_Ky_%2878762%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Tichnor Bros. Inc., Boston, Mass. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Tichnor Bros. Inc., Boston, Mass.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11813",
       "status": "needs_work",
       "difficulty": 7,
       "description": "Paper money that you write yourself, but only your bank takes seriously.",
-      "question": "On a check like this one, whose name do you write on the line that starts “Pay to the order of”?",
+      "question": "On a check, whose name do you write on the line that starts “Pay to the order of”?",
       "answer": "The person getting paid",
       "wrong_answers": [
         "The person paying",
@@ -913494,9 +913756,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "blank check USA",
-        "note": "A blank or specimen US personal check, showing clearly the 'Pay to the order of' line.",
+        "role": "illustrative",
+        "query": "specimen personal check",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -913525,22 +913787,50 @@
         "notes": "'The bank's manager' and 'The store's cashier' are weak distractors. A specimen check on Commons is likely, so the essential image is feasible. A practical but dry question."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-36",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates shows a check. The question says \"a check like this one\" and needs an essential image of a blank or specimen US personal check with a visible \"Pay to the order of\" line. No new search is allowed, so the image has to be found by hand (for example \"specimen check\" or \"personal check sample\" on Commons). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows a check. The question says \"a check like this one\" and needs an essential image of a blank or specimen US personal check with a visible \"Pay to the order of\" line. No new search is allowed, so the image has to be found by hand (for example \"specimen check\" or \"personal check sample\" on Commons). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made the check image illustrative instead of essential (removed the words like this one) since no check photo was found; the question works without it.",
+        "previous": {
+          "question": "On a check like this one, whose name do you write on the line that starts “Pay to the order of”?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "blank check USA",
+            "note": "A blank or specimen US personal check, showing clearly the 'Pay to the order of' line.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11814",
@@ -914933,20 +915223,20 @@
     },
     {
       "id": "q-11832",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Your wallet is basically a tiny museum of famous faces.",
-      "question": "Which of these presidents is NOT on any US paper money today?",
+      "question": "Which of the four presidents carved on Mount Rushmore is NOT on any US paper money today?",
       "answer": "Theodore Roosevelt",
       "wrong_answers": [
         "George Washington",
         "Thomas Jefferson",
-        "Andrew Jackson"
+        "Abraham Lincoln"
       ],
       "hints": [
-        "Three of them are on the $1, $2 and $20 bills.",
-        "The missing one was president in the early 1900s.",
-        "He is carved on Mount Rushmore, but not printed on a bill."
+        "The other three are on the $1, $2 and $5 bills.",
+        "He was president in the early 1900s.",
+        "A cuddly toy bear is named after him."
       ],
       "media": {
         "type": "image",
@@ -914991,27 +915281,40 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The clue only works inside the four options: \"NOT on any US paper money today\" is true of most US presidents (John Adams, Madison, Kennedy, etc.), so the question only asks for the odd one out among the options, which the house style rules out (\"Which of these…\" questions). Reframe it around a clue only Theodore Roosevelt has, for example the only Mount Rushmore president not on a current bill.",
-        "problems": [
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The clue only works inside the four options: \"NOT on any US paper money today\" is true of most US presidents (John Adams, Madison, Kennedy, etc.), so the question only asks for the odd one out among the options, which the house style rules out (\"Which of these…\" questions). Reframe it around a clue only Theodore Roosevelt has, for example the only Mount Rushmore president not on a current bill.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the setup sentence that wasn't a clue and replaced the hint 2 giveaway with a vaguer era hint.",
+        "reason": "Reworded to ask which Mount Rushmore president isn't on current paper money, so the clue fits only Theodore Roosevelt in the real world; options and hints adjusted.",
         "previous": {
-          "question": "You get a $5 bill with Abraham Lincoln on it in your change. Which of these presidents is NOT on any US paper money today?",
+          "question": "Which of these presidents is NOT on any US paper money today?",
+          "wrong_answers": [
+            "George Washington",
+            "Thomas Jefferson",
+            "Andrew Jackson"
+          ],
           "hints": [
             "Three of them are on the $1, $2 and $20 bills.",
-            "The missing one is famous for national parks and a teddy bear.",
+            "The missing one was president in the early 1900s.",
             "He is carved on Mount Rushmore, but not printed on a bill."
           ]
         },
@@ -915321,9 +915624,9 @@
     },
     {
       "id": "q-11837",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
-      "description": "Every time the country got a new state, the flag needed a new outfit.",
+      "description": "Even the most famous piece of cloth in America couldn't stick to just one look.",
       "question": "Congress adopted the US flag in 1777. About how many official versions of the flag have there been since?",
       "answer": "27",
       "wrong_answers": [
@@ -915379,24 +915682,32 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives away the clue that rules out options. It says the flag changed with every new state, and since there are only 50 states (37 joined after the first 13), that rules out 70 and 150 before any hint. It repeats hint 1, and it is also slightly inaccurate, because states that joined together shared one new flag. Rewrite it as a joke about the flag in general that doesn't mention states or stars being added.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives away the clue that rules out options. It says the flag changed with every new state, and since there are only 50 states (37 joined after the first 13), that rules out 70 and 150 before any hint. It repeats hint 1, and it is also slightly inaccurate, because states that joined together shared one new flag. Rewrite it as a joke about the flag in general that doesn't mention states or stars being added.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the parade setup and asked directly, keeping the 1777 context.",
+        "reason": "Rewrote the description so it no longer links flag changes to new states, which ruled out options.",
         "previous": {
-          "question": "You're at a Flag Day parade on June 14, the day Congress adopted the flag in 1777. About how many official versions of the flag have there been since?"
+          "description": "Every time the country got a new state, the flag needed a new outfit."
         },
         "revised_on": "2026-11-05"
       }
@@ -916665,7 +916976,7 @@
     },
     {
       "id": "q-11855",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Some instruments are born in a music shop. This one was not.",
       "question": "Zydeco and jug band musicians play this by scraping it with spoons or thimbles. What was it first made for?",
@@ -916683,11 +916994,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "metal washboard ridges close-up",
+        "query": "antique washboard laundry",
         "note": "A clear photo of an old-fashioned washboard (wooden frame with ridged metal), no people, no text.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZwei_Waschbretter_2H1A8698WI.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Zwei_Waschbretter_2H1A8698WI.jpg/3840px-Zwei_Waschbretter_2H1A8698WI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Kora27 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kora27",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kora27",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In Louisiana zydeco, musicians wear a washboard vest called a “frottoir” and play it on their chest.",
       "subcategory": "country-and-folk",
@@ -916716,19 +917034,43 @@
       "needs_media": true,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a washboard. 1 is a long strip of the Pluto surface, and 2 and 3 are NASA gravity maps of the seafloor. No new search is allowed, so the media slot can't be filled this round. A new search such as \"washboard laundry antique\" or \"washboard instrument\" should find one on Commons. The text itself has no problems. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a washboard. 1 is a long strip of the Pluto surface, and 2 and 3 are NASA gravity maps of the seafloor. No new search is allowed, so the media slot can't be filled this round. A new search such as \"washboard laundry antique\" or \"washboard instrument\" should find one on Commons. The text itself has no problems. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed only the media query so a real washboard photo can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "metal washboard ridges close-up",
+            "note": "A clear photo of an old-fashioned washboard (wooden frame with ridged metal), no people, no text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11856",
@@ -916964,7 +917306,7 @@
       "id": "q-11859",
       "status": "needs_work",
       "difficulty": 4,
-      "description": "A pie that wears its whipped cream like a fluffy hat.",
+      "description": "The slice that makes you forget you said you were already full.",
       "question": "Look at this slice. What kind of pie is it?",
       "answer": "Chocolate cream pie",
       "wrong_answers": [
@@ -916980,7 +917322,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "chocolate pudding pie slice",
+        "query": "chocolate cream pie slice",
         "note": "Photo of a slice of chocolate cream pie showing the dark chocolate pudding filling, crust and whipped cream on top.",
         "source_url": null,
         "file_url": null,
@@ -917014,19 +917356,46 @@
       "batch": "batch-36",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates is a usable essential photo. The question needs a clear color photo of a chocolate cream pie slice with its dark filling, but the sheet shows only old black-and-white cookbook scans, and no new search is allowed. There is also a smaller problem: the description says the pie wears whipped cream, which rules out pecan pie before any hint is given. Reword it to play on the pie theme without mentioning the topping. No suitable picture found for this question.",
+        "feedback": "None of the candidates shows a clear chocolate cream pie slice with the dark pudding filling visible: 1 is banoffee, 2 is a Boston cream cake, 4 is French silk pie, 5's filling isn't identifiable, 6 is shoo-fly tarts, and 3 is a messy last slice that is mostly whipped cream. The image needs a new search. No suitable picture found for this question.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is a usable essential photo. The question needs a clear color photo of a chocolate cream pie slice with its dark filling, but the sheet shows only old black-and-white cookbook scans, and no new search is allowed. There is also a smaller problem: the description says the pie wears whipped cream, which rules out pecan pie before any hint is given. Reword it to play on the pie theme without mentioning the topping. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query to find a color photo of the pie, and a new description that no longer mentions whipped cream, which ruled out pecan pie.",
+        "previous": {
+          "description": "A pie that wears its whipped cream like a fluffy hat.",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "chocolate pudding pie slice",
+            "note": "Photo of a slice of chocolate cream pie showing the dark chocolate pudding filling, crust and whipped cream on top.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11860",
@@ -918638,7 +919007,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "flat-topped mesa Arizona",
+        "query": "Mesa Verde mesa",
         "note": "Photo of a single wide, flat-topped mesa with steep sides, clearly wider than tall; no text.",
         "source_url": null,
         "file_url": null,
@@ -918672,18 +919041,44 @@
       "batch": "batch-36",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates is a clear photo of a single wide, flat-topped mesa, so the essential image can't be filled. Candidates 1 and 3–5 are wide Grand Canyon views where a canyon (a wrong option) is the main subject, 2 is a hard-to-read view from orbit, and 6 is an old photo of a ceremonial dance. A new search for something like \"Mesa Verde mesa\" or \"Monument Valley mesa\" should find a usable picture. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is a clear photo of a single wide, flat-topped mesa, so the essential image can't be filled. Candidates 1 and 3–5 are wide Grand Canyon views where a canyon (a wrong option) is the main subject, 2 is a hard-to-read view from orbit, and 6 is an old photo of a ceremonial dance. A new search for something like \"Mesa Verde mesa\" or \"Monument Valley mesa\" should find a usable picture. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed only the media query so a clear photo of a single mesa can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "flat-topped mesa Arizona",
+            "note": "Photo of a single wide, flat-topped mesa with steep sides, clearly wider than tall; no text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11882",
@@ -919295,10 +919690,10 @@
     },
     {
       "id": "q-11890",
-      "status": "needs_work",
-      "difficulty": 4,
-      "description": "A lady with a torch who has been standing in the same spot since 1886.",
-      "question": "The Statue of Liberty stands in the state shown on this map. Which state is it?",
+      "status": "approved",
+      "difficulty": 6,
+      "description": "Some states are shaped like neat boxes; this one clearly had other plans.",
+      "question": "Niagara Falls lies on the border between Canada and the US state shown on this map. Which state is it?",
       "answer": "New York",
       "wrong_answers": [
         "Pennsylvania",
@@ -919307,7 +919702,7 @@
       ],
       "hints": [
         "It's in the northeast of the country.",
-        "It borders Canada and two of the Great Lakes.",
+        "Its biggest city has more people than any other US city.",
         "Its nickname is “the Empire State.”"
       ],
       "media": {
@@ -919326,7 +919721,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "The Statue of Liberty was a gift from France, and its copper skin turned green over time.",
+      "fun_fact": "Niagara Falls is really three waterfalls, and the biggest one, Horseshoe Falls, is mostly on the Canadian side.",
       "subcategory": "states-and-capitals",
       "style": null,
       "concept": "Empire State Building",
@@ -919353,31 +919748,44 @@
       "needs_media": true,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This asks the same fact as draft q-11909 (“Paris is to the Eiffel Tower as New York City is to…” → the Statue of Liberty), just the other way round: the Statue of Liberty is in New York. Whichever one is played first gives the other away. Keep only one of the two. If this one stays, the map should become the real clue, not the Statue of Liberty: use a landmark that no other question pairs with New York, or ask about the map alone.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as draft q-11909 (“Paris is to the Eiffel Tower as New York City is to…” → the Statue of Liberty), just the other way round: the Statue of Liberty is in New York. Whichever one is played first gives the other away. Keep only one of the two. If this one stays, the map should become the real clue, not the Statue of Liberty: use a landmark that no other question pairs with New York, or ask about the map alone.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away, with a geography hint about Canada and the Great Lakes.",
+        "reason": "Swapped the Statue of Liberty for Niagara Falls so it no longer overlaps q-11909; updated description, hints and fun fact to match.",
         "previous": {
+          "difficulty": 4,
+          "description": "A lady with a torch who has been standing in the same spot since 1886.",
+          "question": "The Statue of Liberty stands in the state shown on this map. Which state is it?",
           "hints": [
             "It's in the northeast of the country.",
-            "Its biggest city has the same name as the state.",
+            "It borders Canada and two of the Great Lakes.",
             "Its nickname is “the Empire State.”"
-          ]
+          ],
+          "fun_fact": "The Statue of Liberty was a gift from France, and its copper skin turned green over time."
         },
         "revised_on": "2026-11-05"
-      }
+      },
+      "difficulty_original": 4
     },
     {
       "id": "q-11891",
@@ -919399,7 +919807,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Utah relief location map",
+        "query": "Utah locator map blank",
         "note": "Plain outline of Utah, with no labels, city names or neighboring state names.",
         "source_url": null,
         "file_url": null,
@@ -919433,18 +919841,44 @@
       "batch": "batch-36",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates works as the essential map. Candidates 1 and 3 are Utah maps, but their titles say “Relief Map of Utah” and “State of Utah”, which names the answer. Candidates 2, 4, 5 and 6 are not outlines of the state. The slot needs a plain, unlabeled outline or locator map of Utah, for example from a search like “Utah locator map blank” or “Utah outline map”. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works as the essential map. Candidates 1 and 3 are Utah maps, but their titles say “Relief Map of Utah” and “State of Utah”, which names the answer. Candidates 2, 4, 5 and 6 are not outlines of the state. The slot needs a plain, unlabeled outline or locator map of Utah, for example from a search like “Utah locator map blank” or “Utah outline map”. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed only the media query to find a plain, unlabeled Utah outline map.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Utah relief location map",
+            "note": "Plain outline of Utah, with no labels, city names or neighboring state names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11892",
@@ -920735,9 +921169,9 @@
     },
     {
       "id": "q-11909",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
-      "description": "Every big city needs a famous face for the postcards.",
+      "description": "Every big city needs something famous to put on its postcards.",
       "question": "Paris is to the Eiffel Tower as New York City is to…",
       "answer": "The Statue of Liberty",
       "wrong_answers": [
@@ -920747,7 +921181,7 @@
       ],
       "hints": [
         "Think of a famous landmark that greets ships coming into the harbor.",
-        "It's green all over.",
+        "It was a gift from another country.",
         "She holds a torch high in the air."
       ],
       "media": {
@@ -920793,24 +921227,37 @@
       "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description's \"famous face\" points straight to the only option that has a face (a statue), ruling out the bridge, tower and arch before any hint. Hint 2 (\"It's green all over\") also identifies the answer among the four options on its own. Rewrite the description to play on postcards or sightseeing without suggesting a face or figure, and make hint 2 vaguer (for example, a hint that it was a gift from another country).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description's \"famous face\" points straight to the only option that has a face (a statue), ruling out the bridge, tower and arch before any hint. Hint 2 (\"It's green all over\") also identifies the answer among the four options on its own. Rewrite the description to play on postcards or sightseeing without suggesting a face or figure, and make hint 2 vaguer (for example, a hint that it was a gift from another country).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the invented postcard set-up and kept only the analogy.",
+        "reason": "Removed the 'face' giveaway from the description and replaced the green-color hint with a vaguer gift-from-another-country hint.",
         "previous": {
-          "question": "You're sending postcards home from vacation. Paris is to the Eiffel Tower as New York City is to…"
+          "description": "Every big city needs a famous face for the postcards.",
+          "hints": [
+            "Think of a famous landmark that greets ships coming into the harbor.",
+            "It's green all over.",
+            "She holds a torch high in the air."
+          ]
         },
         "revised_on": "2026-11-05"
       }
@@ -921033,7 +921480,7 @@
     },
     {
       "id": "q-11913",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "The spot where Pittsburgh's water gets together for a meeting.",
       "question": "At this spot in Pittsburgh, rivers meet to form the Ohio River. How many rivers join here to start it?",
@@ -921044,8 +921491,8 @@
         "5"
       ],
       "hints": [
-        "Pittsburgh's nickname mentions three rivers, but one of them is the Ohio itself.",
-        "Look at the pointed tip of land in the photo and follow the water along each side of it.",
+        "Careful: Pittsburgh's famous river nickname can lead you the wrong way.",
+        "In the photo, follow the water upstream from the tip of land.",
         "Their names are the Allegheny and the Monongahela."
       ],
       "media": {
@@ -921091,26 +921538,34 @@
       "needs_media": true,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. It says the nickname counts three rivers \"but one of them is the Ohio itself\", which is the sum 3 − 1 = 2. Hint 2 also points to two by saying \"each side\" of the tip. Hint 1 should hint at the region or the nickname trap without doing the math. Hint 2 should not suggest exactly two sides.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. It says the nickname counts three rivers \"but one of them is the Ohio itself\", which is the sum 3 − 1 = 2. Hint 2 also points to two by saying \"each side\" of the tip. Hint 1 should hint at the region or the nickname trap without doing the math. Hint 2 should not suggest exactly two sides.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which stated the number, with a hint that points players to the photo without giving a count.",
+        "reason": "Rewrote hints 1 and 2 so they no longer do the math or suggest exactly two sides.",
         "previous": {
           "hints": [
             "Pittsburgh's nickname mentions three rivers, but one of them is the Ohio itself.",
-            "In the photo, the water arrives from two directions.",
+            "Look at the pointed tip of land in the photo and follow the water along each side of it.",
             "Their names are the Allegheny and the Monongahela."
           ]
         },
@@ -921122,7 +921577,7 @@
       "status": "needs_work",
       "difficulty": 7,
       "description": "Four words that make Texans stand a little taller.",
-      "question": "Today this slogan sounds tough, but who was it first aimed at when Texas started using it in 1986?",
+      "question": "Texas began using the slogan “Don't Mess with Texas” in 1986. Who was it first aimed at?",
       "answer": "People tossing trash from cars",
       "wrong_answers": [
         "Drivers going too fast",
@@ -921136,12 +921591,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Dont Mess with Texas",
-        "note": "A road sign showing only the slogan “Don't Mess with Texas”, with no extra text about littering or fines.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Texas highway bluebonnets",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATexas_bluebonnets_%28Lupinus_texensis%29_in_the_Blackland_Prairie_eco-region._Highway_532_east_of_Gonzalez%2C_Gonzalez_County%2C_Texas%2C_USA_%2819_April_2014%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Texas_bluebonnets_%28Lupinus_texensis%29_in_the_Blackland_Prairie_eco-region._Highway_532_east_of_Gonzalez%2C_Gonzalez_County%2C_Texas%2C_USA_%2819_April_2014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "William L. Farr · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "William L. Farr",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wilafa",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The slogan became so popular that it is a registered trademark of the Texas Department of Transportation.",
       "subcategory": "states-and-capitals",
@@ -921167,22 +921629,50 @@
         "notes": "Nice surprise. The essential sign photo should be available. The question doesn't make sense unless the slogan is visible."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-36",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate clearly shows the “Don't Mess with Texas” road sign, and the question only works if the slogan can be read. #2 is the real highway sign but it is a tiny blue rectangle you can't read on a TV. #1 is a political protest placard (“…Texas Women”), #3 is a parade prop with a misspelled pun (“Mesh”), and #4–6 are unrelated (a train, Need for Speed cars). A better approach is to name the slogan in the question text (“Texas began using the slogan “Don't Mess with Texas” in 1986…”) and switch the media to an illustrative Texas highway image. No suitable picture found for this question.",
+        "feedback": "Hint 2 (“The goal was cleaner roadsides”) gives the answer away: only the litter option has anything to do with clean roadsides. Replace it with a vaguer hint, for example when the campaign started or that it used TV ads, so it doesn't point to litter.",
         "problems": [
-          "media"
+          "giveaway"
         ],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate clearly shows the “Don't Mess with Texas” road sign, and the question only works if the slogan can be read. #2 is the real highway sign but it is a tiny blue rectangle you can't read on a TV. #1 is a political protest placard (“…Texas Women”), #3 is a parade prop with a misspelled pun (“Mesh”), and #4–6 are unrelated (a train, Need for Speed cars). A better approach is to name the slogan in the question text (“Texas began using the slogan “Don't Mess with Texas” in 1986…”) and switch the media to an illustrative Texas highway image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No readable sign photo exists, so the slogan is now named in the question and the media is an illustrative Texas highway.",
+        "previous": {
+          "question": "Today this slogan sounds tough, but who was it first aimed at when Texas started using it in 1986?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Dont Mess with Texas",
+            "note": "A road sign showing only the slogan “Don't Mess with Texas”, with no extra text about littering or fines.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11915",
@@ -921347,7 +921837,7 @@
     },
     {
       "id": "q-11917",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A shower so big it takes two countries to hold it.",
       "question": "Niagara Falls is really several waterfalls side by side. How many?",
@@ -921364,12 +921854,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Niagara Falls panorama",
-        "note": "A wide photo showing all three falls: Horseshoe Falls, American Falls and the small Bridal Veil Falls; no labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Niagara River rapids",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANiagara_River_rapids_in_fall.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Niagara_River_rapids_in_fall.jpg/3840px-Niagara_River_rapids_in_fall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Hannah Clover · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Hannah Clover",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Clovermoss",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The Horseshoe Falls is mostly in Canada, while the American Falls and Bridal Veil Falls are in New York.",
       "subcategory": "states-and-capitals",
@@ -921395,23 +921892,48 @@
         "notes": "Bridal Veil Falls is easy to miss in a panorama, and some sources count only two falls. Mostly fine."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set up as an essential panorama of all three falls, but the question asks the player to count the falls and never mentions the picture. A sharp photo of all three lets players count the answer off the screen, so the image gives it away. Change the slot to decorative or illustrative, using something that doesn't show the falls side by side, for example \"Niagara River rapids\" or \"Rainbow Bridge Niagara\". The text, facts and options are fine. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set up as an essential panorama of all three falls, but the question asks the player to count the falls and never mentions the picture. A sharp photo of all three lets players count the answer off the screen, so the image gives it away. Change the slot to decorative or illustrative, using something that doesn't show the falls side by side, for example \"Niagara River rapids\" or \"Rainbow Bridge Niagara\". The text, facts and options are fine. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "A panorama of all three falls would show the answer, so the media is now an illustrative river rapids image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Niagara Falls panorama",
+            "note": "A wide photo showing all three falls: Horseshoe Falls, American Falls and the small Bridal Veil Falls; no labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11918",
@@ -923604,10 +924126,10 @@
     },
     {
       "id": "q-11947",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Dinner arrives frozen solid, with every food in its own little room.",
-      "question": "Frozen meals in trays like this got popular in 1950s America. Their nickname comes from what families did while eating them. What was it?",
+      "question": "Frozen meals in divided trays got popular in 1950s America. Their nickname comes from what families did while eating them. What was it?",
       "answer": "Watching television",
       "wrong_answers": [
         "Listening to the radio",
@@ -923621,12 +924143,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "frozen dinner compartment tray",
-        "note": "A frozen meal in a divided aluminum or plastic tray with separate sections for meat, vegetables and potatoes; no packaging text.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "supermarket frozen food aisle",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrozen_food_aisle_at_Giant_Food_in_Wheaton%2C_Maryland_%2850760556573%29.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Frozen_food_aisle_at_Giant_Food_in_Wheaton%2C_Maryland_%2850760556573%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Ben Schumin from Montgomery Village, Maryland, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ben Schumin from Montgomery Village, Maryland, USA",
+        "author_url": "https://www.flickr.com/people/64873675@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Swanson's first TV dinner in 1953 was turkey with cornbread dressing, peas and sweet potatoes.",
       "subcategory": "twentieth-century",
@@ -923652,22 +924181,48 @@
         "notes": "The essential tray photo is likely to be found on the media sources. Hint 3 nearly gives the answer away, which is allowed."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-36",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the three candidates shows a frozen meal in a divided tray. All three are 1948 Ladies' Home Journal refrigerator ads. The question says “trays like this”, so the essential image has to show a compartment tray. A new search isn't allowed, so the slot needs a different search (for example “TV dinner tray” or “Swanson TV dinner”) or a manually chosen file. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-05",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the three candidates shows a frozen meal in a divided tray. All three are 1948 Ladies' Home Journal refrigerator ads. The question says “trays like this”, so the essential image has to show a compartment tray. A new search isn't allowed, so the slot needs a different search (for example “TV dinner tray” or “Swanson TV dinner”) or a manually chosen file. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-05",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable tray photo exists, so the question no longer refers to a picture and the media is now an illustrative frozen food aisle.",
+        "previous": {
+          "question": "Frozen meals in trays like this got popular in 1950s America. Their nickname comes from what families did while eating them. What was it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "frozen dinner compartment tray",
+            "note": "A frozen meal in a divided aluminum or plastic tray with separate sections for meat, vegetables and potatoes; no packaging text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-05"
+      }
     },
     {
       "id": "q-11948",

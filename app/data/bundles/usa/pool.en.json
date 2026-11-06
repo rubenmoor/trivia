@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "de2973f5",
+  "hash": "969dfa41",
   "questions": [
     {
       "id": "q-8833",
@@ -19995,6 +19995,40 @@
       "background": null
     },
     {
+      "id": "q-11722",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "civics",
+      "bundle": "usa",
+      "description": "A party name that sounds like it was chosen so nobody could complain.",
+      "question": "One of the four faces on Mount Rushmore belongs to the man who founded the Democratic-Republican Party with James Madison. Who is he?",
+      "answer": "Thomas Jefferson",
+      "wrong_answers": [
+        "George Washington",
+        "Theodore Roosevelt",
+        "Abraham Lincoln"
+      ],
+      "hints": [
+        "He was president from 1801 to 1809.",
+        "He was the main writer of the Declaration of Independence.",
+        "He also bought Louisiana from France."
+      ],
+      "fun_fact": "Jefferson's face was first carved on Washington's other side, but the rock was too cracked, so it was blasted off and started again.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Mount_Rushmore_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMount_Rushmore_2.jpg",
+        "credit": "Post office monthly income scheme · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Post office monthly income scheme",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Post_office_monthly_income_scheme&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-11723",
       "status": "approved",
       "difficulty": 12,
@@ -20127,6 +20161,74 @@
         "license_url": null,
         "author": "Petty Officer 3rd Class Diana Quinlan",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11727",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "comics-and-art",
+      "bundle": "usa",
+      "description": "He painted skies so blue that the color ended up with his name on it.",
+      "question": "Maxfield Parrish, the painter of “Daybreak,” was born in 1870 in which city? His father was a painter and etcher there too.",
+      "answer": "Philadelphia",
+      "wrong_answers": [
+        "Boston",
+        "Baltimore",
+        "New York City"
+      ],
+      "hints": [
+        "It's a big city on the East Coast.",
+        "It was the US capital for most of the 1790s.",
+        "You can see the Liberty Bell there."
+      ],
+      "fun_fact": "Parrish's 1922 print “Daybreak” became one of the most reproduced art prints of the 20th century.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Artist_paint_tubes_studio_trolley.jpg/3840px-Artist_paint_tubes_studio_trolley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtist_paint_tubes_studio_trolley.jpg",
+        "credit": "Vadim Cole · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Vadim Cole",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Vadim_Cole"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11728",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "comics-and-art",
+      "bundle": "usa",
+      "description": "A comic strip that went from the student newspaper to the front of the line at the Pulitzers.",
+      "question": "Garry Trudeau's “Doonesbury” became the first daily comic strip to win a Pulitzer Prize, in 1975. At which university did it start as a student strip?",
+      "answer": "Yale",
+      "wrong_answers": [
+        "Harvard",
+        "Princeton",
+        "Stanford"
+      ],
+      "hints": [
+        "It's an Ivy League school.",
+        "Its sports teams are the Bulldogs.",
+        "It's in New Haven, Connecticut."
+      ],
+      "fun_fact": "The name mixes “doone,” student slang for a goof, with Pillsbury, the last name of Trudeau's college roommate.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/ASC_Leiden_-_Library_-_South_African_newspaper_stack_of_Die_Burger_-_2012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AASC_Leiden_-_Library_-_South_African_newspaper_stack_of_Die_Burger_-_2012.jpg",
+        "credit": "African Studies Centre Leiden · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "African Studies Centre Leiden",
+        "author_url": "https://en.wikipedia.org/wiki/en:African_Studies_Centre_Leiden"
       },
       "background": null
     },
@@ -20539,6 +20641,40 @@
       "background": null
     },
     {
+      "id": "q-11741",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "Cowboy bling with one very practical job.",
+      "question": "Rodeo champions often win a big shiny one of these instead of a medal or a trophy cup. What is it?",
+      "answer": "Belt buckle",
+      "wrong_answers": [
+        "Spur",
+        "Bolo tie",
+        "Horseshoe"
+      ],
+      "hints": [
+        "Winners wear it every day, not on a shelf.",
+        "It sits right in front of your waist.",
+        "In a way, it holds your pants up."
+      ],
+      "fun_fact": "Top rodeo cowboys can own dozens of trophy buckles, and the grandest ones are made of silver and gold.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Methow_Valley_Rodeo%2C_Saddle_Bronc%2C_August_31st_2025.jpg/3840px-Methow_Valley_Rodeo%2C_Saddle_Bronc%2C_August_31st_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMethow_Valley_Rodeo%2C_Saddle_Bronc%2C_August_31st_2025.jpg",
+        "credit": "Guywelch2000 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Guywelch2000",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Guywelch2000"
+      },
+      "background": null
+    },
+    {
       "id": "q-11742",
       "status": "approved",
       "difficulty": 10,
@@ -20841,6 +20977,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Phil Campbell",
         "author_url": "https://www.flickr.com/photos/56188788@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11752",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "cryptids-and-ufos",
+      "bundle": "usa",
+      "description": "Two men, one freezer and a very expensive costume shop receipt.",
+      "question": "Two men from Georgia held a press conference claiming they had a Bigfoot body in a freezer. It turned out to be a rubber costume. In which year?",
+      "answer": "2008",
+      "wrong_answers": [
+        "1967",
+        "1985",
+        "2011"
+      ],
+      "hints": [
+        "The story spread fast across the internet and YouTube.",
+        "It happened within a few years of the first iPhone.",
+        "It was in the late 2000s."
+      ],
+      "fun_fact": "The two Georgia men held their press conference in Palo Alto, California, on the other side of the country from the woods where they claimed to have found the body.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Baugh_Mountain_in_Gordon_County%2C_Georgia%2C_USA.jpg/3840px-Baugh_Mountain_in_Gordon_County%2C_Georgia%2C_USA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABaugh_Mountain_in_Gordon_County%2C_Georgia%2C_USA.jpg",
+        "credit": "Adcart98 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adcart98",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Adcart98&action=edit&redlink=1"
       },
       "background": null
     },
@@ -21661,6 +21831,40 @@
       "background": null
     },
     {
+      "id": "q-11778",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "ghosts-and-superstitions",
+      "bundle": "usa",
+      "description": "He could get out of anything except this question.",
+      "question": "In the 1920s, Harry Houdini went to secret meetings in disguise to unmask fakes. Who was he trying to expose?",
+      "answer": "Fake spirit mediums",
+      "wrong_answers": [
+        "Card cheats at casinos",
+        "Rival escape artists",
+        "Fake medicine sellers"
+      ],
+      "hints": [
+        "As a master of tricks himself, he knew exactly how fakes worked.",
+        "The people he chased claimed to have a special gift.",
+        "They said they could talk to the dead."
+      ],
+      "fun_fact": "Houdini died on Halloween 1926, and his wife Bess held a séance every Halloween for ten years, waiting for a secret code word he had promised to send.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Woodslee_Jail%2C_Heritage_Village%2C_Kingsville%2C_Ontario%2C_2026-10-04_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoodslee_Jail%2C_Heritage_Village%2C_Kingsville%2C_Ontario%2C_2026-10-04_07.jpg",
+        "credit": "Chris Woodrich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Chris Woodrich",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Crisco_1492"
+      },
+      "background": null
+    },
+    {
       "id": "q-11779",
       "status": "approved",
       "difficulty": 10,
@@ -21725,6 +21929,40 @@
         "license_url": null,
         "author": "Ernest Mettendorf",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11781",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "ghosts-and-superstitions",
+      "bundle": "usa",
+      "description": "Razors get benched while the beards play on.",
+      "question": "Players stop shaving when the playoffs begin and keep the beard until their team is out or wins. In which sport did this good-luck habit start, around 1980?",
+      "answer": "Ice hockey",
+      "wrong_answers": [
+        "Baseball",
+        "Basketball",
+        "American football"
+      ],
+      "hints": [
+        "The playoffs run through spring, deep into June.",
+        "The team that started it won four titles in a row.",
+        "The trophy is the Stanley Cup."
+      ],
+      "fun_fact": "The habit is credited to the New York Islanders, who won four Stanley Cups in a row from 1980 to 1983.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Safety_razor_shaving_kit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASafety_razor_shaving_kit.jpg",
+        "credit": "Hustvedt · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Hustvedt",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hustvedt"
       },
       "background": null
     },
@@ -22137,6 +22375,40 @@
       "background": null
     },
     {
+      "id": "q-11794",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "hosts-and-game-shows",
+      "bundle": "usa",
+      "description": "A memory game for grown-ups, with a twist hiding behind every square.",
+      "question": "On NBC's Concentration, players matched prizes on a 30-square board, and each match uncovered part of a hidden puzzle. What kind of puzzle?",
+      "answer": "A rebus",
+      "wrong_answers": [
+        "A crossword",
+        "A jigsaw",
+        "A word search"
+      ],
+      "hints": [
+        "Players often shouted out a famous saying or phrase once they solved it.",
+        "You had to read it out loud, adding up drawings and plus and minus signs.",
+        "A drawing of an eye could stand for the word “I.”"
+      ],
+      "fun_fact": "The original Concentration ran on NBC from 1958 to 1973.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Szentendre%2C_Retro_Design_Center_27.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASzentendre%2C_Retro_Design_Center_27.jpg",
+        "credit": "Christo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Christo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Christo"
+      },
+      "background": null
+    },
+    {
       "id": "q-11795",
       "status": "approved",
       "difficulty": 6,
@@ -22443,6 +22715,40 @@
       "background": null
     },
     {
+      "id": "q-11804",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "kids-tv",
+      "bundle": "usa",
+      "description": "They say he doesn't do much. They've clearly never seen him put on a hat.",
+      "question": "At home I'm a pet who just makes a chattering noise. In secret I wear a fedora and stop Dr. Doofenshmirtz's evil plans. What's my secret agent name?",
+      "answer": "Agent P",
+      "wrong_answers": [
+        "Agent Zero",
+        "Agent Q",
+        "Agent Fedora"
+      ],
+      "hints": [
+        "My owners are two stepbrothers who build something amazing every summer day.",
+        "My boss is Major Monogram.",
+        "My code name is just the first letter of my real name."
+      ],
+      "fun_fact": "Perry's famous chattering sound is made by voice actor Dee Bradley Baker.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/A_fedora_hat%2C_made_by_Borsalino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_fedora_hat%2C_made_by_Borsalino.jpg",
+        "credit": "Kjetil Ree · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Kjetil Ree",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kjetil_r"
+      },
+      "background": null
+    },
+    {
       "id": "q-11805",
       "status": "approved",
       "difficulty": 2,
@@ -22677,6 +22983,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Mike Mozart from Funny YouTube, USA",
         "author_url": "https://www.flickr.com/people/39160147@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11812",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "money-and-shopping",
+      "bundle": "usa",
+      "description": "Back when the dollar had a very shiny best friend.",
+      "question": "From 1934 until 1971, the US government fixed the official price of one ounce of gold. How many dollars was it?",
+      "answer": "$35",
+      "wrong_answers": [
+        "$10",
+        "$100",
+        "$350"
+      ],
+      "hints": [
+        "Before 1934, it was a bit over $20.",
+        "After World War II, many countries tied their money to the dollar at this rate.",
+        "It's less than $50."
+      ],
+      "fun_fact": "In 1971, President Nixon stopped trading dollars for gold, and today an ounce of gold costs thousands of dollars.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Gold_bullion_bars.jpg/3840px-Gold_bullion_bars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGold_bullion_bars.jpg",
+        "credit": "Stevebidmead · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Stevebidmead",
+        "author_url": null
       },
       "background": null
     },
@@ -23293,6 +23633,40 @@
       "background": null
     },
     {
+      "id": "q-11832",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "national-symbols",
+      "bundle": "usa",
+      "description": "Your wallet is basically a tiny museum of famous faces.",
+      "question": "Which of the four presidents carved on Mount Rushmore is NOT on any US paper money today?",
+      "answer": "Theodore Roosevelt",
+      "wrong_answers": [
+        "George Washington",
+        "Thomas Jefferson",
+        "Abraham Lincoln"
+      ],
+      "hints": [
+        "The other three are on the $1, $2 and $5 bills.",
+        "He was president in the early 1900s.",
+        "A cuddly toy bear is named after him."
+      ],
+      "fun_fact": "Abraham Lincoln is on both the $5 bill and the penny, and the Lincoln Memorial is on the back of the $5 bill.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Cash_register_and_change_machine%2C_National_Cash_Register_Company%2C_1959_-_National_Museum_of_American_History_-_DSC00006.jpg/3840px-Cash_register_and_change_machine%2C_National_Cash_Register_Company%2C_1959_-_National_Museum_of_American_History_-_DSC00006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACash_register_and_change_machine%2C_National_Cash_Register_Company%2C_1959_-_National_Museum_of_American_History_-_DSC00006.jpg",
+        "credit": "Daderot · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Daderot",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot"
+      },
+      "background": null
+    },
+    {
       "id": "q-11833",
       "status": "approved",
       "difficulty": 15,
@@ -23425,6 +23799,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Erik Drost",
         "author_url": "https://www.flickr.com/people/62091376@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11837",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "national-symbols",
+      "bundle": "usa",
+      "description": "Even the most famous piece of cloth in America couldn't stick to just one look.",
+      "question": "Congress adopted the US flag in 1777. About how many official versions of the flag have there been since?",
+      "answer": "27",
+      "wrong_answers": [
+        "5",
+        "70",
+        "150"
+      ],
+      "hints": [
+        "The number of stars changed as new states joined.",
+        "Sometimes several states joined at once, so one new flag covered them.",
+        "It's between 20 and 30."
+      ],
+      "fun_fact": "Today's 50-star flag has flown since July 4, 1960, longer than any other version.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Betsy_ross_flag%28OFFICAL_PANTONE%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABetsy_ross_flag%28OFFICAL_PANTONE%29.png",
+        "credit": "Sus2021 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Sus2021",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sus2021"
       },
       "background": null
     },
@@ -24003,6 +24411,40 @@
         "license_url": null,
         "author": "Frederic Remington",
         "author_url": "https://en.wikipedia.org/wiki/en:Frederic_Remington"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11855",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "country-and-folk",
+      "bundle": "usa",
+      "description": "Some instruments are born in a music shop. This one was not.",
+      "question": "Zydeco and jug band musicians play this by scraping it with spoons or thimbles. What was it first made for?",
+      "answer": "Washing clothes",
+      "wrong_answers": [
+        "Grating cheese",
+        "Cooking on a fire",
+        "Covering a roof"
+      ],
+      "hints": [
+        "It was used at home long before washing machines.",
+        "People used it with a tub of soapy water.",
+        "Its name tells you which chore it was for."
+      ],
+      "fun_fact": "In Louisiana zydeco, musicians wear a washboard vest called a “frottoir” and play it on their chest.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Zwei_Waschbretter_2H1A8698WI.jpg/3840px-Zwei_Waschbretter_2H1A8698WI.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZwei_Waschbretter_2H1A8698WI.jpg",
+        "credit": "Kora27 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kora27",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kora27"
       },
       "background": null
     },
@@ -25095,6 +25537,40 @@
       "background": null
     },
     {
+      "id": "q-11890",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "Some states are shaped like neat boxes; this one clearly had other plans.",
+      "question": "Niagara Falls lies on the border between Canada and the US state shown on this map. Which state is it?",
+      "answer": "New York",
+      "wrong_answers": [
+        "Pennsylvania",
+        "Massachusetts",
+        "Ohio"
+      ],
+      "hints": [
+        "It's in the northeast of the country.",
+        "Its biggest city has more people than any other US city.",
+        "Its nickname is “the Empire State.”"
+      ],
+      "fun_fact": "Niagara Falls is really three waterfalls, and the biggest one, Horseshoe Falls, is mostly on the Canadian side.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/New_York_Map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_York_Map.png",
+        "credit": "FlorenceAdorence · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "FlorenceAdorence",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:FlorenceAdorence&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-11892",
       "status": "approved",
       "difficulty": 7,
@@ -25673,6 +26149,40 @@
       "background": null
     },
     {
+      "id": "q-11909",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "Every big city needs something famous to put on its postcards.",
+      "question": "Paris is to the Eiffel Tower as New York City is to…",
+      "answer": "The Statue of Liberty",
+      "wrong_answers": [
+        "The Golden Gate Bridge",
+        "The Space Needle",
+        "The Gateway Arch"
+      ],
+      "hints": [
+        "Think of a famous landmark that greets ships coming into the harbor.",
+        "It was a gift from another country.",
+        "She holds a torch high in the air."
+      ],
+      "fun_fact": "The Statue of Liberty was once shiny brown copper; it slowly turned green as the copper weathered.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/%28USA-New_York%29_NYC_Medallion_Cab_Toyota_RAV4_NY-Taxi-Y202490C_2024-06-15.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%28USA-New_York%29_NYC_Medallion_Cab_Toyota_RAV4_NY-Taxi-Y202490C_2024-06-15.jpg",
+        "credit": "S5A-0043 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "S5A-0043",
+        "author_url": "https://commons.wikimedia.org/wiki/User:S5A-0043"
+      },
+      "background": null
+    },
+    {
       "id": "q-11910",
       "status": "approved",
       "difficulty": 4,
@@ -25775,6 +26285,40 @@
       "background": null
     },
     {
+      "id": "q-11913",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "The spot where Pittsburgh's water gets together for a meeting.",
+      "question": "At this spot in Pittsburgh, rivers meet to form the Ohio River. How many rivers join here to start it?",
+      "answer": "2",
+      "wrong_answers": [
+        "3",
+        "4",
+        "5"
+      ],
+      "hints": [
+        "Careful: Pittsburgh's famous river nickname can lead you the wrong way.",
+        "In the photo, follow the water upstream from the tip of land.",
+        "Their names are the Allegheny and the Monongahela."
+      ],
+      "fun_fact": "The Ohio carries more water into the Mississippi than any other river that flows into it.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/2019-12-28_-_Point_State_Park_in_Pittsburgh_PA_US.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2019-12-28_-_Point_State_Park_in_Pittsburgh_PA_US.jpg",
+        "credit": "Matt Joseph · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Matt Joseph",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mattnotmatte&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-11915",
       "status": "approved",
       "difficulty": 8,
@@ -25839,6 +26383,40 @@
         "license_url": null,
         "author": "Bain News Service, publisher",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11917",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "A shower so big it takes two countries to hold it.",
+      "question": "Niagara Falls is really several waterfalls side by side. How many?",
+      "answer": "3",
+      "wrong_answers": [
+        "2",
+        "4",
+        "5"
+      ],
+      "hints": [
+        "The biggest one is shaped like a horse's shoe.",
+        "The US and Canada both have some of them.",
+        "One small one is named after a bride's wedding veil."
+      ],
+      "fun_fact": "The Horseshoe Falls is mostly in Canada, while the American Falls and Bridal Veil Falls are in New York.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Niagara_River_rapids_in_fall.jpg/3840px-Niagara_River_rapids_in_fall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANiagara_River_rapids_in_fall.jpg",
+        "credit": "Hannah Clover · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Hannah Clover",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Clovermoss"
       },
       "background": null
     },
@@ -26791,6 +27369,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Thomas Wolf, www.foto-tw.de",
         "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11947",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "twentieth-century",
+      "bundle": "usa",
+      "description": "Dinner arrives frozen solid, with every food in its own little room.",
+      "question": "Frozen meals in divided trays got popular in 1950s America. Their nickname comes from what families did while eating them. What was it?",
+      "answer": "Watching television",
+      "wrong_answers": [
+        "Listening to the radio",
+        "Riding in the car",
+        "Playing board games"
+      ],
+      "hints": [
+        "It was a new thing in many homes in the 1950s.",
+        "Families ate on folding trays in the living room.",
+        "The nickname is two letters plus the word “dinner.”"
+      ],
+      "fun_fact": "Swanson's first TV dinner in 1953 was turkey with cornbread dressing, peas and sweet potatoes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Frozen_food_aisle_at_Giant_Food_in_Wheaton%2C_Maryland_%2850760556573%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrozen_food_aisle_at_Giant_Food_in_Wheaton%2C_Maryland_%2850760556573%29.png",
+        "credit": "Ben Schumin from Montgomery Village, Maryland, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ben Schumin from Montgomery Village, Maryland, USA",
+        "author_url": "https://www.flickr.com/people/64873675@N00"
       },
       "background": null
     },
