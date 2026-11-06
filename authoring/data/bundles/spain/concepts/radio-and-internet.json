@@ -176,7 +176,8 @@
     {
       "name": "Kiss FM",
       "facet": "Emisoras y cadenas de radio",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Los datos sobre Kiss FM (fundación, propietario) son demasiado oscuros para la dificultad 10 y no estoy seguro de ellos."
     },
     {
       "name": "Catalunya Ràdio",
@@ -640,7 +641,8 @@
     {
       "name": "Gerard Piqué",
       "facet": "Eventos y fenómenos de internet",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se ha preguntado por la creación de la Queens League; con dificultad 3 y estas opciones no sale una buena pregunta sobre Piqué."
     },
     {
       "name": "QuantumFracture",
@@ -761,7 +763,8 @@
     {
       "name": "Audiolibro",
       "facet": "Podcasts y formatos de audio actuales",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Ya hay una adivinanza que describe el audiolibro; no hay otro ángulo con conexión a España."
     },
     {
       "name": "Videopódcast",
@@ -837,7 +840,8 @@
     {
       "name": "Vlog",
       "facet": "Jerga de youtubers y streamers",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Ya se ha preguntado qué es un vlog; las demás opciones no tienen un hecho útil sobre España."
     },
     {
       "name": "Algoritmo",

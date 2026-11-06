@@ -1118,7 +1118,8 @@
     {
       "name": "Rafting",
       "facet": "Deporte y fiestas en ríos y montañas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Ya se ha preguntado el nombre del deporte y lo del chaleco; las opciones que quedan dan preguntas forzadas o sin relación con España."
     },
     {
       "name": "Barranquismo",

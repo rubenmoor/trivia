@@ -61,7 +61,8 @@
     {
       "name": "Color rojo de la bandera",
       "facet": "La bandera rojigualda",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Los colores de la bandera ya están muy preguntados; las opciones solo darían una variante trivial."
     },
     {
       "name": "Color gualda",
@@ -91,7 +92,8 @@
     {
       "name": "Bandera a media asta",
       "facet": "La bandera rojigualda",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El término «a media asta» ya se ha preguntado; las opciones no dan otro dato bueno."
     },
     {
       "name": "Jura de bandera",

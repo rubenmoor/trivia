@@ -222,7 +222,8 @@
     {
       "name": "Cruzar los dedos",
       "facet": "Supersticiones del día a día",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: La pregunta que ya existe describe el gesto, así que contar los dedos sería contestar algo ya dicho."
     },
     {
       "name": "Pan boca abajo",
@@ -278,7 +279,8 @@
     {
       "name": "Doce uvas",
       "facet": "Rituales de Nochevieja y San Juan",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Las uvas, cuántas son y quién empezó la costumbre ya están preguntados."
     },
     {
       "name": "Campanadas de la Puerta del Sol",
