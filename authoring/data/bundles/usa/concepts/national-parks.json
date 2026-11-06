@@ -721,7 +721,8 @@
     {
       "name": "Tent",
       "facet": "Visiting: trails, roads and camping",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Tents aren't specific to the US, and what a tent is for has already been asked; the options would only give a trivial repeat."
     },
     {
       "name": "Road trip",

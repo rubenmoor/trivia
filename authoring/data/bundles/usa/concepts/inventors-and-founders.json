@@ -61,7 +61,8 @@
     {
       "name": "Light bulb",
       "facet": "Electricity and light inventors",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The pool already asks about the light bulb's purpose, its inventor and its parts. The remaining place options are forced."
     },
     {
       "name": "Lightning rod",
@@ -393,7 +394,8 @@
     {
       "name": "Dishwasher",
       "facet": "Household and kitchen inventions",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The dishwasher's purpose is already asked twice. Josephine Cochrane and the invention date are far above difficulty 1."
     },
     {
       "name": "Josephine Cochrane",
@@ -413,7 +415,8 @@
     {
       "name": "Post-it Note",
       "facet": "Household and kitchen inventions",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The invention story is already asked, and naming Post-its from a photo is trivial and not US-specific."
     },
     {
       "name": "Super Glue",
