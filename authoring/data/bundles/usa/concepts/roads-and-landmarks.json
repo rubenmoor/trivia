@@ -350,7 +350,8 @@
     {
       "name": "Vietnam Veterans Memorial",
       "facet": "Monuments and memorials",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Maya Lin is already in the pool. The count option would mean counting names of the dead, which breaks the tone rule."
     },
     {
       "name": "Martin Luther King Jr. Memorial",
@@ -510,7 +511,8 @@
     {
       "name": "Panama Canal",
       "facet": "Dams, canals and engineering feats",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Already asked from many angles. The facts left (locks, Gatun Lake) don't need a US connection, so they don't fit the usa bundle."
     },
     {
       "name": "Transcontinental Railroad",

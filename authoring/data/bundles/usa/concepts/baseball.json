@@ -186,7 +186,8 @@
     {
       "name": "Home plate",
       "facet": "Ballpark and equipment",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The photo options add nothing new beyond the existing home plate questions."
     },
     {
       "name": "Scoreboard",
@@ -196,7 +197,8 @@
     {
       "name": "Baseball diamond",
       "facet": "Ballpark and equipment",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Identifying the sport from the diamond is already in the pool several times."
     },
     {
       "name": "Batting helmet",
