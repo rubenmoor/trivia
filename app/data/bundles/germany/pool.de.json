@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "273381b2",
+  "hash": "db21f98e",
   "questions": [
     {
       "id": "q-9120",
@@ -23472,6 +23472,40 @@
       "background": null
     },
     {
+      "id": "q-11974",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "brands-and-products",
+      "bundle": "germany",
+      "description": "Ein Familienname so lang, dass die Firma ihn auf vier Buchstaben eingekocht hat.",
+      "question": "Haba sitzt in Bad Rodach in Oberfranken, wurde 1938 gegründet und heißt nach der Familie Habermaaß. Was für eine Firma ist das?",
+      "answer": "Spielzeughersteller",
+      "wrong_answers": [
+        "Porzellanhersteller",
+        "Babykosthersteller",
+        "Fahrradhersteller"
+      ],
+      "hints": [
+        "Der Firmensitz liegt ganz nah an der Grenze zu Thüringen.",
+        "Vor allem Kinder freuen sich über ihre Produkte.",
+        "„Obstgarten“ und „Tier auf Tier“ stammen von ihr."
+      ],
+      "fun_fact": "Haba-Spiele wie „Obstgarten“ stehen seit Jahrzehnten in deutschen Kinderzimmern.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Half-timbered_mansion%2C_Zirkel%2C_East_view.jpg/3840px-Half-timbered_mansion%2C_Zirkel%2C_East_view.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHalf-timbered_mansion%2C_Zirkel%2C_East_view.jpg",
+        "credit": "Radomianin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Radomianin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Radomianin"
+      },
+      "background": null
+    },
+    {
       "id": "q-11975",
       "status": "approved",
       "difficulty": 2,
@@ -23672,6 +23706,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Steffen Prößdorf",
         "author_url": "https://commons.wikimedia.org/wiki/User:Stepro"
+      },
+      "background": null
+    },
+    {
+      "id": "q-11982",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "bundesliga-and-clubs",
+      "bundle": "germany",
+      "description": "Ein Spruch, so bayerisch, dass ihn nur Weißwürste ganz verstehen.",
+      "question": "Fans des FC Bayern rufen gern „Mia san …“. Was bedeutet der ganze Spruch auf Hochdeutsch?",
+      "answer": "Wir sind wir",
+      "wrong_answers": [
+        "Wir sind Meister",
+        "Wir sind München",
+        "Wir sind mehr"
+      ],
+      "hints": [
+        "Auf Bayerisch heißt „mia“ so viel wie „wir“.",
+        "Der Spruch steht für bayerischen Stolz und das Selbstbewusstsein des Vereins.",
+        "Der Spruch heißt komplett „Mia san mia“."
+      ],
+      "fun_fact": "Der FC Bayern hat „Mia san mia“ sogar zum offiziellen Vereinsmotto gemacht.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Allianz_arena_at_night_Richard_Bartz.jpg/3840px-Allianz_arena_at_night_Richard_Bartz.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAllianz_arena_at_night_Richard_Bartz.jpg",
+        "credit": "Richard Bartz, Munich aka Makro Freak · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Richard Bartz, Munich aka Makro Freak",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Richard_Bartz"
       },
       "background": null
     },
@@ -24254,6 +24322,40 @@
       "background": null
     },
     {
+      "id": "q-12001",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "chancellors-and-presidents",
+      "bundle": "germany",
+      "description": "Ein Kleiderschrank, der aussieht wie ein Malkasten.",
+      "question": "Ich habe Knöpfe und einen immer gleichen Schnitt. Angela Merkel trug mich in fast allen Farben des Regenbogens. Was bin ich?",
+      "answer": "Blazer",
+      "wrong_answers": [
+        "Pullunder",
+        "Trenchcoat",
+        "Strickweste"
+      ],
+      "hints": [
+        "Ich werde über einer Bluse oder einem Shirt getragen.",
+        "Viele Leute tragen mich im Büro oder beim Vorstellungsgespräch.",
+        "Mein Name klingt englisch und beginnt mit B."
+      ],
+      "fun_fact": "Eine niederländische Designerin hat aus Fotos ihrer Jacken eine Farbtafel gebastelt, die aussieht wie ein Farbfächer aus dem Baumarkt.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Reichstag_Plenarsaal_des_Bundestags.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReichstag_Plenarsaal_des_Bundestags.jpg",
+        "credit": "Photo: Andreas Praefcke · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Photo: Andreas Praefcke",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12002",
       "status": "approved",
       "difficulty": 9,
@@ -24726,6 +24828,40 @@
         "license_url": null,
         "author": "Wiel van der Randen",
         "author_url": "https://www.wikidata.org/wiki/Q18065666"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12016",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "childrens-books-and-comics",
+      "bundle": "germany",
+      "description": "Hier ist so viel los, dass selbst der Hund auf Seite drei seinen eigenen Fanclub hat.",
+      "question": "Welches Merkmal passt NICHT zu einem typischen Wimmelbuch?",
+      "answer": "Lange Textkapitel",
+      "wrong_answers": [
+        "Viele kleine Figuren",
+        "Große Doppelseiten",
+        "Feste Pappseiten"
+      ],
+      "hints": [
+        "Bei jedem Hinschauen entdeckt man etwas Neues im Gewusel.",
+        "Man sucht, entdeckt und erzählt sich die Geschichten selbst.",
+        "Ein Wimmelbuch kann man schon anschauen, bevor man lesen kann."
+      ],
+      "fun_fact": "Als Vater des deutschen Wimmelbuchs gilt Ali Mitgutsch, dessen erstes Wimmelbuch 1968 erschien.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Helsinki_Market_Square_at_Tall_Ships%27_Races_2024.jpg/3840px-Helsinki_Market_Square_at_Tall_Ships%27_Races_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Market_Square_at_Tall_Ships%27_Races_2024.jpg",
+        "credit": "JIP · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JIP",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JIP&action=edit&redlink=1"
       },
       "background": null
     },
@@ -25682,6 +25818,40 @@
       "background": null
     },
     {
+      "id": "q-12046",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "films-and-actors",
+      "bundle": "germany",
+      "description": "Westernhelden mit Föhnfrisur und einer großen Schwäche für Wortwitze.",
+      "question": "Ich bin Apachenhäuptling, mein Blutsbruder heißt Ranger, und mein Zwillingsbruder führt die Puder-Rosa-Ranch. Wer bin ich?",
+      "answer": "Abahachi",
+      "wrong_answers": [
+        "Winnetou",
+        "Intschu-tschuna",
+        "Old Shatterhand"
+      ],
+      "hints": [
+        "Ich stamme aus einer Westernparodie von 2001.",
+        "Michael Herbig hat mich nicht nur erfunden, er spielt mich auch.",
+        "Mein Name fängt fast so an wie die schwedische Band ABBA."
+      ],
+      "fun_fact": "Mit fast 12 Millionen Zuschauern gehört „Der Schuh des Manitu“ zu den erfolgreichsten deutschen Kinofilmen überhaupt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Organ_Pipe_Cactus_Pictures_of_Desert_sunset_%2849408454148%29.jpg/3840px-Organ_Pipe_Cactus_Pictures_of_Desert_sunset_%2849408454148%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOrgan_Pipe_Cactus_Pictures_of_Desert_sunset_%2849408454148%29.jpg",
+        "credit": "daveynin from United States · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "daveynin from United States",
+        "author_url": "https://www.flickr.com/people/44124370018@N01"
+      },
+      "background": null
+    },
+    {
       "id": "q-12047",
       "status": "approved",
       "difficulty": 12,
@@ -26124,6 +26294,40 @@
       "background": null
     },
     {
+      "id": "q-12060",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "founders-and-entrepreneurs",
+      "bundle": "germany",
+      "description": "Das erste Auto, für das man keinen Führerschein, aber zwei kräftige Füße braucht.",
+      "question": "Wie heißt dieses Rutschauto für kleine Kinder?",
+      "answer": "Bobby-Car",
+      "wrong_answers": [
+        "Kettcar",
+        "Laufrad",
+        "Dreirad"
+      ],
+      "hints": [
+        "Es hat keine Pedale.",
+        "Man schiebt sich mit den Füßen an.",
+        "Der Name fängt mit „Bobby“ an."
+      ],
+      "fun_fact": "Das Bobby-Car gibt es seit 1972, und es ist seitdem durch unzählige Kinderzimmer geflitzt.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Vivien_thw_bobbycar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVivien_thw_bobbycar.jpg",
+        "credit": "Thiemo Schuff · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thiemo Schuff",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Starwhooper"
+      },
+      "background": null
+    },
+    {
       "id": "q-12061",
       "status": "approved",
       "difficulty": 4,
@@ -26362,6 +26566,40 @@
       "background": null
     },
     {
+      "id": "q-12068",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Eine Zimmermannsbrigade, die lieber nach eigenen Regeln baut als nach Plan.",
+      "question": "Was stimmt NICHT über den DEFA-Film „Spur der Steine“ von 1966?",
+      "answer": "Die Romanvorlage schrieb Christa Wolf",
+      "wrong_answers": [
+        "Manfred Krug spielt die Hauptrolle",
+        "Regie führte Frank Beyer",
+        "Er wurde kurz nach dem Start abgesetzt"
+      ],
+      "hints": [
+        "Der DEFA-Film erzählt von einer Brigade auf einer Großbaustelle.",
+        "Die Staatsführung der DDR war von dem Film alles andere als begeistert.",
+        "Der Roman stammt von Erik Neutsch."
+      ],
+      "fun_fact": "Bei Vorführungen 1966 störten bestellte Zuschauer den Film absichtlich mit Zwischenrufen, bevor er ganz aus den Kinos verschwand.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Construction_of_museum-panorama_Borodino_Battle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConstruction_of_museum-panorama_Borodino_Battle.jpg",
+        "credit": "Главархив Москвы · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Главархив Москвы",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12069",
       "status": "approved",
       "difficulty": 13,
@@ -26430,6 +26668,40 @@
       "background": null
     },
     {
+      "id": "q-12071",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Ein Laden, in dem schon der Name teurer klang als das halbe Monatsgehalt.",
+      "question": "In den „Exquisit“-Läden der DDR zahlte man mit DDR-Mark statt mit Westgeld, aber zu sehr hohen Preisen. Was wurde dort vor allem verkauft?",
+      "answer": "Modische Kleidung und Schuhe",
+      "wrong_answers": [
+        "Südfrüchte und Feinkost",
+        "Fernseher und Stereoanlagen",
+        "Autos ohne Wartezeit"
+      ],
+      "hints": [
+        "Schon der Name sollte nach westlichem Luxus klingen.",
+        "Für Lebensmittel gab es eigene Läden mit anderem Namen.",
+        "Zu Hause landete die Ware im Kleiderschrank oder im Schuhregal."
+      ],
+      "fun_fact": "Für Lebensmittel gab es das Gegenstück: die „Delikat“-Läden mit Feinkost zu ebenfalls gesalzenen Preisen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Kelet-Berlin%2C_Strausberger_Platz%2C_szemben_a_Karl_Marx_Allee._Fortepan_60022.jpg/3840px-Kelet-Berlin%2C_Strausberger_Platz%2C_szemben_a_Karl_Marx_Allee._Fortepan_60022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKelet-Berlin%2C_Strausberger_Platz%2C_szemben_a_Karl_Marx_Allee._Fortepan_60022.jpg",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "FOTO:Fortepan — ID 60022: Adományozó/Donor: Nagy Gyula. archive copy at the Wayback Machine",
+        "author_url": "https://fortepan.hu/"
+      },
+      "background": null
+    },
+    {
       "id": "q-12072",
       "status": "approved",
       "difficulty": 12,
@@ -26494,6 +26766,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Myrmux",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Myrmux&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12074",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Ein Feiertag, an dem das Winken von oben Chefsache war.",
+      "question": "Bei der Maidemonstration 1985 in Ost-Berlin zogen Tausende an der Ehrentribüne vorbei. Welcher SED-Chef winkte ihnen von dort zu?",
+      "answer": "Erich Honecker",
+      "wrong_answers": [
+        "Walter Ulbricht",
+        "Wilhelm Pieck",
+        "Otto Grotewohl"
+      ],
+      "hints": [
+        "Er führte die DDR bis zum Herbst 1989.",
+        "Er hatte das Amt 1971 übernommen.",
+        "Seine Frau Margot war Ministerin für Volksbildung."
+      ],
+      "fun_fact": "Der 1. Mai hieß in der DDR offiziell „Kampf- und Feiertag der Werktätigen“.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Bundesarchiv_Bild_183-R0501-0025%2C_Berlin%2C_Palast_der_Republik%2C_1._Mai-Demonstration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABundesarchiv_Bild_183-R0501-0025%2C_Berlin%2C_Palast_der_Republik%2C_1._Mai-Demonstration.jpg",
+        "credit": "Klaus Franke · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Klaus Franke",
+        "author_url": "https://www.wikidata.org/wiki/Q112939733"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12075",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Ein Stück Stoff, das man vor dem Fahnenappell auf keinen Fall zu Hause vergessen durfte.",
+      "question": "Wer trug in den 1980er-Jahren in der DDR ein blaues Pionierhalstuch?",
+      "answer": "Jungpioniere der Klassen 1 bis 3",
+      "wrong_answers": [
+        "Thälmann-Pioniere ab Klasse 4",
+        "FDJ-Mitglieder ab 14 Jahren",
+        "Lehrer beim Fahnenappell"
+      ],
+      "hints": [
+        "Es ging um Schulkinder.",
+        "Die Älteren trugen ein Halstuch in einer anderen Farbe.",
+        "Es waren die Jüngsten der Pionierorganisation."
+      ],
+      "fun_fact": "Ab 1973 trugen die älteren Thälmann-Pioniere ein rotes Halstuch, die Jüngeren blieben beim blauen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/1988-07-01_Berlin_Mahlsdorf_S%C3%BCd_Erich-Baron_Weg_106_%28Ostberlin%29_b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1988-07-01_Berlin_Mahlsdorf_S%C3%BCd_Erich-Baron_Weg_106_%28Ostberlin%29_b.jpg",
+        "credit": "Lothar Weber · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lothar Weber",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Throttle_lever"
       },
       "background": null
     },
@@ -26766,6 +27106,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Юрий Д.К.",
         "author_url": "https://commons.wikimedia.org/wiki/User:%D0%AE%D1%80%D0%B8%D0%B9_%D0%94.%D0%9A."
+      },
+      "background": null
+    },
+    {
+      "id": "q-12084",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Ein Spion, der so gut war, dass nicht mal sein Gesicht bekannt war.",
+      "question": "Er leitete über 30 Jahre die HVA, die Auslandsspionage der Stasi, und galt im Westen lange als „Mann ohne Gesicht“. Wer ist er?",
+      "answer": "Markus Wolf",
+      "wrong_answers": [
+        "Erich Mielke",
+        "Günter Guillaume",
+        "Egon Krenz"
+      ],
+      "hints": [
+        "Er war nicht Stasi-Minister, sondern Chef eines ihrer Bereiche.",
+        "Seine Agenten schleusten einen Spion ins Kanzleramt von Willy Brandt.",
+        "Sein Nachname ist auch ein Raubtier."
+      ],
+      "fun_fact": "Erst 1978 erkannte der Westen Wolf auf einem heimlich in Stockholm aufgenommenen Foto.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Ehemalige-Stasi-Zentrale-Frankfurter-Allee-Ruschestr-Berlin-Lichtenberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEhemalige-Stasi-Zentrale-Frankfurter-Allee-Ruschestr-Berlin-Lichtenberg.jpg",
+        "credit": "Gunnar Klack · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Gunnar Klack",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gunnar_Klack"
       },
       "background": null
     },
@@ -28538,6 +28912,40 @@
       "background": null
     },
     {
+      "id": "q-12141",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "federal-republic-and-reunification",
+      "bundle": "germany",
+      "description": "Wer ein Grundgesetz schreiben will, braucht Ruhe, Seeluft und am besten keinen Brückenzugang.",
+      "question": "Im August 1948 entwarfen Fachleute zwei Wochen lang auf einer Insel in einem bayerischen See die Grundlagen des Grundgesetzes. Welche Insel?",
+      "answer": "Herreninsel",
+      "wrong_answers": [
+        "Fraueninsel",
+        "Roseninsel",
+        "Krautinsel"
+      ],
+      "hints": [
+        "Der See wird auch „Bayerisches Meer“ genannt.",
+        "Es ist die größte Insel in ihrem See.",
+        "Auf derselben Insel ließ König Ludwig II. sein Schloss nach dem Vorbild von Versailles bauen."
+      ],
+      "fun_fact": "Der Konvent tagte im Alten Schloss, nicht im prächtigen Neuen Schloss von Ludwig II. nebenan.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Constitui%C3%A7%C3%A3o_da_Alemanha_de_1949.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConstitui%C3%A7%C3%A3o_da_Alemanha_de_1949.JPG",
+        "credit": "Almanaque Lusofonista · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Almanaque Lusofonista",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Almanaque_Lusofonista&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-12142",
       "status": "approved",
       "difficulty": 7,
@@ -28772,6 +29180,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "J. Triepke",
         "author_url": "https://www.flickr.com/people/65630793@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12149",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Ein Vogel aus Suhl, für den das Gesetz bis heute eine kleine Ausnahme macht.",
+      "question": "Die Simson Schwalbe aus der DDR hat einen Zweitaktmotor. Wie schnell darf sie dank einer Sonderregel aus der Wendezeit bis heute fahren?",
+      "answer": "Bis zu 60 km/h",
+      "wrong_answers": [
+        "Bis zu 45 km/h",
+        "Bis zu 50 km/h",
+        "Bis zu 70 km/h"
+      ],
+      "hints": [
+        "Die Sonderregel hat mit dem Tacho zu tun.",
+        "Die Regel geht auf den Einigungsvertrag zurück, der bestimmte DDR-Fahrzeugregeln übernahm.",
+        "Neue Mopeds mit dem gleichen Führerschein sind auf 45 km/h gedrosselt – die Schwalbe darf 15 km/h mehr."
+      ],
+      "fun_fact": "Die Schwalbe gehört zur „Vogelserie“ von Simson, zu der auch Spatz, Star, Sperber und Habicht zählten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Moped_schwalbe_dunkelblau_2019.jpg/3840px-Moped_schwalbe_dunkelblau_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoped_schwalbe_dunkelblau_2019.jpg",
+        "credit": "VSchagow · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "VSchagow",
+        "author_url": null
       },
       "background": null
     },
@@ -30306,6 +30748,40 @@
       "background": null
     },
     {
+      "id": "q-12197",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "schlager-and-folk-music",
+      "bundle": "germany",
+      "description": "Ein Lied, bei dem am Ende nur noch die Hände singen.",
+      "question": "„Ich habe drei Ecken, sitze auf dem Kopf, und in meinem Lied lässt man nach und nach Wörter weg und zeigt sie nur mit den Händen.“ Wer bin ich?",
+      "answer": "Hut",
+      "wrong_answers": [
+        "Mütze",
+        "Krone",
+        "Helm"
+      ],
+      "hints": [
+        "Ich bin etwas zum Anziehen.",
+        "Ich kann aus Filz oder Stroh sein und habe oft eine Krempe.",
+        "Im Lied heißt es: „Und hätt er nicht drei Ecken, so wär er nicht mein …“"
+      ],
+      "fun_fact": "Die Melodie des Liedes stammt aus Italien: Sie ist als „Karneval von Venedig“ bekannt.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Rhythmic_action_plays_and_dances%3B_a_book_of_original_games_and_dances%2C_arranged_progressively%2C_to_Mother_Goose_and_other_action_songs%2C_with_a_teaching_introductory%3B_for_the_kindergarten%2C_primary_%2814789224193%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARhythmic_action_plays_and_dances%3B_a_book_of_original_games_and_dances%2C_arranged_progressively%2C_to_Mother_Goose_and_other_action_songs%2C_with_a_teaching_introductory%3B_for_the_kindergarten%2C_primary_%2814789224193%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-12199",
       "status": "approved",
       "difficulty": 10,
@@ -30370,6 +30846,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Josue007",
         "author_url": "https://commons.wikimedia.org/wiki/User:Josue007"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12201",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "shows-and-presenters",
+      "bundle": "germany",
+      "description": "Eine Million vor Augen, und plötzlich fällt dir nicht mal mehr die Hauptstadt von Frankreich ein.",
+      "question": "Du sitzt bei „Wer wird Millionär?“ und nimmst den Publikumsjoker. Was passiert dann?",
+      "answer": "Die Leute im Studio stimmen ab",
+      "wrong_answers": [
+        "Der Moderator gibt dir einen Tipp",
+        "Ein Experte kommt auf die Bühne",
+        "Du bekommst mehr Bedenkzeit"
+      ],
+      "hints": [
+        "Dafür brauchst du keine Telefonnummer.",
+        "Es kommt auf viele Menschen gleichzeitig an.",
+        "Danach erscheint ein Balkendiagramm mit Prozentzahlen."
+      ],
+      "fun_fact": "Die Studiogäste geben ihre Stimme über kleine Tastengeräte an ihren Plätzen ab.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/QTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg",
+        "credit": "NJM2010 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "NJM2010",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NJM2010&action=edit&redlink=1"
       },
       "background": null
     },
@@ -31054,6 +31564,40 @@
       "background": null
     },
     {
+      "id": "q-12223",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "state-and-city-emblems",
+      "bundle": "germany",
+      "description": "Ein Fabelwesen, das es aus alten Sagen bis in die Umgangssprache geschafft hat.",
+      "question": "Was für ein Blick ist ein „Basiliskenblick“?",
+      "answer": "Ein böser, stechender Blick",
+      "wrong_answers": [
+        "Ein verliebter Blick",
+        "Ein verschlafener Blick",
+        "Ein neugieriger Blick"
+      ],
+      "hints": [
+        "Das Wort kommt von einem Fabelwesen.",
+        "Diesem Wesen sagte man nach, es könne mit den Augen töten.",
+        "So einen Blick möchte man lieber nicht abbekommen."
+      ],
+      "fun_fact": "Im Mittelalter glaubte man, ein Basilisk schlüpfe aus einem Ei, das ein Hahn gelegt und eine Kröte ausgebrütet hat.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Aberdeen_Bestiary_Basilisk.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAberdeen_Bestiary_Basilisk.jpg",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12224",
       "status": "approved",
       "difficulty": 2,
@@ -31322,6 +31866,40 @@
         "license_url": "http://artlibre.org/licence/lal/en",
         "author": "A.Savin",
         "author_url": "https://commons.wikimedia.org/wiki/User:A.Savin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12233",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "transport",
+      "bundle": "germany",
+      "description": "Pflaster, Schere, Mullbinde: der kleinste Erste-Hilfe-Laden der Welt fährt im Kofferraum mit.",
+      "question": "Was gilt laut Gesetz in Deutschland, wenn man an einen Unfall mit Verletzten kommt?",
+      "answer": "Man muss Hilfe leisten",
+      "wrong_answers": [
+        "Man darf nichts anfassen",
+        "Man muss erst die Polizei fragen",
+        "Man darf nur Profis helfen lassen"
+      ],
+      "hints": [
+        "Im deutschen Gesetz gibt es dazu eine klare Regel.",
+        "Dafür liegt in jedem Auto ein Verbandskasten.",
+        "Es betrifft alle, die an der Unfallstelle helfen können."
+      ],
+      "fun_fact": "Wer in Deutschland nicht hilft, obwohl er könnte, macht sich sogar strafbar: Das heißt „unterlassene Hilfeleistung“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/What%27s_in_your_car_safety_kit%3F.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhat%27s_in_your_car_safety_kit%3F.jpg",
+        "credit": "OregonDOT · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "OregonDOT",
+        "author_url": null
       },
       "background": null
     },
