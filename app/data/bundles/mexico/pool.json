@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "a061ba28",
+  "hash": "6202fae8",
   "questions": [
     {
       "id": "q-0711",
@@ -23089,6 +23089,40 @@
       "background": null
     },
     {
+      "id": "q-12550",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "liga-mx",
+      "bundle": "mexico",
+      "description": "Hay entrenadores que gritan desde la banca, y luego está este, que convierte cada partido en una clase de motivación a todo pulmón.",
+      "question": "¿Con qué apodo se conoce a este entrenador mexicano?",
+      "answer": "El Vasco",
+      "wrong_answers": [
+        "El Piojo",
+        "El Tuca",
+        "El Chepo"
+      ],
+      "hints": [
+        "Dirigió a la Selección Mexicana en varias etapas.",
+        "También jugó un Mundial con México, el de 1986.",
+        "El apodo viene del origen de su familia, de una región del norte de España famosa por la boina y el jai alai."
+      ],
+      "fun_fact": "Javier Aguirre dirigió a México en los Mundiales de 2002 y 2010, y además entrenó a clubes españoles como Osasuna, Atlético de Madrid y Mallorca.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Wiki_javier_aguirre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWiki_javier_aguirre.jpg",
+        "credit": "Juancamartos · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juancamartos",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Juancamartos&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-12551",
       "status": "approved",
       "difficulty": 6,
@@ -23323,6 +23357,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Yavidaxiu",
         "author_url": "https://commons.wikimedia.org/wiki/User:Yavidaxiu"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12559",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "mariachi-and-ranchera",
+      "bundle": "mexico",
+      "description": "Un balcón con más público que cualquier concierto del año.",
+      "question": "En las Fiestas Patrias de México, ¿desde el balcón de qué edificio da el presidente el Grito de Independencia?",
+      "answer": "El Palacio Nacional",
+      "wrong_answers": [
+        "El Castillo de Chapultepec",
+        "El Palacio de Bellas Artes",
+        "El Palacio de Minería"
+      ],
+      "hints": [
+        "Está en el Centro Histórico de la Ciudad de México.",
+        "Da al Zócalo, la plaza más grande del país.",
+        "Por dentro tiene los famosos murales de Diego Rivera sobre la historia de México."
+      ],
+      "fun_fact": "La campana que se toca en el Grito es la original de Dolores Hidalgo, que se llevó a la Ciudad de México en 1896.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Street_Scene_with_Facades_and_Flags_-_Queretaro_-_Mexico_%2846412521202%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStreet_Scene_with_Facades_and_Flags_-_Queretaro_-_Mexico_%2846412521202%29.jpg",
+        "credit": "Adam Jones from Kelowna, BC, Canada · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Adam Jones from Kelowna, BC, Canada",
+        "author_url": "https://www.flickr.com/people/41000732@N04"
       },
       "background": null
     },
@@ -24381,6 +24449,40 @@
       "background": null
     },
     {
+      "id": "q-12593",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "painters-and-muralists",
+      "bundle": "mexico",
+      "description": "Hollywood se fue a Coyoacán y regresó con estatuillas doradas en la maleta.",
+      "question": "La película «Frida» (2002), con Salma Hayek, ganó dos premios Óscar: uno a la mejor música original. ¿Cuál fue el otro?",
+      "answer": "Mejor maquillaje",
+      "wrong_answers": [
+        "Mejor actriz",
+        "Mejor película",
+        "Mejor dirección"
+      ],
+      "hints": [
+        "Salma estuvo nominada, pero esa noche no ganó.",
+        "La película también estuvo nominada a mejor vestuario, pero ese no lo ganó.",
+        "Tiene que ver con pelucas, pinturas para la cara y prótesis."
+      ],
+      "fun_fact": "Con este papel, Salma Hayek fue la primera mexicana nominada al Óscar como mejor actriz.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/%E2%80%9CLa_casa_azul%E2%80%9D.jpg/3840px-%E2%80%9CLa_casa_azul%E2%80%9D.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E2%80%9CLa_casa_azul%E2%80%9D.jpg",
+        "credit": "Isabel Pinzon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Isabel Pinzon",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Isabel_Pinzon&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-12594",
       "status": "approved",
       "difficulty": 13,
@@ -25206,6 +25308,40 @@
       "background": null
     },
     {
+      "id": "q-12619",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "tv-shows-and-hosts",
+      "bundle": "mexico",
+      "description": "Pati Chapoy tiene un verbo propio y no le da miedo usarlo.",
+      "question": "En el programa de espectáculos «Ventaneando» de TV Azteca, ¿qué significa «ventanear» a un famoso?",
+      "answer": "Exhibir sus secretos en público",
+      "wrong_answers": [
+        "Entrevistarlo en exclusiva",
+        "Anunciar sus próximos estrenos",
+        "Darle un premio por su carrera"
+      ],
+      "hints": [
+        "A ningún famoso le gusta que se lo hagan.",
+        "El programa es famoso por sus chismes y polémicas de la farándula.",
+        "Es sacar sus trapitos al sol."
+      ],
+      "fun_fact": "«Ventaneando» lleva al aire desde los años noventa y Pati Chapoy lo ha conducido casi todo ese tiempo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/View_into_a_garden_through_an_open_ground_floor_window_in_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_into_a_garden_through_an_open_ground_floor_window_in_Germany.jpg",
+        "credit": "Karl432 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Karl432",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Karl432"
+      },
+      "background": null
+    },
+    {
       "id": "q-12620",
       "status": "approved",
       "difficulty": 7,
@@ -25376,6 +25512,40 @@
       "background": null
     },
     {
+      "id": "q-12625",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "christmas-season",
+      "bundle": "mexico",
+      "description": "Una olla tan grande que en diciembre necesita su propio lugar en la estufa.",
+      "question": "En las posadas se sirve una bebida caliente con tejocote, guayaba y caña. ¿Cómo se llama?",
+      "answer": "El ponche",
+      "wrong_answers": [
+        "El atole",
+        "El champurrado",
+        "El café de olla"
+      ],
+      "hints": [
+        "Se sirve caliente, en jarrito o en vaso.",
+        "Además de fruta, lleva canela y piloncillo.",
+        "Su nombre se parece a «poncho», cambiando solo una letra."
+      ],
+      "fun_fact": "El tejocote, la fruta estrella del ponche, es nativo de México y parece una manzanita amarilla.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Night_Candlelight_Procession.jpg/3840px-Night_Candlelight_Procession.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANight_Candlelight_Procession.jpg",
+        "credit": "LuzViMindaLife · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "LuzViMindaLife",
+        "author_url": "https://commons.wikimedia.org/wiki/User:LuzViMindaLife"
+      },
+      "background": null
+    },
+    {
       "id": "q-12626",
       "status": "approved",
       "difficulty": 6,
@@ -25406,6 +25576,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Cristina Zapata Pérez",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cristina_Zapata_P%C3%A9rez&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12627",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "civic-holidays",
+      "bundle": "mexico",
+      "description": "El día en que medio salón llega a la escuela con bigote pintado.",
+      "question": "El 20 de noviembre hay desfiles deportivos en escuelas y ciudades de todo México. ¿Qué se conmemora?",
+      "answer": "La Revolución Mexicana",
+      "wrong_answers": [
+        "La Independencia de México",
+        "La Batalla de Puebla",
+        "La Constitución de 1917"
+      ],
+      "hints": [
+        "Pasó a principios del siglo XX.",
+        "En los desfiles, muchos niños se disfrazan con sombrero de ala ancha y cananas cruzadas.",
+        "Empezó en 1910 contra el gobierno de Porfirio Díaz."
+      ],
+      "fun_fact": "Las Adelitas recuerdan a las soldaderas, mujeres que acompañaban y también peleaban junto a las tropas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Zocalo_-_West_Side_-_Mexico_2024.jpg/3840px-Zocalo_-_West_Side_-_Mexico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AZocalo_-_West_Side_-_Mexico_2024.jpg",
+        "credit": "José Luiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "José Luiz",
+        "author_url": null
       },
       "background": null
     },
@@ -25508,6 +25712,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Montanabw",
         "author_url": "https://commons.wikimedia.org/wiki/User:Montanabw"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12631",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "civic-holidays",
+      "bundle": "mexico",
+      "description": "Una fiesta en la que ningún peinado sale vivo.",
+      "question": "¿Cómo se llaman las sorpresas de colores rellenas de confeti que se rompen en la cabeza durante las fiestas?",
+      "answer": "Cascarones",
+      "wrong_answers": [
+        "Piñatas",
+        "Alebrijes",
+        "Papel picado"
+      ],
+      "hints": [
+        "Por dentro están llenos de algo.",
+        "Se pintan de colores y se tapan con papel de china.",
+        "Antes de decorarlos, guardaban un huevo."
+      ],
+      "fun_fact": "Los cascarones se rellenan de confeti y dicen que romper uno en la cabeza de alguien trae buena suerte.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Offizielle_Er%C3%B6ffnung_Stra%C3%9Fenparade_-_ColognePride_2011_%287771%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOffizielle_Er%C3%B6ffnung_Stra%C3%9Fenparade_-_ColognePride_2011_%287771%29.jpg",
+        "credit": "Raimond Spekking · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Raimond Spekking",
+        "author_url": "https://www.wikidata.org/wiki/Q108103612"
       },
       "background": null
     },
@@ -25644,6 +25882,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Eden, Janine and Jim from New York City",
         "author_url": "https://www.flickr.com/people/10485077@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12636",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "contemporary-cinema",
+      "bundle": "mexico",
+      "description": "De un viaje en un carro destartalado a un viaje mucho más raro, sin escalas.",
+      "question": "¿Qué película dirigió Alfonso Cuarón justo después de «Y tu mamá también» (2001)?",
+      "answer": "Harry Potter y el prisionero de Azkaban",
+      "wrong_answers": [
+        "Niños del hombre",
+        "Gravedad",
+        "Roma"
+      ],
+      "hints": [
+        "Fue un salto de un viaje en carretera a una superproducción.",
+        "Se estrenó en 2004.",
+        "Tiene magos, un hipogrifo y dementores."
+      ],
+      "fun_fact": "Cuarón les pidió a los actores de Harry Potter escribir un ensayo sobre su personaje antes de filmar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Clapperboard%2C_O2_film%2C_September_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClapperboard%2C_O2_film%2C_September_2008.jpg",
+        "credit": "Mattbr · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Mattbr",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=Utente:Mattbr&action=edit&redlink=1"
       },
       "background": null
     },
@@ -26328,6 +26600,40 @@
       "background": null
     },
     {
+      "id": "q-12657",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "national-symbols",
+      "bundle": "mexico",
+      "description": "Si los colores hablaran, esta franja tendría mucho que decir.",
+      "question": "Según la explicación más común en la escuela, ¿qué representa la franja verde de la bandera de México?",
+      "answer": "La esperanza",
+      "wrong_answers": [
+        "La justicia",
+        "La sabiduría",
+        "La alegría"
+      ],
+      "hints": [
+        "Es un sentimiento.",
+        "Tiene que ver con lo que deseas para el futuro.",
+        "Según el dicho, es lo último que se pierde."
+      ],
+      "fun_fact": "La ley mexicana no dice qué significa cada color; en la bandera Trigarante de 1821, el verde representaba la independencia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/CGI_Mexico_Flag.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACGI_Mexico_Flag.png",
+        "credit": "Aerra Carnicom · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Aerra Carnicom",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aerrapc"
+      },
+      "background": null
+    },
+    {
       "id": "q-12658",
       "status": "approved",
       "difficulty": 2,
@@ -26721,6 +27027,40 @@
         "Los bailadores marcan el ritmo con los tacones encima de ella."
       ],
       "fun_fact": "En muchos fandangos la tarima se considera un instrumento más, y los bailadores la 'tocan' con los pies.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Jarana_de_playa_vicente.jpg/3840px-Jarana_de_playa_vicente.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJarana_de_playa_vicente.jpg",
+        "credit": "Koffermejia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Koffermejia",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Koffermejia"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12670",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "regional-mexican",
+      "bundle": "mexico",
+      "description": "Un grupo con nombre de zoológico y alma de fandango.",
+      "question": "Completa el nombre del grupo que desde 1977 revivió los fandangos jarochos, fundado por Gilberto Gutiérrez: Mono…",
+      "answer": "Blanco",
+      "wrong_answers": [
+        "Araña",
+        "Aullador",
+        "Capuchino"
+      ],
+      "hints": [
+        "Fue uno de los grupos clave del movimiento jaranero de Veracruz.",
+        "Su fundador nació en el sur de Veracruz.",
+        "Es el color de la ropa típica jarocha."
+      ],
+      "fun_fact": "Mono Blanco ayudó a que el son jarocho volviera a tocarse en fandangos comunitarios, no solo en escenarios.",
       "media": {
         "type": "image",
         "role": "illustrative",
@@ -27722,6 +28062,40 @@
       "background": null
     },
     {
+      "id": "q-12701",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "traditional-games",
+      "bundle": "mexico",
+      "description": "Cuando el gritón canta las cartas, toda la mesa aguanta la respiración para gritar «¡Lotería!».",
+      "question": "Juegas lotería y cantan «¡el gallo!», que está en tu tabla. ¿Qué pones tradicionalmente encima de la carta?",
+      "answer": "Un frijol",
+      "wrong_answers": [
+        "Un grano de sal",
+        "Una hoja de cilantro",
+        "Un palillo"
+      ],
+      "hints": [
+        "Se saca de la cocina.",
+        "Es pequeño y no se resbala de la tabla.",
+        "Se usa también para hacer unos ricos refritos."
+      ],
+      "fun_fact": "La Lotería mexicana clásica tiene 54 cartas, cada una con su número y su dibujo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Papel_picado_blanco_1.jpg/3840px-Papel_picado_blanco_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APapel_picado_blanco_1.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
+      },
+      "background": null
+    },
+    {
       "id": "q-12702",
       "status": "approved",
       "difficulty": 4,
@@ -27752,6 +28126,74 @@
         "license_url": null,
         "author": "US Air Force",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12703",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "traditional-games",
+      "bundle": "mexico",
+      "description": "Un juguete que está en los puros huesos y aun así baila feliz.",
+      "question": "En México, ¿qué palabra se usa para los esqueletos sonrientes de los juguetes y figuras de Día de Muertos?",
+      "answer": "Calaca",
+      "wrong_answers": [
+        "Alebrije",
+        "Chamuco",
+        "Nahual"
+      ],
+      "hints": [
+        "Aparece mucho en noviembre en los mercados.",
+        "Está hecho a imagen de lo que tenemos debajo de la piel.",
+        "La Catrina es la más elegante de todas."
+      ],
+      "fun_fact": "José Guadalupe Posada hizo famosas las calaveras con sus grabados, entre ellos el de la Catrina.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Ofrenda_or_Day_of_the_Dead_Altar_at_Mission_Marquee_Plaza._%28586908b4-40dd-4be5-bc53-ababb89291f1%29.JPG/3840px-Ofrenda_or_Day_of_the_Dead_Altar_at_Mission_Marquee_Plaza._%28586908b4-40dd-4be5-bc53-ababb89291f1%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOfrenda_or_Day_of_the_Dead_Altar_at_Mission_Marquee_Plaza._%28586908b4-40dd-4be5-bc53-ababb89291f1%29.JPG",
+        "credit": "NPS Photo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NPS Photo",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12704",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "traditional-games",
+      "bundle": "mexico",
+      "description": "Una carta que trae su propio paseo dominical incluido.",
+      "question": "Es una carta de la Lotería mexicana: una mujer rema en una canoa llena de flores, como en Xochimilco. ¿Cómo se llama?",
+      "answer": "La Chalupa",
+      "wrong_answers": [
+        "La Dama",
+        "La Sirena",
+        "La Garza"
+      ],
+      "hints": [
+        "La mujer va sentada y lleva un remo.",
+        "En su verso tradicional, una tal Lupita va «rema y rema».",
+        "También se llama así un antojito poblano."
+      ],
+      "fun_fact": "En Puebla, la chalupa es también una tortillita con salsa, carne deshebrada y cebolla.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Trajineras_and_canals_of_Xochimilco_07.jpg/3840px-Trajineras_and_canals_of_Xochimilco_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrajineras_and_canals_of_Xochimilco_07.jpg",
+        "credit": "Ivo Kruusamägi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ivo Kruusamägi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kruusam%C3%A4gi"
       },
       "background": null
     },
@@ -28262,6 +28704,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Carole Raddato from FRANKFURT, Germany",
         "author_url": "https://www.flickr.com/people/41523983@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12720",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Un libro con título de abogado, pero lleno de poemas.",
+      "question": "¿En qué año publicó Octavio Paz la primera edición de su libro de poemas “Libertad bajo palabra”?",
+      "answer": "1949",
+      "wrong_answers": [
+        "1929",
+        "1969",
+        "1989"
+      ],
+      "hints": [
+        "Paz tenía unos 35 años.",
+        "Un año después salió “El laberinto de la soledad”.",
+        "Fue justo antes de la mitad del siglo XX."
+      ],
+      "fun_fact": "Paz revisó tanto este libro que la versión de 1960 es muy distinta de la primera.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Palacio_de_Bellas_Artes_00_%282%29.JPG/3840px-Palacio_de_Bellas_Artes_00_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalacio_de_Bellas_Artes_00_%282%29.JPG",
+        "credit": "لا روسا · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "لا روسا",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:%D9%84%D8%A7_%D8%B1%D9%88%D8%B3%D8%A7&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-12721",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Un poeta que viajó tanto que hasta para despedirse necesitó pasaporte.",
+      "question": "Amado Nervo nació en 1870, fue diplomático y murió en Montevideo en 1919. ¿En qué estado actual está su ciudad natal?",
+      "answer": "Nayarit",
+      "wrong_answers": [
+        "Jalisco",
+        "Sinaloa",
+        "Michoacán"
+      ],
+      "hints": [
+        "Su estado es uno de los más jóvenes de México.",
+        "Está en la costa del Pacífico, al norte de Puerto Vallarta.",
+        "Nació en Tepic."
+      ],
+      "fun_fact": "Su cuerpo regresó de Uruguay a México en barco y está en la Rotonda de las Personas Ilustres.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/AmadoNervotomb1DoloresDF.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmadoNervotomb1DoloresDF.JPG",
+        "credit": "Thelmadatter · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thelmadatter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Thelmadatter"
       },
       "background": null
     },

@@ -970827,9 +970827,9 @@
     },
     {
       "id": "q-12550",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
-      "description": "Ha dirigido en México, España y Japón, y nunca se le acaban los regaños en la banca.",
+      "description": "Hay entrenadores que gritan desde la banca, y luego está este, que convierte cada partido en una clase de motivación a todo pulmón.",
       "question": "¿Con qué apodo se conoce a este entrenador mexicano?",
       "answer": "El Vasco",
       "wrong_answers": [
@@ -970885,27 +970885,31 @@
       "needs_media": true,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description says he has coached in Spain and Japan. That is Aguirre's best-known trait among Mexican coaches, and it rules out Piojo, Tuca and Chepo before the photo or any hint. Rewrite the description so it jokes about coaching or the bench without naming countries or anything else only he has done.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description says he has coached in Spain and Japan. That is Aguirre's best-known trait among Mexican coaches, and it rules out Piojo, Tuca and Chepo before the photo or any hint. Rewrite the description so it jokes about coaching or the bench without naming countries or anything else only he has done.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway hint 2 with a 1986 World Cup career hint and made hint 3 vaguer, without Bilbao or the word 'vasco'.",
+        "reason": "Rewrote the description so it jokes about the bench without naming the countries that only Aguirre has coached in.",
         "previous": {
-          "hints": [
-            "Dirigió a la Selección Mexicana en varias etapas.",
-            "El apodo viene de las raíces de su familia en España.",
-            "Su familia viene del norte de España, de la región de Bilbao."
-          ]
+          "description": "Ha dirigido en México, España y Japón, y nunca se le acaban los regaños en la banca."
         },
         "revised_on": "2026-11-06"
       }
@@ -971241,10 +971245,10 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "wrestling referee pin count",
-        "note": "Foto de una lucha con un luchador de espaldas en la lona y el réferi agachado contando; que no se vean los dedos del réferi mostrando un número.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AJack_Brisco_vs._Jerry_Lawler_1975_%28pin_attempt%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Jack_Brisco_vs._Jerry_Lawler_1975_%28pin_attempt%29.jpg/3840px-Jack_Brisco_vs._Jerry_Lawler_1975_%28pin_attempt%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "query": "professional wrestling pinfall referee",
+        "note": "Foto de una lucha con un luchador de espaldas en la lona y el réferi agachado contando; que no se vean los dedos del réferi mostrando un número. Licencia libre (CC o dominio público mundial), no PD-US-only.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJack_Brisco_vs._Jerry_Lawler_1975_%28foot_on_the_rope%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Jack_Brisco_vs._Jerry_Lawler_1975_%28foot_on_the_rope%29.jpg/3840px-Jack_Brisco_vs._Jerry_Lawler_1975_%28foot_on_the_rope%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Robert Melhorn · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
@@ -971291,10 +971295,45 @@
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The chosen image has a US-only public-domain licence; changed the query slightly so a properly licensed pin photo gets picked.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "wrestling referee pin count",
+            "note": "Foto de una lucha con un luchador de espaldas en la lona y el réferi agachado contando; que no se vean los dedos del réferi mostrando un número.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AJack_Brisco_vs._Jerry_Lawler_1975_%28pin_attempt%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Jack_Brisco_vs._Jerry_Lawler_1975_%28pin_attempt%29.jpg/3840px-Jack_Brisco_vs._Jerry_Lawler_1975_%28pin_attempt%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Robert Melhorn · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Robert Melhorn",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12556",
@@ -971524,20 +971563,20 @@
     },
     {
       "id": "q-12559",
-      "status": "needs_work",
-      "difficulty": 2,
-      "description": "Un mes con tanto pozole que hasta la cuchara echa el grito.",
-      "question": "¿En qué mes se celebran las Fiestas Patrias de México, con el Grito, banderas y mariachis?",
-      "answer": "Septiembre",
+      "status": "approved",
+      "difficulty": 4,
+      "description": "Un balcón con más público que cualquier concierto del año.",
+      "question": "En las Fiestas Patrias de México, ¿desde el balcón de qué edificio da el presidente el Grito de Independencia?",
+      "answer": "El Palacio Nacional",
       "wrong_answers": [
-        "Noviembre",
-        "Mayo",
-        "Julio"
+        "El Castillo de Chapultepec",
+        "El Palacio de Bellas Artes",
+        "El Palacio de Minería"
       ],
       "hints": [
-        "Es después de las vacaciones de verano.",
-        "Es el mes en que empieza el otoño.",
-        "El Grito se da la noche del día 15."
+        "Está en el Centro Histórico de la Ciudad de México.",
+        "Da al Zócalo, la plaza más grande del país.",
+        "Por dentro tiene los famosos murales de Diego Rivera sobre la historia de México."
       ],
       "media": {
         "type": "image",
@@ -971555,7 +971594,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Cada año el presidente da el Grito de Independencia la noche del 15 desde el balcón de Palacio Nacional.",
+      "fun_fact": "La campana que se toca en el Grito es la original de Dolores Hidalgo, que se llevó a la Ciudad de México en 1896.",
       "subcategory": "mariachi-and-ranchera",
       "style": null,
       "concept": "Fiestas Patrias",
@@ -971582,18 +971621,49 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This repeats the fact in approved q-11631 (\"En México, ¿qué día se celebra oficialmente la Independencia?\" → 16 de septiembre). Both ask when Mexico celebrates Independence, so either one gives the other away. Drop it, or replace it with a different Fiestas Patrias fact (for example, where the president gives the Grito).",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This repeats the fact in approved q-11631 (\"En México, ¿qué día se celebra oficialmente la Independencia?\" → 16 de septiembre). Both ask when Mexico celebrates Independence, so either one gives the other away. Drop it, or replace it with a different Fiestas Patrias fact (for example, where the president gives the Grito).",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the month-of-Independence fact, which repeats q-11631, with a different Fiestas Patrias fact: the building where the president gives the Grito.",
+        "previous": {
+          "difficulty": 2,
+          "description": "Un mes con tanto pozole que hasta la cuchara echa el grito.",
+          "question": "¿En qué mes se celebran las Fiestas Patrias de México, con el Grito, banderas y mariachis?",
+          "answer": "Septiembre",
+          "wrong_answers": [
+            "Noviembre",
+            "Mayo",
+            "Julio"
+          ],
+          "hints": [
+            "Es después de las vacaciones de verano.",
+            "Es el mes en que empieza el otoño.",
+            "El Grito se da la noche del día 15."
+          ],
+          "fun_fact": "Cada año el presidente da el Grito de Independencia la noche del 15 desde el balcón de Palacio Nacional."
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12560",
@@ -971615,8 +971685,8 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "solo harp arpeggio",
-        "note": "Grabación de un arpa sola tocada con los dedos (punteo), sin otros instrumentos ni voz.",
+        "query": "harp solo",
+        "note": "Grabación claramente etiquetada como arpa sola tocada con los dedos (punteo), sin otros instrumentos ni voz; no sintetizada.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -971644,19 +971714,30 @@
         "difficulty_estimate": 4,
         "notes": "A solo harp recording is easy to find. A concert harp may sound different from a jarocho harp, but it's still clearly a harp. The audio item is missing a background_query. The fun fact touches on q-10367 (the guitarrón plays the bass), but it asks a different thing."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": true,
       "batch": "batch-39",
       "review": {
         "decision": "needs_work",
-        "feedback": "The only audio candidate, \"File:Arpeggio.ogg\" (Mysid), doesn't say it's a harp. It's most likely the synthesized example from Wikipedia's \"Arpeggio\" article, so it may not sound like a harp at all. The essential audio needs a clearly labelled solo harp recording, for example from a search for \"harp solo\" or \"arpa jarocha\", but no new search is allowed in this run. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta. Verificación de datos: wrong. The wrong answer 'La vihuela' is arguably also correct: the vihuela jarocha is a real son jarocho instrument, and the vihuela is also in the mariachi. The violin is also sometimes heard in son jarocho. The question has no single clear answer. I did not run a search for this check.",
         "problems": [
+          "fact",
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The only audio candidate, \"File:Arpeggio.ogg\" (Mysid), doesn't say it's a harp. It's most likely the synthesized example from Wikipedia's \"Arpeggio\" article, so it may not sound like a harp at all. The essential audio needs a clearly labelled solo harp recording, for example from a search for \"harp solo\" or \"arpa jarocha\", but no new search is allowed in this run. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": {
@@ -971674,9 +971755,17 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description as a fiesta line, with no strings or size that set the harp apart.",
+        "reason": "The only audio candidate is likely a synthesized arpeggio, not a harp; changed the audio query to a clearly labelled solo harp recording.",
         "previous": {
-          "description": "Tiene más cuerdas que un tendedero de domingo."
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "solo harp arpeggio",
+            "note": "Grabación de un arpa sola tocada con los dedos (punteo), sin otros instrumentos ni voz.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -974100,7 +974189,7 @@
     },
     {
       "id": "q-12593",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Hollywood se fue a Coyoacán y regresó con estatuillas doradas en la maleta.",
       "question": "La película «Frida» (2002), con Salma Hayek, ganó dos premios Óscar: uno a la mejor música original. ¿Cuál fue el otro?",
@@ -974112,7 +974201,7 @@
       ],
       "hints": [
         "Salma estuvo nominada, pero esa noche no ganó.",
-        "Es una categoría técnica, de las que se entregan lejos de los reflectores.",
+        "La película también estuvo nominada a mejor vestuario, pero ese no lo ganó.",
         "Tiene que ver con pelucas, pinturas para la cara y prótesis."
       ],
       "media": {
@@ -974158,25 +974247,33 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"una categoría técnica\") gives the answer away: best actress, best picture and best director are not technical categories, so only makeup is left once hint 2 is read. Hint 1 had already ruled out best actress. Hint 2 should stay vague, for example about the night of the ceremony or the film's look, without saying the category is technical.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"una categoría técnica\") gives the answer away: best actress, best picture and best director are not technical categories, so only makeup is left once hint 2 is read. Hint 1 had already ruled out best actress. Hint 2 should stay vague, for example about the night of the ceremony or the film's look, without saying the category is technical.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which described makeup work, with a vaguer hint about a technical category.",
+        "reason": "Replaced hint 2, which gave the answer away by calling it a technical category, with a vaguer true fact about another nomination the film lost.",
         "previous": {
           "hints": [
             "Salma estuvo nominada, pero esa noche no ganó.",
-            "Piensa en lo que había que hacer cada mañana para que los actores se parecieran a Frida y Diego.",
+            "Es una categoría técnica, de las que se entregan lejos de los reflectores.",
             "Tiene que ver con pelucas, pinturas para la cara y prótesis."
           ]
         },
@@ -975663,8 +975760,8 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Takis Fuego chips",
+        "role": "decorative",
+        "query": "snack chips bowl",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -975698,17 +975795,43 @@
       "batch": "batch-39",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text works, but no candidate fits. The slot needs a photo of Takis or rolled spicy tortilla chips. The candidates show two galaxies, two bowls of salsa and an old archaeological site plan. The salsa also points to Mexico. No new search is allowed, so the media slot can't be filled. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text works, but no candidate fits. The slot needs a photo of Takis or rolled spicy tortilla chips. The candidates show two galaxies, two bowls of salsa and an old archaeological site plan. The salsa also points to Mexico. No new search is allowed, so the media slot can't be filled. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No Takis photo exists among the candidates, so the media is now a decorative snack image that is easier to find and doesn't point to a country.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Takis Fuego chips",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12614",
@@ -976069,7 +976192,7 @@
     },
     {
       "id": "q-12619",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Pati Chapoy tiene un verbo propio y no le da miedo usarlo.",
       "question": "En el programa de espectáculos «Ventaneando» de TV Azteca, ¿qué significa «ventanear» a un famoso?",
@@ -976123,19 +976246,27 @@
         "difficulty_estimate": 6,
         "notes": "The word itself (ventana) and the window image suggest the answer, but that is inherent to the question. The correct option is somewhat distinctive. Difficulty 5 may be a bit low for 11-year-olds."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. I could not verify the exact meaning of «ventanear» from a source. The answer is plausible, and the wrong answers are clearly wrong.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. I could not verify the exact meaning of «ventanear» from a source. The answer is plausible, and the wrong answers are clearly wrong.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
@@ -976517,20 +976648,20 @@
     },
     {
       "id": "q-12625",
-      "status": "needs_work",
-      "difficulty": 2,
-      "description": "Una caminata nocturna en la que nadie se pierde porque todos traen su propia lucecita.",
-      "question": "Caminas de noche por la calle con una velita encendida, cantando para pedir posada. ¿En qué mes estás?",
-      "answer": "Diciembre",
+      "status": "approved",
+      "difficulty": 4,
+      "description": "Una olla tan grande que en diciembre necesita su propio lugar en la estufa.",
+      "question": "En las posadas se sirve una bebida caliente con tejocote, guayaba y caña. ¿Cómo se llama?",
+      "answer": "El ponche",
       "wrong_answers": [
-        "Noviembre",
-        "Octubre",
-        "Enero"
+        "El atole",
+        "El champurrado",
+        "El café de olla"
       ],
       "hints": [
-        "Es un mes de fiestas y vacaciones.",
-        "Las posadas duran nueve noches seguidas y terminan con piñata.",
-        "Es el último mes del año."
+        "Se sirve caliente, en jarrito o en vaso.",
+        "Además de fruta, lleva canela y piloncillo.",
+        "Su nombre se parece a «poncho», cambiando solo una letra."
       ],
       "media": {
         "type": "image",
@@ -976548,7 +976679,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Las posadas recuerdan el viaje de José y María buscando dónde quedarse en Belén.",
+      "fun_fact": "El tejocote, la fruta estrella del ponche, es nativo de México y parece una manzanita amarilla.",
       "subcategory": "christmas-season",
       "style": null,
       "concept": "Velitas",
@@ -976575,18 +976706,49 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlap with approved q-10389, whose text states \"En México las posadas empiezan justo el 16 de diciembre\": seeing that question gives this one's answer away. Consider dropping this one or asking a different posadas fact.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlap with approved q-10389, whose text states \"En México las posadas empiezan justo el 16 de diciembre\": seeing that question gives this one's answer away. Consider dropping this one or asking a different posadas fact.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "The month overlaps approved q-10389, which says posadas start on 16 December; switched to another posadas fact, the ponche.",
+        "previous": {
+          "difficulty": 2,
+          "description": "Una caminata nocturna en la que nadie se pierde porque todos traen su propia lucecita.",
+          "question": "Caminas de noche por la calle con una velita encendida, cantando para pedir posada. ¿En qué mes estás?",
+          "answer": "Diciembre",
+          "wrong_answers": [
+            "Noviembre",
+            "Octubre",
+            "Enero"
+          ],
+          "hints": [
+            "Es un mes de fiestas y vacaciones.",
+            "Las posadas duran nueve noches seguidas y terminan con piñata.",
+            "Es el último mes del año."
+          ],
+          "fun_fact": "Las posadas recuerdan el viaje de José y María buscando dónde quedarse en Belén."
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12626",
@@ -976661,7 +976823,7 @@
     },
     {
       "id": "q-12627",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "El día en que medio salón llega a la escuela con bigote pintado.",
       "question": "El 20 de noviembre hay desfiles deportivos en escuelas y ciudades de todo México. ¿Qué se conmemora?",
@@ -976673,7 +976835,7 @@
       ],
       "hints": [
         "Pasó a principios del siglo XX.",
-        "Pancho Villa y Emiliano Zapata fueron sus caudillos.",
+        "En los desfiles, muchos niños se disfrazan con sombrero de ala ancha y cananas cruzadas.",
         "Empezó en 1910 contra el gobierno de Porfirio Díaz."
       ],
       "media": {
@@ -976719,18 +976881,38 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This question overlaps draft q-12629, whose text says \"La Revolución que empezó el 20 de noviembre de 1910\". Anyone who has seen that question already knows this answer. Keep only one of them, or reword q-12629 so it doesn't link 20 de noviembre to the Revolution. Also, hint 2 (Villa and Zapata) is close to giving the answer away for a hint that isn't the last one.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This question overlaps draft q-12629, whose text says \"La Revolución que empezó el 20 de noviembre de 1910\". Anyone who has seen that question already knows this answer. Keep only one of them, or reword q-12629 so it doesn't link 20 de noviembre to the Revolution. Also, hint 2 (Villa and Zapata) is close to giving the answer away for a hint that isn't the last one.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer so it doesn't name Villa and Zapata; the overlap should be fixed by rewording draft q-12629 so it doesn't tie 20 de noviembre to the Revolution.",
+        "previous": {
+          "hints": [
+            "Pasó a principios del siglo XX.",
+            "Pancho Villa y Emiliano Zapata fueron sus caudillos.",
+            "Empezó en 1910 contra el gobierno de Porfirio Díaz."
+          ]
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12628",
@@ -976964,10 +977146,10 @@
     },
     {
       "id": "q-12631",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una fiesta en la que ningún peinado sale vivo.",
-      "question": "Mira esta foto de cerca. ¿Cómo se llaman estas sorpresas de colores que se rompen en la cabeza durante las fiestas?",
+      "question": "¿Cómo se llaman las sorpresas de colores rellenas de confeti que se rompen en la cabeza durante las fiestas?",
       "answer": "Cascarones",
       "wrong_answers": [
         "Piñatas",
@@ -976981,12 +977163,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "confetti filled eggs",
-        "note": "Primer plano de cascarones: cáscaras de huevo pintadas de colores, tapadas con papel de china; sin texto.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "colorful confetti celebration",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOffizielle_Er%C3%B6ffnung_Stra%C3%9Fenparade_-_ColognePride_2011_%287771%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Offizielle_Er%C3%B6ffnung_Stra%C3%9Fenparade_-_ColognePride_2011_%287771%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Raimond Spekking · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Raimond Spekking",
+        "author_url": "https://www.wikidata.org/wiki/Q108103612",
+        "restrictions": [
+          "personality"
+        ],
+        "pd_reasons": []
       },
       "fun_fact": "Los cascarones se rellenan de confeti y dicen que romper uno en la cabeza de alguien trae buena suerte.",
       "subcategory": "civic-holidays",
@@ -977012,21 +977203,47 @@
         "notes": "Wikimedia Commons and Openverse very likely have clear photos of cascarones, so essential media is fine. The 'good luck' claim in the fun fact is folklore but widely reported. The 'history' lens doesn't fit."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows cascarones, the painted, confetti-filled eggs the essential image needs. They show hatching chicks and ducklings, a prickly-pear cactus, a craft panel and Filipino rice balls. No new search is allowed. You could add a Commons photo of Mexican confetti eggs by hand, or turn the question into a text-only one with an illustrative or decorative image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows cascarones, the painted, confetti-filled eggs the essential image needs. They show hatching chicks and ducklings, a prickly-pear cactus, a craft panel and Filipino rice balls. No new search is allowed. You could add a Commons photo of Mexican confetti eggs by hand, or turn the question into a text-only one with an illustrative or decorative image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No cascarones photo exists, so the question is now text-only with a decorative confetti image instead of an essential photo.",
+        "previous": {
+          "question": "Mira esta foto de cerca. ¿Cómo se llaman estas sorpresas de colores que se rompen en la cabeza durante las fiestas?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "confetti filled eggs",
+            "note": "Primer plano de cascarones: cáscaras de huevo pintadas de colores, tapadas con papel de china; sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12632",
@@ -977332,7 +977549,7 @@
     },
     {
       "id": "q-12636",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "De un viaje en un carro destartalado a un viaje mucho más raro, sin escalas.",
       "question": "¿Qué película dirigió Alfonso Cuarón justo después de «Y tu mamá también» (2001)?",
@@ -977350,11 +977567,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Mexico Pacific coast road",
+        "query": "film clapperboard",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClapperboard%2C_O2_film%2C_September_2008.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Clapperboard%2C_O2_film%2C_September_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Mattbr · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Mattbr",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=Utente:Mattbr&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Cuarón les pidió a los actores de Harry Potter escribir un ensayo sobre su personaje antes de filmar.",
       "subcategory": "contemporary-cinema",
@@ -977383,23 +977607,39 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but no media candidate works. 1, 5 and 6 are old maps, 2 is an 1883 village engraving and 3 is sheep in a corral, so none fits the road trip or Cuarón's films. 4 is the Mexican coast photographed from the ISS, which points to the wrong option «Gravedad». A new search such as \"Oaxaca beach road\" or \"film clapperboard\" is needed. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no media candidate works. 1, 5 and 6 are old maps, 2 is an 1883 village engraving and 3 is sheep in a corral, so none fits the road trip or Cuarón's films. 4 is the Mexican coast photographed from the ISS, which points to the wrong option «Gravedad». A new search such as \"Oaxaca beach road\" or \"film clapperboard\" is needed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the made-up viewing scenario and asked the question directly.",
+        "reason": "No usable image candidates, so the query is now a neutral film clapperboard.",
         "previous": {
-          "question": "Acabas de ver «Y tu mamá también» (2001) y quieres seguir con la siguiente película que dirigió Alfonso Cuarón. ¿Cuál es?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Mexico Pacific coast road",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -978885,7 +979125,7 @@
     },
     {
       "id": "q-12657",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Si los colores hablaran, esta franja tendría mucho que decir.",
       "question": "Según la explicación más común en la escuela, ¿qué representa la franja verde de la bandera de México?",
@@ -978897,7 +979137,7 @@
       ],
       "hints": [
         "Es un sentimiento.",
-        "En la escuela se enseña que el blanco es la unidad y el rojo, la sangre de los héroes.",
+        "Tiene que ver con lo que deseas para el futuro.",
         "Según el dicho, es lo último que se pierde."
       ],
       "media": {
@@ -978943,25 +979183,33 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 states that red is 'la sangre de los héroes', which is exactly the answer of draft q-12578 ('el rojo … representa «la sangre de los…»'), so seeing this question gives that one away. Replace hint 2 with a vaguer clue that doesn't reveal another colour's meaning (e.g. about the word in the saying or the feeling's link to the future).",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 states that red is 'la sangre de los héroes', which is exactly the answer of draft q-12578 ('el rojo … representa «la sangre de los…»'), so seeing this question gives that one away. Replace hint 2 with a vaguer clue that doesn't reveal another colour's meaning (e.g. about the word in the saying or the feeling's link to the future).",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which defined 'esperanza', with the school meanings of the other two colours.",
+        "reason": "Hint 2 revealed the meaning of red, which is another question's answer, so it now gives a vaguer clue about the future.",
         "previous": {
           "hints": [
             "Es un sentimiento.",
-            "Es lo que sientes cuando crees que algo bueno va a pasar.",
+            "En la escuela se enseña que el blanco es la unidad y el rojo, la sangre de los héroes.",
             "Según el dicho, es lo último que se pierde."
           ]
         },
@@ -979855,7 +980103,7 @@
     },
     {
       "id": "q-12670",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un grupo con nombre de zoológico y alma de fandango.",
       "question": "Completa el nombre del grupo que desde 1977 revivió los fandangos jarochos, fundado por Gilberto Gutiérrez: Mono…",
@@ -979867,7 +980115,7 @@
       ],
       "hints": [
         "Fue uno de los grupos clave del movimiento jaranero de Veracruz.",
-        "El grupo nació en Tlacotalpan, Veracruz.",
+        "Su fundador nació en el sur de Veracruz.",
         "Es el color de la ropa típica jarocha."
       ],
       "media": {
@@ -979909,29 +980157,37 @@
         "difficulty_estimate": 13,
         "notes": "Completing a group's name is niche fact recall with little fun. Hint 2 already gives the answer away (snow/paper = white). The monkey-species distractors are clever."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check says 'wrong': hint 2 claims Mono Blanco was born in Tlacotalpan, but sources generally say Gilberto Gutiérrez founded it in Mexico City in 1977, and I can't confirm Tlacotalpan myself. Replace hint 2 with something verifiable, e.g. «El grupo se fundó en la Ciudad de México, pero su música es de raíz veracruzana.» Verificación de datos: wrong. Hint 2 says the group was born in Tlacotalpan, Veracruz. Mono Blanco was founded in 1977 in Mexico City by Gilberto Gutiérrez (Veracruz-born members, but not founded in Tlacotalpan). This is from memory; I did not search.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check says 'wrong': hint 2 claims Mono Blanco was born in Tlacotalpan, but sources generally say Gilberto Gutiérrez founded it in Mexico City in 1977, and I can't confirm Tlacotalpan myself. Replace hint 2 with something verifiable, e.g. «El grupo se fundó en la Ciudad de México, pero su música es de raíz veracruzana.» Verificación de datos: wrong. Hint 2 says the group was born in Tlacotalpan, Veracruz. Mono Blanco was founded in 1977 in Mexico City by Gilberto Gutiérrez (Veracruz-born members, but not founded in Tlacotalpan). This is from memory; I did not search.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which plainly pointed to 'blanco', with the group's birthplace.",
+        "reason": "Replaced the unverified Tlacotalpan hint with a safe one about the founder's southern Veracruz roots.",
         "previous": {
           "hints": [
             "Fue uno de los grupos clave del movimiento jaranero de Veracruz.",
-            "Es una palabra que también describe la nieve o el papel.",
+            "El grupo nació en Tlacotalpan, Veracruz.",
             "Es el color de la ropa típica jarocha."
           ]
         },
@@ -981837,7 +982093,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "quijada de burro instrument",
+        "query": "donkey jawbone percussion",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -981871,26 +982127,40 @@
       "batch": "batch-39",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits: none shows a quijada de burro, the Danza de los Diablos or the Costa Chica, and no new search is allowed. The text itself is fine. It needs a new image search, e.g. \"Danza de los Diablos Guerrero\" or \"donkey jawbone percussion\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits: none shows a quijada de burro, the Danza de los Diablos or the Costa Chica, and no new search is allowed. The text itself is fine. It needs a new image search, e.g. \"Danza de los Diablos Guerrero\" or \"donkey jawbone percussion\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the dates and gave the answer away.",
+        "reason": "No usable image candidates, so the query is now a clearer search for the donkey-jaw instrument.",
         "previous": {
-          "hints": [
-            "Es una tradición de los pueblos afromexicanos de la Costa Chica.",
-            "Se baila a finales de octubre y principios de noviembre.",
-            "Es cuando se ponen ofrendas con cempasúchil."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "quijada de burro instrument",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -982194,7 +982464,7 @@
     },
     {
       "id": "q-12701",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Cuando el gritón canta las cartas, toda la mesa aguanta la respiración para gritar «¡Lotería!».",
       "question": "Juegas lotería y cantan «¡el gallo!», que está en tu tabla. ¿Qué pones tradicionalmente encima de la carta?",
@@ -982212,11 +982482,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Mexican loteria cards",
+        "query": "Mexican papel picado",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APapel_picado_blanco_1.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Papel_picado_blanco_1.jpg/3840px-Papel_picado_blanco_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La Lotería mexicana clásica tiene 54 cartas, cada una con su número y su dibujo.",
       "subcategory": "traditional-games",
@@ -982245,23 +982522,39 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits: all six are 19th-century stereograph cards of Santa Fe, New Mexico (a residence, pack burros), not a lotería game. A new search isn't allowed. The slot needs a picture of lotería cards or a lotería board ('loteria mexicana tabla'); since frijoles may appear on it, check that it doesn't show bean markers. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits: all six are 19th-century stereograph cards of Santa Fe, New Mexico (a residence, pack burros), not a lotería game. A new search isn't allowed. The slot needs a picture of lotería cards or a lotería board ('loteria mexicana tabla'); since frijoles may appear on it, check that it doesn't show bean markers. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description, which said the marker is food.",
+        "reason": "No usable lotería image, so the decorative query is now a festive papel picado scene that can't show bean markers.",
         "previous": {
-          "description": "El único juego donde la comida es la ficha y no el premio."
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "Mexican loteria cards",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -982341,10 +982634,10 @@
     },
     {
       "id": "q-12703",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un juguete que está en los puros huesos y aun así baila feliz.",
-      "question": "Mira de cerca este juguete de Día de Muertos que mueve brazos y piernas. ¿Cómo se le dice en México?",
+      "question": "En México, ¿qué palabra se usa para los esqueletos sonrientes de los juguetes y figuras de Día de Muertos?",
       "answer": "Calaca",
       "wrong_answers": [
         "Alebrije",
@@ -982354,16 +982647,25 @@
       "hints": [
         "Aparece mucho en noviembre en los mercados.",
         "Está hecho a imagen de lo que tenemos debajo de la piel.",
-        "Es otra forma de decir esqueleto o calavera."
+        "La Catrina es la más elegante de todas."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Day of the Dead skeleton toy",
-        "note": "Acercamiento a un juguete de esqueleto articulado mexicano (madera o cartón), sin texto.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Day of the Dead altar marigold",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOfrenda_or_Day_of_the_Dead_Altar_at_Mission_Marquee_Plaza._%28586908b4-40dd-4be5-bc53-ababb89291f1%29.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Ofrenda_or_Day_of_the_Dead_Altar_at_Mission_Marquee_Plaza._%28586908b4-40dd-4be5-bc53-ababb89291f1%29.JPG/3840px-Ofrenda_or_Day_of_the_Dead_Altar_at_Mission_Marquee_Plaza._%28586908b4-40dd-4be5-bc53-ababb89291f1%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "NPS Photo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NPS Photo",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NPS"
+        ]
       },
       "fun_fact": "José Guadalupe Posada hizo famosas las calaveras con sus grabados, entre ellos el de la Catrina.",
       "subcategory": "traditional-games",
@@ -982388,26 +982690,57 @@
         "difficulty_estimate": 4,
         "notes": "Commons may not have a clean close-up of an articulated Mexican skeleton toy. The Catrina was originally 'La Calavera Garbancera', a small nuance."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows what the essential image must show: a close-up of an articulated Mexican skeleton toy that moves its arms and legs. #3 shows small clay skeleton figurines in a market, #4 and #5 are Catrina figures, #6 shows Coco merchandise, and #1 and #2 are unrelated. No new search is allowed. Either find a photo of a jointed calaca toy (a pull-string or jumping-jack skeleton) or reword the question so it doesn't refer to a moving toy shown in the photo. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows what the essential image must show: a close-up of an articulated Mexican skeleton toy that moves its arms and legs. #3 shows small clay skeleton figurines in a market, #4 and #5 are Catrina figures, #6 shows Coco merchandise, and #1 and #2 are unrelated. No new search is allowed. Either find a photo of a jointed calaca toy (a pull-string or jumping-jack skeleton) or reword the question so it doesn't refer to a moving toy shown in the photo. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of a jointed skeleton toy exists, so the question is reworded without the photo, with an illustrative altar image, and hint 3 is changed because the new wording already says 'esqueleto'.",
+        "previous": {
+          "question": "Mira de cerca este juguete de Día de Muertos que mueve brazos y piernas. ¿Cómo se le dice en México?",
+          "hints": [
+            "Aparece mucho en noviembre en los mercados.",
+            "Está hecho a imagen de lo que tenemos debajo de la piel.",
+            "Es otra forma de decir esqueleto o calavera."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Day of the Dead skeleton toy",
+            "note": "Acercamiento a un juguete de esqueleto articulado mexicano (madera o cartón), sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12704",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Una carta que trae su propio paseo dominical incluido.",
       "question": "Es una carta de la Lotería mexicana: una mujer rema en una canoa llena de flores, como en Xochimilco. ¿Cómo se llama?",
@@ -982419,7 +982752,7 @@
       ],
       "hints": [
         "La mujer va sentada y lleva un remo.",
-        "El nombre de la carta es el de una pequeña embarcación, no el de una persona ni de un animal.",
+        "En su verso tradicional, una tal Lupita va «rema y rema».",
         "También se llama así un antojito poblano."
       ],
       "media": {
@@ -982465,25 +982798,33 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It says the card's name is a small boat, \"not a person or an animal\", which rules out La Dama, La Sirena and La Garza in one go. Replace it with a vaguer hint, for example about the card's usual verse or the trajineras of Xochimilco, without saying what kind of word the name is.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It says the card's name is a small boat, \"not a person or an animal\", which rules out La Dama, La Sirena and La Garza in one go. Replace it with a vaguer hint, for example about the card's usual verse or the trajineras of Xochimilco, without saying what kind of word the name is.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which quoted a made-up verse, with a hint about the boat that names neither the answer nor its diminutive.",
+        "reason": "Hint 2 ruled out all wrong options, so it now quotes part of the card's traditional verse.",
         "previous": {
           "hints": [
             "La mujer va sentada y lleva un remo.",
-            "Su verso dice «rema y rema va Lupita».",
+            "El nombre de la carta es el de una pequeña embarcación, no el de una persona ni de un animal.",
             "También se llama así un antojito poblano."
           ]
         },
@@ -983598,7 +983939,7 @@
     },
     {
       "id": "q-12720",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un libro con título de abogado, pero lleno de poemas.",
       "question": "¿En qué año publicó Octavio Paz la primera edición de su libro de poemas “Libertad bajo palabra”?",
@@ -983616,11 +983957,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Octavio Paz portrait",
+        "query": "Palacio de Bellas Artes",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalacio_de_Bellas_Artes_00_%282%29.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Palacio_de_Bellas_Artes_00_%282%29.JPG/3840px-Palacio_de_Bellas_Artes_00_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "لا روسا · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "لا روسا",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:%D9%84%D8%A7_%D8%B1%D9%88%D8%B3%D8%A7&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Paz revisó tanto este libro que la versión de 1960 es muy distinta de la primera.",
       "subcategory": "writers-and-poets",
@@ -983649,22 +983997,46 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six image candidates shows Octavio Paz. They're other people with \"Paz\" in their names (Elena Garro's family, Bolivian legislators, others), and no new search is allowed. The text itself is fine. A better search would be \"Octavio Paz 1988\" or \"Octavio Paz writer\", or an illustrative image such as \"Palacio de Bellas Artes\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six image candidates shows Octavio Paz. They're other people with \"Paz\" in their names (Elena Garro's family, Bolivian legislators, others), and no new search is allowed. The text itself is fine. A better search would be \"Octavio Paz 1988\" or \"Octavio Paz writer\", or an illustrative image such as \"Palacio de Bellas Artes\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Image search found other people named Paz, so the query is now the Palacio de Bellas Artes.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Octavio Paz portrait",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12721",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Un poeta que viajó tanto que hasta para despedirse necesitó pasaporte.",
       "question": "Amado Nervo nació en 1870, fue diplomático y murió en Montevideo en 1919. ¿En qué estado actual está su ciudad natal?",
@@ -983682,11 +984054,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Amado Nervo portrait",
+        "query": "Amado Nervo",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmadoNervotomb1DoloresDF.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/AmadoNervotomb1DoloresDF.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Thelmadatter · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thelmadatter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Thelmadatter",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Su cuerpo regresó de Uruguay a México en barco y está en la Rotonda de las Personas Ilustres.",
       "subcategory": "writers-and-poets",
@@ -983715,28 +984094,39 @@
       "needs_media": false,
       "batch": "batch-39",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No media candidate shows Amado Nervo or anything related to him: they are a botany plate, Luis Amado with the Obamas, and four portraits of the Brazilian writer Jorge Amado. A new search isn't allowed here. The slot needs a new search, for example \"Amado Nervo\" or \"Tepic Nayarit cathedral\". The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No media candidate shows Amado Nervo or anything related to him: they are a botany plate, Luis Amado with the Obamas, and four portraits of the Brazilian writer Jorge Amado. A new search isn't allowed here. The slot needs a new search, for example \"Amado Nervo\" or \"Tepic Nayarit cathedral\". The text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question to ask for the present-day state, since Tepic was part of Jalisco in 1870, and replaced the hints that gave it away or repeated each other.",
+        "reason": "Image search found other people named Amado, so the query is now just the poet's full name (a Tepic photo would give the answer away).",
         "previous": {
-          "question": "Amado Nervo nació en 1870, fue diplomático y murió en Montevideo en 1919. ¿En qué estado nació?",
-          "hints": [
-            "Su estado tiene costa en el Pacífico.",
-            "Cuando él nació, su tierra todavía era parte de Jalisco.",
-            "Nació en Tepic."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Amado Nervo portrait",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
