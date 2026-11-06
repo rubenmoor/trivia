@@ -1022246,20 +1022246,20 @@
     },
     {
       "id": "q-13213",
-      "status": "needs_work",
-      "difficulty": 3,
+      "status": "approved",
+      "difficulty": 5,
       "description": "El primer grafiti de la historia, y nadie lo multó.",
-      "question": "Estás en la cueva de Altamira, mirando los bisontes pintados en el techo. ¿Cuándo se pintaron?",
-      "answer": "Hace más de 10 000 años",
+      "question": "En 1879 alguien vio por primera vez los bisontes pintados en el techo de la cueva de Altamira. ¿Quién fue?",
+      "answer": "Una niña de 8 años",
       "wrong_answers": [
-        "Hace unos 500 años",
-        "Hace unos 2000 años",
-        "Hace 66 millones de años"
+        "Un pastor con su perro",
+        "Un grupo de mineros",
+        "Unos soldados franceses"
       ],
       "hints": [
-        "Los pintaron humanos, así que no fue en tiempos de los dinosaurios.",
-        "Fue en la Prehistoria, mucho antes que los romanos.",
-        "Fue en la Edad de Hielo."
+        "Fue alguien que entró en la cueva acompañando a un familiar.",
+        "Su padre buscaba restos prehistóricos en el suelo, y no miró hacia arriba.",
+        "Se llamaba María y era muy pequeña."
       ],
       "media": {
         "type": "image",
@@ -1022277,7 +1022277,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Las pinturas de Altamira las descubrió en 1879 una niña de 8 años, María, la hija de Marcelino Sanz de Sautuola.",
+      "fun_fact": "Según la historia, María gritó «¡Mira, papá, bueyes!» al ver los bisontes del techo.",
       "subcategory": "ancient-hispania",
       "style": null,
       "concept": "Pinturas rupestres",
@@ -1022304,19 +1022304,49 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This overlaps with approved q-9864 («¿Quiénes pintaron estos bisontes en la cueva de Altamira?» → Cazadores del Paleolítico). Both ask about the age and makers of the same Altamira bison, and seeing «Paleolítico» in that answer settles this one, because «Hace más de 10 000 años» is the only option left that fits it. The media is fine (candidate 4).",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This overlaps with approved q-9864 («¿Quiénes pintaron estos bisontes en la cueva de Altamira?» → Cazadores del Paleolítico). Both ask about the age and makers of the same Altamira bison, and seeing «Paleolítico» in that answer settles this one, because «Hace más de 10 000 años» is the only option left that fits it. The media is fine (candidate 4).",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 3,
+      "revision": {
+        "action": "revise",
+        "reason": "Reworked to ask who discovered the paintings, so approved q-9864 no longer gives away the age; fun fact and hints adjusted.",
+        "previous": {
+          "difficulty": 3,
+          "question": "Estás en la cueva de Altamira, mirando los bisontes pintados en el techo. ¿Cuándo se pintaron?",
+          "answer": "Hace más de 10 000 años",
+          "wrong_answers": [
+            "Hace unos 500 años",
+            "Hace unos 2000 años",
+            "Hace 66 millones de años"
+          ],
+          "hints": [
+            "Los pintaron humanos, así que no fue en tiempos de los dinosaurios.",
+            "Fue en la Prehistoria, mucho antes que los romanos.",
+            "Fue en la Edad de Hielo."
+          ],
+          "fun_fact": "Las pinturas de Altamira las descubrió en 1879 una niña de 8 años, María, la hija de Marcelino Sanz de Sautuola."
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13214",
@@ -1023159,7 +1023189,7 @@
       "id": "q-13225",
       "status": "needs_work",
       "difficulty": 11,
-      "description": "Pelucas empolvadas, palacios enormes y muchas ganas de cambiar el mundo… desde el trono.",
+      "description": "Pelucas empolvadas, palacios enormes y lacayos con medias hasta la rodilla.",
       "question": "Reino en el siglo XVIII: el rey manda en todo, pero quiere escuelas, ciencia y progreso. Mi lema: «Todo para el pueblo, pero sin el pueblo». ¿Qué soy?",
       "answer": "El despotismo ilustrado",
       "wrong_answers": [
@@ -1023214,28 +1023244,38 @@
         "difficulty_estimate": 10,
         "notes": "The famous motto is a strong clue. A safe illustrative image (an 18th-century palace) was possible, so decorative is a slightly odd choice."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-42",
       "review": {
         "decision": "needs_work",
-        "feedback": "The description gives the answer away. «Muchas ganas de cambiar el mundo… desde el trono» states the defining trait of enlightened despotism: reform imposed by an absolute monarch. Read with only the four options, it rules out parlamentarismo and liberalismo (not from the throne) and feudalismo (no reforming zeal). Rewrite it to play on the 18th-century court theme, for example wigs and palaces, without the idea of reform from above.",
+        "feedback": "The fact check is uncertain about the fun fact, and I can't confirm it either. It says no king said «todo para el pueblo, pero sin el pueblo» and that the phrase was coined later, but the motto's origin is unclear and it is often loosely credited to Joseph II or Frederick II. Rewrite the fun fact so it makes no claim about who coined the phrase or when; for example, say only that it is the famous French summary «Tout pour le peuple, rien par le peuple». Verificación de datos: uncertain. Answer is right. The fun fact says no king said the phrase and it was coined later, but no source I found gives an author or a date for it.",
         "problems": [
-          "giveaway"
+          "fact"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. «Muchas ganas de cambiar el mundo… desde el trono» states the defining trait of enlightened despotism: reform imposed by an absolute monarch. Read with only the four options, it rules out parlamentarismo and liberalismo (not from the throne) and feudalismo (no reforming zeal). Rewrite it to play on the 18th-century court theme, for example wigs and palaces, without the idea of reform from above.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer paraphrases the answer's defining trait.",
+        "reason": "Rewrote the description so it plays on the 18th-century court look without hinting at reform from the throne.",
         "previous": {
-          "description": "Un gobierno que te quiere tanto que no te deja opinar."
+          "description": "Pelucas empolvadas, palacios enormes y muchas ganas de cambiar el mundo… desde el trono."
         },
         "revised_on": "2026-11-06"
       }
@@ -1024825,7 +1024865,7 @@
     },
     {
       "id": "q-13247",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Compartir es vivir, también cuando se trata de idiomas en un mismo cartel.",
       "question": "En sus comunidades, el catalán, el gallego y el euskera tienen el mismo rango que el castellano, como permite la Constitución de 1978. ¿Cómo se llaman?",
@@ -1024837,7 +1024877,7 @@
       ],
       "hints": [
         "Por eso ves carteles y señales escritos en dos idiomas.",
-        "El nombre indica que son oficiales «junto con» otra lengua.",
+        "Se pueden usar con la Administración y en las escuelas igual que el castellano.",
         "Lleva el prefijo «co-», como «copiloto»."
       ],
       "media": {
@@ -1024883,24 +1024923,36 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. «El nombre indica que son oficiales \"junto con\" otra lengua» puts the word «oficiales» in the hint, and only «Lenguas cooficiales» contains it, so the hint settles the question at step 2. Hint 2 should point to the shared status without using the answer's own word, for example by saying both languages can be used with the authorities and in schools.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. «El nombre indica que son oficiales \"junto con\" otra lengua» puts the word «oficiales» in the hint, and only «Lenguas cooficiales» contains it, so the hint settles the question at step 2. Hint 2 should point to the shared status without using the answer's own word, for example by saying both languages can be used with the authorities and in schools.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question and removed the word «oficial», which gave the answer away.",
+        "reason": "Rewrote hint 2 so it no longer uses the answer's word «oficiales».",
         "previous": {
-          "question": "El catalán, el gallego y el euskera lo son en sus comunidades: comparten el rango oficial con el castellano, como permite la Constitución de 1978. ¿Cómo se llaman?"
+          "hints": [
+            "Por eso ves carteles y señales escritos en dos idiomas.",
+            "El nombre indica que son oficiales «junto con» otra lengua.",
+            "Lleva el prefijo «co-», como «copiloto»."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -1025143,10 +1025195,10 @@
     },
     {
       "id": "q-13251",
-      "status": "needs_work",
-      "difficulty": 2,
+      "status": "approved",
+      "difficulty": 3,
       "description": "Tanta agua que ni la abuela con su bañera más llena podría superarlo.",
-      "question": "Mira el mapa: ¿qué océano está marcado, el que baña las costas de Galicia y Portugal?",
+      "question": "¿Qué océano baña las costas de Galicia y Portugal?",
       "answer": "El océano Atlántico",
       "wrong_answers": [
         "El océano Pacífico",
@@ -1025160,12 +1025212,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Atlantic Ocean orthographic projection",
-        "note": "Mapa mudo de la península ibérica, sin rótulos, con el océano al oeste de Galicia y Portugal resaltado o señalado con una flecha.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Galicia coast lighthouse cliffs",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVista_del_faro_del_cabo_Vil%C3%A1n.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Vista_del_faro_del_cabo_Vil%C3%A1n.jpg/3840px-Vista_del_faro_del_cabo_Vil%C3%A1n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "SusoRedondo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SusoRedondo",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SusoRedondo",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El Atlántico es el segundo océano más grande del mundo; solo el Pacífico lo supera.",
       "subcategory": "coasts-and-islands",
@@ -1025191,22 +1025250,50 @@
         "notes": "Easy and correct, but a dry geography question. The description is a weak bathtub joke. Hint 1 (Columbus crossed it) already nearly gives the answer. A blank map with the ocean marked may be hard to find with that exact query; it depends on the note."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate is the essential map the question needs: a blank map of the Iberian Peninsula with the ocean west of Galicia and Portugal highlighted or marked. #1 and #4 are old world maps with printed ocean names (#4 clearly says «Atlantic»). #2 and #3 are diagrams of map projections with nothing marked. No new search is allowed, so the media has to be sourced by hand (for example a blank Iberia map with the Atlantic shaded), or the question reworded so it doesn't depend on a marked map. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is the essential map the question needs: a blank map of the Iberian Peninsula with the ocean west of Galicia and Portugal highlighted or marked. #1 and #4 are old world maps with printed ocean names (#4 clearly says «Atlantic»). #2 and #3 are diagrams of map projections with nothing marked. No new search is allowed, so the media has to be sourced by hand (for example a blank Iberia map with the Atlantic shaded), or the question reworded so it doesn't depend on a marked map. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable blank map exists, so the question no longer depends on a marked map and uses an illustrative Galician coast photo.",
+        "previous": {
+          "difficulty": 2,
+          "question": "Mira el mapa: ¿qué océano está marcado, el que baña las costas de Galicia y Portugal?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Atlantic Ocean orthographic projection",
+            "note": "Mapa mudo de la península ibérica, sin rótulos, con el océano al oeste de Galicia y Portugal resaltado o señalado con una flecha.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13252",
@@ -1025654,10 +1025741,10 @@
     },
     {
       "id": "q-13258",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Aquí las toallas se colocan a las ocho de la mañana para reservar sitio.",
-      "question": "Mira el mapa de España: ¿qué costa está marcada?",
+      "question": "¿Cómo se llama la costa de la provincia de Málaga, famosa por sus playas?",
       "answer": "La Costa del Sol",
       "wrong_answers": [
         "La Costa Blanca",
@@ -1025666,17 +1025753,24 @@
       ],
       "hints": [
         "Está en Andalucía",
-        "Su gran ciudad es Málaga",
+        "Allí están Marbella y Torremolinos",
         "Su nombre es el de la estrella que nos calienta"
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Costa del Sol locator map",
-        "note": "Mapa mudo de España, sin rótulos, con la costa de la provincia de Málaga resaltada en color.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Malaga city beach",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThis_Fish_Eats_Plastic.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/This_Fish_Eats_Plastic.jpg/3840px-This_Fish_Eats_Plastic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Daniel Capilla · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniel Capilla",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dcapillae",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Málaga presume de tener unos 300 días de sol al año.",
       "subcategory": "coasts-and-islands",
@@ -1025702,22 +1025796,53 @@
         "notes": "Telling the Costa del Sol from a highlighted map needs knowing where the Málaga coast is, which is harder than 4. A plain 'blank map of Spain' won't show the highlight; a locator map with exactly that stretch is uncertain. '300 days of sun' is a promotional claim. Same answer as q-10042, but a different clue."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works as the essential map. #1 is the only relevant one, but it is a labelled map of Andalusia, not a blank map of Spain. Its German labels name Málaga and the comarcas, and the highlighted strip appears to be labelled with the comarca name \"Costa del Sol Occidental\", which gives the answer away. A new search isn't allowed, so the question needs a hand-picked or custom blank locator map of Spain with the Málaga coast highlighted, or it should be dropped. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works as the essential map. #1 is the only relevant one, but it is a labelled map of Andalusia, not a blank map of Spain. Its German labels name Málaga and the comarcas, and the highlighted strip appears to be labelled with the comarca name \"Costa del Sol Occidental\", which gives the answer away. A new search isn't allowed, so the question needs a hand-picked or custom blank locator map of Spain with the Málaga coast highlighted, or it should be dropped. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable blank map exists, so the question now names the province of Málaga and uses an illustrative beach photo; hint 2 changed since Málaga is now in the text.",
+        "previous": {
+          "question": "Mira el mapa de España: ¿qué costa está marcada?",
+          "hints": [
+            "Está en Andalucía",
+            "Su gran ciudad es Málaga",
+            "Su nombre es el de la estrella que nos calienta"
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Costa del Sol locator map",
+            "note": "Mapa mudo de España, sin rótulos, con la costa de la provincia de Málaga resaltada en color.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13259",
@@ -1025937,10 +1026062,10 @@
     },
     {
       "id": "q-13262",
-      "status": "needs_work",
-      "difficulty": 5,
+      "status": "approved",
+      "difficulty": 6,
       "description": "Acantilados, calas y pinos que se asoman al agua como si quisieran bañarse.",
-      "question": "Mira el mapa de España: ¿qué costa está marcada?",
+      "question": "¿Cómo se llama la costa de la provincia de Girona, que llega hasta la frontera con Francia?",
       "answer": "La Costa Brava",
       "wrong_answers": [
         "La Costa Dorada",
@@ -1025948,18 +1026073,25 @@
         "La Costa Cálida"
       ],
       "hints": [
-        "Está en Cataluña",
-        "Llega hasta la frontera con Francia",
+        "Da al mar Mediterráneo",
+        "Allí están Tossa de Mar y Cadaqués",
         "Su nombre significa «salvaje», por sus acantilados"
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Costa Brava locator map",
-        "note": "Mapa mudo de España, sin rótulos, con la costa de la provincia de Girona resaltada en color.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Tossa de Mar coves",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATossa_de_Mar_%2832443073814%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Tossa_de_Mar_%2832443073814%29.jpg/3840px-Tossa_de_Mar_%2832443073814%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Speed Kore · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Speed Kore",
+        "author_url": "https://www.flickr.com/people/128395852@N03",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El nombre «Costa Brava» lo inventó el periodista Ferran Agulló en 1908.",
       "subcategory": "coasts-and-islands",
@@ -1025985,22 +1026117,55 @@
         "notes": "A dry map-identification question. The essential map with the Girona coast highlighted may be hard to find with the plain query 'blank map of Spain'."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a blank map of Spain with the Girona coast highlighted. They are maps of Brava in Cape Verde, Punta Brava in Havana, an Álava municipality and Ribeira Brava in Madeira. No new search is allowed, so the essential map has to be found by hand, for example a Costa Brava locator map on Commons or a Spain map with the Girona coast marked. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a blank map of Spain with the Girona coast highlighted. They are maps of Brava in Cape Verde, Punta Brava in Havana, an Álava municipality and Ribeira Brava in Madeira. No new search is allowed, so the essential map has to be found by hand, for example a Costa Brava locator map on Commons or a Spain map with the Girona coast marked. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 5,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable blank map exists, so the question now names the province of Girona and uses an illustrative Tossa de Mar photo; hints adjusted to avoid repeating the text.",
+        "previous": {
+          "difficulty": 5,
+          "question": "Mira el mapa de España: ¿qué costa está marcada?",
+          "hints": [
+            "Está en Cataluña",
+            "Llega hasta la frontera con Francia",
+            "Su nombre significa «salvaje», por sus acantilados"
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Costa Brava locator map",
+            "note": "Mapa mudo de España, sin rótulos, con la costa de la provincia de Girona resaltada en color.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13263",
@@ -1026696,10 +1026861,10 @@
     },
     {
       "id": "q-13272",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Una canción que pide que te quedes, desde una isla de la que nadie se quiere ir.",
-      "question": "El cantante de «Quédate», el gran éxito de 2022 con Bizarrap, se crio en la isla de esta foto. ¿En cuál?",
+      "question": "El cantante de «Quédate», su gran éxito con Bizarrap, se crio en la isla de esta foto. ¿En cuál?",
       "answer": "Gran Canaria",
       "wrong_answers": [
         "Tenerife",
@@ -1026716,14 +1026881,14 @@
         "role": "essential",
         "query": "Roque Nublo",
         "note": "Foto del Roque Nublo, sin carteles con el nombre de la isla.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoque_Nublo_-_Tejeda_-_Gran_Canaria.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Roque_Nublo_-_Tejeda_-_Gran_Canaria.jpg/3840px-Roque_Nublo_-_Tejeda_-_Gran_Canaria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Rvr · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoque_Nublo_-_Gran_Canaria.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Roque_Nublo_-_Gran_Canaria.JPG/3840px-Roque_Nublo_-_Gran_Canaria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "H. Zell · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Rvr",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rvr&action=edit&redlink=1",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "H. Zell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Llez",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1026754,28 +1026919,32 @@
       "needs_media": true,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text calls «Quédate» with Bizarrap 'el gran éxito de 2022', which is exactly the answer to the approved q-11166 (the year of the Quevedo/Bizarrap «Quédate» session), so seeing this question gives that one away. Dropping 'de 2022' from the question text would remove the overlap. The facts are fine: Quevedo was born in Madrid and raised in Gran Canaria, which is the third-largest island and roughly round.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text calls «Quédate» with Bizarrap 'el gran éxito de 2022', which is exactly the answer to the approved q-11166 (the year of the Quevedo/Bizarrap «Quédate» session), so seeing this question gives that one away. Dropping 'de 2022' from the question text would remove the overlap. The facts are fine: Quevedo was born in Madrid and raised in Gran Canaria, which is the third-largest island and roughly round.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints from vague to strong: third-largest island, almost round shape, then the capital.",
+        "reason": "Removed «de 2022» from the question so it no longer gives away approved q-11166.",
         "previous": {
-          "hints": [
-            "Es una de las islas Canarias.",
-            "Su capital es Las Palmas.",
-            "En ella está el Roque Nublo."
-          ]
+          "question": "El cantante de «Quédate», el gran éxito de 2022 con Bizarrap, se crio en la isla de esta foto. ¿En cuál?"
         },
         "revised_on": "2026-11-06"
       }
@@ -1030501,10 +1030670,10 @@
     },
     {
       "id": "q-13322",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 5,
       "description": "Un escritor tan famoso que cabe en el monedero.",
-      "question": "Mira esta moneda española de 50 céntimos. ¿Qué escritor aparece en ella?",
+      "question": "¿Qué escritor aparece en las monedas españolas de 10, 20 y 50 céntimos?",
       "answer": "Miguel de Cervantes",
       "wrong_answers": [
         "Lope de Vega",
@@ -1030513,19 +1030682,26 @@
       ],
       "hints": [
         "Vivió hace más de 400 años.",
-        "Lleva un cuello blanco con pliegues llamado gola.",
+        "En su retrato lleva un cuello blanco con pliegues llamado gola.",
         "Escribió las aventuras de un caballero y su escudero Sancho."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Spain 50 cent coin Cervantes",
-        "note": "Cara nacional de la moneda española de 50 céntimos, con el retrato de Cervantes bien visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "leather coin purse",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeather_coin_purse.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Leather_coin_purse.jpg/3840px-Leather_coin_purse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Tarasna0922 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tarasna0922",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Tarasna0922&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
-      "fun_fact": "Cervantes aparece en las monedas españolas de 10, 20 y 50 céntimos.",
+      "fun_fact": "Las monedas españolas de 1 y 2 euros llevan la cara del rey, y las de 1, 2 y 5 céntimos, la catedral de Santiago de Compostela.",
       "subcategory": "national-symbols",
       "style": null,
       "concept": "Cervantes en los céntimos",
@@ -1030549,23 +1030725,57 @@
         "notes": "The facts check out: the Spanish 10, 20 and 50 cent coins show Cervantes, and his name isn't printed on the coin. This is a Spain-bundle question, so the local focus is fine. Wikimedia Commons very likely has a clear photo of the Spanish side of the coin, but the query should say 'Spain' so it doesn't find the common side. Lope de Vega is a strong distractor. Lorca and Machado are 20th-century writers, so someone who knows the period can rule them out by the clothes in the portrait. Hint 3 points at Don Quijote, which links to q-0116, but this question asks a different fact (the face on the coin), so it's only a related topic, not an overlap."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The real Spanish 10/20/50-cent coins have Cervantes' name engraved in script beside the portrait, as candidate 1 clearly shows ('Cervantes' next to a quill). So any essential photo of the coin gives the answer away, and the rater's note that the name isn't on the coin is wrong. The question needs a different approach, for example a decorative or illustrative image with no coin, and asking 'which writer appears on Spain's 10, 20 and 50 cent coins?'. Candidate 1 is also the 10-cent coin, not the 50-cent coin the text names. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The real Spanish 10/20/50-cent coins have Cervantes' name engraved in script beside the portrait, as candidate 1 clearly shows ('Cervantes' next to a quill). So any essential photo of the coin gives the answer away, and the rater's note that the name isn't on the coin is wrong. The question needs a different approach, for example a decorative or illustrative image with no coin, and asking 'which writer appears on Spain's 10, 20 and 50 cent coins?'. Candidate 1 is also the 10-cent coin, not the 50-cent coin the text names. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 4,
+      "revision": {
+        "action": "revise",
+        "reason": "The coin shows Cervantes' name, so the question now asks about it without a photo and uses a decorative coin-purse image; hint 2 and fun fact adjusted.",
+        "previous": {
+          "difficulty": 4,
+          "question": "Mira esta moneda española de 50 céntimos. ¿Qué escritor aparece en ella?",
+          "hints": [
+            "Vivió hace más de 400 años.",
+            "Lleva un cuello blanco con pliegues llamado gola.",
+            "Escribió las aventuras de un caballero y su escudero Sancho."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Spain 50 cent coin Cervantes",
+            "note": "Cara nacional de la moneda española de 50 céntimos, con el retrato de Cervantes bien visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "fun_fact": "Cervantes aparece en las monedas españolas de 10, 20 y 50 céntimos.",
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13323",
@@ -1031583,10 +1031793,10 @@
     },
     {
       "id": "q-13336",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una bandera que juega al ajedrez con triángulos en vez de casillas.",
-      "question": "Esta bandera de triángulos blancos y negros es casi igual que la de Lisboa. ¿De qué ciudad española es?",
+      "question": "Hay una ciudad española cuya bandera de triángulos blancos y negros es casi igual que la de Lisboa. ¿Cuál es?",
       "answer": "Ceuta",
       "wrong_answers": [
         "Melilla",
@@ -1031600,12 +1031810,22 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Flag of Ceuta svg",
-        "note": "Close-up of the flag of Ceuta: black and white gyronny (eight triangles) with the Portuguese-style coat of arms in the centre. No caption or city name visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Flag of Lisbon",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABandeira_municipal_de_Lisboa.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Bandeira_municipal_de_Lisboa.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Sérgio Horta, a partir de orginal de Ornellas e outros · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Sérgio Horta, a partir de orginal de Ornellas e outros",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Art",
+          "PD-old"
+        ]
       },
       "fun_fact": "Ceuta conserva la bandera y el escudo de su época portuguesa, que empezó en 1415, y por eso se parece tanto a la de Lisboa.",
       "subcategory": "regional-symbols",
@@ -1031631,22 +1031851,48 @@
         "notes": "The Lisbon link lets players work their way to Ceuta. Stated 13 seems a little high for Spanish adults, who know Ceuta's flag fairly well. A Commons flag image is reliable."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the flag of Ceuta, and the question needs it as essential media (\"Esta bandera…\"). Candidates 1, 3 and 4 are maps labelled \"Ceuta\", candidate 2 is a «Ceuta Ya» logo, and all of them give the answer away. 5 and 6 are unrelated maps or satellite views. A new search isn't allowed, so the file needs to be set by hand, for example File:Flag of Ceuta.svg from Commons. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the flag of Ceuta, and the question needs it as essential media (\"Esta bandera…\"). Candidates 1, 3 and 4 are maps labelled \"Ceuta\", candidate 2 is a «Ceuta Ya» logo, and all of them give the answer away. 5 and 6 are unrelated maps or satellite views. A new search isn't allowed, so the file needs to be set by hand, for example File:Flag of Ceuta.svg from Commons. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable Ceuta flag image was found, so the question no longer points to a picture. It now names the flag in words and uses an illustrative image of Lisbon's flag, which doesn't give the answer away.",
+        "previous": {
+          "question": "Esta bandera de triángulos blancos y negros es casi igual que la de Lisboa. ¿De qué ciudad española es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Flag of Ceuta svg",
+            "note": "Close-up of the flag of Ceuta: black and white gyronny (eight triangles) with the Portuguese-style coat of arms in the centre. No caption or city name visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13337",
@@ -1033007,7 +1033253,7 @@
     },
     {
       "id": "q-13355",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Un chaval de uniforme que reparte más desastres que cartas.",
       "question": "El botones Sacarino, de Francisco Ibáñez, siempre está liándola en su trabajo. ¿Dónde trabaja?",
@@ -1033025,20 +1033271,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "comic strip panels",
+        "query": "comic books stack",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASherlock_Holmes_comic_strip_in_The_Atlanta_Constitution%2C_22_august_1930.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Sherlock_Holmes_comic_strip_in_The_Atlanta_Constitution%2C_22_august_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Leo O'Mealia · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFan_Expo_2014_-_Stacks_%289669608946%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Fan_Expo_2014_-_Stacks_%289669608946%29.jpg/3840px-Fan_Expo_2014_-_Stacks_%289669608946%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "jareed from London, UK · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Leo O'Mealia",
-        "author_url": null,
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "jareed from London, UK",
+        "author_url": "https://www.flickr.com/people/48254827@N00",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Sacarino nació en 1963, y sus inventos y travesuras acaban casi siempre con el director furioso.",
       "subcategory": "comics-and-childrens-books",
@@ -1033067,19 +1033311,52 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image's licence isn't usable, so the media gets a new decorative search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "comic strip panels",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASherlock_Holmes_comic_strip_in_The_Atlanta_Constitution%2C_22_august_1930.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Sherlock_Holmes_comic_strip_in_The_Atlanta_Constitution%2C_22_august_1930.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Leo O'Mealia · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Leo O'Mealia",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13356",
@@ -1033388,7 +1033665,7 @@
     },
     {
       "id": "q-13360",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un caballero que viaja más que una maleta y nunca va solo.",
       "question": "¿Cuál de estos personajes NO es compañero de aventuras del Capitán Trueno?",
@@ -1033399,8 +1033676,8 @@
         "Sigrid"
       ],
       "hints": [
-        "El que buscas es de un tebeo estadounidense.",
-        "Es el joven ayudante de un superhéroe y lleva antifaz y capa.",
+        "Los compañeros de verdad acompañan a Trueno desde sus primeros tebeos, en los años 50.",
+        "El intruso tiene nombre de pájaro en inglés.",
         "Es el ayudante de Batman."
       ],
       "media": {
@@ -1033446,26 +1033723,34 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 give the answer away: in a «which is NOT a Trueno companion» question, hint 1 («de un tebeo estadounidense») already picks out the one non-Spanish character. Hint 2 («joven ayudante de un superhéroe con antifaz y capa») is simply Robin's definition. Hint 1 should be a vague hint (e.g. about the era or the kind of story), and hint 2 should not describe Robin outright; only hint 3 may come that close.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 give the answer away: in a «which is NOT a Trueno companion» question, hint 1 («de un tebeo estadounidense») already picks out the one non-Spanish character. Hint 2 («joven ayudante de un superhéroe con antifaz y capa») is simply Robin's definition. Hint 1 should be a vague hint (e.g. about the era or the kind of story), and hint 2 should not describe Robin outright; only hint 3 may come that close.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed straight at Batman, with a vaguer sidekick clue.",
+        "reason": "Hints 1 and 2 gave the answer away; they are now vaguer (when the real companions first appeared, and a name clue), and hint 3 stays.",
         "previous": {
           "hints": [
             "El que buscas es de un tebeo estadounidense.",
-            "Va con un hombre murciélago.",
+            "Es el joven ayudante de un superhéroe y lleva antifaz y capa.",
             "Es el ayudante de Batman."
           ]
         },
@@ -1033854,7 +1034139,7 @@
     },
     {
       "id": "q-13366",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Los premios también tienen primos, y algunos están todavía más estrellados.",
       "question": "Si el Goya es al cine, la estrella Michelin es a…",
@@ -1033872,11 +1034157,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Goya award statuette",
+        "query": "Premios Goya ceremony",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APresentaci%C3%B3n_Premios_Goya_2013_-_02.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Presentaci%C3%B3n_Premios_Goya_2013_-_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Carlos Delgado · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Carlos Delgado",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kadellar",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La guía Michelin la crearon en 1900 unos fabricantes de neumáticos para animar a la gente a viajar en coche.",
       "subcategory": "famous-figures",
@@ -1033905,28 +1034197,40 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but no candidate shows a Goya statuette (or anything Michelin-related). They are unrelated awards: a Polish atheist award, a porcelain Figaro figure, nativity figurines, two 1930 Oscar photos and a Russian Wiki-award. Another search isn't allowed, so the media slot needs a new search such as \"Premios Goya statuette\" or a \"fine dining plate\" image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no candidate shows a Goya statuette (or anything Michelin-related). They are unrelated awards: a Polish atheist award, a porcelain Figaro figure, nativity figurines, two 1930 Oscar photos and a Russian Wiki-award. Another search isn't allowed, so the media slot needs a new search such as \"Premios Goya statuette\" or a \"fine dining plate\" image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away by naming chefs, with the anonymous-inspectors clue.",
+        "reason": "No candidate image fit, so the media gets a new search for the Goya awards.",
         "previous": {
-          "hints": [
-            "La guía que las reparte es de color rojo.",
-            "Tiene mucho que ver con chefs.",
-            "Allí te sientas a comer."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Goya award statuette",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1034918,7 +1035222,7 @@
     },
     {
       "id": "q-13380",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un traje a medida que el chorizo lleva puesto desde el primer día.",
       "question": "Mira este chorizo hecho a la manera tradicional. ¿De qué está hecha su piel?",
@@ -1034936,11 +1035240,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Spanish chorizo ristra",
+        "query": "chorizo sausages",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChorizo_sausage.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Chorizo_sausage.JPG/3840px-Chorizo_sausage.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jaydoo · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jaydoo",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jaydoo&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Muchos embutidos industriales usan hoy tripas de colágeno, pero los tradicionales siguen usando tripa natural.",
       "subcategory": "ham-cheese-and-produce",
@@ -1034969,28 +1035280,40 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says «Mira este chorizo», but none of the six candidates shows a chorizo. They show twine spools, baptism amulets, chili ristras, a garlic braid and a kitchen. No new search is allowed, so the slot needs a real chorizo photo (e.g. \"chorizo sausage\" or \"chorizo sarta\") from a new media run. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says «Mira este chorizo», but none of the six candidates shows a chorizo. They show twine spools, baptism amulets, chili ristras, a garlic braid and a kitchen. No new search is allowed, so the slot needs a real chorizo photo (e.g. \"chorizo sausage\" or \"chorizo sarta\") from a new media run. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed to the only animal-based option.",
+        "reason": "No candidate showed a chorizo, so the media gets a new, more direct search.",
         "previous": {
-          "hints": [
-            "Se hace en la matanza, aprovechando todo el animal.",
-            "Es lo mismo que llevan las salchichas tradicionales.",
-            "Viene del intestino."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Spanish chorizo ristra",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1036436,7 +1036759,7 @@
     },
     {
       "id": "q-13400",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un sitio donde siempre es de noche y el techo gotea muy, muy despacio.",
       "question": "La Cueva de Nerja, en Málaga, se descubrió en 1959. ¿Quién la encontró?",
@@ -1036447,7 +1036770,7 @@
         "Tres mineros de carbón"
       ],
       "hints": [
-        "No eran científicos ni trabajaban allí.",
+        "Ocurrió en pleno invierno, un 12 de enero.",
         "Entraron por un agujero siguiendo a unos murciélagos.",
         "Eran jóvenes de la zona que habían salido de aventura."
       ],
@@ -1036494,31 +1036817,43 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 («No eran científicos ni trabajaban allí») rules out the archaeologists and the coal miners outright, and arguably the shepherd too, who works in that countryside. That leaves only the five local boys at the first hint. Hint 1 should be vague, for example about the season or the year's mood, and shouldn't knock out options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 («No eran científicos ni trabajaban allí») rules out the archaeologists and the coal miners outright, and arguably the shepherd too, who works in that countryside. That leaves only the five local boys at the first hint. Hint 1 should be vague, for example about the season or the year's mood, and shouldn't knock out options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints that the discovery was accidental.",
+        "reason": "Hint 1 ruled out the wrong options; it now gives only the season and date of the discovery.",
         "previous": {
-          "description": "Hay descubrimientos que se planean durante años… y otros que no se planean nada."
+          "hints": [
+            "No eran científicos ni trabajaban allí.",
+            "Entraron por un agujero siguiendo a unos murciélagos.",
+            "Eran jóvenes de la zona que habían salido de aventura."
+          ]
         },
         "revised_on": "2026-11-06"
       }
     },
     {
       "id": "q-13401",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Una frase con gorra de chulapo y clavel en la solapa.",
       "question": "Según la explicación más popular, ¿qué era el «ocho» de la expresión «más chulo que un ocho»?",
@@ -1036529,8 +1036864,8 @@
         "Un toro"
       ],
       "hints": [
+        "La historia se sitúa en el Madrid de principios del siglo XX.",
         "Era algo a lo que la gente se subía.",
-        "Circulaba por raíles.",
         "Según la historia, llevaba a los madrileños vestidos de chulapos a las verbenas."
       ],
       "media": {
@@ -1036576,33 +1036911,35 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («Circulaba por raíles») settles it: only the tram among the four options runs on rails, so hint 2 gives the answer away (hint 1 already narrows it to horse or tram). Hint 2 should be weaker, for example about the 8 being a number or a line, without naming rails. The media is fine: candidate 1.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Circulaba por raíles») settles it: only the tram among the four options runs on rails, so hint 2 gives the answer away (hint 1 already narrows it to horse or tram). Hint 2 should be weaker, for example about the 8 being a number or a line, without naming rails. The media is fine: candidate 1.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed «de Madrid» from the answer so it no longer stands out, shortened the wrong options to match, and softened hint 3 because sources disagree on the route.",
+        "reason": "Hint 2 («raíles») gave the answer away. The hints now go from the era, to something people rode, to the verbena story.",
         "previous": {
-          "answer": "Un tranvía de Madrid",
-          "wrong_answers": [
-            "Un caballo de carreras",
-            "Un naipe de la baraja",
-            "Un toro de lidia"
-          ],
           "hints": [
             "Era algo a lo que la gente se subía.",
             "Circulaba por raíles.",
-            "Llevaba a los madrileños, vestidos de chulapos, a la verbena de San Antonio de la Florida."
+            "Según la historia, llevaba a los madrileños vestidos de chulapos a las verbenas."
           ]
         },
         "revised_on": "2026-11-06"
@@ -1036682,7 +1037019,7 @@
     },
     {
       "id": "q-13403",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Una manchega que ya hablaba de estrés cuatro siglos antes de que existiera la palabra.",
       "question": "«Soy de Alcaraz y en 1587 se publicó con mi nombre un libro que decía que las penas y las alegrías afectan a la salud.» ¿Quién soy?",
@@ -1036695,24 +1037032,24 @@
       "hints": [
         "Mi libro se titulaba «Nueva filosofía de la naturaleza del hombre».",
         "Durante siglos se discutió si el libro era mío o de mi padre.",
-        "Mi nombre de pila es el mismo que el del árbol que da aceitunas."
+        "Mi nombre de pila es el mismo que el del fruto que da el olivo."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "Alcaraz Albacete old town",
+        "query": "Plaza Mayor Alcaraz",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAtlas_geografico_descriptivo_de_la_Peninsula_Iberica%2C_Islas_Baleares%2C_Canarias_y_posesiones_Espanolas_de_Ultrama_%28IA_dr_atlas-geografico-descriptivo-de-la-peninsula-iberica-islas-baleares-canar-11468039%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Atlas_geografico_descriptivo_de_la_Peninsula_Iberica%2C_Islas_Baleares%2C_Canarias_y_posesiones_Espanolas_de_Ultrama_%28IA_dr_atlas-geografico-descriptivo-de-la-peninsula-iberica-islas-baleares-canar-11468039%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Valverde Alvarez, Emilio (1848-1894) · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlcaraz_Plaza.-Albacete.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Alcaraz_Plaza.-Albacete.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Valverde Alvarez, Emilio (1848-1894)\nAlfaro, J.",
+        "author": null,
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-old-100-expired"
+          "PD-self"
         ]
       },
       "fun_fact": "Su libro defendía que la tristeza podía enfermar el cuerpo, una idea que hoy estudia la medicina psicosomática.",
@@ -1036738,23 +1037075,43 @@
         "difficulty_estimate": 15,
         "notes": "Accurate, and the period distractors are good. Very niche: hard to reason towards, so it is a fair 15 at best. The 'manchega' description repeats the Alcaraz clue. Hint 3 (the olive) gives it away, which is allowed."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Oliva Sabuco (Alcaraz, 'Nueva filosofía de la naturaleza del hombre', 1587) is correct. Hint 3 is loose: the olive tree is 'olivo', and 'oliva' is the fruit.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Oliva Sabuco (Alcaraz, 'Nueva filosofía de la naturaleza del hombre', 1587) is correct. Hint 3 is loose: the olive tree is 'olivo', and 'oliva' is the fruit.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Fixed hint 3: «oliva» is the olive tree's fruit, not the tree.",
+        "previous": {
+          "hints": [
+            "Mi libro se titulaba «Nueva filosofía de la naturaleza del hombre».",
+            "Durante siglos se discutió si el libro era mío o de mi padre.",
+            "Mi nombre de pila es el mismo que el del árbol que da aceitunas."
+          ]
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13404",
@@ -1037148,7 +1037505,7 @@
     },
     {
       "id": "q-13409",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una tabla, una montaña y un donostiarra: lo raro es que no haya olas.",
       "question": "El donostiarra Lucas Eguibar fue campeón del mundo de snowboard en 2017, en Sierra Nevada. ¿En qué modalidad?",
@@ -1037179,7 +1037536,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Eguibar ganó aquel título mundial en casa, en Sierra Nevada (Granada), y al año siguiente fue cuarto en los Juegos Olímpicos de 2018.",
+      "fun_fact": "Eguibar ganó aquel título mundial en casa, en Sierra Nevada (Granada).",
       "subcategory": "sportspeople",
       "style": null,
       "concept": "Lucas Eguibar",
@@ -1037202,28 +1037559,36 @@
         "difficulty_estimate": 13,
         "notes": "Eguibar did win snowboard cross gold in Sierra Nevada in 2017. The fun-fact claim that this was the first snowboard World Championship held in Spain is plausible, but I'm not fully sure of it. Niche sports fact; the hints let you reason it out."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact is wrong: it says Eguibar finished fourth at the 2018 Olympics, but he went out in the 1/8 finals at Pyeongchang (Regino Hernández won the Spanish bronze). Correct the fun fact or drop the Olympic claim, e.g. «Eguibar ganó aquel título mundial en casa, en Sierra Nevada (Granada).» Verificación de datos: wrong. The fun fact says Eguibar was fourth at the 2018 Olympics. He crashed out in the 1/8 final at Pyeongchang 2018 and finished about 33rd. The Spanish rider who medalled there was Regino Hernández (bronze).",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact is wrong: it says Eguibar finished fourth at the 2018 Olympics, but he went out in the 1/8 finals at Pyeongchang (Regino Hernández won the Spanish bronze). Correct the fun fact or drop the Olympic claim, e.g. «Eguibar ganó aquel título mundial en casa, en Sierra Nevada (Granada).» Verificación de datos: wrong. The fun fact says Eguibar was fourth at the 2018 Olympics. He crashed out in the 1/8 final at Pyeongchang 2018 and finished about 33rd. The Spanish rider who medalled there was Regino Hernández (bronze).",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the false «first World Championship in Spain» fun fact (La Molina hosted one in 2011) with a true one.",
+        "reason": "Removed the false claim that Eguibar was fourth at the 2018 Olympics.",
         "previous": {
-          "fun_fact": "Aquel Mundial de 2017 fue el primero de snowboard que se celebró en España, y Eguibar lo ganó en casa."
+          "fun_fact": "Eguibar ganó aquel título mundial en casa, en Sierra Nevada (Granada), y al año siguiente fue cuarto en los Juegos Olímpicos de 2018."
         },
         "revised_on": "2026-11-06"
       }
@@ -1037458,13 +1037823,13 @@
       ],
       "hints": [
         "A cada niño le duraba un buen rato.",
-        "Tenían un sabor dulce y un poco anisado.",
+        "La planta crece en suelos húmedos, a menudo cerca de los ríos.",
         "Se vendían en los quioscos, junto a otras chucherías."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Glycyrrhiza glabra dried root",
+        "query": "liquorice root sticks",
         "note": "Foto clara de palitos de raíz de regaliz (paloduz) secos, sin envoltorios ni texto.",
         "source_url": null,
         "file_url": null,
@@ -1037498,19 +1037863,50 @@
       "batch": "batch-42",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows what the essential image needs: dried liquorice root sticks (paloduz). #1 shows small chopped chips of root, not sticks. #2 is a botanical drawing of the whole plant, and #3 is an unrelated engraving of fruit. No new search is allowed. Hint 2 («Tenían un sabor dulce y un poco anisado») also gives the answer away: the sweet taste rules out chalk, whistles and bait. It should become a vaguer hint, for example about where the root grows or what it looks like. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the essential image needs: dried liquorice root sticks (paloduz). #1 shows small chopped chips of root, not sticks. #2 is a botanical drawing of the whole plant, and #3 is an unrelated engraving of fruit. No new search is allowed. Hint 2 («Tenían un sabor dulce y un poco anisado») also gives the answer away: the sweet taste rules out chalk, whistles and bait. It should become a vaguer hint, for example about where the root grows or what it looks like. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 2 (sweet taste) gave the answer away and now describes where the plant grows instead; the essential image gets a new search for liquorice root sticks.",
+        "previous": {
+          "hints": [
+            "A cada niño le duraba un buen rato.",
+            "Tenían un sabor dulce y un poco anisado.",
+            "Se vendían en los quioscos, junto a otras chucherías."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Glycyrrhiza glabra dried root",
+            "note": "Foto clara de palitos de raíz de regaliz (paloduz) secos, sin envoltorios ni texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13414",
@@ -1038343,7 +1038739,7 @@
     },
     {
       "id": "q-13425",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Las tormentas nocturnas tienen un talento especial para despertar a toda la casa.",
       "question": "Oyes un trueno enorme en mitad de la noche y se te ponen los… de punta. ¿Qué completa la frase?",
@@ -1038355,7 +1038751,7 @@
       ],
       "hints": [
         "Es algo que tienes por casi todo el cuerpo.",
-        "Se cortan en la peluquería.",
+        "Los gatos los erizan cuando se asustan.",
         "Cuando se levantan, se te pone la piel de gallina."
       ],
       "media": {
@@ -1038401,24 +1038797,36 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («Se cortan en la peluquería») gives the answer away: «peluquería» even contains «pelo», and against the four options it points straight to «Pelos». Replace it with a hint that doesn't name or suggest the hairdresser, e.g. «Los gatos los erizan cuando se asustan».",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Se cortan en la peluquería») gives the answer away: «peluquería» even contains «pelo», and against the four options it points straight to «Pelos». Replace it with a hint that doesn't name or suggest the hairdresser, e.g. «Los gatos los erizan cuando se asustan».",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description, which stated the answer's defining trait (found all over the body).",
+        "reason": "Replaced hint 2, which pointed to the answer through «peluquería», with a cat hint.",
         "previous": {
-          "description": "Tu cuerpo también tiene su propio sistema de alarma, y está por todas partes."
+          "hints": [
+            "Es algo que tienes por casi todo el cuerpo.",
+            "Se cortan en la peluquería.",
+            "Cuando se levantan, se te pone la piel de gallina."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -1038515,7 +1038923,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "domestic goat climbing rocks",
+        "query": "mountain goat rocks",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1038549,18 +1038957,44 @@
       "batch": "batch-42",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates shows a goat. No new search is allowed, so the media slot can't be filled. It needs a clear photo of a goat on rocks, for example from the search \"mountain goat rocks\" or \"domestic goat cliff\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates shows a goat. No new search is allowed, so the media slot can't be filled. It needs a clear photo of a goat on rocks, for example from the search \"mountain goat rocks\" or \"domestic goat cliff\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to a search that should return a clear goat photo.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "domestic goat climbing rocks",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13428",
@@ -1039101,10 +1039535,10 @@
     },
     {
       "id": "q-13435",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Cuatro poetas con versos de oro, pero solo uno se llevó a casa la medalla de verdad.",
-      "question": "De estos cuatro grandes poetas españoles del siglo XX, ¿cuál ganó el Premio Nobel de Literatura?",
+      "question": "¿Qué poeta español ganó el Premio Nobel de Literatura en 1956?",
       "answer": "Juan Ramón Jiménez",
       "wrong_answers": [
         "Federico García Lorca",
@@ -1039112,7 +1039546,7 @@
         "Miguel Hernández"
       ],
       "hints": [
-        "Lo ganó en 1956, viviendo exiliado en Puerto Rico.",
+        "Cuando le dieron el premio vivía exiliado en Puerto Rico.",
         "Nació en Moguer, en Huelva.",
         "Escribió la historia de un burrito «pequeño, peludo, suave»."
       ],
@@ -1039159,26 +1039593,37 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The clue also fits Vicente Aleixandre, a 20th-century Spanish poet who won the Nobel Prize in Literature in 1977. The question only works through «de estos cuatro», which the house style rules out. Use a clue only Juan Ramón Jiménez has, for example «¿Qué poeta español ganó el Premio Nobel de Literatura en 1956?», and move or replace hint 1, which gives that year.",
-        "problems": [
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The clue also fits Vicente Aleixandre, a 20th-century Spanish poet who won the Nobel Prize in Literature in 1977. The question only works through «de estos cuatro», which the house style rules out. Use a clue only Juan Ramón Jiménez has, for example «¿Qué poeta español ganó el Premio Nobel de Literatura en 1956?», and move or replace hint 1, which gives that year.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the classroom scene, replaced the false Stockholm description and swapped the sad fun fact for a light, true one.",
+        "reason": "Made the clue unique (Nobel in 1956, since Aleixandre also won one) and replaced hint 1, which gave the year.",
         "previous": {
-          "description": "Cuatro grandes poetas, pero solo uno tuvo que hacer la maleta para Estocolmo.",
-          "question": "Recitas en clase poemas de cuatro grandes poetas españoles del siglo XX. ¿Cuál es el único de ellos que ganó el Nobel?",
-          "fun_fact": "Juan Ramón Jiménez recibió la noticia del Nobel pocos días antes de que muriera su esposa, Zenobia Camprubí."
+          "question": "De estos cuatro grandes poetas españoles del siglo XX, ¿cuál ganó el Premio Nobel de Literatura?",
+          "hints": [
+            "Lo ganó en 1956, viviendo exiliado en Puerto Rico.",
+            "Nació en Moguer, en Huelva.",
+            "Escribió la historia de un burrito «pequeño, peludo, suave»."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -1039356,7 +1039801,7 @@
     },
     {
       "id": "q-13438",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una palabra que lleva siglos saliendo de la boca de los abuelos sin pedir permiso.",
       "question": "Cuando alguien exclama «¡Caramba!», ¿qué está mostrando normalmente?",
@@ -1039374,11 +1039819,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "surprised child face",
+        "query": "vintage comic books",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClassic_Comics_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Classic_Comics_%28Unsplash%29.jpg/3840px-Classic_Comics_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Mitch Rosen focusmitch · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mitch Rosen focusmitch",
+        "author_url": "https://unsplash.com/@focusmitch",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "«¡Caramba!» es una forma suavizada de otra exclamación más malsonante, y por eso se ha usado tanto en tebeos y dibujos animados.",
       "subcategory": "slang",
@@ -1039407,19 +1039859,43 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text is fine, but none of the image candidates works, and no new search is allowed. #1 is a nude body (not family-friendly), #2 shows a sleeping woman, which points to the wrong option «Sueño». #3 is a church statue, #4 a caricaturist drawing a calm boy, #5 a medical photo of a baby with chickenpox, and #6 an old Sunday-school group photo. A new search such as \"surprised face reaction\" or \"cartoon surprise expression\" is needed. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text is fine, but none of the image candidates works, and no new search is allowed. #1 is a nude body (not family-friendly), #2 shows a sleeping woman, which points to the wrong option «Sueño». #3 is a church statue, #4 a caricaturist drawing a calm boy, #5 a medical photo of a baby with chickenpox, and #6 an old Sunday-school group photo. A new search such as \"surprised face reaction\" or \"cartoon surprise expression\" is needed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New decorative image query (old comics, from the fun fact) that avoids both unsuitable results and showing the answer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "surprised child face",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13439",
@@ -1040940,7 +1041416,7 @@
     },
     {
       "id": "q-13459",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "El postre que convierte el horno en una sauna para fruta.",
       "question": "Estás preparando manzanas asadas y les quitas el corazón antes de meterlas al horno. ¿Para qué es ese hueco?",
@@ -1040952,7 +1041428,7 @@
       ],
       "hints": [
         "Piensa en el sabor del postre, no en su aspecto.",
-        "Al salir del horno, ese hueco está lleno de un almíbar delicioso.",
+        "Lo que metes en ese hueco se derrite con el calor del horno.",
         "Muchas recetas añaden también canela o un chorrito de vino dulce."
       ],
       "media": {
@@ -1041000,29 +1041476,36 @@
       "needs_media": false,
       "batch": "batch-42",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Al salir del horno, ese hueco está lleno de un almíbar delicioso\") basically states the answer, since almíbar is melted sugar syrup and the hollow is said to end up full of it. Replace it with a vaguer hint, for example about the hollow being there to hold something that melts and adds flavour, without naming sugar or syrup.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Al salir del horno, ese hueco está lleno de un almíbar delicioso\") basically states the answer, since almíbar is melted sugar syrup and the hollow is said to end up full of it. Replace it with a vaguer hint, for example about the hollow being there to hold something that melts and adds flavour, without naming sugar or syrup.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave the answer away, and softened the fun fact.",
+        "reason": "Replaced hint 2, which named the syrup and so gave the answer, with a vaguer one.",
         "previous": {
           "hints": [
-            "El hueco no se queda vacío mucho tiempo.",
-            "Allí se pone algo dulce que se derrite con el calor.",
+            "Piensa en el sabor del postre, no en su aspecto.",
+            "Al salir del horno, ese hueco está lleno de un almíbar delicioso.",
             "Muchas recetas añaden también canela o un chorrito de vino dulce."
-          ],
-          "fun_fact": "Las manzanas asadas eran un postre de aprovechamiento: se hacían con las manzanas que empezaban a arrugarse."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -1041660,7 +1042143,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Salmo trutta skin spots",
+        "query": "brown trout scales closeup",
         "note": "Primer plano de la piel de una trucha común con escamas y puntos rojos y negros, sin que se vea la cabeza ni las aletas.",
         "source_url": null,
         "file_url": null,
@@ -1041689,24 +1042172,50 @@
         "difficulty_estimate": 3,
         "notes": "In a close-up the scales make 'fish' quite obvious. A trout-skin close-up may be hard to find in the media sources. Fairly dry."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-42",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the skin close-up the question needs. #2 and #4 show the whole trout, head and fins included, so the answer (a fish) is obvious. #1 is a plate of several fish drawings and #3 is a range map. No new search is allowed, so the image slot can't be filled. The question may need a different image approach, such as a cropped trout-skin photo, or a rewrite that doesn't depend on a close-up. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the skin close-up the question needs. #2 and #4 show the whole trout, head and fins included, so the answer (a fish) is obvious. #1 is a plate of several fish drawings and #3 is a range map. No new search is allowed, so the image slot can't be filled. The question may need a different image approach, such as a cropped trout-skin photo, or a rewrite that doesn't depend on a close-up. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the essential image query so it finds a close-up of trout skin without the head or fins.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Salmo trutta skin spots",
+            "note": "Primer plano de la piel de una trucha común con escamas y puntos rojos y negros, sin que se vea la cabeza ni las aletas.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13469",
