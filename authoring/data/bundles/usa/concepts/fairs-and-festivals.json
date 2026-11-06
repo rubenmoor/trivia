@@ -256,7 +256,8 @@
     {
       "name": "Bumper cars",
       "facet": "Midway rides and carnival games",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Both the name from the ceiling net and the purpose of bumper cars are already asked; nothing new fits these options."
     },
     {
       "name": "Funhouse",
@@ -391,7 +392,8 @@
     {
       "name": "Ash Wednesday",
       "facet": "Mardi Gras and Carnival",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Identifying Ash Wednesday from the ash cross and where the ash comes from are both already asked; what's left would repeat them."
     },
     {
       "name": "Lent",

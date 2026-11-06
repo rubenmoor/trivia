@@ -226,7 +226,8 @@
     {
       "name": "St. Louis",
       "facet": "French-origin place names",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The good facts (Arch, ribs) are already asked, and the options can't give a fresh question about the name at difficulty 5."
     },
     {
       "name": "Lafayette",
@@ -256,7 +257,8 @@
     {
       "name": "Thibodaux",
       "facet": "French-origin place names",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: A small Louisiana town with no fair multiple-choice angle in these options; the question would just be about how one name is spelled."
     },
     {
       "name": "Natchitoches",
@@ -346,12 +348,14 @@
     {
       "name": "Delhi, New York",
       "facet": "European names said American-style",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Too obscure. Any riddle about the name gives it away, and a photo of a small village can't be recognized."
     },
     {
       "name": "Russia, Ohio",
       "facet": "European names said American-style",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Far too obscure even for specialists, and the options can't make it a fair question."
     },
     {
       "name": "Calais, Maine",

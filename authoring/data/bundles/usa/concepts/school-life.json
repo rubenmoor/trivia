@@ -87,7 +87,8 @@
     {
       "name": "High school",
       "facet": "Grade levels and school types",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: 'What comes after middle school' and the class-year names are already covered by existing questions."
     },
     {
       "name": "Twelfth grade",
@@ -197,7 +198,8 @@
     {
       "name": "Gold star sticker",
       "facet": "Grades, tests and report cards",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: Gold star stickers are common across the English-speaking world, not just in the US."
     },
     {
       "name": "Summer school",
@@ -262,7 +264,8 @@
     {
       "name": "Roll call",
       "facet": "School day routines",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: Taking attendance is a worldwide routine, and asking its purpose would be trivial."
     },
     {
       "name": "Moment of silence",
@@ -312,7 +315,8 @@
     {
       "name": "Lunch tray",
       "facet": "School lunch and cafeteria food",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: No good estimate or person question exists for a lunch tray."
     },
     {
       "name": "Lunchbox",
@@ -382,7 +386,8 @@
     {
       "name": "Crossing guard",
       "facet": "School buses and getting to school",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already has a crossing guard question, and stop signs look the same worldwide, so it isn't US-specific."
     },
     {
       "name": "School bus stop arm",
@@ -412,7 +417,8 @@
     {
       "name": "Bike rack",
       "facet": "School buses and getting to school",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Asking 'who' or 'where from' about a bike rack doesn't give a meaningful question."
     },
     {
       "name": "National School Bus Glossy Yellow",
@@ -457,7 +463,8 @@
     {
       "name": "Team captain",
       "facet": "Sports, cheerleading and pep rallies",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The captain armband and pirate captain questions already exist, and the remaining options are forced."
     },
     {
       "name": "Tryouts",
@@ -602,7 +609,8 @@
     {
       "name": "Chalkboard",
       "facet": "School supplies and classroom objects",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: Chalkboards are global, and the photo count and 'when' options are forced."
     },
     {
       "name": "Whiteboard",
@@ -617,7 +625,8 @@
     {
       "name": "Smartboard",
       "facet": "School supplies and classroom objects",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Smartboards are used worldwide and aren't specific to US schools."
     },
     {
       "name": "Locker",
@@ -743,7 +752,8 @@
     {
       "name": "Bookworm",
       "facet": "Yearbook, slang and school words",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: 'Bookworm' is used across the English-speaking world and in many other languages, so it isn't a US question."
     },
     {
       "name": "Spitball",
