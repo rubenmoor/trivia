@@ -201,7 +201,8 @@
     {
       "name": "Himno de Aragón",
       "facet": "Himnos regionales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Con estas opciones solo sale un dato contable (cuántos poetas escribieron la letra) que nadie puede deducir."
     },
     {
       "name": "Himno a la Montaña",
@@ -211,7 +212,8 @@
     {
       "name": "Himno de Extremadura",
       "facet": "Himnos regionales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Los datos sobre el himno de Extremadura son demasiado oscuros y no tengo bastante seguridad sobre ellos para una pregunta justa."
     },
     {
       "name": "Himno de la Comunidad de Madrid",
@@ -392,7 +394,8 @@
     {
       "name": "Bandera de Álava",
       "facet": "Banderas insulares y comarcales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tengo bastante seguridad sobre el diseño de la bandera de Álava; además es demasiado oscura para una familia."
     },
     {
       "name": "Bandera de Vizcaya",
@@ -677,7 +680,8 @@
     {
       "name": "Francesc Alió",
       "facet": "Creadores y momentos de los símbolos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Francesc Alió es demasiado oscuro; con estas opciones solo salen fechas menores o preguntas en las que él no es lo central."
     },
     {
       "name": "José del Castillo Díaz",
