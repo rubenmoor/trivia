@@ -682,7 +682,8 @@
     {
       "name": "Babieca",
       "facet": "El Cid y héroes medievales",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: La pregunta sobre qué es Babieca ya está en el pool; las opciones de origen o secuencia dependerían de leyendas inseguras (quién se lo regaló, dónde está enterrado)."
     },
     {
       "name": "Tizona",
@@ -802,7 +803,8 @@
     {
       "name": "Concha de vieira",
       "facet": "Camino de Santiago y órdenes militares",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Las preguntas que ya existen asocian la concha con el Camino de Santiago, así que preguntar para qué sirve o quién la lleva sería demasiado fácil; ninguna opción da una pregunta nueva y justa."
     },
     {
       "name": "Flecha amarilla",

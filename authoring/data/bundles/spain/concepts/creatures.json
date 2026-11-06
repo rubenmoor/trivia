@@ -131,7 +131,8 @@
     {
       "name": "El Duende",
       "facet": "Duendes y espíritus de la casa",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Ya hay varias preguntas sobre duendes (y sobre el trasno), y un acertijo de nivel 1 no necesitaría saber nada de España."
     },
     {
       "name": "El Trasgu",
@@ -251,7 +252,8 @@
     {
       "name": "Molinos de viento",
       "facet": "Gigantes, ogros y cíclopes",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Lo de los molinos que parecen gigantes ya está preguntado, y lo que queda o es muy rebuscado o no tiene que ver con España."
     },
     {
       "name": "Caraculiambro",
@@ -521,7 +523,8 @@
     {
       "name": "La Sirena",
       "facet": "Hombres bestia y seres marinos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: La sirena ya tiene analogía, acertijo y pregunta de descarte, y las opciones que quedan no tienen nada propio de España."
     },
     {
       "name": "Los Mariñaos",
