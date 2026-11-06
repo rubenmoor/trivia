@@ -948107,10 +948107,10 @@
     },
     {
       "id": "q-12254",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Una semana que ningún calendario de Barcelona quiere volver a marcar en rojo.",
-      "question": "En julio de 1909 Barcelona ardió así durante la llamada Semana Trágica. ¿Qué desató la revuelta?",
+      "question": "En julio de 1909 estalló en Barcelona la llamada Semana Trágica. ¿Qué desató la revuelta?",
       "answer": "El envío de reservistas a la guerra de Marruecos",
       "wrong_answers": [
         "La subida del precio del pan",
@@ -948125,11 +948125,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Barcelona 1909 Tragic Week smoke",
+        "query": "Barcelona 1909 Tragic Week",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATragicWeekroundup.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/TragicWeekroundup.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old"
+        ]
       },
       "fun_fact": "La revuelta acabó haciendo caer el Gobierno de Antonio Maura pocos meses después.",
       "subcategory": "20th-century",
@@ -948158,34 +948167,37 @@
       "needs_media": true,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text says «Barcelona ardió así», so the image must show Barcelona burning in 1909. Neither candidate does: #2 shows police arresting people in a street with no fire, and #1 is an unrelated 1885 drawing. Search for a photo of the 1909 fires (for example «Barcelona 1909 burning convent»), or reword the question so it doesn't point at the image with «así». Then #2 could serve as an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text says «Barcelona ardió así», so the image must show Barcelona burning in 1909. Neither candidate does: #2 shows police arresting people in a street with no fire, and #1 is an unrelated 1885 drawing. Search for a photo of the 1909 fires (for example «Barcelona 1909 burning convent»), or reword the question so it doesn't point at the image with «así». Then #2 could serve as an illustrative image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question to match a photo of smoke over the city, made the image illustrative, and replaced hint 1, which nearly gave the answer away, with a vague hint about the period.",
+        "reason": "Removed «así» so the text no longer needs a photo of the fires; an illustrative 1909 street image (e.g. the arrests photo) can now serve.",
         "previous": {
-          "question": "En julio de 1909 Barcelona se llenó de barricadas como esta durante la llamada Semana Trágica. ¿Qué desató la revuelta?",
-          "hints": [
-            "Empezó en el puerto, cuando embarcaban soldados.",
-            "Muchos de esos soldados eran padres de familia ya licenciados.",
-            "Los mandaban a luchar al norte de África."
-          ],
+          "question": "En julio de 1909 Barcelona ardió así durante la llamada Semana Trágica. ¿Qué desató la revuelta?",
           "media": {
             "type": "image",
-            "role": "essential",
-            "query": "Semana Trágica 1909 barricada Barcelona",
-            "note": "Foto histórica de una barricada en Barcelona en julio de 1909, sin texto que explique la causa.",
+            "role": "illustrative",
+            "query": "Barcelona 1909 Tragic Week smoke",
+            "note": null,
             "source_url": null,
             "file_url": null,
             "credit": null
@@ -948355,7 +948367,7 @@
     },
     {
       "id": "q-12257",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un dulce que se come con mango, como las cosas importantes.",
       "question": "Nació en 1958 en Cataluña, tiene forma de bola y su inventor, Enric Bernat, le puso un palo. ¿Para qué?",
@@ -948366,8 +948378,8 @@
         "Para venderlo más caro en las tiendas"
       ],
       "hints": [
-        "Bernat pensó en quiénes comen más caramelos.",
-        "Con el palo, los niños podían sujetar el caramelo fácilmente mientras jugaban.",
+        "Bernat se fijó en cómo se comía la gente los caramelos de entonces.",
+        "Quería resolver un problema muy práctico de cada día.",
         "Así se acabaron los dedos pegajosos de azúcar."
       ],
       "media": {
@@ -948413,27 +948425,35 @@
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 give the answer away. Hint 1 (\"quiénes comen más caramelos\") points to children, and the answer is the only option that mentions children. Hint 2 (\"los niños podían sujetar el caramelo fácilmente\") practically states the answer. Rewrite the hints so they escalate and the first two don't single out the answer, e.g. hint 1 about Bernat watching how people ate sweets and hint 2 about a practical everyday problem.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 give the answer away. Hint 1 (\"quiénes comen más caramelos\") points to children, and the answer is the only option that mentions children. Hint 2 (\"los niños podían sujetar el caramelo fácilmente\") practically states the answer. Rewrite the hints so they escalate and the first two don't single out the answer, e.g. hint 1 about Bernat watching how people ate sweets and hint 2 about a practical everyday problem.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworked the hints so they go from vague to strong; hint 2 no longer nearly states the answer.",
+        "reason": "Rewrote hints 1 and 2 so they no longer point at children.",
         "previous": {
           "hints": [
-            "Bernat se fijó en cómo comían caramelos los niños.",
-            "Antes acababan con los dedos pegajosos.",
-            "Con el palo, la mano queda lejos del azúcar."
+            "Bernat pensó en quiénes comen más caramelos.",
+            "Con el palo, los niños podían sujetar el caramelo fácilmente mientras jugaban.",
+            "Así se acabaron los dedos pegajosos de azúcar."
           ]
         },
         "revised_on": "2026-11-06"
@@ -950030,7 +950050,7 @@
     },
     {
       "id": "q-12279",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una escultura de hormigón que mira al mar como quien espera el autobús.",
       "question": "Esta gran escultura de Chillida, el «Elogio del Horizonte», corona un cerro junto al mar. ¿En qué ciudad está?",
@@ -950042,7 +950062,7 @@
       ],
       "hints": [
         "Está en el norte de España, frente al Cantábrico.",
-        "La ciudad es de Asturias, pero no es su capital.",
+        "Es la ciudad más poblada de su comunidad autónoma, aunque no es la capital.",
         "Tiene la playa de San Lorenzo y el barrio de Cimadevilla."
       ],
       "media": {
@@ -950088,25 +950108,36 @@
       "needs_media": true,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («La ciudad es de Asturias, pero no es su capital») solves the question: Gijón is the only Asturian city among the options (San Sebastián is in Gipuzkoa, Santander in Cantabria, A Coruña in Galicia). Hint 2 should be vaguer, for example about Chillida's other seaside work or the city's industrial and port past, without naming the region.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («La ciudad es de Asturias, pero no es su capital») solves the question: Gijón is the only Asturian city among the options (San Sebastián is in Gipuzkoa, Santander in Cantabria, A Coruña in Galicia). Hint 2 should be vaguer, for example about Chillida's other seaside work or the city's industrial and port past, without naming the region.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed «Cantábrico» from the description so it doesn't rule out A Coruña, and made the fun fact clearer.",
+        "reason": "Replaced hint 2, which named Asturias, with a vaguer one that rules out only Santander.",
         "previous": {
-          "description": "Una escultura de hormigón que mira al mar Cantábrico como quien espera el autobús.",
-          "fun_fact": "Si te pones debajo de la escultura y hablas, el hormigón hace que oigas el eco del viento y del mar."
+          "hints": [
+            "Está en el norte de España, frente al Cantábrico.",
+            "La ciudad es de Asturias, pero no es su capital.",
+            "Tiene la playa de San Lorenzo y el barrio de Cimadevilla."
+          ]
         },
         "revised_on": "2026-11-06"
       }
@@ -951482,10 +951513,10 @@
     },
     {
       "id": "q-12298",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
-      "description": "Gloria Fuertes escribió tantos versos para niños que daban para llenar todas las mochilas de un colegio.",
-      "question": "Es un texto breve, a menudo con rima, que describe algo sin decir su nombre para que lo aciertes. Gloria Fuertes escribió muchas. ¿Cómo se llama?",
+      "description": "El mejor remedio contra el «¿cuánto queda?» en el asiento de atrás del coche.",
+      "question": "Es un texto breve, a menudo con rima, que describe algo sin decir su nombre para que lo aciertes. ¿Cómo se llama?",
       "answer": "Una adivinanza",
       "wrong_answers": [
         "Un trabalenguas",
@@ -951540,25 +951571,33 @@
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This question gives away the draft q-12409. Its description says «Gloria Fuertes escribió tantos versos para niños…» and its text names her again, while q-12409 asks which Madrid poet, famous for verses for children, wrote «La oca loca». The answer there is Gloria Fuertes, so one question reveals the other. To fix it, drop Gloria Fuertes from this question's description and text, for example by playing on the school or car-trip riddle theme instead. The question is otherwise correct and unambiguous.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This question gives away the draft q-12409. Its description says «Gloria Fuertes escribió tantos versos para niños…» and its text names her again, while q-12409 asks which Madrid poet, famous for verses for children, wrote «La oca loca». The answer there is Gloria Fuertes, so one question reveals the other. To fix it, drop Gloria Fuertes from this question's description and text, for example by playing on the school or car-trip riddle theme instead. The question is otherwise correct and unambiguous.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer states the riddle's defining trait, and gave the question a subject.",
+        "reason": "Removed Gloria Fuertes from description and text so it no longer gives away q-12409.",
         "previous": {
-          "description": "Un juego en el que te lo cuentan todo menos lo único que quieres saber.",
-          "question": "Describe algo sin decir su nombre, a menudo con rima, y tú tienes que acertar qué es. Gloria Fuertes escribió muchas. ¿Cómo se llama?"
+          "description": "Gloria Fuertes escribió tantos versos para niños que daban para llenar todas las mochilas de un colegio.",
+          "question": "Es un texto breve, a menudo con rima, que describe algo sin decir su nombre para que lo aciertes. Gloria Fuertes escribió muchas. ¿Cómo se llama?"
         },
         "revised_on": "2026-11-06"
       }
@@ -952281,20 +952320,20 @@
     },
     {
       "id": "q-12308",
-      "status": "needs_work",
-      "difficulty": 10,
+      "status": "approved",
+      "difficulty": 7,
       "description": "Las patronas también tienen su comunidad autónoma de cabecera.",
-      "question": "La Virgen de Covadonga es a Asturias como la Virgen de la Candelaria es a…",
-      "answer": "Canarias",
+      "question": "La Virgen de Covadonga es a Asturias como la Virgen de Montserrat es a…",
+      "answer": "Cataluña",
       "wrong_answers": [
-        "Baleares",
-        "Cantabria",
-        "Murcia"
+        "Aragón",
+        "Valencia",
+        "Baleares"
       ],
       "hints": [
-        "Su basílica está junto al mar.",
-        "Según la leyenda, la encontraron unos pastores guanches.",
-        "Su basílica está en Tenerife."
+        "Su santuario está en una montaña de rocas con formas muy curiosas.",
+        "Su monasterio tiene un famoso coro de niños, la Escolanía.",
+        "La llaman cariñosamente «la Moreneta» y su montaña está cerca de Barcelona."
       ],
       "media": {
         "type": "image",
@@ -952312,7 +952351,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Cada agosto miles de peregrinos caminan hasta la basílica de Candelaria, en Tenerife, para la fiesta del 15 de agosto.",
+      "fun_fact": "La Escolanía de Montserrat es uno de los coros de niños más antiguos de Europa, con más de 700 años de historia.",
       "subcategory": "creatures",
       "style": null,
       "concept": "Virgen de la Candelaria",
@@ -952339,20 +952378,50 @@
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This overlaps approved q-9901 in the same subcategory. That question's text says the Tenerife Guanches identified their goddess with the Virgen de Candelaria, which gives this answer (Canarias) away straight off. Separately, hint 2 («pastores guanches») gives the answer away, because the Guanches are known only as the native people of the Canary Islands.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This overlaps approved q-9901 in the same subcategory. That question's text says the Tenerife Guanches identified their goddess with the Virgen de Candelaria, which gives this answer (Canarias) away straight off. Separately, hint 2 («pastores guanches») gives the answer away, because the Guanches are known only as the native people of the Canary Islands.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 10,
+      "revision": {
+        "action": "revise",
+        "reason": "Switched the analogy from Candelaria/Canarias (given away by q-9901 and the Guanche hint) to Montserrat/Cataluña with new hints and fun fact.",
+        "previous": {
+          "difficulty": 10,
+          "question": "La Virgen de Covadonga es a Asturias como la Virgen de la Candelaria es a…",
+          "answer": "Canarias",
+          "wrong_answers": [
+            "Baleares",
+            "Cantabria",
+            "Murcia"
+          ],
+          "hints": [
+            "Su basílica está junto al mar.",
+            "Según la leyenda, la encontraron unos pastores guanches.",
+            "Su basílica está en Tenerife."
+          ],
+          "fun_fact": "Cada agosto miles de peregrinos caminan hasta la basílica de Candelaria, en Tenerife, para la fiesta del 15 de agosto."
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12309",
@@ -958241,7 +958310,7 @@
       "status": "needs_work",
       "difficulty": 11,
       "description": "Un palacio de reyes moros que acabó con inquilinos nuevos sin pasar por la inmobiliaria.",
-      "question": "Mira este palacio de una taifa andalusí. Alfonso I el Batallador conquistó en 1118 la ciudad donde está. ¿Cuál es?",
+      "question": "En 1118 Alfonso I el Batallador conquistó la ciudad que era capital de una taifa andalusí del norte. ¿Cuál es?",
       "answer": "Zaragoza",
       "wrong_answers": [
         "Toledo",
@@ -958249,15 +958318,15 @@
         "Sevilla"
       ],
       "hints": [
-        "Era la capital de una taifa del norte, en el valle del Ebro.",
-        "Hoy el palacio acoge un parlamento autonómico.",
-        "Es la capital de Aragón."
+        "Su palacio andalusí, la Aljafería, sigue en pie.",
+        "Hoy ese palacio acoge un parlamento autonómico.",
+        "Está a orillas del Ebro y es la capital de Aragón."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Aljaferia Santa Isabel courtyard",
-        "note": "Foto del patio o los arcos del palacio de la Aljafería, sin carteles ni texto con el nombre de la ciudad.",
+        "role": "decorative",
+        "query": "Islamic stucco arches",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -958286,22 +958355,55 @@
         "notes": "Accurate: Alfonso I took Zaragoza in 1118, and the Aljafería now houses the Cortes de Aragón. A photo of the Aljafería is easy to find, but the essential image must not show a sign with the name."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-38",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the Aljafería palace itself. Candidates 2–5 show the Convento de Santa Isabel de los Reyes in Toledo, which is one of the wrong options, and 6 is an unrelated church courtyard. Candidate 1 is an Aljafería arch, but it stands in a room of the Museo Arqueológico Nacional, not the palace the question asks you to look at. A new search such as \"Aljafería palace Zaragoza\" is needed. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the Aljafería palace itself. Candidates 2–5 show the Convento de Santa Isabel de los Reyes in Toledo, which is one of the wrong options, and 6 is an unrelated church courtyard. Candidate 1 is an Aljafería arch, but it stands in a room of the Museo Arqueológico Nacional, not the palace the question asks you to look at. A new search such as \"Aljafería palace Zaragoza\" is needed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable Aljafería photo, so the question no longer points at an image; media is now decorative and hints were adjusted.",
+        "previous": {
+          "question": "Mira este palacio de una taifa andalusí. Alfonso I el Batallador conquistó en 1118 la ciudad donde está. ¿Cuál es?",
+          "hints": [
+            "Era la capital de una taifa del norte, en el valle del Ebro.",
+            "Hoy el palacio acoge un parlamento autonómico.",
+            "Es la capital de Aragón."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Aljaferia Santa Isabel courtyard",
+            "note": "Foto del patio o los arcos del palacio de la Aljafería, sin carteles ni texto con el nombre de la ciudad.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12387",
@@ -960100,7 +960202,7 @@
     },
     {
       "id": "q-12411",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "La forma más justa de decidir algo sin votaciones ni abogados.",
       "question": "Estás en el patio echando a suertes quién se la queda con «Pito, pito, gorgorito». ¿Cuál de estas NO es otra retahíla para echar a suertes?",
@@ -960108,7 +960210,7 @@
       "wrong_answers": [
         "«Una, dola, tela, catola»",
         "«En un café se rifa un gato»",
-        "«Zapatito blanco, zapatito azul»"
+        "«En la casa de Pinocho»"
       ],
       "hints": [
         "Tres de ellas se dicen señalando a cada niño por turnos.",
@@ -960156,23 +960258,43 @@
         "difficulty_estimate": 5,
         "notes": "A nice playground-culture question. All the facts check out: «Al pasar la barca» is a skipping-rope song."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. 'Zapatito blanco, zapatito azul' is mostly known as a skipping-rope rhyme, though some versions are used for choosing. So the 'wrong answer' may not be clearly a counting-out rhyme, and the answer is ambiguous with 'Al pasar la barca'.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. 'Zapatito blanco, zapatito azul' is mostly known as a skipping-rope rhyme, though some versions are used for choosing. So the 'wrong answer' may not be clearly a counting-out rhyme, and the answer is ambiguous with 'Al pasar la barca'.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the ambiguous «Zapatito blanco» (often a skipping rhyme) with the clear counting-out rhyme «En la casa de Pinocho».",
+        "previous": {
+          "wrong_answers": [
+            "«Una, dola, tela, catola»",
+            "«En un café se rifa un gato»",
+            "«Zapatito blanco, zapatito azul»"
+          ]
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12412",
@@ -961278,7 +961400,7 @@
     },
     {
       "id": "q-12427",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Un monasterio navarro con unas vistas al embalse que ya quisiera cualquier hotel.",
       "question": "El monasterio de Leyre, en Navarra, fue muy importante para los primeros reyes de Pamplona. ¿Para qué les sirvió?",
@@ -961290,7 +961412,7 @@
       ],
       "hints": [
         "Su cripta románica es del siglo XI y está junto al embalse de Yesa.",
-        "Los reyes no vivían allí, no reunían allí a las Cortes y tampoco encerraban allí a nadie.",
+        "Los reyes de Pamplona lo llenaron de donaciones y privilegios.",
         "En su iglesia, una arqueta de madera guarda los restos de aquellos reyes."
       ],
       "media": {
@@ -961336,27 +961458,35 @@
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It says the kings didn't live there, didn't hold the Cortes there and didn't imprison anyone there, which rules out all three wrong answers and leaves only «Como panteón real». It should be replaced with a vague hint that rules out nothing, for example one about the monastery's age or its role in the early kingdom.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It says the kings didn't live there, didn't hold the Cortes there and didn't imprison anyone there, which rules out all three wrong answers and leaves only «Como panteón real». It should be replaced with a vague hint that rules out nothing, for example one about the monastery's age or its role in the early kingdom.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints so they go from vague to strong and hint 2 no longer gives away the burial.",
+        "reason": "Replaced hint 2, which ruled out all three wrong answers, with a vague one.",
         "previous": {
           "hints": [
-            "Tiene que ver con lo que pasaba al final de cada reinado.",
-            "Hoy los restos de esos reyes se guardan en una arqueta de madera en la iglesia.",
-            "Allí reposan varios reyes del antiguo reino de Pamplona."
+            "Su cripta románica es del siglo XI y está junto al embalse de Yesa.",
+            "Los reyes no vivían allí, no reunían allí a las Cortes y tampoco encerraban allí a nadie.",
+            "En su iglesia, una arqueta de madera guarda los restos de aquellos reyes."
           ]
         },
         "revised_on": "2026-11-06"
@@ -962758,34 +962888,34 @@
     },
     {
       "id": "q-12446",
-      "status": "needs_work",
-      "difficulty": 13,
+      "status": "approved",
+      "difficulty": 14,
       "description": "Subir hasta donde vuelan los aviones y respirar lo justo: la definición de «mal plan» para cualquiera menos para ella.",
-      "question": "En 1999, la gallega Chus Lago subió al Everest sin oxígeno embotellado. ¿Qué puesto ocupó entre las mujeres del mundo que lo habían logrado?",
-      "answer": "La tercera",
+      "question": "¿Qué alpinista fue la primera española en subir al Everest sin oxígeno embotellado, en 1999?",
+      "answer": "Chus Lago",
       "wrong_answers": [
-        "La primera",
-        "La segunda",
-        "La cuarta"
+        "Edurne Pasaban",
+        "Araceli Segarra",
+        "Rosa Fernández"
       ],
       "hints": [
-        "Sí fue la primera española en hacerlo.",
-        "La pionera fue la neozelandesa Lydia Bradey, en 1988.",
-        "Entre Bradey y ella solo lo consiguió otra: la británica Alison Hargreaves, en 1995."
+        "Es gallega.",
+        "Llegó a la cima por la cara norte, desde el Tíbet.",
+        "Su apellido también es el nombre de una masa de agua dulce."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "Mount Everest summit ridge",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHillary_Step_near_Everest_top_%28retouched%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Hillary_Step_near_Everest_top_%28retouched%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Debasish biswas kolkata · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMount_Everest_as_seen_from_Drukair2_PLW_edit.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Mount_Everest_as_seen_from_Drukair2.jpg: shrimpo1967 · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Debasish biswas kolkata\nDerivative work MagentaGreen",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Debasish_biswas_kolkata&action=edit&redlink=1",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Mount_Everest_as_seen_from_Drukair2.jpg: shrimpo1967\nderivative work: Papa Lima Whiskey 2 (talk)",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Mount_Everest_as_seen_from_Drukair2.jpg",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -962812,23 +962942,52 @@
         "difficulty_estimate": 13,
         "notes": "A narrow, fairly obscure ranking fact (Bradey 1988, Hargreaves 1995, Lago 1999 is the commonly cited order). It is mostly a guess among ordinals, with little reasoning possible. Hints 2 and 3 together state the answer outright. The polar-crossing fun fact is plausible but vague."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Chus Lago's 1999 Everest summit (26 May, north side) is documented, but only a Galician teaching sheet says she was the third woman without oxygen. The Himalayan Database doesn't mention oxygen, and I found no independent source for the ranking. Her 1998 attempt failed.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Chus Lago's 1999 Everest summit (26 May, north side) is documented, but only a Galician teaching sheet says she was the third woman without oxygen. The Himalayan Database doesn't mention oxygen, and I found no independent source for the ranking. Her 1998 attempt failed.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 13,
+      "revision": {
+        "action": "revise",
+        "reason": "The 'third woman worldwide' ranking can't be verified, so the question now asks about her well-documented first among Spanish women, with Chus Lago as the answer.",
+        "previous": {
+          "difficulty": 13,
+          "question": "En 1999, la gallega Chus Lago subió al Everest sin oxígeno embotellado. ¿Qué puesto ocupó entre las mujeres del mundo que lo habían logrado?",
+          "answer": "La tercera",
+          "wrong_answers": [
+            "La primera",
+            "La segunda",
+            "La cuarta"
+          ],
+          "hints": [
+            "Sí fue la primera española en hacerlo.",
+            "La pionera fue la neozelandesa Lydia Bradey, en 1988.",
+            "Entre Bradey y ella solo lo consiguió otra: la británica Alison Hargreaves, en 1995."
+          ]
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12447",
@@ -962992,7 +963151,7 @@
     },
     {
       "id": "q-12449",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un hombre que no sabe quedarse quieto ni en el sofá.",
       "question": "Karlos Arguiñano es a la cocina como Jesús Calleja es a…",
@@ -963023,7 +963182,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Jesús Calleja es de León y empezó a escalar de joven en las montañas de la cordillera Cantábrica.",
+      "fun_fact": "Jesús Calleja nació en Madrid, pero se crió en León, la tierra que siempre presenta como suya.",
       "subcategory": "scientists-and-explorers",
       "style": null,
       "concept": "Jesús Calleja",
@@ -963046,23 +963205,39 @@
         "difficulty_estimate": 6,
         "notes": "The description ('no sabe quedarse quieto') leans slightly towards adventure. An 11-year-old in Spain may not know Calleja, so slightly harder than 5."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Calleja was born in Madrid (1967) and raised in León, so 'es de León' is loose. I did not check this by search. The answer is fine.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Calleja was born in Madrid (1967) and raised in León, so 'es de León' is loose. I did not check this by search. The answer is fine.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Fixed the fun fact: Calleja was born in Madrid and grew up in León.",
+        "previous": {
+          "fun_fact": "Jesús Calleja es de León y empezó a escalar de joven en las montañas de la cordillera Cantábrica."
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12450",
@@ -963438,7 +963613,7 @@
     },
     {
       "id": "q-12455",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Una pierna que se pasa años colgada del techo y nadie se queja.",
       "question": "Mira la pezuña de este jamón. ¿De qué animal suele ser el jamón que la tiene así?",
@@ -963450,7 +963625,7 @@
       ],
       "hints": [
         "Es un cerdo que se cría sobre todo en el suroeste de la península.",
-        "Muchos pasan el otoño en la dehesa comiendo bellotas.",
+        "Muchos pasan el otoño en el campo comiendo bellotas bajo las encinas.",
         "Por esa pezuña se le llama «pata negra»."
       ],
       "media": {
@@ -963469,7 +963644,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Desde 2014, el precinto negro en un jamón solo se puede usar para el 100 % ibérico de bellota.",
+      "fun_fact": "Un buen jamón ibérico puede pasar más de tres años curándose antes de llegar a la mesa.",
       "subcategory": "tapas",
       "style": null,
       "concept": "Pata negra",
@@ -963496,19 +963671,40 @@
       "needs_media": true,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlap: the fun fact (black seal only for 100 % ibérico de bellota) gives away the answer of q-10070 (the seal colour), and hint 2 names the dehesa, the answer of q-10124. Change the fun fact to a different fact (e.g. about the hoof or curing time) and make hint 2 point to acorns/oak woods without the word «dehesa».",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlap: the fun fact (black seal only for 100 % ibérico de bellota) gives away the answer of q-10070 (the seal colour), and hint 2 names the dehesa, the answer of q-10124. Change the fun fact to a different fact (e.g. about the hoof or curing time) and make hint 2 point to acorns/oak woods without the word «dehesa».",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Took «dehesa» out of hint 2 and replaced the black-seal fun fact so this question no longer overlaps with q-10124 and q-10070.",
+        "previous": {
+          "hints": [
+            "Es un cerdo que se cría sobre todo en el suroeste de la península.",
+            "Muchos pasan el otoño en la dehesa comiendo bellotas.",
+            "Por esa pezuña se le llama «pata negra»."
+          ],
+          "fun_fact": "Desde 2014, el precinto negro en un jamón solo se puede usar para el 100 % ibérico de bellota."
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-12456",
@@ -964935,7 +965131,7 @@
     },
     {
       "id": "q-12475",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un sótano fresco y oscuro del que los mayores nunca tienen prisa por salir.",
       "question": "Entras en una bodega de La Rioja y huele a barricas de roble. ¿Qué se hace allí?",
@@ -964947,7 +965143,7 @@
       ],
       "hints": [
         "Se hace con fruta.",
-        "Suele servirse en copa y puede ser tinto, blanco o rosado.",
+        "A menudo se deja envejecer durante años antes de venderlo.",
         "Se hace con uvas."
       ],
       "media": {
@@ -964993,27 +965189,34 @@
       "needs_media": false,
       "batch": "batch-38",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («Suele servirse en copa y puede ser tinto, blanco o rosado») gives the answer away: tinto/blanco/rosado names wine outright. It is also stronger than hint 3 («Se hace con uvas»), so the hints don't go from vague to strong. Replace hint 2 with something vaguer (for example about the harvest season or ageing for years), and keep the grapes for hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Suele servirse en copa y puede ser tinto, blanco o rosado») gives the answer away: tinto/blanco/rosado names wine outright. It is also stronger than hint 3 («Se hace con uvas»), so the hints don't go from vague to strong. Replace hint 2 with something vaguer (for example about the harvest season or ageing for years), and keep the grapes for hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it doesn't name wine's ageing trait, and replaced the vineyard hint 2.",
+        "reason": "Replaced hint 2, which gave away wine by naming tinto/blanco/rosado, with a vaguer ageing hint so the hints go from vague to strong.",
         "previous": {
-          "description": "Un sótano donde las cosas mejoran con los años, como el abuelo.",
           "hints": [
             "Se hace con fruta.",
-            "La Rioja está llena de viñedos.",
+            "Suele servirse en copa y puede ser tinto, blanco o rosado.",
             "Se hace con uvas."
           ]
         },
