@@ -858,7 +858,8 @@
     {
       "name": "¡No contaban con mi astucia!",
       "facet": "Frases de la tele y el cine mexicano",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El origen (El Chapulín Colorado) ya se preguntó; el país de origen sería trivial en este bundle."
     },
     {
       "name": "Eso, eso, eso",

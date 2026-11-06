@@ -546,7 +546,8 @@
     {
       "name": "Brigitte Broch",
       "facet": "Cinefotógrafos y oficios del cine",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Solo da para el año de su Óscar, un dato menor que no se puede deducir."
     },
     {
       "name": "Martín Hernández",
@@ -601,7 +602,8 @@
     {
       "name": "Ficunam",
       "facet": "Premios y festivales de cine",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Solo da para un año de fundación poco conocido o una foto forzada: la dificultad saldría de un dato menor."
     },
     {
       "name": "Diosas de Plata",

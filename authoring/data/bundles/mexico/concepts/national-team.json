@@ -507,7 +507,8 @@
     {
       "name": "Selección de Brasil",
       "facet": "Rivalidades y clásicos del Tri",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Los datos fáciles de Brasil ya están usados; ninguna opción da una pregunta de nivel 2 con conexión mexicana."
     },
     {
       "name": "Selección de Holanda",
@@ -828,7 +829,8 @@
     {
       "name": "Pedro López",
       "facet": "Selección Femenil de México",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Un técnico poco conocido; ninguna opción (conteo con foto, secuencia de grupo, significado) da una pregunta justa."
     },
     {
       "name": "Victoria ante Estados Unidos en la Copa Oro W 2024",

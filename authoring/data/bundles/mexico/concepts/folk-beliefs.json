@@ -76,7 +76,8 @@
     {
       "name": "Susto para el hipo",
       "facet": "Remedios caseros de la abuela",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El susto para el hipo ya está preguntado y las opciones made_of/group no dan un hecho nuevo."
     },
     {
       "name": "Gárgaras de agua con sal",
@@ -352,7 +353,8 @@
     {
       "name": "Cruzar los dedos",
       "facet": "Supersticiones del hogar y la vida diaria",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El significado ya está preguntado; cruzar los dedos no es una creencia propia de México."
     },
     {
       "name": "Pasar debajo de una escalera",
@@ -618,7 +620,8 @@
     {
       "name": "Peregrinación",
       "facet": "Santos, mandas y milagritos",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El nombre y la fecha de diciembre ya están preguntados; las opciones restantes serían forzadas."
     },
     {
       "name": "Ir de rodillas",

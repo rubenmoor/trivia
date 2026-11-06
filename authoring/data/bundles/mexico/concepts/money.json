@@ -356,7 +356,8 @@
     {
       "name": "Número de serie",
       "facet": "Seguridad y diseño de billetes",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Que el número de serie identifica a cada billete ya se preguntó; las otras opciones quedan forzadas."
     },
     {
       "name": "Familia G de billetes",
