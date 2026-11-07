@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "2ac28b6a",
+  "hash": "5db7ca09",
   "questions": [
     {
       "id": "q-0975",
@@ -38756,6 +38756,40 @@
       "background": null
     },
     {
+      "id": "q-14246",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "co-official-languages",
+      "bundle": "spain",
+      "description": "Una palabra con tanta erre que parece el ruido de una moto.",
+      "question": "En catalán, «porta» es a «puerta» como «carrer» es a…",
+      "answer": "calle",
+      "wrong_answers": [
+        "carro",
+        "carretera",
+        "carrera"
+      ],
+      "hints": [
+        "Aparece en los letreros de las esquinas de Barcelona.",
+        "Allí está el número de tu casa.",
+        "Avenida, plaza, paseo… es la más común de todas."
+      ],
+      "fun_fact": "En los letreros y direcciones, «carrer» suele abreviarse como «C/», igual que «calle».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Wooden_door_of_an_old_house01.jpg/3840px-Wooden_door_of_an_old_house01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWooden_door_of_an_old_house01.jpg",
+        "credit": "Panpanchik · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Panpanchik",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Panpanchik"
+      },
+      "background": null
+    },
+    {
       "id": "q-14249",
       "status": "approved",
       "difficulty": 5,
@@ -38854,6 +38888,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "JopkeB",
         "author_url": "https://commons.wikimedia.org/wiki/User:JopkeB"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14252",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "drinks",
+      "bundle": "spain",
+      "description": "Una taza de leche con grumos que no hay cuchara capaz de deshacer.",
+      "question": "Completa la expresión de cuando estás hecho un lío: «Tengo un cacao…»",
+      "answer": "…mental",
+      "wrong_answers": [
+        "…loco",
+        "…gordo",
+        "…redondo"
+      ],
+      "hints": [
+        "Lo dice quien no se aclara con nada.",
+        "Se suele decir antes de un examen o cuando pasan demasiadas cosas a la vez.",
+        "Tiene que ver con la mente."
+      ],
+      "fun_fact": "En el español coloquial de España, «cacao» a secas también significa «lío» o «jaleo».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Chocolate_and_cocoa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChocolate_and_cocoa.jpg",
+        "credit": "Nikowsk · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nikowsk",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Nikowsk&action=edit&redlink=1"
       },
       "background": null
     },
@@ -40252,6 +40320,40 @@
       "background": null
     },
     {
+      "id": "q-14295",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "painting-and-architecture",
+      "bundle": "spain",
+      "description": "Una camisa blanca que se ha hecho más famosa que muchas pasarelas.",
+      "question": "En un famoso cuadro de Goya, un hombre de camisa blanca levanta los brazos en alto. ¿Quiénes están frente a él?",
+      "answer": "Soldados franceses",
+      "wrong_answers": [
+        "Soldados ingleses",
+        "Soldados portugueses",
+        "Soldados austriacos"
+      ],
+      "hints": [
+        "El cuadro recuerda lo que pasó en Madrid en mayo de 1808.",
+        "Fue el comienzo de la guerra de la Independencia.",
+        "Su emperador era Napoleón."
+      ],
+      "fun_fact": "En la mano derecha del hombre de la camisa blanca se ve una marca parecida a un estigma, como si fuera un mártir.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Goya_statue_at_the_Prado_museum.jpg/3840px-Goya_statue_at_the_Prado_museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGoya_statue_at_the_Prado_museum.jpg",
+        "credit": "Sheila1988 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Sheila1988",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sheila1988"
+      },
+      "background": null
+    },
+    {
       "id": "q-14296",
       "status": "approved",
       "difficulty": 12,
@@ -41170,6 +41272,40 @@
       "background": null
     },
     {
+      "id": "q-14323",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "regional-dishes",
+      "bundle": "spain",
+      "description": "El menú de emergencia de cualquier estudiante con una sartén y poca paciencia.",
+      "question": "Arroz blanco, huevo frito, tomate frito y plátano frito: en España, este plato lleva en su nombre un país. ¿Cuál?",
+      "answer": "Cuba",
+      "wrong_answers": [
+        "México",
+        "Filipinas",
+        "Venezuela"
+      ],
+      "hints": [
+        "Es un país de América.",
+        "Es una isla del Caribe.",
+        "Su capital es La Habana."
+      ],
+      "fun_fact": "Se cree que el nombre viene de la época en que Cuba era colonia española, donde se comía mucho arroz con plátano frito.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Fried_egg_cooking_in_a_pan.jpg/3840px-Fried_egg_cooking_in_a_pan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFried_egg_cooking_in_a_pan.jpg",
+        "credit": "Horacio Cambeiro · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Horacio Cambeiro",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tubby3"
+      },
+      "background": null
+    },
+    {
       "id": "q-14324",
       "status": "approved",
       "difficulty": 1,
@@ -41200,6 +41336,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": null,
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14325",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "regional-speech",
+      "bundle": "spain",
+      "description": "Desaparece más que los calcetines y nadie sabe adónde va.",
+      "question": "Soy elástica y redonda, espero en tu muñeca hasta que me necesitas y en los noventa me forraron de tela. Sujeto coletas. ¿Qué soy?",
+      "answer": "La goma del pelo",
+      "wrong_answers": [
+        "La diadema",
+        "La horquilla",
+        "La pinza del pelo"
+      ],
+      "hints": [
+        "Me pongo en la cabeza, pero no soy un sombrero.",
+        "Me estiro y me encojo; si me estiras demasiado, me rompo.",
+        "Muchos me llaman coletero o gomilla."
+      ],
+      "fun_fact": "Las gomas forradas de tela, muy de moda en los noventa, se llaman en inglés «scrunchies».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/John_Roddam_Spencer_Stanhope_-_Thoughts_of_the_Past_detail01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJohn_Roddam_Spencer_Stanhope_-_Thoughts_of_the_Past_detail01.jpg",
+        "credit": "John Roddam Spencer Stanhope · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "John Roddam Spencer Stanhope",
+        "author_url": "https://en.wikipedia.org/wiki/en:John_Roddam_Spencer_Stanhope"
       },
       "background": null
     },
@@ -42666,6 +42836,40 @@
       "background": null
     },
     {
+      "id": "q-14369",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "monuments",
+      "bundle": "spain",
+      "description": "Reciclar está de moda, pero en Málaga ya lo hacían hace casi mil años.",
+      "question": "Mira la Alcazaba de Málaga: al levantarla en el siglo XI se usaron piedras y columnas de un edificio más antiguo que está a sus pies. ¿Cuál?",
+      "answer": "Un teatro romano",
+      "wrong_answers": [
+        "Un castillo visigodo",
+        "Un templo griego",
+        "Un faro fenicio"
+      ],
+      "hints": [
+        "Ese edificio tiene unos 2000 años.",
+        "Lo construyó el pueblo que levantó el acueducto de Segovia.",
+        "Allí se representaban obras ante el público."
+      ],
+      "fun_fact": "El teatro romano estuvo enterrado y olvidado hasta 1951, cuando apareció durante unas obras.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Alcazaba_de_Malaga_1.JPG/3840px-Alcazaba_de_Malaga_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlcazaba_de_Malaga_1.JPG",
+        "credit": "Ismael zniber · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Ismael zniber",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ismael_zniber"
+      },
+      "background": null
+    },
+    {
       "id": "q-14370",
       "status": "approved",
       "difficulty": 4,
@@ -42764,6 +42968,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Carlos Delgado",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kadellar"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14373",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "pop-and-rock",
+      "bundle": "spain",
+      "description": "Hay cantantes con estilo propio y cantantes con un armario muy, muy pequeño.",
+      "question": "Joaquín Sabina, de Úbeda, suele salir al escenario con un sombrero negro, duro y de copa baja y redondeada. ¿Cuál es?",
+      "answer": "Un bombín",
+      "wrong_answers": [
+        "Una boina",
+        "Una chistera",
+        "Un sombrero cordobés"
+      ],
+      "hints": [
+        "Es un tipo de sombrero clásico.",
+        "Charles Chaplin también llevaba uno con su bastón.",
+        "Lo llevaban los banqueros ingleses, y su nombre suena a «bombo» pequeño."
+      ],
+      "fun_fact": "En 2007 Sabina y Joan Manuel Serrat hicieron juntos una gira llamada «Dos pájaros de un tiro».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Sacra_Capilla_del_Salvador%2C_en_%C3%9Abeda_%28Ja%C3%A9n%2C_Espa%C3%B1a%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASacra_Capilla_del_Salvador%2C_en_%C3%9Abeda_%28Ja%C3%A9n%2C_Espa%C3%B1a%29.jpg",
+        "credit": "Mihael Grmek · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Mihael Grmek",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Meho29"
       },
       "background": null
     },
@@ -43172,6 +43410,40 @@
         "license_url": null,
         "author": "Russell Lee",
         "author_url": "https://en.wikipedia.org/wiki/en:Russell_Lee_(photographer)"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14386",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "radio-and-internet",
+      "bundle": "spain",
+      "description": "Una emisora que te acompaña en el desayuno, el atasco y la vuelta a casa.",
+      "question": "Esta cadena de radio nació en 1990 de la mano de la ONCE, hoy es de Atresmedia y emite el programa «Más de uno». ¿Cuál es?",
+      "answer": "Onda Cero",
+      "wrong_answers": [
+        "Cadena SER",
+        "COPE",
+        "Radio Nacional"
+      ],
+      "hints": [
+        "Es una radio privada, no la pública de RTVE.",
+        "Comparte dueño con las cadenas de televisión Antena 3 y laSexta.",
+        "Su nombre lleva un número que significa «nada»."
+      ],
+      "fun_fact": "Onda Cero se formó en 1990 uniendo emisoras que había comprado la ONCE, como las de la antigua Cadena Rato.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Penwith_Radio_studio_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APenwith_Radio_studio_%282%29.jpg",
+        "credit": "M4th5 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "M4th5",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:M4th5&action=edit&redlink=1"
       },
       "background": null
     },
@@ -45926,6 +46198,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "kallerna",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kallerna"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14471",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "transport",
+      "bundle": "spain",
+      "description": "Un cartel que convierte cualquier viaje en coche en un examen sorpresa.",
+      "question": "Vas por la autovía y entras en una zona con «radar de tramo». ¿Qué mide ese radar?",
+      "answer": "La velocidad media entre dos puntos",
+      "wrong_answers": [
+        "La distancia con el coche de delante",
+        "El ruido que hace el motor",
+        "Las horas que llevas conduciendo"
+      ],
+      "hints": [
+        "Lo pone la DGT y puede acabar en multa.",
+        "No te mira en un solo momento, sino durante un trayecto.",
+        "Anota cuándo entras y cuándo sales del tramo, y hace la cuenta."
+      ],
+      "fun_fact": "Frenar justo antes del final no sirve de nada: si hiciste la media demasiado rápido, la multa llega igual.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Tr%C3%A1fico_denso_-_Heavy_traffic_%284510295383%29.jpg/3840px-Tr%C3%A1fico_denso_-_Heavy_traffic_%284510295383%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATr%C3%A1fico_denso_-_Heavy_traffic_%284510295383%29.jpg",
+        "credit": "Spanish Coches · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Spanish Coches",
+        "author_url": "https://www.flickr.com/people/39302751@N06"
       },
       "background": null
     },
