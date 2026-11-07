@@ -842,7 +842,8 @@
     {
       "name": "Siegfried der Drachentöter",
       "facet": "Bergsagen und Sagengestalten",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Bei allen Optionen (made_of mit Foto) rückt Siegfried an den Rand. Drachenblut und Lindenblatt sind schon abgefragt."
     },
     {
       "name": "Mummelsee",
@@ -852,7 +853,8 @@
     {
       "name": "Heinzelmännchen von Köln",
       "facet": "Bergsagen und Sagengestalten",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Das vorhandene Rätsel nimmt die Sage vorweg (nächtliche Arbeit, Erbsen). Ein Foto mit made_of gibt keine neue Frage her."
     },
     {
       "name": "Bergmönch",

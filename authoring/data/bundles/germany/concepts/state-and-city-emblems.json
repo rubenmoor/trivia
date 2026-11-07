@@ -201,12 +201,14 @@
     {
       "name": "Hamburger Flagge",
       "facet": "Wappen der Stadtstaaten",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Der Pool hat schon Burg und Rot-Weiß zur Hamburger Flagge; Türme zählen oder die Stadt am Ausschnitt erkennen wäre trivial oder schon beantwortet."
     },
     {
       "name": "Hamburger Admiralitätsflagge",
       "facet": "Wappen der Stadtstaaten",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Die Details der Admiralitätsflagge sind mir nicht sicher genug bekannt und zu obskur."
     },
     {
       "name": "Hamburger Rathaus",

@@ -512,7 +512,8 @@
     {
       "name": "Schutzengel",
       "facet": "Schutzzauber und Abwehrzeichen",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Das Flügelzählen bei einem Engel ist banal, und das Rätsel zum Schutzengel ist schon im Pool."
     },
     {
       "name": "Wetterläuten",
