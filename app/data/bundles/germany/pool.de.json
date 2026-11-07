@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "3c4bfa42",
+  "hash": "21d8a02f",
   "questions": [
     {
       "id": "q-9120",
@@ -50334,6 +50334,40 @@
       "background": null
     },
     {
+      "id": "q-14975",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chancellors-and-presidents",
+      "bundle": "germany",
+      "description": "Plötzlich ein dickes Geldpaket, und alle fragen sich, wer es auspacken darf.",
+      "question": "Kurz nach dem russischen Angriff auf die Ukraine 2022 kündigte Olaf Scholz 100 Milliarden Euro extra an. Wer bekam das Geld?",
+      "answer": "Die Bundeswehr",
+      "wrong_answers": [
+        "Die Deutsche Bahn",
+        "Die Schulen",
+        "Die Krankenhäuser"
+      ],
+      "hints": [
+        "Scholz kündigte es an einem Sonntag in einer Sondersitzung des Bundestags an.",
+        "Seit Jahren klagten viele, dass die Ausrüstung dort alt oder kaputt sei.",
+        "Gemeint sind Deutschlands Soldatinnen und Soldaten."
+      ],
+      "fun_fact": "Das Geld heißt offiziell „Sondervermögen“, obwohl es eigentlich Schulden sind.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Reichstag_pano.jpg/3840px-Reichstag_pano.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReichstag_pano.jpg",
+        "credit": "Daniel Schwen · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniel Schwen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dschwen"
+      },
+      "background": null
+    },
+    {
       "id": "q-14976",
       "status": "approved",
       "difficulty": 8,
@@ -50364,6 +50398,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
         "author": "Unknown authorUnknown author",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14977",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "chancellors-and-presidents",
+      "bundle": "germany",
+      "description": "Zehn Finger, eine Form und plötzlich ein Wahlplakat.",
+      "question": "Wer hat diese Handhaltung als Markenzeichen berühmt gemacht?",
+      "answer": "Angela Merkel",
+      "wrong_answers": [
+        "Olaf Scholz",
+        "Helmut Kohl",
+        "Ursula von der Leyen"
+      ],
+      "hints": [
+        "Diese Person regierte Deutschland sehr lange.",
+        "Diese Person wuchs in der DDR auf.",
+        "Sie war die erste Frau im Kanzleramt."
+      ],
+      "fun_fact": "2013 hing in Berlin ein riesiges CDU-Plakat, das aus vielen kleinen Fotos zusammengesetzt nur diese Hände zeigte.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Angela_Merkel_hands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAngela_Merkel_hands.jpg",
+        "credit": "Armin Linnartz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Armin Linnartz",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14978",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "childrens-books-and-comics",
+      "bundle": "germany",
+      "description": "Zwei Freunde, ein Wegweiser und ein ziemlich großer Umweg.",
+      "question": "Der kleine Bär und der kleine Tiger suchen das Land ihrer Träume. Ergänze den Buchtitel von Janosch: „Oh, wie schön ist …“",
+      "answer": "Panama",
+      "wrong_answers": [
+        "Kuba",
+        "Jamaika",
+        "Kanada"
+      ],
+      "hints": [
+        "Die beiden finden eine Kiste, die nach Bananen riecht.",
+        "Das Land liegt in Mittelamerika.",
+        "Durch dieses Land führt ein berühmter Kanal zwischen zwei Ozeanen."
+      ],
+      "fun_fact": "Am Ende laufen die beiden im Kreis und landen wieder zu Hause, das sie plötzlich wunderschön finden.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Tigerente_am_Janosch-Spielplatz_in_Bad_Zwischenahn_%282025%29.jpg/3840px-Tigerente_am_Janosch-Spielplatz_in_Bad_Zwischenahn_%282025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATigerente_am_Janosch-Spielplatz_in_Bad_Zwischenahn_%282025%29.jpg",
+        "credit": "JoachimKohler-HB · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JoachimKohler-HB",
+        "author_url": "https://commons.wikimedia.org/wiki/User:JoachimKohler-HB"
       },
       "background": null
     },
@@ -51762,6 +51864,40 @@
       "background": null
     },
     {
+      "id": "q-15020",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "federal-republic-and-reunification",
+      "bundle": "germany",
+      "description": "Der einzige Fernsehstar, der sein Publikum absichtlich einschlafen lässt.",
+      "question": "Abends im Fernsehen: Wie lange dauert eine Sendung „Unser Sandmännchen“ ungefähr?",
+      "answer": "Etwa 7 Minuten",
+      "wrong_answers": [
+        "Etwa 30 Sekunden",
+        "Etwa 1 Stunde",
+        "Etwa 2 Stunden"
+      ],
+      "hints": [
+        "Danach sollen Kinder ins Bett gehen.",
+        "Es ist länger als ein Werbespot.",
+        "Es reicht gerade für eine kurze Geschichte und einen Gute-Nacht-Gruß."
+      ],
+      "fun_fact": "Das Sandmännchen lief zum ersten Mal am 22. November 1959 im Fernsehen der DDR.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Sir_Henry%27s_Night_Stand_%284145348386%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASir_Henry%27s_Night_Stand_%284145348386%29.jpg",
+        "credit": "elPadawan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "elPadawan",
+        "author_url": "https://www.flickr.com/people/7776449@N06"
+      },
+      "background": null
+    },
+    {
       "id": "q-15021",
       "status": "approved",
       "difficulty": 13,
@@ -52472,6 +52608,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Robert von Oliva (naruciakk)",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Naruciakk&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15043",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Wer mehr Kohle schaufelt als alle anderen, bekommt Blumen, Orden und den Neid der ganzen Schicht.",
+      "question": "Die Hennecke-Bewegung von 1948 kopierte einen sowjetischen Rekord-Bergmann. Wann hatte dieser Vorbild-Rekord stattgefunden?",
+      "answer": "in den 1930er-Jahren",
+      "wrong_answers": [
+        "in den 1910er-Jahren",
+        "in den 1920er-Jahren",
+        "in den 1940er-Jahren"
+      ],
+      "hints": [
+        "Das Vorbild hieß Alexei Stachanow.",
+        "Stalin regierte schon, der Zweite Weltkrieg hatte noch nicht begonnen.",
+        "Zur selben Zeit regierte Hitler bereits in Deutschland."
+      ],
+      "fun_fact": "Adolf Hennecke förderte am 13. Oktober 1948 in einer gut vorbereiteten Schicht 387 Prozent seiner Tagesnorm.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Bytom_Bobrek_coal_mine.jpg/3840px-Bytom_Bobrek_coal_mine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABytom_Bobrek_coal_mine.jpg",
+        "credit": "Adrian Tync · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adrian Tync",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gower"
       },
       "background": null
     },
@@ -54924,6 +55094,40 @@
       "background": null
     },
     {
+      "id": "q-15117",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "sights-and-landmarks",
+      "bundle": "germany",
+      "description": "Stahlriesen, die nie Feierabend machen, nicht mal am Sonntag.",
+      "question": "Im Hamburger Hafen stehen riesige Kräne, so hoch wie Hochhäuser. Wozu dienen sie vor allem?",
+      "answer": "Container be- und entladen",
+      "wrong_answers": [
+        "Schiffe aus dem Wasser heben",
+        "Fisch aus Kuttern laden",
+        "Windräder zusammenbauen"
+      ],
+      "hints": [
+        "Sie stehen direkt am Wasser neben großen Schiffen.",
+        "Sie arbeiten Tag und Nacht, damit die Schiffe schnell weiterfahren können.",
+        "Sie heben große bunte Metallkisten voller Waren aus aller Welt."
+      ],
+      "fun_fact": "Der Hamburger Hafen ist der größte Seehafen Deutschlands.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Hamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg/3840px-Hamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
       "id": "q-15118",
       "status": "approved",
       "difficulty": 2,
@@ -55808,6 +56012,74 @@
       "background": null
     },
     {
+      "id": "q-15144",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Ein Brief, der aus einem Schulabgänger einen Mann in Steingrau machte.",
+      "question": "Ab 1962 galt in der DDR die Wehrpflicht. Junge Männer bekamen um 18 Post und mussten 18 Monate in steingrauer Uniform dienen. Wohin?",
+      "answer": "Zur Nationalen Volksarmee",
+      "wrong_answers": [
+        "Zur Volkspolizei",
+        "Zur Sowjetarmee",
+        "Zur Gesellschaft für Sport und Technik"
+      ],
+      "hints": [
+        "Die jungen Männer lebten dort meist in Kasernen, oft weit weg von zu Hause.",
+        "Sie wurde 1956 gegründet, nur wenige Monate nach der Bundeswehr.",
+        "Ihre Abkürzung hatte drei Buchstaben und begann mit N."
+      ],
+      "fun_fact": "Die NVA wurde 1956 gegründet und 1990 aufgelöst, ohne je in einem Krieg zu kämpfen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Kolkwitz%2C_Am_Technologiepark_%28old_NVA_barracks%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKolkwitz%2C_Am_Technologiepark_%28old_NVA_barracks%29.png",
+        "credit": "Trio3D · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Trio3D",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Trio3D&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15145",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Lange Sitzungen, dicke Akten und jede Menge Stempel – Ost-Berliner Büroalltag vom Feinsten.",
+      "question": "Hans Modrow war 1989/90 sein Vorsitzender. Welches Gremium bildete die Regierung der DDR?",
+      "answer": "Ministerrat",
+      "wrong_answers": [
+        "Staatsrat",
+        "Politbüro",
+        "Nationaler Verteidigungsrat"
+      ],
+      "hints": [
+        "Es ist nicht das kollektive Staatsoberhaupt der DDR.",
+        "Es ist auch kein Gremium der SED selbst.",
+        "In ihm saßen die Minister der DDR."
+      ],
+      "fun_fact": "Die wahre Macht in der DDR lag nicht beim Ministerrat, sondern beim Politbüro der SED.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Detlev-Rohwedder-Haus_2015.jpg/3840px-Detlev-Rohwedder-Haus_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADetlev-Rohwedder-Haus_2015.jpg",
+        "credit": "Perituss · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Perituss",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Perituss"
+      },
+      "background": null
+    },
+    {
       "id": "q-15146",
       "status": "approved",
       "difficulty": 9,
@@ -56420,6 +56692,40 @@
       "background": null
     },
     {
+      "id": "q-15165",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "reformation-to-empire",
+      "bundle": "germany",
+      "description": "Zwei Brüder, die statt Briefmarken lieber Geschichten gesammelt haben.",
+      "question": "Welches dieser Märchen steht NICHT in den „Kinder- und Hausmärchen“ der Brüder Grimm?",
+      "answer": "Die kleine Meerjungfrau",
+      "wrong_answers": [
+        "Rotkäppchen",
+        "Hänsel und Gretel",
+        "Schneewittchen"
+      ],
+      "hints": [
+        "Dieses Märchen hat sich ein einzelner Schriftsteller selbst ausgedacht.",
+        "Sein Autor kam aus Dänemark.",
+        "Hans Christian Andersen hat es geschrieben."
+      ],
+      "fun_fact": "Der erste Band der „Kinder- und Hausmärchen“ erschien 1812 kurz vor Weihnachten.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Burg_Frankenstein_%28Pfalz%29-0432.jpg/3840px-Burg_Frankenstein_%28Pfalz%29-0432.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurg_Frankenstein_%28Pfalz%29-0432.jpg",
+        "credit": "Zoppo59 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Zoppo59",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zoppo59"
+      },
+      "background": null
+    },
+    {
       "id": "q-15166",
       "status": "approved",
       "difficulty": 7,
@@ -56586,6 +56892,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Gordito1869",
         "author_url": "https://commons.wikimedia.org/wiki/User:Gordito1869"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15172",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "schlager-and-folk-music",
+      "bundle": "germany",
+      "description": "Ein Rätsel mit doppeltem Boden: Hier ist nicht alles, was es zu sein scheint.",
+      "question": "Im Lied „Ein Männlein steht im Walde“ trägt es ein purpurrotes Mäntlein und ein schwarzes Käppchen. Was ist das Männlein?",
+      "answer": "Hagebutte",
+      "wrong_answers": [
+        "Fliegenpilz",
+        "Marienkäfer",
+        "Gartenzwerg"
+      ],
+      "hints": [
+        "Über das Männlein wird gern im Herbst gesungen.",
+        "Es wächst an einem stacheligen Strauch.",
+        "Es ist die Frucht der Rose, aus der man Tee und Marmelade macht."
+      ],
+      "fun_fact": "Viele denken beim Singen an einen Fliegenpilz, dabei hat der weiße Punkte und kein schwarzes Käppchen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Autumn_Forest_Path_with_Tall_Trees.jpg/3840px-Autumn_Forest_Path_with_Tall_Trees.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAutumn_Forest_Path_with_Tall_Trees.jpg",
+        "credit": "Vovogov90 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Vovogov90",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Vovogov90&action=edit&redlink=1"
       },
       "background": null
     },
@@ -56910,6 +57250,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Melissa",
         "author_url": "https://www.flickr.com/people/44176993@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15183",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sausages-and-cheese",
+      "bundle": "germany",
+      "description": "Ein Klassiker hinter der Glasscheibe, gleich neben der Fleischwurst.",
+      "question": "An der Wursttheke fragt die Verkäuferin: „Darf's ein bisschen mehr sein?“ Was ist meistens gerade passiert?",
+      "answer": "Sie hat zu viel abgeschnitten",
+      "wrong_answers": [
+        "Die Wurst ist gerade im Angebot",
+        "Der Laden schließt gleich",
+        "Die Schneidemaschine klemmt"
+      ],
+      "hints": [
+        "Die Frage kommt, kurz bevor der Aufschnitt eingepackt wird.",
+        "Du hast zum Beispiel 200 Gramm bestellt.",
+        "Die Waage zeigt vielleicht 230 Gramm."
+      ],
+      "fun_fact": "Der Satz „Darf's ein bisschen mehr sein?“ ist so bekannt, dass er in Deutschland fast schon ein Sprichwort ist.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Cold_Cut_Counter_at_Lighthouse_Cafe.jpg/3840px-Cold_Cut_Counter_at_Lighthouse_Cafe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACold_Cut_Counter_at_Lighthouse_Cafe.jpg",
+        "credit": "Peachyeung316 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peachyeung316",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316"
       },
       "background": null
     },
