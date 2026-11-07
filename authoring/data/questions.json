@@ -1196745,7 +1196745,7 @@
     },
     {
       "id": "q-15455",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "El tiempo justo para tomar agüita, escuchar regaños y volver al ring.",
       "question": "Suena la campana y los boxeadores profesionales se van a su esquina a descansar. ¿Cuánto dura ese descanso?",
@@ -1196763,19 +1196763,19 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "boxing ring corner stool",
+        "query": "boxing ring corner",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABetween_rounds%2C_large%2C_first_stone_-_DPLA_-_eed44133a32b5d0f2cbdd3b9b3250af2.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Between_rounds%2C_large%2C_first_stone_-_DPLA_-_eed44133a32b5d0f2cbdd3b9b3250af2.jpg/3840px-Between_rounds%2C_large%2C_first_stone_-_DPLA_-_eed44133a32b5d0f2cbdd3b9b3250af2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Bellows, George, 1882-1925 · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A3rd_Infantry_Division_Soldiers_compete_in_NATO_boxing_event_%288266886%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/3rd_Infantry_Division_Soldiers_compete_in_NATO_boxing_event_%288266886%29.jpg/3840px-3rd_Infantry_Division_Soldiers_compete_in_NATO_boxing_event_%288266886%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "U.S. Army photo by Pfc. Trey Gonzales · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Bellows, George, 1882-1925",
-        "author_url": null,
+        "author": "U.S. Army photo by Pfc. Trey Gonzales",
+        "author_url": "https://www.dvidshub.net/portfolio/1826655",
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-USGov-Military-Army"
         ]
       },
       "fun_fact": "En el box profesional varonil cada round dura 3 minutos, y en el femenil suele durar 2.",
@@ -1196805,18 +1196805,51 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Only the media query changes, so a new search can replace the PD-US-only image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "boxing ring corner stool",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ABetween_rounds%2C_large%2C_first_stone_-_DPLA_-_eed44133a32b5d0f2cbdd3b9b3250af2.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Between_rounds%2C_large%2C_first_stone_-_DPLA_-_eed44133a32b5d0f2cbdd3b9b3250af2.jpg/3840px-Between_rounds%2C_large%2C_first_stone_-_DPLA_-_eed44133a32b5d0f2cbdd3b9b3250af2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Bellows, George, 1882-1925 · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Bellows, George, 1882-1925",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15456",
@@ -1197499,7 +1197532,7 @@
     },
     {
       "id": "q-15465",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un lugar donde la cama cuelga del techo y nadie se espanta.",
       "question": "En este estado del sureste hace tanto calor que muchas familias duermen en hamaca, se habla mucho maya y está Chichén Itzá. ¿Cuál es?",
@@ -1197517,11 +1197550,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "hammock hanging indoors",
+        "query": "Mexican hammock house",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2014-01-02_Traditionelle_Maya-Wohnstatt_in_Santa_Elena_01_anagoria.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/2014-01-02_Traditionelle_Maya-Wohnstatt_in_Santa_Elena_01_anagoria.JPG/3840px-2014-01-02_Traditionelle_Maya-Wohnstatt_in_Santa_Elena_01_anagoria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Anagoria · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Anagoria",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Anagoria",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La palabra «hamaca» viene del taíno del Caribe y fue de las primeras palabras americanas que entraron al español.",
       "subcategory": "childrens-songs",
@@ -1197550,29 +1197590,40 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates shows a hammock or anything from Yucatán: they show laundry, curtains, a selfie, airport workers, a seed catalogue and a crowd of children. No new search is allowed, so the media slot needs a new search, for example \"Yucatan hammock\" or \"hammock Mexico house\". The question text itself is acceptable. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows a hammock or anything from Yucatán: they show laundry, curtains, a selfie, airport workers, a seed catalogue and a crowd of children. No new search is allowed, so the media slot needs a new search, for example \"Yucatan hammock\" or \"hammock Mexico house\". The question text itself is acceptable. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "difficulty_original": 5,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the distractors, which «sureste» ruled out, with southeastern states and raised the difficulty slightly.",
+        "reason": "New media query aimed at a Mexican hammock, since no usable image was found.",
         "previous": {
-          "difficulty": 5,
-          "wrong_answers": [
-            "Chihuahua",
-            "Jalisco",
-            "Puebla"
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "hammock hanging indoors",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1198766,7 +1198817,7 @@
       "id": "q-15482",
       "status": "needs_work",
       "difficulty": 3,
-      "description": "El desayuno favorito de una pantera que no come carne.",
+      "description": "Una pantera con músculos de caricatura y bigote de chocolate.",
       "question": "Viene en lata, su mascota es Pancho Pantera y se prepara en un vaso frío. Su nombre junta «choco» con una palabra en inglés. ¿Qué significa?",
       "answer": "Leche",
       "wrong_answers": [
@@ -1198775,8 +1198826,8 @@
         "Dulce"
       ],
       "hints": [
-        "Es algo que muchos niños toman en el desayuno.",
-        "En inglés, la misma palabra aparece en «milkshake».",
+        "La marca se vende en México desde hace muchas décadas.",
+        "Es lo que sirves en el vaso antes de echarle el polvo de chocolate.",
         "Es blanca y va con el cereal."
       ],
       "media": {
@@ -1198823,24 +1198874,35 @@
       "batch": "batch-51",
       "review": {
         "decision": "needs_work",
-        "feedback": "The description and hint 1 give the answer away: among Polvo, Fuerza, Dulce and Leche, only milk is something you have or drink for breakfast, so «El desayuno favorito…» and «Es algo que muchos niños toman en el desayuno» rule out every wrong option. Hint 2 («milkshake») also translates the word outright. The description should play on the brand or panther theme without mentioning breakfast. Hint 1 should be something vague, such as the brand's age or its can. Hint 2 must not contain the English word.",
+        "feedback": "Hint 2 (\"Es lo que sirves en el vaso antes de echarle el polvo de chocolate\") gives the answer away: it describes milk directly, so the question is solved by hint 2 rather than hint 3. It also rules out \"Polvo\" by naming the powder as something else. Hint 2 should hint at the English word or the brand instead, for example that it's a word you learn in your first English classes, next to \"water\" and \"bread\".",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description and hint 1 give the answer away: among Polvo, Fuerza, Dulce and Leche, only milk is something you have or drink for breakfast, so «El desayuno favorito…» and «Es algo que muchos niños toman en el desayuno» rule out every wrong option. Hint 2 («milkshake») also translates the word outright. The description should play on the brand or panther theme without mentioning breakfast. Hint 1 should be something vague, such as the brand's age or its can. Hint 2 must not contain the English word.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave the answer away, with a vague breakfast hint and a medium «milkshake» hint.",
+        "reason": "Rewrote the description and hints 1–2 so they no longer mention breakfast or translate the English word.",
         "previous": {
+          "description": "El desayuno favorito de una pantera que no come carne.",
           "hints": [
-            "Es lo que le echas al vaso antes del polvo.",
-            "Sale de la vaca.",
+            "Es algo que muchos niños toman en el desayuno.",
+            "En inglés, la misma palabra aparece en «milkshake».",
             "Es blanca y va con el cereal."
           ]
         },
@@ -1199511,7 +1199573,7 @@
     },
     {
       "id": "q-15492",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "La canción más pegajosa de México no está en la radio: suena por tu calle un sábado a las ocho de la mañana.",
       "question": "Por tu calle se escucha una grabación: «Se compran colchones, tambores, refrigeradores…». ¿Quién viene pasando?",
@@ -1199529,20 +1199591,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Mexico City residential street",
+        "query": "Mexico neighborhood street houses",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APalace_of_Escandon_family%2C_Mexico_City%2C_Mexico%2C_ca.1905-1910_%28CHS-660%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Palace_of_Escandon_family%2C_Mexico_City%2C_Mexico%2C_ca.1905-1910_%28CHS-660%29.jpg/3840px-Palace_of_Escandon_family%2C_Mexico_City%2C_Mexico%2C_ca.1905-1910_%28CHS-660%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMexican_neighborhood_el_floresta_veracruz_20260711.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Mexican_neighborhood_el_floresta_veracruz_20260711.jpg/3840px-Mexican_neighborhood_el_floresta_veracruz_20260711.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Coral2712 · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Coral2712",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Coral2712",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "La voz de la grabación más famosa es la de María del Mar Terrón, que la grabó de jovencita a petición de su papá.",
       "subcategory": "home-and-street",
@@ -1199571,38 +1199631,48 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took the answer's wording out of hint 3, removed the vehicle from the description (and from the image query), and made the fun fact more general.",
+        "reason": "Only the media query changes, so a new search can replace the PD-US-only image.",
         "previous": {
-          "description": "La canción más pegajosa de México no está en la radio, viene en una camioneta.",
-          "hints": [
-            "No viene a venderte nada.",
-            "Quiere llevarse las cosas viejas que ya no usas.",
-            "La grabación termina diciendo «o algo de fierro viejo que vendan»."
-          ],
           "media": {
             "type": "image",
             "role": "illustrative",
-            "query": "old pickup truck Mexico street",
+            "query": "Mexico City residential street",
             "note": null,
-            "source_url": null,
-            "file_url": null,
-            "credit": null
-          },
-          "fun_fact": "La voz de la grabación más famosa es la de una niña, que su papá grabó hace muchos años y que se volvió un clásico de las calles de México."
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APalace_of_Escandon_family%2C_Mexico_City%2C_Mexico%2C_ca.1905-1910_%28CHS-660%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Palace_of_Escandon_family%2C_Mexico_City%2C_Mexico%2C_ca.1905-1910_%28CHS-660%29.jpg/3840px-Palace_of_Escandon_family%2C_Mexico_City%2C_Mexico%2C_ca.1905-1910_%28CHS-660%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1200596,7 +1200666,7 @@
       "status": "needs_work",
       "difficulty": 8,
       "description": "Por fuera parece un huevo de Pascua; lo bueno es averiguar qué trae adentro.",
-      "question": "Mira la foto de esta granada china. Al abrir su cáscara, ¿qué parte de la fruta se come?",
+      "question": "La granada china tiene una cáscara anaranjada, lisa y dura. Al abrirla, ¿qué parte de la fruta se come?",
       "answer": "Las semillas con su pulpa",
       "wrong_answers": [
         "La cáscara anaranjada, cocida",
@@ -1200610,9 +1200680,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "sweet granadilla whole fruit",
-        "note": "Granada china (Passiflora ligularis) entera y cerrada, con su cáscara anaranjada; no debe verse abierta ni su interior.",
+        "role": "illustrative",
+        "query": "Passiflora ligularis flower",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1200641,52 +1200711,66 @@
         "notes": "The answer is longer and more specific than the wrong options and stands out. The description's «slurp» hints at the jelly-like inside. In Mexico people usually say «el maracuyá», not «la maracuyá». A sharp photo of the closed fruit should be easy to find on Commons."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-51",
       "review": {
         "decision": "needs_work",
-        "feedback": "No adequate essential image: candidate 1 is the right fruit but shows it cut open with the seeds and pulp visible, which gives the answer away; candidates 2–6 are unrelated (river boats, cider, a donut). A new search isn't allowed here, so this needs a closed, whole granada china photo (e.g. 'Passiflora ligularis fruit') or a crop of the left half of candidate 1. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No adequate image: candidates 1 and 2 are old botanical drawings of an unidentified passion flower, and 3 is an unrelated map figure. A new search should find a photo of the whole granadilla (Passiflora ligularis) fruit. It must be closed, not cut open, because the seeds would give the answer away. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate essential image: candidate 1 is the right fruit but shows it cut open with the seeds and pulp visible, which gives the answer away; candidates 2–6 are unrelated (river boats, cider, a donut). A new search isn't allowed here, so this needs a closed, whole granada china photo (e.g. 'Passiflora ligularis fruit') or a crop of the left half of candidate 1. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed «slurp» from the description, changed hint 2 to «del maracuyá» (Mexican usage) and shortened the answer.",
+        "reason": "No closed-fruit photo was found, so the question now describes the fruit itself and uses an illustrative image of the passion-flower bloom, which doesn't give the answer away.",
         "previous": {
-          "description": "Por fuera parece un huevo de Pascua; por dentro, una sorpresa que hace «slurp».",
-          "answer": "Las semillas con su pulpa gelatinosa",
-          "hints": [
-            "La cáscara es dura y se rompe con los dedos.",
-            "Es pariente de la maracuyá.",
-            "Lo de adentro se sorbe con cuchara y está lleno de bolitas resbalosas."
-          ]
+          "question": "Mira la foto de esta granada china. Al abrir su cáscara, ¿qué parte de la fruta se come?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "sweet granadilla whole fruit",
+            "note": "Granada china (Passiflora ligularis) entera y cerrada, con su cáscara anaranjada; no debe verse abierta ni su interior.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-07"
       }
     },
     {
       "id": "q-15507",
-      "status": "needs_work",
-      "difficulty": 5,
-      "description": "Unas enchiladas que se cambiaron de ropa para ir más tranquilas.",
-      "question": "Las entomatadas son tortillas dobladas con queso fresco y crema. ¿Con qué salsa se bañan?",
-      "answer": "Salsa de jitomate",
+      "status": "approved",
+      "difficulty": 4,
+      "description": "La familia de las tortillas bañadas tiene muchos primos, y todos se apellidan «en-».",
+      "question": "Son tortillas dobladas con queso fresco y crema, bañadas en salsa de jitomate en vez de salsa de chile. ¿Cómo se llama este platillo?",
+      "answer": "Entomatadas",
       "wrong_answers": [
-        "Salsa de frijol",
-        "Salsa de mole",
-        "Salsa de aguacate"
+        "Enfrijoladas",
+        "Enmoladas",
+        "Enchiladas"
       ],
       "hints": [
-        "Fíjate bien en el nombre del platillo.",
-        "Es la misma salsa con la que se bañan los huevos rancheros.",
-        "La salsa es roja y se hace con el fruto que los mexicas llamaban xitomatl."
+        "Fíjate bien en el ingrediente de la salsa.",
+        "Su nombre sale del ingrediente principal de la salsa, no del chile.",
+        "Su nombre lleva escondida la palabra «tomate»."
       ],
       "media": {
         "type": "image",
@@ -1200731,31 +1200815,48 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text gives the answer away: the dish's name 'entomatadas' already contains 'tomate', so asking which salsa it is bathed in answers itself. The text also says the same thing twice: the name tells you the salsa, then the question asks for it. Rework it so the dish's name isn't the clue, for example by describing the dish and asking for its name, with enfrijoladas, enmoladas and enchiladas as the wrong options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text gives the answer away: the dish's name 'entomatadas' already contains 'tomate', so asking which salsa it is bathed in answers itself. The text also says the same thing twice: the name tells you the salsa, then the question asks for it. Rework it so the dish's name isn't the clue, for example by describing the dish and asking for its name, with enfrijoladas, enmoladas and enchiladas as the wrong options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question to one direct ask and replaced hint 2, which ruled out the frijol and mole options.",
+        "reason": "Reworked as the reviewer suggested: the question describes the dish and asks for its name, with the other 'en-' dishes as wrong options. The description, hints and difficulty were adjusted to match.",
         "previous": {
-          "question": "Son tortillas dobladas, llevan queso fresco y crema encima, y su nombre dice con qué salsa se bañan. ¿Cuál es esa salsa en las entomatadas?",
+          "difficulty": 5,
+          "description": "Unas enchiladas que se cambiaron de ropa para ir más tranquilas.",
+          "question": "Las entomatadas son tortillas dobladas con queso fresco y crema. ¿Con qué salsa se bañan?",
+          "answer": "Salsa de jitomate",
+          "wrong_answers": [
+            "Salsa de frijol",
+            "Salsa de mole",
+            "Salsa de aguacate"
+          ],
           "hints": [
             "Fíjate bien en el nombre del platillo.",
-            "Las enfrijoladas y las enmoladas usan el mismo truco para llamarse así.",
+            "Es la misma salsa con la que se bañan los huevos rancheros.",
             "La salsa es roja y se hace con el fruto que los mexicas llamaban xitomatl."
           ]
         },
         "revised_on": "2026-11-07"
-      }
+      },
+      "difficulty_original": 5
     },
     {
       "id": "q-15508",
@@ -1201722,10 +1201823,10 @@
     },
     {
       "id": "q-15521",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un disfraz escolar con más historia que muchos libros de texto.",
-      "question": "Mira la foto: así se visten muchas niñas el 20 de noviembre. ¿Cómo se llaman las cintas de balas que llevan cruzadas en el pecho?",
+      "question": "El 20 de noviembre muchas niñas se visten de Adelita, con cintas de balas cruzadas en el pecho. ¿Cómo se llaman esas cintas?",
       "answer": "Cananas",
       "wrong_answers": [
         "Charreteras",
@@ -1201739,12 +1201840,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Adelita costume bandolier",
-        "note": "Niña o mujer con traje de Adelita (vestido largo, rebozo y cintas de balas cruzadas en el pecho), en un desfile o festival.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "soldaderas Mexican Revolution",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Marcha_de_las_Adelitas.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/La_Marcha_de_las_Adelitas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "David Cabrera · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "David Cabrera",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Linkogecko",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Muchas soldaderas de la Revolución no solo cocinaban y curaban: también cargaban el rifle y peleaban.",
       "subcategory": "mariachi-and-ranchera",
@@ -1201770,21 +1201878,47 @@
         "notes": "Hint 3 (starts with 'ca', rhymes with 'ganas') nearly spells the answer out, which hint 3 is allowed to do. Commons probably has an Adelita costume photo with bandoliers."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows what the essential image needs: a girl or woman in an Adelita costume with crossed bandoliers. A new search isn't allowed, so the question needs a real Adelita or 20 de noviembre parade photo (e.g. \"Adelita costume parade\" or \"soldadera costume Mexico\"), or the wording must stop relying on \"Mira la foto\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows what the essential image needs: a girl or woman in an Adelita costume with crossed bandoliers. A new search isn't allowed, so the question needs a real Adelita or 20 de noviembre parade photo (e.g. \"Adelita costume parade\" or \"soldadera costume Mexico\"), or the wording must stop relying on \"Mira la foto\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No Adelita photo was found, so the text now describes the costume instead of relying on 'Mira la foto', and the media becomes an illustrative soldadera image.",
+        "previous": {
+          "question": "Mira la foto: así se visten muchas niñas el 20 de noviembre. ¿Cómo se llaman las cintas de balas que llevan cruzadas en el pecho?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Adelita costume bandolier",
+            "note": "Niña o mujer con traje de Adelita (vestido largo, rebozo y cintas de balas cruzadas en el pecho), en un desfile o festival.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15522",
@@ -1202229,7 +1202363,7 @@
     },
     {
       "id": "q-15528",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Antes de las apps de traducción, había una persona que hacía todo el trabajo.",
       "question": "Hablaba náhuatl y maya, aprendí español y fui la intérprete de Hernán Cortés. ¿Quién soy?",
@@ -1202247,21 +1202381,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Florentine Codex page",
+        "query": "Templo Mayor ruins",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Florentine_Codex-_The_Conquest_of_Mexico.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Florentine_Codex-_The_Conquest_of_Mexico.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARuinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Ruinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg/3840px-Ruinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Gary Francisco Keller, artwork created under supervision of Bernardino de Sahagún between 1540-1585.",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Al principio, la Malinche traducía del náhuatl al maya, y Jerónimo de Aguilar pasaba del maya al español para Cortés.",
       "subcategory": "mexica",
@@ -1202290,18 +1202421,52 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query, because the Florentine Codex image has a PD-US-only license.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Florentine Codex page",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Florentine_Codex-_The_Conquest_of_Mexico.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Florentine_Codex-_The_Conquest_of_Mexico.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Gary Francisco Keller, artwork created under supervision of Bernardino de Sahagún between 1540-1585.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15529",
@@ -1202542,7 +1202707,7 @@
     },
     {
       "id": "q-15532",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Entras por un tornillo y sales con medio taller en una bolsa.",
       "question": "«Tlapalería» viene de la palabra náhuatl «tlapalli». ¿Qué significa «tlapalli»?",
@@ -1202554,7 +1202719,7 @@
       ],
       "hints": [
         "Al principio, en esas tiendas se vendía sobre todo una cosa.",
-        "Los mexicas también usaban la palabra para los tintes que sacaban de plantas e insectos.",
+        "En los códices mexicas había mucho de esto.",
         "Es lo que tiene la pintura."
       ],
       "media": {
@@ -1202600,26 +1202765,33 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: saying the Mexica used «tlapalli» for dyes made from plants and insects tells players the word means colour, and none of the wrong options (Fierro, Clavo, Madera) could fit. It is also stronger than hint 3. Make hint 2 vaguer, for example about how the Mexica used the thing the word names in codices or textiles without mentioning dyes, and keep the strongest hint for hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: saying the Mexica used «tlapalli» for dyes made from plants and insects tells players the word means colour, and none of the wrong options (Fierro, Clavo, Madera) could fit. It is also stronger than hint 3. Make hint 2 vaguer, for example about how the Mexica used the thing the word names in codices or textiles without mentioning dyes, and keep the strongest hint for hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made the question direct and replaced hint 2, which pointed straight to paint.",
+        "reason": "Made hint 2 vaguer so it no longer reveals that the word means colour.",
         "previous": {
-          "question": "«Tlapalería» viene del náhuatl «tlapalli», que significa «___». Completa la palabra.",
           "hints": [
             "Al principio, en esas tiendas se vendía sobre todo una cosa.",
-            "Tiene que ver con brochas y botes.",
+            "Los mexicas también usaban la palabra para los tintes que sacaban de plantas e insectos.",
             "Es lo que tiene la pintura."
           ]
         },
@@ -1202854,10 +1203026,10 @@
     },
     {
       "id": "q-15536",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
-      "description": "Un pájaro que tenía la cola más cara de todo el imperio.",
-      "question": "Con las plumas de esta ave se hizo el famoso penacho que hoy está en un museo de Viena. ¿A qué tlatoani se le atribuye?",
+      "description": "Un emperador que recibió unas visitas que ya nunca se fueron.",
+      "question": "¿Qué tlatoani gobernaba Tenochtitlan cuando Hernán Cortés llegó en 1519?",
       "answer": "Moctezuma",
       "wrong_answers": [
         "Cuauhtémoc",
@@ -1202865,27 +1203037,27 @@
         "Ahuízotl"
       ],
       "hints": [
-        "Gobernaba Tenochtitlan cuando llegaron los españoles.",
-        "Recibió a Hernán Cortés en 1519.",
+        "Fue el noveno tlatoani de los mexicas.",
+        "Hubo dos tlatoanis con su nombre, y él fue el segundo.",
         "Hay un dicho sobre su «venganza» para los turistas con dolor de panza."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "resplendent quetzal",
-        "note": "Foto clara de un quetzal macho con sus largas plumas verdes de la cola.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg/3840px-058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Giles Laurent · CC BY-SA 4.0 · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "Tenochtitlan model museum",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AModel_of_Tenochtitlan-RZ.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Model_of_Tenochtitlan-RZ.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Steve Cadman from London, U.K. · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Giles Laurent",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Steve Cadman from London, U.K.",
+        "author_url": "https://www.flickr.com/people/98115025@N00",
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "El penacho tiene cientos de plumas de quetzal, y México lleva años pidiendo que regrese.",
+      "fun_fact": "En español le decimos Moctezuma, pero en náhuatl su nombre era Motecuhzoma.",
       "subcategory": "mexica",
       "style": null,
       "concept": "Plumas de quetzal",
@@ -1202909,21 +1203081,61 @@
         "notes": "The quetzal photo is not really needed to answer, so the media is closer to illustrative than essential. Hint 3 (Moctezuma's revenge) is borderline potty humour, but harmless."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlaps approved q-10434, which shows a 500-year-old Mexica piece of green quetzal feathers and asks what kind of object it is (penacho). This question says outright that the famous penacho in Vienna is made of quetzal feathers, so whichever one a player sees first gives away the other. The two can't stay in the pool together unless this one asks about Moctezuma without the penacho.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlaps approved q-10434, which shows a 500-year-old Mexica piece of green quetzal feathers and asks what kind of object it is (penacho). This question says outright that the famous penacho in Vienna is made of quetzal feathers, so whichever one a player sees first gives away the other. The two can't stay in the pool together unless this one asks about Moctezuma without the penacho.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Dropped the penacho and quetzal so it no longer overlaps q-10434: it now asks which tlatoani ruled when Cortés arrived, with a new description, hints, fun fact and media to match.",
+        "previous": {
+          "description": "Un pájaro que tenía la cola más cara de todo el imperio.",
+          "question": "Con las plumas de esta ave se hizo el famoso penacho que hoy está en un museo de Viena. ¿A qué tlatoani se le atribuye?",
+          "hints": [
+            "Gobernaba Tenochtitlan cuando llegaron los españoles.",
+            "Recibió a Hernán Cortés en 1519.",
+            "Hay un dicho sobre su «venganza» para los turistas con dolor de panza."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "resplendent quetzal",
+            "note": "Foto clara de un quetzal macho con sus largas plumas verdes de la cola.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3A058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg/3840px-058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Giles Laurent · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Giles Laurent",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent",
+            "restrictions": [],
+            "pd_reasons": []
+          },
+          "fun_fact": "El penacho tiene cientos de plumas de quetzal, y México lleva años pidiendo que regrese.",
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15537",
@@ -1204333,7 +1204545,7 @@
     },
     {
       "id": "q-15556",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Antes de los memes, los rockeros de barrio ya inventaban su propio idioma.",
       "question": "Estás en el Tianguis del Chopo entre chamarras de cuero y discos de El Tri. ¿Cómo se llamaba a los jóvenes rockeros de barrio de los ochenta?",
@@ -1204345,7 +1204557,7 @@
       ],
       "hints": [
         "El nombre viene de la forma en que se llamaban entre ellos: su grupo de cuates.",
-        "Los pachucos son de los años cuarenta y los jipitecas, de los setenta.",
+        "Su música era el rock urbano que sonaba en las colonias populares de la Ciudad de México.",
         "La palabra para «pandilla de amigos» va pegada a «chavo»."
       ],
       "media": {
@@ -1204391,23 +1204603,35 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: it rules out Pachucos and Jipitecas by decade, which leaves only Chavos banda and Fresas, and fresas are obviously not barrio rockers. Replace hint 2 with a vaguer clue, for example about the barrios or the sound of 1980s Mexico City rock, that doesn't rule out options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: it rules out Pachucos and Jipitecas by decade, which leaves only Chavos banda and Fresas, and fresas are obviously not barrio rockers. Replace hint 2 with a vaguer clue, for example about the barrios or the sound of 1980s Mexico City rock, that doesn't rule out options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer uses 'banda' from the answer.",
+        "reason": "Replaced hint 2, which ruled out two options by decade, with a vaguer clue about the 1980s barrio rock scene.",
         "previous": {
-          "description": "Antes de los memes, la banda ya tenía su propio diccionario."
+          "hints": [
+            "El nombre viene de la forma en que se llamaban entre ellos: su grupo de cuates.",
+            "Los pachucos son de los años cuarenta y los jipitecas, de los setenta.",
+            "La palabra para «pandilla de amigos» va pegada a «chavo»."
+          ]
         },
         "revised_on": "2026-11-07"
       }
@@ -1205479,7 +1205703,7 @@
     },
     {
       "id": "q-15571",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Un juego para los que siempre presumen tener buena puntería… hasta que llegan al puesto.",
       "question": "En la feria lanzas unas piezas de plástico para que queden ensartadas en el cuello de una botella y ganar un premio. ¿Cómo se llama el juego?",
@@ -1205496,12 +1205720,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "fairground game stall prizes",
+        "role": "decorative",
+        "query": "ferris wheel fair night",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFerris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Ferris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "frank drewett · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "frank drewett",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Las botellas del juego suelen estar muy juntas y el aro apenas cabe en el cuello: por eso cuesta tanto ganar.",
       "subcategory": "regional-fiestas",
@@ -1205530,23 +1205761,39 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No adequate image: candidates 1 and 2 show carnival shooting galleries with toy rifles, which is the wrong option 'El tiro al blanco'. Candidates 3 and 4 are an old magazine masthead and a newspaper scan that have nothing to do with the question. A new search for the ring-toss game is needed (e.g. 'ring toss bottles'). No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate image: candidates 1 and 2 show carnival shooting galleries with toy rifles, which is the wrong option 'El tiro al blanco'. Candidates 3 and 4 are an old magazine masthead and a newspaper scan that have nothing to do with the question. A new search for the ring-toss game is needed (e.g. 'ring toss bottles'). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the question without the word 'anillos', which nearly named the answer.",
+        "reason": "No usable image and a ring-toss photo would show the answer, so switched to a decorative fair image that shows neither rings nor rifles.",
         "previous": {
-          "question": "En la feria avientas unos anillos de plástico para que caigan alrededor de una botella, y si atinas te ganas un premio. ¿Cómo se llama el juego?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "fairground game stall prizes",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1205788,7 +1206035,7 @@
     },
     {
       "id": "q-15575",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Un santo con la agenda más llena de México, sobre todo cada día 28.",
       "question": "Cada 28 de octubre, miles de personas visitan a San Judas Tadeo en el templo de San Hipólito. ¿Para qué casos le rezan?",
@@ -1205800,7 +1206047,7 @@
       ],
       "hints": [
         "Sus devotos son muy fieles y llegan con una misma esperanza.",
-        "Lo buscan cuando ya no saben a quién más pedirle.",
+        "Sus imágenes lo muestran con túnica verde y un medallón en el pecho.",
         "Es el patrono de lo que parece no tener solución."
       ],
       "media": {
@@ -1205846,25 +1206093,32 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Lo buscan cuando ya no saben a quién más pedirle\") restates the answer: someone you turn to when nobody else can help is the patron of desperate causes, so it gives the answer away before hint 3. Hint 2 should be a vaguer clue, for example about the saint's green robe or the medallion he wears, and should not hint at desperation or last resorts.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Lo buscan cuando ya no saben a quién más pedirle\") restates the answer: someone you turn to when nobody else can help is the patron of desperate causes, so it gives the answer away before hint 3. Hint 2 should be a vaguer clue, for example about the saint's green robe or the medallion he wears, and should not hint at desperation or last resorts.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question to one detail and made hint 1 vaguer so the hints get stronger in order.",
+        "reason": "Replaced hint 2, which restated the answer, with a clue about the saint's green robe and medallion.",
         "previous": {
-          "question": "Su fiesta grande es el 28 de octubre, su templo más visitado es San Hipólito, en la Ciudad de México, y lo visten de verde. ¿Para qué casos le rezan a San Judas Tadeo?",
           "hints": [
-            "Le piden cosas que parecen imposibles.",
+            "Sus devotos son muy fieles y llegan con una misma esperanza.",
             "Lo buscan cuando ya no saben a quién más pedirle.",
             "Es el patrono de lo que parece no tener solución."
           ]
@@ -1207713,8 +1207967,8 @@
     },
     {
       "id": "q-15601",
-      "status": "needs_work",
-      "difficulty": 12,
+      "status": "approved",
+      "difficulty": 13,
       "description": "El día en que la vecina del norte se quedó con las ganas de festejar.",
       "question": "En la Copa Oro W 2024, el Tri femenil le ganó 2-0 a Estados Unidos en California. ¿En qué año había sido su victoria anterior ante ellas?",
       "answer": "2010",
@@ -1207744,7 +1207998,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "La victoria de 2024 en San Diego fue la primera de México femenil ante Estados Unidos en territorio estadounidense.",
+      "fun_fact": "La victoria de 2024 en Carson, California, fue la primera de México femenil ante Estados Unidos en territorio estadounidense.",
       "subcategory": "national-team",
       "style": null,
       "concept": "Victoria ante Estados Unidos en la Copa Oro W 2024",
@@ -1207767,30 +1208021,40 @@
         "difficulty_estimate": 14,
         "notes": "Asks for the year of a minor previous match (the 2010 Cancún semifinal). You can't work it out, and most adults won't know it. It's the obscure-date type the house style warns against. The lens tag 'everyday' doesn't fit. Dry."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says the 2024 win was in San Diego, but the 2-0 group-stage match (26 February 2024) was played in Carson, California, at Dignity Health Sports Park. Change the fun fact to name Carson (or just say 'California'). Separately, the rater flagged the question as an obscure-date question (the year of the 2010 Cancún qualifier), which most players can't work out. The developer may want to rethink it. Verificación de datos: wrong. The answer 2010 is right, but the fun fact puts the 2024 match in San Diego. It was played in Carson, California (Dignity Health Sports Park) on Feb 26, 2024.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says the 2024 win was in San Diego, but the 2-0 group-stage match (26 February 2024) was played in Carson, California, at Dignity Health Sports Park. Change the fun fact to name Carson (or just say 'California'). Separately, the rater flagged the question as an obscure-date question (the year of the 2010 Cancún qualifier), which most players can't work out. The developer may want to rethink it. Verificación de datos: wrong. The answer 2010 is right, but the fun fact puts the 2024 match in San Diego. It was played in Carson, California (Dignity Health Sports Park) on Feb 26, 2024.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the fun fact so it clearly refers to the 2024 win and not the 2010 win in Cancún.",
+        "reason": "Corrected the fun fact's venue to Carson, California, and raised the difficulty because the year is mostly worked out from the hints.",
         "previous": {
-          "fun_fact": "Fue la primera vez que México femenil le ganó a Estados Unidos en territorio estadounidense."
+          "difficulty": 12,
+          "fun_fact": "La victoria de 2024 en San Diego fue la primera de México femenil ante Estados Unidos en territorio estadounidense."
         },
         "revised_on": "2026-11-07"
-      }
+      },
+      "difficulty_original": 12
     },
     {
       "id": "q-15602",
@@ -1209652,10 +1209916,10 @@
     },
     {
       "id": "q-15627",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
-      "description": "La forma más justa del mundo de decidir quién la trae, con todo y dedo acusador.",
-      "question": "Se dice señalando a cada niño con el dedo, empieza con «De tin marín, de do pingüé» y sigue con «cúcara, mácara». ¿Qué son esas palabras?",
+      "description": "Una rima de patio que todos se saben de memoria y nadie aprendió en la escuela.",
+      "question": "Una rima infantil empieza con «De tin marín, de do pingüé» y sigue con «cúcara, mácara». ¿Qué son esas palabras?",
       "answer": "Palabras inventadas sin significado",
       "wrong_answers": [
         "Nombres de pueblos de Oaxaca",
@@ -1209663,7 +1209927,7 @@
         "Nombres de dulces mexicanos"
       ],
       "hints": [
-        "Se usan para escoger quién la trae en un juego.",
+        "Los niños se la pasan de generación en generación, sin libro de por medio.",
         "Cada país y hasta cada barrio la dice un poco distinta.",
         "Nadie sabe qué quieren decir, porque no quieren decir nada."
       ],
@@ -1209710,25 +1209974,35 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlaps q-7380, which asks what the «De tin marín» rhyme is for. Here the description ('decidir quién la trae') and hint 1 ('Se usan para escoger quién la trae') state that answer outright, so seeing this question gives q-7380 away. Either drop the purpose from the description and hint 1 or drop this question.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlaps q-7380, which asks what the «De tin marín» rhyme is for. Here the description ('decidir quién la trae') and hint 1 ('Se usan para escoger quién la trae') state that answer outright, so seeing this question gives q-7380 away. Either drop the purpose from the description and hint 1 or drop this question.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which implied the words have no meaning, with a hint about how the rhyme varies from place to place.",
+        "reason": "Removed the rhyme's purpose (picking who's 'it') from the description, question and hint 1 so it no longer gives away q-7380.",
         "previous": {
+          "description": "La forma más justa del mundo de decidir quién la trae, con todo y dedo acusador.",
+          "question": "Se dice señalando a cada niño con el dedo, empieza con «De tin marín, de do pingüé» y sigue con «cúcara, mácara». ¿Qué son esas palabras?",
           "hints": [
             "Se usan para escoger quién la trae en un juego.",
-            "Suenan chistosas y riman, y eso es lo que importa.",
+            "Cada país y hasta cada barrio la dice un poco distinta.",
             "Nadie sabe qué quieren decir, porque no quieren decir nada."
           ]
         },
@@ -1211203,8 +1211477,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Guanajuato location map scheme",
-        "note": "Mapa de México sin nombres con el estado de Guanajuato resaltado.",
+        "query": "Guanajuato in Mexico (location map scheme)",
+        "note": "Mapa de México sin nombres con el estado de Guanajuato resaltado (Commons: 'Guanajuato in Mexico (location map scheme).svg').",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1211237,17 +1211511,43 @@
       "batch": "batch-51",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential map has no usable candidate. None of the six shows Mexico with Guanajuato highlighted: they are UK stewardship signs, plus maps of Serbia/Kosovo, Kenya, Bhutan and Russia. No new search is allowed, so the map has to be sourced another way, for example 'Guanajuato in Mexico (location map scheme).svg' from Commons. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential map has no usable candidate. None of the six shows Mexico with Guanajuato highlighted: they are UK stewardship signs, plus maps of Serbia/Kosovo, Kenya, Bhutan and Russia. No new search is allowed, so the map has to be sourced another way, for example 'Guanajuato in Mexico (location map scheme).svg' from Commons. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Pointed the media query at the Commons location map 'Guanajuato in Mexico (location map scheme).svg' so the essential map can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Guanajuato location map scheme",
+            "note": "Mapa de México sin nombres con el estado de Guanajuato resaltado.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15648",
@@ -1211405,10 +1211705,10 @@
     },
     {
       "id": "q-15650",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Un botanero tan picosito que hasta la bolsita pide agua.",
-      "question": "Mira de cerca esta botana que venden en bolsitas en la tienda y en los puestos. ¿Cómo se llama?",
+      "question": "Es una semilla con cascarita roja, cubierta de chile en polvo, que se vende en bolsitas en la tienda. ¿Cómo se llama esta botana?",
       "answer": "Cacahuates enchilados",
       "wrong_answers": [
         "Cacahuates japoneses",
@@ -1211418,16 +1211718,25 @@
       "hints": [
         "Se come mucho en el cine, en el estadio y con limón.",
         "Por dentro es una semilla que también se convierte en crema para untar.",
-        "La semilla es café con cascarita roja y va cubierta de chile en polvo."
+        "A diferencia de los japoneses, no lleva costra de harina."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "cacahuates enchilados",
-        "note": "Close-up of peanuts with red skin covered in red chili powder (cacahuates enchilados); no packaging or labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Mexican market stall",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_Vendor_at_Fruit_Stall_-_Thursday_Market_-_Narvarte_-_Mexico_City_-_Mexico.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Woman_Vendor_at_Fruit_Stall_-_Thursday_Market_-_Narvarte_-_Mexico_City_-_Mexico.jpg/3840px-Woman_Vendor_at_Fruit_Stall_-_Thursday_Market_-_Narvarte_-_Mexico_City_-_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Adam Jones · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Adam Jones",
+        "author_url": null,
+        "restrictions": [
+          "personality"
+        ],
+        "pd_reasons": []
       },
       "fun_fact": "En México se les dice cacahuates, palabra que viene del náhuatl tlalcacáhuatl, «cacao de la tierra».",
       "subcategory": "sweets-and-bread",
@@ -1211452,22 +1211761,53 @@
         "difficulty_estimate": 3,
         "notes": "Just a plain 'name this snack' question. It's not certain Commons has a clean close-up of cacahuates enchilados with no label, and from a blurry photo they could be confused with pepitas or garbanzos. The description's 'picosito' rules out the cacahuates japoneses only a little."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates can serve as the essential image. The question asks players to identify cacahuates enchilados from a close-up, but no candidate shows a clean close-up of them. No new search is allowed, so the question needs a new image source, or it should become an illustrative-image question. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates can serve as the essential image. The question asks players to identify cacahuates enchilados from a close-up, but no candidate shows a clean close-up of them. No new search is allowed, so the question needs a new image source, or it should become an illustrative-image question. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No essential close-up exists, so the question now describes the snack in words, uses a decorative image and has a new hint 3.",
+        "previous": {
+          "question": "Mira de cerca esta botana que venden en bolsitas en la tienda y en los puestos. ¿Cómo se llama?",
+          "hints": [
+            "Se come mucho en el cine, en el estadio y con limón.",
+            "Por dentro es una semilla que también se convierte en crema para untar.",
+            "La semilla es café con cascarita roja y va cubierta de chile en polvo."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "cacahuates enchilados",
+            "note": "Close-up of peanuts with red skin covered in red chili powder (cacahuates enchilados); no packaging or labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15651",
@@ -1211684,7 +1212024,7 @@
     },
     {
       "id": "q-15654",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una fiesta donde una sola persona tiene más vestido que todos los invitados juntos.",
       "question": "Llego a la fiesta vestida como princesa, cumplo una edad muy especial y abro el baile con un vals. ¿Quién soy?",
@@ -1211715,7 +1212055,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "En muchas fiestas de XV años hay un vals con el papá y otro con los chambelanes, ensayado durante semanas.",
+      "fun_fact": "En muchas fiestas de XV años le entregan a la festejada su «última muñeca», como despedida de la infancia.",
       "subcategory": "traditional-dances",
       "style": null,
       "concept": "Vals de quince años",
@@ -1211742,27 +1212082,31 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This question overlaps with approved q-11680 (chambelanes). Its fun fact says \"otro con los chambelanes\", which gives away q-11680's answer. q-11680's own text (\"bailan el vals con la quinceañera\") also hands this question its answer. To keep it, the fun fact must drop the chambelanes and use another XV años detail, for example the \"última muñeca\" or the change of shoes.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This question overlaps with approved q-11680 (chambelanes). Its fun fact says \"otro con los chambelanes\", which gives away q-11680's answer. q-11680's own text (\"bailan el vals con la quinceañera\") also hands this question its answer. To keep it, the fun fact must drop the chambelanes and use another XV años detail, for example the \"última muñeca\" or the change of shoes.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 now fits all four options and hint 2 is softer, without the chambelanes; hint 3 kept.",
+        "reason": "Swapped the fun fact's chambelanes detail, which gave away q-11680, for the 'última muñeca' tradition.",
         "previous": {
-          "hints": [
-            "Es una fiesta de cumpleaños.",
-            "Me acompañan los chambelanes.",
-            "Ya no soy niña: cumplo quince."
-          ]
+          "fun_fact": "En muchas fiestas de XV años hay un vals con el papá y otro con los chambelanes, ensayado durante semanas."
         },
         "revised_on": "2026-11-07"
       }
@@ -1212307,7 +1212651,7 @@
     },
     {
       "id": "q-15662",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Un señor que te hacía sudar más que un examen final, pero con premio.",
       "question": "Nací en Tijuana, conduje «Atínale al precio» y en 2000 estrené en Televisa «¿Quién quiere ser millonario?». ¿Quién soy?",
@@ -1212325,11 +1212669,20 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "television studio stage lights",
+        "query": "game show studio set",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACountdownset.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Countdownset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "The original uploader was CountdownCrispy at English Wikipedia. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "The original uploader was CountdownCrispy at English Wikipedia.",
+        "author_url": "https://en.wikipedia.org/wiki/User:CountdownCrispy",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-author"
+        ]
       },
       "fun_fact": "En el concurso, el participante podía usar comodines como el 50:50, la llamada a un amigo y la ayuda del público.",
       "subcategory": "tv-shows-and-hosts",
@@ -1212358,18 +1212711,42 @@
       "needs_media": false,
       "batch": "batch-51",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but no media candidate fits. The sheet shows a 1960s hearing, a cathedral painting, an office building, a rock band, a praying mantis and a circuit board. None of them shows a TV studio or a game-show set, and no new search is allowed. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no media candidate fits. The sheet shows a 1960s hearing, a cathedral painting, an office building, a rock band, a praying mantis and a circuit board. None of them shows a TV studio or a game-show set, and no new search is allowed. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate fit, so the decorative image query now asks for a game-show studio set.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "television studio stage lights",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15663",
