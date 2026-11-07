@@ -511,7 +511,8 @@
     {
       "name": "Pib",
       "facet": "Comida, milpa y vida cotidiana",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Lo principal del pib ya está preguntado (un hoyo con piedras calientes); las opciones que quedan (foto de detalle, estimación, origen como persona) no dan un dato nuevo que sea justo."
     },
     {
       "name": "Pozol",

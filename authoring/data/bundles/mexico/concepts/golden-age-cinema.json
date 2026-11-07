@@ -381,7 +381,8 @@
     {
       "name": "Sensualidad",
       "facet": "Cine de rumberas y cabaret",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The film's seduction plot is a poor fit for a family game, and the options would make a forced question."
     },
     {
       "name": "Rumba",
@@ -507,7 +508,8 @@
     {
       "name": "Taquilla",
       "facet": "Estudios, premios y la industria",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The ticket-window meaning is already asked, and the photo, origin or time options would only repeat it or force the question."
     },
     {
       "name": "Matiné",

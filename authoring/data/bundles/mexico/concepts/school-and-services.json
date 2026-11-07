@@ -71,7 +71,8 @@
     {
       "name": "Secundaria",
       "facet": "Niveles y tipos de escuela",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La secundaria ya está en el pool desde varios ángulos; las preguntas de causa y efecto quedarían forzadas."
     },
     {
       "name": "Preparatoria",
@@ -247,7 +248,8 @@
     {
       "name": "Sacapuntas",
       "facet": "Libros de texto y útiles escolares",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Ya se preguntó el sacapuntas con foto de detalle y por su nombre; las opciones que quedan son forzadas y no tienen nada mexicano."
     },
     {
       "name": "Lonchera",
@@ -267,7 +269,8 @@
     {
       "name": "Recreo",
       "facet": "Vida diaria en el salón y el recreo",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Ya hay tres preguntas sobre el recreo; contar en una foto o reconocerla por un detalle no aporta nada."
     },
     {
       "name": "Pase de lista",

@@ -573,7 +573,8 @@
     {
       "name": "Llover a cántaros",
       "facet": "Dichos del clima y el campo",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Lo que es un cántaro ya está preguntado; ninguna de las opciones de origen da otro dato interesante."
     },
     {
       "name": "Hace un frío que pela",
@@ -603,7 +604,8 @@
     {
       "name": "Dormir como un tronco",
       "facet": "Comparaciones exageradas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: «Dormir como un tronco» ya está preguntado; ninguna opción tipo who/group da una pregunta mexicana que no sea forzada."
     },
     {
       "name": "Más terco que una mula",
@@ -1089,7 +1091,8 @@
     {
       "name": "¿Mande?",
       "facet": "Frases hechas del día a día",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: La pregunta que ya existe (cuándo se contesta «¿Mande?») haría obvia cualquier pregunta tipo escenario; las opciones con lugares no sirven."
     },
     {
       "name": "Estar cañón",

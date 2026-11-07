@@ -130,7 +130,8 @@
     {
       "name": "Limpia con huevo",
       "facet": "Nahuales, brujas y lechuzas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó para qué sirve; las opciones con lugar o época resultan forzadas"
     },
     {
       "name": "Bolas de fuego",
@@ -230,12 +231,14 @@
     {
       "name": "Perro negro",
       "facet": "Bestias y criaturas misteriosas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: La cadena ya se preguntó; ninguna opción (significado, lugar) da una pregunta natural sobre el perro negro"
     },
     {
       "name": "Gato negro",
       "facet": "Bestias y criaturas misteriosas",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La superstición ya se preguntó, es universal y no tiene vínculo con México; ninguna opción de significado encaja"
     },
     {
       "name": "Víbora chirrionera",
@@ -480,7 +483,8 @@
     {
       "name": "Mil Cumbres",
       "facet": "Aparecidos de caminos y carreteras",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Las opciones (año, persona, odd one out) no dan una pregunta justa sobre este tramo de carretera"
     },
     {
       "name": "Cumbres de Maltrata",

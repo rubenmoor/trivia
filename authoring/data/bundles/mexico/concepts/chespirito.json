@@ -470,7 +470,8 @@
     {
       "name": "Salida de Don Ramón de la vecindad",
       "facet": "Episodios y capítulos famosos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Don Ramón's departure has no clear in-series episode; the dates and where he went next are too obscure or uncertain."
     },
     {
       "name": "Último episodio de El Chavo del 8",
@@ -510,7 +511,8 @@
     {
       "name": "Ramo de flores del Profesor Jirafales",
       "facet": "Objetos, lugares y comida de las series",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The coffee invitation and flowers are already in the pool's riddle; no good fact about the bouquet is left for these options."
     },
     {
       "name": "Fonda de Doña Florinda",
@@ -621,7 +623,8 @@
     {
       "name": "Chavo (palabra)",
       "facet": "Apodos, nombres y su origen",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The meaning of 'chavo' is already in the pool, and asking where the word is used is trivial in the mexico bundle."
     },
     {
       "name": "Godínez (palabra)",
