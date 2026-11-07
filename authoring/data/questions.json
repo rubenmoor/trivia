@@ -1217921,7 +1217921,7 @@
     },
     {
       "id": "q-15731",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "A captain with a grudge so big it needed a whole ocean.",
       "question": "Which of these is NOT true about Captain Ahab in the novel “Moby-Dick”?",
@@ -1217933,7 +1217933,7 @@
       ],
       "hints": [
         "Three of these are true; one belongs to another character.",
-        "One of these is about how the book is told, not what happens in it.",
+        "Ahab lost part of his body to the whale he is chasing.",
         "Ahab is the one being watched and described, not the one telling the tale."
       ],
       "media": {
@@ -1217982,26 +1217982,34 @@
       "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“One of these is about how the book is told, not what happens in it”) solves the question. Only one option is about narration, so the hint points straight at the answer. Replace it with a vague hint, for example one saying the book is told by a young sailor and not the captain, without singling out an option.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“One of these is about how the book is told, not what happens in it”) solves the question. Only one option is about narration, so the hint points straight at the answer. Replace it with a vague hint, for example one saying the book is told by a young sailor and not the captain, without singling out an option.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which quoted the line that names the narrator and gave the answer away.",
+        "reason": "Replaced hint 2, which pointed straight at the only option about narration, with a middle-strength hint about the plot.",
         "previous": {
           "hints": [
             "Three of these are true; one belongs to another character.",
-            "The book's famous first line is “Call me Ishmael.”",
+            "One of these is about how the book is told, not what happens in it.",
             "Ahab is the one being watched and described, not the one telling the tale."
           ]
         },
@@ -1218010,10 +1218018,10 @@
     },
     {
       "id": "q-15732",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A roadside giant so big he makes every pickup truck parked next to him look like a toy.",
-      "question": "Giant fiberglass men like this one began in 1962 with a Paul Bunyan made for a café on Route 66. In which state did that first one stand?",
+      "question": "The first giant fiberglass man like this one is usually said to be a 1962 Paul Bunyan for a café on Route 66. In which state did it stand?",
       "answer": "Arizona",
       "wrong_answers": [
         "California",
@@ -1218064,33 +1218072,36 @@
         "difficulty_estimate": 15,
         "notes": "The first Muffler Man (the Paul Bunyan Café, Flagstaff, 1962) is correct. It's related to q-9066, which mentions that the first one was a Paul Bunyan, but it asks a different fact. The photo is illustrative rather than truly essential, though Muffler Man photos are easy to find on Commons. Watch for signs in the photo that name a town. Minnesota is a nice trap."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The Flagstaff, Arizona Paul Bunyan (Bob Prewitt, 1962, Paul Bunyan Café on Route 66) is only 'widely cited' as the first Muffler Man. Sources hedge ('World's First?', 'legend has it'). The question states it as flat fact. The café was also renamed the Lumberjack Cafe.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The Flagstaff, Arizona Paul Bunyan (Bob Prewitt, 1962, Paul Bunyan Café on Route 66) is only 'widely cited' as the first Muffler Man. Sources hedge ('World's First?', 'legend has it'). The question states it as flat fact. The café was also renamed the Lumberjack Cafe.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description to remove the false claim that the statue never moved, and replaced hint 2 because it named Flagstaff.",
+        "reason": "Hedged the claim that the Flagstaff Paul Bunyan was the first Muffler Man, because sources only say it is usually called the first.",
         "previous": {
-          "description": "He's tall, strong, and has stood in the same parking lot for sixty years without a break.",
-          "hints": [
-            "Route 66 crossed it on the way between Chicago and Los Angeles.",
-            "The café was in the mountain town of Flagstaff.",
-            "It's nicknamed the Grand Canyon State."
-          ]
+          "question": "Giant fiberglass men like this one began in 1962 with a Paul Bunyan made for a café on Route 66. In which state did that first one stand?"
         },
         "revised_on": "2026-11-07"
       }
@@ -1220298,19 +1220309,19 @@
     },
     {
       "id": "q-15761",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Imported from England, and it broke almost straight out of the box.",
       "question": "This bell was first cast in England in 1752. Which foundry made it?",
       "answer": "Whitechapel Bell Foundry",
       "wrong_answers": [
-        "Meneely Bell Foundry",
-        "Paul Revere & Sons",
-        "John Taylor & Co"
+        "Rudhall Bell Foundry",
+        "John Taylor & Co",
+        "Bilbie Bell Foundry"
       ],
       "hints": [
-        "The foundry was in London.",
-        "It later cast Big Ben for the Houses of Parliament.",
+        "The bell crossed the Atlantic by ship to Philadelphia.",
+        "The same foundry later cast Big Ben for the Houses of Parliament.",
         "It's named after a district in London's East End."
       ],
       "media": {
@@ -1220356,23 +1220367,48 @@
       "needs_media": true,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. Whitechapel is the only London foundry among the options: Meneely was in Troy, New York, Paul Revere & Sons in Boston and John Taylor & Co in Loughborough. The question text already says the bell was cast in England, which rules out the two American foundries, so “The foundry was in London” leaves only one option. Replace hint 1 with a vaguer one, such as the era or how the bell crossed the Atlantic. Also replace the two American foundries with English foundries outside London, or swap one for another London foundry, so the location clues don't remove options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. Whitechapel is the only London foundry among the options: Meneely was in Troy, New York, Paul Revere & Sons in Boston and John Taylor & Co in Loughborough. The question text already says the bell was cast in England, which rules out the two American foundries, so “The foundry was in London” leaves only one option. Replace hint 1 with a vaguer one, such as the era or how the bell crossed the Atlantic. Also replace the two American foundries with English foundries outside London, or swap one for another London foundry, so the location clues don't remove options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Swapped the American foundries for English ones outside London and replaced the London hint, so the location clues no longer remove options; Warner was avoided because it cast the first Big Ben.",
+        "previous": {
+          "wrong_answers": [
+            "Meneely Bell Foundry",
+            "Paul Revere & Sons",
+            "John Taylor & Co"
+          ],
+          "hints": [
+            "The foundry was in London.",
+            "It later cast Big Ben for the Houses of Parliament.",
+            "It's named after a district in London's East End."
+          ]
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15762",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "An eagle with a full quiver and a very specific favorite number.",
       "question": "You flip over a $1 bill and look at the eagle's left claw. How many arrows is it holding?",
@@ -1220383,25 +1220419,27 @@
         "50"
       ],
       "hints": [
-        "The number matches something from the country's start.",
-        "Many people think of this number as unlucky.",
+        "The same number shows up again and again on the Great Seal.",
+        "It's more than a handful, but far fewer than the stars on today's flag.",
         "Think of the first colonies."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "National Archives Washington",
+        "query": "US one dollar bills",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ANational_Archives_Building_2.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/National_Archives_Building_2.jpg/3840px-National_Archives_Building_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Kurt Kaiser · CC0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_one_dollar_bill%2C_obverse.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/United_States_one_dollar_bill%2C_obverse.jpg/3840px-United_States_one_dollar_bill%2C_obverse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Kurt Kaiser",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kurt_Kaiser&action=edit&redlink=1",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-USGov-money"
+        ]
       },
       "fun_fact": "The Great Seal is full of 13s: 13 arrows, 13 stars, 13 stripes on the shield and 13 letters in “E pluribus unum.”",
       "subcategory": "national-symbols",
@@ -1220430,26 +1220468,34 @@
       "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Many people think of this number as unlucky”) gives the answer away: of 3, 7, 50 and 13, only 13 is the famous unlucky number. Hint 1 already points strongly at the 13 colonies too. Replace hint 2 with something vaguer, like the number of arrows being bigger than a handful but smaller than the number of states, and leave the colonies link for hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Many people think of this number as unlucky”) gives the answer away: of 3, 7, 50 and 13, only 13 is the famous unlucky number. Hint 1 already points strongly at the 13 colonies too. Replace hint 2 with something vaguer, like the number of arrows being bigger than a handful but smaller than the number of states, and leave the colonies link for hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 about the flag's stripes, which gave the answer away, with the “unlucky number” clue.",
+        "reason": "Replaced the “unlucky number” hint, which gave the answer away, and made hint 1 vaguer so the colonies link comes only in hint 3.",
         "previous": {
           "hints": [
             "The number matches something from the country's start.",
-            "The flag's stripes have the same number.",
+            "Many people think of this number as unlucky.",
             "Think of the first colonies."
           ]
         },
@@ -1220754,10 +1220800,10 @@
     },
     {
       "id": "q-15767",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "A city that swallows half of its own name every time a local says it.",
-      "question": "Newark, which locals squeeze into “NOO-erk,” was founded by Puritans in 1666. It is the biggest city of the state on this map. Which state?",
+      "question": "Newark, which locals squeeze into “NOO-erk,” was founded by Puritans in 1666. It is the biggest city of which state?",
       "answer": "New Jersey",
       "wrong_answers": [
         "Delaware",
@@ -1220771,12 +1220817,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "New Jersey state outline",
-        "note": "Plain outline of the state of New Jersey, with no labels or city names.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Puritan colonists painting",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Bookshelf_for_boys_and_girls_Historic_Tales_and_Golden_Deeds_part_4_%281912%29_%2814780941151%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/The_Bookshelf_for_boys_and_girls_Historic_Tales_and_Golden_Deeds_part_4_%281912%29_%2814780941151%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Newark, Delaware, has the same spelling, but its locals say it “NEW-ark,” like a brand-new ark.",
       "subcategory": "place-names",
@@ -1220802,31 +1220855,45 @@
         "notes": "A New Jersey outline map is easy to find on Commons. Hint 2 (across the Hudson from Manhattan) is already very strong. Delaware is a clever wrong option, since it has its own Newark."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works as the essential plain outline map. #1, #5 and #6 print \"New Jersey\" in their titles, #4 is a Hudson County map labeled with Jersey City, and #2 and #3 aren't maps. I can't run a new search, so the question needs an unlabeled New Jersey outline (for example a blank state-shape SVG from Commons). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works as the essential plain outline map. #1, #5 and #6 print \"New Jersey\" in their titles, #4 is a Hudson County map labeled with Jersey City, and #2 and #3 aren't maps. I can't run a new search, so the question needs an unlabeled New Jersey outline (for example a blank state-shape SVG from Commons). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 (across the Hudson from Manhattan), which only fits New Jersey, with a clue that fits all four options.",
+        "reason": "No unlabeled outline map was available, so the question no longer refers to a map and uses a decorative image instead.",
         "previous": {
-          "hints": [
-            "Its big airport is one of the busiest gateways to New York City.",
-            "The state sits right across the Hudson River from Manhattan.",
-            "It's nicknamed the Garden State."
-          ]
+          "question": "Newark, which locals squeeze into “NOO-erk,” was founded by Puritans in 1666. It is the biggest city of the state on this map. Which state?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "New Jersey state outline",
+            "note": "Plain outline of the state of New Jersey, with no labels or city names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-07"
       }
@@ -1221757,7 +1221824,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "taco toppings bowls",
+        "query": "salsa and guacamole bowls",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1221791,18 +1221858,44 @@
       "batch": "batch-52",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate works as an illustrative image. Candidates 1 and 2 show soft tortillas topped with filling, so they point straight to the answer \"tortilla\". Candidates 3 to 6 show pho, Thai noodles, Thai desserts and Filipino rice bowls, which have nothing to do with tacos. Search again with something like \"taco night table\" or \"salsa and guacamole bowls\", without showing tortillas or shells. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works as an illustrative image. Candidates 1 and 2 show soft tortillas topped with filling, so they point straight to the answer \"tortilla\". Candidates 3 to 6 show pho, Thai noodles, Thai desserts and Filipino rice bowls, which have nothing to do with tacos. Search again with something like \"taco night table\" or \"salsa and guacamole bowls\", without showing tortillas or shells. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image query that shows taco toppings without tortillas or shells.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "taco toppings bowls",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15781",
@@ -1222928,10 +1223021,10 @@
     },
     {
       "id": "q-15796",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A dunk frozen in bronze, so it never has to come back down.",
-      "question": "This statue stands outside the arena of the Chicago Bulls. Which basketball star does it honor?",
+      "question": "A bronze statue of a player flying in for a dunk stands at the home arena of the Chicago Bulls. Which basketball star does it honor?",
       "answer": "Michael Jordan",
       "wrong_answers": [
         "LeBron James",
@@ -1222945,12 +1223038,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "The Spirit statue Chicago",
-        "note": "The bronze Michael Jordan statue (mid-dunk) outside the United Center in Chicago. Avoid images where the name plaque is readable.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "basketball hoop arena",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABasketball_net.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Basketball_net.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "J.smith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "J.smith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:J.smith",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Fans often call Michael Jordan's statue “The Spirit,” and it shows him flying through the air for a dunk.",
       "subcategory": "cities-and-towns",
@@ -1222976,24 +1223076,50 @@
         "notes": "The \"Chicago Bulls\" clue does most of the work, but that is fair at this level. Watch for a readable plaque on the statue photo."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says the statue \"stands outside the arena,\" but it was moved into the United Center's new atrium in 2017, so the text is out of date. It should say something like \"stands at the home arena of the Chicago Bulls.\" There is also no usable essential image. Candidate 3 is the only clear shot of the statue, and the plaque on its base reads \"MICHAEL JORDAN,\" which gives the answer away. Candidate 4 is a small, dark view of the statue indoors among NHL Draft banners. Candidates 1 and 2 are stone plaques full of text, and in 5 and 6 the statue is a tiny speck in front of the arena. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "fact",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says the statue \"stands outside the arena,\" but it was moved into the United Center's new atrium in 2017, so the text is out of date. It should say something like \"stands at the home arena of the Chicago Bulls.\" There is also no usable essential image. Candidate 3 is the only clear shot of the statue, and the plaque on its base reads \"MICHAEL JORDAN,\" which gives the answer away. Candidate 4 is a small, dark view of the statue indoors among NHL Draft banners. Candidates 1 and 2 are stone plaques full of text, and in 5 and 6 the statue is a tiny speck in front of the arena. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "fact",
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Updated the location (the statue now stands in the arena's atrium) and, since no usable photo exists, described the statue in words and switched to a decorative image.",
+        "previous": {
+          "question": "This statue stands outside the arena of the Chicago Bulls. Which basketball star does it honor?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "The Spirit statue Chicago",
+            "note": "The bronze Michael Jordan statue (mid-dunk) outside the United Center in Chicago. Avoid images where the name plaque is readable.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15797",
@@ -1224114,20 +1224240,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "rusty sledgehammer",
+        "query": "old sledgehammer",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AUSCG_Sector_Jacksonville_Cutter_Roundup_ATON_Challenge_%2814086251541%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/USCG_Sector_Jacksonville_Cutter_Roundup_ATON_Challenge_%2814086251541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Coast Guard · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Coast Guard",
-        "author_url": "https://www.flickr.com/people/30884892@N08",
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-USCG"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "In 1869, a golden spike was tapped in at Promontory, Utah, to finish the first railroad across the US.",
       "subcategory": "folk-heroes-and-tall-tales",
@@ -1224157,18 +1224274,53 @@
       "batch": "batch-52",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-USCG).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-USCG).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image query so a picture with a suitable licence can be picked.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "rusty sledgehammer",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AUSCG_Sector_Jacksonville_Cutter_Roundup_ATON_Challenge_%2814086251541%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/USCG_Sector_Jacksonville_Cutter_Roundup_ATON_Challenge_%2814086251541%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Coast Guard · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Coast Guard",
+            "author_url": "https://www.flickr.com/people/30884892@N08",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-USCG"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15812",
@@ -1224789,7 +1224941,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Mount Rushmore",
+        "query": "Mount Rushmore National Memorial",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3ADean_Franklin_-_06.04.03_Mount_Rushmore_Monument_%28by-sa%29.jpg",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Dean_Franklin_-_06.04.03_Mount_Rushmore_Monument_%28by-sa%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1224839,20 +1224991,43 @@
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which defined microfilm, with a vaguer plot clue.",
+        "reason": "New image query so a Mount Rushmore picture with a suitable licence can be picked.",
         "previous": {
-          "hints": [
-            "The villains want to sneak it out of the country.",
-            "It holds tiny photos of secret papers.",
-            "Think of a roll of camera film, shrunk way down."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Mount Rushmore",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ADean_Franklin_-_06.04.03_Mount_Rushmore_Monument_%28by-sa%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Dean_Franklin_-_06.04.03_Mount_Rushmore_Monument_%28by-sa%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Dean Franklin · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Dean Franklin",
+            "author_url": "https://www.flickr.com/people/82297923@N00",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1225525,7 +1225700,7 @@
     },
     {
       "id": "q-15830",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A place so used to launching rockets that it once launched a whole new name.",
       "question": "From 1963 to 1973, Florida's Cape Canaveral officially carried the name of a US president. Which one?",
@@ -1225543,19 +1225718,19 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "rocket launch Florida coast",
+        "query": "Cape Canaveral lighthouse",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARocket_launch_%2827323065713%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Rocket_launch_%2827323065713%29.jpg/3840px-Rocket_launch_%2827323065713%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Coast Guard · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreative_Photography_-_Sunrise_at_Cape_Canaveral_Lighthouse_%28KSC-20201013-PH-JBS02_0020%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Creative_Photography_-_Sunrise_at_Cape_Canaveral_Lighthouse_%28KSC-20201013-PH-JBS02_0020%29.jpg/3840px-Creative_Photography_-_Sunrise_at_Cape_Canaveral_Lighthouse_%28KSC-20201013-PH-JBS02_0020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "NASA Kennedy Space Center / NASA/Ben Smeglesky · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Coast Guard",
-        "author_url": "https://www.flickr.com/people/30884892@N08",
+        "author": "NASA Kennedy Space Center / NASA/Ben Smeglesky",
+        "author_url": "https://www.nasa.gov/kennedy/",
         "restrictions": [],
         "pd_reasons": [
-          "PD-USCG"
+          "PD-USGov-NASA"
         ]
       },
       "fun_fact": "Locals never liked losing the old name, and in 1973 Florida switched the cape back to Cape Canaveral, while the space center kept Kennedy's name.",
@@ -1225585,28 +1225760,49 @@
       "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-USCG).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-USCG).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they narrow things down step by step without identifying Kennedy or using the Moon speech.",
+        "reason": "The picked picture's licence is unsuitable, so I changed the query to a different subject that doesn't give the answer away, which forces a fresh pick.",
         "previous": {
-          "hints": [
-            "He was president in the early 1960s.",
-            "He gave a famous speech promising to send Americans to the Moon.",
-            "His initials are JFK."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "rocket launch Florida coast",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ARocket_launch_%2827323065713%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Rocket_launch_%2827323065713%29.jpg/3840px-Rocket_launch_%2827323065713%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Coast Guard · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Coast Guard",
+            "author_url": "https://www.flickr.com/people/30884892@N08",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-USCG"
+            ]
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1225771,7 +1225967,7 @@
     },
     {
       "id": "q-15833",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A town named after a South American capital, said like a vegetable, famous for singing.",
       "question": "Lima, Ohio, said “LYE-muh” like the bean, is the setting of the TV show “Glee.” What is the show's high school choir called?",
@@ -1225789,20 +1225985,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "high school choir singing",
+        "query": "show choir performance stage",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASinging_For_the_Music_People_-_DPLA_-_975ef3951964e1e0a55ae45abbb5832b.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Singing_For_the_Music_People_-_DPLA_-_975ef3951964e1e0a55ae45abbb5832b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHK_%E7%B4%85%E7%A3%A1_Hung_Hum_%E9%A6%99%E6%B8%AF%E9%AB%94%E8%82%B2%E9%A4%A8_Hong_Kong_Stadium_%E6%96%87%E8%97%9D%E6%99%9A%E6%9C%83_singing_show_presentation_night_June_2017_red_dress_female.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/HK_%E7%B4%85%E7%A3%A1_Hung_Hum_%E9%A6%99%E6%B8%AF%E9%AB%94%E8%82%B2%E9%A4%A8_Hong_Kong_Stadium_%E6%96%87%E8%97%9D%E6%99%9A%E6%9C%83_singing_show_presentation_night_June_2017_red_dress_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Man Man ZHANG · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Man Man ZHANG",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Man_Man_ZHANG&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Although the show is set in Ohio, “Glee” was filmed in Los Angeles, California.",
       "subcategory": "place-names",
@@ -1225831,19 +1226025,52 @@
       "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked picture's licence is unsuitable, so I changed the query to force a fresh pick.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "high school choir singing",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASinging_For_the_Music_People_-_DPLA_-_975ef3951964e1e0a55ae45abbb5832b.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Singing_For_the_Music_People_-_DPLA_-_975ef3951964e1e0a55ae45abbb5832b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15834",
@@ -1226065,9 +1226292,9 @@
     },
     {
       "id": "q-15837",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "A breakfast named after money, which is what diners hope you'll leave behind.",
+      "description": "Diners hope you'll leave some of these behind, but these ones you eat.",
       "question": "On an American diner menu, what are “silver dollars,” served several to a plate hot off the griddle?",
       "answer": "Small pancakes",
       "wrong_answers": [
@@ -1226125,29 +1226352,32 @@
       "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description calls the item \"a breakfast,\" which rules out \"Fried onion rings\" before any hint. The description should play on the money theme without saying which meal it is, e.g. \"Diners hope you'll leave some of these behind, but these ones you eat.\"",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description calls the item \"a breakfast,\" which rules out \"Fried onion rings\" before any hint. The description should play on the money theme without saying which meal it is, e.g. \"Diners hope you'll leave some of these behind, but these ones you eat.\"",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints that gave the answer away too early, dropped “flapjacks,” and fixed the fun fact's size claim.",
+        "reason": "The description called the item a breakfast, which ruled out onion rings, so I rewrote it to play on the money theme without naming a meal.",
         "previous": {
-          "hints": [
-            "They're sweet, not savory.",
-            "You usually pour maple syrup on them.",
-            "They're the bite-size version of flapjacks."
-          ],
-          "fun_fact": "A US silver dollar coin is about 1.5 inches (38 mm) across, which is roughly the size these little pancakes are poured."
+          "description": "A breakfast named after money, which is what diners hope you'll leave behind."
         },
         "revised_on": "2026-11-07"
       }
@@ -1226980,7 +1227210,7 @@
     },
     {
       "id": "q-15849",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "A sign that has said hello to more tourists than any hotel doorman.",
       "question": "In which decade was the famous “Welcome to Fabulous Las Vegas” sign put up?",
@@ -1226998,11 +1227228,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Las Vegas Strip neon night",
+        "query": "Welcome to Fabulous Las Vegas sign",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWelcome_to_Fabulous_Las_Vegas.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Welcome_to_Fabulous_Las_Vegas.jpg/3840px-Welcome_to_Fabulous_Las_Vegas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The sign's designer, Betty Willis, never copyrighted it and called it her gift to the city, which is why it shows up on so many souvenirs.",
       "subcategory": "roads-and-landmarks",
@@ -1227031,29 +1227268,40 @@
       "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question names a showable object, the “Welcome to Fabulous Las Vegas” sign, but none of the six candidates shows it. They are general Strip and Fremont Street night scenes. A search for the sign itself (e.g. \"Welcome to Las Vegas sign\") is needed, and no new search is allowed here. The text is fine: the 1959 date and the Betty Willis fun fact check out. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question names a showable object, the “Welcome to Fabulous Las Vegas” sign, but none of the six candidates shows it. They are general Strip and Fremont Street night scenes. A search for the sign itself (e.g. \"Welcome to Las Vegas sign\") is needed, and no new search is allowed here. The text is fine: the 1959 date and the Betty Willis fun fact check out. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed the fun fact (never copyrighted, not trademarked) and replaced hint 1, which gave away the decade too early.",
+        "reason": "The question names the sign, so the query now searches for the sign itself, which shows no date.",
         "previous": {
-          "hints": [
-            "It was built when neon signs and big cars with fins were in fashion.",
-            "Las Vegas was growing fast in the years after World War II.",
-            "It went up the same decade Elvis Presley became famous."
-          ],
-          "fun_fact": "The sign's designer, Betty Willis, never trademarked it, so anyone may copy it, which is why it shows up on so many souvenirs."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Las Vegas Strip neon night",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1227294,8 +1227542,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Map of USA OH",
-        "note": "Blank outline of the state of Ohio, with no labels, names or neighbor state names.",
+        "query": "Ohio locator map",
+        "note": "Map of the United States with Ohio highlighted, or a blank Ohio outline; no state names or labels.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1227328,18 +1227576,44 @@
       "batch": "batch-52",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates shows an outline map of Ohio. They are skyscrapers, a ballpark scoreboard, a park path and an OH-13 helicopter, so the essential \"state on this map\" image is missing. A new search isn't allowed, so the slot needs a blank Ohio outline map found by hand, for example by searching \"Ohio blank outline map\" or \"Ohio locator map\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows an outline map of Ohio. They are skyscrapers, a ballpark scoreboard, a park path and an OH-13 helicopter, so the essential \"state on this map\" image is missing. A new search isn't allowed, so the slot needs a blank Ohio outline map found by hand, for example by searching \"Ohio blank outline map\" or \"Ohio locator map\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No Ohio outline was found, so the query now asks for an Ohio locator map, which Commons has, and the note says no labels.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Map of USA OH",
+            "note": "Blank outline of the state of Ohio, with no labels, names or neighbor state names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15854",
@@ -1229523,10 +1229797,10 @@
     },
     {
       "id": "q-15882",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Grandma's kitchen had this before there were built-in cupboards.",
-      "question": "This close-up shows part of a freestanding kitchen cabinet from the early 1900s, with a built-in flour bin and sifter. What was this kind of cabinet called?",
+      "question": "This photo shows a freestanding kitchen cabinet from the early 1900s, with a built-in flour bin and sifter. What was this kind of cabinet called?",
       "answer": "Hoosier cabinet",
       "wrong_answers": [
         "Pie safe",
@@ -1229542,10 +1229816,17 @@
         "type": "image",
         "role": "essential",
         "query": "Hoosier cabinet",
-        "note": "Close-up of the flour bin and sifter of an antique Hoosier cabinet; no brand label or the word “Hoosier” visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": "Photo of a whole antique Hoosier cabinet, open, with the flour sifter visible; no advertisement, brand label or the word “Hoosier” visible.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHoosier_cabinet_inside.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Hoosier_cabinet_inside.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Kepster578 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kepster578",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kepster578&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Before kitchens had built-in counters, millions of American homes did all their baking at one of these cabinets.",
       "subcategory": "state-symbols",
@@ -1229574,26 +1229855,51 @@
       "needs_media": true,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says the photo is a close-up of part of the cabinet showing its flour bin and sifter, but no candidate is a close-up: 1, 2, 5 and 6 show the whole cabinet, and 3 and 4 are advertisements with “Hoosier” printed on them. Either reword the question to “This photo shows a freestanding kitchen cabinet from the early 1900s, with a built-in flour bin and sifter…” and use candidate 1 (the whole cabinet, open, with the sifter showing in the middle), or find a real close-up of the flour bin and sifter with no brand label. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says the photo is a close-up of part of the cabinet showing its flour bin and sifter, but no candidate is a close-up: 1, 2, 5 and 6 show the whole cabinet, and 3 and 4 are advertisements with “Hoosier” printed on them. Either reword the question to “This photo shows a freestanding kitchen cabinet from the early 1900s, with a built-in flour bin and sifter…” and use candidate 1 (the whole cabinet, open, with the sifter showing in the middle), or find a real close-up of the flour bin and sifter with no brand label. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Following the reviewer, I reworded the question to describe a photo of the whole cabinet instead of a close-up, and updated the note to match.",
+        "previous": {
+          "question": "This close-up shows part of a freestanding kitchen cabinet from the early 1900s, with a built-in flour bin and sifter. What was this kind of cabinet called?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Hoosier cabinet",
+            "note": "Close-up of the flour bin and sifter of an antique Hoosier cabinet; no brand label or the word “Hoosier” visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15883",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "A giant marble man who has been sitting in the same chair since 1922.",
-      "question": "The Lincoln Memorial stands in the place outlined on this map. Which place is it?",
+      "question": "In which city does the Lincoln Memorial stand?",
       "answer": "Washington, D.C.",
       "wrong_answers": [
         "Springfield, Illinois",
@@ -1229607,12 +1229913,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "District of Columbia blank map",
-        "note": "A blank outline map of the District of Columbia, no labels or city names.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Lincoln Memorial statue",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStatue_of_Abraham_Lincoln%2C_Lincoln_Memorial_%282024%29-L1005507.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Statue_of_Abraham_Lincoln%2C_Lincoln_Memorial_%282024%29-L1005507.jpg/3840px-Statue_of_Abraham_Lincoln%2C_Lincoln_Memorial_%282024%29-L1005507.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Frank Schulenburg · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Frank Schulenburg",
+        "author_url": "https://www.wikidata.org/wiki/Q57175365",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Martin Luther King Jr. gave his “I Have a Dream” speech on the Lincoln Memorial's steps in 1963.",
       "subcategory": "states-and-capitals",
@@ -1229638,22 +1229951,48 @@
         "notes": "The DC outline map adds little; the Lincoln Memorial clue does all the work. The fun fact repeats the speech from q-11831, but the question asks a different fact. A clean blank DC outline should be available."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a blank outline map of the District of Columbia. #1 is a street map with a big \"DISTRICT OF COLUMBIA\" title box, which names the answer. #2 and #3 are dense, tall old city maps covered in text. #4 and #6 are building photos, and #5 is a map of British Columbia. The slot needs a clean, unlabeled DC outline, and no new search is allowed. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a blank outline map of the District of Columbia. #1 is a street map with a big \"DISTRICT OF COLUMBIA\" title box, which names the answer. #2 and #3 are dense, tall old city maps covered in text. #4 and #6 are building photos, and #5 is a map of British Columbia. The slot needs a clean, unlabeled DC outline, and no new search is allowed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No clean DC outline map exists among the sources, so I made it a plain question with an illustrative photo of the Lincoln statue, which shows no city.",
+        "previous": {
+          "question": "The Lincoln Memorial stands in the place outlined on this map. Which place is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "District of Columbia blank map",
+            "note": "A blank outline map of the District of Columbia, no labels or city names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15884",
@@ -1230669,7 +1231008,7 @@
     },
     {
       "id": "q-15897",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Four heroes in a half shell who never take the elevator up.",
       "question": "The Teenage Mutant Ninja Turtles live in tunnels like this one. Under which city are they?",
@@ -1230681,7 +1231020,7 @@
       ],
       "hints": [
         "It's the biggest city in its country by population.",
-        "It's a huge city on the East Coast of the United States.",
+        "Its tall skyscrapers and yellow taxis are famous around the world.",
         "It's often called the Big Apple."
       ],
       "media": {
@@ -1230727,27 +1231066,35 @@
       "needs_media": true,
       "batch": "batch-52",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"a huge city on the East Coast of the United States\") gives the answer away, because New York City is the only East Coast US city among the options. Hint 2 should only narrow things down, for example by mentioning the city's famous skyscrapers or its many yellow taxis without naming a region that only New York fits. The media is fine: candidate 2, the brick sewer tunnel, works.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"a huge city on the East Coast of the United States\") gives the answer away, because New York City is the only East Coast US city among the options. Hint 2 should only narrow things down, for example by mentioning the city's famous skyscrapers or its many yellow taxis without naming a region that only New York fits. The media is fine: candidate 2, the brick sewer tunnel, works.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reordered the hints from vague to strong, as the reviewer asked, so hint 1 no longer rules out every wrong option.",
+        "reason": "Hint 2 gave the answer away by naming a region only one option fits, so it now mentions skyscrapers and yellow taxis.",
         "previous": {
           "hints": [
-            "It's a huge American city on the East Coast.",
-            "It's often called the Big Apple.",
-            "The Statue of Liberty stands there."
+            "It's the biggest city in its country by population.",
+            "It's a huge city on the East Coast of the United States.",
+            "It's often called the Big Apple."
           ]
         },
         "revised_on": "2026-11-07"

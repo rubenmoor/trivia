@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "20c02db8",
+  "hash": "eebc7987",
   "questions": [
     {
       "id": "q-8833",
@@ -52050,6 +52050,74 @@
       "background": null
     },
     {
+      "id": "q-15731",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "A captain with a grudge so big it needed a whole ocean.",
+      "question": "Which of these is NOT true about Captain Ahab in the novel “Moby-Dick”?",
+      "answer": "He narrates the story",
+      "wrong_answers": [
+        "He commands the Pequod",
+        "He has a whalebone leg",
+        "He hunts a white whale"
+      ],
+      "hints": [
+        "Three of these are true; one belongs to another character.",
+        "Ahab lost part of his body to the whale he is chasing.",
+        "Ahab is the one being watched and described, not the one telling the tale."
+      ],
+      "fun_fact": "The coffee chain Starbucks is named after Starbuck, Ahab's first mate in the novel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Jan_Peeters_%28I%29_-_Whaling_Ship_Lured_onto_Rocks_by_a_Whale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJan_Peeters_%28I%29_-_Whaling_Ship_Lured_onto_Rocks_by_a_Whale.jpg",
+        "credit": "Jan Peeters the Elder · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jan Peeters the Elder",
+        "author_url": "https://en.wikipedia.org/wiki/en:Jan_Peeters_I"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15732",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "A roadside giant so big he makes every pickup truck parked next to him look like a toy.",
+      "question": "The first giant fiberglass man like this one is usually said to be a 1962 Paul Bunyan for a café on Route 66. In which state did it stand?",
+      "answer": "Arizona",
+      "wrong_answers": [
+        "California",
+        "Minnesota",
+        "Illinois"
+      ],
+      "hints": [
+        "Route 66 crossed it on the way between Chicago and Los Angeles.",
+        "The state's stretch of Route 66 runs through high desert and pine forest.",
+        "It's nicknamed the Grand Canyon State."
+      ],
+      "fun_fact": "Many Muffler Men were later dressed up as astronauts, cowboys or pirates to fit the shops they stood outside.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Big_Mike%2C_Muffler_Man%2C_Hayward%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABig_Mike%2C_Muffler_Man%2C_Hayward%2C_California.jpg",
+        "credit": "Mercurywoodrose · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Mercurywoodrose",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mercurywoodrose"
+      },
+      "background": null
+    },
+    {
       "id": "q-15733",
       "status": "approved",
       "difficulty": 14,
@@ -53002,6 +53070,74 @@
       "background": null
     },
     {
+      "id": "q-15761",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "national-symbols",
+      "bundle": "usa",
+      "description": "Imported from England, and it broke almost straight out of the box.",
+      "question": "This bell was first cast in England in 1752. Which foundry made it?",
+      "answer": "Whitechapel Bell Foundry",
+      "wrong_answers": [
+        "Rudhall Bell Foundry",
+        "John Taylor & Co",
+        "Bilbie Bell Foundry"
+      ],
+      "hints": [
+        "The bell crossed the Atlantic by ship to Philadelphia.",
+        "The same foundry later cast Big Ben for the Houses of Parliament.",
+        "It's named after a district in London's East End."
+      ],
+      "fun_fact": "The bell cracked the first time it was rung, so two Philadelphia workers, Pass and Stow, melted it down and recast it.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/The_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Original_Liberty_Bell_in_Philadelphia_%28August_2015%29.jpg",
+        "credit": "Vintage Fan 5678 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Vintage Fan 5678",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Vintage_Fan_5678&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15762",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "national-symbols",
+      "bundle": "usa",
+      "description": "An eagle with a full quiver and a very specific favorite number.",
+      "question": "You flip over a $1 bill and look at the eagle's left claw. How many arrows is it holding?",
+      "answer": "13",
+      "wrong_answers": [
+        "3",
+        "7",
+        "50"
+      ],
+      "hints": [
+        "The same number shows up again and again on the Great Seal.",
+        "It's more than a handful, but far fewer than the stars on today's flag.",
+        "Think of the first colonies."
+      ],
+      "fun_fact": "The Great Seal is full of 13s: 13 arrows, 13 stars, 13 stripes on the shield and 13 letters in “E pluribus unum.”",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/United_States_one_dollar_bill%2C_obverse.jpg/3840px-United_States_one_dollar_bill%2C_obverse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_one_dollar_bill%2C_obverse.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15763",
       "status": "approved",
       "difficulty": 9,
@@ -53134,6 +53270,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Rinbro",
         "author_url": "https://commons.wikimedia.org/wiki/User:Rinbro"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15767",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "A city that swallows half of its own name every time a local says it.",
+      "question": "Newark, which locals squeeze into “NOO-erk,” was founded by Puritans in 1666. It is the biggest city of which state?",
+      "answer": "New Jersey",
+      "wrong_answers": [
+        "Delaware",
+        "Connecticut",
+        "Maryland"
+      ],
+      "hints": [
+        "Its big airport is one of the busiest gateways to New York City.",
+        "It was one of the original 13 states.",
+        "It's nicknamed the Garden State."
+      ],
+      "fun_fact": "Newark, Delaware, has the same spelling, but its locals say it “NEW-ark,” like a brand-new ark.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/The_Bookshelf_for_boys_and_girls_Historic_Tales_and_Golden_Deeds_part_4_%281912%29_%2814780941151%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Bookshelf_for_boys_and_girls_Historic_Tales_and_Golden_Deeds_part_4_%281912%29_%2814780941151%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07"
       },
       "background": null
     },
@@ -54052,6 +54222,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Toby Hudson",
         "author_url": "https://commons.wikimedia.org/wiki/User:99of9"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15796",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "cities-and-towns",
+      "bundle": "usa",
+      "description": "A dunk frozen in bronze, so it never has to come back down.",
+      "question": "A bronze statue of a player flying in for a dunk stands at the home arena of the Chicago Bulls. Which basketball star does it honor?",
+      "answer": "Michael Jordan",
+      "wrong_answers": [
+        "LeBron James",
+        "Kobe Bryant",
+        "Magic Johnson"
+      ],
+      "hints": [
+        "He won six championships with the Bulls in the 1990s.",
+        "He wore the number 23.",
+        "He starred in “Space Jam” with Bugs Bunny."
+      ],
+      "fun_fact": "Fans often call Michael Jordan's statue “The Spirit,” and it shows him flying through the air for a dunk.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Basketball_net.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABasketball_net.jpg",
+        "credit": "J.smith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "J.smith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:J.smith"
       },
       "background": null
     },
@@ -55110,6 +55314,40 @@
       "background": null
     },
     {
+      "id": "q-15830",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "A place so used to launching rockets that it once launched a whole new name.",
+      "question": "From 1963 to 1973, Florida's Cape Canaveral officially carried the name of a US president. Which one?",
+      "answer": "John F. Kennedy",
+      "wrong_answers": [
+        "Dwight D. Eisenhower",
+        "Franklin D. Roosevelt",
+        "Richard Nixon"
+      ],
+      "hints": [
+        "The new name was announced in late 1963, when the space race was in full swing.",
+        "His successor, Lyndon B. Johnson, announced the new name.",
+        "His initials are JFK."
+      ],
+      "fun_fact": "Locals never liked losing the old name, and in 1973 Florida switched the cape back to Cape Canaveral, while the space center kept Kennedy's name.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Creative_Photography_-_Sunrise_at_Cape_Canaveral_Lighthouse_%28KSC-20201013-PH-JBS02_0020%29.jpg/3840px-Creative_Photography_-_Sunrise_at_Cape_Canaveral_Lighthouse_%28KSC-20201013-PH-JBS02_0020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACreative_Photography_-_Sunrise_at_Cape_Canaveral_Lighthouse_%28KSC-20201013-PH-JBS02_0020%29.jpg",
+        "credit": "NASA Kennedy Space Center / NASA/Ben Smeglesky · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Kennedy Space Center / NASA/Ben Smeglesky",
+        "author_url": "https://www.nasa.gov/kennedy/"
+      },
+      "background": null
+    },
+    {
       "id": "q-15831",
       "status": "approved",
       "difficulty": 5,
@@ -55174,6 +55412,40 @@
         "license_url": null,
         "author": "Carol M. Highsmith",
         "author_url": "https://en.wikipedia.org/wiki/en:Carol_M._Highsmith"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15833",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "A town named after a South American capital, said like a vegetable, famous for singing.",
+      "question": "Lima, Ohio, said “LYE-muh” like the bean, is the setting of the TV show “Glee.” What is the show's high school choir called?",
+      "answer": "New Directions",
+      "wrong_answers": [
+        "The Barden Bellas",
+        "The Treblemakers",
+        "Vocal Adrenaline"
+      ],
+      "hints": [
+        "The choir meets at William McKinley High School.",
+        "Two of the wrong options sing in the “Pitch Perfect” films.",
+        "The name suggests a fresh start and new paths."
+      ],
+      "fun_fact": "Although the show is set in Ohio, “Glee” was filmed in Los Angeles, California.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/HK_%E7%B4%85%E7%A3%A1_Hung_Hum_%E9%A6%99%E6%B8%AF%E9%AB%94%E8%82%B2%E9%A4%A8_Hong_Kong_Stadium_%E6%96%87%E8%97%9D%E6%99%9A%E6%9C%83_singing_show_presentation_night_June_2017_red_dress_female.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHK_%E7%B4%85%E7%A3%A1_Hung_Hum_%E9%A6%99%E6%B8%AF%E9%AB%94%E8%82%B2%E9%A4%A8_Hong_Kong_Stadium_%E6%96%87%E8%97%9D%E6%99%9A%E6%9C%83_singing_show_presentation_night_June_2017_red_dress_female.jpg",
+        "credit": "Man Man ZHANG · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Man Man ZHANG",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Man_Man_ZHANG&action=edit&redlink=1"
       },
       "background": null
     },
@@ -55276,6 +55548,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Kjokkenutstyr",
         "author_url": "https://www.flickr.com/photos/146966953@N02/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15837",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "regional-dishes",
+      "bundle": "usa",
+      "description": "Diners hope you'll leave some of these behind, but these ones you eat.",
+      "question": "On an American diner menu, what are “silver dollars,” served several to a plate hot off the griddle?",
+      "answer": "Small pancakes",
+      "wrong_answers": [
+        "Sausage patties",
+        "Hash brown rounds",
+        "Fried onion rings"
+      ],
+      "hints": [
+        "Their name comes from their round shape and small size.",
+        "They're made from a batter poured onto the griddle.",
+        "You usually stack them and pour maple syrup on top."
+      ],
+      "fun_fact": "A US silver dollar coin is about 1.5 inches (38 mm) across, and these little pancakes are named for being small and round like it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/1804_Silver_Dollar_%28Class_III%29.jpg/3840px-1804_Silver_Dollar_%28Class_III%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1804_Silver_Dollar_%28Class_III%29.jpg",
+        "credit": "United States Mint (coin); Heritage Auctions (image) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "United States Mint (coin); Heritage Auctions (image)",
+        "author_url": "https://en.wikipedia.org/wiki/United_States_Mint"
       },
       "background": null
     },
@@ -55650,6 +55956,40 @@
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "Goldwiser at English Wikipedia",
         "author_url": "https://en.wikipedia.org/wiki/User:Goldwiser"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15849",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "roads-and-landmarks",
+      "bundle": "usa",
+      "description": "A sign that has said hello to more tourists than any hotel doorman.",
+      "question": "In which decade was the famous “Welcome to Fabulous Las Vegas” sign put up?",
+      "answer": "The 1950s",
+      "wrong_answers": [
+        "The 1930s",
+        "The 1970s",
+        "The 1990s"
+      ],
+      "hints": [
+        "The sign is older than the big themed resorts on the Strip today.",
+        "Las Vegas was growing fast in the years after World War II.",
+        "It went up the same decade Elvis Presley became famous."
+      ],
+      "fun_fact": "The sign's designer, Betty Willis, never copyrighted it and called it her gift to the city, which is why it shows up on so many souvenirs.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Welcome_to_Fabulous_Las_Vegas.jpg/3840px-Welcome_to_Fabulous_Las_Vegas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWelcome_to_Fabulous_Las_Vegas.jpg",
+        "credit": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald"
       },
       "background": null
     },
@@ -56708,6 +57048,74 @@
       "background": null
     },
     {
+      "id": "q-15882",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "Grandma's kitchen had this before there were built-in cupboards.",
+      "question": "This photo shows a freestanding kitchen cabinet from the early 1900s, with a built-in flour bin and sifter. What was this kind of cabinet called?",
+      "answer": "Hoosier cabinet",
+      "wrong_answers": [
+        "Pie safe",
+        "Welsh dresser",
+        "Shaker cupboard"
+      ],
+      "hints": [
+        "Many were made by companies in one Midwestern state.",
+        "Its name is also the nickname for people from that state.",
+        "The best-known maker was in New Castle, Indiana."
+      ],
+      "fun_fact": "Before kitchens had built-in counters, millions of American homes did all their baking at one of these cabinets.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Hoosier_cabinet_inside.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHoosier_cabinet_inside.jpg",
+        "credit": "Kepster578 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kepster578",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kepster578&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15883",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "A giant marble man who has been sitting in the same chair since 1922.",
+      "question": "In which city does the Lincoln Memorial stand?",
+      "answer": "Washington, D.C.",
+      "wrong_answers": [
+        "Springfield, Illinois",
+        "Philadelphia",
+        "Boston"
+      ],
+      "hints": [
+        "It isn't part of any state.",
+        "It sits on the Potomac River.",
+        "The president lives there too."
+      ],
+      "fun_fact": "Martin Luther King Jr. gave his “I Have a Dream” speech on the Lincoln Memorial's steps in 1963.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Statue_of_Abraham_Lincoln%2C_Lincoln_Memorial_%282024%29-L1005507.jpg/3840px-Statue_of_Abraham_Lincoln%2C_Lincoln_Memorial_%282024%29-L1005507.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStatue_of_Abraham_Lincoln%2C_Lincoln_Memorial_%282024%29-L1005507.jpg",
+        "credit": "Frank Schulenburg · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Frank Schulenburg",
+        "author_url": "https://www.wikidata.org/wiki/Q57175365"
+      },
+      "background": null
+    },
+    {
       "id": "q-15884",
       "status": "approved",
       "difficulty": 4,
@@ -57146,6 +57554,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Gage Skidmore",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15897",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "tv-shows",
+      "bundle": "usa",
+      "description": "Four heroes in a half shell who never take the elevator up.",
+      "question": "The Teenage Mutant Ninja Turtles live in tunnels like this one. Under which city are they?",
+      "answer": "New York City",
+      "wrong_answers": [
+        "Chicago",
+        "Los Angeles",
+        "Tokyo"
+      ],
+      "hints": [
+        "It's the biggest city in its country by population.",
+        "Its tall skyscrapers and yellow taxis are famous around the world.",
+        "It's often called the Big Apple."
+      ],
+      "fun_fact": "The four turtles are named after Italian Renaissance artists: Leonardo, Michelangelo, Donatello and Raphael.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Brightons_Victorian_sewage_tunnel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrightons_Victorian_sewage_tunnel.jpg",
+        "credit": "Les Chatfield from Brighton, England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Les Chatfield from Brighton, England",
+        "author_url": "https://www.flickr.com/people/61132483@N00"
       },
       "background": null
     },
