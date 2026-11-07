@@ -95,7 +95,8 @@
     {
       "name": "Tostitos",
       "facet": "Papitas y frituras de bolsa",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The meaning of the name is already in the pool. The person and year options are forced."
     },
     {
       "name": "Fritos Chile y Limón",
@@ -330,7 +331,8 @@
     {
       "name": "Lors",
       "facet": "Galletas de marca mexicana",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: I'm not sure of the facts about Lors cookies (maker, history)."
     },
     {
       "name": "Piruetas",

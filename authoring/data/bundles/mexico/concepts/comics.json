@@ -242,7 +242,8 @@
     {
       "name": "Andrés Audiffred",
       "facet": "Caricatura política y moneros de periódico",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Andrés Audiffred is too obscure, and the only facts left are minor dates."
     },
     {
       "name": "Antonio Arias Bernal",
@@ -272,7 +273,8 @@
     {
       "name": "Hernández (monero)",
       "facet": "Caricatura política y moneros de periódico",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Most adults don't know the monero Hernández by name, and the options don't fit him."
     },
     {
       "name": "Rapé",
@@ -377,7 +379,8 @@
     {
       "name": "El mito guadalupano",
       "facet": "Rius y la historieta de divulgación",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Rius's book on the Guadalupe story is touchy on religion and its details are uncertain; not good family multiple choice."
     },
     {
       "name": "Hitler para masoquistas",

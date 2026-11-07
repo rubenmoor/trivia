@@ -162,7 +162,8 @@
     {
       "name": "Danza de los Diablos de Juxtlahuaca",
       "facet": "Danzas de la Guelaguetza oaxaqueña",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Not confident about the details of this specific Juxtlahuaca dance, so I couldn't write a fair question."
     },
     {
       "name": "Ciudad de Oaxaca",
@@ -257,7 +258,8 @@
     {
       "name": "Danza de los Santiagueros",
       "facet": "Danzas de Conquista y de moros",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Too obscure, and I can't confirm its details."
     },
     {
       "name": "Danza de los Doce Pares de Francia",
@@ -277,7 +279,8 @@
     {
       "name": "Danza de los Chareos",
       "facet": "Danzas de Conquista y de moros",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure for a fair question."
     },
     {
       "name": "Evangelización franciscana",
@@ -322,7 +325,8 @@
     {
       "name": "Sonora",
       "facet": "Danzas norteñas y polkas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The good Sonora facts are already in the pool (Danza del Venado, pascola, desert), and none of the photo options gives a new one."
     },
     {
       "name": "Inmigrantes alemanes",
@@ -357,7 +361,8 @@
     {
       "name": "Danza de los Mecos",
       "facet": "Danzas del Golfo y la Huasteca",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Not sure enough of the Mecos dance's details to write a trustworthy question."
     },
     {
       "name": "Penacho",

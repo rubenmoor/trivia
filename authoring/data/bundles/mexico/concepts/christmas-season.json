@@ -493,7 +493,8 @@
     {
       "name": "Carta a los Reyes Magos",
       "facet": "Rosca de Reyes y Día de Reyes",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La respuesta de persona sería otra vez «los Reyes Magos», que ya se preguntó cinco veces."
     },
     {
       "name": "Globo con la carta",
@@ -653,7 +654,8 @@
     {
       "name": "Doce uvas",
       "facet": "Fechas del calendario decembrino",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó el número de uvas; cualquier otra pregunta de conteo sería una variante forzada y no es propia de México."
     },
     {
       "name": "Salir con la maleta",
@@ -738,7 +740,8 @@
     {
       "name": "Santa Claus",
       "facet": "Historia y origen de las tradiciones",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Santa Claus ya tiene cuatro preguntas y no tiene un ángulo mexicano para una pregunta de conteo o con foto."
     },
     {
       "name": "Tonantzin",
