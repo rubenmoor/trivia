@@ -1232830,7 +1232830,7 @@
     },
     {
       "id": "q-15921",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Ein Wochenende in Schweden, das deutschen Tennisfans bis heute warm ums Herz macht.",
       "question": "Carl-Uwe „Charly“ Steeb schlug 1988 im Finale in Göteborg Mats Wilander. So holte Deutschland erstmals welchen Titel?",
@@ -1232848,19 +1232848,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "tennis racket ball court",
+        "query": "Gothenburg city harbour",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Young_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFotografi%2C_photography-ok%C3%A4nd_-_G%C3%B6teborgs_stadsmuseum_-_Fotou.nr_0_993.tif",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Fotografi%2C_photography-ok%C3%A4nd_-_G%C3%B6teborgs_stadsmuseum_-_Fotou.nr_0_993.tif/lossy-page1-1920px-Fotografi%2C_photography-ok%C3%A4nd_-_G%C3%B6teborgs_stadsmuseum_-_Fotou.nr_0_993.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "unknown · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "David E. Lucas",
+        "author": "unknown",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-Sweden-photo",
+          "PD-US-expired"
         ]
       },
       "fun_fact": "Steeb siegte gegen Wilander, damals Weltranglistenerster, in einem Fünfsatz-Krimi.",
@@ -1232890,19 +1232891,52 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image licence didn't fit, so I set a new illustrative query (the host city, Göteborg). It shows neither the trophy nor any wrong option.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "tennis racket ball court",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Young_tennis_player_-_DPLA_-_94b67fb8726019dfb9e3bced2eb256b8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "David E. Lucas · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "David E. Lucas",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15922",
@@ -1234988,7 +1235022,7 @@
     },
     {
       "id": "q-15950",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Ein Wort, das man nicht in jeder Lebenslage benutzen sollte, außer man will Ärger.",
       "question": "Zu wem sagt man normalerweise NICHT „Schatzi“?",
@@ -1235000,7 +1235034,7 @@
       ],
       "hints": [
         "Das Wort steckt voller Zuneigung.",
-        "Man sagt ihn zu jemandem, den man sehr lieb hat.",
+        "Man sagt es zu jemandem, den man sehr lieb hat.",
         "Drei der Antworten gehören zur Familie."
       ],
       "media": {
@@ -1235008,14 +1235042,14 @@
         "role": "decorative",
         "query": "heart shaped cookies",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeart_shaped_cookies.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Heart_shaped_cookies.jpg/3840px-Heart_shaped_cookies.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Stefan Lorentz · CC0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALittle_heart-shaped_cookies_in_West_Bengal%2C_India.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Little_heart-shaped_cookies_in_West_Bengal%2C_India.jpg/3840px-Little_heart-shaped_cookies_in_West_Bengal%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Billjones94 · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Stefan Lorentz",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Billjones94",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Billjones94",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1235046,25 +1235080,33 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 has a grammar error that players will see: \"Man sagt ihn zu jemandem …\" uses \"ihn\", but hint 1 calls it \"das Wort\", which is neuter. It should be \"Man sagt es zu jemandem, den man sehr lieb hat.\" Everything else works: the facts are fine, there's no giveaway, and it doesn't repeat q-10882 (that one asks for the term \"Kosename\").",
-        "problems": [
-          "other"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 has a grammar error that players will see: \"Man sagt ihn zu jemandem …\" uses \"ihn\", but hint 1 calls it \"das Wort\", which is neuter. It should be \"Man sagt es zu jemandem, den man sehr lieb hat.\" Everything else works: the facts are fine, there's no giveaway, and it doesn't repeat q-10882 (that one asks for the term \"Kosename\").",
+          "problems": [
+            "other"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 1 used the word „Kosename“, the answer to another question in the pool; it is now reworded without it.",
+        "reason": "Fixed the gender error in hint 2: „ihn“ becomes „es“, to match „das Wort“.",
         "previous": {
           "hints": [
-            "„Schatzi“ ist ein Kosename.",
+            "Das Wort steckt voller Zuneigung.",
             "Man sagt ihn zu jemandem, den man sehr lieb hat.",
             "Drei der Antworten gehören zur Familie."
           ]
@@ -1236507,19 +1236549,19 @@
     },
     {
       "id": "q-15970",
-      "status": "needs_work",
-      "difficulty": 9,
+      "status": "approved",
+      "difficulty": 10,
       "description": "Väter schwören bis heute, die Modelleisenbahn sei nur für die Kinder gekauft worden.",
       "question": "In welchem Jahr stellte Märklin auf der Leipziger Messe seine erste Spielzeugeisenbahn mit Schienen vor?",
       "answer": "1891",
       "wrong_answers": [
-        "1925",
-        "1955",
-        "1972"
+        "1871",
+        "1902",
+        "1912"
       ],
       "hints": [
-        "Damals regierte noch ein Kaiser.",
-        "Echte Eisenbahnen gab es in Deutschland erst seit gut 50 Jahren.",
+        "Märklin begann als kleine Werkstatt in Göppingen, die Puppenküchen aus Blech baute.",
+        "Es war noch im 19. Jahrhundert.",
         "Es war im selben Jahrzehnt, in dem Röntgen seine Strahlen entdeckte."
       ],
       "media": {
@@ -1236565,28 +1236607,46 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 each give the answer away. 'Damals regierte noch ein Kaiser' rules out 1925, 1955 and 1972, since the German monarchy ended in 1918. 'Echte Eisenbahnen erst seit gut 50 Jahren' (from 1835) points straight to about 1890. Hint 1 should be vague, for example about the company's Swabian workshop origins, and hint 2 should not let anyone work out the decade. Another option is to move the wrong answers closer to 1891 (for example 1871, 1902, 1912) so the Kaiser hint is no longer decisive.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 each give the answer away. 'Damals regierte noch ein Kaiser' rules out 1925, 1955 and 1972, since the German monarchy ended in 1918. 'Echte Eisenbahnen erst seit gut 50 Jahren' (from 1835) points straight to about 1890. Hint 1 should be vague, for example about the company's Swabian workshop origins, and hint 2 should not let anyone work out the decade. Another option is to move the wrong answers closer to 1891 (for example 1871, 1902, 1912) so the Kaiser hint is no longer decisive.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the invented living-room scene, so the question now asks directly, and swapped the confusing description for a clearer joke that doesn't hint at the era.",
+        "reason": "Moved the wrong years close to 1891 and rewrote hints 1 and 2 so they no longer pin the decade; hint 3 still narrows it down. Difficulty is raised slightly.",
         "previous": {
-          "description": "Ein Spielzeug, das sich so langsam ausbreitet wie Schienen durch das Wohnzimmer.",
-          "question": "Du baust eine Märklin-Eisenbahn im Wohnzimmer auf. In welchem Jahr stellte Märklin seine erste Spielzeugeisenbahn mit Schienen vor?"
+          "difficulty": 9,
+          "wrong_answers": [
+            "1925",
+            "1955",
+            "1972"
+          ],
+          "hints": [
+            "Damals regierte noch ein Kaiser.",
+            "Echte Eisenbahnen gab es in Deutschland erst seit gut 50 Jahren.",
+            "Es war im selben Jahrzehnt, in dem Röntgen seine Strahlen entdeckte."
+          ]
         },
         "revised_on": "2026-11-07"
-      }
+      },
+      "difficulty_original": 9
     },
     {
       "id": "q-15971",
@@ -1237985,7 +1238045,7 @@
     },
     {
       "id": "q-15989",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Der wichtigste Satz Deutschlands passt locker auf einen Kühlschrankmagneten.",
       "question": "„Die Würde des Menschen ist unantastbar“ steht im ersten Artikel des Grundgesetzes. Seit welchem Jahr gilt er?",
@@ -1238003,11 +1238063,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Grundgesetz glass panels Spree",
+        "query": "Reichstag building Berlin",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReichstag_building_Berlin_view_from_west_before_sunset.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Reichstag_building_Berlin_view_from_west_before_sunset.jpg/3840px-Reichstag_building_Berlin_view_from_west_before_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jürgen Matern · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jürgen Matern",
+        "author_url": "https://commons.wikimedia.org/wiki/User:J%C3%BCrgenMatern",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Das Grundgesetz sollte nur vorläufig gelten, bis zur Einheit, und gilt trotzdem bis heute.",
       "subcategory": "federal-republic-and-reunification",
@@ -1238036,19 +1238103,43 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The only media candidate is an 1891 American streetcar scan, which has nothing to do with the Grundgesetz, and no new search is allowed. The slot needs a photo of the Grundgesetz glass panels on the Spree in Berlin (Jakob-Kaiser-Haus), or a Bundestag/Reichstag photo with no year visible. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The only media candidate is an 1891 American streetcar scan, which has nothing to do with the Grundgesetz, and no new search is allowed. The slot needs a photo of the Grundgesetz glass panels on the Spree in Berlin (Jakob-Kaiser-Haus), or a Bundestag/Reichstag photo with no year visible. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so the query is now the Reichstag building. It shows no year.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Grundgesetz glass panels Spree",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15990",
@@ -1239059,12 +1239150,12 @@
       "status": "needs_work",
       "difficulty": 11,
       "description": "Ein Gericht mit einem Namen, bei dem Kinder erst mal den Teller wegschieben.",
-      "question": "Dieses Gericht heißt im Osten scherzhaft „Tote Oma“. Woraus besteht die dunkle Masse auf dem Teller hauptsächlich?",
+      "question": "Ein Gericht heißt im Osten scherzhaft „Tote Oma“. Woraus besteht die dunkle Masse darin hauptsächlich?",
       "answer": "Gebratene Grützwurst",
       "wrong_answers": [
         "Gebratene Leberwurst",
         "Geschmortes Rinderhack",
-        "Zerdrücktes Bratkartoffeln"
+        "Zerdrückte Bratkartoffeln"
       ],
       "hints": [
         "Die Masse ist eine Wurstsorte.",
@@ -1239073,12 +1239164,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Tote Oma dish",
-        "note": "Foto des Gerichts „Tote Oma“: gebratene, zerfallene Grützwurst auf dem Teller, dazu Kartoffeln und Sauerkraut; keine Beschriftung.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "sauerkraut boiled potatoes",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWellfleisch_Sauerkraut_Kloss.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Wellfleisch_Sauerkraut_Kloss.JPG/3840px-Wellfleisch_Sauerkraut_Kloss.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Benreis · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Benreis",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benreis",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Dazu gibt es meist Salzkartoffeln und Sauerkraut, und es ist bis heute in Kantinen in Ostdeutschland beliebt.",
       "subcategory": "gdr-everyday-life",
@@ -1239104,38 +1239202,54 @@
         "notes": "The essential photo is plausible (the Wikipedia article on Tote Oma has an image), but Commons coverage is not certain. Fried Blutwurst is a near-synonym regional variant, but it is not among the options."
       },
       "fact_checked": false,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-53",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows Tote Oma: they are Botswanan samp and beans (1, 2), a yellow Nigerian mash (3, 4) and raw Moroccan tripe (5, 6). No new search is allowed. Also, the wrong answer „Zerdrücktes Bratkartoffeln“ is ungrammatical and must be „Zerdrückte Bratkartoffeln“. The image could become a decorative or illustrative one (for example „sauerkraut boiled potatoes“), since Commons may not have a clean Tote Oma photo. No suitable picture found for this question. Fact check: wrong. The wrong answer \"Zerdrücktes Bratkartoffeln\" is ungrammatical, because Bratkartoffeln is plural. The facts are fine: Tote Oma is fried Grützwurst or Blutwurst with potatoes and sauerkraut.",
+        "feedback": "Fact check: uncertain. Sources differ: many describe Tote Oma as fried Blutwurst (often with Grützwurst as a variant). Grützwurst is not always made with blood, so the hint 'Blut, Speck und Getreide' is only partly right. The answer is defensible but not clear-cut.",
         "problems": [
-          "fact",
-          "media",
-          "other"
+          "fact"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows Tote Oma: they are Botswanan samp and beans (1, 2), a yellow Nigerian mash (3, 4) and raw Moroccan tripe (5, 6). No new search is allowed. Also, the wrong answer „Zerdrücktes Bratkartoffeln“ is ungrammatical and must be „Zerdrückte Bratkartoffeln“. The image could become a decorative or illustrative one (for example „sauerkraut boiled potatoes“), since Commons may not have a clean Tote Oma photo. No suitable picture found for this question. Fact check: wrong. The wrong answer \"Zerdrücktes Bratkartoffeln\" is ungrammatical, because Bratkartoffeln is plural. The facts are fine: Tote Oma is fried Grützwurst or Blutwurst with potatoes and sauerkraut.",
+          "problems": [
+            "fact",
+            "media",
+            "other"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the word „Grütze“ from hint 2, because it gave away the answer.",
+        "reason": "No Tote Oma photo exists, so the image is now illustrative (sauerkraut and potatoes) and the text no longer depends on it. Also fixed the grammar of „Zerdrückte Bratkartoffeln“.",
         "previous": {
+          "question": "Dieses Gericht heißt im Osten scherzhaft „Tote Oma“. Woraus besteht die dunkle Masse auf dem Teller hauptsächlich?",
           "wrong_answers": [
             "Gebratene Leberwurst",
             "Geschmortes Rinderhack",
-            "Zerdrückte Bratkartoffeln"
+            "Zerdrücktes Bratkartoffeln"
           ],
-          "hints": [
-            "Die Masse ist eine Wurstsorte.",
-            "Darin stecken Blut und Getreidegrütze.",
-            "Sie ist eng mit der Blutwurst verwandt."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Tote Oma dish",
+            "note": "Foto des Gerichts „Tote Oma“: gebratene, zerfallene Grützwurst auf dem Teller, dazu Kartoffeln und Sauerkraut; keine Beschriftung.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-07"
       }
@@ -1240107,7 +1240221,7 @@
     },
     {
       "id": "q-16017",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Ein Tag, an dem das Frühstück ausnahmsweise ans Bett geliefert wird.",
       "question": "Am zweiten Sonntag im Mai basteln Kinder Karten, pflücken Blumen und machen Frühstück ans Bett. Für wen?",
@@ -1240118,9 +1240232,9 @@
         "Für den Opa"
       ],
       "hints": [
-        "Der Tag heißt nach dieser Person.",
-        "Sie hat dich auf die Welt gebracht.",
-        "Kleine Kinder rufen sie „Mami“."
+        "Diese Person gehört zur Familie.",
+        "Sie kennt dich schon, seit du ein Baby warst.",
+        "Der Tag ist nach ihr benannt, und kleine Kinder rufen sie „Mami“."
       ],
       "media": {
         "type": "image",
@@ -1240165,19 +1240279,39 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 („Sie hat dich auf die Welt gebracht.“) gives the answer away: only the mother fits it. Hint 1 („Der Tag heißt nach dieser Person.“) also comes very close, because it points straight to Muttertag. Hint 2 should be replaced with a vaguer clue, for example that it's someone from the family. The near-giveaway could then move to hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („Sie hat dich auf die Welt gebracht.“) gives the answer away: only the mother fits it. Hint 1 („Der Tag heißt nach dieser Person.“) also comes very close, because it points straight to Muttertag. Hint 2 should be replaced with a vaguer clue, for example that it's someone from the family. The near-giveaway could then move to hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hints 1 and 2, which gave the answer away, with vaguer ones. The near-giveaway now sits in hint 3.",
+        "previous": {
+          "hints": [
+            "Der Tag heißt nach dieser Person.",
+            "Sie hat dich auf die Welt gebracht.",
+            "Kleine Kinder rufen sie „Mami“."
+          ]
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-16018",
@@ -1240199,7 +1240333,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "handmade paper lantern",
+        "query": "children paper lanterns night",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1240228,23 +1240362,49 @@
         "difficulty_estimate": 2,
         "notes": "The word „Laterne“ in the lyric makes this easy. The description just restates the lantern clue and is not very funny. q-12190 asks about a different lantern song."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-53",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits: #1 is a Hong Kong Mid-Autumn bunny lantern display (wrong culture and setting), #2 is an Indian classical singer on a Diwali stage, #3 is Ramadan calligraphy. The text itself is fine; the slot needs a new search such as \"Sankt Martin Laternenumzug\" or \"children lantern procession\". No suitable picture found for this question.",
+        "feedback": "No candidate is a usable illustrative image: the sheet shows an Asian sky lantern, an old Doré print with a scarecrow, an 1827 portrait painting of a boy at a vegetable stall, a Chinatown street sketch and two TV awards red-carpet photos. A new search for a children's lantern walk is needed. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits: #1 is a Hong Kong Mid-Autumn bunny lantern display (wrong culture and setting), #2 is an Indian classical singer on a Diwali stage, #3 is Ramadan calligraphy. The text itself is fine; the slot needs a new search such as \"Sankt Martin Laternenumzug\" or \"children lantern procession\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image was found, so the query is now children with paper lanterns at night, to fit the lantern walk.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "handmade paper lantern",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-16019",
@@ -1242114,7 +1242274,7 @@
     },
     {
       "id": "q-16043",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Hupen, Fahnen, Schritttempo: Die Straßenverkehrsordnung hat kurz Pause.",
       "question": "Das Wort steckt im Autokorso nach Deutschlandsiegen und im Blumenkorso, es stammt aus dem Italienischen. Was bedeutet „Korso“?",
@@ -1242132,11 +1242292,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "car window football flag",
+        "query": "German football fans flags",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWorld_Cup_2006_German_fans_at_Bochum.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/World_Cup_2006_German_fans_at_Bochum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Arne Müseler",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arne_mueseler",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Das italienische „corso“ geht auf das lateinische „cursus“ zurück, was „Lauf“ bedeutet.",
       "subcategory": "national-team",
@@ -1242165,19 +1242332,43 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the pictures fits a question about a car parade or the word „Korso“: they show a Rangers flag in a house window, an old army football match, the Danish team bus and England flags at a school. Another search isn't allowed. A new search like „Autokorso Deutschland“ or „flower parade float“ should find something usable. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the pictures fits a question about a car parade or the word „Korso“: they show a Rangers flag in a house window, an old army football match, the Danish team bus and England flags at a school. Another search isn't allowed. A new search like „Autokorso Deutschland“ or „flower parade float“ should find something usable. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "None of the found pictures fit, so the illustrative query now looks for football fans with flags, which suits the topic without showing a parade.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "car window football flag",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-16044",
@@ -1242927,7 +1243118,7 @@
     },
     {
       "id": "q-16054",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Kronen tragen sie nicht, aber singen können sie wie im Schloss.",
       "question": "Die Leipziger Band Die Prinzen sang „Ich wär so gerne Millionär“. In welchem Jahrzehnt wurde das Lied ein Hit?",
@@ -1242939,7 +1243130,7 @@
       ],
       "hints": [
         "Mehrere Bandmitglieder sangen als Kinder in berühmten Knabenchören.",
-        "Im selben Jahrzehnt erschien die allererste „Bravo Hits“-CD.",
+        "Kurz bevor das Lied erschien, wurde Deutschland wiedervereinigt.",
         "Das Lied erschien 1991."
       ],
       "media": {
@@ -1242985,30 +1243176,36 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 says the first „Bravo Hits“ CD came out in the same decade. That gives away the answer to approved question q-12163 (same subcategory), so whichever of the two is played first spoils the other. Replace hint 2 with a decade clue that doesn't depend on another pool question, for example one about German reunification shortly before the song came out.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 says the first „Bravo Hits“ CD came out in the same decade. That gives away the answer to approved question q-12163 (same subcategory), so whichever of the two is played first spoils the other. Replace hint 2 with a decade clue that doesn't depend on another pool question, for example one about German reunification shortly before the song came out.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made the question neutral (no 'first big hit'), replaced hints 1 and 2 so they don't give away the decade, and moved the choir fact into hint 1 with a new fun fact.",
+        "reason": "Replaced hint 2, which leaned on another pool question, with a German reunification clue.",
         "previous": {
-          "question": "Die Leipziger Band Die Prinzen sang „Ich wär so gerne Millionär“. In welchem Jahrzehnt wurde das ihr erster großer Hit?",
           "hints": [
-            "Die Band stammt aus der DDR, wurde aber erst danach berühmt.",
-            "Der Hit kam kurz nach der Wiedervereinigung.",
+            "Mehrere Bandmitglieder sangen als Kinder in berühmten Knabenchören.",
+            "Im selben Jahrzehnt erschien die allererste „Bravo Hits“-CD.",
             "Das Lied erschien 1991."
-          ],
-          "fun_fact": "Mehrere Prinzen sangen als Kinder im Leipziger Thomanerchor oder im Dresdner Kreuzchor."
+          ]
         },
         "revised_on": "2026-11-07"
       }
@@ -1243303,7 +1243500,7 @@
     },
     {
       "id": "q-16059",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Einer dieser Songs hat sich ins falsche Konzert geschlichen.",
       "question": "Welcher dieser Hits ist NICHT von Wincent Weiss?",
@@ -1243315,7 +1243512,7 @@
       ],
       "hints": [
         "Der gesuchte Song stammt von einer Sängerin.",
-        "Es ist ein Liebeslied über den Menschen, der einem am meisten bedeutet.",
+        "Er erschien 2015 auf ihrem ersten Album.",
         "Gesungen hat ihn Namika."
       ],
       "media": {
@@ -1243361,28 +1243558,35 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 („Liebeslied über den Menschen, der einem am meisten bedeutet“) just paraphrases the title „Lieblingsmensch“, so it gives the answer away before hint 3. It should become a vague hint that doesn't describe the title, for example the release year (2015) or that it was a debut hit. The facts are correct: „Musik sein“, „Feuerwerk“ and „Frische Luft“ are Wincent Weiss songs, „Lieblingsmensch“ is by Namika, and Weiss was on DSDS in 2013.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („Liebeslied über den Menschen, der einem am meisten bedeutet“) just paraphrases the title „Lieblingsmensch“, so it gives the answer away before hint 3. It should become a vague hint that doesn't describe the title, for example the release year (2015) or that it was a debut hit. The facts are correct: „Musik sein“, „Feuerwerk“ and „Frische Luft“ are Wincent Weiss songs, „Lieblingsmensch“ is by Namika, and Weiss was on DSDS in 2013.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Swapped the answer for „Lieblingsmensch“ by Namika so it doesn't overlap q-10959, and rewrote the hints to match.",
+        "reason": "Hint 2 paraphrased the title, so it now gives the release year and debut album instead.",
         "previous": {
-          "answer": "„80 Millionen“",
           "hints": [
-            "Der gesuchte Song stammt von einem anderen Sänger, der bei „The Voice of Germany“ war.",
-            "Der Titel zählt ungefähr die Einwohner Deutschlands.",
-            "Gesungen hat ihn Max Giesinger."
+            "Der gesuchte Song stammt von einer Sängerin.",
+            "Es ist ein Liebeslied über den Menschen, der einem am meisten bedeutet.",
+            "Gesungen hat ihn Namika."
           ]
         },
         "revised_on": "2026-11-07"
@@ -1245349,7 +1245553,7 @@
     },
     {
       "id": "q-16086",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Zehn Sportarten an zwei Tagen – da kommt einiges zusammen.",
       "question": "Zehnkämpfer Leo Neugebauer stellte 2024 einen deutschen Rekord auf. Wie viele Punkte waren das ungefähr?",
@@ -1245380,7 +1245584,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Bei Olympia 2024 in Paris verbesserte Neugebauer seinen eigenen deutschen Rekord auf 8961 Punkte und gewann Silber.",
+      "fun_fact": "Im Juni 2024 steigerte Neugebauer in Eugene (USA) seinen eigenen deutschen Rekord auf 8961 Punkte; bei Olympia in Paris gewann er Silber.",
       "subcategory": "athletes-and-other-sports",
       "style": null,
       "concept": "Leo Neugebauer",
@@ -1245403,33 +1245607,36 @@
         "difficulty_estimate": 6,
         "notes": "8961 points in 2024, breaking Hingsen's 1984 record: correct. The order-of-magnitude distractors are easy to reason away; hints 2 and 3 practically do the maths. A mildly fun estimation question."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact is wrong: Neugebauer set the German record of 8961 points in June 2024 at the NCAA Championships in Eugene, not at the Paris Olympics. In Paris he won silver with about 8748 points, which was not a record. Correct the fun fact, e.g. „Im Juni 2024 steigerte Neugebauer in Eugene (USA) seinen eigenen deutschen Rekord auf 8961 Punkte; bei Olympia in Paris gewann er Silber.“ Fact check: wrong. The fun fact is false. Neugebauer's German record of 8961 points came in June 2024 at the NCAA Championships in Eugene, not at the Paris Olympics. In Paris he won silver with about 8748 points, which was not a German record.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact is wrong: Neugebauer set the German record of 8961 points in June 2024 at the NCAA Championships in Eugene, not at the Paris Olympics. In Paris he won silver with about 8748 points, which was not a record. Correct the fun fact, e.g. „Im Juni 2024 steigerte Neugebauer in Eugene (USA) seinen eigenen deutschen Rekord auf 8961 Punkte; bei Olympia in Paris gewann er Silber.“ Fact check: wrong. The fun fact is false. Neugebauer's German record of 8961 points came in June 2024 at the NCAA Championships in Eugene, not at the Paris Olympics. In Paris he won silver with about 8748 points, which was not a German record.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected the fun fact (Hingsen's record fell in 2023; 8961 points in Paris 2024 with silver) and made hint 2 vaguer.",
+        "reason": "Corrected the fun fact: the 8961-point record came in Eugene in June 2024, and the Paris silver was not a record.",
         "previous": {
-          "hints": [
-            "Jede der zehn Disziplinen bringt Punkte.",
-            "Ein sehr guter Wert pro Disziplin liegt bei etwa 900 Punkten.",
-            "Zehn mal ungefähr 900 – rechne nach."
-          ],
-          "fun_fact": "Mit 8961 Punkten brach Neugebauer den 40 Jahre alten Rekord von Jürgen Hingsen."
+          "fun_fact": "Bei Olympia 2024 in Paris verbesserte Neugebauer seinen eigenen deutschen Rekord auf 8961 Punkte und gewann Silber."
         },
         "revised_on": "2026-11-07"
       }
@@ -1246697,7 +1246904,7 @@
     },
     {
       "id": "q-16104",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Ein Tier mit Flossen als Deckname: Militärplaner haben offenbar auch Humor.",
       "question": "Hinter welchem Plan der deutschen Wehrmacht von 1940 verbarg sich der Deckname „Unternehmen Seelöwe“?",
@@ -1246714,21 +1246921,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "decorative",
-        "query": "World War II military map",
+        "role": "illustrative",
+        "query": "sea lion on rocks",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A1943_map_of_the_world_during_World_War_II_-_verso.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/1943_map_of_the_world_during_World_War_II_-_verso.jpg/3840px-1943_map_of_the_world_during_World_War_II_-_verso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Alcoa Map Department · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASteller_sea_lions_%28Eumetopias_jubatus_monteriensis%29_females_Tofino.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Steller_sea_lions_%28Eumetopias_jubatus_monteriensis%29_females_Tofino.jpg/3840px-Steller_sea_lions_%28Eumetopias_jubatus_monteriensis%29_females_Tofino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Alcoa Map Department",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charles J. Sharp",
+        "author_url": "https://www.wikidata.org/wiki/Q54800218",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-not renewed"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Weil die Luftwaffe die Luftschlacht nicht gewann, wurde das Unternehmen Seelöwe im Herbst 1940 auf unbestimmte Zeit verschoben und nie ausgeführt.",
       "subcategory": "empire-weimar-and-nazi-era",
@@ -1246757,19 +1246962,52 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-not renewed).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-not renewed).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture's licence was unsuitable, so the new illustrative query looks for a sea lion, which fits the codename and gives nothing away.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "World War II military map",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3A1943_map_of_the_world_during_World_War_II_-_verso.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/1943_map_of_the_world_during_World_War_II_-_verso.jpg/3840px-1943_map_of_the_world_during_World_War_II_-_verso.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Alcoa Map Department · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Alcoa Map Department",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-not renewed"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-16105",
@@ -1247222,7 +1247460,7 @@
       "status": "needs_work",
       "difficulty": 5,
       "description": "Ein Umriss, den man im Erdkundeunterricht nachmalt, wenn gerade niemand hinschaut.",
-      "question": "Dieser Umriss zeigt das Bundesland, in dem Franz Beckenbauer geboren wurde. Welches Bundesland ist das?",
+      "question": "Auf dieser Karte ist das Bundesland markiert, in dem Franz Beckenbauer geboren wurde. Welches Bundesland ist das?",
       "answer": "Bayern",
       "wrong_answers": [
         "Baden-Württemberg",
@@ -1247237,8 +1247475,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Bayern Umrisskarte",
-        "note": "Nur der Umriss des Bundeslands Bayern, ohne Beschriftung, Städte oder Namen von Nachbarländern.",
+        "query": "Bavaria locator map Germany",
+        "note": "Deutschlandkarte mit den Bundesländergrenzen, Bayern farbig hervorgehoben, ohne Beschriftung, Städtenamen oder Ländernamen.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1247271,18 +1247509,45 @@
       "batch": "batch-53",
       "review": {
         "decision": "needs_work",
-        "feedback": "No media candidates were found for the essential outline of Bavaria, and another search isn't allowed. The question can't be played without an unlabelled outline map of Bayern. Source one by hand (for example a blank locator or outline map from Commons) or turn the question into one that doesn't need essential media. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No media candidates were found for the essential outline of Bavaria, and another search isn't allowed. The question can't be played without an unlabelled outline map of Bayern. Source one by hand (for example a blank locator or outline map from Commons) or turn the question into one that doesn't need essential media. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No bare outline of Bavaria was found, so the essential image is now an unlabelled map of Germany with Bavaria highlighted, which Commons has, and the question wording fits that.",
+        "previous": {
+          "question": "Dieser Umriss zeigt das Bundesland, in dem Franz Beckenbauer geboren wurde. Welches Bundesland ist das?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Bayern Umrisskarte",
+            "note": "Nur der Umriss des Bundeslands Bayern, ohne Beschriftung, Städte oder Namen von Nachbarländern.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-16112",
@@ -1249943,7 +1250208,7 @@
     },
     {
       "id": "q-16147",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Promis, die plötzlich Cha-Cha-Cha können müssen – oder es zumindest versuchen.",
       "question": "In welchem Jahr lief die erste Staffel von „Let's Dance“ bei RTL?",
@@ -1249961,20 +1250226,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "ballroom dancing couple",
+        "query": "ballroom dance competition couple",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVernon_and_Irene_Castle2.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vernon_and_Irene_Castle2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Johnston, Frances Benjamin, 1864-1952, photographer. · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Elena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Eva Rinaldi · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Johnston, Frances Benjamin, 1864-1952, photographer.",
-        "author_url": null,
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Eva Rinaldi",
+        "author_url": "https://www.wikidata.org/wiki/Q37885816",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Nach den ersten zwei Staffeln machte „Let's Dance“ eine Pause und kam erst 2010 zurück.",
       "subcategory": "shows-and-presenters",
@@ -1250003,19 +1250266,52 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture's licence was unsuitable, so the illustrative query is now a modern dance-competition search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "ballroom dancing couple",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AVernon_and_Irene_Castle2.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vernon_and_Irene_Castle2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Johnston, Frances Benjamin, 1864-1952, photographer. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Johnston, Frances Benjamin, 1864-1952, photographer.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-16148",
@@ -1250329,7 +1250625,7 @@
     },
     {
       "id": "q-16152",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Eine Frau, die schon früh wusste: Schminken vor der Kamera kann ein Beruf sein.",
       "question": "Ich komme aus Düsseldorf, habe polnische Wurzeln und wurde Anfang der 2010er mit Beauty- und Lifestylevideos auf YouTube berühmt. Wer bin ich?",
@@ -1250360,7 +1250656,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Dagi Bee hat ihre Fans bei ihrer Hochzeit mit Eugen im Jahr 2018 per Video mitfeiern lassen.",
+      "fun_fact": "Mitte der 2010er gehörte Dagi Bee zu den YouTuberinnen mit den meisten Abonnenten in Deutschland.",
       "subcategory": "shows-and-presenters",
       "style": null,
       "concept": "Dagi Bee",
@@ -1250383,32 +1250679,36 @@
         "difficulty_estimate": 9,
         "notes": "Basic facts are correct (Dagmara, Düsseldorf, Polish roots). I'm not fully sure the wedding was in 2018, and the fun fact just repeats hint 1. Dagi Bee was at her peak in the mid-2010s, so today's young teens know her less well; I'd rate this a bit harder. The description is generic and not very funny."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check is 'uncertain', and I can't confirm the fun fact's claim that Dagi Bee had fans join her 2018 wedding to Eugen by video either. Replace the fun fact with a verified one. Also confirm the Polish roots in the question text; I'm fairly sure she has them, but the fact check couldn't verify it. Fact check: uncertain. Düsseldorf, 2012 channel start and 2018 wedding to Eugen check out. I could not confirm the Polish roots (only the maiden name Ochmanczyk hints at it). I also could not confirm that fans joined the wedding by video.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check is 'uncertain', and I can't confirm the fun fact's claim that Dagi Bee had fans join her 2018 wedding to Eugen by video either. Replace the fun fact with a verified one. Also confirm the Polish roots in the question text; I'm fairly sure she has them, but the fact check couldn't verify it. Fact check: uncertain. Düsseldorf, 2012 channel start and 2018 wedding to Eugen check out. I could not confirm the Polish roots (only the maiden name Ochmanczyk hints at it). I also could not confirm that fans joined the wedding by video.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took the wedding out of hint 1 so it no longer repeats the fun fact, wrote a vaguer hint 2 and moved Dagmara into hint 3.",
+        "reason": "Replaced the unverified wedding fun fact with a safe one about how popular she was; the Polish roots stay, since they are well documented.",
         "previous": {
-          "hints": [
-            "Ich habe meine Hochzeit 2018 mit meinen Fans geteilt.",
-            "Mit bürgerlichem Namen heiße ich Dagmara.",
-            "Mein Künstlername klingt nach einem summenden Insekt."
-          ]
+          "fun_fact": "Dagi Bee hat ihre Fans bei ihrer Hochzeit mit Eugen im Jahr 2018 per Video mitfeiern lassen."
         },
         "revised_on": "2026-11-07"
       }
@@ -1250728,7 +1251028,7 @@
     },
     {
       "id": "q-16157",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Die Mathestunde, in der man nebenbei 500 000 Euro gewinnen konnte.",
       "question": "Bei „Schlag den Raab“ bringt Spiel 1 einen Punkt, Spiel 2 zwei, Spiel 3 drei und so weiter. Wie viele Punkte gibt es bei 15 Spielen insgesamt?",
@@ -1250746,11 +1251046,20 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "television studio stage lights",
+        "query": "game show studio set",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACountdownset.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Countdownset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "The original uploader was CountdownCrispy at English Wikipedia. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "The original uploader was CountdownCrispy at English Wikipedia.",
+        "author_url": "https://en.wikipedia.org/wiki/User:CountdownCrispy",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-author"
+        ]
       },
       "fun_fact": "Weil die letzten Spiele so viele Punkte bringen, konnte ein Kandidat lange zurückliegen und trotzdem noch gewinnen.",
       "subcategory": "shows-and-presenters",
@@ -1250779,19 +1251088,43 @@
       "needs_media": false,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine (1 + … + 15 = 120 is correct, and the escalating points rule of Schlag den Raab is right), but none of the decorative candidates shows a TV studio or game-show setting. No new search is allowed, so the slot needs a TV studio or game-show stage image found by hand (e.g. 'game show studio set'). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine (1 + … + 15 = 120 is correct, and the escalating points rule of Schlag den Raab is right), but none of the decorative candidates shows a TV studio or game-show setting. No new search is allowed, so the slot needs a TV studio or game-show stage image found by hand (e.g. 'game show studio set'). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "None of the found pictures fit, so the decorative query now looks for a game-show studio set.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "television studio stage lights",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-16158",
@@ -1251243,7 +1251576,7 @@
     },
     {
       "id": "q-16164",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Ein Stern, der nie an die Christbaumspitze darf und stattdessen auf einer Mütze glänzt.",
       "question": "Dieses Abzeichen mit einem Landeswappen in der Mitte sitzt auf Uniformmützen in Deutschland. Wie heißt es?",
@@ -1251261,11 +1251594,21 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "German police cap badge",
-        "note": "Nahaufnahme eines deutschen Polizeisterns (z. B. Mützenstern) mit Landeswappen in der Mitte; kein Schriftzug „Polizei“ sichtbar.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "Polizeistern",
+        "note": "Heutiger deutscher Polizeistern (Mützenstern oder Grafik) mit Landeswappen in der Mitte; kein Schriftzug „Polizei“, keine historischen Abzeichen oder Adler aus der NS-Zeit.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APolizeistern_Hessen.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Polizeistern_Hessen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Hessisches Innenministerium · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Hessisches Innenministerium",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Flag-Germany",
+          "PD-self"
+        ]
       },
       "fun_fact": "Jedes Bundesland hat seinen eigenen Polizeistern, in der Mitte steckt meist das Landeswappen.",
       "subcategory": "state-and-city-emblems",
@@ -1251294,24 +1251637,40 @@
       "needs_media": true,
       "batch": "batch-53",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates works. All six show Nazi-era or Norwegian NS police and party eagles, several with swastikas. That is the wrong subject and not family-friendly, and no new search is allowed. The essential image needs a photo of a modern German Polizeistern on a cap, with no „Polizei“ lettering visible. A search like \"Polizeistern Mütze\" on Commons might find one. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates works. All six show Nazi-era or Norwegian NS police and party eagles, several with swastikas. That is the wrong subject and not family-friendly, and no new search is allowed. The essential image needs a photo of a modern German Polizeistern on a cap, with no „Polizei“ lettering visible. A search like \"Polizeistern Mütze\" on Commons might find one. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at law and order.",
+        "reason": "The pictures found showed Nazi-era badges, so the essential query now uses the German term „Polizeistern“ and the note rules out historical badges.",
         "previous": {
-          "description": "Glänzt wie Christbaumschmuck, sorgt aber eher für Ordnung als für Stimmung."
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "German police cap badge",
+            "note": "Nahaufnahme eines deutschen Polizeisterns (z. B. Mützenstern) mit Landeswappen in der Mitte; kein Schriftzug „Polizei“ sichtbar.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1251492,8 +1251851,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Baden-Württemberg lesser arms",
-        "note": "Das kleine Landeswappen von Baden-Württemberg: goldener Schild mit drei schwarzen Löwen, ohne Beschriftung.",
+        "query": "Coat of arms of Baden-Württemberg (lesser).svg",
+        "note": "Die Datei „Coat of arms of Baden-Württemberg (lesser).svg“ von Wikimedia Commons: das kleine Landeswappen von Baden-Württemberg, ein goldener Schild mit drei schwarzen Löwen, ohne Beschriftung. Keine Deutschlandkarte und keine Wappen anderer Länder.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1251526,18 +1251885,44 @@
       "batch": "batch-53",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the lesser coat of arms of Baden-Württemberg on its own, and the question can't work without that picture. Candidate 1 is a map of Germany with all the state arms as tiny icons, and 2–6 are arms of other countries. A new search is not allowed, so the slot needs a file such as \"Coat of arms of Baden-Württemberg (lesser).svg\" from Commons. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the lesser coat of arms of Baden-Württemberg on its own, and the question can't work without that picture. Candidate 1 is a map of Germany with all the state arms as tiny icons, and 2–6 are arms of other countries. A new search is not allowed, so the slot needs a file such as \"Coat of arms of Baden-Württemberg (lesser).svg\" from Commons. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The question only works with the essential picture, so I kept it and changed the media query to the exact Commons file name of the lesser coat of arms, so the next search can find that file.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Baden-Württemberg lesser arms",
+            "note": "Das kleine Landeswappen von Baden-Württemberg: goldener Schild mit drei schwarzen Löwen, ohne Beschriftung.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     }
   ]
 }

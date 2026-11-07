@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "67e346d5",
+  "hash": "1c425fc6",
   "questions": [
     {
       "id": "q-9120",
@@ -58895,6 +58895,40 @@
       "background": null
     },
     {
+      "id": "q-15921",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "athletes-and-other-sports",
+      "bundle": "germany",
+      "description": "Ein Wochenende in Schweden, das deutschen Tennisfans bis heute warm ums Herz macht.",
+      "question": "Carl-Uwe „Charly“ Steeb schlug 1988 im Finale in Göteborg Mats Wilander. So holte Deutschland erstmals welchen Titel?",
+      "answer": "Davis Cup",
+      "wrong_answers": [
+        "Hopman Cup",
+        "World Team Cup",
+        "Laver Cup"
+      ],
+      "hints": [
+        "Es ist ein Mannschaftswettbewerb der Männer.",
+        "Boris Becker spielte im selben Team.",
+        "Der Wettbewerb ist nach einem US-Amerikaner benannt und über 100 Jahre alt."
+      ],
+      "fun_fact": "Steeb siegte gegen Wilander, damals Weltranglistenerster, in einem Fünfsatz-Krimi.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Fotografi%2C_photography-ok%C3%A4nd_-_G%C3%B6teborgs_stadsmuseum_-_Fotou.nr_0_993.tif/lossy-page1-1920px-Fotografi%2C_photography-ok%C3%A4nd_-_G%C3%B6teborgs_stadsmuseum_-_Fotou.nr_0_993.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFotografi%2C_photography-ok%C3%A4nd_-_G%C3%B6teborgs_stadsmuseum_-_Fotou.nr_0_993.tif",
+        "credit": "unknown · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "unknown",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15922",
       "status": "approved",
       "difficulty": 8,
@@ -59779,6 +59813,40 @@
       "background": null
     },
     {
+      "id": "q-15950",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "dialects-and-regional-words",
+      "bundle": "germany",
+      "description": "Ein Wort, das man nicht in jeder Lebenslage benutzen sollte, außer man will Ärger.",
+      "question": "Zu wem sagt man normalerweise NICHT „Schatzi“?",
+      "answer": "zum Schulleiter",
+      "wrong_answers": [
+        "zum eigenen Kind",
+        "zum Partner",
+        "zum eigenen Hund"
+      ],
+      "hints": [
+        "Das Wort steckt voller Zuneigung.",
+        "Man sagt es zu jemandem, den man sehr lieb hat.",
+        "Drei der Antworten gehören zur Familie."
+      ],
+      "fun_fact": "„Schatz“ gehört zu den beliebtesten Kosenamen in Deutschland, oft verniedlicht zu „Schatzi“.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Little_heart-shaped_cookies_in_West_Bengal%2C_India.jpg/3840px-Little_heart-shaped_cookies_in_West_Bengal%2C_India.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALittle_heart-shaped_cookies_in_West_Bengal%2C_India.jpg",
+        "credit": "Billjones94 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Billjones94",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Billjones94"
+      },
+      "background": null
+    },
+    {
       "id": "q-15951",
       "status": "approved",
       "difficulty": 10,
@@ -60391,6 +60459,40 @@
       "background": null
     },
     {
+      "id": "q-15970",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "empire-weimar-and-nazi-era",
+      "bundle": "germany",
+      "description": "Väter schwören bis heute, die Modelleisenbahn sei nur für die Kinder gekauft worden.",
+      "question": "In welchem Jahr stellte Märklin auf der Leipziger Messe seine erste Spielzeugeisenbahn mit Schienen vor?",
+      "answer": "1891",
+      "wrong_answers": [
+        "1871",
+        "1902",
+        "1912"
+      ],
+      "hints": [
+        "Märklin begann als kleine Werkstatt in Göppingen, die Puppenküchen aus Blech baute.",
+        "Es war noch im 19. Jahrhundert.",
+        "Es war im selben Jahrzehnt, in dem Röntgen seine Strahlen entdeckte."
+      ],
+      "fun_fact": "Märklin führte damals Spurweiten ein, die als Normen für Modellbahnen bis heute weiterleben.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Model_of_a_Martens_Liliput_steam_locomotive_0p_scale.jpg/3840px-Model_of_a_Martens_Liliput_steam_locomotive_0p_scale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AModel_of_a_Martens_Liliput_steam_locomotive_0p_scale.jpg",
+        "credit": "PaulUE · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PaulUE",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PaulUE&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-15971",
       "status": "approved",
       "difficulty": 12,
@@ -60999,6 +61101,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Retired electrician",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Retired_electrician&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15989",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "federal-republic-and-reunification",
+      "bundle": "germany",
+      "description": "Der wichtigste Satz Deutschlands passt locker auf einen Kühlschrankmagneten.",
+      "question": "„Die Würde des Menschen ist unantastbar“ steht im ersten Artikel des Grundgesetzes. Seit welchem Jahr gilt er?",
+      "answer": "1949",
+      "wrong_answers": [
+        "1919",
+        "1968",
+        "1990"
+      ],
+      "hints": [
+        "Es war kurz nach dem Zweiten Weltkrieg.",
+        "Im selben Jahr wurde die Bundesrepublik gegründet.",
+        "Ein Jahr nach der Einführung der D-Mark."
+      ],
+      "fun_fact": "Das Grundgesetz sollte nur vorläufig gelten, bis zur Einheit, und gilt trotzdem bis heute.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Reichstag_building_Berlin_view_from_west_before_sunset.jpg/3840px-Reichstag_building_Berlin_view_from_west_before_sunset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReichstag_building_Berlin_view_from_west_before_sunset.jpg",
+        "credit": "Jürgen Matern · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jürgen Matern",
+        "author_url": "https://commons.wikimedia.org/wiki/User:J%C3%BCrgenMatern"
       },
       "background": null
     },
@@ -61887,6 +62023,40 @@
       "background": null
     },
     {
+      "id": "q-16017",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "holidays-through-the-year",
+      "bundle": "germany",
+      "description": "Ein Tag, an dem das Frühstück ausnahmsweise ans Bett geliefert wird.",
+      "question": "Am zweiten Sonntag im Mai basteln Kinder Karten, pflücken Blumen und machen Frühstück ans Bett. Für wen?",
+      "answer": "Für die Mama",
+      "wrong_answers": [
+        "Für den Papa",
+        "Für die Lehrerin",
+        "Für den Opa"
+      ],
+      "hints": [
+        "Diese Person gehört zur Familie.",
+        "Sie kennt dich schon, seit du ein Baby warst.",
+        "Der Tag ist nach ihr benannt, und kleine Kinder rufen sie „Mami“."
+      ],
+      "fun_fact": "In Deutschland wird dieser Tag seit etwa 100 Jahren gefeiert, er kam aus den USA zu uns.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/%E6%81%B5%E6%AF%94%E5%AF%BF%E3%81%AE%E5%90%89%E9%87%8E%E5%AE%B6%E3%81%A7%E3%83%91%E3%83%B3%E3%81%AA%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%A7%8B%E3%81%BE%E3%82%8B_2016.8_%2829241682362%29.jpg/3840px-%E6%81%B5%E6%AF%94%E5%AF%BF%E3%81%AE%E5%90%89%E9%87%8E%E5%AE%B6%E3%81%A7%E3%83%91%E3%83%B3%E3%81%AA%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%A7%8B%E3%81%BE%E3%82%8B_2016.8_%2829241682362%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E6%81%B5%E6%AF%94%E5%AF%BF%E3%81%AE%E5%90%89%E9%87%8E%E5%AE%B6%E3%81%A7%E3%83%91%E3%83%B3%E3%81%AA%E3%83%A2%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%A7%8B%E3%81%BE%E3%82%8B_2016.8_%2829241682362%29.jpg",
+        "credit": "Tatsuo Yamashita · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Tatsuo Yamashita",
+        "author_url": "https://www.flickr.com/people/27983255@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-16019",
       "status": "approved",
       "difficulty": 3,
@@ -62703,6 +62873,40 @@
       "background": null
     },
     {
+      "id": "q-16043",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "national-team",
+      "bundle": "germany",
+      "description": "Hupen, Fahnen, Schritttempo: Die Straßenverkehrsordnung hat kurz Pause.",
+      "question": "Das Wort steckt im Autokorso nach Deutschlandsiegen und im Blumenkorso, es stammt aus dem Italienischen. Was bedeutet „Korso“?",
+      "answer": "Festlicher Umzug",
+      "wrong_answers": [
+        "Lautes Hupen",
+        "Großer Sieg",
+        "Bunte Fahne"
+      ],
+      "hints": [
+        "Beim Blumenkorso gibt es weder Autos noch Hupen.",
+        "Es geht darum, wie sich viele gemeinsam fortbewegen.",
+        "Beim Karneval ziehen solche Wagen in einer langen Reihe durch die Straßen."
+      ],
+      "fun_fact": "Das italienische „corso“ geht auf das lateinische „cursus“ zurück, was „Lauf“ bedeutet.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/World_Cup_2006_German_fans_at_Bochum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWorld_Cup_2006_German_fans_at_Bochum.jpg",
+        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Arne Müseler",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arne_mueseler"
+      },
+      "background": null
+    },
+    {
       "id": "q-16044",
       "status": "approved",
       "difficulty": 6,
@@ -63043,6 +63247,40 @@
       "background": null
     },
     {
+      "id": "q-16054",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "pop-and-rock",
+      "bundle": "germany",
+      "description": "Kronen tragen sie nicht, aber singen können sie wie im Schloss.",
+      "question": "Die Leipziger Band Die Prinzen sang „Ich wär so gerne Millionär“. In welchem Jahrzehnt wurde das Lied ein Hit?",
+      "answer": "1990er",
+      "wrong_answers": [
+        "1970er",
+        "1980er",
+        "2000er"
+      ],
+      "hints": [
+        "Mehrere Bandmitglieder sangen als Kinder in berühmten Knabenchören.",
+        "Kurz bevor das Lied erschien, wurde Deutschland wiedervereinigt.",
+        "Das Lied erschien 1991."
+      ],
+      "fun_fact": "Die Prinzen gehören zu den erfolgreichsten deutschsprachigen Bands überhaupt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Old_city_hall_of_Leipzig_%2821%29.jpg/3840px-Old_city_hall_of_Leipzig_%2821%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_city_hall_of_Leipzig_%2821%29.jpg",
+        "credit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Krzysztof Golik",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tournasol7"
+      },
+      "background": null
+    },
+    {
       "id": "q-16055",
       "status": "approved",
       "difficulty": 6,
@@ -63175,6 +63413,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Wojciech Pędzich",
         "author_url": "https://commons.wikimedia.org/wiki/User:Wojciech_P%C4%99dzich"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16059",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "pop-and-rock",
+      "bundle": "germany",
+      "description": "Einer dieser Songs hat sich ins falsche Konzert geschlichen.",
+      "question": "Welcher dieser Hits ist NICHT von Wincent Weiss?",
+      "answer": "„Lieblingsmensch“",
+      "wrong_answers": [
+        "„Musik sein“",
+        "„Feuerwerk“",
+        "„Frische Luft“"
+      ],
+      "hints": [
+        "Der gesuchte Song stammt von einer Sängerin.",
+        "Er erschien 2015 auf ihrem ersten Album.",
+        "Gesungen hat ihn Namika."
+      ],
+      "fun_fact": "Wincent Weiss trat 2013 bei „Deutschland sucht den Superstar“ auf, Jahre bevor er mit „Musik sein“ berühmt wurde.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/DSC_6184_A_large_crowd_gathers_on_the_beachfront_at_night_colorful_stage_lights_and_city_high-rises_glowing_in_the_background_as_people_enjoy_an_outdoor_concert_or_festival.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADSC_6184_A_large_crowd_gathers_on_the_beachfront_at_night_colorful_stage_lights_and_city_high-rises_glowing_in_the_background_as_people_enjoy_an_outdoor_concert_or_festival.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
       },
       "background": null
     },
@@ -64063,6 +64335,40 @@
       "background": null
     },
     {
+      "id": "q-16086",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "athletes-and-other-sports",
+      "bundle": "germany",
+      "description": "Zehn Sportarten an zwei Tagen – da kommt einiges zusammen.",
+      "question": "Zehnkämpfer Leo Neugebauer stellte 2024 einen deutschen Rekord auf. Wie viele Punkte waren das ungefähr?",
+      "answer": "Rund 9000",
+      "wrong_answers": [
+        "Rund 900",
+        "Rund 90 000",
+        "Rund 900 000"
+      ],
+      "hints": [
+        "Jede der zehn Disziplinen bringt Punkte.",
+        "Ein Spitzenergebnis in einer einzelnen Disziplin bringt mehrere hundert Punkte.",
+        "Zehn mal ungefähr 900 – rechne nach."
+      ],
+      "fun_fact": "Im Juni 2024 steigerte Neugebauer in Eugene (USA) seinen eigenen deutschen Rekord auf 8961 Punkte; bei Olympia in Paris gewann er Silber.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/2008_Summer_Olympics_-_Men%27s_110m_Hurdles_-_Semifinal_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2008_Summer_Olympics_-_Men%27s_110m_Hurdles_-_Semifinal_1.jpg",
+        "credit": "akiwitz · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "akiwitz",
+        "author_url": "https://www.flickr.com/people/69433842@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-16087",
       "status": "approved",
       "difficulty": 8,
@@ -64637,6 +64943,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dietmar Rabich",
         "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16104",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "empire-weimar-and-nazi-era",
+      "bundle": "germany",
+      "description": "Ein Tier mit Flossen als Deckname: Militärplaner haben offenbar auch Humor.",
+      "question": "Hinter welchem Plan der deutschen Wehrmacht von 1940 verbarg sich der Deckname „Unternehmen Seelöwe“?",
+      "answer": "Eine Landung in England",
+      "wrong_answers": [
+        "Ein Angriff auf die Sowjetunion",
+        "Eine Besetzung Norwegens",
+        "Eine Eroberung Gibraltars"
+      ],
+      "hints": [
+        "Der Plan wurde nie ausgeführt.",
+        "Zuerst sollte die Luftwaffe die britischen Jagdflieger ausschalten.",
+        "Soldaten sollten über den Ärmelkanal setzen."
+      ],
+      "fun_fact": "Weil die Luftwaffe die Luftschlacht nicht gewann, wurde das Unternehmen Seelöwe im Herbst 1940 auf unbestimmte Zeit verschoben und nie ausgeführt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Steller_sea_lions_%28Eumetopias_jubatus_monteriensis%29_females_Tofino.jpg/3840px-Steller_sea_lions_%28Eumetopias_jubatus_monteriensis%29_females_Tofino.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASteller_sea_lions_%28Eumetopias_jubatus_monteriensis%29_females_Tofino.jpg",
+        "credit": "Charles J. Sharp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Charles J. Sharp",
+        "author_url": "https://www.wikidata.org/wiki/Q54800218"
       },
       "background": null
     },
@@ -66035,6 +66375,40 @@
       "background": null
     },
     {
+      "id": "q-16147",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "shows-and-presenters",
+      "bundle": "germany",
+      "description": "Promis, die plötzlich Cha-Cha-Cha können müssen – oder es zumindest versuchen.",
+      "question": "In welchem Jahr lief die erste Staffel von „Let's Dance“ bei RTL?",
+      "answer": "2006",
+      "wrong_answers": [
+        "1999",
+        "2013",
+        "2018"
+      ],
+      "hints": [
+        "Das Vorbild ist die BBC-Show „Strictly Come Dancing“ von 2004.",
+        "Die erste Staffel moderierten Hape Kerkeling und Nazan Eckes.",
+        "Im selben Jahr fand die Fußball-WM in Deutschland statt."
+      ],
+      "fun_fact": "Nach den ersten zwei Staffeln machte „Let's Dance“ eine Pause und kam erst 2010 zurück.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Elena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg",
+        "credit": "Eva Rinaldi · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Eva Rinaldi",
+        "author_url": "https://www.wikidata.org/wiki/Q37885816"
+      },
+      "background": null
+    },
+    {
       "id": "q-16148",
       "status": "approved",
       "difficulty": 1,
@@ -66166,6 +66540,40 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "cayuxef3",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16152",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "shows-and-presenters",
+      "bundle": "germany",
+      "description": "Eine Frau, die schon früh wusste: Schminken vor der Kamera kann ein Beruf sein.",
+      "question": "Ich komme aus Düsseldorf, habe polnische Wurzeln und wurde Anfang der 2010er mit Beauty- und Lifestylevideos auf YouTube berühmt. Wer bin ich?",
+      "answer": "Dagi Bee",
+      "wrong_answers": [
+        "Shirin David",
+        "BibisBeautyPalace",
+        "Paola Maria"
+      ],
+      "hints": [
+        "Neben Videos habe ich auch eigene Kosmetikprodukte herausgebracht.",
+        "Meinen YouTube-Kanal habe ich 2012 gestartet.",
+        "Mit bürgerlichem Namen heiße ich Dagmara, und mein Künstlername summt ein bisschen."
+      ],
+      "fun_fact": "Mitte der 2010er gehörte Dagi Bee zu den YouTuberinnen mit den meisten Abonnenten in Deutschland.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Eye_Makeup_Palette_and_Brush_Kit.jpg/3840px-Eye_Makeup_Palette_and_Brush_Kit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEye_Makeup_Palette_and_Brush_Kit.jpg",
+        "credit": "geehairimages · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "geehairimages",
         "author_url": null
       },
       "background": null
@@ -66303,6 +66711,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "John Robert McPherson",
         "author_url": "https://commons.wikimedia.org/wiki/User:John_Robert_McPherson"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16157",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "shows-and-presenters",
+      "bundle": "germany",
+      "description": "Die Mathestunde, in der man nebenbei 500 000 Euro gewinnen konnte.",
+      "question": "Bei „Schlag den Raab“ bringt Spiel 1 einen Punkt, Spiel 2 zwei, Spiel 3 drei und so weiter. Wie viele Punkte gibt es bei 15 Spielen insgesamt?",
+      "answer": "120",
+      "wrong_answers": [
+        "100",
+        "105",
+        "150"
+      ],
+      "hints": [
+        "Man muss 1 + 2 + 3 + … + 15 rechnen.",
+        "Paare bilden hilft: 1 + 15, 2 + 14 …",
+        "Jedes Paar ergibt 16, und es gibt siebeneinhalb davon."
+      ],
+      "fun_fact": "Weil die letzten Spiele so viele Punkte bringen, konnte ein Kandidat lange zurückliegen und trotzdem noch gewinnen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Countdownset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACountdownset.jpg",
+        "credit": "The original uploader was CountdownCrispy at English Wikipedia. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "The original uploader was CountdownCrispy at English Wikipedia.",
+        "author_url": "https://en.wikipedia.org/wiki/User:CountdownCrispy"
       },
       "background": null
     },
@@ -66507,6 +66949,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Andy Witchger",
         "author_url": "https://www.flickr.com/people/42878734@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16164",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "state-and-city-emblems",
+      "bundle": "germany",
+      "description": "Ein Stern, der nie an die Christbaumspitze darf und stattdessen auf einer Mütze glänzt.",
+      "question": "Dieses Abzeichen mit einem Landeswappen in der Mitte sitzt auf Uniformmützen in Deutschland. Wie heißt es?",
+      "answer": "Polizeistern",
+      "wrong_answers": [
+        "Sheriffstern",
+        "Ordensstern",
+        "Feuerwehrstern"
+      ],
+      "hints": [
+        "Wer es trägt, fährt oft mit Blaulicht.",
+        "Die Leute damit können dir einen Strafzettel geben.",
+        "Die Leute damit rufst du unter der Nummer 110."
+      ],
+      "fun_fact": "Jedes Bundesland hat seinen eigenen Polizeistern, in der Mitte steckt meist das Landeswappen.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Polizeistern_Hessen.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APolizeistern_Hessen.JPG",
+        "credit": "Hessisches Innenministerium · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Hessisches Innenministerium",
+        "author_url": null
       },
       "background": null
     },
