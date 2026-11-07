@@ -921,7 +921,8 @@
     {
       "name": "Hash browns",
       "facet": "Breakfast and diner specialties",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already asks that hash browns are made of potatoes. Waffle House's “scattered, smothered, covered” words are a different move and too hard for difficulty 3."
     },
     {
       "name": "Eggs Benedict",

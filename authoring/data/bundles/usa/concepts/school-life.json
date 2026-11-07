@@ -93,7 +93,8 @@
     {
       "name": "Twelfth grade",
       "facet": "Grade levels and school types",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already asks that twelfth grade is senior year; the other options would repeat or force it."
     },
     {
       "name": "Junior year",

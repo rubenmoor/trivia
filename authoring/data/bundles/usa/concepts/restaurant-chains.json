@@ -467,7 +467,8 @@
     {
       "name": "Subway",
       "facet": "Tacos, subs and other fast food",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The footlong count and the founding year are already in the pool; nothing else fits these options at difficulty 1."
     },
     {
       "name": "Jersey Mike's",
@@ -652,7 +653,8 @@
     {
       "name": "Ronald McDonald",
       "facet": "Mascots and logos",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Identifying Ronald is already asked; the count and made-of options don't give a difficulty-1 question, and a photo of the character can't be essential."
     },
     {
       "name": "Golden Arches",
@@ -1108,7 +1110,8 @@
     {
       "name": "Ketchup packet",
       "facet": "Drive-thrus, kids' meals and fast-food culture",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: Record and inventor facts about ketchup packets are uncertain or obscure."
     },
     {
       "name": "Food court",
