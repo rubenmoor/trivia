@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "622a929f",
+  "hash": "993a8253",
   "questions": [
     {
       "id": "q-9120",
@@ -41986,6 +41986,40 @@
       "background": null
     },
     {
+      "id": "q-13994",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "cakes-and-sweets",
+      "bundle": "germany",
+      "description": "Schokolade mit eingebautem Bonuslevel.",
+      "question": "Welche Süßigkeit versteckt unter ihrer Schokolade eine gelbe Plastikkapsel mit einem kleinen Spielzeug?",
+      "answer": "Überraschungsei",
+      "wrong_answers": [
+        "Wundertüte",
+        "Schokoladen-Nikolaus",
+        "Adventskalender"
+      ],
+      "hints": [
+        "Die Schokolade ist außen braun und innen weiß.",
+        "Sie ist in bunt bedruckte Alufolie eingewickelt.",
+        "Ihre Form passt besonders gut zu Ostern."
+      ],
+      "fun_fact": "In den USA ist das Überraschungsei verboten, weil dort Süßigkeiten keine nicht essbaren Teile umschließen dürfen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Sign-1060673%2C_Abbeyfeale%2C_Co._Limerick%2C_Ireland.jpg/3840px-Sign-1060673%2C_Abbeyfeale%2C_Co._Limerick%2C_Ireland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASign-1060673%2C_Abbeyfeale%2C_Co._Limerick%2C_Ireland.jpg",
+        "credit": "Mucklagh · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mucklagh",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mucklagh"
+      },
+      "background": null
+    },
+    {
       "id": "q-13995",
       "status": "approved",
       "difficulty": 4,
@@ -42224,6 +42258,40 @@
       "background": null
     },
     {
+      "id": "q-14002",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "carnival-and-fairs",
+      "bundle": "germany",
+      "description": "Wenn in Köln Karneval ist, singt die halbe Stadt diese Band mit, auch ohne Textblatt.",
+      "question": "Diese Kölner Band gibt es seit 1972, sie sang „Viva Colonia“, und ihr Name ist Kölsch. Was bedeutet er auf Hochdeutsch?",
+      "answer": "Hühner",
+      "wrong_answers": [
+        "Hörner",
+        "Höhen",
+        "Hörer"
+      ],
+      "hints": [
+        "Das hochdeutsche Wort klingt fast gleich, nur ein Vokal ist anders.",
+        "Gemeint sind Tiere, die man auf vielen Bauernhöfen findet.",
+        "Sie legen Eier."
+      ],
+      "fun_fact": "Der Höhner-Song „Wenn nicht jetzt, wann dann?“ wurde 2007 zur Hymne der Handball-WM in Deutschland.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Dom_%28Deutzer_Br%C3%BCcke%29.jpg/3840px-Dom_%28Deutzer_Br%C3%BCcke%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADom_%28Deutzer_Br%C3%BCcke%29.jpg",
+        "credit": "Jörg Braukmann · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jörg Braukmann",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Milseburg"
+      },
+      "background": null
+    },
+    {
       "id": "q-14003",
       "status": "approved",
       "difficulty": 9,
@@ -42322,6 +42390,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Giles Laurent",
         "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14007",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "dialects-and-regional-words",
+      "bundle": "germany",
+      "description": "Jemand, der jedes Jahr mit Pauken und Liedern vor die Tür gesetzt wird.",
+      "question": "Zu meinem Abschied singen Kinder: „… ade, Scheiden tut weh. Aber dein Scheiden macht, dass mir das Herze lacht.“ Wer bin ich?",
+      "answer": "Der Winter",
+      "wrong_answers": [
+        "Der Sommer",
+        "Der Herbst",
+        "Der Frühling"
+      ],
+      "hints": [
+        "Ich bin eine Jahreszeit.",
+        "Das Lied ist fast 200 Jahre alt und wird bis heute in Kindergärten gesungen.",
+        "Nach mir kommen Schneeglöckchen und Krokusse."
+      ],
+      "fun_fact": "„Ade“ stammt vom französischen „adieu“, und „Winter ade“ dichtete Hoffmann von Fallersleben, der auch den Text der Nationalhymne schrieb.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Kids_singing_in_school_festival.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKids_singing_in_school_festival.jpg",
+        "credit": "Konalouisa · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Konalouisa",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Konalouisa&action=edit&redlink=1"
       },
       "background": null
     },
@@ -42700,6 +42802,40 @@
       "background": null
     },
     {
+      "id": "q-14019",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "empire-weimar-and-nazi-era",
+      "bundle": "germany",
+      "description": "Ein Rednerpult, das bis dahin nur Männerschuhe kannte.",
+      "question": "Welche Frau sprach am 19. Februar 1919 als erste Frau in der Weimarer Nationalversammlung und gründete die Arbeiterwohlfahrt?",
+      "answer": "Marie Juchacz",
+      "wrong_answers": [
+        "Clara Zetkin",
+        "Rosa Luxemburg",
+        "Elisabeth Selbert"
+      ],
+      "hints": [
+        "Sie war Sozialdemokratin und kämpfte für das Frauenwahlrecht.",
+        "Die Arbeiterwohlfahrt, kurz AWO, gibt es bis heute.",
+        "Ihr Nachname beginnt mit „Ju“."
+      ],
+      "fun_fact": "Juchacz begann ihre Rede mit „Meine Herren und Damen“ – und brachte die Versammlung damit zum Lachen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Deutsches_Nationaltheater_Weimar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADeutsches_Nationaltheater_Weimar.jpg",
+        "credit": "Lucas Friese · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Lucas Friese",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lucas_Friese"
+      },
+      "background": null
+    },
+    {
       "id": "q-14020",
       "status": "approved",
       "difficulty": 12,
@@ -42870,6 +43006,40 @@
       "background": null
     },
     {
+      "id": "q-14025",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "films-and-actors",
+      "bundle": "germany",
+      "description": "Ein Mann aus Lehm mit einer Frisur, die selbst ein Orkan nicht durcheinanderbringt.",
+      "question": "Wer spielte im Stummfilm „Der Golem, wie er in die Welt kam“ von 1920 den Lehmriesen und führte zugleich Regie?",
+      "answer": "Paul Wegener",
+      "wrong_answers": [
+        "Conrad Veidt",
+        "Max Schreck",
+        "Emil Jannings"
+      ],
+      "hints": [
+        "Er drehte schon 1915 einen ersten Golem-Film.",
+        "Er war ein gefeierter Bühnenstar am Deutschen Theater bei Max Reinhardt.",
+        "Sein Nachname beginnt wie das Wort „Weg“."
+      ],
+      "fun_fact": "Die verwinkelten Prager Gassen im Film entwarf der Architekt Hans Poelzig als Kulisse im Studio.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Old_New_Synagogue-_Jewish_Town_Hall_%28Prague%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_New_Synagogue-_Jewish_Town_Hall_%28Prague%29.jpg",
+        "credit": "Yair Haklai · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Yair Haklai",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yair-haklai"
+      },
+      "background": null
+    },
+    {
       "id": "q-14026",
       "status": "approved",
       "difficulty": 12,
@@ -43002,6 +43172,40 @@
         "license_url": null,
         "author": "George Wharton James, 1858—1923",
         "author_url": "https://en.wikipedia.org/wiki/George_Wharton_James"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14030",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "films-and-actors",
+      "bundle": "germany",
+      "description": "Die seltenste Dankesrede im deutschen Fernsehen: „Nein danke.“",
+      "question": "Welcher Literaturkritiker sollte 2008 den Deutschen Fernsehpreis fürs Lebenswerk bekommen und lehnte ihn auf der Bühne ab?",
+      "answer": "Marcel Reich-Ranicki",
+      "wrong_answers": [
+        "Hellmuth Karasek",
+        "Denis Scheck",
+        "Ulrich Wickert"
+      ],
+      "hints": [
+        "Er wurde in Polen geboren.",
+        "Man nannte ihn den „Literaturpapst“.",
+        "Er leitete im ZDF „Das Literarische Quartett“."
+      ],
+      "fun_fact": "Thomas Gottschalk führte danach mit ihm ein eigenes Gespräch über das Fernsehen, das das ZDF kurz darauf sendete.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Old_books_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_books_%28Unsplash%29.jpg",
+        "credit": "Eli Francis elifrancis · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Eli Francis elifrancis",
+        "author_url": "https://unsplash.com/@elifrancis"
       },
       "background": null
     },
@@ -43448,6 +43652,40 @@
       "background": null
     },
     {
+      "id": "q-14045",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Ein Sommerfest, bei dem Ost-Berlin plötzlich ganz bunt wurde.",
+      "question": "Die US-Bürgerrechtlerin auf dem Foto wurde 1973 bei den Weltfestspielen der Jugend in Ost-Berlin wie ein Star gefeiert. Wer ist sie?",
+      "answer": "Angela Davis",
+      "wrong_answers": [
+        "Rosa Parks",
+        "Nina Simone",
+        "Joan Baez"
+      ],
+      "hints": [
+        "Sie war Philosophin und bekennende Kommunistin.",
+        "Ihr Prozess in den USA war Anfang der 1970er in DDR-Schulen ein großes Thema.",
+        "Ihre große Afro-Frisur wurde zum Symbol einer ganzen Bewegung."
+      ],
+      "fun_fact": "DDR-Kinder schickten ihr massenhaft Rosenpostkarten ins Gefängnis, die Aktion hieß „Eine Million Rosen für Angela“.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Bundesarchiv_Bild_183-L0911-029%2C_Berlin%2C_Erich_Honecker_empf%C3%A4ngt_Angela_Davis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABundesarchiv_Bild_183-L0911-029%2C_Berlin%2C_Erich_Honecker_empf%C3%A4ngt_Angela_Davis.jpg",
+        "credit": "Koard, Peter · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Koard, Peter",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14046",
       "status": "approved",
       "difficulty": 10,
@@ -43584,6 +43822,40 @@
       "background": null
     },
     {
+      "id": "q-14050",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Ein Stück Stoff, das man mit einem ganz bestimmten Knoten binden musste.",
+      "question": "Ein blaues Halstuch trugen viele Schulkinder in der DDR. Zu welcher Organisation gehörte es?",
+      "answer": "Junge Pioniere",
+      "wrong_answers": [
+        "FDJ",
+        "Pfadfinder",
+        "Jugendfeuerwehr"
+      ],
+      "hints": [
+        "Ab der ersten Klasse war man fast automatisch dabei.",
+        "Ältere Kinder trugen das Tuch in Rot.",
+        "Der Gruß lautete „Seid bereit!“ – „Immer bereit!“"
+      ],
+      "fun_fact": "Ab Klasse 4 hießen die Kinder „Thälmann-Pioniere“ und trugen ein rotes Tuch.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Karmsund_folkemuseum_Haugesund_Norway_Interior_Skolestue_klasserom_Class_room_ca_1910_Skolepulter_skrivepulter_benker_school_room_benches_writing_desks_Kateter_Tavle_Blackboard_etc_2020-06-10_DSC00312.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKarmsund_folkemuseum_Haugesund_Norway_Interior_Skolestue_klasserom_Class_room_ca_1910_Skolepulter_skrivepulter_benker_school_room_benches_writing_desks_Kateter_Tavle_Blackboard_etc_2020-06-10_DSC00312.jpg",
+        "credit": "Wolfmann · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Wolfmann",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wolfmann"
+      },
+      "background": null
+    },
+    {
       "id": "q-14051",
       "status": "approved",
       "difficulty": 14,
@@ -43652,6 +43924,40 @@
       "background": null
     },
     {
+      "id": "q-14053",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Sie bestimmte, was in DDR-Klassenzimmern gelernt wurde, und das ziemlich lange.",
+      "question": "Wer war von 1963 bis 1989 Ministerin für Volksbildung der DDR?",
+      "answer": "Margot Honecker",
+      "wrong_answers": [
+        "Lotte Ulbricht",
+        "Hilde Benjamin",
+        "Christa Wolf"
+      ],
+      "hints": [
+        "Wegen ihres Haarfarbtons nannte man sie „lila Hexe“.",
+        "Nach der Wende lebte sie bis zu ihrem Tod in Chile.",
+        "Ihr Mann führte die DDR von 1971 bis 1989."
+      ],
+      "fun_fact": "Margot Honecker starb 2016 in Santiago de Chile.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Old_Classroom_Interior_%2847024892221%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Classroom_Interior_%2847024892221%29.jpg",
+        "credit": "Dejan Krsmanovic · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dejan Krsmanovic",
+        "author_url": "https://www.flickr.com/people/155403590@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-14054",
       "status": "approved",
       "difficulty": 6,
@@ -43716,6 +44022,40 @@
         "license_url": null,
         "author": "Doggo19292",
         "author_url": "https://commons.wikimedia.org/wiki/User:Doggo19292"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14056",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "home-and-public-life",
+      "bundle": "germany",
+      "description": "Deutsche Wohnungen haben ein Atemprogramm, und es ist strenger als jedes Fitnessstudio.",
+      "question": "Beim Stoßlüften reißt man die Fenster für einige Minuten weit auf, statt sie lange zu kippen. Wozu?",
+      "answer": "Damit feuchte Luft rausgeht, aber die Wände warm bleiben",
+      "wrong_answers": [
+        "Damit der Staub von Möbeln und Regalen weht",
+        "Damit Zimmerpflanzen mehr Sonnenlicht bekommen",
+        "Damit keine Insekten in die Wohnung fliegen"
+      ],
+      "hints": [
+        "Es geht um Luft und um die Heizung.",
+        "Es hat mit Kochen, Duschen und Atmen in der Wohnung zu tun.",
+        "Es soll Schimmel verhindern und trotzdem Heizenergie sparen."
+      ],
+      "fun_fact": "Im Winter empfehlen Fachleute, mehrmals am Tag für etwa fünf bis zehn Minuten stoßzulüften.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/View_into_a_garden_through_an_open_ground_floor_window_in_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_into_a_garden_through_an_open_ground_floor_window_in_Germany.jpg",
+        "credit": "Karl432 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Karl432",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Karl432"
       },
       "background": null
     },
@@ -43920,6 +44260,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Flocci Nivis",
         "author_url": "https://commons.wikimedia.org/wiki/User:FlocciNivis"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14063",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "inventors-and-scientists",
+      "bundle": "germany",
+      "description": "Eine Geschichte, die so hell leuchtet, dass man die Lücken darin kaum sieht.",
+      "question": "Ein ausgewanderter Mechaniker soll in New York schon vor Edison Glühlampen wie diese gebaut haben. Aus welcher Stadt bei Hannover stammte er?",
+      "answer": "Springe",
+      "wrong_answers": [
+        "Hameln",
+        "Celle",
+        "Peine"
+      ],
+      "hints": [
+        "Er hieß Heinrich Göbel.",
+        "Die Stadt liegt am Deister.",
+        "Ihr Name klingt wie ein Befehl zum Hüpfen."
+      ],
+      "fun_fact": "Belege für Göbels Erfindung fand man nie – die Geschichte entstand vor allem bei Patentstreitigkeiten gegen Edison um 1893.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Filament_Lamp.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFilament_Lamp.JPG",
+        "credit": "Pfnicholls · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pfnicholls",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Pfnicholls&action=edit&redlink=1"
       },
       "background": null
     },
@@ -44502,6 +44876,49 @@
       "background": null
     },
     {
+      "id": "q-14082",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "native-animals",
+      "bundle": "germany",
+      "description": "Kostenloses Gartenkonzert: kein Eintritt, keine Tickets und trotzdem jeden Tag ausverkauft.",
+      "question": "Hör zu: Welcher Vogel singt hier im Garten?",
+      "answer": "Amsel",
+      "wrong_answers": [
+        "Krähe",
+        "Stockente",
+        "Uhu"
+      ],
+      "hints": [
+        "Er singt oft schon in der Morgendämmerung auf Dächern und Antennen.",
+        "Er hüpft gern über den Rasen und zieht Würmer heraus.",
+        "Das Männchen ist schwarz und hat einen gelb-orangen Schnabel."
+      ],
+      "fun_fact": "Nur das Amselmännchen ist schwarz – das Weibchen ist braun.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Turdus_merula_-_Common_Blackbird_XC536573.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATurdus_merula_-_Common_Blackbird_XC536573.mp3",
+        "credit": "Marie-Lan Taÿ Pamart · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marie-Lan Taÿ Pamart",
+        "author_url": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/D%C3%BClmen%2C_M%C3%BChlenwegfriedhof_--_2012_--_8083.jpg/3840px-D%C3%BClmen%2C_M%C3%BChlenwegfriedhof_--_2012_--_8083.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_M%C3%BChlenwegfriedhof_--_2012_--_8083.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      }
+    },
+    {
       "id": "q-14083",
       "status": "approved",
       "difficulty": 1,
@@ -44736,6 +45153,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Raimond Spekking",
         "author_url": "https://www.wikidata.org/wiki/Q108103612"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14090",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pop-and-rock",
+      "bundle": "germany",
+      "description": "Ein Jurypult, an dem seit Jahrzehnten über große Gesangsträume entschieden wird.",
+      "question": "Wer saß bei „Deutschland sucht den Superstar“ seit 2002 in den meisten Staffeln in der Jury?",
+      "answer": "Dieter Bohlen",
+      "wrong_answers": [
+        "Heidi Klum",
+        "Joko Winterscheidt",
+        "Bruce Darnell"
+      ],
+      "hints": [
+        "Er ist auch Musikproduzent und Songschreiber.",
+        "In den 1980ern war er Teil von Modern Talking.",
+        "Er ist für seine knallharten Sprüche über die Kandidaten bekannt."
+      ],
+      "fun_fact": "Mit Modern Talking landete er 1984 den Hit „You're My Heart, You're My Soul“.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/QTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQTQ9_Sony_studio_camera_with_Canon_lense_20110815.jpg",
+        "credit": "NJM2010 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "NJM2010",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NJM2010&action=edit&redlink=1"
       },
       "background": null
     },
@@ -45012,6 +45463,40 @@
       "background": null
     },
     {
+      "id": "q-14099",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "athletes-and-other-sports",
+      "bundle": "germany",
+      "description": "Anlauf, Absprung, Sandkasten – und zwar auf Weltniveau.",
+      "question": "Welche Deutsche wurde 2021 in Tokio in dieser Disziplin Olympiasiegerin?",
+      "answer": "Malaika Mihambo",
+      "wrong_answers": [
+        "Gina Lückenkemper",
+        "Konstanze Klosterhalfen",
+        "Alica Schmidt"
+      ],
+      "hints": [
+        "Sie kommt aus der Nähe von Heidelberg.",
+        "2019 und 2022 wurde sie auch Weltmeisterin.",
+        "Ihr Vorname bedeutet auf Suaheli „Engel“."
+      ],
+      "fun_fact": "Malaika Mihambos Vater stammt aus Tansania.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Long_jump_area_at_TNT_-_Fortuna_Meeting_in_Kladno_16June2010_025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALong_jump_area_at_TNT_-_Fortuna_Meeting_in_Kladno_16June2010_025.jpg",
+        "credit": "User:Miaow Miaow · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "User:Miaow Miaow",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Miaow_Miaow"
+      },
+      "background": null
+    },
+    {
       "id": "q-14100",
       "status": "approved",
       "difficulty": 7,
@@ -45114,6 +45599,40 @@
       "background": null
     },
     {
+      "id": "q-14103",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "cakes-and-sweets",
+      "bundle": "germany",
+      "description": "Zwei Waffeln, eine Füllung und ein Name, der sich ein paar Buchstaben gespart hat.",
+      "question": "Die Waffel mit Nuss-Nougat-Creme gibt es seit 1959, und ihr Name „Hanuta“ ist eine Abkürzung. Wofür?",
+      "answer": "Haselnusstafel",
+      "wrong_answers": [
+        "Haselnusstaler",
+        "Haselnusstorte",
+        "Haselnusstüte"
+      ],
+      "hints": [
+        "Der Name verbindet die Hauptzutat mit einem zweiten Wort.",
+        "Das zweite Wort hat mit der Form der Waffel zu tun.",
+        "Gemeint ist dasselbe Wort wie in „Schokoladen…“."
+      ],
+      "fun_fact": "Hanuta kommt vom Süßwarenhersteller Ferrero, der auch Nutella herstellt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Hazelnuts_%28from_France%29.jpg/3840px-Hazelnuts_%28from_France%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHazelnuts_%28from_France%29.jpg",
+        "credit": "Vincent van Zeijst · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Vincent van Zeijst",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14104",
       "status": "approved",
       "difficulty": 2,
@@ -45178,6 +45697,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Jjkorff",
         "author_url": "https://commons.wikimedia.org/wiki/User:Jjkorff"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14106",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "carnival-and-fairs",
+      "bundle": "germany",
+      "description": "Kirmesglück ist wie das Wetter: Vorher weiß man nie, was kommt.",
+      "question": "An der Losbude rollst du dein Los auf und liest „Niete“. Was bedeutet das?",
+      "answer": "Du hast nichts gewonnen",
+      "wrong_answers": [
+        "Du hast den Hauptpreis",
+        "Du darfst zweimal ziehen",
+        "Du fährst gratis Karussell"
+      ],
+      "hints": [
+        "Es ist kein Grund zum Jubeln.",
+        "Die meisten Lose in der Trommel sind solche.",
+        "Das Gegenteil davon ist ein „Treffer“."
+      ],
+      "fun_fact": "„Niete“ kommt vom niederländischen Wort „niet“, und das heißt „nichts“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/2017-09-24_3895_Kirmes_K%C3%A4rlich_%28Foto_Sp%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2017-09-24_3895_Kirmes_K%C3%A4rlich_%28Foto_Sp%29.jpg",
+        "credit": "Spurzem · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Spurzem",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Spurzem"
       },
       "background": null
     },
@@ -45756,6 +46309,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Harald Krichel",
         "author_url": "https://www.wikidata.org/wiki/Q640"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14124",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Amtsdeutsch auf dem Teller: Selbst das Mittagessen hatte eine Dienstbezeichnung.",
+      "question": "Du liest eine alte DDR-Speisekarte: „Broiler“ ist zu Brathähnchen wie „Sättigungsbeilage“ zu …?",
+      "answer": "Kartoffeln, Reis oder Nudeln",
+      "wrong_answers": [
+        "Salat, Gurke oder Rohkost",
+        "Pudding, Kompott oder Eis",
+        "Soße, Senf oder Ketchup"
+      ],
+      "hints": [
+        "Ohne sie wäre der Teller ziemlich leer.",
+        "Sie liegt meist direkt neben dem Fleisch.",
+        "Typisch waren Salzkartoffeln."
+      ],
+      "fun_fact": "Das DDR-Wort „Broiler“ kommt aus dem Englischen, wo „to broil“ so viel wie grillen heißt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://live.staticflickr.com/6066/6065102639_bb6d18f9c0_b.jpg",
+        "source_url": "https://www.flickr.com/photos/31190570@N06/6065102639",
+        "credit": "herr.g · CC BY-SA 2.0 · Flickr via Openverse",
+        "provider": "openverse",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "author": "herr.g",
+        "author_url": "https://www.flickr.com/photos/31190570@N06"
       },
       "background": null
     },
@@ -46755,6 +47342,40 @@
       "background": null
     },
     {
+      "id": "q-14155",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "state-and-city-emblems",
+      "bundle": "germany",
+      "description": "Ein Bundesland, das farblich ganz klar bei den Hummeln abgeschaut hat.",
+      "question": "Die Landesflagge von Baden-Württemberg ist schwarz-gold. Aus dem Wappen welches alten Herzogtums stammen diese Farben?",
+      "answer": "Schwaben",
+      "wrong_answers": [
+        "Franken",
+        "Sachsen",
+        "Bayern"
+      ],
+      "hints": [
+        "Die drei schwarzen Löwen im Landeswappen kommen von dort.",
+        "Die Staufer waren dort Herzöge, bevor sie Kaiser wurden.",
+        "Die Menschen dort sagen gern „Schaffe, schaffe, Häusle baue“."
+      ],
+      "fun_fact": "Die drei schwarzen Löwen auf Gold im großen Landeswappen sind das alte Wappen der Staufer.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Neues_Schloss_Schlossplatzspringbrunnen_Jubil%C3%A4umss%C3%A4ule_Schlossplatz_Stuttgart_2015_02.jpg/3840px-Neues_Schloss_Schlossplatzspringbrunnen_Jubil%C3%A4umss%C3%A4ule_Schlossplatz_Stuttgart_2015_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANeues_Schloss_Schlossplatzspringbrunnen_Jubil%C3%A4umss%C3%A4ule_Schlossplatz_Stuttgart_2015_02.jpg",
+        "credit": "Julian Herzog (Website) · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Julian Herzog (Website)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Julian_Herzog"
+      },
+      "background": null
+    },
+    {
       "id": "q-14156",
       "status": "approved",
       "difficulty": 3,
@@ -47571,6 +48192,40 @@
       "background": null
     },
     {
+      "id": "q-14182",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "shows-and-presenters",
+      "bundle": "germany",
+      "description": "Wer gegen diesen Mann gewinnen wollte, brauchte Kraft, Köpfchen und viel Sitzfleisch.",
+      "question": "Bei ProSieben forderte ich bis 2015 Kandidaten in bis zu 15 Spielen heraus. Die Promi-Version meiner Show heißt „Schlag den Star“. Wer bin ich?",
+      "answer": "Stefan Raab",
+      "wrong_answers": [
+        "Joko Winterscheidt",
+        "Klaas Heufer-Umlauf",
+        "Elton"
+      ],
+      "hints": [
+        "Ich mache auch Musik und stand schon beim Eurovision Song Contest auf der Bühne.",
+        "Jahrelang habe ich die Sendung „TV total“ moderiert.",
+        "Mein Nachname klingt fast wie ein schwarzer Vogel."
+      ],
+      "fun_fact": "Manche Ausgaben von „Schlag den Raab“ dauerten über fünf Stunden und liefen bis tief in die Nacht.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/WWL-TV_Studios_New_OrleansJune_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWWL-TV_Studios_New_OrleansJune_2015.jpg",
+        "credit": "Infrogmation of New Orleans · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Infrogmation of New Orleans",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14183",
       "status": "approved",
       "difficulty": 10,
@@ -47737,6 +48392,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Harald Kreutzer Madagaskar Vision e.V.",
         "author_url": "https://commons.wikimedia.org/wiki/User:Hakr0003"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14188",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "slang-and-everyday-words",
+      "bundle": "germany",
+      "description": "Ein englisches Wort, das in England kaum jemand so benutzt.",
+      "question": "Wer immer wieder schikaniert wird, erlebt „Mobbing“. Das klingt englisch. Welches Wort sagt man dafür in England meist?",
+      "answer": "Bullying",
+      "wrong_answers": [
+        "Trolling",
+        "Roasting",
+        "Ghosting"
+      ],
+      "hints": [
+        "Im Englischen meint „mobbing“ eher eine wütende Menschenmenge.",
+        "Das Wort steckt auch im Englischen für einen Tyrannen.",
+        "Es beginnt wie das englische Wort für Stier."
+      ],
+      "fun_fact": "Ähnlich ist es beim „Handy“: Auch das sagt in England kaum jemand für ein Mobiltelefon.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/HK_TKL_%E8%AA%BF%E6%99%AF%E5%B6%BA_Tiu_Keng_Leng_%E6%98%8E%E6%84%9B_CBCC_CIHE_school_corridor_lockers_September_2019_SSG_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHK_TKL_%E8%AA%BF%E6%99%AF%E5%B6%BA_Tiu_Keng_Leng_%E6%98%8E%E6%84%9B_CBCC_CIHE_school_corridor_lockers_September_2019_SSG_05.jpg",
+        "credit": "WORSDI HDE9ORN · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "WORSDI HDE9ORN",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:WORSDI_HDE9ORN&action=edit&redlink=1"
       },
       "background": null
     },
@@ -48149,6 +48838,40 @@
       "background": null
     },
     {
+      "id": "q-14203",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "superstitions-and-folk-beliefs",
+      "bundle": "germany",
+      "description": "Eine Redewendung mit mehr Kreuzen als ein ausgefüllter Lottoschein.",
+      "question": "Nach der Mathearbeit seufzt jemand: „Da mache ich drei Kreuze!“ Was meint er damit?",
+      "answer": "Er ist froh, dass es vorbei ist",
+      "wrong_answers": [
+        "Er hat drei Aufgaben falsch",
+        "Er will die Arbeit wiederholen",
+        "Er hat bei der Arbeit geschummelt"
+      ],
+      "hints": [
+        "Die Kreuze stammen ursprünglich aus der Kirche.",
+        "Früher bekreuzigten sich Menschen so, wenn eine Gefahr überstanden war.",
+        "Man atmet dabei tief durch und denkt: „Puh, geschafft!“"
+      ],
+      "fun_fact": "Vermutlich stammt die Redewendung vom Brauch, sich nach etwas Überstandenem dankbar zu bekreuzigen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Wayside_cross_near_K%C3%B6lburg_%28Monheim%29%2C_Bavaria%2C_April_2024_02.jpg/3840px-Wayside_cross_near_K%C3%B6lburg_%28Monheim%29%2C_Bavaria%2C_April_2024_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWayside_cross_near_K%C3%B6lburg_%28Monheim%29%2C_Bavaria%2C_April_2024_02.jpg",
+        "credit": "Calistemon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Calistemon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Calistemon"
+      },
+      "background": null
+    },
+    {
       "id": "q-14204",
       "status": "approved",
       "difficulty": 4,
@@ -48281,6 +49004,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Gerwin Sturm from Vienna, Austria",
         "author_url": "https://www.flickr.com/people/9294749@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14208",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "superstitions-and-folk-beliefs",
+      "bundle": "germany",
+      "description": "Wenn sogar Gespenster pünktlich zur Arbeit erscheinen.",
+      "question": "Laut Volksglauben beginnt um Mitternacht die Geisterstunde. Um wie viel Uhr endet sie?",
+      "answer": "1 Uhr",
+      "wrong_answers": [
+        "2 Uhr",
+        "4 Uhr",
+        "6 Uhr"
+      ],
+      "hints": [
+        "Der Name verrät schon, wie lange sie dauert.",
+        "Sie dauert genau 60 Minuten.",
+        "Die Turmuhr schlägt dann nur ein einziges Mal."
+      ],
+      "fun_fact": "In vielen Sagen müssen Gespenster spätestens beim ersten Hahnenschrei verschwinden.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Munich_-_Night_view_of_the_Frauenkirche_-_9323.jpg/3840px-Munich_-_Night_view_of_the_Frauenkirche_-_9323.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMunich_-_Night_view_of_the_Frauenkirche_-_9323.jpg",
+        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jorge Royan",
+        "author_url": null
       },
       "background": null
     },
@@ -48519,6 +49276,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Sandro Halank, Wikimedia Commons",
         "author_url": "https://commons.wikimedia.org/wiki/User:Sandro_Halank"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14216",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "winter-sports",
+      "bundle": "germany",
+      "description": "Zwei Buchstaben, die angeben, wie viel Mut man mitbringen sollte.",
+      "question": "Bei der Vierschanzentournee hörst du „Schanze HS 142“. Welches Maß hat dort den alten K-Punkt als Größenangabe abgelöst?",
+      "answer": "Hill Size",
+      "wrong_answers": [
+        "Hill Slope",
+        "Hangstrecke",
+        "Höchstsprung"
+      ],
+      "hints": [
+        "Das Maß beschreibt die ganze Schanze, nicht nur einen Punkt am Hang.",
+        "Gemessen wird vom Schanzentisch bis zum Ende des Landebereichs.",
+        "Übersetzt heißt es „Hanggröße“."
+      ],
+      "fun_fact": "Das K im K-Punkt stand ursprünglich für „kritischer Punkt“, heute offiziell für „Konstruktionspunkt“.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Ski_jumping_hill_oberstdorf_germany_2.jpg/3840px-Ski_jumping_hill_oberstdorf_germany_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASki_jumping_hill_oberstdorf_germany_2.jpg",
+        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Arne Müseler",
+        "author_url": "https://www.wikidata.org/wiki/Q78209280"
       },
       "background": null
     },
