@@ -356,7 +356,8 @@
     {
       "name": "Nachos",
       "facet": "Tex-Mex and Southwestern dishes",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The name, the cheese topping and the inventor are already asked, and corn is asked many times over; nothing fresh is left at level 2."
     },
     {
       "name": "Salsa",
@@ -1082,7 +1083,8 @@
     {
       "name": "Thanksgiving turkey",
       "facet": "Food festivals and regional food traditions",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The turkey, Thanksgiving and the Franklin story are already asked; the options left (an origin person at level 1) would be forced or repeat Native Americans."
     },
     {
       "name": "Corn dog",

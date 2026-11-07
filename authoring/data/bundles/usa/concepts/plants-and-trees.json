@@ -156,7 +156,8 @@
     {
       "name": "Oak",
       "facet": "State trees and flowers",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The national tree, ships, and other oak facts are already asked; the record options give no clear US fact."
     },
     {
       "name": "Southern magnolia",
@@ -798,7 +799,8 @@
     {
       "name": "Mistletoe",
       "facet": "Poisonous and prickly plants",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The kissing tradition and the parasite fact are already asked; the remaining options are forced."
     },
     {
       "name": "Giant hogweed",

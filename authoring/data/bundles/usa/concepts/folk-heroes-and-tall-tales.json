@@ -226,7 +226,8 @@
     {
       "name": "Febold Feboldson",
       "facet": "Railroad and working-hero legends",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: This hero is very obscure. I can't confirm enough facts about him, and the options don't fit."
     },
     {
       "name": "Kemp Morgan",
@@ -461,7 +462,8 @@
     {
       "name": "Tar-Baby",
       "facet": "Tricksters and African American folktales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: “Tar-Baby” is also used as an insult about race, so it is risky for a family game; the pool already has a question about the tar doll."
     },
     {
       "name": "Briar patch",
@@ -526,7 +528,8 @@
     {
       "name": "Spinning a yarn",
       "facet": "Tall-tale talk and exaggeration",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: “Spinning a yarn” is a sailors' phrase used across the English-speaking world, not something only Americans would know."
     },
     {
       "name": "Liars' contest",

@@ -271,7 +271,8 @@
     {
       "name": "Blacksmith",
       "facet": "Colonial daily life and trades",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Blacksmith from an anvil/horseshoe close-up repeats the two existing questions; count/estimate options don't fit."
     },
     {
       "name": "Cooper",
@@ -406,7 +407,8 @@
     {
       "name": "Boston Tea Party",
       "facet": "Road to revolution",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The event's name, the city and the king are already asked; a riddle or odd-one-out at difficulty 2 would repeat them."
     },
     {
       "name": "Intolerable Acts",

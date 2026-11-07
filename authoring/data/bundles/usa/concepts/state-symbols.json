@@ -428,7 +428,8 @@
     {
       "name": "Texan",
       "facet": "Names of state residents",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Easy Texan resident-name facts are already in the pool (Texan/Alaskan analogy, New Yorkian odd-one-out); the options would not give a fair difficulty-2 question."
     },
     {
       "name": "Floridian",
@@ -468,7 +469,8 @@
     {
       "name": "Mainer",
       "facet": "Names of state residents",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Mainer/Maine resident-name facts are already covered (analogy, Stephen King); the options make forced questions."
     },
     {
       "name": "Arkansan",
