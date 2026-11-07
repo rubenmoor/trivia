@@ -86,7 +86,8 @@
     {
       "name": "San Francisco",
       "facet": "Big cities and skylines",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The easy San Francisco facts are all in the pool already. What's left is forced or too hard for difficulty 3."
     },
     {
       "name": "Pittsburgh",
@@ -766,7 +767,8 @@
     {
       "name": "Springfield (The Simpsons)",
       "facet": "Cities in movies and TV",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The pool already asks the one easy fact, which city the Simpsons live in. Franchise characters can't be essential media."
     },
     {
       "name": "Gotham City",

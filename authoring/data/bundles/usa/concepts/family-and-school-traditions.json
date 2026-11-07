@@ -71,7 +71,8 @@
     {
       "name": "Recess",
       "facet": "School day rituals",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Existing questions already cover the bell, the playground and what kids do at recess."
     },
     {
       "name": "Hall pass",
@@ -613,7 +614,8 @@
     {
       "name": "Birthday wish",
       "facet": "Birthday and party customs",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The existing question already covers the candles, the wish and keeping it secret."
     },
     {
       "name": "Surprise party",
@@ -688,7 +690,8 @@
     {
       "name": "Bouquet toss",
       "facet": "Wedding and baby customs",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The existing question covers the toss and its meaning; the garter angle isn't family-friendly and I'm not sure of the origin dates."
     },
     {
       "name": "Garter toss",
