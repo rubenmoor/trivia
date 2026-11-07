@@ -1157186,8 +1157186,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Quedlinburg Samuel Gospels",
-        "note": "Foto eines Stücks aus dem Quedlinburger Domschatz, z. B. Reliquiar oder Samuel-Evangeliar, ohne Beschriftung",
+        "query": "Quedlinburg Domschatz reliquary",
+        "note": "Foto eines Stücks aus dem Quedlinburger Domschatz, z. B. Reliquiar oder Samuhel-Evangeliar, ohne Beschriftung",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1157220,27 +1157220,41 @@
       "batch": "batch-49",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates is usable. The search for \"Quedlinburg Samuel Gospels\" returned only Sam Cooke pictures: portraits, his grave, his camera, his outfit and a Billboard ad. The essential slot needs a photo of a piece from the Quedlinburg cathedral treasure, and no new search is allowed. A new search such as \"Quedlinburg Domschatz reliquary\" or \"Samuhel-Evangeliar Quedlinburg\" should be run manually. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates is usable. The search for \"Quedlinburg Samuel Gospels\" returned only Sam Cooke pictures: portraits, his grave, his camera, his outfit and a Billboard ad. The essential slot needs a photo of a piece from the Quedlinburg cathedral treasure, and no new search is allowed. A new search such as \"Quedlinburg Domschatz reliquary\" or \"Samuhel-Evangeliar Quedlinburg\" should be run manually. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out the European options, with a vague hint that rules out no option.",
+        "reason": "No usable image came back, so I changed the search term for the essential photo to target the Quedlinburg cathedral treasure itself.",
         "previous": {
-          "hints": [
-            "Der Dieb versteckte den Schatz weit weg von Europa.",
-            "Als seine Erben ihn verkaufen wollten, flog alles auf.",
-            "Der Schatz lag jahrzehntelang in Texas."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Quedlinburg Samuel Gospels",
+            "note": "Foto eines Stücks aus dem Quedlinburger Domschatz, z. B. Reliquiar oder Samuel-Evangeliar, ohne Beschriftung",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1159296,7 +1159310,7 @@
     },
     {
       "id": "q-14975",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Plötzlich ein dickes Geldpaket, und alle fragen sich, wer es auspacken darf.",
       "question": "Kurz nach dem russischen Angriff auf die Ukraine 2022 kündigte Olaf Scholz 100 Milliarden Euro extra an. Wer bekam das Geld?",
@@ -1159307,7 +1159321,7 @@
         "Die Krankenhäuser"
       ],
       "hints": [
-        "Scholz kündigte es in seiner berühmten „Zeitenwende“-Rede im Bundestag an.",
+        "Scholz kündigte es an einem Sonntag in einer Sondersitzung des Bundestags an.",
         "Seit Jahren klagten viele, dass die Ausrüstung dort alt oder kaputt sei.",
         "Gemeint sind Deutschlands Soldatinnen und Soldaten."
       ],
@@ -1159354,26 +1159368,34 @@
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlap with approved q-9164 (\"In welchem Jahr sprach Olaf Scholz im Bundestag von einer „Zeitenwende“?\" → 2022): this question says the announcement came in 2022, and hint 1 says it was made in the „Zeitenwende“ speech in the Bundestag. Anyone who sees this question gets q-9164's answer. Hint 1 should drop the „Zeitenwende“ reference and use a vague hint instead, for example that the announcement came in a special Bundestag session.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlap with approved q-9164 (\"In welchem Jahr sprach Olaf Scholz im Bundestag von einer „Zeitenwende“?\" → 2022): this question says the announcement came in 2022, and hint 1 says it was made in the „Zeitenwende“ speech in the Bundestag. Anyone who sees this question gets q-9164's answer. Hint 1 should drop the „Zeitenwende“ reference and use a vague hint instead, for example that the announcement came in a special Bundestag session.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which pointed straight to defence, with vaguer hints as the reviewer suggested.",
+        "reason": "Hint 1 no longer mentions the „Zeitenwende“ speech, so it doesn't overlap with q-9164.",
         "previous": {
           "hints": [
-            "Es ging um Sicherheit und Verteidigung.",
-            "Davon sollten zum Beispiel neue Kampfflugzeuge gekauft werden.",
+            "Scholz kündigte es in seiner berühmten „Zeitenwende“-Rede im Bundestag an.",
+            "Seit Jahren klagten viele, dass die Ausrüstung dort alt oder kaputt sei.",
             "Gemeint sind Deutschlands Soldatinnen und Soldaten."
           ]
         },
@@ -1159454,7 +1159476,7 @@
     },
     {
       "id": "q-14977",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Zehn Finger, eine Form und plötzlich ein Wahlplakat.",
       "question": "Wer hat diese Handhaltung als Markenzeichen berühmt gemacht?",
@@ -1159485,7 +1159507,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "2013 hing in Berlin ein riesiges CDU-Plakat, das aus über 2000 Fotos zusammengesetzt nur diese Hände zeigte.",
+      "fun_fact": "2013 hing in Berlin ein riesiges CDU-Plakat, das aus vielen kleinen Fotos zusammengesetzt nur diese Hände zeigte.",
       "subcategory": "chancellors-and-presidents",
       "style": null,
       "concept": "Merkel-Raute",
@@ -1159508,40 +1159530,43 @@
         "difficulty_estimate": 4,
         "notes": "Essential image risk: most Commons photos of the 'Raute' gesture probably show Merkel's face, and the note requires hands only. Fun fact: the 2013 poster used about 2150 photos; 'tausende' is a bit loose."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. Answer and hints are fine. The 2013 giant CDU poster of the Raute near Berlin Hauptbahnhof is confirmed, and it was a mosaic of small pictures. I could not verify the 'over 2000 photos' number.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. Answer and hints are fine. The 2013 giant CDU poster of the Raute near Berlin Hauptbahnhof is confirmed, and it was a mosaic of small pictures. I could not verify the 'over 2000 photos' number.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the 'Mutti' hint with a vaguer one about growing up in the GDR, and corrected the photo count in the fun fact.",
+        "reason": "I took the unverified '2000 photos' number out of the fun fact and kept only the confirmed mosaic.",
         "previous": {
-          "hints": [
-            "Diese Person regierte Deutschland sehr lange.",
-            "Viele nannten sie „Mutti“.",
-            "Sie war die erste Frau im Kanzleramt."
-          ],
-          "fun_fact": "2013 hing in Berlin ein riesiges CDU-Plakat, das aus tausenden Fotos zusammengesetzt nur diese Hände zeigte."
+          "fun_fact": "2013 hing in Berlin ein riesiges CDU-Plakat, das aus über 2000 Fotos zusammengesetzt nur diese Hände zeigte."
         },
         "revised_on": "2026-11-07"
       }
     },
     {
       "id": "q-14978",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Zwei Freunde, ein Wegweiser und ein ziemlich großer Umweg.",
       "question": "Der kleine Bär und der kleine Tiger suchen das Land ihrer Träume. Ergänze den Buchtitel von Janosch: „Oh, wie schön ist …“",
@@ -1159559,11 +1159584,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Tigerente wooden toy",
+        "query": "Janosch Tigerente",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATigerente_am_Janosch-Spielplatz_in_Bad_Zwischenahn_%282025%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Tigerente_am_Janosch-Spielplatz_in_Bad_Zwischenahn_%282025%29.jpg/3840px-Tigerente_am_Janosch-Spielplatz_in_Bad_Zwischenahn_%282025%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "JoachimKohler-HB · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JoachimKohler-HB",
+        "author_url": "https://commons.wikimedia.org/wiki/User:JoachimKohler-HB",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Am Ende laufen die beiden im Kreis und landen wieder zu Hause, das sie plötzlich wunderschön finden.",
       "subcategory": "childrens-books-and-comics",
@@ -1159588,23 +1159620,47 @@
         "difficulty_estimate": 3,
         "notes": "Shares a topic with the Tigerente/Janosch question and the answer with the Panama Canal questions, but asks a different fact. The Tigerente toy image is a nice illustrative choice."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine (the facts about Janosch's book, the hints and the fun fact all check out), but none of the image candidates shows the Tigerente or anything else from the book. They are a boomerang, toy trains, train tracks and a wooden castle. The slot needs a real Tigerente pull-along toy, or something from the book's world such as a teddy bear and a toy tiger, or a banana crate. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine (the facts about Janosch's book, the hints and the fun fact all check out), but none of the image candidates shows the Tigerente or anything else from the book. They are a boomerang, toy trains, train tracks and a wooden castle. The slot needs a real Tigerente pull-along toy, or something from the book's world such as a teddy bear and a toy tiger, or a banana crate. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable image came back, so I changed the search term to look for Janosch's Tigerente directly.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Tigerente wooden toy",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14979",
@@ -1162761,11 +1162817,11 @@
     },
     {
       "id": "q-15020",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Der einzige Fernsehstar, der sein Publikum absichtlich einschlafen lässt.",
       "question": "Abends im Fernsehen: Wie lange dauert eine Sendung „Unser Sandmännchen“ ungefähr?",
-      "answer": "Etwa 10 Minuten",
+      "answer": "Etwa 7 Minuten",
       "wrong_answers": [
         "Etwa 30 Sekunden",
         "Etwa 1 Stunde",
@@ -1162815,33 +1162871,36 @@
         "difficulty_estimate": 2,
         "notes": "The distractors (30 seconds, 1 hour, 2 hours) are far off, so the answer is trivial. Hint 3 has a grammar error: 'ein Gute-Nacht-Gruß' should be 'einen'. The roughly 10-minute length is right."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The usual length of 'Unser Sandmännchen' is reported as about 5–7 minutes (rbb: about 7). Only special Advent episodes ran 10–12 minutes. 'Etwa 10 Minuten' is therefore not accurate for a normal episode, though it is the closest of the options. The 22 Nov 1959 first broadcast is correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The usual length of 'Unser Sandmännchen' is reported as about 5–7 minutes (rbb: about 7). Only special Advent episodes ran 10–12 minutes. 'Etwa 10 Minuten' is therefore not accurate for a normal episode, though it is the closest of the options. The 22 Nov 1959 first broadcast is correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description that hinted at the show's length and fixed hint 3's grammar.",
+        "reason": "A normal episode runs about 5–7 minutes, so I changed the answer from 10 to about 7 minutes.",
         "previous": {
-          "description": "Die kürzeste Gute-Nacht-Verhandlung des Tages.",
-          "hints": [
-            "Danach sollen Kinder ins Bett gehen.",
-            "Es ist länger als ein Werbespot.",
-            "Es reicht gerade für eine kurze Geschichte und ein Gute-Nacht-Gruß."
-          ]
+          "answer": "Etwa 10 Minuten"
         },
         "revised_on": "2026-11-07"
       }
@@ -1164541,7 +1164600,7 @@
     },
     {
       "id": "q-15043",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Wer mehr Kohle schaufelt als alle anderen, bekommt Blumen, Orden und den Neid der ganzen Schicht.",
       "question": "Die Hennecke-Bewegung von 1948 kopierte einen sowjetischen Rekord-Bergmann. Wann hatte dieser Vorbild-Rekord stattgefunden?",
@@ -1164559,20 +1164618,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "coal miner pickaxe underground",
+        "query": "coal mine headframe",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMiners_working_underground_-_DPLA_-_998b15cfb11b34bb1e8e75d065981619.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Miners_working_underground_-_DPLA_-_998b15cfb11b34bb1e8e75d065981619.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "McLean, Lachlan, 1843-1929 · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABytom_Bobrek_coal_mine.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Bytom_Bobrek_coal_mine.jpg/3840px-Bytom_Bobrek_coal_mine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Adrian Tync · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "McLean, Lachlan, 1843-1929",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Adrian Tync",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gower",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Adolf Hennecke förderte am 13. Oktober 1948 in einer gut vorbereiteten Schicht 387 Prozent seiner Tagesnorm.",
       "subcategory": "gdr-history",
@@ -1164601,19 +1164658,52 @@
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The chosen picture is licensed for the US only, so I set a new search term to get a different mining image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "coal miner pickaxe underground",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMiners_working_underground_-_DPLA_-_998b15cfb11b34bb1e8e75d065981619.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Miners_working_underground_-_DPLA_-_998b15cfb11b34bb1e8e75d065981619.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "McLean, Lachlan, 1843-1929 · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "McLean, Lachlan, 1843-1929",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15044",
@@ -1170208,7 +1170298,7 @@
     },
     {
       "id": "q-15117",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Stahlriesen, die nie Feierabend machen, nicht mal am Sonntag.",
       "question": "Im Hamburger Hafen stehen riesige Kräne, so hoch wie Hochhäuser. Wozu dienen sie vor allem?",
@@ -1170226,10 +1170316,10 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Hamburg Speicherstadt canal",
+        "query": "Hamburg Landungsbrücken",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHamburg%2C_Speicherstadt%2C_Block_P_--_2016_--_3330-6.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Hamburg%2C_Speicherstadt%2C_Block_P_--_2016_--_3330-6.jpg/3840px-Hamburg%2C_Speicherstadt%2C_Block_P_--_2016_--_3330-6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Hamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg/3840px-Hamburg%2C_Landungsbr%C3%BCcken_--_2016_--_3131-7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
         "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
@@ -1170262,23 +1170352,54 @@
         "difficulty_estimate": 3,
         "notes": "The question is a bit dry and easy to reason out. The axes say photo stimulus, but the media is an illustrative Speicherstadt canal, which has no container cranes; 'Hamburg container terminal cranes' would show the world of the question better."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The facts are fine (container cranes, Hamburg is Germany's largest seaport). But the image query 'Hamburg Speicherstadt canal' does not show cranes and does not match the question (the question says 'photo' stimulus).",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The facts are fine (container cranes, Hamburg is Germany's largest seaport). But the image query 'Hamburg Speicherstadt canal' does not show cranes and does not match the question (the question says 'photo' stimulus).",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I changed the image to a Hamburg harbour scene that fits the question but doesn't show container cranes, which would give the answer away.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Hamburg Speicherstadt canal",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AHamburg%2C_Speicherstadt%2C_Block_P_--_2016_--_3330-6.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Hamburg%2C_Speicherstadt%2C_Block_P_--_2016_--_3330-6.jpg/3840px-Hamburg%2C_Speicherstadt%2C_Block_P_--_2016_--_3330-6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Dietmar Rabich",
+            "author_url": "https://www.wikidata.org/wiki/Q34788025",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15118",
@@ -1172239,7 +1172360,7 @@
     },
     {
       "id": "q-15144",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Ein Brief, der aus einem Schulabgänger einen Mann in Steingrau machte.",
       "question": "Ab 1962 galt in der DDR die Wehrpflicht. Junge Männer bekamen um 18 Post und mussten 18 Monate in steingrauer Uniform dienen. Wohin?",
@@ -1172250,7 +1172371,7 @@
         "Zur Gesellschaft für Sport und Technik"
       ],
       "hints": [
-        "Es war die eigene Armee der DDR.",
+        "Die jungen Männer lebten dort meist in Kasernen, oft weit weg von zu Hause.",
         "Sie wurde 1956 gegründet, nur wenige Monate nach der Bundeswehr.",
         "Ihre Abkürzung hatte drei Buchstaben und begann mit N."
       ],
@@ -1172297,26 +1172418,46 @@
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 („Es war die eigene Armee der DDR.“) gives the answer away: of the four options, only the Nationale Volksarmee is the GDR's own army, so the first, supposedly vague hint already settles the question. Hint 1 should give vaguer context instead, e.g. the barracks life or that conscripts swore an oath, without saying it was the GDR's own army.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 („Es war die eigene Armee der DDR.“) gives the answer away: of the four options, only the Nationale Volksarmee is the GDR's own army, so the first, supposedly vague hint already settles the question. Hint 1 should give vaguer context instead, e.g. the barracks life or that conscripts swore an oath, without saying it was the GDR's own army.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 1 gave the answer away, so I replaced it with a vaguer hint about life in the barracks.",
+        "previous": {
+          "hints": [
+            "Es war die eigene Armee der DDR.",
+            "Sie wurde 1956 gegründet, nur wenige Monate nach der Bundeswehr.",
+            "Ihre Abkürzung hatte drei Buchstaben und begann mit N."
+          ]
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15145",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Lange Sitzungen, dicke Akten und jede Menge Stempel – Ost-Berliner Büroalltag vom Feinsten.",
-      "question": "Willi Stoph leitete es lange, Hans Modrow 1989/90. Welches Gremium war die Regierung der DDR?",
+      "question": "Hans Modrow war 1989/90 sein Vorsitzender. Welches Gremium bildete die Regierung der DDR?",
       "answer": "Ministerrat",
       "wrong_answers": [
         "Staatsrat",
@@ -1172371,24 +1172512,32 @@
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text says Willi Stoph led the GDR government for a long time, which gives away approved q-12080 (\"Brandt meets the DDR Ministerpräsident in Erfurt 1970 – who was it?\" → Willi Stoph). q-12080 in turn ties Stoph to the head-of-government role and so hints at this answer. A reworded version could drop Stoph and keep only Modrow, or use another clue such as the seat or role of the body.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text says Willi Stoph led the GDR government for a long time, which gives away approved q-12080 (\"Brandt meets the DDR Ministerpräsident in Erfurt 1970 – who was it?\" → Willi Stoph). q-12080 in turn ties Stoph to the head-of-government role and so hints at this answer. A reworded version could drop Stoph and keep only Modrow, or use another clue such as the seat or role of the body.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says where the power lay, which ruled out Politbüro.",
+        "reason": "Removed the Willi Stoph clue so it no longer gives away q-12080; only Modrow is left.",
         "previous": {
-          "description": "Viele Sessel, ein Vorsitzender – und trotzdem kam das Sagen von woanders."
+          "question": "Willi Stoph leitete es lange, Hans Modrow 1989/90. Welches Gremium war die Regierung der DDR?"
         },
         "revised_on": "2026-11-07"
       }
@@ -1173420,7 +1173569,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "car side mirror flag",
+        "query": "Germany flag car mirror cover",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1173454,28 +1173603,41 @@
       "batch": "batch-49",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates works. 1 and 2 are side views of 1980s AMC cars with a US flag hanging between fire-truck ladders, not a flag on a car mirror. 3 and 4 are Soviet savings cheques, 5 is an 1891 tram and 6 is a florist's display. Search again with something like 'Germany car mirror flag' or 'Autospiegel Fahne' for a picture of black-red-gold mirror covers on a car. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates works. 1 and 2 are side views of 1980s AMC cars with a US flag hanging between fire-truck ladders, not a flag on a car mirror. 3 and 4 are Soviet savings cheques, 5 is an 1891 tram and 6 is a florist's display. Search again with something like 'Germany car mirror flag' or 'Autospiegel Fahne' for a picture of black-red-gold mirror covers on a car. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the two-year timing from the description and replaced the goal-based hint 2, both of which ruled out options.",
+        "reason": "Changed the image query so it finds black-red-gold mirror covers on a car.",
         "previous": {
-          "description": "Ein Auto, das eine Socke trägt, aber nur alle zwei Jahre.",
-          "hints": [
-            "Man sieht sie vor allem im Sommer bei großen Turnieren.",
-            "Dazu gehören oft auch Hupkonzerte nach Toren.",
-            "Es geht um elf Spieler auf dem Rasen."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "car side mirror flag",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1173866,9 +1174028,9 @@
     },
     {
       "id": "q-15165",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "Eine Sammlung, in der fast jede Großmutter Ärger mit einem Wolf bekommt.",
+      "description": "Zwei Brüder, die statt Briefmarken lieber Geschichten gesammelt haben.",
       "question": "Welches dieser Märchen steht NICHT in den „Kinder- und Hausmärchen“ der Brüder Grimm?",
       "answer": "Die kleine Meerjungfrau",
       "wrong_answers": [
@@ -1173924,28 +1174086,32 @@
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"fast jede Großmutter bekommt Ärger mit einem Wolf\") points straight at Rotkäppchen. It tells players Rotkäppchen is in the collection, so that option is ruled out before any hint. Rewrite it to play on fairy tales or the Grimm brothers without hinting at any of the four tales, for example a joke about two brothers collecting stories instead of stamps.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"fast jede Großmutter bekommt Ärger mit einem Wolf\") points straight at Rotkäppchen. It tells players Rotkäppchen is in the collection, so that option is ruled out before any hint. Rewrite it to play on fairy tales or the Grimm brothers without hinting at any of the four tales, for example a joke about two brothers collecting stories instead of stamps.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which was a near-giveaway and arguably true of Rotkäppchen, with an accurate hint that the tale was invented by a single writer.",
+        "reason": "Rewrote the description because it pointed at Rotkäppchen and ruled that option out.",
         "previous": {
-          "hints": [
-            "Das gesuchte Märchen stammt gar nicht aus Deutschland.",
-            "Sein Autor kam aus Dänemark.",
-            "Hans Christian Andersen hat es geschrieben."
-          ]
+          "description": "Eine Sammlung, in der fast jede Großmutter Ärger mit einem Wolf bekommt."
         },
         "revised_on": "2026-11-07"
       }
@@ -1174181,7 +1174347,7 @@
       "hints": [
         "Es geht um die Gesundheit, nicht um den Geschmack.",
         "Für Mett gelten beim Metzger strengere Hygieneregeln als für fast jede andere Wurst.",
-        "Mett kommt nie in eine Pfanne."
+        "Aufs Brötchen kommt Mett, ohne vorher gebraten oder gekocht zu werden."
       ],
       "media": {
         "type": "image",
@@ -1174227,25 +1174393,35 @@
       "batch": "batch-49",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 3 (\"Mett kommt nie in eine Pfanne\") is factually wrong: Mett is often fried, e.g. in Käse-Lauch-Suppe, Mettbällchen or Mettsoße. Reword it so it is true, e.g. \"Auf dem Brötchen wird Mett nicht gebraten oder gekocht.\"",
+        "feedback": "Hint 1 (\"Es geht um die Gesundheit, nicht um den Geschmack.\") rules out all three wrong answers, since each is about taste or texture, so it gives the answer away. Hint 1 should be vague, for example about the context in which Mett is eaten, without separating health from taste.",
         "problems": [
-          "fact"
+          "giveaway"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 (\"Mett kommt nie in eine Pfanne\") is factually wrong: Mett is often fried, e.g. in Käse-Lauch-Suppe, Mettbällchen or Mettsoße. Reword it so it is true, e.g. \"Auf dem Brötchen wird Mett nicht gebraten oder gekocht.\"",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, whose Frikadelle contrast pointed to cooking, with a hint about strict hygiene rules.",
+        "reason": "Replaced the false hint 3 (Mett does get fried in other dishes) with a true one.",
         "previous": {
           "hints": [
             "Es geht um die Gesundheit, nicht um den Geschmack.",
-            "Bei einer Frikadelle aus demselben Hack ist das weniger streng.",
+            "Für Mett gelten beim Metzger strengere Hygieneregeln als für fast jede andere Wurst.",
             "Mett kommt nie in eine Pfanne."
           ]
         },
@@ -1174411,38 +1174587,38 @@
     },
     {
       "id": "q-15172",
-      "status": "needs_work",
-      "difficulty": 5,
+      "status": "approved",
+      "difficulty": 8,
       "description": "Ein Rätsel mit doppeltem Boden: Hier ist nicht alles, was es zu sein scheint.",
-      "question": "„Ich stehe ganz still und stumm auf einem Bein, trage ein purpurrotes Mäntlein und ein schwarzes Käppchen.“ Wer bin ich?",
-      "answer": "Das Männlein im Walde",
+      "question": "Im Lied „Ein Männlein steht im Walde“ trägt es ein purpurrotes Mäntlein und ein schwarzes Käppchen. Was ist das Männlein?",
+      "answer": "Hagebutte",
       "wrong_answers": [
-        "Rotkäppchen",
-        "Der Hampelmann",
-        "Der Struwwelpeter"
+        "Fliegenpilz",
+        "Marienkäfer",
+        "Gartenzwerg"
       ],
       "hints": [
-        "Über mich wird gern im Herbst gesungen.",
-        "Hoffmann von Fallersleben hat mein Lied gedichtet.",
-        "Eigentlich bin ich eine Hagebutte, aber im Lied nennt man mich einen kleinen Mann."
+        "Über das Männlein wird gern im Herbst gesungen.",
+        "Es wächst an einem stacheligen Strauch.",
+        "Es ist die Frucht der Rose, aus der man Tee und Marmelade macht."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
         "query": "autumn forest path",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AForest_path%2C_Ehrenbach.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Forest_path%2C_Ehrenbach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Gerda Arendt · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAutumn_Forest_Path_with_Tall_Trees.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Autumn_Forest_Path_with_Tall_Trees.jpg/3840px-Autumn_Forest_Path_with_Tall_Trees.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vovogov90 · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Gerda Arendt",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Gerda_Arendt",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Vovogov90",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Vovogov90&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Die Lösung des Liedrätsels ist die Hagebutte. Viele denken beim Singen aber an einen Fliegenpilz.",
+      "fun_fact": "Viele denken beim Singen an einen Fliegenpilz, dabei hat der weiße Punkte und kein schwarzes Käppchen.",
       "subcategory": "schlager-and-folk-music",
       "style": null,
       "concept": "Ein Männlein steht im Walde",
@@ -1174465,23 +1174641,53 @@
         "difficulty_estimate": 5,
         "notes": "The riddle's real solution is the Hagebutte, while the answer given is the song's figure. That is acceptable but a little blurry. The description is generic and not very funny."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The song's riddle solution is the Hagebutte (rose hip), as the hint and fun fact say. The answer \"Das Männlein im Walde\" is only the song's title figure. The question's paraphrase also differs from the original lyrics (\"ein Männlein steht im Walde…\"). Facts about Hoffmann von Fallersleben and the Hagebutte are correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The song's riddle solution is the Hagebutte (rose hip), as the hint and fun fact say. The answer \"Das Männlein im Walde\" is only the song's title figure. The question's paraphrase also differs from the original lyrics (\"ein Männlein steht im Walde…\"). Facts about Hoffmann von Fallersleben and the Hagebutte are correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "difficulty_original": 5,
+      "revision": {
+        "action": "revise",
+        "reason": "The real answer to the song's riddle is the rose hip, not the song's title figure, so the question now asks what the Männlein really is (answer: Hagebutte) and quotes the song correctly.",
+        "previous": {
+          "difficulty": 5,
+          "question": "„Ich stehe ganz still und stumm auf einem Bein, trage ein purpurrotes Mäntlein und ein schwarzes Käppchen.“ Wer bin ich?",
+          "answer": "Das Männlein im Walde",
+          "wrong_answers": [
+            "Rotkäppchen",
+            "Der Hampelmann",
+            "Der Struwwelpeter"
+          ],
+          "hints": [
+            "Über mich wird gern im Herbst gesungen.",
+            "Hoffmann von Fallersleben hat mein Lied gedichtet.",
+            "Eigentlich bin ich eine Hagebutte, aber im Lied nennt man mich einen kleinen Mann."
+          ],
+          "fun_fact": "Die Lösung des Liedrätsels ist die Hagebutte. Viele denken beim Singen aber an einen Fliegenpilz."
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15173",
@@ -1174784,14 +1174990,24 @@
       "batch": "batch-49",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: uncertain. I couldn't retrieve the German lyrics. The words klein, frech and schlau match the well-known 'kleine, freche, schlaue Biene Maja' as I remember it, and 'fleißig' is not one of them. I couldn't verify that hint 2 is right about where these words sit relative to the line 'Und diese Biene, die ich meine, nennt sich Maja'.",
+        "feedback": "Fact check: uncertain. Could not verify the exact lyric. The hint says the three adjectives are 'kleine, freche, schlaue', but I found no lyric source. I also did not confirm that 'fleißig' is absent.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. I couldn't retrieve the German lyrics. The words klein, frech and schlau match the well-known 'kleine, freche, schlaue Biene Maja' as I remember it, and 'fleißig' is not one of them. I couldn't verify that hint 2 is right about where these words sit relative to the line 'Und diese Biene, die ich meine, nennt sich Maja'.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
@@ -1175258,15 +1175474,15 @@
     },
     {
       "id": "q-15183",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 5,
       "description": "Ein Klassiker hinter der Glasscheibe, gleich neben der Fleischwurst.",
-      "question": "An der Wursttheke fragt die Verkäuferin beim Aufschnitt: „Darf's ein bisschen mehr sein?“ Was meint sie damit?",
-      "answer": "Ob es etwas mehr als bestellt sein darf",
+      "question": "An der Wursttheke fragt die Verkäuferin: „Darf's ein bisschen mehr sein?“ Was ist meistens gerade passiert?",
+      "answer": "Sie hat zu viel abgeschnitten",
       "wrong_answers": [
-        "Ob die Scheiben dicker sein sollen",
-        "Ob du noch Brötchen möchtest",
-        "Ob du eine Tüte brauchst"
+        "Die Wurst ist gerade im Angebot",
+        "Der Laden schließt gleich",
+        "Die Schneidemaschine klemmt"
       ],
       "hints": [
         "Die Frage kommt, kurz bevor der Aufschnitt eingepackt wird.",
@@ -1175278,14 +1175494,14 @@
         "role": "illustrative",
         "query": "deli counter sliced cold cuts",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACold_cuts.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Cold_cuts.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "مانفی · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACold_Cut_Counter_at_Lighthouse_Cafe.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Cold_Cut_Counter_at_Lighthouse_Cafe.jpg/3840px-Cold_Cut_Counter_at_Lighthouse_Cafe.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Peachyeung316 · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "مانفی",
-        "author_url": "https://commons.wikimedia.org/wiki/User:%D9%85%D8%A7%D9%86%D9%81%DB%8C",
+        "author": "Peachyeung316",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1175316,33 +1175532,43 @@
       "needs_media": false,
       "batch": "batch-49",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text gives the answer away. The quoted phrase „Darf's ein bisschen mehr sein?“ means literally what the answer says („Ob es etwas mehr als bestellt sein darf“), so anyone who understands the words can just match it. Unlike an idiom such as „Das ist mir Wurst“, there is nothing to work out. A real question would need a non-literal angle, for example what really happens on the scale, or why sellers like to ask it.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text gives the answer away. The quoted phrase „Darf's ein bisschen mehr sein?“ means literally what the answer says („Ob es etwas mehr als bestellt sein darf“), so anyone who understands the words can just match it. Unlike an idiom such as „Das ist mir Wurst“, there is nothing to work out. A real question would need a non-literal angle, for example what really happens on the scale, or why sellers like to ask it.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the answer as an „Ob …“ clause like the wrong options, and removed the weight hints from the description and hint 1.",
+        "reason": "The old answer just repeated the phrase word for word, so the question now asks what has just happened when she says it (she cut too much).",
         "previous": {
-          "description": "Der Satz, bei dem die Waage plötzlich ein Eigenleben bekommt.",
-          "answer": "Auf der Waage liegt etwas mehr als bestellt",
-          "hints": [
-            "Es geht ums Gewicht.",
-            "Du hast zum Beispiel 200 Gramm bestellt.",
-            "Die Waage zeigt vielleicht 230 Gramm."
+          "difficulty": 4,
+          "question": "An der Wursttheke fragt die Verkäuferin beim Aufschnitt: „Darf's ein bisschen mehr sein?“ Was meint sie damit?",
+          "answer": "Ob es etwas mehr als bestellt sein darf",
+          "wrong_answers": [
+            "Ob die Scheiben dicker sein sollen",
+            "Ob du noch Brötchen möchtest",
+            "Ob du eine Tüte brauchst"
           ]
         },
         "revised_on": "2026-11-07"
-      }
+      },
+      "difficulty_original": 4
     },
     {
       "id": "q-15184",
@@ -1175618,8 +1175844,8 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "glockenspiel",
-        "note": "Glockenspiel (Metallplatten, mit Schlägeln gespielt), kurze helle Melodie, ohne Begleitung.",
+        "query": "glockenspiel melody solo",
+        "note": "Freesound-Aufnahme: nur ein Glockenspiel/Lyra (Metallplatten, mit Schlägeln gespielt), kurze helle Melodie, ohne Begleitung, ohne Sprache, kein Turmglockenspiel und keine Röhrenglocken.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1175647,19 +1175873,29 @@
         "difficulty_estimate": 6,
         "notes": "Telling a glockenspiel from a xylophone by ear is harder than difficulty 4, and many kids call a glockenspiel 'Xylophon'. The recording must clearly ring like metal. The fun fact repeats hint 3 (Lyra)."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-49",
       "review": {
         "decision": "needs_work",
-        "feedback": "No audio candidate is a plain glockenspiel recording. Candidates 1 and 4 are Lingua Libre/Commons recordings of someone saying the word „Glockenspiel“, which would give the answer away. Candidate 2 mixes clock chimes, tubular bells, handbells and vibraphone, and candidate 3 is the carillon on the Kiel town hall tower, not the hand-played instrument. Find a Freesound recording of a lyra or glockenspiel played alone, or drop the question. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No audio candidate is a plain glockenspiel recording. Candidates 1 and 4 are Lingua Libre/Commons recordings of someone saying the word „Glockenspiel“, which would give the answer away. Candidate 2 mixes clock chimes, tubular bells, handbells and vibraphone, and candidate 3 is the carillon on the Kiel town hall tower, not the hand-played instrument. Find a Freesound recording of a lyra or glockenspiel played alone, or drop the question. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
@@ -1175675,6 +1175911,22 @@
         "author_url": "https://commons.wikimedia.org/wiki/User:Kzirkel",
         "restrictions": [],
         "pd_reasons": []
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Freesound has many plain glockenspiel recordings, so the audio query and note now aim for an instrument-only melody, not spoken words or carillons.",
+        "previous": {
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "glockenspiel",
+            "note": "Glockenspiel (Metallplatten, mit Schlägeln gespielt), kurze helle Melodie, ohne Begleitung.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
       }
     },
     {
