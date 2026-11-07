@@ -716,7 +716,8 @@
     {
       "name": "Baby TV",
       "facet": "Canales infantiles",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: Canal demasiado desconocido para sacar una pregunta justa."
     },
     {
       "name": "Super3",

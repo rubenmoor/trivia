@@ -866,7 +866,8 @@
     {
       "name": "Andén",
       "facet": "Billetes, tarjetas y viajeros",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Identifying the andén is already in the pool. The remaining options (who waits there, a record) would be filler."
     },
     {
       "name": "Coche cafetería",

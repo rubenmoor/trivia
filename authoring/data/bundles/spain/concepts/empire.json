@@ -141,7 +141,8 @@
     {
       "name": "Cristóbal Colón",
       "facet": "Colón y la conquista de América",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The pool already has the difficulty-1 Columbus questions (1492, the three ships, the statue, the egg). The options left would repeat them or need a much higher level."
     },
     {
       "name": "La Pinta, la Niña y la Santa María",
@@ -906,7 +907,8 @@
     {
       "name": "Diego Velázquez",
       "facet": "Siglo de Oro: pintura y arte",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: At difficulty 1 the only thing people know about Velázquez is Las Meninas, which is already asked. A riddle would just repeat it."
     },
     {
       "name": "Las meninas",
