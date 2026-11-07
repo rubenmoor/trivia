@@ -285,12 +285,14 @@
     {
       "name": "Campanadas de la Puerta del Sol",
       "facet": "Rituales de Nochevieja y San Juan",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La plaza ya se ha preguntado, las uvas ya están en el pool y los presentadores cambian cada año."
     },
     {
       "name": "Entrar en el año con el pie derecho",
       "facet": "Rituales de Nochevieja y San Juan",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: La pregunta ya hecha sobre el pie derecho deja respondida cualquier variante de Nochevieja."
     },
     {
       "name": "Hoguera de San Juan",
