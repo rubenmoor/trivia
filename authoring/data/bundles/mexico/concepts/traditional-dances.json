@@ -208,7 +208,8 @@
     {
       "name": "Pascola",
       "facet": "Voladores y danzas rituales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already names the Mayos of Sonora and Sinaloa and the meaning of pascola, so its origin and people are answered already; its mask and rattles overlap with the tenabaris slot."
     },
     {
       "name": "Mayos",
@@ -269,7 +270,8 @@
     {
       "name": "Carlomagno",
       "facet": "Danzas de Conquista y de moros",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The Doce Pares question already gives away Carlomagno and France; what's left is too obscure."
     },
     {
       "name": "Danza de los Sonajeros",
@@ -387,7 +389,8 @@
     {
       "name": "Máscara de diablo",
       "facet": "Máscaras, accesorios e instrumentos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Many devil questions are already in the pool, and none of the options gives a fresh fact at difficulty 3."
     },
     {
       "name": "Máscara de jaguar",

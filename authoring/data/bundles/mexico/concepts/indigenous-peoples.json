@@ -415,7 +415,8 @@
     {
       "name": "Tambor de agua yaqui",
       "facet": "Música e instrumentos tradicionales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Instrumento demasiado especializado para foto o récord; no hay una pregunta justa."
     },
     {
       "name": "Banda de viento mixe",
@@ -440,7 +441,8 @@
     {
       "name": "Curandero",
       "facet": "Creencias, rituales y medicina tradicional",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Las preguntas que ya existen nombran al curandero y sus limpias; preguntar cómo se llama ya tendría la respuesta."
     },
     {
       "name": "Tonal",
@@ -450,7 +452,8 @@
     {
       "name": "Mal de ojo",
       "facet": "Creencias, rituales y medicina tradicional",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El pool ya cubre el mal de ojo (ojo de venado, huevo, definición); no queda un dato nuevo con estas opciones."
     },
     {
       "name": "Susto",
@@ -541,7 +544,8 @@
     {
       "name": "Briceida Cuevas Cob",
       "facet": "Personajes indígenas contemporáneos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Las tres opciones piden una foto de la poeta; no es seguro que haya una foto libre reconocible y es demasiado poco conocida para reconocerla por su cara."
     },
     {
       "name": "Abigail Mendoza",

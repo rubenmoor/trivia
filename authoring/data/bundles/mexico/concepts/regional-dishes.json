@@ -286,7 +286,8 @@
     {
       "name": "Barbacoa de borrego",
       "facet": "Carnes y barbacoas tradicionales",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El animal, la técnica, las pencas y Hidalgo ya están en el pool; no queda un dato fácil y distinto para nivel 3."
     },
     {
       "name": "Tasajo",
@@ -701,7 +702,8 @@
     {
       "name": "Huevos rancheros",
       "facet": "Platillos con historia y leyenda",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La pregunta ya existente describe el platillo completo y su nombre; las opciones restantes (quién lo comía, cuándo nació) repiten ese dato o no tienen fecha segura."
     },
     {
       "name": "Camotes de Puebla",

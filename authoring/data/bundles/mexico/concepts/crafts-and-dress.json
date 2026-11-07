@@ -306,7 +306,8 @@
     {
       "name": "Cuchara de madera tallada",
       "facet": "Alebrijes y tallado en madera",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: La única opción posible pregunta de qué material está hecha una cuchara de madera que se ve en la foto: es trivial, y el pool ya tiene varias preguntas cuya respuesta es «madera»."
     },
     {
       "name": "Santos estofados",
@@ -651,7 +652,8 @@
     {
       "name": "Fonart",
       "facet": "Mercados, pueblos artesanos y maestros",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Todas las opciones piden una foto esencial de Fonart, que no es algo que se pueda fotografiar de forma reconocible."
     },
     {
       "name": "Hermanas Aguilar de Ocotlán",
@@ -661,7 +663,8 @@
     {
       "name": "Teodora Blanco",
       "facet": "Mercados, pueblos artesanos y maestros",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Teodora Blanco es demasiado oscura para hacer una pregunta justa, y no es probable encontrar una foto libre de su obra que sirva como medio esencial."
     }
   ]
 }

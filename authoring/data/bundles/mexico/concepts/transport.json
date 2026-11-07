@@ -386,7 +386,8 @@
     {
       "name": "Paradero",
       "facet": "Camiones, peseras y combis",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El propósito del paradero ya se preguntó; la otra opción saldría forzada."
     },
     {
       "name": "CETRAM",
@@ -782,7 +783,8 @@
     {
       "name": "Puente peatonal",
       "facet": "Bicis, scooters y movilidad urbana",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Las opciones (persona, estimación, año) no dan una buena pregunta y lo de quién lo usa ya se preguntó."
     },
     {
       "name": "Hoy No Circula",
