@@ -206,7 +206,8 @@
     {
       "name": "Retahíla",
       "facet": "Romancero y poesía popular",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Ya se preguntó el significado de «retahíla» y la novela «Retahílas»; las opciones restantes no dan una buena pregunta nueva."
     },
     {
       "name": "Canción de corro",
@@ -286,7 +287,8 @@
     {
       "name": "Río Tormes",
       "facet": "La Celestina y la novela picaresca",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: El dato literario del río Tormes (lugar de nacimiento del Lazarillo) ya aparece en la pregunta del ciego que hay en el pool; las demás opciones darían una pregunta forzada."
     },
     {
       "name": "Guzmán de Alfarache",
@@ -431,7 +433,8 @@
     {
       "name": "«Érase un hombre a una nariz pegado»",
       "facet": "Poesía del Siglo de Oro",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: El pool ya tiene el soneto de Quevedo de la nariz (forma y autor); lo único que queda, completar el siguiente verso, es forzado."
     },
     {
       "name": "«Un soneto me manda hacer Violante»",
