@@ -1081762,19 +1081762,29 @@
         "difficulty_estimate": 10,
         "notes": "Facts check out: first gold was the 1992 Barcelona team event, and she has the most Olympic medals of any rider. Hint 2 (Spain) already gives away Barcelona 1992 for most adults. The 1970s option is implausible for someone who still won gold in 2024. The question is fairly dry."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: wrong. The premise is false. In Paris 2024 Werth won silver (team and individual), not gold. Her first gold, Barcelona 1992 team, is correct.",
+        "feedback": "Hint 2 gives the answer away: 'the first Summer Games after reunification with an all-German team' points straight to 1992, so the 1990s are solved before hint 3. Hint 1 ('over 30 years at the top', counted back from 2024) also leans hard toward the early 1990s. Hint 2 should be replaced with a vaguer clue, for example about her horse or about it being a team event, with no date.",
         "problems": [
-          "fact"
+          "giveaway"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. The premise is false. In Paris 2024 Werth won silver (team and individual), not gold. Her first gold, Barcelona 1992 team, is correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
@@ -1082422,15 +1082432,15 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "wooden tennis racket",
+        "query": "grass tennis court",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AShoemakers_-_DPLA_-_1c55082cb4a6b500e4e3237c7306c90c.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Shoemakers_-_DPLA_-_1c55082cb4a6b500e4e3237c7306c90c.jpg/3840px-Shoemakers_-_DPLA_-_1c55082cb4a6b500e4e3237c7306c90c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Brackett, J. Raymond · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATennis_Players_at_Ward_Burton%27s_Annual_Grass_Court_Tennis_Tournament_at_Lake_Minnetonka_-_DPLA_-_036f10fd34b972565479df6cb33d1a22.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Tennis_Players_at_Ward_Burton%27s_Annual_Grass_Court_Tennis_Tournament_at_Lake_Minnetonka_-_DPLA_-_036f10fd34b972565479df6cb33d1a22.jpg/3840px-Tennis_Players_at_Ward_Burton%27s_Annual_Grass_Court_Tennis_Tournament_at_Lake_Minnetonka_-_DPLA_-_036f10fd34b972565479df6cb33d1a22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Bromley, Edward A · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Brackett, J. Raymond",
+        "author": "Bromley, Edward A",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
@@ -1082472,22 +1082482,43 @@
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took out every pointer to nobility from the question, description and hint 3.",
+        "reason": "Changed the decorative image query so a picture with a suitable licence gets picked.",
         "previous": {
-          "description": "Ein Adliger, der lieber zum Schläger griff als zum Säbel.",
-          "question": "Ich war ein Baron aus Niedersachsen, gewann 1934 und 1936 in Paris und stand dreimal in Folge im Wimbledon-Finale. Wer bin ich?",
-          "hints": [
-            "Ich spielte in den 1930er-Jahren.",
-            "1937 lieferte ich mir im Davis Cup mit dem Amerikaner Don Budge ein legendäres Match.",
-            "Mein Name enthält ein „von“."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "wooden tennis racket",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AShoemakers_-_DPLA_-_1c55082cb4a6b500e4e3237c7306c90c.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Shoemakers_-_DPLA_-_1c55082cb4a6b500e4e3237c7306c90c.jpg/3840px-Shoemakers_-_DPLA_-_1c55082cb4a6b500e4e3237c7306c90c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Brackett, J. Raymond · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Brackett, J. Raymond",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1083135,10 +1083166,10 @@
     },
     {
       "id": "q-13994",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Schokolade mit eingebautem Bonuslevel.",
-      "question": "Diese gelbe Plastikkapsel mit einem kleinen Spielzeug drin steckt in welcher Süßigkeit?",
+      "question": "Welche Süßigkeit versteckt unter ihrer Schokolade eine gelbe Plastikkapsel mit einem kleinen Spielzeug?",
       "answer": "Überraschungsei",
       "wrong_answers": [
         "Wundertüte",
@@ -1083146,18 +1083177,25 @@
         "Adventskalender"
       ],
       "hints": [
-        "Die Süßigkeit ist rundherum aus Schokolade.",
-        "Ihre Form passt besonders gut zu Ostern.",
-        "Man weiß vorher nie, was drin ist."
+        "Die Schokolade ist außen braun und innen weiß.",
+        "Sie ist in bunt bedruckte Alufolie eingewickelt.",
+        "Ihre Form passt besonders gut zu Ostern."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Kinder egg toy capsule",
-        "note": "Die geöffnete oder geschlossene gelbe, ovale Plastikkapsel aus einem Überraschungsei, ohne Verpackung, Logo oder Schokolade.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "colorful sweets jars",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASign-1060673%2C_Abbeyfeale%2C_Co._Limerick%2C_Ireland.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Sign-1060673%2C_Abbeyfeale%2C_Co._Limerick%2C_Ireland.jpg/3840px-Sign-1060673%2C_Abbeyfeale%2C_Co._Limerick%2C_Ireland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Mucklagh · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mucklagh",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mucklagh",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In den USA ist das Überraschungsei verboten, weil dort Süßigkeiten keine nicht essbaren Teile umschließen dürfen.",
       "subcategory": "cakes-and-sweets",
@@ -1083183,23 +1083221,54 @@
         "notes": "Hint 3 (you never know what's inside) also fits the Wundertüte. The query 'Kinder Surprise' may return pictures with the logo or packaging, so the note's 'no logo' requirement needs checking. q-13043 (Wundertüte) is a different fact. The US ban fact is true."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works for the essential image. #1 shows the capsule inside a broken chocolate egg, which shows the answer, and the capsule there is clear rather than yellow. #2 and #3 show Japanese gashapon capsules and vending machines, and #4 is an engraving of a shotgun. No new search is possible. Separately, hint 2 (\"Ihre Form passt besonders gut zu Ostern\") points straight to the only egg among the options, so it gives the answer away too early; it should be swapped with a vaguer hint. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works for the essential image. #1 shows the capsule inside a broken chocolate egg, which shows the answer, and the capsule there is clear rather than yellow. #2 and #3 show Japanese gashapon capsules and vending machines, and #4 is an engraving of a shotgun. No new search is possible. Separately, hint 2 (\"Ihre Form passt besonders gut zu Ostern\") points straight to the only egg among the options, so it gives the answer away too early; it should be swapped with a vaguer hint. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo exists, so I reworded the question so it needs no picture, switched to a decorative image and moved the Easter hint, which gave the answer away, to third place.",
+        "previous": {
+          "question": "Diese gelbe Plastikkapsel mit einem kleinen Spielzeug drin steckt in welcher Süßigkeit?",
+          "hints": [
+            "Die Süßigkeit ist rundherum aus Schokolade.",
+            "Ihre Form passt besonders gut zu Ostern.",
+            "Man weiß vorher nie, was drin ist."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Kinder egg toy capsule",
+            "note": "Die geöffnete oder geschlossene gelbe, ovale Plastikkapsel aus einem Überraschungsei, ohne Verpackung, Logo oder Schokolade.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-13995",
@@ -1083750,9 +1083819,9 @@
     },
     {
       "id": "q-14002",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
-      "description": "Eine Band, die nur auf Kölsch singt und trotzdem in ganz Deutschland mitgegrölt wird.",
+      "description": "Wenn in Köln Karneval ist, singt die halbe Stadt diese Band mit, auch ohne Textblatt.",
       "question": "Diese Kölner Band gibt es seit 1972, sie sang „Viva Colonia“, und ihr Name ist Kölsch. Was bedeutet er auf Hochdeutsch?",
       "answer": "Hühner",
       "wrong_answers": [
@@ -1083762,7 +1083831,7 @@
       ],
       "hints": [
         "Das hochdeutsche Wort klingt fast gleich, nur ein Vokal ist anders.",
-        "Man findet sie auch auf dem Frühstückstisch – zumindest das, was sie liefern.",
+        "Gemeint sind Tiere, die man auf vielen Bauernhöfen findet.",
         "Sie legen Eier."
       ],
       "media": {
@@ -1083808,28 +1083877,36 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description says the Höhner sing \"nur auf Kölsch\". That's false: many of their songs are in standard German, including \"Wenn nicht jetzt, wann dann?\", the song the fun fact itself names. Hint 2 also gives the answer away, because the breakfast-table \"what they deliver\" points straight to eggs, so only Hühner fits among the four options. The description should play on Cologne or carnival without the false claim, and hint 2 should be vaguer, for example a hint about the band's mascot or the sound of the name.",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description says the Höhner sing \"nur auf Kölsch\". That's false: many of their songs are in standard German, including \"Wenn nicht jetzt, wann dann?\", the song the fun fact itself names. Hint 2 also gives the answer away, because the breakfast-table \"what they deliver\" points straight to eggs, so only Hühner fits among the four options. The description should play on Cologne or carnival without the false claim, and hint 2 should be vaguer, for example a hint about the band's mascot or the sound of the name.",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the farm reference from the description and replaced hints 1–2, which said outright that the answer is an animal.",
+        "reason": "Removed the false 'only in Kölsch' claim from the description and made hint 2 vaguer so it no longer points straight to eggs.",
         "previous": {
-          "description": "Eine Band, deren Name auf dem Bauernhof sofort verstanden wird.",
+          "description": "Eine Band, die nur auf Kölsch singt und trotzdem in ganz Deutschland mitgegrölt wird.",
           "hints": [
-            "Es sind Tiere.",
-            "Sie gackern laut.",
+            "Das hochdeutsche Wort klingt fast gleich, nur ein Vokal ist anders.",
+            "Man findet sie auch auf dem Frühstückstisch – zumindest das, was sie liefern.",
             "Sie legen Eier."
           ]
         },
@@ -1084085,7 +1084162,7 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "German tavern wooden table",
+        "query": "rustic tavern interior",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Family_Lunching_in_a_Tavern_%28SM_1135%29.png",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/A_Family_Lunching_in_a_Tavern_%28SM_1135%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
@@ -1084133,18 +1084210,51 @@
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the decorative image query so a picture with a suitable licence gets picked.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "German tavern wooden table",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Family_Lunching_in_a_Tavern_%28SM_1135%29.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/A_Family_Lunching_in_a_Tavern_%28SM_1135%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Georg Melchior Kraus · PDM-owner · Wikimedia Commons",
+            "provider": "commons",
+            "license": "PDM-owner",
+            "license_url": null,
+            "author": "Georg Melchior Kraus",
+            "author_url": "https://en.wikipedia.org/wiki/en:Georg_Melchior_Kraus",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14007",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Jemand, der jedes Jahr mit Pauken und Liedern vor die Tür gesetzt wird.",
-      "question": "Ich komme jedes Jahr wieder, und wenn ich gehe, singen Kinder mir nach: „… ade, Scheiden tut weh“. Wer bin ich?",
+      "question": "Zu meinem Abschied singen Kinder: „… ade, Scheiden tut weh. Aber dein Scheiden macht, dass mir das Herze lacht.“ Wer bin ich?",
       "answer": "Der Winter",
       "wrong_answers": [
         "Der Sommer",
@@ -1084195,32 +1084305,36 @@
         "difficulty_estimate": 4,
         "notes": "Hoffmann von Fallersleben did write 'Winter ade'. Hint 2 nearly gives the answer away."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The line 'Sommer ade, Scheiden tut weh' is, as far as I know, also a real children's song. I could not confirm that with a search. If it exists, the question stem alone fits both winter and summer, so 'Der Sommer' may not be clearly wrong. Only the hint about Schneeglöckchen and Krokusse settles it.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The line 'Sommer ade, Scheiden tut weh' is, as far as I know, also a real children's song. I could not confirm that with a search. If it exists, the question stem alone fits both winter and summer, so 'Der Sommer' may not be clearly wrong. Only the hint about Schneeglöckchen and Krokusse settles it.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which made winter the only season children would be glad to see go.",
+        "reason": "Quoted the song's happy farewell line so the question itself fits only winter, not a possible 'Sommer ade'.",
         "previous": {
-          "hints": [
-            "Ich bin eine Jahreszeit.",
-            "„Ade“ heißt so viel wie „Tschüss“, und die Kinder sind froh, dass ich gehe.",
-            "Nach mir kommen Schneeglöckchen und Krokusse."
-          ]
+          "question": "Ich komme jedes Jahr wieder, und wenn ich gehe, singen Kinder mir nach: „… ade, Scheiden tut weh“. Wer bin ich?"
         },
         "revised_on": "2026-11-06"
       }
@@ -1085067,10 +1085181,10 @@
     },
     {
       "id": "q-14019",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
-      "description": "„Meine Herren und Damen“ – so hatte das Parlament noch niemand angesprochen.",
-      "question": "Diese Frau sprach am 19. Februar 1919 als erste Frau in der Weimarer Nationalversammlung und gründete die Arbeiterwohlfahrt. Wer ist sie?",
+      "description": "Ein Rednerpult, das bis dahin nur Männerschuhe kannte.",
+      "question": "Welche Frau sprach am 19. Februar 1919 als erste Frau in der Weimarer Nationalversammlung und gründete die Arbeiterwohlfahrt?",
       "answer": "Marie Juchacz",
       "wrong_answers": [
         "Clara Zetkin",
@@ -1085084,12 +1085198,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Marie Juchacz",
-        "note": "Porträtfoto von Marie Juchacz (um 1919), ohne Namensbeschriftung.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Deutsches Nationaltheater Weimar",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADeutsches_Nationaltheater_Weimar.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Deutsches_Nationaltheater_Weimar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Lucas Friese · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Lucas Friese",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Lucas_Friese",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Juchacz begann ihre Rede mit „Meine Herren und Damen“ – und brachte die Versammlung damit zum Lachen.",
       "subcategory": "empire-weimar-and-nazi-era",
@@ -1085115,33 +1085236,47 @@
         "notes": "'First woman in a German parliament' is the common wording, but women may have spoken in state parliaments a few weeks earlier, e.g. in Baden. The essential portrait isn't needed and few players would recognise her, so the question text does all the work. The description quotes her famous opening, which gives it away to anyone who knows it, and the fun fact repeats it."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the essential-image candidates works: every one carries the name „Marie Juchacz“ (medal inscription, monument lettering, street sign, plaque), and none is the plain portrait the note asks for. No new search is allowed. Switch the slot to an illustrative or decorative image without her name, for example the Weimar Nationaltheater, where the Nationalversammlung met. Also consider rewriting the description: it quotes her famous opening line, which identifies her to anyone who knows it. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the essential-image candidates works: every one carries the name „Marie Juchacz“ (medal inscription, monument lettering, street sign, plaque), and none is the plain portrait the note asks for. No new search is allowed. Switch the slot to an illustrative or decorative image without her name, for example the Weimar Nationaltheater, where the Nationalversammlung met. Also consider rewriting the description: it quotes her famous opening line, which identifies her to anyone who knows it. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made the 'first woman' claim specific to the Weimar National Assembly and made hint 1 vaguer.",
+        "reason": "No clean portrait exists, so I switched to an illustrative image of the Weimar Nationaltheater, reworded the question so it doesn't refer to a photo, and replaced the description that quoted her famous opening line.",
         "previous": {
-          "question": "Diese Frau sprach am 19. Februar 1919 als erste Frau in einem deutschen Parlament und gründete die Arbeiterwohlfahrt. Wer ist sie?",
-          "hints": [
-            "Sie war Abgeordnete der SPD in der Weimarer Nationalversammlung.",
-            "Die Arbeiterwohlfahrt, kurz AWO, gibt es bis heute.",
-            "Ihr Nachname beginnt mit „Ju“."
-          ]
+          "description": "„Meine Herren und Damen“ – so hatte das Parlament noch niemand angesprochen.",
+          "question": "Diese Frau sprach am 19. Februar 1919 als erste Frau in der Weimarer Nationalversammlung und gründete die Arbeiterwohlfahrt. Wer ist sie?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Marie Juchacz",
+            "note": "Porträtfoto von Marie Juchacz (um 1919), ohne Namensbeschriftung.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -1085560,10 +1085695,10 @@
     },
     {
       "id": "q-14025",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Ein Mann aus Lehm mit einer Frisur, die selbst ein Orkan nicht durcheinanderbringt.",
-      "question": "Dieser Lehmriese stammt aus dem Stummfilm „Der Golem, wie er in die Welt kam“ von 1920. Wer spielte ihn und führte zugleich Regie?",
+      "question": "Wer spielte im Stummfilm „Der Golem, wie er in die Welt kam“ von 1920 den Lehmriesen und führte zugleich Regie?",
       "answer": "Paul Wegener",
       "wrong_answers": [
         "Conrad Veidt",
@@ -1085577,12 +1085712,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Paul Wegener Golem",
-        "note": "Standbild des Golems (Paul Wegener im Kostüm) aus dem Film von 1920, ohne Bildunterschrift oder Namen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Prague Old New Synagogue",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_New_Synagogue-_Jewish_Town_Hall_%28Prague%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Old_New_Synagogue-_Jewish_Town_Hall_%28Prague%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Yair Haklai · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Yair Haklai",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yair-haklai",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Die verwinkelten Prager Gassen im Film entwarf der Architekt Hans Poelzig als Kulisse im Studio.",
       "subcategory": "films-and-actors",
@@ -1085608,22 +1085750,48 @@
         "notes": "Wegener co-directed with Carl Boese, so 'führte zugleich Regie' holds, but strictly he was co-director. A dry film-history fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates is usable for the essential slot. The question says „Dieser Lehmriese“, so it needs a still of Wegener in his Golem costume. Candidate 1 is the film poster, and it prints „Paul Wegener“ in large letters, which gives the answer away. Candidate 2 is a film still, but it shows Rabbi Löw and Miriam, not the Golem. Candidates 3–6 are modern figurines, a stage play and a computer labelled GOLEM. No new search is allowed, so either source a clean film still showing only the Golem, or change the role to illustrative/decorative and reword the question so it no longer refers to a picture. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is usable for the essential slot. The question says „Dieser Lehmriese“, so it needs a still of Wegener in his Golem costume. Candidate 1 is the film poster, and it prints „Paul Wegener“ in large letters, which gives the answer away. Candidate 2 is a film still, but it shows Rabbi Löw and Miriam, not the Golem. Candidates 3–6 are modern figurines, a stage play and a computer labelled GOLEM. No new search is allowed, so either source a clean film still showing only the Golem, or change the role to illustrative/decorative and reword the question so it no longer refers to a picture. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No clean Golem still exists, so I reworded the question so it doesn't refer to a picture and switched to an illustrative image of the film's Prague setting.",
+        "previous": {
+          "question": "Dieser Lehmriese stammt aus dem Stummfilm „Der Golem, wie er in die Welt kam“ von 1920. Wer spielte ihn und führte zugleich Regie?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Paul Wegener Golem",
+            "note": "Standbild des Golems (Paul Wegener im Kostüm) aus dem Film von 1920, ohne Bildunterschrift oder Namen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14026",
@@ -1085920,10 +1086088,10 @@
     },
     {
       "id": "q-14030",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Die seltenste Dankesrede im deutschen Fernsehen: „Nein danke.“",
-      "question": "Dieser Literaturkritiker sollte 2008 den Deutschen Fernsehpreis fürs Lebenswerk bekommen und lehnte ihn auf der Bühne ab. Wer ist er?",
+      "question": "Welcher Literaturkritiker sollte 2008 den Deutschen Fernsehpreis fürs Lebenswerk bekommen und lehnte ihn auf der Bühne ab?",
       "answer": "Marcel Reich-Ranicki",
       "wrong_answers": [
         "Hellmuth Karasek",
@@ -1085937,12 +1086105,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Reich-Ranicki photograph",
-        "note": "Porträtfoto von Marcel Reich-Ranicki, ohne Namensschild oder Bildunterschrift.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "stack of old books",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_books_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Old_books_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Eli Francis elifrancis · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Eli Francis elifrancis",
+        "author_url": "https://unsplash.com/@elifrancis",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Thomas Gottschalk führte danach mit ihm ein eigenes Gespräch über das Fernsehen, das das ZDF kurz darauf sendete.",
       "subcategory": "films-and-actors",
@@ -1085968,22 +1086143,48 @@
         "notes": "A good, memorable moment."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate is usable for this slot, and a new search isn't allowed. Candidates 1 and 4 are plaques that print his name and give the answer away. 2 is a sculpture of his face, which also gives it away. 3 and 5 show a school building that has nothing to do with the question. 6 is a Stolperstein for his mother that mentions deportation and murder, which is not family-friendly. The slot is also set up wrong: the question doesn't ask about a picture, so an 'essential' portrait would only reveal the answer. Change the slot to illustrative or decorative with a query like 'television award stage' or 'stack of books'. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is usable for this slot, and a new search isn't allowed. Candidates 1 and 4 are plaques that print his name and give the answer away. 2 is a sculpture of his face, which also gives it away. 3 and 5 show a school building that has nothing to do with the question. 6 is a Stolperstein for his mother that mentions deportation and murder, which is not family-friendly. The slot is also set up wrong: the question doesn't ask about a picture, so an 'essential' portrait would only reveal the answer. Change the slot to illustrative or decorative with a query like 'television award stage' or 'stack of books'. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "A portrait as essential media would give the answer away and no usable one exists, so I switched to a decorative image and reworded the question so it doesn't refer to a photo.",
+        "previous": {
+          "question": "Dieser Literaturkritiker sollte 2008 den Deutschen Fernsehpreis fürs Lebenswerk bekommen und lehnte ihn auf der Bühne ab. Wer ist er?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Reich-Ranicki photograph",
+            "note": "Porträtfoto von Marcel Reich-Ranicki, ohne Namensschild oder Bildunterschrift.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14031",
@@ -1086177,7 +1086378,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Der Legende nach brachte der Dresdner Bäcker Ferdinand Wendler das Rezept um 1844 aus Sankt Petersburg mit.",
+      "fun_fact": "Der Legende nach brachte der Dresdner Bäcker Ferdinand Wilhelm Hanke das Rezept um 1845 aus Sankt Petersburg mit.",
       "subcategory": "gdr-everyday-life",
       "style": null,
       "concept": "Russisch Brot",
@@ -1086205,27 +1086406,33 @@
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "The fun fact names the wrong baker. The Russisch Brot legend credits the Dresden baker Ferdinand Wilhelm Hanke (around 1844/45), not \"Ferdinand Wendler\" (Wendler is the name linked to the Dominostein). Fix: replace the fun fact with the fact check's correction, which credits Hanke and says around 1845. Fact check: wrong. The fun fact names the wrong baker. Sources attribute the St. Petersburg recipe to the Dresden baker Ferdinand Wilhelm Hanke (about 1845). Herbert Wendler is linked to the Dominostein, not to Russisch Brot.",
+        "feedback": "The fact check rates the ingredient list wrong. The question gives Russisch Brot as egg white, sugar and cocoa, but the main ingredients are egg white, sugar and flour. Cocoa or caramel only adds colour. Without flour, the list reads like a cocoa meringue, which pulls toward the wrong answer „Baiser“. Name the ingredients as „Eiweiß, Zucker und Mehl“. The fun fact should keep the legend hedge and give the date as „um 1844/45“. Fact check: wrong. The ingredients are wrong. Russisch Brot is made from egg white, sugar and flour (plus caramel syrup and malt for colour), not cocoa. The Dresden baker Hanke and the date of about 1845 are legend, and the sources disagree on the date (1844 or 1845).",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact names the wrong baker. The Russisch Brot legend credits the Dresden baker Ferdinand Wilhelm Hanke (around 1844/45), not \"Ferdinand Wendler\" (Wendler is the name linked to the Dominostein). Fix: replace the fun fact with the fact check's correction, which credits Hanke and says around 1845. Fact check: wrong. The fun fact names the wrong baker. Sources attribute the St. Petersburg recipe to the Dresden baker Ferdinand Wilhelm Hanke (about 1845). Herbert Wendler is linked to the Dominostein, not to Russisch Brot.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away through the word „Brot“, with a hint about texture and shelf life.",
+        "reason": "Fixed the fun fact: the legend credits baker Ferdinand Wilhelm Hanke around 1845, not Wendler.",
         "previous": {
-          "hints": [
-            "Viele Kinder legen damit erst ihren Namen, bevor sie es essen.",
-            "Der Name verspricht Brot, dabei ist es süß.",
-            "Im Namen steckt das größte Land der Erde."
-          ]
+          "fun_fact": "Der Legende nach brachte der Dresdner Bäcker Ferdinand Wendler das Rezept um 1844 aus Sankt Petersburg mit."
         },
         "revised_on": "2026-11-06"
       }
@@ -1087110,7 +1087317,7 @@
     },
     {
       "id": "q-14045",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Ein Sommerfest, bei dem Ost-Berlin plötzlich ganz bunt wurde.",
       "question": "Die US-Bürgerrechtlerin auf dem Foto wurde 1973 bei den Weltfestspielen der Jugend in Ost-Berlin wie ein Star gefeiert. Wer ist sie?",
@@ -1087128,20 +1087335,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Angela Davis portrait 1970s",
-        "note": "Porträtfoto von Angela Davis, möglichst aus den 1970er-Jahren, ohne Bildunterschrift mit ihrem Namen.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAngela_Davis%2C_1974.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Angela_Davis%2C_1974.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Philippe Halsman · Public domain · Wikimedia Commons",
+        "query": "Angela Davis Bundesarchiv 1972",
+        "note": "Porträtfoto von Angela Davis aus den 1970er-Jahren (z. B. Bundesarchiv, CC BY-SA), auf dem sie klar zu erkennen ist, ohne Bildunterschrift mit ihrem Namen.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABundesarchiv_Bild_183-L0911-029%2C_Berlin%2C_Erich_Honecker_empf%C3%A4ngt_Angela_Davis.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Bundesarchiv_Bild_183-L0911-029%2C_Berlin%2C_Erich_Honecker_empf%C3%A4ngt_Angela_Davis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Koard, Peter · CC BY-SA 3.0 de · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Philippe Halsman",
-        "author_url": "https://en.wikipedia.org/wiki/en:Philippe_Halsman",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Koard, Peter",
+        "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-no notice"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "DDR-Kinder schickten ihr massenhaft Rosenpostkarten ins Gefängnis, die Aktion hieß „Eine Million Rosen für Angela“.",
       "subcategory": "gdr-history",
@@ -1087170,19 +1087375,52 @@
       "needs_media": true,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to the freely licensed Bundesarchiv photos of Angela Davis in the GDR, replacing the US-only public-domain picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Angela Davis portrait 1970s",
+            "note": "Porträtfoto von Angela Davis, möglichst aus den 1970er-Jahren, ohne Bildunterschrift mit ihrem Namen.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AAngela_Davis%2C_1974.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Angela_Davis%2C_1974.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Philippe Halsman · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Philippe Halsman",
+            "author_url": "https://en.wikipedia.org/wiki/en:Philippe_Halsman",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14046",
@@ -1087494,10 +1087732,10 @@
     },
     {
       "id": "q-14050",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Ein Stück Stoff, das man mit einem ganz bestimmten Knoten binden musste.",
-      "question": "Dieses blaue Halstuch auf dem Foto trugen viele Schulkinder in der DDR. Zu welcher Organisation gehörte es?",
+      "question": "Ein blaues Halstuch trugen viele Schulkinder in der DDR. Zu welcher Organisation gehörte es?",
       "answer": "Junge Pioniere",
       "wrong_answers": [
         "FDJ",
@@ -1087511,12 +1087749,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Bundesarchiv Jungpioniere Halstuch",
-        "note": "Foto von DDR-Schulkindern mit blauem Pioniertuch, ohne sichtbaren Text, der die Organisation nennt.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "old school classroom desks",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKarmsund_folkemuseum_Haugesund_Norway_Interior_Skolestue_klasserom_Class_room_ca_1910_Skolepulter_skrivepulter_benker_school_room_benches_writing_desks_Kateter_Tavle_Blackboard_etc_2020-06-10_DSC00312.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Karmsund_folkemuseum_Haugesund_Norway_Interior_Skolestue_klasserom_Class_room_ca_1910_Skolepulter_skrivepulter_benker_school_room_benches_writing_desks_Kateter_Tavle_Blackboard_etc_2020-06-10_DSC00312.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Wolfmann · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Wolfmann",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wolfmann",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Ab Klasse 4 hießen die Kinder „Thälmann-Pioniere“ und trugen ein rotes Tuch.",
       "subcategory": "gdr-history",
@@ -1087542,22 +1087787,48 @@
         "notes": "Bundesarchiv photos of Pioneers likely exist, but they need checking for banners or text. Good wrong answers (FDJ, Pfadfinder)."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No adequate essential image: the question needs a photo of schoolchildren wearing the blue Pioneer neckerchief, but the candidates are an adult (Grotewohl) at a 1951 camp, a cyclist in 1955 and a 1944 Atlantic Wall bunker, all black-and-white, so the blue can't be seen. A colour photo of Jungpioniere with blue neckerchiefs is needed, without text that names the organisation. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate essential image: the question needs a photo of schoolchildren wearing the blue Pioneer neckerchief, but the candidates are an adult (Grotewohl) at a 1951 camp, a cyclist in 1955 and a 1944 Atlantic Wall bunker, all black-and-white, so the blue can't be seen. A colour photo of Jungpioniere with blue neckerchiefs is needed, without text that names the organisation. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No colour photo of blue neckerchiefs is available, so the question no longer refers to a photo and gets an illustrative classroom image instead.",
+        "previous": {
+          "question": "Dieses blaue Halstuch auf dem Foto trugen viele Schulkinder in der DDR. Zu welcher Organisation gehörte es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Bundesarchiv Jungpioniere Halstuch",
+            "note": "Foto von DDR-Schulkindern mit blauem Pioniertuch, ohne sichtbaren Text, der die Organisation nennt.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14051",
@@ -1087707,10 +1087978,10 @@
     },
     {
       "id": "q-14053",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Sie bestimmte, was in DDR-Klassenzimmern gelernt wurde, und das ziemlich lange.",
-      "question": "Die Frau auf dem Foto war von 1963 bis 1989 Ministerin für Volksbildung der DDR. Wer ist sie?",
+      "question": "Wer war von 1963 bis 1989 Ministerin für Volksbildung der DDR?",
       "answer": "Margot Honecker",
       "wrong_answers": [
         "Lotte Ulbricht",
@@ -1087724,12 +1087995,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Margot Honecker Bundesarchiv",
-        "note": "Porträtfoto von Margot Honecker, ohne Bildunterschrift mit ihrem Namen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "old school blackboard classroom",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Classroom_Interior_%2847024892221%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Old_Classroom_Interior_%2847024892221%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Dejan Krsmanovic · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dejan Krsmanovic",
+        "author_url": "https://www.flickr.com/people/155403590@N07",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Margot Honecker starb 2016 in Santiago de Chile.",
       "subcategory": "gdr-history",
@@ -1087755,31 +1088033,45 @@
         "notes": "The fun fact repeats hint 2 (Chile), so it adds nothing new. Fairly dry."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate is a clear portrait of Margot Honecker: they're all crowded Bundesarchiv group scenes, and in several it isn't clear which woman \"die Frau auf dem Foto\" is. Candidate 4 even centres on Lotte Ulbricht, who is one of the wrong answers. A new search isn't allowed, so this needs a usable portrait (e.g. Bundesarchiv Bild 183-1986-0421-030 or a similar head shot). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is a clear portrait of Margot Honecker: they're all crowded Bundesarchiv group scenes, and in several it isn't clear which woman \"die Frau auf dem Foto\" is. Candidate 4 even centres on Lotte Ulbricht, who is one of the wrong answers. A new search isn't allowed, so this needs a usable portrait (e.g. Bundesarchiv Bild 183-1986-0421-030 or a similar head shot). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected hint 3: Erich Honecker became head of state only in 1976.",
+        "reason": "No usable portrait exists among the candidates, so the question no longer depends on a photo and gets an illustrative classroom image.",
         "previous": {
-          "hints": [
-            "Wegen ihres Haarfarbtons nannte man sie „lila Hexe“.",
-            "Nach der Wende lebte sie bis zu ihrem Tod in Chile.",
-            "Ihr Mann war von 1971 bis 1989 Partei- und Staatschef der DDR."
-          ]
+          "question": "Die Frau auf dem Foto war von 1963 bis 1989 Ministerin für Volksbildung der DDR. Wer ist sie?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Margot Honecker Bundesarchiv",
+            "note": "Porträtfoto von Margot Honecker, ohne Bildunterschrift mit ihrem Namen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -1087944,14 +1088236,14 @@
     },
     {
       "id": "q-14056",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Deutsche Wohnungen haben ein Atemprogramm, und es ist strenger als jedes Fitnessstudio.",
       "question": "Beim Stoßlüften reißt man die Fenster für einige Minuten weit auf, statt sie lange zu kippen. Wozu?",
       "answer": "Damit feuchte Luft rausgeht, aber die Wände warm bleiben",
       "wrong_answers": [
         "Damit der Staub von Möbeln und Regalen weht",
-        "Damit beschlagene Fensterscheiben schnell trocknen",
+        "Damit Zimmerpflanzen mehr Sonnenlicht bekommen",
         "Damit keine Insekten in die Wohnung fliegen"
       ],
       "hints": [
@@ -1087962,11 +1088254,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "wide open window room",
+        "query": "open window curtains",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_into_a_garden_through_an_open_ground_floor_window_in_Germany.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/View_into_a_garden_through_an_open_ground_floor_window_in_Germany.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Karl432 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Karl432",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Karl432",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Im Winter empfehlen Fachleute, mehrmals am Tag für etwa fünf bis zehn Minuten stoßzulüften.",
       "subcategory": "home-and-public-life",
@@ -1087995,35 +1088294,46 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows an open window or a room being aired. 1 is a rusty padlock on a window sill, 2–4 and 6 are black-and-white US building surveys with closed windows, and 5 is a bunker interior. No new search is allowed, so the media slot can't be filled. A note on the text too: the distractor „Damit beschlagene Fensterscheiben schnell trocknen“ is close to defensible, because airing does remove the moisture that fogs the panes. It would be better replaced with a reason clearly unrelated to moisture. No suitable picture found for this question.",
-        "problems": [
-          "ambiguity",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows an open window or a room being aired. 1 is a rusty padlock on a window sill, 2–4 and 6 are black-and-white US building surveys with closed windows, and 5 is a bunker interior. No new search is allowed, so the media slot can't be filled. A note on the text too: the distractor „Damit beschlagene Fensterscheiben schnell trocknen“ is close to defensible, because airing does remove the moisture that fogs the panes. It would be better replaced with a reason clearly unrelated to moisture. No suitable picture found for this question.",
+          "problems": [
+            "ambiguity",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rephrased the answer so it has the same form and length as the wrong answers, and replaced giveaway hint 2 with a vaguer one.",
+        "reason": "Replaced the arguably-correct fogged-window distractor with one unrelated to moisture, and changed the image query to find an open window.",
         "previous": {
-          "answer": "Feuchte Luft raus, ohne dass die Wände auskühlen",
           "wrong_answers": [
-            "Damit Staub von den Möbeln weht",
-            "Damit die Fensterscheiben trocknen",
-            "Damit Insekten nicht hereinfliegen"
+            "Damit der Staub von Möbeln und Regalen weht",
+            "Damit beschlagene Fensterscheiben schnell trocknen",
+            "Damit keine Insekten in die Wohnung fliegen"
           ],
-          "hints": [
-            "Es geht um Luft und um die Heizung.",
-            "Ein dauerhaft gekipptes Fenster kühlt die Wand drumherum stark ab.",
-            "Es soll Schimmel verhindern und trotzdem Heizenergie sparen."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "wide open window room",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1088487,7 +1088797,7 @@
     },
     {
       "id": "q-14063",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Eine Geschichte, die so hell leuchtet, dass man die Lücken darin kaum sieht.",
       "question": "Ein ausgewanderter Mechaniker soll in New York schon vor Edison Glühlampen wie diese gebaut haben. Aus welcher Stadt bei Hannover stammte er?",
@@ -1088504,21 +1088814,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "early carbon filament light bulb",
-        "note": "Eine frühe Kohlefaden-Glühlampe aus dem 19. Jahrhundert, ohne Beschriftung mit Namen oder Ort.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEdison_carbon_filament_light_bulb.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Edison_carbon_filament_light_bulb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Joseph E. Hinds · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "antique carbon filament lamp",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFilament_Lamp.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Filament_Lamp.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Pfnicholls · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Joseph E. Hinds",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pfnicholls",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Pfnicholls&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Belege für Göbels Erfindung fand man nie – die Geschichte entstand vor allem bei Patentstreitigkeiten gegen Edison um 1893.",
       "subcategory": "inventors-and-scientists",
@@ -1088547,19 +1088855,52 @@
       "needs_media": true,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture had a US-only licence, so the query now looks for another antique carbon filament lamp, and the role is now illustrative.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "early carbon filament light bulb",
+            "note": "Eine frühe Kohlefaden-Glühlampe aus dem 19. Jahrhundert, ohne Beschriftung mit Namen oder Ort.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AEdison_carbon_filament_light_bulb.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Edison_carbon_filament_light_bulb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Joseph E. Hinds · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Joseph E. Hinds",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14064",
@@ -1089611,25 +1089952,25 @@
     {
       "id": "q-14078",
       "status": "needs_work",
-      "difficulty": 7,
+      "difficulty": 8,
       "description": "Ein Waldbewohner, der sich auch ohne Spiegel für den Schönsten hält.",
-      "question": "Hör zu: Das ist ein männliches Tier aus dem deutschen Wald. Wie nennt man es in der Jägersprache?",
+      "question": "Wie nennt man ein ausgewachsenes männliches Tier wie dieses in der Jägersprache?",
       "answer": "Keiler",
       "wrong_answers": [
-        "Rehbock",
-        "Rammler",
-        "Auerhahn"
+        "Bache",
+        "Frischling",
+        "Überläufer"
       ],
       "hints": [
-        "Das Tier wühlt gern im Boden nach Futter.",
-        "Seine Weibchen heißen Bachen, die Jungen Frischlinge.",
-        "Es ist ein männliches Wildschwein."
+        "Ausgewachsene Männchen leben meist als Einzelgänger.",
+        "Die Weibchen und die Jungtiere haben andere Namen.",
+        "Das Wort beginnt mit K und hat sechs Buchstaben."
       ],
       "media": {
-        "type": "audio",
+        "type": "image",
         "role": "essential",
-        "query": "Sus scrofa grunting",
-        "note": "Deutlich hörbares Grunzen eines (ausgewachsenen) Wildschweins, keine Hausschweine, keine anderen Tiergeräusche.",
+        "query": "wild boar Sus scrofa forest",
+        "note": "Klares Foto eines ausgewachsenen Wildschweins (Sus scrofa), möglichst mit sichtbaren Eckzähnen, ohne Beschriftung.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1089662,22 +1090003,62 @@
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "No usable audio: candidates 1–3 are domestic pig grunts under one second long (the note rules out domestic pigs), 4 and 6 are spoken words, and 5 ('En-uk-wild boar.ogg') is someone saying 'wild boar', which gives the answer away. The background candidates are book scans (a leaf drawing and a magazine page), not a forest floor. No new search is allowed, so this needs a real wild boar recording, such as one from Freesound, and a forest background photo, or else a switch to an illustrative wild boar image with the wording changed. No suitable picture found for this question. No suitable background picture found.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No usable audio: candidates 1–3 are domestic pig grunts under one second long (the note rules out domestic pigs), 4 and 6 are spoken words, and 5 ('En-uk-wild boar.ogg') is someone saying 'wild boar', which gives the answer away. The background candidates are book scans (a leaf drawing and a magazine page), not a forest floor. No new search is allowed, so this needs a real wild boar recording, such as one from Freesound, and a forest background photo, or else a switch to an illustrative wild boar image with the wording changed. No suitable picture found for this question. No suitable background picture found.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": {
-        "query": "dark forest floor oak leaves",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+      "background": null,
+      "difficulty_original": 7,
+      "revision": {
+        "action": "revise",
+        "reason": "No wild boar recording is available, so this is now an essential boar photo with only wild boar hunting terms as options, so the picture doesn't rule anything out; hints updated to match.",
+        "previous": {
+          "difficulty": 7,
+          "question": "Hör zu: Das ist ein männliches Tier aus dem deutschen Wald. Wie nennt man es in der Jägersprache?",
+          "wrong_answers": [
+            "Rehbock",
+            "Rammler",
+            "Auerhahn"
+          ],
+          "hints": [
+            "Das Tier wühlt gern im Boden nach Futter.",
+            "Seine Weibchen heißen Bachen, die Jungen Frischlinge.",
+            "Es ist ein männliches Wildschwein."
+          ],
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "Sus scrofa grunting",
+            "note": "Deutlich hörbares Grunzen eines (ausgewachsenen) Wildschweins, keine Hausschweine, keine anderen Tiergeräusche.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "background": {
+            "query": "dark forest floor oak leaves",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
       }
     },
     {
@@ -1089910,7 +1090291,7 @@
     },
     {
       "id": "q-14082",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Kostenloses Gartenkonzert: kein Eintritt, keine Tickets und trotzdem jeden Tag ausverkauft.",
       "question": "Hör zu: Welcher Vogel singt hier im Garten?",
@@ -1089930,13 +1090311,13 @@
         "role": "essential",
         "query": "common blackbird song Turdus merula",
         "note": "Klarer Gesang einer Amsel (Turdus merula), möglichst ohne andere Vogelstimmen.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ATurdus_merula_male_song_at_dawn%2820s%29.ogg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Turdus_merula_male_song_at_dawn%2820s%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATurdus_merula_-_Common_Blackbird_XC536573.mp3",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Turdus_merula_-_Common_Blackbird_XC536573.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Marie-Lan Taÿ Pamart · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "author": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marie-Lan Taÿ Pamart",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": []
@@ -1089968,29 +1090349,49 @@
       "needs_media": true,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text and the audio are fine, but none of the background candidates shows a garden. 1 and 2 are the ESO Paranal desert at dusk, 3 is a California rooftop park with palm trees and skyscrapers, and 4 is a street of skyscrapers. The background needs a new search for something like \"German garden lawn\" or \"suburban garden morning\". No suitable background picture found.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text and the audio are fine, but none of the background candidates shows a garden. 1 and 2 are the ESO Paranal desert at dusk, 3 is a California rooftop park with palm trees and skyscrapers, and 4 is a street of skyscrapers. The background needs a new search for something like \"German garden lawn\" or \"suburban garden morning\". No suitable background picture found.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": {
-        "query": "garden at dawn rooftops",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "suburban garden lawn morning",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_M%C3%BChlenwegfriedhof_--_2012_--_8083.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/D%C3%BClmen%2C_M%C3%BChlenwegfriedhof_--_2012_--_8083.jpg/3840px-D%C3%BClmen%2C_M%C3%BChlenwegfriedhof_--_2012_--_8083.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer gives away the dawn-singing and antenna traits.",
+        "reason": "Changed only the background query so it finds an actual garden.",
         "previous": {
-          "description": "Der Wecker auf der Fernsehantenne – leider ohne Schlummertaste."
+          "background": {
+            "query": "garden at dawn rooftops",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1090513,9 +1090914,9 @@
     },
     {
       "id": "q-14090",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Für manche Kandidaten war dieser Mann gefürchteter als jede Mathearbeit.",
+      "description": "Ein Jurypult, an dem seit Jahrzehnten über große Gesangsträume entschieden wird.",
       "question": "Wer saß bei „Deutschland sucht den Superstar“ seit 2002 in den meisten Staffeln in der Jury?",
       "answer": "Dieter Bohlen",
       "wrong_answers": [
@@ -1090571,29 +1090972,32 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description says „dieser Mann“, which rules out Heidi Klum before any hint is shown. It also comes close to naming the answer's defining trait: being the juror candidates feared. Rewrite it so it plays on the casting-show theme without mentioning gender or the harsh judging. One option is to replace Heidi Klum with a male distractor, but the description should still avoid the „gefürchtet“ trait.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description says „dieser Mann“, which rules out Heidi Klum before any hint is shown. It also comes close to naming the answer's defining trait: being the juror candidates feared. Rewrite it so it plays on the casting-show theme without mentioning gender or the harsh judging. One option is to replace Heidi Klum with a male distractor, but the description should still avoid the „gefürchtet“ trait.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the filler opener and replaced hint 3, which contained the first name, with a hint about his blunt remarks.",
+        "reason": "Rewrote the description so it no longer gives away gender or the feared-juror trait.",
         "previous": {
-          "question": "Du schaust „Deutschland sucht den Superstar“. Wer saß seit 2002 in den meisten Staffeln in der Jury?",
-          "hints": [
-            "Er ist auch Musikproduzent und Songschreiber.",
-            "In den 1980ern war er Teil von Modern Talking.",
-            "Sein Vorname ist Dieter."
-          ]
+          "description": "Für manche Kandidaten war dieser Mann gefürchteter als jede Mathearbeit."
         },
         "revised_on": "2026-11-06"
       }
@@ -1091197,7 +1091601,7 @@
     },
     {
       "id": "q-14099",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Anlauf, Absprung, Sandkasten – und zwar auf Weltniveau.",
       "question": "Welche Deutsche wurde 2021 in Tokio in dieser Disziplin Olympiasiegerin?",
@@ -1091215,21 +1091619,20 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "long jump sand pit",
+        "query": "long jump athlete landing sand",
         "note": "Eine Weitsprunganlage mit Sandgrube oder ein Weitspringer im Sprung, ohne erkennbare Namen.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/U.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Sgt. Barry St. Clair · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALong_jump_area_at_TNT_-_Fortuna_Meeting_in_Kladno_16June2010_025.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Long_jump_area_at_TNT_-_Fortuna_Meeting_in_Kladno_16June2010_025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "User:Miaow Miaow · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Sgt. Barry St. Clair",
-        "author_url": null,
+        "author": "User:Miaow Miaow",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Miaow_Miaow",
         "restrictions": [],
         "pd_reasons": [
-          "PD-USGov-Military"
-        ],
-        "file_problem": "truncated (Premature end of JPEG file)"
+          "PD-self"
+        ]
       },
       "fun_fact": "Malaika Mihambos Vater stammt aus Tansania.",
       "subcategory": "athletes-and-other-sports",
@@ -1091258,19 +1091661,53 @@
       "needs_media": true,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture is broken at the source (truncated (Premature end of JPEG file)).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture is broken at the source (truncated (Premature end of JPEG file)).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture file was broken, so the query is new to find a working long jump image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "long jump sand pit",
+            "note": "Eine Weitsprunganlage mit Sandgrube oder ein Weitspringer im Sprung, ohne erkennbare Namen.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/U.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Sgt. Barry St. Clair · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Sgt. Barry St. Clair",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-USGov-Military"
+            ],
+            "file_problem": "truncated (Premature end of JPEG file)"
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14100",
@@ -1091504,7 +1091941,7 @@
     },
     {
       "id": "q-14103",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Zwei Waffeln, eine Füllung und ein Name, der sich ein paar Buchstaben gespart hat.",
       "question": "Die Waffel mit Nuss-Nougat-Creme gibt es seit 1959, und ihr Name „Hanuta“ ist eine Abkürzung. Wofür?",
@@ -1091516,7 +1091953,7 @@
       ],
       "hints": [
         "Der Name verbindet die Hauptzutat mit einem zweiten Wort.",
-        "Das zweite Wort hängt auch in fast jedem Klassenzimmer an der Wand.",
+        "Das zweite Wort hat mit der Form der Waffel zu tun.",
         "Gemeint ist dasselbe Wort wie in „Schokoladen…“."
       ],
       "media": {
@@ -1091562,26 +1091999,34 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Das zweite Wort hängt auch in fast jedem Klassenzimmer an der Wand\") points to \"Tafel\" and is the only fit among Taler/Torte/Tüte/Tafel, so it gives the answer away. Hint 2 should be vaguer, e.g. about the shape of the product (flat, rectangular) without naming the school blackboard.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Das zweite Wort hängt auch in fast jedem Klassenzimmer an der Wand\") points to \"Tafel\" and is the only fit among Taler/Torte/Tüte/Tafel, so it gives the answer away. Hint 2 should be vaguer, e.g. about the shape of the product (flat, rectangular) without naming the school blackboard.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer describe the shape or name chocolate; hint 2 now points indirectly to the classroom blackboard.",
+        "reason": "Made hint 2 vaguer so it no longer points straight to the blackboard (Tafel).",
         "previous": {
           "hints": [
-            "Der letzte Wortteil beschreibt die flache, rechteckige Form.",
-            "Das Wort für diese Form kennt man auch von Schokolade im Supermarktregal.",
+            "Der Name verbindet die Hauptzutat mit einem zweiten Wort.",
+            "Das zweite Wort hängt auch in fast jedem Klassenzimmer an der Wand.",
             "Gemeint ist dasselbe Wort wie in „Schokoladen…“."
           ]
         },
@@ -1091734,7 +1092179,7 @@
     },
     {
       "id": "q-14106",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Kirmesglück ist wie das Wetter: Vorher weiß man nie, was kommt.",
       "question": "An der Losbude rollst du dein Los auf und liest „Niete“. Was bedeutet das?",
@@ -1091752,11 +1092197,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "fairground lottery booth",
+        "query": "Losbude Kirmes",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2017-09-24_3895_Kirmes_K%C3%A4rlich_%28Foto_Sp%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/2017-09-24_3895_Kirmes_K%C3%A4rlich_%28Foto_Sp%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Spurzem · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Spurzem",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Spurzem",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "„Niete“ kommt vom niederländischen Wort „niet“, und das heißt „nichts“.",
       "subcategory": "carnival-and-fairs",
@@ -1091785,19 +1092237,43 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a fairground lottery booth (Losbude). The candidates are US state-lottery counters, Korean school signage, a classroom and a Thai night-market vendor selling printed lottery tickets. Another search isn't allowed. The question text itself is fine. A new search such as \"Losbude Kirmes\" or \"Lostrommel Jahrmarkt\" should find a usable picture. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a fairground lottery booth (Losbude). The candidates are US state-lottery counters, Korean school signage, a classroom and a Thai night-market vendor selling printed lottery tickets. Another search isn't allowed. The question text itself is fine. A new search such as \"Losbude Kirmes\" or \"Lostrommel Jahrmarkt\" should find a usable picture. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New German-language media query so the search can find a real fairground lottery booth.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "fairground lottery booth",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14107",
@@ -1093129,7 +1093605,7 @@
     },
     {
       "id": "q-14124",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Amtsdeutsch auf dem Teller: Selbst das Mittagessen hatte eine Dienstbezeichnung.",
       "question": "Du liest eine alte DDR-Speisekarte: „Broiler“ ist zu Brathähnchen wie „Sättigungsbeilage“ zu …?",
@@ -1093147,11 +1093623,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "GDR restaurant menu Speisekarte",
+        "query": "Goldbroiler DDR",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://www.flickr.com/photos/31190570@N06/6065102639",
+        "file_url": "https://live.staticflickr.com/6066/6065102639_bb6d18f9c0_b.jpg",
+        "credit": "herr.g · CC BY-SA 2.0 · Flickr via Openverse",
+        "provider": "openverse",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "author": "herr.g",
+        "author_url": "https://www.flickr.com/photos/31190570@N06",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Das DDR-Wort „Broiler“ kommt aus dem Englischen, wo „to broil“ so viel wie grillen heißt.",
       "subcategory": "gdr-everyday-life",
@@ -1093180,19 +1093663,43 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what the question names, an old GDR menu. They are modern menus: an Italian dessert menu (1, 2), an English fine-dining menu (3), a Kenyan menu (4), a Chinese wedding menu (5) and an English chalkboard (6). Candidate 1 also shows puddings and ice cream, which points to a wrong option. No new search is allowed, so the media slot needs a GDR menu (e.g. \"DDR Speisekarte HO Gaststätte\") or a different illustrative subject such as a GDR canteen meal. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the question names, an old GDR menu. They are modern menus: an Italian dessert menu (1, 2), an English fine-dining menu (3), a Kenyan menu (4), a Chinese wedding menu (5) and an English chalkboard (6). Candidate 1 also shows puddings and ice cream, which points to a wrong option. No new search is allowed, so the media slot needs a GDR menu (e.g. \"DDR Speisekarte HO Gaststätte\") or a different illustrative subject such as a GDR canteen meal. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media query changed to a GDR Goldbroiler restaurant, which fits the question's world and avoids a menu that might show the side dishes.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "GDR restaurant menu Speisekarte",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14125",
@@ -1094549,7 +1095056,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Berghain building Berlin",
+        "query": "Berghain club exterior",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1094583,18 +1095090,44 @@
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine, but no image candidate shows the Berghain, which the question names. #1 (Ostgut.jpg) is an empty old freight yard, and #2–6 show the Reichstag and Berlin-Mitte. No new search is allowed, so the slot needs a real Berghain exterior photo (e.g. query \"Berghain club exterior\") or a switch to a decorative image. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but no image candidate shows the Berghain, which the question names. #1 (Ostgut.jpg) is an empty old freight yard, and #2–6 show the Reichstag and Berlin-Mitte. No new search is allowed, so the slot needs a real Berghain exterior photo (e.g. query \"Berghain club exterior\") or a switch to a decorative image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media query now targets the Berghain building's exterior.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Berghain building Berlin",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14144",
@@ -1095425,8 +1095958,8 @@
     },
     {
       "id": "q-14155",
-      "status": "needs_work",
-      "difficulty": 10,
+      "status": "approved",
+      "difficulty": 8,
       "description": "Ein Bundesland, das farblich ganz klar bei den Hummeln abgeschaut hat.",
       "question": "Die Landesflagge von Baden-Württemberg ist schwarz-gold. Aus dem Wappen welches alten Herzogtums stammen diese Farben?",
       "answer": "Schwaben",
@@ -1095479,23 +1096012,40 @@
         "difficulty_estimate": 11,
         "notes": "Correct: the black-gold colours come from Staufer/Swabia. Heraldry is fairly dry. Hint 3 gives the answer away through the Swabian saying, which is allowed for hint 3. Probably a bit harder than 10."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The black-gold colours are tied to the Staufer/Swabia arms (three lions), but I found no source that explicitly says the flag colours derive from the Duchy of Swabia's arms. The state constitution just prescribes black-gold. Difficulty 10 also looks too high.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The black-gold colours are tied to the Staufer/Swabia arms (three lions), but I found no source that explicitly says the flag colours derive from the Duchy of Swabia's arms. The state constitution just prescribes black-gold. Difficulty 10 also looks too high.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "difficulty_original": 10,
+      "revision": {
+        "action": "revise",
+        "reason": "The fact matches the usual explanation (black-gold comes from the Swabian/Staufer arms with three black lions on gold), so only the difficulty is lowered to 8.",
+        "previous": {
+          "difficulty": 10
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14156",
@@ -1095602,7 +1096152,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Berlin coat of arms svg",
+        "query": "Coat of arms of Berlin",
         "note": "Das Berliner Landeswappen: schwarzer Bär auf silbernem Schild, darüber die goldene Krone mit Mauer und Tor",
         "source_url": null,
         "file_url": null,
@@ -1095636,18 +1096186,44 @@
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the current Berlin coat of arms (black bear on a silver shield under the gold crown with wall and gate). Since no new search is allowed, the slot needs the Commons file of the official Landeswappen (e.g. \"Coat of arms of Berlin.svg\") added by hand. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the current Berlin coat of arms (black bear on a silver shield under the gold crown with wall and gate). Since no new search is allowed, the slot needs the Commons file of the official Landeswappen (e.g. \"Coat of arms of Berlin.svg\") added by hand. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media query now points at the Commons file of the official Berlin coat of arms.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Berlin coat of arms svg",
+            "note": "Das Berliner Landeswappen: schwarzer Bär auf silbernem Schild, darüber die goldene Krone mit Mauer und Tor",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14158",
@@ -1096245,7 +1096821,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "gravel quarry heaps conveyor",
+        "query": "Kiesgrube Bagger",
         "note": "Photo of a gravel pit with gravel heaps and an excavator or conveyor, no text.",
         "source_url": null,
         "file_url": null,
@@ -1096279,27 +1096855,41 @@
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question says „In Gruben wie dieser“, so the image has to clearly show a gravel pit. No candidate does: 1 and 3 show a green screening conveyor on grass with a little bare soil, 2 is a close-up of a machine, 4 is a rusty processing plant, 5 is an old conveyor in the bushes and 6 is a long covered conveyor across fields. No new search is allowed. A clear photo of a German gravel pit (Kiesgrube) with heaps and an excavator is needed, for example from the search \"Kiesgrube Bagger\" or \"gravel pit excavator Germany\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says „In Gruben wie dieser“, so the image has to clearly show a gravel pit. No candidate does: 1 and 3 show a green screening conveyor on grass with a little bare soil, 2 is a close-up of a machine, 4 is a rusty processing plant, 5 is an old conveyor in the bushes and 6 is a long covered conveyor across fields. No new search is allowed. A clear photo of a German gravel pit (Kiesgrube) with heaps and an excavator is needed, for example from the search \"Kiesgrube Bagger\" or \"gravel pit excavator Germany\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hints 1 and 2 vaguer so they no longer name building sites or describe mixing concrete.",
+        "reason": "Media query changed so the search finds a clear gravel pit with an excavator.",
         "previous": {
-          "hints": [
-            "Auf Baustellen sieht man ihn in großen Haufen.",
-            "Man mischt ihn mit Zement und Wasser.",
-            "Daraus entstehen Wände, Brücken und Fahrbahnen."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "gravel quarry heaps conveyor",
+            "note": "Photo of a gravel pit with gravel heaps and an excavator or conveyor, no text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
@@ -1097437,7 +1098027,7 @@
     },
     {
       "id": "q-14182",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Wer gegen diesen Mann gewinnen wollte, brauchte Kraft, Köpfchen und viel Sitzfleisch.",
       "question": "Bei ProSieben forderte ich bis 2015 Kandidaten in bis zu 15 Spielen heraus. Die Promi-Version meiner Show heißt „Schlag den Star“. Wer bin ich?",
@@ -1097455,11 +1098045,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "television studio stage lights",
+        "query": "TV studio cameras",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWWL-TV_Studios_New_OrleansJune_2015.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/WWL-TV_Studios_New_OrleansJune_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Infrogmation of New Orleans · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Infrogmation of New Orleans",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Manche Ausgaben von „Schlag den Raab“ dauerten über fünf Stunden und liefen bis tief in die Nacht.",
       "subcategory": "shows-and-presenters",
@@ -1097488,19 +1098085,43 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No media candidate fits: the sheet shows an old hearing photo, a cathedral painting, office buildings, an 80s band, a mantis and a circuit board, none of which is a TV studio. A new search like \"TV studio cameras\" is needed, and can_search_again is false. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No media candidate fits: the sheet shows an old hearing photo, a cathedral painting, office buildings, an 80s band, a mantis and a circuit board, none of which is a TV studio. A new search like \"TV studio cameras\" is needed, and can_search_again is false. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media query changed to a concrete TV-studio search.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "television studio stage lights",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14183",
@@ -1097900,7 +1098521,7 @@
     },
     {
       "id": "q-14188",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Ein englisches Wort, das in England kaum jemand so benutzt.",
       "question": "Wer immer wieder schikaniert wird, erlebt „Mobbing“. Das klingt englisch. Welches Wort sagt man dafür in England meist?",
@@ -1097918,20 +1098539,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "empty school hallway",
+        "query": "school corridor lockers",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMostly_empty_hallway_at_Central_High_School_in_Little_Rock.tif",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Mostly_empty_hallway_at_Central_High_School_in_Little_Rock.tif/lossy-page1-3840px-Mostly_empty_hallway_at_Central_High_School_in_Little_Rock.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Thomas J. O'Halloran · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHK_TKL_%E8%AA%BF%E6%99%AF%E5%B6%BA_Tiu_Keng_Leng_%E6%98%8E%E6%84%9B_CBCC_CIHE_school_corridor_lockers_September_2019_SSG_05.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/HK_TKL_%E8%AA%BF%E6%99%AF%E5%B6%BA_Tiu_Keng_Leng_%E6%98%8E%E6%84%9B_CBCC_CIHE_school_corridor_lockers_September_2019_SSG_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "WORSDI HDE9ORN · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Thomas J. O'Halloran",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "WORSDI HDE9ORN",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:WORSDI_HDE9ORN&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-USNWR"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Ähnlich ist es beim „Handy“: Auch das sagt in England kaum jemand für ein Mobiltelefon.",
       "subcategory": "slang-and-everyday-words",
@@ -1097960,19 +1098579,52 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-USNWR).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-USNWR).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image had a US-only licence, so there is a new decorative query to find a different school-corridor picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "empty school hallway",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMostly_empty_hallway_at_Central_High_School_in_Little_Rock.tif",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Mostly_empty_hallway_at_Central_High_School_in_Little_Rock.tif/lossy-page1-3840px-Mostly_empty_hallway_at_Central_High_School_in_Little_Rock.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Thomas J. O'Halloran · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Thomas J. O'Halloran",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-USNWR"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14189",
@@ -1098354,13 +1099006,13 @@
       ],
       "hints": [
         "Es liegt ziemlich genau in der Mitte Deutschlands.",
-        "Seine Landeshauptstadt ist Erfurt.",
+        "Durch seinen großen Wald führt ein berühmter Wanderweg, der Rennsteig.",
         "Man nennt es auch das „grüne Herz Deutschlands“."
       ],
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Thuringia in Germany locator map svg",
+        "query": "Thuringia in Germany map",
         "note": "Unbeschriftete Deutschlandkarte mit Bundesländergrenzen, Thüringen farbig hervorgehoben; keine Namen.",
         "source_url": null,
         "file_url": null,
@@ -1098394,19 +1099046,50 @@
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the essential image: a German map with state borders and Thuringia highlighted, without labels. #1 prints „THÜRINGEN“ and Erfurt on the map, #2 has no highlight, and #3–#6 are maps of Europe or the world. A new search isn't allowed here, so the slot needs a hand-picked file such as „Thuringia in Germany.svg“. Also, hint 2 names the capital, Erfurt, which nearly gives the answer away at hint 2. Hint 2 should be vaguer, for example the neighbouring states or the Thuringian Forest. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the essential image: a German map with state borders and Thuringia highlighted, without labels. #1 prints „THÜRINGEN“ and Erfurt on the map, #2 has no highlight, and #3–#6 are maps of Europe or the world. A new search isn't allowed here, so the slot needs a hand-picked file such as „Thuringia in Germany.svg“. Also, hint 2 names the capital, Erfurt, which nearly gives the answer away at hint 2. Hint 2 should be vaguer, for example the neighbouring states or the Thuringian Forest. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New map query for the Thuringia locator file, and hint 2 now names the Rennsteig instead of the capital Erfurt.",
+        "previous": {
+          "hints": [
+            "Es liegt ziemlich genau in der Mitte Deutschlands.",
+            "Seine Landeshauptstadt ist Erfurt.",
+            "Man nennt es auch das „grüne Herz Deutschlands“."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Thuringia in Germany locator map svg",
+            "note": "Unbeschriftete Deutschlandkarte mit Bundesländergrenzen, Thüringen farbig hervorgehoben; keine Namen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14195",
@@ -1098656,7 +1099339,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Bavaria flag waving",
+        "query": "Flag of Bavaria lozengy",
         "note": "Nahaufnahme des blau-weißen Rautenmusters der bayerischen Flagge, ohne Text oder Wappen.",
         "source_url": null,
         "file_url": null,
@@ -1098690,18 +1099373,44 @@
       "batch": "batch-45",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the essential image (a close-up of the blue-white Bavarian lozenge pattern): the candidates are army vehicles with German flags, a Kamala Harris photo, a warning sign, a US Veterans Day parade, and a portrait-format town sign where the lozenge flag is small and comes with text. No new search is allowed, so the image needs a different source, e.g. \"Bavarian lozenge flag\" or \"Flag of Bavaria (lozengy)\" on Commons. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the essential image (a close-up of the blue-white Bavarian lozenge pattern): the candidates are army vehicles with German flags, a Kamala Harris photo, a warning sign, a US Veterans Day parade, and a portrait-format town sign where the lozenge flag is small and comes with text. No new search is allowed, so the image needs a different source, e.g. \"Bavarian lozenge flag\" or \"Flag of Bavaria (lozengy)\" on Commons. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media query now targets the Commons file of the lozenge Bavarian flag.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Bavaria flag waving",
+            "note": "Nahaufnahme des blau-weißen Rautenmusters der bayerischen Flagge, ohne Text oder Wappen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14199",
@@ -1098996,7 +1099705,7 @@
     },
     {
       "id": "q-14203",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Eine Redewendung mit mehr Kreuzen als ein ausgefüllter Lottoschein.",
       "question": "Nach der Mathearbeit seufzt jemand: „Da mache ich drei Kreuze!“ Was meint er damit?",
@@ -1099007,8 +1099716,8 @@
         "Er hat bei der Arbeit geschummelt"
       ],
       "hints": [
-        "Es geht um ein Gefühl nach etwas Anstrengendem.",
-        "Mit Noten oder Fehlern auf der Arbeit haben die Kreuze nichts zu tun.",
+        "Die Kreuze stammen ursprünglich aus der Kirche.",
+        "Früher bekreuzigten sich Menschen so, wenn eine Gefahr überstanden war.",
         "Man atmet dabei tief durch und denkt: „Puh, geschafft!“"
       ],
       "media": {
@@ -1099027,7 +1099736,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Früher unterschrieben Menschen, die nicht schreiben konnten, oft mit drei Kreuzen.",
+      "fun_fact": "Vermutlich stammt die Redewendung vom Brauch, sich nach etwas Überstandenem dankbar zu bekreuzigen.",
       "subcategory": "superstitions-and-folk-beliefs",
       "style": null,
       "concept": "Kreuzzeichen",
@@ -1099050,33 +1099759,42 @@
         "difficulty_estimate": 6,
         "notes": "Distractors are a bit weak: once a player knows the idiom is about relief, the other three are obviously wrong. The answer is also worded differently from them (a feeling vs. facts about the test). Hint 2 nearly explains the idiom."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 („Es geht um ein Gefühl nach etwas Anstrengendem“) gives the answer away: the correct option is the only one that describes a feeling, so this hint alone solves the question. Hint 1 needs to become vague (e.g. about where the idiom comes from), and hint 2 should stop ruling out options so directly. Fact check: uncertain. The answer is right. The fun fact is not supported. The usual explanation is the Catholic habit of crossing oneself in thanks. I found no source linking the phrase to illiterate people signing with three crosses.",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 („Es geht um ein Gefühl nach etwas Anstrengendem“) gives the answer away: the correct option is the only one that describes a feeling, so this hint alone solves the question. Hint 1 needs to become vague (e.g. about where the idiom comes from), and hint 2 should stop ruling out options so directly. Fact check: uncertain. The answer is right. The fun fact is not supported. The usual explanation is the Catholic habit of crossing oneself in thanks. I found no source linking the phrase to illiterate people signing with three crosses.",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which explained the idiom, with a vaguer hint.",
+        "reason": "Replaced hints 1–2, which gave the answer away, with hints about the idiom's origin, and swapped the unsupported fun fact for the common explanation (crossing oneself in thanks).",
         "previous": {
           "hints": [
             "Es geht um ein Gefühl nach etwas Anstrengendem.",
-            "Früher bekreuzigte man sich, wenn eine Gefahr glücklich überstanden war.",
+            "Mit Noten oder Fehlern auf der Arbeit haben die Kreuze nichts zu tun.",
             "Man atmet dabei tief durch und denkt: „Puh, geschafft!“"
-          ]
+          ],
+          "fun_fact": "Früher unterschrieben Menschen, die nicht schreiben konnten, oft mit drei Kreuzen."
         },
         "revised_on": "2026-11-06"
       }
@@ -1099371,38 +1100089,38 @@
     },
     {
       "id": "q-14208",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Wenn sogar Gespenster pünktlich zur Arbeit erscheinen.",
-      "question": "Um Mitternacht beginnt die Geisterstunde. Wie oft schlägt eine Turmuhr wie diese dann?",
-      "answer": "12",
+      "question": "Laut Volksglauben beginnt um Mitternacht die Geisterstunde. Um wie viel Uhr endet sie?",
+      "answer": "1 Uhr",
       "wrong_answers": [
-        "1",
-        "3",
-        "7"
+        "2 Uhr",
+        "4 Uhr",
+        "6 Uhr"
       ],
       "hints": [
-        "So viele Zahlen stehen auf dem Zifferblatt.",
-        "Genauso viele Monate hat ein Jahr.",
-        "Man nennt diese Menge auch ein Dutzend."
+        "Der Name verrät schon, wie lange sie dauert.",
+        "Sie dauert genau 60 Minuten.",
+        "Die Turmuhr schlägt dann nur ein einziges Mal."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "church tower clock",
-        "note": "Die Turmuhr einer Kirche mit gut sichtbarem Zifferblatt.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AClock_Tower_Stephens_Church_Ooty_Jun22_A7C_02031.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Clock_Tower_Stephens_Church_Ooty_Jun22_A7C_02031.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "church tower clock night",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMunich_-_Night_view_of_the_Frauenkirche_-_9323.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Munich_-_Night_view_of_the_Frauenkirche_-_9323.jpg/3840px-Munich_-_Night_view_of_the_Frauenkirche_-_9323.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information.  Please contact me before commercial use.\n\n\n\nPlease do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
-        "author_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Clock_Tower_Stephens_Church_Ooty_Jun22_A7C_02031.jpg?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jorge Royan",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Laut Volksglauben endet die Geisterstunde um 1 Uhr nachts, wenn die Uhr einmal schlägt.",
+      "fun_fact": "In vielen Sagen müssen Gespenster spätestens beim ersten Hahnenschrei verschwinden.",
       "subcategory": "superstitions-and-folk-beliefs",
       "style": null,
       "concept": "Geisterstunde",
@@ -1099426,22 +1100144,67 @@
         "notes": "The clock image is not truly essential; it is illustrative. It shows a dial with 12 numbers, which helps a lot (hint 1 says the same). Plain arithmetic-like fact, low surprise."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This asks the same fact as the approved q-5648 (\"An old church clock rings once at 1 o'clock… How many times does it ring at midnight?\" → 12). The ghost-hour framing doesn't change what's being asked. To keep the Geisterstunde topic, ask a different folklore fact, for example when the Geisterstunde ends (1 Uhr).",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as the approved q-5648 (\"An old church clock rings once at 1 o'clock… How many times does it ring at midnight?\" → 12). The ghost-hour framing doesn't change what's being asked. To keep the Geisterstunde topic, ask a different folklore fact, for example when the Geisterstunde ends (1 Uhr).",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Duplicated q-5648, so it now asks when the Geisterstunde ends (1 Uhr), as the reviewer suggested; the image is now illustrative.",
+        "previous": {
+          "question": "Um Mitternacht beginnt die Geisterstunde. Wie oft schlägt eine Turmuhr wie diese dann?",
+          "answer": "12",
+          "wrong_answers": [
+            "1",
+            "3",
+            "7"
+          ],
+          "hints": [
+            "So viele Zahlen stehen auf dem Zifferblatt.",
+            "Genauso viele Monate hat ein Jahr.",
+            "Man nennt diese Menge auch ein Dutzend."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "church tower clock",
+            "note": "Die Turmuhr einer Kirche mit gut sichtbarem Zifferblatt.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AClock_Tower_Stephens_Church_Ooty_Jun22_A7C_02031.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Clock_Tower_Stephens_Church_Ooty_Jun22_A7C_02031.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information.  Please contact me before commercial use.\n\n\n\nPlease do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
+            "author_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Clock_Tower_Stephens_Church_Ooty_Jun22_A7C_02031.jpg?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+            "restrictions": [],
+            "pd_reasons": []
+          },
+          "fun_fact": "Laut Volksglauben endet die Geisterstunde um 1 Uhr nachts, wenn die Uhr einmal schlägt.",
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14209",
@@ -1099993,20 +1100756,20 @@
     },
     {
       "id": "q-14216",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Zwei Buchstaben, die angeben, wie viel Mut man mitbringen sollte.",
       "question": "Bei der Vierschanzentournee hörst du „Schanze HS 142“. Welches Maß hat dort den alten K-Punkt als Größenangabe abgelöst?",
-      "answer": "Hillsize",
+      "answer": "Hill Size",
       "wrong_answers": [
+        "Hill Slope",
         "Hangstrecke",
-        "Höchstsprung",
-        "Hauptsprung"
+        "Höchstsprung"
       ],
       "hints": [
-        "Der Begriff kommt aus dem Englischen.",
-        "Es geht um die Größe des ganzen Hangs.",
-        "Übersetzt heißt er „Hanggröße“."
+        "Das Maß beschreibt die ganze Schanze, nicht nur einen Punkt am Hang.",
+        "Gemessen wird vom Schanzentisch bis zum Ende des Landebereichs.",
+        "Übersetzt heißt es „Hanggröße“."
       ],
       "media": {
         "type": "image",
@@ -1100051,24 +1100814,42 @@
       "needs_media": false,
       "batch": "batch-45",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 („Der Begriff kommt aus dem Englischen.“) gives the answer away: „Hillsize“ is the only English option, the other three are German words. Hint 1 needs to be vaguer, for example about the hill as a whole and not just the landing point. The wrong answers could also include an English-sounding term so the answer doesn't stand out. Also consider the official spelling „Hill Size“.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 („Der Begriff kommt aus dem Englischen.“) gives the answer away: „Hillsize“ is the only English option, the other three are German words. Hint 1 needs to be vaguer, for example about the hill as a whole and not just the landing point. The wrong answers could also include an English-sounding term so the answer doesn't stand out. Also consider the official spelling „Hill Size“.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected the fun fact: K originally meant 'kritischer Punkt', today officially 'Konstruktionspunkt'.",
+        "reason": "Hint 1 gave the answer away, so the hints now describe what is measured; added an English-sounding distractor and used the official spelling „Hill Size“.",
         "previous": {
-          "fun_fact": "Das K im K-Punkt steht für „kritischer Punkt“ – dahinter wird der Hang wieder flacher."
+          "answer": "Hillsize",
+          "wrong_answers": [
+            "Hangstrecke",
+            "Höchstsprung",
+            "Hauptsprung"
+          ],
+          "hints": [
+            "Der Begriff kommt aus dem Englischen.",
+            "Es geht um die Größe des ganzen Hangs.",
+            "Übersetzt heißt er „Hanggröße“."
+          ]
         },
         "revised_on": "2026-11-06"
       }
