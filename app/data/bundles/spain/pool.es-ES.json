@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "99466626",
+  "hash": "3a582971",
   "questions": [
     {
       "id": "q-0975",
@@ -47426,6 +47426,40 @@
       "background": null
     },
     {
+      "id": "q-15234",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "bourbons-and-19th-century",
+      "bundle": "spain",
+      "description": "Una camisa blanca que se ha hecho más famosa que muchas pasarelas.",
+      "question": "Mira este detalle: ¿de qué cuadro famoso es?",
+      "answer": "«El 3 de mayo en Madrid»",
+      "wrong_answers": [
+        "«Las meninas»",
+        "«La rendición de Breda»",
+        "«El Guernica»"
+      ],
+      "hints": [
+        "Está en el Museo del Prado.",
+        "Muestra a soldados franceses fusilando a madrileños tras el levantamiento contra Napoleón.",
+        "Su título es una fecha: el día después del levantamiento de Madrid."
+      ],
+      "fun_fact": "El hombre de la camisa blanca tiene en la mano una marca parecida a un estigma, como si fuera un mártir.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Francisco_de_Goya_-_Fusillade_du_3_mai_1808.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrancisco_de_Goya_-_Fusillade_du_3_mai_1808.jpg",
+        "credit": "Francisco Goya · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Francisco Goya",
+        "author_url": "https://en.wikipedia.org/wiki/en:Francisco_Goya"
+      },
+      "background": null
+    },
+    {
       "id": "q-15235",
       "status": "approved",
       "difficulty": 9,
@@ -47592,6 +47626,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Shisma",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shisma"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15240",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "brands-and-shops",
+      "bundle": "spain",
+      "description": "El paraíso de cualquiera que diga «esto lo arreglo yo en un momento».",
+      "question": "En esta tienda venden tornillos, martillos, llaves inglesas y clavos. ¿Cómo se llama?",
+      "answer": "Ferretería",
+      "wrong_answers": [
+        "Droguería",
+        "Mercería",
+        "Carpintería"
+      ],
+      "hints": [
+        "Aquí vas si se te rompe un grifo",
+        "Antes vendían los clavos al peso",
+        "Su nombre viene de un metal muy duro"
+      ],
+      "fun_fact": "«Ferretería» viene de «hierro» (en latín, «ferrum»), porque antes casi todo lo que vendían era de ese metal.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Various_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg/3840px-Various_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVarious_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },
@@ -49500,6 +49568,40 @@
       "background": null
     },
     {
+      "id": "q-15298",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "modern-literature",
+      "bundle": "spain",
+      "description": "Hilo, aguja, espías y una ciudad tan blanca como un patrón sin estrenar.",
+      "question": "En «El tiempo entre costuras», Sira abre su taller en la ciudad que fue capital del protectorado español en Marruecos. ¿Cuál es?",
+      "answer": "Tetuán",
+      "wrong_answers": [
+        "Tánger",
+        "Casablanca",
+        "Marrakech"
+      ],
+      "hints": [
+        "Está en el norte de Marruecos.",
+        "Sira llega allí después de pasar por Tánger.",
+        "Su medina blanca está muy cerca de Ceuta."
+      ],
+      "fun_fact": "La serie de Antena 3, con Adriana Ugarte como Sira, se rodó en parte en el propio Tetuán.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Succes_vintage_sewing_machine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASucces_vintage_sewing_machine.jpg",
+        "credit": "Uberprutser · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Uberprutser",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Uberprutser"
+      },
+      "background": null
+    },
+    {
       "id": "q-15299",
       "status": "approved",
       "difficulty": 12,
@@ -49840,6 +49942,40 @@
       "background": null
     },
     {
+      "id": "q-15309",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "national-symbols",
+      "bundle": "spain",
+      "description": "Una mañana de diciembre en la que media España se queda pegada a la tele cruzando los dedos.",
+      "question": "Cada 22 de diciembre gira un gran bombo mientras unos niños cantan números y premios. ¿Qué sorteo es?",
+      "answer": "La Lotería de Navidad",
+      "wrong_answers": [
+        "La Lotería del Niño",
+        "La Primitiva",
+        "El cupón de la ONCE"
+      ],
+      "hints": [
+        "Se celebra justo antes de las vacaciones de invierno.",
+        "Su premio más famoso se llama «el Gordo».",
+        "Su nombre lleva la misma fiesta que el árbol y el belén."
+      ],
+      "fun_fact": "El Sorteo de Navidad se celebró por primera vez en 1812, en Cádiz.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Dyker_Lights_%2862317%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADyker_Lights_%2862317%29.jpg",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rhododendrites",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rhododendrites"
+      },
+      "background": null
+    },
+    {
       "id": "q-15310",
       "status": "approved",
       "difficulty": 3,
@@ -50108,6 +50244,40 @@
         "license_url": null,
         "author": "Matt Harris",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15318",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "painting-and-architecture",
+      "bundle": "spain",
+      "description": "En el Siglo de Oro, los pinceles viajaban de Sevilla a Madrid y llegaban al Prado sin perder el brillo.",
+      "question": "Francisco Pacheco es a Velázquez lo que Velázquez es a Juan Bautista Martínez del Mazo. ¿Qué relación es?",
+      "answer": "Maestro y suegro",
+      "wrong_answers": [
+        "Tío y padrino",
+        "Hermano mayor y rival",
+        "Mecenas y cuñado"
+      ],
+      "hints": [
+        "Los tres fueron pintores en la España del siglo XVII.",
+        "Su lazo era a la vez de taller y de familia.",
+        "Velázquez se casó con Juana, la hija de Pacheco."
+      ],
+      "fun_fact": "Martínez del Mazo, alumno de Velázquez, se casó con su hija Francisca, igual que Velázquez se había casado con la hija de su maestro.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Sevilla_Old_Town_Street_%2825574035%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASevilla_Old_Town_Street_%2825574035%29.jpeg",
+        "credit": "Heinz Joerg Kretschmer · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Heinz Joerg Kretschmer",
+        "author_url": "https://500px.com/hjkret"
       },
       "background": null
     },
@@ -50996,6 +51166,40 @@
       "background": null
     },
     {
+      "id": "q-15345",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "creatures",
+      "bundle": "spain",
+      "description": "Lucecitas nocturnas que no tienen ni enchufe ni pilas.",
+      "question": "De noche ves llamitas azules flotando sobre el campo: es el fuego fatuo. Según la tradición popular, ¿qué eran?",
+      "answer": "Almas de difuntos",
+      "wrong_answers": [
+        "Hadas del bosque",
+        "Duendes traviesos",
+        "Brujas voladoras"
+      ],
+      "hints": [
+        "Mucha gente les rezaba al verlas.",
+        "Solían verse en los cementerios.",
+        "Se creía que eran espíritus de personas que ya no viven."
+      ],
+      "fun_fact": "La ciencia lo explica con gases que salen de restos que se descomponen y que se encienden solos al tocar el aire.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Aurora_on_a_rainy_and_foggy_night_in_Tuntorp_1.jpg/3840px-Aurora_on_a_rainy_and_foggy_night_in_Tuntorp_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAurora_on_a_rainy_and_foggy_night_in_Tuntorp_1.jpg",
+        "credit": "W.carter · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "W.carter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter"
+      },
+      "background": null
+    },
+    {
       "id": "q-15346",
       "status": "approved",
       "difficulty": 7,
@@ -51128,6 +51332,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
         "author": "Thomas Wolf, www.foto-tw.de",
         "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15350",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "current-music",
+      "bundle": "spain",
+      "description": "Hay finales que se deciden por SMS y luego se cantan en todas las bodas.",
+      "question": "En 2018, «Lo malo» quedó segunda en la gala para elegir la canción de España en Eurovisión. ¿Qué canción ganó?",
+      "answer": "«Tu canción»",
+      "wrong_answers": [
+        "«La venda»",
+        "«Quédate conmigo»",
+        "«Bailar pegados»"
+      ],
+      "hints": [
+        "Es una balada romántica cantada a dúo.",
+        "Sus intérpretes eran compañeros de Operación Triunfo 2017.",
+        "La cantaron Amaia y Alfred."
+      ],
+      "fun_fact": "Aunque perdió esa gala, «Lo malo» se convirtió en un himno y en una de las canciones más escuchadas de 2018 en España.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Eurovision_2023_-_Jury_Semi-final_1_-_Latvia_-_Sudden_Lights_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEurovision_2023_-_Jury_Semi-final_1_-_Latvia_-_Sudden_Lights_%2801%29.jpg",
+        "credit": "Michael Doherty · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Michael Doherty",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sims2aholic8"
       },
       "background": null
     },
@@ -51438,6 +51676,40 @@
       "background": null
     },
     {
+      "id": "q-15360",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "football-clubs",
+      "bundle": "spain",
+      "description": "Una palabra que en realidad son dos colores pegados con cola.",
+      "question": "El Barça, el Levante y el Eibar visten de azulgrana. ¿Qué colores son?",
+      "answer": "Azul y grana",
+      "wrong_answers": [
+        "Azul y gris",
+        "Azul y blanco",
+        "Azul y negro"
+      ],
+      "hints": [
+        "La primera parte ya la sabes.",
+        "La segunda parte es un color que antes se sacaba de un insecto.",
+        "Es un rojo muy oscuro, como el del vino tinto."
+      ],
+      "fun_fact": "«Grana» es un color rojo oscuro; al Barça se le llama «el club azulgrana» y a sus aficionados, «culés».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg/3840px-Adidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdidas_soccer_ball_on_a_grass_pitch_%28Unsplash%29.jpg",
+        "credit": "Peter Glaser baraida · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Peter Glaser baraida",
+        "author_url": "https://unsplash.com/@baraida"
+      },
+      "background": null
+    },
+    {
       "id": "q-15361",
       "status": "approved",
       "difficulty": 5,
@@ -51570,6 +51842,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Guywelch2000",
         "author_url": "https://commons.wikimedia.org/wiki/User:Guywelch2000"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15365",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "modern-literature",
+      "bundle": "spain",
+      "description": "Un barco, un parche, un loro y alguien con mucha imaginación detrás del timón.",
+      "question": "¿Quién escribió «El pirata Garrapata», el desastroso pirata de los libros infantiles?",
+      "answer": "Juan Muñoz Martín",
+      "wrong_answers": [
+        "Jordi Sierra i Fabra",
+        "Gloria Fuertes",
+        "Elvira Lindo"
+      ],
+      "hints": [
+        "Sus libros están llenos de humor disparatado.",
+        "Sus libros salieron en la colección El Barco de Vapor en los años ochenta.",
+        "También creó a Fray Perico y a su inseparable borrico."
+      ],
+      "fun_fact": "Juan Muñoz Martín fue maestro durante muchos años antes de triunfar con sus libros infantiles.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Sailing_Boat_Santa_Bernarda_Caravelo%2C_River_Arade%2C_Portim%C3%A3o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASailing_Boat_Santa_Bernarda_Caravelo%2C_River_Arade%2C_Portim%C3%A3o.jpg",
+        "credit": "Ron B. Thomson · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ron B. Thomson",
+        "author_url": null
       },
       "background": null
     },
@@ -51948,6 +52254,40 @@
       "background": null
     },
     {
+      "id": "q-15377",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "rivers-and-mountains",
+      "bundle": "spain",
+      "description": "Un parque con nombre de señora y vecinos con plumas.",
+      "question": "Según la tradición, el Parque Nacional de Doñana debe su nombre a una mujer que vivió allí. ¿A quién?",
+      "answer": "A una duquesa llamada Ana",
+      "wrong_answers": [
+        "A una reina llamada Juana",
+        "A una pastora llamada Diana",
+        "A una santa llamada Susana"
+      ],
+      "hints": [
+        "Antes, «doña» se decía a las señoras importantes.",
+        "Era hija de una famosa princesa de la corte de Felipe II.",
+        "Su nombre es la segunda mitad de la palabra."
+      ],
+      "fun_fact": "Doña Ana de Silva y Mendoza, hija de la princesa de Éboli, se retiró en el siglo XVI a un palacio en estos bosques, que acabaron llevando su nombre.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Coto_Do%C3%B1ana_marshes.jpg/3840px-Coto_Do%C3%B1ana_marshes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoto_Do%C3%B1ana_marshes.jpg",
+        "credit": "Birding In Spain · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Birding In Spain",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Pyreneesbird&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-15378",
       "status": "approved",
       "difficulty": 10,
@@ -52046,6 +52386,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Adam Jones from Kelowna, BC, Canada",
         "author_url": "https://www.flickr.com/people/41000732@N04"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15381",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "spanish-cinema",
+      "bundle": "spain",
+      "description": "Un planeta de vecinos verdes que ven demasiadas películas de miedo.",
+      "question": "Estás viendo «Planet 51» y los habitantes verdes del planeta huyen aterrados de un visitante recién llegado del espacio. ¿Quién es?",
+      "answer": "Un astronauta de la Tierra",
+      "wrong_answers": [
+        "Un monstruo de gelatina",
+        "Un pulpo de otra galaxia",
+        "Un dinosaurio del espacio"
+      ],
+      "hints": [
+        "En esta película, los papeles de siempre están al revés.",
+        "Llega convencido de que el planeta está deshabitado.",
+        "Es un humano, como tú."
+      ],
+      "fun_fact": "«Planet 51», de los estudios madrileños Ilion, fue en su día la película de animación más cara del cine español.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/House_on_suburban_street_in_Sunshine%2C_Victoria.jpg/3840px-House_on_suburban_street_in_Sunshine%2C_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHouse_on_suburban_street_in_Sunshine%2C_Victoria.jpg",
+        "credit": "Philip Mallis · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Philip Mallis",
+        "author_url": null
       },
       "background": null
     },
@@ -52866,6 +53240,40 @@
       "background": null
     },
     {
+      "id": "q-15406",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "scientists-and-explorers",
+      "bundle": "spain",
+      "description": "Un ingeniero que firmó su invento con la primera letra de su apellido, como quien deja su inicial en un pupitre.",
+      "question": "El ingeniero vasco Alejandro Goicoechea, la «G» del Talgo, probó el primer prototipo de su tren articulado ligero. ¿En qué década?",
+      "answer": "En los años cuarenta",
+      "wrong_answers": [
+        "En los años veinte",
+        "En los años sesenta",
+        "En los años ochenta"
+      ],
+      "hints": [
+        "España aún tenía muchas líneas de tren de vapor.",
+        "Fue unos quince años antes de que el SEAT 600 llegara a las carreteras.",
+        "El primer prototipo, el Talgo 0, se probó en 1942."
+      ],
+      "fun_fact": "Talgo significa «Tren Articulado Ligero Goicoechea Oriol», por el ingeniero y por José Luis Oriol, que lo financió.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Docklands_Light_Railway_type_B23_at_Corella%2C_Spain_06.jpg/3840px-Docklands_Light_Railway_type_B23_at_Corella%2C_Spain_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADocklands_Light_Railway_type_B23_at_Corella%2C_Spain_06.jpg",
+        "credit": "tompagenet · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "tompagenet",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15407",
       "status": "approved",
       "difficulty": 15,
@@ -53134,6 +53542,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "normalityrelief from Golden, CO, USA",
         "author_url": "https://www.flickr.com/people/42846332@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15415",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "spanish-cinema",
+      "bundle": "spain",
+      "description": "El trofeo más cabezota del cine español: es todo cabeza.",
+      "question": "La estatuilla de los Premios Goya es el busto del pintor que les da nombre. ¿En cuál de estas ciudades NO vivió él?",
+      "answer": "Lisboa",
+      "wrong_answers": [
+        "Zaragoza",
+        "Madrid",
+        "Burdeos"
+      ],
+      "hints": [
+        "Nació en un pueblo de Aragón.",
+        "Fue pintor de la corte en la capital y murió en Francia.",
+        "La respuesta está en otro país de la península."
+      ],
+      "fun_fact": "La estatuilla de bronce pesa unos 3 kilos, así que agradecer el premio también es hacer pesas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Fuendetodos_%28Arag%C3%B3n%2C_Espa%C3%B1a%29_-_Poblaci%C3%B3n_Natal_de_Goya_27.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFuendetodos_%28Arag%C3%B3n%2C_Espa%C3%B1a%29_-_Poblaci%C3%B3n_Natal_de_Goya_27.jpg",
+        "credit": "Jahidalgoaloy · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jahidalgoaloy",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jahidalgoaloy&action=edit&redlink=1"
       },
       "background": null
     },
@@ -53882,6 +54324,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ruben Ortega",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ruben_Ortega"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15440",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "tv-series",
+      "bundle": "spain",
+      "description": "Un camarero que sirve el té con una mano y busca pistas con la otra.",
+      "question": "¿Qué actor fue Julio Olmedo, el camarero que busca a su hermana desaparecida en «Gran Hotel»?",
+      "answer": "Yon González",
+      "wrong_answers": [
+        "Álvaro Morte",
+        "Mario Casas",
+        "Miguel Ángel Silvestre"
+      ],
+      "hints": [
+        "Antes fue alumno en «El internado».",
+        "Después trabajó en «Las chicas del cable».",
+        "Su nombre de pila es vasco y tiene solo tres letras."
+      ],
+      "fun_fact": "El lujoso hotel de la serie se rodó en el Palacio de la Magdalena, en Santander.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Palacio_de_la_Magdalena_4.jpg/3840px-Palacio_de_la_Magdalena_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalacio_de_la_Magdalena_4.jpg",
+        "credit": "Jesús Gómez Fernández · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jesús Gómez Fernández",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Corso"
       },
       "background": null
     },
