@@ -211,7 +211,8 @@
     {
       "name": "Estrella en la camiseta",
       "facet": "Mundial de Sudáfrica 2010",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Se repite con lo que ya hay: el significado de la estrella ya se preguntó y el gol de Iniesta está en el banco; contarla en una foto es demasiado obvio."
     },
     {
       "name": "Rúa de los campeones del mundo en Madrid",
@@ -806,7 +807,8 @@
     {
       "name": "Manchester City",
       "facet": "Españoles triunfando en el extranjero",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Se ha preguntado mucho sobre el Manchester City; la pregunta con foto de Guardiola sería de dificultad 4 o más, no de 1."
     }
   ]
 }

@@ -216,7 +216,8 @@
     {
       "name": "Manuel Jalón",
       "facet": "Inventos de la vida cotidiana",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: La fregona de Jalón ya está en el pool; cualquier opción (quién la inventó, foto de fregona) se respondería con esa pregunta."
     },
     {
       "name": "Jeringuilla desechable",
@@ -858,7 +859,8 @@
     {
       "name": "Wolframio",
       "facet": "Químicos y elementos descubiertos",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: El aislamiento del wolframio por los Elhuyar en Bergara ya está en el pool, y a nivel 5 no hay otro dato del wolframio ligado a España."
     },
     {
       "name": "Hermanos Elhuyar",

@@ -313,7 +313,8 @@
     {
       "name": "Escudo de Oviedo",
       "facet": "Banderas y escudos de ciudades",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: Its main figure, the Cruz de los Ángeles, and Alfonso II are already in the pool."
     },
     {
       "name": "Escudo de Valladolid",
@@ -343,7 +344,8 @@
     {
       "name": "Bandera de Fuerteventura",
       "facet": "Banderas insulares y comarcales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and I'm not confident of the facts."
     },
     {
       "name": "Bandera de La Palma",
@@ -475,7 +477,8 @@
     {
       "name": "Lambrequín",
       "facet": "Heráldica: colores y términos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: A lambrequin can't give a question with these options (places or counting)."
     },
     {
       "name": "Tenante",

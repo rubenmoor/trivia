@@ -542,7 +542,8 @@
     {
       "name": "Caireles",
       "facet": "Vestuario y complementos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No tengo seguro el significado exacto de «caireles» en el traje flamenco."
     },
     {
       "name": "Rosario Flores",
@@ -902,7 +903,8 @@
     {
       "name": "Bailaor",
       "facet": "Vocabulario y jaleos flamencos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: La palabra se explica sola y el pool ya tiene bailaora y bailarín."
     },
     {
       "name": "Jaleo",
