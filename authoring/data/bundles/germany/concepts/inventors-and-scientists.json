@@ -71,7 +71,8 @@
     {
       "name": "Ferdinand Porsche",
       "facet": "Auto, Motor und Fahrrad",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Käfer und Sportwagenmarke sind schon gefragt; Herkunft (Böhmen/Österreich) oder Jahreszahlen ergeben keine gute Frage für dieses Bundle."
     },
     {
       "name": "Felix Wankel",
@@ -182,7 +183,8 @@
     {
       "name": "Saturn V",
       "facet": "Pioniere der Luft- und Raumfahrt",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Höhe, Apollo 11 und von Braun sind schon gefragt; was übrig bleibt (z. B. der letzte Start), sind nebensächliche Daten."
     },
     {
       "name": "Relativitätstheorie",

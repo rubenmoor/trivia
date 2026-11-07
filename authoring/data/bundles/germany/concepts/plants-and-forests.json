@@ -656,7 +656,8 @@
     {
       "name": "Jäger",
       "facet": "Waldnutzung, Jagd und Förster",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Drei Jäger-Fragen gibt es schon; die Optionen (Zeitpunkt, Rekord) geben auf Stufe 1 keine gute neue Frage."
     },
     {
       "name": "Jagdhorn",
