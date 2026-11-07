@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "54732287",
+  "hash": "27c066f3",
   "questions": [
     {
       "id": "q-0711",
@@ -44987,6 +44987,40 @@
       "background": null
     },
     {
+      "id": "q-15455",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "boxing",
+      "bundle": "mexico",
+      "description": "El tiempo justo para tomar agüita, escuchar regaños y volver al ring.",
+      "question": "Suena la campana y los boxeadores profesionales se van a su esquina a descansar. ¿Cuánto dura ese descanso?",
+      "answer": "1 minuto",
+      "wrong_answers": [
+        "10 segundos",
+        "5 minutos",
+        "15 minutos"
+      ],
+      "hints": [
+        "Es mucho más corto que un recreo.",
+        "Apenas alcanza para tomar agua y escuchar al entrenador.",
+        "Son 60 segundos."
+      ],
+      "fun_fact": "En el box profesional varonil cada round dura 3 minutos, y en el femenil suele durar 2.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/3rd_Infantry_Division_Soldiers_compete_in_NATO_boxing_event_%288266886%29.jpg/3840px-3rd_Infantry_Division_Soldiers_compete_in_NATO_boxing_event_%288266886%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A3rd_Infantry_Division_Soldiers_compete_in_NATO_boxing_event_%288266886%29.jpg",
+        "credit": "U.S. Army photo by Pfc. Trey Gonzales · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Army photo by Pfc. Trey Gonzales",
+        "author_url": "https://www.dvidshub.net/portfolio/1826655"
+      },
+      "background": null
+    },
+    {
       "id": "q-15456",
       "status": "approved",
       "difficulty": 6,
@@ -45289,6 +45323,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Paul Goyette from Chicago, USA",
         "author_url": "https://www.flickr.com/people/65414509@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15465",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "childrens-songs",
+      "bundle": "mexico",
+      "description": "Un lugar donde la cama cuelga del techo y nadie se espanta.",
+      "question": "En este estado del sureste hace tanto calor que muchas familias duermen en hamaca, se habla mucho maya y está Chichén Itzá. ¿Cuál es?",
+      "answer": "Yucatán",
+      "wrong_answers": [
+        "Campeche",
+        "Quintana Roo",
+        "Tabasco"
+      ],
+      "hints": [
+        "Está en una península.",
+        "Es famoso por la cochinita pibil.",
+        "Su capital es Mérida."
+      ],
+      "fun_fact": "La palabra «hamaca» viene del taíno del Caribe y fue de las primeras palabras americanas que entraron al español.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/2014-01-02_Traditionelle_Maya-Wohnstatt_in_Santa_Elena_01_anagoria.JPG/3840px-2014-01-02_Traditionelle_Maya-Wohnstatt_in_Santa_Elena_01_anagoria.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2014-01-02_Traditionelle_Maya-Wohnstatt_in_Santa_Elena_01_anagoria.JPG",
+        "credit": "Anagoria · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Anagoria",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Anagoria"
       },
       "background": null
     },
@@ -46143,6 +46211,40 @@
       "background": null
     },
     {
+      "id": "q-15492",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "home-and-street",
+      "bundle": "mexico",
+      "description": "La canción más pegajosa de México no está en la radio: suena por tu calle un sábado a las ocho de la mañana.",
+      "question": "Por tu calle se escucha una grabación: «Se compran colchones, tambores, refrigeradores…». ¿Quién viene pasando?",
+      "answer": "El que compra fierro viejo",
+      "wrong_answers": [
+        "El que vende gas",
+        "El que vende camotes",
+        "El que afila cuchillos"
+      ],
+      "hints": [
+        "No viene a venderte nada.",
+        "Quiere llevarse las cosas viejas que ya no usas.",
+        "La grabación también ofrece comprar lavadoras, microondas y cualquier cosa de metal que quieras vender."
+      ],
+      "fun_fact": "La voz de la grabación más famosa es la de María del Mar Terrón, que la grabó de jovencita a petición de su papá.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Mexican_neighborhood_el_floresta_veracruz_20260711.jpg/3840px-Mexican_neighborhood_el_floresta_veracruz_20260711.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMexican_neighborhood_el_floresta_veracruz_20260711.jpg",
+        "credit": "Coral2712 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Coral2712",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Coral2712"
+      },
+      "background": null
+    },
+    {
       "id": "q-15493",
       "status": "approved",
       "difficulty": 6,
@@ -46581,6 +46683,40 @@
         "license_url": null,
         "author": null,
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15507",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "ingredients",
+      "bundle": "mexico",
+      "description": "La familia de las tortillas bañadas tiene muchos primos, y todos se apellidan «en-».",
+      "question": "Son tortillas dobladas con queso fresco y crema, bañadas en salsa de jitomate en vez de salsa de chile. ¿Cómo se llama este platillo?",
+      "answer": "Entomatadas",
+      "wrong_answers": [
+        "Enfrijoladas",
+        "Enmoladas",
+        "Enchiladas"
+      ],
+      "hints": [
+        "Fíjate bien en el ingrediente de la salsa.",
+        "Su nombre sale del ingrediente principal de la salsa, no del chile.",
+        "Su nombre lleva escondida la palabra «tomate»."
+      ],
+      "fun_fact": "En México hay toda una familia de platillos con nombres así: enchiladas, enfrijoladas, enmoladas y entomatadas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Fresh_tortilla_stack_closer_look.jpg/3840px-Fresh_tortilla_stack_closer_look.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFresh_tortilla_stack_closer_look.jpg",
+        "credit": "Armando Gómez · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Armando Gómez",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Armando_G%C3%B3mez&action=edit&redlink=1"
       },
       "background": null
     },
@@ -47027,6 +47163,40 @@
       "background": null
     },
     {
+      "id": "q-15521",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "mariachi-and-ranchera",
+      "bundle": "mexico",
+      "description": "Un disfraz escolar con más historia que muchos libros de texto.",
+      "question": "El 20 de noviembre muchas niñas se visten de Adelita, con cintas de balas cruzadas en el pecho. ¿Cómo se llaman esas cintas?",
+      "answer": "Cananas",
+      "wrong_answers": [
+        "Charreteras",
+        "Mancuernas",
+        "Botonaduras"
+      ],
+      "hints": [
+        "Imitan lo que llevaban las soldaderas de la Revolución.",
+        "Servían para cargar las balas del rifle.",
+        "La palabra empieza con «ca» y rima con «ganas»."
+      ],
+      "fun_fact": "Muchas soldaderas de la Revolución no solo cocinaban y curaban: también cargaban el rifle y peleaban.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/La_Marcha_de_las_Adelitas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Marcha_de_las_Adelitas.jpg",
+        "credit": "David Cabrera · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "David Cabrera",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Linkogecko"
+      },
+      "background": null
+    },
+    {
       "id": "q-15522",
       "status": "approved",
       "difficulty": 10,
@@ -47231,6 +47401,40 @@
       "background": null
     },
     {
+      "id": "q-15528",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "mexica",
+      "bundle": "mexico",
+      "description": "Antes de las apps de traducción, había una persona que hacía todo el trabajo.",
+      "question": "Hablaba náhuatl y maya, aprendí español y fui la intérprete de Hernán Cortés. ¿Quién soy?",
+      "answer": "La Malinche",
+      "wrong_answers": [
+        "Sor Juana Inés de la Cruz",
+        "Josefa Ortiz de Domínguez",
+        "Leona Vicario"
+      ],
+      "hints": [
+        "Viví en la época de la Conquista, en el siglo XVI.",
+        "Los españoles me llamaban doña Marina.",
+        "Mi nombre dio origen a la palabra «malinchismo»."
+      ],
+      "fun_fact": "Al principio, la Malinche traducía del náhuatl al maya, y Jerónimo de Aguilar pasaba del maya al español para Cortés.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Ruinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg/3840px-Ruinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARuinas_del_Templo_Mayor_-_Centro_Hist%C3%B3rico_de_Ciudad_de_M%C3%A9xico.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
+      },
+      "background": null
+    },
+    {
       "id": "q-15529",
       "status": "approved",
       "difficulty": 11,
@@ -47333,6 +47537,40 @@
       "background": null
     },
     {
+      "id": "q-15532",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "mexica",
+      "bundle": "mexico",
+      "description": "Entras por un tornillo y sales con medio taller en una bolsa.",
+      "question": "«Tlapalería» viene de la palabra náhuatl «tlapalli». ¿Qué significa «tlapalli»?",
+      "answer": "Color",
+      "wrong_answers": [
+        "Fierro",
+        "Clavo",
+        "Madera"
+      ],
+      "hints": [
+        "Al principio, en esas tiendas se vendía sobre todo una cosa.",
+        "En los códices mexicas había mucho de esto.",
+        "Es lo que tiene la pintura."
+      ],
+      "fun_fact": "Las tlapalerías empezaron vendiendo pinturas, y con el tiempo se llenaron de clavos, tubos y herramientas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Hardware_store_-_Arlington%2C_MA_-_01.jpg/3840px-Hardware_store_-_Arlington%2C_MA_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHardware_store_-_Arlington%2C_MA_-_01.jpg",
+        "credit": "Daderot · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Daderot",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot"
+      },
+      "background": null
+    },
+    {
       "id": "q-15533",
       "status": "approved",
       "difficulty": 8,
@@ -47431,6 +47669,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "David.Clay.Photography",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:David.Clay.Photography&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15536",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "mexica",
+      "bundle": "mexico",
+      "description": "Un emperador que recibió unas visitas que ya nunca se fueron.",
+      "question": "¿Qué tlatoani gobernaba Tenochtitlan cuando Hernán Cortés llegó en 1519?",
+      "answer": "Moctezuma",
+      "wrong_answers": [
+        "Cuauhtémoc",
+        "Itzcóatl",
+        "Ahuízotl"
+      ],
+      "hints": [
+        "Fue el noveno tlatoani de los mexicas.",
+        "Hubo dos tlatoanis con su nombre, y él fue el segundo.",
+        "Hay un dicho sobre su «venganza» para los turistas con dolor de panza."
+      ],
+      "fun_fact": "En español le decimos Moctezuma, pero en náhuatl su nombre era Motecuhzoma.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Model_of_Tenochtitlan-RZ.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AModel_of_Tenochtitlan-RZ.jpg",
+        "credit": "Steve Cadman from London, U.K. · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Steve Cadman from London, U.K.",
+        "author_url": "https://www.flickr.com/people/98115025@N00"
       },
       "background": null
     },
@@ -48081,6 +48353,40 @@
       "background": null
     },
     {
+      "id": "q-15556",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "pop-and-rock",
+      "bundle": "mexico",
+      "description": "Antes de los memes, los rockeros de barrio ya inventaban su propio idioma.",
+      "question": "Estás en el Tianguis del Chopo entre chamarras de cuero y discos de El Tri. ¿Cómo se llamaba a los jóvenes rockeros de barrio de los ochenta?",
+      "answer": "Chavos banda",
+      "wrong_answers": [
+        "Pachucos",
+        "Jipitecas",
+        "Fresas"
+      ],
+      "hints": [
+        "El nombre viene de la forma en que se llamaban entre ellos: su grupo de cuates.",
+        "Su música era el rock urbano que sonaba en las colonias populares de la Ciudad de México.",
+        "La palabra para «pandilla de amigos» va pegada a «chavo»."
+      ],
+      "fun_fact": "El Tianguis Cultural del Chopo funciona cada sábado desde los años ochenta y es punto de reunión de rockeros.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Tianguis_Cultural_del_Chopo_2024_3.jpg/3840px-Tianguis_Cultural_del_Chopo_2024_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATianguis_Cultural_del_Chopo_2024_3.jpg",
+        "credit": "ProtoplasmaKid · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "ProtoplasmaKid",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid"
+      },
+      "background": null
+    },
+    {
       "id": "q-15557",
       "status": "approved",
       "difficulty": 14,
@@ -48557,6 +48863,40 @@
       "background": null
     },
     {
+      "id": "q-15571",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "regional-fiestas",
+      "bundle": "mexico",
+      "description": "Un juego para los que siempre presumen tener buena puntería… hasta que llegan al puesto.",
+      "question": "En la feria lanzas unas piezas de plástico para que queden ensartadas en el cuello de una botella y ganar un premio. ¿Cómo se llama el juego?",
+      "answer": "Los aros",
+      "wrong_answers": [
+        "La lotería",
+        "Las canicas",
+        "El tiro al blanco"
+      ],
+      "hints": [
+        "No hay rifles ni corchos.",
+        "Lo que lanzas es redondo y hueco por dentro.",
+        "Se parece a un hula-hula pero chiquito."
+      ],
+      "fun_fact": "Las botellas del juego suelen estar muy juntas y el aro apenas cabe en el cuello: por eso cuesta tanto ganar.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Ferris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFerris_wheel_at_night_at_the_2007_state_fair%2C_NM.jpg",
+        "credit": "frank drewett · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "frank drewett",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15572",
       "status": "approved",
       "difficulty": 9,
@@ -48655,6 +48995,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "AlejandroLinaresGarcia",
         "author_url": "https://commons.wikimedia.org/wiki/User:AlejandroLinaresGarcia"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15575",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "regional-fiestas",
+      "bundle": "mexico",
+      "description": "Un santo con la agenda más llena de México, sobre todo cada día 28.",
+      "question": "Cada 28 de octubre, miles de personas visitan a San Judas Tadeo en el templo de San Hipólito. ¿Para qué casos le rezan?",
+      "answer": "Para las causas difíciles y desesperadas",
+      "wrong_answers": [
+        "Para los viajes por mar",
+        "Para cuidar a los animales",
+        "Para los exámenes de la escuela"
+      ],
+      "hints": [
+        "Sus devotos son muy fieles y llegan con una misma esperanza.",
+        "Sus imágenes lo muestran con túnica verde y un medallón en el pecho.",
+        "Es el patrono de lo que parece no tener solución."
+      ],
+      "fun_fact": "Muchos devotos van a San Hipólito el 28 de cada mes, no solo en octubre.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Exterior_-_San_Hipolito_%28Mexico_City%29_-_Mexico_2024.jpg/3840px-Exterior_-_San_Hipolito_%28Mexico_City%29_-_Mexico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AExterior_-_San_Hipolito_%28Mexico_City%29_-_Mexico_2024.jpg",
+        "credit": "José Luiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "José Luiz",
+        "author_url": null
       },
       "background": null
     },
@@ -49504,6 +49878,40 @@
         "license": "Public domain",
         "license_url": null,
         "author": "NPS Photo",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15601",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "national-team",
+      "bundle": "mexico",
+      "description": "El día en que la vecina del norte se quedó con las ganas de festejar.",
+      "question": "En la Copa Oro W 2024, el Tri femenil le ganó 2-0 a Estados Unidos en California. ¿En qué año había sido su victoria anterior ante ellas?",
+      "answer": "2010",
+      "wrong_answers": [
+        "1999",
+        "2015",
+        "2019"
+      ],
+      "hints": [
+        "Fue en un partido eliminatorio rumbo a un Mundial femenil.",
+        "Se jugó en Cancún.",
+        "Fue el mismo año del Mundial varonil de Sudáfrica."
+      ],
+      "fun_fact": "La victoria de 2024 en Carson, California, fue la primera de México femenil ante Estados Unidos en territorio estadounidense.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/UB_Women%27s_Soccer_%28cropped%29.jpg/3840px-UB_Women%27s_Soccer_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUB_Women%27s_Soccer_%28cropped%29.jpg",
+        "credit": "Chad  Cooper · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Chad  Cooper",
         "author_url": null
       },
       "background": null
@@ -50359,6 +50767,40 @@
       "background": null
     },
     {
+      "id": "q-15627",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "traditional-games",
+      "bundle": "mexico",
+      "description": "Una rima de patio que todos se saben de memoria y nadie aprendió en la escuela.",
+      "question": "Una rima infantil empieza con «De tin marín, de do pingüé» y sigue con «cúcara, mácara». ¿Qué son esas palabras?",
+      "answer": "Palabras inventadas sin significado",
+      "wrong_answers": [
+        "Nombres de pueblos de Oaxaca",
+        "Palabras en náhuatl",
+        "Nombres de dulces mexicanos"
+      ],
+      "hints": [
+        "Los niños se la pasan de generación en generación, sin libro de por medio.",
+        "Cada país y hasta cada barrio la dice un poco distinta.",
+        "Nadie sabe qué quieren decir, porque no quieren decir nada."
+      ],
+      "fun_fact": "La rima termina con «títere fue», y en muchas casas le agregan «yo no fui, fue Teté» para alargar la suerte.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Circle_game_at_beach.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACircle_game_at_beach.jpg",
+        "credit": "CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15628",
       "status": "approved",
       "difficulty": 4,
@@ -51039,6 +51481,40 @@
       "background": null
     },
     {
+      "id": "q-15650",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sweets-and-bread",
+      "bundle": "mexico",
+      "description": "Un botanero tan picosito que hasta la bolsita pide agua.",
+      "question": "Es una semilla con cascarita roja, cubierta de chile en polvo, que se vende en bolsitas en la tienda. ¿Cómo se llama esta botana?",
+      "answer": "Cacahuates enchilados",
+      "wrong_answers": [
+        "Cacahuates japoneses",
+        "Pepitas enchiladas",
+        "Garbanzos enchilados"
+      ],
+      "hints": [
+        "Se come mucho en el cine, en el estadio y con limón.",
+        "Por dentro es una semilla que también se convierte en crema para untar.",
+        "A diferencia de los japoneses, no lleva costra de harina."
+      ],
+      "fun_fact": "En México se les dice cacahuates, palabra que viene del náhuatl tlalcacáhuatl, «cacao de la tierra».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Woman_Vendor_at_Fruit_Stall_-_Thursday_Market_-_Narvarte_-_Mexico_City_-_Mexico.jpg/3840px-Woman_Vendor_at_Fruit_Stall_-_Thursday_Market_-_Narvarte_-_Mexico_City_-_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_Vendor_at_Fruit_Stall_-_Thursday_Market_-_Narvarte_-_Mexico_City_-_Mexico.jpg",
+        "credit": "Adam Jones · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Adam Jones",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15651",
       "status": "approved",
       "difficulty": 3,
@@ -51137,6 +51613,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "পাপৰি বৰা",
         "author_url": "https://commons.wikimedia.org/wiki/User:%E0%A6%AA%E0%A6%BE%E0%A6%AA%E0%A7%B0%E0%A6%BF_%E0%A6%AC%E0%A7%B0%E0%A6%BE"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15654",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "traditional-dances",
+      "bundle": "mexico",
+      "description": "Una fiesta donde una sola persona tiene más vestido que todos los invitados juntos.",
+      "question": "Llego a la fiesta vestida como princesa, cumplo una edad muy especial y abro el baile con un vals. ¿Quién soy?",
+      "answer": "La quinceañera",
+      "wrong_answers": [
+        "La novia",
+        "La madrina",
+        "La reina del carnaval"
+      ],
+      "hints": [
+        "La fiesta suele tener un gran salón, pastel y mucha familia.",
+        "Muchas chicas en México sueñan con esta fiesta durante años.",
+        "Ya no soy niña: cumplo quince."
+      ],
+      "fun_fact": "En muchas fiestas de XV años le entregan a la festejada su «última muñeca», como despedida de la infancia.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/Interior_of_the_Mayfair_Ballroom_%2815163527677%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AInterior_of_the_Mayfair_Ballroom_%2815163527677%29.jpg",
+        "credit": "Tyne & Wear Archives & Museums · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Tyne & Wear Archives & Museums",
+        "author_url": "https://www.flickr.com/people/29295370@N07"
       },
       "background": null
     },
@@ -51375,6 +51885,40 @@
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "Daniel Manrique (Roadmaster)",
         "author_url": "https://en.wikipedia.org/wiki/User:Riadmr"
+      },
+      "background": null
+    },
+    {
+      "id": "q-15662",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "tv-shows-and-hosts",
+      "bundle": "mexico",
+      "description": "Un señor que te hacía sudar más que un examen final, pero con premio.",
+      "question": "Nací en Tijuana, conduje «Atínale al precio» y en 2000 estrené en Televisa «¿Quién quiere ser millonario?». ¿Quién soy?",
+      "answer": "Marco Antonio Regil",
+      "wrong_answers": [
+        "Adal Ramones",
+        "Héctor Sandarti",
+        "Raúl Araiza"
+      ],
+      "hints": [
+        "Fue uno de los conductores de concursos más conocidos de Televisa hacia el año 2000.",
+        "Años después se volvió conferencista motivacional y activista vegano.",
+        "Su nombre de pila es el mismo que el del general romano enamorado de Cleopatra."
+      ],
+      "fun_fact": "En el concurso, el participante podía usar comodines como el 50:50, la llamada a un amigo y la ayuda del público.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Countdownset.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACountdownset.jpg",
+        "credit": "The original uploader was CountdownCrispy at English Wikipedia. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "The original uploader was CountdownCrispy at English Wikipedia.",
+        "author_url": "https://en.wikipedia.org/wiki/User:CountdownCrispy"
       },
       "background": null
     },
