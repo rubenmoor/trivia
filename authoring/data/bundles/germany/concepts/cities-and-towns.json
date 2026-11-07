@@ -66,7 +66,8 @@
     {
       "name": "Frankfurt am Main",
       "facet": "Großstädte und ihre Spitznamen",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Frankfurt already has five questions (Goethe, banks, Braun, Apfelwein, Würstchen); nothing new is left at difficulty 3."
     },
     {
       "name": "Leipzig",
@@ -501,7 +502,8 @@
     {
       "name": "Nürnberger Lebkuchen",
       "facet": "Städte und ihre Spezialitäten",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The Lebkuchen riddle already covers the core; a detail photo or estimate would be a filler question."
     },
     {
       "name": "Nürnberger Rostbratwürstchen",

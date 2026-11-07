@@ -552,7 +552,8 @@
     {
       "name": "Klappfix",
       "facet": "Urlaub, Camping und FKK",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: Die Frage zum Zeltanhänger im Pool fragt den Klappfix schon ab."
     },
     {
       "name": "MS Völkerfreundschaft",
@@ -652,7 +653,8 @@
     {
       "name": "Abschnittsbevollmächtigter (ABV)",
       "facet": "DDR-Wörter und Redensarten",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: Den Titel fragt schon eine andere Frage ab. Die Optionen mit Foto oder Person ergeben keine faire neue Frage."
     },
     {
       "name": "Westverwandtschaft",

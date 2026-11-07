@@ -151,7 +151,8 @@
     {
       "name": "Volkswagen",
       "facet": "Autos und Fahrzeugmarken",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Käfer, Bulli und Golf sind schon gefragt. Die übrigen Optionen mit Foto und Person passen nicht."
     },
     {
       "name": "VW Golf",
@@ -336,7 +337,8 @@
     {
       "name": "Scout Schulranzen",
       "facet": "Schreibwaren und Schulbedarf",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: Den Hersteller oder die Herkunft von Scout-Ranzen kennen Familien kaum. Die Grundfrage nach dem Ranzen ist schon gestellt."
     },
     {
       "name": "Geha",

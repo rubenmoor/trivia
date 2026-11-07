@@ -502,7 +502,8 @@
     {
       "name": "Stalagmit",
       "facet": "Höhlen und Karst",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Das Hauptfakt (wächst vom Boden nach oben) ist schon gefragt; keine der Optionen ergibt eine andere gute Frage, und die bekannte Eselsbrücke ist nicht familientauglich."
     },
     {
       "name": "Karst",

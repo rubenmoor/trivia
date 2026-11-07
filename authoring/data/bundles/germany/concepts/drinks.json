@@ -627,7 +627,8 @@
     {
       "name": "Medium",
       "facet": "Mineralwasser und Heilquellen",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Die einzige gute Frage (was „Medium“ bedeutet: wenig Kohlensäure) gibt es schon im Pool."
     },
     {
       "name": "Kohlensäure",
