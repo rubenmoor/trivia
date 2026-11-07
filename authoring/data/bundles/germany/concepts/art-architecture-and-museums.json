@@ -246,7 +246,8 @@
     {
       "name": "Ischtar-Tor",
       "facet": "Museen und Museumsinseln",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Die vorhandene Frage nennt schon „Ischtar-Tor von Babylon“. Damit ist die Herkunftsfrage beantwortet, und die Frage nach dem Zweck ist trivial (es ist ein Tor)."
     },
     {
       "name": "Neues Museum",
