@@ -1178760,9 +1178760,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "triskele spiral carving",
-        "note": "Primer plano de un trisquel (símbolo de tres espirales) tallado en piedra o metal, sin texto.",
+        "role": "illustrative",
+        "query": "triskelion Celtic stone",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1178795,18 +1178795,44 @@
       "batch": "batch-50",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows a triskele (three joined spirals), and the essential image has to show one. Search again with something like 'triskelion Celtic stone' or 'trisquel gallego'. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a triskele (three joined spirals), and the essential image has to show one. Search again with something like 'triskelion Celtic stone' or 'trisquel gallego'. The question text itself is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No essential triskele photo was found and the text already names the symbol, so the image is now illustrative with a better query.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "triskele spiral carving",
+            "note": "Primer plano de un trisquel (símbolo de tres espirales) tallado en piedra o metal, sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15225",
@@ -1179505,7 +1179531,7 @@
     },
     {
       "id": "q-15234",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Una camisa blanca que se ha hecho más famosa que muchas pasarelas.",
       "question": "Mira este detalle: ¿de qué cuadro famoso es?",
@@ -1179517,7 +1179543,7 @@
       ],
       "hints": [
         "Está en el Museo del Prado.",
-        "Muestra los fusilamientos de los soldados franceses tras el levantamiento de Madrid contra Napoleón.",
+        "Muestra a soldados franceses fusilando a madrileños tras el levantamiento contra Napoleón.",
         "Su título es una fecha: el día después del levantamiento de Madrid."
       ],
       "media": {
@@ -1179562,30 +1179588,38 @@
         "difficulty_estimate": 6,
         "notes": "A good use of essential media; the white-shirt detail is iconic. Hint 1 (Prado) rules out Guernica."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gets the scene backwards. It says French soldiers are being shot, but the painting shows French soldiers shooting the people of Madrid after the uprising of 2 May 1808. The fact check flagged this. It should read something like «Muestra los fusilamientos de madrileños por soldados franceses tras el levantamiento del 2 de mayo contra Napoleón». Verificación de datos: wrong. Hint 2 reverses the scene: the painting shows French soldiers executing Spanish civilians (the rebels), not French soldiers being shot.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gets the scene backwards. It says French soldiers are being shot, but the painting shows French soldiers shooting the people of Madrid after the uprising of 2 May 1808. The fact check flagged this. It should read something like «Muestra los fusilamientos de madrileños por soldados franceses tras el levantamiento del 2 de mayo contra Napoleón». Verificación de datos: wrong. Hint 2 reverses the scene: the painting shows French soldiers executing Spanish civilians (the rebels), not French soldiers being shot.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hint 2 so it describes the subject instead of naming Goya, who painted none of the wrong options.",
+        "reason": "Hint 2 had the scene backwards; it now says French soldiers shoot the people of Madrid.",
         "previous": {
           "hints": [
             "Está en el Museo del Prado.",
-            "Lo pintó Goya sobre la guerra contra Napoleón.",
+            "Muestra los fusilamientos de los soldados franceses tras el levantamiento de Madrid contra Napoleón.",
             "Su título es una fecha: el día después del levantamiento de Madrid."
           ]
         },
@@ -1179954,10 +1179988,10 @@
     },
     {
       "id": "q-15240",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "El paraíso de cualquiera que diga «esto lo arreglo yo en un momento».",
-      "question": "Mira esta foto: en esta tienda venden tornillos, martillos, llaves inglesas y clavos. ¿Cómo se llama?",
+      "question": "En esta tienda venden tornillos, martillos, llaves inglesas y clavos. ¿Cómo se llama?",
       "answer": "Ferretería",
       "wrong_answers": [
         "Droguería",
@@ -1179971,12 +1180005,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "hardware store interior",
-        "note": "Interior de una ferretería con estanterías llenas de herramientas, tornillos y martillos; sin carteles con texto visible",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "hand tools on pegboard",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVarious_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Various_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg/3840px-Various_tools_hanging_on_a_pegboard_in_a_workshop_setting_with_natural_light_filtering_in.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "«Ferretería» viene de «hierro» (en latín, «ferrum»), porque antes casi todo lo que vendían era de ese metal.",
       "subcategory": "brands-and-shops",
@@ -1180001,23 +1180042,48 @@
         "difficulty_estimate": 4,
         "notes": "The text already lists the tools, so the 'essential' photo isn't really needed; illustrative would fit better. It's a plain vocabulary question that doesn't really fit brands and shops. Carpintería is close but fair as a distractor."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works for the essential image. All six are black-and-white archive shots of 1900–1940s shop interiors (mostly Finnish), and none clearly shows screws, hammers or spanners. Candidate 6 also has a caption reading 'Hardware Store'. Because the text already lists the tools, the media could be switched to illustrative (e.g. a close-up of screws and nails, or hand tools on a pegboard) rather than searching for an essential store interior again. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works for the essential image. All six are black-and-white archive shots of 1900–1940s shop interiors (mostly Finnish), and none clearly shows screws, hammers or spanners. Candidate 6 also has a caption reading 'Hardware Store'. Because the text already lists the tools, the media could be switched to illustrative (e.g. a close-up of screws and nails, or hand tools on a pegboard) rather than searching for an essential store interior again. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable store-interior photo exists, so the media becomes an illustrative tools image and the text no longer refers to a photo.",
+        "previous": {
+          "question": "Mira esta foto: en esta tienda venden tornillos, martillos, llaves inglesas y clavos. ¿Cómo se llama?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "hardware store interior",
+            "note": "Interior de una ferretería con estanterías llenas de herramientas, tornillos y martillos; sin carteles con texto visible",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15241",
@@ -1184424,10 +1184490,10 @@
     },
     {
       "id": "q-15298",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Hilo, aguja, espías y una ciudad tan blanca como un patrón sin estrenar.",
-      "question": "En «El tiempo entre costuras», Sira abre su taller en esta ciudad, capital del protectorado español en Marruecos. ¿Cuál es?",
+      "question": "En «El tiempo entre costuras», Sira abre su taller en la ciudad que fue capital del protectorado español en Marruecos. ¿Cuál es?",
       "answer": "Tetuán",
       "wrong_answers": [
         "Tánger",
@@ -1184441,12 +1184507,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "vintage sewing machine",
-        "note": "Vista clara de la medina blanca de Tetuán, sin carteles ni texto con el nombre de la ciudad.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASucces_vintage_sewing_machine.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Succes_vintage_sewing_machine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Uberprutser · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Uberprutser",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Uberprutser",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La serie de Antena 3, con Adriana Ugarte como Sira, se rodó en parte en el propio Tetuán.",
       "subcategory": "modern-literature",
@@ -1184475,19 +1184548,44 @@
       "needs_media": true,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot doesn't match itself. It is marked essential and its note asks for a clear view of Tetuán's medina, but the query was \"vintage sewing machine\", so every candidate is a sewing machine. The question text answers itself without a photo, so the slot should become illustrative with the sewing-machine query. Candidate 1 (a vintage sewing machine, no text) would then fit. Or keep the slot essential and search for the medina, but that would add little. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot doesn't match itself. It is marked essential and its note asks for a clear view of Tetuán's medina, but the query was \"vintage sewing machine\", so every candidate is a sewing machine. The question text answers itself without a photo, so the slot should become illustrative with the sewing-machine query. Candidate 1 (a vintage sewing machine, no text) would then fit. Or keep the slot essential and search for the medina, but that would add little. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The media slot contradicted itself, so it is now an illustrative sewing-machine image and the text no longer says «esta ciudad».",
+        "previous": {
+          "question": "En «El tiempo entre costuras», Sira abre su taller en esta ciudad, capital del protectorado español en Marruecos. ¿Cuál es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "vintage sewing machine",
+            "note": "Vista clara de la medina blanca de Tetuán, sin carteles ni texto con el nombre de la ciudad.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15299",
@@ -1185278,10 +1185376,10 @@
     },
     {
       "id": "q-15309",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una mañana de diciembre en la que media España se queda pegada a la tele cruzando los dedos.",
-      "question": "Este bombo gira cada 22 de diciembre mientras unos niños cantan números y premios. ¿Qué sorteo es?",
+      "question": "Cada 22 de diciembre gira un gran bombo mientras unos niños cantan números y premios. ¿Qué sorteo es?",
       "answer": "La Lotería de Navidad",
       "wrong_answers": [
         "La Lotería del Niño",
@@ -1185295,12 +1185393,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Spanish Christmas lottery drum",
-        "note": "Primer plano del gran bombo dorado de la Lotería de Navidad con sus bolas de madera, sin carteles ni textos que nombren el sorteo.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Christmas lights city street",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADyker_Lights_%2862317%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Dyker_Lights_%2862317%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rhododendrites",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rhododendrites",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El Sorteo de Navidad se celebró por primera vez en 1812, en Cádiz.",
       "subcategory": "national-symbols",
@@ -1185329,19 +1185434,44 @@
       "needs_media": true,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows the Christmas lottery drum. 1 and 2 are engravings of the 1683 Thames Frost Fair, and 3 is a roundabout with sculptures. The question says «Este bombo», so the essential image has to show the bombo itself, and no new search is allowed. The text is fine. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows the Christmas lottery drum. 1 and 2 are engravings of the 1683 Thames Frost Fair, and 3 is a roundabout with sculptures. The question says «Este bombo», so the essential image has to show the bombo itself, and no new search is allowed. The text is fine. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of the lottery drum was available, so the text no longer says «Este bombo» and the media becomes a decorative Christmas street.",
+        "previous": {
+          "question": "Este bombo gira cada 22 de diciembre mientras unos niños cantan números y premios. ¿Qué sorteo es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Spanish Christmas lottery drum",
+            "note": "Primer plano del gran bombo dorado de la Lotería de Navidad con sus bolas de madera, sin carteles ni textos que nombren el sorteo.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15310",
@@ -1185965,7 +1186095,7 @@
     },
     {
       "id": "q-15318",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "En el Siglo de Oro, los pinceles viajaban de Sevilla a Madrid y llegaban al Prado sin perder el brillo.",
       "question": "Francisco Pacheco es a Velázquez lo que Velázquez es a Juan Bautista Martínez del Mazo. ¿Qué relación es?",
@@ -1185977,8 +1186107,8 @@
       ],
       "hints": [
         "Los tres fueron pintores en la España del siglo XVII.",
-        "Velázquez se casó con Juana Pacheco.",
-        "Martínez del Mazo se casó con Francisca, la hija de Velázquez."
+        "Su lazo era a la vez de taller y de familia.",
+        "Velázquez se casó con Juana, la hija de Pacheco."
       ],
       "media": {
         "type": "image",
@@ -1185996,7 +1186126,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Pacheco escribió el tratado «Arte de la pintura», donde contó que casó a su hija con Velázquez por su virtud y su talento.",
+      "fun_fact": "Martínez del Mazo, alumno de Velázquez, se casó con su hija Francisca, igual que Velázquez se había casado con la hija de su maestro.",
       "subcategory": "painting-and-architecture",
       "style": null,
       "concept": "Francisco Pacheco",
@@ -1186023,29 +1186153,37 @@
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Velázquez se casó con Juana Pacheco\") gives the answer away: it shows that Pacheco was Velázquez's father-in-law, and «Maestro y suegro» is the only option with that relationship. Hint 2 should give a vaguer clue, for example that the link was both professional and family, without naming the marriage. The marriage can move to hint 3, and the Mazo–Francisca detail can go in the fun fact.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Velázquez se casó con Juana Pacheco\") gives the answer away: it shows that Pacheco was Velázquez's father-in-law, and «Maestro y suegro» is the only option with that relationship. Hint 2 should give a vaguer clue, for example that the link was both professional and family, without naming the marriage. The marriage can move to hint 3, and the Mazo–Francisca detail can go in the fun fact.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hint 1 so neither suggests teaching or a family link.",
+        "reason": "Hint 2 gave the answer away; it is now vaguer, the Pacheco marriage moves to hint 3 and the Mazo–Francisca detail goes into the fun fact.",
         "previous": {
-          "description": "En el Siglo de Oro, las cenas familiares de algunos pintores parecían clases de Bellas Artes.",
           "hints": [
-            "Es una relación de taller y también de familia.",
+            "Los tres fueron pintores en la España del siglo XVII.",
             "Velázquez se casó con Juana Pacheco.",
             "Martínez del Mazo se casó con Francisca, la hija de Velázquez."
-          ]
+          ],
+          "fun_fact": "Pacheco escribió el tratado «Arte de la pintura», donde contó que casó a su hija con Velázquez por su virtud y su talento."
         },
         "revised_on": "2026-11-07"
       }
@@ -1188060,7 +1188198,7 @@
     },
     {
       "id": "q-15345",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Lucecitas nocturnas que no tienen ni enchufe ni pilas.",
       "question": "De noche ves llamitas azules flotando sobre el campo: es el fuego fatuo. Según la tradición popular, ¿qué eran?",
@@ -1188078,11 +1188216,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "misty meadow at night",
+        "query": "foggy field night",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAurora_on_a_rainy_and_foggy_night_in_Tuntorp_1.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Aurora_on_a_rainy_and_foggy_night_in_Tuntorp_1.jpg/3840px-Aurora_on_a_rainy_and_foggy_night_in_Tuntorp_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "W.carter · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "W.carter",
+        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La ciencia lo explica con gases que salen de restos que se descomponen y que se encienden solos al tocar el aire.",
       "subcategory": "creatures",
@@ -1188111,19 +1188256,43 @@
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No media candidate fits. The four candidates are two scanned handwritten letters from 1856 and two book scans of a stone elephant statue in Nepal, none of them a night meadow or anything to do with will-o'-the-wisps. A new search isn't allowed. A query like \"foggy field night\" or \"marsh at dusk\" should find a usable decorative image. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No media candidate fits. The four candidates are two scanned handwritten letters from 1856 and two book scans of a stone elephant statue in Nepal, none of them a night meadow or anything to do with will-o'-the-wisps. A new search isn't allowed. A query like \"foggy field night\" or \"marsh at dusk\" should find a usable decorative image. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "None of the media candidates fit, so the decorative query is now a more searchable night-field term.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "misty meadow at night",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15346",
@@ -1188415,20 +1188584,20 @@
     },
     {
       "id": "q-15350",
-      "status": "needs_work",
-      "difficulty": 9,
+      "status": "approved",
+      "difficulty": 10,
       "description": "Hay finales que se deciden por SMS y luego se cantan en todas las bodas.",
-      "question": "En 2018, «Lo malo» quedó segunda en la gala para elegir la canción de España en Eurovisión. ¿Quiénes ganaron?",
-      "answer": "Amaia y Alfred",
+      "question": "En 2018, «Lo malo» quedó segunda en la gala para elegir la canción de España en Eurovisión. ¿Qué canción ganó?",
+      "answer": "«Tu canción»",
       "wrong_answers": [
-        "Bisbal y Chenoa",
-        "Miriam y Agoney",
-        "Raoul y Mimi"
+        "«La venda»",
+        "«Quédate conmigo»",
+        "«Bailar pegados»"
       ],
       "hints": [
-        "Eran compañeros de Operación Triunfo 2017.",
-        "Cantaron un dúo romántico llamado «Tu canción».",
-        "Ella es navarra y toca el piano; él es catalán y toca el trombón."
+        "Es una balada romántica cantada a dúo.",
+        "Sus intérpretes eran compañeros de Operación Triunfo 2017.",
+        "La cantaron Amaia y Alfred."
       ],
       "media": {
         "type": "image",
@@ -1188473,19 +1188642,48 @@
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This overlaps with approved q-13269 (\"¿Quién es este cantante, que salió de OT 2017 y fue a Eurovisión 2018 junto a Amaia?\" → Alfred García). That text says Amaia and Alfred went to Eurovisión 2018, so it gives away who won the 2018 gala. Seeing either question gives away the other.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This overlaps with approved q-13269 (\"¿Quién es este cantante, que salió de OT 2017 y fue a Eurovisión 2018 junto a Amaia?\" → Alfred García). That text says Amaia and Alfred went to Eurovisión 2018, so it gives away who won the 2018 gala. Seeing either question gives away the other.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "difficulty_original": 9,
+      "revision": {
+        "action": "revise",
+        "reason": "q-13269 already gives away who won, so the question now asks for the winning song, with other Spanish Eurovision entries as wrong options.",
+        "previous": {
+          "difficulty": 9,
+          "question": "En 2018, «Lo malo» quedó segunda en la gala para elegir la canción de España en Eurovisión. ¿Quiénes ganaron?",
+          "answer": "Amaia y Alfred",
+          "wrong_answers": [
+            "Bisbal y Chenoa",
+            "Miriam y Agoney",
+            "Raoul y Mimi"
+          ],
+          "hints": [
+            "Eran compañeros de Operación Triunfo 2017.",
+            "Cantaron un dúo romántico llamado «Tu canción».",
+            "Ella es navarra y toca el piano; él es catalán y toca el trombón."
+          ]
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15351",
@@ -1189197,11 +1189395,11 @@
     },
     {
       "id": "q-15360",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Una palabra que en realidad son dos colores pegados con cola.",
       "question": "El Barça, el Levante y el Eibar visten de azulgrana. ¿Qué colores son?",
-      "answer": "Azul y granate",
+      "answer": "Azul y grana",
       "wrong_answers": [
         "Azul y gris",
         "Azul y blanco",
@@ -1189209,7 +1189407,7 @@
       ],
       "hints": [
         "La primera parte ya la sabes.",
-        "La segunda parte de la palabra es el nombre antiguo de un color.",
+        "La segunda parte es un color que antes se sacaba de un insecto.",
         "Es un rojo muy oscuro, como el del vino tinto."
       ],
       "media": {
@@ -1189251,31 +1189449,39 @@
         "difficulty_estimate": 3,
         "notes": "«Grana» sounds like «granate», so it is easy to work out. It is a word-meaning question, which is fine for the spain bundle. Kids may not know the word «granate», hence 3 rather than 2."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Azulgrana is blue + 'grana' (RAE), not 'granate'. Grana and granate are related dark reds but not the same word. The answer, the hint 'nombre antiguo de un color' and the fun fact are inconsistent with each other.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Azulgrana is blue + 'grana' (RAE), not 'granate'. Grana and granate are related dark reds but not the same word. The answer, the hint 'nombre antiguo de un color' and the fun fact are inconsistent with each other.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 vaguer so it doesn't name the colour family, and reworded the question so the clubs wear the colours.",
+        "reason": "Azulgrana means blue and «grana» (RAE), not «granate», so the answer and hint 2 now match the fun fact.",
         "previous": {
-          "question": "La llevan en la camiseta el Barça, el Levante y el Eibar. ¿Qué significa la palabra «azulgrana»?",
+          "answer": "Azul y granate",
           "hints": [
             "La primera parte ya la sabes.",
-            "El otro color es un tipo de rojo.",
+            "La segunda parte de la palabra es el nombre antiguo de un color.",
             "Es un rojo muy oscuro, como el del vino tinto."
           ]
         },
@@ -1189575,7 +1189781,7 @@
     },
     {
       "id": "q-15365",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un barco, un parche, un loro y alguien con mucha imaginación detrás del timón.",
       "question": "¿Quién escribió «El pirata Garrapata», el desastroso pirata de los libros infantiles?",
@@ -1189593,19 +1189799,19 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "pirate ship illustration",
+        "query": "pirate ship replica sailing",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APirate_ship_-_Pirates_%281922%29.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Pirate_ship_-_Pirates_%281922%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Claud Lovat Fraser; corrected by Parker Higgins · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASailing_Boat_Santa_Bernarda_Caravelo%2C_River_Arade%2C_Portim%C3%A3o.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Sailing_Boat_Santa_Bernarda_Caravelo%2C_River_Arade%2C_Portim%C3%A3o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Ron B. Thomson · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Claud Lovat Fraser; corrected by Parker Higgins",
-        "author_url": "https://commons.wikimedia.org/wiki/Category:Claud_Lovat_Fraser",
+        "author": "Ron B. Thomson",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US-expired"
+          "PD-self"
         ]
       },
       "fun_fact": "Juan Muñoz Martín fue maestro durante muchos años antes de triunfar con sus libros infantiles.",
@@ -1189635,29 +1189841,49 @@
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took the donkey's name out of hint 3 and cut the unconfirmed claim about pupils from the fun fact.",
+        "reason": "Changed the image query so the PD-US-only pirate ship picture gets replaced with a properly licensed one.",
         "previous": {
-          "hints": [
-            "Sus libros están llenos de humor disparatado.",
-            "Sus libros salieron en la colección El Barco de Vapor en los años ochenta.",
-            "También creó a Fray Perico y a su borrico Calcetín."
-          ],
-          "fun_fact": "Juan Muñoz Martín fue profesor durante muchos años y probaba sus historias con sus propios alumnos."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "pirate ship illustration",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APirate_ship_-_Pirates_%281922%29.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Pirate_ship_-_Pirates_%281922%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Claud Lovat Fraser; corrected by Parker Higgins · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Claud Lovat Fraser; corrected by Parker Higgins",
+            "author_url": "https://commons.wikimedia.org/wiki/Category:Claud_Lovat_Fraser",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1190502,7 +1190728,7 @@
     },
     {
       "id": "q-15377",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un parque con nombre de señora y vecinos con plumas.",
       "question": "Según la tradición, el Parque Nacional de Doñana debe su nombre a una mujer que vivió allí. ¿A quién?",
@@ -1190514,7 +1190740,7 @@
       ],
       "hints": [
         "Antes, «doña» se decía a las señoras importantes.",
-        "No era de la realeza, pero sí de la alta nobleza.",
+        "Era hija de una famosa princesa de la corte de Felipe II.",
         "Su nombre es la segunda mitad de la palabra."
       ],
       "media": {
@@ -1190560,24 +1190786,36 @@
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («No era de la realeza, pero sí de la alta nobleza») rules out all three wrong answers at once: the queen is royalty, and a shepherdess or a saint aren't high nobility. Only the duchess is left. Rewrite hint 2 so it points vaguely towards her era or family without naming her rank, for example that she was the daughter of a famous princess at Philip II's court.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («No era de la realeza, pero sí de la alta nobleza») rules out all three wrong answers at once: the queen is royalty, and a shepherdess or a saint aren't high nobility. Only the duchess is left. Rewrite hint 2 so it points vaguely towards her era or family without naming her rank, for example that she was the daughter of a famous princess at Philip II's court.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question so the «A una…» options fit it grammatically.",
+        "reason": "Rewrote hint 2 so it no longer rules out all three wrong answers at once; it now points to her family instead.",
         "previous": {
-          "question": "Según la tradición, el Parque Nacional de Doñana lleva el nombre de una mujer que vivió allí. ¿Quién era?"
+          "hints": [
+            "Antes, «doña» se decía a las señoras importantes.",
+            "No era de la realeza, pero sí de la alta nobleza.",
+            "Su nombre es la segunda mitad de la palabra."
+          ]
         },
         "revised_on": "2026-11-07"
       }
@@ -1190800,7 +1191038,7 @@
     },
     {
       "id": "q-15381",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un planeta de vecinos verdes que ven demasiadas películas de miedo.",
       "question": "Estás viendo «Planet 51» y los habitantes verdes del planeta huyen aterrados de un visitante recién llegado del espacio. ¿Quién es?",
@@ -1190818,20 +1191056,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "1950s American suburb",
+        "query": "retro suburban street houses",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A184_Crandall_Drive_-_DPLA_-_6d15e8771bc7b2d85d8b7186083a5bf4.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/184_Crandall_Drive_-_DPLA_-_6d15e8771bc7b2d85d8b7186083a5bf4.jpg/3840px-184_Crandall_Drive_-_DPLA_-_6d15e8771bc7b2d85d8b7186083a5bf4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHouse_on_suburban_street_in_Sunshine%2C_Victoria.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/House_on_suburban_street_in_Sunshine%2C_Victoria.jpg/3840px-House_on_suburban_street_in_Sunshine%2C_Victoria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Philip Mallis · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Philip Mallis",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "«Planet 51», de los estudios madrileños Ilion, fue en su día la película de animación más cara del cine español.",
       "subcategory": "spanish-cinema",
@@ -1190860,28 +1191096,49 @@
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which nearly defined an astronaut, with a milder clue.",
+        "reason": "Changed the decorative image query so the PD-US-only suburb photo gets replaced.",
         "previous": {
-          "hints": [
-            "En esta película, los papeles de siempre están al revés.",
-            "Llega en un cohete y lleva traje espacial.",
-            "Es un humano, como tú."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "1950s American suburb",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3A184_Crandall_Drive_-_DPLA_-_6d15e8771bc7b2d85d8b7186083a5bf4.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/184_Crandall_Drive_-_DPLA_-_6d15e8771bc7b2d85d8b7186083a5bf4.jpg/3840px-184_Crandall_Drive_-_DPLA_-_6d15e8771bc7b2d85d8b7186083a5bf4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-07"
       }
@@ -1192708,7 +1192965,7 @@
     },
     {
       "id": "q-15406",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Un ingeniero que firmó su invento con la primera letra de su apellido, como quien deja su inicial en un pupitre.",
       "question": "El ingeniero vasco Alejandro Goicoechea, la «G» del Talgo, probó el primer prototipo de su tren articulado ligero. ¿En qué década?",
@@ -1192721,21 +1192978,21 @@
       "hints": [
         "España aún tenía muchas líneas de tren de vapor.",
         "Fue unos quince años antes de que el SEAT 600 llegara a las carreteras.",
-        "El prototipo, el Talgo I, se probó en 1942."
+        "El primer prototipo, el Talgo 0, se probó en 1942."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
         "query": "vintage railway tracks Spain",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AJ23_476_Dreischienengleisschwellen.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/J23_476_Dreischienengleisschwellen.jpg/3840px-J23_476_Dreischienengleisschwellen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Falk2 · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADocklands_Light_Railway_type_B23_at_Corella%2C_Spain_06.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Docklands_Light_Railway_type_B23_at_Corella%2C_Spain_06.jpg/3840px-Docklands_Light_Railway_type_B23_at_Corella%2C_Spain_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "tompagenet · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Falk2",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Falk2",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "tompagenet",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1192762,30 +1193019,38 @@
         "difficulty_estimate": 12,
         "notes": "Asking for a decade is a bit dry. Hint 3 states the year 1942, which is allowed since only hint 3 may come close."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 contains a factual error: the 1942 prototype was the Talgo 0 (the experimental train), not the Talgo I. The Talgo I was built by ACF in the USA and tested around 1949–50. Hint 3 should say «El primer prototipo, el Talgo 0, se probó en 1942.» The answer itself (the 1940s) is correct. Verificación de datos: wrong. Hint 3 is inaccurate. The 1942 prototype was the Talgo 0. The Talgo I was built by ACF in the USA and tested in Spain around 1949-50. The answer (1940s) is still correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 contains a factual error: the 1942 prototype was the Talgo 0 (the experimental train), not the Talgo I. The Talgo I was built by ACF in the USA and tested around 1949–50. Hint 3 should say «El primer prototipo, el Talgo 0, se probó en 1942.» The answer itself (the 1940s) is correct. Verificación de datos: wrong. Hint 3 is inaccurate. The 1942 prototype was the Talgo 0. The Talgo I was built by ACF in the USA and tested in Spain around 1949-50. The answer (1940s) is still correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which pinned the forties, with broader-era clues.",
+        "reason": "Fixed hint 3: the 1942 prototype was the Talgo 0, not the Talgo I.",
         "previous": {
           "hints": [
-            "Fue en plena posguerra española.",
-            "Ocurrió durante la Segunda Guerra Mundial.",
+            "España aún tenía muchas líneas de tren de vapor.",
+            "Fue unos quince años antes de que el SEAT 600 llegara a las carreteras.",
             "El prototipo, el Talgo I, se probó en 1942."
           ]
         },
@@ -1193415,7 +1193680,7 @@
     },
     {
       "id": "q-15415",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "El trofeo más cabezota del cine español: es todo cabeza.",
       "question": "La estatuilla de los Premios Goya es el busto del pintor que les da nombre. ¿En cuál de estas ciudades NO vivió él?",
@@ -1193433,11 +1193698,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Goya Award statuette",
+        "query": "Francisco de Goya bust sculpture",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFuendetodos_%28Arag%C3%B3n%2C_Espa%C3%B1a%29_-_Poblaci%C3%B3n_Natal_de_Goya_27.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Fuendetodos_%28Arag%C3%B3n%2C_Espa%C3%B1a%29_-_Poblaci%C3%B3n_Natal_de_Goya_27.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Jahidalgoaloy · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jahidalgoaloy",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jahidalgoaloy&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La estatuilla de bronce pesa unos 3 kilos, así que agradecer el premio también es hacer pesas.",
       "subcategory": "spanish-cinema",
@@ -1193466,19 +1193738,43 @@
       "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the Goya statuette, which the question names: the sheet has a glass atheist award, a porcelain Figaro figurine, museum figurines, two 1930 Oscar photos and a Russian wiki-award. A new search isn't allowed, so the slot needs a real photo of the Goya bust, for example \"Premios Goya estatuilla\" or \"Goya Award bust bronze\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the Goya statuette, which the question names: the sheet has a glass atheist award, a porcelain Figaro figurine, museum figurines, two 1930 Oscar photos and a Russian wiki-award. A new search isn't allowed, so the slot needs a real photo of the Goya bust, for example \"Premios Goya estatuilla\" or \"Goya Award bust bronze\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query to a bust of Goya, the thing the statuette shows, since no photo of the award itself was found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Goya Award statuette",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15416",
@@ -1195011,9 +1195307,9 @@
     {
       "id": "q-15436",
       "status": "needs_work",
-      "difficulty": 7,
+      "difficulty": 9,
       "description": "En Mirador de Montepinar, ninguna junta de vecinos termina sin gritos y frases para enmarcar.",
-      "question": "¿A qué personaje de «La que se avecina» da vida este actor?",
+      "question": "¿A qué personaje de «La que se avecina» da vida el actor Pablo Chiapella?",
       "answer": "Amador Rivas",
       "wrong_answers": [
         "Antonio Recio",
@@ -1195027,9 +1195323,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Pablo Chiapella actor",
-        "note": "Foto clara del rostro del actor Pablo Chiapella, sin texto con su nombre ni el de la serie.",
+        "role": "illustrative",
+        "query": "residential complex swimming pool",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1195057,31 +1195353,53 @@
         "difficulty_estimate": 8,
         "notes": "The description states the character's defining trait (lazy, works as little as possible). That rules out Recio and Enrique Pastor, who both work, and it repeats hint 1. Hint 3 ('Ama…') nearly gives the answer, which is allowed for hint 3. Asks about a different character from q-11410."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-50",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question depends on recognising the actor's face, and no candidate gives a clear one. Candidate 1 is Pablo Chiapella, but it is a dim, distant stage shot in which his face is tiny. Candidates 2–6 are Swiss landscapes and buildings (Chapella) and a Michigan historical sign. A new search isn't allowed, so the slot needs a close, clear portrait of Pablo Chiapella, or the question must change. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question depends on recognising the actor's face, and no candidate gives a clear one. Candidate 1 is Pablo Chiapella, but it is a dim, distant stage shot in which his face is tiny. Candidates 2–6 are Swiss landscapes and buildings (Chapella) and a Michigan historical sign. A new search isn't allowed, so the slot needs a close, clear portrait of Pablo Chiapella, or the question must change. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer gives away the character's laziness.",
+        "reason": "No clear photo of the actor exists, so the question now names Pablo Chiapella in the text and uses an illustrative image of a residential complex.",
         "previous": {
-          "description": "Un vecino que trabaja lo justo, y lo justo suele ser nada."
+          "difficulty": 7,
+          "question": "¿A qué personaje de «La que se avecina» da vida este actor?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Pablo Chiapella actor",
+            "note": "Foto clara del rostro del actor Pablo Chiapella, sin texto con su nombre ni el de la serie.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-07"
-      }
+      },
+      "difficulty_original": 7
     },
     {
       "id": "q-15437",
@@ -1195303,10 +1195621,10 @@
     },
     {
       "id": "q-15440",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Un camarero que sirve el té con una mano y busca pistas con la otra.",
-      "question": "Este actor fue Julio Olmedo, el camarero que busca a su hermana desaparecida en «Gran Hotel». ¿Quién es?",
+      "question": "¿Qué actor fue Julio Olmedo, el camarero que busca a su hermana desaparecida en «Gran Hotel»?",
       "answer": "Yon González",
       "wrong_answers": [
         "Álvaro Morte",
@@ -1195320,12 +1195638,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Yon González Gran Hotel premiere",
-        "note": "Foto clara del rostro del actor Yon González, sin texto con su nombre ni el de la serie.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Palacio de la Magdalena Santander",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalacio_de_la_Magdalena_4.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Palacio_de_la_Magdalena_4.jpg/3840px-Palacio_de_la_Magdalena_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jesús Gómez Fernández · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jesús Gómez Fernández",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Corso",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El lujoso hotel de la serie se rodó en el Palacio de la Magdalena, en Santander.",
       "subcategory": "tv-series",
@@ -1195351,22 +1195676,48 @@
         "notes": "Solid. The exteriors were indeed filmed at the Palacio de la Magdalena."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-50",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image slot has no candidates and no new search is allowed. The question needs a clear photo of Yon González's face with no caption naming him or the series. Find one manually, or turn the question into a text-only version with illustrative media, such as the Palacio de la Magdalena. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image slot has no candidates and no new search is allowed. The question needs a clear photo of Yon González's face with no caption naming him or the series. Find one manually, or turn the question into a text-only version with illustrative media, such as the Palacio de la Magdalena. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of the actor was found, so the question is now text-only and uses an illustrative image of the Palacio de la Magdalena, where the show was filmed.",
+        "previous": {
+          "question": "Este actor fue Julio Olmedo, el camarero que busca a su hermana desaparecida en «Gran Hotel». ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Yon González Gran Hotel premiere",
+            "note": "Foto clara del rostro del actor Yon González, sin texto con su nombre ni el de la serie.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-15441",
