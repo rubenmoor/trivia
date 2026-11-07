@@ -1103039,7 +1103039,7 @@
     },
     {
       "id": "q-14246",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Una palabra con tanta erre que parece el ruido de una moto.",
       "question": "En catalán, «porta» es a «puerta» como «carrer» es a…",
@@ -1103052,21 +1103052,21 @@
       "hints": [
         "Aparece en los letreros de las esquinas de Barcelona.",
         "Allí está el número de tu casa.",
-        "En gallego se dice «rúa»."
+        "Avenida, plaza, paseo… es la más común de todas."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "Barcelona old wooden door",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_wooden_door%E2%80%93IMG_7297_02.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Old_wooden_door%E2%80%93IMG_7297_02.jpg/3840px-Old_wooden_door%E2%80%93IMG_7297_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Kızıl · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWooden_door_of_an_old_house01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Wooden_door_of_an_old_house01.jpg/3840px-Wooden_door_of_an_old_house01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Panpanchik · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Kızıl",
-        "author_url": "https://commons.wikimedia.org/wiki/User:K%C4%B1z%C4%B1l",
+        "author": "Panpanchik",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Panpanchik",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1103093,30 +1103093,50 @@
         "difficulty_estimate": 4,
         "notes": "Hint 3 (Galician 'rúa') reuses the answer of q-11273. That is a small cross-reference, not the same fact. The look-alike distractors work well."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 («En gallego se dice \"rúa\"») together with the revealed answer \"calle\" states exactly the fact asked by approved q-11273 (\"En gallego, ¿qué es una «rúa»?\" → una calle), so playing this question gives that one away. Replace hint 3 with a strong hint that doesn't use the Galician word (for example: «Avenida, plaza, paseo… es la más común de todas»).",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 («En gallego se dice \"rúa\"») together with the revealed answer \"calle\" states exactly the fact asked by approved q-11273 (\"En gallego, ¿qué es una «rúa»?\" → una calle), so playing this question gives that one away. Replace hint 3 with a strong hint that doesn't use the Galician word (for example: «Avenida, plaza, paseo… es la más común de todas»).",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 3 so it no longer gives away the Galician «rúa» question.",
+        "previous": {
+          "hints": [
+            "Aparece en los letreros de las esquinas de Barcelona.",
+            "Allí está el número de tu casa.",
+            "En gallego se dice «rúa»."
+          ]
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14247",
       "status": "needs_work",
       "difficulty": 5,
       "description": "Un embutido tan blandito que se deja untar sin protestar.",
-      "question": "Mira el mapa: la sobrasada, ese embutido rojo que se unta en el pan, es típica de esta isla. ¿Cuál es?",
+      "question": "La sobrasada, ese embutido rojo que se unta en el pan, tiene un sello de calidad oficial con el nombre de una isla. ¿Cuál?",
       "answer": "Mallorca",
       "wrong_answers": [
         "Menorca",
@@ -1103130,14 +1103150,14 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Mallorca location map",
-        "note": "Silueta de la isla de Mallorca sola, sin nombres ni rótulos.",
+        "role": "decorative",
+        "query": "sobrasada on bread",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
       },
-      "fun_fact": "La sobrasada de Mallorca tiene Indicación Geográfica Protegida, como algunos quesos y vinos.",
+      "fun_fact": "La sobrasada se hace con carne de cerdo y pimentón, que es lo que le da su color rojo.",
       "subcategory": "co-official-languages",
       "style": null,
       "concept": "Sobrassada",
@@ -1103161,29 +1103181,58 @@
         "notes": "Menorca also makes sobrasada, but the map settles it. A clean Mallorca silhouette is likely on Commons. The question text alone already points to Mallorca for many players."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-46",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question says «Mira el mapa» and needs an essential map or silhouette of Mallorca, but none of the six candidates is a map; all are photos taken on the island. A new search isn't allowed. Search Commons for something like \"Mallorca island silhouette map\" (no labels), or drop the map framing. Also, without the map, Menorca would also be defensible, because it makes sobrasada too. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says «Mira el mapa» and needs an essential map or silhouette of Mallorca, but none of the six candidates is a map; all are photos taken on the island. A new search isn't allowed. Search Commons for something like \"Mallorca island silhouette map\" (no labels), or drop the map framing. Also, without the map, Menorca would also be defensible, because it makes sobrasada too. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No map image was found, so I dropped the map framing and now ask which island gives its name to the protected sobrasada (IGP), which also rules out Menorca; I moved the IGP fact out of the fun fact.",
+        "previous": {
+          "question": "Mira el mapa: la sobrasada, ese embutido rojo que se unta en el pan, es típica de esta isla. ¿Cuál es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Mallorca location map",
+            "note": "Silueta de la isla de Mallorca sola, sin nombres ni rótulos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "fun_fact": "La sobrasada de Mallorca tiene Indicación Geográfica Protegida, como algunos quesos y vinos.",
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14248",
       "status": "needs_work",
       "difficulty": 4,
       "description": "Una comunidad donde en marzo los bomberos no descansan ni un minuto.",
-      "question": "Mira el mapa: en esta comunidad, cada marzo, se plantan y se queman «les Falles». ¿Cuál es?",
+      "question": "¿En qué comunidad autónoma se plantan y se queman cada marzo «les Falles»?",
       "answer": "La Comunidad Valenciana",
       "wrong_answers": [
         "Cataluña",
@@ -1103197,9 +1103246,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Valencian Community locator map",
-        "note": "Silueta de la Comunidad Valenciana sola o resaltada en un mapa de España, sin nombres ni rótulos.",
+        "role": "illustrative",
+        "query": "falla monument figures",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1103228,22 +1103277,50 @@
         "notes": "The Fallas clue answers it without the map. Commons locator maps often carry labels, so check the image for text."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-46",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates shows the Valencian Community: they are Madrid district maps (1, 3, 6), a Telugu Wikipedia example (2), a Cardiff map (4) and a South Carolina map (5). The question says «Mira el mapa», so it needs an essential locator map of the Valencian Community with no labels, and no new search is allowed. Supply a suitable file by hand, for example a blank map of Spain with the Valencian Community highlighted. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows the Valencian Community: they are Madrid district maps (1, 3, 6), a Telugu Wikipedia example (2), a Cardiff map (4) and a South Carolina map (5). The question says «Mira el mapa», so it needs an essential locator map of the Valencian Community with no labels, and no new search is allowed. Supply a suitable file by hand, for example a blank map of Spain with the Valencian Community highlighted. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No locator map was found, so I dropped the map framing and switched to an illustrative photo of a falla monument.",
+        "previous": {
+          "question": "Mira el mapa: en esta comunidad, cada marzo, se plantan y se queman «les Falles». ¿Cuál es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Valencian Community locator map",
+            "note": "Silueta de la Comunidad Valenciana sola o resaltada en un mapa de España, sin nombres ni rótulos.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14249",
@@ -1103485,7 +1103562,7 @@
     },
     {
       "id": "q-14252",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Una taza de leche con grumos que no hay cuchara capaz de deshacer.",
       "question": "Completa la expresión de cuando estás hecho un lío: «Tengo un cacao…»",
@@ -1103516,7 +1103593,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "La expresión «cacao mental» compara las ideas mezcladas con el cacao en polvo cuando se remueve en la leche.",
+      "fun_fact": "En el español coloquial de España, «cacao» a secas también significa «lío» o «jaleo».",
       "subcategory": "drinks",
       "style": null,
       "concept": "Cacao",
@@ -1103539,33 +1103616,36 @@
         "difficulty_estimate": 5,
         "notes": "«Cacao mental» is a common idiom in Spain, so it suits a spain bundle question. Distractors: «un cacao gordo» could just about pass as colloquial usage, since «lío gordo» exists. «Loco» and «redondo» are weak, so the answer stands out to anyone who has heard the phrase. Hint 2 («dentro de la cabeza») is already close to giving the answer, which is borderline. Fun: it is a plain idiom-completion exercise with little surprise. Age fit: younger kids may not know the idiom, so I estimate about 5 rather than 4."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact's etymology («cacao mental» comes from comparing mixed-up ideas to cocoa powder stirred into milk) is unsourced, and the fact check says it is uncertain. I can't confirm it either. Replace it with a fact you can check, for example that in colloquial Spain Spanish «cacao» on its own means «lío, jaleo» (RAE, marked coloquial, España). Verificación de datos: uncertain. «Cacao mental» is a real expression, but the fun fact's etymology (ideas mixed like cocoa powder stirred in milk) is unsourced and likely invented. The wrong answers also weren't checked against any source.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact's etymology («cacao mental» comes from comparing mixed-up ideas to cocoa powder stirred into milk) is unsourced, and the fact check says it is uncertain. I can't confirm it either. Replace it with a fact you can check, for example that in colloquial Spain Spanish «cacao» on its own means «lío, jaleo» (RAE, marked coloquial, España). Verificación de datos: uncertain. «Cacao mental» is a real expression, but the fun fact's etymology (ideas mixed like cocoa powder stirred in milk) is unsourced and likely invented. The wrong answers also weren't checked against any source.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hint 2 so they no longer mention the head, which pointed to «…mental».",
+        "reason": "Replaced the unsourced etymology in the fun fact with the RAE meaning of colloquial «cacao» in Spain.",
         "previous": {
-          "description": "Hay días en que la cabeza parece una taza de desayuno bien removida.",
-          "hints": [
-            "Lo dice quien no se aclara con nada.",
-            "El lío está dentro de la cabeza.",
-            "Tiene que ver con la mente."
-          ]
+          "fun_fact": "La expresión «cacao mental» compara las ideas mezcladas con el cacao en polvo cuando se remueve en la leche."
         },
         "revised_on": "2026-11-06"
       }
@@ -1106806,10 +1106886,10 @@
     },
     {
       "id": "q-14295",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Una camisa blanca que se ha hecho más famosa que muchas pasarelas.",
-      "question": "Este hombre de camisa blanca con los brazos en alto es de un famoso cuadro de Goya. ¿Quiénes están frente a él?",
+      "question": "En un famoso cuadro de Goya, un hombre de camisa blanca levanta los brazos en alto. ¿Quiénes están frente a él?",
       "answer": "Soldados franceses",
       "wrong_answers": [
         "Soldados ingleses",
@@ -1106823,12 +1106903,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Goya Third of May detail",
-        "note": "Recorte de «El 3 de mayo de 1808 en Madrid» de Goya que muestre solo al hombre de camisa blanca y pantalón amarillo con los brazos en alto, sin los soldados ni sangre visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Goya statue Prado Museum",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGoya_statue_at_the_Prado_museum.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Goya_statue_at_the_Prado_museum.jpg/3840px-Goya_statue_at_the_Prado_museum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Sheila1988 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Sheila1988",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sheila1988",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En la mano derecha del hombre de la camisa blanca se ve una marca parecida a un estigma, como si fuera un mártir.",
       "subcategory": "painting-and-architecture",
@@ -1106854,22 +1106941,48 @@
         "notes": "The essential media needs a crop without the soldiers, which is unlikely to exist as its own file; the full painting would show the soldiers. Hint 1 (Madrid, 1808) almost settles it."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits the essential slot. The note asks for a crop of the man in the white shirt without the soldiers or blood. Candidates 1 and 3 are the whole «El 3 de mayo de 1808» painting, which shows the firing squad and bloody bodies in the foreground. The other candidates are different paintings, and no new search is allowed. A crop of the man needs to be uploaded or made by hand. Another option is to change the media to an illustrative image, such as the Puerta del Sol or the Príncipe Pío hill. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits the essential slot. The note asks for a crop of the man in the white shirt without the soldiers or blood. Candidates 1 and 3 are the whole «El 3 de mayo de 1808» painting, which shows the firing squad and bloody bodies in the foreground. The other candidates are different paintings, and no new search is allowed. A crop of the man needs to be uploaded or made by hand. Another option is to change the media to an illustrative image, such as the Puerta del Sol or the Príncipe Pío hill. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable crop exists, so the question now describes the painting in words and uses an illustrative Goya statue at the Prado.",
+        "previous": {
+          "question": "Este hombre de camisa blanca con los brazos en alto es de un famoso cuadro de Goya. ¿Quiénes están frente a él?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Goya Third of May detail",
+            "note": "Recorte de «El 3 de mayo de 1808 en Madrid» de Goya que muestre solo al hombre de camisa blanca y pantalón amarillo con los brazos en alto, sin los soldados ni sangre visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14296",
@@ -1108948,10 +1109061,10 @@
     },
     {
       "id": "q-14323",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "El menú de emergencia de cualquier estudiante con una sartén y poca paciencia.",
-      "question": "Mira este plato de cerca: arroz blanco, huevo frito, tomate frito y plátano frito. Su nombre en España hace referencia a un país. ¿Cuál?",
+      "question": "Arroz blanco, huevo frito, tomate frito y plátano frito: en España, este plato lleva en su nombre un país. ¿Cuál?",
       "answer": "Cuba",
       "wrong_answers": [
         "México",
@@ -1108959,18 +1109072,25 @@
         "Venezuela"
       ],
       "hints": [
-        "Es un país del Caribe.",
-        "Fue colonia española hasta 1898.",
+        "Es un país de América.",
+        "Es una isla del Caribe.",
         "Su capital es La Habana."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "rice fried egg banana tomato",
-        "note": "Primer plano de un plato de arroz a la cubana: arroz blanco con huevo frito, tomate frito y plátano frito, sin texto.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "fried egg in pan",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFried_egg_cooking_in_a_pan.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Fried_egg_cooking_in_a_pan.jpg/3840px-Fried_egg_cooking_in_a_pan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Horacio Cambeiro · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Horacio Cambeiro",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tubby3",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Se cree que el nombre viene de la época en que Cuba era colonia española, donde se comía mucho arroz con plátano frito.",
       "subcategory": "regional-dishes",
@@ -1108996,27 +1109116,50 @@
         "notes": "Hint 2 (Spanish colony until 1898) also fits Filipinas. The fun fact about the name's origin is speculative ('se cree'). Very familiar in Spain, so slightly easier than 6."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows arroz a la cubana, and no new search is allowed. The essential image needs a clear photo of white rice with a fried egg, tomato sauce and fried plantain or banana. Possible search terms: \"arroz a la cubana\" or \"Cuban-style rice\". Also, hint 2 (Spanish colony until 1898) fits Filipinas too, so it doesn't narrow the options; a revision could change it. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows arroz a la cubana, and no new search is allowed. The essential image needs a clear photo of white rice with a fried egg, tomato sauce and fried plantain or banana. Possible search terms: \"arroz a la cubana\" or \"Cuban-style rice\". Also, hint 2 (Spanish colony until 1898) fits Filipinas too, so it doesn't narrow the options; a revision could change it. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description without the Atlantic clue, which ruled out Filipinas.",
+        "reason": "No dish photo was found, so I dropped the essential framing for a decorative image, and fixed the hints so they rule out the Philippines.",
         "previous": {
-          "description": "Un plato que ha cruzado el Atlántico, al menos de nombre."
+          "question": "Mira este plato de cerca: arroz blanco, huevo frito, tomate frito y plátano frito. Su nombre en España hace referencia a un país. ¿Cuál?",
+          "hints": [
+            "Es un país del Caribe.",
+            "Fue colonia española hasta 1898.",
+            "Su capital es La Habana."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "rice fried egg banana tomato",
+            "note": "Primer plano de un plato de arroz a la cubana: arroz blanco con huevo frito, tomate frito y plátano frito, sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-06"
       }
@@ -1109095,7 +1109238,7 @@
     },
     {
       "id": "q-14325",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Desaparece más que los calcetines y nadie sabe adónde va.",
       "question": "Soy elástica y redonda, espero en tu muñeca hasta que me necesitas y en los noventa me forraron de tela. Sujeto coletas. ¿Qué soy?",
@@ -1109113,19 +1109256,21 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "hairbrush and mirror",
+        "query": "hairbrush on dressing table",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APyralin_mirror%2C_hairbrush%2C_comb%2C_nail_buffer%2C_button_hook%2C_and_trinket_box_-_DPLA_-_aa580b893733758262457737ac140c69.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Pyralin_mirror%2C_hairbrush%2C_comb%2C_nail_buffer%2C_button_hook%2C_and_trinket_box_-_DPLA_-_aa580b893733758262457737ac140c69.jpg/3840px-Pyralin_mirror%2C_hairbrush%2C_comb%2C_nail_buffer%2C_button_hook%2C_and_trinket_box_-_DPLA_-_aa580b893733758262457737ac140c69.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJohn_Roddam_Spencer_Stanhope_-_Thoughts_of_the_Past_detail01.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/John_Roddam_Spencer_Stanhope_-_Thoughts_of_the_Past_detail01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "John Roddam Spencer Stanhope · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": null,
-        "author_url": null,
+        "author": "John Roddam Spencer Stanhope",
+        "author_url": "https://en.wikipedia.org/wiki/en:John_Roddam_Spencer_Stanhope",
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-Art",
+          "PD-old-100-1923",
+          "PD-old-100-expired"
         ]
       },
       "fun_fact": "Las gomas forradas de tela, muy de moda en los noventa, se llaman en inglés «scrunchies».",
@@ -1109151,23 +1109296,56 @@
         "difficulty_estimate": 3,
         "notes": "Elastic, round, worn on the wrist and holding ponytails makes it easy, closer to a 3. Decorative is fine, though a safe illustrative image (a hairbrush) would have worked too."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image license wasn't suitable, so I set a new decorative query to get a different image.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "hairbrush and mirror",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APyralin_mirror%2C_hairbrush%2C_comb%2C_nail_buffer%2C_button_hook%2C_and_trinket_box_-_DPLA_-_aa580b893733758262457737ac140c69.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Pyralin_mirror%2C_hairbrush%2C_comb%2C_nail_buffer%2C_button_hook%2C_and_trinket_box_-_DPLA_-_aa580b893733758262457737ac140c69.jpg/3840px-Pyralin_mirror%2C_hairbrush%2C_comb%2C_nail_buffer%2C_button_hook%2C_and_trinket_box_-_DPLA_-_aa580b893733758262457737ac140c69.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14326",
@@ -1112466,7 +1112644,7 @@
     },
     {
       "id": "q-14369",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Reciclar está de moda, pero en Málaga ya lo hacían hace casi mil años.",
       "question": "Mira la Alcazaba de Málaga: al levantarla en el siglo XI se usaron piedras y columnas de un edificio más antiguo que está a sus pies. ¿Cuál?",
@@ -1112484,11 +1112662,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Alcazaba Malaga Nasrid patio",
+        "query": "Alcazaba Malaga gardens",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlcazaba_de_Malaga_1.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Alcazaba_de_Malaga_1.JPG/3840px-Alcazaba_de_Malaga_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ismael zniber · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Ismael zniber",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ismael_zniber",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El teatro romano estuvo enterrado y olvidado hasta 1951, cuando apareció durante unas obras.",
       "subcategory": "monuments",
@@ -1112517,19 +1112702,43 @@
       "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "All four image candidates show the Alhambra in Granada, not the Alcazaba of Málaga, which the question names with «Mira la Alcazaba de Málaga». No new search is allowed. The slot needs a new search for the Alcazaba of Málaga, framed without the Roman theatre below it, for example 'Alcazaba Malaga courtyard' or 'Alcazaba Malaga gardens'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "All four image candidates show the Alhambra in Granada, not the Alcazaba of Málaga, which the question names with «Mira la Alcazaba de Málaga». No new search is allowed. The slot needs a new search for the Alcazaba of Málaga, framed without the Roman theatre below it, for example 'Alcazaba Malaga courtyard' or 'Alcazaba Malaga gardens'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image search returned the Alhambra, so I set a new query for the Málaga Alcazaba gardens that leaves out the theatre.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Alcazaba Malaga Nasrid patio",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14370",
@@ -1112764,10 +1112973,10 @@
     },
     {
       "id": "q-14373",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Hay cantantes con estilo propio y cantantes con un armario muy, muy pequeño.",
-      "question": "Joaquín Sabina, de Úbeda, casi siempre sale al escenario con un sombrero negro, duro y de copa baja y abombada. ¿Cuál es?",
+      "question": "Joaquín Sabina, de Úbeda, suele salir al escenario con un sombrero negro, duro y de copa baja y redondeada. ¿Cuál es?",
       "answer": "Un bombín",
       "wrong_answers": [
         "Una boina",
@@ -1112818,34 +1113027,37 @@
         "difficulty_estimate": 10,
         "notes": "The question is long (about 150 characters), and the Úbeda and song details could be cut. A chistera is also a black hat, but 'copa redonda' rules it out. Young teens know Sabina's hat less well than adults."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text describes the hat as «de copa baja y abombada»: «abombada» echoes «bombín» in sound and root, so players can match it to the answer by the word alone. Hint 3 makes the same link («bombo» pequeño), so the question text already gives away what was meant to be the strongest hint. Replace «abombada» with a word that doesn't echo the name, such as «redondeada». At the same time, soften «casi siempre» to «suele salir», as the fact check suggests. Verificación de datos: uncertain. The bombín is his most-cited hat, but he also wears panama and white hats. 'Casi siempre' is a slight overstatement.",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text describes the hat as «de copa baja y abombada»: «abombada» echoes «bombín» in sound and root, so players can match it to the answer by the word alone. Hint 3 makes the same link («bombo» pequeño), so the question text already gives away what was meant to be the strongest hint. Replace «abombada» with a word that doesn't echo the name, such as «redondeada». At the same time, soften «casi siempre» to «suele salir», as the fact check suggests. Verificación de datos: uncertain. The bombín is his most-cited hat, but he also wears panama and white hats. 'Casi siempre' is a slight overstatement.",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Gave the question a clue only a bowler hat fits, shortened it, and changed hint 3 so it no longer repeats the question's clue.",
+        "reason": "Replaced «abombada», which echoed the answer, with «redondeada», and softened «casi siempre» to «suele».",
         "previous": {
-          "question": "Joaquín Sabina, de Úbeda y autor de «Y nos dieron las diez», casi siempre sale al escenario con algo negro de copa redonda en la cabeza. ¿Qué es?",
-          "hints": [
-            "Es un tipo de sombrero clásico.",
-            "Charles Chaplin también llevaba uno con su bastón.",
-            "Es bajito, duro y redondeado, y su nombre suena a «bombo» pequeño."
-          ]
+          "question": "Joaquín Sabina, de Úbeda, casi siempre sale al escenario con un sombrero negro, duro y de copa baja y abombada. ¿Cuál es?"
         },
         "revised_on": "2026-11-06"
       }
@@ -1113750,7 +1113962,7 @@
     },
     {
       "id": "q-14386",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Una emisora que te acompaña en el desayuno, el atasco y la vuelta a casa.",
       "question": "Esta cadena de radio nació en 1990 de la mano de la ONCE, hoy es de Atresmedia y emite el programa «Más de uno». ¿Cuál es?",
@@ -1113761,8 +1113973,8 @@
         "Radio Nacional"
       ],
       "hints": [
-        "Carlos Alsina presenta su programa de las mañanas.",
-        "La primera palabra de su nombre es la forma en que viajan por el aire las señales de radio.",
+        "Es una radio privada, no la pública de RTVE.",
+        "Comparte dueño con las cadenas de televisión Antena 3 y laSexta.",
         "Su nombre lleva un número que significa «nada»."
       ],
       "media": {
@@ -1113808,27 +1114020,35 @@
       "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It describes \"onda\" (the form radio signals take through the air), and Onda Cero is the only option whose name starts with that word, so the answer is solved before hint 3. Hint 2 needs replacing with a clue that doesn't spell out part of the name, for example the station's founding in 1990 or its link to the ONCE told another way. Also, hint 1 (Carlos Alsina) only names the host of «Más de uno», which the question already mentions.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It describes \"onda\" (the form radio signals take through the air), and Onda Cero is the only option whose name starts with that word, so the answer is solved before hint 3. Hint 2 needs replacing with a clue that doesn't spell out part of the name, for example the station's founding in 1990 or its link to the ONCE told another way. Also, hint 1 (Carlos Alsina) only names the host of «Más de uno», which the question already mentions.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which repeated the question, and fixed the wrong surfer and smallest-number claims in hints 2–3.",
+        "reason": "Replaced hint 2, which spelled out «onda», and hint 1, which repeated the question, with clues that don't give away the name.",
         "previous": {
           "hints": [
-            "Comparte grupo con Antena 3 y laSexta.",
-            "La primera palabra de su nombre es algo que buscan los surfistas.",
-            "Su nombre lleva un número, el más pequeño de todos."
+            "Carlos Alsina presenta su programa de las mañanas.",
+            "La primera palabra de su nombre es la forma en que viajan por el aire las señales de radio.",
+            "Su nombre lleva un número que significa «nada»."
           ]
         },
         "revised_on": "2026-11-06"
@@ -1116893,8 +1117113,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "persiana enrollable PVC",
-        "note": "Primer plano de las lamas de plástico de una persiana enrollable, a medio bajar, sin que se vea la habitación entera.",
+        "query": "roller shutter window Spain",
+        "note": "Primer plano de las lamas horizontales de plástico de una persiana enrollable, a medio bajar, sin que se vea la habitación entera.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1116922,23 +1117142,49 @@
         "difficulty_estimate": 1,
         "notes": "Suelo, frigorífico and techo are weak distractors. The search for roller shutter slats might find a metal shop shutter (on a door) instead of a plastic window persiana. The fun fact about foreign visitors is a loose claim."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-46",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the essential image, a Spanish roller shutter (persiana enrollable) with horizontal slats. Candidate 1 is a vertical slat blind, and 2–6 are roll-top desks. No new search is allowed, so the media slot can't be filled. A better query would be \"roller shutter window Spain\" or \"persiana enrollable ventana\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the essential image, a Spanish roller shutter (persiana enrollable) with horizontal slats. Candidate 1 is a vertical slat blind, and 2–6 are roll-top desks. No new search is allowed, so the media slot can't be filled. A better query would be \"roller shutter window Spain\" or \"persiana enrollable ventana\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to one that should find a horizontal-slat roller shutter, so the essential image can be filled.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "persiana enrollable PVC",
+            "note": "Primer plano de las lamas de plástico de una persiana enrollable, a medio bajar, sin que se vea la habitación entera.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-06"
+      }
     },
     {
       "id": "q-14428",
@@ -1120245,10 +1120491,10 @@
     },
     {
       "id": "q-14471",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Un cartel que convierte cualquier viaje en coche en un examen sorpresa.",
-      "question": "Vas por la autovía y ves un cartel: «Tramo controlado por radar». ¿Qué mide ese radar?",
+      "question": "Vas por la autovía y entras en una zona con «radar de tramo». ¿Qué mide ese radar?",
       "answer": "La velocidad media entre dos puntos",
       "wrong_answers": [
         "La distancia con el coche de delante",
@@ -1120303,35 +1120549,32 @@
       "needs_media": false,
       "batch": "batch-46",
       "review": {
-        "decision": "needs_work",
-        "feedback": "On Spanish roads, the sign «Tramo controlado por radar» is the usual warning before ordinary fixed radars, which measure your speed at one point. It doesn't mean average-speed section control. Section-control signs say something like «Control de velocidad media» or «radar de tramo». So the answer, hint 2, hint 3 and the fun fact describe the wrong kind of radar for the sign that's quoted. Quote a real section-control sign (e.g. «Control de velocidad media») or ask directly about the «radar de tramo».",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "On Spanish roads, the sign «Tramo controlado por radar» is the usual warning before ordinary fixed radars, which measure your speed at one point. It doesn't mean average-speed section control. Section-control signs say something like «Control de velocidad media» or «radar de tramo». So the answer, hint 2, hint 3 and the fun fact describe the wrong kind of radar for the sign that's quoted. Quote a real section-control sign (e.g. «Control de velocidad media») or ask directly about the «radar de tramo».",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 1 vague, rewrote the description so it doesn't reveal the mechanism, and gave all options the same form with a more plausible distractor.",
+        "reason": "The question now asks about a «radar de tramo» instead of quoting the sign that warns of ordinary fixed radars, so the answer, hints and fun fact match.",
         "previous": {
-          "description": "Un ojo electrónico con mucha paciencia y muy buena memoria para las matrículas.",
-          "answer": "Tu velocidad media entre dos puntos",
-          "wrong_answers": [
-            "La distancia con el coche de delante",
-            "El ruido que hace tu motor",
-            "Cuántas personas van en tu coche"
-          ],
-          "hints": [
-            "Tiene que ver con lo rápido que vas.",
-            "No te mira en un solo momento, sino durante un trayecto.",
-            "Anota cuándo entras y cuándo sales del tramo, y hace la cuenta."
-          ]
+          "question": "Vas por la autovía y ves un cartel: «Tramo controlado por radar». ¿Qué mide ese radar?"
         },
         "revised_on": "2026-11-06"
       }
@@ -1120657,8 +1120900,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Spain traffic signal r1",
-        "note": "La señal española R-1 de ceda el paso: triángulo blanco con borde rojo y la punta hacia abajo, sin texto",
+        "query": "Spain traffic signal r1.svg",
+        "note": "La señal española R-1 de ceda el paso: triángulo blanco con borde rojo y la punta hacia abajo, sin ningún texto dentro.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1120691,28 +1120934,41 @@
       "batch": "batch-46",
       "review": {
         "decision": "needs_work",
-        "feedback": "No usable essential image: candidate 1 is the R-1 sign but the 'CEDA EL PASO' variant with the answer written inside the triangle; candidates 2 and 3 are street scenes not showing the sign. Needs a new search for the plain Spanish R-1 sign without text (e.g. 'Spain traffic signal r1.svg' or 'yield sign triangle'). No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-06",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No usable essential image: candidate 1 is the R-1 sign but the 'CEDA EL PASO' variant with the answer written inside the triangle; candidates 2 and 3 are street scenes not showing the sign. Needs a new search for the plain Spanish R-1 sign without text (e.g. 'Spain traffic signal r1.svg' or 'yield sign triangle'). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-06",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hint 2, which both stated the sign's meaning.",
+        "reason": "Changed the media query to the plain Spanish R-1 SVG so the essential image shows the sign without the answer written on it.",
         "previous": {
-          "description": "Una señal muy educada que te pide que dejes pasar primero a los demás.",
-          "hints": [
-            "No te obliga siempre a pararte del todo.",
-            "Te dice que los otros coches tienen preferencia.",
-            "Es un triángulo con la punta hacia abajo."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Spain traffic signal r1",
+            "note": "La señal española R-1 de ceda el paso: triángulo blanco con borde rojo y la punta hacia abajo, sin texto",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-06"
       }
