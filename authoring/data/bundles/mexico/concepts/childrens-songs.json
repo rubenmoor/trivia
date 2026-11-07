@@ -330,7 +330,8 @@
     {
       "name": "Arroz con leche",
       "facet": "Rondas y juegos cantados",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La adivinanza de la ronda (casarse con la señorita de San Nicolás) ya está en el banco; las opciones de «cuándo» no dan una pregunta clara."
     },
     {
       "name": "Al ánimo",
@@ -481,7 +482,8 @@
     {
       "name": "Mordida del pastel",
       "facet": "Canciones de posadas, piñatas y cumpleaños",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Ya se preguntó qué muerde el festejado; las opciones disponibles repetirían ese mismo dato."
     },
     {
       "name": "Colación",

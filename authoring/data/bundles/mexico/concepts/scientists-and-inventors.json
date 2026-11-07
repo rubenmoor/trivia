@@ -141,7 +141,8 @@
     {
       "name": "Trompo",
       "facet": "Inventos de la vida cotidiana",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The toy's name is already asked from a photo; none of the remaining options gives a new, natural fact."
     },
     {
       "name": "Chiquihuite",
@@ -458,7 +459,8 @@
     {
       "name": "Susana Lizano",
       "facet": "Pioneras de la ciencia mexicana",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure for families, and I'm not sure enough of facts about her career."
     },
     {
       "name": "María Elena Álvarez-Buylla",
@@ -528,7 +530,8 @@
     {
       "name": "Bimbo",
       "facet": "Empresarios y marcas mexicanas",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Bear mascot and world's biggest bread maker are taken; the only fact left (founder Lorenzo Servitje) is far above difficulty 1."
     },
     {
       "name": "Lorenzo Servitje",

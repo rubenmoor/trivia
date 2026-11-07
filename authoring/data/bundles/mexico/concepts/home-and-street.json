@@ -392,7 +392,8 @@
     {
       "name": "Compadres",
       "facet": "Costumbres de familia y visitas",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: La palabra «compadre» ya está preguntada; lo que queda (compadrazgo/padrinazgo) sería ambiguo."
     },
     {
       "name": "Pedida de mano",

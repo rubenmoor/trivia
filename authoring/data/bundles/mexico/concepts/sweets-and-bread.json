@@ -617,7 +617,8 @@
     {
       "name": "Pastel de tres leches",
       "facet": "Postres caseros y de fonda",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Lo del tres leches para nivel 1 ya está muy preguntado; cuáles son las tres leches varía según la receta."
     },
     {
       "name": "Plátanos fritos",

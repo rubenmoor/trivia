@@ -291,7 +291,8 @@
     {
       "name": "Dos de tres caídas",
       "facet": "Reglas y tipos de lucha",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El pool ya pregunta qué es una caída y el conteo de 3; las opciones de récord o lugar no encajan."
     },
     {
       "name": "Relevos australianos",
@@ -641,7 +642,8 @@
     {
       "name": "Réferi",
       "facet": "Jerga del cuadrilátero",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El réferi ya está en el pool (descalificación y conteo); un acertijo repetiría esos mismos datos."
     },
     {
       "name": "Gladiador",
