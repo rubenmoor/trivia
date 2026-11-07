@@ -1123300,7 +1123300,7 @@
       "status": "needs_work",
       "difficulty": 2,
       "description": "Sandía, pepino y jícama entraron a un vaso y salieron enchilados.",
-      "question": "En la calle te venden este vaso de fruta con chile y limón. ¿Quién lo vende?",
+      "question": "En la calle te venden un vaso de mango, pepino y jícama con chile y limón. ¿Quién lo vende?",
       "answer": "El frutero",
       "wrong_answers": [
         "El elotero",
@@ -1123314,9 +1123314,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "fruta con chile",
-        "note": "Un vaso de plástico con fruta picada (mango, sandía, pepino, jícama) espolvoreada con chile en polvo y limón; sin marcas visibles.",
+        "role": "illustrative",
+        "query": "lime and chili powder",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1123345,21 +1123345,49 @@
         "notes": "The photo plus 'fruta' in the question make 'frutero' easy, which is fine at level 2. Pepino and jícama aren't strictly fruit, but that's a minor point. The essential photo of a Mexican fruit cup is fairly likely to exist on Commons or Openverse."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-47",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a cup of fruit with chile: five are micheladas (beer cocktails, not fit for a family game) and one is a stall of plastic novelty cups. A new search isn't allowed. The essential image needs a photo of a Mexican fruit cup (for example \"Mexican fruit cup chili\" or \"fruta picada con chile\"). Another option is to make it an illustrative image of a street fruit cart, as long as it doesn't show the fruit vendor's sign. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a cup of fruit with chile: five are micheladas (beer cocktails, not fit for a family game) and one is a stall of plastic novelty cups. A new search isn't allowed. The essential image needs a photo of a Mexican fruit cup (for example \"Mexican fruit cup chili\" or \"fruta picada con chile\"). Another option is to make it an illustrative image of a street fruit cart, as long as it doesn't show the fruit vendor's sign. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of the fruit cup exists, so the cup is now described in the text and the image is an illustrative shot of lime and chili powder that does not show the vendor.",
+        "previous": {
+          "question": "En la calle te venden este vaso de fruta con chile y limón. ¿Quién lo vende?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "fruta con chile",
+            "note": "Un vaso de plástico con fruta picada (mango, sandía, pepino, jícama) espolvoreada con chile en polvo y limón; sin marcas visibles.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14509",
@@ -1124741,7 +1124769,7 @@
     },
     {
       "id": "q-14527",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Un personaje al que le encanta salir del cascarón… pero no de la sartén.",
       "question": "Soy un huevo valiente de una película animada mexicana y mi mejor amigo es un tocino llamado Willy. ¿Quién soy?",
@@ -1124752,29 +1124780,27 @@
         "Bibi"
       ],
       "hints": [
-        "Mi película se estrenó en 2006 y fue un éxito en los cines de México.",
-        "Mis creadores empezaron haciendo cortos chistosos en internet.",
-        "Mi gran sueño es convertirme en pollo."
+        "En mi mundo, la comida habla y vive aventuras.",
+        "Mi nombre tiene solo cuatro letras y soy un chico, no una chica.",
+        "Mi nombre rima con «foto»."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "eggs in carton",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A6-Pack-Chicken-Eggs.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/6-Pack-Chicken-Eggs.jpg/3840px-6-Pack-Chicken-Eggs.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Evan-Amos · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEgg_cartons_with_chicken_eggs_03.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/3840px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Evan-Amos",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Evan-Amos",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Krzysztof Golik",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tournasol7",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-self"
-        ]
+        "pd_reasons": []
       },
-      "fun_fact": "«Una película de huevos» fue un gran éxito de taquilla en México y tuvo secuelas, como «Otra película de huevos y un pollo».",
+      "fun_fact": "Al tocino Willy le dio voz el actor y comediante Carlos Espejel.",
       "subcategory": "comics",
       "style": null,
       "concept": "Huevocartoon",
@@ -1124801,33 +1124827,36 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This overlaps too much with approved q-13498, which asks for the film's title using the same clues: the 2006 Mexican animated film, made from internet shorts, whose hero dreams of becoming a chicken. This question's hints repeat those clues and its fun fact names the film, so each question gives the other away. If the question is rewritten, avoid q-13498's facts entirely.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This overlaps too much with approved q-13498, which asks for the film's title using the same clues: the 2006 Mexican animated film, made from internet shorts, whose hero dreams of becoming a chicken. This question's hints repeat those clues and its fun fact names the film, so each question gives the other away. If the question is rewritten, avoid q-13498's facts entirely.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the film title from hint 1, gave hint 3 a clue that fits only Toto, swapped out 'Willy' (the question rules it out) and wrote a new fun fact that doesn't repeat hint 2.",
+        "reason": "Replaced the hints and fun fact that repeated q-13498's clues (2006, internet shorts, dream of becoming a chicken, film title) with new ones.",
         "previous": {
-          "wrong_answers": [
-            "Willy",
-            "Confi",
-            "Bibi"
-          ],
           "hints": [
-            "Salí en «Una película de huevos», de 2006.",
+            "Mi película se estrenó en 2006 y fue un éxito en los cines de México.",
             "Mis creadores empezaron haciendo cortos chistosos en internet.",
-            "Mi nombre es cortito y tiene la misma sílaba dos veces."
+            "Mi gran sueño es convertirme en pollo."
           ],
-          "fun_fact": "Huevocartoon empezó como cortos de internet de los hermanos Riva Palacio antes de llegar al cine."
+          "fun_fact": "«Una película de huevos» fue un gran éxito de taquilla en México y tuvo secuelas, como «Otra película de huevos y un pollo»."
         },
         "revised_on": "2026-11-07"
       }
@@ -1125500,7 +1125529,7 @@
     },
     {
       "id": "q-14537",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Un lugar en la mesa que ninguna tía soltera quiere.",
       "question": "En las comidas familiares, la abuela no deja que las solteras se sienten ahí, porque dicen que no se casan en siete años. ¿Dónde?",
@@ -1125512,7 +1125541,7 @@
       ],
       "hints": [
         "Es un lugar de la mesa misma.",
-        "Ahí se juntan dos lados.",
+        "Está en la orilla de la mesa, pero no es el lugar de honor.",
         "Es donde la mesa tiene un pico."
       ],
       "media": {
@@ -1125520,16 +1125549,19 @@
         "role": "illustrative",
         "query": "family dinner table",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Dinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg/3840px-Dinner_table_arrangement_with_food_of_a_middle_class_Bangladeshi_family_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Afifa Afrin · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchwerin_and_Freudenberg_family_at_the_dinner_table_circa_1920.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Schwerin_and_Freudenberg_family_at_the_dinner_table_circa_1920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Hans Bernhard Schwerin · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Afifa Afrin",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Afifa_Afrin",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Hans Bernhard Schwerin",
+        "author_url": "https://www.wikidata.org/wiki/Q59164080",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-US-unpublished",
+          "PD-old"
+        ]
       },
       "fun_fact": "La misma creencia existe en Rusia: allá también dicen que quien se sienta en la esquina de la mesa no se casa en siete años.",
       "subcategory": "folk-beliefs",
@@ -1125558,23 +1125590,35 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 ('Ahí se juntan dos lados') is the definition of a corner and gives the answer away before hint 3. Hint 1 has already ruled out the window and the door, so after hint 2 'la esquina' is the only option left. Hint 2 should be a vaguer clue, for example that the spot is on the edge of the table but not at either end, and must not describe where two sides meet.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 ('Ahí se juntan dos lados') is the definition of a corner and gives the answer away before hint 3. Hint 1 has already ruled out the window and the door, so after hint 2 'la esquina' is the only option left. Hint 2 should be a vaguer clue, for example that the spot is on the edge of the table but not at either end, and must not describe where two sides meet.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Swapped the unverifiable fun fact for the well-known Russian version of the same superstition.",
+        "reason": "Hint 2 defined a corner and gave the answer away; it now gives a vaguer clue.",
         "previous": {
-          "fun_fact": "Hay versiones de la creencia que dicen que quien se sienta ahí se queda «a la orilla» del amor."
+          "hints": [
+            "Es un lugar de la mesa misma.",
+            "Ahí se juntan dos lados.",
+            "Es donde la mesa tiene un pico."
+          ]
         },
         "revised_on": "2026-11-07"
       }
@@ -1125723,7 +1125767,7 @@
     },
     {
       "id": "q-14540",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Para el cine mexicano, las palomitas son opcionales; la pasión, obligatoria.",
       "question": "Nació en 1974 en la Ciudad de México, guarda y proyecta películas, y en 1982 un incendio destruyó buena parte de su archivo. ¿Qué institución es?",
@@ -1125735,7 +1125779,7 @@
       ],
       "hints": [
         "No es un estudio de filmación: ahí no se rueda ninguna película.",
-        "Tiene salas donde puedes ver ciclos de cine de todo el mundo, y hoy está en Coyoacán.",
+        "Tiene salas donde puedes ver ciclos de cine de todo el mundo, en la colonia Xoco, sobre la avenida México-Coyoacán.",
         "Su nombre mezcla «cine» con la idea de una biblioteca, y lleva el adjetivo del país."
       ],
       "media": {
@@ -1125781,24 +1125825,35 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 says the Cineteca Nacional \"hoy está en Coyoacán\", but its Xoco site (Av. México-Coyoacán 389) is in the Benito Juárez borough. The Filmoteca UNAM, one of the wrong answers, is in Ciudad Universitaria, which really is in Coyoacán, so the hint is wrong and also points towards a distractor. Hint 2 should say it is in the Xoco neighbourhood on Avenida México-Coyoacán, or drop the place.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 says the Cineteca Nacional \"hoy está en Coyoacán\", but its Xoco site (Av. México-Coyoacán 389) is in the Benito Juárez borough. The Filmoteca UNAM, one of the wrong answers, is in Ciudad Universitaria, which really is in Coyoacán, so the hint is wrong and also points towards a distractor. Hint 2 should say it is in the Xoco neighbourhood on Avenida México-Coyoacán, or drop the place.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the unconfirmed fun fact with the 1984 reopening in Xoco, and rewrote the description so it no longer gives away the archive role.",
+        "reason": "Hint 2 wrongly put the Cineteca in Coyoacán, which points to the Filmoteca UNAM; it now names the Xoco neighbourhood.",
         "previous": {
-          "description": "El lugar donde las películas viejas se jubilan con aire acondicionado y cuidados de spa.",
-          "fun_fact": "Tras el incendio de 1982, la Cineteca empezó a guardar sus películas en bóvedas con temperatura y humedad controladas."
+          "hints": [
+            "No es un estudio de filmación: ahí no se rueda ninguna película.",
+            "Tiene salas donde puedes ver ciclos de cine de todo el mundo, y hoy está en Coyoacán.",
+            "Su nombre mezcla «cine» con la idea de una biblioteca, y lleva el adjetivo del país."
+          ]
         },
         "revised_on": "2026-11-07"
       }
@@ -1126394,7 +1126449,7 @@
     },
     {
       "id": "q-14549",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Tres guardaron su secreto bajo la tela, y uno dio la cara desde el primer día.",
       "question": "¿Cuál de estos luchadores legendarios NO usaba máscara?",
@@ -1126406,7 +1126461,7 @@
       ],
       "hints": [
         "Ganó muchas luchas de apuestas contra enmascarados y cabelleras.",
-        "Era de Jalisco y fue uno de los rudos más temidos de los años 70 y 80.",
+        "Nació en Zacatecas y fue uno de los rudos más temidos de los años 70 y 80.",
         "Su nombre lleva un animal que ladra."
       ],
       "media": {
@@ -1126414,14 +1126469,14 @@
         "role": "decorative",
         "query": "lucha libre ring ropes",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AJuan_Manuel_Reyes_Cruz_en_el_ring_de_lucha_Nuevo_Laredo.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Juan_Manuel_Reyes_Cruz_en_el_ring_de_lucha_Nuevo_Laredo.jpg/3840px-Juan_Manuel_Reyes_Cruz_en_el_ring_de_lucha_Nuevo_Laredo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Miguel Angel Omaña Rojas · CC0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALucha_Libre_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Lucha_Libre_%28Unsplash%29.jpg/3840px-Lucha_Libre_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Joe Hernandez joehernandez · CC0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Miguel Angel Omaña Rojas",
-        "author_url": null,
+        "author": "Joe Hernandez joehernandez",
+        "author_url": "https://unsplash.com/@joehernandez",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1126448,29 +1126503,37 @@
         "difficulty_estimate": 8,
         "notes": "Accurate. Hint 2 ('Can de Jalisco') already all but gives it away. Mil Máscaras only shares a topic with comics-0."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 says Perro Aguayo \"era de Jalisco\", but he was born in Nochistlán, Zacatecas (nicknamed \"El Can de Nochistlán\") and only lived in Jalisco. Change the hint to say he was born in Zacatecas, or drop the birthplace and keep the 1970s and 1980s rudo detail. Verificación de datos: wrong. The answer is right (Perro Aguayo wrestled unmasked), but hint 2 says he was \"de Jalisco\". He was born in Nochistlán, Zacatecas, and lived mostly in Tala, Jalisco.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 says Perro Aguayo \"era de Jalisco\", but he was born in Nochistlán, Zacatecas (nicknamed \"El Can de Nochistlán\") and only lived in Jalisco. Change the hint to say he was born in Zacatecas, or drop the birthplace and keep the 1970s and 1980s rudo detail. Verificación de datos: wrong. The answer is right (Perro Aguayo wrestled unmasked), but hint 2 says he was \"de Jalisco\". He was born in Nochistlán, Zacatecas, and lived mostly in Tala, Jalisco.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, whose 'Can de Jalisco' pointed straight to 'Perro', with a hint that has no animal reference.",
+        "reason": "Corrected the birthplace in hint 2: Perro Aguayo was born in Zacatecas, not Jalisco.",
         "previous": {
           "hints": [
             "Ganó muchas luchas de apuestas contra enmascarados y cabelleras.",
-            "Le decían «el Can de Jalisco».",
+            "Era de Jalisco y fue uno de los rudos más temidos de los años 70 y 80.",
             "Su nombre lleva un animal que ladra."
           ]
         },
@@ -1126848,10 +1126911,10 @@
     },
     {
       "id": "q-14555",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Rebotaba miles de años antes de que existieran los tenis.",
-      "question": "Mira la foto: es una pelota de hule para el juego de pelota. ¿Qué pueblo antiguo tiene un nombre náhuatl que significa «gente del hule»?",
+      "question": "El juego de pelota mesoamericano se jugaba con pelotas de hule. ¿Qué pueblo antiguo tiene un nombre náhuatl que significa «gente del hule»?",
       "answer": "Los olmecas",
       "wrong_answers": [
         "Los toltecas",
@@ -1126865,12 +1126928,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Mesoamerican rubber ball",
-        "note": "Una pelota maciza de hule negro como las del juego de pelota mesoamericano (ulama), sin texto ni etiquetas.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Chichen Itza ballcourt ring",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChichen_Itza_Ballcourt_Goal_%289783241994%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Chichen_Itza_Ballcourt_Goal_%289783241994%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd from Xinzheng, China",
+        "author_url": "https://www.flickr.com/people/101561334@N08",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Los mesoamericanos mezclaban el látex del árbol de hule con el jugo de una enredadera para que la pelota rebotara mejor.",
       "subcategory": "maya",
@@ -1126896,30 +1126966,44 @@
         "notes": "The media is marked essential, but the question doesn't need the photo; illustrative would fit better. Hint 3 is exactly the fact asked in q-12596 (Olmecs carved the colossal heads). Same answer, different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows a rubber ball, though the question opens with \"Mira la foto: es una pelota de hule\", and no new search is allowed. The slot needs a real photo of a solid black Mesoamerican rubber ball, for example from a search like \"ulama rubber ball\". The other option is to drop the \"Mira la foto\" clause and make the image illustrative (a ballcourt). No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows a rubber ball, though the question opens with \"Mira la foto: es una pelota de hule\", and no new search is allowed. The slot needs a real photo of a solid black Mesoamerican rubber ball, for example from a search like \"ulama rubber ball\". The other option is to drop the \"Mira la foto\" clause and make the image illustrative (a ballcourt). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3, which mentioned the colossal heads (the answer of q-12596), with a hint about La Venta and jade figures.",
+        "reason": "No rubber ball photo was found, so the 'Mira la foto' clause is gone and the image is now an illustrative Maya ballcourt ring that points to no option.",
         "previous": {
-          "hints": [
-            "Vivieron en la costa del Golfo de México, en Veracruz y Tabasco.",
-            "Se les considera la «cultura madre» de Mesoamérica.",
-            "Son famosos por sus cabezas colosales de piedra."
-          ]
+          "question": "Mira la foto: es una pelota de hule para el juego de pelota. ¿Qué pueblo antiguo tiene un nombre náhuatl que significa «gente del hule»?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Mesoamerican rubber ball",
+            "note": "Una pelota maciza de hule negro como las del juego de pelota mesoamericano (ulama), sin texto ni etiquetas.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-07"
       }
@@ -1127737,7 +1127821,7 @@
     },
     {
       "id": "q-14567",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Una vuelta completa a la pista sin nada que saltar, pero con pulmones en llamas.",
       "question": "En México se le llama «400 metros planos». ¿A qué grupo de carreras de atletismo pertenece?",
@@ -1127749,7 +1127833,7 @@
       ],
       "hints": [
         "Es una sola vuelta a la pista de atletismo.",
-        "Los corredores van casi a toda velocidad desde la salida hasta la meta.",
+        "Los corredores salen con todo y no bajan el ritmo para guardar fuerzas.",
         "Es la carrera más larga del grupo de Usain Bolt."
       ],
       "media": {
@@ -1127795,29 +1127879,35 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 ('Los corredores van casi a toda velocidad…') repeats the answer's key word 'velocidad', which gives away 'Las pruebas de velocidad' at the second hint. Reword hint 2 so it describes the effort without using 'velocidad', e.g. that the runners go all out with no tactical slow phase.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 ('Los corredores van casi a toda velocidad…') repeats the answer's key word 'velocidad', which gives away 'Las pruebas de velocidad' at the second hint. Reword hint 2 so it describes the effort without using 'velocidad', e.g. that the runners go all out with no tactical slow phase.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the Guevara reference from the question and the fun fact (it reveals q-12662) and replaced hint 2, which listed the 400 m with the sprints.",
+        "reason": "Hint 2 used the answer's key word 'velocidad'; it now describes the effort without that word.",
         "previous": {
-          "question": "En México se llaman «400 metros planos», la prueba de Ana Gabriela Guevara. ¿A qué grupo de carreras pertenecen?",
           "hints": [
             "Es una sola vuelta a la pista de atletismo.",
-            "Se corre en carriles separados, como los 100 y los 200 metros.",
+            "Los corredores van casi a toda velocidad desde la salida hasta la meta.",
             "Es la carrera más larga del grupo de Usain Bolt."
-          ],
-          "fun_fact": "Ana Gabriela Guevara fue campeona del mundo de 400 metros en París 2003 y plata olímpica en Atenas 2004."
+          ]
         },
         "revised_on": "2026-11-07"
       }
@@ -1130049,7 +1130139,7 @@
     },
     {
       "id": "q-14597",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Una hechicera que se quedó dormida en el camino y despertó sin camión de regreso.",
       "question": "Según la leyenda, la hermana hechicera de Huitzilopochtli fue abandonada en la peregrinación y fundó este pueblo con un templo tallado en la roca. ¿Cuál es?",
@@ -1130060,7 +1130150,7 @@
         "Cholula"
       ],
       "hints": [
-        "Está en el Estado de México.",
+        "Es un pueblo de montaña, rodeado de cerros con bosque.",
         "Su templo de la roca era de los guerreros águila y jaguar.",
         "La hermana se llamaba Malinalxóchitl."
       ],
@@ -1130111,18 +1130201,38 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"Está en el Estado de México\") gives the answer away for Mexican players: Tepoztlán is in Morelos, Xochimilco in Mexico City and Cholula in Puebla, so the first hint rules out all three wrong answers. Replace it with a vague hint that doesn't point to one state, for example about the mountainous, wooded landscape or the Mexica migration era.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"Está en el Estado de México\") gives the answer away for Mexican players: Tepoztlán is in Morelos, Xochimilco in Mexico City and Cholula in Puebla, so the first hint rules out all three wrong answers. Replace it with a vague hint that doesn't point to one state, for example about the mountainous, wooded landscape or the Mexica migration era.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 1 named the state, which rules out all three wrong answers; it now describes the landscape instead.",
+        "previous": {
+          "hints": [
+            "Está en el Estado de México.",
+            "Su templo de la roca era de los guerreros águila y jaguar.",
+            "La hermana se llamaba Malinalxóchitl."
+          ]
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14598",
@@ -1130209,7 +1130319,7 @@
     },
     {
       "id": "q-14599",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un viaje en carro con más drama que una telenovela de horario estelar.",
       "question": "En el corrido «Contrabando y traición», Camelia la Texana y Emilio Varela cruzan la frontera en carro. ¿De qué ciudad mexicana venían?",
@@ -1130227,20 +1130337,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "vintage car desert highway",
+        "query": "classic car desert road",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACar_below_escarpment._%28b2439dd0-c01e-45f6-a4c4-5288b38e2ddc%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Car_below_escarpment._%28b2439dd0-c01e-45f6-a4c4-5288b38e2ddc%29.jpg/3840px-Car_below_escarpment._%28b2439dd0-c01e-45f6-a4c4-5288b38e2ddc%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhite_Desert%2C_Road_through_the_desert%2C_Egypt.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/White_Desert%2C_Road_through_the_desert%2C_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Camelia la Texana se volvió tan famosa que protagonizó películas y hasta una serie de televisión.",
       "subcategory": "regional-mexican",
@@ -1130269,18 +1130377,51 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image's license was US-only public domain, so the media query is new and a freely licensed image can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "vintage car desert highway",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ACar_below_escarpment._%28b2439dd0-c01e-45f6-a4c4-5288b38e2ddc%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Car_below_escarpment._%28b2439dd0-c01e-45f6-a4c4-5288b38e2ddc%29.jpg/3840px-Car_below_escarpment._%28b2439dd0-c01e-45f6-a4c4-5288b38e2ddc%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14600",
@@ -1131022,7 +1131163,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Mexican pueblo church plaza",
+        "query": "Oaxaca town plaza church",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1131056,17 +1131197,43 @@
       "batch": "batch-47",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question text is fine, but no media candidate fits. All six show Native American pueblos in New Mexico, USA (Zuni, Ohkay Owingeh, Tesuque), and two are architectural line drawings. None shows a Mexican town like Ixtepec. A new search isn't allowed, so the slot needs a new query such as \"Mexican village church plaza\" or \"Oaxaca town plaza church\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text is fine, but no media candidate fits. All six show Native American pueblos in New Mexico, USA (Zuni, Ohkay Owingeh, Tesuque), and two are architectural line drawings. None shows a Mexican town like Ixtepec. A new search isn't allowed, so the slot needs a new query such as \"Mexican village church plaza\" or \"Oaxaca town plaza church\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the media query, which matched US Native American pueblos, with one for a Mexican town plaza.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Mexican pueblo church plaza",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14611",
@@ -1135195,7 +1135362,7 @@
     },
     {
       "id": "q-14666",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Hay quien llega temprano a la fiesta, y hay quien llega antes de que manden las invitaciones.",
       "question": "En Cuchillo Parado, Chihuahua, Toribio Ortega se levantó en armas antes de la fecha que había fijado Madero. ¿Qué día fue?",
@@ -1135212,12 +1135379,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Cuchillo Parado Chihuahua",
+        "role": "decorative",
+        "query": "Chihuahua desert landscape",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChihuahua_Desert_SW_of_Tula%2C_Municipality_of_Tula%2C_Tamaulipas%2C_Mexico_%2824_September_2003%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chihuahua_Desert_SW_of_Tula%2C_Municipality_of_Tula%2C_Tamaulipas%2C_Mexico_%2824_September_2003%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "William L. Farr · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "William L. Farr",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wilafa",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Por ese levantamiento adelantado, Cuchillo Parado se llama a sí mismo «la cuna de la Revolución».",
       "subcategory": "revolution",
@@ -1135246,18 +1135420,42 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The only media candidate is a Chihuahua puppy in a hat, matched on the word 'Chihuahua'. It has nothing to do with Cuchillo Parado or the Revolution, and no new search is allowed. The slot needs a different image, such as a Cuchillo Parado landscape or a period photo of revolutionaries, or a decorative one such as 'Chihuahua desert landscape'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The only media candidate is a Chihuahua puppy in a hat, matched on the word 'Chihuahua'. It has nothing to do with Cuchillo Parado or the Revolution, and no new search is allowed. The slot needs a different image, such as a Cuchillo Parado landscape or a period photo of revolutionaries, or a decorative one such as 'Chihuahua desert landscape'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The query matched a Chihuahua dog; switched to a decorative Chihuahua desert landscape.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Cuchillo Parado Chihuahua",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14667",
@@ -1135508,10 +1135706,10 @@
     },
     {
       "id": "q-14670",
-      "status": "needs_work",
-      "difficulty": 9,
+      "status": "approved",
+      "difficulty": 10,
       "description": "Un presidente al que sus propios amigos le enseñaron la puerta de salida.",
-      "question": "En 1920, el Plan de Agua Prieta desconoció como presidente al hombre de esta foto. ¿Quién es?",
+      "question": "En 1920, el Plan de Agua Prieta desconoció a un presidente de México. ¿A quién?",
       "answer": "Venustiano Carranza",
       "wrong_answers": [
         "Francisco I. Madero",
@@ -1135525,22 +1135723,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Venustiano Carranza portrait",
-        "note": "Historic portrait photo of Venustiano Carranza (white beard, round glasses), with no caption or name visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APortrait_of_Venustiano_Carranza_%28cropped%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Portrait_of_Venustiano_Carranza_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Harris & Ewing · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "Agua Prieta Sonora",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAgua_Prieta%2C_Sonora_%2823094305546%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Agua_Prieta%2C_Sonora_%2823094305546%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Comisión Mexicana de Filmaciones from México D. F., México · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Harris & Ewing",
-        "author_url": null,
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Comisión Mexicana de Filmaciones from México D. F., México",
+        "author_url": "https://www.flickr.com/people/58157206@N02",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Tras el Plan de Agua Prieta, Carranza huyó de la capital en tren rumbo a Veracruz.",
       "subcategory": "revolution",
@@ -1135566,21 +1135761,59 @@
         "notes": "Commons has clear, recognisable portraits of Carranza. A version without a caption has to be chosen."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 9,
+      "revision": {
+        "action": "revise",
+        "reason": "The Carranza portrait is public domain only in the US, so the question no longer needs a photo and gets an illustrative image of Agua Prieta instead; difficulty goes up slightly without the face.",
+        "previous": {
+          "difficulty": 9,
+          "question": "En 1920, el Plan de Agua Prieta desconoció como presidente al hombre de esta foto. ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Venustiano Carranza portrait",
+            "note": "Historic portrait photo of Venustiano Carranza (white beard, round glasses), with no caption or name visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APortrait_of_Venustiano_Carranza_%28cropped%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Portrait_of_Venustiano_Carranza_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Harris & Ewing · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Harris & Ewing",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14671",
@@ -1136725,7 +1136958,7 @@
     },
     {
       "id": "q-14686",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Un apóstol sin barba larga, pero con un libro que hizo temblar a un presidente.",
       "question": "El «Apóstol de la Democracia» venía de una familia rica de hacendados, estudió en Francia y escribió «La sucesión presidencial en 1910». ¿De qué estado era?",
@@ -1136743,20 +1136976,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Francisco Madero portrait",
+        "query": "Monumento a la Revolución Mexico City",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrancisco_I_Madero.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Francisco_I_Madero.jpg/3840px-Francisco_I_Madero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonumento_a_la_Revoluci%C3%B3n_Mexico.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg/3840px-Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "ismael villafranco · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "ismael villafranco",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Madero practicaba el espiritismo y decía que los espíritus lo animaban a entrar a la política.",
       "subcategory": "revolution",
@@ -1136785,18 +1137016,51 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The Madero portrait is public domain only in the US; switched to an illustrative Monumento a la Revolución, which doesn't hint at the state.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Francisco Madero portrait",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AFrancisco_I_Madero.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Francisco_I_Madero.jpg/3840px-Francisco_I_Madero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14687",
@@ -1137499,7 +1137763,7 @@
     },
     {
       "id": "q-14696",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Los papás grabando con el celular y ningún niño marchando al mismo paso.",
       "question": "En la escuela, el 20 de noviembre es al desfile de la Revolución como el 21 de marzo es al desfile de…",
@@ -1137511,7 +1137775,7 @@
       ],
       "hints": [
         "Ese día los niños del kínder se disfrazan.",
-        "Es el único desfile de la lista que no celebra una fecha patria ni histórica.",
+        "Por esas fechas empieza una nueva estación del año.",
         "Llegan las flores y las mariposas."
       ],
       "media": {
@@ -1137519,16 +1137783,19 @@
         "role": "decorative",
         "query": "school parade marching children",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABanner_Philippine_%E5%AD%AB%E9%80%B8%E4%BB%99_Sun_Yat_Sen_High_School_%E8%8F%B2%E5%BE%8B%E8%B3%93%E4%B8%AD%E5%B1%B1%E4%B8%AD%E5%AD%B8_Manila_Chinatown_Solidarity_Parade_29_January_2025_Chinese_Lunar_New_Year_%E8%BE%B2%E6%9B%86%E6%96%B0%E5%B9%B4_PhilippinesG.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Banner_Philippine_%E5%AD%AB%E9%80%B8%E4%BB%99_Sun_Yat_Sen_High_School_%E8%8F%B2%E5%BE%8B%E8%B3%93%E4%B8%AD%E5%B1%B1%E4%B8%AD%E5%AD%B8_Manila_Chinatown_Solidarity_Parade_29_January_2025_Chinese_Lunar_New_Year_%E8%BE%B2%E6%9B%86%E6%96%B0%E5%B9%B4_PhilippinesG.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKindergarten_school_children_at_parade_before_gate_of_the_official_residence_of_Governor-General_of_Taiwan.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Kindergarten_school_children_at_parade_before_gate_of_the_official_residence_of_Governor-General_of_Taiwan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "李火增 · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": null,
+        "license": "Public domain",
+        "license_url": null,
+        "author": "李火增",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-1996",
+          "PD-China"
+        ]
       },
       "fun_fact": "El 21 de marzo también es el natalicio de Benito Juárez, que nació en 1806 en Oaxaca.",
       "subcategory": "school-and-services",
@@ -1137557,26 +1137824,33 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"el único desfile de la lista que no celebra una fecha patria ni histórica\") gives the answer away: the other three options are all patriotic or historic, so it points straight to \"La primavera\". Replace it with a vaguer hint, for example one about kindergarten costumes or the change of season, that doesn't sort the options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"el único desfile de la lista que no celebra una fecha patria ni histórica\") gives the answer away: the other three options are all patriotic or historic, so it points straight to \"La primavera\". Replace it with a vaguer hint, for example one about kindergarten costumes or the change of season, that doesn't sort the options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer mentions bees, and replaced hint 2, which pointed to seasons, with a hint about the parade having no patriotic theme.",
+        "reason": "Replaced hint 2, which sorted the options, with a vaguer seasonal hint.",
         "previous": {
-          "description": "Un desfile donde lo más peligroso es una abeja de cartón de cinco años.",
           "hints": [
             "Ese día los niños del kínder se disfrazan.",
-            "Ese día cambia la estación del año.",
+            "Es el único desfile de la lista que no celebra una fecha patria ni histórica.",
             "Llegan las flores y las mariposas."
           ]
         },
@@ -1137585,9 +1137859,9 @@
     },
     {
       "id": "q-14697",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
-      "description": "Aquí sales con tu certificado y, de pilón, sabiendo arreglar algo.",
+      "description": "Sobreviviste a la secundaria y al examen de admisión; ahora toca estrenar uniforme.",
       "question": "En México, si al terminar la secundaria entras a un CBTIS, ¿en qué tipo de escuela estás?",
       "answer": "Un bachillerato tecnológico",
       "wrong_answers": [
@@ -1137597,7 +1137871,7 @@
       ],
       "hints": [
         "Depende de la SEP y hay cientos en todo el país.",
-        "Al salir puedes ir a la universidad y además tienes una carrera técnica.",
+        "Ahí estudian chavos de más o menos 15 a 18 años.",
         "La T de sus siglas es de «Tecnológico»."
       ],
       "media": {
@@ -1137643,33 +1137917,36 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: 'you can go on to university and you also get a technical career' rules out the normal school and the polytechnic university (both already higher education) and the general bachillerato (no technical career), so it leaves only the answer. The description also states the answer's defining trait ('sabiendo arreglar algo', a technical trade). That rules out the general bachillerato before any hint. Hint 2 should say something vaguer, such as the age of the students or how many years it lasts, and the description should play on the school theme without the technical skill.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: 'you can go on to university and you also get a technical career' rules out the normal school and the polytechnic university (both already higher education) and the general bachillerato (no technical career), so it leaves only the answer. The description also states the answer's defining trait ('sabiendo arreglar algo', a technical trade). That rules out the general bachillerato before any hint. Hint 2 should say something vaguer, such as the age of the students or how many years it lasts, and the description should play on the school theme without the technical skill.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the 'secundaria técnica' distractor with a post-secundaria option, replaced hint 1, which repeated the question, and capitalised the fun fact.",
+        "reason": "Hint 2 and the description gave the answer away; hint 2 now gives the students' ages and the description no longer mentions technical skills.",
         "previous": {
-          "wrong_answers": [
-            "Una secundaria técnica",
-            "Una escuela normal",
-            "Una universidad politécnica"
-          ],
+          "description": "Aquí sales con tu certificado y, de pilón, sabiendo arreglar algo.",
           "hints": [
-            "Se entra justo después de la secundaria.",
+            "Depende de la SEP y hay cientos en todo el país.",
             "Al salir puedes ir a la universidad y además tienes una carrera técnica.",
             "La T de sus siglas es de «Tecnológico»."
-          ],
-          "fun_fact": "CBTIS significa Centro de Bachillerato Tecnológico industrial y de servicios, y muchos de sus alumnos se gradúan también como técnicos."
+          ]
         },
         "revised_on": "2026-11-07"
       }
@@ -1137836,7 +1138113,7 @@
     },
     {
       "id": "q-14700",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Esta frase sale disparada cada vez que alguien cuenta el chisme del año.",
       "question": "Me gritas cuando te cuentan algo increíble. Parece que acuso a alguien de mentir, pero solo muestro sorpresa. ¿Qué expresión soy?",
@@ -1137854,11 +1138131,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "friends gossiping surprised",
+        "query": "Mexico City street conversation",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConversaci%C3%B3n_comunitaria_-_Juntas_en_internet_2026_-_44.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Conversaci%C3%B3n_comunitaria_-_Juntas_en_internet_2026_-_44.jpg/3840px-Conversaci%C3%B3n_comunitaria_-_Juntas_en_internet_2026_-_44.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "ProtoplasmaKid · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "ProtoplasmaKid",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid",
+        "restrictions": [
+          "personality"
+        ],
+        "pd_reasons": []
       },
       "fun_fact": "«¡No inventes!» sirve tanto para la sorpresa buena como para la mala: un premio o un examen sorpresa.",
       "subcategory": "slang",
@@ -1137883,22 +1138169,46 @@
         "difficulty_estimate": 4,
         "notes": "«¡A poco!» would also fit the riddle, but it isn't one of the options. The distractors are good, real Mexican interjections."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits the question, which is about a Mexican expression of surprise at gossip. The sheet shows a Brueghel proverbs painting, an old landscape photo, a Corot road painting, an Oz illustration, a costumed actor and a newspaper column. No new search is allowed, so the slot needs a new search, e.g. \"surprised friends talking\" or \"Mexico City street conversation\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits the question, which is about a Mexican expression of surprise at gossip. The sheet shows a Brueghel proverbs painting, an old landscape photo, a Corot road painting, an Oz illustration, a costumed actor and a newspaper column. No new search is allowed, so the slot needs a new search, e.g. \"surprised friends talking\" or \"Mexico City street conversation\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No image fit; changed the query to a Mexico City street conversation.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "friends gossiping surprised",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14701",
@@ -1139452,9 +1139762,9 @@
     },
     {
       "id": "q-14721",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
-      "description": "Una mecenas que repartía cheques, versos y escenarios por igual.",
+      "description": "Una mujer cuya vida en el México de los años veinte parece guion de telenovela de época.",
       "question": "¿Cuál de estos NO está ligado a Antonieta Rivas Mercado ni a su familia?",
       "answer": "El Monumento a la Revolución",
       "wrong_answers": [
@@ -1139510,18 +1139820,34 @@
       "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description says the patron handed out \"escenarios\" (and \"cheques\"), which tells players before any hint that she funded a theatre, so it rules out the Teatro de Ulises option. Rewrite the description so it plays on the patronage theme without naming the theatre or the money that tie her to the wrong options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description says the patron handed out \"escenarios\" (and \"cheques\"), which tells players before any hint that she funded a theatre, so it rules out the Teatro de Ulises option. Rewrite the description so it plays on the patronage theme without naming the theatre or the money that tie her to the wrong options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer hints at theatre or money, which ruled out wrong options.",
+        "previous": {
+          "description": "Una mecenas que repartía cheques, versos y escenarios por igual."
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14722",
@@ -1139596,10 +1139922,10 @@
     },
     {
       "id": "q-14723",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Cuando una novela corta se vuelve canción de karaoke con amigos.",
-      "question": "Esta banda mexicana convirtió «Las batallas en el desierto» en la canción «Las batallas», de su disco «Re» (1994). ¿Qué banda es?",
+      "question": "¿Qué banda mexicana convirtió «Las batallas en el desierto» en la canción «Las batallas», de su disco «Re» (1994)?",
       "answer": "Café Tacvba",
       "wrong_answers": [
         "Caifanes",
@@ -1139613,12 +1139939,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Colonia Roma Mexico City",
-        "note": "Foto de la banda Café Tacvba en concierto, con sus integrantes visibles; sin texto ni logotipo que muestre el nombre.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColonia_Roma_de_la_Ciudad_de_Mexico_01.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Colonia_Roma_de_la_Ciudad_de_Mexico_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Andycyca · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andycyca",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Andycyca",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "La canción repite el nombre de Mariana, el amor imposible del niño Carlitos en la novela de José Emilio Pacheco.",
       "subcategory": "writers-and-poets",
@@ -1139644,21 +1139977,47 @@
         "notes": "The photo isn't needed to answer, and most players can't recognise band members from a concert shot, so 'essential' is the wrong role. Illustrative would be better. I couldn't verify the fun fact about the lyrics repeating 'Mariana'."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-47",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is 'essential' with a note asking for a concert photo of Café Tacvba, but the search was 'Colonia Roma Mexico City' and none of the candidates shows the band. Either change the role to illustrative (as the rater suggested; Colonia Roma is the novel's setting, so candidate 4 or 3 would then fit) or search again for a band photo. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-07",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is 'essential' with a note asking for a concert photo of Café Tacvba, but the search was 'Colonia Roma Mexico City' and none of the candidates shows the band. Either change the role to illustrative (as the rater suggested; Colonia Roma is the novel's setting, so candidate 4 or 3 would then fit) or search again for a band photo. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-07",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media to an illustrative image of Colonia Roma (the novel's setting) and reworded the question so it no longer refers to a band photo.",
+        "previous": {
+          "question": "Esta banda mexicana convirtió «Las batallas en el desierto» en la canción «Las batallas», de su disco «Re» (1994). ¿Qué banda es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Colonia Roma Mexico City",
+            "note": "Foto de la banda Café Tacvba en concierto, con sus integrantes visibles; sin texto ni logotipo que muestre el nombre.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-07"
+      }
     },
     {
       "id": "q-14724",

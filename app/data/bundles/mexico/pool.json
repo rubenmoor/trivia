@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "33d21983",
+  "hash": "b0ae858f",
   "questions": [
     {
       "id": "q-0711",
@@ -38144,6 +38144,40 @@
       "background": null
     },
     {
+      "id": "q-14527",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "comics",
+      "bundle": "mexico",
+      "description": "Un personaje al que le encanta salir del cascarón… pero no de la sartén.",
+      "question": "Soy un huevo valiente de una película animada mexicana y mi mejor amigo es un tocino llamado Willy. ¿Quién soy?",
+      "answer": "Toto",
+      "wrong_answers": [
+        "Tito",
+        "Confi",
+        "Bibi"
+      ],
+      "hints": [
+        "En mi mundo, la comida habla y vive aventuras.",
+        "Mi nombre tiene solo cuatro letras y soy un chico, no una chica.",
+        "Mi nombre rima con «foto»."
+      ],
+      "fun_fact": "Al tocino Willy le dio voz el actor y comediante Carlos Espejel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Egg_cartons_with_chicken_eggs_03.jpg/3840px-Egg_cartons_with_chicken_eggs_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEgg_cartons_with_chicken_eggs_03.jpg",
+        "credit": "Krzysztof Golik · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Krzysztof Golik",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tournasol7"
+      },
+      "background": null
+    },
+    {
       "id": "q-14528",
       "status": "approved",
       "difficulty": 4,
@@ -38450,6 +38484,40 @@
       "background": null
     },
     {
+      "id": "q-14537",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "folk-beliefs",
+      "bundle": "mexico",
+      "description": "Un lugar en la mesa que ninguna tía soltera quiere.",
+      "question": "En las comidas familiares, la abuela no deja que las solteras se sienten ahí, porque dicen que no se casan en siete años. ¿Dónde?",
+      "answer": "En la esquina de la mesa",
+      "wrong_answers": [
+        "En la cabecera de la mesa",
+        "Junto a la ventana",
+        "Frente a la puerta"
+      ],
+      "hints": [
+        "Es un lugar de la mesa misma.",
+        "Está en la orilla de la mesa, pero no es el lugar de honor.",
+        "Es donde la mesa tiene un pico."
+      ],
+      "fun_fact": "La misma creencia existe en Rusia: allá también dicen que quien se sienta en la esquina de la mesa no se casa en siete años.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Schwerin_and_Freudenberg_family_at_the_dinner_table_circa_1920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchwerin_and_Freudenberg_family_at_the_dinner_table_circa_1920.jpg",
+        "credit": "Hans Bernhard Schwerin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Hans Bernhard Schwerin",
+        "author_url": "https://www.wikidata.org/wiki/Q59164080"
+      },
+      "background": null
+    },
+    {
       "id": "q-14538",
       "status": "approved",
       "difficulty": 2,
@@ -38514,6 +38582,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "iMahesh",
         "author_url": "https://commons.wikimedia.org/wiki/User:IM3847"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14540",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "golden-age-cinema",
+      "bundle": "mexico",
+      "description": "Para el cine mexicano, las palomitas son opcionales; la pasión, obligatoria.",
+      "question": "Nació en 1974 en la Ciudad de México, guarda y proyecta películas, y en 1982 un incendio destruyó buena parte de su archivo. ¿Qué institución es?",
+      "answer": "La Cineteca Nacional",
+      "wrong_answers": [
+        "Los Estudios Churubusco",
+        "La Filmoteca de la UNAM",
+        "El Instituto Mexicano de Cinematografía"
+      ],
+      "hints": [
+        "No es un estudio de filmación: ahí no se rueda ninguna película.",
+        "Tiene salas donde puedes ver ciclos de cine de todo el mundo, en la colonia Xoco, sobre la avenida México-Coyoacán.",
+        "Su nombre mezcla «cine» con la idea de una biblioteca, y lleva el adjetivo del país."
+      ],
+      "fun_fact": "Después del incendio, la Cineteca reabrió en 1984 en su sede actual de Xoco, sobre la avenida México-Coyoacán.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/16mm_film_reel_%286498607729%29.jpg/3840px-16mm_film_reel_%286498607729%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A16mm_film_reel_%286498607729%29.jpg",
+        "credit": "DRs  Kulturarvsprojekt from Copenhagen, Danmark · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "DRs  Kulturarvsprojekt from Copenhagen, Danmark",
+        "author_url": "https://www.flickr.com/people/69385801@N07"
       },
       "background": null
     },
@@ -38790,6 +38892,40 @@
       "background": null
     },
     {
+      "id": "q-14549",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "lucha-libre",
+      "bundle": "mexico",
+      "description": "Tres guardaron su secreto bajo la tela, y uno dio la cara desde el primer día.",
+      "question": "¿Cuál de estos luchadores legendarios NO usaba máscara?",
+      "answer": "Perro Aguayo",
+      "wrong_answers": [
+        "El Santo",
+        "Blue Demon",
+        "Mil Máscaras"
+      ],
+      "hints": [
+        "Ganó muchas luchas de apuestas contra enmascarados y cabelleras.",
+        "Nació en Zacatecas y fue uno de los rudos más temidos de los años 70 y 80.",
+        "Su nombre lleva un animal que ladra."
+      ],
+      "fun_fact": "Su hijo, Perro Aguayo Jr., también fue un rudo muy famoso y fundó el grupo Los Perros del Mal.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Lucha_Libre_%28Unsplash%29.jpg/3840px-Lucha_Libre_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALucha_Libre_%28Unsplash%29.jpg",
+        "credit": "Joe Hernandez joehernandez · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Joe Hernandez joehernandez",
+        "author_url": "https://unsplash.com/@joehernandez"
+      },
+      "background": null
+    },
+    {
       "id": "q-14551",
       "status": "approved",
       "difficulty": 13,
@@ -38922,6 +39058,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Diego Delso",
         "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14555",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "maya",
+      "bundle": "mexico",
+      "description": "Rebotaba miles de años antes de que existieran los tenis.",
+      "question": "El juego de pelota mesoamericano se jugaba con pelotas de hule. ¿Qué pueblo antiguo tiene un nombre náhuatl que significa «gente del hule»?",
+      "answer": "Los olmecas",
+      "wrong_answers": [
+        "Los toltecas",
+        "Los mexicas",
+        "Los zapotecas"
+      ],
+      "hints": [
+        "Vivieron en la costa del Golfo de México, en Veracruz y Tabasco.",
+        "Se les considera la «cultura madre» de Mesoamérica.",
+        "Una de sus grandes ciudades fue La Venta, y tallaban figuras de jade con rasgos de jaguar."
+      ],
+      "fun_fact": "Los mesoamericanos mezclaban el látex del árbol de hule con el jugo de una enredadera para que la pelota rebotara mejor.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Chichen_Itza_Ballcourt_Goal_%289783241994%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChichen_Itza_Ballcourt_Goal_%289783241994%29.jpg",
+        "credit": "Gary Todd from Xinzheng, China · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd from Xinzheng, China",
+        "author_url": "https://www.flickr.com/people/101561334@N08"
       },
       "background": null
     },
@@ -39296,6 +39466,40 @@
         "license_url": null,
         "author": null,
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14567",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "other-sports",
+      "bundle": "mexico",
+      "description": "Una vuelta completa a la pista sin nada que saltar, pero con pulmones en llamas.",
+      "question": "En México se le llama «400 metros planos». ¿A qué grupo de carreras de atletismo pertenece?",
+      "answer": "Las pruebas de velocidad",
+      "wrong_answers": [
+        "Las pruebas de medio fondo",
+        "Las pruebas de fondo",
+        "Las pruebas de marcha"
+      ],
+      "hints": [
+        "Es una sola vuelta a la pista de atletismo.",
+        "Los corredores salen con todo y no bajan el ritmo para guardar fuerzas.",
+        "Es la carrera más larga del grupo de Usain Bolt."
+      ],
+      "fun_fact": "Es la distancia más larga del atletismo en la que cada corredor va en su propio carril de principio a fin.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Brillia_Running_Stadium_track.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrillia_Running_Stadium_track.jpg",
+        "credit": "Petewarrior · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Petewarrior",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Petewarrior"
       },
       "background": null
     },
@@ -40286,6 +40490,40 @@
       "background": null
     },
     {
+      "id": "q-14597",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "pre-hispanic-gods",
+      "bundle": "mexico",
+      "description": "Una hechicera que se quedó dormida en el camino y despertó sin camión de regreso.",
+      "question": "Según la leyenda, la hermana hechicera de Huitzilopochtli fue abandonada en la peregrinación y fundó este pueblo con un templo tallado en la roca. ¿Cuál es?",
+      "answer": "Malinalco",
+      "wrong_answers": [
+        "Tepoztlán",
+        "Xochimilco",
+        "Cholula"
+      ],
+      "hints": [
+        "Es un pueblo de montaña, rodeado de cerros con bosque.",
+        "Su templo de la roca era de los guerreros águila y jaguar.",
+        "La hermana se llamaba Malinalxóchitl."
+      ],
+      "fun_fact": "Su hijo Cópil quiso vengarse de los mexicas, y la leyenda dice que de su corazón brotó el nopal donde se posó el águila.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Jos%C3%A9_Mar%C3%ADa_Velasco_-_The_Valley_of_Mexico_from_the_Santa_Isabel_Mountain_Range_-_Google_Art_Project.jpg/3840px-Jos%C3%A9_Mar%C3%ADa_Velasco_-_The_Valley_of_Mexico_from_the_Santa_Isabel_Mountain_Range_-_Google_Art_Project.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJos%C3%A9_Mar%C3%ADa_Velasco_-_The_Valley_of_Mexico_from_the_Santa_Isabel_Mountain_Range_-_Google_Art_Project.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "José María Velasco (1840 - 1912) – painter (Mexican) Born in State of Mexico. Details on Google Art Project",
+        "author_url": "http://www.googleartproject.com/artist/jose-maria-velasco/4125433/"
+      },
+      "background": null
+    },
+    {
       "id": "q-14598",
       "status": "approved",
       "difficulty": 3,
@@ -40327,6 +40565,40 @@
         "author": "Adam Jones",
         "author_url": null
       }
+    },
+    {
+      "id": "q-14599",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "regional-mexican",
+      "bundle": "mexico",
+      "description": "Un viaje en carro con más drama que una telenovela de horario estelar.",
+      "question": "En el corrido «Contrabando y traición», Camelia la Texana y Emilio Varela cruzan la frontera en carro. ¿De qué ciudad mexicana venían?",
+      "answer": "Tijuana",
+      "wrong_answers": [
+        "Mexicali",
+        "Ciudad Juárez",
+        "Nuevo Laredo"
+      ],
+      "hints": [
+        "La canción la hicieron famosa Los Tigres del Norte.",
+        "Es una ciudad fronteriza de Baja California.",
+        "Está pegadita a San Ysidro, en California."
+      ],
+      "fun_fact": "Camelia la Texana se volvió tan famosa que protagonizó películas y hasta una serie de televisión.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/White_Desert%2C_Road_through_the_desert%2C_Egypt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWhite_Desert%2C_Road_through_the_desert%2C_Egypt.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
     },
     {
       "id": "q-14600",
@@ -42505,6 +42777,40 @@
       "background": null
     },
     {
+      "id": "q-14666",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "revolution",
+      "bundle": "mexico",
+      "description": "Hay quien llega temprano a la fiesta, y hay quien llega antes de que manden las invitaciones.",
+      "question": "En Cuchillo Parado, Chihuahua, Toribio Ortega se levantó en armas antes de la fecha que había fijado Madero. ¿Qué día fue?",
+      "answer": "14 de noviembre de 1910",
+      "wrong_answers": [
+        "18 de noviembre de 1910",
+        "10 de noviembre de 1910",
+        "16 de noviembre de 1910"
+      ],
+      "hints": [
+        "Madero había llamado a levantarse en noviembre, a las seis de la tarde.",
+        "Ortega se adelantó menos de una semana.",
+        "Fue seis días antes del Día de la Revolución."
+      ],
+      "fun_fact": "Por ese levantamiento adelantado, Cuchillo Parado se llama a sí mismo «la cuna de la Revolución».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Chihuahua_Desert_SW_of_Tula%2C_Municipality_of_Tula%2C_Tamaulipas%2C_Mexico_%2824_September_2003%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChihuahua_Desert_SW_of_Tula%2C_Municipality_of_Tula%2C_Tamaulipas%2C_Mexico_%2824_September_2003%29.jpg",
+        "credit": "William L. Farr · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "William L. Farr",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Wilafa"
+      },
+      "background": null
+    },
+    {
       "id": "q-14667",
       "status": "approved",
       "difficulty": 5,
@@ -42603,6 +42909,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Chad Davis from Minneapolis, United States",
         "author_url": "https://www.flickr.com/people/146321178@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14670",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "revolution",
+      "bundle": "mexico",
+      "description": "Un presidente al que sus propios amigos le enseñaron la puerta de salida.",
+      "question": "En 1920, el Plan de Agua Prieta desconoció a un presidente de México. ¿A quién?",
+      "answer": "Venustiano Carranza",
+      "wrong_answers": [
+        "Francisco I. Madero",
+        "Victoriano Huerta",
+        "Álvaro Obregón"
+      ],
+      "hints": [
+        "El plan lo lanzaron sonorenses que antes habían sido sus aliados.",
+        "Fue el Primer Jefe del Ejército Constitucionalista.",
+        "Durante su gobierno se promulgó la Constitución de 1917."
+      ],
+      "fun_fact": "Tras el Plan de Agua Prieta, Carranza huyó de la capital en tren rumbo a Veracruz.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Agua_Prieta%2C_Sonora_%2823094305546%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAgua_Prieta%2C_Sonora_%2823094305546%29.jpg",
+        "credit": "Comisión Mexicana de Filmaciones from México D. F., México · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Comisión Mexicana de Filmaciones from México D. F., México",
+        "author_url": "https://www.flickr.com/people/58157206@N02"
       },
       "background": null
     },
@@ -43083,6 +43423,40 @@
       "background": null
     },
     {
+      "id": "q-14686",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "revolution",
+      "bundle": "mexico",
+      "description": "Un apóstol sin barba larga, pero con un libro que hizo temblar a un presidente.",
+      "question": "El «Apóstol de la Democracia» venía de una familia rica de hacendados, estudió en Francia y escribió «La sucesión presidencial en 1910». ¿De qué estado era?",
+      "answer": "Coahuila",
+      "wrong_answers": [
+        "Chihuahua",
+        "Puebla",
+        "Sonora"
+      ],
+      "hints": [
+        "Era un estado del norte del país.",
+        "Nació en Parras, una tierra famosa por sus viñedos.",
+        "Su capital es Saltillo."
+      ],
+      "fun_fact": "Madero practicaba el espiritismo y decía que los espíritus lo animaban a entrar a la política.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg/3840px-Monumento_a_la_Revoluci%C3%B3n_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonumento_a_la_Revoluci%C3%B3n_Mexico.jpg",
+        "credit": "ismael villafranco · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "ismael villafranco",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14687",
       "status": "approved",
       "difficulty": 14,
@@ -43389,6 +43763,74 @@
       "background": null
     },
     {
+      "id": "q-14696",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "school-and-services",
+      "bundle": "mexico",
+      "description": "Los papás grabando con el celular y ningún niño marchando al mismo paso.",
+      "question": "En la escuela, el 20 de noviembre es al desfile de la Revolución como el 21 de marzo es al desfile de…",
+      "answer": "La primavera",
+      "wrong_answers": [
+        "La Independencia",
+        "La Bandera",
+        "La Batalla de Puebla"
+      ],
+      "hints": [
+        "Ese día los niños del kínder se disfrazan.",
+        "Por esas fechas empieza una nueva estación del año.",
+        "Llegan las flores y las mariposas."
+      ],
+      "fun_fact": "El 21 de marzo también es el natalicio de Benito Juárez, que nació en 1806 en Oaxaca.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Kindergarten_school_children_at_parade_before_gate_of_the_official_residence_of_Governor-General_of_Taiwan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKindergarten_school_children_at_parade_before_gate_of_the_official_residence_of_Governor-General_of_Taiwan.jpg",
+        "credit": "李火增 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "李火增",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14697",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "school-and-services",
+      "bundle": "mexico",
+      "description": "Sobreviviste a la secundaria y al examen de admisión; ahora toca estrenar uniforme.",
+      "question": "En México, si al terminar la secundaria entras a un CBTIS, ¿en qué tipo de escuela estás?",
+      "answer": "Un bachillerato tecnológico",
+      "wrong_answers": [
+        "Un bachillerato general",
+        "Una escuela normal",
+        "Una universidad politécnica"
+      ],
+      "hints": [
+        "Depende de la SEP y hay cientos en todo el país.",
+        "Ahí estudian chavos de más o menos 15 a 18 años.",
+        "La T de sus siglas es de «Tecnológico»."
+      ],
+      "fun_fact": "CBTIS significa Centro de Bachillerato Tecnológico Industrial y de Servicios, y muchos de sus alumnos se gradúan también como técnicos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Gra%C4%91evinska_tehni%C4%8Dka_%C5%A1kola_Neimar_Ni%C5%A1_04.jpg/3840px-Gra%C4%91evinska_tehni%C4%8Dka_%C5%A1kola_Neimar_Ni%C5%A1_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGra%C4%91evinska_tehni%C4%8Dka_%C5%A1kola_Neimar_Ni%C5%A1_04.jpg",
+        "credit": "Nikolina Šepić · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nikolina Šepić",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nikolina_%C5%A0epi%C4%87"
+      },
+      "background": null
+    },
+    {
       "id": "q-14698",
       "status": "approved",
       "difficulty": 7,
@@ -43453,6 +43895,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Friedrich Haag",
         "author_url": "https://commons.wikimedia.org/wiki/User:F._Riedelio"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14700",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "slang",
+      "bundle": "mexico",
+      "description": "Esta frase sale disparada cada vez que alguien cuenta el chisme del año.",
+      "question": "Me gritas cuando te cuentan algo increíble. Parece que acuso a alguien de mentir, pero solo muestro sorpresa. ¿Qué expresión soy?",
+      "answer": "¡No inventes!",
+      "wrong_answers": [
+        "¡Aguas!",
+        "¡Ándale!",
+        "¡Ya mero!"
+      ],
+      "hints": [
+        "Se oye muchísimo entre chavos mexicanos.",
+        "Es pariente cercana de «¡no manches!».",
+        "Lleva el mismo verbo que usarías para hablar de Thomas Edison."
+      ],
+      "fun_fact": "«¡No inventes!» sirve tanto para la sorpresa buena como para la mala: un premio o un examen sorpresa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Conversaci%C3%B3n_comunitaria_-_Juntas_en_internet_2026_-_44.jpg/3840px-Conversaci%C3%B3n_comunitaria_-_Juntas_en_internet_2026_-_44.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConversaci%C3%B3n_comunitaria_-_Juntas_en_internet_2026_-_44.jpg",
+        "credit": "ProtoplasmaKid · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "ProtoplasmaKid",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid"
       },
       "background": null
     },
@@ -44103,6 +44579,40 @@
       "background": null
     },
     {
+      "id": "q-14721",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Una mujer cuya vida en el México de los años veinte parece guion de telenovela de época.",
+      "question": "¿Cuál de estos NO está ligado a Antonieta Rivas Mercado ni a su familia?",
+      "answer": "El Monumento a la Revolución",
+      "wrong_answers": [
+        "El Teatro de Ulises",
+        "La campaña presidencial de José Vasconcelos en 1929",
+        "El Ángel de la Independencia"
+      ],
+      "hints": [
+        "Antonieta fue mecenas del grupo Contemporáneos y del teatro experimental.",
+        "Su padre, Antonio Rivas Mercado, fue el arquitecto de un famoso monumento de Reforma.",
+        "El intruso se construyó en los años 30, después de su muerte, sobre la estructura de un palacio legislativo inconcluso."
+      ],
+      "fun_fact": "Antonieta financió el Teatro de Ulises, donde Xavier Villaurrutia y Salvador Novo actuaron y tradujeron obras de vanguardia.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Juliusz_S%C5%82owacki_Theatre_%28curtain%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJuliusz_S%C5%82owacki_Theatre_%28curtain%29.JPG",
+        "credit": "Marycha80 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marycha80",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Marycha80"
+      },
+      "background": null
+    },
+    {
       "id": "q-14722",
       "status": "approved",
       "difficulty": 14,
@@ -44133,6 +44643,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Rafael Cervantes",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rafael_Cervantes&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-14723",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Cuando una novela corta se vuelve canción de karaoke con amigos.",
+      "question": "¿Qué banda mexicana convirtió «Las batallas en el desierto» en la canción «Las batallas», de su disco «Re» (1994)?",
+      "answer": "Café Tacvba",
+      "wrong_answers": [
+        "Caifanes",
+        "Maldita Vecindad",
+        "Molotov"
+      ],
+      "hints": [
+        "Es una banda de Ciudad Satélite, Estado de México.",
+        "También cantan «Eres» y «Ojalá que llueva café».",
+        "Su nombre recuerda a un famoso café del Centro Histórico."
+      ],
+      "fun_fact": "La canción repite el nombre de Mariana, el amor imposible del niño Carlitos en la novela de José Emilio Pacheco.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Colonia_Roma_de_la_Ciudad_de_Mexico_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColonia_Roma_de_la_Ciudad_de_Mexico_01.jpg",
+        "credit": "Andycyca · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andycyca",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Andycyca"
       },
       "background": null
     },
