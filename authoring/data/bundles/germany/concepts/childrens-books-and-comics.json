@@ -873,7 +873,8 @@
     {
       "name": "Lesepass",
       "facet": "Preise, Verlage und Lesekultur",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: Lesepass ist von Bibliothek zu Bibliothek verschieden, keine eindeutigen Fakten."
     },
     {
       "name": "Lesenacht",
@@ -888,7 +889,8 @@
     {
       "name": "Bilderbuchkino",
       "facet": "Preise, Verlage und Lesekultur",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Bilderbuchkino gibt mit diesen Optionen keine sinnvolle Frage her."
     },
     {
       "name": "Thalia",

@@ -790,7 +790,8 @@
     {
       "name": "Pommes rot-weiß",
       "facet": "Imbiss und Straßenküche",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Der Kernfakt (Ketchup und Mayonnaise) steht schon im Pool, und jede Option fragt im Grunde wieder dasselbe."
     },
     {
       "name": "Bockwurst",
