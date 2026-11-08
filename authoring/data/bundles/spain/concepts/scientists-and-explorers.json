@@ -965,7 +965,8 @@
     {
       "name": "Gran Telescopio Canarias",
       "facet": "Hallazgos y grandes instalaciones científicas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: La isla y el récord del GTC ya están en el pool; la pregunta de para qué sirve es trivial y no necesita saber nada de España."
     },
     {
       "name": "Observatorio del Roque de los Muchachos",

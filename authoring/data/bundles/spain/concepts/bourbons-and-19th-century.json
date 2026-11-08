@@ -501,7 +501,8 @@
     {
       "name": "Liberales",
       "facet": "Cortes de Cádiz y la Pepa",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: El origen del término político «liberal» en Cádiz ya está en el pool; las opciones no dejan sacar otro dato justo y claramente distinto sobre los liberales."
     },
     {
       "name": "Serviles",
@@ -1051,7 +1052,8 @@
     {
       "name": "Isaac Peral",
       "facet": "Inventos y vida cotidiana del XIX",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Su invento, el submarino, ya está en el pool. Para qué servía o cómo era son cosas que se deducen de esa pregunta, y los demás datos son dudosos."
     },
     {
       "name": "Narcís Monturiol",

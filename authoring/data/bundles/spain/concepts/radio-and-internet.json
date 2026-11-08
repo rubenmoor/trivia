@@ -508,7 +508,8 @@
     {
       "name": "Lyna",
       "facet": "Youtubers de entretenimiento y humor",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: No tengo datos fiables sobre Lyna (origen, cifras)."
     },
     {
       "name": "Andrea Compton",
@@ -544,7 +545,8 @@
     {
       "name": "Perxitaa",
       "facet": "Streamers y Twitch en España",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: No tengo datos fiables sobre Perxitaa para estas opciones."
     },
     {
       "name": "Biyin",
@@ -872,17 +874,20 @@
     {
       "name": "sTaXx",
       "facet": "Gaming y creadores de videojuegos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: No tengo datos fiables sobre sTaXx."
     },
     {
       "name": "Alexby11",
       "facet": "Gaming y creadores de videojuegos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: No tengo datos fiables sobre Alexby11 para estas opciones."
     },
     {
       "name": "ElRichMC",
       "facet": "Gaming y creadores de videojuegos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: No tengo datos fiables sobre ElRichMC para estas opciones."
     },
     {
       "name": "Karmaland",
