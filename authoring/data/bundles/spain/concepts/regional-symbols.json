@@ -135,7 +135,8 @@
     {
       "name": "Perros del escudo de Canarias",
       "facet": "Escudos autonómicos y sus figuras",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Naming the dogs from a photo is trivial and hints at the existing question about where the name Canarias comes from."
     },
     {
       "name": "León rampante de León",
@@ -268,7 +269,8 @@
     {
       "name": "Escudo de Granada",
       "facet": "Banderas y escudos de ciudades",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Too close to the pool question «¿Qué fruta es esta?» → granada, and the fruit is small and unclear in the city's shield."
     },
     {
       "name": "Escudo de Segovia",
@@ -355,7 +357,8 @@
     {
       "name": "Bandera de La Gomera",
       "facet": "Banderas insulares y comarcales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Not sure of the flag's design; too obscure for a fair question."
     },
     {
       "name": "Bandera de El Hierro",
@@ -391,7 +394,8 @@
     {
       "name": "Bandera del Valle de Arán",
       "facet": "Banderas insulares y comarcales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Not sure of the flag's design; too obscure."
     },
     {
       "name": "Bandera de Álava",

@@ -181,7 +181,8 @@
     {
       "name": "Cueva de Covadonga",
       "facet": "Encantadas, mouras y tesoros ocultos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Don Pelayo y la Santina ya están en el pool; las opciones de persona no dejan otro dato bueno."
     },
     {
       "name": "Fuente encantada",
@@ -211,7 +212,8 @@
     {
       "name": "Abrir un paraguas en casa",
       "facet": "Supersticiones del día a día",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La pregunta natural (trae mala suerte) ya está en el pool; las opciones de contar no encajan."
     },
     {
       "name": "Tocar madera",
@@ -392,7 +394,8 @@
     {
       "name": "Empacho",
       "facet": "Amuletos, mal de ojo y curanderos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: La cura del empacho ya está preguntada; las opciones restantes quedan forzadas."
     },
     {
       "name": "Ruda",

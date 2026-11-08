@@ -526,7 +526,8 @@
     {
       "name": "Urgencias",
       "facet": "Seguridad Social y sanidad pública",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La adivinanza que ya existe cubre lo esencial (abierto 24 horas, llegas en ambulancia); ninguna opción da una pregunta nueva y buena."
     },
     {
       "name": "Receta médica",
@@ -706,7 +707,8 @@
     {
       "name": "Portero",
       "facet": "Vivienda, alquiler y comunidad",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó qué es un portero (doorman) y la portería; la otra idea, el «portero automático», coincide con el telefonillo del hueco 14."
     },
     {
       "name": "Junta de vecinos",
