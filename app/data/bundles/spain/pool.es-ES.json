@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "8e43a5d2",
+  "hash": "d152afbf",
   "questions": [
     {
       "id": "q-0975",
@@ -54838,6 +54838,40 @@
       "background": null
     },
     {
+      "id": "q-16176",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "al-andalus-and-reconquista",
+      "bundle": "spain",
+      "description": "Un instrumento que lleva la cabeza doblada de tanto escuchar música.",
+      "question": "El laúd, el instrumento que los árabes llamaban «al-ʿūd», ¿a qué familia de instrumentos pertenece?",
+      "answer": "Cuerda pulsada",
+      "wrong_answers": [
+        "Cuerda frotada",
+        "Viento madera",
+        "Percusión"
+      ],
+      "hints": [
+        "Tiene una caja de madera abombada, con forma de media pera.",
+        "Es pariente de un instrumento muy popular en España.",
+        "Se toca pellizcando las cuerdas, como la guitarra"
+      ],
+      "fun_fact": "«Laúd» viene del árabe «al-ʿūd», que significa «la madera».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Nasride_Palace_-_La_Alhambra_de_Granada_Spain_Andalousia_-_Picture_Image_Photography_-_By_night_reflections_%2814691494298%29.jpg/3840px-Nasride_Palace_-_La_Alhambra_de_Granada_Spain_Andalousia_-_Picture_Image_Photography_-_By_night_reflections_%2814691494298%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANasride_Palace_-_La_Alhambra_de_Granada_Spain_Andalousia_-_Picture_Image_Photography_-_By_night_reflections_%2814691494298%29.jpg",
+        "credit": "Grand Parc - Bordeaux, France from France · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Grand Parc - Bordeaux, France from France",
+        "author_url": "https://www.flickr.com/people/80641068@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-16177",
       "status": "approved",
       "difficulty": 5,
@@ -55008,6 +55042,40 @@
       "background": null
     },
     {
+      "id": "q-16182",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "bourbons-and-19th-century",
+      "bundle": "spain",
+      "description": "Atacar, correr y esconderse: el pilla-pilla más serio de toda la historia de España.",
+      "question": "En la Guerra de la Independencia (1808-1814), grupos pequeños de campesinos atacaban por sorpresa y se escondían en los montes. ¿Cómo se llama esta forma de luchar?",
+      "answer": "La guerrilla",
+      "wrong_answers": [
+        "El asedio",
+        "La guerra de trincheras",
+        "La batalla campal"
+      ],
+      "hints": [
+        "La palabra nació justo en esa guerra.",
+        "Hoy se dice casi igual en inglés, francés o alemán.",
+        "Su nombre significa «guerra pequeña»."
+      ],
+      "fun_fact": "La palabra española «guerrilla» nació en esa guerra y hoy se usa en muchísimos idiomas del mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/D%C3%ADlar_-_Sierra_Nevada_-_05.jpg/3840px-D%C3%ADlar_-_Sierra_Nevada_-_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%ADlar_-_Sierra_Nevada_-_05.jpg",
+        "credit": "Benjamin Smith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Benjamin Smith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benjism89"
+      },
+      "background": null
+    },
+    {
       "id": "q-16183",
       "status": "approved",
       "difficulty": 9,
@@ -55106,6 +55174,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Marmontel",
         "author_url": "https://www.flickr.com/people/38318138@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16186",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "bourbons-and-19th-century",
+      "bundle": "spain",
+      "description": "Ponerle nombre a tu propio grupo de amigos: lo más moderno de 1913.",
+      "question": "El nombre «Generación del 98» lo inventó en 1913 uno de sus propios escritores. ¿Quién fue?",
+      "answer": "Azorín",
+      "wrong_answers": [
+        "Pío Baroja",
+        "Antonio Machado",
+        "Ramiro de Maeztu"
+      ],
+      "hints": [
+        "Escribió novelas, ensayos y crítica literaria, y murió en 1967 con 93 años.",
+        "Era de Monóvar, en Alicante.",
+        "Se llamaba José Martínez Ruiz."
+      ],
+      "fun_fact": "Azorín sacó su seudónimo de un personaje de una de sus propias novelas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Fountain_pen_writing_%28literacy%29.jpg/3840px-Fountain_pen_writing_%28literacy%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFountain_pen_writing_%28literacy%29.jpg",
+        "credit": "Petar Milošević · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Petar Milošević",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PetarM"
       },
       "background": null
     },
@@ -55722,6 +55824,40 @@
       "background": null
     },
     {
+      "id": "q-16205",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "classic-literature",
+      "bundle": "spain",
+      "description": "Luna, luna, y un poeta que la miraba demasiado.",
+      "question": "Un poeta granadino publicó en 1928 el «Romancero gitano», con versos como «Verde que te quiero verde». ¿Quién fue?",
+      "answer": "Federico García Lorca",
+      "wrong_answers": [
+        "Rafael Alberti",
+        "Miguel Hernández",
+        "Juan Ramón Jiménez"
+      ],
+      "hints": [
+        "Pertenece a la Generación del 27.",
+        "También escribió obras de teatro como «Yerma».",
+        "Su casa familiar, la Huerta de San Vicente, es hoy un museo en Granada."
+      ],
+      "fun_fact": "El libro tuvo tanto éxito que su autor acabó harto de que lo encasillaran como «poeta gitano».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/View_of_Albaic%C3%ADn_from_Alhambra._Granada%2C_Spain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AView_of_Albaic%C3%ADn_from_Alhambra._Granada%2C_Spain.jpg",
+        "credit": "Ввласенко · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Ввласенко",
+        "author_url": "https://commons.wikimedia.org/wiki/User:%D0%92%D0%B2%D0%BB%D0%B0%D1%81%D0%B5%D0%BD%D0%BA%D0%BE"
+      },
+      "background": null
+    },
+    {
       "id": "q-16206",
       "status": "approved",
       "difficulty": 4,
@@ -55888,6 +56024,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dorieo",
         "author_url": "https://commons.wikimedia.org/wiki/User:Dorieo"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16211",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "classic-literature",
+      "bundle": "spain",
+      "description": "Un parque donde cada primavera brotan libros en lugar de flores.",
+      "question": "Cada primavera, la Feria del Libro llena de casetas un famoso parque de Madrid. ¿Cuál?",
+      "answer": "El Retiro",
+      "wrong_answers": [
+        "La Casa de Campo",
+        "El Parque del Oeste",
+        "Madrid Río"
+      ],
+      "hints": [
+        "Fue un jardín reservado a la realeza.",
+        "Tiene un gran estanque con barcas y un palacio de cristal.",
+        "Está al lado de la Puerta de Alcalá."
+      ],
+      "fun_fact": "La primera Feria del Libro de Madrid se celebró en 1933, y no en un parque, sino en el paseo de Recoletos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Outdoor_Book_Stall_%2827593494601%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOutdoor_Book_Stall_%2827593494601%29.jpg",
+        "credit": "Michael Coghlan from Adelaide, Australia · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Michael Coghlan from Adelaide, Australia",
+        "author_url": "https://www.flickr.com/people/89165847@N00"
       },
       "background": null
     },
@@ -56300,6 +56470,40 @@
       "background": null
     },
     {
+      "id": "q-16224",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "comics-and-childrens-books",
+      "bundle": "spain",
+      "description": "Un superhéroe que en vez de capa de lujo se trajo la de la tintorería del barrio.",
+      "question": "En la película «Superlópez» (2018), con Dani Rovira, el héroe llega de bebé desde otro planeta. ¿Desde cuál?",
+      "answer": "Chitón",
+      "wrong_answers": [
+        "Krypton",
+        "Namek",
+        "Melmac"
+      ],
+      "hints": [
+        "No es el planeta de Superman: Superlópez es su parodia.",
+        "El planeta ya salía en los tebeos de Jan.",
+        "Es lo que te dicen en la biblioteca, como «¡chis!», pero más antiguo."
+      ],
+      "fun_fact": "El planeta Chitón ya aparecía en los tebeos de Jan, el creador de Superlópez, mucho antes de la película.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Barcelona_desde_El_Carmel_%281%29.JPG/3840px-Barcelona_desde_El_Carmel_%281%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarcelona_desde_El_Carmel_%281%29.JPG",
+        "credit": "Jcca76 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jcca76",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jcca76&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-16225",
       "status": "approved",
       "difficulty": 7,
@@ -56534,6 +56738,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Luis Rogelio HM",
         "author_url": "https://www.flickr.com/people/140656059@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16232",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "empire",
+      "bundle": "spain",
+      "description": "Mucha gente buscó oro por la selva; esta pregunta solo te pide un poco de memoria.",
+      "question": "Viendo «La ruta hacia El Dorado» parece que El Dorado es una ciudad, pero al principio el nombre se refería a otra cosa. ¿A quién?",
+      "answer": "Un jefe indígena cubierto de polvo de oro",
+      "wrong_answers": [
+        "Un rey español con corona de oro",
+        "Un dios inca con la cara de oro",
+        "Un pirata inglés cargado de oro"
+      ],
+      "hints": [
+        "Su leyenda empujó a muchos conquistadores a organizar expediciones por la selva y las montañas.",
+        "Los conquistadores oyeron hablar de él en las montañas de lo que hoy es Colombia.",
+        "En una ceremonia se bañaba en una laguna con el cuerpo dorado."
+      ],
+      "fun_fact": "La leyenda nació de un ritual de los muiscas en la laguna de Guatavita, donde se arrojaban ofrendas de oro al agua.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Near_Guatavita%2C_Colombia_%285750658837%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANear_Guatavita%2C_Colombia_%285750658837%29.jpg",
+        "credit": "Pedro Szekely from Los Angeles, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Pedro Szekely from Los Angeles, USA",
+        "author_url": "https://www.flickr.com/people/43355249@N00"
       },
       "background": null
     },
@@ -56844,6 +57082,40 @@
       "background": null
     },
     {
+      "id": "q-16242",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "fiestas",
+      "bundle": "spain",
+      "description": "El despertador más famoso de Navarra.",
+      "question": "El 6 de julio a mediodía, el chupinazo abre los Sanfermines de Pamplona. ¿Qué es el chupinazo?",
+      "answer": "Un cohete",
+      "wrong_answers": [
+        "Un cañonazo",
+        "Una campanada",
+        "Una sirena"
+      ],
+      "hints": [
+        "Se lanza desde un balcón.",
+        "Cada año lo enciende una persona o un grupo invitado.",
+        "Es un fuego artificial."
+      ],
+      "fun_fact": "El chupinazo se lanza desde el balcón del Ayuntamiento de Pamplona desde 1941.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Plaza_Architecture_-_Pamplona_-_Navarra_-_Spain_%2814420091710%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_Architecture_-_Pamplona_-_Navarra_-_Spain_%2814420091710%29.jpg",
+        "credit": "Adam Jones from Kelowna, BC, Canada · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Adam Jones from Kelowna, BC, Canada",
+        "author_url": "https://www.flickr.com/people/41000732@N04"
+      },
+      "background": null
+    },
+    {
       "id": "q-16243",
       "status": "approved",
       "difficulty": 6,
@@ -56874,6 +57146,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Nataev",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nataev"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16244",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "flamenco-and-copla",
+      "bundle": "spain",
+      "description": "Una denuncia por robo que media España se sabe de memoria.",
+      "question": "¿En qué década salió la canción «Mi carro», de Manolo Escobar?",
+      "answer": "En los años 60",
+      "wrong_answers": [
+        "En los años 50",
+        "En los años 70",
+        "En los años 80"
+      ],
+      "hints": [
+        "España todavía estaba con Franco cuando salió.",
+        "Por entonces el Seiscientos llenaba las carreteras.",
+        "Fue la década de los Beatles y de la llegada del ser humano a la Luna."
+      ],
+      "fun_fact": "La letra empieza así: «Mi carro me lo robaron anoche cuando dormía».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Two_SEAT_600_versions_aside.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATwo_SEAT_600_versions_aside.jpg",
+        "credit": "Alistair Young · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Alistair Young",
+        "author_url": "https://www.flickr.com/people/15192926@N00"
       },
       "background": null
     },
@@ -58850,6 +59156,40 @@
       "background": null
     },
     {
+      "id": "q-16303",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "regions-and-provinces",
+      "bundle": "spain",
+      "description": "Deportistas que no necesitan gimnasio: les basta un tronco y muchas ganas.",
+      "question": "Mira a este deportista cortando un tronco con un hacha, subido encima. ¿De qué comunidad es típico este deporte rural?",
+      "answer": "Del País Vasco",
+      "wrong_answers": [
+        "De Galicia",
+        "De Andalucía",
+        "De Canarias"
+      ],
+      "hints": [
+        "Es una comunidad del norte, con mucho bosque y montaña.",
+        "Nació del trabajo de los leñadores de los pueblos de montaña y hoy tiene campeonatos con mucho público.",
+        "Allí se habla euskera."
+      ],
+      "fun_fact": "Las apuestas entre aizkolaris campeones han llegado a reunir a miles de espectadores en una sola plaza.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/LuxioApustua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALuxioApustua.jpg",
+        "credit": "Indalecio Ojanguren · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Indalecio Ojanguren",
+        "author_url": "http://www.guregipuzkoa.net/info/ojanguren.php"
+      },
+      "background": null
+    },
+    {
       "id": "q-16304",
       "status": "approved",
       "difficulty": 2,
@@ -59564,6 +59904,40 @@
       "background": null
     },
     {
+      "id": "q-16325",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "comics-and-childrens-books",
+      "bundle": "spain",
+      "description": "Un tebeo tan veterano que tus abuelos lo leían a escondidas debajo del pupitre.",
+      "question": "¿Qué héroe de tebeo, creado por Manuel Gago en 1944, vive sus aventuras en la España de los Reyes Católicos?",
+      "answer": "El Guerrero del Antifaz",
+      "wrong_answers": [
+        "El Capitán Trueno",
+        "El Jabato",
+        "Roberto Alcázar"
+      ],
+      "hints": [
+        "Es uno de los tebeos de aventuras más antiguos y vendidos de España.",
+        "Lucha contra los moros en las guerras de la Reconquista.",
+        "Lleva algo parecido a lo que te pones en carnaval para que no te reconozcan los ojos."
+      ],
+      "fun_fact": "Manuel Gago tenía solo 18 o 19 años cuando empezó a dibujar al Guerrero del Antifaz para la Editorial Valenciana.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Alhambra_in_the_evening.jpg/3840px-Alhambra_in_the_evening.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlhambra_in_the_evening.jpg",
+        "credit": "Jebulon · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jebulon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
+      },
+      "background": null
+    },
+    {
       "id": "q-16326",
       "status": "approved",
       "difficulty": 5,
@@ -60240,6 +60614,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Downtowngal",
         "author_url": "https://commons.wikimedia.org/wiki/User:Downtowngal"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16346",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "monuments",
+      "bundle": "spain",
+      "description": "Una casa de campo con un vecino muy, muy importante.",
+      "question": "Mira este palacio, el de la Zarzuela, en el monte de El Pardo, cerca de Madrid. ¿Quién tiene en él su residencia oficial?",
+      "answer": "El rey de España",
+      "wrong_answers": [
+        "El presidente del Gobierno",
+        "El alcalde de Madrid",
+        "El presidente del Senado"
+      ],
+      "hints": [
+        "Su cargo es de los más antiguos de la historia de España.",
+        "Da un discurso en la tele cada Nochebuena.",
+        "Su familia forma la Casa Real."
+      ],
+      "fun_fact": "El palacio debe su nombre a las zarzas del lugar, y de las fiestas musicales que se hacían allí en el siglo XVII nació el género teatral de la zarzuela.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Palacio_de_la_Zarzuela_%28An%C3%B3nimo_madrile%C3%B1o%2C_s._XVII%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalacio_de_la_Zarzuela_%28An%C3%B3nimo_madrile%C3%B1o%2C_s._XVII%29.jpg",
+        "credit": "Juan Gómez de Mora · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Juan Gómez de Mora",
+        "author_url": "https://en.wikipedia.org/wiki/en:Juan_G%C3%B3mez_de_Mora"
       },
       "background": null
     },
@@ -61332,6 +61740,40 @@
       "background": null
     },
     {
+      "id": "q-16379",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "rivers-and-mountains",
+      "bundle": "spain",
+      "description": "Un collar de agua que La Mancha se pone para las fotos.",
+      "question": "Si recorres el Parque Natural de las Lagunas de Ruidera, ¿cuántas lagunas encadenadas, unidas por cascadas, puedes ver?",
+      "answer": "Unas 15",
+      "wrong_answers": [
+        "Unas 3",
+        "Unas 60",
+        "Unas 200"
+      ],
+      "hints": [
+        "Son más de las que caben en los dedos de una mano.",
+        "Están en fila a lo largo del alto Guadiana, entre Ciudad Real y Albacete.",
+        "Son más de 10, pero menos de 20."
+      ],
+      "fun_fact": "En el Quijote, Cervantes cuenta que el mago Merlín convirtió en lagunas a la dueña Ruidera, sus hijas y sus sobrinas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/Lagunas_ruidera_12_JMM.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALagunas_ruidera_12_JMM.jpg",
+        "credit": "CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "No machine-readable author provided. Josemanuel assumed (based on copyright claims).",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Josemanuel"
+      },
+      "background": null
+    },
+    {
       "id": "q-16380",
       "status": "approved",
       "difficulty": 7,
@@ -61532,6 +61974,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Catherine Kõrtsmik from Tallinn, Estonia",
         "author_url": "https://www.flickr.com/people/76567879@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16386",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "spanish-cinema",
+      "bundle": "spain",
+      "description": "Una casa llena de cortinas cerradas y de gente que no sabe muy bien en qué siglo vive.",
+      "question": "¿En qué año se estrenó «Los otros», la película de fantasmas de Alejandro Amenábar con Nicole Kidman?",
+      "answer": "2001",
+      "wrong_answers": [
+        "1985",
+        "1991",
+        "2011"
+      ],
+      "hints": [
+        "Fue la primera película que Amenábar rodó en inglés.",
+        "Fue unos cinco años después de «Tesis», la primera película de Amenábar.",
+        "Fue el mismo año en que se estrenaron la primera película de Harry Potter y «El señor de los anillos: La comunidad del anillo»."
+      ],
+      "fun_fact": "Aunque la historia pasa en la isla de Jersey, la mansión de «Los otros» es un palacio de Cantabria, en Las Fraguas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Palacio_de_Los_Hornillos_%28Las_Fraguas%29_-_003_%2827287410088%29.jpg/3840px-Palacio_de_Los_Hornillos_%28Las_Fraguas%29_-_003_%2827287410088%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalacio_de_Los_Hornillos_%28Las_Fraguas%29_-_003_%2827287410088%29.jpg",
+        "credit": "Luis Rogelio HM · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Luis Rogelio HM",
+        "author_url": "https://www.flickr.com/people/140656059@N03"
       },
       "background": null
     },
@@ -61974,6 +62450,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Håkan Dahlström from Malmö, Sweden",
         "author_url": "https://www.flickr.com/people/93755244@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16401",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "team-and-traditional-sports",
+      "bundle": "spain",
+      "description": "Aquí lo de «no se toca con las manos» se lo dejan a los del fútbol.",
+      "question": "En balonmano, ¿cuántos jugadores tiene cada equipo en la pista, contando al portero?",
+      "answer": "7",
+      "wrong_answers": [
+        "5",
+        "6",
+        "11"
+      ],
+      "hints": [
+        "Son más que en baloncesto.",
+        "Son menos que en fútbol.",
+        "Son tantos como los días de la semana."
+      ],
+      "fun_fact": "El Barça juega al balonmano en el Palau Blaugrana, justo al lado del Camp Nou.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/2008_Beijing_National_Indoor_Stadium_-_Handball.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2008_Beijing_National_Indoor_Stadium_-_Handball.JPG",
+        "credit": "Doma-w (talk) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Doma-w (talk)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Doma-w"
       },
       "background": null
     },
