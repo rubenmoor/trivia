@@ -1271105,7 +1271105,7 @@
       ],
       "hints": [
         "Los camiones de esta marca reparten en las tienditas todas las mañanas.",
-        "El intruso no se vende en el anaquel del pan de la tiendita.",
+        "El nombre del intruso esconde el de una fruta.",
         "Es de tamarindo con chile y lo hace Dulces De la Rosa."
       ],
       "media": {
@@ -1271147,29 +1271147,39 @@
         "difficulty_estimate": 4,
         "notes": "A dry brand check. Difficulty 2 seems low: young kids may not know which brand Mantecadas or Medias Noches belong to, though the candy-vs-bread split helps. Hint 2 basically solves it."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": false,
       "batch": "batch-55",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 2 (\"El intruso no se vende en el anaquel del pan de la tiendita\") gives the answer away. All three wrong options (Nito, Mantecadas, Medias Noches) are bread products, so saying the odd one out isn't bread leaves only Pulparindo. Hint 2 should only narrow things down a little, for example by pointing to a different aisle or kind of treat without saying it isn't bread.",
+        "feedback": "Hint 2 (\"El nombre del intruso esconde el de una fruta\") is false: \"Pulparindo\" contains only a fragment of \"tamarindo\", not a whole fruit name, and the fact check marks it wrong. Replace it with a true hint, e.g. \"Es un dulce, no un pan.\" or \"Su nombre viene de la pulpa de tamarindo.\" Verificación de datos: wrong. The answer is right (Pulparindo is made by Dulces De la Rosa, not Bimbo, and Nito, Mantecadas and Medias Noches are Bimbo). But hint 2, 'El nombre del intruso esconde el de una fruta', is false: 'Pulparindo' doesn't contain a fruit's name.",
         "problems": [
-          "giveaway"
+          "fact"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"El intruso no se vende en el anaquel del pan de la tiendita\") gives the answer away. All three wrong options (Nito, Mantecadas, Medias Noches) are bread products, so saying the odd one out isn't bread leaves only Pulparindo. Hint 2 should only narrow things down a little, for example by pointing to a different aisle or kind of treat without saying it isn't bread.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave away that the odd one out isn't bread, with a vague and a medium hint.",
+        "reason": "Hint 2 gave the answer away by saying the odd one out isn't bread; replaced it with a weaker clue about the name.",
         "previous": {
           "hints": [
-            "Tres de ellos son panes o pastelitos.",
-            "El intruso no es pan: es un dulce.",
+            "Los camiones de esta marca reparten en las tienditas todas las mañanas.",
+            "El intruso no se vende en el anaquel del pan de la tiendita.",
             "Es de tamarindo con chile y lo hace Dulces De la Rosa."
           ]
         },
@@ -1275366,7 +1275376,7 @@
     },
     {
       "id": "q-16470",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Luces en el cerro que nadie contrató para la fiesta.",
       "question": "De noche, en el campo mexicano, ves bolas de fuego que brincan entre los árboles y se paran en los techos. ¿Qué dicen los abuelos que son?",
@@ -1275378,7 +1275388,7 @@
       ],
       "hints": [
         "Los abuelos se persignan cuando las ven.",
-        "Dicen que se ven más en las noches de martes y viernes.",
+        "Según la leyenda, de día parecen señoras comunes del pueblo.",
         "En algunos pueblos rezan para que caigan al suelo y se descubra quién es."
       ],
       "media": {
@@ -1275397,7 +1275407,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "En Tlaxcala y Puebla a estas brujas se les llama «tlahuelpuchis».",
+      "fun_fact": "En algunas leyendas mexicanas, las brujas también se convierten en guajolotes para salir de noche sin que nadie las reconozca.",
       "subcategory": "legends",
       "style": null,
       "concept": "Bolas de fuego",
@@ -1275420,32 +1275430,40 @@
         "difficulty_estimate": 8,
         "notes": "Correct folklore. The fun fact repeats hint 3 (praying makes the witch fall). Shares the 'brujas' answer with other questions, but asks a different fact."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. Folk belief about fireballs being witches is real, but the Tuesday/Friday hint and the tlahuelpuchi link (a blood-sucking witch) could not be verified.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. Folk belief about fireballs being witches is real, but the Tuesday/Friday hint and the tlahuelpuchi link (a blood-sucking witch) could not be verified.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway hint 2 and the fun fact that repeated hint 3.",
+        "reason": "Replaced the unverified Tuesday/Friday hint and the tlahuelpuchi fun fact (a dark, blood-sucking figure) with safer, family-friendly folklore.",
         "previous": {
           "hints": [
             "Los abuelos se persignan cuando las ven.",
-            "Dicen que son personas que se transformaron.",
+            "Dicen que se ven más en las noches de martes y viernes.",
             "En algunos pueblos rezan para que caigan al suelo y se descubra quién es."
           ],
-          "fun_fact": "En muchos pueblos se cree que si rezas al ver la bola de fuego, la bruja cae al suelo."
+          "fun_fact": "En Tlaxcala y Puebla a estas brujas se les llama «tlahuelpuchis»."
         },
         "revised_on": "2026-11-11"
       }
@@ -1275991,7 +1276009,7 @@
       "status": "needs_work",
       "difficulty": 11,
       "description": "Un cohete espacial que, según los expertos, nunca salió de la selva.",
-      "question": "Mira la lápida de Pakal. Para los arqueólogos, ¿qué representa la gran figura en forma de cruz que se alza sobre el rey?",
+      "question": "En la lápida del sarcófago de Pakal, en Palenque, hay una gran figura en forma de cruz sobre el rey. ¿Qué representa para los arqueólogos?",
       "answer": "El árbol sagrado del mundo",
       "wrong_answers": [
         "Un volcán en erupción",
@@ -1276005,9 +1276023,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Palenque sarcophagus lid",
-        "note": "Clear photo or drawing of the carved sarcophagus lid of Pakal from Palenque, showing the cross-shaped tree above the reclining king; no captions.",
+        "role": "illustrative",
+        "query": "Temple of the Inscriptions Palenque",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1276036,21 +1276054,49 @@
         "notes": "Commons very likely has the lid of Pakal's sarcophagus. The description's rocket nods to q-14594 (Pakal as an astronaut), but the question asks a different fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-55",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question says \"Mira la lápida de Pakal\", so the image is essential, but none of the candidates shows the sarcophagus lid. 1, 3 and 4 show the outside of the Temple of the Inscriptions and 2 is Pakal's jade mask. No new search is allowed. The slot needs a clear photo or drawing of the carved lid, for example by searching \"Pakal sarcophagus lid\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says \"Mira la lápida de Pakal\", so the image is essential, but none of the candidates shows the sarcophagus lid. 1, 3 and 4 show the outside of the Temple of the Inscriptions and 2 is Pakal's jade mask. No new search is allowed. The slot needs a clear photo or drawing of the carved lid, for example by searching \"Pakal sarcophagus lid\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of the sarcophagus lid was found, so the question no longer says 'Mira' and the media is now an illustrative photo of the Temple of the Inscriptions.",
+        "previous": {
+          "question": "Mira la lápida de Pakal. Para los arqueólogos, ¿qué representa la gran figura en forma de cruz que se alza sobre el rey?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Palenque sarcophagus lid",
+            "note": "Clear photo or drawing of the carved sarcophagus lid of Pakal from Palenque, showing the cross-shaped tree above the reclining king; no captions.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16479",
@@ -1276204,10 +1276250,10 @@
     },
     {
       "id": "q-16481",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Cargar la bandera es un honor que no se gana con el recreo.",
-      "question": "Esta es una escolta escolar mexicana. Por tradición, ¿qué alumnos suelen ser elegidos para formarla?",
+      "question": "En las escuelas de México, ¿qué alumnos suelen ser elegidos por tradición para formar la escolta de la bandera?",
       "answer": "Los de mejores calificaciones",
       "wrong_answers": [
         "Los de primer grado",
@@ -1276221,12 +1276267,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Mexico school flag ceremony",
-        "note": "Una escolta escolar mexicana (alumnos uniformados con la bandera de México) marchando o en formación en un patio de escuela.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Mexican flag waving",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMexican_flag.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mexican_flag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Jorge Mendoza · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jorge Mendoza",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bibliothecamex",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "En muchas escuelas de México, formar parte de la escolta es uno de los premios más codiciados de sexto de primaria.",
       "subcategory": "national-symbols",
@@ -1276251,22 +1276304,48 @@
         "difficulty_estimate": 4,
         "notes": "Generally true; selection rules vary by school but grades are the traditional criterion. The photo isn't really needed to answer, so it is illustrative rather than essential. A bit of a dry school-custom fact. It is related to q-12576 (naming the escolta), but this asks a different fact."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a Mexican school escolta. They show US Air Force personnel, ceremonies in Indonesia, Taiwan, Cuba and China, and a Cuban flag is visible in 4 and 5. The essential slot can't be filled and no new search is allowed. Either find a real photo of a Mexican escolta, or reword the question so it doesn't say \"Esta es…\" and switch the media to illustrative or decorative. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a Mexican school escolta. They show US Air Force personnel, ceremonies in Indonesia, Taiwan, Cuba and China, and a Cuban flag is visible in 4 and 5. The essential slot can't be filled and no new search is allowed. Either find a real photo of a Mexican escolta, or reword the question so it doesn't say \"Esta es…\" and switch the media to illustrative or decorative. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of a Mexican escolta was found, so the question no longer says 'Esta es…' and the media is now an illustrative Mexican flag.",
+        "previous": {
+          "question": "Esta es una escolta escolar mexicana. Por tradición, ¿qué alumnos suelen ser elegidos para formarla?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Mexico school flag ceremony",
+            "note": "Una escolta escolar mexicana (alumnos uniformados con la bandera de México) marchando o en formación en un patio de escuela.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16482",
@@ -1277157,7 +1277236,7 @@
     },
     {
       "id": "q-16494",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Un mural tan viajero que pasó casi veinte años guardado en cajas antes de volver a ver la luz.",
       "question": "En mis afueras, Siqueiros pintó en 1933 el sótano de una quinta, con Antonio Berni y Lino Enea Spilimbergo. Es el mural «Ejercicio plástico». ¿Qué ciudad soy?",
@@ -1277175,11 +1277254,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Polyforum Siqueiros",
+        "query": "Ejercicio Plástico Siqueiros",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJos%C3%A9_David_Alfaro_Siqueiros%2C_boceto_para_%22Ejercicio_Pl%C3%A1stico%22%2C_1933%2C_carbonilla_sobre_papel%2C_77_x_110_cm.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Jos%C3%A9_David_Alfaro_Siqueiros%2C_boceto_para_%22Ejercicio_Pl%C3%A1stico%22%2C_1933%2C_carbonilla_sobre_papel%2C_77_x_110_cm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Museo Nacional de Bellas Artes · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Museo Nacional de Bellas Artes",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El mural se desmontó en pedazos y pasó años guardado en contenedores, hasta que lo restauraron y lo volvieron a armar.",
       "subcategory": "painters-and-muralists",
@@ -1277208,24 +1277294,39 @@
       "needs_media": false,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but the image isn't. The question names the mural «Ejercicio plástico», so the picture has to show that mural. All six candidates show Siqueiros's Polyforum in Mexico City, which is a different mural. We can't search again, so the slot needs a new search such as \"Ejercicio Plástico Siqueiros\". No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but the image isn't. The question names the mural «Ejercicio plástico», so the picture has to show that mural. All six candidates show Siqueiros's Polyforum in Mexico City, which is a different mural. We can't search again, so the slot needs a new search such as \"Ejercicio Plástico Siqueiros\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed 'décadas' to 'casi veinte años' in the description to match the real storage time, and cut 'entero' to shorten the question.",
+        "reason": "Changed the media query so it searches for the mural named in the question, not the Polyforum.",
         "previous": {
-          "description": "Un mural tan viajero que pasó décadas guardado en cajas antes de volver a ver la luz.",
-          "question": "En mis afueras, Siqueiros pintó en 1933 el sótano entero de una quinta, con Antonio Berni y Lino Enea Spilimbergo. Es el mural «Ejercicio plástico». ¿Qué ciudad soy?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Polyforum Siqueiros",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-11"
       }
@@ -1278340,7 +1278441,7 @@
     },
     {
       "id": "q-16510",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Un accesorio del desierto que ninguna serpiente olvida en casa.",
       "question": "Mira la foto: esta serpiente tiene esto en la punta de la cola. ¿Para qué lo usa?",
@@ -1278373,7 +1278474,7 @@
           "PD-USGov-NPS"
         ]
       },
-      "fun_fact": "México tiene más especies de serpientes de cascabel que cualquier otro país del mundo.",
+      "fun_fact": "Cada vez que la serpiente de cascabel muda de piel, a su cascabel se le agrega un anillo nuevo.",
       "subcategory": "pre-hispanic-gods",
       "style": null,
       "concept": "Serpiente de cascabel",
@@ -1278400,28 +1278501,31 @@
       "needs_media": true,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact (\"México tiene más especies de serpientes de cascabel que cualquier otro país\") gives away the answer to pool question q-10359, according to the rater notes. Replace it with a different rattle fact, e.g. that a new segment is added every time the snake sheds its skin. The question itself is fine, though it doesn't really fit the \"Dioses y mitos prehispánicos\" subcategory.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact (\"México tiene más especies de serpientes de cascabel que cualquier otro país\") gives away the answer to pool question q-10359, according to the rater notes. Replace it with a different rattle fact, e.g. that a new segment is added every time the snake sheds its skin. The question itself is fine, though it doesn't really fit the \"Dioses y mitos prehispánicos\" subcategory.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hints 1–2 so they no longer state the warning purpose.",
+        "reason": "Replaced the fun fact, which gave away pool question q-10359, with a different fact about the rattle.",
         "previous": {
-          "description": "Un instrumento musical que nadie quiere oír de cerca.",
-          "hints": [
-            "Suena cuando la serpiente se siente en peligro.",
-            "Es una advertencia, como una alarma.",
-            "Su ruido le dio nombre a la serpiente."
-          ]
+          "fun_fact": "México tiene más especies de serpientes de cascabel que cualquier otro país del mundo."
         },
         "revised_on": "2026-11-11"
       }
@@ -1280515,7 +1280619,7 @@
     },
     {
       "id": "q-16539",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Una plaza donde la fiesta apenas empieza cuando los demás ya se van a dormir.",
       "question": "Está en el Centro de la Ciudad de México, lleva el nombre de un héroe italiano y de noche se llena de gente. ¿A qué va la gente?",
@@ -1280527,7 +1280631,7 @@
       ],
       "hints": [
         "Ahí hay un museo del tequila y el mezcal.",
-        "Los que trabajan ahí esperan en la plaza a que alguien los contrate.",
+        "De noche se oyen canciones de José Alfredo Jiménez por toda la plaza.",
         "Visten traje de charro y tocan violines, trompetas y guitarrón."
       ],
       "media": {
@@ -1280535,14 +1280639,14 @@
         "role": "decorative",
         "query": "Mexico City historic center night",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEdificio_Esmeralda_por_la_noche.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Edificio_Esmeralda_por_la_noche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "ProtoplasmaKid · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACasino_Espa%C3%B1ol_de_M%C3%A9xico%2C_Ciudad_de_M%C3%A9xico_-_Noche.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Casino_Espa%C3%B1ol_de_M%C3%A9xico%2C_Ciudad_de_M%C3%A9xico_-_Noche.jpg/3840px-Casino_Espa%C3%B1ol_de_M%C3%A9xico%2C_Ciudad_de_M%C3%A9xico_-_Noche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "ProtoplasmaKid",
-        "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1280573,26 +1280677,34 @@
       "needs_media": false,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Los que trabajan ahí esperan en la plaza a que alguien los contrate\") repeats the answer's key verb \"contratar\", and it's the only option about hiring anyone, so it gives the answer away before hint 3. Replace it with a hint about the music or the atmosphere at night that doesn't mention hiring. The facts are fine: Plaza Garibaldi, its tequila and mezcal museum, and UNESCO's 2011 listing.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Los que trabajan ahí esperan en la plaza a que alguien los contrate\") repeats the answer's key verb \"contratar\", and it's the only option about hiring anyone, so it gives the answer away before hint 3. Replace it with a hint about the music or the atmosphere at night that doesn't mention hiring. The facts are fine: Plaza Garibaldi, its tequila and mezcal museum, and UNESCO's 2011 listing.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 vaguer (workers waiting to be hired) and moved the charro-suit clue into hint 3 with the instruments.",
+        "reason": "Replaced hint 2, which repeated 'contratar' and gave the answer away, with a hint about the music at night.",
         "previous": {
           "hints": [
             "Ahí hay un museo del tequila y el mezcal.",
-            "Los músicos visten traje de charro y sombrero.",
-            "Tocan violines, trompetas y guitarrón."
+            "Los que trabajan ahí esperan en la plaza a que alguien los contrate.",
+            "Visten traje de charro y tocan violines, trompetas y guitarrón."
           ]
         },
         "revised_on": "2026-11-11"
@@ -1281404,7 +1281516,7 @@
       "status": "needs_work",
       "difficulty": 3,
       "description": "La moneda que más presume dentro de tu monedero.",
-      "question": "Mira esta moneda. ¿Cuántas como esta necesitas para juntar 100 pesos?",
+      "question": "¿Cuántas monedas de 20 pesos necesitas para juntar 100 pesos?",
       "answer": "5",
       "wrong_answers": [
         "2",
@@ -1281412,15 +1281524,15 @@
         "10"
       ],
       "hints": [
-        "Fíjate en el número que trae la moneda.",
         "Es la moneda de uso diario de mayor valor en México.",
+        "Con dos monedas juntas 40 pesos.",
         "Cuenta de 20 en 20 hasta llegar a 100."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Mexico bimetallic 20 pesos coin",
-        "note": "Moneda bimetálica mexicana de 20 pesos, con el «$20» claramente visible.",
+        "role": "illustrative",
+        "query": "Mexican peso coins",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1281448,22 +1281560,56 @@
         "difficulty_estimate": 3,
         "notes": "The 20-peso bimetallic coin is very likely on Commons with its value visible. Hint 2 ('de mayor valor de uso diario') is slightly debatable because 50- and 100-peso commemorative coins exist, but it is fine in everyday terms."
       },
-      "fact_checked": true,
-      "needs_media": true,
+      "fact_checked": false,
+      "needs_media": false,
       "batch": "batch-55",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the modern bimetallic 20-peso coin with a clear \"$20\" that the question and note need. Candidates 4–6 are a historic gold 20-peso coin, worth far more than 20 pesos as bullion, and it doesn't match hint 2 or the fun fact. Candidates 1–3 are an 1866 gold coin, a blank planchet and a pile of old coins. The slot needs a new search, e.g. \"20 pesos bimetallic coin Mexico 2019\" or \"moneda 20 pesos bimetálica\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta. Verificación de datos: uncertain. The answer (5) is right. Hint 1 says the 20-peso coin is the highest-value coin in daily use, but 50-peso and 100-peso coins also exist and are legal tender. It's debatable whether they count as 'daily use'.",
         "problems": [
+          "fact",
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the modern bimetallic 20-peso coin with a clear \"$20\" that the question and note need. Candidates 4–6 are a historic gold 20-peso coin, worth far more than 20 pesos as bullion, and it doesn't match hint 2 or the fun fact. Candidates 1–3 are an 1866 gold coin, a blank planchet and a pile of old coins. The slot needs a new search, e.g. \"20 pesos bimetallic coin Mexico 2019\" or \"moneda 20 pesos bimetálica\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of the modern 20-peso coin exists, so the question now names the coin and uses an illustrative image of peso coins; hints adjusted.",
+        "previous": {
+          "question": "Mira esta moneda. ¿Cuántas como esta necesitas para juntar 100 pesos?",
+          "hints": [
+            "Fíjate en el número que trae la moneda.",
+            "Es la moneda de uso diario de mayor valor en México.",
+            "Cuenta de 20 en 20 hasta llegar a 100."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Mexico bimetallic 20 pesos coin",
+            "note": "Moneda bimetálica mexicana de 20 pesos, con el «$20» claramente visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16552",
@@ -1281680,20 +1281826,20 @@
     },
     {
       "id": "q-16555",
-      "status": "needs_work",
-      "difficulty": 4,
-      "description": "Una fiesta tan grande que tres países tuvieron que poner la casa.",
-      "question": "Estás en Ciudad de México viendo el partido inaugural del Mundial que el país organizó junto con Estados Unidos y Canadá. ¿En qué año es?",
-      "answer": "2026",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "Hay países que organizan una fiesta y otros que ya se saben de memoria dónde guardar las sillas.",
+      "question": "México fue sede del Mundial de 2026 junto con Estados Unidos y Canadá. ¿En qué años lo había organizado antes?",
+      "answer": "1970 y 1986",
       "wrong_answers": [
-        "2018",
-        "2022",
-        "2030"
+        "1962 y 1978",
+        "1974 y 1994",
+        "1966 y 1990"
       ],
       "hints": [
-        "Fue el primer Mundial con 48 selecciones.",
-        "Se jugó después del Mundial de Catar.",
-        "Fue cuatro años después de Catar 2022."
+        "Las dos veces fueron en el siglo XX y el Estadio Azteca recibió la final.",
+        "La primera vez, Pelé fue campeón con Brasil.",
+        "La segunda vez, Maradona metió el famoso gol de la «Mano de Dios»."
       ],
       "media": {
         "type": "image",
@@ -1281711,7 +1281857,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "México es el primer país en ser sede de un Mundial varonil tres veces: 1970, 1986 y 2026.",
+      "fun_fact": "El Estadio Azteca fue el primer estadio en recibir partidos de tres Mundiales: 1970, 1986 y 2026.",
       "subcategory": "national-team",
       "style": null,
       "concept": "Sede compartida con Estados Unidos y Canadá",
@@ -1281738,18 +1281884,49 @@
       "needs_media": false,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This asks the same fact as the approved q-7286: the year of the World Cup hosted by the United States, Mexico and Canada (2026). q-5877 also lands on the same 2026 World Cup. A question for the Mexico bundle about this World Cup needs a different fact, such as the opening venue or Mexico's earlier hosting years.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as the approved q-7286: the year of the World Cup hosted by the United States, Mexico and Canada (2026). q-5877 also lands on the same 2026 World Cup. A question for the Mexico bundle about this World Cup needs a different fact, such as the opening venue or Mexico's earlier hosting years.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 4,
+      "revision": {
+        "action": "revise",
+        "reason": "Duplicated the 2026 World Cup year question; now asks for Mexico's earlier hosting years (1970 and 1986), with new hints, description and fun fact.",
+        "previous": {
+          "difficulty": 4,
+          "description": "Una fiesta tan grande que tres países tuvieron que poner la casa.",
+          "question": "Estás en Ciudad de México viendo el partido inaugural del Mundial que el país organizó junto con Estados Unidos y Canadá. ¿En qué año es?",
+          "answer": "2026",
+          "wrong_answers": [
+            "2018",
+            "2022",
+            "2030"
+          ],
+          "hints": [
+            "Fue el primer Mundial con 48 selecciones.",
+            "Se jugó después del Mundial de Catar.",
+            "Fue cuatro años después de Catar 2022."
+          ],
+          "fun_fact": "México es el primer país en ser sede de un Mundial varonil tres veces: 1970, 1986 y 2026."
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16556",
@@ -1281992,37 +1282169,35 @@
     {
       "id": "q-16559",
       "status": "needs_work",
-      "difficulty": 6,
+      "difficulty": 8,
       "description": "Para quienes salir a correr significa salir hoy y regresar mañana.",
-      "question": "Lorena Ramírez, corredora rarámuri, compite con falda y huaraches. ¿Qué distancia debe superar una carrera para ser ultramaratón?",
-      "answer": "42,195 km",
+      "question": "Lorena Ramírez corre ultramaratones con falda y huaraches. ¿Qué significa «rarámuri», el nombre de su pueblo?",
+      "answer": "Los de pies ligeros",
       "wrong_answers": [
-        "21,097 km",
-        "50 km",
-        "100 km"
+        "Los hijos del sol",
+        "Los que viven en la montaña",
+        "Los guardianes del maíz"
       ],
       "hints": [
-        "Es la distancia de la carrera más famosa de calle.",
-        "El nombre «ultra» significa «más allá» de esa carrera.",
-        "Es la distancia exacta de un maratón."
+        "El nombre tiene que ver con el cuerpo.",
+        "Su pueblo es famoso por correr distancias enormes por la sierra de Chihuahua.",
+        "Tiene que ver con la parte del cuerpo que va dentro de los huaraches."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "Copper Canyon Chihuahua",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarranca_del_cobre_2.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Barranca_del_cobre_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanyon_de_cuivre.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Canyon_de_cuivre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Robert FERREOL · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "No machine-readable author provided. JensUhlenbrock~commonswiki assumed (based on copyright claims).",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JensUhlenbrock~commonswiki&action=edit&redlink=1",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Robert FERREOL",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Robert_FERREOL",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-self"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "En Urique, en las Barrancas del Cobre, se corre cada año el Ultramaratón de los Cañones, donde compiten muchos rarámuri.",
       "subcategory": "other-sports",
@@ -1282052,18 +1282227,49 @@
       "batch": "batch-55",
       "review": {
         "decision": "needs_work",
-        "feedback": "This asks the same fact as approved q-0095 (\"¿Cuánto mide una maratón?\", answer 42,195 km). Hint 3 even says \"Es la distancia exacta de un maratón\", so it's really the marathon-distance question again. The opening about Lorena Ramírez also has nothing to do with what is asked. A real ultramarathon question needs a different answer, for example a famous rarámuri race or what Lorena Ramírez is known for.",
+        "feedback": "This repeats approved q-15603, which asks the same thing (what «rarámuri» means) with the same answer, «Los de pies ligeros». Drop it, or turn it into a different question about Lorena Ramírez.",
         "problems": [
-          "overlap",
-          "style"
+          "overlap"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as approved q-0095 (\"¿Cuánto mide una maratón?\", answer 42,195 km). Hint 3 even says \"Es la distancia exacta de un maratón\", so it's really the marathon-distance question again. The opening about Lorena Ramírez also has nothing to do with what is asked. A real ultramarathon question needs a different answer, for example a famous rarámuri race or what Lorena Ramírez is known for.",
+          "problems": [
+            "overlap",
+            "style"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "difficulty_original": 6,
+      "revision": {
+        "action": "revise",
+        "reason": "Duplicated the marathon-distance question; now asks what 'rarámuri', Lorena Ramírez's people's name, means, so the opening fits the question.",
+        "previous": {
+          "difficulty": 6,
+          "question": "Lorena Ramírez, corredora rarámuri, compite con falda y huaraches. ¿Qué distancia debe superar una carrera para ser ultramaratón?",
+          "answer": "42,195 km",
+          "wrong_answers": [
+            "21,097 km",
+            "50 km",
+            "100 km"
+          ],
+          "hints": [
+            "Es la distancia de la carrera más famosa de calle.",
+            "El nombre «ultra» significa «más allá» de esa carrera.",
+            "Es la distancia exacta de un maratón."
+          ]
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16560",
@@ -1283656,13 +1283862,13 @@
       ],
       "hints": [
         "El verso se burla de él",
-        "Es una palabra que nadie quiere que le digan",
+        "La palabra empieza con «co», igual que otra de las opciones",
         "Es lo contrario de lo que dice el nombre de la carta"
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Loteria Mexicana tabla",
+        "role": "decorative",
+        "query": "Mexican loteria cards",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1283696,18 +1283902,49 @@
       "batch": "batch-55",
       "review": {
         "decision": "needs_work",
-        "feedback": "No usable image: the only lotería-like candidate (1) is a Wikimedia parody tabla full of Wiki project logos, not a real Lotería, and the rest are unrelated (border survey photos, a costume standoff, the Mexicable cable car). A new search isn't allowed this round. Separately, hint 2 ('una palabra que nadie quiere que le digan') leaves cobarde as the only insult among the four options, so it gives the answer away and should be made vaguer. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No usable image: the only lotería-like candidate (1) is a Wikimedia parody tabla full of Wiki project logos, not a real Lotería, and the rest are unrelated (border survey photos, a costume standoff, the Mexicable cable car). A new search isn't allowed this round. Separately, hint 2 ('una palabra que nadie quiere que le digan') leaves cobarde as the only insult among the four options, so it gives the answer away and should be made vaguer. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 2 vaguer so it no longer singles out the only insult, and switched the media to a decorative lotería image since no proper tabla was found.",
+        "previous": {
+          "hints": [
+            "El verso se burla de él",
+            "Es una palabra que nadie quiere que le digan",
+            "Es lo contrario de lo que dice el nombre de la carta"
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Loteria Mexicana tabla",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16582",
@@ -1285964,10 +1286201,10 @@
     },
     {
       "id": "q-16612",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Una telenovela imperial con más de 600 páginas y sin cortes comerciales.",
-      "question": "«Noticias del Imperio» (1987) la narra, ya anciana y sin cordura, la emperatriz que vivió en este castillo. ¿Quién escribió la novela?",
+      "question": "En «Noticias del Imperio» (1987), la emperatriz que vivió en este castillo narra su historia ya anciana y lejos de México. ¿Quién escribió la novela?",
       "answer": "Fernando del Paso",
       "wrong_answers": [
         "Carlos Fuentes",
@@ -1286018,38 +1286255,42 @@
         "difficulty_estimate": 13,
         "notes": "Hint 3 contains the answer's surname ('del Paso'), which the rules forbid. The Chapultepec image isn't really essential: it only points to Carlota, and the answer is the author. Fairly dry school-style question."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. The author (Fernando del Paso) and the hints are correct. But the essential image is Chapultepec Castle in Mexico City. The question describes Carlota as old and insane in a castle, and the fun fact places her in a castle in Belgium (Bouchout). The image therefore doesn't match the clue, though Carlota did live in Chapultepec earlier.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. The author (Fernando del Paso) and the hints are correct. But the essential image is Chapultepec Castle in Mexico City. The question describes Carlota as old and insane in a castle, and the fun fact places her in a castle in Belgium (Bouchout). The image therefore doesn't match the clue, though Carlota did live in Chapultepec earlier.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3, which spelled out the surname, with a clue about «José Trigo» and his work as a painter.",
+        "reason": "Reworded so the castle is clearly where Carlota lived in Mexico, while she narrates as an old woman far from Mexico, which fits the Chapultepec photo.",
         "previous": {
-          "hints": [
-            "El autor nació en la Ciudad de México en 1935 y también escribió «Palinuro de México».",
-            "Ganó el Premio Cervantes en 2015.",
-            "Su apellido suena a un camino o a un pase... del Paso."
-          ]
+          "question": "«Noticias del Imperio» (1987) la narra, ya anciana y sin cordura, la emperatriz que vivió en este castillo. ¿Quién escribió la novela?"
         },
         "revised_on": "2026-11-11"
       }
     },
     {
       "id": "q-16613",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un escritor que investiga revolucionarios con la misma pasión que su detective investiga casos.",
       "question": "Este escritor creó al detective Héctor Belascoarán Shayne y escribió una enorme biografía del revolucionario de la foto. ¿Quién es?",
@@ -1286067,20 +1286308,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Pancho Villa portrait",
-        "note": "Retrato fotográfico histórico de Pancho Villa, sin texto que lo identifique ni que mencione al escritor.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APancho_Villa_bandolier_%28cropped%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Pancho_Villa_bandolier_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Bain News Service, publisher. Photographer is unknown. · Public domain · Wikimedia Commons",
+        "query": "Pancho Villa equestrian statue",
+        "note": "Foto de una estatua de Pancho Villa (de preferencia ecuestre), con licencia libre, sin placas ni texto legible que lo identifique o mencione al escritor.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVillaStatue.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/VillaStatue.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Jflo23 · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Bain News Service, publisher. Photographer is unknown.",
-        "author_url": null,
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jflo23",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jflo23&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Paco Ignacio Taibo II nació en Gijón, España, en 1949, y su detective Belascoarán tiene un solo ojo.",
       "subcategory": "writers-and-poets",
@@ -1286109,18 +1286348,51 @@
       "needs_media": true,
       "batch": "batch-55",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The PD-US-only portrait isn't usable, so the media now asks for a freely licensed photo of a Pancho Villa statue.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Pancho Villa portrait",
+            "note": "Retrato fotográfico histórico de Pancho Villa, sin texto que lo identifique ni que mencione al escritor.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APancho_Villa_bandolier_%28cropped%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Pancho_Villa_bandolier_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Bain News Service, publisher. Photographer is unknown. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Bain News Service, publisher. Photographer is unknown.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16614",

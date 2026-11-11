@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "4da721da",
+  "hash": "d21bd08e",
   "questions": [
     {
       "id": "q-0711",
@@ -54167,6 +54167,40 @@
       "background": null
     },
     {
+      "id": "q-16470",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "legends",
+      "bundle": "mexico",
+      "description": "Luces en el cerro que nadie contrató para la fiesta.",
+      "question": "De noche, en el campo mexicano, ves bolas de fuego que brincan entre los árboles y se paran en los techos. ¿Qué dicen los abuelos que son?",
+      "answer": "Brujas que andan volando",
+      "wrong_answers": [
+        "Aviso de que va a llover",
+        "Aviso de que viene un temblor",
+        "Señal de buena cosecha"
+      ],
+      "hints": [
+        "Los abuelos se persignan cuando las ven.",
+        "Según la leyenda, de día parecen señoras comunes del pueblo.",
+        "En algunos pueblos rezan para que caigan al suelo y se descubra quién es."
+      ],
+      "fun_fact": "En algunas leyendas mexicanas, las brujas también se convierten en guajolotes para salir de noche sin que nadie las reconozca.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Cwmavon_night_sky_-_panoramio.jpg/3840px-Cwmavon_night_sky_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACwmavon_night_sky_-_panoramio.jpg",
+        "credit": "Steve Hill · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Steve Hill",
+        "author_url": "https://web.archive.org/web/20161031072327/http://www.panoramio.com/user/7021661?with_photo_id=115493165"
+      },
+      "background": null
+    },
+    {
       "id": "q-16471",
       "status": "approved",
       "difficulty": 9,
@@ -54469,6 +54503,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Simmremmai",
         "author_url": "https://commons.wikimedia.org/wiki/User:Simmremmai"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16481",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-symbols",
+      "bundle": "mexico",
+      "description": "Cargar la bandera es un honor que no se gana con el recreo.",
+      "question": "En las escuelas de México, ¿qué alumnos suelen ser elegidos por tradición para formar la escolta de la bandera?",
+      "answer": "Los de mejores calificaciones",
+      "wrong_answers": [
+        "Los de primer grado",
+        "Los que llegan más temprano",
+        "Los del equipo de futbol"
+      ],
+      "hints": [
+        "No se elige por sorteo ni por edad.",
+        "Tiene que ver con la boleta.",
+        "Son los que sacan los dieces."
+      ],
+      "fun_fact": "En muchas escuelas de México, formar parte de la escolta es uno de los premios más codiciados de sexto de primaria.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mexican_flag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMexican_flag.jpg",
+        "credit": "Jorge Mendoza · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jorge Mendoza",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bibliothecamex"
       },
       "background": null
     },
@@ -54843,6 +54911,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Respindola23",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Respindola23&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16494",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "painters-and-muralists",
+      "bundle": "mexico",
+      "description": "Un mural tan viajero que pasó casi veinte años guardado en cajas antes de volver a ver la luz.",
+      "question": "En mis afueras, Siqueiros pintó en 1933 el sótano de una quinta, con Antonio Berni y Lino Enea Spilimbergo. Es el mural «Ejercicio plástico». ¿Qué ciudad soy?",
+      "answer": "Buenos Aires",
+      "wrong_answers": [
+        "Montevideo",
+        "Santiago de Chile",
+        "Los Ángeles"
+      ],
+      "hints": [
+        "Siqueiros llegó a mí después de pintar en Estados Unidos.",
+        "Berni y Spilimbergo son grandes pintores de mi país.",
+        "Hoy el mural se exhibe en el Museo del Bicentenario, junto a la Casa Rosada."
+      ],
+      "fun_fact": "El mural se desmontó en pedazos y pasó años guardado en contenedores, hasta que lo restauraron y lo volvieron a armar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Jos%C3%A9_David_Alfaro_Siqueiros%2C_boceto_para_%22Ejercicio_Pl%C3%A1stico%22%2C_1933%2C_carbonilla_sobre_papel%2C_77_x_110_cm.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJos%C3%A9_David_Alfaro_Siqueiros%2C_boceto_para_%22Ejercicio_Pl%C3%A1stico%22%2C_1933%2C_carbonilla_sobre_papel%2C_77_x_110_cm.jpg",
+        "credit": "Museo Nacional de Bellas Artes · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Museo Nacional de Bellas Artes",
+        "author_url": null
       },
       "background": null
     },
@@ -55353,6 +55455,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Mokkie",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mokkie&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16510",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pre-hispanic-gods",
+      "bundle": "mexico",
+      "description": "Un accesorio del desierto que ninguna serpiente olvida en casa.",
+      "question": "Mira la foto: esta serpiente tiene esto en la punta de la cola. ¿Para qué lo usa?",
+      "answer": "Para avisar que no te acerques",
+      "wrong_answers": [
+        "Para atraer a sus presas",
+        "Para llamar a su pareja",
+        "Para guardar su veneno"
+      ],
+      "hints": [
+        "Está hecho de anillos de queratina, el mismo material de tus uñas.",
+        "La serpiente lo agita muy rápido cuando alguien se le acerca.",
+        "Su ruido le dio nombre a la serpiente."
+      ],
+      "fun_fact": "Cada vez que la serpiente de cascabel muda de piel, a su cascabel se le agrega un anillo nuevo.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Southern_Pacific_Rattlesnake_%2811970537744%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASouthern_Pacific_Rattlesnake_%2811970537744%29.jpg",
+        "credit": "National Park Service from USA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "National Park Service from USA",
+        "author_url": "https://www.flickr.com/people/38729417@N06"
       },
       "background": null
     },
@@ -56275,6 +56411,40 @@
       "background": null
     },
     {
+      "id": "q-16539",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "landmarks",
+      "bundle": "mexico",
+      "description": "Una plaza donde la fiesta apenas empieza cuando los demás ya se van a dormir.",
+      "question": "Está en el Centro de la Ciudad de México, lleva el nombre de un héroe italiano y de noche se llena de gente. ¿A qué va la gente?",
+      "answer": "A contratar mariachis",
+      "wrong_answers": [
+        "A ver lucha libre",
+        "A comprar artesanías",
+        "A ver danzas de concheros"
+      ],
+      "hints": [
+        "Ahí hay un museo del tequila y el mezcal.",
+        "De noche se oyen canciones de José Alfredo Jiménez por toda la plaza.",
+        "Visten traje de charro y tocan violines, trompetas y guitarrón."
+      ],
+      "fun_fact": "En 2011 la UNESCO declaró el mariachi Patrimonio Cultural Inmaterial de la Humanidad.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Casino_Espa%C3%B1ol_de_M%C3%A9xico%2C_Ciudad_de_M%C3%A9xico_-_Noche.jpg/3840px-Casino_Espa%C3%B1ol_de_M%C3%A9xico%2C_Ciudad_de_M%C3%A9xico_-_Noche.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACasino_Espa%C3%B1ol_de_M%C3%A9xico%2C_Ciudad_de_M%C3%A9xico_-_Noche.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
+      },
+      "background": null
+    },
+    {
       "id": "q-16540",
       "status": "approved",
       "difficulty": 8,
@@ -56747,6 +56917,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Ted Eytan",
         "author_url": "https://www.wikidata.org/wiki/Q116943179"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16555",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "national-team",
+      "bundle": "mexico",
+      "description": "Hay países que organizan una fiesta y otros que ya se saben de memoria dónde guardar las sillas.",
+      "question": "México fue sede del Mundial de 2026 junto con Estados Unidos y Canadá. ¿En qué años lo había organizado antes?",
+      "answer": "1970 y 1986",
+      "wrong_answers": [
+        "1962 y 1978",
+        "1974 y 1994",
+        "1966 y 1990"
+      ],
+      "hints": [
+        "Las dos veces fueron en el siglo XX y el Estadio Azteca recibió la final.",
+        "La primera vez, Pelé fue campeón con Brasil.",
+        "La segunda vez, Maradona metió el famoso gol de la «Mano de Dios»."
+      ],
+      "fun_fact": "El Estadio Azteca fue el primer estadio en recibir partidos de tres Mundiales: 1970, 1986 y 2026.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Estadio_Azteca_desde_el_aire_1.jpg/3840px-Estadio_Azteca_desde_el_aire_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEstadio_Azteca_desde_el_aire_1.jpg",
+        "credit": "Own work · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Own work",
+        "author_url": null
       },
       "background": null
     },
@@ -58515,6 +58719,74 @@
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "Corpse Reviver",
         "author_url": "https://commons.wikimedia.org/wiki/User:Corpse_Reviver"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16612",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Una telenovela imperial con más de 600 páginas y sin cortes comerciales.",
+      "question": "En «Noticias del Imperio» (1987), la emperatriz que vivió en este castillo narra su historia ya anciana y lejos de México. ¿Quién escribió la novela?",
+      "answer": "Fernando del Paso",
+      "wrong_answers": [
+        "Carlos Fuentes",
+        "Sergio Pitol",
+        "Jorge Ibargüengoitia"
+      ],
+      "hints": [
+        "El autor nació en la Ciudad de México en 1935 y también escribió «Palinuro de México».",
+        "Ganó el Premio Cervantes en 2015.",
+        "También escribió la novela «José Trigo» (1966) y fue pintor y dibujante."
+      ],
+      "fun_fact": "La voz de la novela es la emperatriz Carlota, que en sus delirios le habla a Maximiliano desde un castillo en Bélgica.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Vista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg/3840px-Vista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVista_a%C3%A9rea_del_Castillo_de_Chapultepec_7.jpg",
+        "credit": "Own work · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Own work",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16613",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Un escritor que investiga revolucionarios con la misma pasión que su detective investiga casos.",
+      "question": "Este escritor creó al detective Héctor Belascoarán Shayne y escribió una enorme biografía del revolucionario de la foto. ¿Quién es?",
+      "answer": "Paco Ignacio Taibo II",
+      "wrong_answers": [
+        "Élmer Mendoza",
+        "Carlos Monsiváis",
+        "Jorge Ibargüengoitia"
+      ],
+      "hints": [
+        "Nació en España y llegó a México de niño.",
+        "También escribió una famosa biografía del Che Guevara.",
+        "Su nombre lleva un número romano, como el de un rey."
+      ],
+      "fun_fact": "Paco Ignacio Taibo II nació en Gijón, España, en 1949, y su detective Belascoarán tiene un solo ojo.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/VillaStatue.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVillaStatue.JPG",
+        "credit": "Jflo23 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jflo23",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jflo23&action=edit&redlink=1"
       },
       "background": null
     },
