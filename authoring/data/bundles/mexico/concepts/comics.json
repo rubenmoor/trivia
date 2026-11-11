@@ -201,7 +201,8 @@
     {
       "name": "Carlangas",
       "facet": "Personajes de los cómics mexicanos",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: No puedo confirmar con seguridad de qué historieta es el personaje."
     },
     {
       "name": "Ernestillo",
@@ -525,7 +526,8 @@
     {
       "name": "Black Shadow",
       "facet": "Héroes enmascarados y luchadores de papel",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Las opciones no encajan con el luchador y no estoy seguro de la historieta."
     },
     {
       "name": "El Hijo del Santo",
@@ -670,7 +672,8 @@
     {
       "name": "Oscar González Loyo",
       "facet": "Mexicanos en el cómic internacional",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No tengo datos seguros de su obra internacional, y las opciones no dan una pregunta justa."
     },
     {
       "name": "Tony Sandoval",

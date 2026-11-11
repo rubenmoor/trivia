@@ -101,7 +101,8 @@
     {
       "name": "Nueve posadas",
       "facet": "Las posadas y sus letanías",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La pregunta del pool sobre las nueve noches ya da el número y el porqué."
     },
     {
       "name": "Ora pro nobis",
@@ -266,7 +267,8 @@
     {
       "name": "Virgen María",
       "facet": "Nacimientos y figuras del belén",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El acertijo sobre María y las posadas con José y María ya están; las opciones when no dan una fecha mexicana nueva."
     },
     {
       "name": "San José",
@@ -292,7 +294,8 @@
     {
       "name": "Estrella de Belén",
       "facet": "Nacimientos y figuras del belén",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La estrella como guía hasta Belén ya está preguntada; todas las opciones piden un lugar."
     },
     {
       "name": "Portal de Belén",
@@ -594,7 +597,8 @@
     {
       "name": "Rodolfo el reno",
       "facet": "Villancicos y música navideña",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El acertijo de Rodolfo ya cubre la nariz, las burlas y el trineo; además no tiene un ángulo mexicano."
     },
     {
       "name": "Navidad, Navidad (Cascabel)",

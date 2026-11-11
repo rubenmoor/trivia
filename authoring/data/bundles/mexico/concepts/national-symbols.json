@@ -116,7 +116,8 @@
     {
       "name": "Bandera de Italia",
       "facet": "Colores de la bandera",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La confusión entre la bandera de México sin escudo y la de Italia ya se preguntó."
     },
     {
       "name": "Bandera de Irlanda",
@@ -318,7 +319,8 @@
     {
       "name": "Doblado de la bandera",
       "facet": "Día de la Bandera y honores",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: México no tiene un doblado de bandera estándar con un número de pliegues que se conozca bien; no estoy seguro de los datos."
     },
     {
       "name": "Campo Marte",
@@ -498,7 +500,8 @@
     {
       "name": "Claudina Fiorentini",
       "facet": "Autores y origen del himno",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Las opciones exigen una foto de detalle que no existe para una soprano del siglo XIX; el dato es demasiado oscuro."
     },
     {
       "name": "Cataluña",

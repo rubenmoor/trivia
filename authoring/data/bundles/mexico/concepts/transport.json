@@ -136,7 +136,8 @@
     {
       "name": "Tren naranja del Metro",
       "facet": "Metro de la Ciudad de México",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: El vagón naranja ya se preguntó con foto. Las opciones restantes (origen como persona, récord) no encajan."
     },
     {
       "name": "Correspondencia",

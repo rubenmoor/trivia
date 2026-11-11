@@ -246,7 +246,8 @@
     {
       "name": "El ceniciento",
       "facet": "Películas clásicas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure a Tin Tan film for a fair question with these options."
     },
     {
       "name": "Emilio Fernández",
@@ -600,7 +601,8 @@
     {
       "name": "Chaparrita",
       "facet": "Frases, apodos y dichos del cine",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The only good fact (what «chaparrita» means) is already answerable from the existing synonym question."
     },
     {
       "name": "No hay que confundir la gimnasia con la magnesia",

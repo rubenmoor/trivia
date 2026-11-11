@@ -261,7 +261,8 @@
     {
       "name": "Chichihuacuauhco",
       "facet": "El Mictlán y el viaje de los muertos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Chichihuacuauhco is the afterlife for babies who died. That is too sad a topic for a family game."
     },
     {
       "name": "Huesos preciosos",
@@ -409,6 +410,28 @@
       "name": "Teotl",
       "facet": "Palabras nahuas de los mitos",
       "known_at": 12
+    },
+    {
+      "name": "Nopal sobre una piedra",
+      "facet": "Fundación de Tenochtitlan y Aztlán",
+      "known_at": 5
+    },
+    {
+      "name": "Tlacuache que robó el fuego",
+      "facet": "Animales sagrados y nahuales",
+      "known_at": 8
+    },
+    {
+      "name": "Teocalli",
+      "facet": "Palabras nahuas de los mitos",
+      "known_at": 12
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-11",
+      "added": 3,
+      "unused": 28
     }
   ]
 }
