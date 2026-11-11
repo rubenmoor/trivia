@@ -226,7 +226,8 @@
     {
       "name": "Sismógrafo",
       "facet": "Sismos y placas tectónicas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Su propósito (registrar temblores) ya está en la pool; las otras opciones son forzadas o no son de México."
     },
     {
       "name": "Réplica",
@@ -636,7 +637,8 @@
     {
       "name": "Simulacro Nacional",
       "facet": "Protección civil y prevención",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El motivo del simulacro del 19 de septiembre y cómo evacuar ya están en la pool."
     },
     {
       "name": "No corro, no grito, no empujo",

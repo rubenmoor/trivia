@@ -347,7 +347,8 @@
     {
       "name": "Lucha extrema",
       "facet": "Reglas y tipos de lucha",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Las fotos de lucha extrema suelen mostrar sangre o alambre de púas; no es apto para familias."
     },
     {
       "name": "Lucha de escaleras",
