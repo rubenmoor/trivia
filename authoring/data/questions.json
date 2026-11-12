@@ -837197,7 +837197,8 @@
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-10826",
@@ -942455,7 +942456,8 @@
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-12181",
@@ -1317235,7 +1317237,8 @@
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-17010",
