@@ -306,7 +306,8 @@
     {
       "name": "Totenkopfmaske",
       "facet": "Rapper-Künstlernamen und Herkunft",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The pool already has Sido with the silver skull mask."
     },
     {
       "name": "Marsimoto",
@@ -442,7 +443,8 @@
     {
       "name": "Flow",
       "facet": "Rap-Slang und Jugendsprache",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The term has already been defined. Odd one out with places or groups would be forced."
     },
     {
       "name": "Freestyle",

@@ -347,7 +347,8 @@
     {
       "name": "Der kleine Rabe Socke",
       "facet": "Kinderbuchfiguren und Tierhelden",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Rabe ist schon zweimal gefragt; Gruppenfragen (Vogel) wären trivial."
     },
     {
       "name": "Petronella Apfelmus",
@@ -748,7 +749,8 @@
     {
       "name": "Toniebox",
       "facet": "Verfilmungen und Hörspiele",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Das Gerät selbst wurde schon gefragt; die Optionen (Gründer, Personen-Rätsel) ergeben auf Stufe 1 keine gute Frage."
     },
     {
       "name": "Ohrenbär",

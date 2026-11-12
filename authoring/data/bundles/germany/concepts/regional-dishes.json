@@ -826,7 +826,8 @@
     {
       "name": "Bratwurst im Brötchen",
       "facet": "Imbiss und Straßenküche",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Zwei Bratwurst-im-Brötchen-Fragen gibt es schon; jede weitere bei Schwierigkeit 1 wäre trivial oder eine Wiederholung."
     },
     {
       "name": "Langos",

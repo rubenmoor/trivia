@@ -381,7 +381,8 @@
     {
       "name": "Neustadt",
       "facet": "Hörspielhelden für die Kleinen",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Neustadt dient im Pool schon als Hinweis auf Bibi Blocksberg und Otto; weitere Fragen wären daraus beantwortbar."
     },
     {
       "name": "Herr Tierlieb",
@@ -401,7 +402,8 @@
     {
       "name": "Kartoffelbrei",
       "facet": "Hörspielhelden für die Kleinen",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Kein sicher belegter Hörspielheld, dessen Lieblingsessen Kartoffelbrei ist."
     },
     {
       "name": "Amadeus und Sabrina",
@@ -623,7 +625,8 @@
     {
       "name": "KiKA-Baumhaus",
       "facet": "Kindersender und Mitmachshows",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: Zu wenig sichere Fakten zum KiKA-Baumhaus für eine faire Frage."
     },
     {
       "name": "Confetti TiVi",

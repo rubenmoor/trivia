@@ -595,6 +595,58 @@
       "name": "Jonathan Meese",
       "facet": "Gegenwartskunst und Ausstellungen",
       "known_at": 14
+    },
+    {
+      "name": "Feldhase (Dürer)",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 7
+    },
+    {
+      "name": "Max Beckmann",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 12
+    },
+    {
+      "name": "Gabriele Münter",
+      "facet": "Deutsche Maler und Gemälde",
+      "known_at": 13
+    },
+    {
+      "name": "Siegessäule Berlin",
+      "facet": "Bildhauerei und Denkmäler",
+      "known_at": 7
+    },
+    {
+      "name": "Quadriga auf dem Brandenburger Tor",
+      "facet": "Bildhauerei und Denkmäler",
+      "known_at": 8
+    },
+    {
+      "name": "Lyonel Feininger",
+      "facet": "Bauhaus und Design",
+      "known_at": 13
+    },
+    {
+      "name": "Pergamonaltar",
+      "facet": "Museen und Museumsinseln",
+      "known_at": 11
+    },
+    {
+      "name": "Bruderkuss (Wandbild)",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 11
+    },
+    {
+      "name": "Sigmar Polke",
+      "facet": "Gegenwartskunst und Ausstellungen",
+      "known_at": 13
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-11",
+      "added": 9,
+      "unused": 30
     }
   ]
 }
