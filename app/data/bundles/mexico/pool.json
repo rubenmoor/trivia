@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e2cce3cc",
+  "hash": "f1f7665c",
   "questions": [
     {
       "id": "q-0711",
@@ -65489,6 +65489,40 @@
       "background": null
     },
     {
+      "id": "q-17645",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "20th-century",
+      "bundle": "mexico",
+      "description": "Siglas, filas largas y una oficina con el aire acondicionado al máximo.",
+      "question": "Nací en 1990, organizaba las elecciones federales y muchos todavía le dicen a su credencial para votar con mi nombre. ¿Quién soy?",
+      "answer": "El IFE",
+      "wrong_answers": [
+        "El SAT",
+        "El INEGI",
+        "La SEP"
+      ],
+      "hints": [
+        "Mi trabajo era contar los votos con gente ciudadana en las casillas.",
+        "Mi credencial con foto se usa como identificación oficial.",
+        "En 2014 me cambiaron una letra y me volví el INE."
+      ],
+      "fun_fact": "El IFE se transformó en el INE en 2014, pero la frase «saca tu credencial del IFE» sigue viva.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/2023_Polish_parliamentary_election_and_referendum._October_2023._Ballot_box_in_Tomasz%C3%B3w_Mazowiecki%2C_Sikorskiego_Street_6A.jpg/3840px-2023_Polish_parliamentary_election_and_referendum._October_2023._Ballot_box_in_Tomasz%C3%B3w_Mazowiecki%2C_Sikorskiego_Street_6A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2023_Polish_parliamentary_election_and_referendum._October_2023._Ballot_box_in_Tomasz%C3%B3w_Mazowiecki%2C_Sikorskiego_Street_6A.jpg",
+        "credit": "WrS.tm.pl · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "WrS.tm.pl",
+        "author_url": "https://commons.wikimedia.org/wiki/User:WrS.tm.pl"
+      },
+      "background": null
+    },
+    {
       "id": "q-17646",
       "status": "approved",
       "difficulty": 6,
@@ -65795,6 +65829,40 @@
       "background": null
     },
     {
+      "id": "q-17655",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "conquest-and-colony",
+      "bundle": "mexico",
+      "description": "En la Nueva España, tu nombre dependía menos de ti y más de tus papás.",
+      "question": "En la Nueva España, la gente se clasificaba en castas según el origen de sus padres. ¿Cuál de estos nombres NO era una casta?",
+      "answer": "Tlatoani",
+      "wrong_answers": [
+        "Mestizo",
+        "Castizo",
+        "Mulato"
+      ],
+      "hints": [
+        "Tres de estas palabras salían en los registros de bautizo coloniales.",
+        "La palabra que sobra ya se usaba antes de que llegaran los españoles.",
+        "Así se llamaba al gobernante de los mexicas, como Moctezuma."
+      ],
+      "fun_fact": "En el siglo XVIII se pintaron series enteras de «cuadros de castas», con hasta 16 combinaciones de padres e hijos.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Colonial_Mexico_Urbanscape_%28108107611%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColonial_Mexico_Urbanscape_%28108107611%29.jpeg",
+        "credit": "Octavio Alonso Maya Castro · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Octavio Alonso Maya Castro",
+        "author_url": "https://500px.com/OctavioMaya"
+      },
+      "background": null
+    },
+    {
       "id": "q-17656",
       "status": "approved",
       "difficulty": 6,
@@ -65825,6 +65893,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Zil",
         "author_url": "https://commons.wikimedia.org/wiki/User:Zil"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17657",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "conquest-and-colony",
+      "bundle": "mexico",
+      "description": "El sombrero más elegante de Tenochtitlan, y sin una sola tienda de modas cerca.",
+      "question": "El penacho de Moctezuma es enorme. ¿Cuánto mide aproximadamente de ancho?",
+      "answer": "Casi 2 metros",
+      "wrong_answers": [
+        "Unos 20 centímetros",
+        "Unos 50 centímetros",
+        "Unos 5 metros"
+      ],
+      "hints": [
+        "Es mucho más grande que una gorra.",
+        "Es más ancho que una puerta normal.",
+        "Pasa de metro y medio, pero no llega a 3 metros."
+      ],
+      "fun_fact": "El penacho lleva cientos de plumas de quetzal y es tan frágil que los expertos dicen que viajar podría dañarlo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg/3840px-058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A058_Male_Resplendent_quetzal_in_Los_Quetzales_National_Park_Photo_by_Giles_Laurent.jpg",
+        "credit": "Giles Laurent · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Giles Laurent",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent"
       },
       "background": null
     },
@@ -66233,6 +66335,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Mapio.net",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17671",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "indigenous-peoples",
+      "bundle": "mexico",
+      "description": "Un pueblo que viaja más que un tráiler en la carretera a Laredo.",
+      "question": "Los kikapúes llegaron desde los Grandes Lagos y viven en El Nacimiento, Coahuila. ¿Para qué les dio tierras México en el siglo XIX?",
+      "answer": "Para defender la frontera de ataques apaches",
+      "wrong_answers": [
+        "Para sembrar algodón para el ejército",
+        "Para trabajar en las minas de plata",
+        "Para fundar misiones religiosas"
+      ],
+      "hints": [
+        "Fue a mediados del siglo XIX, en el norte del país.",
+        "Recibieron tierras al mismo tiempo que los mascogos, que también venían de Estados Unidos.",
+        "El norte sufría incursiones de pueblos nómadas a caballo."
+      ],
+      "fun_fact": "Los kikapúes son un pueblo binacional: muchos pasan parte del año en Estados Unidos y regresan a Coahuila.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Regi%C3%B3n_Centro_Desierto_de_Coahuila_%28M%C3%A9xico%29.jpg/3840px-Regi%C3%B3n_Centro_Desierto_de_Coahuila_%28M%C3%A9xico%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARegi%C3%B3n_Centro_Desierto_de_Coahuila_%28M%C3%A9xico%29.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
       },
       "background": null
     },
@@ -67461,6 +67597,40 @@
       "background": null
     },
     {
+      "id": "q-17709",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "other-cultures",
+      "bundle": "mexico",
+      "description": "El último rey de Tula tenía un nombre que hoy sonaría a apodo de luchador.",
+      "question": "Completa: el nombre de Huémac, el último gran rey de Tula según las leyendas, significa en náhuatl «…».",
+      "answer": "Mano grande",
+      "wrong_answers": [
+        "Espejo humeante",
+        "Serpiente de nubes",
+        "Colibrí zurdo"
+      ],
+      "hints": [
+        "Según la leyenda, gobernó cuando la gran ciudad tolteca estaba a punto de caer.",
+        "Su nombre une dos palabras náhuatl: una dice cómo es y la otra qué es.",
+        "En náhuatl, «huei» es grande y «maitl» es lo que usas para saludar."
+      ],
+      "fun_fact": "Cuenta la leyenda que Huémac le ganó un juego de pelota a Tláloc y pidió jades y plumas en vez de elotes; ofendido, el dios dejó a Tula sin lluvia.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Ruinas_de_Tula.jpg/3840px-Ruinas_de_Tula.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARuinas_de_Tula.jpg",
+        "credit": "Crancket · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Crancket",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Crancket&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-17710",
       "status": "approved",
       "difficulty": 12,
@@ -67695,6 +67865,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Lisa",
         "author_url": "https://www.flickr.com/people/44372118@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17717",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "pop-and-rock",
+      "bundle": "mexico",
+      "description": "Uniforme escolar, corbata floja y fans gritando en todo el continente.",
+      "question": "Maite Perroni fue Lupita en «Rebelde» y cantó en RBD. ¿Cómo estaba formado ese grupo?",
+      "answer": "Tres chicas y tres chicos",
+      "wrong_answers": [
+        "Cuatro chicas y dos chicos",
+        "Dos chicas y cuatro chicos",
+        "Tres chicas y dos chicos"
+      ],
+      "hints": [
+        "En total eran seis.",
+        "Anahí y Dulce María también cantaban en el grupo, junto con Maite.",
+        "Había tantos chicos como chicas."
+      ],
+      "fun_fact": "RBD llegó a llenar estadios en Brasil y Estados Unidos, y en 2023 volvió con una gira de reencuentro.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Madrid_Pride_2025_-_Isla_Lavanda_-_250706_201149.jpg/3840px-Madrid_Pride_2025_-_Isla_Lavanda_-_250706_201149.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMadrid_Pride_2025_-_Isla_Lavanda_-_250706_201149.jpg",
+        "credit": "Barcex · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Barcex",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Barcex"
       },
       "background": null
     },

@@ -1366248,9 +1366248,9 @@
     },
     {
       "id": "q-17645",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "La tarjetita de plástico que todos sacan de la cartera en el banco y en la tiendita.",
+      "description": "Siglas, filas largas y una oficina con el aire acondicionado al máximo.",
       "question": "Nací en 1990, organizaba las elecciones federales y muchos todavía le dicen a su credencial para votar con mi nombre. ¿Quién soy?",
       "answer": "El IFE",
       "wrong_answers": [
@@ -1366268,16 +1366268,19 @@
         "role": "illustrative",
         "query": "ballot box election",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABallot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad_2.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Ballot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad_2.jpg/3840px-Ballot_dropped_into_ballot_box_2024_Swedish_EU_election_at_St%C3%A5ngen%C3%A4sskolan%2C_Brastad_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "W.carter · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2023_Polish_parliamentary_election_and_referendum._October_2023._Ballot_box_in_Tomasz%C3%B3w_Mazowiecki%2C_Sikorskiego_Street_6A.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/2023_Polish_parliamentary_election_and_referendum._October_2023._Ballot_box_in_Tomasz%C3%B3w_Mazowiecki%2C_Sikorskiego_Street_6A.jpg/3840px-2023_Polish_parliamentary_election_and_referendum._October_2023._Ballot_box_in_Tomasz%C3%B3w_Mazowiecki%2C_Sikorskiego_Street_6A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "WrS.tm.pl · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "W.carter",
-        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "WrS.tm.pl",
+        "author_url": "https://commons.wikimedia.org/wiki/User:WrS.tm.pl",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-user-at-project",
+          "PD-user-pl"
+        ]
       },
       "fun_fact": "El IFE se transformó en el INE en 2014, pero la frase «saca tu credencial del IFE» sigue viva.",
       "subcategory": "20th-century",
@@ -1366306,23 +1366309,31 @@
       "needs_media": false,
       "batch": "batch-61",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"la tarjetita de plástico que todos sacan de la cartera en el banco y en la tiendita\") describes the IFE voter card, the answer's defining trait. Read with just the four options, it rules out the SAT, INEGI and SEP before the question is even heard. Rewrite it to joke about elections or bureaucracy without mentioning the ID card.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"la tarjetita de plástico que todos sacan de la cartera en el banco y en la tiendita\") describes the IFE voter card, the answer's defining trait. Read with just the four options, it rules out the SAT, INEGI and SEP before the question is even heard. Rewrite it to joke about elections or bureaucracy without mentioning the ID card.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Description no longer mentions the name change, which hint 3 already covers.",
+        "reason": "The description named the voter ID card, which gave the answer away, so I replaced it with a bureaucracy joke that doesn't rule out any option.",
         "previous": {
-          "description": "Una credencial que cambió de nombre, pero en la tiendita la siguen llamando igual."
+          "description": "La tarjetita de plástico que todos sacan de la cartera en el banco y en la tiendita."
         },
         "revised_on": "2026-11-12"
       }
@@ -1366986,7 +1366997,7 @@
     },
     {
       "id": "q-17655",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "En la Nueva España, tu nombre dependía menos de ti y más de tus papás.",
       "question": "En la Nueva España, la gente se clasificaba en castas según el origen de sus padres. ¿Cuál de estos nombres NO era una casta?",
@@ -1366998,7 +1367009,7 @@
       ],
       "hints": [
         "Tres de estas palabras salían en los registros de bautizo coloniales.",
-        "La respuesta no tiene nada que ver con los padres de nadie: es un cargo.",
+        "La palabra que sobra ya se usaba antes de que llegaran los españoles.",
         "Así se llamaba al gobernante de los mexicas, como Moctezuma."
       ],
       "media": {
@@ -1367044,25 +1367055,33 @@
       "needs_media": false,
       "batch": "batch-61",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: \"es un cargo\" is true only of Tlatoani, so anyone who knows Mestizo and Mulato are mixes of parents can solve it from hint 2 alone. Rewrite hint 2 to be vaguer, for example saying the odd word comes from before the Spanish arrived, without saying it is a title or office.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: \"es un cargo\" is true only of Tlatoani, so anyone who knows Mestizo and Mulato are mixes of parents can solve it from hint 2 alone. Rewrite hint 2 to be vaguer, for example saying the odd word comes from before the Spanish arrived, without saying it is a title or office.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave away the answer through the word's language.",
+        "reason": "Hint 2 said the answer is an office, which settled it, so it now only says the odd word existed before the Spanish arrived.",
         "previous": {
           "hints": [
             "Tres de estas palabras salían en los registros de bautizo coloniales.",
-            "La respuesta es una palabra náhuatl.",
+            "La respuesta no tiene nada que ver con los padres de nadie: es un cargo.",
             "Así se llamaba al gobernante de los mexicas, como Moctezuma."
           ]
         },
@@ -1367142,10 +1367161,10 @@
     },
     {
       "id": "q-17657",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "El sombrero más elegante de Tenochtitlan, y sin una sola tienda de modas cerca.",
-      "question": "El penacho de Moctezuma, que hoy está en un museo de Viena, es enorme. ¿Cuánto mide aproximadamente de ancho?",
+      "question": "El penacho de Moctezuma es enorme. ¿Cuánto mide aproximadamente de ancho?",
       "answer": "Casi 2 metros",
       "wrong_answers": [
         "Unos 20 centímetros",
@@ -1367200,28 +1367219,31 @@
       "needs_media": false,
       "batch": "batch-61",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The facts are right: the penacho is about 1.75 m wide, and it has hundreds of quetzal feathers and is too fragile to travel. The problem is the question text. It says the penacho 'hoy está en un museo de Viena', and that is exactly the answer to q-16476, which asks for its city. Anyone who sees this question gets q-16476 for free. Dropping the Vienna clause (e.g. 'El penacho de Moctezuma es enorme. ¿Cuánto mide aproximadamente de ancho?') removes the overlap.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The facts are right: the penacho is about 1.75 m wide, and it has hundreds of quetzal feathers and is too fragile to travel. The problem is the question text. It says the penacho 'hoy está en un museo de Viena', and that is exactly the answer to q-16476, which asks for its city. Anyone who sees this question gets q-16476 for free. Dropping the Vienna clause (e.g. 'El penacho de Moctezuma es enorme. ¿Cuánto mide aproximadamente de ancho?') removes the overlap.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Description no longer hints at size, and hint 2 is now a weaker clue that leaves two options open.",
+        "reason": "I removed the Vienna clause, which gave away the answer to q-16476.",
         "previous": {
-          "description": "Un sombrero tan elegante que no cabe por la puerta de cualquier casa.",
-          "hints": [
-            "Es mucho más grande que una gorra.",
-            "Una persona adulta acostada mediría más o menos lo mismo.",
-            "Pasa de metro y medio, pero no llega a 3 metros."
-          ]
+          "question": "El penacho de Moctezuma, que hoy está en un museo de Viena, es enorme. ¿Cuánto mide aproximadamente de ancho?"
         },
         "revised_on": "2026-11-12"
       }
@@ -1368181,7 +1368203,7 @@
     },
     {
       "id": "q-17671",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "Un pueblo que viaja más que un tráiler en la carretera a Laredo.",
       "question": "Los kikapúes llegaron desde los Grandes Lagos y viven en El Nacimiento, Coahuila. ¿Para qué les dio tierras México en el siglo XIX?",
@@ -1368199,16 +1368221,16 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Coahuila desert landscape",
+        "query": "Chihuahuan desert Coahuila",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Gfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARegi%C3%B3n_Centro_Desierto_de_Coahuila_%28M%C3%A9xico%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Regi%C3%B3n_Centro_Desierto_de_Coahuila_%28M%C3%A9xico%29.jpg/3840px-Regi%C3%B3n_Centro_Desierto_de_Coahuila_%28M%C3%A9xico%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public Domain",
-        "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
-        "author": "Yinan Chen",
-        "author_url": "http://www.goodfreephotos.com",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1368239,29 +1368261,46 @@
       "needs_media": false,
       "batch": "batch-61",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-no-reason: public domain without a template).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 no longer gives away the purpose, the answer is shortened to match the wrong answers, and the question is trimmed.",
+        "reason": "The image's public-domain licence had no template, so I changed the query to fetch a different, properly licensed Coahuila desert photo.",
         "previous": {
-          "question": "Los kikapúes llegaron desde los Grandes Lagos, hablan una lengua algonquina y viven en El Nacimiento, Coahuila. ¿Para qué les dio tierras el gobierno mexicano en el siglo XIX?",
-          "answer": "Para defender la frontera de ataques apaches y comanches",
-          "hints": [
-            "Fue a mediados del siglo XIX, en el norte del país.",
-            "Les dieron tierras junto con los mascogos, como colonos militares.",
-            "El norte sufría incursiones de pueblos nómadas a caballo."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Coahuila desert landscape",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Gfp-mexico-boquillas-del-carmen-desert-and-canyon-around-boquillas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public Domain",
+            "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+            "author": "Yinan Chen",
+            "author_url": "http://www.goodfreephotos.com",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-11-12"
       }
@@ -1371024,7 +1371063,7 @@
     },
     {
       "id": "q-17709",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "El último rey de Tula tenía un nombre que hoy sonaría a apodo de luchador.",
       "question": "Completa: el nombre de Huémac, el último gran rey de Tula según las leyendas, significa en náhuatl «…».",
@@ -1371035,7 +1371074,7 @@
         "Colibrí zurdo"
       ],
       "hints": [
-        "No es el nombre de un dios, sino que describe su cuerpo.",
+        "Según la leyenda, gobernó cuando la gran ciudad tolteca estaba a punto de caer.",
         "Su nombre une dos palabras náhuatl: una dice cómo es y la otra qué es.",
         "En náhuatl, «huei» es grande y «maitl» es lo que usas para saludar."
       ],
@@ -1371082,25 +1371121,33 @@
       "needs_media": false,
       "batch": "batch-61",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. It says the name \"is not a god's name but describes his body\", and all three wrong answers are god names (Espejo humeante = Tezcatlipoca, Serpiente de nubes = Mixcóatl, Colibrí zurdo = Huitzilopochtli). \"Mano grande\" is the only option about a body, so hint 1 settles it. Hint 1 should become a vague hint that doesn't rule out any option, for example one about the Toltec era or the legend of Tula's fall. The distractors could also include a non-divine, body-related name.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. It says the name \"is not a god's name but describes his body\", and all three wrong answers are god names (Espejo humeante = Tezcatlipoca, Serpiente de nubes = Mixcóatl, Colibrí zurdo = Huitzilopochtli). \"Mano grande\" is the only option about a body, so hint 1 settles it. Hint 1 should become a vague hint that doesn't rule out any option, for example one about the Toltec era or the legend of Tula's fall. The distractors could also include a non-divine, body-related name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named a body part and an unconfirmed legend, with a vaguer true hint.",
+        "reason": "Hint 1 ruled out all three god-name options, so it is now a vague hint about the legend of Tula's fall.",
         "previous": {
           "hints": [
             "No es el nombre de un dios, sino que describe su cuerpo.",
-            "Según algunas leyendas, tenía una parte del cuerpo enorme.",
+            "Su nombre une dos palabras náhuatl: una dice cómo es y la otra qué es.",
             "En náhuatl, «huei» es grande y «maitl» es lo que usas para saludar."
           ]
         },
@@ -1371648,7 +1371695,7 @@
     },
     {
       "id": "q-17717",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Uniforme escolar, corbata floja y fans gritando en todo el continente.",
       "question": "Maite Perroni fue Lupita en «Rebelde» y cantó en RBD. ¿Cómo estaba formado ese grupo?",
@@ -1371660,7 +1371707,7 @@
       ],
       "hints": [
         "En total eran seis.",
-        "Uno de los chicos era Poncho, que en la telenovela hacía de Miguel.",
+        "Anahí y Dulce María también cantaban en el grupo, junto con Maite.",
         "Había tantos chicos como chicas."
       ],
       "media": {
@@ -1371708,25 +1371755,33 @@
       "needs_media": false,
       "batch": "batch-61",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Uno de los chicos era Poncho, que en la telenovela hacía de Miguel\") gives away approved q-11622, which asks for the nickname of Alfonso Herrera, who played Miguel in «Rebelde» (answer: Poncho). Replace hint 2 with one that doesn't name Poncho/Miguel, e.g. one that names one of the girls, Anahí or Dulce María, without giving the count.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Uno de los chicos era Poncho, que en la telenovela hacía de Miguel\") gives away approved q-11622, which asks for the nickname of Alfonso Herrera, who played Miguel in «Rebelde» (answer: Poncho). Replace hint 2 with one that doesn't name Poncho/Miguel, e.g. one that names one of the girls, Anahí or Dulce María, without giving the count.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the three girls and solved the question, with a hint about Poncho.",
+        "reason": "Hint 2 named Poncho/Miguel, which gave away q-11622, so it now names two of the girls instead.",
         "previous": {
           "hints": [
             "En total eran seis.",
-            "Las chicas eran Maite, Anahí y Dulce María.",
+            "Uno de los chicos era Poncho, que en la telenovela hacía de Miguel.",
             "Había tantos chicos como chicas."
           ]
         },
@@ -1373556,7 +1373611,7 @@
       "id": "q-17743",
       "status": "needs_work",
       "difficulty": 5,
-      "description": "Al final de este estado ya no hay carretera: solo mar y turistas.",
+      "description": "Un estado con más peces que semáforos y más arena que banquetas.",
       "question": "Mira el estado marcado en el mapa. ¿Qué estado es?",
       "answer": "Baja California Sur",
       "wrong_answers": [
@@ -1373572,8 +1373627,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Baja California Sur in Mexico",
-        "note": "Mapa de México sin nombres con el estado de Baja California Sur resaltado.",
+        "query": "Baja California Sur in Mexico (location map scheme).svg",
+        "note": "Mapa de México sin nombres de estados, con Baja California Sur resaltado (locator map de Wikimedia Commons).",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1373606,18 +1373661,45 @@
       "batch": "batch-61",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential image must be a map of Mexico with Baja California Sur highlighted, but every candidate is a fish, a moth or a beach photo, and no new search is allowed. Use a Wikimedia locator map such as \"Baja California Sur in Mexico (location map scheme).svg\" and check that it has no state names on it. The description's \"al final… ya no hay carretera\" also points to the tip of the peninsula, which rules out Baja California, Sonora and Sinaloa. No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No candidate is a map of Mexico with Baja California Sur highlighted. Candidate 4 is a zoomed topographic map of the peninsula with no state marked. Search again for the Commons locator map. No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must be a map of Mexico with Baja California Sur highlighted, but every candidate is a fish, a moth or a beach photo, and no new search is allowed. Use a Wikimedia locator map such as \"Baja California Sur in Mexico (location map scheme).svg\" and check that it has no state names on it. The description's \"al final… ya no hay carretera\" also points to the tip of the peninsula, which rules out Baja California, Sonora and Sinaloa. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "I pointed the essential image at the Wikimedia locator map and rewrote the description, which pointed to the peninsula's tip.",
+        "previous": {
+          "description": "Al final de este estado ya no hay carretera: solo mar y turistas.",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Baja California Sur in Mexico",
+            "note": "Mapa de México sin nombres con el estado de Baja California Sur resaltado.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17744",
