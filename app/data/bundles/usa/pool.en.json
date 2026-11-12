@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "5258df8a",
+  "hash": "9e70a4d9",
   "questions": [
     {
       "id": "q-8833",
@@ -57898,6 +57898,40 @@
       "background": null
     },
     {
+      "id": "q-16623",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "american-football",
+      "bundle": "usa",
+      "description": "Shoes have them, footballs have them, and neither one ever gets tied in a bow.",
+      "question": "An American football has white laces on one side. What do they mostly help with?",
+      "answer": "Gripping and throwing the ball",
+      "wrong_answers": [
+        "Making the ball bounce higher",
+        "Tying the ball to the goalpost",
+        "Hanging the ball on a hook"
+      ],
+      "hints": [
+        "Watch where the quarterback puts his fingers.",
+        "They help with the hand, not the foot.",
+        "A good spin on a long pass starts with fingers on them."
+      ],
+      "fun_fact": "Many quarterbacks put their fingers right across the laces to make the ball spin in a tight spiral.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Sun_Devil_Stadium_-_Pac12_Championship.jpg/3840px-Sun_Devil_Stadium_-_Pac12_Championship.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASun_Devil_Stadium_-_Pac12_Championship.jpg",
+        "credit": "Clintus McGintus · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Clintus McGintus",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16624",
       "status": "approved",
       "difficulty": 6,
@@ -58714,6 +58748,40 @@
       "background": null
     },
     {
+      "id": "q-16650",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "A story so famous it can't tell a lie, even though it is one.",
+      "question": "The story of young George Washington chopping down his father's cherry tree is made up. Which writer added it to his 1806 book about Washington?",
+      "answer": "Parson Weems",
+      "wrong_answers": [
+        "Washington Irving",
+        "Noah Webster",
+        "James Fenimore Cooper"
+      ],
+      "hints": [
+        "He was a traveling bookseller and a preacher.",
+        "He wrote one of the first popular books about Washington, soon after Washington died.",
+        "His first name was Mason, but people knew him by his church title."
+      ],
+      "fun_fact": "The cherry tree story was not in the first editions of the book; Weems added it in the fifth edition, in 1806.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Mount_Vernon_Estate_Mansion_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMount_Vernon_Estate_Mansion_2.JPG",
+        "credit": "Martin Falbisoner · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Martin Falbisoner",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16652",
       "status": "approved",
       "difficulty": 15,
@@ -59088,6 +59156,40 @@
       "background": null
     },
     {
+      "id": "q-16664",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "household-brands",
+      "bundle": "usa",
+      "description": "The 2013 craze that turned school lunch tables into tiny factories.",
+      "question": "Around 2013, millions of kids had a plastic board with rows of pegs. What did they make on it?",
+      "answer": "Rubber band bracelets",
+      "wrong_answers": [
+        "Bead necklaces",
+        "Paper snowflakes",
+        "Clay figures"
+      ],
+      "hints": [
+        "Whatever they made, they wore it.",
+        "They used a little hook to loop things over the pegs.",
+        "The tiny colorful pieces were stretchy."
+      ],
+      "fun_fact": "Its inventor, Michigan crash-test engineer Cheong Choon Ng, built the first loom in 2010 to make bracelets with his daughters.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Calhan_Colorado_High_School_Cafeteria_by_David_Shankbone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalhan_Colorado_High_School_Cafeteria_by_David_Shankbone.jpg",
+        "credit": "David Shankbone · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "David Shankbone",
+        "author_url": "https://en.wikipedia.org/wiki/en:David_Shankbone"
+      },
+      "background": null
+    },
+    {
       "id": "q-16665",
       "status": "approved",
       "difficulty": 1,
@@ -59152,6 +59254,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dietmar Rabich",
         "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16667",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "household-brands",
+      "bundle": "usa",
+      "description": "Somewhere under that plastic lid, an aircraft carrier is hiding.",
+      "question": "In the classic game Battleship, you call out spots like “B-4” to find hidden ships. What does a white peg mean?",
+      "answer": "A miss",
+      "wrong_answers": [
+        "A hit",
+        "A sunk ship",
+        "Your turn is over"
+      ],
+      "hints": [
+        "The other color of peg is red.",
+        "Red pegs are the good news.",
+        "Your shot landed only in the water."
+      ],
+      "fun_fact": "People played Battleship with pencil and paper for decades before Milton Bradley sold the plastic version in 1967.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Warships_at_Sea_MET_DP801037.jpg/3840px-Warships_at_Sea_MET_DP801037.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWarships_at_Sea_MET_DP801037.jpg",
+        "credit": "Willem van de Velde the Younger · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Willem van de Velde the Younger",
+        "author_url": "https://en.wikipedia.org/wiki/en:Willem_van_de_Velde_the_Younger"
       },
       "background": null
     },
@@ -59938,6 +60074,40 @@
       "background": null
     },
     {
+      "id": "q-16694",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "A town name that visitors mispronounce at least once per fair ride.",
+      "question": "Puyallup, Washington, said “pew-AL-up,” is named after a Native people. What is the name said to mean?",
+      "answer": "Generous people",
+      "wrong_answers": [
+        "Red salmon",
+        "Cold river",
+        "Snowy mountain"
+      ],
+      "hints": [
+        "The Puyallup Tribe itself explains what its name means.",
+        "The tribe says it's a name its members still try to live up to today.",
+        "It's about being kind and giving."
+      ],
+      "fun_fact": "The Washington State Fair in Puyallup is one of the biggest fairs in the US, drawing about a million visitors a year.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Alpacas_%28209032211%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlpacas_%28209032211%29.jpeg",
+        "credit": "Dana Hutchinson · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Dana Hutchinson",
+        "author_url": "https://500px.com/danajoehutchinson"
+      },
+      "background": null
+    },
+    {
       "id": "q-16695",
       "status": "approved",
       "difficulty": 13,
@@ -60618,6 +60788,40 @@
       "background": null
     },
     {
+      "id": "q-16715",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "trailblazers",
+      "bundle": "usa",
+      "description": "A doctor who packed her black bag and headed south without a second thought.",
+      "question": "Rebecca Lee Crumpler became the first Black woman doctor in the US in 1864. After the Civil War she moved to Richmond, Virginia. Whom did she go there to care for?",
+      "answer": "Formerly enslaved people",
+      "wrong_answers": [
+        "Wounded Union soldiers",
+        "Irish immigrants",
+        "Native American tribes"
+      ],
+      "hints": [
+        "Richmond had been the Confederate capital.",
+        "Her new patients had almost no doctors willing to treat them.",
+        "Her patients had just gained their freedom."
+      ],
+      "fun_fact": "In 1883 Crumpler wrote “A Book of Medical Discourses,” one of the first medical books by an African American.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Leather_doctor%27s_bag_with_contents%2C_English%2C_1890-1930._The_Wellcome_L0058360.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeather_doctor%27s_bag_with_contents%2C_English%2C_1890-1930._The_Wellcome_L0058360.jpg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16716",
       "status": "approved",
       "difficulty": 8,
@@ -60648,6 +60852,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "USFWS Mountain-Prairie",
         "author_url": "https://www.flickr.com/people/51986662@N05"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16718",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "weather-and-seasons",
+      "bundle": "usa",
+      "description": "The most important door on the farm isn't on the house.",
+      "question": "On the Great Plains, doors like these in the yard lead to a small underground room. What is it called?",
+      "answer": "A storm cellar",
+      "wrong_answers": [
+        "A mine shaft",
+        "A water well",
+        "A subway entrance"
+      ],
+      "hints": [
+        "It's dug into the ground near the house.",
+        "Families rush down into it when the sky turns dark and the wind howls.",
+        "Its name has the weather in it."
+      ],
+      "fun_fact": "In “The Wizard of Oz,” Dorothy's family hides in their storm cellar, but Dorothy doesn't make it there in time.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Arkansas_-_Willmering_Tourist_Cabins_near_Buffalo_Nat%27l_River_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArkansas_-_Willmering_Tourist_Cabins_near_Buffalo_Nat%27l_River_%284%29.jpg",
+        "credit": "Shauna Lea Jackson · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Shauna Lea Jackson",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ShaunaLeaJ"
       },
       "background": null
     },
@@ -60886,6 +61124,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Paul Volkmer laup",
         "author_url": "https://unsplash.com/@laup"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16726",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "childrens-books",
+      "bundle": "usa",
+      "description": "A birthday party where the guests bring books instead of presents.",
+      "question": "I was born on March 2, 1904, in Springfield, Massachusetts. For years, US schools held Read Across America Day on my birthday. Who am I?",
+      "answer": "Dr. Seuss",
+      "wrong_answers": [
+        "Maurice Sendak",
+        "Eric Carle",
+        "Shel Silverstein"
+      ],
+      "hints": [
+        "I went to college at Dartmouth in New Hampshire.",
+        "I wrote and drew books full of made-up words and silly rhymes.",
+        "One of my characters is a cat in a tall striped hat."
+      ],
+      "fun_fact": "The National Education Association started Read Across America in 1998, and teachers often read in costume that day.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Question_and_Answer_session_with_kids_from_Central_Manor_-_Flickr_-_Pratham_Books.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQuestion_and_Answer_session_with_kids_from_Central_Manor_-_Flickr_-_Pratham_Books.jpg",
+        "credit": "Pratham Books from India · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Pratham Books from India",
+        "author_url": "https://www.flickr.com/people/35026043@N03"
       },
       "background": null
     },
@@ -61395,6 +61667,40 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "4X4 Blazer 1776",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16742",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "hosts-and-game-shows",
+      "bundle": "usa",
+      "description": "Six free gifts that no contestant has ever tried to return.",
+      "question": "In Wheel of Fortune's bonus round, the player gets R, S, T, L, N and E for free. Why these six letters?",
+      "answer": "They are among the most common letters in English",
+      "wrong_answers": [
+        "They are all in the words “Wheel of Fortune”",
+        "They are the host's initials",
+        "They are the rarest letters in English"
+      ],
+      "hints": [
+        "The show gives them away so the puzzle isn't impossible.",
+        "Look at any long word: you will often find several of them.",
+        "Word game players love them because so many words use them."
+      ],
+      "fun_fact": "Since 1988, players get these six letters for free, because so many contestants used to pick them anyway.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Wooden_Block_Letters_Vision.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWooden_Block_Letters_Vision.jpg",
+        "credit": "WOKANDAPIX · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "WOKANDAPIX",
         "author_url": null
       },
       "background": null
@@ -61978,6 +62284,40 @@
       "background": null
     },
     {
+      "id": "q-16763",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "Just down the road from vampire country, someone left the umbrella at home.",
+      "question": "Sequim, said “SKWIM,” is on the same peninsula as Forks, the rainy “Twilight” town, yet gets only about 16 inches (410 mm) of rain a year. Why?",
+      "answer": "A rain shadow from mountains",
+      "wrong_answers": [
+        "A cold ocean current",
+        "Hot winds from a desert",
+        "Its high elevation"
+      ],
+      "hints": [
+        "Most of the peninsula's rain blows in on clouds from the Pacific Ocean.",
+        "The answer has to do with what happens to the clouds on their way to Sequim.",
+        "The Olympic Mountains stand between Sequim and the Pacific, and clouds drop their rain on the ocean side."
+      ],
+      "fun_fact": "Sequim's dry, sunny weather makes it great for lavender, and it calls itself the Lavender Capital of North America.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Sequim%2C_WA_%E2%80%94_Olympic_Lavender_Farm_%E2%80%94_002.jpg/3840px-Sequim%2C_WA_%E2%80%94_Olympic_Lavender_Farm_%E2%80%94_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASequim%2C_WA_%E2%80%94_Olympic_Lavender_Farm_%E2%80%94_002.jpg",
+        "credit": "Steven Pavlov · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Steven Pavlov",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Senapa"
+      },
+      "background": null
+    },
+    {
       "id": "q-16764",
       "status": "approved",
       "difficulty": 3,
@@ -62008,6 +62348,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Guilhem Vellut from Paris, France",
         "author_url": "https://www.flickr.com/people/22539273@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16765",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "roads-and-landmarks",
+      "bundle": "usa",
+      "description": "A memorial that does its math with mirrors.",
+      "question": "In Washington, D.C., 19 steel soldiers in ponchos walk through bushes. Reflected in a polished granite wall, they become 38. What does 38 stand for?",
+      "answer": "The line that divided Korea",
+      "wrong_answers": [
+        "The number of nations that sent troops",
+        "The war's length in weeks",
+        "The number of US states in 1950"
+      ],
+      "hints": [
+        "Think about how the war began.",
+        "The same number shows up in many history books about where the fighting started.",
+        "Korea was split into North and South roughly along this line."
+      ],
+      "fun_fact": "The memorial was dedicated in 1995, 42 years after the fighting in Korea stopped.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/WashMonument_WhiteHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWashMonument_WhiteHouse.jpg",
+        "credit": "U.S. Air Force Tech. Sgt. Andy Dunaway · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Air Force Tech. Sgt. Andy Dunaway",
+        "author_url": null
       },
       "background": null
     },
@@ -62076,6 +62450,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Victoria Posh",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16768",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "roads-and-landmarks",
+      "bundle": "usa",
+      "description": "New York's fanciest flowerbed has a secret underneath.",
+      "question": "New York's Park Avenue is famous for fancy apartments. Its flower-filled middle strip was built to cover what?",
+      "answer": "Train tracks",
+      "wrong_answers": [
+        "An old canal",
+        "A horse-racing track",
+        "A Civil War fort"
+      ],
+      "hints": [
+        "It used to be noisy and full of smoke.",
+        "Long ago, the street had a plain numbered name.",
+        "Commuter trains still roll beneath it today."
+      ],
+      "fun_fact": "Park Avenue used to be part of Fourth Avenue, and it got its new name from the planted strips running over the railroad down its middle.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Park_Avenue_Plantings.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APark_Avenue_Plantings.jpg",
+        "credit": "User:Deans Charbal · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "User:Deans Charbal",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Deans_Charbal&action=edit&redlink=1"
       },
       "background": null
     },
@@ -62250,6 +62658,40 @@
       "background": null
     },
     {
+      "id": "q-16776",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "school-life",
+      "bundle": "usa",
+      "description": "The one weekend a year when the whole town pretends to still be in high school.",
+      "question": "In US high schools, the homecoming dance usually comes right after a big home game. Where is that game played?",
+      "answer": "On the football field",
+      "wrong_answers": [
+        "On the basketball court",
+        "On the baseball diamond",
+        "On the hockey rink"
+      ],
+      "hints": [
+        "The game is usually played in the fall.",
+        "Fans sit in the bleachers outside, often under bright lights at night.",
+        "Think touchdowns and end zones."
+      ],
+      "fun_fact": "Several US colleges, including Baylor and the University of Missouri, claim to have held the first homecoming in the early 1900s.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Empress_Josephine_Tiara_at_HMNS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpress_Josephine_Tiara_at_HMNS.jpg",
+        "credit": "Randall Pugh from Houston, United States · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Randall Pugh from Houston, United States",
+        "author_url": "https://www.flickr.com/people/10649748@N04"
+      },
+      "background": null
+    },
+    {
       "id": "q-16777",
       "status": "approved",
       "difficulty": 5,
@@ -62280,6 +62722,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Qhssparents",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Qhssparents&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16778",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "school-life",
+      "bundle": "usa",
+      "description": "Recess has rules, and breaking the biggest one earns you a nickname.",
+      "question": "What do American kids call a classmate who runs to tell the teacher what another kid did?",
+      "answer": "A tattletale",
+      "wrong_answers": [
+        "A know-it-all",
+        "A teacher's pet",
+        "A scaredy-cat"
+      ],
+      "hints": [
+        "Nobody wants to be called this on the playground.",
+        "Other kids stop telling this classmate their secrets.",
+        "It starts with the word “tattle.”"
+      ],
+      "fun_fact": "A “tattler” meant a chatterbox back in the 1500s, long before kids started yelling “tattletale” on playgrounds.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Hardy_Elementary_School_playground_-_Arlington%2C_MA.jpg/3840px-Hardy_Elementary_School_playground_-_Arlington%2C_MA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHardy_Elementary_School_playground_-_Arlington%2C_MA.jpg",
+        "credit": "Daderot · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Daderot",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot"
       },
       "background": null
     },
@@ -64426,6 +64902,40 @@
       "background": null
     },
     {
+      "id": "q-16844",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "weather-and-seasons",
+      "bundle": "usa",
+      "description": "Spooky season has a strict dress code.",
+      "question": "You're decorating your porch for Halloween on October 31. Which of these does NOT belong?",
+      "answer": "A snowman",
+      "wrong_answers": [
+        "A bat",
+        "A pumpkin",
+        "A black cat"
+      ],
+      "hints": [
+        "Think about what you see in Halloween stories.",
+        "One of them belongs to a different time of year.",
+        "It has a carrot nose."
+      ],
+      "fun_fact": "Americans spend billions of dollars on Halloween candy, costumes and decorations every year.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Indiana%27s_Historic_Pathways_-_Hillforest_Victorian_Mansion_-_NARA_-_7719569.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIndiana%27s_Historic_Pathways_-_Hillforest_Victorian_Mansion_-_NARA_-_7719569.jpg",
+        "credit": "Unknown authorUnknown author or not provided · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author or not provided",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16845",
       "status": "approved",
       "difficulty": 2,
@@ -64626,6 +65136,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Anthony92931",
         "author_url": "https://commons.wikimedia.org/wiki/User:Anthony92931"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16851",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "winter-holidays",
+      "bundle": "usa",
+      "description": "She was rocking before she could drive.",
+      "question": "This singer recorded “Rockin' Around the Christmas Tree” in 1958 when she was just 13. Who is she?",
+      "answer": "Brenda Lee",
+      "wrong_answers": [
+        "Patsy Cline",
+        "Connie Francis",
+        "Dolly Parton"
+      ],
+      "hints": [
+        "She was nicknamed “Little Miss Dynamite.”",
+        "The song finally reached No. 1 in the US in 2023.",
+        "Her first name rhymes with “Glenda.”"
+      ],
+      "fun_fact": "The song hit No. 1 on the Billboard Hot 100 65 years after it was recorded.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/P20231127AS-0510.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AP20231127AS-0510.jpg",
+        "credit": "The White House · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "The White House",
+        "author_url": null
       },
       "background": null
     },
