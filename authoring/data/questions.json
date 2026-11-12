@@ -861257,7 +861257,8 @@
           "question": "«Oro parece, plata no es» es al plátano como «Blanco por dentro, verde por fuera; si quieres que te lo diga, espera» es a…"
         },
         "revised_on": "2026-11-05"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-11137",
@@ -875756,7 +875757,8 @@
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-11323",
@@ -951282,7 +951284,8 @@
           "description": "La letra más presumida del abecedario: nunca sale sin su sombrero."
         },
         "revised_on": "2026-11-06"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-12295",
