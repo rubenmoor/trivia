@@ -1046272,7 +1046272,8 @@
         "previous": null
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-13520",
@@ -1369727,7 +1369728,8 @@
         "previous": null
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-17691",
