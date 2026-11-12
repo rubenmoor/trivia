@@ -207,7 +207,8 @@
     {
       "name": "Plan de Ayala",
       "facet": "Planes y documentos políticos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: El pool ya tiene a quién desconoció el Plan de Ayala, su año (1911) y la relación Zapata–Plan de Ayala."
     },
     {
       "name": "Plan de Guadalupe",
@@ -287,7 +288,8 @@
     {
       "name": "Batalla de Celaya",
       "facet": "Batallas y tomas de ciudades",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Los datos de Celaya para todos los públicos (Villa derrotado, el Manco de Celaya) ya están en el pool; lo que queda (cuántas batallas hubo) es de dificultad 13 o más, muy lejos del objetivo 2."
     },
     {
       "name": "Toma de Torreón",
@@ -619,7 +621,8 @@
     {
       "name": "Cananas",
       "facet": "Ejércitos, armas y trenes",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: El nombre de las cintas de balas ya se preguntó; ninguna de las opciones da un dato nuevo y justo sobre las cananas."
     },
     {
       "name": "Trenes de la Revolución",

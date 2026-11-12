@@ -76,7 +76,8 @@
     {
       "name": "Amat Escalante",
       "facet": "Directores mexicanos reconocidos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Las opciones de conteo o récord no dan una buena pregunta; su otra obra famosa («La región salvaje») es para adultos."
     },
     {
       "name": "Michel Franco",
@@ -351,7 +352,8 @@
     {
       "name": "Profundo carmesí",
       "facet": "Nuevo cine mexicano noventero",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Trata de asesinos seriales; no es apta para el tono familiar."
     },
     {
       "name": "La reina de la noche",
@@ -426,7 +428,8 @@
     {
       "name": "Ánima Estudios",
       "facet": "Animación hecha en México",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Sus fundadores y su sede son datos que nadie puede razonar; las opciones con foto no encajan."
     },
     {
       "name": "Don Gato y su pandilla",
@@ -502,7 +505,8 @@
     {
       "name": "Ahí va el diablo",
       "facet": "Terror y fantasía mexicanos",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Película de terror para adultos, oscura y poco conocida; no es apta para una pregunta familiar."
     },
     {
       "name": "Veneno para las hadas",
@@ -684,7 +688,8 @@
     {
       "name": "EFICINE",
       "facet": "Salas, estudios e industria",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Estímulo fiscal técnico; no da una buena pregunta de opción múltiple para familias."
     },
     {
       "name": "Cine de ficheras",

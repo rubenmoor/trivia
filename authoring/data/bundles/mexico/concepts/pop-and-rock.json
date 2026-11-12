@@ -123,12 +123,14 @@
     {
       "name": "Size",
       "facet": "Rock en tu idioma de los ochenta",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No estoy seguro de quiénes integraron Size; la pregunta de cuál NO es integrante sería arriesgada."
     },
     {
       "name": "Kerigma",
       "facet": "Rock en tu idioma de los ochenta",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Kerigma es demasiado poco conocida; no tengo datos confiables para una pregunta justa."
     },
     {
       "name": "El Tri",
@@ -229,7 +231,8 @@
     {
       "name": "Heavy Nopal",
       "facet": "Bandas de rock mexicano clásico",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Heavy Nopal es demasiado poco conocida y no tengo datos seguros."
     },
     {
       "name": "Transmetal",
@@ -495,7 +498,8 @@
     {
       "name": "Titán",
       "facet": "Rock alternativo y fusión",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Titán es una banda de nicho; no tengo datos confiables para una pregunta justa."
     },
     {
       "name": "La Gusana Ciega",

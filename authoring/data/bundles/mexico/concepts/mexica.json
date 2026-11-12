@@ -531,7 +531,8 @@
     {
       "name": "Molinillo",
       "facet": "Tianguis, tributo y cacao",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: El molinillo ya se preguntó dos veces; identificarlo por su uso se respondería con esas preguntas, y su origen exacto es dudoso."
     },
     {
       "name": "Tributo",

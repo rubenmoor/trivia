@@ -363,7 +363,8 @@
     {
       "name": "Purépecha",
       "facet": "Lenguas indígenas vivas de México",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: La pregunta purépecha → Michoacán ya está en el pool; las otras opciones no encajan."
     },
     {
       "name": "Tzotzil",
@@ -384,6 +385,11 @@
       "name": "Rarámuri (tarahumaras)",
       "facet": "Pueblos originarios y sus regiones",
       "known_at": 9
+    },
+    {
+      "name": "Coco (película de Pixar)",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 2
     }
   ],
   "top_ups": [
@@ -396,6 +402,11 @@
       "date": "2026-11-12",
       "added": 2,
       "unused": 31
+    },
+    {
+      "date": "2026-11-12",
+      "added": 1,
+      "unused": 28
     }
   ]
 }

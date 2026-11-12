@@ -80,7 +80,8 @@
     {
       "name": "La Monja emparedada",
       "facet": "La Llorona y mujeres espectrales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: A nun walled up alive is too dark for a family question."
     },
     {
       "name": "La Pascualita",
@@ -260,7 +261,8 @@
     {
       "name": "Bruja de Monterrey",
       "facet": "Bestias y criaturas misteriosas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: There's no known Monterrey witch legend with reliable facts."
     },
     {
       "name": "Ovnis del Popocatépetl",
@@ -450,7 +452,8 @@
     {
       "name": "Muchacha de la curva",
       "facet": "Aparecidos de caminos y carreteras",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Its only easy fact (the curve) is already in the pool; the identify/thing option would only give a filler question."
     },
     {
       "name": "Jinete sin cabeza",
@@ -460,7 +463,8 @@
     {
       "name": "Autobús fantasma",
       "facet": "Aparecidos de caminos y carreteras",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: There's no Mexican ghost-bus legend well enough known, with facts I'm sure of, for kids."
     },
     {
       "name": "Tren fantasma",
