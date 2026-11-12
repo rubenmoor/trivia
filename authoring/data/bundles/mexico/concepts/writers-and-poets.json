@@ -131,7 +131,8 @@
     {
       "name": "Francisco L. Urquizo",
       "facet": "Novela de la Revolución",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Urquizo y «Tropa vieja» son demasiado poco conocidos; ninguna de las opciones da una pregunta justa."
     },
     {
       "name": "La vida inútil de Pito Pérez",
@@ -352,7 +353,8 @@
     {
       "name": "Salvador Elizondo",
       "facet": "Carlos Fuentes y el Boom",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: «Farabeuf» se basa en una foto de una tortura, que no es para toda la familia, y no hay una foto fiable de Elizondo."
     },
     {
       "name": "Vicente Leñero",
@@ -367,7 +369,8 @@
     {
       "name": "Literatura de la Onda",
       "facet": "Carlos Fuentes y el Boom",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: La Onda ya tiene su adivinanza con autores y rasgos (rock, habla juvenil); otra pregunta se respondería con esa."
     },
     {
       "name": "Jorge Ibargüengoitia",
@@ -537,7 +540,8 @@
     {
       "name": "Inés Arredondo",
       "facet": "Escritoras mexicanas del siglo XX",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Inés Arredondo es demasiado poco conocida para estos formatos; no hay una foto fiable en fuentes libres ni un término claro que preguntar."
     },
     {
       "name": "Amparo Dávila",
@@ -707,7 +711,8 @@
     {
       "name": "Pedro Muzquiz",
       "facet": "Personajes y obras famosas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No puedo verificar quién es «Pedro Muzquiz» ni en qué obra aparece."
     },
     {
       "name": "José Emilio Pacheco",

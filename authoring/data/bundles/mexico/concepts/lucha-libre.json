@@ -860,7 +860,8 @@
     {
       "name": "Puestos de máscaras",
       "facet": "Fiesta y afición en la arena",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El material de las máscaras ya está en el pool y el propósito sería obvio o repetido."
     },
     {
       "name": "Máscara de recuerdo",

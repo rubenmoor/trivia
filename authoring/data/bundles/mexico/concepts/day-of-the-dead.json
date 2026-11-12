@@ -436,7 +436,8 @@
     {
       "name": "31 de octubre",
       "facet": "Calendario: días y ánimas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The pool already covers what comes after 31 de octubre (the 2nd, the children who died). The other options would be forced."
     },
     {
       "name": "28 de octubre",

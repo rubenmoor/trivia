@@ -12,7 +12,8 @@
     "Pirámides y templos de los dioses",
     "Leyendas de amor y del cielo",
     "Dioses de otros pueblos mesoamericanos",
-    "Palabras nahuas de los mitos"
+    "Palabras nahuas de los mitos",
+    "Pueblos y ciudades sagradas"
   ],
   "axis_fit": {
     "move": {
@@ -425,6 +426,41 @@
       "name": "Teocalli",
       "facet": "Palabras nahuas de los mitos",
       "known_at": 12
+    },
+    {
+      "name": "Hombres de barro",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 11
+    },
+    {
+      "name": "Ave quetzal",
+      "facet": "Quetzalcóatl, la Serpiente Emplumada",
+      "known_at": 6
+    },
+    {
+      "name": "Cerro de Coatepec",
+      "facet": "Fundación de Tenochtitlan y Aztlán",
+      "known_at": 12
+    },
+    {
+      "name": "Río Chiconahuapan",
+      "facet": "El Mictlán y el viaje de los muertos",
+      "known_at": 13
+    },
+    {
+      "name": "Venado azul huichol",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 12
+    },
+    {
+      "name": "Chalchihuitl",
+      "facet": "Palabras nahuas de los mitos",
+      "known_at": 13
+    },
+    {
+      "name": "Huracán, Corazón del Cielo",
+      "facet": "Dioses mayas y el Popol Vuh",
+      "known_at": 12
     }
   ],
   "top_ups": [
@@ -432,6 +468,16 @@
       "date": "2026-11-11",
       "added": 3,
       "unused": 28
+    },
+    {
+      "date": "2026-11-11",
+      "added": 6,
+      "unused": 34
+    },
+    {
+      "date": "2026-11-12",
+      "added": 1,
+      "unused": 24
     }
   ]
 }

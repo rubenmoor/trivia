@@ -299,7 +299,8 @@
     {
       "name": "Amor eterno",
       "facet": "Compositores y canciones clásicas",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Los hechos centrales (quién la compuso y quién la cantó) ya salen en la pregunta anterior; las otras opciones no aplican."
     },
     {
       "name": "Cucurrucucú paloma",
@@ -559,7 +560,8 @@
     {
       "name": "Despecho",
       "facet": "Grito, versos y palabras del género",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Su significado ya se preguntó; las opciones de fecha o persona no aplican a una palabra."
     },
     {
       "name": "Llevar gallo",

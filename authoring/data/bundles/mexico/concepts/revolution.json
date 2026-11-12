@@ -141,7 +141,8 @@
     {
       "name": "Rodolfo Fierro",
       "facet": "Caudillos y líderes revolucionarios",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Rodolfo Fierro es conocido sobre todo por su violencia («el Carnicero»): no sirve para un juego familiar."
     },
     {
       "name": "Tomás Urbina",
@@ -526,7 +527,8 @@
     {
       "name": "La Adelita (corrido)",
       "facet": "Corridos y música revolucionaria",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: El género y la identidad de la Adelita ya se preguntaron; ninguna opción da una pregunta nueva de nivel 2 (completar la letra no encaja con número ni con foto)."
     },
     {
       "name": "La Rielera",
@@ -586,7 +588,8 @@
     {
       "name": "División del Norte",
       "facet": "Ejércitos, armas y trenes",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Quién mandaba la División del Norte y qué viajaba en sus trenes ya están en el pool; no queda un dato de nivel 3 que sea nuevo."
     },
     {
       "name": "Ejército Libertador del Sur",
