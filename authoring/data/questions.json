@@ -1353711,7 +1353711,7 @@
     },
     {
       "id": "q-17486",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "The silliest costume in college sports, and that's saying a lot.",
       "question": "I dance with the band at Stanford University's games. My team is named after a color, not after me. I'm green and shaggy. Who am I?",
@@ -1353722,9 +1353722,9 @@
         "A bear"
       ],
       "hints": [
-        "Stanford's campus is full of me.",
-        "I don't have legs, I have roots.",
-        "I grow leaves and branches."
+        "I'm the mascot of the Stanford Band, not of the team itself.",
+        "Students who want to play me try out with silly stunts.",
+        "I have roots instead of legs, and I grow leaves and branches."
       ],
       "media": {
         "type": "image",
@@ -1353769,19 +1353769,39 @@
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"I don't have legs, I have roots\") gives the answer away: among the four options only a tree has roots, so the question is solved by the second hint. Hint 1 (\"Stanford's campus is full of me\") also points strongly at a tree. Hint 2 should go vaguer (for example, about the Stanford Band or the costume being homemade), and the root/leaf clue should move to hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"I don't have legs, I have roots\") gives the answer away: among the four options only a tree has roots, so the question is solved by the second hint. Hint 1 (\"Stanford's campus is full of me\") also points strongly at a tree. Hint 2 should go vaguer (for example, about the Stanford Band or the costume being homemade), and the root/leaf clue should move to hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hints 1 and 2 vaguer (band, try-outs) and moved the roots/leaves clue to hint 3.",
+        "previous": {
+          "hints": [
+            "Stanford's campus is full of me.",
+            "I don't have legs, I have roots.",
+            "I grow leaves and branches."
+          ]
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17487",
@@ -1353952,7 +1353972,7 @@
     },
     {
       "id": "q-17489",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A secret club whose meetings sometimes ended with tea in the harbor.",
       "question": "This secret colonial group included Samuel Adams and Paul Revere, fought the Stamp Act and planned the Boston Tea Party. What was it called?",
@@ -1353960,12 +1353980,12 @@
       "wrong_answers": [
         "The Green Mountain Boys",
         "The Friends of the King",
-        "The Liberty Bell Club"
+        "The Minutemen Society"
       ],
       "hints": [
         "They were Patriots, not Loyalists.",
         "Their name sounds like a family.",
-        "Their name ends with the same word as the famous cracked bell in Philadelphia."
+        "Their name shares a word with the famous cracked bell in Philadelphia."
       ],
       "media": {
         "type": "image",
@@ -1354006,31 +1354026,44 @@
         "difficulty_estimate": 7,
         "notes": "“Friends of the King” and “Liberty Bell Club” look made up and are weak. Hint 3's wording (“the word on the Statue of Liberty”) is clumsy. The Sons of Liberty are middle-school history, so a 5 is too low; about 7."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 is factually wrong: \"Liberty Bell\" ends with \"Bell\", so \"The Sons of Liberty\" doesn't end with the same word as the bell's name. Change it to something like \"Their name shares a word with the famous cracked bell in Philadelphia\". The wrong answer \"The Liberty Bell Club\" also contains both words, so hint 3 points more toward it than toward the answer. Replace that wrong answer with one that doesn't use \"Liberty\" (for example \"The Minutemen Society\"), or rewrite hint 3 so it doesn't rely on the bell. Fact check: wrong. Answer is right, but hint 3 is misleading: the Liberty Bell's name ends in 'Bell', not 'Liberty'. 'Liberty' is the bell's first word.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 is factually wrong: \"Liberty Bell\" ends with \"Bell\", so \"The Sons of Liberty\" doesn't end with the same word as the bell's name. Change it to something like \"Their name shares a word with the famous cracked bell in Philadelphia\". The wrong answer \"The Liberty Bell Club\" also contains both words, so hint 3 points more toward it than toward the answer. Replace that wrong answer with one that doesn't use \"Liberty\" (for example \"The Minutemen Society\"), or rewrite hint 3 so it doesn't rely on the bell. Fact check: wrong. Answer is right, but hint 3 is misleading: the Liberty Bell's name ends in 'Bell', not 'Liberty'. 'Liberty' is the bell's first word.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed hint 3, which wrongly said the word is written on the Statue of Liberty; it now points to the Liberty Bell.",
+        "reason": "Fixed the wrong hint 3 (the bell's name ends in Bell) and replaced the 'Liberty Bell Club' distractor so hint 3 points only to the answer.",
         "previous": {
+          "wrong_answers": [
+            "The Green Mountain Boys",
+            "The Friends of the King",
+            "The Liberty Bell Club"
+          ],
           "hints": [
             "They were Patriots, not Loyalists.",
             "Their name sounds like a family.",
-            "Their name ends with the word on the Statue of Liberty."
+            "Their name ends with the same word as the famous cracked bell in Philadelphia."
           ]
         },
         "revised_on": "2026-11-12"
@@ -1356122,7 +1356155,7 @@
     },
     {
       "id": "q-17517",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Nobody says “That was dreadful” quite like this man.",
       "question": "Simon Cowell has judged several US talent shows. Which of these has he NEVER judged?",
@@ -1356140,11 +1356173,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "television studio stage lights",
+        "query": "talent show stage",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg/3840px-783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Virtual-Pano · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Virtual-Pano",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Virtual-Pano",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Simon Cowell judged the first nine seasons of American Idol before leaving in 2010.",
       "subcategory": "hosts-and-game-shows",
@@ -1356173,29 +1356213,40 @@
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows a TV studio or a talent-show stage. They are a 1922 hearing photo, a cathedral painting, a campus building, a 1980s band portrait, a praying mantis and a circuit board, and no new search is allowed. The text itself is fine: the facts check out (Cowell judged Idol, AGT and the US X Factor, never The Voice) and the earlier invented scenario is gone. It needs a new image search, for example \"talent show stage\" or \"TV studio audience\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows a TV studio or a talent-show stage. They are a 1922 hearing photo, a cathedral painting, a campus building, a 1980s band portrait, a praying mantis and a circuit board, and no new search is allowed. The text itself is fine: the facts check out (Cowell judged Idol, AGT and the US X Factor, never The Voice) and the earlier invented scenario is gone. It needs a new image search, for example \"talent show stage\" or \"TV studio audience\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the invented scenario from the question, and replaced hints 1 and 2, which pointed straight at The Voice's spinning chairs and coaches.",
+        "reason": "New image query so a talent-show stage can be found.",
         "previous": {
-          "question": "You're watching every US talent show Simon Cowell judged. Which one does NOT belong on your list?",
-          "hints": [
-            "Simon judges from a desk, not a spinning seat.",
-            "On the odd show, the judges are called coaches.",
-            "Blake Shelton was a star of that show for years."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "television studio stage lights",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-12"
       }
@@ -1356562,10 +1356613,10 @@
     },
     {
       "id": "q-17523",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Two digits, one man, and a whole league that agreed nobody else gets them.",
-      "question": "Every NHL team has retired the jersey number in this close-up, all for one player. Who wore it?",
+      "question": "Every NHL team has retired the jersey number 99, all for one player. Who wore it?",
       "answer": "Wayne Gretzky",
       "wrong_answers": [
         "Mario Lemieux",
@@ -1356579,12 +1356630,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "99 hockey jersey sleeve",
-        "note": "Close-up of a hockey jersey showing the number 99; the player's name must not be visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "ice hockey arena",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYost_Ice_Arena%2C_Michigan_Ice_Hockey_Game_During_Intermission.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Yost_Ice_Arena%2C_Michigan_Ice_Hockey_Game_During_Intermission.jpg/3840px-Yost_Ice_Arena%2C_Michigan_Ice_Hockey_Game_During_Intermission.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Kyvuh · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Kyvuh",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kyvuh",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The NHL retired number 99 for all teams in 2000, the only number ever retired league-wide in the NHL.",
       "subcategory": "more-sports",
@@ -1356610,38 +1356668,52 @@
         "notes": "The essential image query \"Gretzky 99 jersey\" will often find jerseys with GRETZKY printed on the back. The image needs careful picking to keep the name out."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the number 99 on a jersey. 1 and 2 are a MoDo jersey with the number 29, and 3 is an old black-and-white Leafs vs. Black Hawks game photo. Since the image is essential and the question points to \"this close-up,\" it needs a close-up of a 99 jersey with no name on it. Another search isn't allowed, so this needs a manual media fix or a new search, for example \"number 99 hockey jersey\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the number 99 on a jersey. 1 and 2 are a MoDo jersey with the number 29, and 3 is an old black-and-white Leafs vs. Black Hawks game photo. Since the image is essential and the question points to \"this close-up,\" it needs a close-up of a 99 jersey with no name on it. Another search isn't allowed, so this needs a manual media fix or a new search, for example \"number 99 hockey jersey\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 now only mentions the career points record, because Ovechkin broke Gretzky's goals record in 2025.",
+        "reason": "A clean no-name 99 jersey close-up is unlikely to exist, so the question now states the number and uses an illustrative arena image.",
         "previous": {
-          "hints": [
-            "He's Canadian and played mostly in the 1980s and 1990s.",
-            "He scored more goals and points than anyone in NHL history.",
-            "His nickname is “The Great One.”"
-          ]
+          "question": "Every NHL team has retired the jersey number in this close-up, all for one player. Who wore it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "99 hockey jersey sleeve",
+            "note": "Close-up of a hockey jersey showing the number 99; the player's name must not be visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-12"
       }
     },
     {
       "id": "q-17524",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Mexico City, 1968: thin air, a fast run-up and one very lucky sandbox.",
       "question": "At the 1968 Olympics in Mexico City, Bob Beamon smashed the long jump world record. By about how much?",
@@ -1356659,21 +1356731,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "long jump sand pit",
+        "query": "long jump athlete landing",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/U.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Sgt. Barry St. Clair · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAthletic_training_for_school_boys_%281910%29_%2814598349137%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Athletic_training_for_school_boys_%281910%29_%2814598349137%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Sgt. Barry St. Clair",
-        "author_url": null,
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-USGov-Military"
-        ],
-        "file_problem": "truncated (Premature end of JPEG file)"
+        "pd_reasons": []
       },
       "fun_fact": "Beamon's record lasted almost 23 years, until Mike Powell jumped 8.95 m (29 ft 4¼ in) in 1991.",
       "subcategory": "more-sports",
@@ -1356702,30 +1356771,50 @@
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture is broken at the source (truncated (Premature end of JPEG file)).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture is broken at the source (truncated (Premature end of JPEG file)).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at the margin or the measuring gear, fixed Powell's conversion to 29 ft 4¼ in, and added the old record in feet to hint 3.",
+        "reason": "The picked image file was broken, so the image needs a new search.",
         "previous": {
-          "description": "One jump in thin mountain air, and the measuring tape needed a longer arm.",
-          "hints": [
-            "Long jump records usually improve by just a little at a time.",
-            "The optical measuring device was built for shorter jumps and couldn't measure it.",
-            "He jumped 8.90 m (29 ft 2½ in); the old record was 8.35 m."
-          ],
-          "fun_fact": "Beamon's record lasted almost 23 years, until Mike Powell jumped 8.95 m (29 ft 4½ in) in 1991."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "long jump sand pit",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/U.S._Army_Spc._Darius_Pittman%2C_with_the_1st_Armored_Division%2C_lands_in_a_long_jump_sand_pit_during_the_German_armed_forces_military_proficiency_badge_competition_at_Fort_Bliss%2C_Texas%2C_Sept_120904-A-UK859-006.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Sgt. Barry St. Clair · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Sgt. Barry St. Clair",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-USGov-Military"
+            ],
+            "file_problem": "truncated (Premature end of JPEG file)"
+          }
         },
         "revised_on": "2026-11-12"
       }
@@ -1357028,7 +1357117,7 @@
     },
     {
       "id": "q-17529",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The world's oldest graffiti, and nobody got grounded for it.",
       "question": "You're hiking in a US national park and find ancient pictures of animals pecked into a rock wall. Which word does NOT describe them?",
@@ -1357046,11 +1357135,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "canyon rock wall Utah",
+        "query": "petroglyphs rock panel",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClose-up_of_petroglyphs_on_the_rock_%2834600993883%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Close-up_of_petroglyphs_on_the_rock_%2834600993883%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "BLMUtah · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "BLMUtah",
+        "author_url": "https://www.flickr.com/people/blmutah/",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-BLM"
+        ]
       },
       "fun_fact": "Petroglyph National Monument in New Mexico protects about 25,000 pictures carved into rock.",
       "subcategory": "national-parks",
@@ -1357079,28 +1357177,40 @@
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but the image slot needs a photo of the rock art itself (e.g. \"petroglyphs rock panel\" or \"Newspaper Rock petroglyphs\"). Every candidate shows only bare canyon walls or hoodoos, and no new search is allowed this round. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but the image slot needs a photo of the rock art itself (e.g. \"petroglyphs rock panel\" or \"Newspaper Rock petroglyphs\"). Every candidate shows only bare canyon walls or hoodoos, and no new search is allowed this round. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave the answer away, with vaguer ones.",
+        "reason": "New image query that shows the rock art itself.",
         "previous": {
-          "hints": [
-            "Three of the words describe things people made.",
-            "One word is about the remains of plants and animals in stone.",
-            "Dinosaur bones belong to the odd one out."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "canyon rock wall Utah",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-12"
       }
@@ -1357937,7 +1358047,7 @@
       "status": "needs_work",
       "difficulty": 8,
       "description": "If you build it, the quiz will come.",
-      "question": "In the film “Field of Dreams,” a farmer builds a baseball field in his cornfield. Which state, shown here, is his farm in?",
+      "question": "In the film “Field of Dreams,” a farmer builds a baseball field in his cornfield. Which state, highlighted on this map, is his farm in?",
       "answer": "Iowa",
       "wrong_answers": [
         "Nebraska",
@@ -1357952,8 +1358062,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Iowa in United States",
-        "note": "Blank outline map of the state of Iowa, no labels or names.",
+        "query": "Map of USA IA",
+        "note": "Map of the United States with only Iowa highlighted, no labels or state names.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1357986,25 +1358096,52 @@
       "batch": "batch-60",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential slot needs a blank outline map of Iowa, and no candidate is one. The only map (5, a 1928 Iowa road map) has \"IOWA\" printed in its title and its caption, which gives the answer away. Another search isn't allowed, so the slot needs a label-free Iowa outline (for example \"Iowa blank outline map\" or \"Iowa locator map\"). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential slot needs a blank outline map of Iowa, and no candidate is one. The only map (5, a 1928 Iowa road map) has \"IOWA\" printed in its title and its caption, which gives the answer away. Another search isn't allowed, so the slot needs a label-free Iowa outline (for example \"Iowa blank outline map\" or \"Iowa locator map\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New query for a label-free US locator map with Iowa highlighted; the question wording now matches that map.",
+        "previous": {
+          "question": "In the film “Field of Dreams,” a farmer builds a baseball field in his cornfield. Which state, shown here, is his farm in?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Iowa in United States",
+            "note": "Blank outline map of the state of Iowa, no labels or names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17542",
       "status": "needs_work",
       "difficulty": 12,
       "description": "Same name as a European capital, totally different accent.",
-      "question": "Madrid, an old coal-mining town on the Turquoise Trail, is said “MAD-rid,” not like Spain's capital. Which state, shown here, is it in?",
+      "question": "Madrid, an old coal-mining town on the Turquoise Trail, is said “MAD-rid,” not like Spain's capital. Which state, highlighted here, is it in?",
       "answer": "New Mexico",
       "wrong_answers": [
         "Arizona",
@@ -1358019,8 +1358156,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "New Mexico state outline",
-        "note": "Blank outline map of the state of New Mexico, no labels or names.",
+        "query": "Map of USA NM",
+        "note": "Map of the United States with only New Mexico highlighted, no labels or state names.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1358053,18 +1358190,46 @@
       "batch": "batch-60",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates is a blank New Mexico outline, and every map has text naming the answer. #4 has the outline but is titled \"Köppen climate types of New Mexico\". #2, #3 and #6 are old survey maps labeled \"New Mexico\" or \"Mexico\". #1 and #5 are photos, not maps. A new search isn't allowed, so the slot needs a clean, unlabeled outline map, for example from the query \"New Mexico blank map\". No suitable picture found for this question.",
+        "feedback": "None of the candidates is the map the question needs. All six are University of New Mexico buildings or postcards, and most show the words \"New Mexico\", which gives the answer away. The slot needs a US map with only New Mexico highlighted and no labels. No suitable picture found for this question.",
         "problems": [
+          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is a blank New Mexico outline, and every map has text naming the answer. #4 has the outline but is titled \"Köppen climate types of New Mexico\". #2, #3 and #6 are old survey maps labeled \"New Mexico\" or \"Mexico\". #1 and #5 are photos, not maps. A new search isn't allowed, so the slot needs a clean, unlabeled outline map, for example from the query \"New Mexico blank map\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New query for a label-free US locator map with New Mexico highlighted; the question wording now matches that map.",
+        "previous": {
+          "question": "Madrid, an old coal-mining town on the Turquoise Trail, is said “MAD-rid,” not like Spain's capital. Which state, shown here, is it in?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "New Mexico state outline",
+            "note": "Blank outline map of the state of New Mexico, no labels or names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17543",
@@ -1358728,9 +1358893,9 @@
     },
     {
       "id": "q-17551",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
-      "description": "Valentine's Day's most overworked flower, with its own parade and football game.",
+      "description": "The garden's biggest celebrity, with more fans than any boy band.",
       "question": "It's the national flower of the United States, a big New Year's Day parade in Pasadena is named after it, and people give red ones on Valentine's Day. What is it?",
       "answer": "Rose",
       "wrong_answers": [
@@ -1358786,29 +1358951,32 @@
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. Read with only the four options, “Valentine's Day's most overworked flower, with its own parade and football game” points straight to the rose (the Rose Parade and the Rose Bowl) and rules out tulip, daisy and lily. Rewrite it so it plays on the flower or holiday theme without naming Valentine's Day or the parade and football game.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. Read with only the four options, “Valentine's Day's most overworked flower, with its own parade and football game” points straight to the rose (the Rose Parade and the Rose Bowl) and rules out tulip, daisy and lily. Rewrite it so it plays on the flower or holiday theme without naming Valentine's Day or the parade and football game.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took thorns out of the description and hint 2, since only the rose has them.",
+        "reason": "Rewrote the description so it no longer names Valentine's Day, the parade or the game.",
         "previous": {
-          "description": "A flower with thorns, a parade and a football game named after it.",
-          "hints": [
-            "It smells sweet.",
-            "Its stems have thorns.",
-            "Red ones mean “I love you.”"
-          ]
+          "description": "Valentine's Day's most overworked flower, with its own parade and football game."
         },
         "revised_on": "2026-11-12"
       }
@@ -1360150,7 +1360318,7 @@
     },
     {
       "id": "q-17570",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A superstition that is way more fun than avoiding ladders.",
       "question": "Many Americans believe a New Year's Eve kiss brings a year full of love and luck. When exactly are you supposed to kiss?",
@@ -1360162,7 +1360330,7 @@
       ],
       "hints": [
         "Young kids often have to stay up past their bedtime for it.",
-        "It happens when it's already dark, right as the old year ends.",
+        "Big crowds count down out loud together right before it.",
         "It's when the clock strikes 12 at night."
       ],
       "media": {
@@ -1360208,26 +1360376,34 @@
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"right as the old year ends\") is the definition of midnight on New Year's Eve, so it gives the answer away before hint 3. It also rules out all three wrong answers. Hint 2 should only narrow things down, for example by mentioning the countdown crowd, without naming the moment the year changes.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"right as the old year ends\") is the definition of midnight on New Year's Eve, so it gives the answer away before hint 3. It also rules out all three wrong answers. Hint 2 should only narrow things down, for example by mentioning the countdown crowd, without naming the moment the year changes.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2 so they no longer point straight to midnight, giving a vague-to-strong order.",
+        "reason": "Replaced hint 2, which defined midnight, with a weaker countdown clue.",
         "previous": {
           "hints": [
-            "Everyone counts down for it.",
-            "It's the moment the ball drops in Times Square.",
+            "Young kids often have to stay up past their bedtime for it.",
+            "It happens when it's already dark, right as the old year ends.",
             "It's when the clock strikes 12 at night."
           ]
         },
@@ -1361529,7 +1361705,7 @@
     },
     {
       "id": "q-17588",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Grandma's favorite way to make you feel tiny at Thanksgiving.",
       "question": "To say someone was very small long ago, Americans say they were “knee-high to a…” what?",
@@ -1361547,11 +1361723,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "child height marks wall",
+        "query": "toddler walking park",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASH_%2818997330001%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/SH_%2818997330001%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "vastateparksstaff · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "vastateparksstaff",
+        "author_url": "https://www.flickr.com/people/37922399@N05",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Older versions of the saying compared small children to the knee of a toad or a bumblebee instead.",
       "subcategory": "sayings-and-idioms",
@@ -1361580,28 +1361763,40 @@
       "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates fits the question, and a new search isn't allowed. The slot needs a photo of a child's height marks on a wall or door frame, or of a grasshopper-free meadow or small child scene, sourced by hand. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits the question, and a new search isn't allowed. The slot needs a photo of a child's height marks on a wall or door frame, or of a grasshopper-free meadow or small child scene, sourced by hand. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the defensible wrong answer “A duck” (a real variant of the saying) with “A hamster”.",
+        "reason": "Changed the media query to a common subject (a small child) that's easier to find and doesn't hint at any option.",
         "previous": {
-          "wrong_answers": [
-            "A puppy",
-            "A duck",
-            "A kitten"
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "child height marks wall",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-12"
       }
@@ -1362322,19 +1362517,19 @@
     {
       "id": "q-17598",
       "status": "needs_work",
-      "difficulty": 3,
+      "difficulty": 6,
       "description": "The country's birthday party, with no candles but plenty of things that go boom.",
-      "question": "You're watching Fourth of July fireworks, which celebrate the day the 13 colonies declared independence. What year was that?",
-      "answer": "1776",
+      "question": "Fourth of July fireworks celebrate the Declaration of Independence. In which city was it adopted in 1776?",
+      "answer": "Philadelphia",
       "wrong_answers": [
-        "1492",
-        "1812",
-        "1865"
+        "Boston",
+        "New York City",
+        "Washington, D.C."
       ],
       "hints": [
-        "It was in the 1700s.",
-        "George Washington was already leading the Continental Army.",
-        "The year ends in 76."
+        "The city is in a state whose name starts with P.",
+        "The Liberty Bell hangs there today.",
+        "Its nickname is “the City of Brotherly Love.”"
       ],
       "media": {
         "type": "image",
@@ -1362380,18 +1362575,49 @@
       "batch": "batch-60",
       "review": {
         "decision": "needs_work",
-        "feedback": "This asks for the same fact as q-17491 (draft: the year the Declaration of Independence was signed, 1776). It also overlaps heavily with the approved q-11834 (the Statue of Liberty tablet date, 1776, which is the date of the Declaration). In both cases the question is the year of American independence. Drop it, or turn it into a different Fourth of July fact that isn't the year.",
+        "feedback": "Hint 1 (\"a state whose name starts with P\") gives the answer away: Boston, New York City and Washington, D.C. are clearly not in a P state, so anyone who knows the states can pick the answer from the first, supposedly vague hint. Replace it with a vague hint, for example about the city being the young country's capital for a while, or about it lying between New York and Washington.",
         "problems": [
-          "overlap"
+          "giveaway"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks for the same fact as q-17491 (draft: the year the Declaration of Independence was signed, 1776). It also overlaps heavily with the approved q-11834 (the Statue of Liberty tablet date, 1776, which is the date of the Declaration). In both cases the question is the year of American independence. Drop it, or turn it into a different Fourth of July fact that isn't the year.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 3,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed it to ask the city where the Declaration was adopted, since the year duplicates other questions in the pool.",
+        "previous": {
+          "difficulty": 3,
+          "question": "You're watching Fourth of July fireworks, which celebrate the day the 13 colonies declared independence. What year was that?",
+          "answer": "1776",
+          "wrong_answers": [
+            "1492",
+            "1812",
+            "1865"
+          ],
+          "hints": [
+            "It was in the 1700s.",
+            "George Washington was already leading the Continental Army.",
+            "The year ends in 76."
+          ]
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17599",
@@ -1362633,19 +1362859,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "early 1900s storefront",
+        "query": "1910s city street",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeattle_Public_Library_Rialto_building%2C_ca._1910_-_DPLA_-_9d78bdef464b0d70ead5fc2a89c4f5c5.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Seattle_Public_Library_Rialto_building%2C_ca._1910_-_DPLA_-_9d78bdef464b0d70ead5fc2a89c4f5c5.jpg/3840px-Seattle_Public_Library_Rialto_building%2C_ca._1910_-_DPLA_-_9d78bdef464b0d70ead5fc2a89c4f5c5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Webster & Stevens · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStreetcars_outside_the_Boylston_Street_Incline%2C_1910s.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Streetcars_outside_the_Boylston_Street_Incline%2C_1910s.jpg/3840px-Streetcars_outside_the_Boylston_Street_Incline%2C_1910s.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Webster & Stevens",
+        "author": "Unknown authorUnknown author",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US"
+          "PD-1923",
+          "PD-US-expired"
         ]
       },
       "fun_fact": "Madam C.J. Walker's real name was Sarah Breedlove, and she trained thousands of women to sell her products.",
@@ -1362676,27 +1362903,50 @@
       "batch": "batch-60",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3, which contained the word “hair” from the answer.",
+        "reason": "The chosen picture's licence was PD-US only, so the media needs a new search; the query is now a general early-1900s street scene.",
         "previous": {
-          "hints": [
-            "Her customers were mainly Black women.",
-            "She came up with her first product after a scalp problem of her own.",
-            "Her best-known product was a “Wonderful Hair Grower.”"
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "early 1900s storefront",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASeattle_Public_Library_Rialto_building%2C_ca._1910_-_DPLA_-_9d78bdef464b0d70ead5fc2a89c4f5c5.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Seattle_Public_Library_Rialto_building%2C_ca._1910_-_DPLA_-_9d78bdef464b0d70ead5fc2a89c4f5c5.jpg/3840px-Seattle_Public_Library_Rialto_building%2C_ca._1910_-_DPLA_-_9d78bdef464b0d70ead5fc2a89c4f5c5.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Webster & Stevens · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Webster & Stevens",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
         },
         "revised_on": "2026-11-12"
       }
@@ -1363395,10 +1363645,10 @@
     },
     {
       "id": "q-17612",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "The Golden Gate's hard-working sibling that never gets on the postcards.",
-      "question": "When this San Francisco bridge opened in 1936, its lower deck carried trucks and what else?",
+      "question": "This San Francisco bridge's lower deck once carried trucks and, from 1939 to 1958, what else?",
       "answer": "Electric trains",
       "wrong_answers": [
         "Water pipes",
@@ -1363407,7 +1363657,7 @@
       ],
       "hints": [
         "Thousands of commuters between Oakland and San Francisco used them every day.",
-        "They stopped crossing the bridge in 1958, when more people drove cars.",
+        "They ran on rails, but they weren't cable cars.",
         "Today BART does this job in a tunnel under the bay."
       ],
       "media": {
@@ -1363449,30 +1363699,39 @@
         "difficulty_estimate": 11,
         "notes": "'Horse carriages' is not plausible for a 1936 bridge deck. 'Bicycle lanes' is also weak for that era. Without the photo the Bay Bridge is hard to recognise, but the question names San Francisco and the description mentions the Golden Gate, which helps."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question's premise is wrong. When the Bay Bridge opened in November 1936, its lower deck carried trucks and cars. The electric interurban trains only started in January 1939 and ran until 1958. Reword it to something like \"Its lower deck carried trucks and, from 1939 to 1958, what else?\" Fact check: wrong. The Bay Bridge opened in Nov 1936 with the lower deck carrying trucks and cars. The electric interurban trains only began running in January 1939, so 'when it opened in 1936' is inaccurate. The 1958 end date is correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question's premise is wrong. When the Bay Bridge opened in November 1936, its lower deck carried trucks and cars. The electric interurban trains only started in January 1939 and ran until 1958. Reword it to something like \"Its lower deck carried trucks and, from 1939 to 1958, what else?\" Fact check: wrong. The Bay Bridge opened in Nov 1936 with the lower deck carrying trucks and cars. The electric interurban trains only began running in January 1939, so 'when it opened in 1936' is inaccurate. The 1958 end date is correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer mention rails.",
+        "reason": "Fixed the wrong premise (the trains ran from 1939 to 1958, not from the 1936 opening) and replaced hint 2, which repeated the dates.",
         "previous": {
+          "question": "When this San Francisco bridge opened in 1936, its lower deck carried trucks and what else?",
           "hints": [
-            "They ran on rails.",
-            "The rails were taken out in the 1950s.",
+            "Thousands of commuters between Oakland and San Francisco used them every day.",
+            "They stopped crossing the bridge in 1958, when more people drove cars.",
             "Today BART does this job in a tunnel under the bay."
           ]
         },
@@ -1364017,10 +1364276,10 @@
     },
     {
       "id": "q-17620",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Latin homework, but the teacher is a mountain.",
-      "question": "The state on this map has the Latin motto “Montani semper liberi.” Which state is it?",
+      "question": "Which US state has the Latin motto “Montani semper liberi”?",
       "answer": "West Virginia",
       "wrong_answers": [
         "Montana",
@@ -1364034,12 +1364293,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "West Virginia outline silhouette",
-        "note": "A blank outline map of West Virginia only, with no labels, names or neighboring state names.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Appalachian mountains autumn",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAutumn_road_into_the_mountains_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Autumn_road_into_the_mountains_%28Unsplash%29.jpg/3840px-Autumn_road_into_the_mountains_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Jordan Whitt jwwhitt · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jordan Whitt jwwhitt",
+        "author_url": "https://unsplash.com/@jwwhitt",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "West Virginia University's sports teams are called the Mountaineers, just like in the state motto.",
       "subcategory": "state-symbols",
@@ -1364065,22 +1364331,48 @@
         "notes": "West Virginia's outline is quite easy to recognise, so the map makes this easier for adults who know state shapes. The distractors play nicely on the mountain words (Montana, Vermont)."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-60",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows a blank outline map of West Virginia, and the question needs one because it says \"The state on this map\". A new search is not allowed this run. The media needs a manual source, for example a blank West Virginia locator or outline map from Commons with no labels. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows a blank outline map of West Virginia, and the question needs one because it says \"The state on this map\". A new search is not allowed this run. The media needs a manual source, for example a blank West Virginia locator or outline map from Commons with no labels. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No blank outline map was found, so the question no longer refers to a map and uses an illustrative mountain image that doesn't single out any option.",
+        "previous": {
+          "question": "The state on this map has the Latin motto “Montani semper liberi.” Which state is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "West Virginia outline silhouette",
+            "note": "A blank outline map of West Virginia only, with no labels, names or neighboring state names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17621",
@@ -1364318,7 +1364610,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Caesar Rodney quarter",
+        "query": "Delaware state quarter reverse",
         "note": "The reverse (tails side) of the 1999 Delaware state quarter, showing Caesar Rodney on horseback.",
         "source_url": null,
         "file_url": null,
@@ -1364352,18 +1364644,44 @@
       "batch": "batch-60",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates shows the 1999 Delaware quarter the question names. They are beach and marina photos of Rodney Bay in St Lucia, a police station there, and a portrait of Admiral George Rodney. A new search isn't allowed, so the slot needs the reverse of the Delaware state quarter, for example from a search like \"Delaware state quarter reverse\" on Commons. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows the 1999 Delaware quarter the question names. They are beach and marina photos of Rodney Bay in St Lucia, a police station there, and a portrait of Admiral George Rodney. A new search isn't allowed, so the slot needs the reverse of the Delaware state quarter, for example from a search like \"Delaware state quarter reverse\" on Commons. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to target the US Mint image of the Delaware quarter's reverse, which is public domain and likely on Commons.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Caesar Rodney quarter",
+            "note": "The reverse (tails side) of the 1999 Delaware state quarter, showing Caesar Rodney on horseback.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17625",

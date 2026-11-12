@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "aa22a61a",
+  "hash": "c56d5f40",
   "questions": [
     {
       "id": "q-8833",
@@ -65922,6 +65922,40 @@
       "background": null
     },
     {
+      "id": "q-17486",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "college-sports",
+      "bundle": "usa",
+      "description": "The silliest costume in college sports, and that's saying a lot.",
+      "question": "I dance with the band at Stanford University's games. My team is named after a color, not after me. I'm green and shaggy. Who am I?",
+      "answer": "A tree",
+      "wrong_answers": [
+        "A frog",
+        "A cardinal bird",
+        "A bear"
+      ],
+      "hints": [
+        "I'm the mascot of the Stanford Band, not of the team itself.",
+        "Students who want to play me try out with silly stunts.",
+        "I have roots instead of legs, and I grow leaves and branches."
+      ],
+      "fun_fact": "Each new student who becomes the Stanford Tree makes a brand-new costume, so the Tree looks different almost every year.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Stanford_Stadium_seats_9.JPG/3840px-Stanford_Stadium_seats_9.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStanford_Stadium_seats_9.JPG",
+        "credit": "BrokenSphere · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "BrokenSphere",
+        "author_url": "https://commons.wikimedia.org/wiki/User:BrokenSphere"
+      },
+      "background": null
+    },
+    {
       "id": "q-17487",
       "status": "approved",
       "difficulty": 5,
@@ -65986,6 +66020,40 @@
         "license_url": null,
         "author": "Thomas Jefferson",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17489",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "colonies-and-founding",
+      "bundle": "usa",
+      "description": "A secret club whose meetings sometimes ended with tea in the harbor.",
+      "question": "This secret colonial group included Samuel Adams and Paul Revere, fought the Stamp Act and planned the Boston Tea Party. What was it called?",
+      "answer": "The Sons of Liberty",
+      "wrong_answers": [
+        "The Green Mountain Boys",
+        "The Friends of the King",
+        "The Minutemen Society"
+      ],
+      "hints": [
+        "They were Patriots, not Loyalists.",
+        "Their name sounds like a family.",
+        "Their name shares a word with the famous cracked bell in Philadelphia."
+      ],
+      "fun_fact": "The Sons of Liberty often met under a big elm in Boston that they called the Liberty Tree.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Boston_Tea_Party_Ships_%26_Museum%2C_Boston%2C_Massachusetts%2C_US_%28PPL2-Enhanced%29_julesvernex2.jpg/3840px-Boston_Tea_Party_Ships_%26_Museum%2C_Boston%2C_Massachusetts%2C_US_%28PPL2-Enhanced%29_julesvernex2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoston_Tea_Party_Ships_%26_Museum%2C_Boston%2C_Massachusetts%2C_US_%28PPL2-Enhanced%29_julesvernex2.jpg",
+        "credit": "Jules Verne Times Two · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jules Verne Times Two",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Julesvernex2"
       },
       "background": null
     },
@@ -66874,6 +66942,40 @@
       "background": null
     },
     {
+      "id": "q-17517",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "hosts-and-game-shows",
+      "bundle": "usa",
+      "description": "Nobody says “That was dreadful” quite like this man.",
+      "question": "Simon Cowell has judged several US talent shows. Which of these has he NEVER judged?",
+      "answer": "The Voice",
+      "wrong_answers": [
+        "American Idol",
+        "America's Got Talent",
+        "The X Factor"
+      ],
+      "hints": [
+        "Simon is famous for his blunt comments, but one show here was never his.",
+        "This show began on NBC in 2011.",
+        "Blake Shelton was a star of that show for years."
+      ],
+      "fun_fact": "Simon Cowell judged the first nine seasons of American Idol before leaving in 2010.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg/3840px-783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg",
+        "credit": "Virtual-Pano · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Virtual-Pano",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Virtual-Pano"
+      },
+      "background": null
+    },
+    {
       "id": "q-17518",
       "status": "approved",
       "difficulty": 10,
@@ -67044,6 +67146,74 @@
       "background": null
     },
     {
+      "id": "q-17523",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "more-sports",
+      "bundle": "usa",
+      "description": "Two digits, one man, and a whole league that agreed nobody else gets them.",
+      "question": "Every NHL team has retired the jersey number 99, all for one player. Who wore it?",
+      "answer": "Wayne Gretzky",
+      "wrong_answers": [
+        "Mario Lemieux",
+        "Bobby Orr",
+        "Gordie Howe"
+      ],
+      "hints": [
+        "He's Canadian and played mostly in the 1980s and 1990s.",
+        "He holds the NHL record for most career points.",
+        "His nickname is “The Great One.”"
+      ],
+      "fun_fact": "The NHL retired number 99 for all teams in 2000, the only number ever retired league-wide in the NHL.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Yost_Ice_Arena%2C_Michigan_Ice_Hockey_Game_During_Intermission.jpg/3840px-Yost_Ice_Arena%2C_Michigan_Ice_Hockey_Game_During_Intermission.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYost_Ice_Arena%2C_Michigan_Ice_Hockey_Game_During_Intermission.jpg",
+        "credit": "Kyvuh · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Kyvuh",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kyvuh"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17524",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "more-sports",
+      "bundle": "usa",
+      "description": "Mexico City, 1968: thin air, a fast run-up and one very lucky sandbox.",
+      "question": "At the 1968 Olympics in Mexico City, Bob Beamon smashed the long jump world record. By about how much?",
+      "answer": "About 22 inches",
+      "wrong_answers": [
+        "About 2 inches",
+        "About 6 inches",
+        "About 60 inches"
+      ],
+      "hints": [
+        "Long jump records usually improve by just a little at a time.",
+        "The optical measuring device was built for shorter jumps and couldn't measure it.",
+        "He jumped 8.90 m (29 ft 2½ in); the old record was 8.35 m (27 ft 4¾ in)."
+      ],
+      "fun_fact": "Beamon's record lasted almost 23 years, until Mike Powell jumped 8.95 m (29 ft 4¼ in) in 1991.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Athletic_training_for_school_boys_%281910%29_%2814598349137%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAthletic_training_for_school_boys_%281910%29_%2814598349137%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07"
+      },
+      "background": null
+    },
+    {
       "id": "q-17525",
       "status": "approved",
       "difficulty": 5,
@@ -67176,6 +67346,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Timothy Gonsalves",
         "author_url": "https://commons.wikimedia.org/wiki/User:Tagooty"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17529",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "national-parks",
+      "bundle": "usa",
+      "description": "The world's oldest graffiti, and nobody got grounded for it.",
+      "question": "You're hiking in a US national park and find ancient pictures of animals pecked into a rock wall. Which word does NOT describe them?",
+      "answer": "Fossils",
+      "wrong_answers": [
+        "Petroglyphs",
+        "Rock art",
+        "Carvings"
+      ],
+      "hints": [
+        "Think about who, or what, made the pictures.",
+        "One of the words belongs more in a natural history museum than in an art book.",
+        "Dinosaur bones belong to the odd one out."
+      ],
+      "fun_fact": "Petroglyph National Monument in New Mexico protects about 25,000 pictures carved into rock.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Close-up_of_petroglyphs_on_the_rock_%2834600993883%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClose-up_of_petroglyphs_on_the_rock_%2834600993883%29.jpg",
+        "credit": "BLMUtah · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "BLMUtah",
+        "author_url": "https://www.flickr.com/people/blmutah/"
       },
       "background": null
     },
@@ -67826,6 +68030,40 @@
       "background": null
     },
     {
+      "id": "q-17551",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "plants-and-trees",
+      "bundle": "usa",
+      "description": "The garden's biggest celebrity, with more fans than any boy band.",
+      "question": "It's the national flower of the United States, a big New Year's Day parade in Pasadena is named after it, and people give red ones on Valentine's Day. What is it?",
+      "answer": "Rose",
+      "wrong_answers": [
+        "Tulip",
+        "Daisy",
+        "Lily"
+      ],
+      "hints": [
+        "It smells sweet.",
+        "Gardeners often grow it on bushes or climbing up walls.",
+        "Red ones mean “I love you.”"
+      ],
+      "fun_fact": "The rose became the official national flower of the United States in 1986.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Bloemencorso_Zundert_2023_-_Dobberen_voorkant_2.jpg/3840px-Bloemencorso_Zundert_2023_-_Dobberen_voorkant_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABloemencorso_Zundert_2023_-_Dobberen_voorkant_2.jpg",
+        "credit": "Renée Kools · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Renée Kools",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ReneeWrites"
+      },
+      "background": null
+    },
+    {
       "id": "q-17552",
       "status": "approved",
       "difficulty": 4,
@@ -68438,6 +68676,40 @@
       "background": null
     },
     {
+      "id": "q-17570",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "ghosts-and-superstitions",
+      "bundle": "usa",
+      "description": "A superstition that is way more fun than avoiding ladders.",
+      "question": "Many Americans believe a New Year's Eve kiss brings a year full of love and luck. When exactly are you supposed to kiss?",
+      "answer": "At the stroke of midnight",
+      "wrong_answers": [
+        "At sunrise on New Year's Day",
+        "At noon on New Year's Eve",
+        "At sunset on New Year's Eve"
+      ],
+      "hints": [
+        "Young kids often have to stay up past their bedtime for it.",
+        "Big crowds count down out loud together right before it.",
+        "It's when the clock strikes 12 at night."
+      ],
+      "fun_fact": "The famous ball drop in New York's Times Square has marked the new year since 1907.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/XS_Nightclub_Las_Vegas_Confetti_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AXS_Nightclub_Las_Vegas_Confetti_2.jpg",
+        "credit": "jencu · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "jencu",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-17571",
       "status": "approved",
       "difficulty": 11,
@@ -69012,6 +69284,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Nesnad",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nesnad"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17588",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "usa",
+      "description": "Grandma's favorite way to make you feel tiny at Thanksgiving.",
+      "question": "To say someone was very small long ago, Americans say they were “knee-high to a…” what?",
+      "answer": "A grasshopper",
+      "wrong_answers": [
+        "A puppy",
+        "A hamster",
+        "A kitten"
+      ],
+      "hints": [
+        "It's a small creature you might find in tall grass.",
+        "This creature has very long back legs.",
+        "It's a green jumper that chirps in summer fields."
+      ],
+      "fun_fact": "Older versions of the saying compared small children to the knee of a toad or a bumblebee instead.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/SH_%2818997330001%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASH_%2818997330001%29.jpg",
+        "credit": "vastateparksstaff · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "vastateparksstaff",
+        "author_url": "https://www.flickr.com/people/37922399@N05"
       },
       "background": null
     },
@@ -69730,6 +70036,40 @@
       "background": null
     },
     {
+      "id": "q-17612",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "roads-and-landmarks",
+      "bundle": "usa",
+      "description": "The Golden Gate's hard-working sibling that never gets on the postcards.",
+      "question": "This San Francisco bridge's lower deck once carried trucks and, from 1939 to 1958, what else?",
+      "answer": "Electric trains",
+      "wrong_answers": [
+        "Water pipes",
+        "Bicycle lanes",
+        "Horse carriages"
+      ],
+      "hints": [
+        "Thousands of commuters between Oakland and San Francisco used them every day.",
+        "They ran on rails, but they weren't cable cars.",
+        "Today BART does this job in a tunnel under the bay."
+      ],
+      "fun_fact": "The Bay Bridge opened about six months before the Golden Gate Bridge.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/San_Francisco_Bay_Bridge_Western_Span_at_night.jpg/3840px-San_Francisco_Bay_Bridge_Western_Span_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASan_Francisco_Bay_Bridge_Western_Span_at_night.jpg",
+        "credit": "Dllu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dllu",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dllu"
+      },
+      "background": null
+    },
+    {
       "id": "q-17613",
       "status": "approved",
       "difficulty": 14,
@@ -69964,6 +70304,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "BWard 1997",
         "author_url": "https://commons.wikimedia.org/wiki/User:BWard_1997"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17620",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "Latin homework, but the teacher is a mountain.",
+      "question": "Which US state has the Latin motto “Montani semper liberi”?",
+      "answer": "West Virginia",
+      "wrong_answers": [
+        "Montana",
+        "Vermont",
+        "Colorado"
+      ],
+      "hints": [
+        "The motto means “Mountaineers are always free.”",
+        "This state was born during the Civil War.",
+        "It broke away from its neighbor Virginia in 1863."
+      ],
+      "fun_fact": "West Virginia University's sports teams are called the Mountaineers, just like in the state motto.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Autumn_road_into_the_mountains_%28Unsplash%29.jpg/3840px-Autumn_road_into_the_mountains_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAutumn_road_into_the_mountains_%28Unsplash%29.jpg",
+        "credit": "Jordan Whitt jwwhitt · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jordan Whitt jwwhitt",
+        "author_url": "https://unsplash.com/@jwwhitt"
       },
       "background": null
     },
