@@ -429,5 +429,12 @@
       "facet": "Historia, leyendas y visitantes",
       "known_at": 12
     }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-11",
+      "added": 0,
+      "unused": 17
+    }
   ]
 }

@@ -701,17 +701,20 @@
     {
       "name": "Gladiadores",
       "facet": "Vida cotidiana en Hispania",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Los gladiadores y el anfiteatro ya están en el pool; una adivinanza repetiría el mismo dato"
     },
     {
       "name": "Mosaico",
       "facet": "Vida cotidiana en Hispania",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Qué es un mosaico ya está preguntado; una foto de detalle o la pregunta de para qué servía repetirían el mismo dato"
     },
     {
       "name": "Toga",
       "facet": "Vida cotidiana en Hispania",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Quién llevaba la toga ya está preguntado; las otras opciones (récord, intruso de nivel universidad) no dan nada natural a nivel 2"
     },
     {
       "name": "Domus",

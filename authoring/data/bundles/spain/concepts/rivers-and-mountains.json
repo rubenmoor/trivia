@@ -452,7 +452,8 @@
     {
       "name": "Roque de los Muchachos",
       "facet": "Volcanes y montañas de las islas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: La isla del Roque de los Muchachos ya está en el pool (pregunta «Palmero»); las opciones solo llevan a preguntar por La Palma."
     },
     {
       "name": "Teneguía",
