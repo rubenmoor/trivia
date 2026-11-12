@@ -12,7 +12,9 @@
     "Trajes y vestuario de baile",
     "Máscaras, accesorios e instrumentos",
     "Fiestas y carnavales con danza",
-    "Bailes populares y de salón"
+    "Bailes populares y de salón",
+    "Ballet folklórico y escenarios",
+    "Bailes urbanos y gruperos"
   ],
   "axis_fit": {
     "move": {
@@ -96,7 +98,8 @@
     {
       "name": "Jarabe de la botella",
       "facet": "Jarabes y sones regionales",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: I'm not sure enough of where this jarabe comes from or what it involves, and a detail photo is unlikely to be available."
     },
     {
       "name": "Chilena guerrerense",
@@ -116,7 +119,8 @@
     {
       "name": "Baile de los machetes",
       "facet": "Jarabes y sones regionales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Not enough certain facts for analogy, made_of or when."
     },
     {
       "name": "Jarabe michoacano",
@@ -225,7 +229,8 @@
     {
       "name": "Yúmari",
       "facet": "Voladores y danzas rituales",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Rarámuri ritual dances (tutuguri, pascol, matachines) overlap too much for fair, clearly wrong options."
     },
     {
       "name": "Judea cora",
@@ -313,7 +318,8 @@
     {
       "name": "El Taconazo",
       "facet": "Danzas norteñas y polkas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: I'm not sure who wrote it or where it comes from."
     },
     {
       "name": "El Circo (polka)",
@@ -452,7 +458,8 @@
     {
       "name": "Pérez Prado",
       "facet": "Bailes populares y de salón",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already identifies Pérez Prado from his nickname and hits; the remaining options would be forced or would rest on uncertain song credits."
     },
     {
       "name": "Cumbia",
@@ -478,6 +485,38 @@
       "name": "Pachucos",
       "facet": "Bailes populares y de salón",
       "known_at": 11
+    },
+    {
+      "name": "Las Chiapanecas",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 7
+    },
+    {
+      "name": "La Raspa",
+      "facet": "Bailes populares y de salón",
+      "known_at": 7
+    },
+    {
+      "name": "Sones de Jalisco",
+      "facet": "Jarabes y sones regionales",
+      "known_at": 8
+    },
+    {
+      "name": "Bastón de los Viejitos",
+      "facet": "Danzas de Michoacán y Viejitos",
+      "known_at": 7
+    },
+    {
+      "name": "Sonidero",
+      "facet": "Bailes urbanos y gruperos",
+      "known_at": 10
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-12",
+      "added": 5,
+      "unused": 34
     }
   ]
 }

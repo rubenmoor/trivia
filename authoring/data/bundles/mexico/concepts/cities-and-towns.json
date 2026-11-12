@@ -386,7 +386,8 @@
     {
       "name": "Plata",
       "facet": "Pueblos mineros y de plata",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: La plata ya está muy usada (Taxco, plateros, Spratling); las opciones darían un relleno."
     },
     {
       "name": "Mineros de Cornualles",

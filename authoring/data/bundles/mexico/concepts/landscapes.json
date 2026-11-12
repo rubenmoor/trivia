@@ -1026,7 +1026,8 @@
     {
       "name": "Mantarraya gigante",
       "facet": "Fauna de agua y costa",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: La manta gigante ya está identificada con su tamaño; un cálculo de su peso o una fecha quedaría forzado y saldría muy por encima del nivel 2."
     },
     {
       "name": "Lobo marino de California",

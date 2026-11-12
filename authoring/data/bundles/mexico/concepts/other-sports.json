@@ -339,7 +339,8 @@
     {
       "name": "Taekwondo",
       "facet": "Taekwondo, tiro con arco y pesas",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Its Korean origin and the Mexican medals are already asked. The other options would be forced for kids."
     },
     {
       "name": "Tiro con arco",
@@ -541,7 +542,8 @@
     {
       "name": "Foro Sol del autódromo",
       "facet": "Automovilismo y pilotos mexicanos",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The renaming was already asked. Anything else (its baseball past) is far above difficulty 3."
     },
     {
       "name": "Piales en el lienzo",
@@ -671,7 +673,8 @@
     {
       "name": "Paola Longoria",
       "facet": "Golf, tenis y otras figuras",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The riddle already asked gives her home state and her record, so there is nothing new for kids."
     },
     {
       "name": "Alexa Moreno",
@@ -757,7 +760,8 @@
     {
       "name": "Voleibol de playa",
       "facet": "Básquetbol, voleibol y frontón",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The sport has already been identified several times. Any Mexican angle would be forced."
     },
     {
       "name": "Juan Virgen y Lombardo Ortega",

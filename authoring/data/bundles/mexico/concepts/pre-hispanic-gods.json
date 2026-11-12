@@ -461,6 +461,16 @@
       "name": "Huracán, Corazón del Cielo",
       "facet": "Dioses mayas y el Popol Vuh",
       "known_at": 12
+    },
+    {
+      "name": "Tatewarí",
+      "facet": "Dioses de otros pueblos mesoamericanos",
+      "known_at": 13
+    },
+    {
+      "name": "Tamoanchan",
+      "facet": "Mitos de creación y los Cinco Soles",
+      "known_at": 13
     }
   ],
   "top_ups": [
@@ -478,6 +488,16 @@
       "date": "2026-11-12",
       "added": 1,
       "unused": 24
+    },
+    {
+      "date": "2026-11-12",
+      "added": 1,
+      "unused": 25
+    },
+    {
+      "date": "2026-11-12",
+      "added": 1,
+      "unused": 17
     }
   ]
 }

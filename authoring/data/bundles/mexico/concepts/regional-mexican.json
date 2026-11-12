@@ -61,7 +61,8 @@
     {
       "name": "Bajo sexto",
       "facet": "Instrumentos de banda y norteño",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Las cuerdas y el papel del bajo sexto en el conjunto norteño ya se preguntaron; su origen es dudoso y su sonido difícil de conseguir."
     },
     {
       "name": "Tambora",
@@ -71,12 +72,14 @@
     {
       "name": "Clarinete",
       "facet": "Instrumentos de banda y norteño",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó cómo suena el clarinete y a qué familia pertenece; las otras opciones quedarían forzadas."
     },
     {
       "name": "Trombón",
       "facet": "Instrumentos de banda y norteño",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Ya se preguntó cómo suena y su familia; las bandas sinaloenses usan a veces trombones de pistones, así que preguntar por pistones o vara sería ambiguo."
     },
     {
       "name": "Saxofón",
@@ -131,7 +134,8 @@
     {
       "name": "Arpa jarocha",
       "facet": "Instrumentos de sones y huapangos",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Ya se preguntó cómo suena el arpa; el número de cuerdas del arpa jarocha cambia mucho."
     },
     {
       "name": "Quijada de burro",
@@ -181,7 +185,8 @@
     {
       "name": "La Arrolladora Banda El Limón",
       "facet": "Bandas sinaloenses famosas",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: El origen del nombre (el pueblo El Limón, Salvador Lizárraga) ya está en el pool; las otras opciones serían de relleno."
     },
     {
       "name": "Banda El Limón",

@@ -332,7 +332,8 @@
     {
       "name": "Pelea de gallos",
       "facet": "Comedia ranchera y charros",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Las peleas de gallos son maltrato animal; no da una pregunta familiar y las opciones no encajan."
     },
     {
       "name": "Ninón Sevilla",
@@ -727,7 +728,8 @@
     {
       "name": "Panchito Pistolas",
       "facet": "Época de Oro en el mundo",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: La pregunta anterior ya da la identidad de Panchito y a sus compañeros de «Los tres caballeros»; no queda ningún dato nuevo que sea justo preguntar."
     },
     {
       "name": "Toshiro Mifune",
