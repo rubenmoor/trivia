@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "c659d666",
+  "hash": "c307c327",
   "questions": [
     {
       "id": "q-9120",
@@ -68109,6 +68109,40 @@
       "background": null
     },
     {
+      "id": "q-16891",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "bundesliga-and-clubs",
+      "bundle": "germany",
+      "description": "Eine Frage für alle, die beim Wort „Fahrstuhl“ nicht an Kaufhäuser denken.",
+      "question": "Welcher Verein spielt von allen am längsten ohne Unterbrechung in der Bundesliga und ist nie abgestiegen?",
+      "answer": "FC Bayern München",
+      "wrong_answers": [
+        "Borussia Dortmund",
+        "FC Schalke 04",
+        "1. FC Köln"
+      ],
+      "hints": [
+        "Bei der WM 2006 wurden in seinem Stadion Spiele ausgetragen.",
+        "Er wurde im Jahr 1900 gegründet.",
+        "Seine Fans rufen gern „Mia san mia“."
+      ],
+      "fun_fact": "Sogar Borussia Dortmund stieg einmal ab: 1972 – erst 1976 kehrte der BVB in die Bundesliga zurück.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Emirates_stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmirates_stadium.jpg",
+        "credit": "Nazmi Amin-Tai from Melaka, Malaysia · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Nazmi Amin-Tai from Melaka, Malaysia",
+        "author_url": "https://www.flickr.com/photos/11136470@N08"
+      },
+      "background": null
+    },
+    {
       "id": "q-16893",
       "status": "approved",
       "difficulty": 9,
@@ -68377,6 +68411,40 @@
         "license_url": null,
         "author": "Avij (talk · contribs)",
         "author_url": "https://commons.wikimedia.org/wiki/User:Avij"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16901",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "chancellors-and-presidents",
+      "bundle": "germany",
+      "description": "Der Beifahrer der Bundesregierung, der immer brav auf die Karte schaut.",
+      "question": "Dieser Mann war Vizekanzler unter Angela Merkel. Wer ist auf dem Foto?",
+      "answer": "Olaf Scholz",
+      "wrong_answers": [
+        "Sigmar Gabriel",
+        "Frank-Walter Steinmeier",
+        "Franz Müntefering"
+      ],
+      "hints": [
+        "Er war Bundesfinanzminister.",
+        "Er war Erster Bürgermeister von Hamburg.",
+        "Er wurde 2021 Bundeskanzler einer Ampel-Koalition."
+      ],
+      "fun_fact": "Alle vier Antwortmöglichkeiten waren Vizekanzler unter Merkel, und alle kommen aus der SPD.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/2025-01-23_Politik%2C_SPD-Kanzlerkandidat_Olaf_Scholz_im_Gespr%C3%A4ch_in_Erfurt_STP_6070.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2025-01-23_Politik%2C_SPD-Kanzlerkandidat_Olaf_Scholz_im_Gespr%C3%A4ch_in_Erfurt_STP_6070.jpg",
+        "credit": "Steffen Prößdorf · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Steffen Prößdorf",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Stepro"
       },
       "background": null
     },
@@ -70081,6 +70149,40 @@
       "background": null
     },
     {
+      "id": "q-16953",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "gdr-history",
+      "bundle": "germany",
+      "description": "Ein Händedruck, der länger hielt als manche Ehe.",
+      "question": "1946 reichte Wilhelm Pieck (KPD) einem SPD-Mann die Hand, und die SED entstand. Wer war der SPD-Mann?",
+      "answer": "Otto Grotewohl",
+      "wrong_answers": [
+        "Kurt Schumacher",
+        "Erich Ollenhauer",
+        "Ernst Reuter"
+      ],
+      "hints": [
+        "Er stammte aus Braunschweig.",
+        "Anders als die anderen drei machte er im Osten Karriere.",
+        "Von 1949 bis 1964 war er der erste Ministerpräsident der DDR."
+      ],
+      "fun_fact": "Genau dieser Händedruck wurde zum Symbol im Parteiabzeichen der SED.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Berlin-Mitte%2C_the_Admiralspalast.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABerlin-Mitte%2C_the_Admiralspalast.JPG",
+        "credit": "Dguendel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Dguendel",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dguendel&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-16954",
       "status": "approved",
       "difficulty": 12,
@@ -70455,6 +70557,40 @@
       "background": null
     },
     {
+      "id": "q-16965",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "national-team",
+      "bundle": "germany",
+      "description": "Für manche ist sie eine Unglückszahl, für diesen Mann war sie ein Glückstrikot.",
+      "question": "Welcher Spieler trug in der Nationalmannschaft lange die Rückennummer 13, wie vor ihm Michael Ballack?",
+      "answer": "Thomas Müller",
+      "wrong_answers": [
+        "Toni Kroos",
+        "Philipp Lahm",
+        "Mats Hummels"
+      ],
+      "hints": [
+        "Er spielte fast seine ganze Karriere beim FC Bayern München.",
+        "Er nannte sich selbst „Raumdeuter“ und wurde 2014 Weltmeister.",
+        "Er hat denselben Nachnamen wie Gerd, der „Bomber der Nation“."
+      ],
+      "fun_fact": "Auch Gerd Müller trug bei den Weltmeisterschaften 1970 und 1974 die Nummer 13, die Zahl ist also eine echte Müller-Tradition.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Adidas_Germany_national_football_team_away_jersey.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdidas_Germany_national_football_team_away_jersey.JPG",
+        "credit": "BrokenSphere · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "BrokenSphere",
+        "author_url": "https://commons.wikimedia.org/wiki/User:BrokenSphere"
+      },
+      "background": null
+    },
+    {
       "id": "q-16966",
       "status": "approved",
       "difficulty": 6,
@@ -70553,6 +70689,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Unknown photographer",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16970",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-team",
+      "bundle": "germany",
+      "description": "Zwei WM-Finals hintereinander, die sich anfühlten wie Hin- und Rückspiel.",
+      "question": "Gegen welchen Argentinier verlor Deutschland das WM-Finale 1986? Vier Jahre später gewann es gegen ihn.",
+      "answer": "Diego Maradona",
+      "wrong_answers": [
+        "Lionel Messi",
+        "Pelé",
+        "Gabriel Batistuta"
+      ],
+      "hints": [
+        "Er trug die Nummer 10.",
+        "Er spielte lange für den SSC Neapel.",
+        "Ein Tor von ihm ist als „Hand Gottes“ berühmt."
+      ],
+      "fun_fact": "1990 in Rom entschied ein Elfmeter von Andreas Brehme das Finale gegen Maradonas Argentinien.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Stadio_Olimpico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStadio_Olimpico_2024.jpg",
+        "credit": "Messapi, cropped by Blackcat · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Messapi, cropped by Blackcat",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Messapi"
       },
       "background": null
     },
@@ -70825,6 +70995,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Roman Savulyak",
         "author_url": "https://web.archive.org/web/20161012174516/http://www.panoramio.com/user/2350947?with_photo_id=17786465"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16979",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "reformation-to-empire",
+      "bundle": "germany",
+      "description": "Eine Krone, für die man kein Königreich braucht, nur ein gutes Auge.",
+      "question": "In vielen Dörfern schießen Vereinsmitglieder beim Sommerfest auf einen Holzvogel. Wie nennt man den, der das letzte Stück herunterholt?",
+      "answer": "Schützenkönig",
+      "wrong_answers": [
+        "Karnevalsprinz",
+        "Erntekönig",
+        "Maikönig"
+      ],
+      "hints": [
+        "Er trägt danach eine schwere Kette mit Silberplaketten.",
+        "Er regiert ein Jahr lang, oft zusammen mit einer Königin.",
+        "Sein Verein heißt Schützenverein."
+      ],
+      "fun_fact": "Viele Schützenvereine gehen auf Bürgerwehren des Mittelalters zurück, die ihre Städte verteidigen sollten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/D%C3%BClmen%2C_Vogelstange_am_Festplatz_des_%22Sch%C3%BCtzenfests_Niestr%C3%B6ter%22_--_2012_--_4104.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_Vogelstange_am_Festplatz_des_%22Sch%C3%BCtzenfests_Niestr%C3%B6ter%22_--_2012_--_4104.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
       },
       "background": null
     },
@@ -71301,6 +71505,40 @@
         "license_url": null,
         "author": "Pietro Longhi (Italian, 1701 - 1785) (1701 - 1785) – artist (Italian) Details on Google Art Project",
         "author_url": "http://www.googleartproject.com/artist/pietro-longhi/3867113/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-16994",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "art-architecture-and-museums",
+      "bundle": "germany",
+      "description": "Ein Maler, bei dem man im Museum erst mal den Kopf schief legt.",
+      "question": "Georg Baselitz, eigentlich Hans-Georg Kern, malt seit 1969 seine Motive kopfüber. Wozu?",
+      "answer": "Damit Farbe und Form mehr zählen als das Motiv",
+      "wrong_answers": [
+        "Damit Fälscher seine Bilder nicht kopieren",
+        "Weil er beim Malen von einer Leiter arbeitet",
+        "Als Erinnerung an die Teilung Deutschlands"
+      ],
+      "hints": [
+        "Sein erstes Bild auf dem Kopf zeigte einen Wald.",
+        "Wer ein Bild verkehrt herum sieht, erkennt das Motiv nicht sofort.",
+        "Er wollte, dass man das Bild als Malerei betrachtet, nicht als Abbild."
+      ],
+      "fun_fact": "1963 beschlagnahmte die Staatsanwaltschaft in Berlin zwei seiner Bilder wegen angeblicher Unsittlichkeit.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Dan_Flavin%2C_Untitled_%28to_Don_Judd%2C_Colorist%29_1%E2%80%935_%281987%29%2C_Tate_Modern%2C_London%2C_UK.jpg/3840px-Dan_Flavin%2C_Untitled_%28to_Don_Judd%2C_Colorist%29_1%E2%80%935_%281987%29%2C_Tate_Modern%2C_London%2C_UK.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADan_Flavin%2C_Untitled_%28to_Don_Judd%2C_Colorist%29_1%E2%80%935_%281987%29%2C_Tate_Modern%2C_London%2C_UK.jpg",
+        "credit": "Grand Parc—Bordeaux, France from France · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Grand Parc—Bordeaux, France from France",
+        "author_url": "https://www.flickr.com/people/80641068@N07"
       },
       "background": null
     },
@@ -72733,6 +72971,40 @@
       "background": null
     },
     {
+      "id": "q-17039",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "pop-and-rock",
+      "bundle": "germany",
+      "description": "Kleine Hände, große Wirkung – und ein Umzug mit Folgen.",
+      "question": "Bettina Wegner schrieb „Sind so kleine Hände“ und ging 1983 in den Westen. In welcher Stadt lebte und sang sie vorher?",
+      "answer": "Berlin",
+      "wrong_answers": [
+        "Leipzig",
+        "Dresden",
+        "Karl-Marx-Stadt"
+      ],
+      "hints": [
+        "In ihrer Stadt lebten damals viele bekannte DDR-Künstler und Schriftsteller.",
+        "Durch ihre Stadt fließt die Spree.",
+        "Ihr Weg in den Westen führte nur wenige Kilometer weit, in den anderen Teil derselben Stadt."
+      ],
+      "fun_fact": "1968 wurde Wegner verhaftet, weil sie Flugblätter gegen den Einmarsch in die Tschechoslowakei verteilt hatte.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Gal_George_Gjurin_and_his_frequently_played_Gibson_SJ-300_acoustic_guitar_named_Dorothy.jpg/3840px-Gal_George_Gjurin_and_his_frequently_played_Gibson_SJ-300_acoustic_guitar_named_Dorothy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGal_George_Gjurin_and_his_frequently_played_Gibson_SJ-300_acoustic_guitar_named_Dorothy.jpg",
+        "credit": "Evanbills · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Evanbills",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Evanbills&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-17040",
       "status": "approved",
       "difficulty": 8,
@@ -72899,6 +73171,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "San906",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:San906&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17045",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "rivers-lakes-and-coasts",
+      "bundle": "germany",
+      "description": "Diese Hauswand hat ein ziemlich gutes Gedächtnis.",
+      "question": "Woher kommen solche Striche mit Jahreszahlen an alten Hauswänden am Fluss?",
+      "answer": "Von großen Hochwassern",
+      "wrong_answers": [
+        "Von hohem Schnee im Winter",
+        "Vom Messen der Kinder",
+        "Von den Baujahren des Hauses"
+      ],
+      "hints": [
+        "Die Häuser stehen alle nah am Fluss.",
+        "Je höher der Strich, desto schlimmer war es damals.",
+        "Der Fluss ist an diesen Tagen bis an diese Stelle gestiegen."
+      ],
+      "fun_fact": "In Passau stand das Wasser 2013 fast 13 Meter hoch, so hoch wie seit dem Jahr 1501 nicht mehr.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Burgos%2C_se%C3%B1ales_inundaciones_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurgos%2C_se%C3%B1ales_inundaciones_1.jpg",
+        "credit": "LBM1948 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "LBM1948",
+        "author_url": "https://commons.wikimedia.org/wiki/User:LBM1948"
       },
       "background": null
     },
@@ -73175,6 +73481,40 @@
       "background": null
     },
     {
+      "id": "q-17054",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sights-and-landmarks",
+      "bundle": "germany",
+      "description": "Mittelalterliche Wolkenkratzer, lange bevor jemand den Aufzug erfunden hat.",
+      "question": "In Regensburgs Altstadt stehen hohe Wohntürme, die reiche Familien im Mittelalter bauten. Wozu vor allem?",
+      "answer": "Um Reichtum und Macht zu zeigen",
+      "wrong_answers": [
+        "Um Kirchenglocken aufzuhängen",
+        "Um Schiffe auf der Donau zu leiten",
+        "Um Brieftauben zu züchten"
+      ],
+      "hints": [
+        "Es ging den Familien um ihren Ruf.",
+        "Je höher der Turm, desto besser.",
+        "Kaufleute wollten damit Eindruck bei den Nachbarn machen."
+      ],
+      "fun_fact": "Der Goldene Turm in Regensburg ist rund 50 Meter hoch und gilt als höchster mittelalterlicher Wohnturm nördlich der Alpen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/2018_Goldener_Turm_Regensburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2018_Goldener_Turm_Regensburg.jpg",
+        "credit": "Bärwinkel,Klaus · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bärwinkel,Klaus",
+        "author_url": "https://commons.wikimedia.org/wiki/User:B%C3%A4rwinkel,Klaus"
+      },
+      "background": null
+    },
+    {
       "id": "q-17055",
       "status": "approved",
       "difficulty": 4,
@@ -73273,6 +73613,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "W. Bulach",
         "author_url": "https://commons.wikimedia.org/wiki/User:W._Bulach"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17058",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "rivers-lakes-and-coasts",
+      "bundle": "germany",
+      "description": "Weißer als jede Tafelkreide und ein kleines bisschen älter als dein Lehrer.",
+      "question": "Aus welcher Zeit stammt das Gestein der weißen Kreidefelsen auf Rügen?",
+      "answer": "Zeit der Dinosaurier",
+      "wrong_answers": [
+        "Steinzeit",
+        "Römerzeit",
+        "Mittelalter"
+      ],
+      "hints": [
+        "Kreide bildet sich ganz langsam am Grund eines warmen Meeres.",
+        "Das Gestein besteht vor allem aus winzigen Kalkplättchen von Meeresalgen.",
+        "Das Gestein ist rund 70 Millionen Jahre alt – damals stapfte noch der T. rex über die Erde."
+      ],
+      "fun_fact": "In der Rügener Kreide findet man oft versteinerte Seeigel und Feuersteine.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/K%C3%B6nigsstuhl_und_Viktoria-Sicht.jpg/3840px-K%C3%B6nigsstuhl_und_Viktoria-Sicht.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AK%C3%B6nigsstuhl_und_Viktoria-Sicht.jpg",
+        "credit": "Thomas Wolf, www.foto-tw.de · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Thomas Wolf, www.foto-tw.de",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald"
       },
       "background": null
     },
@@ -73749,6 +74123,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Andy / Andrew Fogg from near Cambridge, UK",
         "author_url": "https://www.flickr.com/people/69024001@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17073",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "series-and-crime",
+      "bundle": "germany",
+      "description": "Ein Hamburger Kommissar zwischen Fahrrädern und Besserwissern.",
+      "question": "In welchem Jahr hatte Hauptkommissar Frank Thiel seinen ersten Fall im Münster-Tatort?",
+      "answer": "2002",
+      "wrong_answers": [
+        "1998",
+        "2005",
+        "2008"
+      ],
+      "hints": [
+        "Es war schon im neuen Jahrtausend.",
+        "Es war in den ersten Jahren nach der Jahrtausendwende.",
+        "Im selben Jahr kam in Deutschland der Euro als Bargeld."
+      ],
+      "fun_fact": "Frank Thiel stammt aus Hamburg und ist großer Fan des FC St. Pauli.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/M%C3%BCnster%2C_Prinzipalmarkt_--_2014_--_4516-20-2.jpg/3840px-M%C3%BCnster%2C_Prinzipalmarkt_--_2014_--_4516-20-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AM%C3%BCnster%2C_Prinzipalmarkt_--_2014_--_4516-20-2.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
       },
       "background": null
     },

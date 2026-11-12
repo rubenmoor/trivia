@@ -1307455,7 +1307455,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "ground beef browning skillet",
+        "query": "minced meat frying pan",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1307489,23 +1307489,41 @@
       "batch": "batch-57",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows minced meat cooking in a pan: 1 is a whole beef tenderloin on a plate, 2 is a plated steak dinner and 3 is a 19th-century prison engraving. A new search isn't allowed, so the image needs a new query such as \"minced meat frying pan\" or \"Hackfleisch Pfanne\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows minced meat cooking in a pan: 1 is a whole beef tenderloin on a plate, 2 is a plated steak dinner and 3 is a 19th-century prison engraving. A new search isn't allowed, so the image needs a new query such as \"minced meat frying pan\" or \"Hackfleisch Pfanne\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed the answer to „Für eine Soße“ so that hint 1 no longer matches a word in it.",
+        "reason": "Changed the image query so it can find minced meat frying in a pan.",
         "previous": {
-          "answer": "Für eine schnelle Soße"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "ground beef browning skillet",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-11"
       }
@@ -1308040,7 +1308058,7 @@
     },
     {
       "id": "q-16891",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Eine Frage für alle, die beim Wort „Fahrstuhl“ nicht an Kaufhäuser denken.",
       "question": "Welcher Verein spielt von allen am längsten ohne Unterbrechung in der Bundesliga und ist nie abgestiegen?",
@@ -1308051,8 +1308069,8 @@
         "1. FC Köln"
       ],
       "hints": [
-        "Die Außenwand seines Stadions kann in verschiedenen Farben leuchten.",
-        "Er kommt aus Süddeutschland.",
+        "Bei der WM 2006 wurden in seinem Stadion Spiele ausgetragen.",
+        "Er wurde im Jahr 1900 gegründet.",
         "Seine Fans rufen gern „Mia san mia“."
       ],
       "media": {
@@ -1308098,26 +1308116,33 @@
       "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Er kommt aus Süddeutschland\") gives the answer away: Dortmund, Schalke and Köln are all in western Germany, so only Bayern is left. Hint 1 (a stadium facade that lights up in different colours) also points straight at the famous Allianz Arena. Replace hint 2 with a hint that doesn't rule out options by region (e.g. about the club's founding era or its record number of titles), and make hint 1 vaguer.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Er kommt aus Süddeutschland\") gives the answer away: Dortmund, Schalke and Köln are all in western Germany, so only Bayern is left. Hint 1 (a stadium facade that lights up in different colours) also points straight at the famous Allianz Arena. Replace hint 2 with a hint that doesn't rule out options by region (e.g. about the club's founding era or its record number of titles), and make hint 1 vaguer.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote it as a real-world question (longest unbroken Bundesliga run) and replaced hint 1 so it no longer repeats the question.",
+        "reason": "Made hint 1 vaguer and replaced the regional hint 2 with the founding year, so the hints no longer rule out options by region.",
         "previous": {
-          "question": "Welcher dieser Vereine ist noch NIE aus der Bundesliga abgestiegen?",
           "hints": [
-            "Der gesuchte Verein spielt seit 1965 ununterbrochen in der Bundesliga.",
+            "Die Außenwand seines Stadions kann in verschiedenen Farben leuchten.",
             "Er kommt aus Süddeutschland.",
             "Seine Fans rufen gern „Mia san mia“."
           ]
@@ -1308810,7 +1308835,7 @@
     },
     {
       "id": "q-16901",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Der Beifahrer der Bundesregierung, der immer brav auf die Karte schaut.",
       "question": "Dieser Mann war Vizekanzler unter Angela Merkel. Wer ist auf dem Foto?",
@@ -1308823,7 +1308848,7 @@
       "hints": [
         "Er war Bundesfinanzminister.",
         "Er war Erster Bürgermeister von Hamburg.",
-        "Er regierte von 2021 bis 2025 mit der Ampel-Koalition."
+        "Er wurde 2021 Bundeskanzler einer Ampel-Koalition."
       ],
       "media": {
         "type": "image",
@@ -1308870,31 +1308895,36 @@
       "needs_media": true,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 is factually off: the Ampel coalition broke up in November 2024 when the FDP left. Scholz stayed chancellor until May 2025, but in a minority government with the Greens, not with the Ampel. Reword it, for example \"Er wurde 2021 Bundeskanzler einer Ampel-Koalition.\"",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 is factually off: the Ampel coalition broke up in November 2024 when the FDP left. Scholz stayed chancellor until May 2025, but in a minority government with the Greens, not with the Ampel. Reword it, for example \"Er wurde 2021 Bundeskanzler einer Ampel-Koalition.\"",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the later-chancellor clue from question and description, replaced the non-distinguishing SPD hint with the finance-minister hint, and reworded the fun fact as the reviewer asked.",
+        "reason": "Corrected hint 3, because the Ampel coalition ended in November 2024, not in 2025.",
         "previous": {
-          "description": "Der Beifahrer der Bundesregierung, der auch mal das Steuer übernehmen darf.",
-          "question": "Dieser Mann war Vizekanzler unter Angela Merkel und wurde danach selbst Bundeskanzler. Wer ist auf dem Foto?",
           "hints": [
-            "Er gehört zur SPD.",
+            "Er war Bundesfinanzminister.",
             "Er war Erster Bürgermeister von Hamburg.",
             "Er regierte von 2021 bis 2025 mit der Ampel-Koalition."
-          ],
-          "fun_fact": "Alle vier Antwortmöglichkeiten waren Vizekanzler unter Merkel, und alle gehören zur SPD."
+          ]
         },
         "revised_on": "2026-11-11"
       }
@@ -1312726,10 +1312756,10 @@
     },
     {
       "id": "q-16953",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Ein Händedruck, der länger hielt als manche Ehe.",
-      "question": "Auf diesem Foto von 1946 reicht Wilhelm Pieck (KPD) einem SPD-Mann die Hand: Die SED entsteht. Wer ist der SPD-Mann?",
+      "question": "1946 reichte Wilhelm Pieck (KPD) einem SPD-Mann die Hand, und die SED entstand. Wer war der SPD-Mann?",
       "answer": "Otto Grotewohl",
       "wrong_answers": [
         "Kurt Schumacher",
@@ -1312743,12 +1312773,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "SED Vereinigungsparteitag 1946 Händedruck",
-        "note": "Foto des Händedrucks von Wilhelm Pieck und Otto Grotewohl beim Vereinigungsparteitag im April 1946, ohne Bildunterschrift mit Namen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Admiralspalast Berlin",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABerlin-Mitte%2C_the_Admiralspalast.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Berlin-Mitte%2C_the_Admiralspalast.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Dguendel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Dguendel",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dguendel&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Genau dieser Händedruck wurde zum Symbol im Parteiabzeichen der SED.",
       "subcategory": "gdr-history",
@@ -1312774,22 +1312811,48 @@
         "notes": "Strong distractors (all SPD men who stayed in the West). The Bundesarchiv handshake photo is likely on Commons, but it may carry a caption with names, so check it. It is related to q-16122 (the SED badge) but asks a different fact. The 'pop_culture' lens is odd."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the famous Pieck–Grotewohl handshake that the question describes (\"Auf diesem Foto … reicht … die Hand\"), and no new search is allowed. The slot needs the April 1946 handshake photo (e.g. Bundesarchiv Bild 183-H26980 in a better crop, or another Commons copy of the handshake). Failing that, the question should drop \"Auf diesem Foto\" and use an illustrative or decorative image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the famous Pieck–Grotewohl handshake that the question describes (\"Auf diesem Foto … reicht … die Hand\"), and no new search is allowed. The slot needs the April 1946 handshake photo (e.g. Bundesarchiv Bild 183-H26980 in a better crop, or another Commons copy of the handshake). Failing that, the question should drop \"Auf diesem Foto\" and use an illustrative or decorative image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No handshake photo was found, so I removed the photo reference and used an illustrative image of the Admiralspalast, where the unification congress took place.",
+        "previous": {
+          "question": "Auf diesem Foto von 1946 reicht Wilhelm Pieck (KPD) einem SPD-Mann die Hand: Die SED entsteht. Wer ist der SPD-Mann?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "SED Vereinigungsparteitag 1946 Händedruck",
+            "note": "Foto des Händedrucks von Wilhelm Pieck und Otto Grotewohl beim Vereinigungsparteitag im April 1946, ohne Bildunterschrift mit Namen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16954",
@@ -1313610,10 +1313673,10 @@
     },
     {
       "id": "q-16965",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Für manche ist sie eine Unglückszahl, für diesen Mann war sie ein Glückstrikot.",
-      "question": "Dieser Spieler trug in der Nationalmannschaft lange die Rückennummer 13, wie vor ihm Michael Ballack. Wer ist es?",
+      "question": "Welcher Spieler trug in der Nationalmannschaft lange die Rückennummer 13, wie vor ihm Michael Ballack?",
       "answer": "Thomas Müller",
       "wrong_answers": [
         "Toni Kroos",
@@ -1313627,12 +1313690,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Germany football jersey",
-        "note": "Klares Foto von Thomas Müller im Trikot der deutschen Nationalmannschaft, ohne sichtbaren Namen.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdidas_Germany_national_football_team_away_jersey.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Adidas_Germany_national_football_team_away_jersey.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "BrokenSphere · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "BrokenSphere",
+        "author_url": "https://commons.wikimedia.org/wiki/User:BrokenSphere",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Auch Gerd Müller trug bei den Weltmeisterschaften 1970 und 1974 die Nummer 13, die Zahl ist also eine echte Müller-Tradition.",
       "subcategory": "national-team",
@@ -1313658,23 +1313728,49 @@
         "notes": "Facts check out (Müller and Ballack both wore 13; Gerd Müller wore 13 in 1970/74). An essential photo is fine, but the shirt may show the 13 and the face is recognisable, which makes it easy. q-11983 shares the concept but asks about his club."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set up wrong. It is marked essential and asks for a clear photo of Thomas Müller, but showing his face in a \"who is it?\" question gives the answer away. No candidate fits the slot either: none shows Müller clearly, and another search isn't allowed. Make the slot illustrative (for example a plain Germany shirt with no number or name, like candidate 1 or 2) or decorative, and search again. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set up wrong. It is marked essential and asks for a clear photo of Thomas Müller, but showing his face in a \"who is it?\" question gives the answer away. No candidate fits the slot either: none shows Müller clearly, and another search isn't allowed. Make the slot illustrative (for example a plain Germany shirt with no number or name, like candidate 1 or 2) or decorative, and search again. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "A face photo would give the answer away, so the media is now an illustrative plain Germany shirt and the question no longer says „Dieser Spieler“.",
+        "previous": {
+          "question": "Dieser Spieler trug in der Nationalmannschaft lange die Rückennummer 13, wie vor ihm Michael Ballack. Wer ist es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Germany football jersey",
+            "note": "Klares Foto von Thomas Müller im Trikot der deutschen Nationalmannschaft, ohne sichtbaren Namen.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16966",
@@ -1314007,10 +1314103,10 @@
     },
     {
       "id": "q-16970",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Zwei WM-Finals hintereinander, die sich anfühlten wie Hin- und Rückspiel.",
-      "question": "Gegen diesen Argentinier verlor Deutschland das WM-Finale 1986, vier Jahre später gewann es gegen ihn. Wer ist es?",
+      "question": "Gegen welchen Argentinier verlor Deutschland das WM-Finale 1986? Vier Jahre später gewann es gegen ihn.",
       "answer": "Diego Maradona",
       "wrong_answers": [
         "Lionel Messi",
@@ -1314024,12 +1314120,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "Stadio Olimpico Rome",
-        "note": "Foto von Diego Maradona im argentinischen Trikot aus den 1980er-Jahren.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStadio_Olimpico_2024.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Stadio_Olimpico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Messapi, cropped by Blackcat · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Messapi, cropped by Blackcat",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Messapi",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "1990 in Rom entschied ein Elfmeter von Andreas Brehme das Finale gegen Maradonas Argentinien.",
       "subcategory": "national-team",
@@ -1314055,27 +1314158,45 @@
         "notes": "Facts are right (1986 lost, 1990 won with Brehme's penalty in Rome). Messi and Pelé fall away with a little reasoning. q-4327 and q-0840 are about specific Maradona goals, not this fact."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set to essential with a note asking for a photo of Maradona. That doesn't work: a photo of the answer would give it away, and the question doesn't need essential media anyway. All six candidates show the Stadio Olimpico in Rome, which doesn't match the essential note. Change the role to illustrative and use the Stadio Olimpico (venue of the 1990 final); candidate 1 would then be a good pick. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set to essential with a note asking for a photo of Maradona. That doesn't work: a photo of the answer would give it away, and the question doesn't need essential media anyway. All six candidates show the Stadio Olimpico in Rome, which doesn't match the essential note. Change the role to illustrative and use the Stadio Olimpico (venue of the 1990 final); candidate 1 would then be a good pick. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the description, which listed Maradona's own traits, with one about the two finals.",
+        "reason": "Changed the media to an illustrative photo of the Stadio Olimpico (venue of the 1990 final) and removed „diesen“ so the question doesn't point to a photo of the answer.",
         "previous": {
-          "description": "Ein kleiner Mann mit großen Locken und noch größerem linken Fuß."
+          "question": "Gegen diesen Argentinier verlor Deutschland das WM-Finale 1986, vier Jahre später gewann es gegen ihn. Wer ist es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Stadio Olimpico Rome",
+            "note": "Foto von Diego Maradona im argentinischen Trikot aus den 1980er-Jahren.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-11"
       }
@@ -1314698,7 +1314819,7 @@
     },
     {
       "id": "q-16979",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Eine Krone, für die man kein Königreich braucht, nur ein gutes Auge.",
       "question": "In vielen Dörfern schießen Vereinsmitglieder beim Sommerfest auf einen Holzvogel. Wie nennt man den, der das letzte Stück herunterholt?",
@@ -1314716,11 +1314837,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Vogelschießen wooden bird pole",
+        "query": "Schützenfest Vogelstange Holzvogel",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AD%C3%BClmen%2C_Vogelstange_am_Festplatz_des_%22Sch%C3%BCtzenfests_Niestr%C3%B6ter%22_--_2012_--_4104.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/D%C3%BClmen%2C_Vogelstange_am_Festplatz_des_%22Sch%C3%BCtzenfests_Niestr%C3%B6ter%22_--_2012_--_4104.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Viele Schützenvereine gehen auf Bürgerwehren des Mittelalters zurück, die ihre Städte verteidigen sollten.",
       "subcategory": "reformation-to-empire",
@@ -1314745,23 +1314873,47 @@
         "difficulty_estimate": 6,
         "notes": "The claim that Schützenvereine go back to medieval Bürgerwehren is the usual simplified story but broadly accepted."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a Vogelschießen or a wooden target bird. All six are real birds (pigeon, starlings) sitting on utility poles or posts, or a lake scene, so they miss the question's subject. No new search is allowed, so the slot needs a new image, e.g. \"Vogelstange Schützenfest\" or \"Schützenfest Holzvogel\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a Vogelschießen or a wooden target bird. All six are real birds (pigeon, starlings) sitting on utility poles or posts, or a lake scene, so they miss the question's subject. No new search is allowed, so the slot needs a new image, e.g. \"Vogelstange Schützenfest\" or \"Schützenfest Holzvogel\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the image query so it finds a Schützenfest target bird instead of real birds on poles.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Vogelschießen wooden bird pole",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16980",
@@ -1315863,7 +1316015,7 @@
     },
     {
       "id": "q-16994",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Ein Maler, bei dem man im Museum erst mal den Kopf schief legt.",
       "question": "Georg Baselitz, eigentlich Hans-Georg Kern, malt seit 1969 seine Motive kopfüber. Wozu?",
@@ -1315875,7 +1316027,7 @@
       ],
       "hints": [
         "Sein erstes Bild auf dem Kopf zeigte einen Wald.",
-        "Der Grund hat mit dem Blick der Betrachter zu tun, nicht mit Technik, Fälschern oder Politik.",
+        "Wer ein Bild verkehrt herum sieht, erkennt das Motiv nicht sofort.",
         "Er wollte, dass man das Bild als Malerei betrachtet, nicht als Abbild."
       ],
       "media": {
@@ -1315921,26 +1316073,34 @@
       "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It says the reason is \"not technique, forgers or politics\", which rules out all three wrong answers at once and leaves only the correct one. Replace it with a hint that points towards the viewer's perception without crossing off the other options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It says the reason is \"not technique, forgers or politics\", which rules out all three wrong answers at once and leaves only the correct one. Replace it with a hint that points towards the viewer's perception without crossing off the other options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 (unhelpful) and hint 2 (gave away 'Farbe und Form') with vaguer hints.",
+        "reason": "Replaced hint 2, which crossed off all three wrong answers, with a perception clue that doesn't rule them out by name.",
         "previous": {
           "hints": [
-            "Mit seiner Herkunft aus Sachsen hat es nichts zu tun.",
-            "Ein Baum auf dem Kopf ist plötzlich vor allem Fläche und Farbe.",
+            "Sein erstes Bild auf dem Kopf zeigte einen Wald.",
+            "Der Grund hat mit dem Blick der Betrachter zu tun, nicht mit Technik, Fälschern oder Politik.",
             "Er wollte, dass man das Bild als Malerei betrachtet, nicht als Abbild."
           ]
         },
@@ -1316492,7 +1316652,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "SPD Parteitag delegates",
+        "query": "SPD party convention hall",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1316526,18 +1316686,44 @@
       "batch": "batch-57",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits the question: 1–3 and 5 are Soviet CPSU congress postcards and stamps with Lenin, 6 is an old Soviet newspaper, and 4 is a crowd at a bus stop outside a Linke party congress. Another search isn't allowed. The slot needs a new search for a neutral SPD or generic party congress image, for example \"SPD party convention hall\" or \"party congress ballot voting\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits the question: 1–3 and 5 are Soviet CPSU congress postcards and stamps with Lenin, 6 is an old Soviet newspaper, and 4 is a crowd at a bus stop outside a Linke party congress. Another search isn't allowed. The slot needs a new search for a neutral SPD or generic party congress image, for example \"SPD party convention hall\" or \"party congress ballot voting\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New image query for a neutral party congress vote, since the old search returned Soviet material.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "SPD Parteitag delegates",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-17003",
@@ -1319260,11 +1319446,11 @@
     },
     {
       "id": "q-17039",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Kleine Hände, große Wirkung – und ein Umzug mit Folgen.",
       "question": "Bettina Wegner schrieb „Sind so kleine Hände“ und ging 1983 in den Westen. In welcher Stadt lebte und sang sie vorher?",
-      "answer": "Ost-Berlin",
+      "answer": "Berlin",
       "wrong_answers": [
         "Leipzig",
         "Dresden",
@@ -1319272,7 +1319458,7 @@
       ],
       "hints": [
         "In ihrer Stadt lebten damals viele bekannte DDR-Künstler und Schriftsteller.",
-        "In ihrer Stadt hatte die Regierung der DDR ihren Sitz.",
+        "Durch ihre Stadt fließt die Spree.",
         "Ihr Weg in den Westen führte nur wenige Kilometer weit, in den anderen Teil derselben Stadt."
       ],
       "media": {
@@ -1319280,14 +1319466,14 @@
         "role": "decorative",
         "query": "acoustic guitar on stage",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARose_on_stage_in_Mainz_2008.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Rose_on_stage_in_Mainz_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Stefan helbig · CC BY-SA 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGal_George_Gjurin_and_his_frequently_played_Gibson_SJ-300_acoustic_guitar_named_Dorothy.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Gal_George_Gjurin_and_his_frequently_played_Gibson_SJ-300_acoustic_guitar_named_Dorothy.jpg/3840px-Gal_George_Gjurin_and_his_frequently_played_Gibson_SJ-300_acoustic_guitar_named_Dorothy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Evanbills · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
-        "author": "Stefan helbig",
-        "author_url": "https://de.wikipedia.org/wiki/User:Steloh",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Evanbills",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Evanbills&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1319318,26 +1319504,35 @@
       "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"the seat of the DDR government\") names East Berlin outright, so it gives the answer away at hint 2. It should be a vaguer clue, for example one about the city's size or its cultural scene. Also, \"Ost-Berlin\" stands out among the plain city names. Using \"Berlin\" as the answer, or giving every option the same form, would fix that.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"the seat of the DDR government\") names East Berlin outright, so it gives the answer away at hint 2. It should be a vaguer clue, for example one about the city's size or its cultural scene. Also, \"Ost-Berlin\" stands out among the plain city names. Using \"Berlin\" as the answer, or giving every option the same form, would fix that.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the geographic Spree hint, which gave the answer away, with the hint about the DDR government's seat that the reviewer suggested.",
+        "reason": "Changed the answer to plain „Berlin“ so it matches the other options' form, and replaced hint 2, which named the DDR capital, with a vaguer river clue.",
         "previous": {
+          "answer": "Ost-Berlin",
           "hints": [
             "In ihrer Stadt lebten damals viele bekannte DDR-Künstler und Schriftsteller.",
-            "Die Stadt liegt an der Spree.",
+            "In ihrer Stadt hatte die Regierung der DDR ihren Sitz.",
             "Ihr Weg in den Westen führte nur wenige Kilometer weit, in den anderen Teil derselben Stadt."
           ]
         },
@@ -1319730,7 +1319925,7 @@
     },
     {
       "id": "q-17045",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Diese Hauswand hat ein ziemlich gutes Gedächtnis.",
       "question": "Woher kommen solche Striche mit Jahreszahlen an alten Hauswänden am Fluss?",
@@ -1319748,11 +1319943,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "flood marks house wall",
+        "query": "Passau town hall flood marks",
         "note": "Mehrere Hochwassermarken mit Jahreszahlen an einer Hauswand; möglichst ohne das Wort „Hochwasser“ im Bild.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurgos%2C_se%C3%B1ales_inundaciones_1.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Burgos%2C_se%C3%B1ales_inundaciones_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "LBM1948 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "LBM1948",
+        "author_url": "https://commons.wikimedia.org/wiki/User:LBM1948",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In Passau stand das Wasser 2013 fast 13 Meter hoch, so hoch wie seit dem Jahr 1501 nicht mehr.",
       "subcategory": "rivers-lakes-and-coasts",
@@ -1319781,19 +1319983,43 @@
       "needs_media": true,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates clearly shows flood marks with years on a house wall, and this essential image is what \"solche Striche\" points to. No new search is allowed in this run. The slot needs a clear photo of flood marks, such as the Passau Rathaus or Hann. Münden marks, ideally without the word „Hochwasser“ in it. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates clearly shows flood marks with years on a house wall, and this essential image is what \"solche Striche\" points to. No new search is allowed in this run. The slot needs a clear photo of flood marks, such as the Passau Rathaus or Hann. Münden marks, ideally without the word „Hochwasser“ in it. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New, more specific essential-image query pointing to the well-documented flood marks on Passau's town hall.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "flood marks house wall",
+            "note": "Mehrere Hochwassermarken mit Jahreszahlen an einer Hauswand; möglichst ohne das Wort „Hochwasser“ im Bild.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-17046",
@@ -1320390,7 +1320616,7 @@
     },
     {
       "id": "q-17054",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Mittelalterliche Wolkenkratzer, lange bevor jemand den Aufzug erfunden hat.",
       "question": "In Regensburgs Altstadt stehen hohe Wohntürme, die reiche Familien im Mittelalter bauten. Wozu vor allem?",
@@ -1320408,11 +1320634,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Regensburg patrician tower",
+        "query": "Goldener Turm Regensburg",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2018_Goldener_Turm_Regensburg.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/2018_Goldener_Turm_Regensburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Bärwinkel,Klaus · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bärwinkel,Klaus",
+        "author_url": "https://commons.wikimedia.org/wiki/User:B%C3%A4rwinkel,Klaus",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Der Goldene Turm in Regensburg ist rund 50 Meter hoch und gilt als höchster mittelalterlicher Wohnturm nördlich der Alpen.",
       "subcategory": "sights-and-landmarks",
@@ -1320441,24 +1320674,40 @@
       "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows Regensburg or its patrician towers: the sheet has an Italian hilltop castle, a Latin stone inscription, a Rembrandt etching, a Dutch castle painting, a Frankfurt double portrait and a handwritten letter. A new search is needed, e.g. \"Goldener Turm Regensburg\" or \"Regensburg old town towers\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows Regensburg or its patrician towers: the sheet has an Italian hilltop castle, a Latin stone inscription, a Rembrandt etching, a Dutch castle painting, a Frankfurt double portrait and a handwritten letter. A new search is needed, e.g. \"Goldener Turm Regensburg\" or \"Regensburg old town towers\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the Stone Bridge fun fact, which gave away another question, with a fact about the Goldener Turm tower house.",
+        "reason": "New image query that targets Regensburg's patrician towers directly.",
         "previous": {
-          "fun_fact": "Die Steinerne Brücke in Regensburg wurde schon im 12. Jahrhundert gebaut."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Regensburg patrician tower",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-11"
       }
@@ -1320693,7 +1320942,7 @@
     },
     {
       "id": "q-17058",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Weißer als jede Tafelkreide und ein kleines bisschen älter als dein Lehrer.",
       "question": "Aus welcher Zeit stammt das Gestein der weißen Kreidefelsen auf Rügen?",
@@ -1320705,7 +1320954,7 @@
       ],
       "hints": [
         "Kreide bildet sich ganz langsam am Grund eines warmen Meeres.",
-        "Das Gestein besteht aus den Schalen winziger Meerestiere.",
+        "Das Gestein besteht vor allem aus winzigen Kalkplättchen von Meeresalgen.",
         "Das Gestein ist rund 70 Millionen Jahre alt – damals stapfte noch der T. rex über die Erde."
       ],
       "media": {
@@ -1320747,31 +1320996,39 @@
         "difficulty_estimate": 5,
         "notes": "Rated 3, but a 9-year-old would likely pick 'Steinzeit' because of the word 'Stein'. Knowing that chalk is from the Cretaceous is closer to a 5. The answer is a bit longer than the other options."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 is factually wrong. It says Rügen chalk is made of shells of tiny sea animals, but it is mostly coccoliths, the calcite plates of single-celled marine algae (coccolithophores). Hint 2 should be replaced, for example with „Das Gestein besteht vor allem aus winzigen Kalkplättchen von Meeresalgen (Plankton).“ Fact check: wrong. Hint 2 says the chalk consists of shells of tiny sea animals. Rügen chalk is mostly coccoliths, the calcite plates of single-celled marine algae (coccolithophores), not animals. The answer (Cretaceous, dinosaur era) is correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 is factually wrong. It says Rügen chalk is made of shells of tiny sea animals, but it is mostly coccoliths, the calcite plates of single-celled marine algae (coccolithophores). Hint 2 should be replaced, for example with „Das Gestein besteht vor allem aus winzigen Kalkplättchen von Meeresalgen (Plankton).“ Fact check: wrong. Hint 2 says the chalk consists of shells of tiny sea animals. Rügen chalk is mostly coccoliths, the calcite plates of single-celled marine algae (coccolithophores), not animals. The answer (Cretaceous, dinosaur era) is correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away, with a vague hint about how chalk forms, and moved the age into hint 3.",
+        "reason": "Corrected hint 2: Rügen chalk is mostly the calcite plates of marine algae (coccoliths), not the shells of sea animals.",
         "previous": {
           "hints": [
-            "Das Gestein ist viel älter als alle Menschen.",
-            "Es besteht aus Schalen winziger Meerestiere und ist rund 70 Millionen Jahre alt.",
-            "Damals stapfte noch der T. rex über die Erde."
+            "Kreide bildet sich ganz langsam am Grund eines warmen Meeres.",
+            "Das Gestein besteht aus den Schalen winziger Meerestiere.",
+            "Das Gestein ist rund 70 Millionen Jahre alt – damals stapfte noch der T. rex über die Erde."
           ]
         },
         "revised_on": "2026-11-11"
@@ -1321887,15 +1322144,15 @@
     },
     {
       "id": "q-17073",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Ein Hamburger Kommissar zwischen Fahrrädern und Besserwissern.",
       "question": "In welchem Jahr hatte Hauptkommissar Frank Thiel seinen ersten Fall im Münster-Tatort?",
       "answer": "2002",
       "wrong_answers": [
-        "1992",
-        "2012",
-        "2018"
+        "1998",
+        "2005",
+        "2008"
       ],
       "hints": [
         "Es war schon im neuen Jahrtausend.",
@@ -1321945,27 +1322202,35 @@
       "needs_media": false,
       "batch": "batch-57",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 („in den ersten Jahren nach der Jahrtausendwende“) leaves only 2002 among the options (1992, 2012, 2018), so it gives the answer away before hint 3. Hint 2 should only narrow things down, for example by ruling out 1992 and one other year, or the wrong answers should be changed so hint 2 still leaves at least two options (e.g. 2004, 2006).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 („in den ersten Jahren nach der Jahrtausendwende“) leaves only 2002 among the options (1992, 2012, 2018), so it gives the answer away before hint 3. Hint 2 should only narrow things down, for example by ruling out 1992 and one other year, or the wrong answers should be changed so hint 2 still leaves at least two options (e.g. 2004, 2006).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "germany",
       "locale": "de",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pinned the exact year, with a vaguer one.",
+        "reason": "Changed the wrong answers to 1998, 2005 and 2008, so hint 2 still leaves two years open and only hint 3 settles it.",
         "previous": {
-          "hints": [
-            "Es war schon im neuen Jahrtausend.",
-            "Im selben Jahr fand die Fußball-WM in Japan und Südkorea statt.",
-            "Im selben Jahr kam in Deutschland der Euro als Bargeld."
+          "wrong_answers": [
+            "1992",
+            "2012",
+            "2018"
           ]
         },
         "revised_on": "2026-11-11"
