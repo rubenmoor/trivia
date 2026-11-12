@@ -78,7 +78,8 @@
     {
       "name": "Ritmo Peligroso",
       "facet": "Rock en tu idioma de los ochenta",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Not confident of the band members' facts."
     },
     {
       "name": "Bon y los Enemigos del Silencio",
@@ -323,7 +324,8 @@
     {
       "name": "Mercurio",
       "facet": "Grupos juveniles y pop de los noventa",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: 90s boy band too obscure for these options, and the name clashes with the many questions about the metal."
     },
     {
       "name": "OV7",
@@ -683,7 +685,8 @@
     {
       "name": "Tianguis Cultural del Chopo",
       "facet": "Festivales y foros en vivo",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already says what is sold there; its founder is too obscure for a fair riddle."
     },
     {
       "name": "Hoyo funky",
@@ -693,7 +696,8 @@
     {
       "name": "Rockotitlán",
       "facet": "Festivales y foros en vivo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Rock venue from the 80s, too obscure for a fair question."
     },
     {
       "name": "Multiforo Alicia",
@@ -708,7 +712,8 @@
     {
       "name": "Foro Indie Rocks!",
       "facet": "Festivales y foros en vivo",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Venue too niche to give a fair question."
     },
     {
       "name": "El Sol de México",
@@ -763,7 +768,8 @@
     {
       "name": "Naco",
       "facet": "Letras, frases y apodos famosos",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: A class-based insult; not right for a family game."
     },
     {
       "name": "Chavo banda",

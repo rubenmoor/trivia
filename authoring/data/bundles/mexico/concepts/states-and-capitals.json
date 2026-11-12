@@ -61,7 +61,8 @@
     {
       "name": "Guadalajara",
       "facet": "Capitales de los estados",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Guadalajara ya tiene muchas preguntas (torres, jericalla, tapatío, universidad); no queda un dato nuevo de dificultad 2."
     },
     {
       "name": "Monterrey",
@@ -726,7 +727,8 @@
     {
       "name": "Birria",
       "facet": "Platillos típicos de cada estado",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: La única buena pregunta (birria → Jalisco) ya existe."
     },
     {
       "name": "Torta ahogada",

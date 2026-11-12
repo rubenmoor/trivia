@@ -116,7 +116,8 @@
     {
       "name": "Mazahua",
       "facet": "Lenguas indígenas vivas de México",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: No da una pregunta justa: sería un dato de especialista y se confunde fácil con el otomí."
     },
     {
       "name": "Popoluca",
@@ -261,7 +262,8 @@
     {
       "name": "Talokan",
       "facet": "Lenguas indígenas en medios y cultura pop",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Talokan, su origen en Tlalocan y su ubicación en Yucatán ya están en el pool."
     },
     {
       "name": "Ajolote de Minecraft",
@@ -357,6 +359,43 @@
       "name": "Itzcuintli",
       "facet": "Partes y sonidos de las palabras náhuatl",
       "known_at": 11
+    },
+    {
+      "name": "Purépecha",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 9
+    },
+    {
+      "name": "Tzotzil",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 10
+    },
+    {
+      "name": "Roma (película de Cuarón)",
+      "facet": "Lenguas indígenas en medios y cultura pop",
+      "known_at": 11
+    },
+    {
+      "name": "Tzeltal",
+      "facet": "Lenguas indígenas vivas de México",
+      "known_at": 11
+    },
+    {
+      "name": "Rarámuri (tarahumaras)",
+      "facet": "Pueblos originarios y sus regiones",
+      "known_at": 9
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-12",
+      "added": 3,
+      "unused": 31
+    },
+    {
+      "date": "2026-11-12",
+      "added": 2,
+      "unused": 31
     }
   ]
 }

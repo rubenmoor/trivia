@@ -171,7 +171,8 @@
     {
       "name": "Panza llena, corazón contento",
       "facet": "Dichos de comida y cocina",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Ya hay preguntas sobre cómo se completa el refrán y sobre panza/barriga; las opciones que quedan son forzadas."
     },
     {
       "name": "Las penas con pan son menos",
@@ -251,7 +252,8 @@
     {
       "name": "Al que madruga, Dios lo ayuda",
       "facet": "Consejos de la abuela",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: El refrán ya se preguntó dos veces (quién ayuda y a quién)."
     },
     {
       "name": "Más vale prevenir que lamentar",
@@ -271,7 +273,8 @@
     {
       "name": "Más vale tarde que nunca",
       "facet": "Consejos de la abuela",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Su significado ya se puede responder con la pregunta que existe; las otras opciones serían forzadas."
     },
     {
       "name": "Despacio que tengo prisa",

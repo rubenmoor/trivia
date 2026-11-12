@@ -176,7 +176,8 @@
     {
       "name": "Desfile militar del 16 de septiembre",
       "facet": "El Grito y las fiestas patrias",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The pool already has a question about why the 16 de septiembre parade happens, and its text names the 'desfile militar'. A photo question would be trivial."
     },
     {
       "name": "Balcón central de Palacio Nacional",
@@ -831,7 +832,8 @@
     {
       "name": "Día de la Bandera",
       "facet": "Símbolos patrios y monumentos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The date (24 de febrero) is already in the pool, and no other fact makes a good, safe question for kids."
     },
     {
       "name": "Honores a la bandera",

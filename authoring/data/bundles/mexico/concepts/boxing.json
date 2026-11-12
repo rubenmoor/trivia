@@ -542,7 +542,8 @@
     {
       "name": "Ibeth \"Roca\" Zamora",
       "facet": "Boxeo femenil mexicano",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: La carrera de Ibeth Zamora es demasiado poco conocida y no tengo datos seguros sobre ella."
     },
     {
       "name": "Kenia Enríquez",
@@ -915,7 +916,8 @@
     {
       "name": "Zanfer Promotions",
       "facet": "Organismos, cinturones y cronistas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Del promotor Zanfer no hay ningún dato justo que un especialista pueda razonar."
     },
     {
       "name": "Don King",

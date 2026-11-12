@@ -126,7 +126,8 @@
     {
       "name": "El Gavilancillo",
       "facet": "Jarabes y sones regionales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: El Gavilancillo es demasiado oscuro y no tengo datos seguros sobre él."
     },
     {
       "name": "Chinas oaxaqueñas",
@@ -333,7 +334,8 @@
     {
       "name": "Inmigrantes alemanes",
       "facet": "Danzas norteñas y polkas",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: La pregunta sobre la polka ya dice que la trajeron inmigrantes alemanes; lo que trajeron a la música norteña ya se puede responder con eso."
     },
     {
       "name": "Fandango jarocho",

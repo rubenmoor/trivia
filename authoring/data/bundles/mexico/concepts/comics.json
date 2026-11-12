@@ -238,7 +238,8 @@
     {
       "name": "El charro Matías",
       "facet": "Caricatura política y moneros de periódico",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No estoy seguro del autor ni de otros datos de El charro Matías."
     },
     {
       "name": "Andrés Audiffred",
@@ -295,7 +296,8 @@
     {
       "name": "Rocha (monero)",
       "facet": "Caricatura política y moneros de periódico",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No tengo datos seguros sobre Gonzalo Rocha para esas opciones."
     },
     {
       "name": "Ángel Boligán",
@@ -582,7 +584,8 @@
     {
       "name": "La Chora Interminable",
       "facet": "Moneros contemporáneos y humor gráfico",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No estoy seguro de los datos de La Chora Interminable (autoría, fechas)."
     },
     {
       "name": "Fábulas de policías y ladrones",
@@ -607,7 +610,8 @@
     {
       "name": "Ricardo Peláez",
       "facet": "Moneros contemporáneos y humor gráfico",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No tengo datos seguros sobre Ricardo Peláez para una pregunta justa."
     },
     {
       "name": "Patricio Betteo",
