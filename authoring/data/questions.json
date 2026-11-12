@@ -1340040,7 +1340040,7 @@
     },
     {
       "id": "q-17308",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Un cineasta que filma la vida como canción ranchera: con mucho drama y sin final feliz.",
       "question": "Soy cineasta mexicano, hijo de un productor, y mi pareja Paz Alicia Garciadiego escribe mis guiones. En 1994 filmé la vida de Lucha Reyes. ¿Quién soy?",
@@ -1340058,11 +1340058,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "mariachi singer stage",
+        "query": "mariachi band Mexico",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMariachi_band_%2852396809910%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Mariachi_band_%2852396809910%29.jpg/3840px-Mariachi_band_%2852396809910%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Gage Skidmore from Surprise, AZ, United States of America · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Gage Skidmore from Surprise, AZ, United States of America",
+        "author_url": "https://www.flickr.com/people/22007612@N05",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Lucha Reyes es considerada una de las primeras grandes cantantes de música ranchera en México.",
       "subcategory": "contemporary-cinema",
@@ -1340091,18 +1340098,42 @@
       "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the image candidates fits. They show a Lebanese pop singer on a neon stage (1, 2) and early-1900s Western stage-singer portraits (3–6). None of them shows Mexican cinema, ranchera or mariachi, and no new search is allowed. A suitable search would be something like 'mariachi band Mexico' or 'film clapperboard'. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits. They show a Lebanese pop singer on a neon stage (1, 2) and early-1900s Western stage-singer portraits (3–6). None of them shows Mexican cinema, ranchera or mariachi, and no new search is allowed. A suitable search would be something like 'mariachi band Mexico' or 'film clapperboard'. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No image candidate fit, so I changed the media query to a Mexican mariachi band to find new candidates.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "mariachi singer stage",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17309",
@@ -1340422,10 +1340453,10 @@
     },
     {
       "id": "q-17313",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una tela bordada que en la mesa mexicana tiene un trabajo muy importante.",
-      "question": "En muchas casas de México se usa una servilleta bordada como esta en la mesa. ¿Para qué sirve sobre todo?",
+      "question": "En muchas casas de México se pone en la mesa una servilleta de tela bordada. ¿Para qué sirve sobre todo?",
       "answer": "Para envolver las tortillas calientes",
       "wrong_answers": [
         "Para secar los trastes",
@@ -1340439,12 +1340470,22 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Mexican embroidered napkin",
-        "note": "Photo of a cloth napkin embroidered in cross-stitch with colorful flowers; must NOT show tortillas or food.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Mexican cross stitch embroidery",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmbroidered_Picture_%28possibly_Mexico%29%2C_late_19th_century_%28CH_18616947%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Embroidered_Picture_%28possibly_Mexico%29%2C_late_19th_century_%28CH_18616947%29.jpg/3840px-Embroidered_Picture_%28possibly_Mexico%29%2C_late_19th_century_%28CH_18616947%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Unknown artistUnknown artist · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown artistUnknown artist",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-100-1923",
+          "PD-old-100-expired"
+        ]
       },
       "fun_fact": "Muchas de estas servilletas se bordan en punto de cruz: cada puntadita forma una pequeña X.",
       "subcategory": "crafts-and-dress",
@@ -1340470,30 +1340511,44 @@
         "notes": "The role should be illustrative, not essential: a generic embroidered napkin photo adds little. The description is not funny."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a Mexican embroidered tortilla napkin. Candidates 5 and 6 are plain white European monogram napkins, not the colourful cross-stitch servilleta that the question (\"como esta\") and the fun fact describe. The rest are off-topic, and no new search is allowed. The slot needs a photo of a colourful cross-stitched Mexican servilleta. Consider making the role illustrative, as the rater suggested. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a Mexican embroidered tortilla napkin. Candidates 5 and 6 are plain white European monogram napkins, not the colourful cross-stitch servilleta that the question (\"como esta\") and the fun fact describe. The rest are off-topic, and no new search is allowed. The slot needs a photo of a colourful cross-stitched Mexican servilleta. Consider making the role illustrative, as the rater suggested. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the tortillero, with a vaguer food hint.",
+        "reason": "No suitable essential napkin photo exists, so I reworded the question so it no longer points to a photo and made the media an illustrative image of embroidery.",
         "previous": {
-          "hints": [
-            "Se pone en la mesa a la hora de comer.",
-            "Va dentro de un tortillero o una canasta.",
-            "Guarda el calor de algo que sale del comal."
-          ]
+          "question": "En muchas casas de México se usa una servilleta bordada como esta en la mesa. ¿Para qué sirve sobre todo?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Mexican embroidered napkin",
+            "note": "Photo of a cloth napkin embroidered in cross-stitch with colorful flowers; must NOT show tortillas or food.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-12"
       }
@@ -1341603,10 +1341658,10 @@
     },
     {
       "id": "q-17329",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Una poeta que rima en una lengua que tiene más de dos mil años.",
-      "question": "Esta poeta escribe en zapoteco, ganó el Premio Nezahualcóyotl y es hija del pintor Francisco Toledo. ¿De qué ciudad del Istmo es?",
+      "question": "Natalia Toledo escribe en zapoteco, ganó el Premio Nezahualcóyotl y es hija del pintor Francisco Toledo. ¿De qué ciudad del Istmo es?",
       "answer": "Juchitán",
       "wrong_answers": [
         "Tehuantepec",
@@ -1341620,12 +1341675,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Francisco Toledo artwork",
-        "note": "Retrato de la poeta zapoteca Natalia Toledo; sin texto que mencione su ciudad.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Oaxaca Zapotec weaving",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_on_a_backstrap_loom_in_Oaxaca.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Woman_on_a_backstrap_loom_in_Oaxaca.jpg/3840px-Woman_on_a_backstrap_loom_in_Oaxaca.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "David.Clay.Photography · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "David.Clay.Photography",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:David.Clay.Photography&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Natalia Toledo ganó el Premio Nezahualcóyotl de Literatura en Lenguas Mexicanas en 2004 con su poemario «Olivo negro».",
       "subcategory": "indigenous-peoples",
@@ -1341651,21 +1341713,47 @@
         "notes": "The photo of the poet is not needed to answer, so it is not essential; it should be illustrative, and few people would recognise her anyway. Juchitán is the most famous Isthmus town, so the question is easier to guess than its stated 14. A Wikimedia photo of Natalia Toledo may not exist. The fun fact repeats the prize from the question; the 2004 date is believed correct."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates fits: they show Cardinal Francisco de Toledo's funeral monument, old maps of Toledo (Spain), a cardinal's engraving and a US immigration card. None shows Natalia Toledo, Francisco Toledo's art or the Isthmus. No new search is allowed, so the slot needs new media. The slot should be illustrative, not essential, with a query like \"Zapotec Tehuana dress\" or \"Francisco Toledo painting\". It must not show anything that names Juchitán. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits: they show Cardinal Francisco de Toledo's funeral monument, old maps of Toledo (Spain), a cardinal's engraving and a US immigration card. None shows Natalia Toledo, Francisco Toledo's art or the Isthmus. No new search is allowed, so the slot needs new media. The slot should be illustrative, not essential, with a query like \"Zapotec Tehuana dress\" or \"Francisco Toledo painting\". It must not show anything that names Juchitán. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No portrait was found, so I reworded the question to name the poet instead of pointing to a photo and made the media an illustrative Zapotec weaving that suggests none of the options.",
+        "previous": {
+          "question": "Esta poeta escribe en zapoteco, ganó el Premio Nezahualcóyotl y es hija del pintor Francisco Toledo. ¿De qué ciudad del Istmo es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Francisco Toledo artwork",
+            "note": "Retrato de la poeta zapoteca Natalia Toledo; sin texto que mencione su ciudad.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17330",
@@ -1342497,10 +1342585,10 @@
     },
     {
       "id": "q-17341",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Una apuesta donde lo único seguro es que alguien va a necesitar lentes de sol.",
-      "question": "Mira: estos dos enmascarados van a luchar máscara contra máscara. ¿Cuántas máscaras pierde el ganador?",
+      "question": "En la lucha libre, dos enmascarados luchan máscara contra máscara. ¿Cuántas máscaras pierde el ganador?",
       "answer": "0",
       "wrong_answers": [
         "1",
@@ -1342514,12 +1342602,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "lucha libre masked wrestlers",
-        "note": "Foto de dos luchadores enmascarados frente a frente en un ring de lucha libre.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "lucha libre masked wrestler",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEl_Felino_Mask.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/El_Felino_Mask.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Secretaría de Cultura Ciudad de México · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Secretaría de Cultura Ciudad de México",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "El que pierde una lucha de máscara contra máscara tiene que decir su nombre real frente al público.",
       "subcategory": "lucha-libre",
@@ -1342545,30 +1342640,44 @@
         "notes": "A logic trick that works without the photo, so 'essential' isn't really needed and illustrative would do. The '4' distractor makes no sense. Hint 3 nearly gives it. The fun fact echoes q-14646 (loser reveals his name), but the question asks something different."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says 'Mira: estos dos enmascarados…', so the essential image must show two masked wrestlers facing each other, and no candidate does. Find a photo of two masked luchadores in a ring, or reword the question so it doesn't point to a photo and make the media illustrative (a single masked luchador, like candidate 1, would then work). No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says 'Mira: estos dos enmascarados…', so the essential image must show two masked wrestlers facing each other, and no candidate does. Find a photo of two masked luchadores in a ring, or reword the question so it doesn't point to a photo and make the media illustrative (a single masked luchador, like candidate 1, would then work). No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the giveaway hint 2 with one about what each wrestler bets.",
+        "reason": "No photo of two wrestlers face to face was found, so I reworded the question so it doesn't point to a photo and made the media an illustrative single masked luchador.",
         "previous": {
-          "hints": [
-            "Piensa quién se queda con la cara descubierta.",
-            "Solo uno de los dos tiene que quitársela.",
-            "El ganador sale del ring igual que entró."
-          ]
+          "question": "Mira: estos dos enmascarados van a luchar máscara contra máscara. ¿Cuántas máscaras pierde el ganador?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "lucha libre masked wrestlers",
+            "note": "Foto de dos luchadores enmascarados frente a frente en un ring de lucha libre.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-12"
       }
@@ -1344292,7 +1344401,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "students school uniform tie",
+        "query": "school uniform red tie",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1344326,17 +1344435,43 @@
       "batch": "batch-59",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fits: they show a 1900s baseball team, a soldier in a classroom, a 1910s portrait of an Italian student, 1961 cheerleaders, a 1922 yearbook page and an AI image of a kidnapped schoolgirl, which isn't family-friendly. No new search is allowed, so the slot needs a new search by hand, e.g. \"school uniform red tie\" or \"private school students uniform\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fits: they show a 1900s baseball team, a soldier in a classroom, a 1910s portrait of an Italian student, 1961 cheerleaders, a 1922 yearbook page and an AI image of a kidnapped schoolgirl, which isn't family-friendly. No new search is allowed, so the slot needs a new search by hand, e.g. \"school uniform red tie\" or \"private school students uniform\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No image candidate fit, so I changed the media query as the reviewer suggested.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "students school uniform tie",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17365",
@@ -1345937,20 +1346072,11 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "drive-in theater cars screen",
+        "query": "drive-in movie theater",
         "note": "Foto clara de un autocinema: varios carros estacionados frente a una gran pantalla al aire libre, sin letreros con nombres.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFirst_drive-in_theater_Camden_NJ_1933.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/First_drive-in_theater_Camden_NJ_1933.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US-not renewed"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "En 2020, por la pandemia, los autocinemas volvieron a ponerse de moda en México porque permitían ver películas sin salir del carro.",
       "subcategory": "contemporary-cinema",
@@ -1345980,17 +1346106,52 @@
       "batch": "batch-59",
       "review": {
         "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-not renewed).",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US-not renewed).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The chosen image's license isn't usable, so I adjusted the media query to get new drive-in candidates; the rest is unchanged.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "drive-in theater cars screen",
+            "note": "Foto clara de un autocinema: varios carros estacionados frente a una gran pantalla al aire libre, sin letreros con nombres.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AFirst_drive-in_theater_Camden_NJ_1933.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/18/First_drive-in_theater_Camden_NJ_1933.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-not renewed"
+            ]
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17387",
@@ -1346462,9 +1346623,9 @@
     },
     {
       "id": "q-17393",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Un capitán de caballería que un día se cansó de obedecer al virrey.",
+      "description": "Un conspirador que terminó más peleado con su socio que dos hermanos por el control remoto.",
       "question": "«Nací en San Miguel el Grande y, tras la derrota de Puente de Calderón, le quité al cura Hidalgo el mando militar insurgente.» ¿Quién soy?",
       "answer": "Ignacio Allende",
       "wrong_answers": [
@@ -1346482,14 +1346643,14 @@
         "role": "illustrative",
         "query": "Dolores Hidalgo parish church",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AIglesia_Dolores_Hidalgo%2C_Guanajuato_DSC04872.JPG",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Iglesia_Dolores_Hidalgo%2C_Guanajuato_DSC04872.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "slevinr · CC BY 3.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADolores_Hidalgo_calle_Tabasco_Centro_2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Dolores_Hidalgo_calle_Tabasco_Centro_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 3.0",
-        "license_url": "https://creativecommons.org/licenses/by/3.0",
-        "author": "slevinr",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Soulecito&action=edit&redlink=1",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1346520,28 +1346681,31 @@
       "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"Un capitán de caballería…\") rules out options before any hint: Morelos was a priest and Guerrero was never a captain in the viceroy's army, so only Allende and Abasolo are left. The description should play on the theme (a conspirator, a falling-out with the priest) without saying he was a royal cavalry officer. Facts are fine and the question doesn't overlap the Aldama or Elizondo questions.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"Un capitán de caballería…\") rules out options before any hint: Morelos was a priest and Guerrero was never a captain in the viceroy's army, so only Allende and Abasolo are left. The description should play on the theme (a conspirator, a falling-out with the priest) without saying he was a royal cavalry officer. Facts are fine and the question doesn't overlap the Aldama or Elizondo questions.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Added the Puente de Calderón command clue that only Allende fits, which separates him from Aldama, and replaced hint 2, which named his town.",
+        "reason": "The description no longer says he was a royal cavalry captain, which ruled out Morelos and Guerrero; now it only plays on his falling-out with Hidalgo.",
         "previous": {
-          "question": "«Nací en San Miguel el Grande, fui capitán del ejército y empecé la lucha por la Independencia junto al cura Hidalgo.» ¿Quién soy?",
-          "hints": [
-            "Fui uno de los conspiradores de Querétaro.",
-            "Mi pueblo, en Guanajuato, hoy lleva mi apellido y lo visitan turistas de todo el mundo.",
-            "Mi apellido empieza con «A» y termina con «-llende»."
-          ]
+          "description": "Un capitán de caballería que un día se cansó de obedecer al virrey."
         },
         "revised_on": "2026-11-12"
       }
@@ -1346566,7 +1346730,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "matraca mexicana juguete",
+        "query": "matraca wooden rattle",
         "note": "Foto clara de una matraca de madera mexicana (juguete que gira y hace ruido), sin texto.",
         "source_url": null,
         "file_url": null,
@@ -1346600,17 +1346764,43 @@
       "batch": "batch-59",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate clearly shows a wooden matraca, and the question needs an essential photo of one (\"Mira este juguete\"). A new search for a clear matraca photo is needed, for example \"matraca wooden rattle\" or \"Mexican matraca ratchet\". No se encontró una imagen adecuada para esta pregunta.",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate clearly shows a wooden matraca, and the question needs an essential photo of one (\"Mira este juguete\"). A new search for a clear matraca photo is needed, for example \"matraca wooden rattle\" or \"Mexican matraca ratchet\". No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo was found, so the essential-image query is now a more concrete search term for a wooden matraca.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "matraca mexicana juguete",
+            "note": "Foto clara de una matraca de madera mexicana (juguete que gira y hace ruido), sin texto.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17395",
@@ -1348372,19 +1348562,19 @@
     },
     {
       "id": "q-17419",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Una diva tan modesta que ni siquiera pedía un satélite natural.",
       "question": "Daniela Romo triunfó en 1984 con «Yo no te pido la luna». La original había sonado ese año en un famoso festival europeo. ¿De qué país era la canción original?",
-      "answer": "Una canción italiana",
+      "answer": "Italia",
       "wrong_answers": [
-        "Una canción francesa",
-        "Una canción portuguesa",
-        "Una canción griega"
+        "Francia",
+        "Portugal",
+        "Grecia"
       ],
       "hints": [
         "El idioma original se parece mucho al español.",
-        "Viene del país famoso por su pizza y su pasta.",
+        "La cantaba una mujer cuyo nombre artístico es el de una flor.",
         "El festival fue el de Sanremo."
       ],
       "media": {
@@ -1348392,14 +1348582,14 @@
         "role": "illustrative",
         "query": "full moon night sky",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AFull_moon_over_Gullmarn_fjord_at_Holma_Marina_2.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Full_moon_over_Gullmarn_fjord_at_Holma_Marina_2.jpg/3840px-Full_moon_over_Gullmarn_fjord_at_Holma_Marina_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "W.carter · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASun_and_moon_2_-_Full_moon_in_the_night_sky.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Sun_and_moon_2_-_Full_moon_in_the_night_sky.jpg/3840px-Sun_and_moon_2_-_Full_moon_in_the_night_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Annatsach · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "W.carter",
-        "author_url": "https://commons.wikimedia.org/wiki/User:W.carter",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Annatsach",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Annatsach",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1348430,26 +1348620,39 @@
       "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Viene del país famoso por su pizza y su pasta\") names Italy almost outright, so it gives the answer away; hint 2 should stay vague (e.g. the singer was a woman with a flower-like stage name, or the festival is held every year in a seaside town). Also, the question asks \"¿De qué país…?\" but the options are \"Una canción italiana\" and so on: either ask \"¿De qué idioma/origen era la canción original?\" or make the options country names.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Viene del país famoso por su pizza y su pasta\") names Italy almost outright, so it gives the answer away; hint 2 should stay vague (e.g. the singer was a woman with a flower-like stage name, or the festival is held every year in a seaside town). Also, the question asks \"¿De qué país…?\" but the options are \"Una canción italiana\" and so on: either ask \"¿De qué idioma/origen era la canción original?\" or make the options country names.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the Italian singer, with a vaguer country clue, and made the question's ending clear.",
+        "reason": "The options are now country names to match «¿De qué país…?», and the pizza-and-pasta hint 2, which gave the answer away, is replaced with a vaguer clue about the singer's flower-like stage name.",
         "previous": {
-          "question": "Daniela Romo triunfó en 1984 con «Yo no te pido la luna». La versión original había sonado ese año en un famoso festival europeo. ¿Qué era?",
+          "answer": "Una canción italiana",
+          "wrong_answers": [
+            "Una canción francesa",
+            "Una canción portuguesa",
+            "Una canción griega"
+          ],
           "hints": [
             "El idioma original se parece mucho al español.",
-            "La cantante original se llamaba Fiordaliso.",
+            "Viene del país famoso por su pizza y su pasta.",
             "El festival fue el de Sanremo."
           ]
         },
@@ -1350211,7 +1350414,7 @@
     },
     {
       "id": "q-17443",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Cada caudillo con su plan, como cada tía con su receta de mole.",
       "question": "Completa: Zapata es al Plan de Ayala como Venustiano Carranza es al…",
@@ -1350229,21 +1350432,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Venustiano Carranza portrait",
+        "query": "Venustiano Carranza statue",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APortrait_of_Venustiano_Carranza_%28cropped%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Portrait_of_Venustiano_Carranza_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Harris & Ewing · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuadalajara%2C_Jalisco%2C_Mexico_%282021%29_-_100.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Guadalajara%2C_Jalisco%2C_Mexico_%282021%29_-_100.jpg/3840px-Guadalajara%2C_Jalisco%2C_Mexico_%282021%29_-_100.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Another Believer · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Harris & Ewing",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Another Believer",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Another_Believer",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Con el Plan de Guadalupe nació el Ejército Constitucionalista, y Carranza se nombró su «Primer Jefe».",
       "subcategory": "revolution",
@@ -1350272,27 +1350472,49 @@
       "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed hint 3: the plan is named after the hacienda, so the hint now only says the name matches the Virgin's.",
+        "reason": "The image is replaced because its license is PD-US-only; the new query is a modern photo of a Carranza statue, which doesn't show the answer.",
         "previous": {
-          "hints": [
-            "Lo firmó en 1913 en una hacienda de Coahuila.",
-            "Desconocía como presidente a Victoriano Huerta.",
-            "Lleva el nombre de la Virgen más famosa de México."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Venustiano Carranza portrait",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APortrait_of_Venustiano_Carranza_%28cropped%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Portrait_of_Venustiano_Carranza_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Harris & Ewing · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Harris & Ewing",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-11-12"
       }
@@ -1350542,20 +1350764,11 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Porfirio Diaz photograph",
-        "note": "Historic portrait photo of Porfirio Díaz in military uniform with medals, no caption or name visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APorfirio_Diaz_civilian.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Porfirio_Diaz_civilian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "query": "Porfirio Diaz military uniform portrait",
+        "note": "Historic portrait (photo or painting) of Porfirio Díaz in military uniform with medals, no caption or name visible; license must not be PD-US-only.",
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "En 1910, Díaz celebró en grande el Centenario de la Independencia e inauguró el Ángel de la Independencia.",
       "subcategory": "revolution",
@@ -1350585,17 +1350798,52 @@
       "batch": "batch-59",
       "review": {
         "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The essential image is replaced because its license is PD-US-only; the new query searches for a different portrait of Díaz.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Porfirio Diaz photograph",
+            "note": "Historic portrait photo of Porfirio Díaz in military uniform with medals, no caption or name visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APorfirio_Diaz_civilian.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Porfirio_Diaz_civilian.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17448",
@@ -1351921,7 +1352169,7 @@
     },
     {
       "id": "q-17466",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Una novela donde los sentimientos se cocinan a fuego lento.",
       "question": "En «Como agua para chocolate», de Laura Esquivel, Tita ama a Pedro y cada capítulo trae una receta. ¿En qué época ocurre la historia?",
@@ -1351933,7 +1352181,7 @@
       ],
       "hints": [
         "Tita vive en un rancho cerca de la frontera con Estados Unidos.",
-        "Pasa a principios del siglo XX, y por el rancho cruzan bandas armadas.",
+        "Por tradición familiar, Mamá Elena le prohíbe casarse por ser la hija menor.",
         "Es la época de Pancho Villa y Emiliano Zapata."
       ],
       "media": {
@@ -1351979,18 +1352227,38 @@
       "needs_media": false,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: \"principios del siglo XX\" alone rules out all three wrong options (Independence 1810, the Conquest, the 1960s), and \"bandas armadas\" points straight at the Revolution. Hint 2 should be vaguer, e.g. about Mama Elena's strict family tradition or the ranch's daily life, without a date or armed groups.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: \"principios del siglo XX\" alone rules out all three wrong options (Independence 1810, the Conquest, the 1960s), and \"bandas armadas\" points straight at the Revolution. Hint 2 should be vaguer, e.g. about Mama Elena's strict family tradition or the ranch's daily life, without a date or armed groups.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 2 gave the period away with its date and armed groups; it now describes Mama Elena's family tradition instead.",
+        "previous": {
+          "hints": [
+            "Tita vive en un rancho cerca de la frontera con Estados Unidos.",
+            "Pasa a principios del siglo XX, y por el rancho cruzan bandas armadas.",
+            "Es la época de Pancho Villa y Emiliano Zapata."
+          ]
+        },
+        "revised_on": "2026-11-12"
+      }
     },
     {
       "id": "q-17467",
@@ -1352207,10 +1352475,10 @@
     },
     {
       "id": "q-17470",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Siete palabras, cero relleno y un reptil que no se quiere ir.",
-      "question": "Este escritor, que vivió casi toda su vida en México, escribió «Cuando despertó, el dinosaurio todavía estaba allí». ¿Quién es?",
+      "question": "¿Qué escritor, que vivió casi toda su vida en México, escribió «Cuando despertó, el dinosaurio todavía estaba allí»?",
       "answer": "Augusto Monterroso",
       "wrong_answers": [
         "Juan José Arreola",
@@ -1352224,12 +1352492,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Augusto Monterroso writer",
-        "note": "Retrato claro del escritor Augusto Monterroso, sin texto con su nombre.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "dinosaur skeleton museum",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADuck-Billed_Dinosaur_skeletons_at_American_Museum_of_Natural_History.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Duck-Billed_Dinosaur_skeletons_at_American_Museum_of_Natural_History.jpg/3840px-Duck-Billed_Dinosaur_skeletons_at_American_Museum_of_Natural_History.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vicpeters · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vicpeters",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Vicpeters",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "«El dinosaurio» tiene solo siete palabras y es uno de los cuentos más cortos y famosos en español.",
       "subcategory": "writers-and-poets",
@@ -1352258,18 +1352533,43 @@
       "needs_media": true,
       "batch": "batch-59",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows Augusto Monterroso, and no new search is allowed. The role is also wrong: the question doesn't need a portrait to be answered, and an essential portrait would just show the answer. Change the slot to illustrative or decorative (e.g. \"dinosaur skeleton museum\" or \"old typewriter\") and search again. No se encontró una imagen adecuada para esta pregunta.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-12",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows Augusto Monterroso, and no new search is allowed. The role is also wrong: the question doesn't need a portrait to be answered, and an essential portrait would just show the answer. Change the slot to illustrative or decorative (e.g. \"dinosaur skeleton museum\" or \"old typewriter\") and search again. No se encontró una imagen adecuada para esta pregunta.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-12",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Switched the essential portrait to an illustrative dinosaur-skeleton image, because no portrait was found and one would show the answer anyway, and reworded the question so it no longer refers to a photo.",
+        "previous": {
+          "question": "Este escritor, que vivió casi toda su vida en México, escribió «Cuando despertó, el dinosaurio todavía estaba allí». ¿Quién es?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Augusto Monterroso writer",
+            "note": "Retrato claro del escritor Augusto Monterroso, sin texto con su nombre.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-12"
+      }
     }
   ]
 }

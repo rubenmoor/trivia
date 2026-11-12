@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "521fd942",
+  "hash": "edb63bbf",
   "questions": [
     {
       "id": "q-0711",
@@ -60185,6 +60185,40 @@
       "background": null
     },
     {
+      "id": "q-17308",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "contemporary-cinema",
+      "bundle": "mexico",
+      "description": "Un cineasta que filma la vida como canción ranchera: con mucho drama y sin final feliz.",
+      "question": "Soy cineasta mexicano, hijo de un productor, y mi pareja Paz Alicia Garciadiego escribe mis guiones. En 1994 filmé la vida de Lucha Reyes. ¿Quién soy?",
+      "answer": "Arturo Ripstein",
+      "wrong_answers": [
+        "Jorge Fons",
+        "Felipe Cazals",
+        "Carlos Carrera"
+      ],
+      "hints": [
+        "Empecé muy joven como asistente de Luis Buñuel.",
+        "Mi película «La reina de la noche» compitió en Cannes.",
+        "También dirigí «Profundo carmesí» y «El castillo de la pureza»."
+      ],
+      "fun_fact": "Lucha Reyes es considerada una de las primeras grandes cantantes de música ranchera en México.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Mariachi_band_%2852396809910%29.jpg/3840px-Mariachi_band_%2852396809910%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMariachi_band_%2852396809910%29.jpg",
+        "credit": "Gage Skidmore from Surprise, AZ, United States of America · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Gage Skidmore from Surprise, AZ, United States of America",
+        "author_url": "https://www.flickr.com/people/22007612@N05"
+      },
+      "background": null
+    },
+    {
       "id": "q-17309",
       "status": "approved",
       "difficulty": 5,
@@ -60317,6 +60351,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Thelmadatter",
         "author_url": "https://commons.wikimedia.org/wiki/User:Thelmadatter"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17313",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "crafts-and-dress",
+      "bundle": "mexico",
+      "description": "Una tela bordada que en la mesa mexicana tiene un trabajo muy importante.",
+      "question": "En muchas casas de México se pone en la mesa una servilleta de tela bordada. ¿Para qué sirve sobre todo?",
+      "answer": "Para envolver las tortillas calientes",
+      "wrong_answers": [
+        "Para secar los trastes",
+        "Para cubrirse la cabeza",
+        "Para colgarla en la pared"
+      ],
+      "hints": [
+        "Se pone en la mesa a la hora de comer.",
+        "Se usa con algo que se come en casi todas las comidas.",
+        "Guarda el calor de algo que sale del comal."
+      ],
+      "fun_fact": "Muchas de estas servilletas se bordan en punto de cruz: cada puntadita forma una pequeña X.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Embroidered_Picture_%28possibly_Mexico%29%2C_late_19th_century_%28CH_18616947%29.jpg/3840px-Embroidered_Picture_%28possibly_Mexico%29%2C_late_19th_century_%28CH_18616947%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmbroidered_Picture_%28possibly_Mexico%29%2C_late_19th_century_%28CH_18616947%29.jpg",
+        "credit": "Unknown artistUnknown artist · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown artistUnknown artist",
+        "author_url": null
       },
       "background": null
     },
@@ -60729,6 +60797,40 @@
       "background": null
     },
     {
+      "id": "q-17329",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "indigenous-peoples",
+      "bundle": "mexico",
+      "description": "Una poeta que rima en una lengua que tiene más de dos mil años.",
+      "question": "Natalia Toledo escribe en zapoteco, ganó el Premio Nezahualcóyotl y es hija del pintor Francisco Toledo. ¿De qué ciudad del Istmo es?",
+      "answer": "Juchitán",
+      "wrong_answers": [
+        "Tehuantepec",
+        "Salina Cruz",
+        "Matías Romero"
+      ],
+      "hints": [
+        "Está en Oaxaca, cerca de la costa del Pacífico.",
+        "Es famosa por sus velas y sus muxes.",
+        "Su nombre oficial termina en «de Zaragoza»."
+      ],
+      "fun_fact": "Natalia Toledo ganó el Premio Nezahualcóyotl de Literatura en Lenguas Mexicanas en 2004 con su poemario «Olivo negro».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Woman_on_a_backstrap_loom_in_Oaxaca.jpg/3840px-Woman_on_a_backstrap_loom_in_Oaxaca.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_on_a_backstrap_loom_in_Oaxaca.jpg",
+        "credit": "David.Clay.Photography · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "David.Clay.Photography",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:David.Clay.Photography&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-17330",
       "status": "approved",
       "difficulty": 6,
@@ -61065,6 +61167,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "ProtoplasmaKid",
         "author_url": "https://commons.wikimedia.org/wiki/User:ProtoplasmaKid"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17341",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "lucha-libre",
+      "bundle": "mexico",
+      "description": "Una apuesta donde lo único seguro es que alguien va a necesitar lentes de sol.",
+      "question": "En la lucha libre, dos enmascarados luchan máscara contra máscara. ¿Cuántas máscaras pierde el ganador?",
+      "answer": "0",
+      "wrong_answers": [
+        "1",
+        "2",
+        "4"
+      ],
+      "hints": [
+        "Piensa quién se queda con la cara descubierta.",
+        "En esta lucha, cada uno apuesta su máscara contra la del otro.",
+        "El ganador sale del ring igual que entró."
+      ],
+      "fun_fact": "El que pierde una lucha de máscara contra máscara tiene que decir su nombre real frente al público.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/El_Felino_Mask.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEl_Felino_Mask.jpg",
+        "credit": "Secretaría de Cultura Ciudad de México · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Secretaría de Cultura Ciudad de México",
+        "author_url": null
       },
       "background": null
     },
@@ -62735,6 +62871,40 @@
       "background": null
     },
     {
+      "id": "q-17393",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "independence-and-19th-century",
+      "bundle": "mexico",
+      "description": "Un conspirador que terminó más peleado con su socio que dos hermanos por el control remoto.",
+      "question": "«Nací en San Miguel el Grande y, tras la derrota de Puente de Calderón, le quité al cura Hidalgo el mando militar insurgente.» ¿Quién soy?",
+      "answer": "Ignacio Allende",
+      "wrong_answers": [
+        "José María Morelos",
+        "Mariano Abasolo",
+        "Vicente Guerrero"
+      ],
+      "hints": [
+        "Fui uno de los conspiradores de Querétaro.",
+        "Fui el militar del movimiento y discutí mucho con Hidalgo sobre cómo hacer la guerra.",
+        "Mi apellido empieza con «A» y termina con «-llende»."
+      ],
+      "fun_fact": "San Miguel el Grande cambió su nombre a San Miguel de Allende en 1826 para honrar a su héroe.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Dolores_Hidalgo_calle_Tabasco_Centro_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADolores_Hidalgo_calle_Tabasco_Centro_2.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata"
+      },
+      "background": null
+    },
+    {
       "id": "q-17395",
       "status": "approved",
       "difficulty": 6,
@@ -63483,6 +63653,40 @@
       "background": null
     },
     {
+      "id": "q-17419",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "pop-and-rock",
+      "bundle": "mexico",
+      "description": "Una diva tan modesta que ni siquiera pedía un satélite natural.",
+      "question": "Daniela Romo triunfó en 1984 con «Yo no te pido la luna». La original había sonado ese año en un famoso festival europeo. ¿De qué país era la canción original?",
+      "answer": "Italia",
+      "wrong_answers": [
+        "Francia",
+        "Portugal",
+        "Grecia"
+      ],
+      "hints": [
+        "El idioma original se parece mucho al español.",
+        "La cantaba una mujer cuyo nombre artístico es el de una flor.",
+        "El festival fue el de Sanremo."
+      ],
+      "fun_fact": "La canción original de Fiordaliso se llamaba «Non voglio mica la luna».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Sun_and_moon_2_-_Full_moon_in_the_night_sky.jpg/3840px-Sun_and_moon_2_-_Full_moon_in_the_night_sky.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASun_and_moon_2_-_Full_moon_in_the_night_sky.jpg",
+        "credit": "Annatsach · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Annatsach",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Annatsach"
+      },
+      "background": null
+    },
+    {
       "id": "q-17420",
       "status": "approved",
       "difficulty": 11,
@@ -64193,6 +64397,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "AlejandroLinaresGarcia",
         "author_url": "https://commons.wikimedia.org/wiki/User:AlejandroLinaresGarcia"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17443",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "revolution",
+      "bundle": "mexico",
+      "description": "Cada caudillo con su plan, como cada tía con su receta de mole.",
+      "question": "Completa: Zapata es al Plan de Ayala como Venustiano Carranza es al…",
+      "answer": "Plan de Guadalupe",
+      "wrong_answers": [
+        "Plan de Agua Prieta",
+        "Plan de Iguala",
+        "Plan de Ayutla"
+      ],
+      "hints": [
+        "Lo firmó en 1913 en una hacienda de Coahuila.",
+        "Desconocía como presidente a Victoriano Huerta.",
+        "Su nombre es el mismo que el de la Virgen más famosa de México."
+      ],
+      "fun_fact": "Con el Plan de Guadalupe nació el Ejército Constitucionalista, y Carranza se nombró su «Primer Jefe».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Guadalajara%2C_Jalisco%2C_Mexico_%282021%29_-_100.jpg/3840px-Guadalajara%2C_Jalisco%2C_Mexico_%282021%29_-_100.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuadalajara%2C_Jalisco%2C_Mexico_%282021%29_-_100.jpg",
+        "credit": "Another Believer · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Another Believer",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Another_Believer"
       },
       "background": null
     },
@@ -64911,6 +65149,40 @@
       "background": null
     },
     {
+      "id": "q-17466",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Una novela donde los sentimientos se cocinan a fuego lento.",
+      "question": "En «Como agua para chocolate», de Laura Esquivel, Tita ama a Pedro y cada capítulo trae una receta. ¿En qué época ocurre la historia?",
+      "answer": "Durante la Revolución Mexicana",
+      "wrong_answers": [
+        "Durante la Guerra de Independencia",
+        "Durante la Conquista",
+        "En los años sesenta"
+      ],
+      "hints": [
+        "Tita vive en un rancho cerca de la frontera con Estados Unidos.",
+        "Por tradición familiar, Mamá Elena le prohíbe casarse por ser la hija menor.",
+        "Es la época de Pancho Villa y Emiliano Zapata."
+      ],
+      "fun_fact": "La película de 1992 la dirigió Alfonso Arau, que entonces era esposo de Laura Esquivel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Cocina_integral_antigua.jpg/3840px-Cocina_integral_antigua.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACocina_integral_antigua.jpg",
+        "credit": "JOSE ANGEL VIDAL MENA · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JOSE ANGEL VIDAL MENA",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JOSE_ANGEL_VIDAL_MENA&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-17467",
       "status": "approved",
       "difficulty": 10,
@@ -65009,6 +65281,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Gobierno CDMX",
         "author_url": "https://www.flickr.com/people/140660272@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17470",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "writers-and-poets",
+      "bundle": "mexico",
+      "description": "Siete palabras, cero relleno y un reptil que no se quiere ir.",
+      "question": "¿Qué escritor, que vivió casi toda su vida en México, escribió «Cuando despertó, el dinosaurio todavía estaba allí»?",
+      "answer": "Augusto Monterroso",
+      "wrong_answers": [
+        "Juan José Arreola",
+        "Julio Cortázar",
+        "Jorge Luis Borges"
+      ],
+      "hints": [
+        "Es un maestro de los textos brevísimos y las fábulas con humor.",
+        "Nació en Honduras y creció en Guatemala.",
+        "Escribió «La oveja negra y demás fábulas»."
+      ],
+      "fun_fact": "«El dinosaurio» tiene solo siete palabras y es uno de los cuentos más cortos y famosos en español.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Duck-Billed_Dinosaur_skeletons_at_American_Museum_of_Natural_History.jpg/3840px-Duck-Billed_Dinosaur_skeletons_at_American_Museum_of_Natural_History.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADuck-Billed_Dinosaur_skeletons_at_American_Museum_of_Natural_History.jpg",
+        "credit": "Vicpeters · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vicpeters",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Vicpeters"
       },
       "background": null
     }
