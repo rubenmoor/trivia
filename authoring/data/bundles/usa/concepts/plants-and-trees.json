@@ -393,7 +393,8 @@
     {
       "name": "Corn",
       "facet": "Native American food crops",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Corn has been asked many times already, and a close-up photo would repeat the existing photo questions."
     },
     {
       "name": "Three Sisters",
@@ -900,7 +901,8 @@
     {
       "name": "George Washington's cherry tree",
       "facet": "Famous trees in history",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The riddle already in the pool covers both the chopped cherry tree and “I cannot tell a lie.”"
     },
     {
       "name": "Arbor Day",

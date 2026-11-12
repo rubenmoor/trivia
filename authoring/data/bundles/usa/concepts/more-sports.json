@@ -402,7 +402,8 @@
     {
       "name": "Pace car",
       "facet": "Indy 500 and open-wheel racing",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The pace car driver question is already asked, and the other options make forced questions."
     },
     {
       "name": "Memorial Day weekend",
@@ -787,7 +788,8 @@
     {
       "name": "Lane Frost",
       "facet": "Rodeo and Western sports",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Lane Frost's story centers on his death in the arena; it's too obscure and somber for a family question."
     },
     {
       "name": "Major League Soccer",
@@ -802,7 +804,8 @@
     {
       "name": "Inter Miami",
       "facet": "US soccer, MLS and USWNT",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Messi, Beckham, pink, Florida and the Spanish players are all already asked; what is left is forced."
     },
     {
       "name": "LA Galaxy",

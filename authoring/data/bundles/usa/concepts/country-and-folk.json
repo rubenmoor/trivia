@@ -552,7 +552,8 @@
     {
       "name": "Accordion",
       "facet": "Instruments of country and folk",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The accordion sound is already asked many times; the other options don't fit country and folk at this level."
     },
     {
       "name": "Capo",
@@ -777,7 +778,8 @@
     {
       "name": "Swing your partner",
       "facet": "Square dance and line dance",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: “Swing your partner” is already asked; nothing new to ask at this level."
     },
     {
       "name": "Line dance",

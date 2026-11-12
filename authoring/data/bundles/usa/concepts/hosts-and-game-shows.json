@@ -558,7 +558,8 @@
     {
       "name": "Floor Is Lava",
       "facet": "Kids' and family game shows",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The pool already asks what the floor pretends to be, and a riddle about a sofa or the show would be forced."
     },
     {
       "name": "Minute to Win It",
@@ -593,7 +594,8 @@
     {
       "name": "Phone a friend",
       "facet": "Catchphrases and show lingo",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The 30-second limit and the number of lifelines are already in the pool, and nothing else fresh is left to ask."
     },
     {
       "name": "Fifty-fifty",

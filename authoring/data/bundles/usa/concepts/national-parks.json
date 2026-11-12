@@ -357,7 +357,8 @@
     {
       "name": "Sonoran Desert",
       "facet": "Caves, deserts and dunes",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The saguaro and Gila monster facts are already used, and the only fact left (Phoenix and Tucson) is far above the target."
     },
     {
       "name": "Chihuahuan Desert",

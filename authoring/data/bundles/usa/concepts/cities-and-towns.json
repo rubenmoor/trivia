@@ -107,7 +107,8 @@
     {
       "name": "The Big Apple",
       "facet": "City nicknames and slogans",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Which city is the Big Apple is already asked; the origin and date of the nickname are far too hard for the target."
     },
     {
       "name": "The Windy City",
@@ -242,7 +243,8 @@
     {
       "name": "Brooklyn Bridge",
       "facet": "Famous landmarks by city",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Close-up, Emily Roebling and Brooklyn/Dodgers are already asked; the options left (Roebling photo, bridge-type riddle) can't reach difficulty 1."
     },
     {
       "name": "Central Park",

@@ -336,7 +336,8 @@
     {
       "name": "Washington (state)",
       "facet": "State names and their origins",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The key fact (named after a president) is already asked, and the riddle options with thing or group answers don't fit a state."
     },
     {
       "name": "Indiana",
@@ -957,7 +958,8 @@
     {
       "name": "Seattle",
       "facet": "Largest cities vs. capitals",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The main Seattle facts are already asked, and the pop-culture count options would be forced."
     },
     {
       "name": "Philadelphia",
@@ -1232,7 +1234,8 @@
     {
       "name": "Grand Canyon",
       "facet": "Famous landmarks by state",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Naming the Grand Canyon from a photo is already asked, and the count options don't fit."
     },
     {
       "name": "Mount Rushmore",

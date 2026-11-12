@@ -356,7 +356,8 @@
     {
       "name": "Ice cream cone",
       "facet": "Ice cream and soda fountain treats",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The cone has already been identified twice, and who invented it is disputed and hard."
     },
     {
       "name": "Hot fudge",
@@ -516,7 +517,8 @@
     {
       "name": "Donut hole",
       "facet": "Breakfast pastries and donuts",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The Munchkins question already reveals the name 'donut holes'."
     },
     {
       "name": "Cronut",
