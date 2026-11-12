@@ -346,7 +346,8 @@
     {
       "name": "Stagecoach",
       "facet": "Cowboys and Wild West legends",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already names the stagecoach and its driver; the options left (odd one out, horse count, riddle) would be ambiguous or repeat facts."
     },
     {
       "name": "Rodeo",
@@ -441,7 +442,8 @@
     {
       "name": "Cowcatcher",
       "facet": "Railroads, Pony Express and telegraph",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The main cowcatcher fact (its purpose) is already in the pool; the remaining options would be forced."
     },
     {
       "name": "Train robbery",

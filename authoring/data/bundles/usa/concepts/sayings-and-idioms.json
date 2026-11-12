@@ -121,7 +121,8 @@
     {
       "name": "Bite the bullet",
       "facet": "Wild West and frontier sayings",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: \"Bite the bullet\" is used all over the English-speaking world, and its origin (soldiers biting bullets during battlefield surgery, also British, e.g. Kipling) is disputed, so it doesn't fit the usa bundle"
     },
     {
       "name": "Hold your horses",
@@ -331,7 +332,8 @@
     {
       "name": "Running around like a chicken with its head cut off",
       "facet": "Farm and animal sayings",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: The saying is about a beheaded chicken, too gory for a family game in every age group"
     },
     {
       "name": "Straight from the horse's mouth",
@@ -847,7 +849,8 @@
     {
       "name": "Haste makes waste",
       "facet": "Proverbs from Franklin and folk wisdom",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: \"Haste makes waste\" is an old English proverb (Heywood, 1500s), not American, and the link to Franklin is too uncertain to build on"
     },
     {
       "name": "Never leave that till tomorrow which you can do today",
