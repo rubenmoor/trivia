@@ -1037432,7 +1037432,8 @@
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-13408",
