@@ -236,7 +236,8 @@
     {
       "name": "Ferris wheel",
       "facet": "Midway rides and carnival games",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Identifying the Ferris wheel and its Eiffel Tower origin are already asked; what's left (gondola names, 1893 capacity) is far above difficulty 1."
     },
     {
       "name": "Carousel",

@@ -411,7 +411,8 @@
     {
       "name": "Money doesn't grow on trees",
       "facet": "Money and business expressions",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already has the completion question for this saying, and the options left (its date or place of origin) are unknown or uncertain, so a difficulty-1 question isn't possible."
     },
     {
       "name": "Bean counter",

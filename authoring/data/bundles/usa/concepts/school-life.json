@@ -114,7 +114,8 @@
     {
       "name": "Public school",
       "facet": "Grade levels and school types",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The main US fact (public school is free) is already in the pool; anything left would repeat it."
     },
     {
       "name": "Private school",
@@ -342,7 +343,8 @@
     {
       "name": "Milk carton",
       "facet": "School lunch and cafeteria food",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool already has a question on school milk cartons (chocolate milk); a photo of the carton would just repeat it."
     },
     {
       "name": "Food fight",
@@ -590,7 +592,8 @@
     {
       "name": "Spiral notebook",
       "facet": "School supplies and classroom objects",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: There is no famous inventor or origin of the spiral notebook to ask about."
     },
     {
       "name": "Trapper Keeper",
