@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "912d1542",
+  "hash": "a7f0a6b0",
   "questions": [
     {
       "id": "q-0975",
@@ -63882,6 +63882,74 @@
       "background": null
     },
     {
+      "id": "q-17124",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "empire",
+      "bundle": "spain",
+      "description": "Un lector tan enganchado a las novelas que acabó saliendo de casa con una bacía de barbero en la cabeza.",
+      "question": "Don Quijote lo era, no pagaba ciertos impuestos y le parecía indigno trabajar con las manos. ¿Qué era un hidalgo?",
+      "answer": "Un noble de rango bajo",
+      "wrong_answers": [
+        "Un campesino sin tierras",
+        "Un monje de clausura",
+        "Un comerciante rico"
+      ],
+      "hints": [
+        "Formaba parte de la clase privilegiada.",
+        "No tenía título de duque ni de conde.",
+        "La palabra viene de «hijo de algo»."
+      ],
+      "fun_fact": "En el «Lazarillo de Tormes», un hidalgo tan pobre que no tenía nada que comer salía a la calle con un palillo en la boca para que pareciera que había comido bien.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Moulins_La_Mancha.jpg/3840px-Moulins_La_Mancha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoulins_La_Mancha.jpg",
+        "credit": "Jebulon · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jebulon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17125",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "empire",
+      "bundle": "spain",
+      "description": "Moctezuma esperaba visitas, pero no a unos señores con armadura llegados del otro lado del mar.",
+      "question": "Moctezuma gobernaba Tenochtitlan cuando llegó Hernán Cortés. ¿Qué ciudad se construyó después sobre sus ruinas?",
+      "answer": "Ciudad de México",
+      "wrong_answers": [
+        "Lima",
+        "Cuzco",
+        "La Habana"
+      ],
+      "hints": [
+        "Hoy es la capital de un país.",
+        "Es una de las ciudades más pobladas del mundo.",
+        "La ciudad tiene el mismo nombre que el país."
+      ],
+      "fun_fact": "Tenochtitlan estaba en una isla del lago de Texcoco y era más grande que casi todas las ciudades europeas de su época.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Aztec_Headdress%2C_Replica_of_One_Given_to_Cortez.jpg/3840px-Aztec_Headdress%2C_Replica_of_One_Given_to_Cortez.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAztec_Headdress%2C_Replica_of_One_Given_to_Cortez.jpg",
+        "credit": "Gary Todd · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Gary Todd",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-17126",
       "status": "approved",
       "difficulty": 8,
@@ -64324,6 +64392,40 @@
       "background": null
     },
     {
+      "id": "q-17139",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "modern-literature",
+      "bundle": "spain",
+      "description": "Un escritor de Úbeda con más billetes de tren que una agencia de viajes.",
+      "question": "¿Cuál de estas ciudades NO aparece en el título de ningún libro de Antonio Muñoz Molina?",
+      "answer": "París",
+      "wrong_answers": [
+        "Lisboa",
+        "Madrid",
+        "Córdoba"
+      ],
+      "hints": [
+        "Uno de sus ensayos viaja a la época de los califas omeyas.",
+        "Su novela «El invierno en…» mezcla jazz, amor y una capital portuguesa.",
+        "La ciudad que falta es la de la Torre Eiffel."
+      ],
+      "fun_fact": "Muñoz Molina convirtió su Úbeda natal en «Mágina», la ciudad imaginaria de varias de sus novelas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/20/Sacra_Capilla_del_Salvador%2C_en_%C3%9Abeda_%28Ja%C3%A9n%2C_Espa%C3%B1a%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASacra_Capilla_del_Salvador%2C_en_%C3%9Abeda_%28Ja%C3%A9n%2C_Espa%C3%B1a%29.jpg",
+        "credit": "Mihael Grmek · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Mihael Grmek",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Meho29"
+      },
+      "background": null
+    },
+    {
       "id": "q-17140",
       "status": "approved",
       "difficulty": 15,
@@ -64592,6 +64694,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Alvaro.vinuela.carnicero",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Alvaro.vinuela.carnicero&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17148",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "monuments",
+      "bundle": "spain",
+      "description": "Lleva más años en obras que la calle de tu barrio, y eso ya es decir.",
+      "question": "Mira este edificio de Gaudí en Barcelona, que lleva más de 140 años en obras. ¿Para qué es?",
+      "answer": "Para ir a misa",
+      "wrong_answers": [
+        "Para ver partidos",
+        "Para que viva un rey",
+        "Para ver cuadros"
+      ],
+      "hints": [
+        "Por dentro caben miles de personas y entra luz de colores por las ventanas.",
+        "Su torre más alta, dedicada a Jesús, está coronada por una gran cruz.",
+        "Es un templo, la Sagrada Familia."
+      ],
+      "fun_fact": "Gaudí está enterrado en la cripta de la Sagrada Familia.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Barcelona_-_Exterior_of_the_Apse_of_the_Sagrada_Fam%C3%ADlia_-_Western_exposure.jpg/3840px-Barcelona_-_Exterior_of_the_Apse_of_the_Sagrada_Fam%C3%ADlia_-_Western_exposure.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarcelona_-_Exterior_of_the_Apse_of_the_Sagrada_Fam%C3%ADlia_-_Western_exposure.jpg",
+        "credit": "Didier Descouens · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Didier Descouens",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
       },
       "background": null
     },
@@ -65000,6 +65136,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Greg Gjerdingen from Willmar, USA",
         "author_url": "https://www.flickr.com/people/52900873@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17161",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pop-and-rock",
+      "bundle": "spain",
+      "description": "Música de la época en que tus padres llevaban hombreras y peinados imposibles.",
+      "question": "Tenía una cinta enrollada dentro y dos caras, A y B; si la cinta se enredaba, la arreglabas con un boli. ¿Qué era?",
+      "answer": "El casete",
+      "wrong_answers": [
+        "El vinilo",
+        "El CD",
+        "El disquete"
+      ],
+      "hints": [
+        "Se ponía en radios, en el coche y en aparatos portátiles con auriculares.",
+        "Cuando acababa una cara, le dabas la vuelta.",
+        "Era una cajita de plástico con dos ruedecitas."
+      ],
+      "fun_fact": "La empresa Philips presentó el casete compacto en 1963.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Bedroom_in_the_80s_museum_in_Zagreb.jpg/3840px-Bedroom_in_the_80s_museum_in_Zagreb.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABedroom_in_the_80s_museum_in_Zagreb.jpg",
+        "credit": "Alex Sirac · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Alex Sirac",
+        "author_url": "https://www.wikidata.org/wiki/Q47472326"
       },
       "background": null
     },
@@ -67652,6 +67822,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
         "author": "Wilson Dias/Abr",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17242",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "sportspeople",
+      "bundle": "spain",
+      "description": "En esta familia, las medallas se repartían como los turrones en Navidad.",
+      "question": "¿Qué medalla ganó Blanca Fernández Ochoa, hermana de Paquito, en el eslalon de Albertville 1992?",
+      "answer": "La medalla de bronce",
+      "wrong_answers": [
+        "La medalla de plata",
+        "La medalla de oro",
+        "El diploma olímpico"
+      ],
+      "hints": [
+        "Fue la primera medalla olímpica de una deportista española.",
+        "No subió al escalón más alto del podio.",
+        "Quedó tercera."
+      ],
+      "fun_fact": "Blanca participó en cuatro Juegos Olímpicos de invierno, de Lake Placid 1980 a Albertville 1992.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Roland_Leitinger_Austrian_Alpine_Ski_Championships_2008_Slalom_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoland_Leitinger_Austrian_Alpine_Ski_Championships_2008_Slalom_1.jpg",
+        "credit": "Christian Jansky · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Christian Jansky",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tschaensky"
       },
       "background": null
     },

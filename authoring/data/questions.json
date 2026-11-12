@@ -1325189,20 +1325189,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "children's book dragon illustration",
+        "query": "cartoon dragon drawing",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren-of-Odin-6-deriv.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Children-of-Odin-6-deriv.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Willy Pogany (illustrator) · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Willy Pogany (illustrator)",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Gloria Fuertes escribió muchísimos libros infantiles y se hizo famosa presentando poemas en la televisión para niños.",
       "subcategory": "comics-and-childrens-books",
@@ -1325232,18 +1325223,53 @@
       "batch": "batch-58",
       "review": {
         "decision": "needs_work",
-        "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+        "feedback": "No se encontró una imagen adecuada para esta pregunta.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "La imagen elegida tiene una licencia no adecuada (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image's licence is PD-US only, so I changed the media query to find a different, properly licensed dragon picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "children's book dragon illustration",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren-of-Odin-6-deriv.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Children-of-Odin-6-deriv.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Willy Pogany (illustrator) · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Willy Pogany (illustrator)",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-17113",
@@ -1326086,9 +1326112,9 @@
     },
     {
       "id": "q-17124",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Un señor de La Mancha con tanta imaginación que veía gigantes donde solo había molinos.",
+      "description": "Un lector tan enganchado a las novelas que acabó saliendo de casa con una bacía de barbero en la cabeza.",
       "question": "Don Quijote lo era, no pagaba ciertos impuestos y le parecía indigno trabajar con las manos. ¿Qué era un hidalgo?",
       "answer": "Un noble de rango bajo",
       "wrong_answers": [
@@ -1326146,32 +1326172,39 @@
       "needs_media": false,
       "batch": "batch-58",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description («veía gigantes donde solo había molinos») gives away the answer to the approved q-9924 («¿Qué creía que eran?» → Gigantes). Rewrite it to play on Don Quijote or nobility some other way, without the giants-and-windmills episode.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description («veía gigantes donde solo había molinos») gives away the answer to the approved q-9924 («¿Qué creía que eran?» → Gigantes). Rewrite it to play on Don Quijote or nobility some other way, without the giants-and-windmills episode.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints at nobility or wealth, and replaced the fun fact that repeated hint 3.",
+        "reason": "I rewrote the description without the giants-and-windmills episode, which is the answer to approved q-9924.",
         "previous": {
-          "description": "Mucho apellido, mucha espada colgada en la pared y poco dinero en el bolsillo.",
-          "fun_fact": "«Hidalgo» viene de «hijo de algo», es decir, hijo de alguien con linaje o bienes."
+          "description": "Un señor de La Mancha con tanta imaginación que veía gigantes donde solo había molinos."
         },
         "revised_on": "2026-11-11"
       }
     },
     {
       "id": "q-17125",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "Moctezuma esperaba visitas, pero no a unos señores con armadura llegados del otro lado del mar.",
       "question": "Moctezuma gobernaba Tenochtitlan cuando llegó Hernán Cortés. ¿Qué ciudad se construyó después sobre sus ruinas?",
@@ -1326183,7 +1326216,7 @@
       ],
       "hints": [
         "Hoy es la capital de un país.",
-        "En ese país se habla español y se comen tacos.",
+        "Es una de las ciudades más pobladas del mundo.",
         "La ciudad tiene el mismo nombre que el país."
       ],
       "media": {
@@ -1326229,24 +1326262,36 @@
       "needs_media": false,
       "batch": "batch-58",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («En ese país se habla español y se comen tacos») points straight to Mexico, and Ciudad de México is the only Mexican option, so hint 2 gives the answer away. Replace it with a vaguer hint, for example that the city is one of the biggest in the world or is very high above sea level, without naming the country or its food.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («En ese país se habla español y se comen tacos») points straight to Mexico, and Ciudad de México is the only Mexican option, so hint 2 gives the answer away. Replace it with a vaguer hint, for example that the city is one of the biggest in the world or is very high above sea level, without naming the country or its food.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer mentions the size of the city or a lake, which ruled out options.",
+        "reason": "Hint 2 pointed straight to Mexico, so I replaced it with a vaguer hint about the city's size.",
         "previous": {
-          "description": "Una capital sobre un lago que acabó convertida en una de las ciudades más grandes del mundo."
+          "hints": [
+            "Hoy es la capital de un país.",
+            "En ese país se habla español y se comen tacos.",
+            "La ciudad tiene el mismo nombre que el país."
+          ]
         },
         "revised_on": "2026-11-11"
       }
@@ -1327275,7 +1327320,7 @@
     },
     {
       "id": "q-17139",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "Un escritor de Úbeda con más billetes de tren que una agencia de viajes.",
       "question": "¿Cuál de estas ciudades NO aparece en el título de ningún libro de Antonio Muñoz Molina?",
@@ -1327329,19 +1327374,27 @@
         "difficulty_estimate": 13,
         "notes": "Facts check out: El invierno en Lisboa, Córdoba de los omeyas and Los misterios de Madrid exist, and no Muñoz Molina title has París. Knowing several of his titles is literary-specialist knowledge, not what most adults know, so it plays harder than 12. The bookshop opening is unneeded invented context, and the NO format is a dry title-recall test."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-58",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Verificación de datos: uncertain. A search found no Muñoz Molina book titled with Paris. It did confirm 'Los misterios de Madrid' and 'Córdoba de los Omeyas'. 'El invierno en Lisboa' is well known. I did not check a full bibliography, so I can't rule out a Paris title.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Verificación de datos: uncertain. A search found no Muñoz Molina book titled with Paris. It did confirm 'Los misterios de Madrid' and 'Córdoba de los Omeyas'. 'El invierno en Lisboa' is well known. I did not check a full bibliography, so I can't rule out a Paris title.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
@@ -1327966,7 +1328019,7 @@
     },
     {
       "id": "q-17148",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Lleva más años en obras que la calle de tu barrio, y eso ya es decir.",
       "question": "Mira este edificio de Gaudí en Barcelona, que lleva más de 140 años en obras. ¿Para qué es?",
@@ -1327978,7 +1328031,7 @@
       ],
       "hints": [
         "Por dentro caben miles de personas y entra luz de colores por las ventanas.",
-        "Sus torres terminan en cruces.",
+        "Su torre más alta, dedicada a Jesús, está coronada por una gran cruz.",
         "Es un templo, la Sagrada Familia."
       ],
       "media": {
@@ -1328020,29 +1328073,37 @@
         "difficulty_estimate": 2,
         "notes": "Related to q-1362 and q-16305, but it asks a different fact, the building's purpose."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-58",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 («Sus torres terminan en cruces») is factually wrong: only the central Tower of Jesus Christ is topped by a cross. The other towers end in other finials (mitres, a star, fruit and symbol pinnacles). Replace it with an accurate hint, for example that the tallest tower, dedicated to Jesus, is crowned by a large cross. Verificación de datos: wrong. Hint 2 'Sus torres terminan en cruces' is inaccurate: only the central Tower of Jesus Christ (completed Feb 2026) ends in a cross. The other towers end in other finials (mitres, star, symbols).",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 («Sus torres terminan en cruces») is factually wrong: only the central Tower of Jesus Christ is topped by a cross. The other towers end in other finials (mitres, a star, fruit and symbol pinnacles). Replace it with an accurate hint, for example that the tallest tower, dedicated to Jesus, is crowned by a large cross. Verificación de datos: wrong. Hint 2 'Sus torres terminan en cruces' is inaccurate: only the central Tower of Jesus Christ (completed Feb 2026) ends in a cross. The other towers end in other finials (mitres, star, symbols).",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which named an altar and gave the answer away, with a vaguer hint.",
+        "reason": "Hint 2 was wrong because only the central tower ends in a cross, so I replaced it with an accurate hint.",
         "previous": {
           "hints": [
-            "Por dentro hay bancos largos y un altar.",
+            "Por dentro caben miles de personas y entra luz de colores por las ventanas.",
             "Sus torres terminan en cruces.",
             "Es un templo, la Sagrada Familia."
           ]
@@ -1328939,9 +1329000,9 @@
     },
     {
       "id": "q-17161",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Antes de las listas de reproducción, la música venía con rebobinado manual incluido.",
+      "description": "Música de la época en que tus padres llevaban hombreras y peinados imposibles.",
       "question": "Tenía una cinta enrollada dentro y dos caras, A y B; si la cinta se enredaba, la arreglabas con un boli. ¿Qué era?",
       "answer": "El casete",
       "wrong_answers": [
@@ -1328997,28 +1329058,32 @@
       "needs_media": false,
       "batch": "batch-58",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. Read with only the four options, «rebobinado manual incluido» points to the cassette alone: of the four, only a tape gets rewound, and by hand with a pen. That rules out the vinyl, the CD and the floppy disk before any hint. Rewrite it to play on the retro-music theme without mentioning rewinding, tape or winding.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. Read with only the four options, «rebobinado manual incluido» points to the cassette alone: of the four, only a tape gets rewound, and by hand with a pen. That rules out the vinyl, the CD and the floppy disk before any hint. Rewrite it to play on the retro-music theme without mentioning rewinding, tape or winding.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the brand-as-generic «walkmans» in hint 1 with a brand-free wording.",
+        "reason": "The description mentioned rewinding, which only fits the cassette, so I rewrote it around the retro theme instead.",
         "previous": {
-          "hints": [
-            "Se ponía en radios, en el coche y en walkmans.",
-            "Cuando acababa una cara, le dabas la vuelta.",
-            "Era una cajita de plástico con dos ruedecitas."
-          ]
+          "description": "Antes de las listas de reproducción, la música venía con rebobinado manual incluido."
         },
         "revised_on": "2026-11-11"
       }
@@ -1335029,7 +1335094,7 @@
     },
     {
       "id": "q-17242",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "En esta familia, las medallas se repartían como los turrones en Navidad.",
       "question": "¿Qué medalla ganó Blanca Fernández Ochoa, hermana de Paquito, en el eslalon de Albertville 1992?",
@@ -1335060,7 +1335125,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Veinte años antes, en Sapporo 1972, su hermano Paquito había ganado el primer oro olímpico de invierno de España.",
+      "fun_fact": "Blanca participó en cuatro Juegos Olímpicos de invierno, de Lake Placid 1980 a Albertville 1992.",
       "subcategory": "sportspeople",
       "style": null,
       "concept": "Blanca Fernández Ochoa",
@@ -1335087,25 +1335152,32 @@
       "needs_media": false,
       "batch": "batch-58",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says outright that Paquito won Spain's first Winter Olympic gold in Sapporo 1972, which is the whole answer to the approved q-11386 ('¿Quién ganó el primer oro olímpico de invierno de la historia de España?'). Replace the fun fact with another true fact about Blanca, for example that she competed in four Winter Olympics, and the question can pass.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says outright that Paquito won Spain's first Winter Olympic gold in Sapporo 1972, which is the whole answer to the approved q-11386 ('¿Quién ganó el primer oro olímpico de invierno de la historia de España?'). Replace the fun fact with another true fact about Blanca, for example that she competed in four Winter Olympics, and the question can pass.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "spain",
       "locale": "es-ES",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Asked directly without the analogy or podium mention, and replaced the fun fact that repeated hint 1.",
+        "reason": "The fun fact gave away the answer to approved q-11386, so I replaced it with a fact about Blanca's four Winter Olympics.",
         "previous": {
-          "question": "En el podio del eslalon de Albertville 1992: Paquito Fernández Ochoa es al oro de 1972 como su hermana Blanca es a…",
-          "fun_fact": "Blanca Fernández Ochoa fue la primera mujer española en ganar una medalla olímpica, contando Juegos de invierno y de verano."
+          "fun_fact": "Veinte años antes, en Sapporo 1972, su hermano Paquito había ganado el primer oro olímpico de invierno de España."
         },
         "revised_on": "2026-11-11"
       }
