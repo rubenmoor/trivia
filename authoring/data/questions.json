@@ -1097807,7 +1097807,8 @@
       },
       "bundle": "germany",
       "locale": "de",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-14179",
