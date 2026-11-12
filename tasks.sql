@@ -45921,7 +45921,7 @@ Requires (runs once they are done):
 
 Runs:
   run 2132, 2026-11-12 16:04, 39m33s, running, work tree questions', '2026-11-12T16:43:42Z', '2026-11-12T18:43:09Z', 1960, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1964, 84, 'run tr-en-<n> spain (qgen batch --translate en --bundle spain)', 'work', 'open', NULL, NULL, '## Run
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1964, 84, 'run tr-en-<n> spain (qgen batch --translate en --bundle spain)', 'work', 'done', NULL, '2026-11-12, tr-en-29: authoring/data/questions*.json, app/data/bundles, app/data/demo, authoring/reports/tr-en-29.md, plans/15c; Done: tr-en-29: 298 translated, 293 approved, 5 need work, 0 rejected, 2 not travelling (1 confirmed); $0.10 per approved; audit 98% (59/60); health pass; claude: 522 calls (0 failed), $31.57; spain en 1464/2000, next run 1967', '## Run
 - `nix develop -c qgen batch --translate en --bundle spain` (`authoring/RUNBOOK.md`; run name from `qgen`). No other pipeline steps by hand.
 - Note on done: the "Done:" line, the `claude:` line, report path, and from `authoring/reports/<run>.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved, audit agreement, health result.
 - Then: `qgen report --bundle spain --locale en`. If it shows 2000 approved en, add no run and note in `plans/15c-regional-questions.md` that `spain` es-ES + en are done. Else add the next run (`--worktree questions`, same body, `--requires` this task) and a progress line in 15c. One open en run for spain at a time.
@@ -45930,7 +45930,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## pm-run rules
 - D-36: no prompt, pool, media or `qgen.py` changes. Stage exactly the printed `git add` paths (plus `app/data/demo/` if modified); don''t commit.
 - Health ✗: `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim, no task linked; the task goes on. Never `qgen health ack`.
-- Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-11-12T17:23:42Z', NULL, 1961, 0, NULL, 'questions');
+- Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-11-12T17:23:42Z', '2026-11-12T19:23:31Z', 1961, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1965, 84, 'run tr-en-<n> mexico (qgen batch --translate en --bundle mexico)', 'work', 'open', NULL, NULL, '## Run
 - `nix develop -c qgen batch --translate en --bundle mexico` (`authoring/RUNBOOK.md`; run name from `qgen`). No other pipeline steps by hand.
 - Note on done: the "Done:" line, the `claude:` line, report path, and from `authoring/reports/<run>.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved, audit agreement, health result.
@@ -45951,6 +45951,16 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - D-36: no prompt, pool, media or `qgen.py` changes. Stage exactly the printed `git add` paths (plus `app/data/demo/` if modified); don''t commit.
 - Health ✗: `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim, no task linked; the task goes on. Never `qgen health ack`.
 - Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-11-12T18:43:09Z', NULL, 1963, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1967, 84, 'run tr-en-<n> spain (qgen batch --translate en --bundle spain)', 'work', 'open', NULL, NULL, '## Run
+- `nix develop -c qgen batch --translate en --bundle spain` (`authoring/RUNBOOK.md`; run name from `qgen`). No other pipeline steps by hand.
+- Note on done: the "Done:" line, the `claude:` line, report path, and from `authoring/reports/<run>.md` and `qgen report --cost`: selected, translated, approved, needs_work, rejected, not travelling, $ per approved, audit agreement, health result.
+- Then: `qgen report --bundle spain --locale en`. If it shows 2000 approved en, add no run and note in `plans/15c-regional-questions.md` that `spain` es-ES + en are done. Else add the next run (`--worktree questions`, same body, `--requires` this task) and a progress line in 15c. One open en run for spain at a time.
+- If the run selects nothing new and the count is unchanged, don''t add another run; add a pm decision asking whether to fix the flagged sources or accept the count.
+
+## pm-run rules
+- D-36: no prompt, pool, media or `qgen.py` changes. Stage exactly the printed `git add` paths (plus `app/data/demo/` if modified); don''t commit.
+- Health ✗: `pm decision list --grep "<run>: health"`; none → `pm decision add "<run>: health ✗, look at it?"` with the warning verbatim, no task linked; the task goes on. Never `qgen health ack`.
+- Exit 75, other non-zero, or exit 1 three times at one step → `pm decision add "Continue <run> …?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop. A Bash timeout isn''t a failure: rerun (resumes).', '2026-11-12T19:23:30Z', NULL, 1964, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -54946,6 +54956,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2133, 1961, '2026-11-12T16:43:48Z', '2026-11-12T17:23:47Z', 'done', NULL, 0, '6f57d77c14120440af3b2053fda171b1b69256c9', 'questions', 'claude-sonnet-5-5', 'db6a4e47-8f2d-4f5d-b724-84daf4081ff7', 2132, 5, 12, 1238, 385210, 20060, 0.38176620000000011, 82142, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2134, 1962, '2026-11-12T17:23:47Z', '2026-11-12T18:04:06Z', 'done', NULL, 0, '1f4d268b719943e04ea306f20e3b5797f5ba0f87', 'questions', 'claude-sonnet-5-5', 'd0af4d51-f1b9-49ef-9d1b-fdea9aaaa8e0', NULL, 5, 10, 1936, 223414, 42161, 0.21036539999999998, 56754, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2135, 1963, '2026-11-12T18:04:07Z', '2026-11-12T18:43:13Z', 'done', NULL, 0, 'ec52cd30ad11bf3717276101367e148c635e55c6', 'questions', 'claude-sonnet-5-5', 'd0af4d51-f1b9-49ef-9d1b-fdea9aaaa8e0', 2134, 4, 10, 2047, 282204, 20780, 0.3421958, 77571, 60, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2136, 1964, '2026-11-12T18:43:14Z', '2026-11-12T19:23:34Z', 'done', NULL, 0, '5891af1f7e6bcc42be2e636daa91454dca24cd50', 'questions', 'claude-sonnet-5-5', 'd0af4d51-f1b9-49ef-9d1b-fdea9aaaa8e0', 2135, 4, 10, 1857, 364807, 20368, 0.47873849999999996, 97947, 60, 118424);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -55851,6 +55862,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1963, 196
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1964, 1961);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1965, 1962);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1966, 1963);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1967, 1964);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
