@@ -297,7 +297,8 @@
     {
       "name": "AVE",
       "facet": "Ingenieros y pioneros técnicos",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: La pregunta que ya existe dice que el AVE es un tren; lo que queda (el año 1992) está muy lejos del nivel 1."
     },
     {
       "name": "Agustín de Betancourt",
@@ -900,7 +901,8 @@
     {
       "name": "Minas de Almadén",
       "facet": "Químicos y elementos descubiertos",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: El mercurio de Almadén ya está en el pool; identificar la mina a partir del mercurio sería la misma pregunta al revés."
     },
     {
       "name": "Cinabrio",

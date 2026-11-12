@@ -182,7 +182,8 @@
     {
       "name": "Himno de la Comunidad Valenciana",
       "facet": "Himnos regionales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: El origen del himno ya está en el pool, y contar o preguntar por grupos no da nada justo a nivel 1."
     },
     {
       "name": "La Balanguera",
@@ -693,7 +694,8 @@
     {
       "name": "José del Castillo Díaz",
       "facet": "Creadores y momentos de los símbolos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No sé con seguridad quién es José del Castillo Díaz ni qué creó."
     },
     {
       "name": "Agustín García Calvo",
@@ -719,7 +721,8 @@
     {
       "name": "Manuel Prieto",
       "facet": "Creadores y momentos de los símbolos",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: No sé con seguridad qué símbolo creó Manuel Prieto."
     },
     {
       "name": "Josep Serrano",

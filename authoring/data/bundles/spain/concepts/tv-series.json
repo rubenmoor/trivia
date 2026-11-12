@@ -251,7 +251,8 @@
     {
       "name": "El príncipe",
       "facet": "Thrillers y series policiacas",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Thriller adulto sobre narcotráfico y yihadismo; no sirve para una pregunta familiar de dificultad 2."
     },
     {
       "name": "Vis a vis",
@@ -398,7 +399,8 @@
     {
       "name": "Jelly Jamm",
       "facet": "Series de animación españolas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: Jelly Jamm es demasiado poco conocida para una pregunta de dificultad 1; ninguna opción da una pregunta justa."
     },
     {
       "name": "Lucky Fred",
@@ -520,7 +522,8 @@
     {
       "name": "Soy mayorista, no limpio pescado",
       "facet": "Frases y momentos célebres",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: El acertijo sobre quién dice la frase repite la pregunta de Antonio Recio que ya está en el banco; con el intruso, la frase deja de ser lo central."
     },
     {
       "name": "Váyase, señor Cuesta",
@@ -530,7 +533,8 @@
     {
       "name": "Uno más uno, siete",
       "facet": "Frases y momentos célebres",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: No tengo datos fiables sobre esta serie; no puedo comprobar ningún hecho."
     },
     {
       "name": "Los Lunnis y los niños nos vamos a la cama",
