@@ -1287065,10 +1287065,10 @@
     },
     {
       "id": "q-16623",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Shoes have them, footballs have them, and neither one ever gets tied in a bow.",
-      "question": "Look at the white laces on this football. What do they mostly help with?",
+      "question": "An American football has white laces on one side. What do they mostly help with?",
       "answer": "Gripping and throwing the ball",
       "wrong_answers": [
         "Making the ball bounce higher",
@@ -1287082,12 +1287082,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "american football ball laces",
-        "note": "A clear photo of an American football showing its white laces.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "american football stadium field",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASun_Devil_Stadium_-_Pac12_Championship.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Sun_Devil_Stadium_-_Pac12_Championship.jpg/3840px-Sun_Devil_Stadium_-_Pac12_Championship.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Clintus McGintus · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Clintus McGintus",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Many quarterbacks put their fingers right across the laces to make the ball spin in a tight spiral.",
       "subcategory": "american-football",
@@ -1287112,23 +1287119,48 @@
         "difficulty_estimate": 3,
         "notes": "Tying the ball to the goalpost and hanging it on a hook are absurd options. The laces first had a structural job (closing the ball), though grip is their main use today. A clear photo of the laces is easy to find."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows what this essential image needs: a clear photo of an American football with its white laces. 1 and 2 are scans of players lining up from a 1902 book, and 3 is a silver matchsafe shaped like a ball with no clear laces. No new search is allowed, so the media slot needs a proper photo of the laces (for example from \"football laces close up\"). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what this essential image needs: a clear photo of an American football with its white laces. 1 and 2 are scans of players lining up from a 1902 book, and 3 is a silver matchsafe shaped like a ball with no clear laces. No new search is allowed, so the media slot needs a proper photo of the laces (for example from \"football laces close up\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of football laces exists in the candidates, so the question no longer points at a photo and the image becomes illustrative.",
+        "previous": {
+          "question": "Look at the white laces on this football. What do they mostly help with?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "american football ball laces",
+            "note": "A clear photo of an American football showing its white laces.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16624",
@@ -1288505,11 +1288537,27 @@
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image's licence is PD-US only, so the media is reset with a fresh query for a new pick.",
+        "previous": {},
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16642",
@@ -1289133,10 +1289181,10 @@
     },
     {
       "id": "q-16650",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A story so famous it can't tell a lie, even though it is one.",
-      "question": "This old print shows young George Washington and the cherry tree. Which writer made up that story and added it to his book about Washington in 1806?",
+      "question": "The story of young George Washington chopping down his father's cherry tree is made up. Which writer added it to his 1806 book about Washington?",
       "answer": "Parson Weems",
       "wrong_answers": [
         "Washington Irving",
@@ -1289150,12 +1289198,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Washington cherry tree print",
-        "note": "Public-domain 19th-century print (e.g. Currier & Ives, “Father, I cannot tell a lie”) of young George Washington with the cut cherry tree and his father; no author name visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Mount Vernon mansion",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMount_Vernon_Estate_Mansion_2.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Mount_Vernon_Estate_Mansion_2.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Martin Falbisoner · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Martin Falbisoner",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The cherry tree story was not in the first editions of the book; Weems added it in the fifth edition, in 1806.",
       "subcategory": "folk-heroes-and-tall-tales",
@@ -1289181,27 +1289236,45 @@
         "notes": "The print isn't really needed to answer, so 'illustrative' would be the better role, but a Currier & Ives print of the scene is easy to find. Well-read American adults know Weems, so 13–14 rather than 15."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the old print of young Washington and the cherry tree that the question names (\"This old print shows…\"). They are all Washington, D.C. cherry blossom photos plus a Childe Hassam sketch. A new search isn't allowed. Source a public-domain print by hand (e.g. the Currier & Ives \"Father, I cannot tell a lie\" lithograph or John C. McRae's 1867 engraving), or reword the question so it doesn't name the print and use an illustrative image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the old print of young Washington and the cherry tree that the question names (\"This old print shows…\"). They are all Washington, D.C. cherry blossom photos plus a Childe Hassam sketch. A new search isn't allowed. Source a public-domain print by hand (e.g. the Currier & Ives \"Father, I cannot tell a lie\" lithograph or John C. McRae's 1867 engraving), or reword the question so it doesn't name the print and use an illustrative image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question so it is accurate: Weems added the cherry tree story to an existing book in 1806.",
+        "reason": "No print of the cherry tree story was found, so the question no longer names a print and the image becomes an illustrative one of Mount Vernon.",
         "previous": {
-          "question": "This old print shows young George Washington and the cherry tree. Which writer made up that story for his 1806 book about Washington?"
+          "question": "This old print shows young George Washington and the cherry tree. Which writer made up that story and added it to his book about Washington in 1806?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Washington cherry tree print",
+            "note": "Public-domain 19th-century print (e.g. Currier & Ives, “Father, I cannot tell a lie”) of young George Washington with the cut cherry tree and his father; no author name visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-11"
       }
@@ -1289951,7 +1290024,7 @@
       "status": "needs_work",
       "difficulty": 14,
       "description": "He came from Boston, and he kept coming back.",
-      "question": "This is “Boston Rob” Mariano. How many different seasons of Survivor did he play as a contestant?",
+      "question": "How many different seasons of Survivor did “Boston Rob” Mariano play as a contestant?",
       "answer": "5",
       "wrong_answers": [
         "2",
@@ -1289965,12 +1290038,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Boston Rob Mariano",
-        "note": "A clear portrait photo of Rob “Boston Rob” Mariano.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "tropical beach shelter camp",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AResort_Camping.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Resort_Camping.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Totoyba2 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Totoyba2",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Totoyba2&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Boston Rob married Amber Brkich, the castaway he met on Survivor: All-Stars, and she won that season.",
       "subcategory": "hosts-and-game-shows",
@@ -1289995,32 +1290075,48 @@
         "difficulty_estimate": 13,
         "notes": "Five seasons is right (Marquesas, All-Stars, Heroes vs. Villains, Redemption Island, Winners at War). The photo isn't needed to answer, so the role should be illustrative, not essential. Hint 1 already rules out 2 and 3. Fan-only trivia; the description is mild."
       },
-      "fact_checked": true,
-      "needs_media": true,
+      "fact_checked": false,
+      "needs_media": false,
       "batch": "batch-56",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates shows Boston Rob Mariano, and no new search is allowed. The question says \"This is “Boston Rob” Mariano,\" so it needs a real photo of him. Find a usable portrait (for example on Commons under \"Rob Mariano\"), or reword the question so it doesn't point at a photo and use an illustrative image such as a Survivor-style beach camp. No suitable picture found for this question.",
+        "feedback": "Fact check: wrong. Boston Rob played 6 seasons: Marquesas, All-Stars, Heroes vs. Villains, Redemption Island, Blood vs. Water and Winners at War. He did not play 5.",
         "problems": [
-          "media"
+          "fact"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates shows Boston Rob Mariano, and no new search is allowed. The question says \"This is “Boston Rob” Mariano,\" so it needs a real photo of him. Find a usable portrait (for example on Commons under \"Rob Mariano\"), or reword the question so it doesn't point at a photo and use an illustrative image such as a Survivor-style beach camp. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 with the 2002–2020 time span, so players can't simply count the seasons.",
+        "reason": "No photo of Boston Rob was found, so the question no longer points at a photo and the image becomes an illustrative beach camp.",
         "previous": {
-          "hints": [
-            "He finally won on his fourth try, in Survivor: Redemption Island in 2011.",
-            "He came back once more for an all-winners season.",
-            "Count the fingers on one hand."
-          ]
+          "question": "This is “Boston Rob” Mariano. How many different seasons of Survivor did he play as a contestant?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Boston Rob Mariano",
+            "note": "A clear portrait photo of Rob “Boston Rob” Mariano.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-11"
       }
@@ -1290187,10 +1290283,10 @@
     },
     {
       "id": "q-16664",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The 2013 craze that turned school lunch tables into tiny factories.",
-      "question": "Around 2013, millions of kids had this plastic board with rows of pegs. What did they make on it?",
+      "question": "Around 2013, millions of kids had a plastic board with rows of pegs. What did they make on it?",
       "answer": "Rubber band bracelets",
       "wrong_answers": [
         "Bead necklaces",
@@ -1290204,12 +1290300,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "empty Rainbow Loom pegboard",
-        "note": "The plastic loom board with its rows of pegs, ideally without a finished bracelet in the picture.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "school cafeteria tables",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalhan_Colorado_High_School_Cafeteria_by_David_Shankbone.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Calhan_Colorado_High_School_Cafeteria_by_David_Shankbone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "David Shankbone · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "David Shankbone",
+        "author_url": "https://en.wikipedia.org/wiki/en:David_Shankbone",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Its inventor, Michigan crash-test engineer Cheong Choon Ng, built the first loom in 2010 to make bracelets with his daughters.",
       "subcategory": "household-brands",
@@ -1290235,22 +1290338,48 @@
         "notes": "Kids today (2026) mostly don't know the 2013 craze; it's more for teens, young adults and parents. A clean photo of a Rainbow Loom on Commons or Openverse is likely but not certain, and many photos show finished bracelets."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image slot has no candidates, and no new search is allowed. The question needs a clear photo of an empty Rainbow Loom pegboard. Either find one by hand, or change the media to an illustrative image that doesn't show bracelets, for example \"plastic pegboard toy\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image slot has no candidates, and no new search is allowed. The question needs a clear photo of an empty Rainbow Loom pegboard. Either find one by hand, or change the media to an illustrative image that doesn't show bracelets, for example \"plastic pegboard toy\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of the empty loom was found, so the question describes the board in words and the image becomes a decorative school cafeteria.",
+        "previous": {
+          "question": "Around 2013, millions of kids had this plastic board with rows of pegs. What did they make on it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "empty Rainbow Loom pegboard",
+            "note": "The plastic loom board with its rows of pegs, ideally without a finished bracelet in the picture.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16665",
@@ -1290419,10 +1290548,10 @@
     },
     {
       "id": "q-16667",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Somewhere under that plastic lid, an aircraft carrier is hiding.",
-      "question": "In this classic game, you call out spots like “B-4” to find hidden ships. What does a white peg mean?",
+      "question": "In the classic game Battleship, you call out spots like “B-4” to find hidden ships. What does a white peg mean?",
       "answer": "A miss",
       "wrong_answers": [
         "A hit",
@@ -1290436,12 +1290565,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Battleship Milton Bradley game",
-        "note": "The Battleship game open, showing its grids with red and white pegs and small gray ships; no box logo.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "gray warship at sea",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWarships_at_Sea_MET_DP801037.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Warships_at_Sea_MET_DP801037.jpg/3840px-Warships_at_Sea_MET_DP801037.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Willem van de Velde the Younger · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Willem van de Velde the Younger",
+        "author_url": "https://en.wikipedia.org/wiki/en:Willem_van_de_Velde_the_Younger",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "People played Battleship with pencil and paper for decades before Milton Bradley sold the plastic version in 1967.",
       "subcategory": "household-brands",
@@ -1290467,22 +1290603,48 @@
         "notes": "q-10049 asks a related Battleship rule (the hit call) but a different fact. Whether an essential photo of the open game with pegs exists is uncertain, though Openverse probably has one."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows Battleship. They are other Milton Bradley products (Blitz, the Milton talking game, Hands Down, Comp IV) and two baseball photos of a player named Milton Bradley. I can't search again, so the essential slot can't be filled. The question doesn't really need an essential image. Switching the slot to illustrative or decorative, with a query like \"battleship game pegs\" or \"naval grid map\", would likely solve it. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows Battleship. They are other Milton Bradley products (Blitz, the Milton talking game, Hands Down, Comp IV) and two baseball photos of a player named Milton Bradley. I can't search again, so the essential slot can't be filled. The question doesn't really need an essential image. Switching the slot to illustrative or decorative, with a query like \"battleship game pegs\" or \"naval grid map\", would likely solve it. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No Battleship photo was found, so the question names the game and the image becomes an illustrative warship that shows no pegs.",
+        "previous": {
+          "question": "In this classic game, you call out spots like “B-4” to find hidden ships. What does a white peg mean?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Battleship Milton Bradley game",
+            "note": "The Battleship game open, showing its grids with red and white pegs and small gray ships; no box logo.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16668",
@@ -1291290,17 +1291452,25 @@
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer compares the winter count to a photo album, which hinted at its purpose.",
-        "previous": {
-          "description": "Like a photo album, but painted on an animal and with far fewer selfies."
-        },
+        "reason": "The picked image's licence is PD-US only, so the media is reset for a new pick with the same query.",
+        "previous": {},
         "revised_on": "2026-11-11"
       }
     },
@@ -1292447,7 +1292617,7 @@
     },
     {
       "id": "q-16694",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "A town name that visitors mispronounce at least once per fair ride.",
       "question": "Puyallup, Washington, said “pew-AL-up,” is named after a Native people. What is the name said to mean?",
@@ -1292459,7 +1292629,7 @@
       ],
       "hints": [
         "The Puyallup Tribe itself explains what its name means.",
-        "The name describes how the tribe treated visitors who came to their land.",
+        "The tribe says it's a name its members still try to live up to today.",
         "It's about being kind and giving."
       ],
       "media": {
@@ -1292505,27 +1292675,34 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"describes how the tribe treated visitors who came to their land\") gives the answer away: only \"Generous people\" describes how people behave, while the three wrong options are all landscape features. Hint 2 needs to be vaguer, for example a hint that the name is about the people rather than the land, or about the river bend in its literal sense.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"describes how the tribe treated visitors who came to their land\") gives the answer away: only \"Generous people\" describes how people behave, while the three wrong options are all landscape features. Hint 2 needs to be vaguer, for example a hint that the name is about the people rather than the land, or about the river bend in its literal sense.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question, replaced hint 1 because it ruled out every nature option, and made hint 2 vaguer.",
+        "reason": "Made hint 2 vaguer so it no longer points straight to the only option about how people behave.",
         "previous": {
-          "question": "Puyallup, Washington, said “pew-AL-up,” sits below Mount Rainier, hosts the state's huge fair and is named after a Native people. What is the name said to mean?",
           "hints": [
-            "It describes how people behave, not nature.",
-            "The tribe says it means welcoming friends and strangers alike.",
+            "The Puyallup Tribe itself explains what its name means.",
+            "The name describes how the tribe treated visitors who came to their land.",
             "It's about being kind and giving."
           ]
         },
@@ -1294067,7 +1294244,7 @@
     },
     {
       "id": "q-16715",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A doctor who packed her black bag and headed south without a second thought.",
       "question": "Rebecca Lee Crumpler became the first Black woman doctor in the US in 1864. After the Civil War she moved to Richmond, Virginia. Whom did she go there to care for?",
@@ -1294085,20 +1294262,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "antique doctor's bag",
+        "query": "Victorian doctor medical bag",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADoctor%27s_Bag_Belonging_to_Ivan_C._James%2C_Sr._-_DPLA_-_cbe5b1a0c0de833c0072a7892962a939_%28page_1%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Doctor%27s_Bag_Belonging_to_Ivan_C._James%2C_Sr._-_DPLA_-_cbe5b1a0c0de833c0072a7892962a939_%28page_1%29.jpg/3840px-Doctor%27s_Bag_Belonging_to_Ivan_C._James%2C_Sr._-_DPLA_-_cbe5b1a0c0de833c0072a7892962a939_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeather_doctor%27s_bag_with_contents%2C_English%2C_1890-1930._The_Wellcome_L0058360.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Leather_doctor%27s_bag_with_contents%2C_English%2C_1890-1930._The_Wellcome_L0058360.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": null,
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "In 1883 Crumpler wrote “A Book of Medical Discourses,” one of the first medical books by an African American.",
       "subcategory": "trailblazers",
@@ -1294127,19 +1294302,52 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image had an unsuitable licence, so the media query is changed to find a new doctor's bag picture.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "antique doctor's bag",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ADoctor%27s_Bag_Belonging_to_Ivan_C._James%2C_Sr._-_DPLA_-_cbe5b1a0c0de833c0072a7892962a939_%28page_1%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Doctor%27s_Bag_Belonging_to_Ivan_C._James%2C_Sr._-_DPLA_-_cbe5b1a0c0de833c0072a7892962a939_%28page_1%29.jpg/3840px-Doctor%27s_Bag_Belonging_to_Ivan_C._James%2C_Sr._-_DPLA_-_cbe5b1a0c0de833c0072a7892962a939_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16716",
@@ -1294289,7 +1294497,7 @@
     },
     {
       "id": "q-16718",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The most important door on the farm isn't on the house.",
       "question": "On the Great Plains, doors like these in the yard lead to a small underground room. What is it called?",
@@ -1294307,11 +1294515,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "tornado shelter Kansas",
+        "query": "storm cellar doors",
         "note": "Photo of the slanted doors of an underground storm cellar on a farm or in a yard, no signs with the name.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArkansas_-_Willmering_Tourist_Cabins_near_Buffalo_Nat%27l_River_%284%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Arkansas_-_Willmering_Tourist_Cabins_near_Buffalo_Nat%27l_River_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Shauna Lea Jackson · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Shauna Lea Jackson",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ShaunaLeaJ",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In “The Wizard of Oz,” Dorothy's family hides in their storm cellar, but Dorothy doesn't make it there in time.",
       "subcategory": "weather-and-seasons",
@@ -1294340,19 +1294555,43 @@
       "needs_media": true,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the slanted double doors of an underground storm cellar, and the question depends on that photo (\"doors like these\"). A new search can't be run here. A query like \"storm cellar doors\" or \"root cellar doors farm\" should find a usable Commons photo. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the slanted double doors of an underground storm cellar, and the question depends on that photo (\"doors like these\"). A new search can't be run here. A query like \"storm cellar doors\" or \"root cellar doors farm\" should find a usable Commons photo. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo was found, so the essential-media query now searches for the cellar doors themselves.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "tornado shelter Kansas",
+            "note": "Photo of the slanted doors of an underground storm cellar on a farm or in a yard, no signs with the name.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16719",
@@ -1294880,7 +1295119,7 @@
     },
     {
       "id": "q-16726",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A birthday party where the guests bring books instead of presents.",
       "question": "I was born on March 2, 1904, in Springfield, Massachusetts. For years, US schools held Read Across America Day on my birthday. Who am I?",
@@ -1294898,20 +1295137,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "children reading classroom",
+        "query": "kids reading books library",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg/3840px-Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Curtis & Miller · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQuestion_and_Answer_session_with_kids_from_Central_Manor_-_Flickr_-_Pratham_Books.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Question_and_Answer_session_with_kids_from_Central_Manor_-_Flickr_-_Pratham_Books.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Pratham Books from India · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Curtis & Miller",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Pratham Books from India",
+        "author_url": "https://www.flickr.com/people/35026043@N03",
+        "restrictions": [
+          "personality"
+        ],
+        "pd_reasons": []
       },
       "fun_fact": "The National Education Association started Read Across America in 1998, and teachers often read in costume that day.",
       "subcategory": "childrens-books",
@@ -1294940,19 +1295179,52 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked image was only public domain in the US, so I changed the media query to find a new, freely licensed picture of children reading; the rest is unchanged.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "children reading classroom",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AChildren_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg/3840px-Children_reading_in_classroom%2C_ca._1915_-_DPLA_-_11b2b4aeffab2be680113fd9dd736174.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Curtis & Miller · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Curtis & Miller",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16727",
@@ -1296098,10 +1296370,10 @@
     },
     {
       "id": "q-16742",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Six free gifts that no contestant has ever tried to return.",
-      "question": "In Wheel of Fortune's bonus round, the player is given R, S, T, L, N and E for free. What do these letters have in common?",
+      "question": "In Wheel of Fortune's bonus round, the player gets R, S, T, L, N and E for free. Why these six letters?",
       "answer": "They are among the most common letters in English",
       "wrong_answers": [
         "They are all in the words “Wheel of Fortune”",
@@ -1296116,11 +1296388,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "game show letter board",
+        "query": "wooden letter tiles",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWooden_Block_Letters_Vision.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Wooden_Block_Letters_Vision.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "WOKANDAPIX · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "WOKANDAPIX",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Since 1988, players get these six letters for free, because so many contestants used to pick them anyway.",
       "subcategory": "hosts-and-game-shows",
@@ -1296149,20 +1296428,45 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This new draft asks \"What do these letters have in common?\", and the 2026-10-21 rule bans that style for new drafts. None of the media candidates fit the question either: they are scans of old Bodleian game booklets and a newspaper column, and a new search isn't allowed. No suitable picture found for this question.",
-        "problems": [
-          "media",
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This new draft asks \"What do these letters have in common?\", and the 2026-10-21 rule bans that style for new drafts. None of the media candidates fit the question either: they are scans of old Bodleian game booklets and a newspaper column, and a new search isn't allowed. No suitable picture found for this question.",
+          "problems": [
+            "media",
+            "style"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded the banned “what do these have in common” style into a why-question and changed the media query to letter tiles.",
+        "previous": {
+          "question": "In Wheel of Fortune's bonus round, the player is given R, S, T, L, N and E for free. What do these letters have in common?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "game show letter board",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16743",
@@ -1296184,7 +1296488,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "cracked dry skin hands",
+        "query": "petroleum jelly jar",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1296218,27 +1296522,41 @@
       "batch": "batch-56",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits. Two are scans of handwritten 1840 letters, and one is an X-ray of a hand from a 1916 remedies book. A new search isn't allowed, so the slot needs a manual media choice. One idea is an 1860s Pennsylvania oil derrick (Titusville): it shows the setting but doesn't name the answer, and crude oil is already the answer, so it may need to be decorative and blurred. Another is a plain jar of petroleum jelly with no label. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits. Two are scans of handwritten 1840 letters, and one is an X-ray of a hand from a 1916 remedies book. A new search isn't allowed, so the slot needs a manual media choice. One idea is an 1860s Pennsylvania oil derrick (Titusville): it shows the setting but doesn't name the answer, and crude oil is already the answer, so it may need to be decorative and blurred. Another is a plain jar of petroleum jelly with no label. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which ruled out all three wrong answers, with a vague hint about the place and time.",
+        "reason": "No media candidate fit, so the query now searches for a plain jar of petroleum jelly, which neither names nor shows crude oil.",
         "previous": {
-          "hints": [
-            "It comes from deep underground.",
-            "Gasoline and plastic are made from the same stuff.",
-            "The goo kept clogging the workers' pumps at the wells."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "cracked dry skin hands",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-11"
       }
@@ -1296554,18 +1296872,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "pile of quarter coins",
+        "query": "US quarter coin closeup",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-quarters.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Gfp-quarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public Domain",
-        "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
-        "author": "Yinan Chen",
-        "author_url": "http://www.goodfreephotos.com",
-        "restrictions": [],
-        "pd_reasons": []
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Delaware's quarter came out first because Delaware was the first state to approve the US Constitution.",
       "subcategory": "money-and-shopping",
@@ -1296595,27 +1296906,48 @@
       "batch": "batch-56",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints so they go from vague to strong and hints 1 and 2 no longer solve it.",
+        "reason": "The picked image had an unsuitable licence, so the query is changed to a single quarter coin, which avoids collector maps printed with the years.",
         "previous": {
-          "hints": [
-            "Five new designs came out each year.",
-            "50 divided by 5.",
-            "It ended in 2008."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "pile of quarter coins",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGfp-quarters.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Gfp-quarters.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Yinan Chen · Public Domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public Domain",
+            "license_url": "https://web.archive.org/web/20230926203737/https://creativecommons.org/licenses/publicdomain/",
+            "author": "Yinan Chen",
+            "author_url": "http://www.goodfreephotos.com",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-11-11"
       }
@@ -1297635,7 +1297967,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Prague Oklahoma downtown",
+        "query": "Prague Oklahoma shrine",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1297669,22 +1298001,48 @@
       "batch": "batch-56",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows Prague, Oklahoma. They show Oklahoma City (1, 2, 4), Enid (3, 5) and Yukon (6, with \"Yukon Mills\" signs). The question names the town, so the picture has to be of it, and there are no searches left. The text itself is fine. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows Prague, Oklahoma. They show Oklahoma City (1, 2, 4), Enid (3, 5) and Yukon (6, with \"Yukon Mills\" signs). The question names the town, so the picture has to be of it, and there are no searches left. The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No candidate showed Prague, Oklahoma, so the query now targets the town's well-known shrine to find a photo of the town itself.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Prague Oklahoma downtown",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16763",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Just down the road from vampire country, someone left the umbrella at home.",
       "question": "Sequim, said “SKWIM,” is on the same peninsula as Forks, the rainy “Twilight” town, yet gets only about 16 inches (410 mm) of rain a year. Why?",
@@ -1297695,9 +1298053,9 @@
         "Its high elevation"
       ],
       "hints": [
-        "The Olympic Mountains stand between Sequim and the Pacific.",
+        "Most of the peninsula's rain blows in on clouds from the Pacific Ocean.",
         "The answer has to do with what happens to the clouds on their way to Sequim.",
-        "Clouds drop their rain on the mountains' ocean side, leaving the far side dry."
+        "The Olympic Mountains stand between Sequim and the Pacific, and clouds drop their rain on the ocean side."
       ],
       "media": {
         "type": "image",
@@ -1297742,28 +1298100,35 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. It names the Olympic Mountains standing between Sequim and the Pacific, and \"A rain shadow from mountains\" is the only option that mentions mountains. Hint 1 is also stronger than hint 2, so the hints run in the wrong order. Hint 1 should become a vague hint (for example about the weather or the wind, without mountains), and the mountains should move to a later hint.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. It names the Olympic Mountains standing between Sequim and the Pacific, and \"A rain shadow from mountains\" is the only option that mentions mountains. Hint 1 is also stronger than hint 2, so the hints run in the wrong order. Hint 1 should become a vague hint (for example about the weather or the wind, without mountains), and the mountains should move to a later hint.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 vaguer, moved the rain-shadow mechanism into hint 3, and reworded the answer as a noun phrase to match the other options.",
+        "reason": "Hint 1 named the mountains and gave the answer away; it now gives a vague wind clue and the mountains move to hint 3.",
         "previous": {
-          "answer": "It lies in a rain shadow",
           "hints": [
             "The Olympic Mountains stand between Sequim and the Pacific.",
-            "Clouds drop their rain on one side of the mountains.",
-            "The dry side is “shaded” from the rain."
+            "The answer has to do with what happens to the clouds on their way to Sequim.",
+            "Clouds drop their rain on the mountains' ocean side, leaving the far side dry."
           ]
         },
         "revised_on": "2026-11-11"
@@ -1297843,7 +1298208,7 @@
     },
     {
       "id": "q-16765",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A memorial that does its math with mirrors.",
       "question": "In Washington, D.C., 19 steel soldiers in ponchos walk through bushes. Reflected in a polished granite wall, they become 38. What does 38 stand for?",
@@ -1297860,12 +1298225,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Korean War Memorial soldiers",
+        "role": "decorative",
+        "query": "National Mall Washington",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWashMonument_WhiteHouse.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/WashMonument_WhiteHouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "U.S. Air Force Tech. Sgt. Andy Dunaway · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Air Force Tech. Sgt. Andy Dunaway",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military-Air Force"
+        ]
       },
       "fun_fact": "The memorial was dedicated in 1995, 42 years after the fighting in Korea stopped.",
       "subcategory": "roads-and-landmarks",
@@ -1297894,28 +1298268,40 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the Washington, D.C. Korean War Veterans Memorial soldiers and wall the question names. Most are of the UN Memorial Cemetery in Busan or the museum in Seoul. #3 shows the D.C. site with the soldiers edited out, and its \"1950 • KOREA • 1953\" inscription rules out the \"weeks\" option. No new search is allowed, so the media slot needs a manual fix, for example a photo of the steel soldiers reflected in the granite wall. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the Washington, D.C. Korean War Veterans Memorial soldiers and wall the question names. Most are of the UN Memorial Cemetery in Busan or the museum in Seoul. #3 shows the D.C. site with the soldiers edited out, and its \"1950 • KOREA • 1953\" inscription rules out the \"weeks\" option. No new search is allowed, so the media slot needs a manual fix, for example a photo of the steel soldiers reflected in the granite wall. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer rule out options or name latitude.",
+        "reason": "No usable photo of the memorial exists among the candidates, so the media becomes a decorative National Mall image that shows nothing about the options.",
         "previous": {
-          "hints": [
-            "The number points to something on a map.",
-            "It's a line of latitude.",
-            "Korea was split into North and South roughly along this line."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Korean War Memorial soldiers",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-11"
       }
@@ -1298066,7 +1298452,7 @@
     },
     {
       "id": "q-16768",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 12,
       "description": "New York's fanciest flowerbed has a secret underneath.",
       "question": "New York's Park Avenue is famous for fancy apartments. Its flower-filled middle strip was built to cover what?",
@@ -1298078,7 +1298464,7 @@
       ],
       "hints": [
         "It used to be noisy and full of smoke.",
-        "Until 1888, the street had a plain numbered name.",
+        "Long ago, the street had a plain numbered name.",
         "Commuter trains still roll beneath it today."
       ],
       "media": {
@@ -1298097,7 +1298483,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "In 1888, part of Fourth Avenue was renamed Park Avenue, after the planted strips running over the railroad cut down its middle.",
+      "fun_fact": "Park Avenue used to be part of Fourth Avenue, and it got its new name from the planted strips running over the railroad down its middle.",
       "subcategory": "roads-and-landmarks",
       "style": null,
       "concept": "Park Avenue",
@@ -1298120,33 +1298506,41 @@
         "difficulty_estimate": 11,
         "notes": "The answer is right. The renaming and covering happened in stages (1870s open cut, renamed 1888, fully decked after electrification), so hint 2 and the fun fact simplify the timeline a little."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The 1888 renaming detail isn't verified. Park Avenue's naming was done in stages, with some sections renamed earlier. The railroad-cover answer is correct.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The 1888 renaming detail isn't verified. Park Avenue's naming was done in stages, with some sections renamed earlier. The railroad-cover answer is correct.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed the fun fact's timeline and took the wrong claim out of hint 2, following the fact-check.",
+        "reason": "Took out the unverified 1888 renaming date from hint 2 and the fun fact and kept the verified railroad facts.",
         "previous": {
           "hints": [
             "It used to be noisy and full of smoke.",
-            "The street was called Fourth Avenue before the cover went on.",
+            "Until 1888, the street had a plain numbered name.",
             "Commuter trains still roll beneath it today."
           ],
-          "fun_fact": "In 1888, part of Fourth Avenue was renamed Park Avenue after the tracks were covered."
+          "fun_fact": "In 1888, part of Fourth Avenue was renamed Park Avenue, after the planted strips running over the railroad cut down its middle."
         },
         "revised_on": "2026-11-11"
       }
@@ -1298403,20 +1298797,11 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "vintage vaudeville theater stage",
+        "query": "old theater stage red curtain",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A2018_United_Palace_tour_12.view_of_stage_from_balcony.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/2018_United_Palace_tour_12.view_of_stage_from_balcony.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Beyond My Ken · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Beyond My Ken",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Beyond_My_Ken",
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US-architecture"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Comedian Phil Silvers won a Tony Award for playing the lead in the 1951 Broadway musical “Top Banana.”",
       "subcategory": "sayings-and-idioms",
@@ -1298446,28 +1298831,50 @@
       "batch": "batch-56",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-architecture).",
+        "feedback": "No picture candidate fits: 1 is an aerial view of Tivoli Gardens in Copenhagen, and 2 and 3 are the War Horse puppets. A new search for a vintage vaudeville stage is needed. The question's text and facts are fine. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-architecture).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the radio hint, which ruled out the 1800s, and shortened the question text.",
+        "reason": "The picked picture's licence only covers the US, so the media query changes to find a new theater stage photo.",
         "previous": {
-          "question": "“Top banana” means the boss. It comes from American stage comedy, where the lead comic was the top banana. In which century did the phrase appear?",
-          "hints": [
-            "Think of vaudeville and burlesque shows.",
-            "Many stage comics of the time went on to star on the radio.",
-            "It's the same century as the first moon landing."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "vintage vaudeville theater stage",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3A2018_United_Palace_tour_12.view_of_stage_from_balcony.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/2018_United_Palace_tour_12.view_of_stage_from_balcony.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Beyond My Ken · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Beyond My Ken",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Beyond_My_Ken",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-architecture"
+            ]
+          }
         },
         "revised_on": "2026-11-11"
       }
@@ -1298716,7 +1299123,7 @@
     },
     {
       "id": "q-16776",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The one weekend a year when the whole town pretends to still be in high school.",
       "question": "In US high schools, the homecoming dance usually comes right after a big home game. Where is that game played?",
@@ -1298734,20 +1299141,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "homecoming queen crown",
+        "query": "homecoming crown tiara",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGeneral_Dwight_D._Eisenhower_crowns_Joyce_Pearson_as_the_1952_homecoming_queen%2C_St._Cloud_State_University%2C_St._Cloud%2C_Minnesota_-_DPLA_-_522ae8f1d5ca83ffabe59ba24d1335ff.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/General_Dwight_D._Eisenhower_crowns_Joyce_Pearson_as_the_1952_homecoming_queen%2C_St._Cloud_State_University%2C_St._Cloud%2C_Minnesota_-_DPLA_-_522ae8f1d5ca83ffabe59ba24d1335ff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpress_Josephine_Tiara_at_HMNS.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Empress_Josephine_Tiara_at_HMNS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Randall Pugh from Houston, United States · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Randall Pugh from Houston, United States",
+        "author_url": "https://www.flickr.com/people/10649748@N04",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Several US colleges, including Baylor and the University of Missouri, claim to have held the first homecoming in the early 1900s.",
       "subcategory": "school-life",
@@ -1298776,19 +1299181,52 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked picture's licence only covers the US, so the media query changes to find a new homecoming crown photo that doesn't show the field.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "homecoming queen crown",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AGeneral_Dwight_D._Eisenhower_crowns_Joyce_Pearson_as_the_1952_homecoming_queen%2C_St._Cloud_State_University%2C_St._Cloud%2C_Minnesota_-_DPLA_-_522ae8f1d5ca83ffabe59ba24d1335ff.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/General_Dwight_D._Eisenhower_crowns_Joyce_Pearson_as_the_1952_homecoming_queen%2C_St._Cloud_State_University%2C_St._Cloud%2C_Minnesota_-_DPLA_-_522ae8f1d5ca83ffabe59ba24d1335ff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16777",
@@ -1298864,7 +1299302,7 @@
     },
     {
       "id": "q-16778",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Recess has rules, and breaking the biggest one earns you a nickname.",
       "question": "What do American kids call a classmate who runs to tell the teacher what another kid did?",
@@ -1298876,7 +1299314,7 @@
       ],
       "hints": [
         "Nobody wants to be called this on the playground.",
-        "The second half of the word is another word for a story.",
+        "Other kids stop telling this classmate their secrets.",
         "It starts with the word “tattle.”"
       ],
       "media": {
@@ -1298922,25 +1299360,33 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"the second half of the word is another word for a story\") gives the answer away: none of the wrong options ends in a word for a story, so it points only to \"tattletale\". Hint 2 should be a vaguer clue, for example about how other kids feel about this classmate, and leave the word-shape clue to hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"the second half of the word is another word for a story\") gives the answer away: none of the wrong options ends in a word for a story, so it points only to \"tattletale\". Hint 2 should be a vaguer clue, for example about how other kids feel about this classmate, and leave the word-shape clue to hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which falsely claimed the word was hundreds of years old.",
+        "reason": "Hint 2 gave the answer away through the word's shape; it is now a vaguer clue about how classmates feel.",
         "previous": {
           "hints": [
-            "It's an old word that kids have used for hundreds of years.",
+            "Nobody wants to be called this on the playground.",
             "The second half of the word is another word for a story.",
             "It starts with the word “tattle.”"
           ]
@@ -1300109,8 +1300555,8 @@
       "media": {
         "type": "audio",
         "role": "essential",
-        "query": "turntable scratching DJ",
-        "note": "A short clip of DJ scratching on a vinyl record (the “wikka-wikka” sound), no song or vocals.",
+        "query": "vinyl scratch DJ",
+        "note": "A short clip of a DJ scratching a vinyl record on a turntable (the “wikka-wikka” sound), with no song, music or spoken words.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1300143,29 +1300589,55 @@
       "batch": "batch-56",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the audio candidates is clearly a DJ scratching a vinyl record. #2–#5 are a head being scratched, brushes and a metal door. #6 is someone saying the word \"scratch\" in French, which would give the answer away. #1 (\"Where it All Started djsamp\") is an unclear DJ sample that may contain music. A new search isn't allowed, so the clip has to be found by hand (for example on Freesound: \"vinyl scratch DJ\" or \"turntablism scratch\"). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the audio candidates is clearly a DJ scratching a vinyl record. #2–#5 are a head being scratched, brushes and a metal door. #6 is someone saying the word \"scratch\" in French, which would give the answer away. #1 (\"Where it All Started djsamp\") is an unclear DJ sample that may contain music. A new search isn't allowed, so the clip has to be found by hand (for example on Freesound: \"vinyl scratch DJ\" or \"turntablism scratch\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": {
         "query": "stack of vinyl records",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVinyl_record_collection_in_The_Stacks_of_KDVS.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Vinyl_record_collection_in_The_Stacks_of_KDVS.jpg/3840px-Vinyl_record_collection_in_The_Stacks_of_KDVS.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Melikamp · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_vinyl_records_%28Unsplash%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Vintage_vinyl_records_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Umberto Cofini umbe · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Melikamp",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Melikamp",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Umberto Cofini umbe",
+        "author_url": "https://unsplash.com/@umbe",
         "restrictions": [],
         "pd_reasons": []
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "No usable clip was found, so the audio query is now a Freesound-style search for a real vinyl scratch sound, which is common there.",
+        "previous": {
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "turntable scratching DJ",
+            "note": "A short clip of DJ scratching on a vinyl record (the “wikka-wikka” sound), no song or vocals.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-11"
       }
     },
     {
@@ -1300569,15 +1301041,15 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "cowboys on horses ranch",
+        "query": "cowboy horse western ranch",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACowboys_on_horseback_at_a_northern_California_cattle_ranch%2C_ca.1897-1900_%28CHS-2019%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Cowboys_on_horseback_at_a_northern_California_cattle_ranch%2C_ca.1897-1900_%28CHS-2019%29.jpg/3840px-Cowboys_on_horseback_at_a_northern_California_cattle_ranch%2C_ca.1897-1900_%28CHS-2019%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Clendenen · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APH036_0309_Lee_Moorhouse_photographs_-_DPLA_-_8dba208ca83b96b40a1cb77c56790a4c.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/PH036_0309_Lee_Moorhouse_photographs_-_DPLA_-_8dba208ca83b96b40a1cb77c56790a4c.jpg/3840px-PH036_0309_Lee_Moorhouse_photographs_-_DPLA_-_8dba208ca83b96b40a1cb77c56790a4c.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Clendenen",
+        "author": null,
         "author_url": null,
         "restrictions": [],
         "pd_reasons": [
@@ -1300607,7 +1301079,7 @@
         "difficulty_estimate": 3,
         "notes": "Plain completion question. It shares the answer 'Up' with the sunny-side-up question, but it's a different fact."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-56",
       "review": {
@@ -1300619,11 +1301091,46 @@
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked picture's licence only covers the US, so the media query changes to find a new cowboy photo.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "cowboys on horses ranch",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ACowboys_on_horseback_at_a_northern_California_cattle_ranch%2C_ca.1897-1900_%28CHS-2019%29.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Cowboys_on_horseback_at_a_northern_California_cattle_ranch%2C_ca.1897-1900_%28CHS-2019%29.jpg/3840px-Cowboys_on_horseback_at_a_northern_California_cattle_ranch%2C_ca.1897-1900_%28CHS-2019%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Clendenen · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Clendenen",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16801",
@@ -1303881,7 +1304388,7 @@
     },
     {
       "id": "q-16844",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "Spooky season has a strict dress code.",
       "question": "You're decorating your porch for Halloween on October 31. Which of these does NOT belong?",
@@ -1303893,7 +1304400,7 @@
       ],
       "hints": [
         "Think about what you see in Halloween stories.",
-        "One of them would melt long before October 31 in most places.",
+        "One of them belongs to a different time of year.",
         "It has a carrot nose."
       ],
       "media": {
@@ -1303941,26 +1304448,34 @@
       "needs_media": false,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"One of them would melt long before October 31 in most places\") gives the answer away: only the snowman can melt, so it names the answer's defining trait as plainly as hint 3 does. Replace it with a hint about the season, e.g. that one option belongs to a different time of year, without mentioning melting, snow or cold.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"One of them would melt long before October 31 in most places\") gives the answer away: only the snowman can melt, so it names the answer's defining trait as plainly as hint 3 does. Replace it with a hint about the season, e.g. that one option belongs to a different time of year, without mentioning melting, snow or cold.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which pointed straight at the snowman, with vaguer ones as the reviewer asked.",
+        "reason": "Hint 2 named the snowman's defining trait (melting); it now just points to a different season.",
         "previous": {
           "hints": [
-            "Three of them are spooky.",
-            "One of them belongs to winter.",
+            "Think about what you see in Halloween stories.",
+            "One of them would melt long before October 31 in most places.",
             "It has a carrot nose."
           ]
         },
@@ -1304418,7 +1304933,7 @@
     },
     {
       "id": "q-16851",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "She was rocking before she could drive.",
       "question": "This singer recorded “Rockin' Around the Christmas Tree” in 1958 when she was just 13. Who is she?",
@@ -1304435,20 +1304950,20 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Brenda Lee singer 1960s",
-        "note": "Photo of singer Brenda Lee in the 1950s or 1960s, without her name visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrenda_Lee_1960.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Brenda_Lee_1960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Dell Publishing, 1960. Photographer not credited · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "vintage decorated Christmas tree",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AP20231127AS-0510.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/P20231127AS-0510.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "The White House · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Dell Publishing, 1960. Photographer not credited",
-        "author_url": "https://commons.wikimedia.org/wiki/Category:Dell_Publishing",
+        "author": "The White House",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": [
-          "PD-US-no notice"
+          "PD-USGov-POTUS"
         ]
       },
       "fun_fact": "The song hit No. 1 on the Billboard Hot 100 65 years after it was recorded.",
@@ -1304478,19 +1304993,52 @@
       "needs_media": true,
       "batch": "batch-56",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-11",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-no notice).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-11",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "usa",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The photo's license only works in the US, so I swapped the essential photo of the singer for an illustrative Christmas tree image that doesn't show the answer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Brenda Lee singer 1960s",
+            "note": "Photo of singer Brenda Lee in the 1950s or 1960s, without her name visible.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ABrenda_Lee_1960.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Brenda_Lee_1960.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Dell Publishing, 1960. Photographer not credited · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Dell Publishing, 1960. Photographer not credited",
+            "author_url": "https://commons.wikimedia.org/wiki/Category:Dell_Publishing",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-no notice"
+            ]
+          }
+        },
+        "revised_on": "2026-11-11"
+      }
     },
     {
       "id": "q-16852",
