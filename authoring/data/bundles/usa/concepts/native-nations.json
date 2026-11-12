@@ -81,7 +81,8 @@
     {
       "name": "Inuit",
       "facet": "Nations and their homelands",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Three Inuit questions already exist, and easy odd-one-out options overlap the Sámi/igloo question."
     },
     {
       "name": "Lakota",
@@ -406,7 +407,8 @@
     {
       "name": "Moccasins",
       "facet": "Crafts, art and clothing",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The existing question already defines moccasins and who made them; word-origin would be far above target."
     },
     {
       "name": "Tomahawk",
@@ -416,7 +418,8 @@
     {
       "name": "Kayak",
       "facet": "Crafts, art and clothing",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The kayak's Inuit origin and hunting purpose are already asked; the remaining options would repeat them."
     },
     {
       "name": "Peace pipe",

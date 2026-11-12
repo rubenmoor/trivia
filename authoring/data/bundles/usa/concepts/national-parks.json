@@ -296,7 +296,8 @@
     {
       "name": "Stalactite",
       "facet": "Caves, deserts and dunes",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already covers stalactites and stalagmites; the options left would be forced."
     },
     {
       "name": "Stalagmite",
@@ -646,7 +647,8 @@
     {
       "name": "Visitor center",
       "facet": "Rangers, rules and park traditions",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Visitor centers have already been asked about, and no option leads to a new, interesting fact."
     },
     {
       "name": "Prescribed burn",

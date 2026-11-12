@@ -326,7 +326,8 @@
     {
       "name": "Lightning McQueen",
       "facet": "NASCAR and stock car racing",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: Franchise characters can't be essential media; Lightning McQueen's basics are already asked."
     },
     {
       "name": "Talladega Nights",
@@ -976,7 +977,8 @@
     {
       "name": "Tony Hawk",
       "facet": "X Games and extreme sports",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Tony Hawk's 900 is already asked, and nothing else about him works at difficulty 1 with these options."
     },
     {
       "name": "Tony Hawk's Pro Skater",
@@ -1021,7 +1023,8 @@
     {
       "name": "BMX",
       "facet": "X Games and extreme sports",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: BMX at difficulty 1 is already covered by the analogy and purpose questions in the pool."
     },
     {
       "name": "Mat Hoffman",
