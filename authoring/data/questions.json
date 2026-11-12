@@ -1139142,7 +1139142,8 @@
           ]
         },
         "revised_on": "2026-11-07"
-      }
+      },
+      "translatable": false
     },
     {
       "id": "q-14713",
@@ -1276649,7 +1276650,8 @@
         "previous": null
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-16486",
@@ -1376521,7 +1376523,8 @@
         "previous": null
       },
       "bundle": "mexico",
-      "background": null
+      "background": null,
+      "translatable": false
     },
     {
       "id": "q-17782",
