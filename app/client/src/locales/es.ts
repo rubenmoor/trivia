@@ -606,6 +606,11 @@ const es = {
     college: { name: "Universidad", desc: "Acertar {n} preguntas de nivel universitario." },
     year: { name: "Año escolar: {group}", desc: "Jugar {n} partidas completas en el grupo de edad {group}." },
     score: { name: "{n} puntos", desc: "Llegar a {n} puntos." },
+    points: "Puntos",
+    rank: "Rango",
+    delta: { plus: "+{n}", minus: "−{n}" },
+    /** Rank 1–15 → name (plans/24-career.md "Rank"). */
+    ranks: ["Principiante", "Aprendiz", "Estudiante", "Aspirante", "Promesa", "Talento", "Prodigio", "Referente", "Lumbrera", "Autoridad", "Eminencia", "Genio", "Fenómeno", "Leyenda", "Enciclopedia viviente"],
   },
   /** The save file couldn't be used (plan 55, decision 98); {path}: the backup. */
   save: {

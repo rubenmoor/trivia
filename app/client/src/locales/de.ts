@@ -539,6 +539,11 @@ export const de = {
     college: { name: "Universität", desc: "{n} Fragen auf Universitätsniveau richtig beantworten." },
     year: { name: "Schuljahr: {group}", desc: "{n} Spiele in der Altersgruppe {group} zu Ende spielen." },
     score: { name: "{n} Punkte", desc: "{n} Punkte erreichen." },
+    points: "Punkte",
+    rank: "Rang",
+    delta: { plus: "+{n}", minus: "−{n}" },
+    /** Rank 1–15 → name (plans/24-career.md "Rank"). */
+    ranks: ["Neuling", "Lehrling", "Schulkind", "Prüfling", "Nachwuchstalent", "Talent", "Wunderkind", "Vorbild", "Kapazität", "Autorität", "Koryphäe", "Genie", "Phänomen", "Legende", "Lebendes Lexikon"],
   },
   save: {
     corrupt: "Die Spielstand-Datei ist beschädigt. Sie wurde als Sicherung nach {path} verschoben, und ein neues Spiel beginnt.",
