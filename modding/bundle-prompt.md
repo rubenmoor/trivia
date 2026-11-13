@@ -51,7 +51,7 @@ b) data/bundles.json
 { "bundles": [ { "id": "<bundle id>", "kind": "topic" (or "base"), "languages": ["<lang>", …], "name": "<name in main language>", "description": "<description in main language>" } ] }
 
 c) data/bundles/<bundle id>/categories.json
-{ "categories": [ { "slug": "<category slug>", "subcategories": ["<subcategory slug>", "<subcategory slug>", …] } ] }
+{ "categories": [ { "slug": "<category slug>", "subject": "<one of history, geography, nature, science, arts, media, sport>", "subcategories": ["<subcategory slug>", "<subcategory slug>", …] } ] }
 - One category (two at most), 2–4 subcategories.
 - Slugs are short English ids: lowercase a-z, 0-9 and "-", e.g. "dinosaurs", "jurassic-dinosaurs", "dinosaur-fossils"; unique within the file.
 

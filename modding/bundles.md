@@ -41,6 +41,7 @@ Two formats; both load. Plain: every subcategory's name is its key, simplest for
   - `slug`: lowercase id of the category; `name`: shown in the game; `subcategories`: names, at least one
 - Slugs: `{ "categories": [ { "slug", "subcategories": ["<slug>", …] } ] }`
   - every slug lowercase letters, digits and `-`, e.g. `space-travel`; names in `names.<locale>.json`
+- `subject` (optional, either format): one of `history`, `geography`, `nature`, `science`, `arts`, `media`, `sport`; the correct answers to the category's questions count toward that school subject of the career. Without it, or with another id, they count toward no subject (only score and rank); `--check-mod` warns `bad_subject` on an unknown one. Mods can't add subjects.
 - Every question's `subcategory` is one of the `subcategories` entries exactly, in every language's pool file.
 - Category slugs and subcategory keys only need to be unique within the bundle; they may repeat the game's or other mods' («history»): each bundle keeps its own.
 

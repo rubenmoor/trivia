@@ -27,6 +27,8 @@ export interface Category {
   name?: string;
   bundle: string;
   subcategories: string[];
+  /** One of subjects.json's ids; mods: optional (decision 588), none if missing or unknown. */
+  subject?: string;
 }
 
 /** The supply check before a new game (GF-5, engine/selection.ts). */

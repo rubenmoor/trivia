@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import {
-  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, parseAgeGroups, parseBundles, parsePool,
+  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, modSubcategories, parseAgeGroups, parseBundles, parsePool,
 } from "./pool.ts";
 import { data, fixture, realCategories } from "./test/fixtures.ts";
 
@@ -141,4 +141,27 @@ test("modPool: namespaced ids, media under the bundle folder, text-only, a reaso
   assert.equal(out.badQuestions, 10);
   assert.equal(out.badMedia, 2);
   assert.ok(isModId(out.questions[0].id) && isOurs("q-0001"));
+});
+
+test("subjects: every real category has one of subjects.json, in the real subject names", () => {
+  const ids = (data("subjects.json") as { subjects: { id: string }[] }).subjects.map((s) => s.id);
+  assert.equal(ids.length, 7);
+  const cats = realCategories();
+  assert.ok(cats.some((c) => c.bundle !== "base"));
+  for (const c of cats) assert.ok(ids.includes(c.subject ?? ""), `${c.bundle}/${c.slug}`);
+  const names = data("names.en.json") as { subjects: Record<string, string> };
+  for (const id of ids) assert.ok(names.subjects[id]);
+});
+
+test("mod categories: subject optional, unknown dropped and reported", () => {
+  const ids = ["history", "sport"];
+  const file = (...subjects: unknown[]) => ({
+    categories: subjects.map((subject, i) => ({ slug: `c${i}`, subject, subcategories: [`s${i}`] })),
+  });
+  const ok = modSubcategories(file("sport", undefined, "foo"), ids)!;
+  assert.deepEqual(ok.badSubjects, ["c2"]);
+  assert.equal(modSubcategories(file(5), ids), null);
+  const cats = loadCategories({ bundles: [{ id: "m" }] }, { m: file("sport", undefined, "foo") }, ids);
+  assert.deepEqual(cats.map((c) => c.subject), ["sport", undefined, undefined]);
+  assert.ok(!("subject" in cats[2]));
 });
