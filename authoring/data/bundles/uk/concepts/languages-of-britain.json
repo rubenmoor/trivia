@@ -1,0 +1,657 @@
+{
+  "subcategory": "languages-of-britain",
+  "facets": [
+    "Welsh words and sayings",
+    "Wales speaking Welsh today",
+    "Scottish Gaelic and the Highlands",
+    "Scots and Robert Burns",
+    "Cornish and Manx revivals",
+    "Irish and Ulster Scots",
+    "British Sign Language",
+    "Old English and the Anglo-Saxons",
+    "Viking and Norman French legacies",
+    "Celtic, Norse and Roman place names",
+    "Lost languages: Pictish, Norn, Cumbric",
+    "Community languages of modern Britain"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Hiraeth",
+      "facet": "Welsh words and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "Nos da",
+      "facet": "Welsh words and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Cymru",
+      "facet": "Welsh words and sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Cymraeg",
+      "facet": "Welsh words and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Y Ddraig Goch",
+      "facet": "Welsh words and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Araf",
+      "facet": "Welsh words and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Cariad",
+      "facet": "Welsh words and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Hwyl",
+      "facet": "Welsh words and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Mam-gu",
+      "facet": "Welsh words and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Double L sound",
+      "facet": "Welsh words and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Paned",
+      "facet": "Welsh words and sayings",
+      "known_at": 13
+    },
+    {
+      "name": "National Eisteddfod",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 9
+    },
+    {
+      "name": "S4C",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 10
+    },
+    {
+      "name": "Urdd Gobaith Cymru",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 11
+    },
+    {
+      "name": "Bilingual road signs",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 6
+    },
+    {
+      "name": "Welsh-medium school",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 9
+    },
+    {
+      "name": "Welsh Language Act 1993",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 13
+    },
+    {
+      "name": "Cymraeg 2050",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 13
+    },
+    {
+      "name": "Radio Cymru",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 12
+    },
+    {
+      "name": "Gwynfor Evans",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 14
+    },
+    {
+      "name": "Cymdeithas yr Iaith",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 14
+    },
+    {
+      "name": "Y Wladfa",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 13
+    },
+    {
+      "name": "Welsh Not",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 12
+    },
+    {
+      "name": "Yma o Hyd",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 11
+    },
+    {
+      "name": "Welsh Language Commissioner",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 13
+    },
+    {
+      "name": "Duolingo Welsh course",
+      "facet": "Wales speaking Welsh today",
+      "known_at": 10
+    },
+    {
+      "name": "Slàinte mhath",
+      "facet": "Scottish Gaelic and the Highlands",
+      "known_at": 11
+    },
+    {
+      "name": "Royal National Mòd",
+      "facet": "Scottish Gaelic and the Highlands",
+      "known_at": 13
+    },
+    {
+      "name": "BBC Alba",
+      "facet": "Scottish Gaelic and the Highlands",
+      "known_at": 11
+    },
+    {
+      "name": "Clan",
+      "facet": "Scottish Gaelic and the Highlands",
+      "known_at": 6
+    },
+    {
+      "name": "Stornoway",
+      "facet": "Scottish Gaelic and the Highlands",
+      "known_at": 12
+    },
+    {
+      "name": "Ciamar a tha thu",
+      "facet": "Scottish Gaelic and the Highlands",
+      "known_at": 13
+    },
+    {
+      "name": "Ben (mountain)",
+      "facet": "Scottish Gaelic and the Highlands",
+      "known_at": 8
+    },
+    {
+      "name": "Scots Wha Hae",
+      "facet": "Scots and Robert Burns",
+      "known_at": 14
+    },
+    {
+      "name": "Alloway",
+      "facet": "Scots and Robert Burns",
+      "known_at": 13
+    },
+    {
+      "name": "The Gruffalo in Scots",
+      "facet": "Scots and Robert Burns",
+      "known_at": 8
+    },
+    {
+      "name": "Henry Jenner",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 15
+    },
+    {
+      "name": "Gorsedh Kernow",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 14
+    },
+    {
+      "name": "Meur ras",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 13
+    },
+    {
+      "name": "Dydh da",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 13
+    },
+    {
+      "name": "Kernow bys vyken",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 13
+    },
+    {
+      "name": "Manx Gaelic",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 11
+    },
+    {
+      "name": "Ned Maddrell",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 15
+    },
+    {
+      "name": "Bunscoill Ghaelgagh",
+      "facet": "Cornish and Manx revivals",
+      "known_at": 15
+    },
+    {
+      "name": "Irish language",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 8
+    },
+    {
+      "name": "Sláinte",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 10
+    },
+    {
+      "name": "Gaeltacht",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 13
+    },
+    {
+      "name": "Cúpla focal",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 13
+    },
+    {
+      "name": "Dia duit",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 13
+    },
+    {
+      "name": "Identity and Language Act 2022",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 14
+    },
+    {
+      "name": "Ulster-Scots Agency",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 14
+    },
+    {
+      "name": "Ogham",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 12
+    },
+    {
+      "name": "Banshee",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 8
+    },
+    {
+      "name": "Smithereens",
+      "facet": "Irish and Ulster Scots",
+      "known_at": 10
+    },
+    {
+      "name": "British Sign Language",
+      "facet": "British Sign Language",
+      "known_at": 7
+    },
+    {
+      "name": "Two-handed fingerspelling alphabet",
+      "facet": "British Sign Language",
+      "known_at": 9
+    },
+    {
+      "name": "BSL Act 2022",
+      "facet": "British Sign Language",
+      "known_at": 12
+    },
+    {
+      "name": "Rose Ayling-Ellis",
+      "facet": "British Sign Language",
+      "known_at": 8
+    },
+    {
+      "name": "See Hear",
+      "facet": "British Sign Language",
+      "known_at": 13
+    },
+    {
+      "name": "Makaton",
+      "facet": "British Sign Language",
+      "known_at": 8
+    },
+    {
+      "name": "The Silent Child",
+      "facet": "British Sign Language",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Braidwood",
+      "facet": "British Sign Language",
+      "known_at": 15
+    },
+    {
+      "name": "BSL regional dialects",
+      "facet": "British Sign Language",
+      "known_at": 12
+    },
+    {
+      "name": "Sign name",
+      "facet": "British Sign Language",
+      "known_at": 11
+    },
+    {
+      "name": "Lip reading",
+      "facet": "British Sign Language",
+      "known_at": 5
+    },
+    {
+      "name": "BSL interpreter",
+      "facet": "British Sign Language",
+      "known_at": 8
+    },
+    {
+      "name": "BSL GCSE",
+      "facet": "British Sign Language",
+      "known_at": 11
+    },
+    {
+      "name": "Deaf community",
+      "facet": "British Sign Language",
+      "known_at": 9
+    },
+    {
+      "name": "Caedmon",
+      "facet": "Old English and the Anglo-Saxons",
+      "known_at": 14
+    },
+    {
+      "name": "Exeter Book",
+      "facet": "Old English and the Anglo-Saxons",
+      "known_at": 14
+    },
+    {
+      "name": "Angles, Saxons and Jutes",
+      "facet": "Old English and the Anglo-Saxons",
+      "known_at": 9
+    },
+    {
+      "name": "Wednesday",
+      "facet": "Old English and the Anglo-Saxons",
+      "known_at": 8
+    },
+    {
+      "name": "Thorn (letter þ)",
+      "facet": "Old English and the Anglo-Saxons",
+      "known_at": 13
+    },
+    {
+      "name": "Berserk",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 10
+    },
+    {
+      "name": "Sky (Norse loanword)",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 12
+    },
+    {
+      "name": "They (Norse loanword)",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 13
+    },
+    {
+      "name": "Thursday",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 7
+    },
+    {
+      "name": "Anglo-Norman French",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 12
+    },
+    {
+      "name": "Beef and cow",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 11
+    },
+    {
+      "name": "Pork and pig",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 11
+    },
+    {
+      "name": "Dieu et mon droit",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 12
+    },
+    {
+      "name": "Honi soit qui mal y pense",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 13
+    },
+    {
+      "name": "Oyez",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 12
+    },
+    {
+      "name": "Shirt and skirt",
+      "facet": "Viking and Norman French legacies",
+      "known_at": 13
+    },
+    {
+      "name": "-caster",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 11
+    },
+    {
+      "name": "Pen-",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 12
+    },
+    {
+      "name": "Deva Victrix",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 14
+    },
+    {
+      "name": "Yr Wyddfa",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 10
+    },
+    {
+      "name": "Torpenhow Hill",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 15
+    },
+    {
+      "name": "Edinburgh (Din Eidyn)",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 13
+    },
+    {
+      "name": "-wick",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 12
+    },
+    {
+      "name": "Glasgow (dear green place)",
+      "facet": "Celtic, Norse and Roman place names",
+      "known_at": 12
+    },
+    {
+      "name": "Pictish language",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 12
+    },
+    {
+      "name": "Pit- place names",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 14
+    },
+    {
+      "name": "Norn",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 13
+    },
+    {
+      "name": "Hildina Ballad",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 15
+    },
+    {
+      "name": "Maeshowe runes",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 14
+    },
+    {
+      "name": "Cumbric",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 14
+    },
+    {
+      "name": "Yan tan tethera",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 12
+    },
+    {
+      "name": "Cumbria",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 9
+    },
+    {
+      "name": "Hen Ogledd",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 15
+    },
+    {
+      "name": "Common Brittonic",
+      "facet": "Lost languages: Pictish, Norn, Cumbric",
+      "known_at": 14
+    },
+    {
+      "name": "Polish",
+      "facet": "Community languages of modern Britain",
+      "known_at": 8
+    },
+    {
+      "name": "Punjabi",
+      "facet": "Community languages of modern Britain",
+      "known_at": 9
+    },
+    {
+      "name": "Urdu",
+      "facet": "Community languages of modern Britain",
+      "known_at": 9
+    },
+    {
+      "name": "Bengali",
+      "facet": "Community languages of modern Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Gujarati",
+      "facet": "Community languages of modern Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Cantonese",
+      "facet": "Community languages of modern Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Somali",
+      "facet": "Community languages of modern Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Romanian",
+      "facet": "Community languages of modern Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Yiddish",
+      "facet": "Community languages of modern Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Jamaican Patois",
+      "facet": "Community languages of modern Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Anglo-Romani",
+      "facet": "Community languages of modern Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Pal (Romani loanword)",
+      "facet": "Community languages of modern Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Bungalow",
+      "facet": "Community languages of modern Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Pyjamas",
+      "facet": "Community languages of modern Britain",
+      "known_at": 9
+    },
+    {
+      "name": "Shampoo",
+      "facet": "Community languages of modern Britain",
+      "known_at": 10
+    },
+    {
+      "name": "Southall",
+      "facet": "Community languages of modern Britain",
+      "known_at": 13
+    },
+    {
+      "name": "2021 Census",
+      "facet": "Community languages of modern Britain",
+      "known_at": 12
+    }
+  ]
+}

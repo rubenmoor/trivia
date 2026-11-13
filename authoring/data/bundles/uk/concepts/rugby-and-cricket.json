@@ -1,0 +1,1237 @@
+{
+  "subcategory": "rugby-and-cricket",
+  "facets": [
+    "Rugby union rules and positions",
+    "Six Nations and home nations rugby",
+    "British and Irish Lions tours",
+    "Rugby league and its northern heartland",
+    "Famous rugby players and moments",
+    "Cricket rules, fielding positions and jargon",
+    "The Ashes and Test cricket",
+    "County cricket, The Hundred and T20",
+    "Famous cricketers and record-breakers",
+    "Grounds and stadiums",
+    "Rugby and cricket customs and traditions",
+    "History and origins of the games"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 5,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 4,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Try",
+      "facet": "Rugby union rules and positions",
+      "known_at": 3
+    },
+    {
+      "name": "Conversion",
+      "facet": "Rugby union rules and positions",
+      "known_at": 6
+    },
+    {
+      "name": "Scrum",
+      "facet": "Rugby union rules and positions",
+      "known_at": 4
+    },
+    {
+      "name": "Lineout",
+      "facet": "Rugby union rules and positions",
+      "known_at": 7
+    },
+    {
+      "name": "Ruck",
+      "facet": "Rugby union rules and positions",
+      "known_at": 9
+    },
+    {
+      "name": "Maul",
+      "facet": "Rugby union rules and positions",
+      "known_at": 10
+    },
+    {
+      "name": "Knock-on",
+      "facet": "Rugby union rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Drop goal",
+      "facet": "Rugby union rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Penalty kick",
+      "facet": "Rugby union rules and positions",
+      "known_at": 5
+    },
+    {
+      "name": "Forward pass",
+      "facet": "Rugby union rules and positions",
+      "known_at": 6
+    },
+    {
+      "name": "Sin bin",
+      "facet": "Rugby union rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Hooker",
+      "facet": "Rugby union rules and positions",
+      "known_at": 9
+    },
+    {
+      "name": "Prop",
+      "facet": "Rugby union rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Lock",
+      "facet": "Rugby union rules and positions",
+      "known_at": 10
+    },
+    {
+      "name": "Flanker",
+      "facet": "Rugby union rules and positions",
+      "known_at": 10
+    },
+    {
+      "name": "Number eight",
+      "facet": "Rugby union rules and positions",
+      "known_at": 10
+    },
+    {
+      "name": "Scrum-half",
+      "facet": "Rugby union rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Fly-half",
+      "facet": "Rugby union rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Winger",
+      "facet": "Rugby union rules and positions",
+      "known_at": 6
+    },
+    {
+      "name": "Full-back",
+      "facet": "Rugby union rules and positions",
+      "known_at": 8
+    },
+    {
+      "name": "Television Match Official",
+      "facet": "Rugby union rules and positions",
+      "known_at": 11
+    },
+    {
+      "name": "Advantage",
+      "facet": "Rugby union rules and positions",
+      "known_at": 11
+    },
+    {
+      "name": "Six Nations Championship",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 6
+    },
+    {
+      "name": "Five Nations Championship",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 11
+    },
+    {
+      "name": "Grand Slam",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 8
+    },
+    {
+      "name": "Triple Crown",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 9
+    },
+    {
+      "name": "Wooden spoon",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 9
+    },
+    {
+      "name": "Millennium Trophy",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 13
+    },
+    {
+      "name": "Centenary Quaich",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 14
+    },
+    {
+      "name": "Doddie Weir Cup",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 13
+    },
+    {
+      "name": "England national rugby union team",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 5
+    },
+    {
+      "name": "Wales national rugby union team",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 6
+    },
+    {
+      "name": "Scotland national rugby union team",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 6
+    },
+    {
+      "name": "Ireland national rugby union team",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 7
+    },
+    {
+      "name": "Italy national rugby union team",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 10
+    },
+    {
+      "name": "Red Roses",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 9
+    },
+    {
+      "name": "Women's Six Nations",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 9
+    },
+    {
+      "name": "Prince of Wales's feathers",
+      "facet": "Six Nations and home nations rugby",
+      "known_at": 10
+    },
+    {
+      "name": "British and Irish Lions",
+      "facet": "British and Irish Lions tours",
+      "known_at": 8
+    },
+    {
+      "name": "Lions red jersey",
+      "facet": "British and Irish Lions tours",
+      "known_at": 9
+    },
+    {
+      "name": "1971 Lions tour of New Zealand",
+      "facet": "British and Irish Lions tours",
+      "known_at": 14
+    },
+    {
+      "name": "1974 Lions tour of South Africa",
+      "facet": "British and Irish Lions tours",
+      "known_at": 13
+    },
+    {
+      "name": "99 call",
+      "facet": "British and Irish Lions tours",
+      "known_at": 14
+    },
+    {
+      "name": "1997 Lions tour of South Africa",
+      "facet": "British and Irish Lions tours",
+      "known_at": 13
+    },
+    {
+      "name": "2013 Lions tour of Australia",
+      "facet": "British and Irish Lions tours",
+      "known_at": 12
+    },
+    {
+      "name": "2017 Lions tour of New Zealand",
+      "facet": "British and Irish Lions tours",
+      "known_at": 12
+    },
+    {
+      "name": "2021 Lions tour of South Africa",
+      "facet": "British and Irish Lions tours",
+      "known_at": 12
+    },
+    {
+      "name": "2025 Lions tour of Australia",
+      "facet": "British and Irish Lions tours",
+      "known_at": 11
+    },
+    {
+      "name": "Willie John McBride",
+      "facet": "British and Irish Lions tours",
+      "known_at": 13
+    },
+    {
+      "name": "Ian McGeechan",
+      "facet": "British and Irish Lions tours",
+      "known_at": 13
+    },
+    {
+      "name": "Warren Gatland",
+      "facet": "British and Irish Lions tours",
+      "known_at": 11
+    },
+    {
+      "name": "Andy Farrell",
+      "facet": "British and Irish Lions tours",
+      "known_at": 12
+    },
+    {
+      "name": "Sam Warburton",
+      "facet": "British and Irish Lions tours",
+      "known_at": 12
+    },
+    {
+      "name": "All Blacks",
+      "facet": "British and Irish Lions tours",
+      "known_at": 6
+    },
+    {
+      "name": "Springboks",
+      "facet": "British and Irish Lions tours",
+      "known_at": 9
+    },
+    {
+      "name": "Wallabies",
+      "facet": "British and Irish Lions tours",
+      "known_at": 9
+    },
+    {
+      "name": "Haka",
+      "facet": "British and Irish Lions tours",
+      "known_at": 6
+    },
+    {
+      "name": "Rugby league",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 7
+    },
+    {
+      "name": "Super League",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 9
+    },
+    {
+      "name": "Challenge Cup",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 10
+    },
+    {
+      "name": "Super League Grand Final",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 11
+    },
+    {
+      "name": "Wigan Warriors",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 9
+    },
+    {
+      "name": "Leeds Rhinos",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 9
+    },
+    {
+      "name": "St Helens",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 10
+    },
+    {
+      "name": "Warrington Wolves",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 11
+    },
+    {
+      "name": "Hull FC",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 11
+    },
+    {
+      "name": "Castleford Tigers",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 12
+    },
+    {
+      "name": "Catalans Dragons",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 12
+    },
+    {
+      "name": "Play-the-ball",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 12
+    },
+    {
+      "name": "Six-tackle rule",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 12
+    },
+    {
+      "name": "Northern Union",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 13
+    },
+    {
+      "name": "George Hotel, Huddersfield",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 14
+    },
+    {
+      "name": "Broken-time payments",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 14
+    },
+    {
+      "name": "Kevin Sinfield",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 10
+    },
+    {
+      "name": "Rob Burrow",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 11
+    },
+    {
+      "name": "Martin Offiah",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 12
+    },
+    {
+      "name": "Ellery Hanley",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 13
+    },
+    {
+      "name": "Lance Todd Trophy",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 14
+    },
+    {
+      "name": "Man of Steel",
+      "facet": "Rugby league and its northern heartland",
+      "known_at": 13
+    },
+    {
+      "name": "Jonny Wilkinson",
+      "facet": "Famous rugby players and moments",
+      "known_at": 7
+    },
+    {
+      "name": "2003 Rugby World Cup final",
+      "facet": "Famous rugby players and moments",
+      "known_at": 8
+    },
+    {
+      "name": "Martin Johnson",
+      "facet": "Famous rugby players and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Jason Robinson",
+      "facet": "Famous rugby players and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Lawrence Dallaglio",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Owen Farrell",
+      "facet": "Famous rugby players and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Maro Itoje",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Bill Beaumont",
+      "facet": "Famous rugby players and moments",
+      "known_at": 12
+    },
+    {
+      "name": "Gareth Edwards",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "That try (Barbarians 1973)",
+      "facet": "Famous rugby players and moments",
+      "known_at": 13
+    },
+    {
+      "name": "JPR Williams",
+      "facet": "Famous rugby players and moments",
+      "known_at": 13
+    },
+    {
+      "name": "Shane Williams",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Alun Wyn Jones",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Gareth Thomas",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Brian O'Driscoll",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Johnny Sexton",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Doddie Weir",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Stuart Hogg",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Finn Russell",
+      "facet": "Famous rugby players and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Emily Scarratt",
+      "facet": "Famous rugby players and moments",
+      "known_at": 12
+    },
+    {
+      "name": "Ellie Kildunne",
+      "facet": "Famous rugby players and moments",
+      "known_at": 12
+    },
+    {
+      "name": "2025 Women's Rugby World Cup",
+      "facet": "Famous rugby players and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Wicket",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 5
+    },
+    {
+      "name": "Stumps",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 4
+    },
+    {
+      "name": "Bails",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 6
+    },
+    {
+      "name": "Over",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 6
+    },
+    {
+      "name": "Maiden over",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 10
+    },
+    {
+      "name": "Bowled",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 5
+    },
+    {
+      "name": "LBW",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 8
+    },
+    {
+      "name": "Run out",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 7
+    },
+    {
+      "name": "Boundary",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 5
+    },
+    {
+      "name": "Duck",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 7
+    },
+    {
+      "name": "Golden duck",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 10
+    },
+    {
+      "name": "Century",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 7
+    },
+    {
+      "name": "No-ball",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 8
+    },
+    {
+      "name": "Wide",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 8
+    },
+    {
+      "name": "Howzat",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 8
+    },
+    {
+      "name": "Googly",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Yorker",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Slip",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 9
+    },
+    {
+      "name": "Gully",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Silly mid-off",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Square leg",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 11
+    },
+    {
+      "name": "Nightwatchman",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Follow-on",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Declaration",
+      "facet": "Cricket rules, fielding positions and jargon",
+      "known_at": 12
+    },
+    {
+      "name": "Ashes urn",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 9
+    },
+    {
+      "name": "Sporting Times mock obituary",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 13
+    },
+    {
+      "name": "Ivo Bligh",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 14
+    },
+    {
+      "name": "Test match",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 8
+    },
+    {
+      "name": "Bodyline series",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 12
+    },
+    {
+      "name": "Botham's Ashes",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 12
+    },
+    {
+      "name": "2005 Ashes series",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 11
+    },
+    {
+      "name": "Headingley 2019 Ashes Test",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 11
+    },
+    {
+      "name": "Ball of the Century",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 12
+    },
+    {
+      "name": "Shane Warne",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 9
+    },
+    {
+      "name": "Don Bradman",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 10
+    },
+    {
+      "name": "Baggy green",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 12
+    },
+    {
+      "name": "Boxing Day Test",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 11
+    },
+    {
+      "name": "Test Match Special",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 11
+    },
+    {
+      "name": "Bazball",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 11
+    },
+    {
+      "name": "Brendon McCullum",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 12
+    },
+    {
+      "name": "Pink ball",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 12
+    },
+    {
+      "name": "World Test Championship",
+      "facet": "The Ashes and Test cricket",
+      "known_at": 12
+    },
+    {
+      "name": "The Hundred",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 9
+    },
+    {
+      "name": "Women's Hundred",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "T20 Blast",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "Twenty20",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 9
+    },
+    {
+      "name": "One-Day Cup",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 13
+    },
+    {
+      "name": "Surrey County Cricket Club",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 10
+    },
+    {
+      "name": "Middlesex County Cricket Club",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "Kent County Cricket Club",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "Somerset County Cricket Club",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "Sussex County Cricket Club",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "Nottinghamshire County Cricket Club",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 12
+    },
+    {
+      "name": "Glamorgan County Cricket Club",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "Welsh Fire",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 11
+    },
+    {
+      "name": "Trent Rockets",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 12
+    },
+    {
+      "name": "Birmingham Phoenix",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 12
+    },
+    {
+      "name": "Southern Brave",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 12
+    },
+    {
+      "name": "National Counties",
+      "facet": "County cricket, The Hundred and T20",
+      "known_at": 14
+    },
+    {
+      "name": "Ian Botham",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 10
+    },
+    {
+      "name": "James Anderson",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 9
+    },
+    {
+      "name": "Stuart Broad",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 9
+    },
+    {
+      "name": "Ben Stokes",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 8
+    },
+    {
+      "name": "Joe Root",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 8
+    },
+    {
+      "name": "Alastair Cook",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Kevin Pietersen",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Andrew Flintoff",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 8
+    },
+    {
+      "name": "Jos Buttler",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Jofra Archer",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 10
+    },
+    {
+      "name": "Harry Brook",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 11
+    },
+    {
+      "name": "Graeme Swann",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 11
+    },
+    {
+      "name": "Monty Panesar",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 11
+    },
+    {
+      "name": "Geoffrey Boycott",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 11
+    },
+    {
+      "name": "Fred Trueman",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Jim Laker",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 13
+    },
+    {
+      "name": "Brian Lara",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 11
+    },
+    {
+      "name": "Garfield Sobers",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Heather Knight",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 11
+    },
+    {
+      "name": "Charlotte Edwards",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Dickie Bird",
+      "facet": "Famous cricketers and record-breakers",
+      "known_at": 12
+    },
+    {
+      "name": "Lord's",
+      "facet": "Grounds and stadiums",
+      "known_at": 8
+    },
+    {
+      "name": "Headingley",
+      "facet": "Grounds and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Edgbaston",
+      "facet": "Grounds and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Old Trafford Cricket Ground",
+      "facet": "Grounds and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Trent Bridge",
+      "facet": "Grounds and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Sophia Gardens",
+      "facet": "Grounds and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Lord's Long Room",
+      "facet": "Grounds and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Lord's Media Centre",
+      "facet": "Grounds and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Father Time weathervane",
+      "facet": "Grounds and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Lord's slope",
+      "facet": "Grounds and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Cardiff Arms Park",
+      "facet": "Grounds and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Murrayfield",
+      "facet": "Grounds and stadiums",
+      "known_at": 9
+    },
+    {
+      "name": "Aviva Stadium",
+      "facet": "Grounds and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Lansdowne Road",
+      "facet": "Grounds and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Welford Road",
+      "facet": "Grounds and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Kingsholm",
+      "facet": "Grounds and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Wembley Stadium (Challenge Cup final)",
+      "facet": "Grounds and stadiums",
+      "known_at": 10
+    },
+    {
+      "name": "Cricket tea",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Cricket whites",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Village cricket",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Walking",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Spirit of cricket",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Barmy Army",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Beer snake",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Fancy dress at Headingley",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Lord's honours boards",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "MCC egg-and-bacon tie",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Five-minute bell at Lord's",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Eton v Harrow match",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Guard of honour",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Barbarians",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Varsity Match",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Cwm Rhondda (Bread of Heaven)",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Jerusalem (hymn)",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Rugby clubhouse",
+      "facet": "Rugby and cricket customs and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Rugby School",
+      "facet": "History and origins of the games",
+      "known_at": 8
+    },
+    {
+      "name": "William Webb Ellis",
+      "facet": "History and origins of the games",
+      "known_at": 9
+    },
+    {
+      "name": "Webb Ellis Cup",
+      "facet": "History and origins of the games",
+      "known_at": 9
+    },
+    {
+      "name": "Gilbert rugby ball",
+      "facet": "History and origins of the games",
+      "known_at": 11
+    },
+    {
+      "name": "Rugby Football Union",
+      "facet": "History and origins of the games",
+      "known_at": 12
+    },
+    {
+      "name": "First rugby international (1871)",
+      "facet": "History and origins of the games",
+      "known_at": 13
+    },
+    {
+      "name": "1991 Rugby World Cup",
+      "facet": "History and origins of the games",
+      "known_at": 13
+    },
+    {
+      "name": "Marylebone Cricket Club",
+      "facet": "History and origins of the games",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Lord",
+      "facet": "History and origins of the games",
+      "known_at": 12
+    },
+    {
+      "name": "Laws of Cricket",
+      "facet": "History and origins of the games",
+      "known_at": 12
+    },
+    {
+      "name": "Hambledon Club",
+      "facet": "History and origins of the games",
+      "known_at": 14
+    },
+    {
+      "name": "Overarm bowling",
+      "facet": "History and origins of the games",
+      "known_at": 13
+    },
+    {
+      "name": "First Test match (1877)",
+      "facet": "History and origins of the games",
+      "known_at": 13
+    },
+    {
+      "name": "Gentlemen v Players",
+      "facet": "History and origins of the games",
+      "known_at": 14
+    },
+    {
+      "name": "Wisden Cricketers' Almanack",
+      "facet": "History and origins of the games",
+      "known_at": 12
+    },
+    {
+      "name": "Cricket bat willow",
+      "facet": "History and origins of the games",
+      "known_at": 11
+    },
+    {
+      "name": "2019 Cricket World Cup final",
+      "facet": "History and origins of the games",
+      "known_at": 10
+    },
+    {
+      "name": "2017 Women's Cricket World Cup",
+      "facet": "History and origins of the games",
+      "known_at": 12
+    },
+    {
+      "name": "Women's Cricket World Cup 1973",
+      "facet": "History and origins of the games",
+      "known_at": 14
+    }
+  ]
+}

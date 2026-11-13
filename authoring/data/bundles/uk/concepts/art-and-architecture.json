@@ -1,0 +1,733 @@
+{
+  "subcategory": "art-and-architecture",
+  "facets": [
+    "Famous British painters",
+    "Iconic paintings and portraits",
+    "Modern and contemporary British art",
+    "Public sculpture and monuments",
+    "Castles and palaces",
+    "Cathedrals, abbeys and churches",
+    "Architectural styles and periods",
+    "Famous architects and engineers",
+    "Landmark modern buildings",
+    "Bridges, towers and engineering feats",
+    "Galleries, museums and art prizes",
+    "Street art, design and everyday icons"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 2,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 3,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "L. S. Lowry",
+      "facet": "Famous British painters",
+      "known_at": 9
+    },
+    {
+      "name": "David Hockney",
+      "facet": "Famous British painters",
+      "known_at": 10
+    },
+    {
+      "name": "Thomas Gainsborough",
+      "facet": "Famous British painters",
+      "known_at": 11
+    },
+    {
+      "name": "William Hogarth",
+      "facet": "Famous British painters",
+      "known_at": 12
+    },
+    {
+      "name": "Joshua Reynolds",
+      "facet": "Famous British painters",
+      "known_at": 12
+    },
+    {
+      "name": "Francis Bacon",
+      "facet": "Famous British painters",
+      "known_at": 12
+    },
+    {
+      "name": "Lucian Freud",
+      "facet": "Famous British painters",
+      "known_at": 12
+    },
+    {
+      "name": "John Everett Millais",
+      "facet": "Famous British painters",
+      "known_at": 12
+    },
+    {
+      "name": "Dante Gabriel Rossetti",
+      "facet": "Famous British painters",
+      "known_at": 13
+    },
+    {
+      "name": "George Stubbs",
+      "facet": "Famous British painters",
+      "known_at": 13
+    },
+    {
+      "name": "Hans Holbein the Younger",
+      "facet": "Famous British painters",
+      "known_at": 12
+    },
+    {
+      "name": "Edwin Landseer",
+      "facet": "Famous British painters",
+      "known_at": 13
+    },
+    {
+      "name": "John William Waterhouse",
+      "facet": "Famous British painters",
+      "known_at": 13
+    },
+    {
+      "name": "Stanley Spencer",
+      "facet": "Famous British painters",
+      "known_at": 14
+    },
+    {
+      "name": "Gwen John",
+      "facet": "Famous British painters",
+      "known_at": 14
+    },
+    {
+      "name": "Walter Sickert",
+      "facet": "Famous British painters",
+      "known_at": 14
+    },
+    {
+      "name": "Bridget Riley",
+      "facet": "Famous British painters",
+      "known_at": 13
+    },
+    {
+      "name": "Paul Nash",
+      "facet": "Famous British painters",
+      "known_at": 14
+    },
+    {
+      "name": "The Fighting Temeraire",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 11
+    },
+    {
+      "name": "The Hay Wain",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 10
+    },
+    {
+      "name": "Ophelia",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 12
+    },
+    {
+      "name": "Mr and Mrs Andrews",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "The Blue Boy",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 12
+    },
+    {
+      "name": "A Rake's Progress",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "Whistlejacket",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "Going to the Match",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "A Bigger Splash",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 12
+    },
+    {
+      "name": "Mr and Mrs Clark and Percy",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 14
+    },
+    {
+      "name": "Portrait of Henry VIII",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 10
+    },
+    {
+      "name": "The Ambassadors",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "Flaming June",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "The Monarch of the Glen",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 12
+    },
+    {
+      "name": "The Light of the World",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 14
+    },
+    {
+      "name": "Bubbles",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 13
+    },
+    {
+      "name": "Newton (Blake)",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 14
+    },
+    {
+      "name": "Salisbury Cathedral from the Bishop's Grounds",
+      "facet": "Iconic paintings and portraits",
+      "known_at": 14
+    },
+    {
+      "name": "Damien Hirst",
+      "facet": "Modern and contemporary British art",
+      "known_at": 10
+    },
+    {
+      "name": "Tracey Emin",
+      "facet": "Modern and contemporary British art",
+      "known_at": 11
+    },
+    {
+      "name": "My Bed",
+      "facet": "Modern and contemporary British art",
+      "known_at": 11
+    },
+    {
+      "name": "The Physical Impossibility of Death in the Mind of Someone Living",
+      "facet": "Modern and contemporary British art",
+      "known_at": 12
+    },
+    {
+      "name": "For the Love of God",
+      "facet": "Modern and contemporary British art",
+      "known_at": 12
+    },
+    {
+      "name": "Young British Artists",
+      "facet": "Modern and contemporary British art",
+      "known_at": 13
+    },
+    {
+      "name": "Grayson Perry",
+      "facet": "Modern and contemporary British art",
+      "known_at": 11
+    },
+    {
+      "name": "Henry Moore",
+      "facet": "Modern and contemporary British art",
+      "known_at": 11
+    },
+    {
+      "name": "Barbara Hepworth",
+      "facet": "Modern and contemporary British art",
+      "known_at": 12
+    },
+    {
+      "name": "Anish Kapoor",
+      "facet": "Modern and contemporary British art",
+      "known_at": 12
+    },
+    {
+      "name": "Rachel Whiteread",
+      "facet": "Modern and contemporary British art",
+      "known_at": 13
+    },
+    {
+      "name": "Chris Ofili",
+      "facet": "Modern and contemporary British art",
+      "known_at": 14
+    },
+    {
+      "name": "Gilbert & George",
+      "facet": "Modern and contemporary British art",
+      "known_at": 13
+    },
+    {
+      "name": "Sgt. Pepper's album cover",
+      "facet": "Modern and contemporary British art",
+      "known_at": 9
+    },
+    {
+      "name": "Richard Hamilton",
+      "facet": "Modern and contemporary British art",
+      "known_at": 14
+    },
+    {
+      "name": "Ben Nicholson",
+      "facet": "Modern and contemporary British art",
+      "known_at": 14
+    },
+    {
+      "name": "Vorticism",
+      "facet": "Modern and contemporary British art",
+      "known_at": 15
+    },
+    {
+      "name": "Spot paintings",
+      "facet": "Modern and contemporary British art",
+      "known_at": 12
+    },
+    {
+      "name": "Trafalgar Square lions",
+      "facet": "Public sculpture and monuments",
+      "known_at": 5
+    },
+    {
+      "name": "Eros statue at Piccadilly Circus",
+      "facet": "Public sculpture and monuments",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria Memorial",
+      "facet": "Public sculpture and monuments",
+      "known_at": 11
+    },
+    {
+      "name": "Paddington Bear statue",
+      "facet": "Public sculpture and monuments",
+      "known_at": 5
+    },
+    {
+      "name": "Boadicea and Her Daughters",
+      "facet": "Public sculpture and monuments",
+      "known_at": 12
+    },
+    {
+      "name": "Winston Churchill statue",
+      "facet": "Public sculpture and monuments",
+      "known_at": 10
+    },
+    {
+      "name": "Millicent Fawcett statue",
+      "facet": "Public sculpture and monuments",
+      "known_at": 13
+    },
+    {
+      "name": "Monument to the Great Fire of London",
+      "facet": "Public sculpture and monuments",
+      "known_at": 10
+    },
+    {
+      "name": "Wellington Arch",
+      "facet": "Public sculpture and monuments",
+      "known_at": 12
+    },
+    {
+      "name": "Duke of Wellington statue with traffic cone",
+      "facet": "Public sculpture and monuments",
+      "known_at": 9
+    },
+    {
+      "name": "Westminster Cathedral",
+      "facet": "Cathedrals, abbeys and churches",
+      "known_at": 13
+    },
+    {
+      "name": "Tudor architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 5
+    },
+    {
+      "name": "Mock Tudor",
+      "facet": "Architectural styles and periods",
+      "known_at": 11
+    },
+    {
+      "name": "Elizabethan architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 10
+    },
+    {
+      "name": "Jacobean architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 12
+    },
+    {
+      "name": "Georgian architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 9
+    },
+    {
+      "name": "Regency architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 11
+    },
+    {
+      "name": "Victorian architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 7
+    },
+    {
+      "name": "Edwardian architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 11
+    },
+    {
+      "name": "Norman architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 9
+    },
+    {
+      "name": "Perpendicular Gothic",
+      "facet": "Architectural styles and periods",
+      "known_at": 14
+    },
+    {
+      "name": "Palladian architecture",
+      "facet": "Architectural styles and periods",
+      "known_at": 13
+    },
+    {
+      "name": "Art Deco",
+      "facet": "Architectural styles and periods",
+      "known_at": 11
+    },
+    {
+      "name": "Brutalism",
+      "facet": "Architectural styles and periods",
+      "known_at": 12
+    },
+    {
+      "name": "Arts and Crafts movement",
+      "facet": "Architectural styles and periods",
+      "known_at": 12
+    },
+    {
+      "name": "Scottish baronial",
+      "facet": "Architectural styles and periods",
+      "known_at": 14
+    },
+    {
+      "name": "Thatched cottage",
+      "facet": "Architectural styles and periods",
+      "known_at": 5
+    },
+    {
+      "name": "Back-to-back houses",
+      "facet": "Architectural styles and periods",
+      "known_at": 11
+    },
+    {
+      "name": "Gargoyle",
+      "facet": "Architectural styles and periods",
+      "known_at": 6,
+      "retired": "used_up: Its name, its rain-spout purpose and its era are already asked, and none of the options gives a fresh, fair question."
+    },
+    {
+      "name": "Fan vaulting",
+      "facet": "Architectural styles and periods",
+      "known_at": 13
+    },
+    {
+      "name": "Inigo Jones",
+      "facet": "Famous architects and engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Nicholas Hawksmoor",
+      "facet": "Famous architects and engineers",
+      "known_at": 14
+    },
+    {
+      "name": "John Vanbrugh",
+      "facet": "Famous architects and engineers",
+      "known_at": 14
+    },
+    {
+      "name": "John Nash",
+      "facet": "Famous architects and engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Robert Adam",
+      "facet": "Famous architects and engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Rennie Mackintosh",
+      "facet": "Famous architects and engineers",
+      "known_at": 11
+    },
+    {
+      "name": "Edwin Lutyens",
+      "facet": "Famous architects and engineers",
+      "known_at": 13
+    },
+    {
+      "name": "Basil Spence",
+      "facet": "Famous architects and engineers",
+      "known_at": 14
+    },
+    {
+      "name": "Norman Foster",
+      "facet": "Famous architects and engineers",
+      "known_at": 11
+    },
+    {
+      "name": "Richard Rogers",
+      "facet": "Famous architects and engineers",
+      "known_at": 12
+    },
+    {
+      "name": "Zaha Hadid",
+      "facet": "Famous architects and engineers",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Heatherwick",
+      "facet": "Famous architects and engineers",
+      "known_at": 12
+    },
+    {
+      "name": "The Cheesegrater",
+      "facet": "Landmark modern buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Lloyd's building",
+      "facet": "Landmark modern buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Barbican Estate",
+      "facet": "Landmark modern buildings",
+      "known_at": 12
+    },
+    {
+      "name": "London Olympic Stadium",
+      "facet": "Landmark modern buildings",
+      "known_at": 6
+    },
+    {
+      "name": "Trellick Tower",
+      "facet": "Landmark modern buildings",
+      "known_at": 14
+    },
+    {
+      "name": "Royal National Theatre",
+      "facet": "Landmark modern buildings",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Festival Hall",
+      "facet": "Landmark modern buildings",
+      "known_at": 12
+    },
+    {
+      "name": "V&A Dundee",
+      "facet": "Landmark modern buildings",
+      "known_at": 13
+    },
+    {
+      "name": "Sage Gateshead",
+      "facet": "Landmark modern buildings",
+      "known_at": 13
+    },
+    {
+      "name": "MediaCityUK",
+      "facet": "Landmark modern buildings",
+      "known_at": 12
+    },
+    {
+      "name": "The Iron Bridge",
+      "facet": "Bridges, towers and engineering feats",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Albert Bridge",
+      "facet": "Bridges, towers and engineering feats",
+      "known_at": 14
+    },
+    {
+      "name": "Tees Transporter Bridge",
+      "facet": "Bridges, towers and engineering feats",
+      "known_at": 14
+    },
+    {
+      "name": "Lovell Telescope",
+      "facet": "Bridges, towers and engineering feats",
+      "known_at": 12
+    },
+    {
+      "name": "Tate St Ives",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Academy of Arts",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Academy Summer Exhibition",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Turner Prize",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 11
+    },
+    {
+      "name": "Stirling Prize",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 14
+    },
+    {
+      "name": "Saatchi Gallery",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Serpentine Gallery",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Kelvingrove Art Gallery and Museum",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 12
+    },
+    {
+      "name": "National Museum of Scotland",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 11
+    },
+    {
+      "name": "Ashmolean Museum",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Fitzwilliam Museum",
+      "facet": "Galleries, museums and art prizes",
+      "known_at": 14
+    },
+    {
+      "name": "Banksy",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 7
+    },
+    {
+      "name": "Girl with Balloon",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 8
+    },
+    {
+      "name": "Shoreditch street art",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 12
+    },
+    {
+      "name": "Red pillar box",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 5
+    },
+    {
+      "name": "London Underground map",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 8
+    },
+    {
+      "name": "London Underground roundel",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 6
+    },
+    {
+      "name": "Johnston typeface",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 14
+    },
+    {
+      "name": "Keep Calm and Carry On poster",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 6
+    },
+    {
+      "name": "Jaguar E-Type",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 12
+    },
+    {
+      "name": "British road signs",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 13
+    },
+    {
+      "name": "William Morris",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 12
+    },
+    {
+      "name": "Liberty print",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 13
+    },
+    {
+      "name": "Burberry check",
+      "facet": "Street art, design and everyday icons",
+      "known_at": 11
+    }
+  ]
+}

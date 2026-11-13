@@ -52101,6 +52101,856 @@
       "hash": "78e602e9083a",
       "answer": "Augusto Monterroso",
       "concept": "The Dinosaur (micro-story)"
+    },
+    "q-17640": {
+      "hash": "5914bfcae13b",
+      "answer": "Get your passport",
+      "concept": "IMSS"
+    },
+    "q-17641": {
+      "hash": "7640e8ec7c0f",
+      "answer": "Civil Protection",
+      "concept": "Civil Protection"
+    },
+    "q-17642": {
+      "hash": "25bf8b148bf7",
+      "answer": "Institutional Revolutionary Party",
+      "concept": "PRI"
+    },
+    "q-17643": {
+      "hash": "f8c433a39850",
+      "answer": "Volkswagen Beetle",
+      "concept": "Vocho"
+    },
+    "q-17644": {
+      "hash": "3a237bd060ce",
+      "answer": "Electric light in your home",
+      "concept": "Pemex"
+    },
+    "q-17645": {
+      "hash": "3957509bc82d",
+      "answer": "IFE",
+      "concept": "IFE"
+    },
+    "q-17646": {
+      "hash": "7127721ee2bb",
+      "answer": "Tlatelolco",
+      "concept": "October 2 is not forgotten"
+    },
+    "q-17647": {
+      "hash": "b62be6be9290",
+      "answer": "Polytechnic (IPN)",
+      "concept": "National Polytechnic Institute"
+    },
+    "q-17648": {
+      "hash": "7f36e8b85560",
+      "answer": "Push-ups",
+      "concept": "Lizard"
+    },
+    "q-17649": {
+      "hash": "5a1ac70a4ad9",
+      "answer": "To spray you with a stinky jet",
+      "concept": "Skunk"
+    },
+    "q-17650": {
+      "hash": "1c6a9167c2c8",
+      "answer": "At night",
+      "concept": "Scorpion"
+    },
+    "q-17651": {
+      "hash": "7c9981bff9c5",
+      "answer": "In the southern jungles",
+      "concept": "Anteater"
+    },
+    "q-17652": {
+      "hash": "564d8bb4e214",
+      "answer": "Mexico",
+      "concept": "World Heritage Site"
+    },
+    "q-17653": {
+      "hash": "7c4e5caa09d7",
+      "answer": "Some angels",
+      "concept": "Puebla"
+    },
+    "q-17654": {
+      "hash": "e94e103ae143",
+      "answer": "Miguel Hidalgo",
+      "concept": "Dolores Hidalgo"
+    },
+    "q-17655": {
+      "hash": "6eedfb3dfd6f",
+      "answer": "Tlatoani",
+      "concept": "Castas"
+    },
+    "q-17656": {
+      "hash": "8dee7f75aa37",
+      "answer": "Manila mango",
+      "concept": "Manila mango"
+    },
+    "q-17657": {
+      "hash": "b4433a629b68",
+      "answer": "Almost 2 meters",
+      "concept": "Moctezuma's headdress"
+    },
+    "q-17658": {
+      "hash": "7d9a86ae2a29",
+      "answer": "In the 17th century",
+      "concept": "China poblana"
+    },
+    "q-17659": {
+      "hash": "90ceefc374f0",
+      "answer": "Cinnamon",
+      "concept": "Champurrado"
+    },
+    "q-17660": {
+      "hash": "e5371ca05ab0",
+      "answer": "In the 16th century",
+      "concept": "Chinese porcelain"
+    },
+    "q-17661": {
+      "hash": "c3bd5441c45e",
+      "answer": "Veracruz",
+      "concept": "Burning of the ships"
+    },
+    "q-17662": {
+      "hash": "f7d2d927b481",
+      "answer": "Tenoch Huerta",
+      "concept": "Tenoch Huerta"
+    },
+    "q-17663": {
+      "hash": "935b0ba4cd4a",
+      "answer": "A space telescope",
+      "concept": "Gravity"
+    },
+    "q-17664": {
+      "hash": "3f6dd8167ad4",
+      "answer": "Xochimilco",
+      "concept": "Legend of La Llorona"
+    },
+    "q-17665": {
+      "hash": "3f533cceb5a6",
+      "answer": "Naguib Mahfouz",
+      "concept": "Beginning and End"
+    },
+    "q-17666": {
+      "hash": "af8c52a8d60c",
+      "answer": "Don't back down",
+      "concept": "No te rajes"
+    },
+    "q-17667": {
+      "hash": "9ea5b81328d0",
+      "answer": "Emilio \"El Indio\" Fernández",
+      "concept": "Emilio Fernández"
+    },
+    "q-17668": {
+      "hash": "1b8f1e8bc7ca",
+      "answer": "Chihuahua",
+      "concept": "Ay, Chihuahua!"
+    },
+    "q-17669": {
+      "hash": "b334e8693937",
+      "answer": "Mixtec",
+      "concept": "Lila Downs"
+    },
+    "q-17670": {
+      "hash": "d9f75a9cec1f",
+      "answer": "68",
+      "concept": "National Institute of Indigenous Languages (INALI)"
+    },
+    "q-17671": {
+      "hash": "9e4cbccab38b",
+      "answer": "To defend the border from Apache attacks",
+      "concept": "Kickapoo"
+    },
+    "q-17672": {
+      "hash": "41677ec0f584",
+      "answer": "Chihuahua",
+      "concept": "Arnulfo Quimare"
+    },
+    "q-17673": {
+      "hash": "4c5511fba822",
+      "answer": "Huntress",
+      "concept": "Diana the Huntress"
+    },
+    "q-17674": {
+      "hash": "bf02d0f50da0",
+      "answer": "To see the pyramids from the sky",
+      "concept": "Teotihuacan"
+    },
+    "q-17675": {
+      "hash": "f6085a181141",
+      "answer": "President of Mexico",
+      "concept": "Los Pinos"
+    },
+    "q-17676": {
+      "hash": "8ebfa065d7ac",
+      "answer": "So that it would rain",
+      "concept": "Tlaloc"
+    },
+    "q-17677": {
+      "hash": "a3ea096cbddf",
+      "answer": "About 5200 meters",
+      "concept": "Iztaccíhuatl"
+    },
+    "q-17678": {
+      "hash": "e3ae0362e8cc",
+      "answer": "Palace of Fine Arts",
+      "concept": "Chapultepec Lake"
+    },
+    "q-17679": {
+      "hash": "a29b800331a9",
+      "answer": "Lightning bolts",
+      "concept": "Necaxa"
+    },
+    "q-17680": {
+      "hash": "b1cc01a709b1",
+      "answer": "About 2600 meters",
+      "concept": "Diablos Rojos"
+    },
+    "q-17681": {
+      "hash": "c337c757de05",
+      "answer": "Green",
+      "concept": "Sacred Herd"
+    },
+    "q-17682": {
+      "hash": "6e8a91b18e2b",
+      "answer": "A mascot costume",
+      "concept": "Mascot costume"
+    },
+    "q-17683": {
+      "hash": "a6aa1dd5b104",
+      "answer": "Mexico",
+      "concept": "Liga MX Femenil"
+    },
+    "q-17684": {
+      "hash": "5d8e708db0ea",
+      "answer": "Charro jacket",
+      "concept": "Charro jacket"
+    },
+    "q-17685": {
+      "hash": "849afe24a2ae",
+      "answer": "Mariachis",
+      "concept": "Cocula"
+    },
+    "q-17686": {
+      "hash": "aabe5b3da7f0",
+      "answer": "From the ranch",
+      "concept": "Ranchera song"
+    },
+    "q-17687": {
+      "hash": "a585e5aee302",
+      "answer": "Jalisco",
+      "concept": "Rajarse"
+    },
+    "q-17688": {
+      "hash": "bc65d29e9a7b",
+      "answer": "Leather",
+      "concept": "Ankle boots"
+    },
+    "q-17689": {
+      "hash": "fbde7a434776",
+      "answer": "San Marcos Fair",
+      "concept": "San Marcos Fair"
+    },
+    "q-17690": {
+      "hash": "b3c1b7f45ad5",
+      "answer": "Years",
+      "concept": "Quinceañera"
+    },
+    "q-17691": {
+      "hash": "8ce6e8cfddfd",
+      "answer": "Yucatecan mestiza",
+      "concept": "Yucatecan jarana"
+    },
+    "q-17692": {
+      "hash": "58a0e202bd82",
+      "answer": "War",
+      "concept": "Ixchel"
+    },
+    "q-17693": {
+      "hash": "fb3a790927a5",
+      "answer": "About 1200 years",
+      "concept": "Bonampak murals"
+    },
+    "q-17694": {
+      "hash": "219a768cc996",
+      "answer": "Pakal the Great",
+      "concept": "Pakal the Great"
+    },
+    "q-17695": {
+      "hash": "42a69eb4771a",
+      "answer": "El Caracol",
+      "concept": "El Caracol"
+    },
+    "q-17696": {
+      "hash": "f8dc92871004",
+      "answer": "A rabbit",
+      "concept": "Moon"
+    },
+    "q-17697": {
+      "hash": "4894f31e928f",
+      "answer": "Hernán Cortés",
+      "concept": "Spaniards' horses"
+    },
+    "q-17698": {
+      "hash": "9a6d7c4a1ec8",
+      "answer": "Templo Mayor Museum",
+      "concept": "Templo Mayor Museum"
+    },
+    "q-17699": {
+      "hash": "23b9bd98edcf",
+      "answer": "About 500 years",
+      "concept": "Fall of Tenochtitlan"
+    },
+    "q-17700": {
+      "hash": "9d02d1c60ec0",
+      "answer": "A tortilla",
+      "concept": "Tortilla"
+    },
+    "q-17701": {
+      "hash": "c2b2bd5690c6",
+      "answer": "About 700",
+      "concept": "Year 1325"
+    },
+    "q-17702": {
+      "hash": "c71d2d36d165",
+      "answer": "Pakal",
+      "concept": "Aztecs"
+    },
+    "q-17703": {
+      "hash": "0eea92ec9ca7",
+      "answer": "To make knives and weapons",
+      "concept": "Obsidian"
+    },
+    "q-17704": {
+      "hash": "df3f12ff3a03",
+      "answer": "Shorts",
+      "concept": "White shorts"
+    },
+    "q-17705": {
+      "hash": "b22302f4cfe8",
+      "answer": "As offerings in shaft tombs",
+      "concept": "Nayarit models"
+    },
+    "q-17706": {
+      "hash": "c3e086cfe0cf",
+      "answer": "Veracruz",
+      "concept": "Yokes and palmas"
+    },
+    "q-17707": {
+      "hash": "bba0cb29576a",
+      "answer": "Yagul",
+      "concept": "Yagul"
+    },
+    "q-17708": {
+      "hash": "0690ce444f5d",
+      "answer": "A hollow in the wall",
+      "concept": "Pyramid of the Niches"
+    },
+    "q-17709": {
+      "hash": "a565a8fdffd6",
+      "answer": "Big hand",
+      "concept": "Huemac"
+    },
+    "q-17710": {
+      "hash": "187a53071050",
+      "answer": "About 800 years ago",
+      "concept": "Cuarenta Casas"
+    },
+    "q-17711": {
+      "hash": "48afef89749a",
+      "answer": "Moving identically and at the same time",
+      "concept": "Synchronized diving"
+    },
+    "q-17712": {
+      "hash": "adb6b565de0b",
+      "answer": "February",
+      "concept": "Caribbean Series"
+    },
+    "q-17713": {
+      "hash": "45201a0b5360",
+      "answer": "A nun",
+      "concept": "Portrait of Sor Juana Inés de la Cruz"
+    },
+    "q-17714": {
+      "hash": "cb762f2b417c",
+      "answer": "A bus",
+      "concept": "Frida Kahlo's accident"
+    },
+    "q-17715": {
+      "hash": "5a45c9444678",
+      "answer": "\"Piel morena\"",
+      "concept": "Fey"
+    },
+    "q-17716": {
+      "hash": "a5aefaaa1057",
+      "answer": "An English-language rock hit translated into Spanish",
+      "concept": "Refrito"
+    },
+    "q-17717": {
+      "hash": "0e0c3782ff16",
+      "answer": "Three girls and three boys",
+      "concept": "Maite Perroni"
+    },
+    "q-17718": {
+      "hash": "0d2abe765001",
+      "answer": "Ska and punk",
+      "concept": "Tijuana No!"
+    },
+    "q-17719": {
+      "hash": "a922d70d3227",
+      "answer": "Fire",
+      "concept": "Opossum who stole fire"
+    },
+    "q-17720": {
+      "hash": "e60881c58eff",
+      "answer": "Their heart",
+      "concept": "Deceased's jade bead"
+    },
+    "q-17721": {
+      "hash": "687f605b1761",
+      "answer": "Tezcatlipoca",
+      "concept": "Ce Acatl Topiltzin"
+    },
+    "q-17722": {
+      "hash": "86a15f047d0a",
+      "answer": "The mud men",
+      "concept": "Mud men"
+    },
+    "q-17723": {
+      "hash": "789ad1383d34",
+      "answer": "Matlalcueye",
+      "concept": "Matlalcueye"
+    },
+    "q-17724": {
+      "hash": "38cd86d3475b",
+      "answer": "9",
+      "concept": "Chiconahuapan River"
+    },
+    "q-17725": {
+      "hash": "33f3976ee8ba",
+      "answer": "Regida",
+      "concept": "Fuerza Regida"
+    },
+    "q-17726": {
+      "hash": "23df126700dc",
+      "answer": "Periférico",
+      "concept": "Periférico"
+    },
+    "q-17727": {
+      "hash": "d003a6f0b380",
+      "answer": "The Sun of Mexico",
+      "concept": "Luis Miguel"
+    },
+    "q-17728": {
+      "hash": "a4fb8ea7a39f",
+      "answer": "A corridor of giant sculptures",
+      "concept": "Route of Friendship"
+    },
+    "q-17729": {
+      "hash": "7961531ff85c",
+      "answer": "Serves as a column or pilaster",
+      "concept": "Estipite"
+    },
+    "q-17730": {
+      "hash": "e232797e3a93",
+      "answer": "Silver",
+      "concept": "Chichimecas"
+    },
+    "q-17731": {
+      "hash": "3ef064ef84a2",
+      "answer": "About 250",
+      "concept": "Inquisition"
+    },
+    "q-17732": {
+      "hash": "8914ef31e0e4",
+      "answer": "When saying goodbye",
+      "concept": "Ahí nos vidrios"
+    },
+    "q-17733": {
+      "hash": "1b57d98051ac",
+      "answer": "In the 1920s",
+      "concept": "Hollywood"
+    },
+    "q-17734": {
+      "hash": "1a4d88c1a617",
+      "answer": "Resortes",
+      "concept": "Resortes"
+    },
+    "q-17735": {
+      "hash": "ca00334587a0",
+      "answer": "Irma Pineda",
+      "concept": "Irma Pineda"
+    },
+    "q-17736": {
+      "hash": "31ab8e7a2017",
+      "answer": "Mexico",
+      "concept": "Mexico"
+    },
+    "q-17737": {
+      "hash": "d81eb35d630d",
+      "answer": "A hill",
+      "concept": "Suffix -tepec"
+    },
+    "q-17738": {
+      "hash": "fca75072018d",
+      "answer": "Wikipedia",
+      "concept": "Nahuatl Wikipedia"
+    },
+    "q-17739": {
+      "hash": "0e4d090a131d",
+      "answer": "Mummies",
+      "concept": "Museum of the Mummies of Guanajuato"
+    },
+    "q-17740": {
+      "hash": "d665c2cb8631",
+      "answer": "365",
+      "concept": "El Tajín"
+    },
+    "q-17741": {
+      "hash": "69e3fa292cd5",
+      "answer": "Quintana Roo",
+      "concept": "Xcaret"
+    },
+    "q-17742": {
+      "hash": "9dd432af143e",
+      "answer": "Flower fields",
+      "concept": "Lake Xochimilco"
+    },
+    "q-17743": {
+      "hash": "08d6b78c3a73",
+      "answer": "Baja California Sur",
+      "concept": "Los Cabos"
+    },
+    "q-17744": {
+      "hash": "97474d1c0f6e",
+      "answer": "A ship",
+      "concept": "The Mulata of Córdoba"
+    },
+    "q-17745": {
+      "hash": "3fd5f0d8ee63",
+      "answer": "The headless horseman",
+      "concept": "Headless horseman"
+    },
+    "q-17746": {
+      "hash": "b9f8c089a81e",
+      "answer": "Play for a European club",
+      "concept": "Jorge Campos"
+    },
+    "q-17747": {
+      "hash": "9db3a6ae3be9",
+      "answer": "Coco",
+      "concept": "Un poco loco"
+    },
+    "q-17748": {
+      "hash": "fcc9ebaea10c",
+      "answer": "Pozol",
+      "concept": "Pozol"
+    },
+    "q-17749": {
+      "hash": "5ccc3e962cad",
+      "answer": "Roads",
+      "concept": "Sacbe"
+    },
+    "q-17750": {
+      "hash": "092dbbc1cf96",
+      "answer": "Copa América",
+      "concept": "Copa América"
+    },
+    "q-17751": {
+      "hash": "68e138e5f921",
+      "answer": "A fan",
+      "concept": "\"Sí se puede\""
+    },
+    "q-17752": {
+      "hash": "939a35eb2e84",
+      "answer": "Forward",
+      "concept": "Hirving \"Chucky\" Lozano"
+    },
+    "q-17753": {
+      "hash": "d6ab200151fd",
+      "answer": "Mexico",
+      "concept": "CONCACAF Gold Cup"
+    },
+    "q-17754": {
+      "hash": "6fcb38be7600",
+      "answer": "Netherlands",
+      "concept": "\"No era penal\""
+    },
+    "q-17755": {
+      "hash": "d42b6171b01f",
+      "answer": "Estadio Olímpico Universitario",
+      "concept": "Estadio Banorte"
+    },
+    "q-17756": {
+      "hash": "164c2538c5fa",
+      "answer": "Genealogies of the Mixtec lords",
+      "concept": "Codex Nuttall"
+    },
+    "q-17757": {
+      "hash": "37da87a692db",
+      "answer": "That team won the match",
+      "concept": "Ballcourt ring"
+    },
+    "q-17758": {
+      "hash": "c7779b849cd3",
+      "answer": "Diablos Rojos del México",
+      "concept": "Mexican League (baseball)"
+    },
+    "q-17759": {
+      "hash": "f8636f437a95",
+      "answer": "Acapulco",
+      "concept": "Mexican Open (tennis)"
+    },
+    "q-17760": {
+      "hash": "9ca3f89b5c7d",
+      "answer": "Muralism",
+      "concept": "Los Tres Grandes"
+    },
+    "q-17761": {
+      "hash": "f676d3926a56",
+      "answer": "María la del Barrio",
+      "concept": "María la del Barrio"
+    },
+    "q-17762": {
+      "hash": "3eda120ef974",
+      "answer": "Maná",
+      "concept": "Rayando el sol"
+    },
+    "q-17763": {
+      "hash": "2307887ed605",
+      "answer": "Merchants",
+      "concept": "Ek Chuah"
+    },
+    "q-17764": {
+      "hash": "d4811c58151b",
+      "answer": "A temple",
+      "concept": "Teocalli"
+    },
+    "q-17765": {
+      "hash": "e239a1fdb4fb",
+      "answer": "Fire",
+      "concept": "Tatewari"
+    },
+    "q-17766": {
+      "hash": "852c8be28914",
+      "answer": "Sinaloa",
+      "concept": "Banda El Recodo"
+    },
+    "q-17767": {
+      "hash": "c970983a0968",
+      "answer": "The Zapatistas",
+      "concept": "Zapatistas"
+    },
+    "q-17768": {
+      "hash": "1365113a0b5f",
+      "answer": "Emiliano Zapata",
+      "concept": "Tlaltizapán"
+    },
+    "q-17769": {
+      "hash": "dfd086dbd2fb",
+      "answer": "The federales",
+      "concept": "Federal Army"
+    },
+    "q-17770": {
+      "hash": "0e19baa64223",
+      "answer": "The brim",
+      "concept": "Wide-brimmed hat"
+    },
+    "q-17771": {
+      "hash": "fcfe321413f0",
+      "answer": "Poblano pepper",
+      "concept": "Poblano"
+    },
+    "q-17772": {
+      "hash": "02718fcd6324",
+      "answer": "Sinaloan",
+      "concept": "Sinaloan"
+    },
+    "q-17773": {
+      "hash": "5ca752b0bd85",
+      "answer": "Ruler",
+      "concept": "Dance of the Tastoanes"
+    },
+    "q-17774": {
+      "hash": "c3648398e71d",
+      "answer": "To let one person through at a time",
+      "concept": "Turnstile"
+    },
+    "q-17775": {
+      "hash": "a7d1cd2914ff",
+      "answer": "To carry passengers on short trips",
+      "concept": "Mototaxi"
+    },
+    "q-17776": {
+      "hash": "96f8ce891757",
+      "answer": "The baker's basket",
+      "concept": "Baker on a bicycle"
+    },
+    "q-17777": {
+      "hash": "1846ee316181",
+      "answer": "Street vendors",
+      "concept": "Cargo tricycle"
+    },
+    "q-17778": {
+      "hash": "f3994fcc2fd2",
+      "answer": "To say where it passes and where it goes",
+      "concept": "Route sign on the windshield"
+    },
+    "q-17779": {
+      "hash": "bd576e2121ba",
+      "answer": "Andrea Legarreta",
+      "concept": "Andrea Legarreta"
+    },
+    "q-17780": {
+      "hash": "7dc6b3af60db",
+      "answer": "\"The Years with Laura Díaz\"",
+      "concept": "The Years with Laura Díaz"
+    },
+    "q-17781": {
+      "hash": "792bf9f21bcd",
+      "answer": "The peons",
+      "concept": "Peon"
+    },
+    "q-17782": {
+      "hash": "e8178cdb0949",
+      "answer": "The Baja California one",
+      "concept": "Baja California Peninsula"
+    },
+    "q-17783": {
+      "hash": "42e2ccee4c80",
+      "answer": "Mexico City",
+      "concept": "Chilango"
+    },
+    "q-17784": {
+      "hash": "5beab1d3e986",
+      "answer": "Hidrocálidos",
+      "concept": "Aguascalientes"
+    },
+    "q-17785": {
+      "hash": "9d6535f266df",
+      "answer": "Toluca",
+      "concept": "Caribbean Sea"
+    },
+    "q-17786": {
+      "hash": "6a58a421e474",
+      "answer": "Morelos",
+      "concept": "Morelos"
+    },
+    "q-17787": {
+      "hash": "67b188446659",
+      "answer": "Brakes",
+      "concept": "Ugly Betty (Yo soy Betty, la fea)"
+    },
+    "q-17788": {
+      "hash": "427b76333053",
+      "answer": "Epigmenio Ibarra",
+      "concept": "Argos"
+    },
+    "q-17789": {
+      "hash": "843403f11798",
+      "answer": "Roberta Pardo",
+      "concept": "Rebelde uniform"
+    },
+    "q-17790": {
+      "hash": "05f76ea9f500",
+      "answer": "Chilena",
+      "concept": "Chilena from Guerrero"
+    },
+    "q-17791": {
+      "hash": "5f719a272deb",
+      "answer": "The Cora",
+      "concept": "Judea Cora"
+    },
+    "q-17792": {
+      "hash": "6040cbd54599",
+      "answer": "Mexico City",
+      "concept": "Pink and white taxi"
+    },
+    "q-17793": {
+      "hash": "8c111cd5139d",
+      "answer": "To cover short distances in the city",
+      "concept": "Electric scooter"
+    },
+    "q-17794": {
+      "hash": "eaa36183ef12",
+      "answer": "So the driver stops and picks you up",
+      "concept": "Microbus"
+    },
+    "q-17795": {
+      "hash": "6b76eb9727e1",
+      "answer": "The last station the train is heading to",
+      "concept": "Mexico City Metro Line 1"
+    },
+    "q-17796": {
+      "hash": "ee51efe4b5a1",
+      "answer": "Nobody panic",
+      "concept": "Que no panda el cúnico"
+    },
+    "q-17797": {
+      "hash": "fe4333ff18f9",
+      "answer": "Los Polinesios",
+      "concept": "Los Polinesios"
+    },
+    "q-17798": {
+      "hash": "c2910af92fd9",
+      "answer": "El Chavo",
+      "concept": "Se me chispoteó"
+    },
+    "q-17799": {
+      "hash": "090da13e9135",
+      "answer": "Influencer",
+      "concept": "Kimberly Loaiza"
+    },
+    "q-17800": {
+      "hash": "ed28033463d0",
+      "answer": "Doña Florinda",
+      "concept": "Doña Florinda"
+    },
+    "q-17801": {
+      "hash": "e7e8d5a92c26",
+      "answer": "At the beginning of the 17th century",
+      "concept": "Bernardo de Balbuena"
+    },
+    "q-17802": {
+      "hash": "41068bdf9d61",
+      "answer": "Samuel Ramos",
+      "concept": "Samuel Ramos"
+    },
+    "q-17803": {
+      "hash": "737c23c53e88",
+      "answer": "\"The Indians of Mexico\"",
+      "concept": "Fernando Benítez"
+    },
+    "q-17804": {
+      "hash": "42f1c8638014",
+      "answer": "\"Santa\"",
+      "concept": "Santa (novel)"
+    },
+    "q-17805": {
+      "hash": "30f7cd94c28c",
+      "answer": "He is a muleteer",
+      "concept": "Abundio"
+    },
+    "q-17806": {
+      "hash": "fe935099ef17",
+      "answer": "\"Battles in the Desert\"",
+      "concept": "Juan Villoro"
+    },
+    "q-17807": {
+      "hash": "08c46abcf29e",
+      "answer": "Octavio Paz",
+      "concept": "Pasado en claro"
+    },
+    "q-17808": {
+      "hash": "ec61cbaa8fa3",
+      "answer": "In 1921",
+      "concept": "Manuel Maples Arce"
+    },
+    "q-17809": {
+      "hash": "4247a114ac8c",
+      "answer": "\"The Genealogies\"",
+      "concept": "Margo Glantz"
     }
   }
 }

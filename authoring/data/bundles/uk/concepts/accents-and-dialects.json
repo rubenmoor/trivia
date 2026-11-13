@@ -1,0 +1,757 @@
+{
+  "subcategory": "accents-and-dialects",
+  "facets": [
+    "Cockney and London speech",
+    "Scouse and the North West",
+    "Geordie and the North East",
+    "Yorkshire dialect",
+    "Midlands accents and words",
+    "West Country and Cornish speech",
+    "Scottish speech and Scots words",
+    "Welsh English and Wenglish",
+    "Northern Irish speech",
+    "Received Pronunciation and posh speech",
+    "Regional words for everyday things",
+    "Accents on screen and in music"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 2,
+      "record": 1,
+      "origin": 5,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Cockney rhyming slang",
+      "facet": "Cockney and London speech",
+      "known_at": 5
+    },
+    {
+      "name": "Pork pies",
+      "facet": "Cockney and London speech",
+      "known_at": 8
+    },
+    {
+      "name": "Glottal stop",
+      "facet": "Cockney and London speech",
+      "known_at": 10
+    },
+    {
+      "name": "H-dropping",
+      "facet": "Cockney and London speech",
+      "known_at": 9
+    },
+    {
+      "name": "Th-fronting",
+      "facet": "Cockney and London speech",
+      "known_at": 12
+    },
+    {
+      "name": "Multicultural London English",
+      "facet": "Cockney and London speech",
+      "known_at": 13
+    },
+    {
+      "name": "Guv'nor",
+      "facet": "Cockney and London speech",
+      "known_at": 8
+    },
+    {
+      "name": "Mockney",
+      "facet": "Cockney and London speech",
+      "known_at": 12
+    },
+    {
+      "name": "Scouse accent",
+      "facet": "Scouse and the North West",
+      "known_at": 6
+    },
+    {
+      "name": "Lobscouse",
+      "facet": "Scouse and the North West",
+      "known_at": 12
+    },
+    {
+      "name": "Boss",
+      "facet": "Scouse and the North West",
+      "known_at": 9
+    },
+    {
+      "name": "Sound",
+      "facet": "Scouse and the North West",
+      "known_at": 8
+    },
+    {
+      "name": "Kecks",
+      "facet": "Scouse and the North West",
+      "known_at": 9
+    },
+    {
+      "name": "Jarg",
+      "facet": "Scouse and the North West",
+      "known_at": 12
+    },
+    {
+      "name": "Woolyback",
+      "facet": "Scouse and the North West",
+      "known_at": 13
+    },
+    {
+      "name": "Mancunian accent",
+      "facet": "Scouse and the North West",
+      "known_at": 8
+    },
+    {
+      "name": "Lancashire accent",
+      "facet": "Scouse and the North West",
+      "known_at": 8
+    },
+    {
+      "name": "Gradely",
+      "facet": "Scouse and the North West",
+      "known_at": 13
+    },
+    {
+      "name": "Buzzin'",
+      "facet": "Scouse and the North West",
+      "known_at": 7
+    },
+    {
+      "name": "Mam",
+      "facet": "Scouse and the North West",
+      "known_at": 5
+    },
+    {
+      "name": "Howay",
+      "facet": "Geordie and the North East",
+      "known_at": 9
+    },
+    {
+      "name": "Why aye",
+      "facet": "Geordie and the North East",
+      "known_at": 7
+    },
+    {
+      "name": "Hinny",
+      "facet": "Geordie and the North East",
+      "known_at": 11
+    },
+    {
+      "name": "The Toon",
+      "facet": "Geordie and the North East",
+      "known_at": 8
+    },
+    {
+      "name": "Gan",
+      "facet": "Geordie and the North East",
+      "known_at": 11
+    },
+    {
+      "name": "Netty",
+      "facet": "Geordie and the North East",
+      "known_at": 12
+    },
+    {
+      "name": "Smoggie",
+      "facet": "Geordie and the North East",
+      "known_at": 12
+    },
+    {
+      "name": "Geordie Shore",
+      "facet": "Geordie and the North East",
+      "known_at": 10
+    },
+    {
+      "name": "Pitmatic",
+      "facet": "Geordie and the North East",
+      "known_at": 14
+    },
+    {
+      "name": "Nowt",
+      "facet": "Yorkshire dialect",
+      "known_at": 6
+    },
+    {
+      "name": "Owt",
+      "facet": "Yorkshire dialect",
+      "known_at": 7
+    },
+    {
+      "name": "Summat",
+      "facet": "Yorkshire dialect",
+      "known_at": 7
+    },
+    {
+      "name": "Ee by gum",
+      "facet": "Yorkshire dialect",
+      "known_at": 9
+    },
+    {
+      "name": "Thee and thou",
+      "facet": "Yorkshire dialect",
+      "known_at": 10
+    },
+    {
+      "name": "Definite article reduction",
+      "facet": "Yorkshire dialect",
+      "known_at": 13
+    },
+    {
+      "name": "Laikin'",
+      "facet": "Yorkshire dialect",
+      "known_at": 12
+    },
+    {
+      "name": "Reyt",
+      "facet": "Yorkshire dialect",
+      "known_at": 9
+    },
+    {
+      "name": "Tyke",
+      "facet": "Yorkshire dialect",
+      "known_at": 11
+    },
+    {
+      "name": "Hear all, see all, say nowt",
+      "facet": "Yorkshire dialect",
+      "known_at": 12
+    },
+    {
+      "name": "Four Yorkshiremen sketch",
+      "facet": "Yorkshire dialect",
+      "known_at": 13
+    },
+    {
+      "name": "Sean Bean",
+      "facet": "Yorkshire dialect",
+      "known_at": 11
+    },
+    {
+      "name": "Brummie accent",
+      "facet": "Midlands accents and words",
+      "known_at": 6
+    },
+    {
+      "name": "Yam yam",
+      "facet": "Midlands accents and words",
+      "known_at": 12
+    },
+    {
+      "name": "Bab",
+      "facet": "Midlands accents and words",
+      "known_at": 10
+    },
+    {
+      "name": "Ta-ra-a-bit",
+      "facet": "Midlands accents and words",
+      "known_at": 11
+    },
+    {
+      "name": "Ay up me duck",
+      "facet": "Midlands accents and words",
+      "known_at": 9
+    },
+    {
+      "name": "Island",
+      "facet": "Midlands accents and words",
+      "known_at": 12
+    },
+    {
+      "name": "Babby",
+      "facet": "Midlands accents and words",
+      "known_at": 11
+    },
+    {
+      "name": "Potteries dialect",
+      "facet": "Midlands accents and words",
+      "known_at": 13
+    },
+    {
+      "name": "Ozzy Osbourne",
+      "facet": "Midlands accents and words",
+      "known_at": 10
+    },
+    {
+      "name": "Jasper Carrott",
+      "facet": "Midlands accents and words",
+      "known_at": 13
+    },
+    {
+      "name": "Noddy Holder",
+      "facet": "Midlands accents and words",
+      "known_at": 11
+    },
+    {
+      "name": "Julie Walters",
+      "facet": "Midlands accents and words",
+      "known_at": 11
+    },
+    {
+      "name": "Ooh arr",
+      "facet": "West Country and Cornish speech",
+      "known_at": 6
+    },
+    {
+      "name": "Gert lush",
+      "facet": "West Country and Cornish speech",
+      "known_at": 9
+    },
+    {
+      "name": "Bristol L",
+      "facet": "West Country and Cornish speech",
+      "known_at": 13
+    },
+    {
+      "name": "Alright my lover",
+      "facet": "West Country and Cornish speech",
+      "known_at": 9
+    },
+    {
+      "name": "Where's that to?",
+      "facet": "West Country and Cornish speech",
+      "known_at": 12
+    },
+    {
+      "name": "Proper job",
+      "facet": "West Country and Cornish speech",
+      "known_at": 10
+    },
+    {
+      "name": "Dreckly",
+      "facet": "West Country and Cornish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Emmet",
+      "facet": "West Country and Cornish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Ansum",
+      "facet": "West Country and Cornish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Babber",
+      "facet": "West Country and Cornish speech",
+      "known_at": 12
+    },
+    {
+      "name": "Dolly Pentreath",
+      "facet": "West Country and Cornish speech",
+      "known_at": 14
+    },
+    {
+      "name": "Rhotic accent",
+      "facet": "West Country and Cornish speech",
+      "known_at": 13
+    },
+    {
+      "name": "Och",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 6
+    },
+    {
+      "name": "Ken",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 10
+    },
+    {
+      "name": "Glaikit",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 12
+    },
+    {
+      "name": "Haud yer wheesht",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 11
+    },
+    {
+      "name": "Braw",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 11
+    },
+    {
+      "name": "Bonnie",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 7
+    },
+    {
+      "name": "Kirk",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 10
+    },
+    {
+      "name": "Greet",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 12
+    },
+    {
+      "name": "Messages",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 12
+    },
+    {
+      "name": "Outwith",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 13
+    },
+    {
+      "name": "Peely-wally",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 12
+    },
+    {
+      "name": "Taps aff",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 11
+    },
+    {
+      "name": "Wenglish",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 12
+    },
+    {
+      "name": "Tidy",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 9
+    },
+    {
+      "name": "Now in a minute",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 10
+    },
+    {
+      "name": "Butt",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 11
+    },
+    {
+      "name": "Twp",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 12
+    },
+    {
+      "name": "Ych a fi",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 12
+    },
+    {
+      "name": "Duw",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 13
+    },
+    {
+      "name": "Iechyd da",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 11
+    },
+    {
+      "name": "Bore da",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 8
+    },
+    {
+      "name": "Diolch",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 8
+    },
+    {
+      "name": "Croeso",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 9
+    },
+    {
+      "name": "Valleys accent",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 10
+    },
+    {
+      "name": "Gavin and Stacey",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 8
+    },
+    {
+      "name": "Max Boyce",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 13
+    },
+    {
+      "name": "Craic",
+      "facet": "Northern Irish speech",
+      "known_at": 8
+    },
+    {
+      "name": "Bout ye",
+      "facet": "Northern Irish speech",
+      "known_at": 10
+    },
+    {
+      "name": "Wee buns",
+      "facet": "Northern Irish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Catch yourself on",
+      "facet": "Northern Irish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Dander",
+      "facet": "Northern Irish speech",
+      "known_at": 12
+    },
+    {
+      "name": "Yer man",
+      "facet": "Northern Irish speech",
+      "known_at": 10
+    },
+    {
+      "name": "Norn Iron",
+      "facet": "Northern Irish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Wind your neck in",
+      "facet": "Northern Irish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Scundered",
+      "facet": "Northern Irish speech",
+      "known_at": 12
+    },
+    {
+      "name": "Gurn",
+      "facet": "Northern Irish speech",
+      "known_at": 12
+    },
+    {
+      "name": "Boke",
+      "facet": "Northern Irish speech",
+      "known_at": 11
+    },
+    {
+      "name": "Mucker",
+      "facet": "Northern Irish speech",
+      "known_at": 12
+    },
+    {
+      "name": "Hallion",
+      "facet": "Northern Irish speech",
+      "known_at": 13
+    },
+    {
+      "name": "Belfast accent",
+      "facet": "Northern Irish speech",
+      "known_at": 8
+    },
+    {
+      "name": "Liam Neeson",
+      "facet": "Northern Irish speech",
+      "known_at": 10
+    },
+    {
+      "name": "Jamie Dornan",
+      "facet": "Northern Irish speech",
+      "known_at": 11
+    },
+    {
+      "name": "James Nesbitt",
+      "facet": "Northern Irish speech",
+      "known_at": 12
+    },
+    {
+      "name": "BBC English",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 10
+    },
+    {
+      "name": "Pygmalion",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 12
+    },
+    {
+      "name": "My Fair Lady",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 10
+    },
+    {
+      "name": "Henry Higgins",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 12
+    },
+    {
+      "name": "U and non-U English",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 14
+    },
+    {
+      "name": "Nancy Mitford",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 14
+    },
+    {
+      "name": "Napkin",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 11
+    },
+    {
+      "name": "Loo",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 6
+    },
+    {
+      "name": "Plummy accent",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 11
+    },
+    {
+      "name": "Elocution lessons",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 10
+    },
+    {
+      "name": "Trap-bath split",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 11
+    },
+    {
+      "name": "Non-rhotic accent",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 13
+    },
+    {
+      "name": "Rah",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 12
+    },
+    {
+      "name": "Daniel Jones",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 15
+    },
+    {
+      "name": "Stottie",
+      "facet": "Regional words for everyday things",
+      "known_at": 11
+    },
+    {
+      "name": "Dinner or tea",
+      "facet": "Regional words for everyday things",
+      "known_at": 6
+    },
+    {
+      "name": "Pumps",
+      "facet": "Regional words for everyday things",
+      "known_at": 9
+    },
+    {
+      "name": "Daps",
+      "facet": "Regional words for everyday things",
+      "known_at": 11
+    },
+    {
+      "name": "Sannies",
+      "facet": "Regional words for everyday things",
+      "known_at": 12
+    },
+    {
+      "name": "Gutties",
+      "facet": "Regional words for everyday things",
+      "known_at": 13
+    },
+    {
+      "name": "Twitten",
+      "facet": "Regional words for everyday things",
+      "known_at": 13
+    },
+    {
+      "name": "Jitty",
+      "facet": "Regional words for everyday things",
+      "known_at": 13
+    },
+    {
+      "name": "Spelk",
+      "facet": "Regional words for everyday things",
+      "known_at": 12
+    },
+    {
+      "name": "Nesh",
+      "facet": "Regional words for everyday things",
+      "known_at": 11
+    },
+    {
+      "name": "Lug",
+      "facet": "Regional words for everyday things",
+      "known_at": 9
+    },
+    {
+      "name": "Chuddy",
+      "facet": "Regional words for everyday things",
+      "known_at": 10
+    },
+    {
+      "name": "Hagrid",
+      "facet": "Accents on screen and in music",
+      "known_at": 4
+    },
+    {
+      "name": "Arctic Monkeys",
+      "facet": "Accents on screen and in music",
+      "known_at": 9
+    },
+    {
+      "name": "The Proclaimers",
+      "facet": "Accents on screen and in music",
+      "known_at": 10
+    },
+    {
+      "name": "The Streets",
+      "facet": "Accents on screen and in music",
+      "known_at": 12
+    },
+    {
+      "name": "Grime",
+      "facet": "Accents on screen and in music",
+      "known_at": 10
+    }
+  ]
+}

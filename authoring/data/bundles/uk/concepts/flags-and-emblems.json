@@ -1,0 +1,663 @@
+{
+  "subcategory": "flags-and-emblems",
+  "facets": [
+    "Union Flag design and history",
+    "Flags of the four nations",
+    "Patron saints and saint's days",
+    "National plants and floral emblems",
+    "Heraldic beasts and dragons",
+    "Royal arms, crowns and mottos",
+    "County, city and island flags",
+    "Overseas Territories and Crown Dependencies",
+    "Naval ensigns and maritime flags",
+    "Emblems on coins, stamps and passports",
+    "Sports badges and team emblems",
+    "Flag customs and protocol"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 5,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 4,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 4,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 3,
+      "history": 5,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "St Andrew's Cross",
+      "facet": "Union Flag design and history",
+      "known_at": 7
+    },
+    {
+      "name": "St Patrick's Saltire",
+      "facet": "Union Flag design and history",
+      "known_at": 10
+    },
+    {
+      "name": "King James VI and I",
+      "facet": "Union Flag design and history",
+      "known_at": 11
+    },
+    {
+      "name": "Fimbriation",
+      "facet": "Union Flag design and history",
+      "known_at": 15
+    },
+    {
+      "name": "Counterchanged saltire",
+      "facet": "Union Flag design and history",
+      "known_at": 14
+    },
+    {
+      "name": "Upside-down Union Flag",
+      "facet": "Union Flag design and history",
+      "known_at": 11
+    },
+    {
+      "name": "Canton",
+      "facet": "Union Flag design and history",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of Australia",
+      "facet": "Union Flag design and history",
+      "known_at": 5
+    },
+    {
+      "name": "Flag of New Zealand",
+      "facet": "Union Flag design and history",
+      "known_at": 7
+    },
+    {
+      "name": "Flag of Hawaii",
+      "facet": "Union Flag design and history",
+      "known_at": 12
+    },
+    {
+      "name": "Jack staff",
+      "facet": "Union Flag design and history",
+      "known_at": 13
+    },
+    {
+      "name": "Flag Institute",
+      "facet": "Union Flag design and history",
+      "known_at": 15
+    },
+    {
+      "name": "Flag of England",
+      "facet": "Flags of the four nations",
+      "known_at": 3
+    },
+    {
+      "name": "Flag of Scotland",
+      "facet": "Flags of the four nations",
+      "known_at": 4
+    },
+    {
+      "name": "Flag of Wales",
+      "facet": "Flags of the four nations",
+      "known_at": 3
+    },
+    {
+      "name": "Ulster Banner",
+      "facet": "Flags of the four nations",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Banner of Scotland",
+      "facet": "Flags of the four nations",
+      "known_at": 10
+    },
+    {
+      "name": "Flag of St David",
+      "facet": "Flags of the four nations",
+      "known_at": 12
+    },
+    {
+      "name": "Tudor green and white",
+      "facet": "Flags of the four nations",
+      "known_at": 11
+    },
+    {
+      "name": "House of Tudor",
+      "facet": "Flags of the four nations",
+      "known_at": 8
+    },
+    {
+      "name": "Cadwaladr",
+      "facet": "Flags of the four nations",
+      "known_at": 15
+    },
+    {
+      "name": "Saltire blue",
+      "facet": "Flags of the four nations",
+      "known_at": 11
+    },
+    {
+      "name": "Flag of the Duchy of Lancaster",
+      "facet": "Flags of the four nations",
+      "known_at": 15
+    },
+    {
+      "name": "St George and the Dragon",
+      "facet": "Patron saints and saint's days",
+      "known_at": 4
+    },
+    {
+      "name": "St Piran",
+      "facet": "Patron saints and saint's days",
+      "known_at": 12
+    },
+    {
+      "name": "St Margaret of Scotland",
+      "facet": "Patron saints and saint's days",
+      "known_at": 14
+    },
+    {
+      "name": "St Mungo",
+      "facet": "Patron saints and saint's days",
+      "known_at": 13
+    },
+    {
+      "name": "Welsh poppy",
+      "facet": "National plants and floral emblems",
+      "known_at": 13
+    },
+    {
+      "name": "Lion",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 1
+    },
+    {
+      "name": "Unicorn",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 1
+    },
+    {
+      "name": "Red Dragon",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 3
+    },
+    {
+      "name": "Lion rampant",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 11
+    },
+    {
+      "name": "Lion passant guardant",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 14
+    },
+    {
+      "name": "The Lion and the Unicorn",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 9
+    },
+    {
+      "name": "Queen's Beasts",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 13
+    },
+    {
+      "name": "Griffin",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 8
+    },
+    {
+      "name": "Yale",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 15
+    },
+    {
+      "name": "White Horse of Kent",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 12
+    },
+    {
+      "name": "White Hart",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 13
+    },
+    {
+      "name": "Heraldic leopard",
+      "facet": "Heraldic beasts and dragons",
+      "known_at": 14
+    },
+    {
+      "name": "Royal coat of arms of the United Kingdom",
+      "facet": "Royal arms, crowns and mottos",
+      "known_at": 8
+    },
+    {
+      "name": "Nemo me impune lacessit",
+      "facet": "Royal arms, crowns and mottos",
+      "known_at": 14
+    },
+    {
+      "name": "Ich dien",
+      "facet": "Royal arms, crowns and mottos",
+      "known_at": 13
+    },
+    {
+      "name": "Order of the Garter",
+      "facet": "Royal arms, crowns and mottos",
+      "known_at": 12
+    },
+    {
+      "name": "Tudor Crown",
+      "facet": "Royal arms, crowns and mottos",
+      "known_at": 13
+    },
+    {
+      "name": "Cullinan diamond",
+      "facet": "Royal arms, crowns and mottos",
+      "known_at": 13
+    },
+    {
+      "name": "Honours of Scotland",
+      "facet": "Royal arms, crowns and mottos",
+      "known_at": 14
+    },
+    {
+      "name": "Flag of Cornwall",
+      "facet": "County, city and island flags",
+      "known_at": 9
+    },
+    {
+      "name": "Flag of Yorkshire",
+      "facet": "County, city and island flags",
+      "known_at": 9
+    },
+    {
+      "name": "Flag of Kent",
+      "facet": "County, city and island flags",
+      "known_at": 12
+    },
+    {
+      "name": "Flag of Devon",
+      "facet": "County, city and island flags",
+      "known_at": 12
+    },
+    {
+      "name": "Flag of Essex",
+      "facet": "County, city and island flags",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of Sussex",
+      "facet": "County, city and island flags",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of Northumberland",
+      "facet": "County, city and island flags",
+      "known_at": 14
+    },
+    {
+      "name": "Flag of Lancashire",
+      "facet": "County, city and island flags",
+      "known_at": 11
+    },
+    {
+      "name": "Flag of the Isle of Wight",
+      "facet": "County, city and island flags",
+      "known_at": 14
+    },
+    {
+      "name": "Flag of Orkney",
+      "facet": "County, city and island flags",
+      "known_at": 14
+    },
+    {
+      "name": "Flag of Shetland",
+      "facet": "County, city and island flags",
+      "known_at": 13
+    },
+    {
+      "name": "Flag of the City of London",
+      "facet": "County, city and island flags",
+      "known_at": 12
+    },
+    {
+      "name": "Flag of Anglesey",
+      "facet": "County, city and island flags",
+      "known_at": 15,
+      "retired": "unaskable: I'm not sure enough about the design and history of the Anglesey flag to write a reliable question."
+    },
+    {
+      "name": "Flag of Durham",
+      "facet": "County, city and island flags",
+      "known_at": 15
+    },
+    {
+      "name": "Flag of Lincolnshire",
+      "facet": "County, city and island flags",
+      "known_at": 15
+    },
+    {
+      "name": "Triskelion",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 11
+    },
+    {
+      "name": "Gibraltar",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 7
+    },
+    {
+      "name": "Rock of Gibraltar",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 8
+    },
+    {
+      "name": "Barbary macaque",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 10
+    },
+    {
+      "name": "Falkland Islands",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 9
+    },
+    {
+      "name": "Bermuda",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 7
+    },
+    {
+      "name": "Cayman Islands",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 9
+    },
+    {
+      "name": "British Virgin Islands",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 10
+    },
+    {
+      "name": "Montserrat",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 13
+    },
+    {
+      "name": "Anguilla",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 13
+    },
+    {
+      "name": "Turks and Caicos Islands",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 11
+    },
+    {
+      "name": "Saint Helena",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 11
+    },
+    {
+      "name": "Pitcairn Islands",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 13
+    },
+    {
+      "name": "Tristan da Cunha",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 14
+    },
+    {
+      "name": "British Antarctic Territory",
+      "facet": "Overseas Territories and Crown Dependencies",
+      "known_at": 12
+    },
+    {
+      "name": "White Ensign",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 12
+    },
+    {
+      "name": "Red Ensign",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 12
+    },
+    {
+      "name": "Blue Ensign",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 13
+    },
+    {
+      "name": "Red Duster",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 15
+    },
+    {
+      "name": "Royal Navy",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 5
+    },
+    {
+      "name": "Signal flags",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 8
+    },
+    {
+      "name": "Semaphore",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 10
+    },
+    {
+      "name": "Blue Peter flag",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 13
+    },
+    {
+      "name": "Jolly Roger",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 5
+    },
+    {
+      "name": "Paying-off pennant",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 15
+    },
+    {
+      "name": "Trinity House",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 14
+    },
+    {
+      "name": "Dressing overall",
+      "facet": "Naval ensigns and maritime flags",
+      "known_at": 15
+    },
+    {
+      "name": "Fifty pence piece",
+      "facet": "Emblems on coins, stamps and passports",
+      "known_at": 3
+    },
+    {
+      "name": "Royal Shield coin design",
+      "facet": "Emblems on coins, stamps and passports",
+      "known_at": 13
+    },
+    {
+      "name": "Sovereign coin",
+      "facet": "Emblems on coins, stamps and passports",
+      "known_at": 11
+    },
+    {
+      "name": "Portcullis",
+      "facet": "Emblems on coins, stamps and passports",
+      "known_at": 11
+    },
+    {
+      "name": "Burgundy passport",
+      "facet": "Emblems on coins, stamps and passports",
+      "known_at": 11
+    },
+    {
+      "name": "Monarch's head on coins",
+      "facet": "Emblems on coins, stamps and passports",
+      "known_at": 5
+    },
+    {
+      "name": "England football badge",
+      "facet": "Sports badges and team emblems",
+      "known_at": 5
+    },
+    {
+      "name": "England rugby red rose",
+      "facet": "Sports badges and team emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Scotland rugby thistle",
+      "facet": "Sports badges and team emblems",
+      "known_at": 10
+    },
+    {
+      "name": "Wales rugby feathers",
+      "facet": "Sports badges and team emblems",
+      "known_at": 10
+    },
+    {
+      "name": "Arsenal cannon",
+      "facet": "Sports badges and team emblems",
+      "known_at": 6
+    },
+    {
+      "name": "Tottenham cockerel",
+      "facet": "Sports badges and team emblems",
+      "known_at": 7
+    },
+    {
+      "name": "Liverpool FC crest",
+      "facet": "Sports badges and team emblems",
+      "known_at": 6
+    },
+    {
+      "name": "Manchester United red devil",
+      "facet": "Sports badges and team emblems",
+      "known_at": 6
+    },
+    {
+      "name": "West Ham crossed hammers",
+      "facet": "Sports badges and team emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Chelsea lion",
+      "facet": "Sports badges and team emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Leicester City fox",
+      "facet": "Sports badges and team emblems",
+      "known_at": 8
+    },
+    {
+      "name": "Newcastle United magpies",
+      "facet": "Sports badges and team emblems",
+      "known_at": 7
+    },
+    {
+      "name": "Wolverhampton Wanderers wolf",
+      "facet": "Sports badges and team emblems",
+      "known_at": 7
+    },
+    {
+      "name": "Celtic shamrock crest",
+      "facet": "Sports badges and team emblems",
+      "known_at": 10
+    },
+    {
+      "name": "Wimbledon colours",
+      "facet": "Sports badges and team emblems",
+      "known_at": 9
+    },
+    {
+      "name": "England cricket three lions",
+      "facet": "Sports badges and team emblems",
+      "known_at": 11
+    },
+    {
+      "name": "Half-mast",
+      "facet": "Flag customs and protocol",
+      "known_at": 6
+    },
+    {
+      "name": "Royal Standard over Buckingham Palace",
+      "facet": "Flag customs and protocol",
+      "known_at": 10
+    },
+    {
+      "name": "Flag-flying days",
+      "facet": "Flag customs and protocol",
+      "known_at": 13
+    },
+    {
+      "name": "Bunting",
+      "facet": "Flag customs and protocol",
+      "known_at": 4
+    },
+    {
+      "name": "Regimental colours",
+      "facet": "Flag customs and protocol",
+      "known_at": 13
+    },
+    {
+      "name": "Coronation",
+      "facet": "Flag customs and protocol",
+      "known_at": 5
+    },
+    {
+      "name": "Flag of St George on churches",
+      "facet": "Flag customs and protocol",
+      "known_at": 12
+    },
+    {
+      "name": "Flag at sunset",
+      "facet": "Flag customs and protocol",
+      "known_at": 12
+    },
+    {
+      "name": "Union Flag on government buildings",
+      "facet": "Flag customs and protocol",
+      "known_at": 11
+    }
+  ]
+}

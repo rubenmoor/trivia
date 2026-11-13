@@ -1,0 +1,1192 @@
+{
+  "subcategory": "football",
+  "facets": [
+    "Premier League clubs and nicknames",
+    "Famous grounds and stadiums",
+    "England and home nations teams",
+    "Legendary British players",
+    "Great managers and their eras",
+    "FA Cup and cup competitions",
+    "Historic matches and moments",
+    "Women's football and the Lionesses",
+    "Scottish, Welsh and Northern Irish football",
+    "Football chants, slang and sayings",
+    "Fan culture and matchday traditions",
+    "Football on TV, in films and games"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wolves",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "The Hammers",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "The Foxes",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "The Magpies",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Leeds United",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "The Toffees",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "The Saints",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "The Villans",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "The Seagulls",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "The Canaries",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Big Six",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "The Cherries",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "The Eagles",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "The Black Cats",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "The Bees",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "The Cottagers",
+      "facet": "Premier League clubs and nicknames",
+      "known_at": 12
+    },
+    {
+      "name": "Old Trafford",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 4
+    },
+    {
+      "name": "Anfield",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 4
+    },
+    {
+      "name": "Emirates Stadium",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 5
+    },
+    {
+      "name": "Stamford Bridge",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 6
+    },
+    {
+      "name": "Etihad Stadium",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 6
+    },
+    {
+      "name": "Tottenham Hotspur Stadium",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 7
+    },
+    {
+      "name": "St James' Park",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 7
+    },
+    {
+      "name": "Villa Park",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 7
+    },
+    {
+      "name": "London Stadium",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 8
+    },
+    {
+      "name": "Celtic Park",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 8
+    },
+    {
+      "name": "Goodison Park",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 9
+    },
+    {
+      "name": "Hampden Park",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 9
+    },
+    {
+      "name": "Ibrox",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 9
+    },
+    {
+      "name": "Elland Road",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 9
+    },
+    {
+      "name": "Highbury",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 10
+    },
+    {
+      "name": "Molineux",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 10
+    },
+    {
+      "name": "Craven Cottage",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 10
+    },
+    {
+      "name": "City Ground",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 10
+    },
+    {
+      "name": "Bramall Lane",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 11
+    },
+    {
+      "name": "Windsor Park",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "St George's Park",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 12
+    },
+    {
+      "name": "Deepdale",
+      "facet": "Famous grounds and stadiums",
+      "known_at": 13
+    },
+    {
+      "name": "Harry Kane",
+      "facet": "England and home nations teams",
+      "known_at": 3
+    },
+    {
+      "name": "Jude Bellingham",
+      "facet": "England and home nations teams",
+      "known_at": 4
+    },
+    {
+      "name": "Bukayo Saka",
+      "facet": "England and home nations teams",
+      "known_at": 4
+    },
+    {
+      "name": "Gareth Southgate",
+      "facet": "England and home nations teams",
+      "known_at": 4
+    },
+    {
+      "name": "Declan Rice",
+      "facet": "England and home nations teams",
+      "known_at": 6
+    },
+    {
+      "name": "Jordan Pickford",
+      "facet": "England and home nations teams",
+      "known_at": 6
+    },
+    {
+      "name": "Phil Foden",
+      "facet": "England and home nations teams",
+      "known_at": 6
+    },
+    {
+      "name": "Raheem Sterling",
+      "facet": "England and home nations teams",
+      "known_at": 6
+    },
+    {
+      "name": "Euro 2020 final",
+      "facet": "England and home nations teams",
+      "known_at": 6
+    },
+    {
+      "name": "Thomas Tuchel",
+      "facet": "England and home nations teams",
+      "known_at": 7
+    },
+    {
+      "name": "England penalty shootouts",
+      "facet": "England and home nations teams",
+      "known_at": 7
+    },
+    {
+      "name": "2018 World Cup Golden Boot",
+      "facet": "England and home nations teams",
+      "known_at": 9
+    },
+    {
+      "name": "Sir Alf Ramsey",
+      "facet": "England and home nations teams",
+      "known_at": 10
+    },
+    {
+      "name": "Sven-Göran Eriksson",
+      "facet": "England and home nations teams",
+      "known_at": 10
+    },
+    {
+      "name": "Italia 90",
+      "facet": "England and home nations teams",
+      "known_at": 11
+    },
+    {
+      "name": "British Home Championship",
+      "facet": "England and home nations teams",
+      "known_at": 14
+    },
+    {
+      "name": "Wayne Rooney",
+      "facet": "Legendary British players",
+      "known_at": 4
+    },
+    {
+      "name": "Steven Gerrard",
+      "facet": "Legendary British players",
+      "known_at": 6
+    },
+    {
+      "name": "Alan Shearer",
+      "facet": "Legendary British players",
+      "known_at": 7
+    },
+    {
+      "name": "Frank Lampard",
+      "facet": "Legendary British players",
+      "known_at": 7
+    },
+    {
+      "name": "Jamie Vardy",
+      "facet": "Legendary British players",
+      "known_at": 7
+    },
+    {
+      "name": "Ryan Giggs",
+      "facet": "Legendary British players",
+      "known_at": 8
+    },
+    {
+      "name": "Peter Crouch",
+      "facet": "Legendary British players",
+      "known_at": 8
+    },
+    {
+      "name": "Sir Bobby Charlton",
+      "facet": "Legendary British players",
+      "known_at": 9
+    },
+    {
+      "name": "George Best",
+      "facet": "Legendary British players",
+      "known_at": 9
+    },
+    {
+      "name": "Paul Scholes",
+      "facet": "Legendary British players",
+      "known_at": 9
+    },
+    {
+      "name": "Ian Wright",
+      "facet": "Legendary British players",
+      "known_at": 9
+    },
+    {
+      "name": "Michael Owen",
+      "facet": "Legendary British players",
+      "known_at": 9
+    },
+    {
+      "name": "Sir Geoff Hurst",
+      "facet": "Legendary British players",
+      "known_at": 10
+    },
+    {
+      "name": "Kenny Dalglish",
+      "facet": "Legendary British players",
+      "known_at": 11
+    },
+    {
+      "name": "Gordon Banks",
+      "facet": "Legendary British players",
+      "known_at": 11
+    },
+    {
+      "name": "Kevin Keegan",
+      "facet": "Legendary British players",
+      "known_at": 11
+    },
+    {
+      "name": "John Barnes",
+      "facet": "Legendary British players",
+      "known_at": 11
+    },
+    {
+      "name": "Sir Stanley Matthews",
+      "facet": "Legendary British players",
+      "known_at": 13
+    },
+    {
+      "name": "Denis Law",
+      "facet": "Legendary British players",
+      "known_at": 13
+    },
+    {
+      "name": "Dixie Dean",
+      "facet": "Legendary British players",
+      "known_at": 14
+    },
+    {
+      "name": "Sir Tom Finney",
+      "facet": "Legendary British players",
+      "known_at": 14
+    },
+    {
+      "name": "Jürgen Klopp",
+      "facet": "Great managers and their eras",
+      "known_at": 4
+    },
+    {
+      "name": "Pep Guardiola",
+      "facet": "Great managers and their eras",
+      "known_at": 4
+    },
+    {
+      "name": "Sir Alex Ferguson",
+      "facet": "Great managers and their eras",
+      "known_at": 5
+    },
+    {
+      "name": "José Mourinho",
+      "facet": "Great managers and their eras",
+      "known_at": 5
+    },
+    {
+      "name": "Arsène Wenger",
+      "facet": "Great managers and their eras",
+      "known_at": 6
+    },
+    {
+      "name": "Mikel Arteta",
+      "facet": "Great managers and their eras",
+      "known_at": 7
+    },
+    {
+      "name": "Claudio Ranieri",
+      "facet": "Great managers and their eras",
+      "known_at": 9
+    },
+    {
+      "name": "Harry Redknapp",
+      "facet": "Great managers and their eras",
+      "known_at": 9
+    },
+    {
+      "name": "Arne Slot",
+      "facet": "Great managers and their eras",
+      "known_at": 9
+    },
+    {
+      "name": "Ange Postecoglou",
+      "facet": "Great managers and their eras",
+      "known_at": 9
+    },
+    {
+      "name": "Sam Allardyce",
+      "facet": "Great managers and their eras",
+      "known_at": 10
+    },
+    {
+      "name": "Roy Hodgson",
+      "facet": "Great managers and their eras",
+      "known_at": 10
+    },
+    {
+      "name": "Brian Clough",
+      "facet": "Great managers and their eras",
+      "known_at": 11
+    },
+    {
+      "name": "Sir Bobby Robson",
+      "facet": "Great managers and their eras",
+      "known_at": 11
+    },
+    {
+      "name": "Bill Shankly",
+      "facet": "Great managers and their eras",
+      "known_at": 12
+    },
+    {
+      "name": "Sir Matt Busby",
+      "facet": "Great managers and their eras",
+      "known_at": 12
+    },
+    {
+      "name": "Busby Babes",
+      "facet": "Great managers and their eras",
+      "known_at": 12
+    },
+    {
+      "name": "Bob Paisley",
+      "facet": "Great managers and their eras",
+      "known_at": 13
+    },
+    {
+      "name": "Jock Stein",
+      "facet": "Great managers and their eras",
+      "known_at": 13
+    },
+    {
+      "name": "Don Revie",
+      "facet": "Great managers and their eras",
+      "known_at": 13
+    },
+    {
+      "name": "Herbert Chapman",
+      "facet": "Great managers and their eras",
+      "known_at": 15
+    },
+    {
+      "name": "FA Cup trophy",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 5
+    },
+    {
+      "name": "Europa League",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 6
+    },
+    {
+      "name": "Carabao Cup",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 7
+    },
+    {
+      "name": "Community Shield",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 9
+    },
+    {
+      "name": "Giant-killing",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 9
+    },
+    {
+      "name": "FA Cup draw",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 9
+    },
+    {
+      "name": "Championship play-off final",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 9
+    },
+    {
+      "name": "FA Cup third round",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 10
+    },
+    {
+      "name": "Non-League football",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 10
+    },
+    {
+      "name": "Conference League",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 10
+    },
+    {
+      "name": "FA Cup replay",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 11
+    },
+    {
+      "name": "Scottish Cup",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 11
+    },
+    {
+      "name": "EFL Trophy",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 13
+    },
+    {
+      "name": "Wanderers FC",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 14
+    },
+    {
+      "name": "Welsh Cup",
+      "facet": "FA Cup and cup competitions",
+      "known_at": 14
+    },
+    {
+      "name": "1966 World Cup final",
+      "facet": "Historic matches and moments",
+      "known_at": 4
+    },
+    {
+      "name": "Agüero's last-minute title winner",
+      "facet": "Historic matches and moments",
+      "known_at": 7
+    },
+    {
+      "name": "Leicester City's 2016 title",
+      "facet": "Historic matches and moments",
+      "known_at": 7
+    },
+    {
+      "name": "Christmas truce football match",
+      "facet": "Historic matches and moments",
+      "known_at": 7
+    },
+    {
+      "name": "Hand of God",
+      "facet": "Historic matches and moments",
+      "known_at": 8
+    },
+    {
+      "name": "Arsenal Invincibles",
+      "facet": "Historic matches and moments",
+      "known_at": 8
+    },
+    {
+      "name": "Miracle of Istanbul",
+      "facet": "Historic matches and moments",
+      "known_at": 8
+    },
+    {
+      "name": "Liverpool's comeback against Barcelona",
+      "facet": "Historic matches and moments",
+      "known_at": 8
+    },
+    {
+      "name": "Manchester United's 1999 treble",
+      "facet": "Historic matches and moments",
+      "known_at": 9
+    },
+    {
+      "name": "Chelsea's 2012 Champions League win",
+      "facet": "Historic matches and moments",
+      "known_at": 9
+    },
+    {
+      "name": "Beckham's halfway-line goal",
+      "facet": "Historic matches and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Beckham's free kick against Greece",
+      "facet": "Historic matches and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Germany 1–5 England",
+      "facet": "Historic matches and moments",
+      "known_at": 10
+    },
+    {
+      "name": "Lampard's ghost goal",
+      "facet": "Historic matches and moments",
+      "known_at": 11
+    },
+    {
+      "name": "Michael Thomas's title-winning goal at Anfield",
+      "facet": "Historic matches and moments",
+      "known_at": 12
+    },
+    {
+      "name": "Wimbledon's Crazy Gang FA Cup win",
+      "facet": "Historic matches and moments",
+      "known_at": 12
+    },
+    {
+      "name": "First international football match",
+      "facet": "Historic matches and moments",
+      "known_at": 13
+    },
+    {
+      "name": "Scotland's 1967 win at Wembley",
+      "facet": "Historic matches and moments",
+      "known_at": 13
+    },
+    {
+      "name": "Ronnie Radford's goal for Hereford",
+      "facet": "Historic matches and moments",
+      "known_at": 14
+    },
+    {
+      "name": "Euro 2022 final",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 5
+    },
+    {
+      "name": "Chloe Kelly",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 6
+    },
+    {
+      "name": "Leah Williamson",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 6
+    },
+    {
+      "name": "Sarina Wiegman",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 6
+    },
+    {
+      "name": "Mary Earps",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 6
+    },
+    {
+      "name": "Alessia Russo",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 6
+    },
+    {
+      "name": "Beth Mead",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 7
+    },
+    {
+      "name": "Lucy Bronze",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 7
+    },
+    {
+      "name": "Women's Super League",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 7
+    },
+    {
+      "name": "Euro 2025",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 7
+    },
+    {
+      "name": "Ella Toone",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 8
+    },
+    {
+      "name": "Arsenal Women",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 8
+    },
+    {
+      "name": "Millie Bright",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 9
+    },
+    {
+      "name": "Fran Kirby",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 9
+    },
+    {
+      "name": "Michelle Agyemang",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 9
+    },
+    {
+      "name": "Hannah Hampton",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 9
+    },
+    {
+      "name": "Women's FA Cup",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 9
+    },
+    {
+      "name": "Steph Houghton",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 10
+    },
+    {
+      "name": "Kelly Smith",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 12
+    },
+    {
+      "name": "1921 FA ban on women's football",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 13
+    },
+    {
+      "name": "Hope Powell",
+      "facet": "Women's football and the Lionesses",
+      "known_at": 13
+    },
+    {
+      "name": "Gareth Bale",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 4
+    },
+    {
+      "name": "Andy Robertson",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 7
+    },
+    {
+      "name": "Scott McTominay",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 7
+    },
+    {
+      "name": "Tartan Army",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 8
+    },
+    {
+      "name": "Scottish Premiership",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 8
+    },
+    {
+      "name": "Aaron Ramsey",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 9
+    },
+    {
+      "name": "John McGinn",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 9
+    },
+    {
+      "name": "Ian Rush",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 11
+    },
+    {
+      "name": "Red Wall",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 11
+    },
+    {
+      "name": "Lisbon Lions",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 12
+    },
+    {
+      "name": "Neville Southall",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 12
+    },
+    {
+      "name": "Pat Jennings",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 12
+    },
+    {
+      "name": "Queen's Park",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 13
+    },
+    {
+      "name": "Archie Gemmill's 1978 goal",
+      "facet": "Scottish, Welsh and Northern Irish football",
+      "known_at": 14
+    },
+    {
+      "name": "It's Coming Home",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Hat-trick",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 4
+    },
+    {
+      "name": "Nutmeg",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Keepy-uppy",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Back of the net",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Top bins",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Worldie",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Fergie Time",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Over the moon",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Will Grigg's on Fire",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Game of two halves",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Howler",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Park the bus",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Magic of the Cup",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Jumpers for goalposts",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Early doors",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Sick as a parrot",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Squeaky bum time",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Six-pointer",
+      "facet": "Football chants, slang and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Football scarf",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Panini sticker album",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 4
+    },
+    {
+      "name": "Replica shirt",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Player mascots",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 5
+    },
+    {
+      "name": "Five-a-side",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Fantasy Premier League",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 6
+    },
+    {
+      "name": "Half-time pie",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Boxing Day fixtures",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Derby day",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 7
+    },
+    {
+      "name": "The Kop",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Season ticket",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Away end",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Pitch invasion",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Sunday League",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Matchday programme",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Gunnersaurus",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Half-time oranges",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Saturday 3pm blackout",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Football pools",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Groundhopping",
+      "facet": "Fan culture and matchday traditions",
+      "known_at": 14
+    },
+    {
+      "name": "EA Sports FC",
+      "facet": "Football on TV, in films and games",
+      "known_at": 3
+    },
+    {
+      "name": "Match of the Day",
+      "facet": "Football on TV, in films and games",
+      "known_at": 5
+    },
+    {
+      "name": "VAR",
+      "facet": "Football on TV, in films and games",
+      "known_at": 6
+    },
+    {
+      "name": "Ted Lasso",
+      "facet": "Football on TV, in films and games",
+      "known_at": 7
+    },
+    {
+      "name": "Sky Sports",
+      "facet": "Football on TV, in films and games",
+      "known_at": 7
+    },
+    {
+      "name": "Soccer Saturday",
+      "facet": "Football on TV, in films and games",
+      "known_at": 9
+    },
+    {
+      "name": "Football Manager",
+      "facet": "Football on TV, in films and games",
+      "known_at": 9
+    },
+    {
+      "name": "Welcome to Wrexham",
+      "facet": "Football on TV, in films and games",
+      "known_at": 9
+    },
+    {
+      "name": "Transfer Deadline Day",
+      "facet": "Football on TV, in films and games",
+      "known_at": 9
+    },
+    {
+      "name": "Football Focus",
+      "facet": "Football on TV, in films and games",
+      "known_at": 10
+    },
+    {
+      "name": "Final Score",
+      "facet": "Football on TV, in films and games",
+      "known_at": 11
+    },
+    {
+      "name": "Monday Night Football",
+      "facet": "Football on TV, in films and games",
+      "known_at": 11
+    },
+    {
+      "name": "Jeff Stelling",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "The Damned United",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "Escape to Victory",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "Fever Pitch",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "Roy of the Rovers",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "Shoot! magazine",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "Championship Manager",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "Goal!",
+      "facet": "Football on TV, in films and games",
+      "known_at": 12
+    },
+    {
+      "name": "Mike Bassett: England Manager",
+      "facet": "Football on TV, in films and games",
+      "known_at": 13
+    },
+    {
+      "name": "Sensible Soccer",
+      "facet": "Football on TV, in films and games",
+      "known_at": 13
+    }
+  ]
+}

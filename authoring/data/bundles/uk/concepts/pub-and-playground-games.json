@@ -1,0 +1,823 @@
+{
+  "subcategory": "pub-and-playground-games",
+  "facets": [
+    "Darts and its language",
+    "Snooker, pool and bar billiards",
+    "Skittles, dominoes and shove ha'penny",
+    "Pub quizzes and card games",
+    "Playground chasing and catching games",
+    "Skipping and counting-out rhymes",
+    "Conkers, marbles and playground crazes",
+    "Party and rainy-day games",
+    "Eccentric village contests",
+    "Playground truce words and regional names",
+    "Garden, park and seaside games"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 4,
+      "count": 5,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 3,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Bullseye (darts)",
+      "facet": "Darts and its language",
+      "known_at": 3
+    },
+    {
+      "name": "One hundred and eighty",
+      "facet": "Darts and its language",
+      "known_at": 5
+    },
+    {
+      "name": "Double top",
+      "facet": "Darts and its language",
+      "known_at": 10
+    },
+    {
+      "name": "Treble twenty",
+      "facet": "Darts and its language",
+      "known_at": 8
+    },
+    {
+      "name": "Checkout",
+      "facet": "Darts and its language",
+      "known_at": 10
+    },
+    {
+      "name": "Nine-dart finish",
+      "facet": "Darts and its language",
+      "known_at": 10
+    },
+    {
+      "name": "501",
+      "facet": "Darts and its language",
+      "known_at": 8
+    },
+    {
+      "name": "Bust (darts)",
+      "facet": "Darts and its language",
+      "known_at": 10
+    },
+    {
+      "name": "Madhouse (double one)",
+      "facet": "Darts and its language",
+      "known_at": 13
+    },
+    {
+      "name": "Bed and breakfast (26)",
+      "facet": "Darts and its language",
+      "known_at": 13
+    },
+    {
+      "name": "Round the clock",
+      "facet": "Darts and its language",
+      "known_at": 9
+    },
+    {
+      "name": "Eric Bristow",
+      "facet": "Darts and its language",
+      "known_at": 12
+    },
+    {
+      "name": "Jocky Wilson",
+      "facet": "Darts and its language",
+      "known_at": 13
+    },
+    {
+      "name": "Lakeside Country Club",
+      "facet": "Darts and its language",
+      "known_at": 13
+    },
+    {
+      "name": "Bullseye (TV show)",
+      "facet": "Darts and its language",
+      "known_at": 11
+    },
+    {
+      "name": "Snooker",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 4
+    },
+    {
+      "name": "Alex Higgins",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmy White",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 11
+    },
+    {
+      "name": "Ted Lowe",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 14
+    },
+    {
+      "name": "Cue ball",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 5
+    },
+    {
+      "name": "Black ball",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 5
+    },
+    {
+      "name": "The D (snooker)",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 11
+    },
+    {
+      "name": "Rest (snooker)",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 9
+    },
+    {
+      "name": "Cue chalk",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 6
+    },
+    {
+      "name": "Reds and yellows (pub pool)",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 6
+    },
+    {
+      "name": "Bar billiards mushroom",
+      "facet": "Snooker, pool and bar billiards",
+      "known_at": 14
+    },
+    {
+      "name": "Alley skittles",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 11
+    },
+    {
+      "name": "Table skittles",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 12
+    },
+    {
+      "name": "Aunt Sally",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 12
+    },
+    {
+      "name": "Dominoes",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 3
+    },
+    {
+      "name": "Fives and threes",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 13
+    },
+    {
+      "name": "Double six",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 6
+    },
+    {
+      "name": "Bones (dominoes)",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 13
+    },
+    {
+      "name": "Shove ha'penny",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 11
+    },
+    {
+      "name": "Halfpenny",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 10
+    },
+    {
+      "name": "Bat and trap",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 14
+    },
+    {
+      "name": "Ringing the bull",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 14
+    },
+    {
+      "name": "Quoits",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 12
+    },
+    {
+      "name": "Toad in the hole (pub game)",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 14
+    },
+    {
+      "name": "Shut the box",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 10
+    },
+    {
+      "name": "Nine pins",
+      "facet": "Skittles, dominoes and shove ha'penny",
+      "known_at": 8
+    },
+    {
+      "name": "Picture round",
+      "facet": "Pub quizzes and card games",
+      "known_at": 10
+    },
+    {
+      "name": "Joker round",
+      "facet": "Pub quizzes and card games",
+      "known_at": 12
+    },
+    {
+      "name": "Quizmaster",
+      "facet": "Pub quizzes and card games",
+      "known_at": 8
+    },
+    {
+      "name": "Fruit machine",
+      "facet": "Pub quizzes and card games",
+      "known_at": 11
+    },
+    {
+      "name": "Meat raffle",
+      "facet": "Pub quizzes and card games",
+      "known_at": 13
+    },
+    {
+      "name": "Cribbage",
+      "facet": "Pub quizzes and card games",
+      "known_at": 11
+    },
+    {
+      "name": "Cribbage board",
+      "facet": "Pub quizzes and card games",
+      "known_at": 12
+    },
+    {
+      "name": "Fifteen two",
+      "facet": "Pub quizzes and card games",
+      "known_at": 13
+    },
+    {
+      "name": "Whist",
+      "facet": "Pub quizzes and card games",
+      "known_at": 11
+    },
+    {
+      "name": "Nap (card game)",
+      "facet": "Pub quizzes and card games",
+      "known_at": 13
+    },
+    {
+      "name": "Three card brag",
+      "facet": "Pub quizzes and card games",
+      "known_at": 12
+    },
+    {
+      "name": "Pontoon",
+      "facet": "Pub quizzes and card games",
+      "known_at": 10
+    },
+    {
+      "name": "Rummy",
+      "facet": "Pub quizzes and card games",
+      "known_at": 8
+    },
+    {
+      "name": "Happy Families",
+      "facet": "Pub quizzes and card games",
+      "known_at": 4
+    },
+    {
+      "name": "Old Maid",
+      "facet": "Pub quizzes and card games",
+      "known_at": 5
+    },
+    {
+      "name": "Beggar my neighbour",
+      "facet": "Pub quizzes and card games",
+      "known_at": 10
+    },
+    {
+      "name": "Cheat (card game)",
+      "facet": "Pub quizzes and card games",
+      "known_at": 7
+    },
+    {
+      "name": "Chase the ace",
+      "facet": "Pub quizzes and card games",
+      "known_at": 12
+    },
+    {
+      "name": "Top Trumps",
+      "facet": "Pub quizzes and card games",
+      "known_at": 4
+    },
+    {
+      "name": "British Bulldog",
+      "facet": "Playground chasing and catching games",
+      "known_at": 5
+    },
+    {
+      "name": "Stuck in the mud",
+      "facet": "Playground chasing and catching games",
+      "known_at": 3
+    },
+    {
+      "name": "What's the time, Mr Wolf?",
+      "facet": "Playground chasing and catching games",
+      "known_at": 2
+    },
+    {
+      "name": "Grandmother's footsteps",
+      "facet": "Playground chasing and catching games",
+      "known_at": 5
+    },
+    {
+      "name": "Kiss chase",
+      "facet": "Playground chasing and catching games",
+      "known_at": 6
+    },
+    {
+      "name": "Off ground tig",
+      "facet": "Playground chasing and catching games",
+      "known_at": 5
+    },
+    {
+      "name": "Chain tig",
+      "facet": "Playground chasing and catching games",
+      "known_at": 5
+    },
+    {
+      "name": "Cops and robbers",
+      "facet": "Playground chasing and catching games",
+      "known_at": 4
+    },
+    {
+      "name": "Hide and seek",
+      "facet": "Playground chasing and catching games",
+      "known_at": 1
+    },
+    {
+      "name": "Forty forty",
+      "facet": "Playground chasing and catching games",
+      "known_at": 10
+    },
+    {
+      "name": "Kick the can",
+      "facet": "Playground chasing and catching games",
+      "known_at": 9
+    },
+    {
+      "name": "Red Rover",
+      "facet": "Playground chasing and catching games",
+      "known_at": 8
+    },
+    {
+      "name": "Fox and hounds",
+      "facet": "Playground chasing and catching games",
+      "known_at": 9
+    },
+    {
+      "name": "Sardines",
+      "facet": "Playground chasing and catching games",
+      "known_at": 6
+    },
+    {
+      "name": "Duck, duck, goose",
+      "facet": "Playground chasing and catching games",
+      "known_at": 3
+    },
+    {
+      "name": "Bulldog line",
+      "facet": "Playground chasing and catching games",
+      "known_at": 8
+    },
+    {
+      "name": "Teddy bear, teddy bear",
+      "facet": "Skipping and counting-out rhymes",
+      "known_at": 5
+    },
+    {
+      "name": "The big ship sails on the alley-alley-o",
+      "facet": "Skipping and counting-out rhymes",
+      "known_at": 11
+    },
+    {
+      "name": "French skipping",
+      "facet": "Skipping and counting-out rhymes",
+      "known_at": 8
+    },
+    {
+      "name": "Conker",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 3
+    },
+    {
+      "name": "Horse chestnut tree",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 6
+    },
+    {
+      "name": "Oneser",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 11
+    },
+    {
+      "name": "Vinegar-soaked conker",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 9
+    },
+    {
+      "name": "Marbles",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 2
+    },
+    {
+      "name": "Alley (marble)",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 13
+    },
+    {
+      "name": "Tinsley Green",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 14
+    },
+    {
+      "name": "Pogs",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 9
+    },
+    {
+      "name": "Tamagotchi",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 6
+    },
+    {
+      "name": "Yo-yo",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 2
+    },
+    {
+      "name": "Loom bands",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 6
+    },
+    {
+      "name": "Panini stickers",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 5
+    },
+    {
+      "name": "Got, got, need",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 9
+    },
+    {
+      "name": "Clackers",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 13
+    },
+    {
+      "name": "Pokémon cards",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 3
+    },
+    {
+      "name": "Fidget spinner",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 3
+    },
+    {
+      "name": "Slap bracelet",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 10
+    },
+    {
+      "name": "Crazy Bones",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 11
+    },
+    {
+      "name": "Space hopper",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 7
+    },
+    {
+      "name": "Beyblade",
+      "facet": "Conkers, marbles and playground crazes",
+      "known_at": 6
+    },
+    {
+      "name": "Sleeping lions",
+      "facet": "Party and rainy-day games",
+      "known_at": 3
+    },
+    {
+      "name": "Pin the tail on the donkey",
+      "facet": "Party and rainy-day games",
+      "known_at": 2,
+      "retired": "used_up: The pool already names the game and its blindfold; nothing UK-specific is left to ask."
+    },
+    {
+      "name": "Chocolate game (hat, scarf and gloves)",
+      "facet": "Party and rainy-day games",
+      "known_at": 8
+    },
+    {
+      "name": "Consequences",
+      "facet": "Party and rainy-day games",
+      "known_at": 11
+    },
+    {
+      "name": "Hangman",
+      "facet": "Party and rainy-day games",
+      "known_at": 4
+    },
+    {
+      "name": "Noughts and crosses",
+      "facet": "Party and rainy-day games",
+      "known_at": 2
+    },
+    {
+      "name": "Wink murder",
+      "facet": "Party and rainy-day games",
+      "known_at": 7
+    },
+    {
+      "name": "Squeak piggy squeak",
+      "facet": "Party and rainy-day games",
+      "known_at": 10
+    },
+    {
+      "name": "Simon says",
+      "facet": "Party and rainy-day games",
+      "known_at": 1
+    },
+    {
+      "name": "Blind man's buff",
+      "facet": "Party and rainy-day games",
+      "known_at": 8
+    },
+    {
+      "name": "Snapdragon (game)",
+      "facet": "Party and rainy-day games",
+      "known_at": 14
+    },
+    {
+      "name": "I spy",
+      "facet": "Party and rainy-day games",
+      "known_at": 1
+    },
+    {
+      "name": "Cluedo",
+      "facet": "Party and rainy-day games",
+      "known_at": 6
+    },
+    {
+      "name": "Buckaroo",
+      "facet": "Party and rainy-day games",
+      "known_at": 7
+    },
+    {
+      "name": "KerPlunk",
+      "facet": "Party and rainy-day games",
+      "known_at": 6
+    },
+    {
+      "name": "World Bog Snorkelling Championship",
+      "facet": "Eccentric village contests",
+      "known_at": 11
+    },
+    {
+      "name": "Hurling the Silver Ball",
+      "facet": "Eccentric village contests",
+      "known_at": 14
+    },
+    {
+      "name": "World Black Pudding Throwing Championships",
+      "facet": "Eccentric village contests",
+      "known_at": 13
+    },
+    {
+      "name": "World Coal Carrying Championship",
+      "facet": "Eccentric village contests",
+      "known_at": 14
+    },
+    {
+      "name": "Shin kicking",
+      "facet": "Eccentric village contests",
+      "known_at": 12
+    },
+    {
+      "name": "World Pea Shooting Championship",
+      "facet": "Eccentric village contests",
+      "known_at": 12
+    },
+    {
+      "name": "Stinging nettle eating championship",
+      "facet": "Eccentric village contests",
+      "known_at": 13
+    },
+    {
+      "name": "Fainites",
+      "facet": "Playground truce words and regional names",
+      "known_at": 12
+    },
+    {
+      "name": "Barley (truce word)",
+      "facet": "Playground truce words and regional names",
+      "known_at": 12
+    },
+    {
+      "name": "Pax",
+      "facet": "Playground truce words and regional names",
+      "known_at": 11
+    },
+    {
+      "name": "Kings (truce word)",
+      "facet": "Playground truce words and regional names",
+      "known_at": 12
+    },
+    {
+      "name": "Crossies",
+      "facet": "Playground truce words and regional names",
+      "known_at": 10
+    },
+    {
+      "name": "Bagsy",
+      "facet": "Playground truce words and regional names",
+      "known_at": 7
+    },
+    {
+      "name": "Dibs",
+      "facet": "Playground truce words and regional names",
+      "known_at": 7
+    },
+    {
+      "name": "Shotgun (front seat)",
+      "facet": "Playground truce words and regional names",
+      "known_at": 6
+    },
+    {
+      "name": "Tig",
+      "facet": "Playground truce words and regional names",
+      "known_at": 4
+    },
+    {
+      "name": "It (chaser)",
+      "facet": "Playground truce words and regional names",
+      "known_at": 3
+    },
+    {
+      "name": "Den (base)",
+      "facet": "Playground truce words and regional names",
+      "known_at": 7
+    },
+    {
+      "name": "Knock down ginger",
+      "facet": "Playground truce words and regional names",
+      "known_at": 9
+    },
+    {
+      "name": "Peever",
+      "facet": "Playground truce words and regional names",
+      "known_at": 13
+    },
+    {
+      "name": "Skiving",
+      "facet": "Playground truce words and regional names",
+      "known_at": 8
+    },
+    {
+      "name": "Wagging (truancy)",
+      "facet": "Playground truce words and regional names",
+      "known_at": 11
+    },
+    {
+      "name": "Telltale tit",
+      "facet": "Playground truce words and regional names",
+      "known_at": 8
+    },
+    {
+      "name": "Jinx",
+      "facet": "Playground truce words and regional names",
+      "known_at": 6
+    },
+    {
+      "name": "French cricket",
+      "facet": "Garden, park and seaside games",
+      "known_at": 8
+    },
+    {
+      "name": "Rounders",
+      "facet": "Garden, park and seaside games",
+      "known_at": 5
+    },
+    {
+      "name": "Kerby",
+      "facet": "Garden, park and seaside games",
+      "known_at": 12
+    },
+    {
+      "name": "Swingball",
+      "facet": "Garden, park and seaside games",
+      "known_at": 6
+    },
+    {
+      "name": "Beach cricket",
+      "facet": "Garden, park and seaside games",
+      "known_at": 7
+    },
+    {
+      "name": "Crazy golf",
+      "facet": "Garden, park and seaside games",
+      "known_at": 4
+    },
+    {
+      "name": "Pitch and putt",
+      "facet": "Garden, park and seaside games",
+      "known_at": 9
+    },
+    {
+      "name": "Croquet",
+      "facet": "Garden, park and seaside games",
+      "known_at": 8
+    },
+    {
+      "name": "Lawn bowls",
+      "facet": "Garden, park and seaside games",
+      "known_at": 9
+    },
+    {
+      "name": "Sack race",
+      "facet": "Garden, park and seaside games",
+      "known_at": 3,
+      "retired": "used_up: Sack race already covered (photo, analogy, fabric); the remaining options would make filler questions."
+    },
+    {
+      "name": "Three-legged race",
+      "facet": "Garden, park and seaside games",
+      "known_at": 3
+    },
+    {
+      "name": "Hook-a-duck",
+      "facet": "Garden, park and seaside games",
+      "known_at": 4
+    },
+    {
+      "name": "Penny falls",
+      "facet": "Garden, park and seaside games",
+      "known_at": 8
+    },
+    {
+      "name": "Stoolball",
+      "facet": "Garden, park and seaside games",
+      "known_at": 14
+    }
+  ]
+}

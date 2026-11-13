@@ -1,0 +1,827 @@
+{
+  "subcategory": "brands-and-adverts",
+  "facets": [
+    "Biscuits, sweets and chocolate bars",
+    "Crisps, drinks and supermarket food",
+    "Supermarkets and high-street shops",
+    "Christmas adverts and campaigns",
+    "Advert mascots and characters",
+    "Slogans and catchphrases",
+    "Brand jingles and TV ads of the past",
+    "Cars, transport and travel brands",
+    "Fashion and luxury labels",
+    "Toys, games and children's brands",
+    "Household and kitchen products",
+    "Brand history and founders"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jaffa Cakes",
+      "facet": "Biscuits, sweets and chocolate bars",
+      "known_at": 4
+    },
+    {
+      "name": "Hobnobs",
+      "facet": "Biscuits, sweets and chocolate bars",
+      "known_at": 8
+    },
+    {
+      "name": "Jammie Dodgers",
+      "facet": "Biscuits, sweets and chocolate bars",
+      "known_at": 4
+    },
+    {
+      "name": "Cadbury Flake",
+      "facet": "Biscuits, sweets and chocolate bars",
+      "known_at": 5
+    },
+    {
+      "name": "Walkers crisps",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 3
+    },
+    {
+      "name": "Robinsons squash",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 6
+    },
+    {
+      "name": "HP Sauce",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 7
+    },
+    {
+      "name": "Bisto",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 7
+    },
+    {
+      "name": "Oxo cube",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 8
+    },
+    {
+      "name": "Hovis",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 8
+    },
+    {
+      "name": "Pot Noodle",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 7
+    },
+    {
+      "name": "Weetabix",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 3
+    },
+    {
+      "name": "Birds Eye fish fingers",
+      "facet": "Crisps, drinks and supermarket food",
+      "known_at": 4
+    },
+    {
+      "name": "Tesco Clubcard",
+      "facet": "Supermarkets and high-street shops",
+      "known_at": 8
+    },
+    {
+      "name": "Man on the Moon advert",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "The Bear and the Hare",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "Buster the Boxer",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "Moz the Monster",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "The Boy and the Piano",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "Mog's Christmas Calamity",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 10
+    },
+    {
+      "name": "Iceland Rang-tan advert",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 11
+    },
+    {
+      "name": "M&S Percy Pig",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 7
+    },
+    {
+      "name": "Boots “Here Come the Girls”",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 12
+    },
+    {
+      "name": "Christmas advert season",
+      "facet": "Christmas adverts and campaigns",
+      "known_at": 8
+    },
+    {
+      "name": "Aleksandr Orlov",
+      "facet": "Advert mascots and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Churchill the dog",
+      "facet": "Advert mascots and characters",
+      "known_at": 8
+    },
+    {
+      "name": "PG Tips Monkey",
+      "facet": "Advert mascots and characters",
+      "known_at": 9
+    },
+    {
+      "name": "Andrex Puppy",
+      "facet": "Advert mascots and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Honey Monster",
+      "facet": "Advert mascots and characters",
+      "known_at": 8
+    },
+    {
+      "name": "Tetley Tea Folk",
+      "facet": "Advert mascots and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Captain Birds Eye",
+      "facet": "Advert mascots and characters",
+      "known_at": 7
+    },
+    {
+      "name": "Dulux dog",
+      "facet": "Advert mascots and characters",
+      "known_at": 7
+    },
+    {
+      "name": "Smash Martians",
+      "facet": "Advert mascots and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Gio Compario",
+      "facet": "Advert mascots and characters",
+      "known_at": 10
+    },
+    {
+      "name": "Cadbury Caramel Bunny",
+      "facet": "Advert mascots and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Homepride Fred",
+      "facet": "Advert mascots and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Bisto Kids",
+      "facet": "Advert mascots and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Oxo family",
+      "facet": "Advert mascots and characters",
+      "known_at": 13
+    },
+    {
+      "name": "Cresta polar bear",
+      "facet": "Advert mascots and characters",
+      "known_at": 14
+    },
+    {
+      "name": "Tango Man",
+      "facet": "Advert mascots and characters",
+      "known_at": 12
+    },
+    {
+      "name": "“Never knowingly undersold”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 11
+    },
+    {
+      "name": "“Simples”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 6
+    },
+    {
+      "name": "“Does exactly what it says on the tin”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 9
+    },
+    {
+      "name": "“Love it or hate it”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 7
+    },
+    {
+      "name": "“Should've gone to Specsavers”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 8
+    },
+    {
+      "name": "“Vorsprung durch Technik”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 12
+    },
+    {
+      "name": "“Made in Scotland from girders”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 11
+    },
+    {
+      "name": "“Beanz Meanz Heinz”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 9
+    },
+    {
+      "name": "“It's good to talk”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 12
+    },
+    {
+      "name": "“The future's bright, the future's Orange”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 12
+    },
+    {
+      "name": "“Go to work on an egg”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 13
+    },
+    {
+      "name": "“Ahh Bisto”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 11
+    },
+    {
+      "name": "“You've been Tango'd”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 11
+    },
+    {
+      "name": "“Calm down, dear”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 12
+    },
+    {
+      "name": "“Naughty but nice”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 12
+    },
+    {
+      "name": "“This is not just food, this is M&S food”",
+      "facet": "Slogans and catchphrases",
+      "known_at": 10
+    },
+    {
+      "name": "Hovis “Boy on the Bike” advert",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 12
+    },
+    {
+      "name": "Shake n' Vac jingle",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 13
+    },
+    {
+      "name": "“Just One Cornetto” jingle",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 12
+    },
+    {
+      "name": "Levi's launderette advert",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 13
+    },
+    {
+      "name": "Nescafé Gold Blend couple",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 13
+    },
+    {
+      "name": "Yellow Pages J. R. Hartley advert",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 13
+    },
+    {
+      "name": "Fairy Liquid “hands that do dishes” jingle",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 12
+    },
+    {
+      "name": "Club biscuit jingle",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 12
+    },
+    {
+      "name": "Um Bongo",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 12
+    },
+    {
+      "name": "Renault Clio “Papa? Nicole?” advert",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 14
+    },
+    {
+      "name": "Honda “Cog” advert",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 14
+    },
+    {
+      "name": "Sony Bravia bouncing balls advert",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 13
+    },
+    {
+      "name": "BT Beattie adverts",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 14
+    },
+    {
+      "name": "Tango slap advert",
+      "facet": "Brand jingles and TV ads of the past",
+      "known_at": 13
+    },
+    {
+      "name": "Rolls-Royce",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 7
+    },
+    {
+      "name": "Bentley",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 8
+    },
+    {
+      "name": "Aston Martin",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 7
+    },
+    {
+      "name": "Jaguar",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 7
+    },
+    {
+      "name": "Land Rover",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 7
+    },
+    {
+      "name": "McLaren",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 7
+    },
+    {
+      "name": "Lotus",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 10
+    },
+    {
+      "name": "MG",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 10
+    },
+    {
+      "name": "Morris Minor",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 12
+    },
+    {
+      "name": "Reliant Robin",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 9
+    },
+    {
+      "name": "Vauxhall",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 8
+    },
+    {
+      "name": "Triumph motorcycles",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 11
+    },
+    {
+      "name": "London black cab",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 4
+    },
+    {
+      "name": "British Airways",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 6
+    },
+    {
+      "name": "Virgin Atlantic",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 8
+    },
+    {
+      "name": "easyJet",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 7
+    },
+    {
+      "name": "Eurostar",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 7
+    },
+    {
+      "name": "National Express",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 9
+    },
+    {
+      "name": "Raleigh",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 10
+    },
+    {
+      "name": "Brompton bicycle",
+      "facet": "Cars, transport and travel brands",
+      "known_at": 11
+    },
+    {
+      "name": "Burberry",
+      "facet": "Fashion and luxury labels",
+      "known_at": 8
+    },
+    {
+      "name": "Barbour",
+      "facet": "Fashion and luxury labels",
+      "known_at": 10
+    },
+    {
+      "name": "Hunter boots",
+      "facet": "Fashion and luxury labels",
+      "known_at": 9
+    },
+    {
+      "name": "Dr. Martens",
+      "facet": "Fashion and luxury labels",
+      "known_at": 7
+    },
+    {
+      "name": "Mulberry",
+      "facet": "Fashion and luxury labels",
+      "known_at": 12
+    },
+    {
+      "name": "Alexander McQueen",
+      "facet": "Fashion and luxury labels",
+      "known_at": 11
+    },
+    {
+      "name": "Paul Smith",
+      "facet": "Fashion and luxury labels",
+      "known_at": 12
+    },
+    {
+      "name": "Ted Baker",
+      "facet": "Fashion and luxury labels",
+      "known_at": 11
+    },
+    {
+      "name": "Superdry",
+      "facet": "Fashion and luxury labels",
+      "known_at": 9
+    },
+    {
+      "name": "Stella McCartney",
+      "facet": "Fashion and luxury labels",
+      "known_at": 11
+    },
+    {
+      "name": "Laura Ashley",
+      "facet": "Fashion and luxury labels",
+      "known_at": 12
+    },
+    {
+      "name": "Cath Kidston",
+      "facet": "Fashion and luxury labels",
+      "known_at": 12
+    },
+    {
+      "name": "Jimmy Choo",
+      "facet": "Fashion and luxury labels",
+      "known_at": 11
+    },
+    {
+      "name": "Umbro",
+      "facet": "Fashion and luxury labels",
+      "known_at": 10
+    },
+    {
+      "name": "Meccano",
+      "facet": "Toys, games and children's brands",
+      "known_at": 10
+    },
+    {
+      "name": "Hornby",
+      "facet": "Toys, games and children's brands",
+      "known_at": 10
+    },
+    {
+      "name": "Scalextric",
+      "facet": "Toys, games and children's brands",
+      "known_at": 8
+    },
+    {
+      "name": "Airfix",
+      "facet": "Toys, games and children's brands",
+      "known_at": 10
+    },
+    {
+      "name": "Subbuteo",
+      "facet": "Toys, games and children's brands",
+      "known_at": 11
+    },
+    {
+      "name": "Corgi Toys",
+      "facet": "Toys, games and children's brands",
+      "known_at": 11
+    },
+    {
+      "name": "Matchbox",
+      "facet": "Toys, games and children's brands",
+      "known_at": 8
+    },
+    {
+      "name": "Spirograph",
+      "facet": "Toys, games and children's brands",
+      "known_at": 9
+    },
+    {
+      "name": "Sindy",
+      "facet": "Toys, games and children's brands",
+      "known_at": 12
+    },
+    {
+      "name": "Action Man",
+      "facet": "Toys, games and children's brands",
+      "known_at": 9
+    },
+    {
+      "name": "Stickle Bricks",
+      "facet": "Toys, games and children's brands",
+      "known_at": 8
+    },
+    {
+      "name": "Fuzzy-Felt",
+      "facet": "Toys, games and children's brands",
+      "known_at": 12
+    },
+    {
+      "name": "Raleigh Chopper",
+      "facet": "Toys, games and children's brands",
+      "known_at": 12
+    },
+    {
+      "name": "Fairy Liquid",
+      "facet": "Household and kitchen products",
+      "known_at": 5
+    },
+    {
+      "name": "Persil",
+      "facet": "Household and kitchen products",
+      "known_at": 7
+    },
+    {
+      "name": "Dettol",
+      "facet": "Household and kitchen products",
+      "known_at": 7
+    },
+    {
+      "name": "Domestos",
+      "facet": "Household and kitchen products",
+      "known_at": 9
+    },
+    {
+      "name": "Marigold gloves",
+      "facet": "Household and kitchen products",
+      "known_at": 10
+    },
+    {
+      "name": "Hoover",
+      "facet": "Household and kitchen products",
+      "known_at": 6
+    },
+    {
+      "name": "Henry hoover",
+      "facet": "Household and kitchen products",
+      "known_at": 5
+    },
+    {
+      "name": "Aga cooker",
+      "facet": "Household and kitchen products",
+      "known_at": 12
+    },
+    {
+      "name": "Kenwood Chef",
+      "facet": "Household and kitchen products",
+      "known_at": 12
+    },
+    {
+      "name": "Russell Hobbs",
+      "facet": "Household and kitchen products",
+      "known_at": 11
+    },
+    {
+      "name": "Brown Betty teapot",
+      "facet": "Household and kitchen products",
+      "known_at": 13
+    },
+    {
+      "name": "Ronseal",
+      "facet": "Household and kitchen products",
+      "known_at": 10
+    },
+    {
+      "name": "Dulux",
+      "facet": "Household and kitchen products",
+      "known_at": 8
+    },
+    {
+      "name": "Andrex",
+      "facet": "Household and kitchen products",
+      "known_at": 7
+    },
+    {
+      "name": "Sellotape",
+      "facet": "Household and kitchen products",
+      "known_at": 5
+    },
+    {
+      "name": "Blu Tack",
+      "facet": "Household and kitchen products",
+      "known_at": 5
+    },
+    {
+      "name": "Mr Sheen",
+      "facet": "Household and kitchen products",
+      "known_at": 11
+    },
+    {
+      "name": "Cillit Bang",
+      "facet": "Household and kitchen products",
+      "known_at": 10
+    },
+    {
+      "name": "Goblin Teasmade",
+      "facet": "Household and kitchen products",
+      "known_at": 14
+    },
+    {
+      "name": "Kilner jar",
+      "facet": "Household and kitchen products",
+      "known_at": 12
+    },
+    {
+      "name": "Brillo pad",
+      "facet": "Household and kitchen products",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Lipton",
+      "facet": "Brand history and founders",
+      "known_at": 13
+    },
+    {
+      "name": "Jesse Boot",
+      "facet": "Brand history and founders",
+      "known_at": 13
+    },
+    {
+      "name": "Michael Marks",
+      "facet": "Brand history and founders",
+      "known_at": 13
+    },
+    {
+      "name": "Jack Cohen",
+      "facet": "Brand history and founders",
+      "known_at": 14
+    },
+    {
+      "name": "John James Sainsbury",
+      "facet": "Brand history and founders",
+      "known_at": 12
+    },
+    {
+      "name": "Richard Branson",
+      "facet": "Brand history and founders",
+      "known_at": 8
+    },
+    {
+      "name": "Anita Roddick",
+      "facet": "Brand history and founders",
+      "known_at": 12
+    },
+    {
+      "name": "Thomas Burberry",
+      "facet": "Brand history and founders",
+      "known_at": 12
+    },
+    {
+      "name": "William Lever",
+      "facet": "Brand history and founders",
+      "known_at": 13
+    },
+    {
+      "name": "Thomas Twining",
+      "facet": "Brand history and founders",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Rolls and Henry Royce",
+      "facet": "Brand history and founders",
+      "known_at": 12
+    },
+    {
+      "name": "Harry Gordon Selfridge",
+      "facet": "Brand history and founders",
+      "known_at": 12
+    },
+    {
+      "name": "Alan Sugar",
+      "facet": "Brand history and founders",
+      "known_at": 9
+    },
+    {
+      "name": "JCB",
+      "facet": "Brand history and founders",
+      "known_at": 7
+    },
+    {
+      "name": "Royal Warrant",
+      "facet": "Brand history and founders",
+      "known_at": 12
+    }
+  ]
+}

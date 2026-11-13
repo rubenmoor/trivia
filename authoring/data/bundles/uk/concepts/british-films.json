@@ -1,0 +1,1117 @@
+{
+  "subcategory": "british-films",
+  "facets": [
+    "Wallace & Gromit and Aardman",
+    "Harry Potter films",
+    "James Bond films",
+    "Paddington and family favourites",
+    "Ealing, Carry On and Python comedies",
+    "Richard Curtis romcoms",
+    "Gritty regional dramas",
+    "War and royal history films",
+    "Period dramas and literary adaptations",
+    "British film stars",
+    "Great British directors",
+    "Studios, locations and the BAFTAs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Wallace",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 2
+    },
+    {
+      "name": "A Grand Day Out",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 9
+    },
+    {
+      "name": "The Wrong Trousers",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 7
+    },
+    {
+      "name": "A Close Shave",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 8
+    },
+    {
+      "name": "The Curse of the Were-Rabbit",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 6
+    },
+    {
+      "name": "Vengeance Most Fowl",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 7
+    },
+    {
+      "name": "Preston",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 12
+    },
+    {
+      "name": "Lady Tottington",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 11
+    },
+    {
+      "name": "Rocky the Rooster",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 7
+    },
+    {
+      "name": "Flushed Away",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 8
+    },
+    {
+      "name": "Early Man",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 9
+    },
+    {
+      "name": "Arthur Christmas",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 9
+    },
+    {
+      "name": "Plasticine",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 5
+    },
+    {
+      "name": "Stop-motion animation",
+      "facet": "Wallace & Gromit and Aardman",
+      "known_at": 7
+    },
+    {
+      "name": "Ron Weasley",
+      "facet": "Harry Potter films",
+      "known_at": 2
+    },
+    {
+      "name": "Severus Snape",
+      "facet": "Harry Potter films",
+      "known_at": 4
+    },
+    {
+      "name": "Bellatrix Lestrange",
+      "facet": "Harry Potter films",
+      "known_at": 7
+    },
+    {
+      "name": "Daniel Radcliffe",
+      "facet": "Harry Potter films",
+      "known_at": 5
+    },
+    {
+      "name": "Emma Watson",
+      "facet": "Harry Potter films",
+      "known_at": 5
+    },
+    {
+      "name": "Rupert Grint",
+      "facet": "Harry Potter films",
+      "known_at": 7
+    },
+    {
+      "name": "Robbie Coltrane",
+      "facet": "Harry Potter films",
+      "known_at": 10
+    },
+    {
+      "name": "007",
+      "facet": "James Bond films",
+      "known_at": 4
+    },
+    {
+      "name": "Sean Connery",
+      "facet": "James Bond films",
+      "known_at": 8
+    },
+    {
+      "name": "George Lazenby",
+      "facet": "James Bond films",
+      "known_at": 14
+    },
+    {
+      "name": "Roger Moore",
+      "facet": "James Bond films",
+      "known_at": 10
+    },
+    {
+      "name": "Timothy Dalton",
+      "facet": "James Bond films",
+      "known_at": 12
+    },
+    {
+      "name": "Pierce Brosnan",
+      "facet": "James Bond films",
+      "known_at": 9
+    },
+    {
+      "name": "Daniel Craig",
+      "facet": "James Bond films",
+      "known_at": 8
+    },
+    {
+      "name": "Dr. No",
+      "facet": "James Bond films",
+      "known_at": 11
+    },
+    {
+      "name": "Goldfinger",
+      "facet": "James Bond films",
+      "known_at": 9
+    },
+    {
+      "name": "The Spy Who Loved Me",
+      "facet": "James Bond films",
+      "known_at": 12
+    },
+    {
+      "name": "Casino Royale",
+      "facet": "James Bond films",
+      "known_at": 10
+    },
+    {
+      "name": "Skyfall",
+      "facet": "James Bond films",
+      "known_at": 9
+    },
+    {
+      "name": "No Time to Die",
+      "facet": "James Bond films",
+      "known_at": 11
+    },
+    {
+      "name": "Q",
+      "facet": "James Bond films",
+      "known_at": 8
+    },
+    {
+      "name": "M",
+      "facet": "James Bond films",
+      "known_at": 8
+    },
+    {
+      "name": "Miss Moneypenny",
+      "facet": "James Bond films",
+      "known_at": 9
+    },
+    {
+      "name": "Judi Dench",
+      "facet": "James Bond films",
+      "known_at": 8
+    },
+    {
+      "name": "Oddjob",
+      "facet": "James Bond films",
+      "known_at": 12
+    },
+    {
+      "name": "Jaws",
+      "facet": "James Bond films",
+      "known_at": 11
+    },
+    {
+      "name": "Ernst Stavro Blofeld",
+      "facet": "James Bond films",
+      "known_at": 11
+    },
+    {
+      "name": "Aston Martin DB5",
+      "facet": "James Bond films",
+      "known_at": 9
+    },
+    {
+      "name": "Walther PPK",
+      "facet": "James Bond films",
+      "known_at": 12
+    },
+    {
+      "name": "Shaken, not stirred",
+      "facet": "James Bond films",
+      "known_at": 8
+    },
+    {
+      "name": "MI6",
+      "facet": "James Bond films",
+      "known_at": 7
+    },
+    {
+      "name": "Mr Brown",
+      "facet": "Paddington and family favourites",
+      "known_at": 7
+    },
+    {
+      "name": "Mrs Bird",
+      "facet": "Paddington and family favourites",
+      "known_at": 10
+    },
+    {
+      "name": "Mr Curry",
+      "facet": "Paddington and family favourites",
+      "known_at": 11
+    },
+    {
+      "name": "Phoenix Buchanan",
+      "facet": "Paddington and family favourites",
+      "known_at": 10
+    },
+    {
+      "name": "Paddington in Peru",
+      "facet": "Paddington and family favourites",
+      "known_at": 7
+    },
+    {
+      "name": "Mr. Bean",
+      "facet": "Paddington and family favourites",
+      "known_at": 3
+    },
+    {
+      "name": "Matilda the Musical",
+      "facet": "Paddington and family favourites",
+      "known_at": 6
+    },
+    {
+      "name": "Wonka",
+      "facet": "Paddington and family favourites",
+      "known_at": 6
+    },
+    {
+      "name": "Chitty Chitty Bang Bang",
+      "facet": "Paddington and family favourites",
+      "known_at": 7
+    },
+    {
+      "name": "Oliver!",
+      "facet": "Paddington and family favourites",
+      "known_at": 9
+    },
+    {
+      "name": "Nanny McPhee",
+      "facet": "Paddington and family favourites",
+      "known_at": 7
+    },
+    {
+      "name": "Bugsy Malone",
+      "facet": "Paddington and family favourites",
+      "known_at": 12
+    },
+    {
+      "name": "Ealing Studios",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Kind Hearts and Coronets",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 13
+    },
+    {
+      "name": "The Ladykillers",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 13
+    },
+    {
+      "name": "The Lavender Hill Mob",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 13
+    },
+    {
+      "name": "Passport to Pimlico",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 14
+    },
+    {
+      "name": "Whisky Galore!",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 13
+    },
+    {
+      "name": "Alec Guinness",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 10
+    },
+    {
+      "name": "Carry On films",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 10
+    },
+    {
+      "name": "Carry On Cleo",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 13
+    },
+    {
+      "name": "Sid James",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 13
+    },
+    {
+      "name": "Kenneth Williams",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 12
+    },
+    {
+      "name": "Hattie Jacques",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 13
+    },
+    {
+      "name": "Life of Brian",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 10
+    },
+    {
+      "name": "The Meaning of Life",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 12
+    },
+    {
+      "name": "The Black Knight",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 10
+    },
+    {
+      "name": "The Killer Rabbit",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 11
+    },
+    {
+      "name": "The Knights Who Say Ni",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Coconut halves",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Always Look on the Bright Side of Life",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 9
+    },
+    {
+      "name": "John Cleese",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 9
+    },
+    {
+      "name": "Michael Palin",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 10
+    },
+    {
+      "name": "Eric Idle",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 11
+    },
+    {
+      "name": "Terry Jones",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 12
+    },
+    {
+      "name": "Terry Gilliam",
+      "facet": "Ealing, Carry On and Python comedies",
+      "known_at": 12
+    },
+    {
+      "name": "Richard Curtis",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 11
+    },
+    {
+      "name": "Four Weddings and a Funeral",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 10
+    },
+    {
+      "name": "About Time",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 10
+    },
+    {
+      "name": "The Boat That Rocked",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 12
+    },
+    {
+      "name": "Yesterday",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 10
+    },
+    {
+      "name": "Hugh Grant",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 6
+    },
+    {
+      "name": "Bill Nighy",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 9
+    },
+    {
+      "name": "Emma Thompson",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 8
+    },
+    {
+      "name": "Renée Zellweger",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 9
+    },
+    {
+      "name": "Mark Darcy",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 9
+    },
+    {
+      "name": "Daniel Cleaver",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 11
+    },
+    {
+      "name": "Spike",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 11
+    },
+    {
+      "name": "The Prime Minister",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 10
+    },
+    {
+      "name": "Christmas Is All Around",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 11
+    },
+    {
+      "name": "Cue cards scene",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 9
+    },
+    {
+      "name": "Portobello Road",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 10
+    },
+    {
+      "name": "The blue door",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 12
+    },
+    {
+      "name": "Helen Fielding",
+      "facet": "Richard Curtis romcoms",
+      "known_at": 12
+    },
+    {
+      "name": "Renton",
+      "facet": "Gritty regional dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Choose life",
+      "facet": "Gritty regional dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Ewan McGregor",
+      "facet": "Gritty regional dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Billy Elliot",
+      "facet": "Gritty regional dramas",
+      "known_at": 8
+    },
+    {
+      "name": "This Is England",
+      "facet": "Gritty regional dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Shane Meadows",
+      "facet": "Gritty regional dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Ken Loach",
+      "facet": "Gritty regional dramas",
+      "known_at": 12
+    },
+    {
+      "name": "I, Daniel Blake",
+      "facet": "Gritty regional dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Sweet Sixteen",
+      "facet": "Gritty regional dramas",
+      "known_at": 15
+    },
+    {
+      "name": "Fish Tank",
+      "facet": "Gritty regional dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Saturday Night and Sunday Morning",
+      "facet": "Gritty regional dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Kidulthood",
+      "facet": "Gritty regional dramas",
+      "known_at": 13
+    },
+    {
+      "name": "East Is East",
+      "facet": "Gritty regional dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Bend It Like Beckham",
+      "facet": "Gritty regional dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Get Carter",
+      "facet": "Gritty regional dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Quadrophenia",
+      "facet": "Gritty regional dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Rita, Sue and Bob Too",
+      "facet": "Gritty regional dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Lynne Ramsay",
+      "facet": "Gritty regional dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Aftersun",
+      "facet": "Gritty regional dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Lionel Logue",
+      "facet": "War and royal history films",
+      "known_at": 13
+    },
+    {
+      "name": "The Queen",
+      "facet": "War and royal history films",
+      "known_at": 12
+    },
+    {
+      "name": "Helen Mirren",
+      "facet": "War and royal history films",
+      "known_at": 9
+    },
+    {
+      "name": "Elizabeth",
+      "facet": "War and royal history films",
+      "known_at": 12
+    },
+    {
+      "name": "Mrs Brown",
+      "facet": "War and royal history films",
+      "known_at": 14
+    },
+    {
+      "name": "Victoria & Abdul",
+      "facet": "War and royal history films",
+      "known_at": 13
+    },
+    {
+      "name": "Dunkirk",
+      "facet": "War and royal history films",
+      "known_at": 9
+    },
+    {
+      "name": "Little ships of Dunkirk",
+      "facet": "War and royal history films",
+      "known_at": 11
+    },
+    {
+      "name": "Darkest Hour",
+      "facet": "War and royal history films",
+      "known_at": 11
+    },
+    {
+      "name": "Gary Oldman",
+      "facet": "War and royal history films",
+      "known_at": 10
+    },
+    {
+      "name": "1917",
+      "facet": "War and royal history films",
+      "known_at": 10
+    },
+    {
+      "name": "The Dam Busters",
+      "facet": "War and royal history films",
+      "known_at": 11
+    },
+    {
+      "name": "The Imitation Game",
+      "facet": "War and royal history films",
+      "known_at": 10
+    },
+    {
+      "name": "The Bridge on the River Kwai",
+      "facet": "War and royal history films",
+      "known_at": 12
+    },
+    {
+      "name": "Lawrence of Arabia",
+      "facet": "War and royal history films",
+      "known_at": 11
+    },
+    {
+      "name": "Zulu",
+      "facet": "War and royal history films",
+      "known_at": 13
+    },
+    {
+      "name": "Gandhi",
+      "facet": "War and royal history films",
+      "known_at": 12
+    },
+    {
+      "name": "Chariots of Fire",
+      "facet": "War and royal history films",
+      "known_at": 11
+    },
+    {
+      "name": "Mrs Bennet",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 11
+    },
+    {
+      "name": "Keira Knightley",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 7
+    },
+    {
+      "name": "Atonement",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 11
+    },
+    {
+      "name": "A Room with a View",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 13
+    },
+    {
+      "name": "Howards End",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 13
+    },
+    {
+      "name": "Merchant Ivory",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 14
+    },
+    {
+      "name": "The Remains of the Day",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 13
+    },
+    {
+      "name": "Far from the Madding Crowd",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 14
+    },
+    {
+      "name": "Gosford Park",
+      "facet": "Period dramas and literary adaptations",
+      "known_at": 13
+    },
+    {
+      "name": "Julie Andrews",
+      "facet": "British film stars",
+      "known_at": 6
+    },
+    {
+      "name": "Rowan Atkinson",
+      "facet": "British film stars",
+      "known_at": 5
+    },
+    {
+      "name": "Tom Holland",
+      "facet": "British film stars",
+      "known_at": 5
+    },
+    {
+      "name": "Audrey Hepburn",
+      "facet": "British film stars",
+      "known_at": 8
+    },
+    {
+      "name": "Cary Grant",
+      "facet": "British film stars",
+      "known_at": 11
+    },
+    {
+      "name": "Laurence Olivier",
+      "facet": "British film stars",
+      "known_at": 12
+    },
+    {
+      "name": "Vivien Leigh",
+      "facet": "British film stars",
+      "known_at": 12
+    },
+    {
+      "name": "Elizabeth Taylor",
+      "facet": "British film stars",
+      "known_at": 11
+    },
+    {
+      "name": "Michael Caine",
+      "facet": "British film stars",
+      "known_at": 9
+    },
+    {
+      "name": "Anthony Hopkins",
+      "facet": "British film stars",
+      "known_at": 10
+    },
+    {
+      "name": "Ian McKellen",
+      "facet": "British film stars",
+      "known_at": 7
+    },
+    {
+      "name": "Patrick Stewart",
+      "facet": "British film stars",
+      "known_at": 8
+    },
+    {
+      "name": "Kate Winslet",
+      "facet": "British film stars",
+      "known_at": 7
+    },
+    {
+      "name": "Idris Elba",
+      "facet": "British film stars",
+      "known_at": 8
+    },
+    {
+      "name": "Olivia Colman",
+      "facet": "British film stars",
+      "known_at": 10
+    },
+    {
+      "name": "Orlando Bloom",
+      "facet": "British film stars",
+      "known_at": 7
+    },
+    {
+      "name": "Tom Hardy",
+      "facet": "British film stars",
+      "known_at": 9
+    },
+    {
+      "name": "Ralph Fiennes",
+      "facet": "British film stars",
+      "known_at": 11
+    },
+    {
+      "name": "Daniel Day-Lewis",
+      "facet": "British film stars",
+      "known_at": 12
+    },
+    {
+      "name": "Christian Bale",
+      "facet": "British film stars",
+      "known_at": 9
+    },
+    {
+      "name": "Henry Cavill",
+      "facet": "British film stars",
+      "known_at": 8
+    },
+    {
+      "name": "Florence Pugh",
+      "facet": "British film stars",
+      "known_at": 10
+    },
+    {
+      "name": "Kenneth Branagh",
+      "facet": "British film stars",
+      "known_at": 11
+    },
+    {
+      "name": "Psycho",
+      "facet": "Great British directors",
+      "known_at": 8
+    },
+    {
+      "name": "The Birds",
+      "facet": "Great British directors",
+      "known_at": 9
+    },
+    {
+      "name": "Hitchcock cameos",
+      "facet": "Great British directors",
+      "known_at": 11
+    },
+    {
+      "name": "David Lean",
+      "facet": "Great British directors",
+      "known_at": 12
+    },
+    {
+      "name": "Carol Reed",
+      "facet": "Great British directors",
+      "known_at": 14
+    },
+    {
+      "name": "The Third Man",
+      "facet": "Great British directors",
+      "known_at": 13
+    },
+    {
+      "name": "Powell and Pressburger",
+      "facet": "Great British directors",
+      "known_at": 14
+    },
+    {
+      "name": "Richard Attenborough",
+      "facet": "Great British directors",
+      "known_at": 10
+    },
+    {
+      "name": "Ridley Scott",
+      "facet": "Great British directors",
+      "known_at": 10
+    },
+    {
+      "name": "Alien",
+      "facet": "Great British directors",
+      "known_at": 9
+    },
+    {
+      "name": "Gladiator",
+      "facet": "Great British directors",
+      "known_at": 8
+    },
+    {
+      "name": "Christopher Nolan",
+      "facet": "Great British directors",
+      "known_at": 8
+    },
+    {
+      "name": "Inception",
+      "facet": "Great British directors",
+      "known_at": 9
+    },
+    {
+      "name": "Danny Boyle",
+      "facet": "Great British directors",
+      "known_at": 10
+    },
+    {
+      "name": "Slumdog Millionaire",
+      "facet": "Great British directors",
+      "known_at": 10
+    },
+    {
+      "name": "Sam Mendes",
+      "facet": "Great British directors",
+      "known_at": 11
+    },
+    {
+      "name": "Guy Ritchie",
+      "facet": "Great British directors",
+      "known_at": 10
+    },
+    {
+      "name": "Lock, Stock and Two Smoking Barrels",
+      "facet": "Great British directors",
+      "known_at": 11
+    },
+    {
+      "name": "Edgar Wright",
+      "facet": "Great British directors",
+      "known_at": 11
+    },
+    {
+      "name": "Shaun of the Dead",
+      "facet": "Great British directors",
+      "known_at": 9
+    },
+    {
+      "name": "Cornetto trilogy",
+      "facet": "Great British directors",
+      "known_at": 12
+    },
+    {
+      "name": "Steve McQueen",
+      "facet": "Great British directors",
+      "known_at": 13
+    },
+    {
+      "name": "Mike Leigh",
+      "facet": "Great British directors",
+      "known_at": 13
+    },
+    {
+      "name": "Paul King",
+      "facet": "Great British directors",
+      "known_at": 12
+    },
+    {
+      "name": "BAFTA",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 8
+    },
+    {
+      "name": "BAFTA mask",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 13
+    },
+    {
+      "name": "EE Rising Star Award",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 13
+    },
+    {
+      "name": "Pinewood Studios",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 10
+    },
+    {
+      "name": "007 Stage",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 14
+    },
+    {
+      "name": "Shepperton Studios",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 13
+    },
+    {
+      "name": "Leavesden Studios",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 12
+    },
+    {
+      "name": "Warner Bros. Studio Tour London",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 7
+    },
+    {
+      "name": "Hammer Films",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 12
+    },
+    {
+      "name": "Film4",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 12
+    },
+    {
+      "name": "British Film Institute",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 13
+    },
+    {
+      "name": "BFI IMAX",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 13
+    },
+    {
+      "name": "BFI London Film Festival",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 13
+    },
+    {
+      "name": "Edinburgh International Film Festival",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 14
+    },
+    {
+      "name": "British Board of Film Classification",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 12
+    },
+    {
+      "name": "12A rating",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 9
+    },
+    {
+      "name": "Leicester Square",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 8
+    },
+    {
+      "name": "Odeon",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 8
+    },
+    {
+      "name": "Royal Film Performance",
+      "facet": "Studios, locations and the BAFTAs",
+      "known_at": 14
+    }
+  ]
+}

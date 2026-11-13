@@ -1,0 +1,782 @@
+{
+  "subcategory": "home-and-public-services",
+  "facets": [
+    "The NHS and seeing a doctor",
+    "999 and the emergency services",
+    "Royal Mail, postboxes and stamps",
+    "Bins, recycling and the council",
+    "Types of British homes",
+    "Around the British house",
+    "Gas, water, electricity and bills",
+    "The TV licence and the BBC",
+    "Libraries, post offices and the high street",
+    "Official papers and numbers",
+    "Red phone boxes and street furniture",
+    "How public services began"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 3,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "GP surgery",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 5
+    },
+    {
+      "name": "A&E",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 6
+    },
+    {
+      "name": "NHS 111",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 8
+    },
+    {
+      "name": "Chemist",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 4
+    },
+    {
+      "name": "Health visitor",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 11
+    },
+    {
+      "name": "Fit note",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 12
+    },
+    {
+      "name": "NHS App",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 10
+    },
+    {
+      "name": "Clap for Our Carers",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 6
+    },
+    {
+      "name": "NHS waiting list",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 10
+    },
+    {
+      "name": "Matron",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 9
+    },
+    {
+      "name": "Consultant",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 11
+    },
+    {
+      "name": "Junior doctor",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 10
+    },
+    {
+      "name": "NHS dentist",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 8
+    },
+    {
+      "name": "NHS blue logo",
+      "facet": "The NHS and seeing a doctor",
+      "known_at": 6
+    },
+    {
+      "name": "112",
+      "facet": "999 and the emergency services",
+      "known_at": 10
+    },
+    {
+      "name": "101",
+      "facet": "999 and the emergency services",
+      "known_at": 10
+    },
+    {
+      "name": "Fire engine",
+      "facet": "999 and the emergency services",
+      "known_at": 1
+    },
+    {
+      "name": "Ambulance service",
+      "facet": "999 and the emergency services",
+      "known_at": 2
+    },
+    {
+      "name": "Battenburg markings",
+      "facet": "999 and the emergency services",
+      "known_at": 12
+    },
+    {
+      "name": "Paramedic",
+      "facet": "999 and the emergency services",
+      "known_at": 5
+    },
+    {
+      "name": "Custodian helmet",
+      "facet": "999 and the emergency services",
+      "known_at": 5
+    },
+    {
+      "name": "Scotland Yard",
+      "facet": "999 and the emergency services",
+      "known_at": 9
+    },
+    {
+      "name": "Police community support officer",
+      "facet": "999 and the emergency services",
+      "known_at": 10
+    },
+    {
+      "name": "Two-tone siren",
+      "facet": "999 and the emergency services",
+      "known_at": 4
+    },
+    {
+      "name": "Royal Mail",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 4
+    },
+    {
+      "name": "Pillar box",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 3
+    },
+    {
+      "name": "Second class stamp",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 7
+    },
+    {
+      "name": "Postcode",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 5
+    },
+    {
+      "name": "Royal Mail van",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 3
+    },
+    {
+      "name": "Christmas stamps",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 6
+    },
+    {
+      "name": "Recorded delivery",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 10
+    },
+    {
+      "name": "Special Delivery",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 10
+    },
+    {
+      "name": "Sorry we missed you card",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 7
+    },
+    {
+      "name": "Royal cypher",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 12
+    },
+    {
+      "name": "Machin stamp",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 14
+    },
+    {
+      "name": "Penfold pillar box",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 15
+    },
+    {
+      "name": "Wall box",
+      "facet": "Royal Mail, postboxes and stamps",
+      "known_at": 10
+    },
+    {
+      "name": "Wheelie bin",
+      "facet": "Bins, recycling and the council",
+      "known_at": 2
+    },
+    {
+      "name": "Bin day",
+      "facet": "Bins, recycling and the council",
+      "known_at": 3
+    },
+    {
+      "name": "Local council",
+      "facet": "Bins, recycling and the council",
+      "known_at": 7
+    },
+    {
+      "name": "Recycling centre",
+      "facet": "Bins, recycling and the council",
+      "known_at": 5
+    },
+    {
+      "name": "Food waste caddy",
+      "facet": "Bins, recycling and the council",
+      "known_at": 6
+    },
+    {
+      "name": "Garden waste bin",
+      "facet": "Bins, recycling and the council",
+      "known_at": 7
+    },
+    {
+      "name": "Bulky waste collection",
+      "facet": "Bins, recycling and the council",
+      "known_at": 11
+    },
+    {
+      "name": "Fly-tipping",
+      "facet": "Bins, recycling and the council",
+      "known_at": 10
+    },
+    {
+      "name": "Bin men",
+      "facet": "Bins, recycling and the council",
+      "known_at": 3
+    },
+    {
+      "name": "Bottle bank",
+      "facet": "Bins, recycling and the council",
+      "known_at": 5
+    },
+    {
+      "name": "Keep Britain Tidy",
+      "facet": "Bins, recycling and the council",
+      "known_at": 9
+    },
+    {
+      "name": "Carrier bag charge",
+      "facet": "Bins, recycling and the council",
+      "known_at": 7
+    },
+    {
+      "name": "Councillor",
+      "facet": "Bins, recycling and the council",
+      "known_at": 9
+    },
+    {
+      "name": "Town hall",
+      "facet": "Bins, recycling and the council",
+      "known_at": 7
+    },
+    {
+      "name": "Street sweeper",
+      "facet": "Bins, recycling and the council",
+      "known_at": 4
+    },
+    {
+      "name": "Detached house",
+      "facet": "Types of British homes",
+      "known_at": 6
+    },
+    {
+      "name": "Council house",
+      "facet": "Types of British homes",
+      "known_at": 8
+    },
+    {
+      "name": "Tower block",
+      "facet": "Types of British homes",
+      "known_at": 5
+    },
+    {
+      "name": "Back-to-back house",
+      "facet": "Types of British homes",
+      "known_at": 12
+    },
+    {
+      "name": "Maisonette",
+      "facet": "Types of British homes",
+      "known_at": 11
+    },
+    {
+      "name": "Bedsit",
+      "facet": "Types of British homes",
+      "known_at": 11
+    },
+    {
+      "name": "Mews house",
+      "facet": "Types of British homes",
+      "known_at": 13
+    },
+    {
+      "name": "Prefab",
+      "facet": "Types of British homes",
+      "known_at": 12
+    },
+    {
+      "name": "Two-up two-down",
+      "facet": "Types of British homes",
+      "known_at": 11
+    },
+    {
+      "name": "Tenement",
+      "facet": "Types of British homes",
+      "known_at": 11
+    },
+    {
+      "name": "Stately home",
+      "facet": "Types of British homes",
+      "known_at": 8
+    },
+    {
+      "name": "Georgian townhouse",
+      "facet": "Types of British homes",
+      "known_at": 11
+    },
+    {
+      "name": "Airing cupboard",
+      "facet": "Around the British house",
+      "known_at": 8
+    },
+    {
+      "name": "Immersion heater",
+      "facet": "Around the British house",
+      "known_at": 11
+    },
+    {
+      "name": "Separate hot and cold taps",
+      "facet": "Around the British house",
+      "known_at": 5
+    },
+    {
+      "name": "Loft",
+      "facet": "Around the British house",
+      "known_at": 4
+    },
+    {
+      "name": "Conservatory",
+      "facet": "Around the British house",
+      "known_at": 7
+    },
+    {
+      "name": "Net curtains",
+      "facet": "Around the British house",
+      "known_at": 8
+    },
+    {
+      "name": "Letterbox",
+      "facet": "Around the British house",
+      "known_at": 3
+    },
+    {
+      "name": "Electric kettle",
+      "facet": "Around the British house",
+      "known_at": 2
+    },
+    {
+      "name": "Three-pin plug",
+      "facet": "Around the British house",
+      "known_at": 6
+    },
+    {
+      "name": "Chimney pot",
+      "facet": "Around the British house",
+      "known_at": 5
+    },
+    {
+      "name": "Pull-cord light switch",
+      "facet": "Around the British house",
+      "known_at": 8
+    },
+    {
+      "name": "Box room",
+      "facet": "Around the British house",
+      "known_at": 10
+    },
+    {
+      "name": "Utility room",
+      "facet": "Around the British house",
+      "known_at": 9
+    },
+    {
+      "name": "Downstairs loo",
+      "facet": "Around the British house",
+      "known_at": 6
+    },
+    {
+      "name": "Rotary washing line",
+      "facet": "Around the British house",
+      "known_at": 6
+    },
+    {
+      "name": "Aga",
+      "facet": "Around the British house",
+      "known_at": 12
+    },
+    {
+      "name": "Gas meter",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 7
+    },
+    {
+      "name": "Prepayment meter",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 11
+    },
+    {
+      "name": "Smart meter",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 8
+    },
+    {
+      "name": "Ofgem",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 13
+    },
+    {
+      "name": "Combi boiler",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 11
+    },
+    {
+      "name": "Water meter",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 9
+    },
+    {
+      "name": "National Grid",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 10
+    },
+    {
+      "name": "TV pickup",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 12
+    },
+    {
+      "name": "Standing charge",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 13
+    },
+    {
+      "name": "Economy 7",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 13
+    },
+    {
+      "name": "British Gas",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 8
+    },
+    {
+      "name": "Kilowatt-hour",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 11
+    },
+    {
+      "name": "Radiator",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 3
+    },
+    {
+      "name": "Tell Sid",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 14
+    },
+    {
+      "name": "Thames Water",
+      "facet": "Gas, water, electricity and bills",
+      "known_at": 10
+    },
+    {
+      "name": "TV detector van",
+      "facet": "The TV licence and the BBC",
+      "known_at": 11
+    },
+    {
+      "name": "Auntie Beeb",
+      "facet": "The TV licence and the BBC",
+      "known_at": 11
+    },
+    {
+      "name": "Broadcasting House",
+      "facet": "The TV licence and the BBC",
+      "known_at": 12
+    },
+    {
+      "name": "BBC iPlayer",
+      "facet": "The TV licence and the BBC",
+      "known_at": 6
+    },
+    {
+      "name": "ITV",
+      "facet": "The TV licence and the BBC",
+      "known_at": 6
+    },
+    {
+      "name": "Channel 4",
+      "facet": "The TV licence and the BBC",
+      "known_at": 7
+    },
+    {
+      "name": "BBC World Service",
+      "facet": "The TV licence and the BBC",
+      "known_at": 10
+    },
+    {
+      "name": "Freeview",
+      "facet": "The TV licence and the BBC",
+      "known_at": 9
+    },
+    {
+      "name": "John Reith",
+      "facet": "The TV licence and the BBC",
+      "known_at": 14
+    },
+    {
+      "name": "Public library",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 3
+    },
+    {
+      "name": "Library card",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 4
+    },
+    {
+      "name": "Mobile library",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 8
+    },
+    {
+      "name": "Sub-postmaster",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 12
+    },
+    {
+      "name": "Post Office Horizon scandal",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 12
+    },
+    {
+      "name": "High street",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 5
+    },
+    {
+      "name": "Pound shop",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 5
+    },
+    {
+      "name": "Launderette",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 8
+    },
+    {
+      "name": "Bookmaker",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 11
+    },
+    {
+      "name": "Market town",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 10
+    },
+    {
+      "name": "Carnegie library",
+      "facet": "Libraries, post offices and the high street",
+      "known_at": 14
+    },
+    {
+      "name": "National Insurance number",
+      "facet": "Official papers and numbers",
+      "known_at": 10
+    },
+    {
+      "name": "British passport",
+      "facet": "Official papers and numbers",
+      "known_at": 6
+    },
+    {
+      "name": "Driving licence",
+      "facet": "Official papers and numbers",
+      "known_at": 6
+    },
+    {
+      "name": "Birth certificate",
+      "facet": "Official papers and numbers",
+      "known_at": 6
+    },
+    {
+      "name": "Electoral roll",
+      "facet": "Official papers and numbers",
+      "known_at": 12
+    },
+    {
+      "name": "Poll card",
+      "facet": "Official papers and numbers",
+      "known_at": 11
+    },
+    {
+      "name": "Council tax band",
+      "facet": "Official papers and numbers",
+      "known_at": 12
+    },
+    {
+      "name": "MOT",
+      "facet": "Official papers and numbers",
+      "known_at": 10
+    },
+    {
+      "name": "Tax disc",
+      "facet": "Official papers and numbers",
+      "known_at": 12
+    },
+    {
+      "name": "NHS number",
+      "facet": "Official papers and numbers",
+      "known_at": 10
+    },
+    {
+      "name": "HMRC",
+      "facet": "Official papers and numbers",
+      "known_at": 11
+    },
+    {
+      "name": "P60",
+      "facet": "Official papers and numbers",
+      "known_at": 13
+    },
+    {
+      "name": "Self Assessment",
+      "facet": "Official papers and numbers",
+      "known_at": 12
+    },
+    {
+      "name": "Census",
+      "facet": "Official papers and numbers",
+      "known_at": 9
+    },
+    {
+      "name": "Older person's bus pass",
+      "facet": "Official papers and numbers",
+      "known_at": 8
+    },
+    {
+      "name": "K6 telephone kiosk",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 14
+    },
+    {
+      "name": "Bollard",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 6
+    },
+    {
+      "name": "Lamp post",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 2
+    },
+    {
+      "name": "Bus shelter",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 3
+    },
+    {
+      "name": "Police box",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 7
+    },
+    {
+      "name": "Memorial bench",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 8
+    },
+    {
+      "name": "Phone box library",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 9
+    },
+    {
+      "name": "Public defibrillator",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 9
+    },
+    {
+      "name": "Traffic warden",
+      "facet": "Red phone boxes and street furniture",
+      "known_at": 7
+    },
+    {
+      "name": "Founding of the NHS",
+      "facet": "How public services began",
+      "known_at": 9
+    },
+    {
+      "name": "Bow Street Runners",
+      "facet": "How public services began",
+      "known_at": 13
+    },
+    {
+      "name": "Public Libraries Act 1850",
+      "facet": "How public services began",
+      "known_at": 15
+    },
+    {
+      "name": "Homes fit for heroes",
+      "facet": "How public services began",
+      "known_at": 14
+    },
+    {
+      "name": "First 999 call",
+      "facet": "How public services began",
+      "known_at": 12
+    }
+  ]
+}
