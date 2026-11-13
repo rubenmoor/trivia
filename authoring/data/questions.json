@@ -1426782,9 +1426782,9 @@
     },
     {
       "id": "q-18430",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
-      "description": "A phrase that sounds like advice from a chiropractor, but isn't.",
+      "description": "Belfast has a sharp tongue, and this is one of its favourite ways to use it.",
       "question": "You'll hear “Wind your neck in!” in Belfast and across the UK. What does it mean?",
       "answer": "Calm down and back off",
       "wrong_answers": [
@@ -1426840,25 +1426840,32 @@
       "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (“sounds like advice from a chiropractor, but isn't”) tells players the meaning is not posture advice, which rules out the wrong answer “Sit up straight” before any hint. Rewrite the description so it plays on Belfast or put-downs in general without saying the phrase isn't about the body.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (“sounds like advice from a chiropractor, but isn't”) tells players the meaning is not posture advice, which rules out the wrong answer “Sit up straight” before any hint. Rewrite the description so it plays on Belfast or put-downs in general without saying the phrase isn't about the body.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the mid-rant clue from the question and took the tortoise and talking-too-much ideas out of the description.",
+        "reason": "Rewrote the description so it no longer rules out the posture option.",
         "previous": {
-          "description": "Advice for giraffes, tortoises and anyone who's had far too much to say.",
-          "question": "You'll hear “Wind your neck in!” in Belfast, it's never a compliment, and it's aimed at someone mid-rant. What does it mean?"
+          "description": "A phrase that sounds like advice from a chiropractor, but isn't."
         },
         "revised_on": "2026-11-13"
       }
@@ -1426949,7 +1426956,7 @@
     },
     {
       "id": "q-18432",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A tower block for food, with a strict rule about who lives on which floor.",
       "question": "At a traditional afternoon tea on a three-tier cake stand, what goes on the bottom tier, to be eaten first?",
@@ -1426961,7 +1426968,7 @@
       ],
       "hints": [
         "You work your way up the stand from the bottom.",
-        "You start with the savoury things and save the sweetest for the top.",
+        "The scones usually sit on the middle tier.",
         "Think cucumber or egg and cress, with the crusts cut off."
       ],
       "media": {
@@ -1426969,14 +1426976,14 @@
         "role": "decorative",
         "query": "afternoon tea table",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpeke_Hall%2C_The_Oak_Drawing_Room%2C_Table_laid_for_afternoon_tea_-_geograph.org.uk_-_7033970.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Speke_Hall%2C_The_Oak_Drawing_Room%2C_Table_laid_for_afternoon_tea_-_geograph.org.uk_-_7033970.jpg/3840px-Speke_Hall%2C_The_Oak_Drawing_Room%2C_Table_laid_for_afternoon_tea_-_geograph.org.uk_-_7033970.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Michael Garlick · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACamomile_tea%2C_High_Tea_at_the_Savoy_Hotel.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Camomile_tea%2C_High_Tea_at_the_Savoy_Hotel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Payton Walton · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Michael Garlick",
-        "author_url": "https://www.geograph.org.uk/profile/118660",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Payton Walton",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Payton_Walton",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1427007,26 +1427014,34 @@
       "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"start with the savoury things and save the sweetest for the top\") gives the answer away. Sandwiches are the only savoury option, so this hint rules out scones, cakes and biscuits all at once. Hint 2 should be vaguer, for example about the order being a matter of etiquette or about what you might find on the other tiers, without saying \"savoury\".",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"start with the savoury things and save the sweetest for the top\") gives the answer away. Sandwiches are the only savoury option, so this hint rules out scones, cakes and biscuits all at once. Hint 2 should be vaguer, for example about the order being a matter of etiquette or about what you might find on the other tiers, without saying \"savoury\".",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away, with a neutral hint, and moved the savoury idea to hint 2.",
+        "reason": "Replaced hint 2, which gave the answer away by saying “savoury”, with a vaguer clue about the middle tier.",
         "previous": {
           "hints": [
-            "You start with the savoury things.",
-            "The sweetest treats are saved for the top.",
+            "You work your way up the stand from the bottom.",
+            "You start with the savoury things and save the sweetest for the top.",
             "Think cucumber or egg and cress, with the crusts cut off."
           ]
         },
@@ -1427107,10 +1427122,10 @@
     },
     {
       "id": "q-18434",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Named after a planet, but you won't need a rocket to reach it.",
-      "question": "Look inside this Mars bar cut in half. What is the gooey golden layer on top of the soft nougat?",
+      "question": "Inside a Mars bar, what is the gooey golden layer on top of the soft nougat?",
       "answer": "Caramel",
       "wrong_answers": [
         "Honey",
@@ -1427124,12 +1427139,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Mars chocolate bar cut",
-        "note": "A Mars bar cut open, showing the nougat and caramel layers inside the chocolate; no wrapper.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "sweet shop shelves",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGummibaeren_assorti.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Gummibaeren_assorti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "No machine-readable author provided. Texaner assumed (based on copyright claims).",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Texaner",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The Mars bar was first made in Slough, England, in 1932.",
       "subcategory": "cakes-puddings-and-biscuits",
@@ -1427155,22 +1427177,48 @@
         "notes": "A clear Mars bar cross-section may be hard to find on Commons or Openverse."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a Mars bar cut open. The question says “this Mars bar cut in half”, so the essential image must show exactly that, and no new search is allowed. The slot needs a real Mars bar cross-section showing the nougat and caramel layers, with no wrapper. If none can be found, make the image illustrative or decorative instead. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a Mars bar cut open. The question says “this Mars bar cut in half”, so the essential image must show exactly that, and no new search is allowed. The slot needs a real Mars bar cross-section showing the nougat and caramel layers, with no wrapper. If none can be found, make the image illustrative or decorative instead. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No cut-open Mars bar photo exists, so the question no longer refers to a picture and the image is now decorative.",
+        "previous": {
+          "question": "Look inside this Mars bar cut in half. What is the gooey golden layer on top of the soft nougat?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Mars chocolate bar cut",
+            "note": "A Mars bar cut open, showing the nougat and caramel layers inside the chocolate; no wrapper.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18435",
@@ -1430054,7 +1430102,7 @@
     },
     {
       "id": "q-18473",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "The red cup that keeps half of Britain's high streets awake.",
       "question": "Costa Coffee was started in 1971 by two Italian brothers. In which city did they found it?",
@@ -1430066,7 +1430114,7 @@
       ],
       "hints": [
         "The brothers had left Italy before starting the business.",
-        "The city was already home to the world's first underground railway.",
+        "It was the early 1970s, long before coffee chains filled every high street.",
         "Their first roastery was in Lambeth."
       ],
       "media": {
@@ -1430112,26 +1430160,34 @@
       "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"already home to the world's first underground railway\") names a famous fact that only London has, so it gives the answer away at hint 2. The pool even asks that exact fact in q-0314. Hint 1 already cuts the options to London and Seattle, so hint 2 should be a vague clue, for example about the era or the type of business, and must not identify the city.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"already home to the world's first underground railway\") names a famous fact that only London has, so it gives the answer away at hint 2. The pool even asks that exact fact in q-0314. Hint 1 already cuts the options to London and Seattle, so hint 2 should be a vague clue, for example about the era or the type of business, and must not identify the city.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer name the UK, which gave the answer away at once.",
+        "reason": "Replaced hint 2, which identified London, with a vague clue about the era.",
         "previous": {
           "hints": [
-            "Despite the Italian name, the brand is British.",
-            "The brothers had moved to the UK.",
+            "The brothers had left Italy before starting the business.",
+            "The city was already home to the world's first underground railway.",
             "Their first roastery was in Lambeth."
           ]
         },
@@ -1433889,7 +1433945,7 @@
     },
     {
       "id": "q-18523",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Shiny armour, a wise wizard and a lot of knights who never stop questing.",
       "question": "Which of these does NOT belong in the legends of King Arthur?",
@@ -1433901,7 +1433957,7 @@
       ],
       "hints": [
         "Three of these come from tales of Camelot and its knights.",
-        "Arthur's knights sat at one, searched for another, and the king carried the third.",
+        "The odd one out comes from a fairy tale, not a story about knights.",
         "Cinderella left it behind at the ball."
       ],
       "media": {
@@ -1433947,26 +1434003,34 @@
       "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. It describes all three wrong options in turn (the knights sat at the Round Table, searched for the Grail, and the king carried Excalibur), so the glass slipper is the only option left. Hint 2 should instead point vaguely at another story world without matching each Arthurian item. Also, this odd-one-out question doesn't fit the \"Hills, moors and national parks\" subcategory.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. It describes all three wrong options in turn (the knights sat at the Round Table, searched for the Grail, and the king carried Excalibur), so the glass slipper is the only option left. Hint 2 should instead point vaguely at another story world without matching each Arthurian item. Also, this odd-one-out question doesn't fit the \"Hills, moors and national parks\" subcategory.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 to point at the Arthurian items rather than describe the slipper.",
+        "reason": "Replaced hint 2, which matched each Arthurian option in turn, with a vaguer pointer to a fairy tale.",
         "previous": {
           "hints": [
-            "It belongs to a different fairy tale.",
-            "It was lost on a staircase at midnight.",
+            "Three of these come from tales of Camelot and its knights.",
+            "Arthur's knights sat at one, searched for another, and the king carried the third.",
             "Cinderella left it behind at the ball."
           ]
         },
@@ -1436696,10 +1436760,10 @@
     },
     {
       "id": "q-18560",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A Victorian lady who packed light and went very, very far.",
-      "question": "This Victorian traveller rode through the Rocky Mountains, Japan and Persia, and in 1892 was among the first women made Fellows of the Royal Geographical Society. Who is she?",
+      "question": "Which Victorian traveller rode through the Rocky Mountains, Japan and Persia, and in 1892 was among the first women made Fellows of the Royal Geographical Society?",
       "answer": "Isabella Bird",
       "wrong_answers": [
         "Gertrude Bell",
@@ -1436713,21 +1436777,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Isabella Bird portrait",
-        "note": "A portrait photo of Isabella Bird, without a caption naming her.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AIsabella_Bird_portrait.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Isabella_Bird_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "G.P. Putnam's Sons · Public domain · Wikimedia Commons",
+        "role": "illustrative",
+        "query": "Rocky Mountains Colorado",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARocky_Mountains_around_Mount_Ida%2C_Rocky_Mountains_National_Park_20110824_2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Rocky_Mountains_around_Mount_Ida%2C_Rocky_Mountains_National_Park_20110824_2.jpg/3840px-Rocky_Mountains_around_Mount_Ida%2C_Rocky_Mountains_National_Park_20110824_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "DXR · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "G.P. Putnam's Sons",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "DXR",
+        "author_url": "https://commons.wikimedia.org/wiki/User:DXR",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Isabella Bird began travelling partly on doctor's advice, after years of poor health at home.",
       "subcategory": "pioneers-and-heroes",
@@ -1436753,22 +1436815,57 @@
         "notes": "Nobody can recognise her from a Victorian portrait, so 'essential' media adds nothing. The question is long (over 160 characters) and pure recall."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The portrait's licence is unsuitable, so the question no longer points to a photo and uses an illustrative Rocky Mountains image instead.",
+        "previous": {
+          "question": "This Victorian traveller rode through the Rocky Mountains, Japan and Persia, and in 1892 was among the first women made Fellows of the Royal Geographical Society. Who is she?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Isabella Bird portrait",
+            "note": "A portrait photo of Isabella Bird, without a caption naming her.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AIsabella_Bird_portrait.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Isabella_Bird_portrait.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "G.P. Putnam's Sons · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "G.P. Putnam's Sons",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18561",
@@ -1439641,10 +1439738,10 @@
     },
     {
       "id": "q-18599",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "The most famous Cheddar in Britain that isn't a cheese.",
-      "question": "My bones lay in a cave in Cheddar Gorge for about 10,000 years. How did I live?",
+      "question": "A man's skeleton lay in a cave in Cheddar Gorge for about 10,000 years. How did he live?",
       "answer": "As a hunter-gatherer",
       "wrong_answers": [
         "As a wheat farmer",
@@ -1439652,25 +1439749,27 @@
         "As a bronze smith"
       ],
       "hints": [
-        "I lived in the Stone Age.",
-        "I lived not long after the last Ice Age ended.",
-        "My way of life is two words: what I did with deer and what I did with nuts."
+        "He lived in the Stone Age.",
+        "He lived not long after the last Ice Age ended.",
+        "His way of life is two words: what he did with deer and what he did with nuts."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "Cheddar Gorge",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACheddar_Gorge_-_geograph.org.uk_-_4450237.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Cheddar_Gorge_-_geograph.org.uk_-_4450237.jpg/3840px-Cheddar_Gorge_-_geograph.org.uk_-_4450237.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Michael Garlick · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACheddar_gorge_from_aircraft_arp.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Cheddar_gorge_from_aircraft_arp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Adrian Pingstone (Arpingstone) · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Michael Garlick",
-        "author_url": "https://www.geograph.org.uk/profile/118660",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Adrian Pingstone (Arpingstone)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arpingstone",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-user"
+        ]
       },
       "fun_fact": "Cheddar Man is Britain's oldest almost complete skeleton, and his DNA suggests he had dark skin and blue eyes.",
       "subcategory": "early-britain",
@@ -1439699,26 +1439798,35 @@
       "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question is a first-person riddle (\"My bones lay… How did I live?\") that asks about the speaker's way of life, not who the speaker is. House style says a riddle like this should be a direct question. Rewrite it as one, e.g. \"A man's skeleton lay in a cave in Cheddar Gorge for about 10,000 years. How did he live?\", and change the hints to the third person to match.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question is a first-person riddle (\"My bones lay… How did I live?\") that asks about the speaker's way of life, not who the speaker is. House style says a riddle like this should be a direct question. Rewrite it as one, e.g. \"A man's skeleton lay in a cave in Cheddar Gorge for about 10,000 years. How did he live?\", and change the hints to the third person to match.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which ruled out both farming options, with a vaguer hint about the time.",
+        "reason": "Rewrote the first-person riddle as a direct question and changed the hints to the third person.",
         "previous": {
+          "question": "My bones lay in a cave in Cheddar Gorge for about 10,000 years. How did I live?",
           "hints": [
             "I lived in the Stone Age.",
-            "Farming hadn't reached Britain yet in my day.",
+            "I lived not long after the last Ice Age ended.",
             "My way of life is two words: what I did with deer and what I did with nuts."
           ]
         },
@@ -1442960,7 +1443068,7 @@
     },
     {
       "id": "q-18642",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A fielding position that sounds like a bad dance move.",
       "question": "In cricket, one umpire stands at square leg, level with the batter. Which decisions is that umpire best placed to judge?",
@@ -1442993,7 +1443101,7 @@
         ],
         "pd_reasons": []
       },
-      "fun_fact": "The umpires don't swap places between overs: the bowling switches ends, so their jobs swap instead.",
+      "fun_fact": "At the end of every over, the two umpires swap jobs: one walks out to square leg while the other takes their place behind the stumps.",
       "subcategory": "rugby-and-cricket",
       "style": null,
       "concept": "Square leg",
@@ -1443016,33 +1443124,36 @@
         "difficulty_estimate": 12,
         "notes": "The question is long, and its definition of square leg reads like a school test. The square-leg umpire also helps with some calls such as short runs and high no-balls, but run-outs and stumpings is clearly the best answer."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact is misleading and the fact check marks it wrong. Each umpire stays at the same end, but at the end of every over they do move: one goes from behind the stumps to square leg, and the other goes from square leg to behind the stumps. Saying they “don't swap places” is false as most people will read it. Rewrite the fun fact, for example: “At the end of every over, the two umpires swap jobs: one walks out to square leg while the other takes his place behind the stumps.” Fact check: wrong. The answer is fine, but the fun fact is false. Umpires do change places between overs. The bowler's-end umpire moves to square leg, and the square-leg umpire goes to the new bowler's end. The roles swap and so do the positions.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact is misleading and the fact check marks it wrong. Each umpire stays at the same end, but at the end of every over they do move: one goes from behind the stumps to square leg, and the other goes from square leg to behind the stumps. Saying they “don't swap places” is false as most people will read it. Rewrite the fun fact, for example: “At the end of every over, the two umpires swap jobs: one walks out to square leg while the other takes his place behind the stumps.” Fact check: wrong. The answer is fine, but the fun fact is false. Umpires do change places between overs. The bowler's-end umpire moves to square leg, and the square-leg umpire goes to the new bowler's end. The roles swap and so do the positions.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question and replaced hints 1 and 2, which ruled out options or described the answer too directly.",
+        "reason": "Fixed the false fun fact: at the end of each over the umpires do swap positions.",
         "previous": {
-          "question": "Square leg is a cricket fielding position level with the batter, on the leg side. One umpire stands there. What is that umpire best placed to judge?",
-          "hints": [
-            "The other umpire, behind the bowler, handles most other calls.",
-            "It's about whether the batter made it back to the crease.",
-            "Think of the wicketkeeper whipping off the bails."
-          ]
+          "fun_fact": "The umpires don't swap places between overs: the bowling switches ends, so their jobs swap instead."
         },
         "revised_on": "2026-11-13"
       }
@@ -1443897,10 +1444008,10 @@
     },
     {
       "id": "q-18654",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 5,
       "description": "A dress that looks like it was cut from the family picnic blanket.",
-      "question": "Many British primary school girls wear a checked dress like this one in the summer term. What is this pattern called?",
+      "question": "Many British primary school girls wear a checked summer dress, often blue and white. What is this checked pattern called?",
       "answer": "Gingham",
       "wrong_answers": [
         "Tartan",
@@ -1443908,18 +1444019,25 @@
         "Houndstooth"
       ],
       "hints": [
-        "It's usually white mixed with just one colour, often blue or red.",
+        "Its little squares are all the same size, a bit like a chessboard.",
         "The same pattern is on many classic picnic tablecloths.",
         "Dorothy wears a blue dress like this in The Wizard of Oz."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "gingham school dress",
-        "note": "A clear photo of a blue-and-white gingham (small even checks) summer dress or fabric; no text or labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "primary school classroom",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1st_year_classroom%2C_Hallfield_Primary_School_-_geograph.org.uk_-_4684915.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/1st_year_classroom%2C_Hallfield_Primary_School_-_geograph.org.uk_-_4684915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "David Hawgood · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "David Hawgood",
+        "author_url": "https://www.geograph.org.uk/profile/560",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The word “gingham” is thought to come from the Malay word “genggang”, meaning striped.",
       "subcategory": "school-and-childhood",
@@ -1443945,22 +1444063,55 @@
         "notes": "The Malay origin of 'gingham' is widely cited but not certain. The description's picnic-blanket line duplicates hint 2. A clear gingham dress photo should be easy to find."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates gives the essential image the question needs: a clear photo of a gingham dress or fabric. #1 is a black-and-white archive scan whose typed caption says \"blue gingham dress\", which gives the answer away. In #2 the gingham dress is a tiny background detail among children in blue jumpers. #3–#6 show no gingham. A new search, such as \"blue gingham dress\" or \"gingham fabric\", is needed, but no more searches are allowed. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates gives the essential image the question needs: a clear photo of a gingham dress or fabric. #1 is a black-and-white archive scan whose typed caption says \"blue gingham dress\", which gives the answer away. In #2 the gingham dress is a tiny background detail among children in blue jumpers. #3–#6 show no gingham. A new search, such as \"blue gingham dress\" or \"gingham fabric\", is needed, but no more searches are allowed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 4,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable gingham photo exists, so the question now describes the dress in words, the image is a decorative school scene, and hint 1 no longer repeats the question.",
+        "previous": {
+          "difficulty": 4,
+          "question": "Many British primary school girls wear a checked dress like this one in the summer term. What is this pattern called?",
+          "hints": [
+            "It's usually white mixed with just one colour, often blue or red.",
+            "The same pattern is on many classic picnic tablecloths.",
+            "Dorothy wears a blue dress like this in The Wizard of Oz."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "gingham school dress",
+            "note": "A clear photo of a blue-and-white gingham (small even checks) summer dress or fabric; no text or labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18655",
@@ -1445583,7 +1445734,7 @@
     },
     {
       "id": "q-18676",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Checking under the bed for monsters, but the bed is Parliament and the monster is from 1605.",
       "question": "Before every State Opening of Parliament, these royal bodyguards search the cellars of Westminster with lanterns. Who are they?",
@@ -1445600,12 +1445751,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Houses of Parliament night",
-        "note": "Yeomen of the Guard in their red and gold Tudor uniforms, with no caption or sign naming them.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Westminster Palace bridge night",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalace_of_Westminster%2C_London_-_Feb_2007.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Diliff · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Diliff",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Diliff",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The Yeomen of the Guard were founded by Henry VII after the Battle of Bosworth in 1485.",
       "subcategory": "tudors-and-stuarts",
@@ -1445631,22 +1445789,47 @@
         "notes": "Most UK adults confuse the Yeomen of the Guard with the Beefeaters (Yeomen Warders), whose uniforms are almost the same. That makes this harder than 11; I'd say 12–13. Calling them 'the oldest military corps' is usually worded as the oldest surviving one. The fun fact repeats hint 3 (Henry VII, 1485), so it adds nothing new. The photo is shown as part of the question, but it's really illustrative."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot doesn't fit. It is marked essential and its note asks for Yeomen of the Guard in uniform, which would show the answer. The search was for \"Houses of Parliament night\", so the candidates are buildings. The question doesn't need an image to be answered. Change the role to illustrative and use candidate 3 (Westminster Palace and Bridge at night). It fits the question and doesn't show any guard unit. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot doesn't fit. It is marked essential and its note asks for Yeomen of the Guard in uniform, which would show the answer. The search was for \"Houses of Parliament night\", so the candidates are buildings. The question doesn't need an image to be answered. Change the role to illustrative and use candidate 3 (Westminster Palace and Bridge at night). It fits the question and doesn't show any guard unit. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media from an essential photo of the guards, which would show the answer, to an illustrative image of Westminster at night, as the reviewer suggested.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Houses of Parliament night",
+            "note": "Yeomen of the Guard in their red and gold Tudor uniforms, with no caption or sign naming them.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18677",
@@ -1446911,9 +1447094,9 @@
     },
     {
       "id": "q-18693",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
-      "description": "A man who tried to out-think the British weather with a pencil, which tells you everything about his optimism.",
+      "description": "A scientist who took British drizzle very personally.",
       "question": "Which of these is NOT something the English scientist Lewis Fry Richardson is known for?",
       "answer": "Naming the cloud types cumulus and stratus",
       "wrong_answers": [
@@ -1446928,12 +1447111,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Lewis Fry Richardson",
+        "role": "decorative",
+        "query": "weather station instruments",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADavis_Instruments_weather_station_-_detail.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Davis_Instruments_weather_station_-_detail.jpg/3840px-Davis_Instruments_weather_station_-_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Cjp24 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Cjp24",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cjp24",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Richardson worked out his test forecast during the First World War while serving as an ambulance driver in France.",
       "subcategory": "weather-and-seasons",
@@ -1446962,20 +1447152,45 @@
       "needs_media": false,
       "batch": "batch-64",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows Lewis Fry Richardson or anything to do with weather forecasting, and no new search is allowed. There is a second problem: the description (\"tried to out-think the British weather with a pencil\") states the trait behind the option \"Working out a weather forecast by hand with maths\", so it rules that option out before any hint. It should play on the weather theme without the hand-calculation detail. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows Lewis Fry Richardson or anything to do with weather forecasting, and no new search is allowed. There is a second problem: the description (\"tried to out-think the British weather with a pencil\") states the trait behind the option \"Working out a weather forecast by hand with maths\", so it rules that option out before any hint. It should play on the weather theme without the hand-calculation detail. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer gives away the hand-forecast option, and changed the media to a decorative weather image because no photo of Richardson was found.",
+        "previous": {
+          "description": "A man who tried to out-think the British weather with a pencil, which tells you everything about his optimism.",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Lewis Fry Richardson",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18694",
