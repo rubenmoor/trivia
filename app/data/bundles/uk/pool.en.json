@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "d78724a5",
+  "hash": "bece0d89",
   "questions": [
     {
       "id": "q-9487",
@@ -32577,6 +32577,40 @@
       "background": null
     },
     {
+      "id": "q-18430",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "Belfast has a sharp tongue, and this is one of its favourite ways to use it.",
+      "question": "You'll hear “Wind your neck in!” in Belfast and across the UK. What does it mean?",
+      "answer": "Calm down and back off",
+      "wrong_answers": [
+        "Look where you're going",
+        "Sit up straight",
+        "Hurry up"
+      ],
+      "hints": [
+        "It's not about your actual neck.",
+        "Think of a tortoise pulling its head back into its shell.",
+        "It's a firm way of saying “settle down”."
+      ],
+      "fun_fact": "Northern Irish speech has plenty of firm put-downs, like “catch yourself on”, which means “don't be daft”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Belfast_-_Titanic_Quarter_-_Titanic_Belfast_-_geograph.org.uk_-_3699862.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABelfast_-_Titanic_Quarter_-_Titanic_Belfast_-_geograph.org.uk_-_3699862.jpg",
+        "credit": "Joseph Mischyshyn · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joseph Mischyshyn",
+        "author_url": "https://www.geograph.org.uk/profile/34083"
+      },
+      "background": null
+    },
+    {
       "id": "q-18431",
       "status": "approved",
       "difficulty": 2,
@@ -32611,6 +32645,40 @@
       "background": null
     },
     {
+      "id": "q-18432",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "cakes-puddings-and-biscuits",
+      "bundle": "uk",
+      "description": "A tower block for food, with a strict rule about who lives on which floor.",
+      "question": "At a traditional afternoon tea on a three-tier cake stand, what goes on the bottom tier, to be eaten first?",
+      "answer": "Sandwiches",
+      "wrong_answers": [
+        "Scones",
+        "Cakes and pastries",
+        "Biscuits"
+      ],
+      "hints": [
+        "You work your way up the stand from the bottom.",
+        "The scones usually sit on the middle tier.",
+        "Think cucumber or egg and cress, with the crusts cut off."
+      ],
+      "fun_fact": "Afternoon tea is said to have been started in the 1840s by Anna, Duchess of Bedford, who got hungry between lunch and a late dinner.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Camomile_tea%2C_High_Tea_at_the_Savoy_Hotel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACamomile_tea%2C_High_Tea_at_the_Savoy_Hotel.jpg",
+        "credit": "Payton Walton · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Payton Walton",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Payton_Walton"
+      },
+      "background": null
+    },
+    {
       "id": "q-18433",
       "status": "approved",
       "difficulty": 7,
@@ -32641,6 +32709,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Crown Lynn Potteries Ltd",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-18434",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "cakes-puddings-and-biscuits",
+      "bundle": "uk",
+      "description": "Named after a planet, but you won't need a rocket to reach it.",
+      "question": "Inside a Mars bar, what is the gooey golden layer on top of the soft nougat?",
+      "answer": "Caramel",
+      "wrong_answers": [
+        "Honey",
+        "Peanut butter",
+        "Jam"
+      ],
+      "hints": [
+        "It's sweet and very sticky.",
+        "It's made by cooking sugar until it turns brown.",
+        "It's also a sweet, toffee-like sauce."
+      ],
+      "fun_fact": "The Mars bar was first made in Slough, England, in 1932.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Gummibaeren_assorti.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGummibaeren_assorti.jpg",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "No machine-readable author provided. Texaner assumed (based on copyright claims).",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Texaner"
       },
       "background": null
     },
@@ -33933,6 +34035,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Gareth James",
         "author_url": "https://www.geograph.org.uk/profile/32787"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18473",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "drinks",
+      "bundle": "uk",
+      "description": "The red cup that keeps half of Britain's high streets awake.",
+      "question": "Costa Coffee was started in 1971 by two Italian brothers. In which city did they found it?",
+      "answer": "London",
+      "wrong_answers": [
+        "Milan",
+        "Rome",
+        "Seattle"
+      ],
+      "hints": [
+        "The brothers had left Italy before starting the business.",
+        "It was the early 1970s, long before coffee chains filled every high street.",
+        "Their first roastery was in Lambeth."
+      ],
+      "fun_fact": "Bruno and Sergio Costa first sold their roasted coffee to caterers before opening their own coffee shop in 1978.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/A_person_holds_a_cup_of_cappuccino_featuring_intricate_latte_art%2C_sitting_at_a_caf%C3%A9_table.jpg/3840px-A_person_holds_a_cup_of_cappuccino_featuring_intricate_latte_art%2C_sitting_at_a_caf%C3%A9_table.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_person_holds_a_cup_of_cappuccino_featuring_intricate_latte_art%2C_sitting_at_a_caf%C3%A9_table.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
       },
       "background": null
     },
@@ -35535,6 +35671,40 @@
       "background": null
     },
     {
+      "id": "q-18523",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "Shiny armour, a wise wizard and a lot of knights who never stop questing.",
+      "question": "Which of these does NOT belong in the legends of King Arthur?",
+      "answer": "A glass slipper",
+      "wrong_answers": [
+        "The Round Table",
+        "The sword Excalibur",
+        "The Holy Grail"
+      ],
+      "hints": [
+        "Three of these come from tales of Camelot and its knights.",
+        "The odd one out comes from a fairy tale, not a story about knights.",
+        "Cinderella left it behind at the ball."
+      ],
+      "fun_fact": "In the legends, Excalibur was given to Arthur by the Lady of the Lake, and thrown back into the water at the end.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Tintagel_Castle_ruins_-_geograph.org.uk_-_7416531.jpg/3840px-Tintagel_Castle_ruins_-_geograph.org.uk_-_7416531.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATintagel_Castle_ruins_-_geograph.org.uk_-_7416531.jpg",
+        "credit": "Bryn Holmes · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Bryn Holmes",
+        "author_url": "https://www.geograph.org.uk/profile/137152"
+      },
+      "background": null
+    },
+    {
       "id": "q-18524",
       "status": "approved",
       "difficulty": 13,
@@ -36755,6 +36925,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Unknown authorUnknown author",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-18560",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "pioneers-and-heroes",
+      "bundle": "uk",
+      "description": "A Victorian lady who packed light and went very, very far.",
+      "question": "Which Victorian traveller rode through the Rocky Mountains, Japan and Persia, and in 1892 was among the first women made Fellows of the Royal Geographical Society?",
+      "answer": "Isabella Bird",
+      "wrong_answers": [
+        "Gertrude Bell",
+        "Mary Kingsley",
+        "Marianne North"
+      ],
+      "hints": [
+        "She wrote “A Lady's Life in the Rocky Mountains”.",
+        "She also wrote “Unbeaten Tracks in Japan”.",
+        "Her surname is something that can fly."
+      ],
+      "fun_fact": "Isabella Bird began travelling partly on doctor's advice, after years of poor health at home.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Rocky_Mountains_around_Mount_Ida%2C_Rocky_Mountains_National_Park_20110824_2.jpg/3840px-Rocky_Mountains_around_Mount_Ida%2C_Rocky_Mountains_National_Park_20110824_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARocky_Mountains_around_Mount_Ida%2C_Rocky_Mountains_National_Park_20110824_2.jpg",
+        "credit": "DXR · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "DXR",
+        "author_url": "https://commons.wikimedia.org/wiki/User:DXR"
       },
       "background": null
     },
@@ -38047,6 +38251,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Dejan Krsmanovic",
         "author_url": "https://www.flickr.com/people/155403590@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18599",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "The most famous Cheddar in Britain that isn't a cheese.",
+      "question": "A man's skeleton lay in a cave in Cheddar Gorge for about 10,000 years. How did he live?",
+      "answer": "As a hunter-gatherer",
+      "wrong_answers": [
+        "As a wheat farmer",
+        "As a cattle herder",
+        "As a bronze smith"
+      ],
+      "hints": [
+        "He lived in the Stone Age.",
+        "He lived not long after the last Ice Age ended.",
+        "His way of life is two words: what he did with deer and what he did with nuts."
+      ],
+      "fun_fact": "Cheddar Man is Britain's oldest almost complete skeleton, and his DNA suggests he had dark skin and blue eyes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Cheddar_gorge_from_aircraft_arp.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACheddar_gorge_from_aircraft_arp.jpg",
+        "credit": "Adrian Pingstone (Arpingstone) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Adrian Pingstone (Arpingstone)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arpingstone"
       },
       "background": null
     },
@@ -39479,6 +39717,40 @@
       "background": null
     },
     {
+      "id": "q-18642",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "rugby-and-cricket",
+      "bundle": "uk",
+      "description": "A fielding position that sounds like a bad dance move.",
+      "question": "In cricket, one umpire stands at square leg, level with the batter. Which decisions is that umpire best placed to judge?",
+      "answer": "Run-outs and stumpings",
+      "wrong_answers": [
+        "LBW appeals",
+        "Front-foot no-balls",
+        "Wides"
+      ],
+      "hints": [
+        "From square leg, the umpire sees the batter's crease side-on.",
+        "These calls depend on quick hands in the field more than on the bowler.",
+        "Think of the wicketkeeper whipping off the bails."
+      ],
+      "fun_fact": "At the end of every over, the two umpires swap jobs: one walks out to square leg while the other takes their place behind the stumps.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Old_Finchleians_Cricket_Club_v_Highgate_Taverners_Cricket_Club_at_Finchley%2C_London%2C_England_09.jpg/3840px-Old_Finchleians_Cricket_Club_v_Highgate_Taverners_Cricket_Club_at_Finchley%2C_London%2C_England_09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Finchleians_Cricket_Club_v_Highgate_Taverners_Cricket_Club_at_Finchley%2C_London%2C_England_09.jpg",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Acabashi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
       "id": "q-18643",
       "status": "approved",
       "difficulty": 4,
@@ -39849,6 +40121,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Blakegripling ph",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Blakegripling_ph&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18654",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "school-and-childhood",
+      "bundle": "uk",
+      "description": "A dress that looks like it was cut from the family picnic blanket.",
+      "question": "Many British primary school girls wear a checked summer dress, often blue and white. What is this checked pattern called?",
+      "answer": "Gingham",
+      "wrong_answers": [
+        "Tartan",
+        "Paisley",
+        "Houndstooth"
+      ],
+      "hints": [
+        "Its little squares are all the same size, a bit like a chessboard.",
+        "The same pattern is on many classic picnic tablecloths.",
+        "Dorothy wears a blue dress like this in The Wizard of Oz."
+      ],
+      "fun_fact": "The word “gingham” is thought to come from the Malay word “genggang”, meaning striped.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/1st_year_classroom%2C_Hallfield_Primary_School_-_geograph.org.uk_-_4684915.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1st_year_classroom%2C_Hallfield_Primary_School_-_geograph.org.uk_-_4684915.jpg",
+        "credit": "David Hawgood · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "David Hawgood",
+        "author_url": "https://www.geograph.org.uk/profile/560"
       },
       "background": null
     },
@@ -40567,6 +40873,40 @@
       "background": null
     },
     {
+      "id": "q-18676",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "Checking under the bed for monsters, but the bed is Parliament and the monster is from 1605.",
+      "question": "Before every State Opening of Parliament, these royal bodyguards search the cellars of Westminster with lanterns. Who are they?",
+      "answer": "The Yeomen of the Guard",
+      "wrong_answers": [
+        "The Coldstream Guards",
+        "The Household Cavalry",
+        "The Gentlemen at Arms"
+      ],
+      "hints": [
+        "The search remembers the Gunpowder Plot.",
+        "Their red and gold uniform dates back to Tudor times.",
+        "Henry VII founded them in 1485, and they are the oldest military corps in Britain."
+      ],
+      "fun_fact": "The Yeomen of the Guard were founded by Henry VII after the Battle of Bosworth in 1485.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalace_of_Westminster%2C_London_-_Feb_2007.jpg",
+        "credit": "Diliff · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Diliff",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Diliff"
+      },
+      "background": null
+    },
+    {
       "id": "q-18677",
       "status": "approved",
       "difficulty": 8,
@@ -41107,6 +41447,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Basotxerri",
         "author_url": "https://commons.wikimedia.org/wiki/User:Basotxerri"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18693",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "A scientist who took British drizzle very personally.",
+      "question": "Which of these is NOT something the English scientist Lewis Fry Richardson is known for?",
+      "answer": "Naming the cloud types cumulus and stratus",
+      "wrong_answers": [
+        "Working out a weather forecast by hand with maths",
+        "Dreaming up a “forecast factory” of 64,000 human calculators",
+        "Showing that a coastline's length depends on your ruler"
+      ],
+      "hints": [
+        "He was a pioneer of number-crunching weather forecasts.",
+        "His ideas came in the early 20th century.",
+        "The odd one out was done by Luke Howard around 1802."
+      ],
+      "fun_fact": "Richardson worked out his test forecast during the First World War while serving as an ambulance driver in France.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Davis_Instruments_weather_station_-_detail.jpg/3840px-Davis_Instruments_weather_station_-_detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADavis_Instruments_weather_station_-_detail.jpg",
+        "credit": "Cjp24 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Cjp24",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cjp24"
       },
       "background": null
     },
