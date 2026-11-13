@@ -20,6 +20,7 @@
     submitLabel = t("screen.player.submit"),
     onchoose,
     ondelete,
+    onbadges,
     onclose,
   }: {
     players: Player[];
@@ -35,6 +36,8 @@
     onchoose: (name: string) => void;
     /** A delete control per name (the Player screen). */
     ondelete?: (p: Player) => void;
+    /** A badges control per name (the Player screen, not in the demo). */
+    onbadges?: (p: Player) => void;
     onclose?: () => void;
   } = $props();
 
@@ -119,6 +122,11 @@
             <span class="who"><Icon name="person" /> {p.name}{#if i === 0 && free}<Prompt action="confirm" />{/if}</span>
             <span class="label">{games(p)}</span>
           </button>
+          {#if onbadges}
+            <button class="badges" onclick={() => onbadges(p)} disabled={busy} title={t("screen.player.badges", { name: p.name })}>
+              <Icon name="seal" />
+            </button>
+          {/if}
           {#if ondelete}
             <button class="delete" onclick={() => ondelete(p)} disabled={busy} title={t("screen.player.delete", { name: p.name })}>
               <Icon name="trash" />
@@ -177,7 +185,8 @@
     position: relative;
     animation: arrive 0.5s calc(0.15s + var(--i) * 0.06s) var(--spring) backwards;
   }
-  .delete {
+  .delete,
+  .badges {
     position: absolute;
     top: calc(-0.7 * var(--u));
     right: calc(-0.7 * var(--u));
@@ -197,7 +206,13 @@
       color 0.15s,
       border-color 0.15s;
   }
+  .badges {
+    right: calc(1.9 * var(--u));
+  }
   .entry:hover .delete,
+  .entry:hover .badges,
+  .badges:focus-visible,
+  .badges:global([data-nav]),
   .delete:focus-visible,
   .delete:global([data-nav]) {
     opacity: 1;
@@ -205,6 +220,10 @@
   .delete:hover {
     color: var(--coral);
     border-color: var(--coral);
+  }
+  .badges:hover {
+    color: var(--sky);
+    border-color: var(--sky);
   }
   .name-button {
     display: grid;

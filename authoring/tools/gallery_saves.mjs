@@ -3,6 +3,7 @@
 // pool (plan 176), only the saves its shots need.
 // Usage: node authoring/tools/gallery_saves.mjs <ui locale> → JSON {saves: {name: save}, meta: {name: {...}}} on stdout.
 import { QUESTION_MS } from "../../app/client/src/engine/choice.ts";
+import { BADGE_NAMES, emptyCareer } from "../../app/client/src/engine/career.ts";
 import { answer, claim, expire, newSession, pick, show, view } from "../../app/client/src/engine/game.ts";
 import { baseSave, EXTRA_PLAYERS, checkVersion, io, latestState, PLAYERS, playTo, rightOf, withExtraPlayers } from "./demo_saves.mjs";
 import { loadData } from "./engine_data.mjs";
@@ -113,6 +114,19 @@ if (themes.length) {
     ({ save: saves["topics-lost"] } = answer(structuredClone(saves.topics), data, io(), (meta.topics.right + 1) % latestState(saves.topics).answers.length));
   }
 }
+
+// Careers of every player (plan 197): some badges, all of them, turned off. Shown marks set: no celebration.
+const withCareer = (save, fn) => {
+  save = structuredClone(save);
+  for (const p of save.players) p.career = fn(emptyCareer());
+  return save;
+};
+const earned = (names) => Object.fromEntries(names.map((n, i) => [n, { on: `2026-10-${String(1 + (i % 28)).padStart(2, "0")}`, shown: true }]));
+const SOME = ["CAREER_HISTORY_ELEMENTARY", "CAREER_NATURE_ELEMENTARY", "CAREER_SPORT_ELEMENTARY", "CAREER_SCIENCE_ELEMENTARY", "CAREER_HISTORY_MIDDLE", "CAREER_SCORE_100", "CAREER_SCORE_250", "CAREER_YEAR_ADULTS"];
+saves["career"] = withCareer(done, (c) => ({ ...c, score: 312, badges: earned(SOME) }));
+saves["career-full"] = withCareer(done, (c) => ({ ...c, score: 120000, badges: earned(BADGE_NAMES) }));
+saves["career-off"] = withCareer(done, (c) => ({ ...c, off: true, badges: earned(SOME) }));
+meta.career = meta["career-full"] = meta["career-off"] = { right: 0 };
 
 // Eight known names: the Join screen with up to eight seats.
 saves.crowd = withExtraPlayers(structuredClone(done));

@@ -132,7 +132,8 @@ The career gives each player a long-term sense of progress: school-style subject
 - Person titles only where they work for everyone (de: no gendered masculine).
 
 ## Badge page and celebration (milestone 20)
-- A badge page lists all badges (earned and open) per player; it opens with celebration, sound and animation when a new badge is earned. Design and screens: part 3 (`plan 192: masterplan`).
+- A badge page lists all badges (earned and open) per player; it opens with celebration, sound and animation when a new badge is earned. Design and screens: `plan 197: Badge page and celebration` (`game/Career.svelte`; celebration: `task 1990: Career celebration of new badges`).
+- Page (task 1989): opened by the badges button on each name of the Player screen (not in the demo); header: name, «n of 39», an empty slot for score and rank (part 6), the on/off switch (`career` op); groups subjects × grades, diplomas, college, school years, score; earned in colour with the date, open dimmed in greyscale; the focused badge's name, description and date below (`badgeText`); off: only the switch.
 
 ## Age-group reach
 - Windows (`app/data/age-groups.json`): kids 1–6, young teens 1–10, young adults 4–13, adults 5–15.

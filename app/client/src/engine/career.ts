@@ -6,22 +6,22 @@ import { subOf } from "./pool.ts";
 import type { EngineData, GameRow, GameState, PlayerRow, SaveData } from "./state.ts";
 import { GameError, gameLocale, transact } from "./state.ts";
 
-/** Ids of app/data/subjects.json, same order (career.test.ts checks). @internal used by tests and the UI parts */
+/** Ids of app/data/subjects.json, same order (career.test.ts checks). */
 export const SUBJECTS = ["history", "geography", "nature", "science", "arts", "media", "sport"] as const;
 
-/** Ids of app/data/age-groups.json, kids first (career.test.ts checks). @internal used by tests and the UI parts */
+/** Ids of app/data/age-groups.json, kids first (career.test.ts checks). */
 export const YEAR_GROUPS = ["kids", "young_teens", "young_adults", "adults"] as const;
 
 /** Difficulty floors of the grades elementary, middle, high, college: a right answer counts for every grade with floor ≤ d. */
 const BAND_FLOORS = [1, 5, 9, 13] as const;
 const GRADES = ["elementary", "middle", "high"] as const;
-/** Right answers per subject for the grades elementary, middle, high. @internal used by the badge texts */
+/** Right answers per subject for the grades elementary, middle, high. */
 export const GRADE_NEED = [15, 25, 15] as const;
-/** @internal used by the badge texts */
+/** Right answers for College. */
 export const COLLEGE_NEED = 15;
-/** @internal used by the badge texts */
+/** Finished games per school year. */
 export const YEAR_NEED = 20;
-/** @internal used by the badge texts */
+/** Score badge thresholds. */
 export const SCORE_MILESTONES = [100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000] as const;
 const RANKS_KEPT = 10;
 const RANK_NAMES = 15;
@@ -46,7 +46,7 @@ export interface GameCareer {
   ended?: true;
 }
 
-/** @internal used by tests and the UI parts */
+/** A player's career before anything is counted. */
 export const emptyCareer = (): PlayerCareer => ({ score: 0, right: {}, years: {}, ranks: [], badges: {} });
 
 const up = (s: string) => s.toUpperCase();
