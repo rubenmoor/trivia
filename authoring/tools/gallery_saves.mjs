@@ -256,5 +256,15 @@ scene("timed-12", timedScene(timedSession(2, toTwelve)));
 const last = claim(shown(saves["timed-12"]), data, tio(3000), 0).save;
 scene("timed-12-claim", timedScene(last, { right: timedRight(last) }));
 
+// The score after an answer (task 1993): careers with a few thousand points on the solo question, the co-op question
+// and the timed question (Sofía's claim, right pick known).
+const scored = (save) => withCareer(save, (c) => ({ ...c, score: 1840, badges: earned(SOME) }));
+saves["solo-score"] = scored(saves.solo);
+saves["coop-q-score"] = scored(saves["coop-q"]);
+saves["timed-q-score"] = scored(saves["timed-q"]);
+meta["solo-score"] = meta.solo;
+meta["coop-q-score"] = meta["coop-q"];
+meta["timed-q-score"] = { ...meta["timed-q"], right: timedRight(saves["timed-q"]) };
+
 for (const s of Object.values(saves)) checkVersion(s);
 process.stdout.write(JSON.stringify({ saves, meta, players: [...PLAYERS, ...EXTRA_PLAYERS] }));

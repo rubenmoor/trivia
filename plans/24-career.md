@@ -136,6 +136,14 @@ The career gives each player a long-term sense of progress: school-style subject
 - Celebration (task 1990): on page open, on turning the career on, and after a game's end screen or abandon for each of its players in seat order (Badges screen, «Seguir»); hidden slots, one stamp per badge within ≈6 s, «¡Nueva insignia!» / «¡n nuevas insignias!», fanfare and fireworks once; confirm skips; `career_shown` when the page closes. Details: `plans/04-ui-tv-display.md` "Career".
 - Page (task 1989): opened by the badges button on each name of the Player screen (not in the demo); header: name, «n of 39», an empty slot for score and rank (part 6), the on/off switch (`career` op); groups subjects × grades, diplomas, college, school years, score; earned in colour with the date, open dimmed in greyscale; the focused badge's name, description and date below (`badgeText`); off: only the switch.
 
+## Progress on screen (`plan 198: Score, rank and progress between badges`)
+- Score after every answer (task 1993, `decision 593: Career score and rank on screen: only where the game counts, for the seat that answered`): `game/ScoreCount.svelte` on Correct, Wrong and the timed reveal banner; «Points» / «Punkte» + the score counting old → new (≈ 1 s, ease-out) + «+25» / «−1» (`formatDelta`).
+- Data: `scoreStep(save, data, last)` in `engine/career.ts` (route `getScoreStep`, `fetchScoreStep()`): the answering seat's player (`last.seat`; solo: the game's player), new score from the career (catch-up has run), delta = difficulty² or −1, old = new − delta.
+- Nothing for: reveals (`revealed`), jokers, unclaimed timed answers, career off (`decision 515: Career turned off: what happens to a player's progress and badges?`), games that count nothing (`qualifies()`, gamemaster, demo row), the demo build.
+- Never blocks: the screen reads the step after it mounts; input and duration unchanged. Reduced motion: the new value at once. Sound: existing cues only.
+- Sessions: next to the answering seat's `SeatTag` (timed: in the result banner under it).
+- Gallery shots `correct-score`, `wrong-score`, `session-correct-score`, `timed-score` (`authoring/tools/gallery_saves.mjs` `*-score` saves, careers with 1840 points; frozen after the count).
+
 ## Age-group reach
 - Windows (`app/data/age-groups.json`): kids 1–6, young teens 1–10, young adults 4–13, adults 5–15.
 - Games to the badge, slowest locale, typical player, 1 player (4 players on one save within 15 %):

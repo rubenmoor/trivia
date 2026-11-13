@@ -3,7 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import { deletePlayer, gameAction } from "./api.ts";
-import { catchUp, emptyCareer } from "./career.ts";
+import { catchUp, emptyCareer, scoreStep } from "./career.ts";
 import { STANDARD_JOKERS } from "./choice.ts";
 import type { PoolQuestion } from "./pool.ts";
 import { actionRng } from "./rng.ts";
@@ -175,4 +175,22 @@ test("engine actions run the step: a real solo game counts as it goes", () => {
   assert.equal(save.players[0].career!.score, d * d - 1);
   assert.deepEqual(save.players[0].career!.years, { adults: 1 });
   assert.deepEqual(save.games[0].career, { cursor: [2], ended: true });
+});
+
+test("scoreStep: the answering player's score and delta; nothing for reveals, career off, gamemaster, demo, unclaimed", () => {
+  const solo = catchUp(saveOf([row(1, state([right("d5"), wrong("d9", 2)], {}, "select"), null)]), data, ON);
+  const last = { question_id: "d9", correct: false };
+  assert.deepEqual(scoreStep(solo, data, last), { name: "P1", score: 24, delta: -1 });
+  assert.deepEqual(scoreStep(solo, data, { question_id: "d5", correct: true }), { name: "P1", score: 24, delta: 25 });
+  assert.equal(scoreStep(solo, data, { ...last, revealed: true }), null);
+  assert.equal(scoreStep(solo, data, null), null);
+  assert.equal(scoreStep(solo, { ...data, demo: true }, last), null);
+  const off = { ...solo, players: solo.players.map((p) => (p.id === 1 ? { ...p, career: { ...p.career!, off: true as const } } : p)) };
+  assert.equal(scoreStep(off, data, last), null);
+  const gm = catchUp(saveOf([row(1, state([right("d5")], { mode: "gamemaster" }, "select"), null)]), data, ON);
+  assert.equal(scoreStep(gm, data, last), null);
+  const seats: Seat[] = [{ player_id: 1 }, { player_id: 2 }];
+  const timed = catchUp(saveOf([row(1, state([right("d5", 1, 1)], { mode: "timed", cards: 0 }, "select"), null, { seats, turn: 0 })]), data, ON);
+  assert.deepEqual(scoreStep(timed, data, { question_id: "d5", correct: true, seat: 1 }), { name: "P2", score: 25, delta: 25 });
+  assert.equal(scoreStep(timed, data, { question_id: "d5", correct: true }), null, "unclaimed: nobody");
 });

@@ -229,12 +229,16 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - Continue (click / `Enter`) → transition → Level screen, where the new block drops in. After level 12 → Victory.
 - Round-robin: the answerer's `SeatTag` (`last.seat`) under «¡Correcto!»; a session routes on `last.correct` and its end, not the top-level phase.
 
+- Career score (plan 198, `ScoreCount`): the answering player's «Points» chip counts up by `+d²` next to the `SeatTag` (alone below the title in solo); nothing with the career off, in the demo or where the game counts nothing. `plans/24-career.md` "Progress on screen".
+
 ### Wrong
 - The game ends (D-20). The submitted music has already turned into a **sad sound** (a descending trombone "wah-wah", or a low gong) at the reveal. No music plays on this screen.
 - **Dark animation:** colour drains from the screen (desaturate), a vignette closes in, and the tower (shown small) crumbles, or its blocks fall away one by one with soft thuds. Rain or a slow fade to deep blue also works. It should be gentle, not scary; the players are 11 and 12 (D-6).
 - Then the **correct answer** and the `fun_fact` are shown (D-22), with a **consolation message** that names the level reached: «¡Llegaron al nivel 7! Eso es más alto que la mayoría de las torres…». There are several messages, chosen by how far the players got.
 - One button: **«Volver al inicio»** → transition → Start.
 - Round-robin: the answerer's `SeatTag`; rr-competitive's out seat: «¡Fuera, Ana!» instead of «¡Oh no!», its track crumbles, no consolation line; rr-coop: the team's tower crumbles, the team lost, «Volver al inicio»; rr-competitive, one seat out: «Seguir» → Level of the next turn, or Victory for the last one standing (decision 279).
+
+- Career score: the same chip («−1») under the title / seat tag, not in the timed «nobody» case; the timed reveal banner carries it under the seat tag.
 
 ### Next and Completed (answers off, D-105)
 - `game/screens/Revealed.svelte`, both neutral: neither success nor failure, sky-coloured title, the correct answer and `fun_fact` (`AnswerPanel`), normal music; whoosh in, no applause, no boom.

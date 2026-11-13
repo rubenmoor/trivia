@@ -6,7 +6,7 @@ export function formatScore(n: number, locale: string): string {
   return new Intl.NumberFormat(locale).format(n).replace("-", "−");
 }
 
-/** The sign text of a score change: «+25», «−1». @internal used by the score display (part 6) */
+/** The sign text of a score change: «+25», «−1». */
 export function formatDelta(d: number, locale: string): string {
   const c = catalogFor(locale).career.delta;
   return (d < 0 ? c.minus : c.plus).replace("{n}", formatScore(Math.abs(d), locale));

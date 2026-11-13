@@ -729,6 +729,32 @@ def results(r):
     r.shot("victory")
 
 
+def scores(r):
+    """The career score after an answer (task 1993), frozen after the count: solo right and wrong, a session's seat, timed."""
+    for name, save, right in (("correct-score", "solo-score", True), ("wrong-score", "solo-score", False)):
+        if r.only and name not in r.only:
+            continue
+        on_question(r, save)
+        r.answer(r.meta[save]["right"] if right else (r.meta[save]["right"] + 1) % 4)
+        r.wait("main .result [data-score]", 30000)
+        r.settle(2.5)
+        r.shot(name)
+    if not r.only or "session-correct-score" in r.only:
+        rr_question(r, "coop-q-score")
+        r.answer(r.meta["coop-q-score"]["right"])
+        r.wait("main .result [data-score]", 30000)
+        r.settle(2.5)
+        r.shot("session-correct-score")
+    if not r.only or "timed-score" in r.only:
+        timed_on(r, "timed-q-score", 10)
+        r.pad(5, 1)
+        r.wait(".timed-screen .banner .ring")
+        r.pad((3, 1, 2, 0)[r.meta["timed-q-score"]["right"]], 1)  # Sofía's pad: A △, B ○, C □, D ✕
+        r.wait(".timed-screen .banner.result [data-score]", 15000)
+        r.settle(1.2)  # the count's 1 s; the result banner stays 2.2 s
+        r.shot("timed-score")
+
+
 def overlay(r):
     r.scene("base")
     r.menu()
@@ -1070,6 +1096,7 @@ STEPS = [
       "joker-easier"], question),
     (["question-splash", "question-splash-long", "timed-splash", *[f"question-splash-in-{e}" for e in ENTRANCES]], splash),
     (["question-waiting", "correct", "wrong", "victory"], results),
+    (["correct-score", "wrong-score", "session-correct-score", "timed-score"], scores),
     (["menu-start", "menu-solo", "menu-gamemaster", "menu-confirm", "goto", "goto-letter-picker", "credits"], overlay),
     (["flag-dialog", "flag-list"], flags),
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),

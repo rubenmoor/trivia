@@ -4,7 +4,7 @@ import { qualifies, towerWin } from "./achievements.ts";
 import { cleanName, gameMode, playerId } from "./game.ts";
 import { subOf } from "./pool.ts";
 import type { EngineData, GameRow, GameState, PlayerRow, SaveData } from "./state.ts";
-import { GameError, gameLocale, transact } from "./state.ts";
+import { GameError, gameLocale, newest as newestRow, transact } from "./state.ts";
 
 /** Ids of app/data/subjects.json, same order (career.test.ts checks). */
 export const SUBJECTS = ["history", "geography", "nature", "science", "arts", "media", "sport"] as const;
@@ -234,4 +234,19 @@ function playerOf(work: SaveData, name: unknown): PlayerRow {
 export function careerUnlocks(save: SaveData): string[] {
   const held = new Set(save.players.filter((p) => !p.career?.off).flatMap((p) => Object.keys(p.career?.badges ?? {})));
   return BADGE_NAMES.filter((n) => held.has(n));
+}
+
+/** The score after an answer: the answering player's new score and what the answer changed. */
+export interface ScoreStep { name: string; score: number; delta: number }
+
+/** The score step of the newest game's last answer (plan 198, decision 593): null unless the answer counted and its player's
+ * career is on; `last` is the game view's last answer, the catch-up step has run. Reveals and unclaimed answers change nothing. */
+export function scoreStep(save: SaveData, data: EngineData, last: { question_id: string; correct: boolean; revealed?: true; seat?: number } | null): ScoreStep | null {
+  const row = newestRow(save.games);
+  if (!last || last.revealed || !row || data.demo || row.demo || gameLocale(row) !== data.locale || !qualifies(row)) return null;
+  const pid = row.seats ? (last.seat === undefined ? null : row.seats[last.seat]?.player_id ?? null) : row.player_id;
+  const p = save.players.find((x) => x.id === pid);
+  const q = data.byId.get(last.question_id);
+  if (!p || !q || p.career?.off) return null;
+  return { name: p.name, score: p.career?.score ?? 0, delta: last.correct ? q.difficulty ** 2 : -1 };
 }

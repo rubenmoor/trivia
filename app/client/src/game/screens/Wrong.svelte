@@ -7,6 +7,7 @@
   import AnswerPanel from "../AnswerPanel.svelte";
   import { consolation } from "../copy.ts";
   import Prompt from "../Prompt.svelte";
+  import ScoreCount from "../ScoreCount.svelte";
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
 
@@ -50,6 +51,7 @@
         <h1 class="title bad">{t("screen.result.wrong")}</h1>
         {#if game.session && last.seat !== undefined}<SeatTag session={game.session} seat={last.seat} />{/if}
       {/if}
+      {#if !nobody}<ScoreCount />{/if}
       <AnswerPanel {last} label={t("screen.result.answerWas")} />
       {#if !knockout && !nobody}<p class="consolation">{consolation(game.level, levels, game.id)}</p>{/if}
     </div>
