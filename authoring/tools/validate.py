@@ -425,6 +425,8 @@ def subject_problems():
     ids = categories.subject_ids()
     errors = []
     for b in categories.bundle_ids():
+        if not categories.load(b):  # `qgen bundle new` writes none: its taxonomy (with subjects) comes next
+            errors.append(f"{categories.path(b).relative_to(ROOT)}: no categories yet (`qgen taxonomy --bundle {b}`, then `--apply`)")
         bad = [c["slug"] for c in categories.load(b) if c.get("subject") not in ids]
         if bad:
             errors.append(f"{categories.path(b).relative_to(ROOT)}: category without a subject or with an unknown one "

@@ -12,6 +12,10 @@ Every category and every subcategory has:
 
 Names in the game's other languages are made from `en` later.
 
+## Subject
+Every category belongs to exactly one school-style subject of the career (a fixed list, never extended): `subject` is its id, `subject_reason` one English sentence why. Pick by what the category is about, as a school would file it:
+{subjects}
+
 ## Steps
 1. **Base on the topic.** Find base's subcategories on the bundle's topic. Each is a starting point: the bundle goes beyond it (lesser-known concepts, a narrower angle, a part base only touches) without asking base's concepts again.
 2. **Categories.** Group the bundle's topic into broad categories, as a fan of the topic sees it. `origin`: `base_extends` when the category mainly goes deeper into topics base already has, `new` when base has next to nothing of it. Each with a `scope` and a `reason`.

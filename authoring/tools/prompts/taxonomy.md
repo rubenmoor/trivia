@@ -10,7 +10,11 @@ Every category and every subcategory has:
 - `en`: the English name players see, short, sentence case, as on a game's category screen ("Rivers of Colombia", "Colombian sweets"); for an English bundle in its voice ("Colours of …" for a British one).
 - `name`: the name in {language} the region's players see, in the bundle's voice («Ríos de Colombia», „Flüsse Deutschlands“); for an English bundle the same as `en`.
 
-Names in the game's other languages are made from `en` later. `region`: the region's name in English.
+Names in the game's other languages are made from `en` later.
+
+## Subject
+Every category belongs to exactly one school-style subject of the career (a fixed list, never extended): `subject` is its id, `subject_reason` one English sentence why. Pick by what the category is about, as a school would file it:
+{subjects} `region`: the region's name in English.
 
 ## Steps
 1. **General list.** Start from the general category list for regional bundles. Take a general category's `slug` as it is and fill `{region}` in its English `name` with the region's English name, worded as English needs it ("Food and drink of Germany" or "German food and drink"); its `name` in {language} says the same. Keep a general category unless the region has too little to ask in it; a left-out one goes into `left_out` (its English name) with the reason.
