@@ -241,7 +241,8 @@
     {
       "name": "Chelsea Pensioners",
       "facet": "Royal guards and ceremonial units",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The question already asked names the scarlet-coated retired soldiers of Chelsea, so it gives away an identify or sequence question about the Pensioners."
     },
     {
       "name": "Royal Maundy service",
@@ -366,7 +367,8 @@
     {
       "name": "Princess Royal",
       "facet": "Royal titles and honours",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The question already asked (Princess Anne's title) answers any riddle or origin question about the Princess Royal title."
     },
     {
       "name": "Duke of Edinburgh",

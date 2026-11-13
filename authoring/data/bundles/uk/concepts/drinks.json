@@ -561,7 +561,8 @@
     {
       "name": "Orange squash",
       "facet": "Soft drinks and squash",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The pool already asks that squash is diluted with water; nothing else simple to ask about orange squash."
     },
     {
       "name": "Elderflower cordial",
@@ -641,7 +642,8 @@
     {
       "name": "Instant coffee",
       "facet": "Hot drinks beyond tea",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The existing 1938 Nescafé question already covers identifying instant coffee; the other options can't add a different fact."
     },
     {
       "name": "Costa Coffee",

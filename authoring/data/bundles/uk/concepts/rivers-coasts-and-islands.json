@@ -313,7 +313,8 @@
     {
       "name": "Loch Ness Monster",
       "facet": "Lakes, lochs and waterfalls",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: At difficulty 1, the photo and country questions already cover Nessie, and the existing questions give the nickname away."
     },
     {
       "name": "Loch Lomond",

@@ -141,7 +141,8 @@
     {
       "name": "Fire engine",
       "facet": "999 and the emergency services",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The fire engine has already been identified in a riddle; a close-up photo would ask the same fact again, and it has no UK-specific angle at difficulty 1."
     },
     {
       "name": "Ambulance service",
