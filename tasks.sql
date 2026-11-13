@@ -11085,6 +11085,43 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Done when
 Under Steam with the real App ID, a player''s first career badge unlocks as a Steam achievement with its icon and localized name; a player with the career off unlocks nothing new until it is on again; a save with earlier badges unlocks them on start; plan 18 lists live and pending badges; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', 'Every badge a player earns in the game''s career is also meant to show up as an achievement on their Steam profile. This work connects the two: it sends each new badge to Steam, draws an icon for every badge, writes the badge names in four languages for Steam, and gets them entered on Steam''s side. It also keeps a fixed order of badges, because Steam allows only 100 achievements until it trusts a new game, and anything entered there can never be removed.', '2026-11-13T00:45:12Z', 1880);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (197, 20, 'Badge page and celebration', 400, 'Part 5 of `plan 192: masterplan`. The career''s screens: a badge page per player and the celebration of new badges. Design source: `plans/24-career.md` (39 badges, texts approved in `decision 521: Career badge list, revised: 39 badges, score and rank: which score milestones?`); data and ops from `plan 195: Career engine and save`; icons from `plan 196: Badges as Steam achievements`.
+
+## Rules
+- `decision 591: Career badge page: where it opens, where the career is turned off, when new badges are celebrated`:
+  - Player screen: a badges button per name opens that player''s page; the page holds the on/off switch (`career` op, `task 1981: Career opt-out, shown marks and reads`)
+  - Celebration only after a game''s end screen (or an abandon), every player of that game with new badges in seat order, then Start; and when a player opens their page or turns the career on there; never mid-game
+- `decision 515: Career turned off: what happens to a player''s progress and badges?`: off = page reduced to the switch, no celebration; on again → everything not shown yet celebrated once
+- `decision 590: Career in sessions and on deleting a player: the answering seat earns; a deleted player''s career goes with them`: the delete confirmation says badges go too
+- Demo build: no badges button, no page, no celebration (`decision 346: Achievements in the demo: off, as Valve recommends?`, `decision 516: Do games played in the demo count toward the career after buying the full game?`)
+- Shown marks: `career_shown` once a player''s celebration closes (skipped animation counts as shown)
+- Gallery reviews: review set per `decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`, es, es-ES, en, de, 1920x1080 and 1280x800 (Deck)
+- Strings: `locales/style/<locale>.md` first; new glossary entries (career, badge, grade names) go there
+- Input: pad, keyboard, mouse on every control (`<Prompt>`, spatial focus, Esc/Backspace/B back), as the other layers (`Credits.svelte`, `Mods.svelte`)
+
+## Page
+- Header: player name, badges earned «n of 39»; a slot for score, rank and progress bars (part 6, `task 1882: write plan: Progress between badges`)
+- Groups: subjects × grades (7 rows × Primaria/Secundaria/Bachillerato), diplomas, college, school years (4), score (10)
+- Earned: icon in colour + date (locale format); open: dimmed greyscale (the look of `render.sh`''s unachieved PNG) + what it takes; focused badge: name, description, date
+- Icons: `app/desktop/achievements/CAREER_*.svg` (`task 1984: Career badge icons`), imported, not copied (decision 199)
+
+## Celebration
+- One page per player: the new badges hidden in their slots, then revealed one by one (stamp cue each), fanfare and `Fireworks` once, a line «¡Nueva insignia!» / «3 nuevas insignias»; total reveal capped (≈6 s even for a backfill of many); confirm skips to the end; «Seguir» → next player or Start
+- Reduced motion: fades, no flight; existing cues only (`sound.svelte.ts`); a recorded badge sound, if the review asks, is a follow-up in `plan 32: Recorded sound effects (UI-10)`
+- Multiplayer: any seat may continue (shared scope, as Victory)
+
+## Tasks
+1. Career badge texts in the catalogs: per-family keys (grade names, subject × grade, diplomas, college, school years, score) in es, es-ES, en, de; one helper `badgeText(id)` → name, description, built from catalogs + data names (subjects `names.<locale>.json`, age groups); en title case in names as approved («History and Humanities»); number format per locale; unit test against every example in `plans/24-career.md`; style guide glossary rows. Requires `task 1979: Career module and save v6` and `task 1976: Subjects in the client and mods`.
+2. Badge page: layer per player from the Player screen''s badges button, groups, earned/open, focused details, off state with the switch, demo hidden, delete confirmation text; gallery saves with careers (`authoring/tools/gallery_saves.mjs`: none, some, all, off) and shots (`career`, `career-full`, `career-off`, `player`, `player-delete`); docs `plans/04-ui-tv-display.md` (new "Career" section, Player), `plans/24-career.md` "Badge page and celebration" (fix «part 3» there). Iterative feedback: review decision with the set, repeated until approved. Requires 1, `task 1981: Career opt-out, shown marks and reads`, `task 1984: Career badge icons`.
+3. Celebration: after end screens and abandon, on page open and on turning on; per player in seat order; reveal, sound, fireworks, skip, reduced motion, many badges, `career_shown`; walkers that go end screen → Start updated (`authoring/steam/smoke.mjs`, gallery walks, `trivia-trailer`, recorded tapes): pass the page or start from saves without new badges; a new `Screen` name goes into the modding docs'' screen list; shots `career-new`, `career-new-many`, `career-new-session` (frozen frames); docs. Iterative feedback: review decision with the set, repeated until approved. Requires 2. `--model opus`.
+
+## Not here
+- Score after every answer, rank, progress bars, «your progress» at game end: part 6.
+- Steam unlock and icons: `plan 196: Badges as Steam achievements`.
+- Release-check and smoke coverage of the career, demo and mods close-out, family playtest: part 7 (`task 1883: write plan: Career close-out: demo, mods and family playtest`).
+
+## Done when
+A player opens their badge page from the Player screen with pad, keyboard or mouse; a new badge is celebrated after the game''s end screen, for each player of a session; the career can be turned off and on there; the demo shows none of it; the developer approved both review sets; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', 'The game is getting a career: each player collects school-style badges for answering questions in different subjects at rising difficulty. This work builds what the players see of it: a page per player with all badges, earned and still open, and a celebration with fireworks and sound when a new badge comes in at the end of a game. It also gives each player a switch to turn the career off, and it is reviewed on screenshots in four languages until the developer approves.', '2026-11-13T00:48:25Z', 1881);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -46247,6 +46284,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Docs after it passes: `plans/18-steam-integration.md` "Steam features" Achievements bullet names the career badges; `plans/24-career.md` a "Steam" section (unlock moments, live cap); `directory.md` if needed.
 
 Done when: check passed (issues → follow-up tasks in plan 196), docs updated; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:46:13Z', NULL, 1982, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1987, 197, 'create tasks for plan 197: Badge page and celebration', 'split', 'open', 1000, NULL, 'Split plan 197 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-13T00:48:25Z', NULL, 1881, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
