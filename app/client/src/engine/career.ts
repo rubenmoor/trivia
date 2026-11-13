@@ -15,11 +15,14 @@ export const YEAR_GROUPS = ["kids", "young_teens", "young_adults", "adults"] as 
 /** Difficulty floors of the grades elementary, middle, high, college: a right answer counts for every grade with floor ≤ d. */
 const BAND_FLOORS = [1, 5, 9, 13] as const;
 const GRADES = ["elementary", "middle", "high"] as const;
-/** Right answers per subject for the grades elementary, middle, high. */
-const GRADE_NEED = [15, 25, 15] as const;
-const COLLEGE_NEED = 15;
-const YEAR_NEED = 20;
-const SCORE_MILESTONES = [100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000] as const;
+/** Right answers per subject for the grades elementary, middle, high. @internal used by the badge texts */
+export const GRADE_NEED = [15, 25, 15] as const;
+/** @internal used by the badge texts */
+export const COLLEGE_NEED = 15;
+/** @internal used by the badge texts */
+export const YEAR_NEED = 20;
+/** @internal used by the badge texts */
+export const SCORE_MILESTONES = [100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000] as const;
 const RANKS_KEPT = 10;
 const RANK_NAMES = 15;
 

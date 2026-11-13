@@ -17,6 +17,7 @@ Fixed terms; use them as written, never a synonym.
 - Steam terms as Steam writes them: «Steam achievements» (never bare «achievements»), «Steam Cloud», «Steam Deck», «Steam Workshop»
 - Devices: «controller» (pad), «Keyboard and mouse»
 - Spelling: US («Customize», «color»), sheet «Letter»
+- Career: «career», badge: «badge»; grades «Elementary School», «Middle School», «High School», «College» (US English: no «University»), title case in badge names («History and Humanities»); «Rank», «Points» (`career.*`, plan 197)
 
 ## Address
 - «you» for one player or the whole group; never «you all», «you guys», «yourselves»

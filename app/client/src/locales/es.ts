@@ -591,6 +591,22 @@ const es = {
       ],
     },
   },
+  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject}, {group} age group. */
+  career: {
+    grade: { elementary: "Primaria", middle: "Secundaria", high: "Bachillerato", college: "Universidad" },
+    subject: {
+      name: "{grade}: {subject}",
+      desc: { elementary: "Acertar {n} preguntas de {subject} de nivel primaria o superior.", middle: "Acertar {n} preguntas de {subject} de nivel secundaria o superior.", high: "Acertar {n} preguntas de {subject} de nivel bachillerato o superior." },
+    },
+    diploma: {
+      elementary: { name: "Primaria completa", desc: "Aprobar primaria en las 7 asignaturas." },
+      middle: { name: "Secundaria completa", desc: "Aprobar secundaria en las 7 asignaturas." },
+      high: { name: "Título de bachiller", desc: "Aprobar bachillerato en las 7 asignaturas." },
+    },
+    college: { name: "Universidad", desc: "Acertar {n} preguntas de nivel universitario." },
+    year: { name: "Año escolar: {group}", desc: "Jugar {n} partidas completas en el grupo de edad {group}." },
+    score: { name: "{n} puntos", desc: "Llegar a {n} puntos." },
+  },
   /** The save file couldn't be used (plan 55, decision 98); {path}: the backup. */
   save: {
     corrupt: "El archivo de la partida guardada está dañado. Se guardó como copia de seguridad en {path} y empieza una partida nueva.",

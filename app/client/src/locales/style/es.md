@@ -18,6 +18,7 @@ Fixed terms; use them as written, never a synonym.
 - Media: «video» (not «vídeo»), «audio», «imagen»
 - Devices: «mando» (pad), «teclado», «Teclado y mouse» (not «ratón»)
 - Mods: «mod», «encender» / «apagar»
+- Carrera: «carrera» (la del jugador); insignia: «insignia»; notas: «Primaria», «Secundaria», «Bachillerato», «Universidad»; asignaturas de `names.es.json`; rango y puntos: «Rango», «puntos» (`career.*`, plan 197)
 
 ## Address
 - Players: «ustedes» (D-6), the group in front of the TV: «Elijan una respuesta», «¡Ganaron!», «Escriban su nombre»

@@ -525,6 +525,22 @@ export const en = {
       ],
     },
   },
+  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject} / {subjectLc} subject, {group} age group. */
+  career: {
+    grade: { elementary: "Elementary School", middle: "Middle School", high: "High School", college: "College" },
+    subject: {
+      name: "{grade}: {subject}",
+      desc: { elementary: "Answer {n} {subject} questions right, elementary level or harder.", middle: "Answer {n} {subject} questions right, middle school level or harder.", high: "Answer {n} {subject} questions right, high school level or harder." },
+    },
+    diploma: {
+      elementary: { name: "Elementary School Graduate", desc: "Pass Elementary School in all 7 subjects." },
+      middle: { name: "Middle School Graduate", desc: "Pass Middle School in all 7 subjects." },
+      high: { name: "High School Diploma", desc: "Pass High School in all 7 subjects." },
+    },
+    college: { name: "College", desc: "Answer {n} college-level questions right." },
+    year: { name: "School Year: {group}", desc: "Finish {n} games in the {group} age group." },
+    score: { name: "{n} Points", desc: "Reach {n} points." },
+  },
   save: {
     corrupt: "The saved game file is damaged. It was backed up to {path}, and a new game starts.",
     newer: "The saved game file is from a newer version of the game. It was backed up to {path}, and a new game starts.",
