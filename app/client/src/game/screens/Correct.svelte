@@ -6,6 +6,7 @@
   import AnswerPanel from "../AnswerPanel.svelte";
   import Fireworks from "../Fireworks.svelte";
   import Prompt from "../Prompt.svelte";
+  import ScoreCount from "../ScoreCount.svelte";
   import SeatTag from "../SeatTag.svelte";
 
   let {
@@ -19,7 +20,10 @@
 <section class="screen result">
   <Fireworks />
   <h1 class="title good">{t("screen.result.correct")}</h1>
-  {#if session && last.seat !== undefined}<SeatTag {session} seat={last.seat} />{/if}
+  <div class="who">
+    {#if session && last.seat !== undefined}<SeatTag {session} seat={last.seat} />{/if}
+    <ScoreCount />
+  </div>
   <AnswerPanel {last} />
   <button class="secondary hint" onclick={onnext} disabled={busy} data-focus-default>{t("action.next")} <Prompt action="confirm" /></button>
 </section>
@@ -27,6 +31,12 @@
 <style>
   .title {
     animation: arrive 0.6s var(--spring) backwards;
+  }
+  .who {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: calc(1 * var(--u));
   }
   .good {
     color: var(--mint);

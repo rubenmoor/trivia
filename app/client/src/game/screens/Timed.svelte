@@ -23,6 +23,7 @@
   import Media from "../question/Media.svelte";
   import Splash from "../question/Splash.svelte";
   import type { AnswerView } from "../question/reveal.ts";
+  import ScoreCount from "../ScoreCount.svelte";
   import SeatTag from "../SeatTag.svelte";
   import { duck, music, sfx } from "../sound.svelte.ts";
   import { cardFlip, swap } from "../swap.ts";
@@ -382,6 +383,7 @@
     <div class="banner glass-strong result" class:good={outcome.good}>
       <p class="claimed">{outcome.text}</p>
       {#if held?.last.seat !== undefined}<SeatTag {session} seat={held.last.seat} />{/if}
+      {#if held?.last.seat !== undefined}<ScoreCount />{/if}
     </div>
   {/if}
 

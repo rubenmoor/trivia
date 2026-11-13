@@ -1,7 +1,7 @@
 import { devMode } from "./desktop.ts";
 import * as engine from "../engine/api.ts";
 import { gameChoice, jokersUsed, playerMode, view } from "../engine/game.ts";
-import type { CareerView } from "../engine/career.ts";
+import type { CareerView, ScoreStep } from "../engine/career.ts";
 import { seededRng } from "../engine/rng.ts";
 import type { Outlook } from "../engine/outlook.ts";
 export type { Outlook };
@@ -29,6 +29,11 @@ export async function deletePlayer(name: string): Promise<Player[]> {
 /** Every player's career view by name (plan 195). */
 export async function fetchCareers(): Promise<Record<string, CareerView>> {
   return read((save) => engine.getCareers(save));
+}
+
+/** The answering player's score after the game's last answer, null where nothing shows (plan 198, decision 593). */
+export async function fetchScoreStep(): Promise<ScoreStep | null> {
+  return read((save, data, io) => engine.getScoreStep(save, data, io));
 }
 
 /** A player's career off (true) or on; returns the careers. */
