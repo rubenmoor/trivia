@@ -1,15 +1,15 @@
 // The career (plan 195, plans/24-career.md): pure counters, badges, rank and the catch-up step over the save. No UI.
 import { DEFAULT_AGE_GROUP } from "./choice.ts";
 import { qualifies, towerWin } from "./achievements.ts";
-import { gameMode } from "./game.ts";
+import { cleanName, gameMode, playerId } from "./game.ts";
 import { subOf } from "./pool.ts";
 import type { EngineData, GameRow, GameState, PlayerRow, SaveData } from "./state.ts";
-import { gameLocale } from "./state.ts";
+import { GameError, gameLocale, transact } from "./state.ts";
 
-/** Ids of app/data/subjects.json, same order (career.test.ts checks). @internal until task 1981 wires it */
+/** Ids of app/data/subjects.json, same order (career.test.ts checks). @internal used by tests and the UI parts */
 export const SUBJECTS = ["history", "geography", "nature", "science", "arts", "media", "sport"] as const;
 
-/** Ids of app/data/age-groups.json, kids first (career.test.ts checks). @internal until task 1981 wires it */
+/** Ids of app/data/age-groups.json, kids first (career.test.ts checks). @internal used by tests and the UI parts */
 export const YEAR_GROUPS = ["kids", "young_teens", "young_adults", "adults"] as const;
 
 /** Difficulty floors of the grades elementary, middle, high, college: a right answer counts for every grade with floor ≤ d. */
@@ -43,7 +43,7 @@ export interface GameCareer {
   ended?: true;
 }
 
-/** @internal until task 1981 wires it */
+/** @internal used by tests and the UI parts */
 export const emptyCareer = (): PlayerCareer => ({ score: 0, right: {}, years: {}, ranks: [], badges: {} });
 
 const up = (s: string) => s.toUpperCase();
@@ -52,7 +52,7 @@ interface Badge { name: string; met: (c: PlayerCareer) => boolean }
 
 const rightAt = (c: PlayerCareer, subject: string, grade: number) => c.right[subject]?.[grade] ?? 0;
 
-/** Every badge in live order (Steam): grade-major subject × grade, diplomas, college, school years, score. New ones are appended, never inserted. @internal until task 1981 wires it */
+/** Every badge in live order (Steam): grade-major subject × grade, diplomas, college, school years, score. New ones are appended, never inserted. @internal used by tests and the UI parts */
 export const BADGES: readonly Badge[] = [
   ...GRADES.flatMap((g, gi) => SUBJECTS.map((s) => ({
     name: `CAREER_${up(s)}_${up(g)}`, met: (c: PlayerCareer) => rightAt(c, s, gi) >= GRADE_NEED[gi],
@@ -65,10 +65,10 @@ export const BADGES: readonly Badge[] = [
   ...SCORE_MILESTONES.map((n) => ({ name: `CAREER_SCORE_${n}`, met: (c: PlayerCareer) => c.score >= n })),
 ];
 
-/** @internal until task 1981 wires it */
+/** @internal used by tests and the UI parts */
 export const BADGE_NAMES: readonly string[] = BADGES.map((b) => b.name);
 
-/** A right answer of difficulty `d` (+d²), counted for `subject` (none: score only). @internal until task 1981 wires it */
+/** A right answer of difficulty `d` (+d²), counted for `subject` (none: score only). @internal used by tests and the UI parts */
 export function countRight(c: PlayerCareer, subject: string | undefined, d: number): PlayerCareer {
   const next = { ...c, score: c.score + d * d };
   if (subject !== undefined && (SUBJECTS as readonly string[]).includes(subject)) {
@@ -79,24 +79,24 @@ export function countRight(c: PlayerCareer, subject: string | undefined, d: numb
   return next;
 }
 
-/** A wrong answer: −1, the score may go negative. @internal until task 1981 wires it */
+/** A wrong answer: −1, the score may go negative. @internal used by tests and the UI parts */
 export const countWrong = (c: PlayerCareer): PlayerCareer => ({ ...c, score: c.score - 1 });
 
-/** A finished game (won or lost) in `ageGroup`; `rank`: its rank value (hardest right answer, 0 if none). @internal until task 1981 wires it */
+/** A finished game (won or lost) in `ageGroup`; `rank`: its rank value (hardest right answer, 0 if none). @internal used by tests and the UI parts */
 export const countEnd = (c: PlayerCareer, ageGroup: string, rank: number): PlayerCareer => ({
   ...c, years: { ...c.years, [ageGroup]: (c.years[ageGroup] ?? 0) + 1 }, ranks: [...c.ranks, rank].slice(-RANKS_KEPT),
 });
 
-/** The badges reached and not yet held, in live order. @internal until task 1981 wires it */
+/** The badges reached and not yet held, in live order. @internal used by tests and the UI parts */
 export const newBadges = (c: PlayerCareer): string[] => BADGES.filter((b) => !c.badges[b.name] && b.met(c)).map((b) => b.name);
 
-/** The career with its new badges held from `on`; a badge is never removed. @internal until task 1981 wires it */
+/** The career with its new badges held from `on`; a badge is never removed. @internal used by tests and the UI parts */
 export function award(c: PlayerCareer, on: string): PlayerCareer {
   const names = newBadges(c);
   return names.length ? { ...c, badges: { ...c.badges, ...Object.fromEntries(names.map((n) => [n, { on }])) } } : c;
 }
 
-/** Rank value: weighted mean of the ranks (newest last; weights 10..1 newest first), half up, at least 1; null without games. @internal until task 1981 wires it */
+/** Rank value: weighted mean of the ranks (newest last; weights 10..1 newest first), half up, at least 1; null without games. @internal used by tests and the UI parts */
 export function rankOf(ranks: readonly number[]): number | null {
   if (!ranks.length) return null;
   const last = ranks.slice(-RANKS_KEPT);
@@ -109,7 +109,7 @@ export function rankOf(ranks: readonly number[]): number | null {
   return Math.max(1, Math.floor((2 * sum + weights) / (2 * weights)));
 }
 
-/** Index into the 15 rank names (0-based), null without games. @internal until task 1981 wires it */
+/** Index into the 15 rank names (0-based), null without games. @internal used by tests and the UI parts */
 export const rankIndex = (ranks: readonly number[]): number | null => {
   const r = rankOf(ranks);
   return r === null ? null : Math.min(r, RANK_NAMES) - 1;
@@ -174,4 +174,62 @@ function countRow(row: GameRow, byId: Map<number, PlayerRow>, data: EngineData, 
     }
   }
   return done;
+}
+
+// Ops and reads (plan 195): opt-out, shown marks, the player view, Steam's union.
+
+/** What a player's career looks like to the UI (counted even when `off`; hiding is the UI's). */
+export interface CareerView {
+  off: boolean;
+  score: number;
+  /** Rank value (null before the first finished game), its 0-based name index, the 15 names' count is the UI's. */
+  rank: number | null;
+  rank_index: number | null;
+  /** Subject id → right answers at difficulty 1+, 5+, 9+, 13+. */
+  right: Record<string, [number, number, number, number]>;
+  years: Record<string, number>;
+  badges: { name: string; on: string; shown: boolean }[];
+}
+
+export function careerView(p: PlayerRow): CareerView {
+  const c = p.career ?? emptyCareer();
+  return {
+    off: c.off === true, score: c.score, rank: rankOf(c.ranks), rank_index: rankIndex(c.ranks), right: c.right, years: c.years,
+    badges: BADGE_NAMES.filter((n) => c.badges[n]).map((n) => ({ name: n, on: c.badges[n].on, shown: c.badges[n].shown === true })),
+  };
+}
+
+/** `career` op: turn a player's career off (`off` true) or on; counting goes on either way, turning on shows nothing by itself (decision 515). */
+export function setCareerOff(save: SaveData, name: unknown, off: unknown): SaveData {
+  return transact(save, (work) => {
+    const p = playerOf(work, name);
+    const c = p.career ?? emptyCareer();
+    const { off: _, ...rest } = c;
+    p.career = off === true ? { ...rest, off: true } : rest;
+  }).save;
+}
+
+/** `career_shown` op: mark held badges of a player shown; unknown or not-held names are ignored. */
+export function markShown(save: SaveData, name: unknown, badges: unknown): SaveData {
+  return transact(save, (work) => {
+    const p = playerOf(work, name);
+    const names = Array.isArray(badges) ? badges : [];
+    for (const n of names) {
+      const b = typeof n === "string" ? p.career?.badges[n] : undefined;
+      if (b) b.shown = true;
+    }
+  }).save;
+}
+
+function playerOf(work: SaveData, name: unknown): PlayerRow {
+  const pid = playerId(work, cleanName(name));
+  const p = work.players.find((x) => x.id === pid);
+  if (!p) throw new GameError("player_unknown", { name });
+  return p;
+}
+
+/** Badges of every player with the career on, in live order: what Steam unlocks (decision 515). @internal until task 1983 wires it */
+export function careerUnlocks(save: SaveData): string[] {
+  const held = new Set(save.players.filter((p) => !p.career?.off).flatMap((p) => Object.keys(p.career?.badges ?? {})));
+  return BADGE_NAMES.filter((n) => held.has(n));
 }
