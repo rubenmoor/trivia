@@ -143,6 +143,11 @@ The career gives each player a long-term sense of progress: school-style subject
 - Never blocks: the screen reads the step after it mounts; input and duration unchanged. Reduced motion: the new value at once. Sound: existing cues only.
 - Sessions: next to the answering seat's `SeatTag` (timed: in the result banner under it).
 - Gallery shots `correct-score`, `wrong-score`, `session-correct-score`, `timed-score` (`authoring/tools/gallery_saves.mjs` `*-score` saves, careers with 1840 points; frozen after the count).
+- Rank at a finished game (task 1994): `game/RankBars.svelte` (one `game/RankBar.svelte` per seat with a player and the career on, seat order; sessions: the player's name in it) on Victory and the game-ending Wrong (not rr-competitive's knockout Wrong, its Victory follows); Completed never qualifies (answers off), so nothing there.
+- Bar: the 1–15 scale, the unrounded weighted mean (`rankMean`) moving old → new (0.8 s after mount, 1.6 s ease-in-out), a thin mark at the old value; number and name (`rankNumber`, `rankText`) change when a whole number is crossed (name fades in); cue `bing` on each rank up; first finished game: the bar grows from 0, number and name appear at its end with the cue. Reduced motion: the new value at once. `still`: the badge page header's (task 1995).
+- Data: `rankSteps(save, data)` in `engine/career.ts` (route `getRankSteps`, `fetchRankSteps()`): the newest game, finished and counted (`career.ended`), qualifying, not demo; old = `ranks` without the newest entry (at 10 games kept, the window before it has 9), null for a first rank. Nothing for running, abandoned or uncounted games, career off, the demo build.
+- Order at game end (`decision 591: Career badge page: where it opens, where the career is turned off, when new badges are celebrated`): end screen with the rank → celebration → Start; the bar reads after mount and blocks nothing.
+- Gallery shots `victory-rank`, `wrong-rank`, `session-victory-rank`, `rank-first` (`*-rank` saves with past ranks; frozen after the move).
 
 ## Age-group reach
 - Windows (`app/data/age-groups.json`): kids 1–6, young teens 1–10, young adults 4–13, adults 5–15.

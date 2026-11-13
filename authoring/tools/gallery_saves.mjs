@@ -266,5 +266,16 @@ meta["solo-score"] = meta.solo;
 meta["coop-q-score"] = meta["coop-q"];
 meta["timed-q-score"] = { ...meta["timed-q"], right: timedRight(saves["timed-q"]) };
 
+// The rank at a finished game (task 1994): past ranks before the solo win (crosses a whole number), the solo loss (down),
+// the co-op win (three seats: low, high, a first rank) and a first finished game.
+const ranked = (save, ranks) => withCareer(save, (c, name) => careerAt({}, { ranks: ranks[PLAYERS.indexOf(name)] ?? [] })(c));
+saves["final-rank"] = ranked(saves.final, [[4, 5, 5, 6, 6, 7]]);
+saves["solo-rank"] = ranked(saves.solo, [[9, 10, 10, 11, 11]]);
+saves["coop-q12-rank"] = ranked(saves["coop-q12"], [[5, 6, 6], [10, 11, 12, 12], []]);
+saves["solo-rank-first"] = ranked(saves.solo, []);
+meta["final-rank"] = meta.final;
+meta["solo-rank"] = meta["solo-rank-first"] = meta.solo;
+meta["coop-q12-rank"] = meta["coop-q12"];
+
 for (const s of Object.values(saves)) checkVersion(s);
 process.stdout.write(JSON.stringify({ saves, meta, players: [...PLAYERS, ...EXTRA_PLAYERS] }));

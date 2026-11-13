@@ -239,6 +239,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - Round-robin: the answerer's `SeatTag`; rr-competitive's out seat: «¡Fuera, Ana!» instead of «¡Oh no!», its track crumbles, no consolation line; rr-coop: the team's tower crumbles, the team lost, «Volver al inicio»; rr-competitive, one seat out: «Seguir» → Level of the next turn, or Victory for the last one standing (decision 279).
 
 - Career score: the same chip («−1») under the title / seat tag, not in the timed «nobody» case; the timed reveal banner carries it under the seat tag.
+- Career rank (plan 198, `RankBars`): at a game-ending Wrong (not the knockout «Seguir» one), under the consolation line, one bar per seat with a player and the career on, as on Victory.
 
 ### Next and Completed (answers off, D-105)
 - `game/screens/Revealed.svelte`, both neutral: neither success nor failure, sky-coloured title, the correct answer and `fun_fact` (`AnswerPanel`), normal music; whoosh in, no applause, no boom.
@@ -250,6 +251,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 - «Volver al inicio» → Start, or first the Badges screen (Career).
 - rr-coop: the line under the title names every player («¡Luna, Mateo y Sofía llegaron a la cima!», after four «y n más»).
 - rr-competitive: «¡Gana Ana!», the winner's tower and tag big (crowned when it climbed to the top), the others' tracks small beside it in one row with their final levels; won as the last one standing (decision 278): the line «Último en pie» and no crown.
+- Career rank (plan 198, `RankBars`, `plans/24-career.md` "Progress on screen"): under the answer, one bar per seat with a player and the career on (the player's name in sessions); «Rango 7 Prodigio», the bar moving from the old value with a mark there, the name changing on each whole number (cue `bing` on rank up); first finished game: the rank appears. Never delays «Volver al inicio».
 
 ## Transitions
 Every change between the states above uses one transition routine with these steps:

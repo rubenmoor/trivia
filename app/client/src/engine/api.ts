@@ -1,6 +1,6 @@
 // The former game routes of app/server/main.py (gone since PORT-8) on the engine (PORT-3, plan 20): same {status, body} as recorded.
 import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/types.ts";
-import { type CareerView, type ScoreStep, careerView, catchUp, markShown, scoreStep, setCareerOff } from "./career.ts";
+import { type CareerView, type RankStep, type ScoreStep, careerView, catchUp, markShown, rankSteps, scoreStep, setCareerOff } from "./career.ts";
 import * as game from "./game.ts";
 import { noteRunningOut as noteRunningOutIn, outlook as outlookOf, sessionOutlook, type Outlook } from "./outlook.ts";
 import { pyInt, pyStr, pyTruthy } from "./pycompat.ts";
@@ -56,6 +56,11 @@ export function getCareers(save: SaveData): Reply<Record<string, CareerView>> {
 /** The score step of the game's last answer (plan 198), or null. */
 export function getScoreStep(save: SaveData, data: EngineData, io: Io): Reply<ScoreStep | null> {
   return { save, status: 200, body: scoreStep(save, data, game.view(save, data, io)?.last ?? null) };
+}
+
+/** The rank steps of the game just finished (plan 198), one per seat with a player and the career on. */
+export function getRankSteps(save: SaveData, data: EngineData): Reply<RankStep[]> {
+  return { save, status: 200, body: rankSteps(save, data) };
 }
 
 /** POST /api/players/career {name, off}: a player's career off or on (decision 515). */

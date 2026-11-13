@@ -7,6 +7,7 @@
   import Fireworks from "../Fireworks.svelte";
   import Hearts from "../Hearts.svelte";
   import Prompt from "../Prompt.svelte";
+  import RankBars from "../RankBars.svelte";
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
   import Tracks from "../Tracks.svelte";
@@ -60,6 +61,7 @@
     {#if game.session?.mode === "rr-coop"}<p class="milestone">{t("screen.victory.team", { names: seatNames(game.session, TEAM_NAMES) })}</p>
     {:else if !competitive && game.player}<p class="milestone">{t("screen.victory.top", { name: game.player })}</p>{/if}
     {#if game.last}<AnswerPanel last={game.last} />{/if}
+    <RankBars names={!!session} />
 
     <button class="candy breathe" onclick={onhome} disabled={busy} data-focus-default>{t("action.home")} <Prompt action="confirm" /></button>
   </div>

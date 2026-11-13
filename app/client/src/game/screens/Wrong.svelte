@@ -7,6 +7,7 @@
   import AnswerPanel from "../AnswerPanel.svelte";
   import { consolation } from "../copy.ts";
   import Prompt from "../Prompt.svelte";
+  import RankBars from "../RankBars.svelte";
   import ScoreCount from "../ScoreCount.svelte";
   import SeatTag from "../SeatTag.svelte";
   import Tower from "../Tower.svelte";
@@ -54,6 +55,7 @@
       {#if !nobody}<ScoreCount />{/if}
       <AnswerPanel {last} label={t("screen.result.answerWas")} />
       {#if !knockout && !nobody}<p class="consolation">{consolation(game.level, levels, game.id)}</p>{/if}
+      {#if game.result !== null && !onnext}<RankBars names={!!game.session} />{/if}
     </div>
   </div>
   {#if onnext}
