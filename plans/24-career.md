@@ -61,7 +61,7 @@ The career gives each player a long-term sense of progress: school-style subject
 
 ## Badges: 39
 - 21 subject × grade; 3 diplomas; 1 college; 4 school years; 10 score.
-- Texts follow the existing achievement style (infinitive descriptions, `steam-achievements.vdf`); catalogs and review are part 4's work. Texts below are approved (decision 521); `<n>` thresholds can change, names and count can't once entered in Steamworks.
+- Texts follow the existing achievement style (infinitive descriptions, `steam-achievements.vdf`); Steam texts (`steam-achievements.vdf`) are part 4's work, UI catalogs part 5's. Texts below are approved (decision 521); `<n>` thresholds can change, names and count can't once entered in Steamworks.
 - Grade-specific descriptions: replace the grade word and number: es «de nivel primaria / secundaria / bachillerato o superior», en «elementary / middle school / high school level or harder», de «Grundschulniveau / Mittelstufenniveau / Oberstufenniveau oder schwerer».
 
 ### Subject × grade (21): `CAREER_<SUBJECT>_<GRADE>`
