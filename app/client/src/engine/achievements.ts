@@ -46,8 +46,7 @@ export function inSteamworks(id: AchievementId): boolean {
 }
 
 /** Standard rules only (decisions 19, 74, 285): not gamemaster, not customized, 12 levels, 4 cards (timed: 0), answers on,
- * no «Ir a pregunta…»; every game of a session.
- * @internal exported for tests */
+ * no «Ir a pregunta…»; every game of a session. */
 export function qualifies(row: GameRow): boolean {
   const mode = gameMode(row.state);
   const cards = mode === "timed" ? 0 : PER_LEVEL;
@@ -59,7 +58,7 @@ export function qualifies(row: GameRow): boolean {
 }
 
 /** A won row's winning game when it answered the last level right (decision 285); last-standing wins: null. */
-function towerWin(row: GameRow): GameState | null {
+export function towerWin(row: GameRow): GameState | null {
   if (row.result !== "won") return null;
   const mode = gameMode(row.state);
   if (mode !== "rr-competitive" && mode !== "timed") return row.state;

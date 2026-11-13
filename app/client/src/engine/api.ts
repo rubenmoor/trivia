@@ -1,5 +1,6 @@
 // The former game routes of app/server/main.py (gone since PORT-8) on the engine (PORT-3, plan 20): same {status, body} as recorded.
 import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/types.ts";
+import { catchUp } from "./career.ts";
 import * as game from "./game.ts";
 import { noteRunningOut as noteRunningOutIn, outlook as outlookOf, sessionOutlook, type Outlook } from "./outlook.ts";
 import { pyInt, pyStr, pyTruthy } from "./pycompat.ts";
@@ -116,7 +117,8 @@ export function gameAction(save: SaveData, data: EngineData, io: Io, action: str
   if (!Object.hasOwn(actions, action)) return { save, status: 404, body: NOT_FOUND };
   return guard(save, 409, () => {
     if (!CLOCK.has(action)) game.checkActor(save, body.seat);
-    const { save: out, event } = actions[action](save);
+    const { save: acted, event } = actions[action](save);
+    const out = catchUp(acted, data, io.now);
     const res: { game: Game | null; event?: JokerEvent } = { game: game.view(out, data, io) };
     if (action === "joker") res.event = event;
     return { save: out, status: 200, body: res };

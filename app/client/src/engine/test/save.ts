@@ -16,6 +16,11 @@ export function withoutOrphans(save: Tables): Tables {
   return { ...save, seen: save.seen.filter((s) => s.game_id !== 0) };
 }
 
+/** The recordings predate the career (plan 195): compare game rows without their cursor. */
+export function withoutCareer(save: Tables): Tables {
+  return { ...save, games: save.games.map(({ career: _, ...g }) => g) };
+}
+
 /** The save as the fixtures' `db` snapshot: tables only, rows by id, seen rows by (game_id, question_id), blocked sorted. */
 export function snapshot(save: Tables): Tables {
   const byId = <T extends { id: number }>(rows: T[]) => [...rows].sort((a, b) => a.id - b.id);
