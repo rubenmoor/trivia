@@ -1,0 +1,762 @@
+{
+  "subcategory": "nursery-rhymes-and-singalongs",
+  "facets": [
+    "Nursery rhyme characters",
+    "Rhymes about British places",
+    "History behind the rhymes",
+    "Playground and skipping rhymes",
+    "Action songs and party dances",
+    "Pub and music hall singalongs",
+    "Football chants and terrace anthems",
+    "Last Night of the Proms",
+    "Christmas, panto and Hogmanay songs",
+    "Children's TV theme songs",
+    "Scottish, Welsh and regional folk songs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 4,
+      "estimate": 2,
+      "record": 2,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 4,
+      "sequence": 5,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 2,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Humpty Dumpty",
+      "facet": "Nursery rhyme characters",
+      "known_at": 1
+    },
+    {
+      "name": "Jack and Jill",
+      "facet": "Nursery rhyme characters",
+      "known_at": 1
+    },
+    {
+      "name": "Little Miss Muffet",
+      "facet": "Nursery rhyme characters",
+      "known_at": 2
+    },
+    {
+      "name": "Little Bo-Peep",
+      "facet": "Nursery rhyme characters",
+      "known_at": 2
+    },
+    {
+      "name": "Little Jack Horner",
+      "facet": "Nursery rhyme characters",
+      "known_at": 4
+    },
+    {
+      "name": "Georgie Porgie",
+      "facet": "Nursery rhyme characters",
+      "known_at": 4
+    },
+    {
+      "name": "Wee Willie Winkie",
+      "facet": "Nursery rhyme characters",
+      "known_at": 4
+    },
+    {
+      "name": "Mary, Mary, Quite Contrary",
+      "facet": "Nursery rhyme characters",
+      "known_at": 4
+    },
+    {
+      "name": "Old Mother Hubbard",
+      "facet": "Nursery rhyme characters",
+      "known_at": 4
+    },
+    {
+      "name": "The Grand Old Duke of York",
+      "facet": "Nursery rhyme characters",
+      "known_at": 3
+    },
+    {
+      "name": "Little Boy Blue",
+      "facet": "Nursery rhyme characters",
+      "known_at": 5
+    },
+    {
+      "name": "Simple Simon",
+      "facet": "Nursery rhyme characters",
+      "known_at": 6
+    },
+    {
+      "name": "Tom, Tom, the Piper's Son",
+      "facet": "Nursery rhyme characters",
+      "known_at": 7
+    },
+    {
+      "name": "Polly Put the Kettle On",
+      "facet": "Nursery rhyme characters",
+      "known_at": 5
+    },
+    {
+      "name": "Lucy Locket",
+      "facet": "Nursery rhyme characters",
+      "known_at": 8
+    },
+    {
+      "name": "Little Tommy Tucker",
+      "facet": "Nursery rhyme characters",
+      "known_at": 8
+    },
+    {
+      "name": "Solomon Grundy",
+      "facet": "Nursery rhyme characters",
+      "known_at": 9
+    },
+    {
+      "name": "Peter Piper",
+      "facet": "Nursery rhyme characters",
+      "known_at": 5
+    },
+    {
+      "name": "Hey Diddle Diddle",
+      "facet": "Nursery rhyme characters",
+      "known_at": 2
+    },
+    {
+      "name": "London Bridge Is Falling Down",
+      "facet": "Rhymes about British places",
+      "known_at": 2
+    },
+    {
+      "name": "Oranges and Lemons",
+      "facet": "Rhymes about British places",
+      "known_at": 5
+    },
+    {
+      "name": "Banbury Cross",
+      "facet": "Rhymes about British places",
+      "known_at": 6
+    },
+    {
+      "name": "Drury Lane",
+      "facet": "Rhymes about British places",
+      "known_at": 8
+    },
+    {
+      "name": "Old Bailey",
+      "facet": "Rhymes about British places",
+      "known_at": 10
+    },
+    {
+      "name": "St Clement Danes",
+      "facet": "Rhymes about British places",
+      "known_at": 13
+    },
+    {
+      "name": "City Road",
+      "facet": "Rhymes about British places",
+      "known_at": 13
+    },
+    {
+      "name": "Pop Goes the Weasel",
+      "facet": "Rhymes about British places",
+      "known_at": 4
+    },
+    {
+      "name": "Bedfordshire",
+      "facet": "Rhymes about British places",
+      "known_at": 9
+    },
+    {
+      "name": "Pussycat, Pussycat",
+      "facet": "Rhymes about British places",
+      "known_at": 5
+    },
+    {
+      "name": "Taffy Was a Welshman",
+      "facet": "Rhymes about British places",
+      "known_at": 13
+    },
+    {
+      "name": "Mary I of England",
+      "facet": "History behind the rhymes",
+      "known_at": 10
+    },
+    {
+      "name": "Prince Frederick, Duke of York",
+      "facet": "History behind the rhymes",
+      "known_at": 12
+    },
+    {
+      "name": "Baa, Baa, Black Sheep",
+      "facet": "History behind the rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "Three Blind Mice",
+      "facet": "History behind the rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "Iona and Peter Opie",
+      "facet": "History behind the rhymes",
+      "known_at": 14
+    },
+    {
+      "name": "Tommy Thumb's Pretty Song Book",
+      "facet": "History behind the rhymes",
+      "known_at": 15
+    },
+    {
+      "name": "Through the Looking-Glass",
+      "facet": "History behind the rhymes",
+      "known_at": 9
+    },
+    {
+      "name": "Pawnbroker",
+      "facet": "History behind the rhymes",
+      "known_at": 11
+    },
+    {
+      "name": "Wool tax",
+      "facet": "History behind the rhymes",
+      "known_at": 13
+    },
+    {
+      "name": "Ip Dip",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Eeny, Meeny, Miny, Moe",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 2
+    },
+    {
+      "name": "One Potato, Two Potato",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 3
+    },
+    {
+      "name": "Teddy Bear, Teddy Bear, Turn Around",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Cinderella Dressed in Yella",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 6
+    },
+    {
+      "name": "Double Dutch",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 5
+    },
+    {
+      "name": "Salt, Mustard, Vinegar, Pepper",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 7
+    },
+    {
+      "name": "Miss Mary Mack",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 6
+    },
+    {
+      "name": "Pat-a-Cake",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "In and Out the Dusty Bluebells",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 7
+    },
+    {
+      "name": "The Farmer's in His Den",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Here We Go Round the Mulberry Bush",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Hopscotch",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 2,
+      "retired": "used_up: Two questions already cover hopscotch. It isn't specific to the UK, and the remaining options would be forced."
+    },
+    {
+      "name": "My Mother Said",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 10
+    },
+    {
+      "name": "Ladybird, Ladybird",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 4
+    },
+    {
+      "name": "Bubblegum, Bubblegum in a Dish",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 5
+    },
+    {
+      "name": "Skipping rope",
+      "facet": "Playground and skipping rhymes",
+      "known_at": 1
+    },
+    {
+      "name": "Hokey Cokey",
+      "facet": "Action songs and party dances",
+      "known_at": 2
+    },
+    {
+      "name": "The Birdie Song",
+      "facet": "Action songs and party dances",
+      "known_at": 6
+    },
+    {
+      "name": "Black Lace",
+      "facet": "Action songs and party dances",
+      "known_at": 12
+    },
+    {
+      "name": "Lambeth Walk",
+      "facet": "Action songs and party dances",
+      "known_at": 12
+    },
+    {
+      "name": "Musical statues",
+      "facet": "Action songs and party dances",
+      "known_at": 2
+    },
+    {
+      "name": "Head, Shoulders, Knees and Toes",
+      "facet": "Action songs and party dances",
+      "known_at": 1
+    },
+    {
+      "name": "Wind the Bobbin Up",
+      "facet": "Action songs and party dances",
+      "known_at": 4
+    },
+    {
+      "name": "Row, Row, Row Your Boat",
+      "facet": "Action songs and party dances",
+      "known_at": 1
+    },
+    {
+      "name": "The Wheels on the Bus",
+      "facet": "Action songs and party dances",
+      "known_at": 1
+    },
+    {
+      "name": "Sleeping Bunnies",
+      "facet": "Action songs and party dances",
+      "known_at": 3
+    },
+    {
+      "name": "Five Little Ducks",
+      "facet": "Action songs and party dances",
+      "known_at": 1
+    },
+    {
+      "name": "Five Little Speckled Frogs",
+      "facet": "Action songs and party dances",
+      "known_at": 3
+    },
+    {
+      "name": "I'm a Little Teapot",
+      "facet": "Action songs and party dances",
+      "known_at": 2
+    },
+    {
+      "name": "Superman (Black Lace song)",
+      "facet": "Action songs and party dances",
+      "known_at": 11
+    },
+    {
+      "name": "Knees Up Mother Brown",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 9
+    },
+    {
+      "name": "Roll Out the Barrel",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 11
+    },
+    {
+      "name": "Daisy Bell",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 9
+    },
+    {
+      "name": "Any Old Iron",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 12
+    },
+    {
+      "name": "My Old Man Said Follow the Van",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 12
+    },
+    {
+      "name": "Down at the Old Bull and Bush",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 13
+    },
+    {
+      "name": "I Do Like to Be Beside the Seaside",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 6
+    },
+    {
+      "name": "It's a Long Way to Tipperary",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 10
+    },
+    {
+      "name": "Pack Up Your Troubles",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 11
+    },
+    {
+      "name": "Burlington Bertie from Bow",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 14
+    },
+    {
+      "name": "Marie Lloyd",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 14
+    },
+    {
+      "name": "George Formby",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 11
+    },
+    {
+      "name": "When I'm Cleaning Windows",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 12
+    },
+    {
+      "name": "Chas & Dave",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 11
+    },
+    {
+      "name": "Show Me the Way to Go Home",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 11
+    },
+    {
+      "name": "We'll Meet Again",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 9
+    },
+    {
+      "name": "Gracie Fields",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 13
+    },
+    {
+      "name": "Champagne Charlie",
+      "facet": "Pub and music hall singalongs",
+      "known_at": 15
+    },
+    {
+      "name": "You'll Never Walk Alone",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 6
+    },
+    {
+      "name": "Blue Moon",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 10
+    },
+    {
+      "name": "I'm Forever Blowing Bubbles",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 9
+    },
+    {
+      "name": "Glad All Over",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 12
+    },
+    {
+      "name": "Keep Right On to the End of the Road",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 13
+    },
+    {
+      "name": "Marching on Together",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 12
+    },
+    {
+      "name": "World in Motion",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 12
+    },
+    {
+      "name": "Back Home",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 14
+    },
+    {
+      "name": "Go West",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 11
+    },
+    {
+      "name": "Que Sera, Sera",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 10
+    },
+    {
+      "name": "Ossie's Dream",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 14
+    },
+    {
+      "name": "Glory Glory Man United",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 10
+    },
+    {
+      "name": "Sweet Caroline",
+      "facet": "Football chants and terrace anthems",
+      "known_at": 9
+    },
+    {
+      "name": "Rule, Britannia!",
+      "facet": "Last Night of the Proms",
+      "known_at": 7
+    },
+    {
+      "name": "Jerusalem",
+      "facet": "Last Night of the Proms",
+      "known_at": 9
+    },
+    {
+      "name": "Pomp and Circumstance March No. 1",
+      "facet": "Last Night of the Proms",
+      "known_at": 12
+    },
+    {
+      "name": "Fantasia on British Sea Songs",
+      "facet": "Last Night of the Proms",
+      "known_at": 14
+    },
+    {
+      "name": "Edward Elgar",
+      "facet": "Last Night of the Proms",
+      "known_at": 11
+    },
+    {
+      "name": "Thomas Arne",
+      "facet": "Last Night of the Proms",
+      "known_at": 14
+    },
+    {
+      "name": "Hubert Parry",
+      "facet": "Last Night of the Proms",
+      "known_at": 13
+    },
+    {
+      "name": "Henry Wood",
+      "facet": "Last Night of the Proms",
+      "known_at": 13
+    },
+    {
+      "name": "Promenaders",
+      "facet": "Last Night of the Proms",
+      "known_at": 12
+    },
+    {
+      "name": "Proms in the Park",
+      "facet": "Last Night of the Proms",
+      "known_at": 11
+    },
+    {
+      "name": "BBC Symphony Orchestra",
+      "facet": "Last Night of the Proms",
+      "known_at": 11
+    },
+    {
+      "name": "Malcolm Sargent",
+      "facet": "Last Night of the Proms",
+      "known_at": 15
+    },
+    {
+      "name": "God Save the King",
+      "facet": "Last Night of the Proms",
+      "known_at": 4
+    },
+    {
+      "name": "Deck the Halls",
+      "facet": "Christmas, panto and Hogmanay songs",
+      "known_at": 4
+    },
+    {
+      "name": "Bob the Builder",
+      "facet": "Children's TV theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Fireman Sam",
+      "facet": "Children's TV theme songs",
+      "known_at": 2
+    },
+    {
+      "name": "Thomas the Tank Engine",
+      "facet": "Children's TV theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Teletubbies",
+      "facet": "Children's TV theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Peppa Pig",
+      "facet": "Children's TV theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Bagpuss",
+      "facet": "Children's TV theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "Camberwick Green",
+      "facet": "Children's TV theme songs",
+      "known_at": 13
+    },
+    {
+      "name": "Trumpton",
+      "facet": "Children's TV theme songs",
+      "known_at": 13
+    },
+    {
+      "name": "The Wombles",
+      "facet": "Children's TV theme songs",
+      "known_at": 9
+    },
+    {
+      "name": "Grange Hill",
+      "facet": "Children's TV theme songs",
+      "known_at": 12
+    },
+    {
+      "name": "Byker Grove",
+      "facet": "Children's TV theme songs",
+      "known_at": 13
+    },
+    {
+      "name": "Danger Mouse",
+      "facet": "Children's TV theme songs",
+      "known_at": 8
+    },
+    {
+      "name": "Count Duckula",
+      "facet": "Children's TV theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "SuperTed",
+      "facet": "Children's TV theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "Tweenies",
+      "facet": "Children's TV theme songs",
+      "known_at": 7
+    },
+    {
+      "name": "Mr Benn",
+      "facet": "Children's TV theme songs",
+      "known_at": 12
+    },
+    {
+      "name": "Rainbow",
+      "facet": "Children's TV theme songs",
+      "known_at": 11
+    },
+    {
+      "name": "Ivor the Engine",
+      "facet": "Children's TV theme songs",
+      "known_at": 13
+    },
+    {
+      "name": "Hey Duggee",
+      "facet": "Children's TV theme songs",
+      "known_at": 1
+    },
+    {
+      "name": "Skye Boat Song",
+      "facet": "Scottish, Welsh and regional folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Donald, Where's Your Troosers?",
+      "facet": "Scottish, Welsh and regional folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "Hen Wlad Fy Nhadau",
+      "facet": "Scottish, Welsh and regional folk songs",
+      "known_at": 11
+    },
+    {
+      "name": "All Through the Night",
+      "facet": "Scottish, Welsh and regional folk songs",
+      "known_at": 12
+    },
+    {
+      "name": "Trelawny",
+      "facet": "Scottish, Welsh and regional folk songs",
+      "known_at": 14
+    },
+    {
+      "name": "Ally Bally Bee",
+      "facet": "Scottish, Welsh and regional folk songs",
+      "known_at": 12
+    }
+  ]
+}

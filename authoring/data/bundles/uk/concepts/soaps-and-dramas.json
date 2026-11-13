@@ -1,0 +1,1123 @@
+{
+  "subcategory": "soaps-and-dramas",
+  "facets": [
+    "Coronation Street and Weatherfield",
+    "EastEnders and Albert Square",
+    "Emmerdale and other long-running soaps",
+    "Soap pubs, cafés and launderettes",
+    "Iconic soap characters and families",
+    "Famous soap storylines and cliffhangers",
+    "Costume and period dramas",
+    "Crime and detective dramas",
+    "Hospital, police and workplace dramas",
+    "Teen and school dramas",
+    "Soap catchphrases, theme tunes and Christmas specials",
+    "Actors, writers and TV awards"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 1,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Weatherfield",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 7
+    },
+    {
+      "name": "Ken Barlow",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 8
+    },
+    {
+      "name": "Gail Platt",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 9
+    },
+    {
+      "name": "David Platt",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Roy Cropper",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 9
+    },
+    {
+      "name": "Hayley Cropper",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Rita Tanner",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Audrey Roberts",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Steve McDonald",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Dev Alahan",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Norris Cole",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 11
+    },
+    {
+      "name": "Mavis Riley",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 12
+    },
+    {
+      "name": "Emily Bishop",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 12
+    },
+    {
+      "name": "Fred Elliott",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 12
+    },
+    {
+      "name": "Tyrone Dobbs",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Eileen Grimshaw",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Sally Webster",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 10
+    },
+    {
+      "name": "Underworld factory",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 11
+    },
+    {
+      "name": "Victoria Street",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 12
+    },
+    {
+      "name": "Granada Television",
+      "facet": "Coronation Street and Weatherfield",
+      "known_at": 11
+    },
+    {
+      "name": "Walford",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 7
+    },
+    {
+      "name": "Albert Square",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 6
+    },
+    {
+      "name": "E20 postcode",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 11
+    },
+    {
+      "name": "Billy Mitchell",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 10
+    },
+    {
+      "name": "Arthur Fowler",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 12
+    },
+    {
+      "name": "Pauline Fowler",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 11
+    },
+    {
+      "name": "Lou Beale",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 13
+    },
+    {
+      "name": "Sonia Fowler",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 11
+    },
+    {
+      "name": "Martin Fowler",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 11
+    },
+    {
+      "name": "Bianca Jackson",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 10
+    },
+    {
+      "name": "Ricky Butcher",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 10
+    },
+    {
+      "name": "Stacey Slater",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 10
+    },
+    {
+      "name": "Mick Carter",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 9
+    },
+    {
+      "name": "Linda Carter",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 10
+    },
+    {
+      "name": "Shirley Carter",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 10
+    },
+    {
+      "name": "Max Branning",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 11
+    },
+    {
+      "name": "Bridge Street market",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 11
+    },
+    {
+      "name": "Walford East tube station",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 11
+    },
+    {
+      "name": "Elstree Studios",
+      "facet": "EastEnders and Albert Square",
+      "known_at": 12
+    },
+    {
+      "name": "Beckindale",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 13
+    },
+    {
+      "name": "Hotten",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 12
+    },
+    {
+      "name": "Esholt",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 14
+    },
+    {
+      "name": "Hollyoaks",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 7
+    },
+    {
+      "name": "Brookside",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 11
+    },
+    {
+      "name": "Brookside Close",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 12
+    },
+    {
+      "name": "Crossroads",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 12
+    },
+    {
+      "name": "The Archers",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 10
+    },
+    {
+      "name": "Ambridge",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 12
+    },
+    {
+      "name": "Doctors",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 10
+    },
+    {
+      "name": "River City",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 12
+    },
+    {
+      "name": "Pobol y Cwm",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 13
+    },
+    {
+      "name": "Eldorado",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 13
+    },
+    {
+      "name": "Family Affairs",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 13
+    },
+    {
+      "name": "Howards' Way",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 14
+    },
+    {
+      "name": "Albion Market",
+      "facet": "Emmerdale and other long-running soaps",
+      "known_at": 15
+    },
+    {
+      "name": "Rovers Return",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 6
+    },
+    {
+      "name": "The Snug",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 12
+    },
+    {
+      "name": "Betty's hotpot",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 11
+    },
+    {
+      "name": "Roy's Rolls",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 9
+    },
+    {
+      "name": "The Kabin",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 11
+    },
+    {
+      "name": "Dev's corner shop",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 10
+    },
+    {
+      "name": "Dot's launderette",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 10
+    },
+    {
+      "name": "Kathy's Café",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 12
+    },
+    {
+      "name": "Walford Minute Mart",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 12
+    },
+    {
+      "name": "The Dog in the Pond",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 10
+    },
+    {
+      "name": "The Loft",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 12
+    },
+    {
+      "name": "The Bull",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 13
+    },
+    {
+      "name": "Grey Gables",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 14
+    },
+    {
+      "name": "Crossroads Motel",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 12
+    },
+    {
+      "name": "Speed Daal",
+      "facet": "Soap pubs, cafés and launderettes",
+      "known_at": 13
+    },
+    {
+      "name": "Den Watts",
+      "facet": "Iconic soap characters and families",
+      "known_at": 10
+    },
+    {
+      "name": "Angie Watts",
+      "facet": "Iconic soap characters and families",
+      "known_at": 11
+    },
+    {
+      "name": "Sharon Watts",
+      "facet": "Iconic soap characters and families",
+      "known_at": 10
+    },
+    {
+      "name": "Peggy Mitchell",
+      "facet": "Iconic soap characters and families",
+      "known_at": 8
+    },
+    {
+      "name": "Mitchell brothers",
+      "facet": "Iconic soap characters and families",
+      "known_at": 7
+    },
+    {
+      "name": "Pat Butcher",
+      "facet": "Iconic soap characters and families",
+      "known_at": 9
+    },
+    {
+      "name": "Dot Cotton",
+      "facet": "Iconic soap characters and families",
+      "known_at": 9
+    },
+    {
+      "name": "Ian Beale",
+      "facet": "Iconic soap characters and families",
+      "known_at": 9
+    },
+    {
+      "name": "Kat Slater",
+      "facet": "Iconic soap characters and families",
+      "known_at": 9
+    },
+    {
+      "name": "Alfie Moon",
+      "facet": "Iconic soap characters and families",
+      "known_at": 10
+    },
+    {
+      "name": "Slater family",
+      "facet": "Iconic soap characters and families",
+      "known_at": 10
+    },
+    {
+      "name": "Barlow family",
+      "facet": "Iconic soap characters and families",
+      "known_at": 10
+    },
+    {
+      "name": "Ena Sharples",
+      "facet": "Iconic soap characters and families",
+      "known_at": 12
+    },
+    {
+      "name": "Elsie Tanner",
+      "facet": "Iconic soap characters and families",
+      "known_at": 12
+    },
+    {
+      "name": "Hilda Ogden",
+      "facet": "Iconic soap characters and families",
+      "known_at": 11
+    },
+    {
+      "name": "Bet Lynch",
+      "facet": "Iconic soap characters and families",
+      "known_at": 11
+    },
+    {
+      "name": "Jack and Vera Duckworth",
+      "facet": "Iconic soap characters and families",
+      "known_at": 11
+    },
+    {
+      "name": "Dingle family",
+      "facet": "Iconic soap characters and families",
+      "known_at": 9
+    },
+    {
+      "name": "Sugden family",
+      "facet": "Iconic soap characters and families",
+      "known_at": 12
+    },
+    {
+      "name": "Cain Dingle",
+      "facet": "Iconic soap characters and families",
+      "known_at": 10
+    },
+    {
+      "name": "Kim Tate",
+      "facet": "Iconic soap characters and families",
+      "known_at": 11
+    },
+    {
+      "name": "Jimmy Corkhill",
+      "facet": "Iconic soap characters and families",
+      "known_at": 13
+    },
+    {
+      "name": "Benny Hawkins",
+      "facet": "Iconic soap characters and families",
+      "known_at": 14
+    },
+    {
+      "name": "Who Shot Phil?",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 10
+    },
+    {
+      "name": "Who Killed Lucy Beale?",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 10
+    },
+    {
+      "name": "Den and Angie's divorce papers",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 12
+    },
+    {
+      "name": "Dirty Den's return",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 12
+    },
+    {
+      "name": "Sharongate",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 12
+    },
+    {
+      "name": "Kat and Alfie's Christmas",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 11
+    },
+    {
+      "name": "Archie Mitchell",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 12,
+      "retired": "unaskable: Archie Mitchell's key storylines are a murder whodunit and abuse; too adult for a family question."
+    },
+    {
+      "name": "EastEnders live episode",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 11
+    },
+    {
+      "name": "Free the Weatherfield One",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 13
+    },
+    {
+      "name": "Ken, Deirdre and Mike love triangle",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 13
+    },
+    {
+      "name": "Richard Hillman",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 11
+    },
+    {
+      "name": "Coronation Street tram crash",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 10
+    },
+    {
+      "name": "Coronation Street 50th anniversary",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 11
+    },
+    {
+      "name": "Emmerdale plane crash",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 11
+    },
+    {
+      "name": "Emmerdale storm",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 12
+    },
+    {
+      "name": "Body under the patio",
+      "facet": "Famous soap storylines and cliffhangers",
+      "known_at": 13
+    },
+    {
+      "name": "Downton Abbey",
+      "facet": "Costume and period dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Mrs Patmore",
+      "facet": "Costume and period dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Dowager Countess",
+      "facet": "Costume and period dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Upstairs, Downstairs",
+      "facet": "Costume and period dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Poldark",
+      "facet": "Costume and period dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Thomas Shelby",
+      "facet": "Costume and period dramas",
+      "known_at": 10
+    },
+    {
+      "name": "The Crown",
+      "facet": "Costume and period dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Bridgerton",
+      "facet": "Costume and period dramas",
+      "known_at": 8
+    },
+    {
+      "name": "Cranford",
+      "facet": "Costume and period dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Lark Rise to Candleford",
+      "facet": "Costume and period dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Gentleman Jack",
+      "facet": "Costume and period dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Victoria",
+      "facet": "Costume and period dramas",
+      "known_at": 11
+    },
+    {
+      "name": "North and South",
+      "facet": "Costume and period dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Sherlock",
+      "facet": "Crime and detective dramas",
+      "known_at": 6
+    },
+    {
+      "name": "Line of Duty",
+      "facet": "Crime and detective dramas",
+      "known_at": 9
+    },
+    {
+      "name": "AC-12",
+      "facet": "Crime and detective dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Ted Hastings",
+      "facet": "Crime and detective dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Midsomer Murders",
+      "facet": "Crime and detective dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Morse's Jaguar",
+      "facet": "Crime and detective dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Lewis",
+      "facet": "Crime and detective dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Endeavour",
+      "facet": "Crime and detective dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Broadchurch",
+      "facet": "Crime and detective dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Happy Valley",
+      "facet": "Crime and detective dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Luther",
+      "facet": "Crime and detective dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Prime Suspect",
+      "facet": "Crime and detective dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Vera",
+      "facet": "Crime and detective dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Agatha Christie's Poirot",
+      "facet": "Crime and detective dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Taggart",
+      "facet": "Crime and detective dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Bodyguard",
+      "facet": "Crime and detective dramas",
+      "known_at": 10
+    },
+    {
+      "name": "A Touch of Frost",
+      "facet": "Crime and detective dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Death in Paradise",
+      "facet": "Crime and detective dramas",
+      "known_at": 8
+    },
+    {
+      "name": "The Sweeney",
+      "facet": "Crime and detective dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Cracker",
+      "facet": "Crime and detective dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Casualty",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Holby City",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Charlie Fairhead",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 11
+    },
+    {
+      "name": "The Bill",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Sun Hill",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Dixon of Dock Green",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Z-Cars",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Juliet Bravo",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Goathland",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Peak Practice",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 13
+    },
+    {
+      "name": "London's Burning",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Spooks",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Bad Girls",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Footballers' Wives",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Mr Selfridge",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 12
+    },
+    {
+      "name": "Silk",
+      "facet": "Hospital, police and workplace dramas",
+      "known_at": 14
+    },
+    {
+      "name": "Zammo",
+      "facet": "Teen and school dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Just Say No",
+      "facet": "Teen and school dramas",
+      "known_at": 13
+    },
+    {
+      "name": "PJ and Duncan",
+      "facet": "Teen and school dramas",
+      "known_at": 10
+    },
+    {
+      "name": "Waterloo Road",
+      "facet": "Teen and school dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Ackley Bridge",
+      "facet": "Teen and school dramas",
+      "known_at": 9
+    },
+    {
+      "name": "Heartstopper",
+      "facet": "Teen and school dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Skins",
+      "facet": "Teen and school dramas",
+      "known_at": 11
+    },
+    {
+      "name": "Wolfblood",
+      "facet": "Teen and school dramas",
+      "known_at": 7
+    },
+    {
+      "name": "Teachers",
+      "facet": "Teen and school dramas",
+      "known_at": 13
+    },
+    {
+      "name": "Get outta my pub!",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 9
+    },
+    {
+      "name": "You ain't my mother!",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 10
+    },
+    {
+      "name": "Mother of God",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 11
+    },
+    {
+      "name": "Now we're sucking diesel",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 12
+    },
+    {
+      "name": "Evenin' all",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 13
+    },
+    {
+      "name": "Shut it!",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 13
+    },
+    {
+      "name": "Hilda Ogden's muriel",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 13
+    },
+    {
+      "name": "Doof doof",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 7
+    },
+    {
+      "name": "EastEnders opening titles",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 9
+    },
+    {
+      "name": "Coronation Street theme",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 8
+    },
+    {
+      "name": "Coronation Street cat",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 11
+    },
+    {
+      "name": "The cobbles",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 10
+    },
+    {
+      "name": "Emmerdale theme",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 11
+    },
+    {
+      "name": "Barwick Green",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 14
+    },
+    {
+      "name": "Chicken Man",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 14
+    },
+    {
+      "name": "Inspector Morse theme",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 12
+    },
+    {
+      "name": "Pat Butcher's earrings",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 10
+    },
+    {
+      "name": "Ena Sharples's hairnet",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas Day ratings war",
+      "facet": "Soap catchphrases, theme tunes and Christmas specials",
+      "known_at": 10
+    },
+    {
+      "name": "National Television Awards",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 9
+    },
+    {
+      "name": "British Soap Awards",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 10
+    },
+    {
+      "name": "BAFTA TV Awards",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 10
+    },
+    {
+      "name": "TV Choice Awards",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 12
+    },
+    {
+      "name": "Tony Warren",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 13
+    },
+    {
+      "name": "Julia Smith",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 14
+    },
+    {
+      "name": "Phil Redmond",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 13
+    },
+    {
+      "name": "Sally Wainwright",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 13
+    },
+    {
+      "name": "Jed Mercurio",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 12
+    },
+    {
+      "name": "Julian Fellowes",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 12
+    },
+    {
+      "name": "Andrew Davies",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 14
+    },
+    {
+      "name": "Jimmy McGovern",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 14
+    },
+    {
+      "name": "Lynda La Plante",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 13
+    },
+    {
+      "name": "William Roache",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 11
+    },
+    {
+      "name": "Barbara Windsor",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 9
+    },
+    {
+      "name": "June Brown",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 12
+    },
+    {
+      "name": "Steve McFadden",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 11
+    },
+    {
+      "name": "Ross Kemp",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 10
+    },
+    {
+      "name": "Danny Dyer",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 9
+    },
+    {
+      "name": "Suranne Jones",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 12
+    },
+    {
+      "name": "Sarah Lancashire",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 12
+    },
+    {
+      "name": "Colin Firth",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 10
+    },
+    {
+      "name": "Benedict Cumberbatch",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 7
+    },
+    {
+      "name": "David Jason",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 9
+    },
+    {
+      "name": "John Thaw",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 13
+    },
+    {
+      "name": "Maggie Smith",
+      "facet": "Actors, writers and TV awards",
+      "known_at": 8
+    }
+  ]
+}

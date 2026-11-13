@@ -1,0 +1,467 @@
+{
+  "subcategory": "crown-and-state",
+  "facets": [
+    "Crown Jewels and regalia",
+    "Coronation ceremony and traditions",
+    "Royal residences and palaces",
+    "Royal guards and ceremonial units",
+    "Royal ceremonies and pageantry",
+    "Royal arms, crests and badges",
+    "Union Flag and national flags",
+    "National anthems and patriotic songs",
+    "Coins, banknotes and stamps",
+    "Parliament and state ceremony",
+    "Royal titles and honours",
+    "Royal emblems in everyday life"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 4,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 4,
+      "university": 1,
+      "everyday": 4,
+      "colombia": 1,
+      "pop_culture": 2,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 4,
+      "nature": 2,
+      "history": 5,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sovereign's Orb",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 7
+    },
+    {
+      "name": "Sovereign's Sceptre with Cross",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 10
+    },
+    {
+      "name": "Black Prince's Ruby",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 12
+    },
+    {
+      "name": "Stuart Sapphire",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 14
+    },
+    {
+      "name": "Coronation Spoon",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 12
+    },
+    {
+      "name": "Ampulla",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 13
+    },
+    {
+      "name": "Jewel House",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 9
+    },
+    {
+      "name": "Sovereign's Ring",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 11
+    },
+    {
+      "name": "Coronation spurs",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 13
+    },
+    {
+      "name": "Armills",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 14
+    },
+    {
+      "name": "Imperial Crown of India",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 13
+    },
+    {
+      "name": "Crown of Queen Elizabeth The Queen Mother",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 12
+    },
+    {
+      "name": "Coronation Chair",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Anointing",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Coronation Oath",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Homage of the People",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Coronation quiche",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "The Recognition",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 14
+    },
+    {
+      "name": "Enthronement",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Coronation of William the Conqueror",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Coronation Concert",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Coronation Medal",
+      "facet": "Coronation ceremony and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Lodge",
+      "facet": "Royal residences and palaces",
+      "known_at": 13
+    },
+    {
+      "name": "King's Guard",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 5
+    },
+    {
+      "name": "Yeomen Warders",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 6
+    },
+    {
+      "name": "Bearskin",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 5
+    },
+    {
+      "name": "Grenadier Guards",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 10
+    },
+    {
+      "name": "Coldstream Guards",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 10
+    },
+    {
+      "name": "Scots Guards",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 10
+    },
+    {
+      "name": "Irish Guards",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 11
+    },
+    {
+      "name": "Welsh Guards",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 10
+    },
+    {
+      "name": "King's Troop Royal Horse Artillery",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 12
+    },
+    {
+      "name": "Gentlemen at Arms",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 14
+    },
+    {
+      "name": "Royal Company of Archers",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 14
+    },
+    {
+      "name": "Life Guards",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 11
+    },
+    {
+      "name": "Blues and Royals",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 12
+    },
+    {
+      "name": "Chelsea Pensioners",
+      "facet": "Royal guards and ceremonial units",
+      "known_at": 9
+    },
+    {
+      "name": "Royal Maundy service",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 12
+    },
+    {
+      "name": "State banquet",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 10
+    },
+    {
+      "name": "Royal wedding",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 4
+    },
+    {
+      "name": "State funeral of Elizabeth II",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 7
+    },
+    {
+      "name": "Lying in state",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 10
+    },
+    {
+      "name": "Buckingham Palace garden party",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 8
+    },
+    {
+      "name": "Beating Retreat",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 13
+    },
+    {
+      "name": "Royal flypast",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 7
+    },
+    {
+      "name": "Royal coat of arms",
+      "facet": "Royal arms, crests and badges",
+      "known_at": 7
+    },
+    {
+      "name": "Lion and unicorn",
+      "facet": "Royal arms, crests and badges",
+      "known_at": 6
+    },
+    {
+      "name": "Harp of Ireland",
+      "facet": "Royal arms, crests and badges",
+      "known_at": 11
+    },
+    {
+      "name": "Fleur-de-lis",
+      "facet": "Royal arms, crests and badges",
+      "known_at": 9
+    },
+    {
+      "name": "Heraldic supporters",
+      "facet": "Royal arms, crests and badges",
+      "known_at": 14
+    },
+    {
+      "name": "College of Arms",
+      "facet": "Royal arms, crests and badges",
+      "known_at": 13
+    },
+    {
+      "name": "Acts of Union 1801",
+      "facet": "Union Flag and national flags",
+      "known_at": 12
+    },
+    {
+      "name": "Flag of the Isle of Man",
+      "facet": "Union Flag and national flags",
+      "known_at": 12
+    },
+    {
+      "name": "I Vow to Thee, My Country",
+      "facet": "National anthems and patriotic songs",
+      "known_at": 12
+    },
+    {
+      "name": "Pomp and Circumstance",
+      "facet": "National anthems and patriotic songs",
+      "known_at": 12
+    },
+    {
+      "name": "Ireland's Call",
+      "facet": "National anthems and patriotic songs",
+      "known_at": 13
+    },
+    {
+      "name": "50p coin",
+      "facet": "Coins, banknotes and stamps",
+      "known_at": 4
+    },
+    {
+      "name": "20p coin",
+      "facet": "Coins, banknotes and stamps",
+      "known_at": 4
+    },
+    {
+      "name": "£2 coin",
+      "facet": "Coins, banknotes and stamps",
+      "known_at": 4
+    },
+    {
+      "name": "Peter Rabbit 50p",
+      "facet": "Coins, banknotes and stamps",
+      "known_at": 8
+    },
+    {
+      "name": "Accession Council",
+      "facet": "Parliament and state ceremony",
+      "known_at": 13
+    },
+    {
+      "name": "Princess Royal",
+      "facet": "Royal titles and honours",
+      "known_at": 11
+    },
+    {
+      "name": "Duke of Edinburgh",
+      "facet": "Royal titles and honours",
+      "known_at": 7
+    },
+    {
+      "name": "Duke of Cornwall",
+      "facet": "Royal titles and honours",
+      "known_at": 12
+    },
+    {
+      "name": "Dame",
+      "facet": "Royal titles and honours",
+      "known_at": 8
+    },
+    {
+      "name": "Investiture",
+      "facet": "Royal titles and honours",
+      "known_at": 11
+    },
+    {
+      "name": "Master of the King's Music",
+      "facet": "Royal titles and honours",
+      "known_at": 14
+    },
+    {
+      "name": "His Royal Highness",
+      "facet": "Royal titles and honours",
+      "known_at": 8
+    },
+    {
+      "name": "Line of succession",
+      "facet": "Royal titles and honours",
+      "known_at": 8
+    },
+    {
+      "name": "Prince consort",
+      "facet": "Royal titles and honours",
+      "known_at": 11
+    },
+    {
+      "name": "Queen consort",
+      "facet": "Royal titles and honours",
+      "known_at": 10
+    },
+    {
+      "name": "Lord Chamberlain",
+      "facet": "Royal titles and honours",
+      "known_at": 13
+    },
+    {
+      "name": "Order of Merit",
+      "facet": "Royal titles and honours",
+      "known_at": 13
+    },
+    {
+      "name": "HMS",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 8
+    },
+    {
+      "name": "Royal Air Force",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 6
+    },
+    {
+      "name": "Crown Estate",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Parks",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 10
+    },
+    {
+      "name": "Red Lion pub",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 9
+    },
+    {
+      "name": "Crown Court",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 11
+    },
+    {
+      "name": "King's English",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 13
+    },
+    {
+      "name": "OHMS",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 14
+    }
+  ]
+}

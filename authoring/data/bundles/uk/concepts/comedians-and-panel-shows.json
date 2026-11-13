@@ -1,0 +1,937 @@
+{
+  "subcategory": "comedians-and-panel-shows",
+  "facets": [
+    "Classic panel shows",
+    "Quiz-based comedy panel shows",
+    "Stand-up comedians",
+    "Comedy double acts and troupes",
+    "Panel show hosts and team captains",
+    "Panel show rounds and formats",
+    "Catchphrases and famous lines",
+    "Sketch show stars",
+    "Charity comedy nights and telethons",
+    "Comedy festivals and venues",
+    "Radio comedy and panel games",
+    "Comedy legends of the past"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 3,
+      "estimate": 2,
+      "record": 3,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "The Last Leg",
+      "facet": "Classic panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "Through the Keyhole",
+      "facet": "Classic panel shows",
+      "known_at": 10
+    },
+    {
+      "name": "Call My Bluff",
+      "facet": "Classic panel shows",
+      "known_at": 12
+    },
+    {
+      "name": "Celebrity Squares",
+      "facet": "Classic panel shows",
+      "known_at": 12
+    },
+    {
+      "name": "Give Us a Clue",
+      "facet": "Classic panel shows",
+      "known_at": 12
+    },
+    {
+      "name": "What's My Line?",
+      "facet": "Classic panel shows",
+      "known_at": 13
+    },
+    {
+      "name": "Juke Box Jury",
+      "facet": "Classic panel shows",
+      "known_at": 14
+    },
+    {
+      "name": "Argumental",
+      "facet": "Classic panel shows",
+      "known_at": 14
+    },
+    {
+      "name": "Hypothetical",
+      "facet": "Quiz-based comedy panel shows",
+      "known_at": 14
+    },
+    {
+      "name": "Question Team",
+      "facet": "Quiz-based comedy panel shows",
+      "known_at": 14
+    },
+    {
+      "name": "Insert Name Here",
+      "facet": "Quiz-based comedy panel shows",
+      "known_at": 14
+    },
+    {
+      "name": "Duck Quacks Don't Echo",
+      "facet": "Quiz-based comedy panel shows",
+      "known_at": 13
+    },
+    {
+      "name": "Guessable",
+      "facet": "Quiz-based comedy panel shows",
+      "known_at": 14
+    },
+    {
+      "name": "Never Mind the Full Stops",
+      "facet": "Quiz-based comedy panel shows",
+      "known_at": 15
+    },
+    {
+      "name": "Pointless Celebrities",
+      "facet": "Quiz-based comedy panel shows",
+      "known_at": 8
+    },
+    {
+      "name": "Michael McIntyre",
+      "facet": "Stand-up comedians",
+      "known_at": 7
+    },
+    {
+      "name": "Lee Evans",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Billy Connolly",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Sarah Millican",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Jimmy Carr",
+      "facet": "Stand-up comedians",
+      "known_at": 8
+    },
+    {
+      "name": "Romesh Ranganathan",
+      "facet": "Stand-up comedians",
+      "known_at": 9
+    },
+    {
+      "name": "Jack Whitehall",
+      "facet": "Stand-up comedians",
+      "known_at": 8
+    },
+    {
+      "name": "John Bishop",
+      "facet": "Stand-up comedians",
+      "known_at": 9
+    },
+    {
+      "name": "Jason Manford",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Victoria Wood",
+      "facet": "Stand-up comedians",
+      "known_at": 11
+    },
+    {
+      "name": "Ross Noble",
+      "facet": "Stand-up comedians",
+      "known_at": 12
+    },
+    {
+      "name": "Bill Bailey",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Frankie Boyle",
+      "facet": "Stand-up comedians",
+      "known_at": 11
+    },
+    {
+      "name": "Rhod Gilbert",
+      "facet": "Stand-up comedians",
+      "known_at": 12
+    },
+    {
+      "name": "Kevin Bridges",
+      "facet": "Stand-up comedians",
+      "known_at": 11
+    },
+    {
+      "name": "Joe Lycett",
+      "facet": "Stand-up comedians",
+      "known_at": 9
+    },
+    {
+      "name": "Jo Brand",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Russell Howard",
+      "facet": "Stand-up comedians",
+      "known_at": 9
+    },
+    {
+      "name": "Stewart Lee",
+      "facet": "Stand-up comedians",
+      "known_at": 13
+    },
+    {
+      "name": "Tim Vine",
+      "facet": "Stand-up comedians",
+      "known_at": 11
+    },
+    {
+      "name": "Milton Jones",
+      "facet": "Stand-up comedians",
+      "known_at": 11
+    },
+    {
+      "name": "Katherine Ryan",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Mo Gilligan",
+      "facet": "Stand-up comedians",
+      "known_at": 10
+    },
+    {
+      "name": "Morecambe and Wise",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 9
+    },
+    {
+      "name": "The Two Ronnies",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 9
+    },
+    {
+      "name": "French and Saunders",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 10
+    },
+    {
+      "name": "Monty Python",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 8
+    },
+    {
+      "name": "Reeves and Mortimer",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 11
+    },
+    {
+      "name": "Mitchell and Webb",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 11
+    },
+    {
+      "name": "Hale and Pace",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 14
+    },
+    {
+      "name": "Cannon and Ball",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 13
+    },
+    {
+      "name": "Little and Large",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 14
+    },
+    {
+      "name": "The League of Gentlemen",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "The Goodies",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "Armstrong and Miller",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "Fry and Laurie",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 11
+    },
+    {
+      "name": "Smith and Jones",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 13
+    },
+    {
+      "name": "The Mighty Boosh",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "The Comic Strip",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 14
+    },
+    {
+      "name": "Cambridge Footlights",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 12
+    },
+    {
+      "name": "Horne and Corden",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 13
+    },
+    {
+      "name": "Newman and Baddiel",
+      "facet": "Comedy double acts and troupes",
+      "known_at": 14
+    },
+    {
+      "name": "Angus Deayton",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 11
+    },
+    {
+      "name": "Ian Hislop",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 10
+    },
+    {
+      "name": "Paul Merton",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 10
+    },
+    {
+      "name": "Stephen Fry",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 9
+    },
+    {
+      "name": "Sandi Toksvig",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 9
+    },
+    {
+      "name": "Alan Davies",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 9
+    },
+    {
+      "name": "Greg Davies",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 8
+    },
+    {
+      "name": "Alex Horne",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 9
+    },
+    {
+      "name": "Rob Brydon",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 9
+    },
+    {
+      "name": "Mark Lamarr",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 13
+    },
+    {
+      "name": "Phill Jupitus",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 12
+    },
+    {
+      "name": "Sean Lock",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 11
+    },
+    {
+      "name": "Jon Richardson",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 10
+    },
+    {
+      "name": "Dara Ó Briain",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 10
+    },
+    {
+      "name": "Hugh Dennis",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 11
+    },
+    {
+      "name": "Freddie Flintoff",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 9
+    },
+    {
+      "name": "Jamie Redknapp",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 10
+    },
+    {
+      "name": "Keith Lemon",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 9
+    },
+    {
+      "name": "Nick Hancock",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 13
+    },
+    {
+      "name": "Simon Amstell",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 12
+    },
+    {
+      "name": "Adam Hills",
+      "facet": "Panel show hosts and team captains",
+      "known_at": 11
+    },
+    {
+      "name": "Missing Words round",
+      "facet": "Panel show rounds and formats",
+      "known_at": 13
+    },
+    {
+      "name": "Guest host",
+      "facet": "Panel show rounds and formats",
+      "known_at": 12
+    },
+    {
+      "name": "General Ignorance",
+      "facet": "Panel show rounds and formats",
+      "known_at": 12
+    },
+    {
+      "name": "Prize task",
+      "facet": "Panel show rounds and formats",
+      "known_at": 11
+    },
+    {
+      "name": "Live task",
+      "facet": "Panel show rounds and formats",
+      "known_at": 12
+    },
+    {
+      "name": "Taskmaster Champion of Champions",
+      "facet": "Panel show rounds and formats",
+      "known_at": 13
+    },
+    {
+      "name": "This Is My…",
+      "facet": "Panel show rounds and formats",
+      "known_at": 12
+    },
+    {
+      "name": "Home Truths",
+      "facet": "Panel show rounds and formats",
+      "known_at": 13
+    },
+    {
+      "name": "Quickfire Lies",
+      "facet": "Panel show rounds and formats",
+      "known_at": 13
+    },
+    {
+      "name": "Scenes We'd Like to See",
+      "facet": "Panel show rounds and formats",
+      "known_at": 13
+    },
+    {
+      "name": "Identity Parade",
+      "facet": "Panel show rounds and formats",
+      "known_at": 12
+    },
+    {
+      "name": "Dove from Above",
+      "facet": "Panel show rounds and formats",
+      "known_at": 13
+    },
+    {
+      "name": "Pet hates",
+      "facet": "Panel show rounds and formats",
+      "known_at": 10
+    },
+    {
+      "name": "Conundrum",
+      "facet": "Panel show rounds and formats",
+      "known_at": 10
+    },
+    {
+      "name": "Scenes from a Hat",
+      "facet": "Panel show rounds and formats",
+      "known_at": 13
+    },
+    {
+      "name": "Party Quirks",
+      "facet": "Panel show rounds and formats",
+      "known_at": 14
+    },
+    {
+      "name": "Odd One Out round",
+      "facet": "Panel show rounds and formats",
+      "known_at": 12
+    },
+    {
+      "name": "Garlic bread?",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "Am I bovvered?",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "Yeah but no but",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "Computer says no",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "Suits you, sir!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 13
+    },
+    {
+      "name": "Bring Me Sunshine",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "Just like that!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "It's goodnight from me",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 12
+    },
+    {
+      "name": "And now for something completely different",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "I'm a laydee",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "Ooh, Matron!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 13
+    },
+    {
+      "name": "Catherine Tate",
+      "facet": "Sketch show stars",
+      "known_at": 10
+    },
+    {
+      "name": "Harry Enfield",
+      "facet": "Sketch show stars",
+      "known_at": 12
+    },
+    {
+      "name": "Paul Whitehouse",
+      "facet": "Sketch show stars",
+      "known_at": 12
+    },
+    {
+      "name": "Kenny Everett",
+      "facet": "Sketch show stars",
+      "known_at": 14
+    },
+    {
+      "name": "Benny Hill",
+      "facet": "Sketch show stars",
+      "known_at": 11
+    },
+    {
+      "name": "Tracey Ullman",
+      "facet": "Sketch show stars",
+      "known_at": 13
+    },
+    {
+      "name": "Meera Syal",
+      "facet": "Sketch show stars",
+      "known_at": 12
+    },
+    {
+      "name": "Sanjeev Bhaskar",
+      "facet": "Sketch show stars",
+      "known_at": 12
+    },
+    {
+      "name": "Sacha Baron Cohen",
+      "facet": "Sketch show stars",
+      "known_at": 9
+    },
+    {
+      "name": "Steve Coogan",
+      "facet": "Sketch show stars",
+      "known_at": 11
+    },
+    {
+      "name": "Kathy Burke",
+      "facet": "Sketch show stars",
+      "known_at": 13
+    },
+    {
+      "name": "Rory Bremner",
+      "facet": "Sketch show stars",
+      "known_at": 12
+    },
+    {
+      "name": "Mike Yarwood",
+      "facet": "Sketch show stars",
+      "known_at": 14
+    },
+    {
+      "name": "Dick Emery",
+      "facet": "Sketch show stars",
+      "known_at": 15
+    },
+    {
+      "name": "Comic Relief",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 6
+    },
+    {
+      "name": "Children in Need",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 5
+    },
+    {
+      "name": "Pudsey Bear",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 4
+    },
+    {
+      "name": "Sport Relief",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 8
+    },
+    {
+      "name": "Lenny Henry",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 10
+    },
+    {
+      "name": "The Secret Policeman's Ball",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 13
+    },
+    {
+      "name": "Stand Up to Cancer",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 11
+    },
+    {
+      "name": "Text Santa",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 13
+    },
+    {
+      "name": "24 Hour Panel People",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 13
+    },
+    {
+      "name": "The Great Comic Relief Bake Off",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Variety Performance",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 9
+    },
+    {
+      "name": "Let's Dance for Comic Relief",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 12
+    },
+    {
+      "name": "Sport Relief Mile",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 11
+    },
+    {
+      "name": "The Big Night In",
+      "facet": "Charity comedy nights and telethons",
+      "known_at": 13
+    },
+    {
+      "name": "Edinburgh Comedy Award",
+      "facet": "Comedy festivals and venues",
+      "known_at": 13
+    },
+    {
+      "name": "The Comedy Store",
+      "facet": "Comedy festivals and venues",
+      "known_at": 11
+    },
+    {
+      "name": "Hammersmith Apollo",
+      "facet": "Comedy festivals and venues",
+      "known_at": 11
+    },
+    {
+      "name": "Jongleurs",
+      "facet": "Comedy festivals and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Leicester Comedy Festival",
+      "facet": "Comedy festivals and venues",
+      "known_at": 13
+    },
+    {
+      "name": "Machynlleth Comedy Festival",
+      "facet": "Comedy festivals and venues",
+      "known_at": 15
+    },
+    {
+      "name": "Soho Theatre",
+      "facet": "Comedy festivals and venues",
+      "known_at": 13
+    },
+    {
+      "name": "The Stand Comedy Club",
+      "facet": "Comedy festivals and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Glasgow International Comedy Festival",
+      "facet": "Comedy festivals and venues",
+      "known_at": 13
+    },
+    {
+      "name": "Brighton Fringe",
+      "facet": "Comedy festivals and venues",
+      "known_at": 13
+    },
+    {
+      "name": "Funniest Joke of the Fringe",
+      "facet": "Comedy festivals and venues",
+      "known_at": 12
+    },
+    {
+      "name": "Pleasance",
+      "facet": "Comedy festivals and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Gilded Balloon",
+      "facet": "Comedy festivals and venues",
+      "known_at": 14
+    },
+    {
+      "name": "Working men's club",
+      "facet": "Comedy festivals and venues",
+      "known_at": 12
+    },
+    {
+      "name": "The News Quiz",
+      "facet": "Radio comedy and panel games",
+      "known_at": 13
+    },
+    {
+      "name": "The Unbelievable Truth",
+      "facet": "Radio comedy and panel games",
+      "known_at": 13
+    },
+    {
+      "name": "The Now Show",
+      "facet": "Radio comedy and panel games",
+      "known_at": 14
+    },
+    {
+      "name": "The Goon Show",
+      "facet": "Radio comedy and panel games",
+      "known_at": 12
+    },
+    {
+      "name": "Round the Horne",
+      "facet": "Radio comedy and panel games",
+      "known_at": 14
+    },
+    {
+      "name": "Hancock's Half Hour",
+      "facet": "Radio comedy and panel games",
+      "known_at": 13
+    },
+    {
+      "name": "Humphrey Lyttelton",
+      "facet": "Radio comedy and panel games",
+      "known_at": 14
+    },
+    {
+      "name": "Dead Ringers",
+      "facet": "Radio comedy and panel games",
+      "known_at": 13
+    },
+    {
+      "name": "The Navy Lark",
+      "facet": "Radio comedy and panel games",
+      "known_at": 15
+    },
+    {
+      "name": "Cabin Pressure",
+      "facet": "Radio comedy and panel games",
+      "known_at": 14
+    },
+    {
+      "name": "Fighting Talk",
+      "facet": "Radio comedy and panel games",
+      "known_at": 14
+    },
+    {
+      "name": "The Infinite Monkey Cage",
+      "facet": "Radio comedy and panel games",
+      "known_at": 13
+    },
+    {
+      "name": "Tommy Cooper",
+      "facet": "Comedy legends of the past",
+      "known_at": 10
+    },
+    {
+      "name": "Les Dawson",
+      "facet": "Comedy legends of the past",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Sellers",
+      "facet": "Comedy legends of the past",
+      "known_at": 11
+    },
+    {
+      "name": "Tony Hancock",
+      "facet": "Comedy legends of the past",
+      "known_at": 13
+    },
+    {
+      "name": "Frankie Howerd",
+      "facet": "Comedy legends of the past",
+      "known_at": 13
+    },
+    {
+      "name": "Norman Wisdom",
+      "facet": "Comedy legends of the past",
+      "known_at": 12
+    },
+    {
+      "name": "Ken Dodd",
+      "facet": "Comedy legends of the past",
+      "known_at": 11
+    },
+    {
+      "name": "Dave Allen",
+      "facet": "Comedy legends of the past",
+      "known_at": 13
+    },
+    {
+      "name": "Larry Grayson",
+      "facet": "Comedy legends of the past",
+      "known_at": 14
+    },
+    {
+      "name": "Max Wall",
+      "facet": "Comedy legends of the past",
+      "known_at": 15
+    },
+    {
+      "name": "Arthur Askey",
+      "facet": "Comedy legends of the past",
+      "known_at": 14
+    },
+    {
+      "name": "Hylda Baker",
+      "facet": "Comedy legends of the past",
+      "known_at": 15
+    },
+    {
+      "name": "Stan Laurel",
+      "facet": "Comedy legends of the past",
+      "known_at": 8
+    },
+    {
+      "name": "Joyce Grenfell",
+      "facet": "Comedy legends of the past",
+      "known_at": 14
+    },
+    {
+      "name": "Max Miller",
+      "facet": "Comedy legends of the past",
+      "known_at": 15
+    }
+  ]
+}

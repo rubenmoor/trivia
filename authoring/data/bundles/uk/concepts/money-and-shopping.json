@@ -1,0 +1,850 @@
+{
+  "subcategory": "money-and-shopping",
+  "facets": [
+    "Coins and banknotes",
+    "Faces on the money",
+    "Money slang and old money",
+    "Decimalisation and money history",
+    "High street shops and chains",
+    "Supermarkets and the weekly shop",
+    "Markets, car boot sales and charity shops",
+    "Famous department stores and shopping streets",
+    "Sales, Boxing Day and shopping customs",
+    "Paying, saving and pocket money",
+    "Banks, the Royal Mint and the Bank of England",
+    "Prices, VAT and everyday costs"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 5,
+      "count": 4,
+      "estimate": 3,
+      "record": 3,
+      "origin": 4,
+      "made_of": 4,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 5,
+      "body_senses": 1,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Penny",
+      "facet": "Coins and banknotes",
+      "known_at": 1
+    },
+    {
+      "name": "Two pence coin",
+      "facet": "Coins and banknotes",
+      "known_at": 2
+    },
+    {
+      "name": "Five pence coin",
+      "facet": "Coins and banknotes",
+      "known_at": 3
+    },
+    {
+      "name": "Ten pence coin",
+      "facet": "Coins and banknotes",
+      "known_at": 3
+    },
+    {
+      "name": "Twenty pence coin",
+      "facet": "Coins and banknotes",
+      "known_at": 3
+    },
+    {
+      "name": "Fifty pence coin",
+      "facet": "Coins and banknotes",
+      "known_at": 2
+    },
+    {
+      "name": "One pound coin",
+      "facet": "Coins and banknotes",
+      "known_at": 1
+    },
+    {
+      "name": "Two pound coin",
+      "facet": "Coins and banknotes",
+      "known_at": 2
+    },
+    {
+      "name": "Five pound note",
+      "facet": "Coins and banknotes",
+      "known_at": 2
+    },
+    {
+      "name": "Ten pound note",
+      "facet": "Coins and banknotes",
+      "known_at": 3
+    },
+    {
+      "name": "Twenty pound note",
+      "facet": "Coins and banknotes",
+      "known_at": 3
+    },
+    {
+      "name": "Fifty pound note",
+      "facet": "Coins and banknotes",
+      "known_at": 5
+    },
+    {
+      "name": "Polymer banknote",
+      "facet": "Coins and banknotes",
+      "known_at": 7
+    },
+    {
+      "name": "Kew Gardens 50p",
+      "facet": "Coins and banknotes",
+      "known_at": 9
+    },
+    {
+      "name": "Scottish banknotes",
+      "facet": "Coins and banknotes",
+      "known_at": 8
+    },
+    {
+      "name": "Commemorative 50p",
+      "facet": "Coins and banknotes",
+      "known_at": 7
+    },
+    {
+      "name": "Royal Shield reverse designs",
+      "facet": "Coins and banknotes",
+      "known_at": 12
+    },
+    {
+      "name": "King Charles III",
+      "facet": "Faces on the money",
+      "known_at": 2
+    },
+    {
+      "name": "Adam Smith",
+      "facet": "Faces on the money",
+      "known_at": 12
+    },
+    {
+      "name": "Sir John Houblon",
+      "facet": "Faces on the money",
+      "known_at": 15
+    },
+    {
+      "name": "Beatrix Potter 50p",
+      "facet": "Faces on the money",
+      "known_at": 6
+    },
+    {
+      "name": "Guinea",
+      "facet": "Money slang and old money",
+      "known_at": 11
+    },
+    {
+      "name": "Farthing",
+      "facet": "Money slang and old money",
+      "known_at": 10
+    },
+    {
+      "name": "Threepenny bit",
+      "facet": "Money slang and old money",
+      "known_at": 12
+    },
+    {
+      "name": "Sixpence",
+      "facet": "Money slang and old money",
+      "known_at": 7
+    },
+    {
+      "name": "Florin",
+      "facet": "Money slang and old money",
+      "known_at": 13
+    },
+    {
+      "name": "Pounds, shillings and pence",
+      "facet": "Money slang and old money",
+      "known_at": 10
+    },
+    {
+      "name": "Crown",
+      "facet": "Money slang and old money",
+      "known_at": 12
+    },
+    {
+      "name": "Groat",
+      "facet": "Money slang and old money",
+      "known_at": 14
+    },
+    {
+      "name": "Decimal Day",
+      "facet": "Decimalisation and money history",
+      "known_at": 9
+    },
+    {
+      "name": "New pence",
+      "facet": "Decimalisation and money history",
+      "known_at": 10
+    },
+    {
+      "name": "Decimal halfpenny",
+      "facet": "Decimalisation and money history",
+      "known_at": 11
+    },
+    {
+      "name": "Round pound coin",
+      "facet": "Decimalisation and money history",
+      "known_at": 6
+    },
+    {
+      "name": "One pound note",
+      "facet": "Decimalisation and money history",
+      "known_at": 11
+    },
+    {
+      "name": "Pound sterling",
+      "facet": "Decimalisation and money history",
+      "known_at": 5
+    },
+    {
+      "name": "Exchange Rate Mechanism",
+      "facet": "Decimalisation and money history",
+      "known_at": 14
+    },
+    {
+      "name": "Euro",
+      "facet": "Decimalisation and money history",
+      "known_at": 4
+    },
+    {
+      "name": "Gold standard",
+      "facet": "Decimalisation and money history",
+      "known_at": 12
+    },
+    {
+      "name": "Offa of Mercia",
+      "facet": "Decimalisation and money history",
+      "known_at": 14
+    },
+    {
+      "name": "Tally sticks",
+      "facet": "Decimalisation and money history",
+      "known_at": 13
+    },
+    {
+      "name": "South Sea Bubble",
+      "facet": "Decimalisation and money history",
+      "known_at": 14
+    },
+    {
+      "name": "Great Recoinage of 1696",
+      "facet": "Decimalisation and money history",
+      "known_at": 15
+    },
+    {
+      "name": "Sterling silver",
+      "facet": "Decimalisation and money history",
+      "known_at": 11
+    },
+    {
+      "name": "2008 financial crisis",
+      "facet": "Decimalisation and money history",
+      "known_at": 11
+    },
+    {
+      "name": "Boots",
+      "facet": "High street shops and chains",
+      "known_at": 4
+    },
+    {
+      "name": "Marks & Spencer",
+      "facet": "High street shops and chains",
+      "known_at": 4
+    },
+    {
+      "name": "WHSmith",
+      "facet": "High street shops and chains",
+      "known_at": 5
+    },
+    {
+      "name": "Greggs",
+      "facet": "High street shops and chains",
+      "known_at": 3
+    },
+    {
+      "name": "Argos",
+      "facet": "High street shops and chains",
+      "known_at": 4
+    },
+    {
+      "name": "Poundland",
+      "facet": "High street shops and chains",
+      "known_at": 3
+    },
+    {
+      "name": "Primark",
+      "facet": "High street shops and chains",
+      "known_at": 4
+    },
+    {
+      "name": "Next",
+      "facet": "High street shops and chains",
+      "known_at": 6
+    },
+    {
+      "name": "Superdrug",
+      "facet": "High street shops and chains",
+      "known_at": 6,
+      "retired": "unaskable: Superdrug's founders and history are too obscure for a fair question."
+    },
+    {
+      "name": "Currys",
+      "facet": "High street shops and chains",
+      "known_at": 6
+    },
+    {
+      "name": "HMV",
+      "facet": "High street shops and chains",
+      "known_at": 8
+    },
+    {
+      "name": "Wilko",
+      "facet": "High street shops and chains",
+      "known_at": 7
+    },
+    {
+      "name": "BHS",
+      "facet": "High street shops and chains",
+      "known_at": 11
+    },
+    {
+      "name": "Topshop",
+      "facet": "High street shops and chains",
+      "known_at": 8
+    },
+    {
+      "name": "Pret A Manger",
+      "facet": "High street shops and chains",
+      "known_at": 8
+    },
+    {
+      "name": "Clarks",
+      "facet": "High street shops and chains",
+      "known_at": 5
+    },
+    {
+      "name": "The Body Shop",
+      "facet": "High street shops and chains",
+      "known_at": 8
+    },
+    {
+      "name": "Timpson",
+      "facet": "High street shops and chains",
+      "known_at": 10
+    },
+    {
+      "name": "Tesco",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 2
+    },
+    {
+      "name": "Sainsbury's",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 3
+    },
+    {
+      "name": "Asda",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 3
+    },
+    {
+      "name": "Morrisons",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 4
+    },
+    {
+      "name": "Waitrose",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 5
+    },
+    {
+      "name": "Lidl",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 3
+    },
+    {
+      "name": "Co-op",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 4
+    },
+    {
+      "name": "Iceland",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 4
+    },
+    {
+      "name": "Ocado",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 9
+    },
+    {
+      "name": "Clubcard",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 5
+    },
+    {
+      "name": "Nectar card",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 7
+    },
+    {
+      "name": "Meal deal",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 5
+    },
+    {
+      "name": "Bag for life",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 5
+    },
+    {
+      "name": "Plastic bag charge",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 6
+    },
+    {
+      "name": "Self-checkout",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 3
+    },
+    {
+      "name": "Yellow sticker reductions",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 7
+    },
+    {
+      "name": "Every little helps",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 7
+    },
+    {
+      "name": "Aldi middle aisle",
+      "facet": "Supermarkets and the weekly shop",
+      "known_at": 8
+    },
+    {
+      "name": "Car boot sale",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 4
+    },
+    {
+      "name": "Jumble sale",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 7
+    },
+    {
+      "name": "Charity shop",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 3
+    },
+    {
+      "name": "Oxfam",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 6
+    },
+    {
+      "name": "British Heart Foundation",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 8
+    },
+    {
+      "name": "Cancer Research UK",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 7
+    },
+    {
+      "name": "Petticoat Lane Market",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 12
+    },
+    {
+      "name": "Leeds Kirkgate Market",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 13
+    },
+    {
+      "name": "Bric-a-brac",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 10
+    },
+    {
+      "name": "Farmers' market",
+      "facet": "Markets, car boot sales and charity shops",
+      "known_at": 6
+    },
+    {
+      "name": "John Lewis",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 6
+    },
+    {
+      "name": "Harvey Nichols",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 11
+    },
+    {
+      "name": "Debenhams",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 7
+    },
+    {
+      "name": "Bond Street",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 7
+    },
+    {
+      "name": "King's Road",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 11
+    },
+    {
+      "name": "Burlington Arcade",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 13
+    },
+    {
+      "name": "Bullring",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 9
+    },
+    {
+      "name": "Trafford Centre",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 9
+    },
+    {
+      "name": "The Shambles",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 10
+    },
+    {
+      "name": "Westfield London",
+      "facet": "Famous department stores and shopping streets",
+      "known_at": 8
+    },
+    {
+      "name": "January sales",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 5
+    },
+    {
+      "name": "Black Friday",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 5
+    },
+    {
+      "name": "Sunday Trading Act",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 11
+    },
+    {
+      "name": "Early closing day",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 13
+    },
+    {
+      "name": "Christmas hamper",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 7
+    },
+    {
+      "name": "Christmas club",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 12
+    },
+    {
+      "name": "Click and collect",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 6
+    },
+    {
+      "name": "Buy one get one free",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 4,
+      "retired": "used_up: The meaning of BOGO is already asked; a BOGOF question would repeat it, and none of the options leads to a different good UK fact."
+    },
+    {
+      "name": "Closing-down sale",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 7
+    },
+    {
+      "name": "Late-night shopping",
+      "facet": "Sales, Boxing Day and shopping customs",
+      "known_at": 9
+    },
+    {
+      "name": "Pocket money",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 1
+    },
+    {
+      "name": "Piggy bank",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 1,
+      "retired": "used_up: Piggy bank is already covered many times; no fresh UK angle at this level."
+    },
+    {
+      "name": "ERNIE",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 13
+    },
+    {
+      "name": "Chip and PIN",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 6
+    },
+    {
+      "name": "Contactless payment",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 4
+    },
+    {
+      "name": "Cheque",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 7
+    },
+    {
+      "name": "Cashpoint",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 5
+    },
+    {
+      "name": "ISA",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 11
+    },
+    {
+      "name": "Junior ISA",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 12
+    },
+    {
+      "name": "Post Office",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 4
+    },
+    {
+      "name": "Tooth fairy",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 1
+    },
+    {
+      "name": "Direct debit",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 10
+    },
+    {
+      "name": "Standing order",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 12
+    },
+    {
+      "name": "Mortgage",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 9
+    },
+    {
+      "name": "Cashback at the till",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 8
+    },
+    {
+      "name": "Sort code",
+      "facet": "Paying, saving and pocket money",
+      "known_at": 10
+    },
+    {
+      "name": "Bank of England",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 6
+    },
+    {
+      "name": "Old Lady of Threadneedle Street",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Mint",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 7
+    },
+    {
+      "name": "Llantrisant",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 13
+    },
+    {
+      "name": "Governor of the Bank of England",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 11
+    },
+    {
+      "name": "Bank Rate",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 11
+    },
+    {
+      "name": "Monetary Policy Committee",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 13
+    },
+    {
+      "name": "Barclays",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 6
+    },
+    {
+      "name": "Lloyds Bank",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 7
+    },
+    {
+      "name": "HSBC",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 7
+    },
+    {
+      "name": "NatWest",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 7
+    },
+    {
+      "name": "Royal Bank of Scotland",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 9
+    },
+    {
+      "name": "Nationwide",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 8
+    },
+    {
+      "name": "Northern Rock",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 12
+    },
+    {
+      "name": "First cash machine",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 12
+    },
+    {
+      "name": "Gold sovereign",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 11
+    },
+    {
+      "name": "Bank of England gold vaults",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 10
+    },
+    {
+      "name": "Building society",
+      "facet": "Banks, the Royal Mint and the Bank of England",
+      "known_at": 10
+    },
+    {
+      "name": "VAT",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 9
+    },
+    {
+      "name": "Council tax",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 10
+    },
+    {
+      "name": "Stamp duty",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 12
+    },
+    {
+      "name": "Income tax",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 8
+    },
+    {
+      "name": "PAYE",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 12
+    },
+    {
+      "name": "First-class stamp",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 5
+    },
+    {
+      "name": "Price of a pint",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 11
+    },
+    {
+      "name": "Energy price cap",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 11
+    },
+    {
+      "name": "National Living Wage",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 10
+    },
+    {
+      "name": "Inflation",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 9
+    },
+    {
+      "name": "Prescription charge",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 10
+    },
+    {
+      "name": "Window tax",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 12
+    },
+    {
+      "name": "Sugar tax",
+      "facet": "Prices, VAT and everyday costs",
+      "known_at": 9
+    }
+  ]
+}

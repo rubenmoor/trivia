@@ -1,0 +1,932 @@
+{
+  "subcategory": "childrens-books-and-comics",
+  "facets": [
+    "Victorian and Edwardian classics",
+    "Beatrix Potter's animal tales",
+    "Roald Dahl's books and characters",
+    "Harry Potter's wizarding world",
+    "Enid Blyton's adventures and schools",
+    "Beano, Dandy and comic strips",
+    "Picture books and their illustrators",
+    "Narnia, Middle-earth and fantasy worlds",
+    "Pooh, Paddington and Rupert Bear",
+    "Railway Series, Mr Men and early readers",
+    "Modern authors and book prizes",
+    "Real places behind the stories"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 3,
+      "university": 2,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 2,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "The Cheshire Cat",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 4
+    },
+    {
+      "name": "The Mad Hatter",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 4
+    },
+    {
+      "name": "The White Rabbit",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 3
+    },
+    {
+      "name": "Jabberwocky",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 11
+    },
+    {
+      "name": "Captain Hook",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 3
+    },
+    {
+      "name": "Tinker Bell",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 2
+    },
+    {
+      "name": "Kenneth Grahame",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 12
+    },
+    {
+      "name": "The Secret Garden",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 7
+    },
+    {
+      "name": "The Railway Children",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 7
+    },
+    {
+      "name": "E. Nesbit",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 12
+    },
+    {
+      "name": "Five Children and It",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 10
+    },
+    {
+      "name": "Black Beauty",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 6
+    },
+    {
+      "name": "The Jungle Book",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 3
+    },
+    {
+      "name": "Just So Stories",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 11
+    },
+    {
+      "name": "The Water-Babies",
+      "facet": "Victorian and Edwardian classics",
+      "known_at": 13
+    },
+    {
+      "name": "Mr McGregor",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 5
+    },
+    {
+      "name": "Benjamin Bunny",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 6
+    },
+    {
+      "name": "Tom Kitten",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 7
+    },
+    {
+      "name": "Jeremy Fisher",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 8
+    },
+    {
+      "name": "Flopsy, Mopsy and Cotton-tail",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 7
+    },
+    {
+      "name": "The Tailor of Gloucester",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 12
+    },
+    {
+      "name": "Mr Tod",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 12
+    },
+    {
+      "name": "The Tale of Two Bad Mice",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 11
+    },
+    {
+      "name": "Frederick Warne",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 14
+    },
+    {
+      "name": "Peter Rabbit 50p coin",
+      "facet": "Beatrix Potter's animal tales",
+      "known_at": 7
+    },
+    {
+      "name": "Oompa-Loompas",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 3
+    },
+    {
+      "name": "Golden Ticket",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 4
+    },
+    {
+      "name": "Augustus Gloop",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Veruca Salt",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Miss Trunchbull",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "Miss Honey",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 6
+    },
+    {
+      "name": "The Witches",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 6
+    },
+    {
+      "name": "James and the Giant Peach",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "The Twits",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 5
+    },
+    {
+      "name": "George's Marvellous Medicine",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 6
+    },
+    {
+      "name": "Danny, the Champion of the World",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 9
+    },
+    {
+      "name": "Esio Trot",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 10
+    },
+    {
+      "name": "Gobblefunk",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 11
+    },
+    {
+      "name": "Quentin Blake",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 9
+    },
+    {
+      "name": "Boy (Roald Dahl)",
+      "facet": "Roald Dahl's books and characters",
+      "known_at": 12
+    },
+    {
+      "name": "Platform Nine and Three-Quarters",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 5
+    },
+    {
+      "name": "Hogwarts Express",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 4
+    },
+    {
+      "name": "Quidditch",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 4
+    },
+    {
+      "name": "Golden Snitch",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 5
+    },
+    {
+      "name": "Hermione Granger",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 3
+    },
+    {
+      "name": "Albus Dumbledore",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 4
+    },
+    {
+      "name": "Rubeus Hagrid",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 4
+    },
+    {
+      "name": "Hedwig",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 5
+    },
+    {
+      "name": "Dobby",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 5
+    },
+    {
+      "name": "Lord Voldemort",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 5
+    },
+    {
+      "name": "Gryffindor",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 4
+    },
+    {
+      "name": "Sorting Hat",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 4
+    },
+    {
+      "name": "Muggle",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 5
+    },
+    {
+      "name": "Patronus",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 8
+    },
+    {
+      "name": "Privet Drive",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 8
+    },
+    {
+      "name": "Bloomsbury Publishing",
+      "facet": "Harry Potter's wizarding world",
+      "known_at": 13
+    },
+    {
+      "name": "Timmy the dog",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 8
+    },
+    {
+      "name": "George Kirrin",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 9
+    },
+    {
+      "name": "Kirrin Island",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 11
+    },
+    {
+      "name": "The Secret Seven",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 8
+    },
+    {
+      "name": "Malory Towers",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 9
+    },
+    {
+      "name": "St Clare's",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 11
+    },
+    {
+      "name": "Noddy",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 4
+    },
+    {
+      "name": "Big Ears",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 7
+    },
+    {
+      "name": "Toyland",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 8
+    },
+    {
+      "name": "The Magic Faraway Tree",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 8
+    },
+    {
+      "name": "Moon-Face",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 11
+    },
+    {
+      "name": "The Enchanted Wood",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 11
+    },
+    {
+      "name": "The Naughtiest Girl in the School",
+      "facet": "Enid Blyton's adventures and schools",
+      "known_at": 11
+    },
+    {
+      "name": "The Beano",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 5
+    },
+    {
+      "name": "The Dandy",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 9
+    },
+    {
+      "name": "Dennis the Menace",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 4
+    },
+    {
+      "name": "Gnasher",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 5
+    },
+    {
+      "name": "Minnie the Minx",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 7
+    },
+    {
+      "name": "The Bash Street Kids",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 8
+    },
+    {
+      "name": "Roger the Dodger",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 9
+    },
+    {
+      "name": "Walter the Softy",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 9
+    },
+    {
+      "name": "Beanotown",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 9
+    },
+    {
+      "name": "Desperate Dan",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 9
+    },
+    {
+      "name": "Cow pie",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "Korky the Cat",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "D. C. Thomson",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "Oor Wullie",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "The Broons",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 12
+    },
+    {
+      "name": "Dan Dare",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 12
+    },
+    {
+      "name": "Eagle (comic)",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "2000 AD",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 12
+    },
+    {
+      "name": "Judge Dredd",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 11
+    },
+    {
+      "name": "Bunty",
+      "facet": "Beano, Dandy and comic strips",
+      "known_at": 13
+    },
+    {
+      "name": "Axel Scheffler",
+      "facet": "Picture books and their illustrators",
+      "known_at": 10
+    },
+    {
+      "name": "Room on the Broom",
+      "facet": "Picture books and their illustrators",
+      "known_at": 3
+    },
+    {
+      "name": "Zog",
+      "facet": "Picture books and their illustrators",
+      "known_at": 4
+    },
+    {
+      "name": "Judith Kerr",
+      "facet": "Picture books and their illustrators",
+      "known_at": 10
+    },
+    {
+      "name": "Mog the cat",
+      "facet": "Picture books and their illustrators",
+      "known_at": 6
+    },
+    {
+      "name": "We're Going on a Bear Hunt",
+      "facet": "Picture books and their illustrators",
+      "known_at": 2
+    },
+    {
+      "name": "Michael Rosen",
+      "facet": "Picture books and their illustrators",
+      "known_at": 8
+    },
+    {
+      "name": "Helen Oxenbury",
+      "facet": "Picture books and their illustrators",
+      "known_at": 12
+    },
+    {
+      "name": "Fungus the Bogeyman",
+      "facet": "Picture books and their illustrators",
+      "known_at": 11
+    },
+    {
+      "name": "Elmer the Patchwork Elephant",
+      "facet": "Picture books and their illustrators",
+      "known_at": 3
+    },
+    {
+      "name": "David McKee",
+      "facet": "Picture books and their illustrators",
+      "known_at": 12
+    },
+    {
+      "name": "Not Now, Bernard",
+      "facet": "Picture books and their illustrators",
+      "known_at": 9
+    },
+    {
+      "name": "Shirley Hughes",
+      "facet": "Picture books and their illustrators",
+      "known_at": 12
+    },
+    {
+      "name": "The Jolly Postman",
+      "facet": "Picture books and their illustrators",
+      "known_at": 9
+    },
+    {
+      "name": "Janet and Allan Ahlberg",
+      "facet": "Picture books and their illustrators",
+      "known_at": 12
+    },
+    {
+      "name": "Guess How Much I Love You",
+      "facet": "Picture books and their illustrators",
+      "known_at": 5
+    },
+    {
+      "name": "The Lion, the Witch and the Wardrobe",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 4
+    },
+    {
+      "name": "The White Witch",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 5
+    },
+    {
+      "name": "Mr Tumnus",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Lucy Pevensie",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 7
+    },
+    {
+      "name": "The Shire",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Lyra Belacqua",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 11
+    },
+    {
+      "name": "Dæmon",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 11
+    },
+    {
+      "name": "The Borrowers",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 7
+    },
+    {
+      "name": "Redwall",
+      "facet": "Narnia, Middle-earth and fantasy worlds",
+      "known_at": 13
+    },
+    {
+      "name": "Christopher Robin",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 4
+    },
+    {
+      "name": "Hundred Acre Wood",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 5
+    },
+    {
+      "name": "Eeyore",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 3
+    },
+    {
+      "name": "Piglet",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 2
+    },
+    {
+      "name": "Tigger",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 2
+    },
+    {
+      "name": "E. H. Shepard",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 13
+    },
+    {
+      "name": "Darkest Peru",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 5
+    },
+    {
+      "name": "Marmalade sandwich",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 3
+    },
+    {
+      "name": "Mr Gruber",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 9
+    },
+    {
+      "name": "The Brown family",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 6
+    },
+    {
+      "name": "Aunt Lucy",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 7
+    },
+    {
+      "name": "Rupert Bear",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 8
+    },
+    {
+      "name": "Nutwood",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 13
+    },
+    {
+      "name": "Mary Tourtel",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 15
+    },
+    {
+      "name": "Alfred Bestall",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 15
+    },
+    {
+      "name": "Daily Express",
+      "facet": "Pooh, Paddington and Rupert Bear",
+      "known_at": 12
+    },
+    {
+      "name": "Rev. W. Awdry",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 12
+    },
+    {
+      "name": "The Fat Controller",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 4
+    },
+    {
+      "name": "Island of Sodor",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 7
+    },
+    {
+      "name": "Gordon the Big Engine",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 4
+    },
+    {
+      "name": "Percy the Small Engine",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 3
+    },
+    {
+      "name": "Annie and Clarabel",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 8
+    },
+    {
+      "name": "Mr Men",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 2
+    },
+    {
+      "name": "Roger Hargreaves",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 10
+    },
+    {
+      "name": "Mr Tickle",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 3
+    },
+    {
+      "name": "Mr Greedy",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 3
+    },
+    {
+      "name": "Mr Happy",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 2
+    },
+    {
+      "name": "Little Miss Sunshine",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 4
+    },
+    {
+      "name": "Peter and Jane",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 11
+    },
+    {
+      "name": "Biff, Chip and Kipper",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 4
+    },
+    {
+      "name": "Oxford Reading Tree",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 10
+    },
+    {
+      "name": "Spot the Dog",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 2
+    },
+    {
+      "name": "Meg and Mog",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 6
+    },
+    {
+      "name": "Topsy and Tim",
+      "facet": "Railway Series, Mr Men and early readers",
+      "known_at": 7
+    },
+    {
+      "name": "Kate Greenaway Medal",
+      "facet": "Modern authors and book prizes",
+      "known_at": 14
+    },
+    {
+      "name": "Blue Peter Book Awards",
+      "facet": "Modern authors and book prizes",
+      "known_at": 12
+    },
+    {
+      "name": "Jacqueline Wilson",
+      "facet": "Modern authors and book prizes",
+      "known_at": 7
+    },
+    {
+      "name": "David Walliams",
+      "facet": "Modern authors and book prizes",
+      "known_at": 5
+    },
+    {
+      "name": "Gangsta Granny",
+      "facet": "Modern authors and book prizes",
+      "known_at": 5
+    },
+    {
+      "name": "Michael Morpurgo",
+      "facet": "Modern authors and book prizes",
+      "known_at": 8
+    },
+    {
+      "name": "Anthony Horowitz",
+      "facet": "Modern authors and book prizes",
+      "known_at": 10
+    },
+    {
+      "name": "Alex Rider",
+      "facet": "Modern authors and book prizes",
+      "known_at": 8
+    },
+    {
+      "name": "Malorie Blackman",
+      "facet": "Modern authors and book prizes",
+      "known_at": 10
+    },
+    {
+      "name": "Noughts and Crosses (novel)",
+      "facet": "Modern authors and book prizes",
+      "known_at": 10
+    },
+    {
+      "name": "Cressida Cowell",
+      "facet": "Modern authors and book prizes",
+      "known_at": 10
+    },
+    {
+      "name": "How to Train Your Dragon",
+      "facet": "Modern authors and book prizes",
+      "known_at": 4
+    },
+    {
+      "name": "Horrible Histories",
+      "facet": "Modern authors and book prizes",
+      "known_at": 5
+    },
+    {
+      "name": "Terry Deary",
+      "facet": "Modern authors and book prizes",
+      "known_at": 11
+    },
+    {
+      "name": "Tom Gates",
+      "facet": "Modern authors and book prizes",
+      "known_at": 6
+    },
+    {
+      "name": "Frank Cottrell-Boyce",
+      "facet": "Modern authors and book prizes",
+      "known_at": 13
+    },
+    {
+      "name": "Private Peaceful",
+      "facet": "Modern authors and book prizes",
+      "known_at": 9
+    },
+    {
+      "name": "Ashdown Forest",
+      "facet": "Real places behind the stories",
+      "known_at": 12
+    },
+    {
+      "name": "Gloucester Cathedral",
+      "facet": "Real places behind the stories",
+      "known_at": 13
+    },
+    {
+      "name": "Christ Church, Oxford",
+      "facet": "Real places behind the stories",
+      "known_at": 12
+    },
+    {
+      "name": "The Elephant House",
+      "facet": "Real places behind the stories",
+      "known_at": 12
+    },
+    {
+      "name": "Great Ormond Street Hospital",
+      "facet": "Real places behind the stories",
+      "known_at": 12
+    },
+    {
+      "name": "Great Missenden",
+      "facet": "Real places behind the stories",
+      "known_at": 13
+    },
+    {
+      "name": "Sarehole Mill",
+      "facet": "Real places behind the stories",
+      "known_at": 15
+    },
+    {
+      "name": "The Eagle and Child",
+      "facet": "Real places behind the stories",
+      "known_at": 14
+    },
+    {
+      "name": "Seven Stories",
+      "facet": "Real places behind the stories",
+      "known_at": 14
+    }
+  ]
+}

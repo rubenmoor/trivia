@@ -1,0 +1,833 @@
+{
+  "subcategory": "transport",
+  "facets": [
+    "London Underground and the Tube map",
+    "Trains and railway stations",
+    "Buses and coaches",
+    "Black cabs and taxis",
+    "Roads, motorways and road signs",
+    "Driving rules and the Highway Code",
+    "Tickets, fares and travel cards",
+    "Bridges and tunnels",
+    "Ferries, canals and boats",
+    "Airports and flying",
+    "Cycling and walking routes",
+    "Transport history and famous vehicles"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 4,
+      "word_meaning": 4,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 4,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 5,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 2,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Jubilee line",
+      "facet": "London Underground and the Tube map",
+      "known_at": 8
+    },
+    {
+      "name": "Piccadilly line",
+      "facet": "London Underground and the Tube map",
+      "known_at": 8
+    },
+    {
+      "name": "District line",
+      "facet": "London Underground and the Tube map",
+      "known_at": 8
+    },
+    {
+      "name": "Waterloo & City line",
+      "facet": "London Underground and the Tube map",
+      "known_at": 11
+    },
+    {
+      "name": "Tube roundel",
+      "facet": "London Underground and the Tube map",
+      "known_at": 6
+    },
+    {
+      "name": "Baker Street station",
+      "facet": "London Underground and the Tube map",
+      "known_at": 8
+    },
+    {
+      "name": "Aldwych station",
+      "facet": "London Underground and the Tube map",
+      "known_at": 13
+    },
+    {
+      "name": "Hampstead station",
+      "facet": "London Underground and the Tube map",
+      "known_at": 13
+    },
+    {
+      "name": "Night Tube",
+      "facet": "London Underground and the Tube map",
+      "known_at": 9
+    },
+    {
+      "name": "Wartime Tube shelters",
+      "facet": "London Underground and the Tube map",
+      "known_at": 9
+    },
+    {
+      "name": "Waterloo station",
+      "facet": "Trains and railway stations",
+      "known_at": 7
+    },
+    {
+      "name": "Euston station",
+      "facet": "Trains and railway stations",
+      "known_at": 9
+    },
+    {
+      "name": "Clapham Junction",
+      "facet": "Trains and railway stations",
+      "known_at": 11
+    },
+    {
+      "name": "Edinburgh Waverley",
+      "facet": "Trains and railway stations",
+      "known_at": 11
+    },
+    {
+      "name": "HS2",
+      "facet": "Trains and railway stations",
+      "known_at": 9
+    },
+    {
+      "name": "Network Rail",
+      "facet": "Trains and railway stations",
+      "known_at": 10
+    },
+    {
+      "name": "National Rail",
+      "facet": "Trains and railway stations",
+      "known_at": 10
+    },
+    {
+      "name": "Caledonian Sleeper",
+      "facet": "Trains and railway stations",
+      "known_at": 11
+    },
+    {
+      "name": "Night Riviera",
+      "facet": "Trains and railway stations",
+      "known_at": 13
+    },
+    {
+      "name": "West Highland Line",
+      "facet": "Trains and railway stations",
+      "known_at": 12
+    },
+    {
+      "name": "Settle–Carlisle line",
+      "facet": "Trains and railway stations",
+      "known_at": 13
+    },
+    {
+      "name": "Llanfairpwllgwyngyll station",
+      "facet": "Trains and railway stations",
+      "known_at": 9
+    },
+    {
+      "name": "Leaves on the line",
+      "facet": "Trains and railway stations",
+      "known_at": 10
+    },
+    {
+      "name": "Train guard",
+      "facet": "Trains and railway stations",
+      "known_at": 6
+    },
+    {
+      "name": "Blackpool Tramway",
+      "facet": "Trains and railway stations",
+      "known_at": 10
+    },
+    {
+      "name": "Double-decker bus",
+      "facet": "Buses and coaches",
+      "known_at": 1
+    },
+    {
+      "name": "New Routemaster",
+      "facet": "Buses and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Bendy bus",
+      "facet": "Buses and coaches",
+      "known_at": 7
+    },
+    {
+      "name": "Megabus",
+      "facet": "Buses and coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria Coach Station",
+      "facet": "Buses and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Bus conductor",
+      "facet": "Buses and coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Request stop",
+      "facet": "Buses and coaches",
+      "known_at": 8
+    },
+    {
+      "name": "Bus lane",
+      "facet": "Buses and coaches",
+      "known_at": 7
+    },
+    {
+      "name": "Night bus",
+      "facet": "Buses and coaches",
+      "known_at": 7
+    },
+    {
+      "name": "Rail replacement bus",
+      "facet": "Buses and coaches",
+      "known_at": 9
+    },
+    {
+      "name": "Open-top tour bus",
+      "facet": "Buses and coaches",
+      "known_at": 4
+    },
+    {
+      "name": "Hail and ride",
+      "facet": "Buses and coaches",
+      "known_at": 11
+    },
+    {
+      "name": "Stagecoach",
+      "facet": "Buses and coaches",
+      "known_at": 10
+    },
+    {
+      "name": "Lothian Buses",
+      "facet": "Buses and coaches",
+      "known_at": 12
+    },
+    {
+      "name": "Knight Bus",
+      "facet": "Buses and coaches",
+      "known_at": 5
+    },
+    {
+      "name": "Summer Holiday",
+      "facet": "Buses and coaches",
+      "known_at": 13
+    },
+    {
+      "name": "School bus",
+      "facet": "Buses and coaches",
+      "known_at": 2
+    },
+    {
+      "name": "Hackney carriage",
+      "facet": "Black cabs and taxis",
+      "known_at": 11
+    },
+    {
+      "name": "Minicab",
+      "facet": "Black cabs and taxis",
+      "known_at": 8
+    },
+    {
+      "name": "Austin FX4",
+      "facet": "Black cabs and taxis",
+      "known_at": 14
+    },
+    {
+      "name": "LEVC TX",
+      "facet": "Black cabs and taxis",
+      "known_at": 14
+    },
+    {
+      "name": "Taxi rank",
+      "facet": "Black cabs and taxis",
+      "known_at": 5
+    },
+    {
+      "name": "For-hire light",
+      "facet": "Black cabs and taxis",
+      "known_at": 5
+    },
+    {
+      "name": "Taximeter",
+      "facet": "Black cabs and taxis",
+      "known_at": 6
+    },
+    {
+      "name": "Cabmen's shelter",
+      "facet": "Black cabs and taxis",
+      "known_at": 13
+    },
+    {
+      "name": "Black cab turning circle",
+      "facet": "Black cabs and taxis",
+      "known_at": 12
+    },
+    {
+      "name": "Green Badge",
+      "facet": "Black cabs and taxis",
+      "known_at": 13
+    },
+    {
+      "name": "Knowledge boy",
+      "facet": "Black cabs and taxis",
+      "known_at": 13
+    },
+    {
+      "name": "Blue Book runs",
+      "facet": "Black cabs and taxis",
+      "known_at": 14
+    },
+    {
+      "name": "Hansom cab",
+      "facet": "Black cabs and taxis",
+      "known_at": 12
+    },
+    {
+      "name": "Pedicab",
+      "facet": "Black cabs and taxis",
+      "known_at": 10
+    },
+    {
+      "name": "Addison Lee",
+      "facet": "Black cabs and taxis",
+      "known_at": 12
+    },
+    {
+      "name": "M25",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 7
+    },
+    {
+      "name": "M1",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 7
+    },
+    {
+      "name": "M6 Toll",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 11
+    },
+    {
+      "name": "A1",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 10
+    },
+    {
+      "name": "Spaghetti Junction",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 9
+    },
+    {
+      "name": "Magic Roundabout",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 11
+    },
+    {
+      "name": "Roundabout",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 2
+    },
+    {
+      "name": "Motorway services",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 4
+    },
+    {
+      "name": "Zebra crossing",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 2
+    },
+    {
+      "name": "Pelican crossing",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 7
+    },
+    {
+      "name": "Puffin crossing",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 10
+    },
+    {
+      "name": "Toucan crossing",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 9
+    },
+    {
+      "name": "Pegasus crossing",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 12
+    },
+    {
+      "name": "Belisha beacon",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 11
+    },
+    {
+      "name": "Hard shoulder",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 8
+    },
+    {
+      "name": "Smart motorway",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 11
+    },
+    {
+      "name": "Brown tourist sign",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 9
+    },
+    {
+      "name": "Blue motorway sign",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 8
+    },
+    {
+      "name": "Transport typeface",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 14
+    },
+    {
+      "name": "Speed bump",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 3
+    },
+    {
+      "name": "Speed camera",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 5,
+      "retired": "used_up: Every good angle (what it measures, the flash, the fine) is already asked, and the yellow-paint rule is too thin to set it apart as a UK question."
+    },
+    {
+      "name": "Passing place",
+      "facet": "Roads, motorways and road signs",
+      "known_at": 11
+    },
+    {
+      "name": "Highway Code",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 7
+    },
+    {
+      "name": "Driving on the left",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 3
+    },
+    {
+      "name": "L plates",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 5
+    },
+    {
+      "name": "P plates",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 10
+    },
+    {
+      "name": "Provisional driving licence",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 10
+    },
+    {
+      "name": "Driving test",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 5
+    },
+    {
+      "name": "Theory test",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 9
+    },
+    {
+      "name": "Hazard perception test",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 11
+    },
+    {
+      "name": "National speed limit",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 10
+    },
+    {
+      "name": "70 mph motorway limit",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 9
+    },
+    {
+      "name": "MOT test",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 10
+    },
+    {
+      "name": "DVLA",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 11
+    },
+    {
+      "name": "Penalty points",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 10
+    },
+    {
+      "name": "Box junction",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 11
+    },
+    {
+      "name": "Double yellow lines",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 8
+    },
+    {
+      "name": "Red route",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 12
+    },
+    {
+      "name": "Two-second rule",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 11
+    },
+    {
+      "name": "Stopping distances",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 10
+    },
+    {
+      "name": "Hierarchy of road users",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 13
+    },
+    {
+      "name": "Blue Badge",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 10
+    },
+    {
+      "name": "Number plate",
+      "facet": "Driving rules and the Highway Code",
+      "known_at": 5
+    },
+    {
+      "name": "Travelcard",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 10
+    },
+    {
+      "name": "Railcard",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 9
+    },
+    {
+      "name": "Off-peak ticket",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 10
+    },
+    {
+      "name": "Return ticket",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 5
+    },
+    {
+      "name": "Advance ticket",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 11
+    },
+    {
+      "name": "Split ticketing",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 13
+    },
+    {
+      "name": "Freedom Pass",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 12
+    },
+    {
+      "name": "Concessionary bus pass",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 9
+    },
+    {
+      "name": "Ticket barrier",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 5
+    },
+    {
+      "name": "Penalty fare",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 10
+    },
+    {
+      "name": "Daily cap",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 11
+    },
+    {
+      "name": "Hopper fare",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 12
+    },
+    {
+      "name": "Fare zones",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 8
+    },
+    {
+      "name": "ULEZ",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 11
+    },
+    {
+      "name": "Delay Repay",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 12
+    },
+    {
+      "name": "Ticket inspector",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 5
+    },
+    {
+      "name": "Rover ticket",
+      "facet": "Tickets, fares and travel cards",
+      "known_at": 13
+    },
+    {
+      "name": "Mersey Tunnels",
+      "facet": "Bridges and tunnels",
+      "known_at": 11
+    },
+    {
+      "name": "Canal & River Trust",
+      "facet": "Ferries, canals and boats",
+      "known_at": 13
+    },
+    {
+      "name": "Towpath",
+      "facet": "Ferries, canals and boats",
+      "known_at": 9
+    },
+    {
+      "name": "CalMac",
+      "facet": "Ferries, canals and boats",
+      "known_at": 12
+    },
+    {
+      "name": "Isle of Wight hovercraft",
+      "facet": "Ferries, canals and boats",
+      "known_at": 9
+    },
+    {
+      "name": "Norfolk Broads",
+      "facet": "Ferries, canals and boats",
+      "known_at": 10
+    },
+    {
+      "name": "Gatwick Airport",
+      "facet": "Airports and flying",
+      "known_at": 6
+    },
+    {
+      "name": "Stansted Airport",
+      "facet": "Airports and flying",
+      "known_at": 9
+    },
+    {
+      "name": "Luton Airport",
+      "facet": "Airports and flying",
+      "known_at": 9
+    },
+    {
+      "name": "London City Airport",
+      "facet": "Airports and flying",
+      "known_at": 11
+    },
+    {
+      "name": "Manchester Airport",
+      "facet": "Airports and flying",
+      "known_at": 7
+    },
+    {
+      "name": "Edinburgh Airport",
+      "facet": "Airports and flying",
+      "known_at": 9
+    },
+    {
+      "name": "Birmingham Airport",
+      "facet": "Airports and flying",
+      "known_at": 9
+    },
+    {
+      "name": "George Best Belfast City Airport",
+      "facet": "Airports and flying",
+      "known_at": 11
+    },
+    {
+      "name": "Barra Airport",
+      "facet": "Airports and flying",
+      "known_at": 12
+    },
+    {
+      "name": "Westray to Papa Westray flight",
+      "facet": "Airports and flying",
+      "known_at": 12
+    },
+    {
+      "name": "Heathrow Terminal 5",
+      "facet": "Airports and flying",
+      "known_at": 10
+    },
+    {
+      "name": "Heathrow third runway",
+      "facet": "Airports and flying",
+      "known_at": 11
+    },
+    {
+      "name": "Speedbird",
+      "facet": "Airports and flying",
+      "known_at": 14
+    },
+    {
+      "name": "Loganair",
+      "facet": "Airports and flying",
+      "known_at": 13
+    },
+    {
+      "name": "Air Passenger Duty",
+      "facet": "Airports and flying",
+      "known_at": 13
+    },
+    {
+      "name": "Cycle Superhighway",
+      "facet": "Cycling and walking routes",
+      "known_at": 12
+    },
+    {
+      "name": "National Cycle Network",
+      "facet": "Cycling and walking routes",
+      "known_at": 11
+    },
+    {
+      "name": "Sustrans",
+      "facet": "Cycling and walking routes",
+      "known_at": 13
+    },
+    {
+      "name": "Bikeability",
+      "facet": "Cycling and walking routes",
+      "known_at": 7
+    },
+    {
+      "name": "Camel Trail",
+      "facet": "Cycling and walking routes",
+      "known_at": 13
+    },
+    {
+      "name": "Public footpath",
+      "facet": "Cycling and walking routes",
+      "known_at": 6
+    },
+    {
+      "name": "Stile",
+      "facet": "Cycling and walking routes",
+      "known_at": 6
+    },
+    {
+      "name": "Kissing gate",
+      "facet": "Cycling and walking routes",
+      "known_at": 10
+    },
+    {
+      "name": "Beeching cuts",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 12
+    },
+    {
+      "name": "British Rail",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 10
+    },
+    {
+      "name": "InterCity 125",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 12
+    },
+    {
+      "name": "Land Rover Defender",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 8
+    },
+    {
+      "name": "Sinclair C5",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 12
+    },
+    {
+      "name": "Donald Campbell's Bluebird",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 13
+    },
+    {
+      "name": "Red Flag Act",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 13
+    },
+    {
+      "name": "Preston Bypass",
+      "facet": "Transport history and famous vehicles",
+      "known_at": 13
+    }
+  ]
+}

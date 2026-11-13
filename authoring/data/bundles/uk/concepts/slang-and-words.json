@@ -1,0 +1,902 @@
+{
+  "subcategory": "slang-and-words",
+  "facets": [
+    "Everyday feelings slang",
+    "Cockney rhyming slang",
+    "Regional dialect words",
+    "Food and drink words",
+    "Money slang",
+    "Playful insults and nicknames",
+    "School and playground words",
+    "Catchphrases from British TV",
+    "Old and wartime slang",
+    "Greetings, thanks and goodbyes",
+    "Youth and street slang",
+    "Classic British sayings"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 3,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 1,
+      "estimate": 1,
+      "record": 1,
+      "origin": 4,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 1,
+      "sequence": 1,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 3,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 2,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 4,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Gutted",
+      "facet": "Everyday feelings slang",
+      "known_at": 4
+    },
+    {
+      "name": "Chuffed",
+      "facet": "Everyday feelings slang",
+      "known_at": 5
+    },
+    {
+      "name": "Knackered",
+      "facet": "Everyday feelings slang",
+      "known_at": 5
+    },
+    {
+      "name": "Miffed",
+      "facet": "Everyday feelings slang",
+      "known_at": 8
+    },
+    {
+      "name": "Peckish",
+      "facet": "Everyday feelings slang",
+      "known_at": 5
+    },
+    {
+      "name": "Gobsmacked",
+      "facet": "Everyday feelings slang",
+      "known_at": 6
+    },
+    {
+      "name": "Cheesed off",
+      "facet": "Everyday feelings slang",
+      "known_at": 8
+    },
+    {
+      "name": "Narked",
+      "facet": "Everyday feelings slang",
+      "known_at": 11
+    },
+    {
+      "name": "Made up",
+      "facet": "Everyday feelings slang",
+      "known_at": 9
+    },
+    {
+      "name": "Buzzing",
+      "facet": "Everyday feelings slang",
+      "known_at": 6
+    },
+    {
+      "name": "Shattered",
+      "facet": "Everyday feelings slang",
+      "known_at": 5
+    },
+    {
+      "name": "Jammy",
+      "facet": "Everyday feelings slang",
+      "known_at": 7
+    },
+    {
+      "name": "Stroppy",
+      "facet": "Everyday feelings slang",
+      "known_at": 7
+    },
+    {
+      "name": "Hacked off",
+      "facet": "Everyday feelings slang",
+      "known_at": 10
+    },
+    {
+      "name": "Throwing a wobbly",
+      "facet": "Everyday feelings slang",
+      "known_at": 7
+    },
+    {
+      "name": "Apples and pears",
+      "facet": "Cockney rhyming slang",
+      "known_at": 7
+    },
+    {
+      "name": "Dog and bone",
+      "facet": "Cockney rhyming slang",
+      "known_at": 8
+    },
+    {
+      "name": "Trouble and strife",
+      "facet": "Cockney rhyming slang",
+      "known_at": 10
+    },
+    {
+      "name": "Butcher's hook",
+      "facet": "Cockney rhyming slang",
+      "known_at": 9
+    },
+    {
+      "name": "Plates of meat",
+      "facet": "Cockney rhyming slang",
+      "known_at": 10
+    },
+    {
+      "name": "Loaf of bread",
+      "facet": "Cockney rhyming slang",
+      "known_at": 9
+    },
+    {
+      "name": "Porky pies",
+      "facet": "Cockney rhyming slang",
+      "known_at": 6
+    },
+    {
+      "name": "Adam and Eve",
+      "facet": "Cockney rhyming slang",
+      "known_at": 10
+    },
+    {
+      "name": "Raspberry tart",
+      "facet": "Cockney rhyming slang",
+      "known_at": 8
+    },
+    {
+      "name": "Barnet",
+      "facet": "Cockney rhyming slang",
+      "known_at": 10
+    },
+    {
+      "name": "Whistle and flute",
+      "facet": "Cockney rhyming slang",
+      "known_at": 11
+    },
+    {
+      "name": "Cream crackered",
+      "facet": "Cockney rhyming slang",
+      "known_at": 10
+    },
+    {
+      "name": "Brown bread",
+      "facet": "Cockney rhyming slang",
+      "known_at": 11
+    },
+    {
+      "name": "Mince pies",
+      "facet": "Cockney rhyming slang",
+      "known_at": 10
+    },
+    {
+      "name": "Frog and toad",
+      "facet": "Cockney rhyming slang",
+      "known_at": 11
+    },
+    {
+      "name": "Jam jar",
+      "facet": "Cockney rhyming slang",
+      "known_at": 12
+    },
+    {
+      "name": "Ginnel",
+      "facet": "Regional dialect words",
+      "known_at": 13
+    },
+    {
+      "name": "Snicket",
+      "facet": "Regional dialect words",
+      "known_at": 12
+    },
+    {
+      "name": "Bostin",
+      "facet": "Regional dialect words",
+      "known_at": 14
+    },
+    {
+      "name": "Cwtch",
+      "facet": "Regional dialect words",
+      "known_at": 10
+    },
+    {
+      "name": "Canny",
+      "facet": "Regional dialect words",
+      "known_at": 10
+    },
+    {
+      "name": "Mither",
+      "facet": "Regional dialect words",
+      "known_at": 12
+    },
+    {
+      "name": "Lass",
+      "facet": "Regional dialect words",
+      "known_at": 6
+    },
+    {
+      "name": "Owt and nowt",
+      "facet": "Regional dialect words",
+      "known_at": 9
+    },
+    {
+      "name": "Our kid",
+      "facet": "Regional dialect words",
+      "known_at": 11
+    },
+    {
+      "name": "Gurt",
+      "facet": "Regional dialect words",
+      "known_at": 12
+    },
+    {
+      "name": "Hen",
+      "facet": "Regional dialect words",
+      "known_at": 11
+    },
+    {
+      "name": "Pet",
+      "facet": "Regional dialect words",
+      "known_at": 9
+    },
+    {
+      "name": "Aye",
+      "facet": "Regional dialect words",
+      "known_at": 5
+    },
+    {
+      "name": "Brekkie",
+      "facet": "Food and drink words",
+      "known_at": 4
+    },
+    {
+      "name": "Squash",
+      "facet": "Food and drink words",
+      "known_at": 3
+    },
+    {
+      "name": "Crisps",
+      "facet": "Food and drink words",
+      "known_at": 1
+    },
+    {
+      "name": "Fry-up",
+      "facet": "Food and drink words",
+      "known_at": 5
+    },
+    {
+      "name": "Chippy",
+      "facet": "Food and drink words",
+      "known_at": 4
+    },
+    {
+      "name": "Nosh",
+      "facet": "Food and drink words",
+      "known_at": 8
+    },
+    {
+      "name": "Quid",
+      "facet": "Money slang",
+      "known_at": 4
+    },
+    {
+      "name": "Fiver",
+      "facet": "Money slang",
+      "known_at": 3
+    },
+    {
+      "name": "Tenner",
+      "facet": "Money slang",
+      "known_at": 4
+    },
+    {
+      "name": "Score",
+      "facet": "Money slang",
+      "known_at": 10
+    },
+    {
+      "name": "Pony",
+      "facet": "Money slang",
+      "known_at": 12
+    },
+    {
+      "name": "Monkey",
+      "facet": "Money slang",
+      "known_at": 12
+    },
+    {
+      "name": "Grand",
+      "facet": "Money slang",
+      "known_at": 7
+    },
+    {
+      "name": "Bob",
+      "facet": "Money slang",
+      "known_at": 11
+    },
+    {
+      "name": "Skint",
+      "facet": "Money slang",
+      "known_at": 7
+    },
+    {
+      "name": "Dosh",
+      "facet": "Money slang",
+      "known_at": 6
+    },
+    {
+      "name": "Wonga",
+      "facet": "Money slang",
+      "known_at": 9
+    },
+    {
+      "name": "Shrapnel",
+      "facet": "Money slang",
+      "known_at": 9
+    },
+    {
+      "name": "Coppers",
+      "facet": "Money slang",
+      "known_at": 7
+    },
+    {
+      "name": "Brass",
+      "facet": "Money slang",
+      "known_at": 11
+    },
+    {
+      "name": "Tanner",
+      "facet": "Money slang",
+      "known_at": 12
+    },
+    {
+      "name": "Ton",
+      "facet": "Money slang",
+      "known_at": 11
+    },
+    {
+      "name": "Minted",
+      "facet": "Money slang",
+      "known_at": 7
+    },
+    {
+      "name": "Readies",
+      "facet": "Money slang",
+      "known_at": 11
+    },
+    {
+      "name": "Numpty",
+      "facet": "Playful insults and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Plonker",
+      "facet": "Playful insults and nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Muppet",
+      "facet": "Playful insults and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Wally",
+      "facet": "Playful insults and nicknames",
+      "known_at": 7
+    },
+    {
+      "name": "Pillock",
+      "facet": "Playful insults and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Berk",
+      "facet": "Playful insults and nicknames",
+      "known_at": 10
+    },
+    {
+      "name": "Twit",
+      "facet": "Playful insults and nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Wazzock",
+      "facet": "Playful insults and nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Div",
+      "facet": "Playful insults and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Nincompoop",
+      "facet": "Playful insults and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Gormless",
+      "facet": "Playful insults and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Jobsworth",
+      "facet": "Playful insults and nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Clever clogs",
+      "facet": "Playful insults and nicknames",
+      "known_at": 5
+    },
+    {
+      "name": "Nosy parker",
+      "facet": "Playful insults and nicknames",
+      "known_at": 6
+    },
+    {
+      "name": "Toff",
+      "facet": "Playful insults and nicknames",
+      "known_at": 11
+    },
+    {
+      "name": "Smart alec",
+      "facet": "Playful insults and nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Scaredy-cat",
+      "facet": "Playful insults and nicknames",
+      "known_at": 3
+    },
+    {
+      "name": "Dipstick",
+      "facet": "Playful insults and nicknames",
+      "known_at": 8
+    },
+    {
+      "name": "Wet blanket",
+      "facet": "Playful insults and nicknames",
+      "known_at": 9
+    },
+    {
+      "name": "Barley",
+      "facet": "School and playground words",
+      "known_at": 11
+    },
+    {
+      "name": "Skive",
+      "facet": "School and playground words",
+      "known_at": 7
+    },
+    {
+      "name": "Swot",
+      "facet": "School and playground words",
+      "known_at": 7
+    },
+    {
+      "name": "Teacher's pet",
+      "facet": "School and playground words",
+      "known_at": 4
+    },
+    {
+      "name": "Sixth form",
+      "facet": "School and playground words",
+      "known_at": 8
+    },
+    {
+      "name": "Dinner lady",
+      "facet": "School and playground words",
+      "known_at": 3
+    },
+    {
+      "name": "Lollipop lady",
+      "facet": "School and playground words",
+      "known_at": 3
+    },
+    {
+      "name": "Packed lunch",
+      "facet": "School and playground words",
+      "known_at": 2
+    },
+    {
+      "name": "Plimsolls",
+      "facet": "School and playground words",
+      "known_at": 7
+    },
+    {
+      "name": "Wet play",
+      "facet": "School and playground words",
+      "known_at": 5
+    },
+    {
+      "name": "Rubber",
+      "facet": "School and playground words",
+      "known_at": 2
+    },
+    {
+      "name": "Jotter",
+      "facet": "School and playground words",
+      "known_at": 10
+    },
+    {
+      "name": "Exterminate!",
+      "facet": "Catchphrases from British TV",
+      "known_at": 6
+    },
+    {
+      "name": "Blighty",
+      "facet": "Old and wartime slang",
+      "known_at": 10
+    },
+    {
+      "name": "Spiv",
+      "facet": "Old and wartime slang",
+      "known_at": 12
+    },
+    {
+      "name": "Kip",
+      "facet": "Old and wartime slang",
+      "known_at": 7
+    },
+    {
+      "name": "Pukka",
+      "facet": "Old and wartime slang",
+      "known_at": 10
+    },
+    {
+      "name": "Wizard",
+      "facet": "Old and wartime slang",
+      "known_at": 11
+    },
+    {
+      "name": "Prang",
+      "facet": "Old and wartime slang",
+      "known_at": 11
+    },
+    {
+      "name": "Gone for a Burton",
+      "facet": "Old and wartime slang",
+      "known_at": 13
+    },
+    {
+      "name": "Chocks away",
+      "facet": "Old and wartime slang",
+      "known_at": 12
+    },
+    {
+      "name": "Tickety-boo",
+      "facet": "Old and wartime slang",
+      "known_at": 9
+    },
+    {
+      "name": "Spiffing",
+      "facet": "Old and wartime slang",
+      "known_at": 9
+    },
+    {
+      "name": "Jerry",
+      "facet": "Old and wartime slang",
+      "known_at": 11
+    },
+    {
+      "name": "Blitz spirit",
+      "facet": "Old and wartime slang",
+      "known_at": 10
+    },
+    {
+      "name": "Shufti",
+      "facet": "Old and wartime slang",
+      "known_at": 13
+    },
+    {
+      "name": "Bang on",
+      "facet": "Old and wartime slang",
+      "known_at": 8
+    },
+    {
+      "name": "Whizz-bang",
+      "facet": "Old and wartime slang",
+      "known_at": 13
+    },
+    {
+      "name": "Ta",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 4
+    },
+    {
+      "name": "Ta-ra",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 7
+    },
+    {
+      "name": "Hiya",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 2
+    },
+    {
+      "name": "Alright?",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 4
+    },
+    {
+      "name": "Wotcha",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 8
+    },
+    {
+      "name": "Cheerio",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 4
+    },
+    {
+      "name": "Toodle-oo",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 8
+    },
+    {
+      "name": "Ta-ta",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 5
+    },
+    {
+      "name": "Laters",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 6
+    },
+    {
+      "name": "Ay up",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 9
+    },
+    {
+      "name": "Now then",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 11
+    },
+    {
+      "name": "Love",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 4
+    },
+    {
+      "name": "How do",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 11
+    },
+    {
+      "name": "Pip pip",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 10
+    },
+    {
+      "name": "Cheers, drive",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 12
+    },
+    {
+      "name": "Evening all",
+      "facet": "Greetings, thanks and goodbyes",
+      "known_at": 12
+    },
+    {
+      "name": "Innit",
+      "facet": "Youth and street slang",
+      "known_at": 5
+    },
+    {
+      "name": "Peng",
+      "facet": "Youth and street slang",
+      "known_at": 8
+    },
+    {
+      "name": "Bare",
+      "facet": "Youth and street slang",
+      "known_at": 8
+    },
+    {
+      "name": "Allow it",
+      "facet": "Youth and street slang",
+      "known_at": 9
+    },
+    {
+      "name": "Bruv",
+      "facet": "Youth and street slang",
+      "known_at": 6
+    },
+    {
+      "name": "Fam",
+      "facet": "Youth and street slang",
+      "known_at": 7
+    },
+    {
+      "name": "Mandem",
+      "facet": "Youth and street slang",
+      "known_at": 10
+    },
+    {
+      "name": "Peak",
+      "facet": "Youth and street slang",
+      "known_at": 8
+    },
+    {
+      "name": "Wagwan",
+      "facet": "Youth and street slang",
+      "known_at": 8
+    },
+    {
+      "name": "Long",
+      "facet": "Youth and street slang",
+      "known_at": 9
+    },
+    {
+      "name": "Ends",
+      "facet": "Youth and street slang",
+      "known_at": 10
+    },
+    {
+      "name": "Bossman",
+      "facet": "Youth and street slang",
+      "known_at": 10
+    },
+    {
+      "name": "Dench",
+      "facet": "Youth and street slang",
+      "known_at": 11
+    },
+    {
+      "name": "Wasteman",
+      "facet": "Youth and street slang",
+      "known_at": 10
+    },
+    {
+      "name": "Butters",
+      "facet": "Youth and street slang",
+      "known_at": 10
+    },
+    {
+      "name": "Gassed",
+      "facet": "Youth and street slang",
+      "known_at": 10
+    },
+    {
+      "name": "Roadman",
+      "facet": "Youth and street slang",
+      "known_at": 8
+    },
+    {
+      "name": "Mint",
+      "facet": "Youth and street slang",
+      "known_at": 7
+    },
+    {
+      "name": "Bob's your uncle",
+      "facet": "Classic British sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Stiff upper lip",
+      "facet": "Classic British sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Not my cup of tea",
+      "facet": "Classic British sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Spend a penny",
+      "facet": "Classic British sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Taking the mickey",
+      "facet": "Classic British sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Chin up",
+      "facet": "Classic British sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Mustn't grumble",
+      "facet": "Classic British sayings",
+      "known_at": 11
+    },
+    {
+      "name": "As happy as Larry",
+      "facet": "Classic British sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Bits and bobs",
+      "facet": "Classic British sayings",
+      "known_at": 6
+    },
+    {
+      "name": "Spanner in the works",
+      "facet": "Classic British sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Done and dusted",
+      "facet": "Classic British sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Cheap as chips",
+      "facet": "Classic British sayings",
+      "known_at": 6
+    },
+    {
+      "name": "All mouth and no trousers",
+      "facet": "Classic British sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Know your onions",
+      "facet": "Classic British sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Sent to Coventry",
+      "facet": "Classic British sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Gone pear-shaped",
+      "facet": "Classic British sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Dog's dinner",
+      "facet": "Classic British sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Storm in a teacup",
+      "facet": "Classic British sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Curate's egg",
+      "facet": "Classic British sayings",
+      "known_at": 14
+    }
+  ]
+}

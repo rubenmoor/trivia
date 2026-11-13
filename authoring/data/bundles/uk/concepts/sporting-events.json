@@ -1,0 +1,803 @@
+{
+  "subcategory": "sporting-events",
+  "facets": [
+    "Wimbledon traditions and champions",
+    "Horse racing's big meetings",
+    "FA Cup and Wembley finals",
+    "The Ashes and Lord's cricket",
+    "Six Nations rugby days",
+    "Boat Race, Henley and sailing regattas",
+    "London 2012 and Commonwealth Games",
+    "Marathons and mass road races",
+    "Snooker and darts championships",
+    "The Open golf championship",
+    "British Grand Prix at Silverstone",
+    "Highland Games and quirky contests"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 3,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 4,
+      "detail": 3,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Centre Court",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 6
+    },
+    {
+      "name": "All-white dress code",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 7
+    },
+    {
+      "name": "Ball boys and ball girls",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 6
+    },
+    {
+      "name": "The Wimbledon Queue",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 10
+    },
+    {
+      "name": "Venus Rosewater Dish",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 13
+    },
+    {
+      "name": "Roger Federer",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 6
+    },
+    {
+      "name": "Serena Williams",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 7
+    },
+    {
+      "name": "Novak Djokovic",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 6
+    },
+    {
+      "name": "Martina Navratilova",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 11
+    },
+    {
+      "name": "Björn Borg",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Box",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 9
+    },
+    {
+      "name": "Grass court",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 5
+    },
+    {
+      "name": "Hawk-Eye",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 9
+    },
+    {
+      "name": "Rufus the hawk",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 12
+    },
+    {
+      "name": "Middle Sunday",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 13
+    },
+    {
+      "name": "SW19",
+      "facet": "Wimbledon traditions and champions",
+      "known_at": 11
+    },
+    {
+      "name": "Aintree",
+      "facet": "Horse racing's big meetings",
+      "known_at": 9
+    },
+    {
+      "name": "Cheltenham Gold Cup",
+      "facet": "Horse racing's big meetings",
+      "known_at": 11
+    },
+    {
+      "name": "Epsom Derby",
+      "facet": "Horse racing's big meetings",
+      "known_at": 9
+    },
+    {
+      "name": "Frankie Dettori",
+      "facet": "Horse racing's big meetings",
+      "known_at": 10
+    },
+    {
+      "name": "Ladies Day",
+      "facet": "Horse racing's big meetings",
+      "known_at": 9
+    },
+    {
+      "name": "Glorious Goodwood",
+      "facet": "Horse racing's big meetings",
+      "known_at": 12
+    },
+    {
+      "name": "Becher's Brook",
+      "facet": "Horse racing's big meetings",
+      "known_at": 12
+    },
+    {
+      "name": "The Chair",
+      "facet": "Horse racing's big meetings",
+      "known_at": 14
+    },
+    {
+      "name": "Tiger Roll",
+      "facet": "Horse racing's big meetings",
+      "known_at": 13
+    },
+    {
+      "name": "Bob Champion",
+      "facet": "Horse racing's big meetings",
+      "known_at": 13
+    },
+    {
+      "name": "Royal procession",
+      "facet": "Horse racing's big meetings",
+      "known_at": 11
+    },
+    {
+      "name": "St Leger",
+      "facet": "Horse racing's big meetings",
+      "known_at": 13
+    },
+    {
+      "name": "Newmarket",
+      "facet": "Horse racing's big meetings",
+      "known_at": 11
+    },
+    {
+      "name": "Rachael Blackmore",
+      "facet": "Horse racing's big meetings",
+      "known_at": 12
+    },
+    {
+      "name": "AP McCoy",
+      "facet": "Horse racing's big meetings",
+      "known_at": 11
+    },
+    {
+      "name": "Shergar",
+      "facet": "Horse racing's big meetings",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Ascot dress code",
+      "facet": "Horse racing's big meetings",
+      "known_at": 11
+    },
+    {
+      "name": "Wembley arch",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 7
+    },
+    {
+      "name": "Twin Towers",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 11
+    },
+    {
+      "name": "White Horse Final",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 13
+    },
+    {
+      "name": "Matthews Final",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 14
+    },
+    {
+      "name": "Ricky Villa",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 14
+    },
+    {
+      "name": "Third round day",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 11
+    },
+    {
+      "name": "Crazy Gang",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 13
+    },
+    {
+      "name": "Wembley Way",
+      "facet": "FA Cup and Wembley finals",
+      "known_at": 12
+    },
+    {
+      "name": "The Ashes urn",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 9
+    },
+    {
+      "name": "Long Room",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 13
+    },
+    {
+      "name": "Lord's Pavilion",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 12
+    },
+    {
+      "name": "MCC",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 12
+    },
+    {
+      "name": "Headingley 2019",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 12
+    },
+    {
+      "name": "Bodyline",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 13
+    },
+    {
+      "name": "Jimmy Anderson",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 10
+    },
+    {
+      "name": "Honours boards",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 14
+    },
+    {
+      "name": "Tea interval",
+      "facet": "The Ashes and Lord's cricket",
+      "known_at": 10
+    },
+    {
+      "name": "Twickenham",
+      "facet": "Six Nations rugby days",
+      "known_at": 8
+    },
+    {
+      "name": "Women's Boat Race",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 11
+    },
+    {
+      "name": "Championship Course",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 14
+    },
+    {
+      "name": "Putney Bridge",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 12
+    },
+    {
+      "name": "Mortlake",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 13
+    },
+    {
+      "name": "Cox",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 10
+    },
+    {
+      "name": "Oxford Blue",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 12
+    },
+    {
+      "name": "Grand Challenge Cup",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 14
+    },
+    {
+      "name": "Stewards' Enclosure",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 14
+    },
+    {
+      "name": "Rowing blazer",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 12
+    },
+    {
+      "name": "Round the Island Race",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 13
+    },
+    {
+      "name": "Fastnet Race",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 13
+    },
+    {
+      "name": "America's Cup",
+      "facet": "Boat Race, Henley and sailing regattas",
+      "known_at": 11
+    },
+    {
+      "name": "London 2012 Olympics",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 6
+    },
+    {
+      "name": "Usain Bolt",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 5
+    },
+    {
+      "name": "Wenlock and Mandeville",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 10
+    },
+    {
+      "name": "Happy and Glorious",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 9
+    },
+    {
+      "name": "Gold postboxes",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 11
+    },
+    {
+      "name": "Birmingham 2022",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 10
+    },
+    {
+      "name": "Glasgow 2014",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 11
+    },
+    {
+      "name": "Queen's Baton Relay",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 11
+    },
+    {
+      "name": "Perry the bull",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 13
+    },
+    {
+      "name": "Clyde the thistle",
+      "facet": "London 2012 and Commonwealth Games",
+      "known_at": 14,
+      "retired": "unaskable: None of the count options leads to a fair question about the Glasgow 2014 mascot. The only countable facts, like the age of the designer, are trivia nobody could reason out."
+    },
+    {
+      "name": "Fancy-dress runners",
+      "facet": "Marathons and mass road races",
+      "known_at": 7
+    },
+    {
+      "name": "Great North Run",
+      "facet": "Marathons and mass road races",
+      "known_at": 10
+    },
+    {
+      "name": "Red Arrows",
+      "facet": "Marathons and mass road races",
+      "known_at": 8
+    },
+    {
+      "name": "Chris Brasher",
+      "facet": "Marathons and mass road races",
+      "known_at": 14
+    },
+    {
+      "name": "Brendan Foster",
+      "facet": "Marathons and mass road races",
+      "known_at": 14
+    },
+    {
+      "name": "parkrun",
+      "facet": "Marathons and mass road races",
+      "known_at": 8
+    },
+    {
+      "name": "Race for Life",
+      "facet": "Marathons and mass road races",
+      "known_at": 9
+    },
+    {
+      "name": "The Mall",
+      "facet": "Marathons and mass road races",
+      "known_at": 10
+    },
+    {
+      "name": "Blackheath",
+      "facet": "Marathons and mass road races",
+      "known_at": 13
+    },
+    {
+      "name": "London Marathon ballot",
+      "facet": "Marathons and mass road races",
+      "known_at": 12
+    },
+    {
+      "name": "Eliud Kipchoge",
+      "facet": "Marathons and mass road races",
+      "known_at": 10
+    },
+    {
+      "name": "Foil blanket",
+      "facet": "Marathons and mass road races",
+      "known_at": 9
+    },
+    {
+      "name": "Edinburgh Marathon",
+      "facet": "Marathons and mass road races",
+      "known_at": 12
+    },
+    {
+      "name": "Crucible Theatre",
+      "facet": "Snooker and darts championships",
+      "known_at": 10
+    },
+    {
+      "name": "World Snooker Championship",
+      "facet": "Snooker and darts championships",
+      "known_at": 8
+    },
+    {
+      "name": "Ronnie O'Sullivan",
+      "facet": "Snooker and darts championships",
+      "known_at": 9
+    },
+    {
+      "name": "Stephen Hendry",
+      "facet": "Snooker and darts championships",
+      "known_at": 11
+    },
+    {
+      "name": "Steve Davis",
+      "facet": "Snooker and darts championships",
+      "known_at": 11
+    },
+    {
+      "name": "Dennis Taylor",
+      "facet": "Snooker and darts championships",
+      "known_at": 12
+    },
+    {
+      "name": "Judd Trump",
+      "facet": "Snooker and darts championships",
+      "known_at": 11
+    },
+    {
+      "name": "Maximum break",
+      "facet": "Snooker and darts championships",
+      "known_at": 10
+    },
+    {
+      "name": "Referee's white gloves",
+      "facet": "Snooker and darts championships",
+      "known_at": 10
+    },
+    {
+      "name": "Pot Black",
+      "facet": "Snooker and darts championships",
+      "known_at": 13
+    },
+    {
+      "name": "Phil Taylor",
+      "facet": "Snooker and darts championships",
+      "known_at": 9
+    },
+    {
+      "name": "Luke Littler",
+      "facet": "Snooker and darts championships",
+      "known_at": 7
+    },
+    {
+      "name": "Fallon Sherrock",
+      "facet": "Snooker and darts championships",
+      "known_at": 11
+    },
+    {
+      "name": "180",
+      "facet": "Snooker and darts championships",
+      "known_at": 9
+    },
+    {
+      "name": "Oche",
+      "facet": "Snooker and darts championships",
+      "known_at": 10
+    },
+    {
+      "name": "Lakeside",
+      "facet": "Snooker and darts championships",
+      "known_at": 13
+    },
+    {
+      "name": "Walk-on music",
+      "facet": "Snooker and darts championships",
+      "known_at": 10
+    },
+    {
+      "name": "Sid Waddell",
+      "facet": "Snooker and darts championships",
+      "known_at": 14
+    },
+    {
+      "name": "The Open",
+      "facet": "The Open golf championship",
+      "known_at": 9
+    },
+    {
+      "name": "Old Course",
+      "facet": "The Open golf championship",
+      "known_at": 11
+    },
+    {
+      "name": "Swilcan Bridge",
+      "facet": "The Open golf championship",
+      "known_at": 13
+    },
+    {
+      "name": "Road Hole",
+      "facet": "The Open golf championship",
+      "known_at": 14
+    },
+    {
+      "name": "Royal Troon",
+      "facet": "The Open golf championship",
+      "known_at": 13
+    },
+    {
+      "name": "Carnoustie",
+      "facet": "The Open golf championship",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Portrush",
+      "facet": "The Open golf championship",
+      "known_at": 13
+    },
+    {
+      "name": "Royal Birkdale",
+      "facet": "The Open golf championship",
+      "known_at": 13
+    },
+    {
+      "name": "Links golf",
+      "facet": "The Open golf championship",
+      "known_at": 11
+    },
+    {
+      "name": "Pot bunker",
+      "facet": "The Open golf championship",
+      "known_at": 12
+    },
+    {
+      "name": "Old Tom Morris",
+      "facet": "The Open golf championship",
+      "known_at": 14
+    },
+    {
+      "name": "Seve Ballesteros",
+      "facet": "The Open golf championship",
+      "known_at": 12
+    },
+    {
+      "name": "Rory McIlroy",
+      "facet": "The Open golf championship",
+      "known_at": 10
+    },
+    {
+      "name": "Nick Faldo",
+      "facet": "The Open golf championship",
+      "known_at": 11
+    },
+    {
+      "name": "Tiger Woods",
+      "facet": "The Open golf championship",
+      "known_at": 7
+    },
+    {
+      "name": "Champion Golfer of the Year",
+      "facet": "The Open golf championship",
+      "known_at": 13
+    },
+    {
+      "name": "R&A",
+      "facet": "The Open golf championship",
+      "known_at": 13
+    },
+    {
+      "name": "Jean van de Velde",
+      "facet": "The Open golf championship",
+      "known_at": 14
+    },
+    {
+      "name": "Silverstone",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 9
+    },
+    {
+      "name": "Formula One",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 5
+    },
+    {
+      "name": "Nigel Mansell",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 11
+    },
+    {
+      "name": "Damon Hill",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 12
+    },
+    {
+      "name": "Jim Clark",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 13
+    },
+    {
+      "name": "Jackie Stewart",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 12
+    },
+    {
+      "name": "Jenson Button",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 10
+    },
+    {
+      "name": "Lando Norris",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 9
+    },
+    {
+      "name": "George Russell",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 11
+    },
+    {
+      "name": "Murray Walker",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 12
+    },
+    {
+      "name": "Copse Corner",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 13
+    },
+    {
+      "name": "Maggotts and Becketts",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 14
+    },
+    {
+      "name": "1950 British Grand Prix",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 13
+    },
+    {
+      "name": "RAF Silverstone",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 12
+    },
+    {
+      "name": "Brands Hatch",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 12
+    },
+    {
+      "name": "Pit stop",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 7
+    },
+    {
+      "name": "Chequered flag",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 6
+    },
+    {
+      "name": "Silverstone Wing",
+      "facet": "British Grand Prix at Silverstone",
+      "known_at": 14
+    },
+    {
+      "name": "Highland dancing",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 8
+    },
+    {
+      "name": "Scottish hammer throw",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 11
+    },
+    {
+      "name": "Stone put",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 11
+    },
+    {
+      "name": "Cheese rolling",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 8
+    },
+    {
+      "name": "Cooper's Hill",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 11
+    },
+    {
+      "name": "World Gurning Championship",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 12
+    },
+    {
+      "name": "Shrovetide football",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 13
+    },
+    {
+      "name": "Haggis hurling",
+      "facet": "Highland Games and quirky contests",
+      "known_at": 10
+    }
+  ]
+}

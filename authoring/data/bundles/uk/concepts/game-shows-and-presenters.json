@@ -1,0 +1,1077 @@
+{
+  "subcategory": "game-shows-and-presenters",
+  "facets": [
+    "Teatime and daytime quizzes",
+    "Big-money prime-time quizzes",
+    "Brainy quizzes and Mastermind",
+    "Famous game show presenters",
+    "Catchphrases and famous lines",
+    "Saturday night family entertainment",
+    "Children's game shows",
+    "Comedy panel shows",
+    "Talent and reality competitions",
+    "Physical and adventure challenge shows",
+    "Prizes, props, sets and rules"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 4,
+      "estimate": 3,
+      "record": 2,
+      "origin": 3,
+      "made_of": 2,
+      "purpose": 3,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 3,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 2,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Countdown",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 5
+    },
+    {
+      "name": "The Chase",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 4
+    },
+    {
+      "name": "Pointless",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 6
+    },
+    {
+      "name": "Tipping Point",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 6
+    },
+    {
+      "name": "Fifteen to One",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 12
+    },
+    {
+      "name": "Going for Gold",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "Blockbusters",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 11
+    },
+    {
+      "name": "Deal or No Deal",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 7
+    },
+    {
+      "name": "The Weakest Link",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 7
+    },
+    {
+      "name": "Golden Balls",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 11
+    },
+    {
+      "name": "Supermarket Sweep",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 9
+    },
+    {
+      "name": "Bargain Hunt",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 9
+    },
+    {
+      "name": "Ready Steady Cook",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 10
+    },
+    {
+      "name": "Richard Osman's House of Games",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 10
+    },
+    {
+      "name": "Lingo",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "Tenable",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 12
+    },
+    {
+      "name": "The Beast",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 7
+    },
+    {
+      "name": "The Governess",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 8
+    },
+    {
+      "name": "The Dark Destroyer",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 9
+    },
+    {
+      "name": "The Vixen",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 9
+    },
+    {
+      "name": "The Sinnerman",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 10
+    },
+    {
+      "name": "The Menace",
+      "facet": "Teatime and daytime quizzes",
+      "known_at": 11
+    },
+    {
+      "name": "Who Wants to Be a Millionaire?",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 4
+    },
+    {
+      "name": "The Million Pound Drop",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 10
+    },
+    {
+      "name": "The 1% Club",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 7
+    },
+    {
+      "name": "Beat the Chasers",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 8
+    },
+    {
+      "name": "In It to Win It",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "The Wall",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 11
+    },
+    {
+      "name": "Winning Lines",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "The Colour of Money",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 14
+    },
+    {
+      "name": "Red or Black?",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "Sale of the Century",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "Take Your Pick!",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "Double Your Money",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 14
+    },
+    {
+      "name": "Limitless Win",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 11
+    },
+    {
+      "name": "Judith Keppel",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "Charles Ingram",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 12
+    },
+    {
+      "name": "Rolling In It",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 13
+    },
+    {
+      "name": "Moneyball",
+      "facet": "Big-money prime-time quizzes",
+      "known_at": 14
+    },
+    {
+      "name": "Mastermind",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 7
+    },
+    {
+      "name": "University Challenge",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 9
+    },
+    {
+      "name": "Only Connect",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 11
+    },
+    {
+      "name": "Brain of Britain",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 13
+    },
+    {
+      "name": "The Krypton Factor",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 12
+    },
+    {
+      "name": "Eggheads",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 10
+    },
+    {
+      "name": "Ask the Family",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 14
+    },
+    {
+      "name": "Top of the Form",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 14
+    },
+    {
+      "name": "Connecting Wall",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 12
+    },
+    {
+      "name": "Missing Vowels",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 12
+    },
+    {
+      "name": "Specialist subject",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 9
+    },
+    {
+      "name": "Only Connect hieroglyphs",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 14
+    },
+    {
+      "name": "Gail Trimble",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 14
+    },
+    {
+      "name": "Fred Housego",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 15
+    },
+    {
+      "name": "Approaching Menace",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 15
+    },
+    {
+      "name": "Round Britain Quiz",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 15
+    },
+    {
+      "name": "Christmas University Challenge",
+      "facet": "Brainy quizzes and Mastermind",
+      "known_at": 12
+    },
+    {
+      "name": "Bruce Forsyth",
+      "facet": "Famous game show presenters",
+      "known_at": 7
+    },
+    {
+      "name": "Bradley Walsh",
+      "facet": "Famous game show presenters",
+      "known_at": 5
+    },
+    {
+      "name": "Anne Robinson",
+      "facet": "Famous game show presenters",
+      "known_at": 9
+    },
+    {
+      "name": "Chris Tarrant",
+      "facet": "Famous game show presenters",
+      "known_at": 10
+    },
+    {
+      "name": "Alexander Armstrong",
+      "facet": "Famous game show presenters",
+      "known_at": 9
+    },
+    {
+      "name": "Richard Osman",
+      "facet": "Famous game show presenters",
+      "known_at": 9
+    },
+    {
+      "name": "Jeremy Paxman",
+      "facet": "Famous game show presenters",
+      "known_at": 11
+    },
+    {
+      "name": "Bamber Gascoigne",
+      "facet": "Famous game show presenters",
+      "known_at": 13
+    },
+    {
+      "name": "Magnus Magnusson",
+      "facet": "Famous game show presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Richard Whiteley",
+      "facet": "Famous game show presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Carol Vorderman",
+      "facet": "Famous game show presenters",
+      "known_at": 10
+    },
+    {
+      "name": "Rachel Riley",
+      "facet": "Famous game show presenters",
+      "known_at": 9
+    },
+    {
+      "name": "Jim Bowen",
+      "facet": "Famous game show presenters",
+      "known_at": 13
+    },
+    {
+      "name": "Dale Winton",
+      "facet": "Famous game show presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Bob Monkhouse",
+      "facet": "Famous game show presenters",
+      "known_at": 13
+    },
+    {
+      "name": "Les Dennis",
+      "facet": "Famous game show presenters",
+      "known_at": 13
+    },
+    {
+      "name": "Ben Shephard",
+      "facet": "Famous game show presenters",
+      "known_at": 9
+    },
+    {
+      "name": "Victoria Coren Mitchell",
+      "facet": "Famous game show presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Nicholas Parsons",
+      "facet": "Famous game show presenters",
+      "known_at": 13
+    },
+    {
+      "name": "Hughie Green",
+      "facet": "Famous game show presenters",
+      "known_at": 14
+    },
+    {
+      "name": "Roy Walker",
+      "facet": "Famous game show presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Lee Mack",
+      "facet": "Famous game show presenters",
+      "known_at": 8
+    },
+    {
+      "name": "Good game, good game",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "Nice to see you, to see you nice",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 9
+    },
+    {
+      "name": "Didn't he do well?",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 12
+    },
+    {
+      "name": "You are the weakest link, goodbye",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 8
+    },
+    {
+      "name": "Is that your final answer?",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 6
+    },
+    {
+      "name": "Say what you see",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 9
+    },
+    {
+      "name": "It's good, but it's not right",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 13
+    },
+    {
+      "name": "Our survey said",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "Super, smashing, great",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 13
+    },
+    {
+      "name": "Look at what you could have won",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 12
+    },
+    {
+      "name": "Your starter for ten",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "I've started, so I'll finish",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 11
+    },
+    {
+      "name": "Come on down!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "Tonight, Matthew, I'm going to be…",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 12
+    },
+    {
+      "name": "Shut that door!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 14
+    },
+    {
+      "name": "Bernie, the bolt!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 15
+    },
+    {
+      "name": "I'll have a P, please, Bob",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 13
+    },
+    {
+      "name": "Contenders ready! Gladiators ready!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 10
+    },
+    {
+      "name": "Start the fans, please!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 13
+    },
+    {
+      "name": "Points make prizes",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 13
+    },
+    {
+      "name": "You're fired!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 8
+    },
+    {
+      "name": "Keep dancing!",
+      "facet": "Catchphrases and famous lines",
+      "known_at": 9
+    },
+    {
+      "name": "The Generation Game",
+      "facet": "Saturday night family entertainment",
+      "known_at": 11
+    },
+    {
+      "name": "Bullseye",
+      "facet": "Saturday night family entertainment",
+      "known_at": 11
+    },
+    {
+      "name": "Family Fortunes",
+      "facet": "Saturday night family entertainment",
+      "known_at": 9
+    },
+    {
+      "name": "Blind Date",
+      "facet": "Saturday night family entertainment",
+      "known_at": 11
+    },
+    {
+      "name": "Play Your Cards Right",
+      "facet": "Saturday night family entertainment",
+      "known_at": 12
+    },
+    {
+      "name": "Catchphrase",
+      "facet": "Saturday night family entertainment",
+      "known_at": 7
+    },
+    {
+      "name": "Saturday Night Takeaway",
+      "facet": "Saturday night family entertainment",
+      "known_at": 4
+    },
+    {
+      "name": "Noel's House Party",
+      "facet": "Saturday night family entertainment",
+      "known_at": 12
+    },
+    {
+      "name": "3-2-1",
+      "facet": "Saturday night family entertainment",
+      "known_at": 14
+    },
+    {
+      "name": "The Price Is Right",
+      "facet": "Saturday night family entertainment",
+      "known_at": 10
+    },
+    {
+      "name": "Blankety Blank",
+      "facet": "Saturday night family entertainment",
+      "known_at": 11
+    },
+    {
+      "name": "Big Break",
+      "facet": "Saturday night family entertainment",
+      "known_at": 13
+    },
+    {
+      "name": "Bob's Full House",
+      "facet": "Saturday night family entertainment",
+      "known_at": 14
+    },
+    {
+      "name": "Strike It Lucky",
+      "facet": "Saturday night family entertainment",
+      "known_at": 14
+    },
+    {
+      "name": "Surprise Surprise",
+      "facet": "Saturday night family entertainment",
+      "known_at": 12
+    },
+    {
+      "name": "Beadle's About",
+      "facet": "Saturday night family entertainment",
+      "known_at": 13
+    },
+    {
+      "name": "You Bet!",
+      "facet": "Saturday night family entertainment",
+      "known_at": 14
+    },
+    {
+      "name": "Don't Forget Your Toothbrush",
+      "facet": "Saturday night family entertainment",
+      "known_at": 14
+    },
+    {
+      "name": "The Golden Shot",
+      "facet": "Saturday night family entertainment",
+      "known_at": 15
+    },
+    {
+      "name": "Wheel of Fortune",
+      "facet": "Saturday night family entertainment",
+      "known_at": 10
+    },
+    {
+      "name": "Runaround",
+      "facet": "Children's game shows",
+      "known_at": 14
+    },
+    {
+      "name": "Trapped!",
+      "facet": "Children's game shows",
+      "known_at": 12
+    },
+    {
+      "name": "Copycats",
+      "facet": "Children's game shows",
+      "known_at": 12
+    },
+    {
+      "name": "GamesMaster",
+      "facet": "Children's game shows",
+      "known_at": 13
+    },
+    {
+      "name": "We Are the Champions",
+      "facet": "Children's game shows",
+      "known_at": 14
+    },
+    {
+      "name": "Run the Risk",
+      "facet": "Children's game shows",
+      "known_at": 14
+    },
+    {
+      "name": "Splatalot",
+      "facet": "Children's game shows",
+      "known_at": 12
+    },
+    {
+      "name": "Beat the Teacher",
+      "facet": "Children's game shows",
+      "known_at": 14
+    },
+    {
+      "name": "Bogies",
+      "facet": "Children's game shows",
+      "known_at": 11
+    },
+    {
+      "name": "Have I Got News for You",
+      "facet": "Comedy panel shows",
+      "known_at": 10
+    },
+    {
+      "name": "QI",
+      "facet": "Comedy panel shows",
+      "known_at": 10
+    },
+    {
+      "name": "Mock the Week",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "Would I Lie to You?",
+      "facet": "Comedy panel shows",
+      "known_at": 9
+    },
+    {
+      "name": "8 Out of 10 Cats",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "8 Out of 10 Cats Does Countdown",
+      "facet": "Comedy panel shows",
+      "known_at": 10
+    },
+    {
+      "name": "Never Mind the Buzzcocks",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "Taskmaster",
+      "facet": "Comedy panel shows",
+      "known_at": 8
+    },
+    {
+      "name": "A League of Their Own",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "Shooting Stars",
+      "facet": "Comedy panel shows",
+      "known_at": 13
+    },
+    {
+      "name": "Room 101",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "I'm Sorry I Haven't a Clue",
+      "facet": "Comedy panel shows",
+      "known_at": 13
+    },
+    {
+      "name": "Mornington Crescent",
+      "facet": "Comedy panel shows",
+      "known_at": 14
+    },
+    {
+      "name": "Just a Minute",
+      "facet": "Comedy panel shows",
+      "known_at": 12
+    },
+    {
+      "name": "Whose Line Is It Anyway?",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "The Big Fat Quiz of the Year",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "A Question of Sport",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "Celebrity Juice",
+      "facet": "Comedy panel shows",
+      "known_at": 11
+    },
+    {
+      "name": "Strictly Come Dancing",
+      "facet": "Talent and reality competitions",
+      "known_at": 3
+    },
+    {
+      "name": "Opportunity Knocks",
+      "facet": "Talent and reality competitions",
+      "known_at": 14
+    },
+    {
+      "name": "New Faces",
+      "facet": "Talent and reality competitions",
+      "known_at": 14
+    },
+    {
+      "name": "Stars in Their Eyes",
+      "facet": "Talent and reality competitions",
+      "known_at": 11
+    },
+    {
+      "name": "Big Brother",
+      "facet": "Talent and reality competitions",
+      "known_at": 8
+    },
+    {
+      "name": "I'm a Celebrity... Get Me Out of Here!",
+      "facet": "Talent and reality competitions",
+      "known_at": 4
+    },
+    {
+      "name": "Love Island",
+      "facet": "Talent and reality competitions",
+      "known_at": 8
+    },
+    {
+      "name": "The Apprentice",
+      "facet": "Talent and reality competitions",
+      "known_at": 7
+    },
+    {
+      "name": "Dancing on Ice",
+      "facet": "Talent and reality competitions",
+      "known_at": 6
+    },
+    {
+      "name": "MasterChef",
+      "facet": "Talent and reality competitions",
+      "known_at": 6
+    },
+    {
+      "name": "Popstars",
+      "facet": "Talent and reality competitions",
+      "known_at": 13
+    },
+    {
+      "name": "Bushtucker Trial",
+      "facet": "Talent and reality competitions",
+      "known_at": 6
+    },
+    {
+      "name": "Gladiators",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 6
+    },
+    {
+      "name": "Wolf",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 12
+    },
+    {
+      "name": "Jet",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 13
+    },
+    {
+      "name": "The Eliminator",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 11
+    },
+    {
+      "name": "The Crystal Maze",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 9
+    },
+    {
+      "name": "Crystal Dome",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 11
+    },
+    {
+      "name": "Richard O'Brien",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 13
+    },
+    {
+      "name": "Total Wipeout",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 8
+    },
+    {
+      "name": "Robot Wars",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 9
+    },
+    {
+      "name": "Sir Killalot",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 12
+    },
+    {
+      "name": "It's a Knockout",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 12
+    },
+    {
+      "name": "Takeshi's Castle",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 10
+    },
+    {
+      "name": "Ninja Warrior UK",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 8
+    },
+    {
+      "name": "The Cube",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 10
+    },
+    {
+      "name": "Interceptor",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 15
+    },
+    {
+      "name": "Treasure Hunt",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 13
+    },
+    {
+      "name": "Anneka Rice",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 13
+    },
+    {
+      "name": "The Adventure Game",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 15
+    },
+    {
+      "name": "Hole in the Wall",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 10
+    },
+    {
+      "name": "SAS: Who Dares Wins",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 11
+    },
+    {
+      "name": "Fort Boyard",
+      "facet": "Physical and adventure challenge shows",
+      "known_at": 12
+    },
+    {
+      "name": "Dusty Bin",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 14
+    },
+    {
+      "name": "Bully",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Generation Game conveyor belt",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 11
+    },
+    {
+      "name": "Cuddly toy",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 12
+    },
+    {
+      "name": "Blankety Blank chequebook and pen",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Mastermind black chair",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 9
+    },
+    {
+      "name": "Countdown clock",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Countdown Conundrum",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 10
+    },
+    {
+      "name": "Dictionary Corner",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 12
+    },
+    {
+      "name": "Phone a Friend",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 5
+    },
+    {
+      "name": "50:50",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 6
+    },
+    {
+      "name": "Ask the Audience",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 6,
+      "retired": "used_up: What the lifeline does and how many lifelines there were are already asked; the options left give only a forced or overlapping question."
+    },
+    {
+      "name": "Split or Steal",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 11
+    },
+    {
+      "name": "The Banker",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 8
+    },
+    {
+      "name": "Gotcha Oscar",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Crackerjack pencil",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Glitterball trophy",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 7
+    },
+    {
+      "name": "QI klaxon",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 12
+    },
+    {
+      "name": "Hesitation, repetition, deviation",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 13
+    },
+    {
+      "name": "Pointless answer",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Tipping Point machine",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Final Chase",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 7
+    },
+    {
+      "name": "Yes–No Interlude",
+      "facet": "Prizes, props, sets and rules",
+      "known_at": 15
+    }
+  ]
+}

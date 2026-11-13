@@ -1,0 +1,1162 @@
+{
+  "subcategory": "pop-and-rock",
+  "facets": [
+    "Beatles and the Sixties",
+    "Glam, punk and new wave",
+    "Eighties synth-pop and New Romantics",
+    "Britpop bands and rivalries",
+    "Spice Girls and nineties pop groups",
+    "Solo stars and pop icons",
+    "Christmas number ones",
+    "Chart records and number ones",
+    "TV talent shows and pop TV",
+    "Eurovision and the UK",
+    "Iconic British albums and covers",
+    "Pop places and music events"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 2,
+      "count": 3,
+      "estimate": 3,
+      "record": 4,
+      "origin": 4,
+      "made_of": 3,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 3,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 5
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 1,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "John Lennon",
+      "facet": "Beatles and the Sixties",
+      "known_at": 6
+    },
+    {
+      "name": "Paul McCartney",
+      "facet": "Beatles and the Sixties",
+      "known_at": 6
+    },
+    {
+      "name": "Ringo Starr",
+      "facet": "Beatles and the Sixties",
+      "known_at": 8
+    },
+    {
+      "name": "George Harrison",
+      "facet": "Beatles and the Sixties",
+      "known_at": 9
+    },
+    {
+      "name": "Yellow Submarine",
+      "facet": "Beatles and the Sixties",
+      "known_at": 4
+    },
+    {
+      "name": "Hey Jude",
+      "facet": "Beatles and the Sixties",
+      "known_at": 9
+    },
+    {
+      "name": "Strawberry Fields Forever",
+      "facet": "Beatles and the Sixties",
+      "known_at": 11
+    },
+    {
+      "name": "Brian Epstein",
+      "facet": "Beatles and the Sixties",
+      "known_at": 13
+    },
+    {
+      "name": "George Martin",
+      "facet": "Beatles and the Sixties",
+      "known_at": 13
+    },
+    {
+      "name": "The Beatles' rooftop concert",
+      "facet": "Beatles and the Sixties",
+      "known_at": 12
+    },
+    {
+      "name": "Mick Jagger",
+      "facet": "Beatles and the Sixties",
+      "known_at": 8
+    },
+    {
+      "name": "Merseybeat",
+      "facet": "Beatles and the Sixties",
+      "known_at": 13
+    },
+    {
+      "name": "Swinging London",
+      "facet": "Beatles and the Sixties",
+      "known_at": 12
+    },
+    {
+      "name": "Dusty Springfield",
+      "facet": "Beatles and the Sixties",
+      "known_at": 13
+    },
+    {
+      "name": "Cilla Black",
+      "facet": "Beatles and the Sixties",
+      "known_at": 12
+    },
+    {
+      "name": "Freddie Mercury",
+      "facet": "Glam, punk and new wave",
+      "known_at": 5
+    },
+    {
+      "name": "Ziggy Stardust",
+      "facet": "Glam, punk and new wave",
+      "known_at": 11
+    },
+    {
+      "name": "T. Rex",
+      "facet": "Glam, punk and new wave",
+      "known_at": 12
+    },
+    {
+      "name": "Roxy Music",
+      "facet": "Glam, punk and new wave",
+      "known_at": 13
+    },
+    {
+      "name": "Johnny Rotten",
+      "facet": "Glam, punk and new wave",
+      "known_at": 12
+    },
+    {
+      "name": "Sid Vicious",
+      "facet": "Glam, punk and new wave",
+      "known_at": 12
+    },
+    {
+      "name": "The Clash",
+      "facet": "Glam, punk and new wave",
+      "known_at": 11
+    },
+    {
+      "name": "Vivienne Westwood",
+      "facet": "Glam, punk and new wave",
+      "known_at": 11
+    },
+    {
+      "name": "Safety pin",
+      "facet": "Glam, punk and new wave",
+      "known_at": 9
+    },
+    {
+      "name": "Mohican hairstyle",
+      "facet": "Glam, punk and new wave",
+      "known_at": 7
+    },
+    {
+      "name": "Dr. Martens boots",
+      "facet": "Glam, punk and new wave",
+      "known_at": 8
+    },
+    {
+      "name": "The Jam",
+      "facet": "Glam, punk and new wave",
+      "known_at": 12
+    },
+    {
+      "name": "The Police",
+      "facet": "Glam, punk and new wave",
+      "known_at": 9
+    },
+    {
+      "name": "Sting",
+      "facet": "Glam, punk and new wave",
+      "known_at": 9
+    },
+    {
+      "name": "Elvis Costello",
+      "facet": "Glam, punk and new wave",
+      "known_at": 12
+    },
+    {
+      "name": "Siouxsie and the Banshees",
+      "facet": "Glam, punk and new wave",
+      "known_at": 13
+    },
+    {
+      "name": "Madness",
+      "facet": "Glam, punk and new wave",
+      "known_at": 10
+    },
+    {
+      "name": "The Specials",
+      "facet": "Glam, punk and new wave",
+      "known_at": 12
+    },
+    {
+      "name": "2 Tone",
+      "facet": "Glam, punk and new wave",
+      "known_at": 14
+    },
+    {
+      "name": "Duran Duran",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 11
+    },
+    {
+      "name": "Spandau Ballet",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 12
+    },
+    {
+      "name": "Culture Club",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 12
+    },
+    {
+      "name": "Boy George",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 11
+    },
+    {
+      "name": "Depeche Mode",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 11
+    },
+    {
+      "name": "Pet Shop Boys",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 11
+    },
+    {
+      "name": "The Human League",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 13
+    },
+    {
+      "name": "Don't You Want Me",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 13
+    },
+    {
+      "name": "Eurythmics",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 11
+    },
+    {
+      "name": "Annie Lennox",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 11
+    },
+    {
+      "name": "Wham!",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 9
+    },
+    {
+      "name": "George Michael",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 9
+    },
+    {
+      "name": "Tears for Fears",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 12
+    },
+    {
+      "name": "Soft Cell",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 13
+    },
+    {
+      "name": "Tainted Love",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 12
+    },
+    {
+      "name": "Adam Ant",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 13
+    },
+    {
+      "name": "New Order",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 12
+    },
+    {
+      "name": "Blue Monday",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 13
+    },
+    {
+      "name": "Frankie Goes to Hollywood",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 12
+    },
+    {
+      "name": "Relax",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 13
+    },
+    {
+      "name": "Ultravox",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 14
+    },
+    {
+      "name": "Rick Astley",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 8
+    },
+    {
+      "name": "Stock Aitken Waterman",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 13
+    },
+    {
+      "name": "Blitz Club",
+      "facet": "Eighties synth-pop and New Romantics",
+      "known_at": 15
+    },
+    {
+      "name": "Oasis",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 8
+    },
+    {
+      "name": "Blur",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 10
+    },
+    {
+      "name": "Battle of Britpop",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Liam Gallagher",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 10
+    },
+    {
+      "name": "Noel Gallagher",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 10
+    },
+    {
+      "name": "Damon Albarn",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Gorillaz",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 9
+    },
+    {
+      "name": "Wonderwall",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 7
+    },
+    {
+      "name": "Country House",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Roll With It",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 14
+    },
+    {
+      "name": "Pulp",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Jarvis Cocker",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Common People",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Suede",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Elastica",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 15
+    },
+    {
+      "name": "Supergrass",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 14
+    },
+    {
+      "name": "The Verve",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Bitter Sweet Symphony",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "The Stone Roses",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 13
+    },
+    {
+      "name": "Radiohead",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 11
+    },
+    {
+      "name": "Cool Britannia",
+      "facet": "Britpop bands and rivalries",
+      "known_at": 12
+    },
+    {
+      "name": "Wannabe",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 7
+    },
+    {
+      "name": "Girl Power",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 8
+    },
+    {
+      "name": "Posh Spice",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 6
+    },
+    {
+      "name": "Ginger Spice",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 9
+    },
+    {
+      "name": "Scary Spice",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 9
+    },
+    {
+      "name": "Baby Spice",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 9
+    },
+    {
+      "name": "Sporty Spice",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 9
+    },
+    {
+      "name": "Union Jack dress",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 10
+    },
+    {
+      "name": "Spice World",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 11
+    },
+    {
+      "name": "Take That",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 9
+    },
+    {
+      "name": "Gary Barlow",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 11
+    },
+    {
+      "name": "Boyzone",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 12
+    },
+    {
+      "name": "Westlife",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 11
+    },
+    {
+      "name": "East 17",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 13
+    },
+    {
+      "name": "All Saints",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 13
+    },
+    {
+      "name": "S Club 7",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 11
+    },
+    {
+      "name": "Steps",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 12
+    },
+    {
+      "name": "5, 6, 7, 8",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 13
+    },
+    {
+      "name": "Atomic Kitten",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 13
+    },
+    {
+      "name": "Five",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 14
+    },
+    {
+      "name": "B*Witched",
+      "facet": "Spice Girls and nineties pop groups",
+      "known_at": 14
+    },
+    {
+      "name": "Ed Sheeran",
+      "facet": "Solo stars and pop icons",
+      "known_at": 4
+    },
+    {
+      "name": "Harry Styles",
+      "facet": "Solo stars and pop icons",
+      "known_at": 5
+    },
+    {
+      "name": "Elton John",
+      "facet": "Solo stars and pop icons",
+      "known_at": 6
+    },
+    {
+      "name": "Dua Lipa",
+      "facet": "Solo stars and pop icons",
+      "known_at": 7
+    },
+    {
+      "name": "Robbie Williams",
+      "facet": "Solo stars and pop icons",
+      "known_at": 9
+    },
+    {
+      "name": "Lewis Capaldi",
+      "facet": "Solo stars and pop icons",
+      "known_at": 9
+    },
+    {
+      "name": "Sam Smith",
+      "facet": "Solo stars and pop icons",
+      "known_at": 10
+    },
+    {
+      "name": "Jessie J",
+      "facet": "Solo stars and pop icons",
+      "known_at": 10
+    },
+    {
+      "name": "Tom Jones",
+      "facet": "Solo stars and pop icons",
+      "known_at": 11
+    },
+    {
+      "name": "Rod Stewart",
+      "facet": "Solo stars and pop icons",
+      "known_at": 11
+    },
+    {
+      "name": "George Ezra",
+      "facet": "Solo stars and pop icons",
+      "known_at": 11
+    },
+    {
+      "name": "Ellie Goulding",
+      "facet": "Solo stars and pop icons",
+      "known_at": 11
+    },
+    {
+      "name": "Charli XCX",
+      "facet": "Solo stars and pop icons",
+      "known_at": 11
+    },
+    {
+      "name": "Shirley Bassey",
+      "facet": "Solo stars and pop icons",
+      "known_at": 12
+    },
+    {
+      "name": "Kate Bush",
+      "facet": "Solo stars and pop icons",
+      "known_at": 12
+    },
+    {
+      "name": "Lily Allen",
+      "facet": "Solo stars and pop icons",
+      "known_at": 13
+    },
+    {
+      "name": "Raye",
+      "facet": "Solo stars and pop icons",
+      "known_at": 13
+    },
+    {
+      "name": "Dizzee Rascal",
+      "facet": "Solo stars and pop icons",
+      "known_at": 13
+    },
+    {
+      "name": "Hallelujah",
+      "facet": "Christmas number ones",
+      "known_at": 12
+    },
+    {
+      "name": "Military Wives Choir",
+      "facet": "Christmas number ones",
+      "known_at": 13
+    },
+    {
+      "name": "Always on My Mind",
+      "facet": "Christmas number ones",
+      "known_at": 14
+    },
+    {
+      "name": "There's No One Quite Like Grandma",
+      "facet": "Christmas number ones",
+      "known_at": 14
+    },
+    {
+      "name": "UK Singles Chart",
+      "facet": "Chart records and number ones",
+      "known_at": 10
+    },
+    {
+      "name": "Official Charts Company",
+      "facet": "Chart records and number ones",
+      "known_at": 13
+    },
+    {
+      "name": "Vindaloo",
+      "facet": "Chart records and number ones",
+      "known_at": 12
+    },
+    {
+      "name": "Shape of You",
+      "facet": "Chart records and number ones",
+      "known_at": 8
+    },
+    {
+      "name": "Crazy Frog",
+      "facet": "Chart records and number ones",
+      "known_at": 8
+    },
+    {
+      "name": "Candle in the Wind 1997",
+      "facet": "Chart records and number ones",
+      "known_at": 11
+    },
+    {
+      "name": "Someone You Loved",
+      "facet": "Chart records and number ones",
+      "known_at": 11
+    },
+    {
+      "name": "(Everything I Do) I Do It for You",
+      "facet": "Chart records and number ones",
+      "known_at": 13
+    },
+    {
+      "name": "Love Is All Around",
+      "facet": "Chart records and number ones",
+      "known_at": 13
+    },
+    {
+      "name": "Unchained Melody",
+      "facet": "Chart records and number ones",
+      "known_at": 13
+    },
+    {
+      "name": "Mr Brightside",
+      "facet": "Chart records and number ones",
+      "known_at": 12
+    },
+    {
+      "name": "Agadoo",
+      "facet": "Chart records and number ones",
+      "known_at": 13
+    },
+    {
+      "name": "Two Tribes",
+      "facet": "Chart records and number ones",
+      "known_at": 14
+    },
+    {
+      "name": "Gareth Gates",
+      "facet": "Chart records and number ones",
+      "known_at": 13
+    },
+    {
+      "name": "Radio 1 Official Chart Show",
+      "facet": "Chart records and number ones",
+      "known_at": 12
+    },
+    {
+      "name": "Pick of the Pops",
+      "facet": "Chart records and number ones",
+      "known_at": 14
+    },
+    {
+      "name": "Platinum disc",
+      "facet": "Chart records and number ones",
+      "known_at": 10
+    },
+    {
+      "name": "The X Factor",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 7
+    },
+    {
+      "name": "Simon Cowell",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 6
+    },
+    {
+      "name": "Britain's Got Talent",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 6
+    },
+    {
+      "name": "Susan Boyle",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 9
+    },
+    {
+      "name": "Diversity",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 11
+    },
+    {
+      "name": "Ant and Dec",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 8
+    },
+    {
+      "name": "One Direction",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 5
+    },
+    {
+      "name": "Little Mix",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 7
+    },
+    {
+      "name": "The Voice UK",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 9
+    },
+    {
+      "name": "Pop Idol",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 12
+    },
+    {
+      "name": "Popstars: The Rivals",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 14
+    },
+    {
+      "name": "Hear'Say",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 14
+    },
+    {
+      "name": "Girls Aloud",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 11
+    },
+    {
+      "name": "Cheryl",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 10
+    },
+    {
+      "name": "Leona Lewis",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 11
+    },
+    {
+      "name": "Olly Murs",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 11
+    },
+    {
+      "name": "Jedward",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 11
+    },
+    {
+      "name": "Later... with Jools Holland",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 13
+    },
+    {
+      "name": "Smash Hits",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 13
+    },
+    {
+      "name": "Ready Steady Go!",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 14
+    },
+    {
+      "name": "The Old Grey Whistle Test",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 14
+    },
+    {
+      "name": "CD:UK",
+      "facet": "TV talent shows and pop TV",
+      "known_at": 14
+    },
+    {
+      "name": "Eurovision Song Contest",
+      "facet": "Eurovision and the UK",
+      "known_at": 7
+    },
+    {
+      "name": "Graham Norton",
+      "facet": "Eurovision and the UK",
+      "known_at": 9
+    },
+    {
+      "name": "Eurovision 2023 in Liverpool",
+      "facet": "Eurovision and the UK",
+      "known_at": 10
+    },
+    {
+      "name": "Nul points",
+      "facet": "Eurovision and the UK",
+      "known_at": 11
+    },
+    {
+      "name": "Sam Ryder",
+      "facet": "Eurovision and the UK",
+      "known_at": 11
+    },
+    {
+      "name": "Space Man",
+      "facet": "Eurovision and the UK",
+      "known_at": 12
+    },
+    {
+      "name": "Terry Wogan",
+      "facet": "Eurovision and the UK",
+      "known_at": 12
+    },
+    {
+      "name": "Bucks Fizz",
+      "facet": "Eurovision and the UK",
+      "known_at": 12
+    },
+    {
+      "name": "Making Your Mind Up",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Sandie Shaw",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Puppet on a String",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Katrina and the Waves",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Love Shine a Light",
+      "facet": "Eurovision and the UK",
+      "known_at": 14
+    },
+    {
+      "name": "Brotherhood of Man",
+      "facet": "Eurovision and the UK",
+      "known_at": 14
+    },
+    {
+      "name": "Save Your Kisses for Me",
+      "facet": "Eurovision and the UK",
+      "known_at": 14
+    },
+    {
+      "name": "Lulu",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Boom Bang-a-Bang",
+      "facet": "Eurovision and the UK",
+      "known_at": 15
+    },
+    {
+      "name": "Congratulations",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Jemini",
+      "facet": "Eurovision and the UK",
+      "known_at": 14
+    },
+    {
+      "name": "Eurovision 1974 in Brighton",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Big Five",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Olly Alexander",
+      "facet": "Eurovision and the UK",
+      "known_at": 13
+    },
+    {
+      "name": "Sgt. Pepper's Lonely Hearts Club Band",
+      "facet": "Iconic British albums and covers",
+      "known_at": 10
+    },
+    {
+      "name": "The White Album",
+      "facet": "Iconic British albums and covers",
+      "known_at": 11
+    },
+    {
+      "name": "Revolver",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "Pink Floyd",
+      "facet": "Iconic British albums and covers",
+      "known_at": 9
+    },
+    {
+      "name": "The Dark Side of the Moon",
+      "facet": "Iconic British albums and covers",
+      "known_at": 10
+    },
+    {
+      "name": "Animals",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "Aladdin Sane",
+      "facet": "Iconic British albums and covers",
+      "known_at": 12
+    },
+    {
+      "name": "Led Zeppelin",
+      "facet": "Iconic British albums and covers",
+      "known_at": 10
+    },
+    {
+      "name": "Led Zeppelin IV",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "Definitely Maybe",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "(What's the Story) Morning Glory?",
+      "facet": "Iconic British albums and covers",
+      "known_at": 12
+    },
+    {
+      "name": "Parklife",
+      "facet": "Iconic British albums and covers",
+      "known_at": 12
+    },
+    {
+      "name": "OK Computer",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "Back to Black",
+      "facet": "Iconic British albums and covers",
+      "known_at": 11
+    },
+    {
+      "name": "21",
+      "facet": "Iconic British albums and covers",
+      "known_at": 9
+    },
+    {
+      "name": "÷ (Divide)",
+      "facet": "Iconic British albums and covers",
+      "known_at": 10
+    },
+    {
+      "name": "Unknown Pleasures",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "London Calling",
+      "facet": "Iconic British albums and covers",
+      "known_at": 12
+    },
+    {
+      "name": "Tubular Bells",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "Brothers in Arms",
+      "facet": "Iconic British albums and covers",
+      "known_at": 13
+    },
+    {
+      "name": "Peter Blake",
+      "facet": "Iconic British albums and covers",
+      "known_at": 14
+    },
+    {
+      "name": "Hipgnosis",
+      "facet": "Iconic British albums and covers",
+      "known_at": 15
+    },
+    {
+      "name": "Pyramid Stage",
+      "facet": "Pop places and music events",
+      "known_at": 11
+    },
+    {
+      "name": "Abbey Road Studios",
+      "facet": "Pop places and music events",
+      "known_at": 9
+    },
+    {
+      "name": "The Cavern Club",
+      "facet": "Pop places and music events",
+      "known_at": 11
+    },
+    {
+      "name": "Live 8",
+      "facet": "Pop places and music events",
+      "known_at": 12
+    },
+    {
+      "name": "The O2 Arena",
+      "facet": "Pop places and music events",
+      "known_at": 8
+    },
+    {
+      "name": "BBC Radio 1",
+      "facet": "Pop places and music events",
+      "known_at": 8
+    },
+    {
+      "name": "BRIT Awards",
+      "facet": "Pop places and music events",
+      "known_at": 9
+    },
+    {
+      "name": "Mercury Prize",
+      "facet": "Pop places and music events",
+      "known_at": 12
+    },
+    {
+      "name": "Ivor Novello Awards",
+      "facet": "Pop places and music events",
+      "known_at": 14
+    },
+    {
+      "name": "Knebworth",
+      "facet": "Pop places and music events",
+      "known_at": 13
+    },
+    {
+      "name": "Hyde Park concerts",
+      "facet": "Pop places and music events",
+      "known_at": 12
+    },
+    {
+      "name": "The Haçienda",
+      "facet": "Pop places and music events",
+      "known_at": 13
+    },
+    {
+      "name": "Brixton Academy",
+      "facet": "Pop places and music events",
+      "known_at": 13
+    },
+    {
+      "name": "Radio Caroline",
+      "facet": "Pop places and music events",
+      "known_at": 13
+    },
+    {
+      "name": "Denmark Street",
+      "facet": "Pop places and music events",
+      "known_at": 14
+    }
+  ]
+}

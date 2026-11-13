@@ -1,0 +1,698 @@
+{
+  "subcategory": "school-and-childhood",
+  "facets": [
+    "School years and key stages",
+    "Exams and qualifications",
+    "School uniform and kit",
+    "School dinners and packed lunches",
+    "Playground games and rhymes",
+    "Classroom and school slang",
+    "Types of British schools",
+    "Children's TV and presenters",
+    "Classic British children's books",
+    "Sweets, treats and pocket money",
+    "Childhood traditions and celebrations",
+    "Famous schools and school stories"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 5,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 3,
+      "purpose": 4,
+      "cause_effect": 2,
+      "sequence": 4,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 4,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 2,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Reception",
+      "facet": "School years and key stages",
+      "known_at": 2
+    },
+    {
+      "name": "Nursery",
+      "facet": "School years and key stages",
+      "known_at": 1
+    },
+    {
+      "name": "Year 1",
+      "facet": "School years and key stages",
+      "known_at": 1
+    },
+    {
+      "name": "Year 6",
+      "facet": "School years and key stages",
+      "known_at": 2
+    },
+    {
+      "name": "Year 7",
+      "facet": "School years and key stages",
+      "known_at": 3
+    },
+    {
+      "name": "Year 11",
+      "facet": "School years and key stages",
+      "known_at": 5
+    },
+    {
+      "name": "Year 13",
+      "facet": "School years and key stages",
+      "known_at": 7
+    },
+    {
+      "name": "Key Stage 1",
+      "facet": "School years and key stages",
+      "known_at": 5
+    },
+    {
+      "name": "Key Stage 2",
+      "facet": "School years and key stages",
+      "known_at": 5
+    },
+    {
+      "name": "Key Stage 3",
+      "facet": "School years and key stages",
+      "known_at": 7
+    },
+    {
+      "name": "Key Stage 4",
+      "facet": "School years and key stages",
+      "known_at": 8
+    },
+    {
+      "name": "Early Years Foundation Stage",
+      "facet": "School years and key stages",
+      "known_at": 11
+    },
+    {
+      "name": "Lower sixth",
+      "facet": "School years and key stages",
+      "known_at": 9
+    },
+    {
+      "name": "Upper sixth",
+      "facet": "School years and key stages",
+      "known_at": 9
+    },
+    {
+      "name": "Autumn term",
+      "facet": "School years and key stages",
+      "known_at": 3
+    },
+    {
+      "name": "Spring term",
+      "facet": "School years and key stages",
+      "known_at": 4
+    },
+    {
+      "name": "Summer term",
+      "facet": "School years and key stages",
+      "known_at": 3
+    },
+    {
+      "name": "P7 (Scotland)",
+      "facet": "School years and key stages",
+      "known_at": 10
+    },
+    {
+      "name": "S1 (Scotland)",
+      "facet": "School years and key stages",
+      "known_at": 10
+    },
+    {
+      "name": "SATs",
+      "facet": "Exams and qualifications",
+      "known_at": 4
+    },
+    {
+      "name": "GCSE",
+      "facet": "Exams and qualifications",
+      "known_at": 5
+    },
+    {
+      "name": "A level",
+      "facet": "Exams and qualifications",
+      "known_at": 6
+    },
+    {
+      "name": "AS level",
+      "facet": "Exams and qualifications",
+      "known_at": 9
+    },
+    {
+      "name": "11-plus",
+      "facet": "Exams and qualifications",
+      "known_at": 7
+    },
+    {
+      "name": "BTEC",
+      "facet": "Exams and qualifications",
+      "known_at": 9
+    },
+    {
+      "name": "T Level",
+      "facet": "Exams and qualifications",
+      "known_at": 11
+    },
+    {
+      "name": "Highers",
+      "facet": "Exams and qualifications",
+      "known_at": 10
+    },
+    {
+      "name": "Advanced Highers",
+      "facet": "Exams and qualifications",
+      "known_at": 11
+    },
+    {
+      "name": "O level",
+      "facet": "Exams and qualifications",
+      "known_at": 11
+    },
+    {
+      "name": "CSE",
+      "facet": "Exams and qualifications",
+      "known_at": 13
+    },
+    {
+      "name": "Grade 9",
+      "facet": "Exams and qualifications",
+      "known_at": 7
+    },
+    {
+      "name": "A* grade",
+      "facet": "Exams and qualifications",
+      "known_at": 6
+    },
+    {
+      "name": "Mock exams",
+      "facet": "Exams and qualifications",
+      "known_at": 6
+    },
+    {
+      "name": "Results day",
+      "facet": "Exams and qualifications",
+      "known_at": 6
+    },
+    {
+      "name": "UCAS",
+      "facet": "Exams and qualifications",
+      "known_at": 9
+    },
+    {
+      "name": "Clearing",
+      "facet": "Exams and qualifications",
+      "known_at": 10
+    },
+    {
+      "name": "Personal statement",
+      "facet": "Exams and qualifications",
+      "known_at": 9
+    },
+    {
+      "name": "Phonics screening check",
+      "facet": "Exams and qualifications",
+      "known_at": 9
+    },
+    {
+      "name": "Times tables check",
+      "facet": "Exams and qualifications",
+      "known_at": 5
+    },
+    {
+      "name": "Extended Project Qualification",
+      "facet": "Exams and qualifications",
+      "known_at": 12
+    },
+    {
+      "name": "Ofqual",
+      "facet": "Exams and qualifications",
+      "known_at": 12
+    },
+    {
+      "name": "Blazer",
+      "facet": "School uniform and kit",
+      "known_at": 2
+    },
+    {
+      "name": "School jumper",
+      "facet": "School uniform and kit",
+      "known_at": 1
+    },
+    {
+      "name": "Grey trousers",
+      "facet": "School uniform and kit",
+      "known_at": 2
+    },
+    {
+      "name": "Pinafore dress",
+      "facet": "School uniform and kit",
+      "known_at": 5
+    },
+    {
+      "name": "Gingham summer dress",
+      "facet": "School uniform and kit",
+      "known_at": 3
+    },
+    {
+      "name": "PE kit",
+      "facet": "School uniform and kit",
+      "known_at": 2
+    },
+    {
+      "name": "Book bag",
+      "facet": "School uniform and kit",
+      "known_at": 2
+    },
+    {
+      "name": "Satchel",
+      "facet": "School uniform and kit",
+      "known_at": 7
+    },
+    {
+      "name": "School cap",
+      "facet": "School uniform and kit",
+      "known_at": 7
+    },
+    {
+      "name": "Boater",
+      "facet": "School uniform and kit",
+      "known_at": 11
+    },
+    {
+      "name": "School crest",
+      "facet": "School uniform and kit",
+      "known_at": 4
+    },
+    {
+      "name": "Name tapes",
+      "facet": "School uniform and kit",
+      "known_at": 6
+    },
+    {
+      "name": "Clarks school shoes",
+      "facet": "School uniform and kit",
+      "known_at": 5
+    },
+    {
+      "name": "Eton tailcoat",
+      "facet": "School uniform and kit",
+      "known_at": 11
+    },
+    {
+      "name": "Netball bib",
+      "facet": "School uniform and kit",
+      "known_at": 4
+    },
+    {
+      "name": "Hockey stick",
+      "facet": "School uniform and kit",
+      "known_at": 3
+    },
+    {
+      "name": "Blue coat (Christ's Hospital)",
+      "facet": "School uniform and kit",
+      "known_at": 14
+    },
+    {
+      "name": "Turkey Twizzlers",
+      "facet": "School dinners and packed lunches",
+      "known_at": 9
+    },
+    {
+      "name": "Jamie Oliver",
+      "facet": "School dinners and packed lunches",
+      "known_at": 6
+    },
+    {
+      "name": "Pink custard",
+      "facet": "School dinners and packed lunches",
+      "known_at": 10
+    },
+    {
+      "name": "Fish fingers",
+      "facet": "School dinners and packed lunches",
+      "known_at": 1
+    },
+    {
+      "name": "Sponge and custard",
+      "facet": "School dinners and packed lunches",
+      "known_at": 3
+    },
+    {
+      "name": "Lunch box",
+      "facet": "School dinners and packed lunches",
+      "known_at": 1
+    },
+    {
+      "name": "Free school meals",
+      "facet": "School dinners and packed lunches",
+      "known_at": 7
+    },
+    {
+      "name": "Capri-Sun",
+      "facet": "School dinners and packed lunches",
+      "known_at": 3
+    },
+    {
+      "name": "Dairylea Lunchables",
+      "facet": "School dinners and packed lunches",
+      "known_at": 5
+    },
+    {
+      "name": "Frubes",
+      "facet": "School dinners and packed lunches",
+      "known_at": 6
+    },
+    {
+      "name": "Spam fritters",
+      "facet": "School dinners and packed lunches",
+      "known_at": 12
+    },
+    {
+      "name": "Cat's cradle",
+      "facet": "Playground games and rhymes",
+      "known_at": 7
+    },
+    {
+      "name": "Bunking off",
+      "facet": "Classroom and school slang",
+      "known_at": 7
+    },
+    {
+      "name": "Detention",
+      "facet": "Classroom and school slang",
+      "known_at": 4
+    },
+    {
+      "name": "Head boy",
+      "facet": "Classroom and school slang",
+      "known_at": 6
+    },
+    {
+      "name": "Form tutor",
+      "facet": "Classroom and school slang",
+      "known_at": 7
+    },
+    {
+      "name": "Register",
+      "facet": "Classroom and school slang",
+      "known_at": 3
+    },
+    {
+      "name": "Assembly",
+      "facet": "Classroom and school slang",
+      "known_at": 2
+    },
+    {
+      "name": "Supply teacher",
+      "facet": "Classroom and school slang",
+      "known_at": 5
+    },
+    {
+      "name": "INSET day",
+      "facet": "Classroom and school slang",
+      "known_at": 8
+    },
+    {
+      "name": "Exercise book",
+      "facet": "Classroom and school slang",
+      "known_at": 4
+    },
+    {
+      "name": "Ofsted",
+      "facet": "Classroom and school slang",
+      "known_at": 9
+    },
+    {
+      "name": "Golden time",
+      "facet": "Classroom and school slang",
+      "known_at": 4
+    },
+    {
+      "name": "Show and tell",
+      "facet": "Classroom and school slang",
+      "known_at": 3,
+      "retired": "used_up: The pool already asks what the activity is and what it's called. No different fact about show and tell is left for these players."
+    },
+    {
+      "name": "Lines",
+      "facet": "Classroom and school slang",
+      "known_at": 9
+    },
+    {
+      "name": "Primary school",
+      "facet": "Types of British schools",
+      "known_at": 1
+    },
+    {
+      "name": "Infant school",
+      "facet": "Types of British schools",
+      "known_at": 4
+    },
+    {
+      "name": "Junior school",
+      "facet": "Types of British schools",
+      "known_at": 5
+    },
+    {
+      "name": "Secondary school",
+      "facet": "Types of British schools",
+      "known_at": 3
+    },
+    {
+      "name": "Comprehensive school",
+      "facet": "Types of British schools",
+      "known_at": 9
+    },
+    {
+      "name": "Secondary modern",
+      "facet": "Types of British schools",
+      "known_at": 12
+    },
+    {
+      "name": "Academy",
+      "facet": "Types of British schools",
+      "known_at": 8
+    },
+    {
+      "name": "Free school",
+      "facet": "Types of British schools",
+      "known_at": 11
+    },
+    {
+      "name": "State school",
+      "facet": "Types of British schools",
+      "known_at": 7
+    },
+    {
+      "name": "Public school",
+      "facet": "Types of British schools",
+      "known_at": 10
+    },
+    {
+      "name": "Prep school",
+      "facet": "Types of British schools",
+      "known_at": 9
+    },
+    {
+      "name": "Boarding school",
+      "facet": "Types of British schools",
+      "known_at": 4
+    },
+    {
+      "name": "Faith school",
+      "facet": "Types of British schools",
+      "known_at": 9
+    },
+    {
+      "name": "Sixth-form college",
+      "facet": "Types of British schools",
+      "known_at": 9
+    },
+    {
+      "name": "Further education college",
+      "facet": "Types of British schools",
+      "known_at": 10
+    },
+    {
+      "name": "University technical college",
+      "facet": "Types of British schools",
+      "known_at": 13
+    },
+    {
+      "name": "Pupil referral unit",
+      "facet": "Types of British schools",
+      "known_at": 12
+    },
+    {
+      "name": "Ragged school",
+      "facet": "Types of British schools",
+      "known_at": 13
+    },
+    {
+      "name": "Sunday school",
+      "facet": "Types of British schools",
+      "known_at": 8
+    },
+    {
+      "name": "Polytechnic",
+      "facet": "Types of British schools",
+      "known_at": 12
+    },
+    {
+      "name": "SMTV Live",
+      "facet": "Children's TV and presenters",
+      "known_at": 11
+    },
+    {
+      "name": "Jackanory",
+      "facet": "Children's TV and presenters",
+      "known_at": 12
+    },
+    {
+      "name": "Just William",
+      "facet": "Classic British children's books",
+      "known_at": 12
+    },
+    {
+      "name": "Horrid Henry",
+      "facet": "Classic British children's books",
+      "known_at": 3
+    },
+    {
+      "name": "Stig of the Dump",
+      "facet": "Classic British children's books",
+      "known_at": 11
+    },
+    {
+      "name": "Goodnight Mister Tom",
+      "facet": "Classic British children's books",
+      "known_at": 9
+    },
+    {
+      "name": "Fruit Salad chews",
+      "facet": "Sweets, treats and pocket money",
+      "known_at": 9
+    },
+    {
+      "name": "Fab lolly",
+      "facet": "Sweets, treats and pocket money",
+      "known_at": 8
+    },
+    {
+      "name": "Brownies",
+      "facet": "Childhood traditions and celebrations",
+      "known_at": 5
+    },
+    {
+      "name": "Leavers' shirt signing",
+      "facet": "Childhood traditions and celebrations",
+      "known_at": 7
+    },
+    {
+      "name": "Eton College",
+      "facet": "Famous schools and school stories",
+      "known_at": 7
+    },
+    {
+      "name": "Harrow School",
+      "facet": "Famous schools and school stories",
+      "known_at": 10
+    },
+    {
+      "name": "Gordonstoun",
+      "facet": "Famous schools and school stories",
+      "known_at": 12
+    },
+    {
+      "name": "Summerhill School",
+      "facet": "Famous schools and school stories",
+      "known_at": 14
+    },
+    {
+      "name": "Westminster School",
+      "facet": "Famous schools and school stories",
+      "known_at": 13
+    },
+    {
+      "name": "Winchester College",
+      "facet": "Famous schools and school stories",
+      "known_at": 13
+    },
+    {
+      "name": "Christ's Hospital",
+      "facet": "Famous schools and school stories",
+      "known_at": 14
+    },
+    {
+      "name": "St Trinian's",
+      "facet": "Famous schools and school stories",
+      "known_at": 10
+    },
+    {
+      "name": "Tom Brown's School Days",
+      "facet": "Famous schools and school stories",
+      "known_at": 12
+    },
+    {
+      "name": "Jennings",
+      "facet": "Famous schools and school stories",
+      "known_at": 14
+    },
+    {
+      "name": "Goodbye, Mr. Chips",
+      "facet": "Famous schools and school stories",
+      "known_at": 12
+    },
+    {
+      "name": "The History Boys",
+      "facet": "Famous schools and school stories",
+      "known_at": 12
+    },
+    {
+      "name": "Educating Yorkshire",
+      "facet": "Famous schools and school stories",
+      "known_at": 11
+    },
+    {
+      "name": "Please Sir!",
+      "facet": "Famous schools and school stories",
+      "known_at": 14
+    }
+  ]
+}

@@ -1,0 +1,1077 @@
+{
+  "subcategory": "sitcoms",
+  "facets": [
+    "Classic sitcoms of the 1960s–80s",
+    "Modern sitcoms since 2000",
+    "Famous sitcom characters",
+    "Sitcom catchphrases and sayings",
+    "Sitcom stars and writers",
+    "Sitcoms set in the past",
+    "Sitcom settings and towns",
+    "Family and children's sitcoms",
+    "Sitcoms from Scotland, Wales and Northern Ireland",
+    "Sitcom cars, props and theme tunes",
+    "Christmas specials and famous scenes"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 2,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 3,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 3,
+      "sequence": 4,
+      "connection": 2,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 1,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 3,
+      "body_senses": 1,
+      "language": 3
+    }
+  },
+  "concepts": [
+    {
+      "name": "Fawlty Towers",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 9
+    },
+    {
+      "name": "Steptoe and Son",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 13
+    },
+    {
+      "name": "Are You Being Served?",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 12
+    },
+    {
+      "name": "Some Mothers Do 'Ave 'Em",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 12
+    },
+    {
+      "name": "Yes Minister",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 12
+    },
+    {
+      "name": "The Young Ones",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 12
+    },
+    {
+      "name": "Rising Damp",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 13
+    },
+    {
+      "name": "Open All Hours",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 11
+    },
+    {
+      "name": "Red Dwarf",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 11
+    },
+    {
+      "name": "To the Manor Born",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 13
+    },
+    {
+      "name": "Till Death Us Do Part",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 14
+    },
+    {
+      "name": "The Likely Lads",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 14
+    },
+    {
+      "name": "On the Buses",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 13
+    },
+    {
+      "name": "Bread",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 14
+    },
+    {
+      "name": "Butterflies",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 14
+    },
+    {
+      "name": "Citizen Smith",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 14
+    },
+    {
+      "name": "Man About the House",
+      "facet": "Classic sitcoms of the 1960s–80s",
+      "known_at": 14
+    },
+    {
+      "name": "The Office",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 10
+    },
+    {
+      "name": "The Inbetweeners",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 9
+    },
+    {
+      "name": "Peep Show",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Miranda",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 9
+    },
+    {
+      "name": "The IT Crowd",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 10
+    },
+    {
+      "name": "Ghosts",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 8
+    },
+    {
+      "name": "Motherland",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 12
+    },
+    {
+      "name": "Fleabag",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Kay's Car Share",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Detectorists",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 12
+    },
+    {
+      "name": "Not Going Out",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Black Books",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 12
+    },
+    {
+      "name": "Extras",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 12
+    },
+    {
+      "name": "Phoenix Nights",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 12
+    },
+    {
+      "name": "Bad Education",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 9
+    },
+    {
+      "name": "This Country",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 11
+    },
+    {
+      "name": "W1A",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 13
+    },
+    {
+      "name": "Rev.",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 13
+    },
+    {
+      "name": "People Just Do Nothing",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Stath Lets Flats",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 12
+    },
+    {
+      "name": "Benidorm",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 11
+    },
+    {
+      "name": "Toast of London",
+      "facet": "Modern sitcoms since 2000",
+      "known_at": 13
+    },
+    {
+      "name": "Del Boy",
+      "facet": "Famous sitcom characters",
+      "known_at": 7
+    },
+    {
+      "name": "Rodney Trotter",
+      "facet": "Famous sitcom characters",
+      "known_at": 8
+    },
+    {
+      "name": "Trigger",
+      "facet": "Famous sitcom characters",
+      "known_at": 10
+    },
+    {
+      "name": "Basil Fawlty",
+      "facet": "Famous sitcom characters",
+      "known_at": 9
+    },
+    {
+      "name": "Manuel",
+      "facet": "Famous sitcom characters",
+      "known_at": 10
+    },
+    {
+      "name": "Sybil Fawlty",
+      "facet": "Famous sitcom characters",
+      "known_at": 11
+    },
+    {
+      "name": "David Brent",
+      "facet": "Famous sitcom characters",
+      "known_at": 10
+    },
+    {
+      "name": "Captain Mainwaring",
+      "facet": "Famous sitcom characters",
+      "known_at": 10
+    },
+    {
+      "name": "Corporal Jones",
+      "facet": "Famous sitcom characters",
+      "known_at": 10
+    },
+    {
+      "name": "Hyacinth Bucket",
+      "facet": "Famous sitcom characters",
+      "known_at": 9
+    },
+    {
+      "name": "Victor Meldrew",
+      "facet": "Famous sitcom characters",
+      "known_at": 10
+    },
+    {
+      "name": "Edmund Blackadder",
+      "facet": "Famous sitcom characters",
+      "known_at": 9
+    },
+    {
+      "name": "Baldrick",
+      "facet": "Famous sitcom characters",
+      "known_at": 8
+    },
+    {
+      "name": "Frank Spencer",
+      "facet": "Famous sitcom characters",
+      "known_at": 11
+    },
+    {
+      "name": "Alan Partridge",
+      "facet": "Famous sitcom characters",
+      "known_at": 11
+    },
+    {
+      "name": "Father Ted Crilly",
+      "facet": "Famous sitcom characters",
+      "known_at": 11
+    },
+    {
+      "name": "Arnold Rimmer",
+      "facet": "Famous sitcom characters",
+      "known_at": 12
+    },
+    {
+      "name": "Edina Monsoon",
+      "facet": "Famous sitcom characters",
+      "known_at": 12
+    },
+    {
+      "name": "Norman Stanley Fletcher",
+      "facet": "Famous sitcom characters",
+      "known_at": 12
+    },
+    {
+      "name": "Sir Humphrey Appleby",
+      "facet": "Famous sitcom characters",
+      "known_at": 13
+    },
+    {
+      "name": "René Artois",
+      "facet": "Famous sitcom characters",
+      "known_at": 12
+    },
+    {
+      "name": "Jay Cartwright",
+      "facet": "Famous sitcom characters",
+      "known_at": 9
+    },
+    {
+      "name": "Mark Corrigan",
+      "facet": "Famous sitcom characters",
+      "known_at": 11
+    },
+    {
+      "name": "Maurice Moss",
+      "facet": "Famous sitcom characters",
+      "known_at": 11
+    },
+    {
+      "name": "Agnes Brown",
+      "facet": "Famous sitcom characters",
+      "known_at": 9
+    },
+    {
+      "name": "Lovely jubbly",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "You plonker",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Cushty",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "He who dares wins",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Don't panic!",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Stupid boy",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Don't mention the war",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Que?",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "I don't believe it!",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "I have a cunning plan",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Listen very carefully, I shall say this only once",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "I'm free!",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Ooh Betty",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "What's occurring?",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Have you tried turning it off and on again?",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Smeg",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "It's pronounced Bouquet",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Such fun!",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Go on, go on, go on",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 11
+    },
+    {
+      "name": "Down with this sort of thing",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Bus wankers",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 15
+    },
+    {
+      "name": "Hi-de-Hi!",
+      "facet": "Sitcom catchphrases and sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Ronnie Barker",
+      "facet": "Sitcom stars and writers",
+      "known_at": 11
+    },
+    {
+      "name": "Ricky Gervais",
+      "facet": "Sitcom stars and writers",
+      "known_at": 10
+    },
+    {
+      "name": "Stephen Merchant",
+      "facet": "Sitcom stars and writers",
+      "known_at": 12
+    },
+    {
+      "name": "Ben Elton",
+      "facet": "Sitcom stars and writers",
+      "known_at": 13
+    },
+    {
+      "name": "John Sullivan",
+      "facet": "Sitcom stars and writers",
+      "known_at": 13
+    },
+    {
+      "name": "James Corden",
+      "facet": "Sitcom stars and writers",
+      "known_at": 8
+    },
+    {
+      "name": "Ruth Jones",
+      "facet": "Sitcom stars and writers",
+      "known_at": 11
+    },
+    {
+      "name": "Miranda Hart",
+      "facet": "Sitcom stars and writers",
+      "known_at": 9
+    },
+    {
+      "name": "Phoebe Waller-Bridge",
+      "facet": "Sitcom stars and writers",
+      "known_at": 12
+    },
+    {
+      "name": "Peter Kay",
+      "facet": "Sitcom stars and writers",
+      "known_at": 10
+    },
+    {
+      "name": "Graham Linehan",
+      "facet": "Sitcom stars and writers",
+      "known_at": 14
+    },
+    {
+      "name": "Jennifer Saunders",
+      "facet": "Sitcom stars and writers",
+      "known_at": 11
+    },
+    {
+      "name": "Joanna Lumley",
+      "facet": "Sitcom stars and writers",
+      "known_at": 11
+    },
+    {
+      "name": "Richard Wilson",
+      "facet": "Sitcom stars and writers",
+      "known_at": 12
+    },
+    {
+      "name": "Patricia Routledge",
+      "facet": "Sitcom stars and writers",
+      "known_at": 12
+    },
+    {
+      "name": "Nicholas Lyndhurst",
+      "facet": "Sitcom stars and writers",
+      "known_at": 12
+    },
+    {
+      "name": "David Croft",
+      "facet": "Sitcom stars and writers",
+      "known_at": 14
+    },
+    {
+      "name": "Rik Mayall",
+      "facet": "Sitcom stars and writers",
+      "known_at": 12
+    },
+    {
+      "name": "Dawn French",
+      "facet": "Sitcom stars and writers",
+      "known_at": 10
+    },
+    {
+      "name": "David Mitchell",
+      "facet": "Sitcom stars and writers",
+      "known_at": 11
+    },
+    {
+      "name": "Blackadder",
+      "facet": "Sitcoms set in the past",
+      "known_at": 9
+    },
+    {
+      "name": "'Allo 'Allo!",
+      "facet": "Sitcoms set in the past",
+      "known_at": 11
+    },
+    {
+      "name": "Hi-de-Hi! (sitcom)",
+      "facet": "Sitcoms set in the past",
+      "known_at": 12
+    },
+    {
+      "name": "Goodnight Sweetheart",
+      "facet": "Sitcoms set in the past",
+      "known_at": 13
+    },
+    {
+      "name": "Upstart Crow",
+      "facet": "Sitcoms set in the past",
+      "known_at": 12
+    },
+    {
+      "name": "Plebs",
+      "facet": "Sitcoms set in the past",
+      "known_at": 12
+    },
+    {
+      "name": "It Ain't Half Hot Mum",
+      "facet": "Sitcoms set in the past",
+      "known_at": 14
+    },
+    {
+      "name": "You Rang, M'Lord?",
+      "facet": "Sitcoms set in the past",
+      "known_at": 14
+    },
+    {
+      "name": "Up Pompeii!",
+      "facet": "Sitcoms set in the past",
+      "known_at": 14
+    },
+    {
+      "name": "Cradle to Grave",
+      "facet": "Sitcoms set in the past",
+      "known_at": 14
+    },
+    {
+      "name": "The Kennedys",
+      "facet": "Sitcoms set in the past",
+      "known_at": 15
+    },
+    {
+      "name": "Queenie (Blackadder)",
+      "facet": "Sitcoms set in the past",
+      "known_at": 12
+    },
+    {
+      "name": "Nelson Mandela House",
+      "facet": "Sitcom settings and towns",
+      "known_at": 11
+    },
+    {
+      "name": "The Nag's Head",
+      "facet": "Sitcom settings and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Walmington-on-Sea",
+      "facet": "Sitcom settings and towns",
+      "known_at": 12
+    },
+    {
+      "name": "Wernham Hogg",
+      "facet": "Sitcom settings and towns",
+      "known_at": 12
+    },
+    {
+      "name": "Slough",
+      "facet": "Sitcom settings and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Billericay",
+      "facet": "Sitcom settings and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Holmfirth",
+      "facet": "Sitcom settings and towns",
+      "known_at": 14
+    },
+    {
+      "name": "Craggy Island",
+      "facet": "Sitcom settings and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Grace Brothers",
+      "facet": "Sitcom settings and towns",
+      "known_at": 13
+    },
+    {
+      "name": "Slade Prison",
+      "facet": "Sitcom settings and towns",
+      "known_at": 14
+    },
+    {
+      "name": "Reynholm Industries",
+      "facet": "Sitcom settings and towns",
+      "known_at": 13
+    },
+    {
+      "name": "Button House",
+      "facet": "Sitcom settings and towns",
+      "known_at": 11
+    },
+    {
+      "name": "Dibley",
+      "facet": "Sitcom settings and towns",
+      "known_at": 10
+    },
+    {
+      "name": "Craiglang",
+      "facet": "Sitcom settings and towns",
+      "known_at": 13
+    },
+    {
+      "name": "Rudge Park Comprehensive",
+      "facet": "Sitcom settings and towns",
+      "known_at": 12
+    },
+    {
+      "name": "Surbiton",
+      "facet": "Sitcom settings and towns",
+      "known_at": 13
+    },
+    {
+      "name": "Maplins",
+      "facet": "Sitcom settings and towns",
+      "known_at": 13
+    },
+    {
+      "name": "Café René",
+      "facet": "Sitcom settings and towns",
+      "known_at": 12
+    },
+    {
+      "name": "Bolton",
+      "facet": "Sitcom settings and towns",
+      "known_at": 12
+    },
+    {
+      "name": "Outnumbered",
+      "facet": "Family and children's sitcoms",
+      "known_at": 9
+    },
+    {
+      "name": "My Family",
+      "facet": "Family and children's sitcoms",
+      "known_at": 10
+    },
+    {
+      "name": "2point4 Children",
+      "facet": "Family and children's sitcoms",
+      "known_at": 13
+    },
+    {
+      "name": "My Parents Are Aliens",
+      "facet": "Family and children's sitcoms",
+      "known_at": 10
+    },
+    {
+      "name": "Bernard's Watch",
+      "facet": "Family and children's sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "ChuckleVision",
+      "facet": "Family and children's sitcoms",
+      "known_at": 8
+    },
+    {
+      "name": "Mrs Brown's Boys",
+      "facet": "Family and children's sitcoms",
+      "known_at": 9
+    },
+    {
+      "name": "Friday Night Dinner",
+      "facet": "Family and children's sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "The Royle Family",
+      "facet": "Family and children's sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "Keeping Up Appearances",
+      "facet": "Family and children's sitcoms",
+      "known_at": 10
+    },
+    {
+      "name": "One Foot in the Grave",
+      "facet": "Family and children's sitcoms",
+      "known_at": 11
+    },
+    {
+      "name": "Bless This House",
+      "facet": "Family and children's sitcoms",
+      "known_at": 14
+    },
+    {
+      "name": "Birds of a Feather",
+      "facet": "Family and children's sitcoms",
+      "known_at": 12
+    },
+    {
+      "name": "Here Come the Double Deckers",
+      "facet": "Family and children's sitcoms",
+      "known_at": 15
+    },
+    {
+      "name": "Still Game",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 11
+    },
+    {
+      "name": "Jack and Victor",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 12
+    },
+    {
+      "name": "Rab C. Nesbitt",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 12
+    },
+    {
+      "name": "Two Doors Down",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 12
+    },
+    {
+      "name": "Gary: Tank Commander",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 13
+    },
+    {
+      "name": "Scot Squad",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 13
+    },
+    {
+      "name": "Para Handy",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "The High Life",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 15
+    },
+    {
+      "name": "Nessa Jenkins",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 10
+    },
+    {
+      "name": "Uncle Bryn",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 11
+    },
+    {
+      "name": "Stella",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 13
+    },
+    {
+      "name": "High Hopes",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 14
+    },
+    {
+      "name": "The Indian Doctor",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 14
+    },
+    {
+      "name": "Sister Michael",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 11
+    },
+    {
+      "name": "Erin Quinn",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 11
+    },
+    {
+      "name": "Give My Head Peace",
+      "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
+      "known_at": 14
+    },
+    {
+      "name": "Reliant Regal",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 10
+    },
+    {
+      "name": "Trotters Independent Traders",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 11
+    },
+    {
+      "name": "Ford Capri",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 13
+    },
+    {
+      "name": "Mr Bean's Mini",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 4
+    },
+    {
+      "name": "Teddy (Mr Bean)",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 3
+    },
+    {
+      "name": "Stapler in jelly",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 11
+    },
+    {
+      "name": "Fiat Cinquecento",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 11
+    },
+    {
+      "name": "Frank Spencer's beret",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 12
+    },
+    {
+      "name": "Slimline telephone",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 13
+    },
+    {
+      "name": "Fawlty Towers sign",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 11,
+      "retired": "unaskable: The sign's famous anagrams are mostly rude, so they don't suit a family game. None of the options work without them."
+    },
+    {
+      "name": "Basil the Rat",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 13
+    },
+    {
+      "name": "Hercules the horse",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 14
+    },
+    {
+      "name": "Starbug",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 13
+    },
+    {
+      "name": "Talkie Toaster",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 13
+    },
+    {
+      "name": "Hooky Street",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 13
+    },
+    {
+      "name": "Who Do You Think You Are Kidding, Mr Hitler?",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 12
+    },
+    {
+      "name": "Handbags and Gladrags",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 13
+    },
+    {
+      "name": "Old Ned",
+      "facet": "Sitcom cars, props and theme tunes",
+      "known_at": 15
+    },
+    {
+      "name": "Del Boy falling through the bar",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 9
+    },
+    {
+      "name": "The chandelier scene",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Batman and Robin scene",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Time on Our Hands",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Harrison watch",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 13
+    },
+    {
+      "name": "The Germans",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Basil thrashing his car",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Don't tell him, Pike!",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 11
+    },
+    {
+      "name": "David Brent's dance",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 11
+    },
+    {
+      "name": "Vicar of Dibley puddle scene",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 11
+    },
+    {
+      "name": "Geraldine's four Christmas dinners",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Merry Christmas Mr Bean",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 5
+    },
+    {
+      "name": "Blackadder Goes Forth final scene",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 12
+    },
+    {
+      "name": "Gavin & Stacey 2019 Christmas special",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 10
+    },
+    {
+      "name": "Gavin & Stacey: The Finale",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 11
+    },
+    {
+      "name": "A Christmassy Ted",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 14
+    },
+    {
+      "name": "The Royle Family Christmas specials",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 13
+    },
+    {
+      "name": "Ghosts Christmas specials",
+      "facet": "Christmas specials and famous scenes",
+      "known_at": 11
+    }
+  ]
+}

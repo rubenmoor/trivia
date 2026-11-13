@@ -1,0 +1,1077 @@
+{
+  "subcategory": "writers-and-poets",
+  "facets": [
+    "Shakespeare's life and plays",
+    "Early writers from Chaucer to Milton",
+    "Austen and Regency novelists",
+    "Victorian novelists",
+    "Romantic and Victorian poets",
+    "Children's authors and their characters",
+    "Crime and detective writers",
+    "Fantasy and science fiction writers",
+    "Twentieth-century novelists and playwrights",
+    "War poets and modern poetry",
+    "Scottish, Welsh and Northern Irish writers",
+    "Literary landmarks, laureates and traditions"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 5,
+      "name_concept": 3,
+      "word_meaning": 3,
+      "count": 2,
+      "estimate": 2,
+      "record": 2,
+      "origin": 3,
+      "made_of": 1,
+      "purpose": 1,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 1,
+      "analogy": 3,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 3
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 5,
+      "university": 3,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 5,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 3,
+      "nature": 2,
+      "history": 4,
+      "body_senses": 1,
+      "language": 4
+    }
+  },
+  "concepts": [
+    {
+      "name": "Othello",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 10
+    },
+    {
+      "name": "The Merchant of Venice",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 10
+    },
+    {
+      "name": "Much Ado About Nothing",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 11
+    },
+    {
+      "name": "The Taming of the Shrew",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 11
+    },
+    {
+      "name": "Lady Macbeth",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 9
+    },
+    {
+      "name": "Shylock",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 11
+    },
+    {
+      "name": "Sonnet 18",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 12
+    },
+    {
+      "name": "Royal Shakespeare Company",
+      "facet": "Shakespeare's life and plays",
+      "known_at": 11
+    },
+    {
+      "name": "Sir Thomas Malory",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 14
+    },
+    {
+      "name": "Utopia",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 12
+    },
+    {
+      "name": "Doctor Faustus",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 13
+    },
+    {
+      "name": "Edmund Spenser",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 14
+    },
+    {
+      "name": "The Faerie Queene",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 14
+    },
+    {
+      "name": "John Donne",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 13
+    },
+    {
+      "name": "Paradise Lost",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 12
+    },
+    {
+      "name": "John Bunyan",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 13
+    },
+    {
+      "name": "The Pilgrim's Progress",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 13
+    },
+    {
+      "name": "Andrew Marvell",
+      "facet": "Early writers from Chaucer to Milton",
+      "known_at": 15
+    },
+    {
+      "name": "Pride and Prejudice",
+      "facet": "Austen and Regency novelists",
+      "known_at": 7
+    },
+    {
+      "name": "Elizabeth Bennet",
+      "facet": "Austen and Regency novelists",
+      "known_at": 9
+    },
+    {
+      "name": "Mr Collins",
+      "facet": "Austen and Regency novelists",
+      "known_at": 12
+    },
+    {
+      "name": "Pemberley",
+      "facet": "Austen and Regency novelists",
+      "known_at": 12
+    },
+    {
+      "name": "Emma",
+      "facet": "Austen and Regency novelists",
+      "known_at": 10
+    },
+    {
+      "name": "Sense and Sensibility",
+      "facet": "Austen and Regency novelists",
+      "known_at": 10
+    },
+    {
+      "name": "Persuasion",
+      "facet": "Austen and Regency novelists",
+      "known_at": 12
+    },
+    {
+      "name": "Northanger Abbey",
+      "facet": "Austen and Regency novelists",
+      "known_at": 13
+    },
+    {
+      "name": "Mansfield Park",
+      "facet": "Austen and Regency novelists",
+      "known_at": 13
+    },
+    {
+      "name": "Chawton",
+      "facet": "Austen and Regency novelists",
+      "known_at": 14
+    },
+    {
+      "name": "Jane Austen £10 note",
+      "facet": "Austen and Regency novelists",
+      "known_at": 9
+    },
+    {
+      "name": "Frankenstein",
+      "facet": "Austen and Regency novelists",
+      "known_at": 6
+    },
+    {
+      "name": "Walter Scott",
+      "facet": "Austen and Regency novelists",
+      "known_at": 11
+    },
+    {
+      "name": "Ivanhoe",
+      "facet": "Austen and Regency novelists",
+      "known_at": 12
+    },
+    {
+      "name": "Fanny Burney",
+      "facet": "Austen and Regency novelists",
+      "known_at": 15
+    },
+    {
+      "name": "Maria Edgeworth",
+      "facet": "Austen and Regency novelists",
+      "known_at": 15
+    },
+    {
+      "name": "Great Expectations",
+      "facet": "Victorian novelists",
+      "known_at": 10
+    },
+    {
+      "name": "David Copperfield",
+      "facet": "Victorian novelists",
+      "known_at": 10
+    },
+    {
+      "name": "Bleak House",
+      "facet": "Victorian novelists",
+      "known_at": 13
+    },
+    {
+      "name": "Charlotte Brontë",
+      "facet": "Victorian novelists",
+      "known_at": 10
+    },
+    {
+      "name": "Emily Brontë",
+      "facet": "Victorian novelists",
+      "known_at": 11
+    },
+    {
+      "name": "Heathcliff",
+      "facet": "Victorian novelists",
+      "known_at": 11
+    },
+    {
+      "name": "Anne Brontë",
+      "facet": "Victorian novelists",
+      "known_at": 13
+    },
+    {
+      "name": "Haworth",
+      "facet": "Victorian novelists",
+      "known_at": 13
+    },
+    {
+      "name": "George Eliot",
+      "facet": "Victorian novelists",
+      "known_at": 12
+    },
+    {
+      "name": "Middlemarch",
+      "facet": "Victorian novelists",
+      "known_at": 13
+    },
+    {
+      "name": "Tess of the d'Urbervilles",
+      "facet": "Victorian novelists",
+      "known_at": 13
+    },
+    {
+      "name": "Elizabeth Gaskell",
+      "facet": "Victorian novelists",
+      "known_at": 14
+    },
+    {
+      "name": "Anthony Trollope",
+      "facet": "Victorian novelists",
+      "known_at": 14
+    },
+    {
+      "name": "I Wandered Lonely as a Cloud",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 10
+    },
+    {
+      "name": "Dove Cottage",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 14
+    },
+    {
+      "name": "Percy Bysshe Shelley",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 12
+    },
+    {
+      "name": "Ozymandias",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 12
+    },
+    {
+      "name": "John Keats",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 12
+    },
+    {
+      "name": "The Rime of the Ancient Mariner",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 12
+    },
+    {
+      "name": "Kubla Khan",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 13
+    },
+    {
+      "name": "The Tyger",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 11
+    },
+    {
+      "name": "Alfred, Lord Tennyson",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 12
+    },
+    {
+      "name": "The Charge of the Light Brigade",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 12
+    },
+    {
+      "name": "Robert Browning",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 13
+    },
+    {
+      "name": "The Pied Piper of Hamelin",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 10
+    },
+    {
+      "name": "Elizabeth Barrett Browning",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 13
+    },
+    {
+      "name": "Gerard Manley Hopkins",
+      "facet": "Romantic and Victorian poets",
+      "known_at": 15
+    },
+    {
+      "name": "Willy Wonka",
+      "facet": "Children's authors and their characters",
+      "known_at": 2
+    },
+    {
+      "name": "Matilda",
+      "facet": "Children's authors and their characters",
+      "known_at": 3
+    },
+    {
+      "name": "The BFG",
+      "facet": "Children's authors and their characters",
+      "known_at": 3
+    },
+    {
+      "name": "J.K. Rowling",
+      "facet": "Children's authors and their characters",
+      "known_at": 4
+    },
+    {
+      "name": "Harry Potter",
+      "facet": "Children's authors and their characters",
+      "known_at": 1
+    },
+    {
+      "name": "Hogwarts",
+      "facet": "Children's authors and their characters",
+      "known_at": 2
+    },
+    {
+      "name": "A.A. Milne",
+      "facet": "Children's authors and their characters",
+      "known_at": 6
+    },
+    {
+      "name": "Winnie-the-Pooh",
+      "facet": "Children's authors and their characters",
+      "known_at": 1
+    },
+    {
+      "name": "Alice's Adventures in Wonderland",
+      "facet": "Children's authors and their characters",
+      "known_at": 4
+    },
+    {
+      "name": "J.M. Barrie",
+      "facet": "Children's authors and their characters",
+      "known_at": 8
+    },
+    {
+      "name": "Michael Bond",
+      "facet": "Children's authors and their characters",
+      "known_at": 10
+    },
+    {
+      "name": "Enid Blyton",
+      "facet": "Children's authors and their characters",
+      "known_at": 9
+    },
+    {
+      "name": "The Famous Five",
+      "facet": "Children's authors and their characters",
+      "known_at": 9
+    },
+    {
+      "name": "Julia Donaldson",
+      "facet": "Children's authors and their characters",
+      "known_at": 5
+    },
+    {
+      "name": "Tracy Beaker",
+      "facet": "Children's authors and their characters",
+      "known_at": 6
+    },
+    {
+      "name": "Dr Watson",
+      "facet": "Crime and detective writers",
+      "known_at": 5
+    },
+    {
+      "name": "221B Baker Street",
+      "facet": "Crime and detective writers",
+      "known_at": 7
+    },
+    {
+      "name": "Professor Moriarty",
+      "facet": "Crime and detective writers",
+      "known_at": 9
+    },
+    {
+      "name": "Agatha Christie",
+      "facet": "Crime and detective writers",
+      "known_at": 7
+    },
+    {
+      "name": "Hercule Poirot",
+      "facet": "Crime and detective writers",
+      "known_at": 8
+    },
+    {
+      "name": "Miss Marple",
+      "facet": "Crime and detective writers",
+      "known_at": 9
+    },
+    {
+      "name": "Murder on the Orient Express",
+      "facet": "Crime and detective writers",
+      "known_at": 8
+    },
+    {
+      "name": "And Then There Were None",
+      "facet": "Crime and detective writers",
+      "known_at": 12
+    },
+    {
+      "name": "The Mousetrap",
+      "facet": "Crime and detective writers",
+      "known_at": 12
+    },
+    {
+      "name": "Ian Fleming",
+      "facet": "Crime and detective writers",
+      "known_at": 8
+    },
+    {
+      "name": "G.K. Chesterton",
+      "facet": "Crime and detective writers",
+      "known_at": 13
+    },
+    {
+      "name": "Father Brown",
+      "facet": "Crime and detective writers",
+      "known_at": 12
+    },
+    {
+      "name": "Dorothy L. Sayers",
+      "facet": "Crime and detective writers",
+      "known_at": 14
+    },
+    {
+      "name": "Lord Peter Wimsey",
+      "facet": "Crime and detective writers",
+      "known_at": 14
+    },
+    {
+      "name": "Colin Dexter",
+      "facet": "Crime and detective writers",
+      "known_at": 13
+    },
+    {
+      "name": "Ian Rankin",
+      "facet": "Crime and detective writers",
+      "known_at": 13
+    },
+    {
+      "name": "Inspector Rebus",
+      "facet": "Crime and detective writers",
+      "known_at": 13
+    },
+    {
+      "name": "P.D. James",
+      "facet": "Crime and detective writers",
+      "known_at": 14
+    },
+    {
+      "name": "Ruth Rendell",
+      "facet": "Crime and detective writers",
+      "known_at": 14
+    },
+    {
+      "name": "The Thursday Murder Club",
+      "facet": "Crime and detective writers",
+      "known_at": 11
+    },
+    {
+      "name": "J.R.R. Tolkien",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 7
+    },
+    {
+      "name": "The Hobbit",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 6
+    },
+    {
+      "name": "The Lord of the Rings",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 4
+    },
+    {
+      "name": "Bilbo Baggins",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 5
+    },
+    {
+      "name": "Gandalf",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 4
+    },
+    {
+      "name": "C.S. Lewis",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 7
+    },
+    {
+      "name": "Narnia",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 4
+    },
+    {
+      "name": "Aslan",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 5
+    },
+    {
+      "name": "The Inklings",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 14
+    },
+    {
+      "name": "H.G. Wells",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 9
+    },
+    {
+      "name": "The War of the Worlds",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 8
+    },
+    {
+      "name": "The Time Machine",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 8
+    },
+    {
+      "name": "Terry Pratchett",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 10
+    },
+    {
+      "name": "Discworld",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 10
+    },
+    {
+      "name": "Douglas Adams",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 10
+    },
+    {
+      "name": "The Hitchhiker's Guide to the Galaxy",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 9
+    },
+    {
+      "name": "42 (Hitchhiker's answer)",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 10
+    },
+    {
+      "name": "Philip Pullman",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 9
+    },
+    {
+      "name": "His Dark Materials",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 9
+    },
+    {
+      "name": "Neil Gaiman",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 11
+    },
+    {
+      "name": "Aldous Huxley",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 12
+    },
+    {
+      "name": "Brave New World",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 12
+    },
+    {
+      "name": "John Wyndham",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 13
+    },
+    {
+      "name": "The Day of the Triffids",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 12
+    },
+    {
+      "name": "Gormenghast",
+      "facet": "Fantasy and science fiction writers",
+      "known_at": 14
+    },
+    {
+      "name": "George Orwell",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 9
+    },
+    {
+      "name": "Nineteen Eighty-Four",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 9
+    },
+    {
+      "name": "Animal Farm",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 8
+    },
+    {
+      "name": "William Golding",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 10
+    },
+    {
+      "name": "Lord of the Flies",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 9
+    },
+    {
+      "name": "An Inspector Calls",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 11
+    },
+    {
+      "name": "J.B. Priestley",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Bloomsbury Group",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "D.H. Lawrence",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "E.M. Forster",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "P.G. Wodehouse",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Jeeves and Wooster",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Evelyn Waugh",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 14
+    },
+    {
+      "name": "Brideshead Revisited",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Graham Greene",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Daphne du Maurier",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Rebecca",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Noël Coward",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Harold Pinter",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 14
+    },
+    {
+      "name": "Tom Stoppard",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 14
+    },
+    {
+      "name": "Alan Bennett",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Kazuo Ishiguro",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Salman Rushdie",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 12
+    },
+    {
+      "name": "Hilary Mantel",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Zadie Smith",
+      "facet": "Twentieth-century novelists and playwrights",
+      "known_at": 13
+    },
+    {
+      "name": "Siegfried Sassoon",
+      "facet": "War poets and modern poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Rupert Brooke",
+      "facet": "War poets and modern poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Edward Thomas",
+      "facet": "War poets and modern poetry",
+      "known_at": 14
+    },
+    {
+      "name": "Adlestrop",
+      "facet": "War poets and modern poetry",
+      "known_at": 14
+    },
+    {
+      "name": "T.S. Eliot",
+      "facet": "War poets and modern poetry",
+      "known_at": 12
+    },
+    {
+      "name": "The Waste Land",
+      "facet": "War poets and modern poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Old Possum's Book of Practical Cats",
+      "facet": "War poets and modern poetry",
+      "known_at": 10
+    },
+    {
+      "name": "W.H. Auden",
+      "facet": "War poets and modern poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Funeral Blues",
+      "facet": "War poets and modern poetry",
+      "known_at": 12
+    },
+    {
+      "name": "John Betjeman",
+      "facet": "War poets and modern poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Philip Larkin",
+      "facet": "War poets and modern poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Ted Hughes",
+      "facet": "War poets and modern poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Carol Ann Duffy",
+      "facet": "War poets and modern poetry",
+      "known_at": 11
+    },
+    {
+      "name": "Simon Armitage",
+      "facet": "War poets and modern poetry",
+      "known_at": 13
+    },
+    {
+      "name": "Benjamin Zephaniah",
+      "facet": "War poets and modern poetry",
+      "known_at": 10
+    },
+    {
+      "name": "Spike Milligan",
+      "facet": "War poets and modern poetry",
+      "known_at": 9
+    },
+    {
+      "name": "On the Ning Nang Nong",
+      "facet": "War poets and modern poetry",
+      "known_at": 8
+    },
+    {
+      "name": "Roger McGough",
+      "facet": "War poets and modern poetry",
+      "known_at": 11
+    },
+    {
+      "name": "Pam Ayres",
+      "facet": "War poets and modern poetry",
+      "known_at": 12
+    },
+    {
+      "name": "Tam o' Shanter",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 11
+    },
+    {
+      "name": "To a Mouse",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 12
+    },
+    {
+      "name": "Treasure Island",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 6
+    },
+    {
+      "name": "Long John Silver",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 6
+    },
+    {
+      "name": "Strange Case of Dr Jekyll and Mr Hyde",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 8
+    },
+    {
+      "name": "Kidnapped",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 11
+    },
+    {
+      "name": "Muriel Spark",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 13
+    },
+    {
+      "name": "The Prime of Miss Jean Brodie",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 13
+    },
+    {
+      "name": "Irvine Welsh",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 13
+    },
+    {
+      "name": "Alexander McCall Smith",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 13
+    },
+    {
+      "name": "Val McDermid",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 13
+    },
+    {
+      "name": "Hugh MacDiarmid",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 15
+    },
+    {
+      "name": "Dylan Thomas",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 11
+    },
+    {
+      "name": "Under Milk Wood",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 13
+    },
+    {
+      "name": "Do Not Go Gentle into That Good Night",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 12
+    },
+    {
+      "name": "The Mabinogion",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 13
+    },
+    {
+      "name": "R.S. Thomas",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 15
+    },
+    {
+      "name": "Seamus Heaney",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 12
+    },
+    {
+      "name": "Louis MacNeice",
+      "facet": "Scottish, Welsh and Northern Irish writers",
+      "known_at": 15
+    },
+    {
+      "name": "Poet Laureate",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Children's Laureate",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Poets' Corner",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Booker Prize",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Carnegie Medal",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Costa Book Awards",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "World Book Day",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 4
+    },
+    {
+      "name": "National Poetry Day",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 11
+    },
+    {
+      "name": "Edinburgh International Book Festival",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "British Library",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Bodleian Library",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 12
+    },
+    {
+      "name": "Charles Dickens Museum",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "Blue plaque",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Penguin Books",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Ladybird Books",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 7
+    },
+    {
+      "name": "Waterstones",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 8
+    },
+    {
+      "name": "Oxford English Dictionary",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 10
+    },
+    {
+      "name": "Samuel Johnson",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 13
+    },
+    {
+      "name": "The Strand Magazine",
+      "facet": "Literary landmarks, laureates and traditions",
+      "known_at": 14
+    }
+  ]
+}

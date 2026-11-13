@@ -1,0 +1,797 @@
+{
+  "subcategory": "sayings-and-idioms",
+  "facets": [
+    "Weather and rain sayings",
+    "Food and drink idioms",
+    "Tea and cuppa expressions",
+    "Money and shopping sayings",
+    "Animal idioms",
+    "Sayings from history and the monarchy",
+    "Sport and cricket idioms",
+    "Sayings from the sea and Navy",
+    "Everyday mild exclamations",
+    "Expressions of tiredness, mood and health",
+    "Idioms about places in Britain",
+    "Old proverbs and nursery wisdom"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 2,
+      "name_concept": 3,
+      "word_meaning": 5,
+      "count": 2,
+      "estimate": 1,
+      "record": 1,
+      "origin": 5,
+      "made_of": 1,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 2,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 3,
+      "who": 2,
+      "when": 2
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 2,
+      "detail": 1,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 1
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 5,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 3,
+      "history": 4,
+      "body_senses": 3,
+      "language": 5
+    }
+  },
+  "concepts": [
+    {
+      "name": "Brass monkeys",
+      "facet": "Weather and rain sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Right as rain",
+      "facet": "Weather and rain sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Nippy",
+      "facet": "Weather and rain sayings",
+      "known_at": 5
+    },
+    {
+      "name": "Steal someone's thunder",
+      "facet": "Weather and rain sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Fair-weather friend",
+      "facet": "Weather and rain sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Taking the biscuit",
+      "facet": "Food and drink idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Easy peasy lemon squeezy",
+      "facet": "Food and drink idioms",
+      "known_at": 3
+    },
+    {
+      "name": "Full of beans",
+      "facet": "Food and drink idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Hard cheese",
+      "facet": "Food and drink idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Use your loaf",
+      "facet": "Food and drink idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Over-egging the pudding",
+      "facet": "Food and drink idioms",
+      "known_at": 13
+    },
+    {
+      "name": "In a pickle",
+      "facet": "Food and drink idioms",
+      "known_at": 6
+    },
+    {
+      "name": "Butter wouldn't melt",
+      "facet": "Food and drink idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Pie in the sky",
+      "facet": "Food and drink idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Selling like hot cakes",
+      "facet": "Food and drink idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Bun in the oven",
+      "facet": "Food and drink idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Silly sausage",
+      "facet": "Food and drink idioms",
+      "known_at": 5
+    },
+    {
+      "name": "Porkies",
+      "facet": "Food and drink idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Like a kid in a sweet shop",
+      "facet": "Food and drink idioms",
+      "known_at": 6
+    },
+    {
+      "name": "The best thing since sliced bread",
+      "facet": "Food and drink idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Not for all the tea in China",
+      "facet": "Tea and cuppa expressions",
+      "known_at": 10
+    },
+    {
+      "name": "Tea and sympathy",
+      "facet": "Tea and cuppa expressions",
+      "known_at": 13
+    },
+    {
+      "name": "Put the kettle on",
+      "facet": "Tea and cuppa expressions",
+      "known_at": 5
+    },
+    {
+      "name": "Brew",
+      "facet": "Tea and cuppa expressions",
+      "known_at": 7
+    },
+    {
+      "name": "Shall I be mother?",
+      "facet": "Tea and cuppa expressions",
+      "known_at": 13
+    },
+    {
+      "name": "Reading the tea leaves",
+      "facet": "Tea and cuppa expressions",
+      "known_at": 11
+    },
+    {
+      "name": "Everything stops for tea",
+      "facet": "Tea and cuppa expressions",
+      "known_at": 12
+    },
+    {
+      "name": "A few bob",
+      "facet": "Money and shopping sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Daylight robbery",
+      "facet": "Money and shopping sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Costs an arm and a leg",
+      "facet": "Money and shopping sayings",
+      "known_at": 7
+    },
+    {
+      "name": "Look after the pennies",
+      "facet": "Money and shopping sayings",
+      "known_at": 11
+    },
+    {
+      "name": "In for a penny, in for a pound",
+      "facet": "Money and shopping sayings",
+      "known_at": 11
+    },
+    {
+      "name": "The penny dropped",
+      "facet": "Money and shopping sayings",
+      "known_at": 9
+    },
+    {
+      "name": "A penny for your thoughts",
+      "facet": "Money and shopping sayings",
+      "known_at": 9
+    },
+    {
+      "name": "Cheap and cheerful",
+      "facet": "Money and shopping sayings",
+      "known_at": 10
+    },
+    {
+      "name": "Splash out",
+      "facet": "Money and shopping sayings",
+      "known_at": 8
+    },
+    {
+      "name": "Where there's muck there's brass",
+      "facet": "Money and shopping sayings",
+      "known_at": 12
+    },
+    {
+      "name": "Money for old rope",
+      "facet": "Money and shopping sayings",
+      "known_at": 12
+    },
+    {
+      "name": "The bee's knees",
+      "facet": "Animal idioms",
+      "known_at": 8
+    },
+    {
+      "name": "The cat's pyjamas",
+      "facet": "Animal idioms",
+      "known_at": 11
+    },
+    {
+      "name": "A dog's dinner",
+      "facet": "Animal idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Let the cat out of the bag",
+      "facet": "Animal idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Pigs might fly",
+      "facet": "Animal idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Donkey's years",
+      "facet": "Animal idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Wild goose chase",
+      "facet": "Animal idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Rabbit on",
+      "facet": "Animal idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Monkey business",
+      "facet": "Animal idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Grinning like a Cheshire cat",
+      "facet": "Animal idioms",
+      "known_at": 8
+    },
+    {
+      "name": "As the crow flies",
+      "facet": "Animal idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Bull in a china shop",
+      "facet": "Animal idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Cock and bull story",
+      "facet": "Animal idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Talk the hind legs off a donkey",
+      "facet": "Animal idioms",
+      "known_at": 10
+    },
+    {
+      "name": "We shall fight on the beaches",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 11
+    },
+    {
+      "name": "Dunkirk spirit",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 12
+    },
+    {
+      "name": "The King's English",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 12
+    },
+    {
+      "name": "Take the King's shilling",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 14
+    },
+    {
+      "name": "Nation of shopkeepers",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 13
+    },
+    {
+      "name": "The sun never sets on the British Empire",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 11
+    },
+    {
+      "name": "Hobson's choice",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 13
+    },
+    {
+      "name": "Bobby",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 8
+    },
+    {
+      "name": "Never in the field of human conflict",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 13
+    },
+    {
+      "name": "Royal we",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 11
+    },
+    {
+      "name": "The Iron Lady",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 11
+    },
+    {
+      "name": "Cometh the hour, cometh the man",
+      "facet": "Sayings from history and the monarchy",
+      "known_at": 13
+    },
+    {
+      "name": "It's not cricket",
+      "facet": "Sport and cricket idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Sticky wicket",
+      "facet": "Sport and cricket idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Hit for six",
+      "facet": "Sport and cricket idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Bowled over",
+      "facet": "Sport and cricket idioms",
+      "known_at": 9
+    },
+    {
+      "name": "Stumped",
+      "facet": "Sport and cricket idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Had a good innings",
+      "facet": "Sport and cricket idioms",
+      "known_at": 11
+    },
+    {
+      "name": "A game of two halves",
+      "facet": "Sport and cricket idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Own goal",
+      "facet": "Sport and cricket idioms",
+      "known_at": 7
+    },
+    {
+      "name": "Moving the goalposts",
+      "facet": "Sport and cricket idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Level playing field",
+      "facet": "Sport and cricket idioms",
+      "known_at": 10
+    },
+    {
+      "name": "Close of play",
+      "facet": "Sport and cricket idioms",
+      "known_at": 12
+    },
+    {
+      "name": "Football's coming home",
+      "facet": "Sport and cricket idioms",
+      "known_at": 8
+    },
+    {
+      "name": "Out for a duck",
+      "facet": "Sport and cricket idioms",
+      "known_at": 11
+    },
+    {
+      "name": "Shiver me timbers",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 5
+    },
+    {
+      "name": "Show a leg",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 14
+    },
+    {
+      "name": "Shipshape and Bristol fashion",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 13
+    },
+    {
+      "name": "By and large",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 14
+    },
+    {
+      "name": "Learn the ropes",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 8
+    },
+    {
+      "name": "Above board",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 11
+    },
+    {
+      "name": "Pipe down",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 8
+    },
+    {
+      "name": "Tell it to the marines",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 14
+    },
+    {
+      "name": "Hard and fast",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 13
+    },
+    {
+      "name": "All hands on deck",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 7
+    },
+    {
+      "name": "Batten down the hatches",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 10
+    },
+    {
+      "name": "Taken aback",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 11
+    },
+    {
+      "name": "Loose cannon",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 10
+    },
+    {
+      "name": "Plain sailing",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 8
+    },
+    {
+      "name": "Turn a blind eye",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 9
+    },
+    {
+      "name": "On an even keel",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 11
+    },
+    {
+      "name": "Sling your hook",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 12
+    },
+    {
+      "name": "Hand over fist",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 13
+    },
+    {
+      "name": "Push the boat out",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 11
+    },
+    {
+      "name": "No room to swing a cat",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 10
+    },
+    {
+      "name": "Davy Jones's locker",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 9
+    },
+    {
+      "name": "Toe the line",
+      "facet": "Sayings from the sea and Navy",
+      "known_at": 11
+    },
+    {
+      "name": "Blimey",
+      "facet": "Everyday mild exclamations",
+      "known_at": 6
+    },
+    {
+      "name": "Crikey",
+      "facet": "Everyday mild exclamations",
+      "known_at": 6
+    },
+    {
+      "name": "Gordon Bennett",
+      "facet": "Everyday mild exclamations",
+      "known_at": 12
+    },
+    {
+      "name": "Flipping heck",
+      "facet": "Everyday mild exclamations",
+      "known_at": 7
+    },
+    {
+      "name": "Oh my days",
+      "facet": "Everyday mild exclamations",
+      "known_at": 8
+    },
+    {
+      "name": "Jolly good",
+      "facet": "Everyday mild exclamations",
+      "known_at": 7
+    },
+    {
+      "name": "Golly gosh",
+      "facet": "Everyday mild exclamations",
+      "known_at": 7
+    },
+    {
+      "name": "Bless",
+      "facet": "Everyday mild exclamations",
+      "known_at": 8
+    },
+    {
+      "name": "Righto",
+      "facet": "Everyday mild exclamations",
+      "known_at": 9
+    },
+    {
+      "name": "Oi",
+      "facet": "Everyday mild exclamations",
+      "known_at": 5
+    },
+    {
+      "name": "Sorry",
+      "facet": "Everyday mild exclamations",
+      "known_at": 4
+    },
+    {
+      "name": "Pardon",
+      "facet": "Everyday mild exclamations",
+      "known_at": 5
+    },
+    {
+      "name": "Fiddlesticks",
+      "facet": "Everyday mild exclamations",
+      "known_at": 9
+    },
+    {
+      "name": "Under the weather",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 6
+    },
+    {
+      "name": "Fed up",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 6
+    },
+    {
+      "name": "Feeling rough",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 8
+    },
+    {
+      "name": "Poorly",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 6
+    },
+    {
+      "name": "Peaky",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 11
+    },
+    {
+      "name": "Off colour",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 11
+    },
+    {
+      "name": "Forty winks",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 7
+    },
+    {
+      "name": "Throw a wobbly",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 9
+    },
+    {
+      "name": "Throw your toys out of the pram",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 9
+    },
+    {
+      "name": "Got the hump",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 10
+    },
+    {
+      "name": "Lurgy",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 10
+    },
+    {
+      "name": "Fit as a fiddle",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 8
+    },
+    {
+      "name": "Done in",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 10
+    },
+    {
+      "name": "Lost the plot",
+      "facet": "Expressions of tiredness, mood and health",
+      "known_at": 9
+    },
+    {
+      "name": "Carrying coals to Newcastle",
+      "facet": "Idioms about places in Britain",
+      "known_at": 12
+    },
+    {
+      "name": "It's grim up north",
+      "facet": "Idioms about places in Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Bedlam",
+      "facet": "Idioms about places in Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Up the wooden hill to Bedfordshire",
+      "facet": "Idioms about places in Britain",
+      "known_at": 11
+    },
+    {
+      "name": "Within the sound of Bow Bells",
+      "facet": "Idioms about places in Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Land's End to John o' Groats",
+      "facet": "Idioms about places in Britain",
+      "known_at": 9
+    },
+    {
+      "name": "The Smoke",
+      "facet": "Idioms about places in Britain",
+      "known_at": 13
+    },
+    {
+      "name": "The Square Mile",
+      "facet": "Idioms about places in Britain",
+      "known_at": 12
+    },
+    {
+      "name": "Chelsea tractor",
+      "facet": "Idioms about places in Britain",
+      "known_at": 13
+    },
+    {
+      "name": "Billingsgate",
+      "facet": "Idioms about places in Britain",
+      "known_at": 14
+    },
+    {
+      "name": "An apple a day keeps the doctor away",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 4
+    },
+    {
+      "name": "Mind your Ps and Qs",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 8
+    },
+    {
+      "name": "Early to bed, early to rise",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 8
+    },
+    {
+      "name": "Many hands make light work",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 8
+    },
+    {
+      "name": "Too many cooks spoil the broth",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 8
+    },
+    {
+      "name": "A stitch in time saves nine",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 11
+    },
+    {
+      "name": "Waste not, want not",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 10
+    },
+    {
+      "name": "Sticks and stones may break my bones",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 6
+    },
+    {
+      "name": "Monday's Child",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 11
+    },
+    {
+      "name": "Manners maketh man",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 11
+    },
+    {
+      "name": "Cut your coat according to your cloth",
+      "facet": "Old proverbs and nursery wisdom",
+      "known_at": 13
+    }
+  ]
+}

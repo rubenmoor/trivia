@@ -1,0 +1,992 @@
+{
+  "subcategory": "team-gb-and-olympians",
+  "facets": [
+    "Athletics heroes",
+    "Cycling and rowing champions",
+    "Swimming and diving stars",
+    "Paralympic greats",
+    "London 2012 Games",
+    "Super Saturday moments",
+    "Early British Olympic history",
+    "Winter Olympics and Team GB",
+    "Combat sports and boxing medallists",
+    "Equestrian, sailing and shooting",
+    "Team sports at the Olympics",
+    "Medals, honours and celebrations"
+  ],
+  "axis_fit": {
+    "move": {
+      "identify": 4,
+      "name_concept": 2,
+      "word_meaning": 2,
+      "count": 4,
+      "estimate": 3,
+      "record": 4,
+      "origin": 2,
+      "made_of": 2,
+      "purpose": 2,
+      "cause_effect": 2,
+      "sequence": 3,
+      "connection": 2,
+      "analogy": 2,
+      "odd_one_out": 4,
+      "who": 5,
+      "when": 4
+    },
+    "stimulus": {
+      "none": 5,
+      "photo": 3,
+      "detail": 2,
+      "silhouette": 1,
+      "map_outline": 1,
+      "sound": 1,
+      "video": 2
+    },
+    "lens": {
+      "school": 2,
+      "university": 1,
+      "everyday": 2,
+      "colombia": 1,
+      "pop_culture": 3,
+      "popular_science": 1,
+      "science_news": 1,
+      "educational_media": 2,
+      "nature": 1,
+      "history": 4,
+      "body_senses": 4,
+      "language": 2
+    }
+  },
+  "concepts": [
+    {
+      "name": "Sebastian Coe",
+      "facet": "Athletics heroes",
+      "known_at": 10
+    },
+    {
+      "name": "Linford Christie",
+      "facet": "Athletics heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Steve Ovett",
+      "facet": "Athletics heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Denise Lewis",
+      "facet": "Athletics heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Sally Gunnell",
+      "facet": "Athletics heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Katarina Johnson-Thompson",
+      "facet": "Athletics heroes",
+      "known_at": 9
+    },
+    {
+      "name": "Dina Asher-Smith",
+      "facet": "Athletics heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Keely Hodgkinson",
+      "facet": "Athletics heroes",
+      "known_at": 8
+    },
+    {
+      "name": "Christine Ohuruogu",
+      "facet": "Athletics heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Steve Cram",
+      "facet": "Athletics heroes",
+      "known_at": 12
+    },
+    {
+      "name": "Colin Jackson",
+      "facet": "Athletics heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Josh Kerr",
+      "facet": "Athletics heroes",
+      "known_at": 11
+    },
+    {
+      "name": "Tessa Sanderson",
+      "facet": "Athletics heroes",
+      "known_at": 13
+    },
+    {
+      "name": "Jason Kenny",
+      "facet": "Cycling and rowing champions",
+      "known_at": 8
+    },
+    {
+      "name": "Laura Kenny",
+      "facet": "Cycling and rowing champions",
+      "known_at": 7
+    },
+    {
+      "name": "Victoria Pendleton",
+      "facet": "Cycling and rowing champions",
+      "known_at": 9
+    },
+    {
+      "name": "Matthew Pinsent",
+      "facet": "Cycling and rowing champions",
+      "known_at": 11
+    },
+    {
+      "name": "Katherine Grainger",
+      "facet": "Cycling and rowing champions",
+      "known_at": 11
+    },
+    {
+      "name": "Helen Glover",
+      "facet": "Cycling and rowing champions",
+      "known_at": 10
+    },
+    {
+      "name": "Heather Stanning",
+      "facet": "Cycling and rowing champions",
+      "known_at": 13
+    },
+    {
+      "name": "Ed Clancy",
+      "facet": "Cycling and rowing champions",
+      "known_at": 13
+    },
+    {
+      "name": "Mark Cavendish",
+      "facet": "Cycling and rowing champions",
+      "known_at": 8
+    },
+    {
+      "name": "Geraint Thomas",
+      "facet": "Cycling and rowing champions",
+      "known_at": 9
+    },
+    {
+      "name": "Chris Boardman",
+      "facet": "Cycling and rowing champions",
+      "known_at": 11
+    },
+    {
+      "name": "James Cracknell",
+      "facet": "Cycling and rowing champions",
+      "known_at": 12
+    },
+    {
+      "name": "Keirin",
+      "facet": "Cycling and rowing champions",
+      "known_at": 12
+    },
+    {
+      "name": "Tom Pidcock",
+      "facet": "Cycling and rowing champions",
+      "known_at": 11
+    },
+    {
+      "name": "Velodrome",
+      "facet": "Cycling and rowing champions",
+      "known_at": 5
+    },
+    {
+      "name": "Adam Peaty",
+      "facet": "Swimming and diving stars",
+      "known_at": 6
+    },
+    {
+      "name": "Rebecca Adlington",
+      "facet": "Swimming and diving stars",
+      "known_at": 8
+    },
+    {
+      "name": "Duncan Goodhew",
+      "facet": "Swimming and diving stars",
+      "known_at": 12
+    },
+    {
+      "name": "David Wilkie",
+      "facet": "Swimming and diving stars",
+      "known_at": 13
+    },
+    {
+      "name": "Anita Lonsbrough",
+      "facet": "Swimming and diving stars",
+      "known_at": 14
+    },
+    {
+      "name": "Jack Laugher",
+      "facet": "Swimming and diving stars",
+      "known_at": 11
+    },
+    {
+      "name": "Matty Lee",
+      "facet": "Swimming and diving stars",
+      "known_at": 11
+    },
+    {
+      "name": "Tom Dean",
+      "facet": "Swimming and diving stars",
+      "known_at": 9
+    },
+    {
+      "name": "Duncan Scott",
+      "facet": "Swimming and diving stars",
+      "known_at": 10
+    },
+    {
+      "name": "Keri-Anne Payne",
+      "facet": "Swimming and diving stars",
+      "known_at": 13
+    },
+    {
+      "name": "Mark Foster",
+      "facet": "Swimming and diving stars",
+      "known_at": 12
+    },
+    {
+      "name": "Sharron Davies",
+      "facet": "Swimming and diving stars",
+      "known_at": 11
+    },
+    {
+      "name": "Synchronised diving",
+      "facet": "Swimming and diving stars",
+      "known_at": 5
+    },
+    {
+      "name": "Breaststroke",
+      "facet": "Swimming and diving stars",
+      "known_at": 3
+    },
+    {
+      "name": "Mixed medley relay",
+      "facet": "Swimming and diving stars",
+      "known_at": 10
+    },
+    {
+      "name": "Knitting",
+      "facet": "Swimming and diving stars",
+      "known_at": 7
+    },
+    {
+      "name": "Matt Richards",
+      "facet": "Swimming and diving stars",
+      "known_at": 12
+    },
+    {
+      "name": "David Weir",
+      "facet": "Paralympic greats",
+      "known_at": 8
+    },
+    {
+      "name": "Sarah Storey",
+      "facet": "Paralympic greats",
+      "known_at": 10
+    },
+    {
+      "name": "Jonnie Peacock",
+      "facet": "Paralympic greats",
+      "known_at": 7
+    },
+    {
+      "name": "Hannah Cockroft",
+      "facet": "Paralympic greats",
+      "known_at": 9
+    },
+    {
+      "name": "Lee Pearson",
+      "facet": "Paralympic greats",
+      "known_at": 12
+    },
+    {
+      "name": "Kadeena Cox",
+      "facet": "Paralympic greats",
+      "known_at": 11
+    },
+    {
+      "name": "Richard Whitehead",
+      "facet": "Paralympic greats",
+      "known_at": 11
+    },
+    {
+      "name": "Stoke Mandeville",
+      "facet": "Paralympic greats",
+      "known_at": 9
+    },
+    {
+      "name": "Alfie Hewett",
+      "facet": "Paralympic greats",
+      "known_at": 11
+    },
+    {
+      "name": "Jody Cundy",
+      "facet": "Paralympic greats",
+      "known_at": 12
+    },
+    {
+      "name": "Will Bayley",
+      "facet": "Paralympic greats",
+      "known_at": 11
+    },
+    {
+      "name": "Boccia",
+      "facet": "Paralympic greats",
+      "known_at": 10
+    },
+    {
+      "name": "Wheelchair racing",
+      "facet": "Paralympic greats",
+      "known_at": 4
+    },
+    {
+      "name": "Mandeville",
+      "facet": "Paralympic greats",
+      "known_at": 7
+    },
+    {
+      "name": "Superhumans",
+      "facet": "Paralympic greats",
+      "known_at": 11
+    },
+    {
+      "name": "ParalympicsGB",
+      "facet": "Paralympic greats",
+      "known_at": 6
+    },
+    {
+      "name": "London 2012 opening ceremony",
+      "facet": "London 2012 Games",
+      "known_at": 5
+    },
+    {
+      "name": "Wenlock",
+      "facet": "London 2012 Games",
+      "known_at": 6
+    },
+    {
+      "name": "London Aquatics Centre",
+      "facet": "London 2012 Games",
+      "known_at": 9
+    },
+    {
+      "name": "Olympic torch relay",
+      "facet": "London 2012 Games",
+      "known_at": 4
+    },
+    {
+      "name": "Olympic cauldron",
+      "facet": "London 2012 Games",
+      "known_at": 7
+    },
+    {
+      "name": "Games Makers",
+      "facet": "London 2012 Games",
+      "known_at": 10
+    },
+    {
+      "name": "Horse Guards Parade",
+      "facet": "London 2012 Games",
+      "known_at": 11
+    },
+    {
+      "name": "Isles of Wonder",
+      "facet": "London 2012 Games",
+      "known_at": 13
+    },
+    {
+      "name": "Super Saturday",
+      "facet": "Super Saturday moments",
+      "known_at": 8
+    },
+    {
+      "name": "Greg Rutherford",
+      "facet": "Super Saturday moments",
+      "known_at": 8
+    },
+    {
+      "name": "Heptathlon",
+      "facet": "Super Saturday moments",
+      "known_at": 7
+    },
+    {
+      "name": "Long jump",
+      "facet": "Super Saturday moments",
+      "known_at": 3
+    },
+    {
+      "name": "Men's 10,000 metres",
+      "facet": "Super Saturday moments",
+      "known_at": 9
+    },
+    {
+      "name": "Mobot",
+      "facet": "Super Saturday moments",
+      "known_at": 4
+    },
+    {
+      "name": "Women's team pursuit",
+      "facet": "Super Saturday moments",
+      "known_at": 10
+    },
+    {
+      "name": "Men's coxless four",
+      "facet": "Super Saturday moments",
+      "known_at": 11
+    },
+    {
+      "name": "Women's lightweight double sculls",
+      "facet": "Super Saturday moments",
+      "known_at": 13
+    },
+    {
+      "name": "Katherine Copeland",
+      "facet": "Super Saturday moments",
+      "known_at": 14
+    },
+    {
+      "name": "Sophie Hosking",
+      "facet": "Super Saturday moments",
+      "known_at": 14
+    },
+    {
+      "name": "Dani King",
+      "facet": "Super Saturday moments",
+      "known_at": 13
+    },
+    {
+      "name": "Joanna Rowsell",
+      "facet": "Super Saturday moments",
+      "known_at": 13
+    },
+    {
+      "name": "Andrew Triggs Hodge",
+      "facet": "Super Saturday moments",
+      "known_at": 14
+    },
+    {
+      "name": "Pete Reed",
+      "facet": "Super Saturday moments",
+      "known_at": 14
+    },
+    {
+      "name": "Eton Dorney",
+      "facet": "Super Saturday moments",
+      "known_at": 12
+    },
+    {
+      "name": "4 August 2012",
+      "facet": "Super Saturday moments",
+      "known_at": 11
+    },
+    {
+      "name": "London 1908 Olympics",
+      "facet": "Early British Olympic history",
+      "known_at": 10
+    },
+    {
+      "name": "White City Stadium",
+      "facet": "Early British Olympic history",
+      "known_at": 13
+    },
+    {
+      "name": "London 1948 Olympics",
+      "facet": "Early British Olympic history",
+      "known_at": 10
+    },
+    {
+      "name": "Austerity Games",
+      "facet": "Early British Olympic history",
+      "known_at": 12
+    },
+    {
+      "name": "Wyndham Halswelle",
+      "facet": "Early British Olympic history",
+      "known_at": 15
+    },
+    {
+      "name": "Dorando Pietri",
+      "facet": "Early British Olympic history",
+      "known_at": 14
+    },
+    {
+      "name": "Charlotte Cooper",
+      "facet": "Early British Olympic history",
+      "known_at": 14
+    },
+    {
+      "name": "Harold Abrahams",
+      "facet": "Early British Olympic history",
+      "known_at": 12
+    },
+    {
+      "name": "Eric Liddell",
+      "facet": "Early British Olympic history",
+      "known_at": 11
+    },
+    {
+      "name": "Wenlock Olympian Games",
+      "facet": "Early British Olympic history",
+      "known_at": 13
+    },
+    {
+      "name": "William Penny Brookes",
+      "facet": "Early British Olympic history",
+      "known_at": 14
+    },
+    {
+      "name": "Tug of war",
+      "facet": "Early British Olympic history",
+      "known_at": 3
+    },
+    {
+      "name": "Jack Beresford",
+      "facet": "Early British Olympic history",
+      "known_at": 15
+    },
+    {
+      "name": "Lord Burghley",
+      "facet": "Early British Olympic history",
+      "known_at": 14
+    },
+    {
+      "name": "Cotswold Olimpicks",
+      "facet": "Early British Olympic history",
+      "known_at": 14
+    },
+    {
+      "name": "Boléro",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 11
+    },
+    {
+      "name": "Lizzy Yarnold",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 10
+    },
+    {
+      "name": "Amy Williams",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 11
+    },
+    {
+      "name": "Skeleton",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 8
+    },
+    {
+      "name": "Curling",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 5
+    },
+    {
+      "name": "Eve Muirhead",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 11
+    },
+    {
+      "name": "Rhona Martin",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 13
+    },
+    {
+      "name": "Robin Cousins",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 12
+    },
+    {
+      "name": "John Curry",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 13
+    },
+    {
+      "name": "Ski jumping",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 5
+    },
+    {
+      "name": "Bruce Mouat",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 12
+    },
+    {
+      "name": "Jenny Jones",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 12
+    },
+    {
+      "name": "Elise Christie",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 12
+    },
+    {
+      "name": "Dave Ryding",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 13
+    },
+    {
+      "name": "Bobsleigh",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 5
+    },
+    {
+      "name": "Ice dancing",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 5
+    },
+    {
+      "name": "Matt Weston",
+      "facet": "Winter Olympics and Team GB",
+      "known_at": 12
+    },
+    {
+      "name": "Anthony Joshua",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 6
+    },
+    {
+      "name": "Lauren Price",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 11
+    },
+    {
+      "name": "Audley Harrison",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 12
+    },
+    {
+      "name": "Amir Khan",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 9
+    },
+    {
+      "name": "Luke Campbell",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 13
+    },
+    {
+      "name": "James DeGale",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 13
+    },
+    {
+      "name": "Galal Yafai",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 13
+    },
+    {
+      "name": "Jade Jones",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 10
+    },
+    {
+      "name": "Bianca Walkden",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 13
+    },
+    {
+      "name": "Lutalo Muhammad",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 14
+    },
+    {
+      "name": "Kate Howey",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 14
+    },
+    {
+      "name": "Neil Adams",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 14
+    },
+    {
+      "name": "Chris Finnegan",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 15
+    },
+    {
+      "name": "Dick McTaggart",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 15
+    },
+    {
+      "name": "Taekwondo",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 5
+    },
+    {
+      "name": "Judo",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 4
+    },
+    {
+      "name": "Super-heavyweight",
+      "facet": "Combat sports and boxing medallists",
+      "known_at": 9
+    },
+    {
+      "name": "Ben Ainslie",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 9
+    },
+    {
+      "name": "Shirley Robertson",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 13
+    },
+    {
+      "name": "Hannah Mills",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 12
+    },
+    {
+      "name": "Giles Scott",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 13
+    },
+    {
+      "name": "Finn dinghy",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 13
+    },
+    {
+      "name": "Weymouth and Portland",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 12
+    },
+    {
+      "name": "Charlotte Dujardin",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 10
+    },
+    {
+      "name": "Valegro",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 12
+    },
+    {
+      "name": "Carl Hester",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 13
+    },
+    {
+      "name": "Dressage",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 7
+    },
+    {
+      "name": "Nick Skelton",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 12
+    },
+    {
+      "name": "Big Star",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 14
+    },
+    {
+      "name": "Scott Brash",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 14
+    },
+    {
+      "name": "Zara Tindall",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 9
+    },
+    {
+      "name": "Peter Wilson",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 14
+    },
+    {
+      "name": "Richard Faulds",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 15
+    },
+    {
+      "name": "Eventing",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 10
+    },
+    {
+      "name": "Laura Collett",
+      "facet": "Equestrian, sailing and shooting",
+      "known_at": 14
+    },
+    {
+      "name": "Field hockey",
+      "facet": "Team sports at the Olympics",
+      "known_at": 4
+    },
+    {
+      "name": "Kate Richardson-Walsh",
+      "facet": "Team sports at the Olympics",
+      "known_at": 13
+    },
+    {
+      "name": "Maddie Hinch",
+      "facet": "Team sports at the Olympics",
+      "known_at": 12
+    },
+    {
+      "name": "Hollie Webb",
+      "facet": "Team sports at the Olympics",
+      "known_at": 14
+    },
+    {
+      "name": "Rio 2016 hockey final",
+      "facet": "Team sports at the Olympics",
+      "known_at": 12
+    },
+    {
+      "name": "Seoul 1988 hockey gold",
+      "facet": "Team sports at the Olympics",
+      "known_at": 13
+    },
+    {
+      "name": "Sean Kerly",
+      "facet": "Team sports at the Olympics",
+      "known_at": 14
+    },
+    {
+      "name": "Barry Davies",
+      "facet": "Team sports at the Olympics",
+      "known_at": 13
+    },
+    {
+      "name": "Penalty shootout",
+      "facet": "Team sports at the Olympics",
+      "known_at": 4
+    },
+    {
+      "name": "Rugby sevens",
+      "facet": "Team sports at the Olympics",
+      "known_at": 8
+    },
+    {
+      "name": "Team GB football",
+      "facet": "Team sports at the Olympics",
+      "known_at": 10
+    },
+    {
+      "name": "Stuart Pearce",
+      "facet": "Team sports at the Olympics",
+      "known_at": 12
+    },
+    {
+      "name": "Water polo",
+      "facet": "Team sports at the Olympics",
+      "known_at": 7
+    },
+    {
+      "name": "Cricket at the 1900 Olympics",
+      "facet": "Team sports at the Olympics",
+      "known_at": 13
+    },
+    {
+      "name": "Handball",
+      "facet": "Team sports at the Olympics",
+      "known_at": 7
+    },
+    {
+      "name": "Beach volleyball",
+      "facet": "Team sports at the Olympics",
+      "known_at": 4
+    },
+    {
+      "name": "Gold postbox",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "Knighthood",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 7
+    },
+    {
+      "name": "Damehood",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "MBE",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 10
+    },
+    {
+      "name": "OBE",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 10
+    },
+    {
+      "name": "New Year Honours",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 11
+    },
+    {
+      "name": "BBC Sports Personality of the Year",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 7
+    },
+    {
+      "name": "Open-top bus parade",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 6
+    },
+    {
+      "name": "Royal Mail stamps",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "National Lottery",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 9
+    },
+    {
+      "name": "UK Sport",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Medal table",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 6
+    },
+    {
+      "name": "Team GB",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 3
+    },
+    {
+      "name": "British Olympic Association",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 12
+    },
+    {
+      "name": "Team GB lion",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "Rio 2016 Olympics",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 8
+    },
+    {
+      "name": "Gold medal",
+      "facet": "Medals, honours and celebrations",
+      "known_at": 1
+    }
+  ]
+}
