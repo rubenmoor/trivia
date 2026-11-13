@@ -44801,7 +44801,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Waits for two decisions, both about what counts: what turning the career off means, and whether demo games count. Follow the answers in the save and the backfill; part 7 then only carries out the demo answer.
 - The engine also keeps the total score and the rank of `decision 519: Career badge list: grades, rules, 29 badges with names and thresholds?` (score per answer, rank per finished game, score badges); part 6 shows them.
 - The plan settles shared `rr-coop` answers and what a deleted player loses; raise a decision only if the choice is really the developer''s.', '2026-11-01T03:47:41Z', '2026-11-13T00:42:50Z', 1876, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1880, 192, 'write plan: Badges as Steam achievements', 'plan', 'open', 1000, NULL, 'Write the plan for part 4 of `plan 192: masterplan` (Steam side).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1880, 192, 'write plan: Badges as Steam achievements', 'plan', 'done', 1000, '2026-11-12, plan 196: Badges as Steam achievements; plans/18-steam-integration.md (own-UI line narrowed to funny achievements), plans/24-career.md (Steam texts part 4, catalogs part 5)', 'Write the plan for part 4 of `plan 192: masterplan` (Steam side).
 
 - Coordinate with `plan 86: Achievements (SW-11)`, still open: `task 657: Steamworks achievement setup values and VDF`, `task 658: SW-11 close-out: gamemaster check and docs`, and `decision 140: Achievements entered and published in Steamworks?` (pending). The badges are entered the same way, or in a later decision of the same shape.
 - Unlocks while the career is off: `decision 515: Career turned off: what happens to a player''s progress and badges?` (no new Steam unlock while off; on again, everything earned meanwhile unlocks).
@@ -44809,7 +44809,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Live-limit rule: sized for 5,000 achievements (vetted app); until vetted at most 100 live in Steamworks: the 39 existing first (`ACHIEVEMENTS`, `BUNDLE_*`), then career badges in a fixed order up to 100. Later badges are earned and shown in game only.
   - The plan holds the list: live in Steamworks vs pending, in that fixed order (from `plans/24-career.md`).
   - How a pending badge becomes live: VDF rows, icons, one release; the retroactive unlock on load then grants it to players who already earned it.
-  - Archived achievements still count: entered means for good, no trial badges.', '2026-11-01T03:47:43Z', NULL, 1876, 0, NULL, 'app');
+  - Archived achievements still count: entered means for good, no trial badges.', '2026-11-01T03:47:43Z', '2026-11-13T00:45:17Z', 1876, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1881, 192, 'write plan: Badge page and celebration', 'plan', 'open', 1000, NULL, 'Write the plan for part 5 of `plan 192: masterplan` (Badge page and celebration).
 
 Iterative feedback: the page and the celebration go through gallery shots and a review decision, repeated until the developer approves; say "iterative feedback" in the tasks it concerns. New strings follow `locales/style/<locale>.md`, for es, es-ES, en, de.', '2026-11-01T03:47:43Z', NULL, 1876, 0, NULL, 'app');
@@ -46207,8 +46207,46 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Not here: screens, settings row, Steam calls
 
 Done when: tests cover off → games still count → on with not-shown badges intact, `career_shown`, `careerUnlocks` leaving off players out, delete removing only that player''s career; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:43:39Z', NULL, 1977, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1982, 196, 'create tasks for plan 196: Badges as Steam achievements', 'split', 'open', 1000, NULL, 'Split plan 196 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-13T00:45:12Z', NULL, 1880, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1982, 196, 'create tasks for plan 196: Badges as Steam achievements', 'split', 'done', 1000, '2026-11-12, tasks 1983, 1984, 1985, 1986; no new decisions now: the icon review, Steamworks entry and Steam check decisions are raised by tasks 1984, 1985, 1986 once their output exists', 'Split plan 196 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-13T00:45:12Z', '2026-11-13T00:46:16Z', 1880, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1983, 196, 'Career badges in the Steam unlock path', 'work', 'open', NULL, NULL, 'Plan 196 task 1. Every career badge unlocks as a Steam achievement through the funny achievements'' code path.
+
+- `app/client/src/lib/achievements.ts`: union `careerUnlocks(save)` (`task 1981: Career opt-out, shown marks and reads`) with `earned()`; same gate (only `validUser && steam?.available`), each id once per page load, fire and forget; demo builds unlock nothing (`decision 346: Achievements in the demo: off, as Valve recommends?`).
+- Unlock moments: after the save loads (retroactive), when a game ends (after its end screen; a badge earned mid-game, e.g. score, waits for the end), when a player turns the career on (re-check whenever the set grows).
+- Career off (`decision 515: Career turned off: what happens to a player''s progress and badges?`): that player''s badges are not in `careerUnlocks`; on again → everything earned meanwhile unlocks at the next moment.
+- `AchievementId` and `inSteamworks(id)` cover career ids: career badge position = 39 + index in the ordered list of `engine/career.ts` + 1; live iff ≤ `STEAM_LIVE_CAP = 100` (constant, raised to 5,000 once Steam vets the app). New badges appended only.
+- Multiplayer: any seat''s badge unlocks for the account (`decision 285: Achievements from multiplayer sessions: every seat earns for the save; tower achievements need a win at the top level`, `decision 590: Career in sessions and on deleting a player: the answering seat earns; a deleted player''s career goes with them`).
+- Unit tests: live-cap rule (positions, a badge past the cap pending, append-only keeps live badges live), off → no unlock, on → unlock, gate (no valid user / demo → nothing).
+
+Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:45:56Z', NULL, 1982, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1984, 196, 'Career badge icons', 'work', 'open', NULL, NULL, 'Plan 196 task 2. Steam achievement icons for the 39 career badges (`plans/24-career.md` "Badges: 39", "Live order (Steam)").
+
+- 39 SVG sources `app/desktop/achievements/CAREER_<API>.svg`, house style of the existing icons there; built from families: subject glyph × grade mark (21), diploma (3), college (1), age group / school year (4), score number (10).
+- `render.sh` unchanged or extended so it renders them to `png/<API>_achieved.png` / `_unachieved.png` (256×256).
+- Must also read at the badge page''s sizes (part 5, `task 1881: write plan: Badge page and celebration`, may reuse them).
+- Credits row (plan 47) covers them; extend it if it names files.
+- Review, iterative feedback: a contact sheet of all 39 (achieved and unachieved) as a developer decision (`pm decision add`, options: approved / changes (name them)); pend this task on it; rework on feedback, then raise the next round until approved.
+
+Done when: the developer approved the contact sheet; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:45:56Z', NULL, 1982, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1985, 196, 'Career badges: Steamworks rows and VDF', 'work', 'open', NULL, NULL, 'Plan 196 task 3. The career badges'' rows for Steamworks and their localized names.
+
+- `plans/18-steam-integration.md` "Achievements in Steamworks": a "Career (39)" table (API name; name and description in latam = es, spanish = es-ES, english = en, german = de) from the approved texts (`decision 521: Career badge list, revised: 39 badges, score and rank: which score milestones?`, `plans/24-career.md` "Badges: 39"); number format per language (en «1,000 Points»). Hidden no, Set by Client, no stat, base game set.
+- Same section: live/pending list with the live-cap rule (39 existing first, then career in live order, ≤ 100 until vetted; today 78, all live, none pending) and the «pending → live» steps (VDF rows, icon pair, plan 18 row, entered in list order, cap raised, one release).
+- `app/desktop/steam-achievements.vdf`: career tokens `NEW_ACHIEVEMENT_1_25` … `_63` in live order; topic `BUNDLE_*` draft tokens move from 25–29 to after the career ones.
+- `plans/24-career.md` "Steam budget": points to plan 18''s rows.
+- Then `pm decision add` «Career badges entered and published in Steamworks?», same shape as `decision 140: Achievements entered and published in Steamworks?` (enter in live order after its 25, icons from `render.sh` (task 1984), check tokens, upload VDF, publish; needs the real App ID); if decision 140 is still open, say the developer enters both in one sitting. Options: entered and published (note token renames) (recommended) / issues. Pend this task on it; on the answer, fix token names if renamed.
+
+Done when: rows and VDF in, decision answered; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:46:05Z', NULL, 1982, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1986, 196, 'Career Steam check and docs', 'work', 'open', NULL, NULL, 'Plan 196 task 4. The developer checks the career badges under real Steam; docs close out.
+
+- `pm decision add` one developer check under Steam with the real App ID and a logged-in user (fresh account or reset stats):
+  - earn `CAREER_SCORE_100` → Steam toast with icon and localized name
+  - career off → a new badge doesn''t unlock; on again → it unlocks
+  - a v5 save with old games (e.g. `--import-save`) unlocks its backfilled badges on start
+  - Options: passes (recommended) / issues (name rows). Pend this task on it. Steam only, no "without Steam" row.
+- Docs after it passes: `plans/18-steam-integration.md` "Steam features" Achievements bullet names the career badges; `plans/24-career.md` a "Steam" section (unlock moments, live cap); `directory.md` if needed.
+
+Done when: check passed (issues → follow-up tasks in plan 196), docs updated; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:46:13Z', NULL, 1982, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -55226,8 +55264,10 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2149, 1973, '2026-11-13T00:38:55Z', '2026-11-13T00:40:05Z', 'done', NULL, 0, 'c25a9799aff6e1e9116dd61037bf0c627a009a50', NULL, 'claude-opus-5-5', '3e006d78-ff0d-46fb-8d87-ede1baea5efc', NULL, 8, 16, 3634, 322310, 34224, 0.41099800000000003, 49068, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2150, 1974, '2026-11-13T00:40:02Z', '2026-11-13T00:43:28Z', 'done', NULL, 0, 'c25a9799aff6e1e9116dd61037bf0c627a009a50', 'questions', 'claude-sonnet-5-5', '3a4e8452-44a0-4cb3-970d-afdaa5ae8672', NULL, 24, 46, 11190, 1234317, 53306, 0.44864770000000004, 68151, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2151, 1977, '2026-11-13T00:42:45Z', '2026-11-13T00:43:47Z', 'done', NULL, 0, '017bd1e0875975c46baf0c92d63a2014eabd5132', NULL, 'claude-opus-5-5', '3169cad2-07b0-4f42-8127-7247a939665a', NULL, 10, 20, 4402, 390098, 33080, 0.4307796, 47733, 60, 118424);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2152, 1880, '2026-11-13T00:43:02Z', NULL, 'running', NULL, NULL, '017bd1e0875975c46baf0c92d63a2014eabd5132', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2152, 1880, '2026-11-13T00:43:02Z', '2026-11-13T00:45:29Z', 'done', NULL, 0, '017bd1e0875975c46baf0c92d63a2014eabd5132', 'app', 'claude-opus-5-5', '78dddc01-fa79-410a-b22f-f2b5ec0e42fd', NULL, 16, 32, 9957, 940496, 71539, 0.9596792, 86588, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2153, 1975, '2026-11-13T00:43:28Z', NULL, 'running', NULL, NULL, '41addaf85f0ca5293220279e637e41de8afb2d4a', 'questions', NULL, NULL, 2150, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2154, 1982, '2026-11-13T00:45:14Z', '2026-11-13T00:46:24Z', 'done', NULL, 0, '08d630eb85f3647970f3a5cf8656a6cc084d2533', NULL, 'claude-opus-5-5', '50f37d9b-1cf9-457b-b149-056a654641da', NULL, 10, 18, 4963, 405182, 40999, 0.50836039999999994, 55883, 60, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2155, 1881, '2026-11-13T00:45:29Z', NULL, 'running', NULL, NULL, '6ddf81055a7c5460821eb25dbb8557eb524fc34c', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 118424);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -56147,6 +56187,10 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1979, 197
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1980, 1976);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1980, 1979);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1981, 1980);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1983, 1981);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1985, 1984);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1986, 1983);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1986, 1985);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
