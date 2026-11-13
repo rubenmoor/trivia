@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "geography",
+      "subject": "geography",
       "subcategories": [
         "states-and-capitals",
         "cities-and-towns",
@@ -12,6 +13,7 @@
     },
     {
       "slug": "nature",
+      "subject": "nature",
       "subcategories": [
         "animals",
         "plants",
@@ -20,6 +22,7 @@
     },
     {
       "slug": "history",
+      "subject": "history",
       "subcategories": [
         "conquest-and-colony",
         "independence-and-19th-century",
@@ -29,6 +32,7 @@
     },
     {
       "slug": "ancient-mexico",
+      "subject": "history",
       "subcategories": [
         "mexica",
         "maya",
@@ -37,6 +41,7 @@
     },
     {
       "slug": "people",
+      "subject": "history",
       "subcategories": [
         "scientists-and-inventors",
         "indigenous-peoples"
@@ -44,6 +49,7 @@
     },
     {
       "slug": "food-and-drink",
+      "subject": "geography",
       "subcategories": [
         "antojitos-and-street-food",
         "regional-dishes",
@@ -54,6 +60,7 @@
     },
     {
       "slug": "festivals-and-traditions",
+      "subject": "geography",
       "subcategories": [
         "day-of-the-dead",
         "christmas-season",
@@ -65,6 +72,7 @@
     },
     {
       "slug": "myths-and-legends",
+      "subject": "history",
       "subcategories": [
         "legends",
         "pre-hispanic-gods",
@@ -73,6 +81,7 @@
     },
     {
       "slug": "music-and-dance",
+      "subject": "arts",
       "subcategories": [
         "mariachi-and-ranchera",
         "regional-mexican",
@@ -83,6 +92,7 @@
     },
     {
       "slug": "art-and-literature",
+      "subject": "arts",
       "subcategories": [
         "painters-and-muralists",
         "writers-and-poets",
@@ -91,6 +101,7 @@
     },
     {
       "slug": "film-and-television",
+      "subject": "media",
       "subcategories": [
         "golden-age-cinema",
         "contemporary-cinema",
@@ -101,6 +112,7 @@
     },
     {
       "slug": "sports",
+      "subject": "sport",
       "subcategories": [
         "liga-mx",
         "national-team",
@@ -111,6 +123,7 @@
     },
     {
       "slug": "how-people-speak",
+      "subject": "history",
       "subcategories": [
         "slang",
         "sayings",
@@ -119,6 +132,7 @@
     },
     {
       "slug": "daily-life",
+      "subject": "geography",
       "subcategories": [
         "money",
         "brands-and-snacks",
@@ -129,6 +143,7 @@
     },
     {
       "slug": "symbols",
+      "subject": "geography",
       "subcategories": [
         "national-symbols",
         "state-symbols"

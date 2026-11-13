@@ -1,84 +1,84 @@
 {
   "about": "Categories of the colombia bundle (D-41, D-43): structure only, keyed by English slugs unique within the bundle (decision 259); names in names.<locale>.json.",
   "categories": [
-    {"slug": "geography", "subcategories": [
+    {"slug": "geography", "subject": "geography", "subcategories": [
       "regions-and-departments",
       "cities-and-towns",
       "rivers-seas-and-islands",
       "mountains-and-landscapes",
       "places-and-monuments"
     ]},
-    {"slug": "nature", "subcategories": [
+    {"slug": "nature", "subject": "nature", "subcategories": [
       "animals",
       "plants-and-flowers",
       "natural-parks-and-ecosystems"
     ]},
-    {"slug": "history", "subcategories": [
+    {"slug": "history", "subject": "history", "subcategories": [
       "pre-columbian-cultures",
       "conquest-and-colonial-era",
       "independence",
       "19th-century",
       "20th-century"
     ]},
-    {"slug": "people", "subcategories": [
+    {"slug": "people", "subject": "history", "subcategories": [
       "scientists-and-inventors",
       "pioneers-and-popular-figures"
     ]},
-    {"slug": "food-and-drink", "subcategories": [
+    {"slug": "food-and-drink", "subject": "geography", "subcategories": [
       "typical-dishes",
       "street-food-and-bakery",
       "sweets-and-desserts",
       "drinks",
       "fruits"
     ]},
-    {"slug": "festivals-and-traditions", "subcategories": [
+    {"slug": "festivals-and-traditions", "subject": "geography", "subcategories": [
       "carnivals-and-fairs",
       "christmas-and-special-dates",
       "crafts-and-traditional-dress",
       "traditional-games"
     ]},
-    {"slug": "myths-and-legends", "subcategories": [
+    {"slug": "myths-and-legends", "subject": "history", "subcategories": [
       "ghosts-and-creatures",
       "indigenous-myths-and-folk-beliefs"
     ]},
-    {"slug": "music-and-dance", "subcategories": [
+    {"slug": "music-and-dance", "subject": "arts", "subcategories": [
       "rhythms-dances-and-instruments",
       "vallenato",
       "salsa-and-tropical-music",
       "pop-rock-and-urban-music",
       "popular-and-andean-music"
     ]},
-    {"slug": "art-and-literature", "subcategories": [
+    {"slug": "art-and-literature", "subject": "arts", "subcategories": [
       "writers-and-books",
       "poetry-and-childrens-stories",
       "painters-sculptors-and-museums"
     ]},
-    {"slug": "film-and-television", "subcategories": [
+    {"slug": "film-and-television", "subject": "media", "subcategories": [
       "telenovelas",
       "tv-shows-and-series",
       "hosts-actors-and-comedians",
       "cinema"
     ]},
-    {"slug": "sports", "subcategories": [
+    {"slug": "sports", "subject": "sport", "subcategories": [
       "national-team",
       "club-football",
       "cycling",
       "olympic-medallists",
       "other-sports"
     ]},
-    {"slug": "how-colombia-speaks", "subcategories": [
+    {"slug": "how-colombia-speaks", "subject": "history", "subcategories": [
       "words",
       "sayings-and-expressions",
       "regional-speech",
       "languages"
     ]},
-    {"slug": "daily-life", "subcategories": [
+    {"slug": "daily-life", "subject": "geography", "subcategories": [
       "banknotes-and-coins",
       "brands-and-products",
       "transport",
       "home-school-and-paperwork"
     ]},
-    {"slug": "symbols", "subcategories": [
+    {"slug": "symbols", "subject": "geography", "subcategories": [
       "national-symbols",
       "symbols-of-departments-and-cities"
     ]}

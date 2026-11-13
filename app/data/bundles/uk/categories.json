@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "geography",
+      "subject": "geography",
       "subcategories": [
         "cities-and-towns",
         "london",
@@ -14,6 +15,7 @@
     },
     {
       "slug": "nature",
+      "subject": "nature",
       "subcategories": [
         "wildlife",
         "birds",
@@ -23,6 +25,7 @@
     },
     {
       "slug": "history",
+      "subject": "history",
       "subcategories": [
         "early-britain",
         "middle-ages",
@@ -34,6 +37,7 @@
     },
     {
       "slug": "people",
+      "subject": "history",
       "subcategories": [
         "scientists-and-inventors",
         "pioneers-and-heroes"
@@ -41,6 +45,7 @@
     },
     {
       "slug": "food-and-drink",
+      "subject": "geography",
       "subcategories": [
         "classic-dishes",
         "regional-specialities",
@@ -51,6 +56,7 @@
     },
     {
       "slug": "festivals-and-traditions",
+      "subject": "geography",
       "subcategories": [
         "holidays-and-celebrations",
         "christmas-in-britain",
@@ -59,6 +65,7 @@
     },
     {
       "slug": "myths-and-legends",
+      "subject": "history",
       "subcategories": [
         "legendary-heroes",
         "creatures-ghosts-and-superstitions"
@@ -66,6 +73,7 @@
     },
     {
       "slug": "music-and-dance",
+      "subject": "arts",
       "subcategories": [
         "pop-and-rock",
         "traditional-music-and-dance",
@@ -74,6 +82,7 @@
     },
     {
       "slug": "art-and-literature",
+      "subject": "arts",
       "subcategories": [
         "writers-and-poets",
         "childrens-books-and-comics",
@@ -82,6 +91,7 @@
     },
     {
       "slug": "film-and-television",
+      "subject": "media",
       "subcategories": [
         "childrens-tv",
         "soaps-and-dramas",
@@ -91,6 +101,7 @@
     },
     {
       "slug": "comedy",
+      "subject": "media",
       "subcategories": [
         "sitcoms",
         "comedians-and-panel-shows"
@@ -98,6 +109,7 @@
     },
     {
       "slug": "sports",
+      "subject": "sport",
       "subcategories": [
         "football",
         "rugby-and-cricket",
@@ -108,6 +120,7 @@
     },
     {
       "slug": "how-people-speak",
+      "subject": "history",
       "subcategories": [
         "slang-and-words",
         "sayings-and-idioms",
@@ -117,6 +130,7 @@
     },
     {
       "slug": "daily-life",
+      "subject": "geography",
       "subcategories": [
         "money-and-shopping",
         "brands-and-adverts",
@@ -127,6 +141,7 @@
     },
     {
       "slug": "symbols",
+      "subject": "geography",
       "subcategories": [
         "flags-and-emblems",
         "crown-and-state"

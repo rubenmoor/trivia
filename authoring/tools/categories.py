@@ -8,7 +8,7 @@ a plain string is also key and name, a category's `name` its name.
 import json
 import re
 
-from paths import BUNDLES, BUNDLE_DATA, CATEGORIES, OLD_KEYS, names  # authoring/tools/paths.py
+from paths import SUBJECTS, BUNDLES, BUNDLE_DATA, CATEGORIES, OLD_KEYS, names  # authoring/tools/paths.py
 
 
 def path(bundle):
@@ -38,6 +38,11 @@ def load(bundle=None):
         if p.exists():
             out += [{**c, "bundle": b} for c in _read(p, "categories")]
     return out
+
+
+def subject_ids():
+    """The career subjects' ids in order (app/data/subjects.json, plan 194)."""
+    return [s["id"] for s in _read(SUBJECTS, "subjects")]
 
 
 def subcategories(bundle=None):
@@ -83,7 +88,7 @@ def category_of(bundle, sub):
 
 
 NAMES_LOCALES = ("en", "es", "de")  # own names files; es-ES reads es's, then names.es-ES.json overrides
-NAME_KINDS = ("categories", "subcategories")
+NAME_KINDS = ("categories", "subcategories", "subjects")  # subjects: base's names files only
 SLUG = re.compile(r"[a-z0-9]+(-[a-z0-9]+)*")
 
 
@@ -101,7 +106,7 @@ def load_names(locale):
     """{"bundles", "categories", "subcategories", "age_groups"}: display names in a locale (D-81), base's file
     merged with every bundle's; "categories" and "subcategories" keyed by sub_key (bundle + key, D-99).
     es-ES: names.es.json, then names.es-ES.json where Spain differs (decision 259)."""
-    out = {"bundles": {}, "categories": {}, "subcategories": {}, "age_groups": {}}
+    out = {"bundles": {}, "categories": {}, "subcategories": {}, "subjects": {}, "age_groups": {}}
     for b in bundle_ids():
         for p in _names_files(locale, b):
             if p.exists():

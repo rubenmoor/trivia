@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "screen-history",
+      "subject": "media",
       "subcategories": [
         "silent-cinema",
         "golden-age-hollywood",
@@ -12,6 +13,7 @@
     },
     {
       "slug": "world-cinema",
+      "subject": "media",
       "subcategories": [
         "european-cinema",
         "east-asian-cinema",
@@ -21,6 +23,7 @@
     },
     {
       "slug": "film-genres",
+      "subject": "media",
       "subcategories": [
         "action-and-martial-arts",
         "comedy-and-romcoms",
@@ -31,6 +34,7 @@
     },
     {
       "slug": "fantastic-cinema",
+      "subject": "media",
       "subcategories": [
         "sci-fi-films",
         "horror-and-monsters",
@@ -39,6 +43,7 @@
     },
     {
       "slug": "franchises",
+      "subject": "media",
       "subcategories": [
         "star-wars",
         "star-trek",
@@ -52,6 +57,7 @@
     },
     {
       "slug": "animation",
+      "subject": "media",
       "subcategories": [
         "disney-animation-deep-cuts",
         "pixar-deep-cuts",
@@ -65,6 +71,7 @@
     },
     {
       "slug": "series",
+      "subject": "media",
       "subcategories": [
         "comedy-series",
         "drama-series",
@@ -76,6 +83,7 @@
     },
     {
       "slug": "directors-and-stars",
+      "subject": "media",
       "subcategories": [
         "classic-directors",
         "modern-directors",
@@ -86,6 +94,7 @@
     },
     {
       "slug": "screen-icons",
+      "subject": "media",
       "subcategories": [
         "movie-quotes",
         "animal-stars"
@@ -93,6 +102,7 @@
     },
     {
       "slug": "screen-music",
+      "subject": "media",
       "subcategories": [
         "film-scores",
         "screen-songs"
@@ -100,6 +110,7 @@
     },
     {
       "slug": "awards-and-industry",
+      "subject": "media",
       "subcategories": [
         "oscar-records",
         "festivals-and-awards",
