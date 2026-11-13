@@ -55,11 +55,12 @@ def cmd_bundle_new(args):
 PER_SUBCATEGORY = 40  # approved per subcategory a regional taxonomy is sized for (plan 138)
 NAMES_MODEL = "sonnet"  # names of a taxonomy's new categories and subcategories
 KEYED = {"slug": STR, "en": STR, "name": STR}  # key, English name, name in the bundle's language
+SUBJECT = {"subject": {"type": "string", "enum": categories.subject_ids()}, "subject_reason": STR}  # plan 194: a category's career subject
 TAXONOMY_SCHEMA = {"type": "object", "required": ["region", "categories", "left_out"], "properties": {
     "region": STR,
     "categories": {"type": "array", "items": {
-        "type": "object", "required": [*KEYED, "origin", "scope", "reason", "subcategories"], "properties": {
-            **KEYED, "origin": {"type": "string", "enum": ["general", "region"]}, "scope": STR, "reason": STR,
+        "type": "object", "required": [*KEYED, "origin", "scope", "reason", *SUBJECT, "subcategories"], "properties": {
+            **KEYED, **SUBJECT, "origin": {"type": "string", "enum": ["general", "region"]}, "scope": STR, "reason": STR,
             "subcategories": {"type": "array", "items": {
                 "type": "object", "required": [*KEYED, "scope", "reason", "samples"], "properties": {
                     **KEYED, "scope": STR, "reason": STR,
@@ -70,14 +71,20 @@ TAXONOMY_SCHEMA = {"type": "object", "required": ["region", "categories", "left_
 SAMPLES = TAXONOMY_SCHEMA["properties"]["categories"]["items"]["properties"]["subcategories"]["items"]["properties"]["samples"]
 THEME_TAXONOMY_SCHEMA = {"type": "object", "required": ["categories"], "properties": {
     "categories": {"type": "array", "items": {
-        "type": "object", "required": [*KEYED, "origin", "scope", "reason", "subcategories"], "properties": {
-            **KEYED, "origin": {"type": "string", "enum": ["base_extends", "new"]}, "scope": STR, "reason": STR,
+        "type": "object", "required": [*KEYED, "origin", "scope", "reason", *SUBJECT, "subcategories"], "properties": {
+            **KEYED, **SUBJECT, "origin": {"type": "string", "enum": ["base_extends", "new"]}, "scope": STR, "reason": STR,
             "subcategories": {"type": "array", "items": {
                 "type": "object", "required": [*KEYED, "scope", "reason", "base_related", "samples"], "properties": {
                     **KEYED, "scope": STR, "reason": STR, "base_related": {"type": "array", "items": STR},
                     "samples": SAMPLES}}}}}}}}
 BASE_RELATED_ABOUT = ("A theme bundle's subcategory → the base subcategories it goes beyond (plan 184); its concept lists "
                       "and drafts keep away from their questions. Authoring only, never exported.")
+
+
+def subjects_text():
+    """The fixed subject list for the prompts: `id`: English name, what it covers (plan 194)."""
+    return "\n".join(f"- `{s['id']}`: {categories.display('base', s['id'], 'en', 'subjects')}: {s['about']}"
+                     for s in categories._read(categories.SUBJECTS, "subjects"))
 
 
 def names_locale(locale):
@@ -134,7 +141,8 @@ def taxonomy_md(p, found):
     i = 0
     for c in cats:
         lines += ["", f"## {keyed(c)}{ORIGIN.get(c['origin'], '')}", f"{c['scope']}"
-                  + (f" Reason: {c['reason']}" if c["reason"] else "")]
+                  + (f" Reason: {c['reason']}" if c["reason"] else ""),
+                  f"Subject: `{c.get('subject')}`" + (f". Reason: {c['subject_reason']}" if c.get("subject_reason") else "")]
         for s in c["subcategories"]:
             i += 1
             samples = ", ".join(f"{x['name']} ({x['known_at']})" for x in sorted(s["samples"], key=lambda x: x["known_at"]))
@@ -163,7 +171,7 @@ def cmd_taxonomy(args):
     per = PER_SUBCATEGORY
     loc = translations.draft_locale(b)
     system = (PROMPTS / ("taxonomy-theme.md" if theme else "taxonomy.md")).read_text(encoding="utf-8").replace(
-        "{per_sub}", str(per)).replace("{subs}", str(round(total / per))).replace("{language}", LANGUAGES[loc])
+        "{per_sub}", str(per)).replace("{subs}", str(round(total / per))).replace("{language}", LANGUAGES[loc]).replace("{subjects}", subjects_text())
     approved = {x: Counter(q["subcategory"] for q in load_json(POOL)["questions"]
                            if (q.get("bundle") or "base") == x and q["status"] == "approved") for x in (args.bundle, "base")}
     def own(x, kind):
@@ -217,6 +225,8 @@ def taxonomy_errors(p, bundle):
         if bad := [x["slug"] for x in items if isinstance(x.get("slug"), str) and not categories.SLUG.fullmatch(x["slug"])]:
             errors.append(f"not a slug (decision 259): {', '.join(bad)}")
     errors += [f"{c.get('slug')}: no subcategories" for c in cats if not c.get("subcategories")]
+    errors += [f"{c.get('slug')}: subject {c.get('subject')!r} is missing or not one of {', '.join(categories.subject_ids())}"
+               for c in cats if c.get("subject") not in categories.subject_ids()]
     base = set(categories.subcategories("base"))
     errors += [f"{s.get('slug')}: base_related {r!r} is not a base subcategory" for c in cats
                for s in c.get("subcategories") or [] for r in s.get("base_related") or [] if r not in base]
@@ -299,7 +309,11 @@ def write_taxonomy(bundle, p, d):
                 used.add(e.setdefault("slug", s))
     path = categories.path(bundle)
     doc = load_json(path, {})
-    cats = [{"slug": c["slug"], "subcategories": [s["slug"] for s in c["subcategories"]]} for c in p["categories"]]
+    had = {c["slug"]: c.get("subject") for c in categories.load(bundle)}  # an existing category keeps its subject
+    cats = [{"slug": c["slug"], "subject": c.get("subject") or had.get(c["slug"]),
+             "subcategories": [s["slug"] for s in c["subcategories"]]} for c in p["categories"]]
+    if bad := [c["slug"] for c in cats if c["subject"] not in categories.subject_ids()]:
+        sys.exit(f"nothing written; no valid subject for category {', '.join(bad)}")
     save_json(path, {"about": doc.get("about") or CATEGORIES_ABOUT.format(bundle=bundle), "categories": cats})
     subs = [s for c in cats for s in c["subcategories"]]
     print(f"{path.relative_to(ROOT)}: {len(cats)} categories, {len(subs)} subcategories")
@@ -316,8 +330,9 @@ def write_taxonomy(bundle, p, d):
 
 
 REMAP_SCHEMA = {"type": "object", "required": ["questions", "lists"], "properties": {
-    "questions": {"type": "array", "items": {"type": "object", "required": ["id", "subcategory", "category", "scope", "reason"],
-                                            "properties": {"id": STR, "subcategory": STR, "category": STR, "scope": STR, "reason": STR}}},
+    "questions": {"type": "array", "items": {"type": "object", "required": ["id", "subcategory", "category", "subject", "scope", "reason"],
+                                            "properties": {"id": STR, "subcategory": STR, "category": STR, "scope": STR, "reason": STR,
+                                                           "subject": {"type": "string", "enum": ["", *categories.subject_ids()]}}}},
     "lists": {"type": "array", "items": {"type": "object", "required": ["subcategory", "target", "reason"],
                                         "properties": {"subcategory": STR, "target": STR, "reason": STR}}}}}
 
@@ -348,6 +363,10 @@ def remap_errors(p, bundle):
             errors.append(f"{r['id']}: {r['subcategory']!r} is not in the list and has no category and scope")
         elif new.setdefault(r["subcategory"], r["category"]) != r["category"]:
             errors.append(f"{r['subcategory']!r}: in two categories")
+    for c in {c for c in new.values() if c not in cats}:  # a new category needs one subject, the same on every row
+        got = {r.get("subject") for r in p["questions"] if r["subcategory"] in new and new[r["subcategory"]] == c}
+        if len(got) != 1 or not got <= set(categories.subject_ids()):
+            errors.append(f"new category {c!r}: needs one subject of {', '.join(categories.subject_ids())} on every row of it")
     targets_ = subs | set(new)
     errors += [f"list {x['subcategory']!r}: target {x['target']!r} is not a subcategory" for x in p["lists"]
                if x["target"] and x["target"] not in targets_]
@@ -357,8 +376,9 @@ def remap_errors(p, bundle):
 def remap_md(p, new, cats, by_id):
     lines = [f"# Remap proposal: `{p['bundle']}`", "", f"{len(p['questions'])} questions; "
              f"{sum(r['subcategory'] != by_id[r['id']]['subcategory'] for r in p['questions'] if r['id'] in by_id)} change subcategory.", ""]
+    subjects = {new[r["subcategory"]]: r.get("subject") for r in p["questions"] if r["subcategory"] in new and r.get("subject")}
     if new:
-        lines += ["## Additions"] + [f"- {s} → {c}{'' if c in cats else ' (new category)'}" for s, c in sorted(new.items())] + [""]
+        lines += ["## Additions"] + [f"- {s} → {c}{'' if c in cats else f' (new category, subject {subjects.get(c)})'}" for s, c in sorted(new.items())] + [""]
     lines += ["## Questions"]
     for r in sorted((r for r in p["questions"] if r["id"] in by_id), key=lambda r: (r["subcategory"], r["id"])):
         q = by_id[r["id"]]
@@ -397,7 +417,7 @@ def cmd_remap(args):
         "## Old concept lists\n" + (json.dumps([{"subcategory": shown(s), "facets": l.get("facets", []), "concepts": len(l["concepts"]),
                                                  "examples": [c["name"] for c in l["concepts"][:25]]}
                                                 for s, l in lists.items()], ensure_ascii=False) if lists else "none")])
-    out = claude((PROMPTS / "remap.md").read_text(encoding="utf-8"), user, REMAP_SCHEMA, args.model, d)
+    out = claude((PROMPTS / "remap.md").read_text(encoding="utf-8").replace("{subjects}", subjects_text()), user, REMAP_SCHEMA, args.model, d)
     for r in out["questions"]:  # names back to keys; a new subcategory keeps its name
         r["subcategory"] = categories.resolve(args.bundle, r["subcategory"]) or r["subcategory"]
     by_name = {shown(s): s for s in lists}
@@ -431,13 +451,14 @@ def apply_remap(args, src, d):
             sources |= {concepts.key(c["name"]): c for c in lst.get("concepts", []) if c["name"] == q["concept"]}
     if new:  # new subcategories (and categories) come as names in the bundle's language: slugs from their en names
         scope = {r["subcategory"]: r["scope"] for r in p["questions"]}
-        cats_ = [{"slug": c["slug"], "scope": "", "subcategories": [{"slug": s, "scope": ""} for s in c["subcategories"]]}
+        cats_ = [{"slug": c["slug"], "subject": c.get("subject"), "scope": "", "subcategories": [{"slug": s, "scope": ""} for s in c["subcategories"]]}
                  for c in categories.load(bundle)]
         for s, c in new.items():
             cid = categories.resolve(bundle, c, "categories")
             cat = next((x for x in cats_ if (x.get("slug") == cid if cid else x.get("name") == c)), None)
             if not cat:
-                cat = {"name": c, "scope": scope[s], "subcategories": []}
+                cat = {"name": c, "scope": scope[s], "subject": next(r["subject"] for r in p["questions"] if r["subcategory"] == s),
+                       "subcategories": []}
                 cats_.append(cat)
             cat["subcategories"].append({"name": s, "scope": scope[s]})
         tx = load_json(WORK / "taxonomy" / bundle / "proposal.json", {}) or {}
