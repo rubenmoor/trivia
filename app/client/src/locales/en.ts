@@ -540,6 +540,11 @@ export const en = {
     college: { name: "College", desc: "Answer {n} college-level questions right." },
     year: { name: "School Year: {group}", desc: "Finish {n} games in the {group} age group." },
     score: { name: "{n} Points", desc: "Reach {n} points." },
+    points: "Points",
+    rank: "Rank",
+    delta: { plus: "+{n}", minus: "−{n}" },
+    /** Rank 1–15 → name (plans/24-career.md "Rank"). */
+    ranks: ["Beginner", "Apprentice", "Student", "Contender", "Up-and-Comer", "Talent", "Prodigy", "Role Model", "Bright Mind", "Authority", "Luminary", "Genius", "Phenomenon", "Legend", "Walking Encyclopedia"],
   },
   save: {
     corrupt: "The saved game file is damaged. It was backed up to {path}, and a new game starts.",

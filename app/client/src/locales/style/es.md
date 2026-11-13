@@ -19,6 +19,7 @@ Fixed terms; use them as written, never a synonym.
 - Devices: «mando» (pad), «teclado», «Teclado y mouse» (not «ratón»)
 - Mods: «mod», «encender» / «apagar»
 - Carrera: «carrera» (la del jugador); insignia: «insignia»; notas: «Primaria», «Secundaria», «Bachillerato», «Universidad»; asignaturas de `names.es.json`; rango y puntos: «Rango», «puntos» (`career.*`, plan 197)
+- Puntos y rango: «Puntos» (`career.points`); «Rango» (`career.rank`); nombres de rango 1–15 en `career.ranks` (plans/24-career.md); número «1840», desde 5 cifras «12.840»
 
 ## Address
 - Players: «ustedes» (D-6), the group in front of the TV: «Elijan una respuesta», «¡Ganaron!», «Escriban su nombre»

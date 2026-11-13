@@ -18,6 +18,7 @@ Fixed terms; use them as written, never a synonym.
 - Devices: «controller» (pad), «Keyboard and mouse»
 - Spelling: US («Customize», «color»), sheet «Letter»
 - Career: «career», badge: «badge»; grades «Elementary School», «Middle School», «High School», «College» (US English: no «University»), title case in badge names («History and Humanities»); «Rank», «Points» (`career.*`, plan 197)
+- Score and rank: «Points» (`career.points`), «Rank» (`career.rank`); rank names 1–15 in `career.ranks` (plans/24-career.md); numbers «1,840»
 
 ## Address
 - «you» for one player or the whole group; never «you all», «you guys», «yourselves»

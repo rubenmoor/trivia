@@ -1,5 +1,6 @@
 // Name and description of a career badge (plan 197, plans/24-career.md): catalog families + data names.
 import { BADGE_NAMES, COLLEGE_NEED, GRADE_NEED, SUBJECTS, YEAR_GROUPS, YEAR_NEED } from "../engine/career.ts";
+import { formatScore } from "./career-text.ts";
 import { catalogFor } from "./i18n.ts";
 
 export interface BadgeNames {
@@ -20,9 +21,8 @@ const titleCase = (s: string) => s.split(" ").map((w, i) => (i && SMALL.has(w.to
 /** The text of badge `id` (`CAREER_…`, career.ts) in UI language `locale`, with the names of `names`; the id itself for an unknown id. */
 export function badgeText(id: string, locale: string, names: BadgeNames): { name: string; description: string } {
   const c = catalogFor(locale).career;
-  const numbers = new Intl.NumberFormat(locale);
   const fill = (text: string, params: Record<string, string | number>) =>
-    text.replace(/\{(\w+)\}/g, (m, k: string) => { const v = params[k]; return v === undefined ? m : typeof v === "number" ? numbers.format(v) : v; });
+    text.replace(/\{(\w+)\}/g, (m, k: string) => { const v = params[k]; return v === undefined ? m : typeof v === "number" ? formatScore(v, locale) : v; });
   const en = locale === "en";
   const cased = (s: string) => (en ? titleCase(s) : s);
   const text = (t: { name: string; desc: string }, params: Record<string, string | number>) => ({ name: fill(t.name, params), description: fill(t.desc, params) });

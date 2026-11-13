@@ -8,6 +8,7 @@ Differences from `es` only.
 - «Pulsa» (`es` «Presiona», decision 59), «¡Qué pasada!» (`es` «¡Qué maravilla!»)
 - Jokers, modes, Esc rows, Steam terms: as in `es` («Modo anfitrión», «Volver al menú principal», «Salir del juego», «logros de Steam»)
 - Carrera: como `es`; la nota de secundaria es «ESO» y «Curso escolar» en vez de «Año escolar» (`career.*`)
+- Puntos, rango, nombres de rango: como `es` (`career.points`, `career.rank`, `career.ranks`); número «1840»
 
 ## Address
 - «vosotros» wherever `es` addresses the group with «ustedes»: «Elegid una respuesta», «¡Habéis ganado!», «ya no os quedan Soplos»
