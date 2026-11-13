@@ -65,7 +65,6 @@ export const BADGES: readonly Badge[] = [
   ...SCORE_MILESTONES.map((n) => ({ name: `CAREER_SCORE_${n}`, met: (c: PlayerCareer) => c.score >= n })),
 ];
 
-/** @internal used by tests and the UI parts */
 export const BADGE_NAMES: readonly string[] = BADGES.map((b) => b.name);
 
 /** A right answer of difficulty `d` (+d²), counted for `subject` (none: score only). @internal used by tests and the UI parts */
@@ -228,7 +227,7 @@ function playerOf(work: SaveData, name: unknown): PlayerRow {
   return p;
 }
 
-/** Badges of every player with the career on, in live order: what Steam unlocks (decision 515). @internal until task 1983 wires it */
+/** Badges of every player with the career on, in live order: what Steam unlocks (decision 515). */
 export function careerUnlocks(save: SaveData): string[] {
   const held = new Set(save.players.filter((p) => !p.career?.off).flatMap((p) => Object.keys(p.career?.badges ?? {})));
   return BADGE_NAMES.filter((n) => held.has(n));

@@ -1,7 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
-import { earned, inSteamworks, qualifies } from "./achievements.ts";
+import { careerLive, earned, inSteamworks, qualifies, steamUnlocks } from "./achievements.ts";
+import { emptyCareer } from "./career.ts";
 import { gameAction } from "./api.ts";
 import { STANDARD_JOKERS } from "./choice.ts";
 import { newSession } from "./game.ts";
@@ -127,4 +128,15 @@ test("timed: the sudden-death answer is a tower win; a drop-out win only the mod
   while (last(save).result === null) save = play(save, last(save).state.timed!.round_done % 2, true, ms += 2000);
   assert.equal(last(save).state.history.at(-1)!.level, 12);
   assert.deepEqual(has(save, ["FIRST_WIN", "WIN_ADULTS", "WIN_NO_JOKERS", "WIN_TIMED"]), ["FIRST_WIN", "WIN_ADULTS", "WIN_TIMED"]);
+});
+
+test("career badges: live cap by position, append-only, off and on", () => {
+  assert.ok(careerLive("CAREER_HISTORY_ELEMENTARY") && careerLive("CAREER_SCORE_100000") && !careerLive("CAREER_NOPE"));
+  assert.ok(inSteamworks("CAREER_SCORE_100000") && !careerLive("CAREER_SCORE_100000", 77) && careerLive("CAREER_SCORE_50000", 77));
+  assert.ok(careerLive("CAREER_HISTORY_ELEMENTARY", 40) && !careerLive("CAREER_HISTORY_ELEMENTARY", 39) && !careerLive("CAREER_GEOGRAPHY_ELEMENTARY", 40));
+  const save = (off: boolean): SaveData => ({
+    ...emptySave(), players: [{ id: 1, name: "A", career: { ...emptyCareer(), score: 100, badges: { CAREER_SCORE_100: { on: "2026-11-01" } }, ...(off ? { off: true } : {}) } }] as never,
+  });
+  assert.ok(steamUnlocks(save(false), data).includes("CAREER_SCORE_100"));
+  assert.ok(!steamUnlocks(save(true), data).includes("CAREER_SCORE_100"));
 });

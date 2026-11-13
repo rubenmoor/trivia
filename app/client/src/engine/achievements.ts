@@ -1,5 +1,6 @@
 // Steam achievements (plan 86, SW-11, decision 73): derived from the save, never stored.
 import type { GameMode, JokerName } from "../lib/types.ts";
+import { BADGE_NAMES, careerUnlocks } from "./career.ts";
 import { DEFAULT_AGE_GROUP } from "./choice.ts";
 import { BUILT_MODES, gameMode, jokersUsed } from "./game.ts";
 import { categoryOf, isModId } from "./pool.ts";
@@ -18,8 +19,13 @@ export const ACHIEVEMENTS = [
   { id: "WIN_RR_COOP", mode: "rr-coop" }, { id: "WIN_RR_COMPETITIVE", mode: "rr-competitive" }, { id: "WIN_TIMED", mode: "timed" },
 ] as const satisfies readonly { id: string; mode?: GameMode }[];
 
-/** One per regional or topic bundle, entered with its DLC: `BUNDLE_COLOMBIA`, `BUNDLE_STEM`. */
-export type AchievementId = (typeof ACHIEVEMENTS)[number]["id"] | `BUNDLE_${string}`;
+/** One per regional or topic bundle, entered with its DLC (`BUNDLE_COLOMBIA`), or per career badge (`CAREER_SCORE_100`). */
+export type AchievementId = (typeof ACHIEVEMENTS)[number]["id"] | `BUNDLE_${string}` | `CAREER_${string}`;
+
+/** Steam's cap for an unvetted app; 5,000 once vetted (plan 196). */
+const STEAM_LIVE_CAP = 100;
+/** The 28 funny ones plus 6 regional and 5 topic bundle ones, entered or not: career badges come after them. */
+const STEAM_BEFORE_CAREER = 39;
 
 /** Regional and topic bundles whose DLC (and achievement) is in Steamworks. */
 const DLC_BUNDLES: readonly string[] = [];
@@ -38,10 +44,22 @@ const LANGUAGES = 2;
 /** «After midnight»: finished before 05:00, local clock. */
 const NIGHT_END = 5;
 
-/** In Steamworks now: mode wins with their mode built, bundle ones with their DLC. */
+/** A career badge is live iff its position (after the 39, in the order of `BADGE_NAMES`) is within the cap. @internal used by tests */
+export function careerLive(id: string, cap = STEAM_LIVE_CAP): boolean {
+  const i = BADGE_NAMES.indexOf(id);
+  return i >= 0 && STEAM_BEFORE_CAREER + i + 1 <= cap;
+}
+
+/** What Steam gets: the funny ones and the career badges (players with the career on), live ones only. */
+export function steamUnlocks(save: SaveData, data: EngineData): AchievementId[] {
+  return [...new Set<AchievementId>([...earned(save, data), ...(careerUnlocks(save) as AchievementId[])])].filter(inSteamworks);
+}
+
+/** In Steamworks now: mode wins with their mode built, bundle ones with their DLC. @internal used by tests */
 export function inSteamworks(id: AchievementId): boolean {
   const mode = [...MODE_WIN].find(([, a]) => a === id)?.[0];
   if (mode) return BUILT_MODES.includes(mode);
+  if (id.startsWith("CAREER_")) return careerLive(id);
   return id.startsWith("BUNDLE_") ? DLC_BUNDLES.some((b) => bundleAchievement(b) === id) : true;
 }
 
