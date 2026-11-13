@@ -129,7 +129,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
 
 ### Career (plan 197, `game/Career.svelte`)
-- A layer over the Player screen, one player's badge page: header with Back, «Carrera de <name>», «n de 39 insignias», an empty slot for score and rank (part 6) and the switch «Desactivar la carrera».
+- A layer over the Player screen, one player's badge page: header with Back, «Carrera de <name>», «n de 39 insignias», score and a still rank bar (none before the first finished game) and the switch «Desactivar el seguimiento de la carrera».
 - Groups: subjects (7 rows × Primaria/Secundaria/Bachillerato), diplomas, college, school years, score (10); icons from `app/desktop/achievements/CAREER_*.svg`.
 - Earned: colour icon and date (locale format); open: greyscale and dimmed; the focused or hovered badge: name, description, «Conseguida el …» / «Aún sin conseguir» in the strip below.
 - Career off (decision 515): the page shows only the switch and a note. Input: arrows move between badges, Esc/Backspace/B back, mouse on every control; modal scope `career`.
