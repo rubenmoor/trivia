@@ -12,8 +12,11 @@ export function formatDelta(d: number, locale: string): string {
   return (d < 0 ? c.minus : c.plus).replace("{n}", formatScore(Math.abs(d), locale));
 }
 
-/** Rank name of rank value `n` (rounded half up, at least 1, at most 15). @internal used by the rank display (part 6) */
+/** Shown rank of rank value `n`: rounded half up, 1 to 15. */
+export const rankNumber = (n: number): number => Math.min(RANKS, Math.max(1, Math.floor(n + 0.5)));
+const RANKS = 15;
+
+/** Rank name of rank value `n` (as `rankNumber`). */
 export function rankText(n: number, locale: string): string {
-  const names = catalogFor(locale).career.ranks;
-  return names[Math.min(names.length, Math.max(1, Math.floor(n + 0.5))) - 1];
+  return catalogFor(locale).career.ranks[rankNumber(n) - 1];
 }

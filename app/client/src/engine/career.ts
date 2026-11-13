@@ -4,7 +4,7 @@ import { qualifies, towerWin } from "./achievements.ts";
 import { cleanName, gameMode, playerId } from "./game.ts";
 import { subOf } from "./pool.ts";
 import type { EngineData, GameRow, GameState, PlayerRow, SaveData } from "./state.ts";
-import { GameError, gameLocale, newest as newestRow, transact } from "./state.ts";
+import { GameError, gameLocale, newest as newestRow, rowPlayers, transact } from "./state.ts";
 
 /** Ids of app/data/subjects.json, same order (career.test.ts checks). */
 export const SUBJECTS = ["history", "geography", "nature", "science", "arts", "media", "sport"] as const;
@@ -98,9 +98,8 @@ export function award(c: PlayerCareer, on: string): PlayerCareer {
   return names.length ? { ...c, badges: { ...c.badges, ...Object.fromEntries(names.map((n) => [n, { on }])) } } : c;
 }
 
-/** Rank value: weighted mean of the ranks (newest last; weights 10..1 newest first), half up, at least 1; null without games. @internal used by tests and the UI parts */
-export function rankOf(ranks: readonly number[]): number | null {
-  if (!ranks.length) return null;
+/** Weighted sum and weights of the last ranks (newest last; weights 10..1 newest first). */
+function rankWeights(ranks: readonly number[]): [number, number] {
   const last = ranks.slice(-RANKS_KEPT);
   let sum = 0, weights = 0;
   last.forEach((v, i) => {
@@ -108,7 +107,21 @@ export function rankOf(ranks: readonly number[]): number | null {
     sum += w * v;
     weights += w;
   });
+  return [sum, weights];
+}
+
+/** Rank value: weighted mean of the ranks, half up, at least 1; null without games. @internal used by tests and the UI parts */
+export function rankOf(ranks: readonly number[]): number | null {
+  if (!ranks.length) return null;
+  const [sum, weights] = rankWeights(ranks);
   return Math.max(1, Math.floor((2 * sum + weights) / (2 * weights)));
+}
+
+/** The unrounded weighted mean (the rank bar's position); null without games. @internal used by tests */
+export function rankMean(ranks: readonly number[]): number | null {
+  if (!ranks.length) return null;
+  const [sum, weights] = rankWeights(ranks);
+  return sum / weights;
 }
 
 /** Index into the 15 rank names (0-based), null without games. @internal used by tests and the UI parts */
@@ -249,4 +262,20 @@ export function scoreStep(save: SaveData, data: EngineData, last: { question_id:
   const q = data.byId.get(last.question_id);
   if (!p || !q || p.career?.off) return null;
   return { name: p.name, score: p.career?.score ?? 0, delta: last.correct ? q.difficulty ** 2 : -1 };
+}
+
+/** A player's rank at a finished game: the weighted mean before it (null: their first finished game) and after it. */
+export interface RankStep { name: string; from: number | null; to: number }
+
+/** The rank steps of the newest game (plan 198, decision 593): per seat with a player and the career on, in seat order;
+ * none unless the game finished, counted (catch-up has run) and qualifies. Old value: `ranks` without the newest entry. */
+export function rankSteps(save: SaveData, data: EngineData): RankStep[] {
+  const row = newestRow(save.games);
+  if (!row || data.demo || row.demo || gameLocale(row) !== data.locale || !finished(row) || !row.career?.ended || !qualifies(row)) return [];
+  return [...new Set(rowPlayers(row))].flatMap((id) => {
+    const p = save.players.find((x) => x.id === id);
+    const ranks = p?.career?.ranks ?? [];
+    const to = rankMean(ranks);
+    return !p || p.career?.off || to === null ? [] : [{ name: p.name, from: rankMean(ranks.slice(0, -1)), to }];
+  });
 }

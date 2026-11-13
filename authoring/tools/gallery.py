@@ -755,6 +755,24 @@ def scores(r):
         r.shot("timed-score")
 
 
+def ranks(r):
+    """The career rank at a finished game (task 1994), frozen after the bar's move: solo win and loss, co-op win, a first rank."""
+    for name, save, right in (("victory-rank", "final-rank", True), ("wrong-rank", "solo-rank", False), ("rank-first", "solo-rank-first", False)):
+        if r.only and name not in r.only:
+            continue
+        on_question(r, save)
+        r.answer(r.meta[save]["right"] if right else (r.meta[save]["right"] + 1) % 4)
+        r.wait("main .result [data-rank]", 40000)
+        r.settle(3.5)
+        r.shot(name)
+    if not r.only or "session-victory-rank" in r.only:
+        rr_question(r, "coop-q12-rank")
+        r.answer(r.meta["coop-q12-rank"]["right"])
+        r.wait("main .result.victory [data-rank]", 40000)
+        r.settle(3.5)
+        r.shot("session-victory-rank")
+
+
 def overlay(r):
     r.scene("base")
     r.menu()
@@ -1097,6 +1115,7 @@ STEPS = [
     (["question-splash", "question-splash-long", "timed-splash", *[f"question-splash-in-{e}" for e in ENTRANCES]], splash),
     (["question-waiting", "correct", "wrong", "victory"], results),
     (["correct-score", "wrong-score", "session-correct-score", "timed-score"], scores),
+    (["victory-rank", "wrong-rank", "session-victory-rank", "rank-first"], ranks),
     (["menu-start", "menu-solo", "menu-gamemaster", "menu-confirm", "goto", "goto-letter-picker", "credits"], overlay),
     (["flag-dialog", "flag-list"], flags),
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),

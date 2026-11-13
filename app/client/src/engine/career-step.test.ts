@@ -3,7 +3,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import { deletePlayer, gameAction } from "./api.ts";
-import { catchUp, emptyCareer, scoreStep } from "./career.ts";
+import { catchUp, emptyCareer, rankMean, rankSteps, scoreStep } from "./career.ts";
 import { STANDARD_JOKERS } from "./choice.ts";
 import type { PoolQuestion } from "./pool.ts";
 import { actionRng } from "./rng.ts";
@@ -193,4 +193,24 @@ test("scoreStep: the answering player's score and delta; nothing for reveals, ca
   const timed = catchUp(saveOf([row(1, state([right("d5", 1, 1)], { mode: "timed", cards: 0 }, "select"), null, { seats, turn: 0 })]), data, ON);
   assert.deepEqual(scoreStep(timed, data, { question_id: "d5", correct: true, seat: 1 }), { name: "P2", score: 25, delta: 25 });
   assert.equal(scoreStep(timed, data, { question_id: "d5", correct: true }), null, "unclaimed: nobody");
+});
+
+test("rankSteps: every seat with a player at a finished, counted game; nothing for running games, career off, gamemaster, demo", () => {
+  const seats: Seat[] = [{ player_id: 1 }, { player_id: 2 }, { player_id: null }];
+  const coop = (result: GameRow["result"]) => saveOf([row(1, state([right("d5", 1, 0), wrong("d2", 2, 1)], { mode: "rr-coop" }, result ? "lost" : "select"), result, { player_id: null, seats, turn: 0 })]);
+  const withPast = (save: SaveData) => ({ ...save, players: save.players.map((p) => (p.id === 1 ? { ...p, career: { ...emptyCareer(), ranks: [3, 4] } } : p)) });
+  const ended = catchUp(withPast(coop("lost")), data, ON);
+  assert.deepEqual(rankSteps(ended, data), [
+    { name: "P1", from: rankMean([3, 4]), to: rankMean([3, 4, 5]) },
+    { name: "P2", from: null, to: 0 },
+  ]);
+  assert.deepEqual(rankSteps(catchUp(withPast(coop(null)), data, ON), data), [], "running");
+  assert.deepEqual(rankSteps(withPast(coop("lost")), data), [], "not counted yet");
+  assert.deepEqual(rankSteps(ended, { ...data, demo: true }), []);
+  const off = { ...ended, players: ended.players.map((p) => (p.id === 1 ? { ...p, career: { ...p.career!, off: true as const } } : p)) };
+  assert.deepEqual(rankSteps(off, data).map((s) => s.name), ["P2"]);
+  const gm = catchUp(saveOf([row(1, state([right("d5")], { mode: "gamemaster" }), "lost")]), data, ON);
+  assert.deepEqual(rankSteps(gm, data), []);
+  assert.equal(rankMean([]), null);
+  assert.equal(rankMean([5, 10]), (9 * 5 + 10 * 10) / 19);
 });
