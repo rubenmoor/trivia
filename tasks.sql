@@ -44894,9 +44894,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1881, 192, 'write plan: Badge page and celebration', 'plan', 'done', 1000, '2026-11-12, plan 197: Badge page and celebration, decision 591', 'Write the plan for part 5 of `plan 192: masterplan` (Badge page and celebration).
 
 Iterative feedback: the page and the celebration go through gallery shots and a review decision, repeated until the developer approves; say "iterative feedback" in the tasks it concerns. New strings follow `locales/style/<locale>.md`, for es, es-ES, en, de.', '2026-11-01T03:47:43Z', '2026-11-13T00:48:29Z', 1876, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1882, 192, 'write plan: Progress between badges', 'plan', 'open', 1000, NULL, 'Write the plan for part 6 of `plan 192: masterplan` (Progress between badges).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1882, 192, 'write plan: Progress between badges', 'plan', 'done', 1000, '2026-11-12, plan 198: Score, rank and progress between badges; decision 592 raised (further signals), decision 593 recorded (when score and rank show); no files changed', 'Write the plan for part 6 of `plan 192: masterplan` (Progress between badges).
 
-Read part 5''s plan first: the progress bars live on its badge page. Score and rank are decided (`decision 519: Career badge list: grades, rules, 29 badges with names and thresholds?`, as recorded in `plans/24-career.md`): this part shows them, the score counting up or down after every answer, the rank animation at a finished game, a name per rank (catalogs for es, es-ES, en, de, `locales/style/<locale>.md`). The milestone asks for more ideas beyond badges, so the choice of further signals (bars, game nights, the end-of-game line) is the developer''s: raise it as a decision with a recommended set, and link the tasks that wait for it. Screens get iterative feedback through gallery shots, as in part 5.', '2026-11-01T03:47:44Z', NULL, 1876, 0, NULL, 'app');
+Read part 5''s plan first: the progress bars live on its badge page. Score and rank are decided (`decision 519: Career badge list: grades, rules, 29 badges with names and thresholds?`, as recorded in `plans/24-career.md`): this part shows them, the score counting up or down after every answer, the rank animation at a finished game, a name per rank (catalogs for es, es-ES, en, de, `locales/style/<locale>.md`). The milestone asks for more ideas beyond badges, so the choice of further signals (bars, game nights, the end-of-game line) is the developer''s: raise it as a decision with a recommended set, and link the tasks that wait for it. Screens get iterative feedback through gallery shots, as in part 5.', '2026-11-01T03:47:44Z', '2026-11-13T00:50:40Z', 1876, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1883, 192, 'write plan: Career close-out: demo, mods and family playtest', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 192: masterplan` (Demo, mods and close-out).
 
 The demo question is settled by the decision that part 3''s plan task waited for: `pm decision list --all --grep demo`. Covers the milestone''s "Done when" end to end, including the check that buying a DLC changes no badge.', '2026-11-01T03:47:45Z', NULL, 1876, 0, NULL, 'app');
@@ -46374,8 +46374,77 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Review: review set per `decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`, es, es-ES, en, de at 1920x1080 and 1280x800; raise a review decision linking the set, make this task pending on it, repeat until the developer approves
 
 Done when: a solo game and a session that earn badges show each player''s celebration after the end screen in seat order, then Start; opening the page or turning the career on celebrates not-shown badges once; skip and reduced motion work; walkers pass; the developer approved the review set; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:49:18Z', NULL, 1987, 0, 'opus', 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1991, 198, 'create tasks for plan 198: Score, rank and progress between badges', 'split', 'open', 1000, NULL, 'Split plan 198 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-13T00:50:30Z', NULL, 1882, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1991, 198, 'create tasks for plan 198: Score, rank and progress between badges', 'split', 'done', 1000, '2026-11-12, tasks 1992–1997 (1996, 1997 pending decision 592); extra links: 1992 requires 1988 (number format), 1993 requires 1989 (gallery career saves), 1994 requires 1990 (end-screen order with the celebration)', 'Split plan 198 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-13T00:50:30Z', '2026-11-13T00:51:43Z', 1882, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1992, 198, 'Career score and rank texts and helpers', 'work', 'open', NULL, NULL, 'Part of `plan 198: Score, rank and progress between badges`; the texts and helpers the score and rank screens use.
+
+## What
+- Catalog keys (`app/client/src/locales/`, es, es-ES, en, de; read `locales/style/<locale>.md` first): score label («Puntos»/«Points»/«Punkte»), delta («+25», «−1»), rank label («Rango»/«Rank»/«Rang»), the 15 rank names as in `decision 521: Career badge list, revised: 39 badges, score and rank: which score milestones?` / `plans/24-career.md` "Rank" (es-ES = es)
+- One place for `rankText(n)` (rounded rank → name) and `formatScore(n, locale)`; reuse the locale number format the badge texts use (`task 1988: Career badge texts in the catalogs and badgeText`, decision 199: import, don''t copy); en «1,840», es/de per their style guides; negative scores formatted too
+- Glossary rows in the four style guides: score, rank, the 15 rank names
+- Unit test: every row of `plans/24-career.md`''s rank table, number format per locale, negative score, delta signs
+
+## Done when
+Helpers and keys in place, tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:51:00Z', NULL, 1991, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1993, 198, 'Career score after every answer', 'work', 'open', NULL, NULL, 'Part of `plan 198: Score, rank and progress between badges`: the answering player''s career score counts up or down after every answer.
+
+## What
+- `ScoreCount` component: counts from old to new (+d², up to 225, ≈ 1 s) or −1, a small «+25» / «−1» next to it; old value = new − the last entry''s delta (the catch-up step of `task 1980: Career catch-up step and backfill` has run already); reduced motion: new value at once, no counting
+- On `Correct.svelte`, `Wrong.svelte` (and the game-over variant), the timed reveal banner (`Timed.svelte` result line); sessions: next to the seat tag of the answering seat; jokers and `revealed`: nothing
+- Rules, `decision 593: Career score and rank on screen: only where the game counts, for the seat that answered`: career on, qualifying full game only (not demo, not gamemaster); the answering seat''s player (rr-coop: seat on turn; unclaimed timed answers: nothing); never blocks input or lengthens a screen; career off: nothing (`decision 515: Career turned off: what happens to a player''s progress and badges?`); demo build: nothing
+- Sound: existing cues only (`sound.svelte.ts`); a recorded tick sound, if the review asks, is a follow-up task in `plan 32: Recorded sound effects (UI-10)`
+- Gallery: extend the career saves `task 1989: Career badge page on the Player screen` adds to `authoring/tools/gallery_saves.mjs`; shots `correct-score`, `wrong-score`, `session-correct-score`, `timed-score`, frozen at the end of the count
+- Walkers (`authoring/steam/smoke.mjs`, gallery walks, `trivia-trailer`, recorded tapes): unchanged since nothing blocks; check they still pass
+- Docs: `plans/24-career.md` new section "Progress on screen", `plans/04-ui-tv-display.md`
+- Iterative feedback: a review set of the shots (`decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`, es, es-ES, en, de, 1920x1080 and 1280x800), a review decision linking it, repeated until approved
+
+## Done when
+The developer approved the review set; nothing shows when the career is off, in the demo or in games that count nothing; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:51:13Z', NULL, 1991, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1994, 198, 'Career rank bar at a finished game', 'work', 'open', NULL, NULL, 'Part of `plan 198: Score, rank and progress between badges`: each player''s rank moves on the end screens of a finished game.
+
+## What
+- `RankBar` component: bar on the 1–15 scale moving from the old rank value to the new one; rounded number and name (`rankText`, `task 1992: Career score and rank texts and helpers`) change when a whole number is crossed (name crossfade, an existing cue from `sound.svelte.ts` on rank up); first finished game: the rank appears; reduced motion: new value at once; a still mode for the badge page header (next task)
+- Old value from `ranks` without the newest entry (`rankOf`)
+- On `Victory.svelte` and the game-ending `Wrong`/`Completed` screens, per seat with a player and the career on (`decision 593: Career score and rank on screen: only where the game counts, for the seat that answered`); abandoned or unfinished games, career off, demo, games that count nothing: nothing
+- Order at game end: end screen (with rank) → celebration (`task 1990: Career celebration of new badges`) → Start (`decision 591: Career badge page: where it opens, where the career is turned off, when new badges are celebrated`); the rank never delays input or lengthens the screen
+- Gallery shots `victory-rank`, `wrong-rank`, `session-victory-rank`, `rank-first` (frozen at the end of the animation); walkers checked as in `task 1990`
+- Docs: `plans/24-career.md` "Progress on screen", `plans/04-ui-tv-display.md`
+- Iterative feedback: a review set of the shots (`decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`, es, es-ES, en, de, 1920x1080 and 1280x800), a review decision linking it, repeated until approved
+
+## Done when
+The developer approved the review set; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:51:13Z', NULL, 1991, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1995, 198, 'Career score and rank in the badge page header', 'work', 'open', NULL, NULL, 'Part of `plan 198: Score, rank and progress between badges`: the badge page shows the player''s score and rank.
+
+## What
+- In the header slot of the badge page (`task 1989: Career badge page on the Player screen`): score (`formatScore`), rank number and name, `RankBar` still (`task 1994: Career rank bar at a finished game`); no rank before the first finished game
+- Career off: the page shows only the switch, so nothing (`decision 591: Career badge page: where it opens, where the career is turned off, when new badges are celebrated`); demo: no page
+- Gallery shots `career`, `career-full` reshot
+- Iterative feedback: a review set of the shots (`decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`, es, es-ES, en, de, 1920x1080 and 1280x800), a review decision linking it, repeated until approved
+
+## Done when
+The developer approved the review set; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:51:27Z', NULL, 1991, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1996, 198, 'Career progress bars on the badge page', 'work', 'open', NULL, NULL, 'Part of `plan 198: Score, rank and progress between badges`, built only if `decision 592: Career progress beyond badges, score and rank: which further signals?` chooses bars; drop this task otherwise.
+
+## What
+- `badgeProgress(view, id)` next to the badge list in `engine/career.ts`: count / threshold per open badge from the player view (subject × grade «12 / 25», Universidad, school years, diplomas «n / 7», score to the next milestone); no save change
+- A bar per open badge on the badge page (`task 1989: Career badge page on the Player screen`), numbers in the locale format (`formatScore`, `task 1992: Career score and rank texts and helpers`); earned badges: no bar
+- Unit tests for every badge family, edge cases (0, at threshold, negative score)
+- Gallery shots `career`, `career-full` reshot
+- Iterative feedback: a review set of the shots (`decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`, es, es-ES, en, de, 1920x1080 and 1280x800), a review decision linking it, repeated until approved
+
+## Done when
+The developer approved the review set; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:51:27Z', NULL, 1991, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1997, 198, 'Career «your progress» line at game end', 'work', 'open', NULL, NULL, 'Part of `plan 198: Score, rank and progress between badges`, built only if `decision 592: Career progress beyond badges, score and rank: which further signals?` chooses the line; drop or reshape this task per the answer (it also adds game nights or the Player-screen rank if the answer chooses them).
+
+## What
+- Per player with the career on, on the end screens after the rank bar (`task 1994: Career rank bar at a finished game`): points this game and the closest open badge (largest share of its threshold, ties in live order) via `badgeProgress` (`task 1996: Career progress bars on the badge page`), e.g. «+340 puntos · faltan 3 para Secundaria: Ciencia y tecnología»
+- Rules as the rank bar: `decision 593: Career score and rank on screen: only where the game counts, for the seat that answered`; before the celebration (`decision 591: Career badge page: where it opens, where the career is turned off, when new badges are celebrated`); never delays input
+- Catalogs es, es-ES, en, de; read `locales/style/<locale>.md` first, new bad patterns into it
+- Gallery shots `victory-rank`, `session-victory-rank` reshot
+- Iterative feedback: a review set of the shots (`decision 352: Gallery reviews: a review set of the touched shots, linked as /gallery?set=<name>`, es, es-ES, en, de, 1920x1080 and 1280x800), a review decision linking it, repeated until approved
+
+## Done when
+The developer approved the review set; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-13T00:51:28Z', NULL, 1991, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -55417,7 +55486,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2154, 1982, '2026-11-13T00:45:14Z', '2026-11-13T00:46:24Z', 'done', NULL, 0, '08d630eb85f3647970f3a5cf8656a6cc084d2533', NULL, 'claude-opus-5-5', '50f37d9b-1cf9-457b-b149-056a654641da', NULL, 10, 18, 4963, 405182, 40999, 0.50836039999999994, 55883, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2155, 1881, '2026-11-13T00:45:29Z', '2026-11-13T00:48:39Z', 'done', NULL, 0, '6ddf81055a7c5460821eb25dbb8557eb524fc34c', 'app', 'claude-opus-5-5', '426d8c18-3c28-4fd9-8353-25b1cc1c73e8', NULL, 20, 38, 12456, 1321868, 83817, 1.1841815999999998, 98820, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2156, 1987, '2026-11-13T00:48:26Z', '2026-11-13T00:49:38Z', 'done', NULL, 0, 'eb91a6018ba43be76b52bf2fc7ef85cb009f44d6', NULL, 'claude-opus-5-5', '45b2a67a-e4a4-47d9-9721-b62f47f1b73f', NULL, 11, 22, 5347, 485342, 38699, 0.5136884, 53624, 60, 118424);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2157, 1882, '2026-11-13T00:48:39Z', NULL, 'running', NULL, NULL, 'eb91a6018ba43be76b52bf2fc7ef85cb009f44d6', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2157, 1882, '2026-11-13T00:48:39Z', '2026-11-13T00:50:51Z', 'done', NULL, 0, 'eb91a6018ba43be76b52bf2fc7ef85cb009f44d6', 'app', 'claude-opus-5-5', '14acb548-deb2-402c-a59d-5f53a4afd179', NULL, 16, 32, 9873, 1030851, 69301, 0.9581662, 83651, 60, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2158, 1991, '2026-11-13T00:50:33Z', '2026-11-13T00:51:49Z', 'done', NULL, 0, '794260f4b4cfbd8fe5dacddbf49bd4015301c731', NULL, 'claude-opus-5-5', '2477d255-894a-4c6e-bbb1-df7231dfc361', NULL, 10, 20, 6412, 454881, 41019, 0.5474482, 55368, 60, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2159, 1883, '2026-11-13T00:50:51Z', NULL, 'running', NULL, NULL, '794260f4b4cfbd8fe5dacddbf49bd4015301c731', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 118424);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -56120,6 +56191,8 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1886, 517);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1887, 519);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1887, 521);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1889, 520);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1996, 592);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1997, 592);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
@@ -56347,6 +56420,18 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1989, 198
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1989, 1984);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1989, 1988);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1990, 1989);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1992, 1981);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1992, 1988);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1993, 1980);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1993, 1989);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1993, 1992);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1994, 1990);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1994, 1993);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1995, 1989);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1995, 1994);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1996, 1995);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1997, 1994);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1997, 1996);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
