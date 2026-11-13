@@ -363,7 +363,7 @@ export function newGame(
     deal(work, state, data, io);
     work.games.push({
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: pid,
-      ...(locale === "es" ? {} : { locale }), state: structuredClone(state),
+      ...(locale === "es" ? {} : { locale }), ...(data.demo ? { demo: true as const } : {}), state: structuredClone(state),
     });
     return state;
   });
@@ -410,7 +410,7 @@ export function newSession(
     };
     const row: GameRow = {
       id: nextId(work.games), started_on: io.now, finished_on: null, result: null, player_id: null,
-      ...(data.locale === "es" ? {} : { locale: data.locale }), ...(timed ? {} : { turn: 0 }),
+      ...(data.locale === "es" ? {} : { locale: data.locale }), ...(data.demo ? { demo: true as const } : {}), ...(timed ? {} : { turn: 0 }),
       seats: ids.map((player_id, i) => (competitive
         ? { player_id, ...device(i), state: freshState({ ...seatArgs[i], age_group: choices[i].age_group ?? undefined }, choices[i], mode as GameMode, overrides) }
         : timed ? { player_id, ...device(i), lives: LIVES } : { player_id, ...device(i) })),

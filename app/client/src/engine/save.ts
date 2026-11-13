@@ -76,6 +76,7 @@ export function parseSave(json: unknown): SaveData {
   if (!doc.games.every((g: Record<string, any>) => isObject(g.state))) throw new Error("every game needs a state");
   if (!doc.games.every((g: Record<string, any>) => g.locale === undefined || typeof g.locale === "string"))
     throw new Error("a game's locale must be text");
+  if (!doc.games.every((g: Record<string, any>) => g.demo === undefined || g.demo === true)) throw new Error("a game's demo mark must be true");
   for (const g of doc.games) checkSession(g);
   const flags = doc.flags ?? {};
   if (!isObject(flags)) throw new Error("flags must be an object");
