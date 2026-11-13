@@ -1,6 +1,6 @@
 # 24 — Career: Subjects, Grades, Badges, Score and Rank
 
-**Status:** agreed (design only; no code yet)
+**Status:** agreed; engine module and save v6 built, counting not yet wired
 
 The career gives each player a long-term sense of progress: school-style subjects with grades that rise with harder questions, badges for it, a lifelong score and a rank with a name that follows the last ten games. It is the design of `plan 193: Career design: subjects, grades and badge list` (part 1 of `plan 192: masterplan`, `milestone 20: give a player a sense of progress`); parts 2 to 7 build on this file and need no other source.
 
@@ -159,6 +159,19 @@ The career gives each player a long-term sense of progress: school-style subject
 
 ## Supply figures
 - `qgen report --career [--subjects FILE] [--locale …] [--json]` (needs Node, dev shell): per category × band supply and games-to-N from the engine sessions (`authoring/tools/sim/career.ts`); output of 2026-11-04 in `work/career/supply-categories.md`.
+
+## Engine and save (`plan 195: Career engine and save`)
+- Counters are stored, not derived (`decision 589: Career engine: counters per player in the save, kept up by one catch-up step after every game action`); save version 6, upgrade 5 → 6 a no-op (the bump keeps older builds off saves with careers). Code: `app/client/src/engine/career.ts` (pure), checks in `engine/save.ts` `parseSave`.
+- `GameRow.demo?: true`: demo build game; never counted (`decision 516`).
+- `GameRow.career?`: `cursor` (history entries counted per state: `row.state`, then each seat's own), `ended: true` once the game end is counted.
+- `PlayerRow.career?`:
+  - `off?: true`; `score` (integer, may be negative)
+  - `right`: subject id → 4 counts, right answers at difficulty 1+, 5+, 9+, 13+
+  - `years`: age group id → finished games; `ranks`: last 10 rank values, newest last
+  - `badges`: API name → `{ on, shown? }`
+- Reducers (`career.ts`): `countRight` (+d², every band floor ≤ d for the category's subject; no or unknown subject: score only, `decision 588`), `countWrong` (−1), `countEnd` (years +1, rank value, keep 10), `newBadges` / `award` (reached and not held, never removed), `rankOf` (weights 10..1 newest first, half up, at least 1, null without games), `rankIndex` (0-based into the 15 names).
+- `BADGES` / `BADGE_NAMES`: the 39 in live order; thresholds: 15 / 25 / 15 right per subject at grades elementary / middle / high, diplomas = grade in all 7 subjects, college = 15 right at 13+ summed over subjects, school year = 20 finished games, score milestones.
+- Not yet (tasks of plan 195): calling the reducers from the game, backfill, ops and reads.
 
 ## Parts (`plan 192: masterplan`)
 - Part 2 subjects in the data; part 3 and later: engine and save, badge page, Steam, UI texts; they read this file.

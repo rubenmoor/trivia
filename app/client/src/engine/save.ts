@@ -10,6 +10,7 @@ const UPGRADES: Record<number, (doc: Record<string, any>) => Record<string, any>
   2: upgradeBurns, // plan 65: seen counters
   3: mergeReports, // decision 60: one entry per flag
   4: (doc) => doc, // plan 157: session rows (seats); no v4 save has any, the bump keeps older builds off a session
+  5: (doc) => doc, // plan 195: careers; the bump keeps older builds off a save with one
 };
 
 /** v2 → v3: a player's burn → one seen row; a burn for everyone (player_id null) → blocked. */
@@ -50,6 +51,27 @@ function checkSession(g: Record<string, any>): void {
     throw new Error("turn must be an index into seats");
 }
 
+const isCount = (v: unknown) => Number.isInteger(v) && (v as number) >= 0;
+
+/** A player's `career` (plan 195). */
+function checkPlayerCareer(c: unknown): void {
+  const bad = (what: string) => { throw new Error(`a player's career: ${what}`); };
+  if (!isObject(c)) return bad("must be an object");
+  if (c.off !== undefined && c.off !== true) bad("off must be true");
+  if (!Number.isInteger(c.score)) bad("score must be an integer");
+  if (!isObject(c.right) || !Object.values(c.right).every((r) => Array.isArray(r) && r.length === 4 && r.every(isCount))) bad("right must map subjects to 4 counts");
+  if (!isObject(c.years) || !Object.values(c.years).every(isCount)) bad("years must map age groups to counts");
+  if (!Array.isArray(c.ranks) || c.ranks.length > 10 || !c.ranks.every(isCount)) bad("ranks must be at most 10 numbers");
+  if (!isObject(c.badges) || !Object.values(c.badges).every((b) => isObject(b) && typeof b.on === "string" && (b.shown === undefined || b.shown === true)))
+    bad("badges must map names to { on, shown? }");
+}
+
+/** A game row's `career` (plan 195). */
+function checkGameCareer(c: unknown): void {
+  if (!isObject(c) || !Array.isArray(c.cursor) || !c.cursor.every(isCount) || (c.ended !== undefined && c.ended !== true))
+    throw new Error("a game's career must be { cursor: counts, ended? }");
+}
+
 /** A save from a newer game (plan 55): the desktop backs it up as `newer`, not `corrupt`. */
 export class SaveNewerError extends Error {
   readonly code = "save_newer";
@@ -77,7 +99,11 @@ export function parseSave(json: unknown): SaveData {
   if (!doc.games.every((g: Record<string, any>) => g.locale === undefined || typeof g.locale === "string"))
     throw new Error("a game's locale must be text");
   if (!doc.games.every((g: Record<string, any>) => g.demo === undefined || g.demo === true)) throw new Error("a game's demo mark must be true");
-  for (const g of doc.games) checkSession(g);
+  for (const g of doc.games) {
+    checkSession(g);
+    if (g.career !== undefined) checkGameCareer(g.career);
+  }
+  for (const p of doc.players) if (p.career !== undefined) checkPlayerCareer(p.career);
   const flags = doc.flags ?? {};
   if (!isObject(flags)) throw new Error("flags must be an object");
   const stored = doc.language ?? SPANISH;

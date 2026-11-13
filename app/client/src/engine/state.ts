@@ -4,9 +4,10 @@ import type { Category, Difficulty, ErrorInfo, GameMode, JokerBudget, JokerName,
 import type { AgeGroup, Bundle, PoolQuestion } from "./pool.ts";
 import { broadOf, byId, subKey } from "./pool.ts";
 import { pyRepr } from "./pycompat.ts";
+import type { GameCareer, PlayerCareer } from "./career.ts";
 import type { Rng } from "./rng.ts";
 
-export const SAVE_VERSION = 5; // bump authoring/tools/save_file.py's upgrades too (and app/server/save.py VERSION/LISTS until task 765)
+export const SAVE_VERSION = 6; // bump authoring/tools/save_file.py's upgrades too (and app/server/save.py VERSION/LISTS until task 765)
 
 export type { Language };
 
@@ -53,6 +54,8 @@ export interface PlayerRow {
   id: number;
   name: string;
   created_on: string;
+  /** Counters and badges (plan 195), created on the first count; since version 6. */
+  career?: PlayerCareer;
 }
 
 export interface GameRow {
@@ -71,6 +74,8 @@ export interface GameRow {
   locale?: string;
   /** Played in the demo build (plan 195): the career never counts it. Left out otherwise. */
   demo?: true;
+  /** What the career has counted of this row (plan 195); since version 6. */
+  career?: GameCareer;
   state: GameState;
 }
 

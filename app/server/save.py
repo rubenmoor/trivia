@@ -16,10 +16,11 @@ import json, os, sqlite3, tempfile, threading, time
 import paths
 
 FILE = paths.STATE / "game.json"
-VERSION = 5  # the client upgrades older saves (engine/save.ts)
+VERSION = 6  # the client upgrades older saves (engine/save.ts)
 MIGRATE_VERSION = 2  # what migrate() writes
 LISTS = {2: ("players", "games", "burned", "reports"), 3: ("players", "games", "seen", "blocked", "reports"),
-         4: ("players", "games", "seen", "blocked"), 5: ("players", "games", "seen", "blocked")}
+         4: ("players", "games", "seen", "blocked"), 5: ("players", "games", "seen", "blocked"),
+         6: ("players", "games", "seen", "blocked")}
 MAX_BYTES = 10 * 1024 * 1024
 BACKUPS = paths.STATE / "backup"
 KINDS = ("corrupt", "newer")

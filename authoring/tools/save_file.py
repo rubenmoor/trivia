@@ -6,6 +6,7 @@ blocked questions from the newest. Without a save: none of them. Never writes th
 only its own ledger:
 
 Version 5 (plan 157) adds multiplayer session rows to `games` (`seats`); this module reads none of that.
+Version 6 (plan 195) adds `career` to player and game rows and `demo` to game rows; this module reads none of that.
 
     flags-applied.json   {"<question id>": "<flagged_on>[ <note>]"}   flags already turned into reviews (stamp())
 """

@@ -64,6 +64,21 @@ test("v3 → v4: reports become flags or add their note", () => {
   assert.ok(!("reports" in out));
 });
 
+test("v5 → v6 unchanged; career shapes are checked", () => {
+  assert.deepEqual(parseSave({ ...full, version: 5 }), full);
+  const career = { off: true, score: -3, right: { history: [1, 1, 0, 0] }, years: { kids: 2 }, ranks: [3], badges: { CAREER_SCORE_100: { on: "t", shown: true } } };
+  const ok = { ...full, players: [{ id: 1, name: "Bo", created_on: "t0", career }], games: full.games.map((g) => ({ ...g, career: { cursor: [2, 0], ended: true } })) };
+  assert.deepEqual(parseSave(ok), ok);
+  const player = (c: unknown) => ({ ...full, players: [{ id: 1, name: "Bo", created_on: "t0", career: c }] });
+  for (const bad of [1, { ...career, score: 1.5 }, { ...career, off: false }, { ...career, right: { history: [1] } }, { ...career, years: { kids: -1 } },
+    { ...career, ranks: Array(11).fill(1) }, { ...career, badges: { X: {} } }, { ...career, badges: { X: { on: "t", shown: false } } }]) {
+    assert.throws(() => parseSave(player(bad)), /career/);
+  }
+  for (const bad of [1, { cursor: "x" }, { cursor: [-1] }, { cursor: [1], ended: false }]) {
+    assert.throws(() => parseSave({ ...full, games: full.games.map((g) => ({ ...g, career: bad })) }), /career/);
+  }
+});
+
 test("v4 → v5 unchanged; a session row round-trips parseSave and mapOldKeys", () => {
   assert.deepEqual(parseSave({ ...full, version: 4 }), full);
   const state = { ...db.games[0].state, purged: ["old"] };
