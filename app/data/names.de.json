@@ -286,5 +286,14 @@
     "brand-origins": "Woher Marken kommen",
     "famous-companies": "Berühmte Firmen",
     "supermarket-products": "Produkte aus dem Supermarkt"
+  },
+  "subjects": {
+    "history": "Geschichte und Geisteswissenschaften",
+    "geography": "Geografie und Gesellschaft",
+    "nature": "Naturkunde",
+    "science": "Naturwissenschaft und Technik",
+    "arts": "Literatur und Kunst",
+    "media": "Medienkunde",
+    "sport": "Sport und Spiele"
   }
 }

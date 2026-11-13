@@ -1,0 +1,33 @@
+{
+  "about": "The 7 career subjects (plan 194): fixed ordered list, never grows with a bundle; names in names.<locale>.json, each category's subject in its categories.json.",
+  "subjects": [
+    {
+      "id": "history",
+      "about": "Past, myths, languages, religion and philosophy."
+    },
+    {
+      "id": "geography",
+      "about": "Places, buildings, customs, food and money."
+    },
+    {
+      "id": "nature",
+      "about": "Animals, plants, the human body and the planet."
+    },
+    {
+      "id": "science",
+      "about": "Science, maths, space, inventions and transport."
+    },
+    {
+      "id": "arts",
+      "about": "Art, literature, music and design."
+    },
+    {
+      "id": "media",
+      "about": "Film, TV, video games and brands."
+    },
+    {
+      "id": "sport",
+      "about": "Sports, football, games and curiosities."
+    }
+  ]
+}

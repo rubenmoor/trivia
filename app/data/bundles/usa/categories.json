@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "geography",
+      "subject": "geography",
       "subcategories": [
         "states-and-capitals",
         "cities-and-towns",
@@ -12,6 +13,7 @@
     },
     {
       "slug": "nature",
+      "subject": "nature",
       "subcategories": [
         "wildlife",
         "plants-and-trees",
@@ -21,6 +23,7 @@
     },
     {
       "slug": "history",
+      "subject": "history",
       "subcategories": [
         "native-nations",
         "colonies-and-founding",
@@ -31,6 +34,7 @@
     },
     {
       "slug": "people",
+      "subject": "history",
       "subcategories": [
         "inventors-and-founders",
         "trailblazers"
@@ -38,6 +42,7 @@
     },
     {
       "slug": "food-and-drink",
+      "subject": "geography",
       "subcategories": [
         "regional-dishes",
         "home-cooking",
@@ -48,6 +53,7 @@
     },
     {
       "slug": "festivals-and-traditions",
+      "subject": "geography",
       "subcategories": [
         "holidays",
         "winter-holidays",
@@ -57,6 +63,7 @@
     },
     {
       "slug": "myths-and-legends",
+      "subject": "history",
       "subcategories": [
         "folk-heroes-and-tall-tales",
         "cryptids-and-ufos",
@@ -65,6 +72,7 @@
     },
     {
       "slug": "music-and-dance",
+      "subject": "arts",
       "subcategories": [
         "country-and-folk",
         "roots-and-soul",
@@ -73,6 +81,7 @@
     },
     {
       "slug": "art-and-literature",
+      "subject": "arts",
       "subcategories": [
         "american-literature",
         "childrens-books",
@@ -81,6 +90,7 @@
     },
     {
       "slug": "film-and-television",
+      "subject": "media",
       "subcategories": [
         "tv-shows",
         "kids-tv",
@@ -90,6 +100,7 @@
     },
     {
       "slug": "sports",
+      "subject": "sport",
       "subcategories": [
         "american-football",
         "baseball",
@@ -99,6 +110,7 @@
     },
     {
       "slug": "how-people-speak",
+      "subject": "history",
       "subcategories": [
         "words-and-slang",
         "sayings-and-idioms",
@@ -107,6 +119,7 @@
     },
     {
       "slug": "daily-life",
+      "subject": "geography",
       "subcategories": [
         "money-and-shopping",
         "school-life",
@@ -116,6 +129,7 @@
     },
     {
       "slug": "symbols",
+      "subject": "geography",
       "subcategories": [
         "national-symbols",
         "state-symbols"

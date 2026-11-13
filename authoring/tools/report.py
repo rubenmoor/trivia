@@ -558,7 +558,8 @@ def report_career(args):
     groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
     models = ["strong", "typical"] if (args.player or "both") == "both" else [args.player]
     counts = [args.players] if args.players else CAREER_PLAYERS
-    subjects = load_json(Path(args.subjects)) if args.subjects else None
+    subjects = load_json(Path(args.subjects)) if args.subjects else {  # default: the data's (plan 194), `<bundle>/<category>` keys
+        categories.sub_key(c["bundle"], c["slug"]): c["subject"] for c in categories.load()}
     cells = [{"locale": l, "bundles": args.bundles.split(",") if args.bundles else ["base"], "age_group": g, "player": p,
               "players": n, "seeds": args.seeds or 3, "games": args.games or 100, "subjects": subjects}
              for l in locales for g in groups for p in models for n in counts]

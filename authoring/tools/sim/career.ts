@@ -113,7 +113,7 @@ function career(cell: CareerCell, loaded: Loaded) {
     const key = cat(q), b = bandOf(q.difficulty);
     if (key === null || b < 0) return null;
     const slug = key.includes("/") ? key.slice(key.indexOf("/") + 1) : key;
-    return { row: cell.subjects?.[slug] ?? slug, band: b };
+    return { row: cell.subjects?.[key] ?? cell.subjects?.[slug] ?? slug, band: b };
   };
   const inGame = data.pool.filter((q) => bundles.has(q.bundle ?? "base"));
   const rowById = new Map(inGame.map((q) => [q.id, rowFor(q)] as const));

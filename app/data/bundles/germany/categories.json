@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "geography",
+      "subject": "geography",
       "subcategories": [
         "states-and-capitals",
         "cities-and-towns",
@@ -13,6 +14,7 @@
     },
     {
       "slug": "nature",
+      "subject": "nature",
       "subcategories": [
         "native-animals",
         "plants-and-forests",
@@ -21,6 +23,7 @@
     },
     {
       "slug": "history",
+      "subject": "history",
       "subcategories": [
         "early-history",
         "reformation-to-empire",
@@ -31,6 +34,7 @@
     },
     {
       "slug": "people",
+      "subject": "history",
       "subcategories": [
         "inventors-and-scientists",
         "founders-and-entrepreneurs"
@@ -38,6 +42,7 @@
     },
     {
       "slug": "food-and-drink",
+      "subject": "geography",
       "subcategories": [
         "regional-dishes",
         "sausages-and-cheese",
@@ -48,6 +53,7 @@
     },
     {
       "slug": "festivals-and-traditions",
+      "subject": "geography",
       "subcategories": [
         "advent-and-christmas",
         "carnival-and-fairs",
@@ -57,6 +63,7 @@
     },
     {
       "slug": "myths-and-legends",
+      "subject": "history",
       "subcategories": [
         "legends-and-figures",
         "superstitions-and-folk-beliefs"
@@ -64,6 +71,7 @@
     },
     {
       "slug": "music-and-dance",
+      "subject": "arts",
       "subcategories": [
         "schlager-and-folk-music",
         "pop-and-rock",
@@ -73,6 +81,7 @@
     },
     {
       "slug": "art-and-literature",
+      "subject": "arts",
       "subcategories": [
         "classic-literature",
         "childrens-books-and-comics",
@@ -81,6 +90,7 @@
     },
     {
       "slug": "film-and-television",
+      "subject": "media",
       "subcategories": [
         "series-and-crime",
         "childrens-tv-and-audio-dramas",
@@ -90,6 +100,7 @@
     },
     {
       "slug": "sports",
+      "subject": "sport",
       "subcategories": [
         "bundesliga-and-clubs",
         "national-team",
@@ -99,6 +110,7 @@
     },
     {
       "slug": "how-people-speak",
+      "subject": "history",
       "subcategories": [
         "dialects-and-regional-words",
         "sayings-and-idioms",
@@ -107,6 +119,7 @@
     },
     {
       "slug": "daily-life",
+      "subject": "geography",
       "subcategories": [
         "brands-and-products",
         "money-and-shopping",
@@ -117,6 +130,7 @@
     },
     {
       "slug": "symbols",
+      "subject": "geography",
       "subcategories": [
         "national-symbols-and-state",
         "state-and-city-emblems"
@@ -124,6 +138,7 @@
     },
     {
       "slug": "east-germany",
+      "subject": "history",
       "subcategories": [
         "gdr-history",
         "gdr-everyday-life"

@@ -1,12 +1,12 @@
 {
   "categories": [
-    {"slug": "holidays-and-traditions", "subcategories": [
+    {"slug": "holidays-and-traditions", "subject": "geography", "subcategories": [
       "christmas",
       "celebrations-around-the-world",
       "calendars-and-new-year",
       "manners-and-customs"
     ]},
-    {"slug": "food-and-drink", "subcategories": [
+    {"slug": "food-and-drink", "subject": "geography", "subcategories": [
       "vegetables",
       "italian-food",
       "mexican-food",
@@ -18,7 +18,7 @@
       "sweets-and-chocolate",
       "food-history"
     ]},
-    {"slug": "world-geography", "subcategories": [
+    {"slug": "world-geography", "subject": "geography", "subcategories": [
       "continents",
       "countries",
       "capital-cities",
@@ -28,7 +28,7 @@
       "deserts",
       "islands"
     ]},
-    {"slug": "planet-earth", "subcategories": [
+    {"slug": "planet-earth", "subject": "nature", "subcategories": [
       "planet-earth",
       "the-sea",
       "oceans",
@@ -39,19 +39,19 @@
       "natures-records",
       "rocks-and-minerals"
     ]},
-    {"slug": "plants-and-environment", "subcategories": [
+    {"slug": "plants-and-environment", "subject": "nature", "subcategories": [
       "plants",
       "trees",
       "environment",
       "recycling"
     ]},
-    {"slug": "amazon", "subcategories": [
+    {"slug": "amazon", "subject": "nature", "subcategories": [
       "amazon-animals",
       "amazon-plants",
       "indigenous-peoples-of-the-amazon",
       "amazon-history-and-exploration"
     ]},
-    {"slug": "animals", "subcategories": [
+    {"slug": "animals", "subject": "nature", "subcategories": [
       "mammals",
       "birds",
       "reptiles",
@@ -62,13 +62,13 @@
       "animal-records",
       "african-wildlife"
     ]},
-    {"slug": "pets-and-farm", "subcategories": [
+    {"slug": "pets-and-farm", "subject": "nature", "subcategories": [
       "farm-animals",
       "dogs",
       "cats",
       "unusual-pets"
     ]},
-    {"slug": "science-and-maths", "subcategories": [
+    {"slug": "science-and-maths", "subject": "science", "subcategories": [
       "science",
       "maths",
       "numbers",
@@ -78,19 +78,19 @@
       "famous-scientists",
       "nobel-prizes"
     ]},
-    {"slug": "human-body", "subcategories": [
+    {"slug": "human-body", "subject": "nature", "subcategories": [
       "human-body",
       "body-oddities",
       "medicine-and-health",
       "brain-and-mind"
     ]},
-    {"slug": "space", "subcategories": [
+    {"slug": "space", "subject": "science", "subcategories": [
       "space",
       "solar-system",
       "space-race-and-astronauts",
       "stars-and-galaxies"
     ]},
-    {"slug": "inventions-and-technology", "subcategories": [
+    {"slug": "inventions-and-technology", "subject": "science", "subcategories": [
       "inventions",
       "famous-inventors",
       "accidental-inventions",
@@ -101,13 +101,13 @@
       "social-media",
       "youtubers"
     ]},
-    {"slug": "transport", "subcategories": [
+    {"slug": "transport", "subject": "science", "subcategories": [
       "cars",
       "planes",
       "trains",
       "ships-and-boats"
     ]},
-    {"slug": "history", "subcategories": [
+    {"slug": "history", "subject": "history", "subcategories": [
       "history",
       "prehistory",
       "dinosaurs",
@@ -127,14 +127,14 @@
       "famous-crimes",
       "famous-scandals"
     ]},
-    {"slug": "myths-and-legends", "subcategories": [
+    {"slug": "myths-and-legends", "subject": "history", "subcategories": [
       "greek-gods",
       "greek-heroes",
       "roman-mythology",
       "norse-mythology",
       "legends-and-superstitions"
     ]},
-    {"slug": "music", "subcategories": [
+    {"slug": "music", "subject": "arts", "subcategories": [
       "musical-instruments",
       "classical-music",
       "world-music",
@@ -145,7 +145,7 @@
       "musicals",
       "childrens-songs"
     ]},
-    {"slug": "film-tv-and-superheroes", "subcategories": [
+    {"slug": "film-tv-and-superheroes", "subject": "media", "subcategories": [
       "film",
       "tv-series",
       "disney-films",
@@ -165,19 +165,19 @@
       "harry-potter",
       "the-lord-of-the-rings"
     ]},
-    {"slug": "video-games", "subcategories": [
+    {"slug": "video-games", "subject": "media", "subcategories": [
       "video-games",
       "retro-games",
       "video-game-characters",
       "consoles-and-game-companies"
     ]},
-    {"slug": "football", "subcategories": [
+    {"slug": "football", "subject": "sport", "subcategories": [
       "football",
       "world-cups",
       "football-history",
       "international-football"
     ]},
-    {"slug": "sports", "subcategories": [
+    {"slug": "sports", "subject": "sport", "subcategories": [
       "basketball",
       "tennis",
       "swimming",
@@ -189,7 +189,7 @@
       "rugby",
       "cricket"
     ]},
-    {"slug": "art-and-literature", "subcategories": [
+    {"slug": "art-and-literature", "subject": "arts", "subcategories": [
       "art",
       "museums",
       "colours",
@@ -201,13 +201,13 @@
       "crime-fiction",
       "photography"
     ]},
-    {"slug": "languages-and-words", "subcategories": [
+    {"slug": "languages-and-words", "subject": "history", "subcategories": [
       "language",
       "languages-of-the-world",
       "famous-quotes",
       "proverbs-of-the-world"
     ]},
-    {"slug": "games-and-curiosities", "subcategories": [
+    {"slug": "games-and-curiosities", "subject": "sport", "subcategories": [
       "toys",
       "board-games",
       "magic",
@@ -217,14 +217,14 @@
       "circus",
       "famous-duos"
     ]},
-    {"slug": "fashion-and-design", "subcategories": [
+    {"slug": "fashion-and-design", "subject": "arts", "subcategories": [
       "fashion-history",
       "fashion-designers",
       "traditional-dress",
       "shoes-and-accessories",
       "product-design"
     ]},
-    {"slug": "architecture-and-landmarks", "subcategories": [
+    {"slug": "architecture-and-landmarks", "subject": "geography", "subcategories": [
       "wonders-of-the-world",
       "famous-landmarks",
       "skyscrapers",
@@ -232,21 +232,21 @@
       "temples-and-cathedrals",
       "architectural-styles"
     ]},
-    {"slug": "money-and-currencies", "subcategories": [
+    {"slug": "money-and-currencies", "subject": "geography", "subcategories": [
       "world-currencies",
       "banknotes",
       "history-of-money",
       "saving-and-banks",
       "economy-and-stock-market"
     ]},
-    {"slug": "religion-and-philosophy", "subcategories": [
+    {"slug": "religion-and-philosophy", "subject": "history", "subcategories": [
       "world-religions",
       "bible-stories",
       "sacred-places",
       "famous-philosophers",
       "big-questions"
     ]},
-    {"slug": "brands-and-logos", "subcategories": [
+    {"slug": "brands-and-logos", "subject": "media", "subcategories": [
       "famous-logos",
       "advertising-slogans",
       "brand-mascots",
