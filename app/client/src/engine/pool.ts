@@ -170,16 +170,18 @@ export function modPool(json: unknown, bundle: string, subcategories: Iterable<s
   return { questions, reasons, badQuestions: raw.length - questions.length, badMedia };
 }
 
-/** A categories file's subcategories if well-formed (slugs, keys unique within it; `name` optional, decision 259), else null. */
-export function modSubcategories(file: unknown): { slugs: string[]; subs: string[] } | null {
+/** A categories file's subcategories if well-formed (slugs, keys unique within it; `name` optional, decision 259), else null.
+ * `subject` optional (decision 588): a non-string makes it malformed; `badSubjects`: slugs whose subject isn't in `subjects`. */
+export function modSubcategories(file: unknown, subjects: readonly string[] = []): { slugs: string[]; subs: string[]; badSubjects: string[] } | null {
   const cats = (file as { categories?: unknown } | null)?.categories;
   if (!Array.isArray(cats) || !cats.length) return null;
-  const ok = cats.every((c) => typeof c?.slug === "string" && c.slug && (c.name === undefined || typeof c.name === "string") && Array.isArray(c.subcategories)
+  const ok = cats.every((c) => typeof c?.slug === "string" && c.slug && (c.name === undefined || typeof c.name === "string") && (c.subject === undefined || typeof c.subject === "string") && Array.isArray(c.subcategories)
     && c.subcategories.length && c.subcategories.every((s: unknown) => typeof s === "string" && s));
   if (!ok) return null;
   const slugs = cats.map((c) => c.slug as string);
   const subs = cats.flatMap((c) => c.subcategories as string[]);
-  return new Set(slugs).size === slugs.length && new Set(subs).size === subs.length ? { slugs, subs } : null;
+  const badSubjects = cats.filter((c) => c.subject !== undefined && !subjects.includes(c.subject)).map((c) => c.slug as string);
+  return new Set(slugs).size === slugs.length && new Set(subs).size === subs.length ? { slugs, subs, badSubjects } : null;
 }
 
 /** The bundles offered in `locale`, bundles.json order (plan 71). */
@@ -258,11 +260,14 @@ export function withPacks(
 
 /** app/data/bundles.json and each bundle's categories file → categories in display order, base first.
  * A bundle without a file has none. */
-export function loadCategories(bundlesJson: unknown, files: Record<string, unknown>): Category[] {
+export function loadCategories(bundlesJson: unknown, files: Record<string, unknown>, subjects?: readonly string[]): Category[] {
   const ids = (bundlesJson as { bundles: { id: string }[] }).bundles.map((b) => b.id);
   return ids.flatMap((bundle) => {
     const file = files[bundle] as { categories: Omit<Category, "bundle">[] } | undefined;
-    return file ? file.categories.map((c) => ({ ...c, bundle })) : [];
+    return file ? file.categories.map((c) => {
+      const { subject, ...rest } = c;
+      return { ...rest, bundle, ...(typeof subject === "string" && (!subjects || subjects.includes(subject)) ? { subject } : {}) };
+    }) : [];
   });
 }
 

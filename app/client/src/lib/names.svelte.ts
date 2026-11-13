@@ -22,9 +22,10 @@ export function poolHash(): string | null {
 
 /** The locale's name (bundles: the UI language's), es's for es-ES; fallback categories.json's `name` / bundles.json name
  * / the key (a plain-string key is its name: old format, mods; decision 259). Keys: catKey, subKey, bundle id. */
-export function displayName(kind: "category" | "subcategory" | "bundle", key: string): string {
+export function displayName(kind: "category" | "subcategory" | "subject" | "bundle", key: string): string {
   const d = data;
   if (!d) return key;
+  if (kind === "subject") return d.names.subjects[key] ?? key;
   if (kind === "subcategory") return d.names.subcategories[key] ?? subName(d.broad.get(key)?.bundle, key);
   if (kind === "category") return d.names.categories[key] ?? d.categories.find((c) => catKey(c) === key)?.name ?? key;
   return d.uiNames.bundles[key]?.name ?? d.bundles.find((b) => b.id === key)?.name ?? key;

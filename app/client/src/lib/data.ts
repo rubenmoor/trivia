@@ -92,9 +92,10 @@ interface Loaded {
  * without a pool file isn't offered (withPacks). Mod bundles (decision 128) are packs checked by modPool;
  * a broken one is left out like a pack without a file, its issues in modIssues(). Then the mods' data hooks (plan 117). */
 async function load(locale: string): Promise<Loaded> {
-  const [pool, bundles, ageGroups] = await Promise.all(
-    [basePoolFile(locale), "bundles.json", "age-groups.json"].map((f) => get(f)),
+  const [pool, bundles, ageGroups, subjectsFile] = await Promise.all(
+    [basePoolFile(locale), "bundles.json", "age-groups.json", "subjects.json"].map((f) => get(f)),
   );
+  const subjects = subjectIds(subjectsFile);
   const all = parseBundles(bundles).filter((b) => !buildInfo().demo || b.id === "base").map((b) => {
     if (b.source !== "mod") return b;
     const languages = b.languages.filter((l) => (LOCALES as readonly string[]).includes(l));
@@ -114,7 +115,7 @@ async function load(locale: string): Promise<Loaded> {
   mods.forEach((b, i) => {
     const [json, catFile] = modFiles[i];
     packs[b.id] = null;
-    const tax = modSubcategories(catFile);
+    const tax = modSubcategories(catFile, subjects);
     if (!tax) return issue(b, "bad_categories");
     if (!json) return issue(b, "no_pool");
     let out;
@@ -134,9 +135,13 @@ async function load(locale: string): Promise<Loaded> {
     locale, questions: packed.pool, bundles: packed.bundles, ageGroups: parseAgeGroups(ageGroups),
   });
   const named = parsed.filter((b) => b.source !== "mod" || byBundle[b.id]);
-  const data = engineData(questions, loadCategories(bundles, byBundle), parsed, groups, locale, await namesOf(named, locale), poolHash(pool), buildInfo().demo);
+  const data = engineData(questions, loadCategories(bundles, byBundle, subjects), parsed, groups, locale, await namesOf(named, locale), poolHash(pool), buildInfo().demo);
   return { data, named };
 }
+
+/** app/data/subjects.json → its ids in order. */
+const subjectIds = (file: unknown): string[] =>
+  ((file as { subjects?: { id: string }[] } | null)?.subjects ?? []).map((s) => s.id);
 
 /** The bundles' names files of `lang` merged (namesFiles: es-ES over es); missing files add nothing. */
 async function namesOf(bundles: Bundle[], lang: string): Promise<Names> {

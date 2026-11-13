@@ -1,6 +1,6 @@
 {
   "categories": [
-    {"slug": "dinosaurs", "name": "Dinosaurios", "subcategories": [
+    {"slug": "dinosaurs", "name": "Dinosaurios", "subject": "nature", "subcategories": [
       "Dinosaurios carnívoros",
       "Dinosaurios herbívoros",
       "La era de los dinosaurios"

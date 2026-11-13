@@ -16,7 +16,7 @@ const ERRORS = {
   entry_missing: () => "mod.json: entry file not found in the folder",
   bundle_json: () => "data/bundles.json: not a JSON object with a bundles list",
   bundle_row: (e) => `data/bundles.json: row ${e.id ? `"${e.id}"` : "without an id"} needs id, kind (slugs), languages, name, description; ids unique; country (ISO code in capitals, e.g. CO) on kind "region" only`,
-  bad_categories: (e) => `${e.file}: missing, or not categories with slug and subcategories (unique)`,
+  bad_categories: (e) => `${e.file}: missing, or not categories with slug, subcategories (unique) and, if any, a text subject`,
   bad_pool: (e) => `${e.file}: ${e.message}`,
   no_pool: (e) => `bundle ${e.bundle}: no pool file for any of its languages`,
   no_bundles: () => "kind bundle but no bundles in data/bundles.json",
@@ -29,6 +29,7 @@ const WARNINGS = {
   bad_icon: (w) => `bundle ${w.id}: icon ignored (puzzle shown): not allowed on kind "region", else one of ${BUNDLE_ICONS.join(", ")}`,
   bundle_language: (w) => `bundle ${w.bundle}: language "${w.tag}" has no questions in the game (es, es-ES, en, de), ignored`,
   no_pool_file: (w) => `${w.file}: missing, bundle ${w.bundle} not offered in ${w.locale}`,
+  bad_subject: (w) => `${w.file}: category "${w.slug}": subject isn't one of ${w.known.join(", ")}, ignored (its questions count toward no subject)`,
   bad_names: (w) => `${w.file}: ${w.key ? `${w.kind} "${w.key}" not in ${w.kind === "bundles" ? "data/bundles.json" : "categories.json"}` : "not a JSON object"}, ignored`,
 };
 // modPool's reasons (engine/pool.ts).
@@ -92,6 +93,7 @@ export async function checkMod(folder, { dist, data, gameVersion }, out = () => 
     return done(mod.id);
   }
 
+  const subjects = ((JSON.parse(await fs.readFile(path.join(data, "subjects.json"), "utf8"))).subjects ?? []).map((s) => s.id);
   const groups = pool.parseAgeGroups(JSON.parse(await fs.readFile(path.join(data, "age-groups.json"), "utf8")));
 
   // Like the loader: question ids unique per locale across this mod's pools.
@@ -103,11 +105,12 @@ export async function checkMod(folder, { dist, data, gameVersion }, out = () => 
     out(`bundle ${row.id} (${row.kind}): ${row.name}`);
     for (const tag of row.languages.filter((l) => !LOCALES.includes(l))) warning({ code: "bundle_language", bundle: row.id, tag });
     const cats = await readJson(dir, "categories.json");
-    const tax = cats instanceof Error ? null : pool.modSubcategories(cats);
+    const tax = cats instanceof Error ? null : pool.modSubcategories(cats, subjects);
     if (!tax) {
       error({ code: "bad_categories", file: rel("categories.json") });
       continue;
     }
+    for (const slug of tax.badSubjects) warning({ code: "bad_subject", file: rel("categories.json"), slug, known: subjects });
     let pools = 0;
     for (const locale of row.languages.filter((l) => LOCALES.includes(l))) {
       const file = locale === "es" ? "pool.json" : `pool.${locale}.json`;

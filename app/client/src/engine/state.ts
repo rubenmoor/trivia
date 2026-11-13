@@ -318,6 +318,8 @@ export interface Names {
   /** By catKey / subKey (decision 259): each file keys its own bundle's keys. */
   categories: Record<string, string>;
   subcategories: Record<string, string>;
+  /** Subject id → name (base's names file only). */
+  subjects: Record<string, string>;
   /** Age-group id → name (decision 48). */
   age_groups: Record<string, string>;
 }
@@ -343,7 +345,7 @@ export interface EngineData {
   demo: boolean;
 }
 
-const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
+const NO_NAMES: Names = { bundles: {}, categories: {}, subcategories: {}, subjects: {}, age_groups: {} };
 
 /** A locale's names files, the overriding one last (decision 259): es-ES reads es's, then its own. */
 export const namesFiles = (lang: string): string[] =>
@@ -351,7 +353,7 @@ export const namesFiles = (lang: string): string[] =>
 
 /** Base's names file merged with every bundle's ([bundle id, file]), later ones winning; null files (none) are skipped. */
 export function mergeNames(files: (readonly [string, unknown])[]): Names {
-  const out: Names = { bundles: {}, categories: {}, subcategories: {}, age_groups: {} };
+  const out: Names = { bundles: {}, categories: {}, subcategories: {}, subjects: {}, age_groups: {} };
   const keyed = (bundle: string, m: Record<string, string> | undefined) =>
     Object.fromEntries(Object.entries(m ?? {}).map(([k, v]) => [subKey(bundle, k), v]));
   for (const [bundle, f] of files as [string, Partial<Names> | null][]) {
@@ -359,6 +361,7 @@ export function mergeNames(files: (readonly [string, unknown])[]): Names {
     Object.assign(out.bundles, f.bundles);
     Object.assign(out.categories, keyed(bundle, f.categories));
     Object.assign(out.subcategories, keyed(bundle, f.subcategories));
+    if (bundle === "base") Object.assign(out.subjects, f.subjects);
     Object.assign(out.age_groups, f.age_groups);
   }
   return out;
