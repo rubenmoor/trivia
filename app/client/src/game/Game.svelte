@@ -1,16 +1,17 @@
 <script lang="ts">
   // The game on the TV (plans/04-ui-tv-display.md, D-21, D-25): a state machine over the screens
-  // Start → Player → Mode → (Join, multiplayer) → Choice (age) → Bundles → Level → Select → Question → Correct / Wrong → … → Victory (answers off, D-105:
+  // Start → Player → Mode → (Join, multiplayer) → Choice (age) → Bundles → Level → Select → Question → Correct / Wrong → … → Victory → (Badges, plan 197) → Start (answers off, D-105:
   // Question → Next → … → Completed; timed, plan 164: Level as round screen → Timed → … → Level → …), with one transition routine and the admin overlay on Esc. The engine
   // keeps the game (engine/, lib/api.ts).
   import { onDestroy, onMount, tick, untrack } from "svelte";
-  import { fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
+  import { fetchCareers, fetchFlags, fetchGame, gameAction, noteRunningOut, playJoker, setFlag, type GameActionBody } from "../lib/api.ts";
   import { isOurs } from "../engine/pool.ts";
   import { GameError } from "../lib/http.ts";
   import { buildInfo } from "../lib/build.ts";
   import { steam, validUser, type ModList } from "../lib/desktop.ts";
   import { language, saveError, takeSaveNotice } from "../lib/engine.ts";
   import { errorText } from "../lib/errors.ts";
+  import { celebrationQueue } from "../lib/celebration.ts";
   import { telemetryState } from "../lib/telemetry.ts";
   import { t } from "../lib/i18n.ts";
   import { listenPads } from "../lib/gamepad.svelte.ts";
@@ -20,6 +21,7 @@
   import { deviceOf, type SessionView } from "../lib/seats.ts";
   import { emit, loadedMods, watchLayers, type ModLayer } from "../lib/mods.ts";
   import type { Game, GameMode, JokerBudget, JokerEvent, Flagged } from "../lib/types.ts";
+  import Career from "./Career.svelte";
   import FlagDialog from "./FlagDialog.svelte";
   import FlagList from "./FlagList.svelte";
   import Hud from "./Hud.svelte";
@@ -58,7 +60,7 @@
   import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "correct" | "wrong" | "victory" | "next" | "completed";
+  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "correct" | "wrong" | "victory" | "next" | "completed" | "badges";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
@@ -78,10 +80,11 @@
     victory: "victory", // «Pomp and Circumstance», over the cheers
     next: "normal",
     completed: "normal", // no victory music (D-105)
+    badges: "normal",
   };
 
   // Next and Completed: both `Revealed` (answers off, D-105).
-  const OURS = { Start, Language, Player, Bundles, Mode, Choice, Join, Level, Select, Question, Timed, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory };
+  const OURS = { Start, Language, Player, Bundles, Mode, Choice, Join, Level, Select, Question, Timed, Correct, Wrong, Next: Revealed, Completed: Revealed, Victory, Badges: Career };
   type Name = keyof typeof OURS;
   /** Each screen: ours or a mod's (plan 117), read once; a failing one falls back to ours. */
   let S = $state.raw(Object.fromEntries(Object.entries(OURS).map(([n, c]) => [n, screenFor(n as Name, c)])) as typeof OURS);
@@ -127,6 +130,8 @@
   let seats = $state<SeatDraft[]>([]);
   /** The Bundles screen's pick; null until its preset loads. */
   let bundlePick = $state<string[] | null>(null);
+  /** After a game: the players still to see their new badges, the one on screen first (decision 591). */
+  let celebrating = $state<string[]>([]);
   /** Why `new` refused the choice on the Bundles screen (plan 29). */
   let refused = $state<GameError | null>(null);
   /** The save file was unusable and moved to a backup (plan 55): shown once on Start. */
@@ -477,9 +482,24 @@
   }
   const outGoesOn = $derived(session?.mode === "rr-competitive");
 
+  /** An end screen or an abandon: each player of the game with new badges gets their page, in seat order, then Start (decision 591). */
   async function toStart() {
+    const careers = buildInfo().demo ? {} : await fetchCareers().catch((e: unknown) => (console.error("career:read", e), {}));
+    const queue = celebrationQueue(game, careers);
+    if (queue.length) await go("badges", "whoosh", () => (celebrating = queue));
+    else await home();
+  }
+
+  /** The Badges screen's «Seguir»: the next player's page, or Start. */
+  async function nextBadges() {
+    const rest = celebrating.slice(1);
+    if (rest.length) await go("badges", "whoosh", () => (celebrating = rest));
+    else await home();
+  }
+
+  async function home() {
     await refresh();
-    await go("start", "whoosh");
+    await go("start", "whoosh", () => (celebrating = []));
   }
 
   // Admin overlay ---------------------------------------------------------------------------
@@ -614,6 +634,7 @@
   /** Abandon, then Start (milestone 9, replaces D-88's configure screen). */
   async function restart() {
     leaveOverlay();
+    if (screen === "badges") return home(); // the game is over; the rest keep their badges for the next time
     if (!(await act("abandon"))) return;
     await toStart();
   }
@@ -685,7 +706,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "mode" || on === "choice" || on === "join" || on === "question" || on === "timed") return; // they push their own
+    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "mode" || on === "choice" || on === "join" || on === "question" || on === "timed" || on === "badges") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" } } : undefined,
@@ -825,6 +846,8 @@
     {:else if screen === "victory" && game}
       <Stage mood="victory" />
       <S.Victory {game} {levels} {busy} onhome={toStart} />
+    {:else if screen === "badges" && celebrating.length}
+      {#key celebrating[0]}<S.Badges name={celebrating[0]} after {busy} onclose={nextBadges} />{/key}
     {:else}
       <Stage />
       <p class="center">{t("screen.noData")} <Prompt action="menu" /> → {t("action.home")}.</p>

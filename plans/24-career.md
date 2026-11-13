@@ -133,6 +133,7 @@ The career gives each player a long-term sense of progress: school-style subject
 
 ## Badge page and celebration (milestone 20)
 - A badge page lists all badges (earned and open) per player; it opens with celebration, sound and animation when a new badge is earned. Design and screens: `plan 197: Badge page and celebration` (`game/Career.svelte`; celebration: `task 1990: Career celebration of new badges`).
+- Celebration (task 1990): on page open, on turning the career on, and after a game's end screen or abandon for each of its players in seat order (Badges screen, «Seguir»); hidden slots, one stamp per badge within ≈6 s, «¡Nueva insignia!» / «¡n nuevas insignias!», fanfare and fireworks once; confirm skips; `career_shown` when the page closes. Details: `plans/04-ui-tv-display.md` "Career".
 - Page (task 1989): opened by the badges button on each name of the Player screen (not in the demo); header: name, «n of 39», an empty slot for score and rank (part 6), the on/off switch (`career` op); groups subjects × grades, diplomas, college, school years, score; earned in colour with the date, open dimmed in greyscale; the focused badge's name, description and date below (`badgeText`); off: only the switch.
 
 ## Age-group reach

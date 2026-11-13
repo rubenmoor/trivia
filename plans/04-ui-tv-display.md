@@ -47,6 +47,10 @@ stateDiagram-v2
   Correct --> Victory: level 12 answered
   Wrong --> Start: «Volver al inicio»
   Victory --> Start: «Volver al inicio»
+  Wrong --> Badges: new career badges (plan 197)
+  Victory --> Badges: new career badges
+  Badges --> Badges: «Seguir», next player
+  Badges --> Start: «Seguir», last player
   Question --> Next: answers off, padlock reveal (D-105)
   Next --> Level: continue (a block is added)
   Question --> Completed: answers off, last level revealed
@@ -83,6 +87,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Victory | Full 12-block tower, big finale | «Volver al inicio» | «Pomp and Circumstance» (`victory`), over cheers |
 | Next | Answers off (D-105): «Siguiente ronda», the correct answer, `fun_fact` | Click / `Enter` / A | Normal |
 | Completed | Answers off, after the last level: «Cuestionario completado», correct answer, fireworks | «Volver al inicio» | Normal (no victory music) |
+| Badges | After an end screen or an abandon: one player's badge page celebrating new badges (Career) | «Seguir» / `Enter` / A | Normal |
 
 ### Language (first start, D-86, D-96)
 - At first start only for a fresh save (no `language` stored) and only with something to pick (>1 UI language); a stored save, like the family's, never sees it unasked.
@@ -128,7 +133,10 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Groups: subjects (7 rows × Primaria/Secundaria/Bachillerato), diplomas, college, school years, score (10); icons from `app/desktop/achievements/CAREER_*.svg`.
 - Earned: colour icon and date (locale format); open: greyscale and dimmed; the focused or hovered badge: name, description, «Conseguida el …» / «Aún sin conseguir» in the strip below.
 - Career off (decision 515): the page shows only the switch and a note. Input: arrows move between badges, Esc/Backspace/B back, mouse on every control; modal scope `career`.
-- No celebration on the page itself yet (task 1990).
+- Celebration (task 1990, decision 591): badges not shown yet, celebrated once: hidden in their slots (dashed outline), then stamped in one by one (`stamp` cue, gold ring, the strip shows the newest), «¡Nueva insignia!» / «¡3 nuevas insignias!» in the header; at the end `fanfare` and `Fireworks` once. Pace 700 ms per badge, the whole reveal ≤ 6 s (`lib/celebration.ts`); confirm skips to the end; reduced motion: a fade, no stamp flight, no fireworks.
+  - When: on page open and on turning the career on (Player screen); after an end screen (Wrong, Victory, Completed) or an abandon: the Badges screen (`Badges`, `Career.svelte` with `after`), one page per player of the game with new badges in seat order, «Seguir» → next player, then Start; never mid-game, nothing with the career off or in the demo.
+  - Badges screen: «Seguir» instead of Back, no switch; a shared scope (any seat continues, as Victory); Esc opens the menu, whose «Volver al menú principal» goes straight to Start.
+  - Shown: `career_shown` with the celebrated badges when the page closes, skipped or not; a page left by quitting celebrates again.
 
 ### Bundles (plan 151, BN-6)
 - `game/screens/Bundles.svelte`, «¿Qué preguntas juega Sofía?»: after Choice in every mode, also with one offered bundle (decision 264: Bundle screen (two columns) reviewed in /gallery?; D-97; task 1361's layout): Player → Choice → Bundles → Level; multiplayer modes: Player → Choice → Join → Bundles → Level (plural titles «¿Qué preguntas juegan?», supply for the whole session, decision 291).
@@ -235,7 +243,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
 
 ### Victory
 - After the 12th correct answer: the Level screen shows the 12th block landing, the crown on top, a long fireworks finale (all variants in sequence) and a victory jingle. Text: «¡Ganaron!».
-- «Volver al inicio» → Start.
+- «Volver al inicio» → Start, or first the Badges screen (Career).
 - rr-coop: the line under the title names every player («¡Luna, Mateo y Sofía llegaron a la cima!», after four «y n más»).
 - rr-competitive: «¡Gana Ana!», the winner's tower and tag big (crowned when it climbed to the top), the others' tracks small beside it in one row with their final levels; won as the last one standing (decision 278): the line «Último en pie» and no crown.
 

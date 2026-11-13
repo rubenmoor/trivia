@@ -45,5 +45,6 @@ export function topicOf(id: string): { category: string; subcategory: string | n
 
 /** Subject names (question locale) and age group names (UI language) for the career badge texts (`badgeText`). */
 export function badgeNames(): { subjects: Record<string, string>; age_groups: Record<string, string> } {
-  return { subjects: data?.names.subjects ?? {}, age_groups: data?.uiNames.age_groups ?? {} };
+  const groups = Object.fromEntries([...(data?.groupById ?? [])].map(([id, g]) => [id, g.name])); // es: age-groups.json's names
+  return { subjects: data?.names.subjects ?? {}, age_groups: { ...groups, ...data?.uiNames.age_groups } };
 }

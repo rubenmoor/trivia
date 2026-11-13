@@ -10,6 +10,7 @@ Differences from `es` only.
 - Carrera: como `es`; la nota de secundaria es «ESO» y «Curso escolar» en vez de «Año escolar» (`career.*`)
 - Puntos, rango, nombres de rango: como `es` (`career.points`, `career.rank`, `career.ranks`); número «1840»
 - Página de insignias: como `es`
+- Celebración (`career.new`): como `es`, «¡Nueva insignia!», «¡3 nuevas insignias!»
 
 ## Address
 - «vosotros» wherever `es` addresses the group with «ustedes»: «Elegid una respuesta», «¡Habéis ganado!», «ya no os quedan Soplos»

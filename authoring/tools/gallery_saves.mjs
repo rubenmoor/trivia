@@ -2,8 +2,8 @@
 // trivia-gallery's demo saves (plan 100): built with the engine on the es pool, made-up players. TRIVIA_DEMO=1: the demo's
 // pool (plan 176), only the saves its shots need.
 // Usage: node authoring/tools/gallery_saves.mjs <ui locale> → JSON {saves: {name: save}, meta: {name: {...}}} on stdout.
-import { QUESTION_MS } from "../../app/client/src/engine/choice.ts";
-import { BADGE_NAMES, emptyCareer } from "../../app/client/src/engine/career.ts";
+import { DEFAULT_AGE_GROUP, QUESTION_MS } from "../../app/client/src/engine/choice.ts";
+import { BADGE_NAMES, catchUp, emptyCareer, SCORE_MILESTONES } from "../../app/client/src/engine/career.ts";
 import { answer, claim, expire, newSession, pick, show, view } from "../../app/client/src/engine/game.ts";
 import { baseSave, EXTRA_PLAYERS, checkVersion, io, latestState, PLAYERS, playTo, rightOf, withExtraPlayers } from "./demo_saves.mjs";
 import { loadData } from "./engine_data.mjs";
@@ -115,13 +115,15 @@ if (themes.length) {
   }
 }
 
-// Careers of every player (plan 197): some badges, all of them, turned off. Shown marks set: no celebration.
+// Careers of every player (plan 197): some badges, all of them, turned off. Shown marks set: no celebration. The games
+// counted first (catchUp), so the page's backfill adds nothing; `fn(career, player)`.
 const withCareer = (save, fn) => {
-  save = structuredClone(save);
-  for (const p of save.players) p.career = fn(emptyCareer());
+  save = catchUp(structuredClone(save), data);
+  for (const p of save.players) p.career = fn(emptyCareer(), p.name);
   return save;
 };
-const earned = (names) => Object.fromEntries(names.map((n, i) => [n, { on: `2026-10-${String(1 + (i % 28)).padStart(2, "0")}`, shown: true }]));
+const earned = (names, shown = true) =>
+  Object.fromEntries(names.map((n, i) => [n, { on: `2026-10-${String(1 + (i % 28)).padStart(2, "0")}`, ...(shown ? { shown } : {}) }]));
 const SOME = ["CAREER_HISTORY_ELEMENTARY", "CAREER_NATURE_ELEMENTARY", "CAREER_SPORT_ELEMENTARY", "CAREER_SCIENCE_ELEMENTARY", "CAREER_HISTORY_MIDDLE", "CAREER_SCORE_100", "CAREER_SCORE_250", "CAREER_YEAR_ADULTS"];
 saves["career"] = withCareer(done, (c) => ({ ...c, score: 312, badges: earned(SOME) }));
 saves["career-full"] = withCareer(done, (c) => ({ ...c, score: 120000, badges: earned(BADGE_NAMES) }));
@@ -192,6 +194,21 @@ scene("comp-q", onQuestion(session("rr-competitive", 3, rounds(1))));
 scene("comp-q12", onQuestion(session("rr-competitive", 3, rounds(33))));
 // Two seats: the second one's question, a wrong answer leaves the first one standing.
 scene("comp-last", onQuestion(session("rr-competitive", 2, rounds(5))));
+
+// Celebrations (task 1990): the last level's question; its win finishes the 20th game of the age group (one new
+// badge), or 12 badges wait from before; a co-op session whose first and third seats have new badges. Score badges up
+// to 2500 held, so the last answer reaches no new one.
+const SCORED = SCORE_MILESTONES.filter((n) => n <= 2500).map((n) => `CAREER_SCORE_${n}`);
+const HELD = [...SOME.filter((n) => !n.startsWith("CAREER_SCORE_")), ...SCORED];
+const careerAt = (badges, more = {}) => (c) => ({ ...c, score: 3000, ...more, badges: { ...earned(HELD), ...badges } });
+const groupOf = (save) => gameRow(save).state.settings.age_group ?? DEFAULT_AGE_GROUP;
+saves["career-new"] = withCareer(saves.final, careerAt({}, { years: { [groupOf(saves.final)]: 19 } }));
+const MANY = BADGE_NAMES.filter((n) => !HELD.includes(n)).slice(0, 12);
+saves["career-new-many"] = withCareer(saves.final, careerAt(earned(MANY, false)));
+meta["career-new"] = meta["career-new-many"] = meta.final;
+const NEW_BY_SEAT = [["CAREER_ARTS_ELEMENTARY"], [], ["CAREER_GEOGRAPHY_ELEMENTARY", "CAREER_MEDIA_ELEMENTARY"]];
+saves["career-new-session"] = withCareer(saves["coop-q12"], (c, name) => careerAt(earned(NEW_BY_SEAT[PLAYERS.indexOf(name)] ?? [], false))(c));
+meta["career-new-session"] = { ...meta["coop-q12"], third: PLAYERS[2] };
 
 // Timed scenes (plans 164, 165): every action at an explicit epoch ms; `meta.now` the last one, the page clock is set
 // from it (plus the seconds a shot needs).
