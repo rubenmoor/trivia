@@ -40,6 +40,7 @@ One step = one HTTP request, recorded as `main.py` answers it.
 - IDs: SQLite gives max+1 after a delete; the `players` scenario pins it
 - Save v3+ (plan 65): the engine stores `seen` rows and `blocked`, the recordings `burned`; `test/save.ts` compares those tables
   - `upgradeDb`: the recorded `db` through `parseSave`'s v2 → v3 upgrade; history outcome `admin_burn` → `admin_block`
+  - `withoutCareer`: game rows' `career` cursor (plan 195, save v6) left out
   - `withoutOrphans`: GF-7 now keeps the player's seen rows (`game_id` 0), Python deleted the burns; compared without them
 - Selection by seen count (plan 65): Python excluded burned questions, the engine offers them again, lowest count first; the recorder stays frozen (plan 51)
   - `game.test.ts` replays a scenario only up to the first step where a seen question of the step's pool could be offered again (a later game; undo after a swap); `get_game`'s player-scoped `supply` isn't compared once a seen question is in the pool

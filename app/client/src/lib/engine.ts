@@ -1,6 +1,7 @@
 // The TS referee in the browser (plan 50, PORT-7): data and save loaded once per page, one action at a time.
 import type { ErrorBody, Reply } from "../engine/api.ts";
 import { actionRng } from "../engine/rng.ts";
+import { behind, catchUp } from "../engine/career.ts";
 import { repair, supply } from "../engine/game.ts";
 import { defaultLanguage, mapOldKeys } from "../engine/save.ts";
 import { gameLocale, newest, type EngineData, type Io, type Language, type SaveData } from "../engine/state.ts";
@@ -66,6 +67,10 @@ async function load(): Promise<Loaded> {
   const loaded = { save: { ...save, language }, locales, fresh };
   const data = await dataFor(loaded, "game"); // a missing data file fails here, not on the first action
   loaded.save = { ...repair(loaded.save, data, io(data)), language }; // dropped questions (plan 91); written with the next action
+  for (const locale of data.demo ? [] : new Set(loaded.save.games.filter(behind).map(gameLocale))) {
+    if (locale !== "es" && !locales.includes(locale)) continue;
+    loaded.save = { ...catchUp(loaded.save, await loadEngineData(locale, language)), language }; // career backfill (plan 195); written with the next action
+  }
   telemetryLoad(loaded.save);
   achievementsLoad(loaded.save, data);
   return loaded;

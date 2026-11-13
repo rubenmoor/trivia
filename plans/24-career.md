@@ -171,7 +171,12 @@ The career gives each player a long-term sense of progress: school-style subject
   - `badges`: API name → `{ on, shown? }`
 - Reducers (`career.ts`): `countRight` (+d², every band floor ≤ d for the category's subject; no or unknown subject: score only, `decision 588`), `countWrong` (−1), `countEnd` (years +1, rank value, keep 10), `newBadges` / `award` (reached and not held, never removed), `rankOf` (weights 10..1 newest first, half up, at least 1, null without games), `rankIndex` (0-based into the 15 names).
 - `BADGES` / `BADGE_NAMES`: the 39 in live order; thresholds: 15 / 25 / 15 right per subject at grades elementary / middle / high, diplomas = grade in all 7 subjects, college = 15 right at 13+ summed over subjects, school year = 20 finished games, score milestones.
-- Not yet (tasks of plan 195): calling the reducers from the game, backfill, ops and reads.
+- Catch-up step `catchUp(save, data, now)` (`career.ts`): run by `engine/api.ts` `gameAction` after every action (`now` = the action's time) and by `lib/engine.ts` at load (backfill, `now` null: the game's `finished_on`, else `started_on`), once per locale with rows `behind`
+  - Per row of `data`'s locale (other locales wait for their own pool): demo-marked or not `qualifies()` → cursor to the end, nothing counted; demo build: nothing at all
+  - Entries with `correct` true/false and not `revealed` → +d² / −1 for the answering seat's player (solo: `row.player_id`; sessions: `seat`; rr-competitive: the seat whose state it is); no seat or no player → nobody; question missing from the pool → skipped
+  - Won or lost (not abandoned): each seat with a player → years +1, rank value = its hardest right answer (0 if none), or the age group's window top for a tower win (`towerWin()`, `achievements.ts`): solo, rr-coop (the team's: every seat, `decision 595: Career rank after a round-robin team win: every seat ranks at the age group's top`), or the winning seat in rr-competitive / timed
+  - Badges awarded after each change, never removed; cursor per state (`row.state`, then rr-competitive's seats' own), `ended` once counted
+- Not yet (tasks of plan 195): ops and reads.
 
 ## Parts (`plan 192: masterplan`)
 - Part 2 subjects in the data; part 3 and later: engine and save, badge page, Steam, UI texts; they read this file.

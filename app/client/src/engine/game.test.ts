@@ -7,7 +7,7 @@ import { repair, supply } from "./game.ts";
 import { mapOldKeys } from "./save.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
 import { fixture, realAgeGroups, realBundles, slugFixtures } from "./test/fixtures.ts";
-import { snapshot, upgradeDb, withoutOrphans } from "./test/save.ts";
+import { snapshot, upgradeDb, withoutCareer, withoutOrphans } from "./test/save.ts";
 import { seededRng } from "./rng.ts";
 import { tapeRng, type TapeEntry } from "./test/tape.ts";
 
@@ -76,7 +76,7 @@ for (const file of scenarios) {
         assert.deepEqual({ status: r.status, body: recorded(r.body) }, { status: step.response.status, body: want }, at);
       } else assert.deepEqual({ status: r.status, body: recorded(r.body) }, step.response, at);
       if (r.status !== 200) assert.deepEqual(r.save, save, `${at}: save changed on error`);
-      if (step.db) assert.deepEqual(snapshot(withoutOrphans(r.save)), keyedDb(step.db), `${at}: db`);
+      if (step.db) assert.deepEqual(snapshot(withoutOrphans(withoutCareer(r.save))), keyedDb(step.db), `${at}: db`);
       assert.equal(mapOldKeys(r.save, oldKeys), r.save, `${at}: keys mapped twice`);
       rng.done();
       save = r.save;
