@@ -20,6 +20,7 @@ Fixed terms; use them as written, never a synonym.
 - Karriere: «Karriere», Abzeichen: «Abzeichen»; Stufen «Grundschule», «Mittelstufe», «Oberstufe», «Universität»; Diplome «Grundschulabschluss», «Mittlere Reife», «Abitur»; «Rang», «Punkte» (`career.*`, plan 197)
 - Punkte und Rang: «Punkte» (`career.points`), «Rang» (`career.rank`); Rangnamen 1–15 in `career.ranks` (plans/24-career.md); Zahlen «1.840»
 - Abzeichen-Seite (`career.page.*`): «Abzeichen», «Karriere ein-/ausschalten», «Erreicht am …», «Noch nicht erreicht»; Gruppe «Diplome»
+- Feier (`career.new`): «Neues Abzeichen!», «3 neue Abzeichen!»
 
 ## Address
 - Never assume a plural: no «ihr», «euch», «euer», no «-t» plural imperatives («Wählt», «Schreibt», «Zielt»)

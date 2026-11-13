@@ -469,6 +469,37 @@ def career(r):
         r.shot(name)
 
 
+def celebration(r):
+    """New badges after the game's end screen (task 1990): one, many (frozen after 5), a session's second page."""
+    for name in ("career-new", "career-new-many"):
+        if r.only and name not in r.only:
+            continue
+        on_question(r, name)
+        if name == "career-new-many":
+            r.page.evaluate("window.__galleryReveal = 5")
+        r.answer(r.meta[name]["right"])
+        r.wait("main .result.victory", 40000)
+        r.settle(1.5)
+        r.click("main .result.victory [data-focus-default]")
+        r.wait(".career.after .badge.landed", 10000)
+        r.settle(5 if name == "career-new-many" else 2.5)
+        r.shot(name)
+    if r.only and "career-new-session" not in r.only:
+        return
+    rr_question(r, "career-new-session")
+    r.answer(r.meta["career-new-session"]["right"])
+    r.wait("main .result.victory", 40000)
+    r.settle(1.5)
+    r.click("main .result.victory [data-focus-default]")
+    r.wait(".career.after.done", 15000)
+    r.settle(0.8)
+    r.click('.career.after [data-focus-id="next"]')
+    r.wait(f".career.after h2:has-text('{r.meta['career-new-session']['third']}')", 10000)
+    r.wait(".career.after.done", 15000)
+    r.settle(1.5)
+    r.shot("career-new-session")
+
+
 def seguir(r, ready):
     """«Seguir» once the screen takes input, then `ready` (a selector of the next screen)."""
     r.wait('[data-focus-id="next"]:enabled')  # force-click ignores disabled (busy)
@@ -1030,6 +1061,7 @@ STEPS = [
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
     (["player", "player-delete", "letter-picker"], player),
     (["career", "career-full", "career-off"], career),
+    (["career-new", "career-new-many", "career-new-session"], celebration),
     (["mode-kind", "mode-single", "choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),
     (["supply-notice", "bundles-supply-report", "bundles-no-questions"], supply),
     (["bundles-topics", "cambiazo-topics", "splash-topic"], topics),

@@ -541,6 +541,8 @@ export const de = {
     college: { name: "Universität", desc: "{n} Fragen auf Universitätsniveau richtig beantworten." },
     year: { name: "Schuljahr: {group}", desc: "{n} Spiele in der Altersgruppe {group} zu Ende spielen." },
     score: { name: "{n} Punkte", desc: "{n} Punkte erreichen." },
+    /** The celebration on the badge page (plan 197). */
+    new: { one: "Neues Abzeichen!", other: "{n} neue Abzeichen!" },
     page: {
       open: "Abzeichen",
       title: "Karriere von {name}",

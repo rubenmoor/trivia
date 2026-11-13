@@ -542,6 +542,8 @@ export const en = {
     college: { name: "College", desc: "Answer {n} college-level questions right." },
     year: { name: "School Year: {group}", desc: "Finish {n} games in the {group} age group." },
     score: { name: "{n} Points", desc: "Reach {n} points." },
+    /** The celebration on the badge page (plan 197). */
+    new: { one: "New badge!", other: "{n} new badges!" },
     page: {
       open: "Badges",
       title: "{name}'s career",

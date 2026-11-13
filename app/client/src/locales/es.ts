@@ -608,6 +608,8 @@ const es = {
     college: { name: "Universidad", desc: "Acertar {n} preguntas de nivel universitario." },
     year: { name: "Año escolar: {group}", desc: "Jugar {n} partidas completas en el grupo de edad {group}." },
     score: { name: "{n} puntos", desc: "Llegar a {n} puntos." },
+    /** The celebration on the badge page (plan 197). */
+    new: { one: "¡Nueva insignia!", other: "¡{n} nuevas insignias!" },
     page: {
       open: "Insignias",
       title: "Carrera de {name}",

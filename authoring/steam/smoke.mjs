@@ -21,7 +21,8 @@
 // The middle of a session is played by the engine on the save (as the solo run swaps cards), the rest on screen; a
 // seat that may not act changes nothing; the timed pads, keyboard-only rr-coop, keyboard-only timed (claim keys) and 4 pads + keyboard and mouse timed sessions
 // quit and restart mid-session: pads rebind (decision 289), keyboard seats never ask for a pad (decision 321); after each: one games[]
-// row with its seats (decision 277), the mode's win achievement derived for a win (decision 285).
+// row with its seats (decision 277), the mode's win achievement derived for a win (decision 285), the badge page of each
+// seat's player with new badges in seat order, then Start (decision 591).
 import { spawn, spawnSync } from "node:child_process";
 import { accessSync, constants, existsSync, readdirSync, readFileSync } from "node:fs";
 import { cp, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
@@ -903,10 +904,30 @@ async function ended(r, end) {
   if (win !== (g.result === "won")) throw new Error(`result ${g.result}, ${WINS[r.mode]} ${win ? "" : "not "}earned`);
   await ready(`${visibleEl(".title.gold")} || ${visibleEl(".title.bad")}`, "end screen", 40000);
   await press(r, 0, "confirm"); // the end screens are every seat's
+  await badgePages(r, save, names);
   await h.waitFor(visibleEl('[data-focus-id="main"]'), "start screen", 20000);
   const label = await h.evaluate(`document.querySelector('[data-focus-id="main"]').textContent`);
   if (label.includes(PLAYER)) throw new Error(`a resume after the end: "${label.trim()}"`);
   console.log(`  ${r.label}: ${end}, ${g.result}${win ? `, ${WINS[r.mode]}` : ""}`);
+}
+
+/** After the end screen: the badge page of each seat's player with new badges, in seat order (decision 591), each
+ * passed with confirm from seat 0; then all of them shown. */
+async function badgePages(r, save, names) {
+  const fresh = (s, n) => {
+    const c = s.players.find((p) => p.name === n)?.career;
+    return !c || c.off ? [] : Object.entries(c.badges).filter(([, b]) => !b.shown).map(([k]) => k);
+  };
+  const want = [...new Set(names)].filter((n) => fresh(save, n).length);
+  for (const n of want) {
+    at(`${r.label}: badges of ${n}`);
+    await h.waitFor(`${visibleEl(".career.after.done")} && document.querySelector(".career.after h2").textContent.includes(${JSON.stringify(n)})`, `${n}'s badges`, 20000);
+    await press(r, 0, "confirm");
+  }
+  if (want.length) {
+    await saved((s) => want.every((n) => !fresh(s, n).length), "badges shown");
+    console.log(`  ${r.label}: badges of ${want.join(", ")}`);
+  }
 }
 
 /** Quit, start again, resume: pad seats wait for a pad and take it (decision 289), the others never ask
