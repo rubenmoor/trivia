@@ -1379214,9 +1379214,9 @@
     },
     {
       "id": "q-17818",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
-      "description": "A greeting that sounds like a warning at the pond.",
+      "description": "Ducks across the Midlands are tired of turning round for nothing.",
       "question": "You'll hear it in Nottingham, Derby and Stoke, and the “duck” isn't a bird. What does “ay up me duck” mean?",
       "answer": "Hello, my dear",
       "wrong_answers": [
@@ -1379225,7 +1379225,7 @@
         "Keep your head down"
       ],
       "hints": [
-        "It's said when you meet someone.",
+        "In this phrase, “me” simply means “my”.",
         "“Me duck” is a friendly name, like “love”.",
         "Bus drivers say it as you step on board."
       ],
@@ -1379272,24 +1379272,37 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description calls the phrase \"a greeting\", which is the answer's defining trait. Among the four options only \"Hello, my dear\" is a greeting, so the answer is given away before any hint. Hint 1 (\"It's said when you meet someone\") gives it away the same way. The description should play on the duck/pond theme without saying what kind of phrase it is, and hint 1 needs to be vaguer, for example about the region.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description calls the phrase \"a greeting\", which is the answer's defining trait. Among the four options only \"Hello, my dear\" is a greeting, so the answer is given away before any hint. Hint 1 (\"It's said when you meet someone\") gives it away the same way. The description should play on the duck/pond theme without saying what kind of phrase it is, and hint 1 needs to be vaguer, for example about the region.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the doubtful “duca” word origin with a fact that can be checked: “duck” as a pet name in Shakespeare.",
+        "reason": "The description and hint 1 said it was a greeting, which gave the answer away; both now avoid what kind of phrase it is.",
         "previous": {
-          "fun_fact": "The “duck” may come from the Old English word “duca”, meaning duke, once used as a term of respect."
+          "description": "A greeting that sounds like a warning at the pond.",
+          "hints": [
+            "It's said when you meet someone.",
+            "“Me duck” is a friendly name, like “love”.",
+            "Bus drivers say it as you step on board."
+          ]
         },
         "revised_on": "2026-11-13"
       }
@@ -1379449,9 +1379462,9 @@
     },
     {
       "id": "q-17821",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "Three words, one kilt, and almost no real Scots who say them.",
+      "description": "A kilt, a cartoon and almost no real Scots who actually say this.",
       "question": "Complete the jokey Scottish phrase heard in countless films and cartoons: “Och aye the…”",
       "answer": "noo",
       "wrong_answers": [
@@ -1379460,8 +1379473,8 @@
         "bairn"
       ],
       "hints": [
-        "The missing word is about time.",
-        "Cartoon Scots use the whole phrase as a cheery way of saying “yes, right away”.",
+        "Comedians and cartoon Scots love saying this phrase.",
+        "In Scots, an “ow” sound often turns into “oo”, as in “hoose” for “house”.",
         "It's the Scots way of saying “now”."
       ],
       "media": {
@@ -1379469,14 +1379482,14 @@
         "role": "illustrative",
         "query": "bagpiper in kilt",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABagpipers_%283414062968%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Bagpipers_%283414062968%29.jpg/3840px-Bagpipers_%283414062968%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Rennett Stowe from USA · CC BY 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AViviers%2C_F%C3%AAte_de_la_force_%C3%A9cossaise.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Viviers%2C_F%C3%AAte_de_la_force_%C3%A9cossaise.jpg/3840px-Viviers%2C_F%C3%AAte_de_la_force_%C3%A9cossaise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Celeda · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Rennett Stowe from USA",
-        "author_url": "https://www.flickr.com/people/10393601@N08",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Celeda",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Celeda",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1379507,27 +1379520,36 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"about time\") gives the answer away: noo is the only time word among the options, since loch, toon and bairn mean a lake, a town and a child. Hint 2 (\"right away\") does the same. The description also gets a fact wrong: it says \"Three words\", but \"Och aye the noo\" has four. Hints 1 and 2 need to be vaguer (for example about where the phrase shows up or who says it), and the description should drop the word count.",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"about time\") gives the answer away: noo is the only time word among the options, since loch, toon and bairn mean a lake, a town and a child. Hint 2 (\"right away\") does the same. The description also gets a fact wrong: it says \"Three words\", but \"Och aye the noo\" has four. Hints 1 and 2 need to be vaguer (for example about where the phrase shows up or who says it), and the description should drop the word count.",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the rhyme hint, which singled out “noo”, with a hint about what the whole phrase means.",
+        "reason": "Hints 1 and 2 pointed straight to the only time word, so they are now vaguer, and the wrong word count is gone from the description.",
         "previous": {
+          "description": "Three words, one kilt, and almost no real Scots who say them.",
           "hints": [
             "The missing word is about time.",
-            "It rhymes with “zoo”.",
+            "Cartoon Scots use the whole phrase as a cheery way of saying “yes, right away”.",
             "It's the Scots way of saying “now”."
           ]
         },
@@ -1379536,7 +1379558,7 @@
     },
     {
       "id": "q-17822",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Yorkshire grandparents have a saying for everything, and this is one of the sharpest.",
       "question": "In old Yorkshire, “Don't thee-tha me!” warned someone who had called you “thee” or “tha”. What were they being?",
@@ -1379548,8 +1379570,8 @@
       ],
       "hints": [
         "“Thee” and “tha” are old forms of “you”, still heard in some Yorkshire dialect.",
-        "“Thee” and “tha” were for close friends and family, while “you” was more polite and distant.",
-        "They were talking as if they knew you well."
+        "The saying was about who had the right to speak to you in a certain way.",
+        "“Thee” and “tha” were kept for close friends and family."
       ],
       "media": {
         "type": "image",
@@ -1379594,27 +1379616,34 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. Saying that “thee” and “tha” were for close friends and family, while “you” was polite and distant, already spells out “too familiar”. It is also stronger than hint 3. Hint 2 should say something vaguer, for example that the saying was about manners or who has the right to speak to whom in a certain way, and the close-friends idea should move to hint 3. The fact, options, description and wording are otherwise fine.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. Saying that “thee” and “tha” were for close friends and family, while “you” was polite and distant, already spells out “too familiar”. It is also stronger than hint 3. Hint 2 should say something vaguer, for example that the saying was about manners or who has the right to speak to whom in a certain way, and the close-friends idea should move to hint 3. The fact, options, description and wording are otherwise fine.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it doesn't hint at closeness, made hint 1 vague, and moved the friends-and-family idea into hint 2.",
+        "reason": "Hint 2 spelled out the answer, so it is now vaguer and the close-friends idea has moved to hint 3.",
         "previous": {
-          "description": "Grammar so personal it could start an argument on a Barnsley street.",
           "hints": [
-            "“Thee” and “tha” were used for close friends and family.",
-            "“You” was the more respectful word.",
+            "“Thee” and “tha” are old forms of “you”, still heard in some Yorkshire dialect.",
+            "“Thee” and “tha” were for close friends and family, while “you” was more polite and distant.",
             "They were talking as if they knew you well."
           ]
         },
@@ -1380480,7 +1380509,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "wooden fence being stained brush",
+        "query": "garden fence wood stain",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1380514,33 +1380543,41 @@
       "batch": "batch-62",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the image candidates fit. Candidates 1 and 2 are the same 1882 \"Canada Lumberman\" gazette header, and candidate 3 is an Indian miniature painting. Neither shows wood staining or a fence, and no new search is allowed. The question text itself is fine. It needs a new illustrative image, for example a \"garden fence wood stain\" photo with no brand names visible. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the image candidates fit. Candidates 1 and 2 are the same 1882 \"Canada Lumberman\" gazette header, and candidate 3 is an Indian miniature painting. Neither shows wood staining or a fence, and no new search is allowed. The question text itself is fine. It needs a new illustrative image, for example a \"garden fence wood stain\" photo with no brand names visible. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made the question direct and changed the media to an illustrative image, since a product photo would show the brand.",
+        "reason": "No usable picture was found, so the image needs a new search term: a plain garden fence being stained.",
         "previous": {
-          "question": "Products like this one were famously sold with the line “Does exactly what it says on the tin”. Which brand?",
           "media": {
             "type": "image",
-            "role": "essential",
+            "role": "illustrative",
             "query": "wooden fence being stained brush",
-            "note": "A brush putting wood stain or varnish onto a wooden garden fence; no brand names visible.",
+            "note": null,
             "source_url": null,
             "file_url": null,
             "credit": null
-          },
-          "needs_media": true
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1382904,7 +1382941,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "magician wand top hat",
+        "query": "magic wand and top hat",
         "note": null,
         "source_url": "https://commons.wikimedia.org/wiki/File%3AMysto_Magic_Exhibition_Set_No._2_-_DPLA_-_0645be6a6fe44595b2364a39169b73a4.jpg",
         "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Mysto_Magic_Exhibition_Set_No._2_-_DPLA_-_0645be6a6fe44595b2364a39169b73a4.jpg/3840px-Mysto_Magic_Exhibition_Set_No._2_-_DPLA_-_0645be6a6fe44595b2364a39169b73a4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
@@ -1382954,11 +1382991,46 @@
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture's licence was unsuitable, so the image needs a new search term that still doesn't show a puppet.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "magician wand top hat",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMysto_Magic_Exhibition_Set_No._2_-_DPLA_-_0645be6a6fe44595b2364a39169b73a4.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Mysto_Magic_Exhibition_Set_No._2_-_DPLA_-_0645be6a6fe44595b2364a39169b73a4.jpg/3840px-Mysto_Magic_Exhibition_Set_No._2_-_DPLA_-_0645be6a6fe44595b2364a39169b73a4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "A.C. Gilbert Company · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "A.C. Gilbert Company",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-17866",
@@ -1384047,20 +1384119,11 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Yeoman Warder uniform",
+        "query": "Yeoman Warder Tower of London",
         "note": "Close-up of the red-and-gold Tudor-style state dress uniform of a Yeoman Warder at the Tower of London (chest and embroidered crown badge), with no sign or caption naming them.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AYeomen_Warders_-_DPLA_-_9f38d302eb1cba783b6ea15d2b5be267.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Yeomen_Warders_-_DPLA_-_9f38d302eb1cba783b6ea15d2b5be267.jpg/3840px-Yeomen_Warders_-_DPLA_-_9f38d302eb1cba783b6ea15d2b5be267.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Edmund F. Arras · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Edmund F. Arras",
-        "author_url": null,
-        "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "source_url": null,
+        "file_url": null,
+        "credit": null
       },
       "fun_fact": "Yeomen Warders actually live inside the Tower of London with their families.",
       "subcategory": "crown-and-state",
@@ -1384085,23 +1384148,58 @@
         "difficulty_estimate": 6,
         "notes": "Essential photo is fine, since Commons has many Yeoman Warder pictures. Make sure the photo shows the red state dress, not the everyday dark blue uniform."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-62",
       "review": {
         "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+        "feedback": "None of the six candidates shows the red-and-gold state dress the question describes. Candidates 1–4 and 6 show the dark blue everyday uniform with red trim, and 5 is only a door. The essential photo would contradict the text, so it needs a new search for the red state dress. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture's licence was unsuitable, so the essential image needs a new search for a freely licensed photo of a Yeoman Warder.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Yeoman Warder uniform",
+            "note": "Close-up of the red-and-gold Tudor-style state dress uniform of a Yeoman Warder at the Tower of London (chest and embroidered crown badge), with no sign or caption naming them.",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AYeomen_Warders_-_DPLA_-_9f38d302eb1cba783b6ea15d2b5be267.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Yeomen_Warders_-_DPLA_-_9f38d302eb1cba783b6ea15d2b5be267.jpg/3840px-Yeomen_Warders_-_DPLA_-_9f38d302eb1cba783b6ea15d2b5be267.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Edmund F. Arras · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Edmund F. Arras",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-17881",
@@ -1386127,7 +1386225,7 @@
     },
     {
       "id": "q-17907",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Sequins, spray tan and a panel of judges who take a quickstep very personally.",
       "question": "On Strictly Come Dancing, what is the highest score one judge can give a couple for a dance?",
@@ -1386145,20 +1386243,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "ballroom dancing couple",
+        "query": "ballroom dance competition couple",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVernon_and_Irene_Castle2.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vernon_and_Irene_Castle2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Johnston, Frances Benjamin, 1864-1952, photographer. · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Elena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Eva Rinaldi · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Johnston, Frances Benjamin, 1864-1952, photographer.",
-        "author_url": null,
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Eva Rinaldi",
+        "author_url": "https://www.wikidata.org/wiki/Q37885816",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Strictly grew out of the BBC's Come Dancing, which ran from 1949 to 1998.",
       "subcategory": "game-shows-and-presenters",
@@ -1386187,19 +1386283,52 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture's licence was unsuitable, so the image needs a new search term.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "ballroom dancing couple",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AVernon_and_Irene_Castle2.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vernon_and_Irene_Castle2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Johnston, Frances Benjamin, 1864-1952, photographer. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Johnston, Frances Benjamin, 1864-1952, photographer.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-17908",
@@ -1387198,7 +1387327,7 @@
     },
     {
       "id": "q-17921",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Five fingers, no waiting, and you never have to find a pen.",
       "question": "In British Sign Language's two-handed alphabet, pointing to your thumb is to A as pointing to your little finger is to…",
@@ -1387210,7 +1387339,7 @@
       ],
       "hints": [
         "Each fingertip of the open hand stands for one letter.",
-        "The five fingertips are the five vowels, in order.",
+        "The fingertips stand for a special group of letters.",
         "It's the last vowel of A, E, I, O…"
       ],
       "media": {
@@ -1387256,19 +1387385,39 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. The question already says the thumb is A, so \"the five fingertips are the five vowels, in order\" leaves only U for the little finger. Hint 3 then adds nothing. Hint 2 should only point towards the vowel pattern, for example by saying that the fingertips stand for a special group of letters, without saying which group or that they go in order.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. The question already says the thumb is A, so \"the five fingertips are the five vowels, in order\" leaves only U for the little finger. Hint 3 then adds nothing. Hint 2 should only point towards the vowel pattern, for example by saying that the fingertips stand for a special group of letters, without saying which group or that they go in order.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 2 gave the answer away by saying the fingertips are the vowels in order, so it now only says they stand for a special group of letters.",
+        "previous": {
+          "hints": [
+            "Each fingertip of the open hand stands for one letter.",
+            "The five fingertips are the five vowels, in order.",
+            "It's the last vowel of A, E, I, O…"
+          ]
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-17922",
@@ -1388423,15 +1388572,15 @@
     },
     {
       "id": "q-17937",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Twenty pounds, crisp and lovely, until the vending machine spits it back out.",
-      "question": "Look at this £20 note. What is it made of?",
-      "answer": "Polymer, a thin plastic",
+      "question": "What are today's Bank of England £20 notes made of?",
+      "answer": "Polymer (plastic)",
       "wrong_answers": [
         "Cotton paper",
         "Silk",
-        "Thin metal foil"
+        "Metal foil"
       ],
       "hints": [
         "It's hard to tear and bends back into shape.",
@@ -1388440,12 +1388589,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Turner twenty pound note",
-        "note": "A clear photo of the current polymer Bank of England £20 note (J.M.W. Turner design), front or back.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "leather wallet",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeather_bi-fold_wallet_by_Eugene_Pik_%282021%29_06.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Leather_bi-fold_wallet_by_Eugene_Pik_%282021%29_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Eugenepik · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Eugenepik",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Eugenepik&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The polymer £20 note came out in 2020 and shows the painter J.M.W. Turner.",
       "subcategory": "money-and-shopping",
@@ -1388471,22 +1388627,54 @@
         "notes": "The answer “Polymer, a thin plastic” is longer than the other options and stands out. Copyright limits on reproducing banknotes may mean Commons has no clear photo of the current £20 note, which makes the essential image risky. It is related to q-5524 (bank card made of plastic), but that is a different object."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows a £20 note. They are all 19th-century book scans (a Civil War soldier, a beggars' tavern, Turner's house in Maiden Lane, a potato seed advert, a wheat field, cucumbers). The question says \"Look at this £20 note\", so the essential image has to show the polymer Turner £20, and no new search is allowed. Banknote copyright may mean Commons has no usable photo. If none can be found, rework the question so it doesn't depend on the picture, for example with an illustrative image of a wallet or till. Separately, the answer \"Polymer, a thin plastic\" is longer than the wrong options and stands out; shorten it to \"Polymer (plastic)\" or similar. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows a £20 note. They are all 19th-century book scans (a Civil War soldier, a beggars' tavern, Turner's house in Maiden Lane, a potato seed advert, a wheat field, cucumbers). The question says \"Look at this £20 note\", so the essential image has to show the polymer Turner £20, and no new search is allowed. Banknote copyright may mean Commons has no usable photo. If none can be found, rework the question so it doesn't depend on the picture, for example with an illustrative image of a wallet or till. Separately, the answer \"Polymer, a thin plastic\" is longer than the wrong options and stands out; shorten it to \"Polymer (plastic)\" or similar. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of the note exists, so the question no longer depends on a picture (it now has an illustrative wallet image), and the answer is shortened so it doesn't stand out.",
+        "previous": {
+          "question": "Look at this £20 note. What is it made of?",
+          "answer": "Polymer, a thin plastic",
+          "wrong_answers": [
+            "Cotton paper",
+            "Silk",
+            "Thin metal foil"
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Turner twenty pound note",
+            "note": "A clear photo of the current polymer Bank of England £20 note (J.M.W. Turner design), front or back.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-17938",
@@ -1388732,7 +1388920,7 @@
     },
     {
       "id": "q-17941",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A big friendly dog who runs the most exciting club meeting in Britain.",
       "question": "In “Hey Duggee”, the Squirrels try a new activity in every episode. What do they earn at the end?",
@@ -1388745,25 +1388933,25 @@
       "hints": [
         "It's something small that the Squirrels can keep.",
         "Each one has a picture that shows what the Squirrels did that day.",
-        "Duggee proudly wears lots of them on his chest."
+        "Real Scouts sew them onto their uniforms."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
         "query": "tree house in woods",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AYew_Tree_Woods_in_Abbotsford_House_-_geograph.org.uk_-_8345992.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Yew_Tree_Woods_in_Abbotsford_House_-_geograph.org.uk_-_8345992.jpg/3840px-Yew_Tree_Woods_in_Abbotsford_House_-_geograph.org.uk_-_8345992.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Iain Lees · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIn_the_woods_3247.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/In_the_woods_3247.jpg/3840px-In_the_woods_3247.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Chris Light · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Iain Lees",
-        "author_url": "https://www.geograph.org.uk/profile/24143",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Chris Light",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chris_Light",
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Duggee has won a badge for nearly everything, and the show itself has won BAFTA and Emmy awards.",
+      "fun_fact": "Hey Duggee has won BAFTA awards and an International Emmy.",
       "subcategory": "nursery-rhymes-and-singalongs",
       "style": null,
       "concept": "Hey Duggee",
@@ -1388786,32 +1388974,41 @@
         "difficulty_estimate": 2,
         "notes": "Sticker is a fairly close distractor, but the badge is iconic in the show. The fun fact about BAFTA and International Emmy awards looks right."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fact check is uncertain, and I can't confirm from my own knowledge that Duggee wears lots of badges on his chest (hint 3). Duggee is mainly shown with his whistle. The fun fact's claims that Duggee has \"a badge for nearly everything\" and that the show won \"Emmy awards\" (plural) also need checking. Replace hint 3 with something safe, such as \"Duggee gives them out at the end of each episode\", and limit the fun fact to awards you can confirm. Fact check: uncertain. Answer (badge) and the BAFTA/Emmy claim are true. I could not verify hint 3, that Duggee wears lots of badges on his chest.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fact check is uncertain, and I can't confirm from my own knowledge that Duggee wears lots of badges on his chest (hint 3). Duggee is mainly shown with his whistle. The fun fact's claims that Duggee has \"a badge for nearly everything\" and that the show won \"Emmy awards\" (plural) also need checking. Replace hint 3 with something safe, such as \"Duggee gives them out at the end of each episode\", and limit the fun fact to awards you can confirm. Fact check: uncertain. Answer (badge) and the BAFTA/Emmy claim are true. I could not verify hint 3, that Duggee wears lots of badges on his chest.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hints 1 and 2 vaguer so they no longer give the answer away, and kept hint 3.",
+        "reason": "Hint 3 and the fun fact contained claims that couldn't be checked, so they now use safe facts: Scouts' sewn-on badges, and the confirmed BAFTA and International Emmy wins.",
         "previous": {
           "hints": [
-            "Real Scouts and Brownies collect these too.",
-            "You often sew them onto a uniform.",
+            "It's something small that the Squirrels can keep.",
+            "Each one has a picture that shows what the Squirrels did that day.",
             "Duggee proudly wears lots of them on his chest."
-          ]
+          ],
+          "fun_fact": "Duggee has won a badge for nearly everything, and the show itself has won BAFTA and Emmy awards."
         },
         "revised_on": "2026-11-13"
       }
@@ -1390109,7 +1390306,7 @@
     },
     {
       "id": "q-17959",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A garden party where the guests are not having a nice time.",
       "question": "In a book from 1865, I hold croquet games where flamingos are the mallets, hedgehogs are the balls and soldiers bend over to be the hoops. Who am I?",
@@ -1390127,16 +1390324,16 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "croquet lawn mallets",
+        "query": "croquet mallets and balls",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Game_of_Croquet_%28SM_1476%29.png",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/A_Game_of_Croquet_%28SM_1476%29.png/3840px-A_Game_of_Croquet_%28SM_1476%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Édouard Manet · PDM-owner · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AModern_croquet_equipment.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Modern_croquet_equipment.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Winnywinn · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "PDM-owner",
-        "license_url": null,
-        "author": "Édouard Manet",
-        "author_url": "https://en.wikipedia.org/wiki/en:%C3%89douard_Manet",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Winnywinn",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Winnywinn&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1390167,24 +1390364,47 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-no-reason: public domain without a template).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed the false claim that the Queen of Hearts first appeared in 1865 by rewording the question text.",
+        "reason": "The picked picture had an unsuitable licence, so the media query is changed to find a new croquet picture; nothing else changes.",
         "previous": {
-          "question": "I first appeared in a book in 1865. At my croquet games, flamingos are the mallets, hedgehogs are the balls and soldiers bend over to be the hoops. Who am I?"
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "croquet lawn mallets",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Game_of_Croquet_%28SM_1476%29.png",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/A_Game_of_Croquet_%28SM_1476%29.png/3840px-A_Game_of_Croquet_%28SM_1476%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Édouard Manet · PDM-owner · Wikimedia Commons",
+            "provider": "commons",
+            "license": "PDM-owner",
+            "license_url": null,
+            "author": "Édouard Manet",
+            "author_url": "https://en.wikipedia.org/wiki/en:%C3%89douard_Manet",
+            "restrictions": [],
+            "pd_reasons": []
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1391124,7 +1391344,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "halved coconut shells",
+        "query": "coconut shell halves",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1391158,18 +1391378,44 @@
       "batch": "batch-62",
       "review": {
         "decision": "needs_work",
-        "feedback": "No adequate media candidate: all three pictures show sundot kulangot, a Filipino sweet sold in small red-painted shells tied with palm strips. They are not halved coconut shells and have nothing to do with the film or its coconut-clopping horse gag. No new search is allowed. A fresh search such as \"coconut shell halves\" or \"medieval knight armour\" would fit. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No adequate media candidate: all three pictures show sundot kulangot, a Filipino sweet sold in small red-painted shells tied with palm strips. They are not halved coconut shells and have nothing to do with the film or its coconut-clopping horse gag. No new search is allowed. A fresh search such as \"coconut shell halves\" or \"medieval knight armour\" would fit. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No picture fitted the old query, so the media query is changed to the reviewer's suggestion.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "halved coconut shells",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-17973",
@@ -1392921,20 +1393167,20 @@
     },
     {
       "id": "q-17996",
-      "status": "needs_work",
-      "difficulty": 6,
-      "description": "Furniture that judges you before you've even finished your first note.",
-      "question": "In the blind auditions of The Voice UK, how many big spinning chairs face away from the singer?",
-      "answer": "4",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "A singing show that switched TV homes faster than a coach can slam a button.",
+      "question": "The Voice UK started on BBC One in 2012. Which channel did it move to in 2017?",
+      "answer": "ITV",
       "wrong_answers": [
-        "3",
-        "5",
-        "6"
+        "Channel 4",
+        "Channel 5",
+        "Sky One"
       ],
       "hints": [
-        "Each chair belongs to one coach.",
-        "Every chair has a big button that the coach slams to turn around.",
-        "Same as the number of legs on a dog."
+        "The move came in time for the show's sixth series.",
+        "The same channel is home to Britain's Got Talent.",
+        "It also shows Coronation Street and I'm a Celebrity."
       ],
       "media": {
         "type": "image",
@@ -1392979,19 +1393225,49 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This repeats the fact in approved q-2826 (“In the blind auditions of The Voice, coaches sit with their backs to the singer. How many coaches are there in most versions?” → 4). The number of spinning chairs is the number of coaches, so it's the same question in other words. Drop it, or replace it with a different Voice UK fact.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This repeats the fact in approved q-2826 (“In the blind auditions of The Voice, coaches sit with their backs to the singer. How many coaches are there in most versions?” → 4). The number of spinning chairs is the number of coaches, so it's the same question in other words. Drop it, or replace it with a different Voice UK fact.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 6,
+      "revision": {
+        "action": "revise",
+        "reason": "The old question repeated q-2826, so it now asks a different Voice UK fact: its 2017 move from the BBC to ITV.",
+        "previous": {
+          "difficulty": 6,
+          "description": "Furniture that judges you before you've even finished your first note.",
+          "question": "In the blind auditions of The Voice UK, how many big spinning chairs face away from the singer?",
+          "answer": "4",
+          "wrong_answers": [
+            "3",
+            "5",
+            "6"
+          ],
+          "hints": [
+            "Each chair belongs to one coach.",
+            "Every chair has a big button that the coach slams to turn around.",
+            "Same as the number of legs on a dog."
+          ]
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-17997",
@@ -1394170,7 +1394446,7 @@
     },
     {
       "id": "q-18012",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "The year you're suddenly the tallest in the playground, for about ten months.",
       "question": "In Year 6 in England, children take SATs and often go on a school trip away from home. What comes next for them?",
@@ -1394181,8 +1394457,8 @@
         "Going to university"
       ],
       "hints": [
-        "At the end of the year they say goodbye to their primary teachers before the summer holidays.",
-        "Next, they'll often have a different teacher for each subject.",
+        "Many children feel excited and a little nervous about it.",
+        "It happens in September, when they are about 11 years old.",
         "They'll be in Year 7, with a new uniform and a much bigger school."
       ],
       "media": {
@@ -1394228,27 +1394504,35 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"they say goodbye to their primary teachers\") tells players straight away that the children are leaving primary school, which points to secondary school and rules out Reception. Hint 2 (\"a different teacher for each subject\") nearly gives it away as well. Hint 1 should be vague, for example about the time of year or how they feel, and hint 2 should not describe secondary school.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"they say goodbye to their primary teachers\") tells players straight away that the children are leaving primary school, which points to secondary school and rules out Reception. Hint 2 (\"a different teacher for each subject\") nearly gives it away as well. Hint 1 should be vague, for example about the time of year or how they feel, and hint 2 should not describe secondary school.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints so they go from vague to strong and the first two no longer give the answer away.",
+        "reason": "Hints 1 and 2 are replaced with vaguer clues that don't say the children are leaving primary school or describe secondary school.",
         "previous": {
           "hints": [
-            "Soon they'll be the youngest in the school again.",
-            "Next September they'll be in Year 7.",
-            "They'll get a new uniform and a much bigger school."
+            "At the end of the year they say goodbye to their primary teachers before the summer holidays.",
+            "Next, they'll often have a different teacher for each subject.",
+            "They'll be in Year 7, with a new uniform and a much bigger school."
           ]
         },
         "revised_on": "2026-11-13"
@@ -1396494,7 +1396778,7 @@
     },
     {
       "id": "q-18042",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "The playground's official way to say “that was nothing”.",
       "question": "Complete the rhyme for something really simple: “Easy peasy, lemon…”",
@@ -1396506,7 +1396790,7 @@
       ],
       "hints": [
         "Think about the fruit in the rhyme.",
-        "The word is about something you do with your hands.",
+        "The word ends with the same sound as “easy”.",
         "It's what you do to a lemon to get the juice."
       ],
       "media": {
@@ -1396552,27 +1396836,35 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“about something you do with your hands”) gives the answer away: it applies only to “Squeezy”, not to Sneezy, Breezy or Cheesy, so it solves the question at the second hint. Replace it with a vaguer hint, e.g. one about the lemon or the kitchen that doesn't point to an action done by hand.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“about something you do with your hands”) gives the answer away: it applies only to “Squeezy”, not to Sneezy, Breezy or Cheesy, so it solves the question at the second hint. Replace it with a vaguer hint, e.g. one about the lemon or the kitchen that doesn't point to an action done by hand.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the hints so they go from vague to strong, moving the lemon-juice hint to third place.",
+        "reason": "Hint 2 pointed only to the answer, so it now says something that fits all four options.",
         "previous": {
           "hints": [
-            "It rhymes with “easy”.",
-            "It's what you do to a lemon to get the juice.",
-            "Squash it hard in your hand!"
+            "Think about the fruit in the rhyme.",
+            "The word is about something you do with your hands.",
+            "It's what you do to a lemon to get the juice."
           ]
         },
         "revised_on": "2026-11-13"
@@ -1396974,7 +1397266,7 @@
       "id": "q-18048",
       "status": "needs_work",
       "difficulty": 2,
-      "description": "No room service, no luggage trolley, but plenty of glitter and glue.",
+      "description": "A class with a name that sounds like the place you pick up your room key.",
       "question": "In England, many four-year-olds start “Reception” in September. Where is Reception class?",
       "answer": "At primary school",
       "wrong_answers": [
@@ -1396990,7 +1397282,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "school cloakroom coat pegs",
+        "query": "school coat pegs",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1397024,28 +1397316,43 @@
       "batch": "batch-62",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates fits: the sheet shows a 19th-century Irish tavern engraving, two adobe house gates in Santa Fe and the Philippine coat of arms. None of them is a school cloakroom, and no new search is allowed. The description also gives the answer away: \"No room service, no luggage trolley\" rules out the hotel, and \"glitter and glue\" points to young children, which rules out secondary school and university. Rewrite it to play on the school theme without hinting at the children's age or ruling out the hotel. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates fits: the sheet shows a 19th-century Irish tavern engraving, two adobe house gates in Santa Fe and the Philippine coat of arms. None of them is a school cloakroom, and no new search is allowed. The description also gives the answer away: \"No room service, no luggage trolley\" rules out the hotel, and \"glitter and glue\" points to young children, which rules out secondary school and university. Rewrite it to play on the school theme without hinting at the children's age or ruling out the hotel. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which named primary school as “big school”, with a vague joke hint.",
+        "reason": "The description no longer rules out the hotel or hints at the children's age, and the media query is changed so a new search can find a picture.",
         "previous": {
-          "hints": [
-            "It is the very first class of “big school”.",
-            "After it comes Year 1.",
-            "You might stay at the same school until Year 6."
-          ]
+          "description": "No room service, no luggage trolley, but plenty of glitter and glue.",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "school cloakroom coat pegs",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1397520,7 +1397827,7 @@
     },
     {
       "id": "q-18055",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Dinner ladies, plastic trays and a lunch queue that stretches all the way to the playground.",
       "question": "On a British school dinner menu, what is “sponge and custard”?",
@@ -1397532,7 +1397839,7 @@
       ],
       "hints": [
         "It's eaten after the main course.",
-        "It's sweet, and served warm.",
+        "One part of it is light, soft and full of tiny air holes.",
         "The sauce is yellow and poured from a jug."
       ],
       "media": {
@@ -1397574,28 +1397881,40 @@
         "difficulty_estimate": 3,
         "notes": "The description shows it's a pudding, which rules out the fish pie and toast options and leaves jelly as the only real rival. The custard question q-13766 asks a different fact."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. Hint 1 (“eaten after the main course”) already leaves only the cake and the jelly. Hint 2 (“sweet, and served warm”) then repeats the answer's own words “warm sweet” and rules out the cold jelly. Hint 2 should stay vaguer, for example about the texture or how it's cooked, and must not say “warm”.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. Hint 1 (“eaten after the main course”) already leaves only the cake and the jelly. Hint 2 (“sweet, and served warm”) then repeats the answer's own words “warm sweet” and rules out the cold jelly. Hint 2 should stay vaguer, for example about the texture or how it's cooked, and must not say “warm”.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer hints that the dish is a sweet pudding.",
+        "reason": "Hint 2 no longer says “warm” and now describes texture, as the reviewer asked.",
         "previous": {
-          "description": "The best reason to finish your cabbage at lunchtime."
+          "hints": [
+            "It's eaten after the main course.",
+            "It's sweet, and served warm.",
+            "The sauce is yellow and poured from a jug."
+          ]
         },
         "revised_on": "2026-11-13"
       }
@@ -1399689,7 +1400008,7 @@
     },
     {
       "id": "q-18083",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "London slang so old it could probably claim its own pension.",
       "question": "ITV's long-running drama The Bill took its title from slang. Who are “the Old Bill”?",
@@ -1399701,7 +1400020,7 @@
       ],
       "hints": [
         "The slang is old and was born in London.",
-        "The show's main characters worked shifts at a station in the fictional borough of Canley.",
+        "The show ran on ITV for more than 25 years, from 1984 to 2010.",
         "They wear helmets and drive cars with flashing blue lights."
       ],
       "media": {
@@ -1399747,28 +1400066,34 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: of the four options (police, judges, tax collectors, bailiffs), only the police work shifts at a “station”. Replace hint 2 with a vaguer clue that doesn't point to a police station, for example one about how long the show ran or which channel it was on.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: of the four options (police, judges, tax collectors, bailiffs), only the police work shifts at a “station”. Replace hint 2 with a vaguer clue that doesn't point to a police station, for example one about how long the show ran or which channel it was on.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hints 1 and 2, which ruled out options or gave the answer away, and shortened the question.",
+        "reason": "Hint 2 mentioned a station, which pointed to the police, so it now says how long the show ran.",
         "previous": {
-          "description": "A title that isn't about paying for anything, though someone usually pays in the end.",
-          "question": "ITV's The Bill ran from 1984 to 2010 in a fictional part of London. Its title comes from slang: who are “the Old Bill”?",
           "hints": [
-            "The show was set at Sun Hill station.",
-            "You might call them on 999.",
+            "The slang is old and was born in London.",
+            "The show's main characters worked shifts at a station in the fictional borough of Canley.",
             "They wear helmets and drive cars with flashing blue lights."
           ]
         },
@@ -1400906,7 +1401231,7 @@
     },
     {
       "id": "q-18099",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Wimbledon: where even a grass stain is a fashion crime.",
       "question": "In 2023, Wimbledon relaxed its all-white rule a little and allowed dark-coloured undershorts. Which players was this change for?",
@@ -1400918,7 +1401243,7 @@
       ],
       "hints": [
         "The change was announced months before the tournament began.",
-        "It followed calls from top players, including tennis legend Billie Jean King.",
+        "The club decided after talking with players, doctors and clothing makers.",
         "The players had asked for it so they would feel more comfortable."
       ],
       "media": {
@@ -1400964,26 +1401289,34 @@
       "needs_media": false,
       "batch": "batch-62",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: naming Billie Jean King, a famous campaigner for women in tennis, as the one asking for the change points straight at \"Women players\" (the rater flagged this too). Hint 2 needs to be replaced with a vaguer clue, for example one about the tennis world or the timing, that doesn't point to women.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: naming Billie Jean King, a famous campaigner for women in tennis, as the one asking for the change points straight at \"Women players\" (the rater flagged this too). Hint 2 needs to be replaced with a vaguer clue, for example one about the tennis world or the timing, that doesn't point to women.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which ruled out all the wrong options or nearly gave the answer.",
+        "reason": "Hint 2 named Billie Jean King, which pointed to women players, so it is replaced with a neutral clue about how the club decided.",
         "previous": {
           "hints": [
-            "It wasn't about age or the type of match.",
-            "The undershorts are worn under skirts and dresses.",
+            "The change was announced months before the tournament began.",
+            "It followed calls from top players, including tennis legend Billie Jean King.",
             "The players had asked for it so they would feel more comfortable."
           ]
         },
