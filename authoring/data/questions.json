@@ -1405693,7 +1405693,7 @@
     },
     {
       "id": "q-18157",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "A train that goes to sleep under the sea and wakes up speaking French.",
       "question": "Since 2007, trains like this one have left London from which station?",
@@ -1405724,7 +1405724,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Before 2007, Eurostar trains used Waterloo, a station named after the battle where Napoleon was defeated, which some French visitors found rather cheeky.",
+      "fun_fact": "St Pancras was nearly knocked down in the 1960s; the poet John Betjeman helped save it, and a statue of him now stands inside.",
       "subcategory": "brands-and-adverts",
       "style": null,
       "concept": "Eurostar",
@@ -1405747,32 +1405747,36 @@
         "difficulty_estimate": 9,
         "notes": "The Meeting Place statue shows a couple embracing; calling it “kissing” is a slight stretch. A clear Eurostar photo is likely to be available, and the note correctly asks for no station signs."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The answer is right (Eurostar moved to St Pancras in Nov 2007, from Waterloo). The claim that French visitors found the Waterloo station name 'rather cheeky' is a popular joke, but I found no source for it, and I didn't search for one.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The answer is right (Eurostar moved to St Pancras in Nov 2007, from Waterloo). The claim that French visitors found the Waterloo station name 'rather cheeky' is a popular joke, but I found no source for it, and I didn't search for one.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Changed “kissing” to “embracing” in hint 2 as the reviewer asked.",
+        "reason": "Replaced the unsourced “cheeky” fun fact with a well-documented one about John Betjeman saving St Pancras.",
         "previous": {
-          "hints": [
-            "Until 2007 they left from a station named after a famous battle.",
-            "The station is a red-brick Victorian building with a giant statue of a couple kissing.",
-            "It sits right next door to King's Cross."
-          ]
+          "fun_fact": "Before 2007, Eurostar trains used Waterloo, a station named after the battle where Napoleon was defeated, which some French visitors found rather cheeky."
         },
         "revised_on": "2026-11-13"
       }
@@ -1406542,7 +1406546,7 @@
         "The 1980s"
       ],
       "hints": [
-        "He handed gadgets to five different actors playing Bond.",
+        "He handed gadgets to four different actors playing Bond.",
         "Sean Connery was playing Bond at the time.",
         "His first was “From Russia with Love”, the second Bond film."
       ],
@@ -1406562,7 +1406566,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "In his last film, “The World Is Not Enough” (1999), Q introduces John Cleese as his assistant and future replacement.",
+      "fun_fact": "In his last film, “The World Is Not Enough” (1999), Q introduces his assistant R, played by John Cleese, who became the new Q in the next film.",
       "subcategory": "british-films",
       "style": null,
       "concept": "Q",
@@ -1406590,27 +1406594,38 @@
       "batch": "batch-63",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: wrong. Hint 1 is false. Llewelyn's Q worked with four Bond actors (Connery, Moore, Dalton, Brosnan). Q doesn't appear in On Her Majesty's Secret Service, so Lazenby is not one. Also, in The World Is Not Enough, Cleese plays R, Q's assistant. 'Future replacement' is correct, since Cleese's character takes over as Q in Die Another Day.",
+        "feedback": "Hint 1 is wrong: Llewelyn's Q handed gadgets to five Bond actors, not four (Connery, Lazenby in On Her Majesty's Secret Service, Moore, Dalton, Brosnan). Change it to \"five different actors\". Also note that q-5564 (the decade of 007's first cinema film, the 1960s) is closely related, and anyone who knows that question can reason their way to this answer. Fact check: wrong. Hint 1 says he handed gadgets to four different Bond actors. Llewelyn appeared opposite five: Connery, Lazenby (On Her Majesty's Secret Service), Moore, Dalton and Brosnan.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. Hint 1 is false. Llewelyn's Q worked with four Bond actors (Connery, Moore, Dalton, Brosnan). Q doesn't appear in On Her Majesty's Secret Service, so Lazenby is not one. Also, in The World Is Not Enough, Cleese plays R, Q's assistant. 'Future replacement' is correct, since Cleese's character takes over as Q in Die Another Day.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed straight to the start of the Bond series.",
+        "reason": "Fixed hint 1 to four Bond actors and corrected the fun fact: Cleese played R, who became the new Q in the next film.",
         "previous": {
           "hints": [
-            "The Bond films had only just begun.",
+            "He handed gadgets to five different actors playing Bond.",
             "Sean Connery was playing Bond at the time.",
             "His first was “From Russia with Love”, the second Bond film."
-          ]
+          ],
+          "fun_fact": "In his last film, “The World Is Not Enough” (1999), Q introduces John Cleese as his assistant and future replacement."
         },
         "revised_on": "2026-11-13"
       }
@@ -1409350,10 +1409365,10 @@
     },
     {
       "id": "q-18205",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Two neighbours bought nearly the same outfit and nobody will ever let it go.",
-      "question": "This close-up shows part of a flag with the Union Jack in its corner and red stars with white borders. Which country's flag is it?",
+      "question": "This flag has the Union Jack in its corner and red stars with white borders. Which country's flag is it?",
       "answer": "New Zealand",
       "wrong_answers": [
         "Australia",
@@ -1409368,11 +1409383,18 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "New Zealand flag waving",
-        "note": "Close-up of the flag of New Zealand showing the Union Jack corner and some of the red, white-bordered stars on blue; no text.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "query": "Flag of New Zealand",
+        "note": "The full flag of New Zealand: Union Jack in the corner and four red, white-bordered stars on blue; no text.",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANew_Zealand_Flag_%2816-9%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/New_Zealand_Flag_%2816-9%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Romanpierson123 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Romanpierson123",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Romanpierson123&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "New Zealand held two votes in 2015 and 2016 on changing its flag, and people chose to keep it.",
       "subcategory": "flags-and-emblems",
@@ -1409401,19 +1409423,44 @@
       "needs_media": true,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates is the essential close-up of New Zealand's flag. A new search isn't allowed, so the slot needs a hand-picked image: a clear close-up of the New Zealand flag showing the Union Jack and the red stars with white borders, with no text in it. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates is the essential close-up of New Zealand's flag. A new search isn't allowed, so the slot needs a hand-picked image: a clear close-up of the New Zealand flag showing the Union Jack and the red stars with white borders, with no text in it. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No close-up was found, so the question now uses the whole flag, which Commons is sure to have, with an updated query and note.",
+        "previous": {
+          "question": "This close-up shows part of a flag with the Union Jack in its corner and red stars with white borders. Which country's flag is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "New Zealand flag waving",
+            "note": "Close-up of the flag of New Zealand showing the Union Jack corner and some of the red, white-bordered stars on blue; no text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18206",
@@ -1410113,7 +1410160,7 @@
     },
     {
       "id": "q-18215",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Three digits you hope you'll never need, at home or on holiday.",
       "question": "On a UK phone, dialling 112 reaches the same emergency services as 999. Where is 112 the standard emergency number?",
@@ -1410125,17 +1410172,24 @@
       ],
       "hints": [
         "It was chosen so that one number would work across many countries.",
-        "North America uses 911, and Australia uses 000.",
+        "It became the shared number in 1991, agreed by countries working together in one union.",
         "It works the same in Paris, Berlin and Madrid."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "phone keypad close-up",
-        "note": "A sign showing the emergency number 112, without flags, maps or country names.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "public payphone keypad",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_person_reaches_for_the_receiver_of_a_payphone.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/A_person_reaches_for_the_receiver_of_a_payphone.jpg/3840px-A_person_reaches_for_the_receiver_of_a_payphone.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "112 can be dialled for free from any phone across the European Union, so travellers only need to remember one number.",
       "subcategory": "home-and-public-services",
@@ -1410164,28 +1410218,45 @@
       "needs_media": true,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is 'essential' with a note asking for a sign showing 112, but no candidate shows 112, and no new search is allowed. The question already says 112, so the image isn't needed to answer it. Make the role illustrative; candidate 1 (a public payphone keypad) would then fit. Separately, hint 2 rules out two of the three wrong answers (North America and Australia), which leaves only Europe or South America. Consider making it vaguer. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is 'essential' with a note asking for a sign showing 112, but no candidate shows 112, and no new search is allowed. The question already says 112, so the image isn't needed to answer it. Make the role illustrative; candidate 1 (a public payphone keypad) would then fit. Separately, hint 2 rules out two of the three wrong answers (North America and Australia), which leaves only Europe or South America. Consider making it vaguer. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed straight at the EU, with a vague hint.",
+        "reason": "Made the media illustrative (payphone keypad) because the question already gives 112, and made hint 2 vaguer so it no longer rules out two options.",
         "previous": {
           "hints": [
-            "The UK took it on while it belonged to a big group of countries.",
+            "It was chosen so that one number would work across many countries.",
             "North America uses 911, and Australia uses 000.",
             "It works the same in Paris, Berlin and Madrid."
-          ]
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "phone keypad close-up",
+            "note": "A sign showing the emergency number 112, without flags, maps or country names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1411329,8 +1411400,8 @@
         "Traveller"
       ],
       "hints": [
-        "It describes a family member.",
-        "It's someone you might share a bedroom with growing up.",
+        "It describes someone very close to you.",
+        "It's a family member you might share a bedroom with growing up.",
         "It's what you'd call a male sibling."
       ],
       "media": {
@@ -1411377,25 +1411448,35 @@
       "batch": "batch-63",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 (\"It describes a family member\") gives the answer away: Brother is the only family member among the four options (Neighbour, Horse, Traveller). Hint 1 should stay vague, for example about how close the people are, without saying they are related. Hint 2 should move to the family idea instead.",
+        "feedback": "Hint 2 (“a family member you might share a bedroom with”) gives the answer away: Brother is the only family member among the four options, so the question is solved before hint 3. Replace hint 2 with a clue that doesn't point to family, such as one about the trust or loyalty the word suggests.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"It describes a family member\") gives the answer away: Brother is the only family member among the four options (Neighbour, Horse, Traveller). Hint 1 should stay vague, for example about how close the people are, without saying they are related. Hint 2 should move to the family idea instead.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away through the sound of the Sanskrit word, with a medium hint.",
+        "reason": "Hint 1 now only says the person is close, and the family idea moves to hint 2, so the first hint no longer gives the answer away.",
         "previous": {
           "hints": [
             "It describes a family member.",
-            "It goes back to an old word from India, “bhratr”.",
+            "It's someone you might share a bedroom with growing up.",
             "It's what you'd call a male sibling."
           ]
         },
@@ -1411632,10 +1411713,10 @@
     },
     {
       "id": "q-18235",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
-      "description": "The Gruffalo swapped his warts for a kilt.",
-      "question": "The Scots Gruffalo begins “a moose took a dauner through the deep mirk wid”. Three of these are Scots words. Which one is Welsh?",
+      "description": "Four words walk into a pub, and one of them ordered in the wrong accent.",
+      "question": "Three of these are Scots words. Which one is Welsh?",
       "answer": "Cwtch",
       "wrong_answers": [
         "Bairn",
@@ -1411643,27 +1411724,27 @@
         "Wee"
       ],
       "hints": [
-        "Three of them mean “child”, “dull and rainy” and “small”.",
-        "The odd one out means a warm hug.",
+        "Welsh spelling often looks very strange to English speakers.",
+        "The Welsh word means a warm, cosy hug.",
         "It's spelled with a W doing the job of a vowel."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "dark forest path Scotland",
+        "query": "Scottish Highlands glen",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AThrough_the_darkness%2C_Caberston_Forest_-_geograph.org.uk_-_7172082.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Through_the_darkness%2C_Caberston_Forest_-_geograph.org.uk_-_7172082.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Richard Webb · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGlen_Coe_stone_bridge_20211022.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Glen_Coe_stone_bridge_20211022.jpg/3840px-Glen_Coe_stone_bridge_20211022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Daniel Kraft · CC BY-SA 3.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Richard Webb",
-        "author_url": "https://www.geograph.org.uk/profile/196",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Daniel Kraft",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Domob",
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "The Gruffalo has been translated into Scots, Gaelic, Doric and Glaswegian, among more than 100 languages.",
+      "fun_fact": "Welsh people say a “cwtch” is warmer than a hug, and the word can also mean a cosy cubbyhole.",
       "subcategory": "languages-of-britain",
       "style": null,
       "concept": "The Gruffalo in Scots",
@@ -1411690,25 +1411771,56 @@
       "needs_media": false,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives away too much: it gives the meanings of the three Scots options, so anyone who knows \"wee\" = small or \"bairn\" = child gets the answer by elimination from the first hint. Hint 1 should be vague, for example about where Welsh is spoken, without explaining the other options. Also, the Scots Gruffalo quote has nothing to do with what is asked (none of its words are options). It only makes the question longer, so cut it to something like \"Three of these are Scots words. Which one is Welsh?\"",
-        "problems": [
-          "giveaway",
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives away too much: it gives the meanings of the three Scots options, so anyone who knows \"wee\" = small or \"bairn\" = child gets the answer by elimination from the first hint. Hint 1 should be vague, for example about where Welsh is spoken, without explaining the other options. Also, the Scots Gruffalo quote has nothing to do with what is asked (none of its words are options). It only makes the question longer, so cut it to something like \"Three of these are Scots words. Which one is Welsh?\"",
+          "problems": [
+            "giveaway",
+            "style"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the “You're reading…” framing and stated the opening line as a plain fact.",
+        "reason": "Cut the unrelated Gruffalo quote and made hint 1 vague so it doesn't explain the Scots options; the description, fun fact and image no longer refer to the Gruffalo.",
         "previous": {
-          "question": "You're reading The Gruffalo in Scots, where “a moose took a dauner through the deep mirk wid”. Three of these are Scots words. Which one is Welsh?"
+          "description": "The Gruffalo swapped his warts for a kilt.",
+          "question": "The Scots Gruffalo begins “a moose took a dauner through the deep mirk wid”. Three of these are Scots words. Which one is Welsh?",
+          "hints": [
+            "Three of them mean “child”, “dull and rainy” and “small”.",
+            "The odd one out means a warm hug.",
+            "It's spelled with a W doing the job of a vowel."
+          ],
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "dark forest path Scotland",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AThrough_the_darkness%2C_Caberston_Forest_-_geograph.org.uk_-_7172082.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Through_the_darkness%2C_Caberston_Forest_-_geograph.org.uk_-_7172082.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Richard Webb · CC BY-SA 2.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 2.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+            "author": "Richard Webb",
+            "author_url": "https://www.geograph.org.uk/profile/196",
+            "restrictions": [],
+            "pd_reasons": []
+          },
+          "fun_fact": "The Gruffalo has been translated into Scots, Gaelic, Doric and Glaswegian, among more than 100 languages."
         },
         "revised_on": "2026-11-13"
       }
@@ -1414594,9 +1414706,9 @@
     },
     {
       "id": "q-18274",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
-      "description": "Like baseball, but with more cardigans watching from the side.",
+      "description": "A summer PE lesson where everyone suddenly becomes an expert at running in circles.",
       "question": "You're playing rounders in PE. Which of these will you NOT find on a rounders pitch?",
       "answer": "Home plate",
       "wrong_answers": [
@@ -1414605,25 +1414717,27 @@
         "Bowling square"
       ],
       "hints": [
-        "Think of rounders' famous American cousin.",
-        "In rounders, you score by running round four posts.",
+        "Rounders has been played in British schools for generations, mostly in summer.",
+        "One of these belongs to rounders' famous American cousin.",
         "This one belongs to baseball, where the batter stands right next to it."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "rounders match school",
+        "query": "rounders game",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchool_Cricket_Match_at_Oakwood_-_geograph.org.uk_-_5023771.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/School_Cricket_Match_at_Oakwood_-_geograph.org.uk_-_5023771.jpg/3840px-School_Cricket_Match_at_Oakwood_-_geograph.org.uk_-_5023771.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Jonathan Clitheroe · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALiving_history_volunteer_portraying_the_6th_Wisconsin_pitches_the_ball_in_a_game_of_rounders_%28ad31f5f3-0b74-4fa6-b071-c331bb38833b%29.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Living_history_volunteer_portraying_the_6th_Wisconsin_pitches_the_ball_in_a_game_of_rounders_%28ad31f5f3-0b74-4fa6-b071-c331bb38833b%29.JPG/3840px-Living_history_volunteer_portraying_the_6th_Wisconsin_pitches_the_ball_in_a_game_of_rounders_%28ad31f5f3-0b74-4fa6-b071-c331bb38833b%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "NPS · Public domain · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Jonathan Clitheroe",
-        "author_url": "https://www.geograph.org.uk/profile/19028",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NPS",
+        "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [
+          "PD-USGov-NPS"
+        ]
       },
       "fun_fact": "Rounders was described in print in England in 1828, and many historians see it as a close relative of baseball.",
       "subcategory": "pub-and-playground-games",
@@ -1414652,19 +1414766,40 @@
       "needs_media": false,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (“Like baseball…”) and hint 1 (“Think of rounders' famous American cousin”) both point straight at baseball, and “Home plate” is the only baseball term among the options. Anyone who knows that can answer before any real hint. The description should play on rounders or PE without mentioning baseball. Hint 1 should be vague, for example about how rounders is laid out with posts, and the baseball link should wait until hint 2 or 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (“Like baseball…”) and hint 1 (“Think of rounders' famous American cousin”) both point straight at baseball, and “Home plate” is the only baseball term among the options. Anyone who knows that can answer before any real hint. The description should play on rounders or PE without mentioning baseball. Hint 1 should be vague, for example about how rounders is laid out with posts, and the baseball link should wait until hint 2 or 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The description and hint 1 no longer point to baseball; the baseball link now comes only in hint 2.",
+        "previous": {
+          "description": "Like baseball, but with more cardigans watching from the side.",
+          "hints": [
+            "Think of rounders' famous American cousin.",
+            "In rounders, you score by running round four posts.",
+            "This one belongs to baseball, where the batter stands right next to it."
+          ]
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18275",
@@ -1417364,10 +1417499,10 @@
     },
     {
       "id": "q-18310",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "A castle gate wearing a crown: security, but make it royal.",
-      "question": "This crowned portcullis with chains is a famous British badge. Whose badge is it?",
+      "question": "A crowned portcullis with chains is a famous British badge. Whose badge is it?",
       "answer": "The Houses of Parliament",
       "wrong_answers": [
         "The Royal Navy",
@@ -1417381,12 +1417516,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "crowned portcullis carving",
-        "note": "Close-up of the crowned portcullis with chains, carved or painted on the Palace of Westminster; no words or signs visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "castle portcullis gate",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_portcullis_gate_at_Raby_Castle_-_geograph.org.uk_-_2490840.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/The_portcullis_gate_at_Raby_Castle_-_geograph.org.uk_-_2490840.jpg/3840px-The_portcullis_gate_at_Raby_Castle_-_geograph.org.uk_-_2490840.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Ian Greig · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ian Greig",
+        "author_url": "https://www.geograph.org.uk/profile/9857",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The crowned portcullis appeared on the back of the British 1p coin from 1971 to 2008.",
       "subcategory": "flags-and-emblems",
@@ -1417412,22 +1417554,48 @@
         "notes": "Other bodies also use a crowned portcullis (Westminster City Council, Westminster School), but none of them is an option. A close-up photo on Commons without any words is plausible but not certain. The 1p fact is correct. The answer_kind 'person' label is wrong."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the crowned portcullis badge. The question needs an essential close-up of the badge, and no new search is allowed. A new search such as \"Parliament portcullis emblem\" or \"crowned portcullis Westminster\" might find one. The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the crowned portcullis badge. The question needs an essential close-up of the badge, and no new search is allowed. A new search such as \"Parliament portcullis emblem\" or \"crowned portcullis Westminster\" might find one. The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No image of the badge was found, so the question now describes the badge in words and the media is a decorative portcullis.",
+        "previous": {
+          "question": "This crowned portcullis with chains is a famous British badge. Whose badge is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "crowned portcullis carving",
+            "note": "Close-up of the crowned portcullis with chains, carved or painted on the Palace of Westminster; no words or signs visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18311",
@@ -1419682,9 +1419850,9 @@
     },
     {
       "id": "q-18341",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Scotland's shiniest export, dressed up like a tiny present.",
+      "description": "The most exciting thing anyone has ever done with a sheet of foil, sorry, baked potatoes.",
       "question": "I'm a biscuit topped with a marshmallow dome, coated in milk chocolate and wrapped in red and silver foil. What am I?",
       "answer": "A Tunnock's Teacake",
       "wrong_answers": [
@@ -1419693,7 +1419861,7 @@
         "A Penguin"
       ],
       "hints": [
-        "I come from a family bakery near Glasgow.",
+        "My recipe was first made in the 1950s.",
         "There's no orange jelly or jam inside me.",
         "Despite my name, I'm not a cake, and there's no tea in me."
       ],
@@ -1419740,24 +1419908,37 @@
       "needs_media": false,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"Scotland's shiniest export\") rules out options before any hint. Jaffa Cakes are made in Stockport and Wagon Wheels by Burton's in England and Wales, so only the Teacake and the Penguin are left. Hint 1 (\"a family bakery near Glasgow\") then picks out the answer on its own, since the Penguin is a big-brand McVitie's biscuit. The description should play on the theme without naming Scotland, and hint 1 should be vaguer, for example about how old the recipe is, not where it's made.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"Scotland's shiniest export\") rules out options before any hint. Jaffa Cakes are made in Stockport and Wagon Wheels by Burton's in England and Wales, so only the Teacake and the Penguin are left. Hint 1 (\"a family bakery near Glasgow\") then picks out the answer on its own, since the Penguin is a big-brand McVitie's biscuit. The description should play on the theme without naming Scotland, and hint 1 should be vaguer, for example about how old the recipe is, not where it's made.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question text to the identifying clues.",
+        "reason": "The description named Scotland and hint 1 pointed to Glasgow, which together ruled out the other options too early; the new description doesn't name a place and hint 1 now gives the decade the teacake was first made (1956).",
         "previous": {
-          "question": "I'm a round biscuit topped with a dome of fluffy marshmallow, coated in milk chocolate and wrapped in red and silver foil. Made in Scotland since 1956, what am I?"
+          "description": "Scotland's shiniest export, dressed up like a tiny present.",
+          "hints": [
+            "I come from a family bakery near Glasgow.",
+            "There's no orange jelly or jam inside me.",
+            "Despite my name, I'm not a cake, and there's no tea in me."
+          ]
         },
         "revised_on": "2026-11-13"
       }
@@ -1421318,7 +1421499,7 @@
     },
     {
       "id": "q-18362",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Your nan still calls it “hoovering”, whatever brand is roaring across the carpet.",
       "question": "In which decade did James Dyson's first bagless vacuum cleaner, the DC01, go on sale in Britain?",
@@ -1421330,7 +1421511,7 @@
       ],
       "hints": [
         "Before it, he spent about five years building 5,127 prototypes.",
-        "His first design was sold only in Japan, in the late 1980s.",
+        "His first design was sold only in Japan, in the 1980s.",
         "It came out in the same decade as the first Harry Potter book."
       ],
       "media": {
@@ -1421374,28 +1421555,40 @@
         "difficulty_estimate": 9,
         "notes": "The opening line “You're hoovering with a bagless Dyson” is padding, not a real clue. The question is a fairly dry decade guess."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 says Dyson's first design, the G-Force, was sold in Japan \"in the late 1980s\". It went on sale there in about 1986, which is the mid-1980s. The fact check was only \"uncertain\", and I can't confirm \"late\". Change the hint to \"in the mid-1980s\" or just \"in the 1980s\". The rest is correct: DC01 in 1993, 5,127 prototypes, the sawmill cyclone idea, and Harry Potter in 1997. Fact check: uncertain. The DC01 (1993) and the 5,127 prototypes are right. The hint says his first design sold in Japan in the 'late 1980s', but the G-Force launched in Japan in about 1986, which is mid-1980s. I did not search this, so it comes from memory.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 says Dyson's first design, the G-Force, was sold in Japan \"in the late 1980s\". It went on sale there in about 1986, which is the mid-1980s. The fact check was only \"uncertain\", and I can't confirm \"late\". Change the hint to \"in the mid-1980s\" or just \"in the 1980s\". The rest is correct: DC01 in 1993, 5,127 prototypes, the sawmill cyclone idea, and Harry Potter in 1997. Fact check: uncertain. The DC01 (1993) and the 5,127 prototypes are right. The hint says his first design sold in Japan in the 'late 1980s', but the G-Force launched in Japan in about 1986, which is mid-1980s. I did not search this, so it comes from memory.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the made-up opening situation and now ask the question directly.",
+        "reason": "Hint 2 said “late 1980s”, but the G-Force went on sale in Japan around 1986, so the hint now just says “in the 1980s”.",
         "previous": {
-          "question": "You're hoovering with a bagless Dyson. In which decade did James Dyson's first bagless vacuum, the DC01, go on sale in Britain?"
+          "hints": [
+            "Before it, he spent about five years building 5,127 prototypes.",
+            "His first design was sold only in Japan, in the late 1980s.",
+            "It came out in the same decade as the first Harry Potter book."
+          ]
         },
         "revised_on": "2026-11-13"
       }
@@ -1423648,7 +1423841,7 @@
     },
     {
       "id": "q-18392",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "No second takes, no retakes, and absolutely no sneezing allowed.",
       "question": "In February 2010, EastEnders broadcast its first-ever live episode to celebrate a birthday. Which one?",
@@ -1423659,7 +1423852,7 @@
         "50th"
       ],
       "hints": [
-        "EastEnders started in the mid-1980s.",
+        "Soaps love a big round-number birthday as an excuse for a special episode.",
         "The show was already older than many of the actors in its cast that night.",
         "The show began in February 1985."
       ],
@@ -1423706,27 +1423899,35 @@
       "needs_media": false,
       "batch": "batch-63",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Overlaps draft q-18395 (“In which decade did EastEnders begin?” → the 1980s): the 2010 date plus a 1980s start leaves only the 25th, so each question gives the other away. Hint 1 (“started in the mid-1980s”) has the same problem: with 2010 in the question, it rules out every wrong option, so it hands over the answer at the first hint. Keep only one of the two questions. If this one stays, hint 1 needs to be vague and must not date the show's start.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Overlaps draft q-18395 (“In which decade did EastEnders begin?” → the 1980s): the 2010 date plus a 1980s start leaves only the 25th, so each question gives the other away. Hint 1 (“started in the mid-1980s”) has the same problem: with 2010 in the question, it rules out every wrong option, so it hands over the answer at the first hint. Keep only one of the two questions. If this one stays, hint 1 needs to be vague and must not date the show's start.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away by saying “silver anniversary”.",
+        "reason": "Hint 1 dated the show's start and so gave away the answer, so it now gives no date; this question should stay and the overlapping draft q-18395 should be dropped.",
         "previous": {
           "hints": [
             "EastEnders started in the mid-1980s.",
-            "It was a silver anniversary.",
+            "The show was already older than many of the actors in its cast that night.",
             "The show began in February 1985."
           ]
         },
