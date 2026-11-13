@@ -125,8 +125,8 @@ const withCareer = (save, fn) => {
 const earned = (names, shown = true) =>
   Object.fromEntries(names.map((n, i) => [n, { on: `2026-10-${String(1 + (i % 28)).padStart(2, "0")}`, ...(shown ? { shown } : {}) }]));
 const SOME = ["CAREER_HISTORY_ELEMENTARY", "CAREER_NATURE_ELEMENTARY", "CAREER_SPORT_ELEMENTARY", "CAREER_SCIENCE_ELEMENTARY", "CAREER_HISTORY_MIDDLE", "CAREER_SCORE_100", "CAREER_SCORE_250", "CAREER_YEAR_ADULTS"];
-saves["career"] = withCareer(done, (c) => ({ ...c, score: 312, badges: earned(SOME) }));
-saves["career-full"] = withCareer(done, (c) => ({ ...c, score: 120000, badges: earned(BADGE_NAMES) }));
+saves["career"] = withCareer(done, (c) => ({ ...c, score: 312, ranks: [5, 6, 6], badges: earned(SOME) }));
+saves["career-full"] = withCareer(done, (c) => ({ ...c, score: 120000, ranks: [14, 15, 15], badges: earned(BADGE_NAMES) }));
 saves["career-off"] = withCareer(done, (c) => ({ ...c, off: true, badges: earned(SOME) }));
 meta.career = meta["career-full"] = meta["career-off"] = { right: 0 };
 

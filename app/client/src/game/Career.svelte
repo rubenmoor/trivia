@@ -7,6 +7,7 @@
   import { type CareerView, SCORE_MILESTONES, SUBJECTS, YEAR_GROUPS } from "../engine/career.ts";
   import { careerShown, fetchCareers, setCareer } from "../lib/api.ts";
   import { badgeText } from "../lib/badge-text.ts";
+  import { formatScore } from "../lib/career-text.ts";
   import { revealStep, unshown } from "../lib/celebration.ts";
   import { errorText } from "../lib/errors.ts";
   import { lang, t } from "../lib/i18n.ts";
@@ -15,6 +16,7 @@
   import Fireworks from "./Fireworks.svelte";
   import Icon from "./Icon.svelte";
   import Prompt from "./Prompt.svelte";
+  import RankBar from "./RankBar.svelte";
   import { sfx } from "./sound.svelte.ts";
   import { FADE_MS, reducedMotion } from "./timing.ts";
 
@@ -157,8 +159,12 @@
       {#if view && !view.off}<p class="count">{t("career.page.earned", { n: held.size - hidden.size, total })}</p>{/if}
     </div>
     {#if fresh.length && revealed}<p class="new" class:done>{t("career.new", { n: fresh.length })}</p>{/if}
-    <!-- part 6: score, rank and progress bars -->
-    <div class="slot" data-slot="progress"></div>
+    <div class="slot" data-slot="progress">
+      {#if view && !view.off}
+        <p class="score"><span>{t("career.points")}</span> <b>{formatScore(view.score, lang)}</b></p>
+        {#if view.rank !== null}<RankBar to={view.rank} still />{/if}
+      {/if}
+    </div>
     {#if view && !after}
       <button class="secondary switch" onclick={toggle} disabled={busy} aria-pressed={!view.off}>
         <Icon name="seal" /> {view.off ? t("career.page.turnOn") : t("career.page.turnOff")}
@@ -236,8 +242,27 @@
     font-size: calc(1.3 * var(--u));
     font-variant-numeric: tabular-nums;
   }
+  .slot {
+    display: flex;
+    align-items: center;
+    gap: calc(1.5 * var(--u));
+  }
   .slot:empty {
     display: none;
+  }
+  .score {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: calc(1.2 * var(--u));
+    color: var(--slate-200);
+  }
+  .score b {
+    font-size: calc(2.6 * var(--u));
+    font-variant-numeric: tabular-nums;
+    color: var(--amber);
   }
   .groups {
     flex: 1;
