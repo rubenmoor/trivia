@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import { gameAction } from "./api.ts";
 import * as game from "./game.ts";
 import { actionRng } from "./rng.ts";
+import { parseSave } from "./save.ts";
 import { emptySave, engineData, type EngineData, type SaveData } from "./state.ts";
 import { realAgeGroups, realBundles, realCategories, realPool } from "./test/fixtures.ts";
 
@@ -79,4 +80,18 @@ test("full game: actionRng is fresh randomness", () => {
     return xs;
   };
   assert.notDeepEqual(order(), order());
+});
+
+test("demo: game and session rows carry demo: true, full-build rows don't, a reload keeps it", () => {
+  const full = engineData(realPool(), realCategories(), realBundles(), realAgeGroups(), "es", undefined, null, false);
+  const fio = { rng: actionRng(full), now: "2026-10-16T00:00:00", ms: T0 };
+  let save = game.newGame(emptySave(), data, io(), "Ana", { mode: "solo", bundles: ["base"], age_group: "adults" }).save;
+  assert.equal(row(save).demo, true);
+  save = game.newSession(save, data, io(), ["Ana", "Beto"], { mode: "timed", bundles: ["base"], age_group: "adults" }).save;
+  assert.equal(row(save).demo, true);
+  assert.equal(parseSave(JSON.stringify(save)).games.every((g) => g.demo === true), true);
+  let other = game.newGame(emptySave(), full, fio, "Ana", { mode: "solo", bundles: ["base"], age_group: "adults" }).save;
+  other = game.newSession(other, full, fio, ["Ana", "Beto"], { mode: "timed", bundles: ["base"], age_group: "adults" }).save;
+  for (const g of other.games) assert.equal("demo" in g, false);
+  assert.throws(() => parseSave({ ...JSON.parse(JSON.stringify(save)), games: save.games.map((g) => ({ ...g, demo: false })) }));
 });

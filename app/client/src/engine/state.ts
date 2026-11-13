@@ -69,6 +69,8 @@ export interface GameRow {
   turn?: number;
   /** The question locale the game plays in (plan 68); missing = es. */
   locale?: string;
+  /** Played in the demo build (plan 195): the career never counts it. Left out otherwise. */
+  demo?: true;
   state: GameState;
 }
 
