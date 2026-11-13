@@ -155,7 +155,7 @@ The career gives each player a long-term sense of progress: school-style subject
 - Until vetted, at most 100 live: the 39 existing achievements first (28 in `ACHIEVEMENTS` + 6 regional + 5 topic `BUNDLE_*`), then career badges in the fixed live order above, up to 100. Count live and pending together.
 - Today: 39 + 39 = **78 of 100**, 22 left; a badge past 100 is earned and shown in game, its Steam achievement is added once vetted, the retroactive unlock on load (part 4) grants it.
 - No trial badges: an archived achievement still counts, entered means for good. The old cap of 40 career badges is dropped (developer, `task 1890`).
-- Rows for Steamworks: `plans/18-steam-integration.md` "Achievements in Steamworks"; the badge rows come from part 4.
+- Rows for Steamworks (all 39 with texts, live/pending list, «pending → live» steps): `plans/18-steam-integration.md` "Achievements in Steamworks" → "Career (39)".
 
 ## Supply figures
 - `qgen report --career [--subjects FILE] [--locale …] [--json]` (needs Node, dev shell): per category × band supply and games-to-N from the engine sessions (`authoring/tools/sim/career.ts`); output of 2026-11-04 in `work/career/supply-categories.md`.
