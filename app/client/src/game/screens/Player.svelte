@@ -5,10 +5,12 @@
   // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 151).
   import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../../lib/api.ts";
+  import { buildInfo } from "../../lib/build.ts";
   import { errorText } from "../../lib/errors.ts";
   import { t } from "../../lib/i18n.ts";
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
   import type { Player } from "../../lib/types.ts";
+  import Career from "../Career.svelte";
   import Icon from "../Icon.svelte";
   import NamePicker from "../NamePicker.svelte";
   import Prompt from "../Prompt.svelte";
@@ -30,6 +32,9 @@
   /** The player waiting for «¿Borrar…?» to be confirmed, or null. */
   let doomed = $state<Player | null>(null);
   let deleting = $state(false);
+  /** The player whose badge page is open (not in the demo, decision 346). */
+  let careerOf = $state<string | null>(null);
+  const demo = buildInfo().demo;
   let cancelButton = $state<HTMLButtonElement>();
   let dialog = $state<HTMLDivElement>();
 
@@ -79,7 +84,9 @@
 <section class="player">
   <h1 class="title">{t("screen.player.title")}</h1>
 
-  {#if loaded}<NamePicker {players} {busy} scope="player" {onchoose} ondelete={(p) => (doomed = p)} />{/if}
+  {#if loaded}<NamePicker {players} {busy} scope="player" {onchoose} ondelete={(p) => (doomed = p)} onbadges={demo ? undefined : (p) => (careerOf = p.name)} />{/if}
+
+  {#if careerOf}<Career name={careerOf} onclose={() => (careerOf = null)} />{/if}
 
   {#if error}<p class="error">{error}</p>{/if}
 
@@ -91,6 +98,7 @@
           {t("screen.player.confirmBody", {
             lose: doomed.games ? t("screen.player.lose", { n: doomed.games }) : t("screen.player.loseNone"),
           })}
+          {#if !demo}{t("screen.player.confirmBadges")}{/if}
         </p>
         <div class="row">
           <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>

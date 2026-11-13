@@ -447,7 +447,7 @@ def player(r):
     r.click(".player .delete")
     r.wait(".player .dialog")
     r.settle(0.6)
-    r.shot("player-delete-confirm")
+    r.shot("player-delete")
     r.key("Escape")
     r.settle(0.6)
     r.click("#new-player")
@@ -455,6 +455,18 @@ def player(r):
     r.wait(".backdrop .candy")
     r.settle(0.8)
     r.shot("letter-picker")
+
+
+def career(r):
+    """The badge page of the first player: some badges, all, career off (plan 197)."""
+    for save, name in (("career", "career"), ("career-full", "career-full"), ("career-off", "career-off")):
+        r.scene(save)
+        r.click('[data-focus-id="main"]')
+        r.wait(".name-button")
+        r.click(".player .badges")
+        r.wait(".career")
+        r.settle(1)
+        r.shot(name)
 
 
 def seguir(r, ready):
@@ -1016,7 +1028,8 @@ DEMO_STEPS = [
 STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
-    (["player", "player-delete-confirm", "letter-picker"], player),
+    (["player", "player-delete", "letter-picker"], player),
+    (["career", "career-full", "career-off"], career),
     (["mode-kind", "mode-single", "choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),
     (["supply-notice", "bundles-supply-report", "bundles-no-questions"], supply),
     (["bundles-topics", "cambiazo-topics", "splash-topic"], topics),

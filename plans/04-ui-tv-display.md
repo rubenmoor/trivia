@@ -120,7 +120,15 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
   - Auto-capital (`game/letters.ts`): first letter and after space or `-` upper case, rest lower; 30 chars.
   - A types; B deletes, on an empty name closes; Start closes; text stays in the field. «Listo» = «¡A jugar!».
   - Mouse clicks on keys; physical letters, `Backspace`, `Enter` (focused key), `Esc` (close) while open.
+- Badges button per name (hover or focus, next to the trash; not in the demo): opens the Career layer. The delete confirmation adds that the career badges go too (decision 590).
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
+
+### Career (plan 197, `game/Career.svelte`)
+- A layer over the Player screen, one player's badge page: header with Back, «Carrera de <name>», «n de 39 insignias», an empty slot for score and rank (part 6) and the switch «Desactivar la carrera».
+- Groups: subjects (7 rows × Primaria/Secundaria/Bachillerato), diplomas, college, school years, score (10); icons from `app/desktop/achievements/CAREER_*.svg`.
+- Earned: colour icon and date (locale format); open: greyscale and dimmed; the focused or hovered badge: name, description, «Conseguida el …» / «Aún sin conseguir» in the strip below.
+- Career off (decision 515): the page shows only the switch and a note. Input: arrows move between badges, Esc/Backspace/B back, mouse on every control; modal scope `career`.
+- No celebration on the page itself yet (task 1990).
 
 ### Bundles (plan 151, BN-6)
 - `game/screens/Bundles.svelte`, «¿Qué preguntas juega Sofía?»: after Choice in every mode, also with one offered bundle (decision 264: Bundle screen (two columns) reviewed in /gallery?; D-97; task 1361's layout): Player → Choice → Bundles → Level; multiplayer modes: Player → Choice → Join → Bundles → Level (plural titles «¿Qué preguntas juegan?», supply for the whole session, decision 291).

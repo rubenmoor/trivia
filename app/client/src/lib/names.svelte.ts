@@ -42,3 +42,8 @@ export function topicOf(id: string): { category: string; subcategory: string | n
   const bundle = !b || b.kind === "base" ? null : { base: false, region: b.kind === "region", country: b.country, icon: b.icon, source: b.source };
   return { category, subcategory: subOf(q), bundle };
 }
+
+/** Subject names (question locale) and age group names (UI language) for the career badge texts (`badgeText`). */
+export function badgeNames(): { subjects: Record<string, string>; age_groups: Record<string, string> } {
+  return { subjects: data?.names.subjects ?? {}, age_groups: data?.uiNames.age_groups ?? {} };
+}

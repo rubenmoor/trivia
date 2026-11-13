@@ -19,6 +19,7 @@ Fixed terms; use them as written, never a synonym.
 - Spelling: US («Customize», «color»), sheet «Letter»
 - Career: «career», badge: «badge»; grades «Elementary School», «Middle School», «High School», «College» (US English: no «University»), title case in badge names («History and Humanities»); «Rank», «Points» (`career.*`, plan 197)
 - Score and rank: «Points» (`career.points`), «Rank» (`career.rank`); rank names 1–15 in `career.ranks` (plans/24-career.md); numbers «1,840»
+- Badge page (`career.page.*`): «Badges», «Turn the career on/off», «Earned on …», «Not earned yet»; group «Graduations» (diplomas)
 
 ## Address
 - «you» for one player or the whole group; never «you all», «you guys», «yourselves»
