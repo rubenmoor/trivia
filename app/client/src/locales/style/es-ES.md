@@ -7,6 +7,7 @@ Differences from `es` only.
 - «vídeo» (not «video»), «Teclado y ratón» (not «mouse»), «iconos» (not «íconos»), «hoja A4» (not «hoja carta»)
 - «Pulsa» (`es` «Presiona», decision 59), «¡Qué pasada!» (`es` «¡Qué maravilla!»)
 - Jokers, modes, Esc rows, Steam terms: as in `es` («Modo anfitrión», «Volver al menú principal», «Salir del juego», «logros de Steam»)
+- Carrera: como `es`; la nota de secundaria es «ESO» y «Curso escolar» en vez de «Año escolar» (`career.*`)
 
 ## Address
 - «vosotros» wherever `es` addresses the group with «ustedes»: «Elegid una respuesta», «¡Habéis ganado!», «ya no os quedan Soplos»

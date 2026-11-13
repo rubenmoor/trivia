@@ -524,6 +524,22 @@ export const de = {
       ],
     },
   },
+  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject} / {subjectLc} subject, {group} age group. */
+  career: {
+    grade: { elementary: "Grundschule", middle: "Mittelstufe", high: "Oberstufe", college: "Universität" },
+    subject: {
+      name: "{grade}: {subject}",
+      desc: { elementary: "{n} Fragen aus {subject} richtig beantworten, Grundschulniveau oder schwerer.", middle: "{n} Fragen aus {subject} richtig beantworten, Mittelstufenniveau oder schwerer.", high: "{n} Fragen aus {subject} richtig beantworten, Oberstufenniveau oder schwerer." },
+    },
+    diploma: {
+      elementary: { name: "Grundschulabschluss", desc: "Die Grundschule in allen 7 Fächern bestehen." },
+      middle: { name: "Mittlere Reife", desc: "Die Mittelstufe in allen 7 Fächern bestehen." },
+      high: { name: "Abitur", desc: "Die Oberstufe in allen 7 Fächern bestehen." },
+    },
+    college: { name: "Universität", desc: "{n} Fragen auf Universitätsniveau richtig beantworten." },
+    year: { name: "Schuljahr: {group}", desc: "{n} Spiele in der Altersgruppe {group} zu Ende spielen." },
+    score: { name: "{n} Punkte", desc: "{n} Punkte erreichen." },
+  },
   save: {
     corrupt: "Die Spielstand-Datei ist beschädigt. Sie wurde als Sicherung nach {path} verschoben, und ein neues Spiel beginnt.",
     newer: "Die Spielstand-Datei stammt aus einer neueren Version des Spiels. Sie wurde als Sicherung nach {path} verschoben, und ein neues Spiel beginnt.",

@@ -17,6 +17,7 @@ Fixed terms; use them as written, never a synonym.
 - Steam terms as Steam writes them in German: «Steam-Erfolge» (never bare «Erfolge»), «Steam Cloud», «Steam Deck», «Steam-Workshop»
 - Credits: «Mitwirkende»
 - Devices: «Controller» (pad), «Tastatur und Maus»
+- Karriere: «Karriere», Abzeichen: «Abzeichen»; Stufen «Grundschule», «Mittelstufe», «Oberstufe», «Universität»; Diplome «Grundschulabschluss», «Mittlere Reife», «Abitur»; «Rang», «Punkte» (`career.*`, plan 197)
 
 ## Address
 - Never assume a plural: no «ihr», «euch», «euer», no «-t» plural imperatives («Wählt», «Schreibt», «Zielt»)

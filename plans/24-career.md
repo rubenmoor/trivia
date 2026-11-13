@@ -91,7 +91,7 @@ The career gives each player a long-term sense of progress: school-style subject
 ### Score (10): `CAREER_SCORE_<N>`
 - Milestones: **100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000** (the developer's first list 10…10000 was replaced by this one: a typical adult takes the first in an evening and the last in about two years of weekly play).
 - Trigger: score ≥ N once (a badge stays when the score drops).
-- Names: es «1000 puntos» / «Llegar a 1000 puntos.»; en «1,000 Points» / «Reach 1,000 points.»; de «1000 Punkte» / «1000 Punkte erreichen.»; number format per locale.
+- Names: es «1000 puntos» / «Llegar a 1000 puntos.»; en «1,000 Points» / «Reach 1,000 points.»; de «1.000 Punkte» / «1.000 Punkte erreichen.» (`Intl.NumberFormat` grouping per locale, `badgeText` in `lib/badge-text.ts`).
 
 ### Live order (Steam)
 - Fixed order, one flat list, grade-major: the 21 subject × grade (grade 1 subjects in the order of the subject table, then grade 2, then grade 3), 3 diplomas, `CAREER_COLLEGE`, 4 school years (kids first), 10 score (ascending). New badges are appended, never inserted.
