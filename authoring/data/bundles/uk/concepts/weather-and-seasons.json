@@ -416,7 +416,8 @@
     {
       "name": "Drizzle",
       "facet": "Rain, drizzle and dialect words",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Drizzle's definition and drop size are already asked; the purpose options are forced."
     },
     {
       "name": "Mizzle",
@@ -856,7 +857,8 @@
     {
       "name": "Peppa Pig muddy puddles",
       "facet": "Weather in British culture and media",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The puddle definition is already in the pool, and the remaining options would need Peppa as essential media or would be forced."
     },
     {
       "name": "Why Does It Always Rain on Me?",

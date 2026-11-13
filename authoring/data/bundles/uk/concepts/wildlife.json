@@ -676,7 +676,8 @@
     {
       "name": "Daisy",
       "facet": "Wild flowers and plants",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The pool already has many daisy questions, including the daisy chain; nothing fresh is left at difficulty 1."
     },
     {
       "name": "Dandelion",
