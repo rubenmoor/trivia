@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "7e35a805",
+  "hash": "8f02c196",
   "questions": [
     {
       "id": "q-9487",
@@ -12075,6 +12075,40 @@
       "background": null
     },
     {
+      "id": "q-17818",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "Ducks across the Midlands are tired of turning round for nothing.",
+      "question": "You'll hear it in Nottingham, Derby and Stoke, and the “duck” isn't a bird. What does “ay up me duck” mean?",
+      "answer": "Hello, my dear",
+      "wrong_answers": [
+        "Goodbye, my friend",
+        "Get up, sleepyhead",
+        "Keep your head down"
+      ],
+      "hints": [
+        "In this phrase, “me” simply means “my”.",
+        "“Me duck” is a friendly name, like “love”.",
+        "Bus drivers say it as you step on board."
+      ],
+      "fun_fact": "Using “duck” as a pet name is centuries old: in Shakespeare's “A Midsummer Night's Dream”, Pyramus cries “O dainty duck! O dear!”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Old_Market_Square%2C_Nottingham_-_geograph.org.uk_-_6433026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Market_Square%2C_Nottingham_-_geograph.org.uk_-_6433026.jpg",
+        "credit": "Graham Robson · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Graham Robson",
+        "author_url": "https://www.geograph.org.uk/profile/8664"
+      },
+      "background": null
+    },
+    {
       "id": "q-17819",
       "status": "approved",
       "difficulty": 3,
@@ -12139,6 +12173,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Benjamin Smith",
         "author_url": "https://commons.wikimedia.org/wiki/User:Benjism89"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17821",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "A kilt, a cartoon and almost no real Scots who actually say this.",
+      "question": "Complete the jokey Scottish phrase heard in countless films and cartoons: “Och aye the…”",
+      "answer": "noo",
+      "wrong_answers": [
+        "loch",
+        "toon",
+        "bairn"
+      ],
+      "hints": [
+        "Comedians and cartoon Scots love saying this phrase.",
+        "In Scots, an “ow” sound often turns into “oo”, as in “hoose” for “house”.",
+        "It's the Scots way of saying “now”."
+      ],
+      "fun_fact": "“Och aye the noo” roughly means “oh yes, just now”, but it's mostly a joke version of Scottish speech.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Viviers%2C_F%C3%AAte_de_la_force_%C3%A9cossaise.jpg/3840px-Viviers%2C_F%C3%AAte_de_la_force_%C3%A9cossaise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AViviers%2C_F%C3%AAte_de_la_force_%C3%A9cossaise.jpg",
+        "credit": "Celeda · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Celeda",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Celeda"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17822",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "Yorkshire grandparents have a saying for everything, and this is one of the sharpest.",
+      "question": "In old Yorkshire, “Don't thee-tha me!” warned someone who had called you “thee” or “tha”. What were they being?",
+      "answer": "Too familiar",
+      "wrong_answers": [
+        "Too posh",
+        "Too polite",
+        "Too loud"
+      ],
+      "hints": [
+        "“Thee” and “tha” are old forms of “you”, still heard in some Yorkshire dialect.",
+        "The saying was about who had the right to speak to you in a certain way.",
+        "“Thee” and “tha” were kept for close friends and family."
+      ],
+      "fun_fact": "In the 1600s, Quakers said “thee” and “thou” to everyone, even judges, to show that all people are equal.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Askrigg_village_centre.jpg/3840px-Askrigg_village_centre.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAskrigg_village_centre.jpg",
+        "credit": "Kreuzschnabel · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Kreuzschnabel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kreuzschnabel"
       },
       "background": null
     },
@@ -14897,6 +14999,40 @@
       "background": null
     },
     {
+      "id": "q-17907",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "game-shows-and-presenters",
+      "bundle": "uk",
+      "description": "Sequins, spray tan and a panel of judges who take a quickstep very personally.",
+      "question": "On Strictly Come Dancing, what is the highest score one judge can give a couple for a dance?",
+      "answer": "10",
+      "wrong_answers": [
+        "5",
+        "12",
+        "20"
+      ],
+      "hints": [
+        "Each judge holds up one paddle with a number on it.",
+        "The top score is a nice round number.",
+        "Fans used to shout it with a rhyme on the old head judge's first name, Len."
+      ],
+      "fun_fact": "Strictly grew out of the BBC's Come Dancing, which ran from 1949 to 1998.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Elena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElena_Samodanova%2C_Shannon_Noll_%286952167198%29.jpg",
+        "credit": "Eva Rinaldi · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Eva Rinaldi",
+        "author_url": "https://www.wikidata.org/wiki/Q37885816"
+      },
+      "background": null
+    },
+    {
       "id": "q-17908",
       "status": "approved",
       "difficulty": 5,
@@ -15335,6 +15471,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Mick from Northamptonshire, England",
         "author_url": "https://www.flickr.com/people/43588250@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17921",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "languages-of-britain",
+      "bundle": "uk",
+      "description": "Five fingers, no waiting, and you never have to find a pen.",
+      "question": "In British Sign Language's two-handed alphabet, pointing to your thumb is to A as pointing to your little finger is to…",
+      "answer": "U",
+      "wrong_answers": [
+        "E",
+        "O",
+        "Y"
+      ],
+      "hints": [
+        "Each fingertip of the open hand stands for one letter.",
+        "The fingertips stand for a special group of letters.",
+        "It's the last vowel of A, E, I, O…"
+      ],
+      "fun_fact": "British Sign Language and American Sign Language are so different that a British signer and an American signer can't easily understand each other.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Ghanaian_sign_language_interpreter_working_at_University_of_Education_Winneba.jpg/3840px-Ghanaian_sign_language_interpreter_working_at_University_of_Education_Winneba.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGhanaian_sign_language_interpreter_working_at_University_of_Education_Winneba.jpg",
+        "credit": "Uprising Man · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Uprising Man",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Uprising_Man"
       },
       "background": null
     },
@@ -15849,6 +16019,40 @@
       "background": null
     },
     {
+      "id": "q-17937",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "money-and-shopping",
+      "bundle": "uk",
+      "description": "Twenty pounds, crisp and lovely, until the vending machine spits it back out.",
+      "question": "What are today's Bank of England £20 notes made of?",
+      "answer": "Polymer (plastic)",
+      "wrong_answers": [
+        "Cotton paper",
+        "Silk",
+        "Metal foil"
+      ],
+      "hints": [
+        "It's hard to tear and bends back into shape.",
+        "It has a see-through window.",
+        "It's waterproof and a bit shiny, rather like a crisp packet."
+      ],
+      "fun_fact": "The polymer £20 note came out in 2020 and shows the painter J.M.W. Turner.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Leather_bi-fold_wallet_by_Eugene_Pik_%282021%29_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeather_bi-fold_wallet_by_Eugene_Pik_%282021%29_06.jpg",
+        "credit": "Eugenepik · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Eugenepik",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Eugenepik&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-17938",
       "status": "approved",
       "difficulty": 4,
@@ -15947,6 +16151,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Vyacheslav Argenberg",
         "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17941",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "nursery-rhymes-and-singalongs",
+      "bundle": "uk",
+      "description": "A big friendly dog who runs the most exciting club meeting in Britain.",
+      "question": "In “Hey Duggee”, the Squirrels try a new activity in every episode. What do they earn at the end?",
+      "answer": "A badge",
+      "wrong_answers": [
+        "A medal",
+        "A trophy",
+        "A sticker"
+      ],
+      "hints": [
+        "It's something small that the Squirrels can keep.",
+        "Each one has a picture that shows what the Squirrels did that day.",
+        "Real Scouts sew them onto their uniforms."
+      ],
+      "fun_fact": "Hey Duggee has won BAFTA awards and an International Emmy.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/In_the_woods_3247.jpg/3840px-In_the_woods_3247.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIn_the_woods_3247.jpg",
+        "credit": "Chris Light · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Chris Light",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Chris_Light"
       },
       "background": null
     },
@@ -16525,6 +16763,40 @@
         "license_url": "https://www.flickr.com/commons/usage/",
         "author": "LSE Library",
         "author_url": "https://www.flickr.com/people/35128489@N07"
+      },
+      "background": null
+    },
+    {
+      "id": "q-17959",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "pub-and-playground-games",
+      "bundle": "uk",
+      "description": "A garden party where the guests are not having a nice time.",
+      "question": "In a book from 1865, I hold croquet games where flamingos are the mallets, hedgehogs are the balls and soldiers bend over to be the hoops. Who am I?",
+      "answer": "The Queen of Hearts",
+      "wrong_answers": [
+        "The White Rabbit",
+        "The Mad Hatter",
+        "The Cheshire Cat"
+      ],
+      "hints": [
+        "The book was written by Lewis Carroll.",
+        "A girl called Alice is invited to play in my garden.",
+        "I rule Wonderland, and I lose my temper very quickly."
+      ],
+      "fun_fact": "Croquet was a huge craze in Victorian England, one of the few outdoor games where men and women played together.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Modern_croquet_equipment.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AModern_croquet_equipment.JPG",
+        "credit": "Winnywinn · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Winnywinn",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Winnywinn&action=edit&redlink=1"
       },
       "background": null
     },
@@ -17719,6 +17991,40 @@
       "background": null
     },
     {
+      "id": "q-17996",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "pop-and-rock",
+      "bundle": "uk",
+      "description": "A singing show that switched TV homes faster than a coach can slam a button.",
+      "question": "The Voice UK started on BBC One in 2012. Which channel did it move to in 2017?",
+      "answer": "ITV",
+      "wrong_answers": [
+        "Channel 4",
+        "Channel 5",
+        "Sky One"
+      ],
+      "hints": [
+        "The move came in time for the show's sixth series.",
+        "The same channel is home to Britain's Got Talent.",
+        "It also shows Coronation Street and I'm a Celebrity."
+      ],
+      "fun_fact": "In 2024, McFly's Tom Fletcher and Danny Jones shared one chair as a double-act coach on The Voice UK.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Guitarist_in_the_spotlight_%28Unsplash%29.jpg/3840px-Guitarist_in_the_spotlight_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuitarist_in_the_spotlight_%28Unsplash%29.jpg",
+        "credit": "Linda Xu rhindaxu · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Linda Xu rhindaxu",
+        "author_url": "https://unsplash.com/@rhindaxu"
+      },
+      "background": null
+    },
+    {
       "id": "q-17997",
       "status": "approved",
       "difficulty": 9,
@@ -18225,6 +18531,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Andrey Gulivanov",
         "author_url": "https://www.flickr.com/people/184846830@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18012",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "school-and-childhood",
+      "bundle": "uk",
+      "description": "The year you're suddenly the tallest in the playground, for about ten months.",
+      "question": "In Year 6 in England, children take SATs and often go on a school trip away from home. What comes next for them?",
+      "answer": "Starting secondary school",
+      "wrong_answers": [
+        "Starting Reception",
+        "Sitting their GCSEs",
+        "Going to university"
+      ],
+      "hints": [
+        "Many children feel excited and a little nervous about it.",
+        "It happens in September, when they are about 11 years old.",
+        "They'll be in Year 7, with a new uniform and a much bigger school."
+      ],
+      "fun_fact": "Lots of Year 6 pupils swap autographs on their school shirts on their last day.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Copley_Primary_School_playground_-_geograph.org.uk_-_3265291.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACopley_Primary_School_playground_-_geograph.org.uk_-_3265291.jpg",
+        "credit": "Humphrey Bolton · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Humphrey Bolton",
+        "author_url": "https://www.geograph.org.uk/profile/1712"
       },
       "background": null
     },
@@ -19215,6 +19555,40 @@
       "background": null
     },
     {
+      "id": "q-18042",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "The playground's official way to say “that was nothing”.",
+      "question": "Complete the rhyme for something really simple: “Easy peasy, lemon…”",
+      "answer": "Squeezy",
+      "wrong_answers": [
+        "Sneezy",
+        "Breezy",
+        "Cheesy"
+      ],
+      "hints": [
+        "Think about the fruit in the rhyme.",
+        "The word ends with the same sound as “easy”.",
+        "It's what you do to a lemon to get the juice."
+      ],
+      "fun_fact": "Rhyming pairs like “easy peasy” are called reduplication, the same trick behind “hocus-pocus” and “helter-skelter”.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Minden_State_School_playground%2C_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMinden_State_School_playground%2C_2023.jpg",
+        "credit": "Unidentified · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Unidentified",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-18043",
       "status": "approved",
       "difficulty": 3,
@@ -19585,6 +19959,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "WORSDI HDE9ORN",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:WORSDI_HDE9ORN&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18055",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "school-and-childhood",
+      "bundle": "uk",
+      "description": "Dinner ladies, plastic trays and a lunch queue that stretches all the way to the playground.",
+      "question": "On a British school dinner menu, what is “sponge and custard”?",
+      "answer": "Cake with warm sweet sauce",
+      "wrong_answers": [
+        "Jelly with whipped cream",
+        "Fish pie with mushy peas",
+        "Toast with scrambled egg"
+      ],
+      "hints": [
+        "It's eaten after the main course.",
+        "One part of it is light, soft and full of tiny air holes.",
+        "The sauce is yellow and poured from a jug."
+      ],
+      "fun_fact": "A school favourite is chocolate sponge with pink custard, which many Britons still remember fondly.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Sandakan_Sabah_SK-St-Monica-04.jpg/3840px-Sandakan_Sabah_SK-St-Monica-04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASandakan_Sabah_SK-St-Monica-04.jpg",
+        "credit": "CEphoto, Uwe Aranas · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "CEphoto, Uwe Aranas",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cccefalon"
       },
       "background": null
     },
@@ -20507,6 +20915,40 @@
       "background": null
     },
     {
+      "id": "q-18083",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "soaps-and-dramas",
+      "bundle": "uk",
+      "description": "London slang so old it could probably claim its own pension.",
+      "question": "ITV's long-running drama The Bill took its title from slang. Who are “the Old Bill”?",
+      "answer": "The police",
+      "wrong_answers": [
+        "The judges",
+        "The tax collectors",
+        "The bailiffs"
+      ],
+      "hints": [
+        "The slang is old and was born in London.",
+        "The show ran on ITV for more than 25 years, from 1984 to 2010.",
+        "They wear helmets and drive cars with flashing blue lights."
+      ],
+      "fun_fact": "The Bill began as a one-off 1983 drama called “Woodentop”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Albert_Bridge_at_night%2C_London%2C_UK_-_Diliff.jpg/3840px-Albert_Bridge_at_night%2C_London%2C_UK_-_Diliff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlbert_Bridge_at_night%2C_London%2C_UK_-_Diliff.jpg",
+        "credit": "Diliff · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Diliff",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Diliff"
+      },
+      "background": null
+    },
+    {
       "id": "q-18084",
       "status": "approved",
       "difficulty": 9,
@@ -21013,6 +21455,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "OP Club Webmaster",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-18099",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "sporting-events",
+      "bundle": "uk",
+      "description": "Wimbledon: where even a grass stain is a fashion crime.",
+      "question": "In 2023, Wimbledon relaxed its all-white rule a little and allowed dark-coloured undershorts. Which players was this change for?",
+      "answer": "Women players",
+      "wrong_answers": [
+        "Junior players",
+        "Wheelchair players",
+        "Doubles players"
+      ],
+      "hints": [
+        "The change was announced months before the tournament began.",
+        "The club decided after talking with players, doctors and clothing makers.",
+        "The players had asked for it so they would feel more comfortable."
+      ],
+      "fun_fact": "Wimbledon's white rule goes back to Victorian times, when sweat showing on coloured clothes was thought to look improper.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Far_shot_of_Wimbledon_Centre_Court.jpg/3840px-Far_shot_of_Wimbledon_Centre_Court.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFar_shot_of_Wimbledon_Centre_Court.jpg",
+        "credit": "Bonoahx · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bonoahx",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Bonoahx&action=edit&redlink=1"
       },
       "background": null
     },
