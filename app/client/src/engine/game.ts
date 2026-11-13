@@ -92,7 +92,7 @@ export function players(save: SaveData): Player[] {
 }
 
 /** The ID of a known player, or null; names match by casefold. */
-function playerId(work: SaveData, name: string): number | null {
+export function playerId(work: SaveData, name: string): number | null {
   const key = casefold(name);
   return [...work.players].sort((a, b) => a.id - b.id).find((p) => casefold(p.name) === key)?.id ?? null;
 }

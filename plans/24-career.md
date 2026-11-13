@@ -176,7 +176,13 @@ The career gives each player a long-term sense of progress: school-style subject
   - Entries with `correct` true/false and not `revealed` → +d² / −1 for the answering seat's player (solo: `row.player_id`; sessions: `seat`; rr-competitive: the seat whose state it is); no seat or no player → nobody; question missing from the pool → skipped
   - Won or lost (not abandoned): each seat with a player → years +1, rank value = its hardest right answer (0 if none), or the age group's window top for a tower win (`towerWin()`, `achievements.ts`): solo, rr-coop (the team's: every seat, `decision 595: Career rank after a round-robin team win: every seat ranks at the age group's top`), or the winning seat in rr-competitive / timed
   - Badges awarded after each change, never removed; cursor per state (`row.state`, then rr-competitive's seats' own), `ended` once counted
-- Not yet (tasks of plan 195): ops and reads.
+- Ops (`engine/api.ts`, `lib/api.ts`; both return the careers by name):
+  - `career {name, off}` (`setCareer`): `off?: true` on or off; counting goes on while off (`decision 515`), turning on shows nothing by itself (not-shown badges are the badge page's to celebrate)
+  - `career_shown {name, badges}` (`careerShown`): marks held badges shown; unknown or unheld names ignored
+  - Unknown player: `player_unknown` (409)
+- Reads: `getCareers` / `fetchCareers` → name → `CareerView` (`career.ts`): `off`, `score`, `rank` (null before a finished game), `rank_index`, `right` per subject × grade band, `years`, `badges` (`{ name, on, shown }`, live order); not in `getPlayers` (recorded wire shape)
+- `careerUnlocks(save)`: badge names held by any player with the career on, live order (Steam, part 4)
+- Deleting a player removes the PlayerRow and so the career; sessions keep their counted cursors (`decision 590`)
 
 ## Parts (`plan 192: masterplan`)
 - Part 2 subjects in the data; part 3 and later: engine and save, badge page, Steam, UI texts; they read this file.

@@ -1,6 +1,7 @@
 import { devMode } from "./desktop.ts";
 import * as engine from "../engine/api.ts";
 import { gameChoice, jokersUsed, playerMode, view } from "../engine/game.ts";
+import type { CareerView } from "../engine/career.ts";
 import { seededRng } from "../engine/rng.ts";
 import type { Outlook } from "../engine/outlook.ts";
 export type { Outlook };
@@ -23,6 +24,21 @@ export async function fetchPlayers(): Promise<Player[]> {
 /** Delete a player's name and games (GF-7), not what the family saw; returns the remaining players. */
 export async function deletePlayer(name: string): Promise<Player[]> {
   return run((save, _data, io) => engine.deletePlayer(save, { name }, io));
+}
+
+/** Every player's career view by name (plan 195). */
+export async function fetchCareers(): Promise<Record<string, CareerView>> {
+  return read((save) => engine.getCareers(save));
+}
+
+/** A player's career off (true) or on; returns the careers. */
+export async function setCareer(name: string, off: boolean): Promise<Record<string, CareerView>> {
+  return run((save) => engine.setCareer(save, { name, off }));
+}
+
+/** Mark badges of a player shown (celebrated); returns the careers. */
+export async function careerShown(name: string, badges: string[]): Promise<Record<string, CareerView>> {
+  return run((save) => engine.careerShown(save, { name, badges }));
 }
 
 /** Flagged questions (GM-5, decision 60), newest first; the running question's answer stays hidden. */

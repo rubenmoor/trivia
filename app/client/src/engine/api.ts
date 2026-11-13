@@ -1,6 +1,6 @@
 // The former game routes of app/server/main.py (gone since PORT-8) on the engine (PORT-3, plan 20): same {status, body} as recorded.
 import type { Choice, Game, GameMode, JokerEvent, Player, Supply } from "../lib/types.ts";
-import { catchUp } from "./career.ts";
+import { type CareerView, careerView, catchUp, markShown, setCareerOff } from "./career.ts";
 import * as game from "./game.ts";
 import { noteRunningOut as noteRunningOutIn, outlook as outlookOf, sessionOutlook, type Outlook } from "./outlook.ts";
 import { pyInt, pyStr, pyTruthy } from "./pycompat.ts";
@@ -46,6 +46,27 @@ export function getGame(save: SaveData, data: EngineData, io: Io, player?: strin
 /** GET /api/players */
 export function getPlayers(save: SaveData): Reply<Player[]> {
   return { save, status: 200, body: game.players(save) };
+}
+
+/** GET /api/players/careers: the career view per player name (not in `getPlayers`: its wire shape is recorded). */
+export function getCareers(save: SaveData): Reply<Record<string, CareerView>> {
+  return { save, status: 200, body: Object.fromEntries(save.players.map((p) => [p.name, careerView(p)])) };
+}
+
+/** POST /api/players/career {name, off}: a player's career off or on (decision 515). */
+export function setCareer(save: SaveData, body: Record<string, unknown>): Reply<Record<string, CareerView>> {
+  return guard(save, 409, () => {
+    const out = setCareerOff(save, body.name, body.off);
+    return { save: out, status: 200, body: getCareers(out).body };
+  });
+}
+
+/** POST /api/players/career_shown {name, badges}: mark badges shown. */
+export function careerShown(save: SaveData, body: Record<string, unknown>): Reply<Record<string, CareerView>> {
+  return guard(save, 409, () => {
+    const out = markShown(save, body.name, body.badges);
+    return { save: out, status: 200, body: getCareers(out).body };
+  });
 }
 
 /** POST /api/players/delete {name} */
