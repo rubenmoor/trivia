@@ -321,7 +321,8 @@
     {
       "name": "Wood pigeon coo",
       "facet": "Birdsong and calls",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The sound-identification question is already asked. The other options would be forced, or far above level 2 (e.g. the “Take two cows, Taffy” mnemonic)."
     },
     {
       "name": "Robin song",
@@ -481,7 +482,8 @@
     {
       "name": "“The early bird catches the worm”",
       "facet": "Birds in British folklore and sayings",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The saying itself is already in the pool (worm answer). None of the options (an estimate, or an odd-one-out about places) gives a natural question at level 2."
     },
     {
       "name": "“A bird in the hand is worth two in the bush”",
@@ -546,7 +548,8 @@
     {
       "name": "“Don't count your chickens before they hatch”",
       "facet": "Birds in British folklore and sayings",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The meaning of the saying is already asked. Its origin (often credited to an Aesop-style milkmaid fable) is too uncertain to ask as a place."
     },
     {
       "name": "“Something to crow about”",

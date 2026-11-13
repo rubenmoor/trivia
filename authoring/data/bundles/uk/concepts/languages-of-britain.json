@@ -381,7 +381,8 @@
     {
       "name": "Lip reading",
       "facet": "British Sign Language",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The lip-reader riddle already covers the main fact, and none of the three options gives a fresh, fair question."
     },
     {
       "name": "BSL interpreter",

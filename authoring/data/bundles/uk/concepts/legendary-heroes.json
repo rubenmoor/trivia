@@ -61,7 +61,8 @@
     {
       "name": "Sword in the Stone",
       "facet": "King Arthur and Camelot",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: At difficulty 2, the only fact is who pulled the sword from the stone, and that has already been asked."
     },
     {
       "name": "Uther Pendragon",
@@ -226,7 +227,8 @@
     {
       "name": "Archimedes the owl",
       "facet": "Merlin and Arthurian magic",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The owl's name has already been asked. The only other facts about Archimedes are thin, and they would give that earlier answer away."
     },
     {
       "name": "Scabbard of Excalibur",
@@ -561,7 +563,8 @@
     {
       "name": "Craig-y-Ddinas",
       "facet": "Sleeping kings and returning heroes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: The details of the Craig-y-Ddinas legend vary between versions. The sleeper is sometimes Arthur and sometimes Owain Lawgoch, so any question would be ambiguous."
     },
     {
       "name": "Drake's Drum",

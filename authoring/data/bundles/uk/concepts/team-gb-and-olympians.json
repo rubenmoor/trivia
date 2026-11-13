@@ -986,7 +986,8 @@
     {
       "name": "Gold medal",
       "facet": "Medals, honours and celebrations",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The easy gold-medal facts (winner's colour, gold postboxes) are already asked."
     }
   ]
 }

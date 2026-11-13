@@ -276,7 +276,8 @@
     {
       "name": "Kidwelly Castle",
       "facet": "Castles of Wales",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Kidwelly is too little known to support a fair question with these options."
     },
     {
       "name": "Powis Castle",
@@ -753,7 +754,8 @@
     {
       "name": "Wembley Stadium arch",
       "facet": "Modern landmarks and monuments",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The arch is already used to identify Wembley twice, and none of the options gives a fresh question at level 4."
     },
     {
       "name": "Senedd",
