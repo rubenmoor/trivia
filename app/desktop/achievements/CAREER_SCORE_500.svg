@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="256" height="256">
+  <!-- CAREER_SCORE_500 (plan 196, SW-11): score 500. Icon.svelte's 24×24 style on a night tile. -->
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="62%">
+      <stop offset="0" stop-color="#ffb81c" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffb81c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" fill="#111a2e"/>
+  <rect width="64" height="64" fill="url(#glow)"/>
+  <rect x="3" y="3" width="58" height="58" rx="10" fill="none" stroke="#ffb81c" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M32 10l3 6 6.5 1-4.7 4.5 1.1 6.5L32 25l-5.9 3 1.1-6.5L22.5 17l6.5-1z" transform="translate(0 -1)" fill="#ffb81c" fill-opacity="0.35" stroke="#ffb81c" stroke-width="2.4" stroke-linejoin="round"/>
+  <text x="32" y="48" text-anchor="middle" font-family="sans-serif" font-weight="bold" font-size="22" fill="#ffb81c">500</text>
+</svg>
