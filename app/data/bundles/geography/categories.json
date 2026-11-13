@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "countries-by-region",
+      "subject": "geography",
       "subcategories": [
         "countries-of-africa",
         "countries-of-asia",
@@ -15,6 +16,7 @@
     },
     {
       "slug": "capitals-and-cities",
+      "subject": "geography",
       "subcategories": [
         "capitals-of-africa",
         "capitals-of-asia-and-oceania",
@@ -28,6 +30,7 @@
     },
     {
       "slug": "flags-and-symbols",
+      "subject": "geography",
       "subcategories": [
         "flag-designs",
         "lookalike-flags",
@@ -38,6 +41,7 @@
     },
     {
       "slug": "maps-and-borders",
+      "subject": "geography",
       "subcategories": [
         "borders-and-neighbours",
         "enclaves-and-odd-borders",
@@ -49,6 +53,7 @@
     },
     {
       "slug": "mountains-and-highlands",
+      "subject": "geography",
       "subcategories": [
         "mountain-ranges",
         "high-peaks",
@@ -58,6 +63,7 @@
     },
     {
       "slug": "rivers-and-lakes",
+      "subject": "geography",
       "subcategories": [
         "rivers-of-europe-and-the-americas",
         "rivers-of-africa-asia-and-oceania",
@@ -67,6 +73,7 @@
     },
     {
       "slug": "seas-coasts-and-islands",
+      "subject": "geography",
       "subcategories": [
         "seas-and-gulfs",
         "straits-and-canals",
@@ -77,6 +84,7 @@
     },
     {
       "slug": "landscapes-and-climate-zones",
+      "subject": "geography",
       "subcategories": [
         "deserts-of-the-world",
         "climate-zones",
@@ -89,6 +97,7 @@
     },
     {
       "slug": "people-and-places",
+      "subject": "geography",
       "subcategories": [
         "population-records",
         "demonyms",

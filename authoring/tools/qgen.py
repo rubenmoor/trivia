@@ -2020,7 +2020,7 @@ def main():
                     help="career supply figures per locale, age group, player model and player count, per category × difficulty band "
                     "(milestone 20, plan 193); --locale, --age-group, --player, --players (default 1, 2, 4), --seeds, --json")
     rp.add_argument("--games", type=int, help="with --career: games per seed (default 100)")
-    rp.add_argument("--subjects", metavar="FILE", help="with --career: JSON category slug → subject (default: each category its own row)")
+    rp.add_argument("--subjects", metavar="FILE", help="with --career: JSON category key → subject, other than the data's (default: each category's `subject` in categories.json; plan 194)")
     rp.add_argument("--cost", action="store_true",
                     help="$ per run and per approved by run kind, projection per launch language and per regional and theme bundle "
                     "(plan 70, CT-3; plan 98)")

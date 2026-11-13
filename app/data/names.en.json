@@ -286,5 +286,14 @@
     "brand-origins": "Brand origins",
     "famous-companies": "Famous companies",
     "supermarket-products": "Supermarket products"
+  },
+  "subjects": {
+    "history": "History and humanities",
+    "geography": "Geography and society",
+    "nature": "Natural sciences",
+    "science": "Science and technology",
+    "arts": "Literature and the arts",
+    "media": "Media studies",
+    "sport": "Sport and games"
   }
 }

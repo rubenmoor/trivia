@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "ancient-world",
+      "subject": "history",
       "subcategories": [
         "life-in-ancient-egypt",
         "mesopotamia",
@@ -16,6 +17,7 @@
     },
     {
       "slug": "medieval-world",
+      "subject": "history",
       "subcategories": [
         "celts-goths-and-huns",
         "viking-age",
@@ -28,6 +30,7 @@
     },
     {
       "slug": "asian-history",
+      "subject": "history",
       "subcategories": [
         "imperial-china",
         "japan-and-korea",
@@ -37,6 +40,7 @@
     },
     {
       "slug": "african-history",
+      "subject": "history",
       "subcategories": [
         "west-african-empires",
         "kush-aksum-and-ethiopia",
@@ -45,6 +49,7 @@
     },
     {
       "slug": "americas-and-pacific",
+      "subject": "history",
       "subcategories": [
         "mesoamerica",
         "andean-civilisations",
@@ -55,6 +60,7 @@
     },
     {
       "slug": "early-modern-world",
+      "subject": "history",
       "subcategories": [
         "renaissance-and-reformation",
         "ottoman-empire",
@@ -65,6 +71,7 @@
     },
     {
       "slug": "rulers-and-courts",
+      "subject": "history",
       "subcategories": [
         "queens-and-empresses",
         "royal-houses-of-europe",
@@ -73,6 +80,7 @@
     },
     {
       "slug": "age-of-revolutions-and-industry",
+      "subject": "history",
       "subcategories": [
         "age-of-revolutions",
         "napoleons-europe",
@@ -83,6 +91,7 @@
     },
     {
       "slug": "twentieth-century",
+      "subject": "history",
       "subcategories": [
         "first-world-war",
         "between-the-wars",
@@ -93,6 +102,7 @@
     },
     {
       "slug": "everyday-life-in-the-past",
+      "subject": "history",
       "subcategories": [
         "childhood-in-the-past",
         "jobs-of-the-past",
@@ -105,6 +115,7 @@
     },
     {
       "slug": "maps-and-borders",
+      "subject": "history",
       "subcategories": [
         "old-place-names",
         "vanished-countries",

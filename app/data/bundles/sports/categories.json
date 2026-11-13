@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "football",
+      "subject": "sport",
       "subcategories": [
         "european-club-football",
         "world-club-football",
@@ -18,6 +19,7 @@
     },
     {
       "slug": "team-sports",
+      "subject": "sport",
       "subcategories": [
         "nba-and-basketball-history",
         "basketball-legends",
@@ -31,6 +33,7 @@
     },
     {
       "slug": "racket-and-target-sports",
+      "subject": "sport",
       "subcategories": [
         "grand-slams-and-tennis-events",
         "tennis-legends",
@@ -41,6 +44,7 @@
     },
     {
       "slug": "athletics-and-olympics",
+      "subject": "sport",
       "subcategories": [
         "sprints-and-hurdles",
         "distance-running",
@@ -53,6 +57,7 @@
     },
     {
       "slug": "winter-sports",
+      "subject": "sport",
       "subcategories": [
         "skiing",
         "skating",
@@ -61,6 +66,7 @@
     },
     {
       "slug": "water-sports",
+      "subject": "sport",
       "subcategories": [
         "swimming-deeper",
         "diving-and-water-polo",
@@ -69,6 +75,7 @@
     },
     {
       "slug": "combat-and-strength",
+      "subject": "sport",
       "subcategories": [
         "boxing",
         "martial-arts",
@@ -77,6 +84,7 @@
     },
     {
       "slug": "speed-sports",
+      "subject": "sport",
       "subcategories": [
         "f1-drivers",
         "f1-teams-and-circuits",
@@ -87,6 +95,7 @@
     },
     {
       "slug": "records",
+      "subject": "sport",
       "subcategories": [
         "track-and-pool-records",
         "speed-records",
@@ -96,6 +105,7 @@
     },
     {
       "slug": "sports-world",
+      "subject": "sport",
       "subcategories": [
         "origins-of-sports",
         "traditional-sports",

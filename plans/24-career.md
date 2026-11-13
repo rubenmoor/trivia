@@ -18,7 +18,7 @@ The career gives each player a long-term sense of progress: school-style subject
 - DLC adds no badges and changes none: fixed subject list, DLC categories map onto it, every badge reachable with the base bundle alone.
 
 ## Subjects
-- 7 fixed subjects; every question counts for the subject of its category. Source: `decision 517`; machine form `work/career/subjects.json` (category → subject id; regional/topic categories as `<bundle>/<category>`), to be moved into the data by `plan 192: masterplan` part 2.
+- 7 fixed subjects; every question counts for the subject of its category. Source: `decision 517`; machine form in the data (`plan 194: Subjects in the data`): the ordered list in `app/data/subjects.json`, `subject` per category in every `categories.json` (base and bundles), names under `subjects` in base `names.<locale>.json`.
 - Base categories (28):
 
 | id | es | en | de | categories |
@@ -35,7 +35,7 @@ The career gives each player a long-term sense of progress: school-style subject
 - Add-on categories map onto the same subjects, no new subject:
   - Regional (colombia, mexico, spain, germany, uk, usa): geography, symbols, food-and-drink, festivals-and-traditions, daily-life → `geography`; nature → `nature`; history, ancient-mexico, east-germany, people, myths-and-legends, how-people-speak, how-colombia-speaks → `history`; music-and-dance, art-and-literature → `arts`; film-and-television, comedy → `media`; sports → `sport`
   - Topic bundles: `geography` bundle (all) → `geography`; `history` bundle → `history`; `movies` → `media`; `sports` → `sport`; `stem`: living-things, ecology, human-body, earth-science → `nature`; physics, chemistry, space, mathematics, technology-and-engineering, history-of-science → `science`
-  - Unmapped category (a new bundle): no subject, counts for score and rank only; `qgen validate` should flag it (part 2)
+  - Unmapped category (a new bundle): no subject, counts for score and rank only; `qgen validate` refuses it on our bundles (mods: optional, `decision 588`)
 - Rejected: 6 subjects (nature + science merged), 8 subjects (languages and philosophy split off; 48–84 questions per band, unreachable).
 
 ## Grades and bands

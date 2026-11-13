@@ -3,6 +3,7 @@
   "categories": [
     {
       "slug": "living-things",
+      "subject": "nature",
       "subcategories": [
         "microbes-and-fungi",
         "cells-and-genetics",
@@ -16,6 +17,7 @@
     },
     {
       "slug": "ecology",
+      "subject": "nature",
       "subcategories": [
         "ecosystems-and-food-webs",
         "conservation"
@@ -23,6 +25,7 @@
     },
     {
       "slug": "human-body",
+      "subject": "nature",
       "subcategories": [
         "heart-blood-and-breathing",
         "digestion-and-nutrition",
@@ -34,6 +37,7 @@
     },
     {
       "slug": "physics",
+      "subject": "science",
       "subcategories": [
         "forces-and-motion",
         "energy-and-heat",
@@ -46,6 +50,7 @@
     },
     {
       "slug": "chemistry",
+      "subject": "science",
       "subcategories": [
         "chemical-elements",
         "chemical-reactions",
@@ -55,6 +60,7 @@
     },
     {
       "slug": "space",
+      "subject": "science",
       "subcategories": [
         "moons-comets-and-asteroids",
         "night-sky",
@@ -66,6 +72,7 @@
     },
     {
       "slug": "earth-science",
+      "subject": "nature",
       "subcategories": [
         "plate-tectonics",
         "crystals-and-gemstones",
@@ -76,6 +83,7 @@
     },
     {
       "slug": "mathematics",
+      "subject": "science",
       "subcategories": [
         "special-numbers",
         "geometry-and-solids",
@@ -87,6 +95,7 @@
     },
     {
       "slug": "technology-and-engineering",
+      "subject": "science",
       "subcategories": [
         "simple-machines-and-tools",
         "how-vehicles-work",
@@ -100,6 +109,7 @@
     },
     {
       "slug": "history-of-science",
+      "subject": "science",
       "subcategories": [
         "ancient-and-medieval-science",
         "scientific-revolution",

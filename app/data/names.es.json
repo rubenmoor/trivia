@@ -230,5 +230,14 @@
     "brand-origins": "Origen de las marcas",
     "famous-companies": "Empresas famosas",
     "supermarket-products": "Productos del supermercado"
+  },
+  "subjects": {
+    "history": "Historia y humanidades",
+    "geography": "Geografía y sociedad",
+    "nature": "Ciencias naturales",
+    "science": "Ciencia y tecnología",
+    "arts": "Literatura y artes",
+    "media": "Comunicación audiovisual",
+    "sport": "Deporte y juegos"
   }
 }

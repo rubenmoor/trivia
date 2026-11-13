@@ -256,6 +256,8 @@ def names_problems(data):
                 errors.append(f"{rel}: header must be version 1, locale {l!r}")
             known = {"categories": {c["slug"] for c in cats if c["bundle"] == b},
                      "subcategories": set(categories.subcategories(b))}
+            if b == "base":
+                known["subjects"] = set(categories.subject_ids())
             if b == "base" and l in translations.NAMED:  # es, es-ES: bundles.json, age-groups.json
                 known["bundles"] = set(categories.bundle_ids())
                 known["age_groups"] = {g["id"] for g in load_age_groups()["groups"]}
@@ -418,12 +420,28 @@ def taxonomy_problems():
     return errors
 
 
+def subject_problems():
+    """Errors: a category of base or a bundle without a known subject, a locale missing subject names (plan 194)."""
+    ids = categories.subject_ids()
+    errors = []
+    for b in categories.bundle_ids():
+        bad = [c["slug"] for c in categories.load(b) if c.get("subject") not in ids]
+        if bad:
+            errors.append(f"{categories.path(b).relative_to(ROOT)}: category without a subject or with an unknown one "
+                          f"(one of {', '.join(ids)}; plan 194): {first_ids(bad)}")
+    for l in categories.NAMES_LOCALES:
+        got = (load_json(layout.NAMES(l), {}) or {}).get("subjects") or {}
+        if missing := [i for i in ids if not (isinstance(got.get(i), str) and got[i].strip())]:
+            errors.append(f"{layout.NAMES(l).relative_to(ROOT)}: subject name(s) missing: {first_ids(missing)}")
+    return errors
+
+
 def slug_problems():
     """The slug rule (decision 259), on once names.es.json exists: keys are slugs, categories.json holds no names,
     names.{en,es,de}.json name every category and subcategory of every bundle (questions: validate_pool's key check)."""
     if not categories.slug_keys():
         return []
-    errors = []
+    errors = subject_problems()
     for b in categories.bundle_ids():
         cats = categories.load(b)
         rel = categories.path(b).relative_to(ROOT)

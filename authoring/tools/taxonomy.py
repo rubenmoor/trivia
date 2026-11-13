@@ -276,7 +276,7 @@ def write_taxonomy(bundle, p, d):
     (a remap's new one) gets one from its English name. `scope` only needed for drafted names. Returns the subcategories."""
     own = names_locale(translations.draft_locale(bundle_row(bundle)))
     files = {l: load_json(layout.NAMES(l, bundle)) or {"version": 1, "locale": l} for l in categories.NAMES_LOCALES}
-    entries = {k: [] for k in categories.NAME_KINDS}
+    entries = {k: [] for k in categories.NAME_KINDS if k != "subjects"}  # subject names: base files, by hand
     for c in p["categories"]:
         entries["categories"].append(c)
         entries["subcategories"] += c["subcategories"]
