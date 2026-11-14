@@ -61,7 +61,8 @@
     {
       "name": "St Andrew's Cross",
       "facet": "Union Flag design and history",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The Saltire's shape, its name and its 'Cross' completion are all already asked."
     },
     {
       "name": "St Patrick's Saltire",
@@ -382,7 +383,8 @@
     {
       "name": "Rock of Gibraltar",
       "facet": "Overseas Territories and Crown Dependencies",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The close-up identify question already exists, and the other options don't give a level-1 question."
     },
     {
       "name": "Barbary macaque",
@@ -472,7 +474,8 @@
     {
       "name": "Signal flags",
       "facet": "Naval ensigns and maritime flags",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: No kid-level question with a UK link is possible from these options."
     },
     {
       "name": "Semaphore",
@@ -562,7 +565,8 @@
     {
       "name": "Tottenham cockerel",
       "facet": "Sports badges and team emblems",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The cockerel on Tottenham's badge is already asked; a riddle would just repeat it."
     },
     {
       "name": "Liverpool FC crest",
@@ -617,7 +621,8 @@
     {
       "name": "Half-mast",
       "facet": "Flag customs and protocol",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Half-mast is already asked several times (the term and when it's used)."
     },
     {
       "name": "Royal Standard over Buckingham Palace",

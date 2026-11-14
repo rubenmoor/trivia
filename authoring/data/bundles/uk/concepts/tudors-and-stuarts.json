@@ -187,7 +187,8 @@
     {
       "name": "Bloody Mary",
       "facet": "Tudor monarchs and rivals",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: The nickname comes from burnings at the stake, which doesn't suit a family game; the sleepover legend is already asked."
     },
     {
       "name": "Philip II of Spain",
@@ -513,7 +514,8 @@
     {
       "name": "5 November 1605",
       "facet": "The Gunpowder Plot",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The pool already gives 5 November and the year 1605; nothing left to ask without overlap."
     },
     {
       "name": "Robert Catesby",
