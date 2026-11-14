@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9970d616",
+  "hash": "dae163da",
   "questions": [
     {
       "id": "q-9487",
@@ -102766,6 +102766,40 @@
       "background": null
     },
     {
+      "id": "q-20544",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "money-and-shopping",
+      "bundle": "uk",
+      "description": "Big red signs, tiny prices and a lot of empty shelves.",
+      "question": "My signs shout “Everything must go!” and even the shelves, rails and tills have price tags. What sale am I?",
+      "answer": "A closing-down sale",
+      "wrong_answers": [
+        "A Boxing Day sale",
+        "A January sale",
+        "A summer sale"
+      ],
+      "hints": [
+        "You see me more often on the high street when times are hard.",
+        "Once I'm over, the windows are often covered with paper.",
+        "The shop is shutting for good."
+      ],
+      "fun_fact": "In the USA, the same kind of sale is usually called a “going-out-of-business sale”.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/High_Street_Shops_-_geograph.org.uk_-_6292051.jpg/3840px-High_Street_Shops_-_geograph.org.uk_-_6292051.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHigh_Street_Shops_-_geograph.org.uk_-_6292051.jpg",
+        "credit": "Des Blenkinsopp · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Des Blenkinsopp",
+        "author_url": "https://www.geograph.org.uk/profile/43370"
+      },
+      "background": null
+    },
+    {
       "id": "q-20545",
       "status": "approved",
       "difficulty": 4,
@@ -103072,6 +103106,40 @@
       "background": null
     },
     {
+      "id": "q-20554",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Hundreds of little boats, one very big rescue, and a phrase Brits still use when the trains stop.",
+      "question": "Brits praise the “Dunkirk spirit” when people pull together. Dunkirk, where a famous rescue happened in 1940, is in which country?",
+      "answer": "France",
+      "wrong_answers": [
+        "Belgium",
+        "The Netherlands",
+        "Germany"
+      ],
+      "hints": [
+        "Dunkirk's long sandy beaches face the North Sea.",
+        "The town is only a few miles from the Belgian border.",
+        "The country is famous for the Eiffel Tower."
+      ],
+      "fun_fact": "In 1940, hundreds of “little ships”, including fishing boats and pleasure cruisers, helped bring soldiers home from Dunkirk's beaches.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Fedalma_II_-_Dunkirk_Little_Ships_-_Ramsgate_May_2025_%2886%29.jpg/3840px-Fedalma_II_-_Dunkirk_Little_Ships_-_Ramsgate_May_2025_%2886%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFedalma_II_-_Dunkirk_Little_Ships_-_Ramsgate_May_2025_%2886%29.jpg",
+        "credit": "Storye book · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Storye book",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Storye_book"
+      },
+      "background": null
+    },
+    {
       "id": "q-20555",
       "status": "approved",
       "difficulty": 6,
@@ -103170,6 +103238,40 @@
         "license_url": null,
         "author": "Miscellaneous Items in High Demand, PPOC, Library of Congress",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20558",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Muddy boots, a full wallet and a Yorkshire grin.",
+      "question": "In Yorkshire they say “Where there's muck there's brass”, with brass meaning money. Which of these is NOT British slang for money?",
+      "answer": "Nosh",
+      "wrong_answers": [
+        "Readies",
+        "Lolly",
+        "Wonga"
+      ],
+      "hints": [
+        "The odd one out is still everyday British slang, just not about money.",
+        "It's something you might ask for at lunchtime.",
+        "Brits say “Let's get some…” when they're hungry."
+      ],
+      "fun_fact": "The saying means that dirty, unpleasant jobs are often the ones that make the most money.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Muddy_Boots_-_Isle_Royale_National_Park_Backpacking_Trip_%2853075677106%29.jpg/3840px-Muddy_Boots_-_Isle_Royale_National_Park_Backpacking_Trip_%2853075677106%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuddy_Boots_-_Isle_Royale_National_Park_Backpacking_Trip_%2853075677106%29.jpg",
+        "credit": "Tony Webster · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Tony Webster",
+        "author_url": "https://www.flickr.com/people/87296837@N00"
       },
       "background": null
     },
@@ -103340,6 +103442,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Diego Delso",
         "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20564",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "Life at Henry VIII's court: big feasts, bigger hats and some very unusual job titles.",
+      "question": "The Groom of the Stool was one of Henry VIII's closest servants, chatted with the king in private and often got very rich. What did he help the king with?",
+      "answer": "Going to the toilet",
+      "wrong_answers": [
+        "Riding his horses",
+        "Cooking his dinner",
+        "Polishing his crown"
+      ],
+      "hints": [
+        "The job was done every day, and it went only to the king's closest and most trusted companions.",
+        "A “stool” here isn't really a seat for sitting at the table.",
+        "The king had a padded “close stool”: a box with a pot hidden inside."
+      ],
+      "fun_fact": "Henry VIII's portable toilet, called a close stool, was covered in black velvet and decorated with ribbons and fringes.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Hampton_Court_Palace_%283%29.jpg/3840px-Hampton_Court_Palace_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHampton_Court_Palace_%283%29.jpg",
+        "credit": "Ricardalovesmonuments · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ricardalovesmonuments",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ricardalovesmonuments"
       },
       "background": null
     },

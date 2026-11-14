@@ -1591132,7 +1591132,7 @@
     },
     {
       "id": "q-20544",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Big red signs, tiny prices and a lot of empty shelves.",
       "question": "My signs shout “Everything must go!” and even the shelves, rails and tills have price tags. What sale am I?",
@@ -1591143,8 +1591143,8 @@
         "A summer sale"
       ],
       "hints": [
-        "I don't come round on any calendar date.",
-        "I only happen once in a shop's whole life.",
+        "You see me more often on the high street when times are hard.",
+        "Once I'm over, the windows are often covered with paper.",
         "The shop is shutting for good."
       ],
       "media": {
@@ -1591190,27 +1591190,34 @@
       "needs_media": false,
       "batch": "batch-76",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“I don't come round on any calendar date.”) already rules out all three wrong answers, because Boxing Day, January and summer sales are all tied to the calendar. Hint 2 (“only once in a shop's whole life”) also gives the answer away. Hint 1 should be a vague hint about the shop or the signs, and hint 2 should not say that the sale only happens once.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“I don't come round on any calendar date.”) already rules out all three wrong answers, because Boxing Day, January and summer sales are all tied to the calendar. Hint 2 (“only once in a shop's whole life”) also gives the answer away. Hint 1 should be a vague hint about the shop or the signs, and hint 2 should not say that the sale only happens once.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Swapped the clue about dropping prices, which seasonal sales share, for one only a closing-down sale has, and reordered the hints so they go from vague to strong.",
+        "reason": "Replaced hints 1 and 2, which ruled out all calendar-based sales and gave the answer away, with vaguer hints about the high street and the shop.",
         "previous": {
-          "question": "My signs shout “Everything must go!” and my prices keep dropping, week after week. What sale am I?",
           "hints": [
+            "I don't come round on any calendar date.",
             "I only happen once in a shop's whole life.",
-            "After me, the staff won't be back next week.",
             "The shop is shutting for good."
           ]
         },
@@ -1591911,7 +1591918,7 @@
     },
     {
       "id": "q-20554",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Hundreds of little boats, one very big rescue, and a phrase Brits still use when the trains stop.",
       "question": "Brits praise the “Dunkirk spirit” when people pull together. Dunkirk, where a famous rescue happened in 1940, is in which country?",
@@ -1591922,8 +1591929,8 @@
         "Germany"
       ],
       "hints": [
-        "It's just across the Channel from Kent.",
-        "The country also has a long coast on the Mediterranean Sea.",
+        "Dunkirk's long sandy beaches face the North Sea.",
+        "The town is only a few miles from the Belgian border.",
         "The country is famous for the Eiffel Tower."
       ],
       "media": {
@@ -1591969,26 +1591976,34 @@
       "needs_media": false,
       "batch": "batch-76",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away: of the four options, only France has a Mediterranean coast, so it rules out Belgium, the Netherlands and Germany at once. Hint 1 (\"just across the Channel from Kent\") also points straight to France. Replace hint 2 with something vaguer, such as one about the 1940 evacuation or the town's North Sea beaches, and soften hint 1 so it doesn't name Kent.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away: of the four options, only France has a Mediterranean coast, so it rules out Belgium, the Netherlands and Germany at once. Hint 1 (\"just across the Channel from Kent\") also points straight to France. Replace hint 2 with something vaguer, such as one about the 1940 evacuation or the town's North Sea beaches, and soften hint 1 so it doesn't name Kent.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which used the French name, with a Mediterranean coast hint.",
+        "reason": "Replaced the Kent and Mediterranean hints, which pointed straight to France, with vaguer hints about Dunkirk's beaches and its location near Belgium.",
         "previous": {
           "hints": [
             "It's just across the Channel from Kent.",
-            "Its people would call the town Dunkerque.",
+            "The country also has a long coast on the Mediterranean Sea.",
             "The country is famous for the Eiffel Tower."
           ]
         },
@@ -1592238,13 +1592253,13 @@
     },
     {
       "id": "q-20558",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Muddy boots, a full wallet and a Yorkshire grin.",
-      "question": "A Yorkshire builder says “Where there's muck there's brass”, with brass meaning money. Which of these is NOT British slang for money?",
+      "question": "In Yorkshire they say “Where there's muck there's brass”, with brass meaning money. Which of these is NOT British slang for money?",
       "answer": "Nosh",
       "wrong_answers": [
-        "Dosh",
+        "Readies",
         "Lolly",
         "Wonga"
       ],
@@ -1592296,27 +1592311,36 @@
       "needs_media": false,
       "batch": "batch-76",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This question overlaps with approved q-18919, which asks for the British slang word for money (answer: Dosh). Here Dosh is one of the three money-slang options, so seeing either question gives the other away. Swap Dosh for another money word (e.g. \"Quid\" isn't usable, but \"Readies\" or \"Spondulicks\" would work), or drop this question. Smaller point: the \"Yorkshire builder says\" setup is close to an invented story. A plain \"In Yorkshire they say…\" would be cleaner.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This question overlaps with approved q-18919, which asks for the British slang word for money (answer: Dosh). Here Dosh is one of the three money-slang options, so seeing either question gives the other away. Swap Dosh for another money word (e.g. \"Quid\" isn't usable, but \"Readies\" or \"Spondulicks\" would work), or drop this question. Smaller point: the \"Yorkshire builder says\" setup is close to an invented story. A plain \"In Yorkshire they say…\" would be cleaner.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which pointed straight at food.",
+        "reason": "Swapped Dosh for Readies to avoid overlap with q-18919, and replaced the invented builder with a plain “In Yorkshire they say”.",
         "previous": {
-          "hints": [
-            "Three of them could buy you something; one you could eat.",
-            "The odd one out is about what's on your plate.",
-            "Brits say “Let's get some…” when they're hungry."
+          "question": "A Yorkshire builder says “Where there's muck there's brass”, with brass meaning money. Which of these is NOT British slang for money?",
+          "wrong_answers": [
+            "Dosh",
+            "Lolly",
+            "Wonga"
           ]
         },
         "revised_on": "2026-11-14"
@@ -1592719,7 +1592743,7 @@
     },
     {
       "id": "q-20564",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Life at Henry VIII's court: big feasts, bigger hats and some very unusual job titles.",
       "question": "The Groom of the Stool was one of Henry VIII's closest servants, chatted with the king in private and often got very rich. What did he help the king with?",
@@ -1592730,7 +1592754,7 @@
         "Polishing his crown"
       ],
       "hints": [
-        "The job was done every day, and it was so trusted that only noblemen got it.",
+        "The job was done every day, and it went only to the king's closest and most trusted companions.",
         "A “stool” here isn't really a seat for sitting at the table.",
         "The king had a padded “close stool”: a box with a pot hidden inside."
       ],
@@ -1592773,32 +1592797,39 @@
         "difficulty_estimate": 4,
         "notes": "The answer stands out as the only funny option, and 'Stool' in the title hints at it. The distractors are dull, everyday jobs."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-76",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 says only noblemen got the Groom of the Stool job. That's wrong: under Henry VIII it went to trusted gentlemen of the privy chamber, and many of them were gentry, not nobles (Henry Norris, Anthony Denny). Hint 1 should say instead that the job went to the king's closest companions. Fact check: wrong. Hint 1 says only noblemen got the Groom of the Stool job. It was held by trusted gentlemen of the privy chamber, many of them gentry rather than nobles (e.g. Henry Norris, Anthony Denny).",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 says only noblemen got the Groom of the Stool job. That's wrong: under Henry VIII it went to trusted gentlemen of the privy chamber, and many of them were gentry, not nobles (Henry Norris, Anthony Denny). Hint 1 should say instead that the job went to the king's closest companions. Fact check: wrong. Hint 1 says only noblemen got the Groom of the Stool job. It was held by trusted gentlemen of the privy chamber, many of them gentry rather than nobles (e.g. Henry Norris, Anthony Denny).",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed to a private room, made the description neutral, and changed hint 3 to point to the close stool so it doesn't repeat q-19144.",
+        "reason": "Fixed hint 1, which wrongly said only noblemen held the job; it went to the king's closest, most trusted companions.",
         "previous": {
-          "description": "The royal job that nobody put on a recruitment poster.",
           "hints": [
-            "The job happened in a very private little room.",
+            "The job was done every day, and it was so trusted that only noblemen got it.",
             "A “stool” here isn't really a seat for sitting at the table.",
-            "Think of what a chamber pot is for."
+            "The king had a padded “close stool”: a box with a pot hidden inside."
           ]
         },
         "revised_on": "2026-11-14"
