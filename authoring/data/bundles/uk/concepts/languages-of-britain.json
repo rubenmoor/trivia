@@ -86,7 +86,8 @@
     {
       "name": "Araf",
       "facet": "Welsh words and sayings",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already asks for the meaning of ARAF (slow); the other options don't fit."
     },
     {
       "name": "Cariad",
@@ -192,7 +193,8 @@
     {
       "name": "Slàinte mhath",
       "facet": "Scottish Gaelic and the Highlands",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already asks for the meaning of “slàinte” (health); who/estimate options don't fit."
     },
     {
       "name": "Royal National Mòd",

@@ -388,7 +388,8 @@
     {
       "name": "Brick Lane beigel",
       "facet": "London and South East favourites",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Brick Lane beigels are too obscure for a level-1 question."
     },
     {
       "name": "Maids of Honour",
@@ -419,7 +420,8 @@
     {
       "name": "Gypsy tart",
       "facet": "London and South East favourites",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Gypsy tart can't be made easy enough for young kids, and its name is sensitive."
     },
     {
       "name": "Isle of Wight garlic",
@@ -570,7 +572,8 @@
     {
       "name": "Bushmills whiskey",
       "facet": "Regional drinks and brews",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: A whiskey brand is not suitable for a level-1 kids question."
     },
     {
       "name": "Scrumpy",
@@ -711,7 +714,8 @@
     {
       "name": "Ginger",
       "facet": "Regional words for food",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: Ginger is already covered a lot; the Glasgow 'ginger' for fizzy drinks is about level 8, far above target."
     },
     {
       "name": "Spice",

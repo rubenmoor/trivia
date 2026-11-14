@@ -66,7 +66,8 @@
     {
       "name": "Right as rain",
       "facet": "Weather and rain sayings",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The pool already asks what “right as rain” means (feeling well), as the answer to an odd-one-out question."
     },
     {
       "name": "Nippy",
@@ -306,7 +307,8 @@
     {
       "name": "Bull in a china shop",
       "facet": "Animal idioms",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: An earlier question already says the German “elephant in a china shop” means clumsy, so this saying's meaning and its china-shop ending are both given away."
     },
     {
       "name": "Cock and bull story",

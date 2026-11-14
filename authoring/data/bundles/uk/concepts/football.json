@@ -631,7 +631,8 @@
     {
       "name": "Christmas truce football match",
       "facet": "Historic matches and moments",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The truce's name is already asked; the options left are an estimate whose answer changes over time, or a forced odd-one-out."
     },
     {
       "name": "Hand of God",
@@ -1093,7 +1094,8 @@
     {
       "name": "VAR",
       "facet": "Football on TV, in films and games",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: What VAR is called is already asked; the remaining options would repeat it or need uncertain numbers."
     },
     {
       "name": "Ted Lasso",

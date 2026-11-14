@@ -265,7 +265,8 @@
     {
       "name": "Trigger",
       "facet": "Famous sitcom characters",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Trigger's famous scene is already asked, and an odd-one-out would be filler."
     },
     {
       "name": "Basil Fawlty",
@@ -285,7 +286,8 @@
     {
       "name": "David Brent",
       "facet": "Famous sitcom characters",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: David Brent's Slough office is already in the earlier question, and the other place options are forced."
     },
     {
       "name": "Captain Mainwaring",
@@ -713,7 +715,8 @@
     {
       "name": "Dibley",
       "facet": "Sitcom settings and towns",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already has Dibley's county and decade, and the options don't fit anything else."
     },
     {
       "name": "Craiglang",
@@ -763,7 +766,8 @@
     {
       "name": "My Parents Are Aliens",
       "facet": "Family and children's sitcoms",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: An early-2000s children's show today's kids don't know, and I can't confirm enough details to write it."
     },
     {
       "name": "Bernard's Watch",
@@ -788,7 +792,8 @@
     {
       "name": "The Royle Family",
       "facet": "Family and children's sitcoms",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: The Royle Family's creators and characters are adult knowledge, far above difficulty 1, and the best-known catchphrase isn't family-friendly."
     },
     {
       "name": "Keeping Up Appearances",

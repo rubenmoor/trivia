@@ -186,7 +186,8 @@
     {
       "name": "Cawdor Castle",
       "facet": "Castles of Scotland",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Cawdor's fame comes from Macbeth, which is adult knowledge. No difficulty-1 question is possible."
     },
     {
       "name": "Caerlaverock Castle",
@@ -421,7 +422,8 @@
     {
       "name": "Frogmore Cottage",
       "facet": "Royal palaces and residences",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Frogmore Cottage is known as Harry and Meghan's home, which is adult celebrity news and not something for a difficulty-1 question."
     },
     {
       "name": "Hillsborough Castle",
