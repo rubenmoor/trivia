@@ -582,7 +582,8 @@
     {
       "name": "Drake's Drum",
       "facet": "Sleeping kings and returning heroes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "used_up: The drum legend is already in the pool; nothing else about it works at difficulty 1."
     },
     {
       "name": "Sir Francis Drake",

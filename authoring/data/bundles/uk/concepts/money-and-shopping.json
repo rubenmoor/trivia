@@ -182,7 +182,8 @@
     {
       "name": "Sixpence",
       "facet": "Money slang and old money",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The pudding-coin fact is already asked; the remaining options (identify a place, count from a photo) are forced."
     },
     {
       "name": "Florin",
@@ -338,7 +339,8 @@
     {
       "name": "Wilko",
       "facet": "High street shops and chains",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: Wilko closed in 2023, and none of the options gives a fair difficulty-1 question."
     },
     {
       "name": "BHS",
@@ -526,7 +528,8 @@
     {
       "name": "Debenhams",
       "facet": "Famous department stores and shopping streets",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: Debenhams closed in 2021, and the options don't give a good question."
     },
     {
       "name": "Bond Street",

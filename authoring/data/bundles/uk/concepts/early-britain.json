@@ -223,7 +223,8 @@
     {
       "name": "Lindow Man",
       "facet": "Celts and Iron Age life",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: A preserved bog body that was violently killed doesn't suit a kid-level family question."
     },
     {
       "name": "Broch",
@@ -283,7 +284,8 @@
     {
       "name": "Caratacus",
       "facet": "Roman invasion and revolts",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Caratacus is far too obscure for difficulty 1."
     },
     {
       "name": "Cartimandua",
@@ -427,7 +429,8 @@
     {
       "name": "Athelstan",
       "facet": "Anglo-Saxon kings and kingdoms",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Athelstan can't be asked at a level a 6-year-old could answer, and Brunanburh is already in the pool."
     },
     {
       "name": "Kingdom of Kent",
@@ -583,7 +586,8 @@
     {
       "name": "Ivar the Boneless",
       "facet": "Vikings in Britain",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Ivar the Boneless is far beyond difficulty 1, and his fame is mostly violent."
     },
     {
       "name": "Cnut",
@@ -658,12 +662,14 @@
     {
       "name": "St Columba",
       "facet": "Early saints, monks and books",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: St Columba and Iona are too obscure for difficulty 1."
     },
     {
       "name": "Lindisfarne Gospels",
       "facet": "Early saints, monks and books",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already asks where and why the Lindisfarne Gospels were made, and nothing kid-level is left."
     },
     {
       "name": "Book of Kells",
@@ -698,7 +704,8 @@
     {
       "name": "St Alban",
       "facet": "Early saints, monks and books",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: St Alban can't be made accessible for kids, and his story centres on his execution."
     },
     {
       "name": "St Hilda of Whitby",
@@ -789,7 +796,8 @@
     {
       "name": "Duncan I",
       "facet": "Picts, Scots and early Wales",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Duncan I is too obscure for difficulty 1, and he is mostly known for being killed by Macbeth."
     },
     {
       "name": "Y Gododdin",

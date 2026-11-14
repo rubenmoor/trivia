@@ -181,7 +181,8 @@
     {
       "name": "London Stadium",
       "facet": "Famous grounds and stadiums",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Its Olympic origin and West Ham are already asked; nothing simple left."
     },
     {
       "name": "Celtic Park",
@@ -638,12 +639,14 @@
     {
       "name": "Hand of God",
       "facet": "Historic matches and moments",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The Hand of God and Maradona are already asked as a riddle."
     },
     {
       "name": "Arsenal Invincibles",
       "facet": "Historic matches and moments",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The unbeaten record and Wenger are already in the pool."
     },
     {
       "name": "Miracle of Istanbul",
@@ -779,7 +782,8 @@
     {
       "name": "Fran Kirby",
       "facet": "Women's football and the Lionesses",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: No count or analogy about Fran Kirby makes a fair question, at any level."
     },
     {
       "name": "Michelle Agyemang",
