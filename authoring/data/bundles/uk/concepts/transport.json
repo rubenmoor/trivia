@@ -251,7 +251,8 @@
     {
       "name": "Stagecoach",
       "facet": "Buses and coaches",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The horse-drawn stagecoach is already asked; the bus company has run trains and trams too, so a purpose question would be unclear."
     },
     {
       "name": "Lothian Buses",

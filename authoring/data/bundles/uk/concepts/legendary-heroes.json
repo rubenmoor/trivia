@@ -72,7 +72,8 @@
     {
       "name": "Igraine",
       "facet": "King Arthur and Camelot",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Igraine is too obscure for young players, and the options don't fit."
     },
     {
       "name": "Battle of Camlann",
@@ -155,7 +156,8 @@
     {
       "name": "Green Knight",
       "facet": "Knights of the Round Table",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The Gawain and Green Knight link is already in the pool, and the other angles are too hard."
     },
     {
       "name": "Siege Perilous",
@@ -176,7 +178,8 @@
     {
       "name": "King Pellinore",
       "facet": "Knights of the Round Table",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: Pellinore's only well-known fact (the Questing Beast) is already in the pool."
     },
     {
       "name": "Questing Beast",
@@ -206,7 +209,8 @@
     {
       "name": "Morgause",
       "facet": "Merlin and Arthurian magic",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Morgause is too obscure, and none of the options (when/purpose) give a fair question."
     },
     {
       "name": "Dinas Emrys",
@@ -481,7 +485,8 @@
     {
       "name": "Cormoran",
       "facet": "Dragon slayers and giant killers",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: Jack the Giant Killer and Cornwall are already in the pool, so a new question would overlap."
     },
     {
       "name": "Grendel",
@@ -597,12 +602,14 @@
     {
       "name": "Herne the Hunter",
       "facet": "Sleeping kings and returning heroes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Herne the Hunter is a ghost legend from Windsor: too obscure, and a bit scary for small children."
     },
     {
       "name": "Wild Hunt",
       "facet": "Sleeping kings and returning heroes",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: The Wild Hunt is too obscure for this level, and the options don't fit."
     },
     {
       "name": "Eildon Hills",
@@ -673,12 +680,14 @@
     {
       "name": "Mother Shipton",
       "facet": "Folk heroes of towns and villages",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Mother Shipton (Knaresborough prophetess) can't give a fair question anywhere near difficulty 1 with these options."
     },
     {
       "name": "John Peel",
       "facet": "Folk heroes of towns and villages",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: John Peel is an old hunting-song figure: obscure, and fox hunting isn't a good theme for a family game."
     },
     {
       "name": "Uncle Tom Cobley",

@@ -71,7 +71,8 @@
     {
       "name": "Emily Wilding Davison",
       "facet": "Suffragettes and votes for women",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Her story is about her death at the Derby, which is off-limits in tone, and nobody this young knows her."
     },
     {
       "name": "Christabel Pankhurst",
@@ -177,7 +178,8 @@
     {
       "name": "Lord Kitchener",
       "facet": "Britain in the First World War",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: His famous poster is already asked; anything else about him is far too hard for difficulty 1."
     },
     {
       "name": "Your Country Needs You",
@@ -617,7 +619,8 @@
     {
       "name": "George VI",
       "facet": "The royal family's century",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The stammer and the abdication are already asked; nothing left about him fits difficulty 1."
     },
     {
       "name": "The King's Speech",

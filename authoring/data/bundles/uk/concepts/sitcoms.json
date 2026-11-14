@@ -202,7 +202,8 @@
     {
       "name": "Black Books",
       "facet": "Modern sitcoms since 2000",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Black Books is adult-only knowledge and the options don't fit."
     },
     {
       "name": "Extras",
@@ -310,7 +311,8 @@
     {
       "name": "Victor Meldrew",
       "facet": "Famous sitcom characters",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already has the catchphrase and the show; what's left (his wife's name) is adult trivia."
     },
     {
       "name": "Edmund Blackadder",
@@ -477,7 +479,8 @@
     {
       "name": "Go on, go on, go on",
       "facet": "Sitcom catchphrases and sayings",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The Mrs Doyle and tea fact and Craggy Island are already in the pool; how many times she says “go on” changes from scene to scene."
     },
     {
       "name": "Down with this sort of thing",
@@ -528,7 +531,8 @@
     {
       "name": "Ruth Jones",
       "facet": "Sitcom stars and writers",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Ruth Jones' Welsh link and Stella are already covered (Rob Brydon, Nessa's Welsh word, Stella)."
     },
     {
       "name": "Miranda Hart",
@@ -558,7 +562,8 @@
     {
       "name": "Joanna Lumley",
       "facet": "Sitcom stars and writers",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: No Joanna Lumley question a young child could answer; her best-known sitcom role revolves around drinking."
     },
     {
       "name": "Richard Wilson",
