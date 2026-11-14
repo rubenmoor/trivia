@@ -182,7 +182,8 @@
     {
       "name": "Green benches",
       "facet": "House of Commons customs",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The colour of the benches is already asked; the remaining options would be forced."
     },
     {
       "name": "Hear, hear",
@@ -403,7 +404,8 @@
     {
       "name": "Budget red box",
       "facet": "Downing Street and Chequers",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The red box and who holds it up are already covered by the Chancellor riddle in the pool; the other options would be obscure."
     },
     {
       "name": "Removal van",
@@ -719,7 +721,8 @@
     {
       "name": "Imperial State Crown",
       "facet": "Royal role in Parliament",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: When the crown is worn (the State Opening) is already in the pool; the other options would repeat it."
     },
     {
       "name": "Throne in the House of Lords",

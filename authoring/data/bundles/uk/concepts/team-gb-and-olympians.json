@@ -408,7 +408,8 @@
     {
       "name": "Super Saturday",
       "facet": "Super Saturday moments",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: Super Saturday facts are already well covered in the pool, and a count question would be trivial or would repeat them."
     },
     {
       "name": "Greg Rutherford",
@@ -769,7 +770,8 @@
     {
       "name": "Charlotte Dujardin",
       "facet": "Equestrian, sailing and shooting",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Too hard for young children, and recent controversy makes her a poor family topic."
     },
     {
       "name": "Valegro",

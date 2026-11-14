@@ -452,7 +452,8 @@
     {
       "name": "Simon Amstell",
       "facet": "Panel show hosts and team captains",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Simon Amstell is unknown to young players, and none of the options fit him."
     },
     {
       "name": "Adam Hills",
@@ -542,7 +543,8 @@
     {
       "name": "Odd One Out round",
       "facet": "Panel show rounds and formats",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The concept is unclear (an obscure 1980s show or a generic round), and none of the options give a fair question."
     },
     {
       "name": "Garlic bread?",
@@ -579,7 +581,8 @@
     {
       "name": "Just like that!",
       "facet": "Catchphrases and famous lines",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The key fact (Tommy Cooper, a magician whose tricks went wrong) is already in the pool."
     },
     {
       "name": "It's goodnight from me",

@@ -131,7 +131,8 @@
     {
       "name": "Bonnie Prince Charlie",
       "facet": "Georgian kings and the Regency",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The Skye Boat Song and the nickname are already asked. The other angles are forced or too hard."
     },
     {
       "name": "Battle of Culloden",
@@ -827,7 +828,8 @@
     {
       "name": "Alexander Graham Bell",
       "facet": "Scientists, inventors and medicine",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The telephone patent and Mr Watson are already asked. The other options would be forced at difficulty 1."
     },
     {
       "name": "Humphry Davy",

@@ -554,12 +554,14 @@
     {
       "name": "Delilah",
       "facet": "Welsh singing and eisteddfodau",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Tom Jones's Delilah and the rugby crowds can't make a question at kids' level."
     },
     {
       "name": "Katherine Jenkins",
       "facet": "Welsh singing and eisteddfodau",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Recognising Katherine Jenkins from a photo or sound is not possible at difficulty 1."
     },
     {
       "name": "Bryn Terfel",
@@ -569,7 +571,8 @@
     {
       "name": "Charlotte Church",
       "facet": "Welsh singing and eisteddfodau",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: A child singer from the late 1990s is unknown to kids; photo recognition of a living person isn't fair."
     },
     {
       "name": "Scarborough Fair",

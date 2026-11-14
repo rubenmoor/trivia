@@ -191,7 +191,8 @@
     {
       "name": "Louise Brown",
       "facet": "Medicine and public health",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: IVF and the first test-tube baby can't make a difficulty-1 odd-one-out question, and the topic doesn't fit young players."
     },
     {
       "name": "Cicely Saunders",
@@ -337,7 +338,8 @@
     {
       "name": "James Watson",
       "facet": "DNA and modern biology",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Watson was American, and the pool already has the 1953 Cambridge DNA facts, so a 'when' question would repeat them."
     },
     {
       "name": "Maurice Wilkins",

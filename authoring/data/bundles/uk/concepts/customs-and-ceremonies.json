@@ -557,6 +557,33 @@
       "name": "Claret Jug",
       "facet": "Sporting occasions and their rituals",
       "known_at": 12
+    },
+    {
+      "name": "Royal garden party",
+      "facet": "Royal pageantry and coronations",
+      "known_at": 9
+    },
+    {
+      "name": "Sparklers",
+      "facet": "Remembrance and Bonfire Night",
+      "known_at": 3
+    },
+    {
+      "name": "Tossing the caber",
+      "facet": "Scottish, Welsh and Irish ceremonies",
+      "known_at": 7
+    },
+    {
+      "name": "Strawberries and cream at Wimbledon",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 6
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-14",
+      "added": 4,
+      "unused": 32
     }
   ]
 }
