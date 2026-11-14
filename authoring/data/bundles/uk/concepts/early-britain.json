@@ -156,7 +156,8 @@
     {
       "name": "Summer solstice",
       "facet": "Stonehenge and ancient monuments",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The solstice date and the midsummer sunrise are already asked, so any 'when' question would repeat them."
     },
     {
       "name": "Durrington Walls",
@@ -306,7 +307,8 @@
     {
       "name": "Camulodunum",
       "facet": "Roman invasion and revolts",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Camulodunum = Colchester is already in the pool, and nothing else about it suits difficulty 1."
     },
     {
       "name": "Claudius's elephants",
@@ -769,7 +771,8 @@
     {
       "name": "Stone of Scone",
       "facet": "Picts, Scots and early Wales",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: There is already a riddle about the Stone of Scone being stolen in 1950, and the other options don't fit."
     },
     {
       "name": "Dunadd",
@@ -870,7 +873,8 @@
     {
       "name": "King Lear",
       "facet": "Legends of early Britain",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: King Lear needs Shakespeare knowledge, and an essential photo of a legendary king isn't possible."
     },
     {
       "name": "Gog and Magog",

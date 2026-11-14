@@ -61,7 +61,8 @@
     {
       "name": "The Last Leg",
       "facet": "Classic panel shows",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already asks about the show's Paralympics origin; the options left (record place, photo of a thing) give forced questions."
     },
     {
       "name": "Through the Keyhole",
@@ -208,7 +209,8 @@
     {
       "name": "Kevin Bridges",
       "facet": "Stand-up comedians",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Kevin Bridges is an adult stand-up; the options (record, odd one out, sequence) don't fit him and can't reach difficulty 1."
     },
     {
       "name": "Joe Lycett",
@@ -243,7 +245,8 @@
     {
       "name": "Katherine Ryan",
       "facet": "Stand-up comedians",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Katherine Ryan is an adult comedian; the record and count options don't give a fair or easy question."
     },
     {
       "name": "Mo Gilligan",
@@ -278,7 +281,8 @@
     {
       "name": "Mitchell and Webb",
       "facet": "Comedy double acts and troupes",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Mitchell and Webb are known only to adults; none of the options gives a question near difficulty 1."
     },
     {
       "name": "Hale and Pace",
@@ -348,7 +352,8 @@
     {
       "name": "Angus Deayton",
       "facet": "Panel show hosts and team captains",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Angus Deayton can't give a place-answer question, and he is adult-only knowledge."
     },
     {
       "name": "Ian Hislop",
@@ -408,7 +413,8 @@
     {
       "name": "Jon Richardson",
       "facet": "Panel show hosts and team captains",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Jon Richardson is known only to adult panel-show viewers; count and record options don't fit."
     },
     {
       "name": "Dara Ó Briain",
@@ -418,7 +424,8 @@
     {
       "name": "Hugh Dennis",
       "facet": "Panel show hosts and team captains",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Hugh Dennis is adult-only knowledge; the year, sequence-place and count options don't fit."
     },
     {
       "name": "Freddie Flintoff",
@@ -550,7 +557,8 @@
     {
       "name": "Yeah but no but",
       "facet": "Catchphrases and famous lines",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: The Little Britain catchphrase is adult-only, a controversial show, and far from difficulty 1."
     },
     {
       "name": "Computer says no",
@@ -741,7 +749,8 @@
     {
       "name": "The Comedy Store",
       "facet": "Comedy festivals and venues",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: The Comedy Store is an adult venue topic; the count and record options are forced and far from difficulty 1."
     },
     {
       "name": "Hammersmith Apollo",

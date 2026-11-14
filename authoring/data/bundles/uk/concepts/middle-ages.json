@@ -357,7 +357,8 @@
     {
       "name": "Prince of Wales",
       "facet": "Scotland and Wales in the Middle Ages",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The pool already has many Prince of Wales questions, including Caernarfon; only obscure dates are left."
     },
     {
       "name": "Eisteddfod",
@@ -392,7 +393,8 @@
     {
       "name": "Maid Marian",
       "facet": "Legends and outlaws",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: A pool question already names Maid Marian as Robin Hood's bride, so the simple 'who is his sweetheart' question would be given away; the other options are forced."
     },
     {
       "name": "Sheriff of Nottingham",

@@ -13,7 +13,8 @@
     "Parliament and state ceremony",
     "Royal titles and honours",
     "Royal emblems in everyday life",
-    "Royal transport and vessels"
+    "Royal transport and vessels",
+    "National emblems and patron saints"
   ],
   "axis_fit": {
     "move": {
@@ -510,6 +511,51 @@
       "name": "Royal Train",
       "facet": "Royal transport and vessels",
       "known_at": 10
+    },
+    {
+      "name": "Sovereign's Sceptre with Dove",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 12
+    },
+    {
+      "name": "Alan Turing £50 note",
+      "facet": "Coins, banknotes and stamps",
+      "known_at": 10
+    },
+    {
+      "name": "Diamond Jubilee State Coach",
+      "facet": "Royal transport and vessels",
+      "known_at": 11
+    },
+    {
+      "name": "Royal Barge Gloriana",
+      "facet": "Royal transport and vessels",
+      "known_at": 13
+    },
+    {
+      "name": "Koh-i-Noor diamond",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 10
+    },
+    {
+      "name": "Welsh flag",
+      "facet": "Union Flag and national flags",
+      "known_at": 4
+    },
+    {
+      "name": "King's Counsel",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 12
+    },
+    {
+      "name": "State Bentley",
+      "facet": "Royal transport and vessels",
+      "known_at": 12
+    },
+    {
+      "name": "Leek and daffodil",
+      "facet": "National emblems and patron saints",
+      "known_at": 7
     }
   ],
   "top_ups": [
@@ -517,6 +563,16 @@
       "date": "2026-11-14",
       "added": 7,
       "unused": 24
+    },
+    {
+      "date": "2026-11-14",
+      "added": 4,
+      "unused": 28
+    },
+    {
+      "date": "2026-11-14",
+      "added": 5,
+      "unused": 27
     }
   ]
 }

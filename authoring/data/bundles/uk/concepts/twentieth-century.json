@@ -242,7 +242,8 @@
     {
       "name": "Cenotaph",
       "facet": "Britain in the First World War",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Who the Cenotaph honours and the 11 o'clock silence are both already in the pool."
     },
     {
       "name": "Two-minute silence",
@@ -332,7 +333,8 @@
     {
       "name": "Dunkirk evacuation",
       "facet": "The Home Front in the Second World War",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The easy fact (civilian boats rescuing trapped soldiers) is already asked; all three options would repeat it."
     },
     {
       "name": "Keep Calm and Carry On",

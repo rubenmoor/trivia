@@ -96,7 +96,8 @@
     {
       "name": "Border morris",
       "facet": "Morris and sword dancing",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Border morris is too niche to ask, and the options (sound, photo of a person, a date) give nothing fair."
     },
     {
       "name": "North West morris",
@@ -212,7 +213,8 @@
     {
       "name": "Strip the Willow",
       "facet": "Ceilidhs and country dancing",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: An earlier question already says Strip the Willow is a ceilidh dance, so the simple question for this level would be answered by it."
     },
     {
       "name": "Gay Gordons",
@@ -393,7 +395,8 @@
     {
       "name": "Concertina",
       "facet": "Folk instruments of the British Isles",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: By sound alone it can't be told apart from an accordion. Its origin is split between England and Germany, and Wheatstone (already asked) gives the date away."
     },
     {
       "name": "Melodeon",
