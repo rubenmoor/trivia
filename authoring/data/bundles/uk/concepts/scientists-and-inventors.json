@@ -384,7 +384,8 @@
     {
       "name": "Human Genome Project",
       "facet": "DNA and modern biology",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: The Human Genome Project can't give a question at difficulty 1."
     },
     {
       "name": "Alec Jeffreys",
@@ -520,7 +521,8 @@
     {
       "name": "DeepMind",
       "facet": "Computing and codebreaking",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: DeepMind is unknown to young children."
     },
     {
       "name": "Demis Hassabis",
@@ -580,7 +582,8 @@
     {
       "name": "Arthur C. Clarke",
       "facet": "Television, radio and telegraph",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Arthur C. Clarke can't be made answerable for a 6-year-old."
     },
     {
       "name": "Robert Watson-Watt",

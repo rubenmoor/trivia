@@ -358,7 +358,8 @@
     {
       "name": "Clarks",
       "facet": "High street shops and chains",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Foot measuring before the school year is already asked; the options left are forced."
     },
     {
       "name": "The Body Shop",
@@ -398,7 +399,8 @@
     {
       "name": "Lidl",
       "facet": "Supermarkets and the weekly shop",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The type of store is already asked, and the options left don't make a good easy question."
     },
     {
       "name": "Co-op",
@@ -643,7 +645,8 @@
     {
       "name": "Cheque",
       "facet": "Paying, saving and pocket money",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: What a cheque is has already been asked; 'made of paper' would be trivial."
     },
     {
       "name": "Cashpoint",

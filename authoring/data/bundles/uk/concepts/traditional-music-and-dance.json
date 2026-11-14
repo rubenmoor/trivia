@@ -81,7 +81,8 @@
     {
       "name": "Morris side",
       "facet": "Morris and sword dancing",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: Its origin and the May Day link are already in the pool (England, Morris dancers, May Day odd one out)."
     },
     {
       "name": "Morris fool",
@@ -123,7 +124,8 @@
     {
       "name": "Longsword dance",
       "facet": "Morris and sword dancing",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Too obscure for level 1 with these options."
     },
     {
       "name": "Sword lock",
@@ -235,7 +237,8 @@
     {
       "name": "Canadian Barn Dance",
       "facet": "Ceilidhs and country dancing",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Too obscure, and none of the options fits well."
     },
     {
       "name": "Military two-step",
@@ -250,7 +253,8 @@
     {
       "name": "Sir Roger de Coverley",
       "facet": "Ceilidhs and country dancing",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Too obscure for level 1. Its link to A Christmas Carol overlaps with the Scrooge question."
     },
     {
       "name": "Petronella",
@@ -715,7 +719,8 @@
     {
       "name": "Fisherman's Friends",
       "facet": "Sea shanties and work songs",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The only options use photos of the band or the lozenge brand; the Port Isaac question already covers the band."
     },
     {
       "name": "Port Isaac",
@@ -833,7 +838,8 @@
     {
       "name": "Lancashire clogs",
       "facet": "Clog, step and Irish dancing",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The meaning of “clog” overlaps with the pool question on what clogs are made of. The other options don't fit."
     },
     {
       "name": "Step dancing",

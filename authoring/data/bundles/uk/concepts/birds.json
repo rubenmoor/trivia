@@ -136,7 +136,8 @@
     {
       "name": "Teal",
       "facet": "Waterbirds, ducks and swans",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: The teal duck is too obscure for a level-1 question, and the video/person options don't fit."
     },
     {
       "name": "Wigeon",
@@ -196,7 +197,8 @@
     {
       "name": "Snipe",
       "facet": "Moorland and game birds",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Snipe facts are too obscure for a level-1 question, and none of the options fit."
     },
     {
       "name": "Woodcock",

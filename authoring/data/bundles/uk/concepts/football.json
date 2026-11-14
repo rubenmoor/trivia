@@ -356,7 +356,8 @@
     {
       "name": "Ryan Giggs",
       "facet": "Legendary British players",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Children don't know Giggs, and his court case makes him a poor fit for a family game."
     },
     {
       "name": "Peter Crouch",
@@ -1029,7 +1030,8 @@
     {
       "name": "The Kop",
       "facet": "Fan culture and matchday traditions",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The pool already has an Anfield question about the Kop fans, and the Spion Kop year or how many fans it held is far too hard."
     },
     {
       "name": "Season ticket",
