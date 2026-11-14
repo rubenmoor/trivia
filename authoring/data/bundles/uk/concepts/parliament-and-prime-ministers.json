@@ -166,7 +166,8 @@
     {
       "name": "Restoration and Renewal",
       "facet": "Palace of Westminster and Big Ben",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too niche and still changing (costs, timelines), so it can't make a fair multiple-choice question for families."
     },
     {
       "name": "Order! Order!",
@@ -927,7 +928,8 @@
     {
       "name": "Liz Truss lettuce",
       "facet": "Plots, scandals and dramatic moments",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The pool's lettuce question already gives away the lettuce and its purpose; the only fact left (which newspaper ran it) is far above the target difficulty."
     },
     {
       "name": "English Civil War",

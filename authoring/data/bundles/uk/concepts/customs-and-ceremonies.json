@@ -116,7 +116,8 @@
     {
       "name": "Easter bonnet parade",
       "facet": "Easter, May Day and spring customs",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The Easter bonnet riddle already covers it, and the best-known parade is in New York, so the origin/place options don't fit the uk bundle"
     },
     {
       "name": "Helston Furry Dance",
@@ -373,7 +374,8 @@
     {
       "name": "Rabbit's foot",
       "facet": "Superstitions and lucky charms",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The keychain riddle already covers the rabbit's foot, and the charm has no British angle for the uk bundle"
     },
     {
       "name": "White rabbits",
