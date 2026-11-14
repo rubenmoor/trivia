@@ -1555831,7 +1555831,7 @@
     },
     {
       "id": "q-20092",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Farmland's most dapper resident, complete with a quiff that would make Elvis jealous.",
       "question": "This bird of British farms and moors has the old nickname “peewit”. Where does that nickname come from?",
@@ -1555843,7 +1555843,7 @@
       ],
       "hints": [
         "The nickname isn't about how the bird looks.",
-        "Lots of bird names come from the birds themselves, not from places or old words.",
+        "Farmers often noticed it long before they spotted it in the fields.",
         "Birdwatchers say it seems to shout its own name."
       ],
       "media": {
@@ -1555889,26 +1555889,34 @@
       "needs_media": true,
       "batch": "batch-72",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. Hint 1 already rules out \"The shape of its crest\", and hint 2 says names don't come \"from places or old words\", which rules out \"A village in Yorkshire\" and \"An old word for green\". After hint 2, only the correct answer is left. Hint 2 should instead point vaguely to the bird's behaviour in spring (for example, that you are more likely to notice it with your ears than your eyes) without ruling out the wrong answers by name.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. Hint 1 already rules out \"The shape of its crest\", and hint 2 says names don't come \"from places or old words\", which rules out \"A village in Yorkshire\" and \"An old word for green\". After hint 2, only the correct answer is left. Hint 2 should instead point vaguely to the bird's behaviour in spring (for example, that you are more likely to notice it with your ears than your eyes) without ruling out the wrong answers by name.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed straight at the call, with a hint that narrows things down without mentioning sound.",
+        "reason": "Replaced hint 2, which ruled out every wrong option, with a vaguer hint about hearing the bird before seeing it.",
         "previous": {
           "hints": [
             "The nickname isn't about how the bird looks.",
-            "Try saying the nickname out loud, like a bird would.",
+            "Lots of bird names come from the birds themselves, not from places or old words.",
             "Birdwatchers say it seems to shout its own name."
           ]
         },
@@ -1557287,7 +1557295,7 @@
       "status": "needs_work",
       "difficulty": 3,
       "description": "The one corner of the ground where singing loudly is basically part of the ticket price.",
-      "question": "Look at the photo: these fans of the visiting team are packed in together behind one goal. What do British fans call this part of the ground?",
+      "question": "Fans of the visiting team are packed in together behind one goal. What do British fans call this part of the ground?",
       "answer": "The away end",
       "wrong_answers": [
         "The Kop",
@@ -1557301,9 +1557309,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "away supporters stadium segregation",
-        "note": "A section of a British football ground full of visiting supporters in their team's colours, ideally behind a goal and separated from home fans. No readable signs naming the section.",
+        "role": "illustrative",
+        "query": "football fans stadium stand",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1557336,18 +1557344,45 @@
       "batch": "batch-72",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows what the essential photo needs: a British football ground with visiting fans packed behind a goal. Candidates 1 and 5 are empty rugby league stands, 2 is a stadium exterior, and 3, 4 and 6 are Korean grounds. We can't search again. The text could also work with an illustrative image, since the question itself says the fans are visiting, so dropping \"Look at the photo\" would allow a looser image. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows what the essential photo needs: a British football ground with visiting fans packed behind a goal. Candidates 1 and 5 are empty rugby league stands, 2 is a stadium exterior, and 3, 4 and 6 are Korean grounds. We can't search again. The text could also work with an illustrative image, since the question itself says the fans are visiting, so dropping \"Look at the photo\" would allow a looser image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No suitable essential photo exists, so I removed “Look at the photo” and switched to an illustrative stadium crowd image.",
+        "previous": {
+          "question": "Look at the photo: these fans of the visiting team are packed in together behind one goal. What do British fans call this part of the ground?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "away supporters stadium segregation",
+            "note": "A section of a British football ground full of visiting supporters in their team's colours, ideally behind a goal and separated from home fans. No readable signs naming the section.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20112",
@@ -1558416,10 +1558451,10 @@
     },
     {
       "id": "q-20126",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "One is prickly, one is clingy, and they share an old song.",
-      "question": "An old British carol is named after these two plants. What do people traditionally use them for at home?",
+      "question": "Holly and ivy have an old British carol named after them. What do people traditionally use them for at home?",
       "answer": "Christmas decorations",
       "wrong_answers": [
         "Summer salads",
@@ -1558433,12 +1558468,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "holly ivy berries hedgerow",
-        "note": "A clear photo of holly (prickly leaves and red berries) together with ivy leaves, with no Christmas decorations or text in the picture.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "holly bush berries",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEnglish_Holly_Berries_2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/English_Holly_Berries_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "FloweringDagwood · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "FloweringDagwood",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Long before Christmas, people brought evergreen plants indoors in winter as a sign that spring would come back.",
       "subcategory": "plants-and-gardens",
@@ -1558463,23 +1558505,48 @@
         "difficulty_estimate": 2,
         "notes": "Summer salads, Easter bonnets and Bonfire Night fuel are not serious options next to a carol and a photo of holly. It's an easy, simple question. A clear holly-and-ivy photo is likely to be available."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-72",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The essential image must show both plants (“these two plants”), but no candidate shows holly together with ivy: 1 is a bird illustration, and 2 and 3 show holly only. A new search isn't allowed this round. The slot needs a holly-and-ivy photo, for example from a search like “holly and ivy”. Another option is to reword the question so it doesn't depend on the picture. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image must show both plants (“these two plants”), but no candidate shows holly together with ivy: 1 is a bird illustration, and 2 and 3 show holly only. A new search isn't allowed this round. The slot needs a holly-and-ivy photo, for example from a search like “holly and ivy”. Another option is to reword the question so it doesn't depend on the picture. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of holly and ivy together exists, so the question now names the plants and uses an illustrative holly image.",
+        "previous": {
+          "question": "An old British carol is named after these two plants. What do people traditionally use them for at home?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "holly ivy berries hedgerow",
+            "note": "A clear photo of holly (prickly leaves and red berries) together with ivy leaves, with no Christmas decorations or text in the picture.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20127",
@@ -1558891,10 +1558958,10 @@
     },
     {
       "id": "q-20132",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "No buffet trolley, but the sandwiches are probably very well cut.",
-      "question": "This special dark red train was built to carry which people?",
+      "question": "Britain has a special dark red train that most people never get to ride. Who was it built to carry?",
       "answer": "The royal family",
       "wrong_answers": [
         "Members of Parliament",
@@ -1558908,12 +1558975,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Royal Train carriages",
-        "note": "A photo of the British Royal Train in its dark red (claret) livery, with no visible crowns, crests or name signs.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "British railway countryside",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurlescombe-_Railway_%26_Countryside_%28geograph_1871380%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Burlescombe-_Railway_%26_Countryside_%28geograph_1871380%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Lewis Clarke · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lewis Clarke",
+        "author_url": "https://www.geograph.org.uk/profile/11775",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Queen Victoria took her first train ride in 1842, from near Windsor to London, and found it delightful.",
       "subcategory": "crown-and-state",
@@ -1558942,19 +1559016,44 @@
       "needs_media": true,
       "batch": "batch-72",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits the essential slot. The question says “this special dark red train”, but every candidate is a black-and-white photo. Candidate 1 also shows a royal crest on the side, which gives the answer away. Candidates 3–6 are New Zealand royal carriages from 1901 and 1927, not the British Royal Train, and 3–4 show interiors. A new search isn't allowed, so the slot needs a colour photo of the claret Royal Train with no crests visible, found manually or by a later search. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits the essential slot. The question says “this special dark red train”, but every candidate is a black-and-white photo. Candidate 1 also shows a royal crest on the side, which gives the answer away. Candidates 3–6 are New Zealand royal carriages from 1901 and 1927, not the British Royal Train, and 3–4 show interiors. A new search isn't allowed, so the slot needs a colour photo of the claret Royal Train with no crests visible, found manually or by a later search. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No suitable colour photo of the Royal Train exists, so the question now describes the train in words and uses a decorative railway image.",
+        "previous": {
+          "question": "This special dark red train was built to carry which people?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Royal Train carriages",
+            "note": "A photo of the British Royal Train in its dark red (claret) livery, with no visible crowns, crests or name signs.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20133",
@@ -1561377,7 +1561476,7 @@
     },
     {
       "id": "q-20165",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The original Sunday league, minus the rules, the referee and the half-time oranges.",
       "question": "In Tudor times, people played “mob football” through the streets, often on Shrove Tuesday. What does “mob” mean here?",
@@ -1561389,7 +1561488,7 @@
       ],
       "hints": [
         "Shopkeepers often boarded up their windows on match day.",
-        "The word describes the players, not the ball, the pitch or the kicking.",
+        "Whole villages could join in, with hundreds of people on each side.",
         "Picture a rowdy crowd surging down the street."
       ],
       "media": {
@@ -1561435,26 +1561534,34 @@
       "needs_media": false,
       "batch": "batch-72",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"The word describes the players, not the ball, the pitch or the kicking\") rules out all three wrong answers by name, so it gives the answer away before hint 3. Replace it with a hint that doesn't eliminate options directly, e.g. one about how many people could join in (whole villages or parishes).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"The word describes the players, not the ball, the pitch or the kicking\") rules out all three wrong answers by name, so it gives the answer away before hint 3. Replace it with a hint that doesn't eliminate options directly, e.g. one about how many people could join in (whole villages or parishes).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "I replaced hints 1 and 2, which gave away the crowd answer, with the reviewer's suggested hints.",
+        "reason": "Replaced hint 2, which ruled out all three wrong options by name, with a hint about how many people took part.",
         "previous": {
           "hints": [
-            "There was no limit on how many could play.",
-            "Each side could have hundreds of people.",
+            "Shopkeepers often boarded up their windows on match day.",
+            "The word describes the players, not the ball, the pitch or the kicking.",
             "Picture a rowdy crowd surging down the street."
           ]
         },
@@ -1561777,9 +1561884,9 @@
     },
     {
       "id": "q-20170",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
-      "description": "The sky's throwing things again, and it's got a very good aim.",
+      "description": "The kind of British day that makes you cancel the picnic and stay on the sofa.",
       "question": "Britons say it's “pelting down” outside. What's pelting down?",
       "answer": "Heavy rain",
       "wrong_answers": [
@@ -1561795,21 +1561902,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "grey cloudy sky town",
+        "query": "English village street overcast",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADutch_Men-of-War_off_a_Craggy_Coast_RMG_BHC0779.tiff",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Dutch_Men-of-War_off_a_Craggy_Coast_RMG_BHC0779.tiff/lossy-page1-3840px-Dutch_Men-of-War_off_a_Craggy_Coast_RMG_BHC0779.tiff.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Simon de Vlieger · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVillage_of_Wherwell_on_a_dull_overcast_day_-_geograph.org.uk_-_3076416.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Village_of_Wherwell_on_a_dull_overcast_day_-_geograph.org.uk_-_3076416.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Barry Shimmon · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Simon de Vlieger",
-        "author_url": "https://en.wikipedia.org/wiki/en:Simon_de_Vlieger",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Barry Shimmon",
+        "author_url": "https://www.geograph.org.uk/profile/20970",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-Art",
-          "PD-old-100-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Britons have lots of other phrases for heavy rain too, like “chucking it down” and “raining cats and dogs”.",
       "subcategory": "weather-and-seasons",
@@ -1561838,19 +1561942,35 @@
       "needs_media": false,
       "batch": "batch-72",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"The sky's throwing things again, and it's got a very good aim\") rules out options before any hint. Autumn leaves come from trees, not the sky, and fog isn't thrown, so only rain and drizzle are left. Rewrite it to play on British weather or soggy days without saying that something falls from the sky.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"The sky's throwing things again, and it's got a very good aim\") rules out options before any hint. Autumn leaves come from trees, not the sky, and fog isn't thrown, so only rain and drizzle are left. Rewrite it to play on British weather or soggy days without saying that something falls from the sky.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer hints that something falls from the sky, which ruled out options.",
+        "previous": {
+          "description": "The sky's throwing things again, and it's got a very good aim."
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20171",
