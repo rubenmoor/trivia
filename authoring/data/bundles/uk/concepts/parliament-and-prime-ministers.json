@@ -468,7 +468,8 @@
     {
       "name": "Polling day Thursday",
       "facet": "Elections and voting rights",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The Thursday tradition has already been asked several times; a count question about polling hours would not really be about Thursday."
     },
     {
       "name": "Postal vote",

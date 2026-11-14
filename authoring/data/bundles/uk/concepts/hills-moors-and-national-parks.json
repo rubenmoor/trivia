@@ -931,12 +931,14 @@
     {
       "name": "Emmerdale",
       "facet": "Legends, writers and hills on screen",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: Emmerdale is an adult soap opera that young children don't know."
     },
     {
       "name": "Braveheart",
       "facet": "Legends, writers and hills on screen",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Braveheart is an adult war film that children don't watch, so it can't give a difficulty-1 question."
     },
     {
       "name": "Outlander",
