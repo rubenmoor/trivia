@@ -1563336,10 +1563336,10 @@
     },
     {
       "id": "q-20189",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Thousands of football fans in yellow, all named after something that weighs less than a biscuit.",
-      "question": "Listen: Norwich City football club, who play in yellow and green, are nicknamed after this singing bird. Which bird is it?",
+      "question": "Norwich City football club, who play in yellow and green, are nicknamed after a singing bird. Which bird is it?",
       "answer": "Canary",
       "wrong_answers": [
         "Robin",
@@ -1563352,13 +1563352,20 @@
         "It shares its name with a group of Spanish islands off Africa."
       ],
       "media": {
-        "type": "audio",
-        "role": "essential",
-        "query": "Serinus canaria domestica song",
-        "note": "A clear recording of a domestic canary singing, a few seconds long, no other birds.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "type": "image",
+        "role": "illustrative",
+        "query": "Norwich Cathedral",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorwich_Cathedral_67.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Norwich_Cathedral_67.jpg/3840px-Norwich_Cathedral_67.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Simon Burchell · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Simon Burchell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Simon_Burchell",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Norwich became famous for canaries after Flemish weavers who settled there in the 1500s brought the hobby of breeding them.",
       "subcategory": "birds",
@@ -1563384,33 +1563391,60 @@
         "notes": "Most kids won't know the Norwich nickname, but a yellow singing pet bird is easy to work out, so 2–3 fits. The audio is mostly decoration because the text already gives the clue, but a canary recording is easy to find. Hint 2 repeats the yellow from the question. The Flemish weavers fun fact is well documented."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-73",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the audio candidates is a canary singing. All six are spoken pronunciation files (\"Canary Wharf\", \"canary fit\", \"canary in a coal mine\", \"Canary Islands\", Dutch \"Canariërs\"), and some of them would say the answer out loud. No new search is allowed, so the essential audio slot can't be filled. Search for an actual canary song recording (for example \"canary bird song\" on Freesound). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the audio candidates is a canary singing. All six are spoken pronunciation files (\"Canary Wharf\", \"canary fit\", \"canary in a coal mine\", \"Canary Islands\", Dutch \"Canariërs\"), and some of them would say the answer out loud. No new search is allowed, so the essential audio slot can't be filled. Search for an actual canary song recording (for example \"canary bird song\" on Freesound). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": {
-        "query": "football stadium crowd",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMbombela_Stadium_crowd_leaving.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Mbombela_Stadium_crowd_leaving.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Tadpolefarm · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Tadpolefarm",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Tadpolefarm",
-        "restrictions": [],
-        "pd_reasons": []
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No canary song recording exists in the sources, so the question no longer says \"Listen\" and uses an illustrative image of Norwich instead of essential audio.",
+        "previous": {
+          "question": "Listen: Norwich City football club, who play in yellow and green, are nicknamed after this singing bird. Which bird is it?",
+          "media": {
+            "type": "audio",
+            "role": "essential",
+            "query": "Serinus canaria domestica song",
+            "note": "A clear recording of a domestic canary singing, a few seconds long, no other birds.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true,
+          "background": {
+            "query": "football stadium crowd",
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AMbombela_Stadium_crowd_leaving.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Mbombela_Stadium_crowd_leaving.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Tadpolefarm · CC BY-SA 4.0 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+            "author": "Tadpolefarm",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Tadpolefarm",
+            "restrictions": [],
+            "pd_reasons": []
+          }
+        },
+        "revised_on": "2026-11-14"
       }
     },
     {
@@ -1563718,28 +1563752,35 @@
     {
       "id": "q-20194",
       "status": "needs_work",
-      "difficulty": 1,
+      "difficulty": 4,
       "description": "Showbiz's quietest game: lots of waving, no talking, and somebody pretending to be a teapot.",
-      "question": "On Give Us a Clue, players acted out film and book titles without speaking. A player holds up this hand first. How many words are in the title?",
-      "answer": "3",
+      "question": "On Give Us a Clue, players acted out film and book titles without speaking. What did holding up three fingers first tell the team?",
+      "answer": "The title has three words",
       "wrong_answers": [
-        "2",
-        "4",
-        "5"
+        "The team gets three guesses",
+        "It's the third clue of the game",
+        "The title has a number in it"
       ],
       "hints": [
-        "Look closely at the hand in the picture.",
-        "Each finger stands for one word.",
-        "Count the fingers that are pointing up."
+        "Players of charades at home use the very same trick.",
+        "Each finger stands for one part of the title.",
+        "Next, the player holds up one finger to show they'll act out the first one."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "three fingers raised hand",
-        "note": "A hand held up showing exactly three raised fingers, clearly countable.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "television studio lights",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AABC-televisioyhti%C3%B6n_tv-studio_Japanin_Osakassa_-_ABC_studio_in_Osaka%2C_Japan.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/ABC-televisioyhti%C3%B6n_tv-studio_Japanin_Osakassa_-_ABC_studio_in_Osaka%2C_Japan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Takajarru · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Takajarru",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Takajarru&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Give Us a Clue ran on ITV from 1979, with dancer Lionel Blair and actress Una Stubbs as the two team captains.",
       "subcategory": "comedians-and-panel-shows",
@@ -1563765,22 +1563806,63 @@
         "notes": "This is just counting fingers in a photo. The show and the charades rule add flavour, but the answer is simply the count. Trivial, and not much fun even for kids. The essential image is easy to find."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-73",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a single hand clearly holding up exactly three fingers, which this essential image needs. Candidate 1 is a Weimar coin with German text and an oath gesture. Candidate 2 shows soldiers swearing an oath to Hitler, which is unacceptable. 3 is a singer with an open hand, 4 is a sketch of a pointing hand, 5 contains nudity and 6 is a ring. No new search is allowed, so the media slot can't be filled. A search like \"hand three fingers up\" against a plain background would be needed. No suitable picture found for this question.",
+        "feedback": "Hint 2 (“Each finger stands for one part of the title.”) gives the answer away: with the four options, three fingers can then only mean three words. Hint 2 should be a vaguer clue, for example that the signal tells the team about the title's shape before the miming starts.",
         "problems": [
-          "media"
+          "giveaway"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a single hand clearly holding up exactly three fingers, which this essential image needs. Candidate 1 is a Weimar coin with German text and an oath gesture. Candidate 2 shows soldiers swearing an oath to Hitler, which is unacceptable. 3 is a singer with an open hand, 4 is a sketch of a pointing hand, 5 contains nudity and 6 is a ring. No new search is allowed, so the media slot can't be filled. A search like \"hand three fingers up\" against a plain background would be needed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 1,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable three-finger photo exists, so the question now asks what holding up three fingers means, with a decorative image; difficulty raised to match.",
+        "previous": {
+          "difficulty": 1,
+          "question": "On Give Us a Clue, players acted out film and book titles without speaking. A player holds up this hand first. How many words are in the title?",
+          "answer": "3",
+          "wrong_answers": [
+            "2",
+            "4",
+            "5"
+          ],
+          "hints": [
+            "Look closely at the hand in the picture.",
+            "Each finger stands for one word.",
+            "Count the fingers that are pointing up."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "three fingers raised hand",
+            "note": "A hand held up showing exactly three raised fingers, clearly countable.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20195",
@@ -1564700,7 +1564782,7 @@
     },
     {
       "id": "q-20207",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Named after a tree, though it has never grown a single needle.",
       "question": "In Scotland's pine woods, a shy pine marten is climbing a tree trunk. What is a pine marten?",
@@ -1564712,7 +1564794,7 @@
       ],
       "hints": [
         "It spends a lot of time up in the trees.",
-        "It's about the size of a pet cat.",
+        "It likes to eat berries, birds' eggs and small animals.",
         "It's a cousin of the weasel and the otter."
       ],
       "media": {
@@ -1564758,26 +1564840,34 @@
       "needs_media": false,
       "batch": "batch-73",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It's about the size of a pet cat”) gives the answer away: a small owl, a woodpecker and a beetle are all far smaller than a cat, so it rules out all three wrong answers at once. Hint 2 should narrow things down without settling it, for example something about its long bushy tail or its liking for berries and eggs, or the wrong answers should include something cat-sized.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It's about the size of a pet cat”) gives the answer away: a small owl, a woodpecker and a beetle are all far smaller than a cat, so it rules out all three wrong answers at once. Hint 2 should narrow things down without settling it, for example something about its long bushy tail or its liking for berries and eggs, or the wrong answers should include something cat-sized.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hints 1 and 2 ruled out the wrong options, so I replaced them with ones that don't.",
+        "reason": "Hint 2 compared its size to a cat, which ruled out all three wrong answers, so it now describes what the animal eats instead.",
         "previous": {
           "hints": [
-            "It has no feathers and no wings.",
-            "It has a bushy tail and a creamy patch on its chest.",
+            "It spends a lot of time up in the trees.",
+            "It's about the size of a pet cat.",
             "It's a cousin of the weasel and the otter."
           ]
         },
@@ -1565103,10 +1565193,10 @@
     },
     {
       "id": "q-20212",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "The great British lunchtime puzzle: which crisps go best with egg mayo?",
-      "question": "Britons have a name for a lunch like this, when a sandwich, a snack and a drink come together for one price. What is it?",
+      "question": "In Britain, what is the name for a lunch where a sandwich, a snack and a drink come together for one price?",
       "answer": "A meal deal",
       "wrong_answers": [
         "A packed lunch",
@@ -1565120,12 +1565210,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "packaged sandwich crisps bottle",
-        "note": "Close-up of a packaged supermarket sandwich, a bag of crisps and a bottled drink together.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "supermarket sandwiches",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHK_YTM_%E4%B9%9D%E9%BE%8D%E8%A5%BF_Kowloon_West_%E5%9C%93%E6%96%B9_Elements_shopping_mall_food_shop_ThreeSixty_3hreeSixty_Supermarket_Urban_Bakery_%E7%86%9F%E9%A3%9F_cooked_food_sandwiches_n_milk_tea_July_2022_Px3.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/HK_YTM_%E4%B9%9D%E9%BE%8D%E8%A5%BF_Kowloon_West_%E5%9C%93%E6%96%B9_Elements_shopping_mall_food_shop_ThreeSixty_3hreeSixty_Supermarket_Urban_Bakery_%E7%86%9F%E9%A3%9F_cooked_food_sandwiches_n_milk_tea_July_2022_Px3.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "MEIGUWC Roppmeira U · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "MEIGUWC Roppmeira U",
+        "author_url": "https://commons.wikimedia.org/wiki/User:MEIGUWC_Roppmeira_U",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Marks & Spencer started selling ready-made packaged sandwiches in 1980, and they soon became a British lunchtime habit.",
       "subcategory": "money-and-shopping",
@@ -1565151,22 +1565248,48 @@
         "notes": "Commons may not have a clear photo of a typical meal deal, and the question needs one (“a lunch like this”). “Packed lunch” is a fair distractor, and the one-price clue rules it out. Reports differ a little on the M&S 1980 sandwich date, but it is the usual claim."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-73",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates works for the essential slot, and no new search is allowed. The question says \"a lunch like this\", so the image must clearly show a packaged sandwich, a bag of crisps and a drink together. Find such a photo (e.g. \"UK meal deal sandwich\"), or reword the question so it doesn't point at a picture and use an illustrative image. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates works for the essential slot, and no new search is allowed. The question says \"a lunch like this\", so the image must clearly show a packaged sandwich, a bag of crisps and a drink together. Find such a photo (e.g. \"UK meal deal sandwich\"), or reword the question so it doesn't point at a picture and use an illustrative image. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No essential photo was found, so the question no longer points at a picture and uses a decorative image instead.",
+        "previous": {
+          "question": "Britons have a name for a lunch like this, when a sandwich, a snack and a drink come together for one price. What is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "packaged sandwich crisps bottle",
+            "note": "Close-up of a packaged supermarket sandwich, a bag of crisps and a bottled drink together.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20213",
@@ -1567453,7 +1567576,7 @@
     },
     {
       "id": "q-20243",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Zaha Hadid designed it, and it is definitely not a garden shed.",
       "question": "Look at the photo: this building was built for London 2012. Who competes inside it?",
@@ -1567465,7 +1567588,7 @@
       ],
       "hints": [
         "Think about what the curvy roof looks like.",
-        "The athletes in here finish their races dripping wet, and not from sweat.",
+        "The athletes here race against the clock, side by side in lanes.",
         "Rebecca Adlington won two Olympic bronze medals in this building."
       ],
       "media": {
@@ -1567473,14 +1567596,14 @@
         "role": "essential",
         "query": "London Aquatics Centre exterior",
         "note": "Exterior of the London Aquatics Centre showing its wave-shaped roof; no visible signs or text naming the building or the sport.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Aquatics_Centre_-_geograph.org.uk_-_4147740.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/London_Aquatics_Centre_-_geograph.org.uk_-_4147740.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Mark Percy · CC BY-SA 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Aquatics_Centre_-_Olympic_Park.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/London_Aquatics_Centre_-_Olympic_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Sumit Surai · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Mark Percy",
-        "author_url": "https://www.geograph.org.uk/profile/18030",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Sumit Surai",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sumitsurai",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1567511,26 +1567634,34 @@
       "needs_media": true,
       "batch": "batch-73",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“finish their races dripping wet, and not from sweat”) leaves only Swimmers among the four options, so it gives the answer away before hint 3. It should be vaguer, for example about what the wave-shaped roof is meant to suggest without mentioning water or wetness. The facts check out: Zaha Hadid designed the building, Adlington won two bronzes there in 2012, and it opened to the public after the Games. The media is fine.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“finish their races dripping wet, and not from sweat”) leaves only Swimmers among the four options, so it gives the answer away before hint 3. It should be vaguer, for example about what the wave-shaped roof is meant to suggest without mentioning water or wetness. The facts check out: Zaha Hadid designed the building, Adlington won two bronzes there in 2012, and it opened to the public after the Games. The media is fine.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named the pools, with a vaguer water clue.",
+        "reason": "Hint 2 said the athletes finish wet, which gave the answer away, so it now gives a vaguer clue about racing in lanes.",
         "previous": {
           "hints": [
             "Think about what the curvy roof looks like.",
-            "Inside there are long pools and very high boards.",
+            "The athletes in here finish their races dripping wet, and not from sweat.",
             "Rebecca Adlington won two Olympic bronze medals in this building."
           ]
         },
@@ -1568331,7 +1568462,7 @@
     },
     {
       "id": "q-20254",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Somewhere fairness is measured with a spirit level.",
       "question": "Teams run around on me. If I slope, one team gets to play downhill, which isn't fair. So a fair contest is called a “level” me. What am I?",
@@ -1568349,11 +1568480,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "referee whistle close-up",
+        "query": "referee whistle",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReferee_Barnstar.png",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Referee_Barnstar.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Jerium · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jerium",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jerium",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Some old British football pitches really did slope: Yeovil Town's old Huish ground dropped about 2.5 metres (8 ft) from one corner to the opposite corner.",
       "subcategory": "sayings-and-idioms",
@@ -1568382,24 +1568520,40 @@
       "needs_media": false,
       "batch": "batch-73",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates is usable as an illustrative image, and no new search is allowed. None of them shows a referee's whistle or anything to do with football. The slot needs a new search, such as \"referee whistle\" or \"football boots grass\", that doesn't show a whole pitch. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates is usable as an illustrative image, and no new search is allowed. None of them shows a referee's whistle or anything to do with football. The slot needs a new search, such as \"referee whistle\" or \"football boots grass\", that doesn't show a whole pitch. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected the fun fact: the Huish slope ran corner to opposite corner.",
+        "reason": "No image candidate worked, so the media query is shortened to \"referee whistle\" for a new search; the question itself is unchanged.",
         "previous": {
-          "fun_fact": "Some old British football pitches really did slope: Yeovil Town's old Huish ground dropped about 2.5 metres (8 ft) from one side to the other."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "referee whistle close-up",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-14"
       }
