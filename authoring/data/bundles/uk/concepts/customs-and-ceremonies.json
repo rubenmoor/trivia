@@ -256,7 +256,8 @@
     {
       "name": "Silver wedding anniversary",
       "facet": "Weddings, christenings and life events",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: An earlier question already asks that silver means 25 years. Any year-arithmetic question could be answered from it."
     },
     {
       "name": "Key of the door",
@@ -422,7 +423,8 @@
     {
       "name": "School tie",
       "facet": "School and university traditions",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already has the school tie question, and its origin is too obscure for difficulty 4."
     },
     {
       "name": "Prefect",

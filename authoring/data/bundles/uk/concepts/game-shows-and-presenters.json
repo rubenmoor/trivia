@@ -665,7 +665,8 @@
     {
       "name": "Trapped!",
       "facet": "Children's game shows",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: I'm not sure enough of the details of the CBBC show Trapped! to write a reliable question at this level."
     },
     {
       "name": "Copycats",
@@ -970,7 +971,8 @@
     {
       "name": "Generation Game conveyor belt",
       "facet": "Prizes, props, sets and rules",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already asks about the prizes on the conveyor belt, so any new question would repeat or give away that fact."
     },
     {
       "name": "Cuddly toy",
@@ -1005,7 +1007,8 @@
     {
       "name": "Phone a Friend",
       "facet": "Prizes, props, sets and rules",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The good facts (the 30-second limit, starting in 1999) are already asked or given away, and the remaining options would be trivial or forced."
     },
     {
       "name": "50:50",

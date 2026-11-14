@@ -252,7 +252,8 @@
     {
       "name": "Bin day",
       "facet": "Bins, recycling and the council",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The pool's “It's bin night… the bin lorry” question already covers bin day; a completion would give it away."
     },
     {
       "name": "Local council",
@@ -287,7 +288,8 @@
     {
       "name": "Bin men",
       "facet": "Bins, recycling and the council",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: What bin men do is close to the pool's bin lorry question, so the remaining facts don't suit difficulty 2."
     },
     {
       "name": "Bottle bank",

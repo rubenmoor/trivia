@@ -421,7 +421,8 @@
     {
       "name": "Saint George",
       "facet": "Medieval saints and the Church",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The flag, dragon, red cross and April 23 have all been asked. The George Cross medal says “For Gallantry” on it, which gives the answer away."
     },
     {
       "name": "Saint Patrick",
@@ -531,7 +532,8 @@
     {
       "name": "Squire",
       "facet": "Everyday life and the Black Death",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The definition and the age have been asked. The remaining options lead to vague lists of jobs."
     },
     {
       "name": "Jousting",

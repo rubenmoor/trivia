@@ -81,7 +81,8 @@
     {
       "name": "Raining cats and dogs",
       "facet": "Weather sayings and folklore",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The idiom is shared across the English-speaking world and well known everywhere, so it doesn't belong in the uk bundle."
     },
     {
       "name": "Cows lying down before rain",
