@@ -1571254,10 +1571254,10 @@
     },
     {
       "id": "q-20290",
-      "status": "needs_work",
-      "difficulty": 2,
+      "status": "approved",
+      "difficulty": 4,
       "description": "The quiet one in the biscuit tin, who never shows off.",
-      "question": "Look at this close-up. Which plain British biscuit, a favourite for dunking in a cuppa, is it?",
+      "question": "Which thin, pale and very plain British biscuit is famous for breaking off and sinking when you dunk it in a cuppa?",
       "answer": "Rich Tea",
       "wrong_answers": [
         "Digestive",
@@ -1571265,18 +1571265,25 @@
         "Custard Cream"
       ],
       "hints": [
-        "It's thin, round and very plain.",
-        "It goes soft fast, so pieces often end up at the bottom of the mug.",
+        "It has no filling, no chocolate and no pictures on it.",
+        "Pieces of it often end up at the bottom of the mug.",
         "Its name includes the drink it's dunked in."
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Rich tea biscuits",
-        "note": "Close-up of one plain Rich Tea biscuit with its pin holes, no packet and no readable brand name.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "cup of tea saucer",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A-2019-09-13_Tea_cup_and_saucer%2C_Wedgwood_%CE%84Mariposa%CE%84_%28C2103%29%2C_Susie_Cooper.JPG",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/-2019-09-13_Tea_cup_and_saucer%2C_Wedgwood_%CE%84Mariposa%CE%84_%28C2103%29%2C_Susie_Cooper.JPG/3840px--2019-09-13_Tea_cup_and_saucer%2C_Wedgwood_%CE%84Mariposa%CE%84_%28C2103%29%2C_Susie_Cooper.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Kolforn (Kolforn) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kolforn (Kolforn)\nI'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope.\n\n\n\n This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Flag-globe-2.gif",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Rich Tea biscuits are said to have started in Yorkshire, as a light snack for wealthy families between meals.",
       "subcategory": "cakes-puddings-and-biscuits",
@@ -1571302,23 +1571309,56 @@
         "notes": "Telling Rich Tea from a Digestive by a close-up is harder than 2 for young kids; 'plain' in the question helps rule out Custard Cream and Malted Milk. The Yorkshire origin is the usual story but is only loosely documented. Commons should have a usable close-up. Brand recognition is fairly dry."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-74",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works for the essential close-up. #1 is a clear Rich Tea, but the words \"RICH TEA BISCUITS\" are pressed into its surface, which gives the answer away. #2 is from a file titled as digestives (one of the wrong options), and #3–#6 show generic tea-time biscuits from South Asia, not a Rich Tea. Another search isn't possible. A close-up of an unbranded Rich Tea (or one where the stamped text is cropped out or can't be read) would fix this. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works for the essential close-up. #1 is a clear Rich Tea, but the words \"RICH TEA BISCUITS\" are pressed into its surface, which gives the answer away. #2 is from a file titled as digestives (one of the wrong options), and #3–#6 show generic tea-time biscuits from South Asia, not a Rich Tea. Another search isn't possible. A close-up of an unbranded Rich Tea (or one where the stamped text is cropped out or can't be read) would fix this. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable unbranded close-up exists, so the essential image is replaced by a text clue that only Rich Tea fits, with a decorative image; hint 1 was reworded so it no longer repeats the new question text.",
+        "previous": {
+          "difficulty": 2,
+          "question": "Look at this close-up. Which plain British biscuit, a favourite for dunking in a cuppa, is it?",
+          "hints": [
+            "It's thin, round and very plain.",
+            "It goes soft fast, so pieces often end up at the bottom of the mug.",
+            "Its name includes the drink it's dunked in."
+          ],
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Rich tea biscuits",
+            "note": "Close-up of one plain Rich Tea biscuit with its pin holes, no packet and no readable brand name.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20291",
@@ -1573190,9 +1573230,9 @@
     },
     {
       "id": "q-20315",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
-      "description": "A cave in Somerset that smells less like a witch's den and more like a sandwich.",
+      "description": "A cave in Somerset where something besides the stalactites is quietly getting older.",
       "question": "Deep inside Wookey Hole Caves in Somerset, the air stays cool and damp all year. Which food is stored there for months to ripen?",
       "answer": "Cheese",
       "wrong_answers": [
@@ -1573202,17 +1573242,24 @@
       ],
       "hints": [
         "It's made from milk.",
-        "Mice in cartoons love it.",
+        "It's often sold in big round wheels.",
         "The famous Cheddar Gorge is just a few miles away."
       ],
       "media": {
         "type": "image",
-        "role": "illustrative",
-        "query": "Wookey Hole cave chamber",
+        "role": "decorative",
+        "query": "limestone cave stalactites",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStalactites_and_stalagmites_in_Elgood_Limestone_cave_at_Adventure_Waikato.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Stalactites_and_stalagmites_in_Elgood_Limestone_cave_at_Adventure_Waikato.jpg/3840px-Stalactites_and_stalagmites_in_Elgood_Limestone_cave_at_Adventure_Waikato.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Johnragla · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Johnragla",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Johnragla&action=edit&redlink=1",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The caves stay at about 11 °C (52 °F) all year, which is just right for slowly ripening big wheels of Cheddar.",
       "subcategory": "landmarks-and-castles",
@@ -1573241,20 +1573288,50 @@
       "needs_media": false,
       "batch": "batch-74",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Mice in cartoons love it”) gives the answer away before hint 3. The description (“smells … like a sandwich”) rules out ice cream and chocolate, so only cheese and bread are left. None of the media candidates shows Wookey Hole: they are a cave in the Bahamas (1, 2), Ash Hole Cavern (3) and a portrait shot of a person in Iganteva Cave (4). A new search isn't allowed in this run. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Mice in cartoons love it”) gives the answer away before hint 3. The description (“smells … like a sandwich”) rules out ice cream and chocolate, so only cheese and bread are left. None of the media candidates shows Wookey Hole: they are a cave in the Bahamas (1, 2), Ash Hole Cavern (3) and a portrait shot of a person in Iganteva Cave (4). A new search isn't allowed in this run. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the description that ruled out options and the giveaway hint 2, and made the image a decorative cave because no Wookey Hole photo was found.",
+        "previous": {
+          "description": "A cave in Somerset that smells less like a witch's den and more like a sandwich.",
+          "hints": [
+            "It's made from milk.",
+            "Mice in cartoons love it.",
+            "The famous Cheddar Gorge is just a few miles away."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Wookey Hole cave chamber",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20316",
@@ -1573482,7 +1573559,7 @@
     },
     {
       "id": "q-20319",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "Shopping for people who love parcels but don't trust the doorbell.",
       "question": "You order something online, the shop gets it ready, and you pick it up yourself in store. What do Britons call this?",
@@ -1573500,11 +1573577,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "shop collection point counter",
+        "query": "parcel locker",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C_%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5_%D0%A2%D0%BE%D0%BB%D0%B5_%D0%B1%D0%B8_64_%281%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C_%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5_%D0%A2%D0%BE%D0%BB%D0%B5_%D0%B1%D0%B8_64_%281%29.jpg/3840px-%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C_%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5_%D0%A2%D0%BE%D0%BB%D0%B5_%D0%B1%D0%B8_64_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Nikolai Bulykin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nikolai Bulykin",
+        "author_url": "https://www.wikidata.org/wiki/Q99741741",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Some British supermarkets have drive-up collection points where staff load your shopping straight into the boot of your car.",
       "subcategory": "money-and-shopping",
@@ -1573533,28 +1573617,40 @@
       "needs_media": false,
       "batch": "batch-74",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates fits a modern click-and-collect topic. All six are old prints or drawings: a 1913 florist shopfront, an 18th-century satire, a dark table of flowers, a 1940 chemist-shop watercolour and two wallpaper trade cards. No new search is allowed, so the slot needs a manual image, such as a modern \"click and collect\" sign-free parcel locker or a store collection point photo with no text naming the service. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates fits a modern click-and-collect topic. All six are old prints or drawings: a 1913 florist shopfront, an 18th-century satire, a dark table of flowers, a 1940 chemist-shop watercolour and two wallpaper trade cards. No new search is allowed, so the slot needs a manual image, such as a modern \"click and collect\" sign-free parcel locker or a store collection point photo with no text naming the service. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 vaguer, since “computer mouse” practically said “click”.",
+        "reason": "Only the image search changed, to a modern parcel locker, because the old results were all antique prints.",
         "previous": {
-          "hints": [
-            "It's named after the two steps you take.",
-            "First you use a computer mouse, then you go and fetch it.",
-            "Step one happens on a screen, step two at the shop counter."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "shop collection point counter",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-14"
       }
@@ -1573881,14 +1573977,14 @@
         "The party picks a new MP itself"
       ],
       "hints": [
-        "The local voters get their say.",
-        "Only that one area goes to the polls.",
+        "The same thing happens when an MP dies in office.",
+        "Several parties can put up candidates for the empty seat.",
         "It's a small election with a name starting “by-”."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "ballot box",
+        "query": "House of Commons green benches",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1573922,25 +1574018,47 @@
       "batch": "batch-74",
       "review": {
         "decision": "needs_work",
-        "feedback": "The ballot box image gives the answer away: \"A by-election is held\" is the only option that involves voting. Hint 1 (\"The local voters get their say\") and hint 2 (\"goes to the polls\") also rule out all three wrong answers on their own. Use a neutral illustrative image instead, such as the empty Commons green benches or the Palace of Westminster. Rewrite hints 1 and 2 so they stay vague, for example about how rarely this happens or about the Chiltern Hundreds custom. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The ballot box image gives the answer away: \"A by-election is held\" is the only option that involves voting. Hint 1 (\"The local voters get their say\") and hint 2 (\"goes to the polls\") also rule out all three wrong answers on their own. Use a neutral illustrative image instead, such as the empty Commons green benches or the Palace of Westminster. Rewrite hints 1 and 2 so they stay vague, for example about how rarely this happens or about the Chiltern Hundreds custom. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the clause that ruled out an option and rewrote the description so it doesn't say the seat must be filled.",
+        "reason": "Swapped the ballot-box image for the Commons benches and made hints 1 and 2 vaguer so they no longer rule out every wrong answer on their own.",
         "previous": {
-          "description": "An empty green bench in the Commons is like an empty chair at dinner: someone has to fill it.",
-          "question": "An MP resigns halfway through a Parliament. Their seat can't stay empty, and no general election is due. What happens in their constituency?"
+          "hints": [
+            "The local voters get their say.",
+            "Only that one area goes to the polls.",
+            "It's a small election with a name starting “by-”."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "ballot box",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-14"
       }
@@ -1576017,7 +1576135,7 @@
     },
     {
       "id": "q-20352",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Purr-fectly dressed for a very good night's sleep.",
       "question": "In old slang, something excellent is called “the cat's…” what?",
@@ -1576029,22 +1576147,22 @@
       ],
       "hints": [
         "The saying comes from the same era as “the bee's knees”.",
-        "They usually come as a top and bottoms.",
-        "The word sounds like “pa-JAH-mas”."
+        "The saying first took off in America in the 1920s.",
+        "The word came into English from Hindi and Persian."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
         "query": "cat sleeping on bed",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACat_sleeping_on_a_bed.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Cat_sleeping_on_a_bed.jpg/3840px-Cat_sleeping_on_a_bed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "MisterDesgraciao · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2019-11-30_12_08_25_A_Tabby_cat_sleeping_on_a_bed_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2019-11-30_12_08_25_A_Tabby_cat_sleeping_on_a_bed_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/3840px-2019-11-30_12_08_25_A_Tabby_cat_sleeping_on_a_bed_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Famartin · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "MisterDesgraciao",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:MisterDesgraciao&action=edit&redlink=1",
+        "author": "Famartin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Famartin",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1576075,15 +1576193,23 @@
       "needs_media": false,
       "batch": "batch-74",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“They usually come as a top and bottoms”) gives the answer away: only pyjamas fit it among the four options, since slippers, a dressing gown and a nightcap are all single items. Replace hint 2 with a vaguer clue, for example one about the saying's 1920s American origins. Hint 3 is also very close, because its phonetic spelling is really the answer itself.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“They usually come as a top and bottoms”) gives the answer away: only pyjamas fit it among the four options, since slippers, a dressing gown and a nightcap are all single items. Replace hint 2 with a vaguer clue, for example one about the saying's 1920s American origins. Hint 3 is also very close, because its phonetic spelling is really the answer itself.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
@@ -1576091,14 +1576217,12 @@
       "difficulty_original": 6,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the riddle with a direct question, rewrote the hints in the third person with a vaguer first hint, and raised the difficulty because the cat-at-bedtime clue is gone.",
+        "reason": "Replaced hint 2, which gave the answer away, and hint 3, whose phonetic spelling was the answer itself.",
         "previous": {
-          "difficulty": 6,
-          "question": "A cat would wear me to bed, if cats wore clothes. In old slang, anything super good is “the cat's…” me. What am I?",
           "hints": [
-            "You wear me at bedtime.",
-            "I usually have a top and bottoms.",
-            "I sound like “pa-JAH-mas”."
+            "The saying comes from the same era as “the bee's knees”.",
+            "They usually come as a top and bottoms.",
+            "The word sounds like “pa-JAH-mas”."
           ]
         },
         "revised_on": "2026-11-14"
