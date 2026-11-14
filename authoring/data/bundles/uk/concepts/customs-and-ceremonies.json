@@ -252,7 +252,8 @@
     {
       "name": "Wake",
       "facet": "Weddings, christenings and life events",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: A wake is about death and mourning, which doesn't suit a family game at this level."
     },
     {
       "name": "Silver wedding anniversary",
@@ -355,7 +356,8 @@
     {
       "name": "Walking under a ladder",
       "facet": "Superstitions and lucky charms",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: The ladder superstition is shared across the English-speaking world, so it isn't UK-specific."
     },
     {
       "name": "Breaking a mirror",
@@ -391,7 +393,8 @@
     {
       "name": "Umbrella indoors",
       "facet": "Superstitions and lucky charms",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "unaskable: The umbrella superstition is shared across the world, and the options don't fit (the answer is a place, not a time)."
     },
     {
       "name": "New shoes on the table",
@@ -406,7 +409,8 @@
     {
       "name": "Find a penny, pick it up",
       "facet": "Superstitions and lucky charms",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: The penny rhyme is just as common in the US, so it doesn't fit the uk bundle."
     },
     {
       "name": "Crossed fingers",

@@ -211,7 +211,8 @@
     {
       "name": "Bus conductor",
       "facet": "Buses and coaches",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The conductor's role has already been asked; any other fact about it would be answerable from that one."
     },
     {
       "name": "Request stop",
@@ -302,7 +303,8 @@
     {
       "name": "Taximeter",
       "facet": "Black cabs and taxis",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The taximeter has already been asked directly; the remaining options would be forced."
     },
     {
       "name": "Cabmen's shelter",

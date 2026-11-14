@@ -142,7 +142,8 @@
     {
       "name": "Scrum-half",
       "facet": "Rugby union rules and positions",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The pool already has the scrum-half's shirt number; the remaining options would be forced."
     },
     {
       "name": "Fly-half",
@@ -620,7 +621,8 @@
     {
       "name": "Golden duck",
       "facet": "Cricket rules, fielding positions and jargon",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The meaning of a golden duck has already been asked twice, and the remaining options don't fit."
     },
     {
       "name": "Century",

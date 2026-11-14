@@ -160,7 +160,8 @@
     {
       "name": "The Sinnerman",
       "facet": "Teatime and daytime quizzes",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Paul Sinha's nickname gives no word-meaning question that suits families at level 1."
     },
     {
       "name": "The Menace",
@@ -175,7 +176,8 @@
     {
       "name": "The Million Pound Drop",
       "facet": "Big-money prime-time quizzes",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: No fair level-1 question; the show is little known to children."
     },
     {
       "name": "The 1% Club",
@@ -355,7 +357,8 @@
     {
       "name": "Chris Tarrant",
       "facet": "Famous game show presenters",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The lifelines and the 'locked in' line are already in the pool; the dates are too hard for level 1."
     },
     {
       "name": "Alexander Armstrong",
@@ -475,7 +478,8 @@
     {
       "name": "Say what you see",
       "facet": "Catchphrases and famous lines",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Roy Walker and Mr Chips are already in the pool; the remaining options would be forced."
     },
     {
       "name": "It's good, but it's not right",
@@ -605,7 +609,8 @@
     {
       "name": "The Price Is Right",
       "facet": "Saturday night family entertainment",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The 'when' option repeats the Leslie Crowther 1980s fact already in the pool."
     },
     {
       "name": "Blankety Blank",
@@ -723,7 +728,8 @@
     {
       "name": "Would I Lie to You?",
       "facet": "Comedy panel shows",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Two odd-one-out/analogy questions already cover the show; another odd-one-out would be forced."
     },
     {
       "name": "8 Out of 10 Cats",
@@ -733,7 +739,8 @@
     {
       "name": "8 Out of 10 Cats Does Countdown",
       "facet": "Comedy panel shows",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Nothing about this late-night show works for level 1 players."
     },
     {
       "name": "Never Mind the Buzzcocks",
@@ -949,7 +956,8 @@
     {
       "name": "Hole in the Wall",
       "facet": "Physical and adventure challenge shows",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The main rule is already asked; the remaining date and number facts are too hard for level 1."
     },
     {
       "name": "SAS: Who Dares Wins",
@@ -1000,7 +1008,8 @@
     {
       "name": "Countdown Conundrum",
       "facet": "Prizes, props, sets and rules",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The earlier riddle already gives away the nine letters and 30 seconds; the points facts are far too hard for level 1."
     },
     {
       "name": "Dictionary Corner",

@@ -127,7 +127,8 @@
     {
       "name": "Magpie",
       "facet": "Garden and hedgerow birds",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Magpie already asked from many angles; a sound-only question would be far harder than target."
     },
     {
       "name": "Wood pigeon",
@@ -828,7 +829,8 @@
     {
       "name": "Holly",
       "facet": "Trees, woodlands and fungi",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: Holly already covered by carol and other questions; no fresh easy fact."
     },
     {
       "name": "Elder",
@@ -1138,7 +1140,8 @@
     {
       "name": "Red Dragon of Wales",
       "facet": "Animal customs, symbols and sayings",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Easy facts about the Welsh dragon are already asked many times; what's left is too hard."
     },
     {
       "name": "Tudor rose",

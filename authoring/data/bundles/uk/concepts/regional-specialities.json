@@ -512,7 +512,8 @@
     {
       "name": "Cromer crab",
       "facet": "Seaside and fishing-town foods",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: Crab has already been asked twice as an identify question; a claw close-up could also be a lobster."
     },
     {
       "name": "Penclawdd cockles",
@@ -649,7 +650,8 @@
     {
       "name": "London Pride",
       "facet": "Regional drinks and brews",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: London Pride is a beer; not a fit for a difficulty-1 family question."
     },
     {
       "name": "Bap",
@@ -674,7 +676,8 @@
     {
       "name": "Breadcake",
       "facet": "Regional words for food",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: Breadcake = bread roll is already asked, and the pool has many regional words for a bread roll."
     },
     {
       "name": "Butty",
