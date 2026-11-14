@@ -759,6 +759,89 @@
       "name": "Grime",
       "facet": "Accents on screen and in music",
       "known_at": 10
+    },
+    {
+      "name": "Bert from Mary Poppins",
+      "facet": "Accents on screen and in music",
+      "known_at": 8
+    },
+    {
+      "name": "Scally",
+      "facet": "Scouse and the North West",
+      "known_at": 9
+    },
+    {
+      "name": "Auf Wiedersehen, Pet",
+      "facet": "Geordie and the North East",
+      "known_at": 12,
+      "retired": "unaskable: An 1980s adult TV drama can't be a question for young children."
+    },
+    {
+      "name": "Flat cap",
+      "facet": "Yorkshire dialect",
+      "known_at": 6
+    },
+    {
+      "name": "Glaswegian accent",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 8
+    },
+    {
+      "name": "Jings, crivens, help ma boab",
+      "facet": "Scottish speech and Scots words",
+      "known_at": 12
+    },
+    {
+      "name": "Shrek",
+      "facet": "Accents on screen and in music",
+      "known_at": 3
+    },
+    {
+      "name": "Merida",
+      "facet": "Accents on screen and in music",
+      "known_at": 4
+    },
+    {
+      "name": "Tamping",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 11
+    },
+    {
+      "name": "Bach",
+      "facet": "Welsh English and Wenglish",
+      "known_at": 10
+    },
+    {
+      "name": "Eejit",
+      "facet": "Northern Irish speech",
+      "known_at": 8
+    },
+    {
+      "name": "Yous",
+      "facet": "Northern Irish speech",
+      "known_at": 8
+    },
+    {
+      "name": "The Queen's English",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 7
+    },
+    {
+      "name": "Sloane Ranger",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 12
+    },
+    {
+      "name": "Jolly hockey sticks",
+      "facet": "Received Pronunciation and posh speech",
+      "known_at": 11
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-14",
+      "added": 15,
+      "unused": 43
     }
   ]
 }

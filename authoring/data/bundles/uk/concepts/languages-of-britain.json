@@ -142,7 +142,8 @@
     {
       "name": "Welsh Language Act 1993",
       "facet": "Wales speaking Welsh today",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: A 1993 law can't make a level-1 question, and the photo/person options don't fit."
     },
     {
       "name": "Cymraeg 2050",
@@ -301,7 +302,8 @@
     {
       "name": "Cúpla focal",
       "facet": "Irish and Ulster Scots",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: The Irish phrase “cúpla focal” is far too niche for a level-1 question, and no option fits it."
     },
     {
       "name": "Dia duit",
@@ -431,7 +433,8 @@
     {
       "name": "Thorn (letter þ)",
       "facet": "Old English and the Anglo-Saxons",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: The Old English letter thorn can't make a level-1 question, and the photo/person options don't fit."
     },
     {
       "name": "Berserk",

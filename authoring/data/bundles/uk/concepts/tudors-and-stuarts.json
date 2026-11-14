@@ -545,7 +545,8 @@
     {
       "name": "Undercroft",
       "facet": "The Gunpowder Plot",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The good undercroft facts (gunpowder, Guy Fawkes guarding it) are already in the pool."
     },
     {
       "name": "Barrels of gunpowder",

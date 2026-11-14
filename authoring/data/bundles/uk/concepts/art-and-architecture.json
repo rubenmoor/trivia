@@ -71,7 +71,8 @@
     {
       "name": "Thomas Gainsborough",
       "facet": "Famous British painters",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The Blue Boy is already asked, and the remaining options would be forced or far too hard."
     },
     {
       "name": "William Hogarth",
@@ -118,7 +119,8 @@
     {
       "name": "Edwin Landseer",
       "facet": "Famous British painters",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: Landseer's Trafalgar lions and his Monarch of the Glen are already in the pool, and nothing easy is left."
     },
     {
       "name": "John William Waterhouse",
@@ -328,7 +330,8 @@
     {
       "name": "Spot paintings",
       "facet": "Modern and contemporary British art",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already describes Hirst's rows of spots, Hirst's works are copyrighted so a photo isn't possible, and \"made of spots\" is trivial."
     },
     {
       "name": "Trafalgar Square lions",
