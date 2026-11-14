@@ -71,7 +71,8 @@
     {
       "name": "Jammie Dodgers",
       "facet": "Biscuits, sweets and chocolate bars",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The jam filling and the heart shape are already covered; I'm not sure enough of the name origin or jam flavour."
     },
     {
       "name": "Cadbury Flake",
@@ -86,7 +87,8 @@
     {
       "name": "Robinsons squash",
       "facet": "Crisps, drinks and supermarket food",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Water-adding and Wimbledon are already asked; I'm not sure enough of the dilution ratio to use it."
     },
     {
       "name": "HP Sauce",

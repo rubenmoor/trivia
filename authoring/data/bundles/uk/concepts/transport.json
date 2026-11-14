@@ -266,7 +266,8 @@
     {
       "name": "School bus",
       "facet": "Buses and coaches",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "unaskable: British school buses aren't distinctive; the yellow school bus belongs to the US."
     },
     {
       "name": "Hackney carriage",

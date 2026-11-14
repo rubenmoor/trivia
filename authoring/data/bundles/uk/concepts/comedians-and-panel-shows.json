@@ -106,7 +106,8 @@
     {
       "name": "Question Team",
       "facet": "Quiz-based comedy panel shows",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: This short-lived Dave show is too obscure for a fair question, even at 15."
     },
     {
       "name": "Insert Name Here",
@@ -196,7 +197,8 @@
     {
       "name": "Frankie Boyle",
       "facet": "Stand-up comedians",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: His edgy comedy isn't family-friendly, and the record options don't fit him."
     },
     {
       "name": "Rhod Gilbert",

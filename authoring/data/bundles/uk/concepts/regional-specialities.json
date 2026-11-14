@@ -101,7 +101,8 @@
     {
       "name": "Tiesen lap",
       "facet": "Welsh food and bakes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Teisen lap is too obscure, and the facts about it (what's in it, when it's from) aren't certain enough for a fair question."
     },
     {
       "name": "Crempog",
@@ -272,7 +273,8 @@
     {
       "name": "Lincolnshire plum bread",
       "facet": "Midlands and East Anglian specialities",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The 'when' options need a date or era for Lincolnshire plum bread, and no clear, checkable one exists."
     },
     {
       "name": "Norfolk dumpling",
