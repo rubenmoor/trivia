@@ -1447940,7 +1447940,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Churchill statue head closeup",
+        "query": "Churchill statue Parliament Square",
         "note": "Close-up of the bronze statue of Winston Churchill in Parliament Square: head and shoulders in his greatcoat, no plinth or inscription visible.",
         "source_url": null,
         "file_url": null,
@@ -1447974,27 +1447974,41 @@
       "batch": "batch-65",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the six candidates shows the Churchill statue in Parliament Square. They show a Buddha head, the Statue of Liberty, an Egyptian head, a Roman woman, the Matija Gubec bust and a wooden saint. The question needs that statue as essential media, and no new search is allowed. A side note for the rework: Lloyd George, Peel and Disraeli also have statues in Parliament Square, so the image has to do the identifying work. Check that the clue \"faces the Houses of Parliament\" really fits only Churchill. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows the Churchill statue in Parliament Square. They show a Buddha head, the Statue of Liberty, an Egyptian head, a Roman woman, the Matija Gubec bust and a wooden saint. The question needs that statue as essential media, and no new search is allowed. A side note for the rework: Lloyd George, Peel and Disraeli also have statues in Parliament Square, so the image has to do the identifying work. Check that the clue \"faces the Houses of Parliament\" really fits only Churchill. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away, with a vaguer hint that also fits Peel and Disraeli.",
+        "reason": "Text is fine and the clue fits only Churchill; changed the media query to search for the actual Parliament Square statue.",
         "previous": {
-          "hints": [
-            "He was Prime Minister during the Second World War.",
-            "He's wrapped in a long military greatcoat.",
-            "He was famous for cigars and a V for victory sign."
-          ]
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Churchill statue head closeup",
+            "note": "Close-up of the bronze statue of Winston Churchill in Parliament Square: head and shoulders in his greatcoat, no plinth or inscription visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1451630,7 +1451644,7 @@
     },
     {
       "id": "q-18752",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A secret hand trick that every teacher has spotted at least once.",
       "question": "In the playground, when do children secretly cross their fingers behind their back?",
@@ -1451641,7 +1451655,7 @@
         "When the bell rings"
       ],
       "hints": [
-        "It's a secret they keep from the person they're talking to.",
+        "It's a playground custom that has been around for generations.",
         "Grown-ups cross their fingers openly to wish for luck, but the hidden version means something else.",
         "It's a sneaky trick when you say something you know is false."
       ],
@@ -1451688,26 +1451702,34 @@
       "needs_media": false,
       "batch": "batch-65",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"It's a secret they keep from the person they're talking to\") already describes deceiving the listener. It rules out sneezing and the bell, and points straight to the fib, so it gives the answer away. Replace it with a vague hint, for example one about it being an old playground custom or a gesture that \"cancels\" something.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"It's a secret they keep from the person they're talking to\") already describes deceiving the listener. It rules out sneezing and the bell, and points straight to the fib, so it gives the answer away. Replace it with a vague hint, for example one about it being an old playground custom or a gesture that \"cancels\" something.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which both pointed straight at lying.",
+        "reason": "Replaced hint 1, which gave the answer away, with a vague one.",
         "previous": {
           "hints": [
-            "Kids think it makes a promise “not count”.",
-            "It's about something that isn't quite true.",
+            "It's a secret they keep from the person they're talking to.",
+            "Grown-ups cross their fingers openly to wish for luck, but the hidden version means something else.",
             "It's a sneaky trick when you say something you know is false."
           ]
         },
@@ -1452797,7 +1452819,7 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "red buzzer button",
+        "query": "quiz show buzzer",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1452831,18 +1452853,44 @@
       "batch": "batch-65",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates fits. They show a wasp on a flower, a Japanese bus stop-request button and bare electronic buzzer parts, not a quiz-show buzzer or studio. A new search (e.g. \"quiz show buzzer\" or \"game show podium\") is needed, but this run can't search again. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates fits. They show a wasp on a flower, a Japanese bus stop-request button and bare electronic buzzer parts, not a quiz-show buzzer or studio. A new search (e.g. \"quiz show buzzer\" or \"game show podium\") is needed, but this run can't search again. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Text is fine; changed the decorative media query to find a real quiz-show buzzer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "red buzzer button",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18767",
@@ -1453620,9 +1453668,9 @@
         "A tartan picnic blanket"
       ],
       "hints": [
+        "Bagpipe players usually wear one.",
         "You wear it around your waist.",
-        "It's pleated at the back.",
-        "It reaches down to the knees."
+        "It's pleated at the back and reaches down to the knees."
       ],
       "media": {
         "type": "image",
@@ -1453668,18 +1453716,40 @@
       "batch": "batch-65",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 (“You wear it around your waist.”) already gives the answer away: of the four options, only the skirt is worn around the waist. Hint 1 should be vague, for example about Scotland or the occasions, and the waist or skirt shape should come in hint 2 or 3 at the earliest.",
+        "feedback": "Hint 2 (“You wear it around your waist.”) gives the answer away. The other three options are a scarf, a cap and a blanket, so only the skirt fits a waist. Hint 2 should say something vaguer, for example that it is clothing for special occasions, without naming the part of the body.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“You wear it around your waist.”) already gives the answer away: of the four options, only the skirt is worn around the waist. Hint 1 should be vague, for example about Scotland or the occasions, and the waist or skirt shape should come in hint 2 or 3 at the earliest.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Made hint 1 vague (bagpipers) and moved the waist and knee clues to later hints.",
+        "previous": {
+          "hints": [
+            "You wear it around your waist.",
+            "It's pleated at the back.",
+            "It reaches down to the knees."
+          ]
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18778",
@@ -1456275,8 +1456345,8 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "blue ribbon rosette",
-        "note": "A plain blue rosette with no party name or logo on it.",
+        "query": "blue rosette",
+        "note": "A plain blue rosette with no party name, logo or text on it.",
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1456309,23 +1456379,41 @@
       "batch": "batch-65",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows a plain blue rosette, and a new search isn't possible. The question depends on that picture, so it needs a plain blue election-style rosette with no text, for example from the search \"blue rosette award\". No suitable picture found for this question.",
+        "feedback": "No candidate shows a rosette badge. They are all ceiling rosettes (1–2) or the Rosette Nebula (3–6), so the essential image is missing. The text is fine; it needs a new search for a plain blue ribbon rosette. No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a plain blue rosette, and a new search isn't possible. The question depends on that picture, so it needs a plain blue election-style rosette with no text, for example from the search \"blue rosette award\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the word “rosette”, which is the answer to another pool question.",
+        "reason": "Text is fine; changed the media query to find a plain blue rosette.",
         "previous": {
-          "question": "At a UK election count, a candidate wears a rosette like this one. Which party do they most likely stand for?"
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "blue ribbon rosette",
+            "note": "A plain blue rosette with no party name or logo on it.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1457262,7 +1457350,7 @@
     },
     {
       "id": "q-18825",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "A number that makes grown adults in fancy dress leap out of their seats.",
       "question": "The crowd waves cards for it, the caller roars it out, and it's the top score with three throws. Which game's maximum is “One hundred and eightyyy!”?",
@@ -1457280,11 +1457368,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "fancy dress crowd cheering",
+        "query": "darts match crowd",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrowd_in_Croke_Park.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Crowd_in_Croke_Park.jpg/3840px-Crowd_in_Croke_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Sheila1988 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Sheila1988",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sheila1988",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Darts players throw from behind a line called the oche, 2.37 metres (7 ft 9¼ in) from the board.",
       "subcategory": "pub-and-playground-games",
@@ -1457313,19 +1457408,43 @@
       "needs_media": false,
       "batch": "batch-65",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits the decorative slot. The candidates are Sinterklaas, a Zwarte Piet figure on a fire engine (unsuitable for a family game), Victorian paintings of dockside and royal crowds, a WWI-era carriage photo and a satirical print. None of them shows the world of darts, and no new search is allowed. The text itself is fine. A new search such as \"darts match crowd\" or \"darts oche\" would probably work. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits the decorative slot. The candidates are Sinterklaas, a Zwarte Piet figure on a fire engine (unsuitable for a family game), Victorian paintings of dockside and royal crowds, a WWI-era carriage photo and a satirical print. None of them shows the world of darts, and no new search is allowed. The text itself is fine. A new search such as \"darts match crowd\" or \"darts oche\" would probably work. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Text is fine; changed the decorative query to show the world of darts.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "fancy dress crowd cheering",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18826",
@@ -1459248,7 +1459367,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "wooden ninepin skittles",
+        "query": "pub skittle alley",
         "note": "Wooden skittle pins set up at the end of a traditional pub skittle alley, ideally with a skittle ball; no text naming the game.",
         "source_url": null,
         "file_url": null,
@@ -1459282,18 +1459401,44 @@
       "batch": "batch-65",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates works as the essential photo of a British pub skittle alley. Candidates 1 and 2 are drawings of German Kegeln, 3 and 4 are technical diagrams with German labels, 5 is a CGI render of red pins on a chessboard (not a photo, and not a pub), and 6 is an Eva Braun photo, which is unsuitable. Another search isn't allowed, so the slot needs a real photo of a pub skittle alley with its pins (for example \"pub skittle alley\"). No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates works as the essential photo of a British pub skittle alley. Candidates 1 and 2 are drawings of German Kegeln, 3 and 4 are technical diagrams with German labels, 5 is a CGI render of red pins on a chessboard (not a photo, and not a pub), and 6 is an Eva Braun photo, which is unsuitable. Another search isn't allowed, so the slot needs a real photo of a pub skittle alley with its pins (for example \"pub skittle alley\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Text is fine; changed the essential media query to find a real pub skittle alley.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "wooden ninepin skittles",
+            "note": "Wooden skittle pins set up at the end of a traditional pub skittle alley, ideally with a skittle ball; no text naming the game.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18852",
@@ -1459536,9 +1459681,9 @@
     {
       "id": "q-18855",
       "status": "needs_work",
-      "difficulty": 1,
+      "difficulty": 2,
       "description": "Doorstep entertainment that arrives with rosy cheeks and a collecting tin.",
-      "question": "Carol singers go from door to door, often holding lanterns and collecting money for charity. What do they sing?",
+      "question": "Groups of singers go from door to door at night, often holding lanterns and collecting money for charity. What do they usually sing?",
       "answer": "Christmas songs",
       "wrong_answers": [
         "Football chants",
@@ -1459553,7 +1459698,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "carol singers lanterns",
+        "query": "lantern street at night",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1459587,19 +1459732,48 @@
       "batch": "batch-65",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows carol singers: 1–2 are pencil sketches of Japanese lanterns, 3–4 are old photos of a crowd singing on a ship's deck, 5 is a carved pumpkin and 6 is an Indian concert stage. A new search isn't allowed. Separately, the question text more or less gives the answer away: “carol” already means a Christmas song, so the question names its own answer. It could ask about something else to do with carolling, or describe the singers without the word “carol”. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
-          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows carol singers: 1–2 are pencil sketches of Japanese lanterns, 3–4 are old photos of a crowd singing on a ship's deck, 5 is a carved pumpkin and 6 is an Indian concert stage. A new search isn't allowed. Separately, the question text more or less gives the answer away: “carol” already means a Christmas song, so the question names its own answer. It could ask about something else to do with carolling, or describe the singers without the word “carol”. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 1,
+      "revision": {
+        "action": "revise",
+        "reason": "Removed the word “carol”, which named the answer, and swapped the media for a lantern scene that doesn't show the answer.",
+        "previous": {
+          "difficulty": 1,
+          "question": "Carol singers go from door to door, often holding lanterns and collecting money for charity. What do they sing?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "carol singers lanterns",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18856",
@@ -1459747,10 +1459921,10 @@
     },
     {
       "id": "q-18858",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "The only way to stick a royal head on an envelope without getting into trouble.",
-      "question": "Look at this British stamp marked “2nd”. What do you get with a second-class stamp instead of a first-class one?",
+      "question": "In the UK, what do you get with a second-class stamp instead of a first-class one?",
       "answer": "Cheaper, slower delivery",
       "wrong_answers": [
         "Cheaper, local delivery only",
@@ -1459764,12 +1459938,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Royal Mail 2nd class stamp",
-        "note": "A Royal Mail Machin stamp with the Queen's head marked “2nd”, without any price or text explaining delivery speed.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "red Royal Mail postbox",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHillside_Avenue_Postbox_%5E_Royal_Mail_Dump_Box_-_geograph.org.uk_-_3853669.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Hillside_Avenue_Postbox_%5E_Royal_Mail_Dump_Box_-_geograph.org.uk_-_3853669.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Geographer · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Geographer",
+        "author_url": "https://www.geograph.org.uk/profile/2639",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Royal Mail brought in first- and second-class post in 1968; before that, there was just one price for a letter.",
       "subcategory": "home-and-public-services",
@@ -1459795,22 +1459976,48 @@
         "notes": "Essential media: Commons may not have a clean Machin '2nd' stamp because of Crown copyright, and the image isn't really needed, so an illustrative image would be safer. Hint 1 (trains) makes it easy to reason out. Fun is 3 because it's practical, everyday knowledge."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-65",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows the essential British stamp marked “2nd”, and a new search isn't allowed. Consider making the media illustrative (e.g. a British postbox or letters on a doormat), as the rater suggested, and rewording the question so it doesn't refer to \"this stamp\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the essential British stamp marked “2nd”, and a new search isn't allowed. Consider making the media illustrative (e.g. a British postbox or letters on a doormat), as the rater suggested, and rewording the question so it doesn't refer to \"this stamp\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of a “2nd” stamp exists, so the media is now an illustrative postbox and the question no longer refers to “this stamp”.",
+        "previous": {
+          "question": "Look at this British stamp marked “2nd”. What do you get with a second-class stamp instead of a first-class one?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Royal Mail 2nd class stamp",
+            "note": "A Royal Mail Machin stamp with the Queen's head marked “2nd”, without any price or text explaining delivery speed.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18859",
@@ -1463748,10 +1463955,10 @@
     },
     {
       "id": "q-18911",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Britain's friendliest word, good for the bus driver, your nan and the dog next door.",
-      "question": "Which friendly British greeting is thought to come from squashing “how are you” into one quick word?",
+      "question": "Which friendly British greeting is basically “hi” with a little extra sound on the end?",
       "answer": "Hiya",
       "wrong_answers": [
         "Wotcha",
@@ -1463761,7 +1463968,7 @@
       "hints": [
         "You'll hear it in shops, at school and on the phone.",
         "I mean the same as “hello”.",
-        "I sound like “hi” with a little extra on the end."
+        "I rhyme with the name “Maya”."
       ],
       "media": {
         "type": "image",
@@ -1463779,7 +1463986,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "“Hiya” is especially popular in northern England and Wales, where you might hear it dozens of times a day.",
+      "fun_fact": "“Hello” only became a common greeting after Thomas Edison suggested it for answering the new telephone in the 1870s.",
       "subcategory": "slang-and-words",
       "style": null,
       "concept": "Hiya",
@@ -1463802,19 +1464009,27 @@
         "difficulty_estimate": 2,
         "notes": "All three distractors are goodbyes and the question says “not when they leave”, so the answer is just the only greeting. “Hiya” also gives itself away as “hi”. The description's “Two syllables” rules out Cheerio. The question is a bit flat."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-65",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The 'how are you' origin is only one theory (dictionaries often give 'hi' + 'you'). The fun fact about it being especially popular in northern England and Wales, and used dozens of times a day, can't be verified.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The 'how are you' origin is only one theory (dictionaries often give 'hi' + 'you'). The fun fact about it being especially popular in northern England and Wales, and used dozens of times a day, can't be verified.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
@@ -1463822,22 +1464037,15 @@
       "difficulty_original": 1,
       "revision": {
         "action": "revise",
-        "reason": "Used a clue only “Hiya” has, swapped the goodbye options for greetings so the options stay honest, and fixed the description, hint 1 and fun fact; raised the difficulty to 3 to match.",
+        "reason": "Removed the disputed “how are you” origin and the unverifiable fun fact; the clue is now how the word is built, hint 3 changed so it doesn't repeat the question, and the fun fact is replaced.",
         "previous": {
-          "difficulty": 1,
-          "description": "Two syllables, one wave, zero effort.",
-          "question": "I'm a short, cheerful word. Brits say me with a wave when they meet a friend, not when they leave. Which word am I?",
-          "wrong_answers": [
-            "Cheerio",
-            "Ta-ra",
-            "Night-night"
-          ],
+          "question": "Which friendly British greeting is thought to come from squashing “how are you” into one quick word?",
           "hints": [
-            "You say me at the start of a chat.",
+            "You'll hear it in shops, at school and on the phone.",
             "I mean the same as “hello”.",
             "I sound like “hi” with a little extra on the end."
           ],
-          "fun_fact": "“Hiya” is thought to come from “how are you”, squashed down into one quick, friendly word."
+          "fun_fact": "“Hiya” is especially popular in northern England and Wales, where you might hear it dozens of times a day."
         },
         "revised_on": "2026-11-13"
       }
@@ -1464842,7 +1465050,7 @@
     },
     {
       "id": "q-18925",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Walford's most famous worrier, never far from a cup of tea and a cigarette.",
       "question": "You're chatting with Dot Cotton in the Walford launderette. Which of these is she NOT known for?",
@@ -1464854,7 +1465062,7 @@
       ],
       "hints": [
         "Three of these were part of Dot's life for years.",
-        "The odd one out is a job Dot never had on the Square.",
+        "Dot spent most of her working life among the washing machines.",
         "Dot never pulled pints as the landlady."
       ],
       "media": {
@@ -1464900,27 +1465108,34 @@
       "needs_media": false,
       "batch": "batch-65",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"The odd one out is a job Dot never had on the Square\") gives away the answer: \"Running the Queen Vic\" is the only option that is a job, so the other three are ruled out. Hint 2 needs to be vaguer, e.g. about Dot's real launderette job or her long run on the show, without pointing at the job/habit/person difference between the options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"The odd one out is a job Dot never had on the Square\") gives away the answer: \"Running the Queen Vic\" is the only option that is a job, so the other three are ruled out. Hint 2 needs to be vaguer, e.g. about Dot's real launderette job or her long run on the show, without pointing at the job/habit/person difference between the options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Hint 2 no longer mentions a bar, and the description no longer confirms the option about quoting the Bible.",
+        "reason": "Hint 2 gave the answer away by pointing to the only option that is a job, so it now talks about Dot's real job instead.",
         "previous": {
-          "description": "Walford's most famous worrier, with a hymn and a hanky for every occasion.",
           "hints": [
             "Three of these were part of Dot's life for years.",
-            "The odd one out would put her behind a bar.",
+            "The odd one out is a job Dot never had on the Square.",
             "Dot never pulled pints as the landlady."
           ]
         },
@@ -1464929,10 +1465144,10 @@
     },
     {
       "id": "q-18926",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "Accessories so loud they practically had their own theme tune.",
-      "question": "Huge, bright earrings like these were the trademark of which EastEnders character?",
+      "question": "Which EastEnders character was famous for her huge, bright earrings?",
       "answer": "Pat Butcher",
       "wrong_answers": [
         "Pauline Fowler",
@@ -1464946,12 +1465161,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "colourful statement earrings",
-        "note": "Close-up photo of big, colourful, dangly costume earrings, no face visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "colourful costume earrings",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEarrings_MET_C.I.59.23.6ab_F2.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Earrings_MET_C.I.59.23.6ab_F2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Pam St Clement played Pat from 1986 to 2012.",
       "subcategory": "soaps-and-dramas",
@@ -1464977,26 +1465199,52 @@
         "notes": "Generic earrings aren't really 'essential'. The photo doesn't show Pat's own earrings, so it adds nothing to answering and should be illustrative. Hint 3 is nearly the answer, which is allowed."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-65",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates shows earrings: #1 is a scan of a painted book plate from an 1895 ethnology report, and #2 and #3 are the same full-body bikini photo of a woman with a skateboard. The question says “earrings like these”, so it needs a clear close-up of big, bright costume earrings, and no new search is allowed. The slot could also be illustrative rather than essential, since the photo doesn't show Pat's own earrings. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows earrings: #1 is a scan of a painted book plate from an 1895 ethnology report, and #2 and #3 are the same full-body bikini photo of a woman with a skateboard. The question says “earrings like these”, so it needs a clear close-up of big, bright costume earrings, and no new search is allowed. The slot could also be illustrative rather than essential, since the photo doesn't show Pat's own earrings. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of earrings was found, so the media is now illustrative and the question no longer says “like these”.",
+        "previous": {
+          "question": "Huge, bright earrings like these were the trademark of which EastEnders character?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "colourful statement earrings",
+            "note": "Close-up photo of big, colourful, dangly costume earrings, no face visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18927",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "The number that makes a whole pub stand up and shout.",
       "question": "A darts caller roars “One hundred and eighty!” It's the top score you can get with three darts. What has the player hit?",
@@ -1465014,11 +1465262,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "darts player throwing",
+        "query": "dartboard pub wall",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWangies_dartboard.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Wangies_dartboard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Marnanel · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marnanel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Marnanel",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "A perfect nine-dart finish usually starts with two 180s in a row.",
       "subcategory": "sporting-events",
@@ -1465047,19 +1465302,43 @@
       "needs_media": false,
       "batch": "batch-65",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the media candidates has anything to do with darts: an award ceremony, an archival photo of a woman holding sticks, and Marines grappling. A new search isn't allowed, so the slot needs a darts image, for example \"darts player throwing\" or \"dartboard pub wall\". The image must not show a dart landing in the treble 20. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates has anything to do with darts: an award ceremony, an archival photo of a woman holding sticks, and Marines grappling. A new search isn't allowed, so the slot needs a darts image, for example \"darts player throwing\" or \"dartboard pub wall\". The image must not show a dart landing in the treble 20. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The image search found nothing about darts, so the media query is now “dartboard pub wall”, which the reviewer suggested.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "darts player throwing",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18928",
