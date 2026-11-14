@@ -1579474,10 +1579474,10 @@
     },
     {
       "id": "q-20395",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A chocolate bar that clearly couldn't decide which way to go.",
-      "question": "This twisty, ladder-shaped bar is a Curly Wurly. What is under its chocolate coating?",
+      "question": "A Curly Wurly is a twisty, ladder-shaped chocolate bar. What is under its chocolate coating?",
       "answer": "Chewy caramel",
       "wrong_answers": [
         "Crunchy biscuit",
@@ -1579491,12 +1579491,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Curly Wurly unwrapped",
-        "note": "An unwrapped Curly Wurly bar showing its twisted ladder shape.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "sweet shop jars",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASassafras_Sweet_Co._candy_in_jars.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Sassafras_Sweet_Co._candy_in_jars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Matthew Paul  Argall · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Matthew Paul  Argall",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Cadbury launched the Curly Wurly in 1970.",
       "subcategory": "cakes-puddings-and-biscuits",
@@ -1579522,22 +1579529,48 @@
         "notes": "A photo of a Curly Wurly should be easy to find on Openverse. A broken bar could show the caramel, which would make it easier."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-75",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate is adequate for the essential image. Candidate 1 is the only Curly Wurly, but it is snapped in two, so the broken ends show the golden caramel inside (the answer). It is also shot from the side, so the ladder shape barely shows. Candidates 2–6 are a sculpture, seating, a footbridge, wooden stepping stones and a tree vine, not the chocolate bar. A whole, unwrapped Curly Wurly seen from above is needed, but no new search is allowed. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate is adequate for the essential image. Candidate 1 is the only Curly Wurly, but it is snapped in two, so the broken ends show the golden caramel inside (the answer). It is also shot from the side, so the ladder shape barely shows. Candidates 2–6 are a sculpture, seating, a footbridge, wooden stepping stones and a tree vine, not the chocolate bar. A whole, unwrapped Curly Wurly seen from above is needed, but no new search is allowed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of a whole Curly Wurly exists, so the question now names and describes the bar in words, with a decorative image instead of an essential one.",
+        "previous": {
+          "question": "This twisty, ladder-shaped bar is a Curly Wurly. What is under its chocolate coating?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Curly Wurly unwrapped",
+            "note": "An unwrapped Curly Wurly bar showing its twisted ladder shape.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20396",
@@ -1579801,7 +1579834,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "rock buns plate",
+        "query": "rock cake baked",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1579835,18 +1579868,44 @@
       "batch": "batch-75",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the media candidates shows rock cakes. They show a 1916 florist journal scan with flowers and two photos of a woman standing on rocks by the sea. A new search isn't allowed, so the image slot needs a real photo of rock cakes or rock buns. The question text itself is fine. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the media candidates shows rock cakes. They show a 1916 florist journal scan with flowers and two photos of a woman standing on rocks by the sea. A new search isn't allowed, so the image slot needs a real photo of rock cakes or rock buns. The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to find a real photo of rock cakes; the question text is unchanged.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "rock buns plate",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20400",
@@ -1580380,9 +1580439,9 @@
     },
     {
       "id": "q-20407",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
-      "description": "A sick day at home, with the telly on and something fizzy by the bed.",
+      "description": "Four fizzy bottles walk into a corner shop, but only one has the right life story.",
       "question": "It was invented in 1927 to help poorly people get their energy back, it came wrapped in yellow cellophane, and now there's a “Sport” version. Which drink is it?",
       "answer": "Lucozade",
       "wrong_answers": [
@@ -1580438,29 +1580497,32 @@
       "needs_media": false,
       "batch": "batch-75",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (“A sick day at home… something fizzy by the bed”) states Lucozade's defining trait, the drink given to poorly people. With only the four options shown, it already points to Lucozade over Irn-Bru, Vimto and Tango. Rewrite it so it plays on British fizzy drinks or Newcastle in general, without mentioning illness or recovery.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (“A sick day at home… something fizzy by the bed”) states Lucozade's defining trait, the drink given to poorly people. With only the four options shown, it already points to Lucozade over Irn-Bru, Vimto and Tango. Rewrite it so it plays on British fizzy drinks or Newcastle in general, without mentioning illness or recovery.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer gives away the energy and sport traits, and replaced the glucose detail in hint 2.",
+        "reason": "Rewrote the description so it no longer points to the drink given to poorly people.",
         "previous": {
-          "description": "Bottled get-up-and-go, now with added running shoes.",
-          "hints": [
-            "It was first sold in chemists' shops, not sweet shops.",
-            "It was made by a chemist in Newcastle and is full of glucose.",
-            "Its very first name was “Glucozade”."
-          ]
+          "description": "A sick day at home, with the telly on and something fizzy by the bed."
         },
         "revised_on": "2026-11-14"
       }
@@ -1581280,7 +1581342,7 @@
       "status": "needs_work",
       "difficulty": 2,
       "description": "Not enough for a new bike, but plenty for a bag of sweets.",
-      "question": "How many of these notes do you need to make £20?",
+      "question": "How many £5 notes do you need to make £20?",
       "answer": "4",
       "wrong_answers": [
         "2",
@@ -1581294,9 +1581356,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "polymer five pound note",
-        "note": "A clear photo of a current Bank of England £5 note (turquoise polymer), with the 5 value clearly visible.",
+        "role": "illustrative",
+        "query": "piggy bank",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1581325,22 +1581387,50 @@
         "notes": "Simple arithmetic built on a photo. Fair for kids, but it plays like a dry counting exercise. Hint 2 already gives away that each note is worth £5. A clear photo of a polymer £5 note is easy to find on Commons."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-75",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows the current turquoise polymer £5 note with a clear \"5\" that the essential slot needs. Candidates 1 and 3 are Victorian and 1930s white fivers whose value is written only in old copperplate script, which kids can't read. The other candidates show a book cover, harbour scans and an Australian note. A new search for a polymer Bank of England £5 note (for example \"Bank of England £5 polymer\") is needed. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows the current turquoise polymer £5 note with a clear \"5\" that the essential slot needs. Candidates 1 and 3 are Victorian and 1930s white fivers whose value is written only in old copperplate script, which kids can't read. The other candidates show a book cover, harbour scans and an Australian note. A new search for a polymer Bank of England £5 note (for example \"Bank of England £5 polymer\") is needed. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable photo of the polymer £5 note is available, so the question now names the note in words and uses an illustrative image instead.",
+        "previous": {
+          "question": "How many of these notes do you need to make £20?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "polymer five pound note",
+            "note": "A clear photo of a current Bank of England £5 note (turquoise polymer), with the 5 value clearly visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20420",
@@ -1581355,22 +1581445,22 @@
         "Winnie the Pooh"
       ],
       "hints": [
-        "The Royal Mint loves characters from British children's books.",
         "The Royal Mint often marks big birthdays of famous stories with a new 50p.",
+        "The Royal Mint loves characters from British children's books.",
         "Look for the one who lives in a pineapple under the sea."
       ],
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "pile of British coins",
+        "query": "UK loose change coins",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStoke_Lyne_II_2016T756._Pile_of_37_Postumus_coins_from_Layer_2_cleaned_for_ID%2C_October_2017._%28FindID_806331-636160%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Stoke_Lyne_II_2016T756._Pile_of_37_Postumus_coins_from_Layer_2_cleaned_for_ID%2C_October_2017._%28FindID_806331-636160%29.jpg/3840px-Stoke_Lyne_II_2016T756._Pile_of_37_Postumus_coins_from_Layer_2_cleaned_for_ID%2C_October_2017._%28FindID_806331-636160%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "The British Museum, Pippa Pearce, 2017-11-07 12:48:26 · CC BY 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2011T283_Coins_%28FindID_440107%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/2011T283_Coins_%28FindID_440107%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "The Portable Antiquities Scheme, Dot Boughton, 2011-08-05 15:15:09 · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "The British Museum, Pippa Pearce, 2017-11-07 12:48:26",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "The Portable Antiquities Scheme, Dot Boughton, 2011-08-05 15:15:09",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": []
@@ -1581403,25 +1581493,35 @@
       "batch": "batch-75",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 (“The Royal Mint loves characters from British children's books.”) gives the answer away: SpongeBob is the only option that isn't a character from a British children's book, so the first hint alone solves it. Replace hint 1 with a vague hint, for example about 50p coins being collected or about the Royal Mint making special designs, and keep the British-books clue for hint 2 or 3.",
+        "feedback": "Hint 2 (“The Royal Mint loves characters from British children's books”) gives the answer away: SpongeBob is the only option that isn't from a British children's book. Hint 2 should be a vaguer clue, for example about the coins being commemorative or collectable, and should not point to where the characters come from.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“The Royal Mint loves characters from British children's books.”) gives the answer away: SpongeBob is the only option that isn't a character from a British children's book, so the first hint alone solves it. Replace hint 1 with a vague hint, for example about 50p coins being collected or about the Royal Mint making special designs, and keep the British-books clue for hint 2 or 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the answer away and was misleading about Winnie the Pooh.",
+        "reason": "Hint 1 gave the answer away, so the vaguer birthday hint now comes first and the British-books hint moves to second place.",
         "previous": {
           "hints": [
             "The Royal Mint loves characters from British children's books.",
-            "The odd one out comes from an American TV cartoon.",
+            "The Royal Mint often marks big birthdays of famous stories with a new 50p.",
             "Look for the one who lives in a pineapple under the sea."
           ]
         },
@@ -1581599,9 +1581699,9 @@
     },
     {
       "id": "q-20423",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "The comfiest seats in Westminster, if you can get an invitation.",
+      "description": "Westminster's plushest place to sit down and argue politely.",
       "question": "In which part of Parliament would you sit on these red leather benches?",
       "answer": "The House of Lords",
       "wrong_answers": [
@@ -1581630,7 +1581730,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Red has long been a royal colour, and the Lords chamber is where the monarch's golden throne stands.",
+      "fun_fact": "The two chambers are colour-coded: the House of Lords has red benches, while the House of Commons has green ones.",
       "subcategory": "parliament-and-prime-ministers",
       "style": null,
       "concept": "Red benches",
@@ -1581657,34 +1581757,34 @@
       "needs_media": true,
       "batch": "batch-75",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says the monarch's golden throne stands in the Lords chamber, which is exactly the answer to the approved q-18808, so seeing this question gives that one away. The fun fact should get a different fact, for example about the red colour or the benches. The description's \"if you can get an invitation\" also hints that members are appointed, not elected. That is the trait that separates the answer from the House of Commons, the only serious distractor, so it should play on the theme without that hint.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says the monarch's golden throne stands in the Lords chamber, which is exactly the answer to the approved q-18808, so seeing this question gives that one away. The fun fact should get a different fact, for example about the red colour or the benches. The description's \"if you can get an invitation\" also hints that members are appointed, not elected. That is the trait that separates the answer from the House of Commons, the only serious distractor, so it should play on the theme without that hint.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which ruled out the Commons, and swapped two wrong answers for real parts of the Palace of Westminster.",
+        "reason": "Replaced the throne fun fact, which gave away q-18808, and removed the hint about invitations from the description.",
         "previous": {
-          "wrong_answers": [
-            "The House of Commons",
-            "The Scottish Parliament",
-            "Westminster Abbey"
-          ],
-          "hints": [
-            "Its members are not elected by voters.",
-            "The other chamber, where MPs sit, has green benches.",
-            "Its members include dukes, earls and bishops."
-          ]
+          "description": "The comfiest seats in Westminster, if you can get an invitation.",
+          "fun_fact": "Red has long been a royal colour, and the Lords chamber is where the monarch's golden throne stands."
         },
         "revised_on": "2026-11-14"
       }
@@ -1583970,7 +1584070,7 @@
     },
     {
       "id": "q-20454",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The one fixture where both sets of fans circle the date in red pen.",
       "question": "In football, what is a derby?",
@@ -1583981,18 +1584081,25 @@
         "A match on the last day of the season"
       ],
       "hints": [
-        "Liverpool v Everton and Celtic v Rangers are famous ones.",
+        "Many fans call it the biggest game of their season.",
         "The two sets of fans might live on the same street.",
         "Both teams come from the same city or area."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "football fans stadium stand",
+        "query": "football terrace fans",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFootball_fan_households%2C_Shiphay_-_geograph.org.uk_-_6872712.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Football_fan_households%2C_Shiphay_-_geograph.org.uk_-_6872712.jpg/3840px-Football_fan_households%2C_Shiphay_-_geograph.org.uk_-_6872712.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Derek Harper · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Derek Harper",
+        "author_url": "https://www.geograph.org.uk/profile/5089",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Liverpool's Anfield and Everton's old home, Goodison Park, are less than a mile apart, on opposite sides of Stanley Park.",
       "subcategory": "football",
@@ -1584021,19 +1584128,48 @@
       "needs_media": false,
       "batch": "batch-75",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate fits: all six pictures are US college American football stadiums (gridiron lines, marching bands, Notre Dame, Neyland, Hawaii) or a NASA mascot event, which is the wrong sport for a British football question. A new search can't be run, so the media slot needs a fresh query such as \"Premier League crowd\" or \"football terrace fans\". A smaller point: hint 1's same-city examples (Liverpool v Everton, Celtic v Rangers) nearly give the answer away; consider a vaguer first hint. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate fits: all six pictures are US college American football stadiums (gridiron lines, marching bands, Notre Dame, Neyland, Hawaii) or a NASA mascot event, which is the wrong sport for a British football question. A new search can't be run, so the media slot needs a fresh query such as \"Premier League crowd\" or \"football terrace fans\". A smaller point: hint 1's same-city examples (Liverpool v Everton, Celtic v Rangers) nearly give the answer away; consider a vaguer first hint. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to British football fans, and made hint 1 vaguer because the same-city examples nearly gave the answer away.",
+        "previous": {
+          "hints": [
+            "Liverpool v Everton and Celtic v Rangers are famous ones.",
+            "The two sets of fans might live on the same street.",
+            "Both teams come from the same city or area."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "football fans stadium stand",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20455",
@@ -1585478,7 +1585614,7 @@
     },
     {
       "id": "q-20474",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A coin with more corners than most people bother to count.",
       "question": "In 2017, Britain's round pound coin was replaced by a new one with 12 sides and two colours. What was the main reason?",
@@ -1585490,17 +1585626,24 @@
       ],
       "hints": [
         "The old coin had a problem that was costing the country money.",
-        "The Royal Mint called the new coin one of the most secure in the world.",
+        "The new coin is made of two different metals joined together.",
         "Some people were making their own pound coins."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "round pound coin",
+        "query": "Royal Mint Llantrisant",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Royal_Mint%2C_Llantrisant.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/The_Royal_Mint%2C_Llantrisant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Nigel Davies · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Nigel Davies",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Before the change, about 1 in 30 of the old round pound coins was thought to be fake.",
       "subcategory": "twentieth-century",
@@ -1585529,29 +1585672,46 @@
       "needs_media": false,
       "batch": "batch-75",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a British round pound coin, which the question names. They show a Malaysian 20 sen next to an egg, a corroded jetton, a triangular weight, 1830s gold £5 pieces and a 1937 Palestine coin. I can't search again. Also, hint 2 (\"one of the most secure coins in the world\") nearly gives the answer away; it should be a vaguer hint, for example about how the coin was made or its design. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a British round pound coin, which the question names. They show a Malaysian 20 sen next to an egg, a corroded jetton, a triangular weight, 1830s gold £5 pieces and a 1937 Palestine coin. I can't search again. Also, hint 2 (\"one of the most secure coins in the world\") nearly gives the answer away; it should be a vaguer hint, for example about how the coin was made or its design. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made hint 2 a vaguer security hint and moved the home-made coins idea to hint 3.",
+        "reason": "Changed the media query to the Royal Mint building because coin photos weren't available, and replaced hint 2, which nearly gave the answer away, with a vaguer fact about how the coin is made.",
         "previous": {
           "hints": [
             "The old coin had a problem that was costing the country money.",
-            "Some people were making their own pound coins.",
-            "It's about coins that aren't real."
-          ]
+            "The Royal Mint called the new coin one of the most secure in the world.",
+            "Some people were making their own pound coins."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "round pound coin",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-14"
       }
@@ -1585846,14 +1586006,14 @@
     },
     {
       "id": "q-20479",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Office supplies, now available in raspberry flavour.",
-      "question": "Tim works at an office in Slough, Gareth sits opposite him, and one day Tim sets Gareth's stapler in jelly. Why can Gareth spot it at once?",
+      "question": "In the TV show The Office, Tim hides Gareth's stapler inside a jelly. Why can Gareth still see his stapler?",
       "answer": "Jelly is see-through",
       "wrong_answers": [
         "Jelly glows in the dark",
-        "Jelly turns into water",
+        "Jelly sticks to metal",
         "Jelly makes a ringing sound"
       ],
       "hints": [
@@ -1585900,31 +1586060,40 @@
         "difficulty_estimate": 2,
         "notes": "The question is about a sitcom but really asks a simple fact about jelly, so it feels forced. Anyone can answer without knowing The Office, and the distractors (glowing, ringing) are silly. The Office is an adult workplace show that children won't know. The question works only because it needs no knowledge of the show. The fun fact is true: in the US pilot, Jim sets Dwight's stapler in Jell-O."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-75",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. The prank is real (UK Office: Tim sets Gareth's stapler in jelly; US pilot copied it). But the reasoning is weak: Gareth would notice a jelly-encased stapler anyway, and 'see-through' is only a loose explanation. The 'history' lens also doesn't fit. I did not verify this by search.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. The prank is real (UK Office: Tim sets Gareth's stapler in jelly; US pilot copied it). But the reasoning is weak: Gareth would notice a jelly-encased stapler anyway, and 'see-through' is only a loose explanation. The 'history' lens also doesn't fit. I did not verify this by search.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer state that jelly is see-through.",
+        "reason": "Reworded the question to ask why Gareth can still see the stapler inside the jelly, which fixes the weak cause-and-effect logic, and replaced the 'turns into water' option because it was arguably also correct.",
         "previous": {
-          "hints": [
-            "Think about looking into a bowl of jelly at a party.",
-            "You can look into it a bit like a coloured window.",
-            "Light passes straight through it."
+          "question": "Tim works at an office in Slough, Gareth sits opposite him, and one day Tim sets Gareth's stapler in jelly. Why can Gareth spot it at once?",
+          "wrong_answers": [
+            "Jelly glows in the dark",
+            "Jelly turns into water",
+            "Jelly makes a ringing sound"
           ]
         },
         "revised_on": "2026-11-14"
@@ -1586324,7 +1586493,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "old tin bath",
+        "query": "zinc tin bath",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1586358,18 +1586527,44 @@
       "batch": "batch-75",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates shows a tin bath, a bath by the fire or an old British home. They are a Devon map, metal-detector finds (spoons, a scabbard chape, a Roman object) and a seascape, and a new search isn't allowed. The slot needs a new search for something like “zinc tin bath” or “Victorian tin bath”. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a tin bath, a bath by the fire or an old British home. They are a Devon map, metal-detector finds (spoons, a scabbard chape, a Roman object) and a seascape, and a new search isn't allowed. The slot needs a new search for something like “zinc tin bath” or “Victorian tin bath”. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "None of the found pictures fit, so the media query now searches for a tin bath specifically.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "old tin bath",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20486",
@@ -1586615,7 +1586810,7 @@
     },
     {
       "id": "q-20489",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Even royals need somewhere to put their feet up.",
       "question": "Every year the royal family spends several weeks at Balmoral Castle in Scotland. When do they usually go?",
@@ -1586626,8 +1586821,8 @@
         "At New Year"
       ],
       "hints": [
-        "The family goes walking and picnicking in the Highland hills.",
-        "The days are long and the heather is purple.",
+        "Royals have stayed there at this time of year ever since Queen Victoria.",
+        "It's usually while Parliament takes its longest break of the year.",
         "It's when schools close for their longest break."
       ],
       "media": {
@@ -1586673,28 +1586868,35 @@
       "needs_media": false,
       "batch": "batch-75",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“The days are long and the heather is purple”) says summer outright and rules out all three wrong options (Christmas, Easter, New Year), so it gives the answer away before hint 3. Hint 1's picnicking also leans hard towards summer; hint 2 should point to something vaguer, such as Highland activities or who joins the family, without naming the season.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“The days are long and the heather is purple”) says summer outright and rules out all three wrong options (Christmas, Easter, New Year), so it gives the answer away before hint 3. Hint 1's picnicking also leans hard towards summer; hint 2 should point to something vaguer, such as Highland activities or who joins the family, without naming the season.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Dropped “long” from the question and reordered the hints so the school-break hint comes last.",
+        "reason": "Rewrote hints 1 and 2 so they no longer point straight to summer before hint 3.",
         "previous": {
-          "question": "Every year the royal family spends a long holiday at Balmoral Castle in Scotland. When do they usually go?",
           "hints": [
-            "It's when schools are closed for the longest break.",
+            "The family goes walking and picnicking in the Highland hills.",
             "The days are long and the heather is purple.",
-            "It's the warmest time of the year."
+            "It's when schools close for their longest break."
           ]
         },
         "revised_on": "2026-11-14"

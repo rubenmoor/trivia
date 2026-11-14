@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "a1c4f541",
+  "hash": "041d115c",
   "questions": [
     {
       "id": "q-9487",
@@ -97895,6 +97895,40 @@
       "background": null
     },
     {
+      "id": "q-20395",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "cakes-puddings-and-biscuits",
+      "bundle": "uk",
+      "description": "A chocolate bar that clearly couldn't decide which way to go.",
+      "question": "A Curly Wurly is a twisty, ladder-shaped chocolate bar. What is under its chocolate coating?",
+      "answer": "Chewy caramel",
+      "wrong_answers": [
+        "Crunchy biscuit",
+        "Pink marshmallow",
+        "Peanut butter"
+      ],
+      "hints": [
+        "It's golden and stretchy.",
+        "It sticks to your teeth.",
+        "It's made from cooked sugar, butter and milk."
+      ],
+      "fun_fact": "Cadbury launched the Curly Wurly in 1970.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Sassafras_Sweet_Co._candy_in_jars.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASassafras_Sweet_Co._candy_in_jars.jpg",
+        "credit": "Matthew Paul  Argall · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Matthew Paul  Argall",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-20396",
       "status": "approved",
       "difficulty": 2,
@@ -98231,6 +98265,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "TCExplorer",
         "author_url": "https://www.geograph.org.uk/profile/129177"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20407",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "drinks",
+      "bundle": "uk",
+      "description": "Four fizzy bottles walk into a corner shop, but only one has the right life story.",
+      "question": "It was invented in 1927 to help poorly people get their energy back, it came wrapped in yellow cellophane, and now there's a “Sport” version. Which drink is it?",
+      "answer": "Lucozade",
+      "wrong_answers": [
+        "Irn-Bru",
+        "Vimto",
+        "Tango"
+      ],
+      "hints": [
+        "It was first sold in chemists' shops, not sweet shops.",
+        "It was made by a chemist in Newcastle, and it got its current name two years after it was launched.",
+        "Its very first name was “Glucozade”."
+      ],
+      "fun_fact": "For decades, British children who were off school sick were often given a bottle of Lucozade to help them feel better.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Newcastle_upon_Tyne_-_Tyne_Bridge.jpg/3840px-Newcastle_upon_Tyne_-_Tyne_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANewcastle_upon_Tyne_-_Tyne_Bridge.jpg",
+        "credit": "Benjamin Smith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Benjamin Smith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benjism89"
       },
       "background": null
     },
@@ -98667,6 +98735,40 @@
         "role": "illustrative",
         "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/House_of_Commons_Chamber_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
         "source_url": "https://commons.wikimedia.org/wiki/File%3AHouse_of_Commons_Chamber_1.png",
+        "credit": "UK Parliament · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "UK Parliament",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20423",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "parliament-and-prime-ministers",
+      "bundle": "uk",
+      "description": "Westminster's plushest place to sit down and argue politely.",
+      "question": "In which part of Parliament would you sit on these red leather benches?",
+      "answer": "The House of Lords",
+      "wrong_answers": [
+        "The House of Commons",
+        "Westminster Hall",
+        "Central Lobby"
+      ],
+      "hints": [
+        "Its members are not elected by voters.",
+        "Most of its members sit there for life or until they retire.",
+        "Its members include dukes, earls and bishops."
+      ],
+      "fun_fact": "The two chambers are colour-coded: the House of Lords has red benches, while the House of Commons has green ones.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Chamber_of_the_House_of_Lords_benches.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChamber_of_the_House_of_Lords_benches.jpg",
         "credit": "UK Parliament · CC BY 3.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY 3.0",
@@ -99663,6 +99765,40 @@
       "background": null
     },
     {
+      "id": "q-20454",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "football",
+      "bundle": "uk",
+      "description": "The one fixture where both sets of fans circle the date in red pen.",
+      "question": "In football, what is a derby?",
+      "answer": "A match between two local rivals",
+      "wrong_answers": [
+        "A match between the top two teams",
+        "A cup final played at Wembley",
+        "A match on the last day of the season"
+      ],
+      "hints": [
+        "Many fans call it the biggest game of their season.",
+        "The two sets of fans might live on the same street.",
+        "Both teams come from the same city or area."
+      ],
+      "fun_fact": "Liverpool's Anfield and Everton's old home, Goodison Park, are less than a mile apart, on opposite sides of Stanley Park.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Football_fan_households%2C_Shiphay_-_geograph.org.uk_-_6872712.jpg/3840px-Football_fan_households%2C_Shiphay_-_geograph.org.uk_-_6872712.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFootball_fan_households%2C_Shiphay_-_geograph.org.uk_-_6872712.jpg",
+        "credit": "Derek Harper · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Derek Harper",
+        "author_url": "https://www.geograph.org.uk/profile/5089"
+      },
+      "background": null
+    },
+    {
       "id": "q-20455",
       "status": "approved",
       "difficulty": 3,
@@ -100275,6 +100411,40 @@
       "background": null
     },
     {
+      "id": "q-20474",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "A coin with more corners than most people bother to count.",
+      "question": "In 2017, Britain's round pound coin was replaced by a new one with 12 sides and two colours. What was the main reason?",
+      "answer": "To stop fake coins",
+      "wrong_answers": [
+        "To make coins cheaper",
+        "To mark a royal anniversary",
+        "To stop coins rolling away"
+      ],
+      "hints": [
+        "The old coin had a problem that was costing the country money.",
+        "The new coin is made of two different metals joined together.",
+        "Some people were making their own pound coins."
+      ],
+      "fun_fact": "Before the change, about 1 in 30 of the old round pound coins was thought to be fake.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/The_Royal_Mint%2C_Llantrisant.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Royal_Mint%2C_Llantrisant.jpg",
+        "credit": "Nigel Davies · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Nigel Davies",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-20475",
       "status": "approved",
       "difficulty": 10,
@@ -100407,6 +100577,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Lukas Beck",
         "author_url": "https://commons.wikimedia.org/wiki/User:L._Beck"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20479",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sitcoms",
+      "bundle": "uk",
+      "description": "Office supplies, now available in raspberry flavour.",
+      "question": "In the TV show The Office, Tim hides Gareth's stapler inside a jelly. Why can Gareth still see his stapler?",
+      "answer": "Jelly is see-through",
+      "wrong_answers": [
+        "Jelly glows in the dark",
+        "Jelly sticks to metal",
+        "Jelly makes a ringing sound"
+      ],
+      "hints": [
+        "It's about what Gareth's eyes notice, not his ears.",
+        "Think of fruit set inside a party jelly: you can still spot every piece.",
+        "Light passes straight through it."
+      ],
+      "fun_fact": "The American version of The Office copied the prank in its very first episode, with Jim setting Dwight's stapler in jelly.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Stapler_on_office_desk_%289446980723%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStapler_on_office_desk_%289446980723%29.jpg",
+        "credit": "Cubicle Sherpa · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Cubicle Sherpa",
+        "author_url": "https://www.flickr.com/people/99945004@N08"
       },
       "background": null
     },
@@ -100688,6 +100892,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Barcex",
         "author_url": "https://commons.wikimedia.org/wiki/User:Barcex"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20489",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "Even royals need somewhere to put their feet up.",
+      "question": "Every year the royal family spends several weeks at Balmoral Castle in Scotland. When do they usually go?",
+      "answer": "In the summer holidays",
+      "wrong_answers": [
+        "At Christmas",
+        "At Easter",
+        "At New Year"
+      ],
+      "hints": [
+        "Royals have stayed there at this time of year ever since Queen Victoria.",
+        "It's usually while Parliament takes its longest break of the year.",
+        "It's when schools close for their longest break."
+      ],
+      "fun_fact": "Prince Albert bought Balmoral for Queen Victoria in 1852, and the family has loved it ever since.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Irving_of_Bonshaw_Tartan_-_no._2609_in_the_Tartan_Registry.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIrving_of_Bonshaw_Tartan_-_no._2609_in_the_Tartan_Registry.jpg",
+        "credit": "Clan Chief Rupert C Irving · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Clan Chief Rupert C Irving",
+        "author_url": null
       },
       "background": null
     }
