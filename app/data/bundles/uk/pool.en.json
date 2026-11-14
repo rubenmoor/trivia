@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "378cd5dc",
+  "hash": "f55bbfb6",
   "questions": [
     {
       "id": "q-9487",
@@ -79551,6 +79551,40 @@
       }
     },
     {
+      "id": "q-19846",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "The great British argument that starts every time someone runs a bath.",
+      "question": "Someone says “bath” and “grass” with a short “a”, like in “cat”. Where in England are they most likely from?",
+      "answer": "The North",
+      "wrong_answers": [
+        "London",
+        "Kent",
+        "Oxford"
+      ],
+      "hints": [
+        "Linguists call this difference the “trap–bath split”.",
+        "People from this region often say “up” and “cup” to rhyme with “put”, too.",
+        "Think of Manchester, Leeds and Newcastle."
+      ],
+      "fun_fact": "Long ago most of England said “bath” with a short “a”; the long “ah” spread in the South later, in the 1700s and 1800s.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Bathroom%2C_Speke_Hall.jpg/3840px-Bathroom%2C_Speke_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABathroom%2C_Speke_Hall.jpg",
+        "credit": "Rodhullandemu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rodhullandemu",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rodhullandemu"
+      },
+      "background": null
+    },
+    {
       "id": "q-19848",
       "status": "approved",
       "difficulty": 7,
@@ -80911,6 +80945,40 @@
       "background": null
     },
     {
+      "id": "q-19889",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "london",
+      "bundle": "uk",
+      "description": "No clowns, no lions, just a lot of buses and some very bright adverts.",
+      "question": "Piccadilly Circus has no tents, no clowns and no acrobats. Its “circus” comes from a Latin word for which shape?",
+      "answer": "A circle",
+      "wrong_answers": [
+        "A square",
+        "A triangle",
+        "A star"
+      ],
+      "hints": [
+        "Several busy roads meet here.",
+        "The ancient Romans used the same word for their chariot-racing tracks.",
+        "A wheel or a coin has this shape."
+      ],
+      "fun_fact": "“Piccadilly” comes from “piccadills”, the frilly collars sold by a tailor who built a big house nearby in the 1600s.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/London%2C_Piccadilly_Circus_--_2016_--_4866.jpg/3840px-London%2C_Piccadilly_Circus_--_2016_--_4866.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon%2C_Piccadilly_Circus_--_2016_--_4866.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      },
+      "background": null
+    },
+    {
       "id": "q-19890",
       "status": "approved",
       "difficulty": 2,
@@ -81009,6 +81077,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Jakub Hałun",
         "author_url": "https://commons.wikimedia.org/wiki/User:Jakubhal"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19893",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "london",
+      "bundle": "uk",
+      "description": "Nelson's fan club has shrunk a lot since the 1990s.",
+      "question": "You're in Trafalgar Square and spot only a few pigeons, though photos from the 1990s show thousands. Why are there so few now?",
+      "answer": "Feeding them was banned",
+      "wrong_answers": [
+        "They all moved to Paris",
+        "The fountains were switched off",
+        "Nelson's Column scares them"
+      ],
+      "hints": [
+        "The change was made by London's mayor in the early 2000s.",
+        "The man who sold birdseed in the square lost his licence.",
+        "Giving them food there can now get you in trouble."
+      ],
+      "fun_fact": "Trained Harris hawks were also flown over the square to scare the pigeons away.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/TrafalgarSquareEvening.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrafalgarSquareEvening.jpg",
+        "credit": "Andreas Tille · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Andreas Tille",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tillea"
       },
       "background": null
     },
@@ -81183,6 +81285,40 @@
       "background": null
     },
     {
+      "id": "q-19899",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "Belfast has a word for this, and it's not on the menu.",
+      "question": "Complete the meaning: in Belfast, if a dinner “gives you the boke”, it makes you feel…",
+      "answer": "Sick",
+      "wrong_answers": [
+        "Sleepy",
+        "Hungry",
+        "Full"
+      ],
+      "hints": [
+        "Think of a dinner that went very wrong.",
+        "Your tummy is not happy at all.",
+        "You might need a bucket nearby."
+      ],
+      "fun_fact": "“Boke” is used in Scotland too, and it comes from an old word meaning to belch.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Terraced_Housing_on_Belfast_Road_-_geograph.org.uk_-_3929419.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATerraced_Housing_on_Belfast_Road_-_geograph.org.uk_-_3929419.jpg",
+        "credit": "Ian Paterson · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ian Paterson",
+        "author_url": "https://www.geograph.org.uk/profile/13639"
+      },
+      "background": null
+    },
+    {
       "id": "q-19900",
       "status": "approved",
       "difficulty": 6,
@@ -81281,6 +81417,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Ardfern",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ardfern"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19903",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "cities-and-towns",
+      "bundle": "uk",
+      "description": "A colourful little island town where everyone knows your name and your favourite song.",
+      "question": "You're watching Balamory. Which of these characters would you NOT meet there?",
+      "answer": "Postman Pat",
+      "wrong_answers": [
+        "Miss Hoolie",
+        "PC Plum",
+        "Josie Jump"
+      ],
+      "hints": [
+        "Balamory is set on a Scottish island.",
+        "The odd one out has his own, much older children's show, first shown in 1981.",
+        "He drives a red van with a black and white cat."
+      ],
+      "fun_fact": "Each grown-up in Balamory has a brightly coloured home of their own, and Archie the inventor lives in a pink castle.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/The_colourful_harbour_buildings_of_Tobermory_-_Flickr_-_Arran_Bee.jpg/3840px-The_colourful_harbour_buildings_of_Tobermory_-_Flickr_-_Arran_Bee.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_colourful_harbour_buildings_of_Tobermory_-_Flickr_-_Arran_Bee.jpg",
+        "credit": "Arran Bee from Nottingham, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Arran Bee from Nottingham, UK",
+        "author_url": "https://www.flickr.com/people/91425144@N04"
       },
       "background": null
     },
@@ -81727,6 +81897,40 @@
       "background": null
     },
     {
+      "id": "q-19918",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "pop-and-rock",
+      "bundle": "uk",
+      "description": "A singer whose outfit gave him a nickname that stuck for life.",
+      "question": "A singer from Newcastle got his stage name from a striped jumper. Which creature did his bandleader say he looked like?",
+      "answer": "A bee",
+      "wrong_answers": [
+        "A tiger",
+        "A zebra",
+        "A skunk"
+      ],
+      "hints": [
+        "He started out playing in jazz bands in the north-east of England in the 1970s.",
+        "It lives with thousands of others in a busy home.",
+        "It makes honey and buzzes from flower to flower."
+      ],
+      "fun_fact": "Sting's real name is Gordon Sumner, and before going solo he sang and played bass in The Police.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Bergen_Big_Band_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABergen_Big_Band_1.jpg",
+        "credit": "Knuand · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Knuand",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Knuand"
+      },
+      "background": null
+    },
+    {
       "id": "q-19919",
       "status": "approved",
       "difficulty": 5,
@@ -82131,6 +82335,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Jonathan Billinger",
         "author_url": "https://www.geograph.org.uk/profile/8569"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19931",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "sporting-events",
+      "bundle": "uk",
+      "description": "The smallest person in the boat, and somehow the loudest.",
+      "question": "This person sits in a racing rowing boat but never rows. They steer and shout orders to the crew. What is their job called?",
+      "answer": "The cox",
+      "wrong_answers": [
+        "The stroke",
+        "The bow",
+        "The sculler"
+      ],
+      "hints": [
+        "Watch for them in the Oxford v Cambridge Boat Race.",
+        "They're often light, so the boat has less weight to carry.",
+        "The word is short for “coxswain”."
+      ],
+      "fun_fact": "In the Boat Race, the winning crew traditionally throws its cox into the River Thames.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Rowing_Eights_Collegiate.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARowing_Eights_Collegiate.png",
+        "credit": "Marky Guerrero · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marky Guerrero",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Marky_Guerrero&action=edit&redlink=1"
       },
       "background": null
     },
@@ -82713,6 +82951,40 @@
       "background": null
     },
     {
+      "id": "q-19949",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "A word so polite your gran could say it in church.",
+      "question": "Grandparents say it instead of a rude word when things go wrong. It's also an old name for the bow used to play a violin. What is it?",
+      "answer": "Fiddlesticks",
+      "wrong_answers": [
+        "Drumsticks",
+        "Chopsticks",
+        "Matchsticks"
+      ],
+      "hints": [
+        "It sounds a bit silly and old-fashioned.",
+        "It's linked to folk music and country dancing.",
+        "A violin is also called a “fiddle”."
+      ],
+      "fun_fact": "Shakespeare used “fiddlestick” in Romeo and Juliet more than 400 years ago, when Mercutio jokingly calls his sword one.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Vienna_-_Violin_and_bows_-_9604.jpg/3840px-Vienna_-_Violin_and_bows_-_9604.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVienna_-_Violin_and_bows_-_9604.jpg",
+        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jorge Royan",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-19950",
       "status": "approved",
       "difficulty": 6,
@@ -82811,6 +83083,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Acabashi",
         "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19953",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "soaps-and-dramas",
+      "bundle": "uk",
+      "description": "A street so bumpy that every pram in Weatherfield deserves a medal.",
+      "question": "Coronation Street fans call its famous road “the cobbles”, because it is paved with rounded…",
+      "answer": "Stones",
+      "wrong_answers": [
+        "Planks",
+        "Tiles",
+        "Bricks"
+      ],
+      "hints": [
+        "Think of how very old streets in British towns looked before tarmac.",
+        "They are hard and bumpy, and wobbly to walk on in high heels.",
+        "They come out of the ground, like big pebbles from a beach."
+      ],
+      "fun_fact": "In 2014 the outdoor street set moved to a new site at Trafford Wharf, near MediaCityUK, and the cobbles were rebuilt there.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Terraced_houses_in_Bury_-_geograph.org.uk_-_2647073.jpg/3840px-Terraced_houses_in_Bury_-_geograph.org.uk_-_2647073.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATerraced_houses_in_Bury_-_geograph.org.uk_-_2647073.jpg",
+        "credit": "Philip Platt · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Philip Platt",
+        "author_url": "https://www.geograph.org.uk/profile/60932"
       },
       "background": null
     },
