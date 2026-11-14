@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "7d012459",
+  "hash": "4c2a4032",
   "questions": [
     {
       "id": "q-9487",
@@ -87822,6 +87822,40 @@
       "background": null
     },
     {
+      "id": "q-20092",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "birds",
+      "bundle": "uk",
+      "description": "Farmland's most dapper resident, complete with a quiff that would make Elvis jealous.",
+      "question": "This bird of British farms and moors has the old nickname “peewit”. Where does that nickname come from?",
+      "answer": "The sound of its call",
+      "wrong_answers": [
+        "A village in Yorkshire",
+        "The shape of its crest",
+        "An old word for green"
+      ],
+      "hints": [
+        "The nickname isn't about how the bird looks.",
+        "Farmers often noticed it long before they spotted it in the fields.",
+        "Birdwatchers say it seems to shout its own name."
+      ],
+      "fun_fact": "In spring, male lapwings tumble, roll and dive through the sky in wild display flights to impress females.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Northern-Lapwing-Vanellus-vanellus.jpg/3840px-Northern-Lapwing-Vanellus-vanellus.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorthern-Lapwing-Vanellus-vanellus.jpg",
+        "credit": "Andreas Trepte · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Andreas Trepte",
+        "author_url": "http://photo-natur.de"
+      },
+      "background": null
+    },
+    {
       "id": "q-20093",
       "status": "approved",
       "difficulty": 4,
@@ -88910,6 +88944,40 @@
       "background": null
     },
     {
+      "id": "q-20126",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "plants-and-gardens",
+      "bundle": "uk",
+      "description": "One is prickly, one is clingy, and they share an old song.",
+      "question": "Holly and ivy have an old British carol named after them. What do people traditionally use them for at home?",
+      "answer": "Christmas decorations",
+      "wrong_answers": [
+        "Summer salads",
+        "Easter bonnets",
+        "Bonfire Night fuel"
+      ],
+      "hints": [
+        "They stay green even in the coldest months.",
+        "The prickly one has bright red berries.",
+        "People hang them up in December, often as a wreath on the door."
+      ],
+      "fun_fact": "Long before Christmas, people brought evergreen plants indoors in winter as a sign that spring would come back.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/English_Holly_Berries_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEnglish_Holly_Berries_2.jpg",
+        "credit": "FloweringDagwood · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "FloweringDagwood",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-20127",
       "status": "approved",
       "difficulty": 1,
@@ -89076,6 +89144,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Flappy Pigeon",
         "author_url": "https://commons.wikimedia.org/wiki/User:Flappy_Pigeon"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20132",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "crown-and-state",
+      "bundle": "uk",
+      "description": "No buffet trolley, but the sandwiches are probably very well cut.",
+      "question": "Britain has a special dark red train that most people never get to ride. Who was it built to carry?",
+      "answer": "The royal family",
+      "wrong_answers": [
+        "Members of Parliament",
+        "Government ministers",
+        "Army generals"
+      ],
+      "hints": [
+        "Its passengers are some of the most famous people in Britain.",
+        "Its carriages have bedrooms, a dining room and an office.",
+        "Its most important passenger lives in Buckingham Palace."
+      ],
+      "fun_fact": "Queen Victoria took her first train ride in 1842, from near Windsor to London, and found it delightful.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Burlescombe-_Railway_%26_Countryside_%28geograph_1871380%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABurlescombe-_Railway_%26_Countryside_%28geograph_1871380%29.jpg",
+        "credit": "Lewis Clarke · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lewis Clarke",
+        "author_url": "https://www.geograph.org.uk/profile/11775"
       },
       "background": null
     },
@@ -90134,6 +90236,40 @@
       "background": null
     },
     {
+      "id": "q-20165",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "The original Sunday league, minus the rules, the referee and the half-time oranges.",
+      "question": "In Tudor times, people played “mob football” through the streets, often on Shrove Tuesday. What does “mob” mean here?",
+      "answer": "A huge, wild crowd",
+      "wrong_answers": [
+        "A muddy field",
+        "A pig's-bladder ball",
+        "A hard, high kick"
+      ],
+      "hints": [
+        "Shopkeepers often boarded up their windows on match day.",
+        "Whole villages could join in, with hundreds of people on each side.",
+        "Picture a rowdy crowd surging down the street."
+      ],
+      "fun_fact": "A version of the game is still played every Shrovetide in Ashbourne, Derbyshire, with goals 3 miles apart.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Tudor_Village%2C_Hever_Castle.jpg/3840px-Tudor_Village%2C_Hever_Castle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATudor_Village%2C_Hever_Castle.jpg",
+        "credit": "Yiannis Theologos Michellis · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Yiannis Theologos Michellis",
+        "author_url": "https://www.flickr.com/people/65056089@N05"
+      },
+      "background": null
+    },
+    {
       "id": "q-20166",
       "status": "approved",
       "difficulty": 5,
@@ -90266,6 +90402,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Jeff Macleod",
         "author_url": "https://500px.com/waxityourself122"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20170",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "The kind of British day that makes you cancel the picnic and stay on the sofa.",
+      "question": "Britons say it's “pelting down” outside. What's pelting down?",
+      "answer": "Heavy rain",
+      "wrong_answers": [
+        "Light drizzle",
+        "Autumn leaves",
+        "Thick fog"
+      ],
+      "hints": [
+        "You'll want your wellies.",
+        "Get your brolly out!",
+        "It's the kind of weather that soaks you in seconds."
+      ],
+      "fun_fact": "Britons have lots of other phrases for heavy rain too, like “chucking it down” and “raining cats and dogs”.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Village_of_Wherwell_on_a_dull_overcast_day_-_geograph.org.uk_-_3076416.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVillage_of_Wherwell_on_a_dull_overcast_day_-_geograph.org.uk_-_3076416.jpg",
+        "credit": "Barry Shimmon · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Barry Shimmon",
+        "author_url": "https://www.geograph.org.uk/profile/20970"
       },
       "background": null
     },
