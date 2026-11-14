@@ -568,7 +568,8 @@
     {
       "name": "Black Friday",
       "facet": "Sales, Boxing Day and shopping customs",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Black Friday is an American custom, not British, and the options rely on a sign with readable text or on a person."
     },
     {
       "name": "Sunday Trading Act",

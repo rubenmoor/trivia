@@ -12,7 +12,8 @@
     "Coins, banknotes and stamps",
     "Parliament and state ceremony",
     "Royal titles and honours",
-    "Royal emblems in everyday life"
+    "Royal emblems in everyday life",
+    "Royal transport and vessels"
   ],
   "axis_fit": {
     "move": {
@@ -96,7 +97,8 @@
     {
       "name": "Sovereign's Ring",
       "facet": "Crown Jewels and regalia",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Obscure item of regalia; the options (detail group, place record/odd one out) don't fit."
     },
     {
       "name": "Coronation spurs",
@@ -116,7 +118,8 @@
     {
       "name": "Crown of Queen Elizabeth The Queen Mother",
       "facet": "Crown Jewels and regalia",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The crown and who wore it have already been asked."
     },
     {
       "name": "Coronation Chair",
@@ -151,7 +154,8 @@
     {
       "name": "Enthronement",
       "facet": "Coronation ceremony and traditions",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: No meaningful count or makeup to ask for at this level."
     },
     {
       "name": "Coronation of William the Conqueror",
@@ -196,12 +200,14 @@
     {
       "name": "Coldstream Guards",
       "facet": "Royal guards and ceremonial units",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The earlier question already gives away the Scottish border town; none of the photo options makes a fair question for young players without repeating the button fact that's already in the pool."
     },
     {
       "name": "Scots Guards",
       "facet": "Royal guards and ceremonial units",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The ways to tell the regiments apart (buttons, plumes) are already in the pool; nothing else fits these options at this level."
     },
     {
       "name": "Irish Guards",
@@ -236,7 +242,8 @@
     {
       "name": "Blues and Royals",
       "facet": "Royal guards and ceremonial units",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Obscure cavalry regiment; there's no fair easy question with these options."
     },
     {
       "name": "Chelsea Pensioners",
@@ -277,7 +284,8 @@
     {
       "name": "Beating Retreat",
       "facet": "Royal ceremonies and pageantry",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Too obscure for young players, and the options (detail person, photo place) don't fit."
     },
     {
       "name": "Royal flypast",
@@ -327,7 +335,8 @@
     {
       "name": "I Vow to Thee, My Country",
       "facet": "National anthems and patriotic songs",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The only fact worth asking (Holst's tune “Jupiter”) is a 12+ question, which is far too hard for the target; the photo options don't fit a hymn."
     },
     {
       "name": "Pomp and Circumstance",
@@ -383,7 +392,8 @@
     {
       "name": "Dame",
       "facet": "Royal titles and honours",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The main fact is already asked; the remaining options (count, place sequence) would be forced."
     },
     {
       "name": "Investiture",
@@ -423,7 +433,8 @@
     {
       "name": "Order of Merit",
       "facet": "Royal titles and honours",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: The 24-member limit and the badge are adult-level facts, far above the target; there's no good easy question."
     },
     {
       "name": "HMS",
@@ -464,6 +475,48 @@
       "name": "OHMS",
       "facet": "Royal emblems in everyday life",
       "known_at": 14
+    },
+    {
+      "name": "Colonel Blood",
+      "facet": "Crown Jewels and regalia",
+      "known_at": 13
+    },
+    {
+      "name": "Royal salute",
+      "facet": "Royal ceremonies and pageantry",
+      "known_at": 9
+    },
+    {
+      "name": "Lion Rampant of Scotland",
+      "facet": "Union Flag and national flags",
+      "known_at": 10
+    },
+    {
+      "name": "£1 coin",
+      "facet": "Coins, banknotes and stamps",
+      "known_at": 3
+    },
+    {
+      "name": "Royal Mail postbox",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Royal corgis",
+      "facet": "Royal emblems in everyday life",
+      "known_at": 3
+    },
+    {
+      "name": "Royal Train",
+      "facet": "Royal transport and vessels",
+      "known_at": 10
+    }
+  ],
+  "top_ups": [
+    {
+      "date": "2026-11-14",
+      "added": 7,
+      "unused": 24
     }
   ]
 }

@@ -106,12 +106,14 @@
     {
       "name": "Surrey",
       "facet": "Historic counties of England",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Surrey has nothing a young child would know; a map outline of it would be specialist-level."
     },
     {
       "name": "Hampshire",
       "facet": "Historic counties of England",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "unaskable: Hampshire has no level-1 fact; a map outline or a date question would be far harder."
     },
     {
       "name": "Suffolk",
@@ -521,7 +523,8 @@
     {
       "name": "Cheshire Cat",
       "facet": "County nicknames and symbols",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The cat's disappearing grin has already been asked, and none of the options gives a level-1 question about the Cheshire Cat."
     },
     {
       "name": "White Rose of Yorkshire",
@@ -942,7 +945,8 @@
     {
       "name": "Giant's Causeway",
       "facet": "Coasts, islands and peninsulas",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The hexagon count is already in the pool, and naming the landmark would be about level 6, not 1."
     },
     {
       "name": "Isle of Skye",
