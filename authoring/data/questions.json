@@ -1546804,10 +1546804,10 @@
     },
     {
       "id": "q-19977",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Small, shiny and worth a lot more than a chocolate coin.",
-      "question": "In 2017, this 12-sided coin replaced an old round one in the UK. How much is it worth?",
+      "question": "In 2017, a new 12-sided coin replaced an old round one in the UK. How much is it worth?",
       "answer": "One pound",
       "wrong_answers": [
         "Two pounds",
@@ -1546821,12 +1546821,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "twelve-sided pound coin",
-        "note": "The heads side of the 12-sided British £1 coin, showing the monarch's head; the words “ONE POUND” must not be visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "coins in a jar",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_jar_of_world_coins.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/A_jar_of_world_coins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Billjones94 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Billjones94",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Billjones94",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "The old round pound was replaced because about one in every 30 of them was a fake.",
       "subcategory": "crown-and-state",
@@ -1546855,35 +1546862,48 @@
       "needs_media": true,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the heads side of the 12-sided £1 coin. #5 is the old round 1983 pound, which is the coin the question says was replaced. #6 is a close-up of the 12-sided coin, but its micro-lettering reads \"ONE POUND\", which gives the answer away. A new search is not allowed, so the slot needs a hand-picked image of the 12-sided coin's obverse with no \"ONE POUND\" text. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the heads side of the 12-sided £1 coin. #5 is the old round 1983 pound, which is the coin the question says was replaced. #6 is a close-up of the 12-sided coin, but its micro-lettering reads \"ONE POUND\", which gives the answer away. A new search is not allowed, so the slot needs a hand-picked image of the 12-sided coin's obverse with no \"ONE POUND\" text. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave the value away, with a supermarket trolley hint.",
+        "reason": "No usable photo of the coin's heads side without “ONE POUND” exists, so the question no longer depends on the photo and the image is now decorative.",
         "previous": {
-          "hints": [
-            "It's gold-coloured on the outside and silver-coloured in the middle.",
-            "It's worth 100 pence.",
-            "People sometimes call it a “quid”."
-          ]
+          "question": "In 2017, this 12-sided coin replaced an old round one in the UK. How much is it worth?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "twelve-sided pound coin",
+            "note": "The heads side of the 12-sided British £1 coin, showing the monarch's head; the words “ONE POUND” must not be visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-14"
       }
     },
     {
       "id": "q-19978",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A flag with more big cats on it than a safari park.",
       "question": "This is the King's flag, the Royal Standard. One of its lions, standing on its back legs, is Scotland's. How many lions are there in total?",
@@ -1546901,13 +1546921,23 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Royal Standard flag svg",
+        "query": "Royal Standard of the United Kingdom",
         "note": "The Royal Standard as flown in England: three gold lions in the top-left and bottom-right quarters, Scotland's red lion rampant in the top-right, the Irish harp in the bottom-left.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoyal_Standard_of_the_United_Kingdom_Great_Britain_%26_Irland._Johnson%27s_new_chart_of_national_emblems%2C_1868.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Royal_Standard_of_the_United_Kingdom_Great_Britain_%26_Irland._Johnson%27s_new_chart_of_national_emblems%2C_1868.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Alvin Jewett Johnson · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Alvin Jewett Johnson",
+        "author_url": "https://en.wikipedia.org/wiki/en:Alvin_J._Johnson",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Art",
+          "PD-old"
+        ]
       },
-      "fun_fact": "The Royal Standard flies over a palace only when the King is inside.",
+      "fun_fact": "In Scotland, a different version of the Royal Standard is flown, with Scotland's lion in two of the quarters.",
       "subcategory": "crown-and-state",
       "style": null,
       "concept": "Lion Rampant of Scotland",
@@ -1546934,19 +1546964,44 @@
       "needs_media": true,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the current Royal Standard, so the essential image can't be filled, and no new search is allowed. The slot needs a clear image of the Royal Standard as flown in England (three gold lions in two quarters, Scotland's red lion, Irish harp), e.g. \"Royal Standard of the United Kingdom\". Separately, the fun fact repeats the answer of q-19916 (the flag flies only when the King is in residence), so seeing this question gives that one away. Consider a different fun fact. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the current Royal Standard, so the essential image can't be filled, and no new search is allowed. The slot needs a clear image of the Royal Standard as flown in England (three gold lions in two quarters, Scotland's red lion, Irish harp), e.g. \"Royal Standard of the United Kingdom\". Separately, the fun fact repeats the answer of q-19916 (the flag flies only when the King is in residence), so seeing this question gives that one away. Consider a different fun fact. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the search to the exact Commons title of the Royal Standard, and replaced the fun fact because it gave away q-19916.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Royal Standard flag svg",
+            "note": "The Royal Standard as flown in England: three gold lions in the top-left and bottom-right quarters, Scotland's red lion rampant in the top-right, the Irish harp in the bottom-left.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "fun_fact": "The Royal Standard flies over a palace only when the King is inside."
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19979",
@@ -1547022,7 +1547077,7 @@
     },
     {
       "id": "q-19980",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Britain has turned standing still into a sport, and this is its championship.",
       "question": "Tennis fans join the famous Queue at Wimbledon to get tickets on the day. When do many of them arrive?",
@@ -1547034,7 +1547089,7 @@
       ],
       "hints": [
         "The best tickets go to the people at the very front.",
-        "Some of them bring tents.",
+        "Fans come from all over the world to join it.",
         "They sleep there before the gates open in the morning."
       ],
       "media": {
@@ -1547080,32 +1547135,34 @@
       "needs_media": false,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Some of them bring tents.\") gives the answer away. Of the four options, only \"The night before\" would ever need a tent, so the hint solves the question one step early. Hint 2 needs replacing with something weaker, such as how long the line can get or that fans come from all over the world. The rest checks out, and candidate 1 is a good illustrative picture.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Some of them bring tents.\") gives the answer away. Of the four options, only \"The night before\" would ever need a tent, so the hint solves the question one step early. Hint 2 needs replacing with something weaker, such as how long the line can get or that fans come from all over the world. The rest checks out, and candidate 1 is a good illustrative picture.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made the question's verb neutral, softened hints 1 and 2, and swapped the wrong answer that was too close to the right one.",
+        "reason": "Replaced hint 2, because the tents gave the answer away.",
         "previous": {
-          "question": "Tennis fans camp in the famous Queue at Wimbledon to get tickets on the day. When do many of them join it?",
-          "wrong_answers": [
-            "Just after lunch",
-            "When the last match ends",
-            "One minute before the gates open"
-          ],
           "hints": [
-            "They bring tents and sleeping bags.",
-            "They want a place near the front.",
+            "The best tickets go to the people at the very front.",
+            "Some of them bring tents.",
             "They sleep there before the gates open in the morning."
           ]
         },
@@ -1549839,10 +1549896,10 @@
     },
     {
       "id": "q-20017",
-      "status": "needs_work",
-      "difficulty": 2,
-      "description": "Blue shirts, blue songs and absolutely no blue moods allowed.",
-      "question": "Chelsea FC play at Stamford Bridge, their fans sing “Blue is the Colour”, and Arsenal are local rivals. Which city are they from?",
+      "status": "approved",
+      "difficulty": 3,
+      "description": "A football club named after a weapons factory, which is much less scary than it sounds.",
+      "question": "Arsenal FC play at the Emirates Stadium, and their fans call them “the Gunners”. Which city are they from?",
       "answer": "London",
       "wrong_answers": [
         "Manchester",
@@ -1549851,26 +1549908,26 @@
       ],
       "hints": [
         "It's a very big city.",
-        "It's the capital of the UK.",
+        "It has more professional football clubs than any other city in the UK.",
         "Big Ben and Buckingham Palace are there too."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Stamford Bridge stadium",
+        "query": "Emirates Stadium",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Stamford_Bridge.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/London_Stamford_Bridge.jpg/3840px-London_Stamford_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmirates_Stadium_2016.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Emirates_Stadium_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Photo2023 · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0 de",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
-        "author": "Arne Müseler",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Arne_mueseler",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Photo2023",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Photo2023&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Chelsea's Stamford Bridge ground is actually in Fulham, not in Chelsea itself.",
+      "fun_fact": "Arsenal began in 1886 as a team of workers at the Royal Arsenal, a weapons factory in Woolwich.",
       "subcategory": "london",
       "style": null,
       "concept": "Chelsea FC",
@@ -1549897,20 +1549954,61 @@
       "needs_media": false,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This overlaps with q-9636 (London subcategory, approved). Its question text says Chelsea is a \"London district\" that gives its name to a Premier League club, so seeing either question gives away the other. Separately, hint 2 (\"It's the capital of the UK\") gives the answer away outright, and only hint 3 is allowed to come that close.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This overlaps with q-9636 (London subcategory, approved). Its question text says Chelsea is a \"London district\" that gives its name to a Premier League club, so seeing either question gives away the other. Separately, hint 2 (\"It's the capital of the UK\") gives the answer away outright, and only hint 3 is allowed to come that close.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "Switched the club to Arsenal so it no longer overlaps with q-9636's Chelsea clue, and replaced hint 2, which named the capital.",
+        "previous": {
+          "difficulty": 2,
+          "description": "Blue shirts, blue songs and absolutely no blue moods allowed.",
+          "question": "Chelsea FC play at Stamford Bridge, their fans sing “Blue is the Colour”, and Arsenal are local rivals. Which city are they from?",
+          "hints": [
+            "It's a very big city.",
+            "It's the capital of the UK.",
+            "Big Ben and Buckingham Palace are there too."
+          ],
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Stamford Bridge stadium",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Stamford_Bridge.jpg",
+            "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/London_Stamford_Bridge.jpg/3840px-London_Stamford_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 3.0 de",
+            "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+            "author": "Arne Müseler",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Arne_mueseler",
+            "restrictions": [],
+            "pd_reasons": []
+          },
+          "fun_fact": "Chelsea's Stamford Bridge ground is actually in Fulham, not in Chelsea itself."
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20018",
@@ -1552314,20 +1552412,20 @@
     },
     {
       "id": "q-20049",
-      "status": "needs_work",
-      "difficulty": 6,
+      "status": "approved",
+      "difficulty": 10,
       "description": "A rugby competition got one new member and had to buy new letterheads.",
-      "question": "In 2000, one country joined rugby's Five Nations, turning it into the Six Nations. Which country?",
-      "answer": "Italy",
+      "question": "Italy joined rugby's Five Nations, turning it into the Six Nations. In which year?",
+      "answer": "2000",
       "wrong_answers": [
-        "Argentina",
-        "Georgia",
-        "Spain"
+        "1987",
+        "1993",
+        "2006"
       ],
       "hints": [
-        "The new team came from mainland Europe.",
-        "Its home matches are played in Rome.",
-        "It's the home of pizza and pasta."
+        "Many of today's parents were already grown-ups when it happened.",
+        "It happened before England won the Rugby World Cup in 2003.",
+        "It was the year the world celebrated a brand-new millennium."
       ],
       "media": {
         "type": "image",
@@ -1552372,20 +1552470,49 @@
       "needs_media": false,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Approved question q-18619 (same subcategory) begins “Apart from Italy, which Six Nations team…”. That tells players Italy is a Six Nations team, and since none of Argentina, Georgia or Spain is, it gives this answer away. Separately, hint 2 (“Its home matches are played in Rome”) as good as names Italy. If the overlap is accepted, hint 2 should be made vaguer, for example a hint about the team's blue shirts or that it often finished bottom in its early years.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Approved question q-18619 (same subcategory) begins “Apart from Italy, which Six Nations team…”. That tells players Italy is a Six Nations team, and since none of Argentina, Georgia or Spain is, it gives this answer away. Separately, hint 2 (“Its home matches are played in Rome”) as good as names Italy. If the overlap is accepted, hint 2 should be made vaguer, for example a hint about the team's blue shirts or that it often finished bottom in its early years.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 6,
+      "revision": {
+        "action": "revise",
+        "reason": "q-18619 reveals Italy as a Six Nations team, so the question now asks for the year Italy joined, with new hints.",
+        "previous": {
+          "difficulty": 6,
+          "question": "In 2000, one country joined rugby's Five Nations, turning it into the Six Nations. Which country?",
+          "answer": "Italy",
+          "wrong_answers": [
+            "Argentina",
+            "Georgia",
+            "Spain"
+          ],
+          "hints": [
+            "The new team came from mainland Europe.",
+            "Its home matches are played in Rome.",
+            "It's the home of pizza and pasta."
+          ]
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20050",
@@ -1553227,7 +1553354,7 @@
     },
     {
       "id": "q-20061",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Woodland trivia for people who get out more than the rest of us.",
       "question": "Brits stuck on a hard question say “I'm stumped!” Cricket has three stumps at each end. And in a wood, what is a stump?",
@@ -1553239,7 +1553366,7 @@
       ],
       "hints": [
         "You might find one on a walk in the woods.",
-        "It's often what's left after someone uses an axe or a saw.",
+        "Woodpeckers and mushrooms love them.",
         "Count its rings to guess how old it was."
       ],
       "media": {
@@ -1553285,26 +1553412,34 @@
       "needs_media": false,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It's often what's left after someone uses an axe or a saw”) basically repeats the answer (“What's left of a chopped-down tree”), so hint 2 gives it away. Rewrite hint 2 so it stays vaguer, for example: “Woodpeckers and mushrooms love them.” Media is fine: candidate 1 (three cricket stumps, no tree stump in shot).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It's often what's left after someone uses an axe or a saw”) basically repeats the answer (“What's left of a chopped-down tree”), so hint 2 gives it away. Rewrite hint 2 so it stays vaguer, for example: “Woodpeckers and mushrooms love them.” Media is fine: candidate 1 (three cricket stumps, no tree stump in shot).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave the answer away, with vaguer clues that build up to the rings hint.",
+        "reason": "Replaced hint 2, which repeated the answer.",
         "previous": {
           "hints": [
-            "It's made of wood.",
-            "You could sit on one for a picnic.",
+            "You might find one on a walk in the woods.",
+            "It's often what's left after someone uses an axe or a saw.",
             "Count its rings to guess how old it was."
           ]
         },
@@ -1553569,7 +1553704,7 @@
     },
     {
       "id": "q-20065",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "The cheapest way to find out what's going on inside someone's head.",
       "question": "When someone looks lost in a daydream, Brits ask “A … for your thoughts?” Which coin is offered in this very old saying?",
@@ -1553581,7 +1553716,7 @@
       ],
       "hints": [
         "It's a coin you can still use today.",
-        "It's the British coin worth the least.",
+        "It's copper-coloured.",
         "When you have more than one, you call them “pence”."
       ],
       "media": {
@@ -1553600,7 +1553735,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "The saying is nearly 500 years old, from a time when that one small coin could buy far more than it does now.",
+      "fun_fact": "The saying is more than 500 years old, from a time when that one small coin could buy far more than it does now.",
       "subcategory": "sayings-and-idioms",
       "style": null,
       "concept": "A penny for your thoughts",
@@ -1553627,29 +1553762,38 @@
       "needs_media": false,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact says the saying is \"nearly 500 years old\". It was first recorded in 1522, so it is now just over 500 years old. Change it to \"about 500 years old\" or \"more than 500 years old\". Hint 2 (\"the British coin worth the least\") also gives the answer away, and it repeats the main clue of q-18802 almost word for word. Swap it for a vaguer hint, for example that the coin is copper-coloured.",
-        "problems": [
-          "giveaway",
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact says the saying is \"nearly 500 years old\". It was first recorded in 1522, so it is now just over 500 years old. Change it to \"about 500 years old\" or \"more than 500 years old\". Hint 2 (\"the British coin worth the least\") also gives the answer away, and it repeats the main clue of q-18802 almost word for word. Swap it for a vaguer hint, for example that the coin is copper-coloured.",
+          "problems": [
+            "giveaway",
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Fixed the false 'smallest coin' hint and replaced hint 3 so it no longer copies another question's clue.",
+        "reason": "Fixed the saying's age to “more than 500 years”, and replaced hint 2, which gave the answer away and repeated q-18802.",
         "previous": {
           "hints": [
             "It's a coin you can still use today.",
-            "It's the smallest coin Britain has.",
-            "A hundred of them make a pound."
-          ]
+            "It's the British coin worth the least.",
+            "When you have more than one, you call them “pence”."
+          ],
+          "fun_fact": "The saying is nearly 500 years old, from a time when that one small coin could buy far more than it does now."
         },
         "revised_on": "2026-11-14"
       }
@@ -1554791,10 +1554935,10 @@
     },
     {
       "id": "q-20081",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "London, drawn as a giant dartboard with Big Ben near the bullseye.",
-      "question": "London's transport map splits the city into numbered rings like these. What are they for?",
+      "question": "London's transport map splits the city into numbered rings called zones. What are they for?",
       "answer": "Working out your ticket price",
       "wrong_answers": [
         "Showing the speed limits",
@@ -1554808,12 +1554952,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "London Travelcard zones map",
-        "note": "A map of London's transport fare zones showing the numbered rings around central London; no prices visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "London Underground platform",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Underground_platforms_at_Whitechapel_station%2C_August_2021_01.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/London_Underground_platforms_at_Whitechapel_station%2C_August_2021_01.jpg/3840px-London_Underground_platforms_at_Whitechapel_station%2C_August_2021_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "TheFrog001 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "TheFrog001",
+        "author_url": "https://commons.wikimedia.org/wiki/User:TheFrog001",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Some London stations sit right on the border between two zones, so they count as being in both.",
       "subcategory": "transport",
@@ -1554839,26 +1554990,52 @@
         "notes": "Knowing that zones set fares is more an older-child or adult thing than a 9-year-old's, so difficulty 3 is low. Zone maps exist on Commons, but some may show prices or text."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question says \"numbered rings like these\", so the image is essential and must show a London fare-zone map, but none of the candidates does. No new search is possible. Search Commons for something like \"London fare zones map\" or \"Tube zone map\" and check that no prices are shown. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question says \"numbered rings like these\", so the image is essential and must show a London fare-zone map, but none of the candidates does. No new search is possible. Search Commons for something like \"London fare zones map\" or \"Tube zone map\" and check that no prices are shown. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "There is no usable fare-zone map, so the question now names the zones in words and gets an illustrative Tube image.",
+        "previous": {
+          "question": "London's transport map splits the city into numbered rings like these. What are they for?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "London Travelcard zones map",
+            "note": "A map of London's transport fare zones showing the numbered rings around central London; no prices visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20082",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "The box in the corner of the living room had to start somewhere, and it wasn't on catch-up.",
       "question": "Scottish inventor John Logie Baird showed off the first working television in London. When was that?",
@@ -1554876,20 +1555053,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "John Logie Baird television",
+        "query": "Baird televisor museum",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AJohn_Logie_Baird_and_Stooky_Bill.png",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/John_Logie_Baird_and_Stooky_Bill.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Orrin Dunlap, Jr. · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A092_MNACTEC_%28Terrassa%29%2C_exposici%C3%B3_En%C3%A9rgeia%2C_r%C3%A0dio_J._Frutos_i_televisor_LMT.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/092_MNACTEC_%28Terrassa%29%2C_exposici%C3%B3_En%C3%A9rgeia%2C_r%C3%A0dio_J._Frutos_i_televisor_LMT.jpg/3840px-092_MNACTEC_%28Terrassa%29%2C_exposici%C3%B3_En%C3%A9rgeia%2C_r%C3%A0dio_J._Frutos_i_televisor_LMT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Enric · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Orrin Dunlap, Jr.",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Enric",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Enric",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The first face Baird ever showed on his television belonged to a ventriloquist's dummy called Stooky Bill.",
       "subcategory": "twentieth-century",
@@ -1554915,31 +1555090,53 @@
         "notes": "The Soho demonstration was in January 1926, so 'about 100 years ago' holds. The 10- and 1,000-year options are easy to rule out. Hint 2 ('1920s') almost gives the answer away by itself. The image search may find captioned pictures with a date on them."
       },
       "fact_checked": true,
-      "needs_media": false,
+      "needs_media": true,
       "batch": "batch-71",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which gave away the decade, with a hint that doesn't mention a date.",
+        "reason": "Changed the media search, because the old picture was public domain only in the US.",
         "previous": {
-          "hints": [
-            "Your grandparents watched television when they were children.",
-            "It happened in the 1920s, before the Second World War.",
-            "Your great-great-grandparents might have read about it in the newspaper."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "John Logie Baird television",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AJohn_Logie_Baird_and_Stooky_Bill.png",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/John_Logie_Baird_and_Stooky_Bill.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Orrin Dunlap, Jr. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Orrin Dunlap, Jr.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US-expired"
+            ]
+          },
+          "needs_media": false
         },
         "revised_on": "2026-11-14"
       }
