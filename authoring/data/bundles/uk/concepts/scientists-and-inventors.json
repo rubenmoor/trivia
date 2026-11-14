@@ -718,7 +718,8 @@
     {
       "name": "Cash machine",
       "facet": "Clever inventions at home",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The pool already has the easy fact (you get cash from it). Any other kid-level riddle would just ask the same thing the other way round, and the nature lens doesn't fit."
     },
     {
       "name": "Toothbrush",

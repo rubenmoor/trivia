@@ -635,7 +635,8 @@
     {
       "name": "Contactless payment",
       "facet": "Paying, saving and pocket money",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The contactless wave symbol and what it's for are already asked; naming the payment from the same symbol would be the same fact."
     },
     {
       "name": "Cheque",
@@ -665,7 +666,8 @@
     {
       "name": "Tooth fairy",
       "facet": "Paying, saving and pocket money",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: The coin under the pillow is already asked; 'made of' and 'place' options don't suit the tooth fairy."
     },
     {
       "name": "Direct debit",

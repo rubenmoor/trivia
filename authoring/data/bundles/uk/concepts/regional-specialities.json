@@ -124,7 +124,8 @@
     {
       "name": "Monmouth pudding",
       "facet": "Welsh food and bakes",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Monmouth pudding needs a detail photo that is unlikely to exist, or a forced completion/pop-culture angle."
     },
     {
       "name": "Anglesey eggs",
@@ -402,7 +403,8 @@
     {
       "name": "Aylesbury duck",
       "facet": "London and South East favourites",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool's analogy question already links Aylesbury and the duck, so asking where it comes from repeats it."
     },
     {
       "name": "Bedfordshire clanger",
@@ -764,7 +766,8 @@
     {
       "name": "First-footing",
       "facet": "Food festivals and customs",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already asks when the first-footer arrives and what he brings (coal, salt, bread)."
     },
     {
       "name": "Hot cross buns",

@@ -196,7 +196,8 @@
     {
       "name": "Geordie Shore",
       "facet": "Geordie and the North East",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Geordie Shore is an adult reality show, not family-friendly."
     },
     {
       "name": "Pitmatic",
@@ -457,7 +458,8 @@
     {
       "name": "Now in a minute",
       "facet": "Welsh English and Wenglish",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already asks what “now in a minute” means, and a Wales answer is already used for the Bore da slot."
     },
     {
       "name": "Butt",
@@ -687,7 +689,8 @@
     {
       "name": "Daps",
       "facet": "Regional words for everyday things",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already has a question saying the Welsh call PE shoes “daps”; the odd-one-out options would just ask that again."
     },
     {
       "name": "Sannies",
