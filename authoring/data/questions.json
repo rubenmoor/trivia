@@ -1507006,10 +1507006,10 @@
     },
     {
       "id": "q-19463",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Four guards who haven't had a single tea break since Victorian times.",
-      "question": "This giant bronze paw belongs to one of the four huge animals guarding Nelson's Column in Trafalgar Square. Which animal?",
+      "question": "Four huge bronze animals guard the bottom of Nelson's Column in Trafalgar Square. Which animal are they?",
       "answer": "Lions",
       "wrong_answers": [
         "Bears",
@@ -1507023,12 +1507023,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Landseer lion paw bronze",
-        "note": "Close-up of the bronze paw of one of the Trafalgar Square lions, without the head or mane visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "Trafalgar Square fountain",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFountain_in_Trafalgar_Square_1.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Fountain_in_Trafalgar_Square_1.jpg/3840px-Fountain_in_Trafalgar_Square_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Photograph by Mike Peel (www.mikepeel.net). · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Photograph by Mike Peel (www.mikepeel.net).",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mike_Peel",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "They were designed by Sir Edwin Landseer, a painter famous for his animal pictures, and put in place in 1867.",
       "subcategory": "art-and-architecture",
@@ -1507054,31 +1507061,45 @@
         "notes": "Clean question. A close-up photo of the paw is likely to exist."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows the paw of a Trafalgar Square lion, and no new search is allowed. Candidates 1 and 2 show the whole lion, head and mane included, which gives the answer away. Candidates 3–6 are other bronze lion paws or lion statues. The slot needs a close-up of one Landseer lion's paw, for example from the search \"Trafalgar Square lion paw\". Or the question could be reworded so it doesn't point at a paw in the picture. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows the paw of a Trafalgar Square lion, and no new search is allowed. Candidates 1 and 2 show the whole lion, head and mane included, which gives the answer away. Candidates 3–6 are other bronze lion paws or lion statues. The slot needs a close-up of one Landseer lion's paw, for example from the search \"Trafalgar Square lion paw\". Or the question could be reworded so it doesn't point at a paw in the picture. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which pointed straight at lions, with vaguer clues.",
+        "reason": "No paw close-up exists, so I reworded the question so it doesn't point at a picture and made the image a blurred decorative view of the square's fountains.",
         "previous": {
-          "hints": [
-            "Three of them appear on England football shirts.",
-            "It's called the king of the jungle.",
-            "The males have a big shaggy mane."
-          ]
+          "question": "This giant bronze paw belongs to one of the four huge animals guarding Nelson's Column in Trafalgar Square. Which animal?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Landseer lion paw bronze",
+            "note": "Close-up of the bronze paw of one of the Trafalgar Square lions, without the head or mane visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
         },
         "revised_on": "2026-11-14"
       }
@@ -1507239,7 +1507260,7 @@
     },
     {
       "id": "q-19466",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "A copycat who wasn't actually a cat.",
       "question": "I was born near Edinburgh in 1996, I was the first mammal cloned from an adult cell, and now I stand stuffed in the National Museum of Scotland. What animal am I?",
@@ -1507251,7 +1507272,7 @@
       ],
       "hints": [
         "I lived on grass and hay.",
-        "People sometimes count my kind when they can't fall asleep.",
+        "I was born at a research centre called the Roslin Institute.",
         "My coat could be sheared to make wool."
       ],
       "media": {
@@ -1507297,26 +1507318,34 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"People sometimes count my kind when they can't fall asleep\") gives the answer away: counting sheep is a saying everyone knows and points only to the sheep. Only hint 3 may come that close. Replace hint 2 with something vaguer that cows, pigs and goats could also fit, for example that the animal lived on a farm research site or was part of a flock. The facts check out (Roslin, 1996, first mammal cloned from an adult cell, now in the National Museum of Scotland, named after Dolly Parton), and media candidate 1 works.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"People sometimes count my kind when they can't fall asleep\") gives the answer away: counting sheep is a saying everyone knows and points only to the sheep. Only hint 3 may come that close. Replace hint 2 with something vaguer that cows, pigs and goats could also fit, for example that the animal lived on a farm research site or was part of a flock. The facts check out (Roslin, 1996, first mammal cloned from an adult cell, now in the National Museum of Scotland, named after Dolly Parton), and media candidate 1 works.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which named Dolly, with a medium clue that doesn't name her.",
+        "reason": "Replaced hint 2, which gave the answer away with the counting-sheep saying, with a vaguer hint about the Roslin Institute.",
         "previous": {
           "hints": [
             "I lived on grass and hay.",
-            "My name was Dolly.",
+            "People sometimes count my kind when they can't fall asleep.",
             "My coat could be sheared to make wool."
           ]
         },
@@ -1508242,7 +1508271,7 @@
     },
     {
       "id": "q-19479",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A sweet that's famous for what's missing.",
       "question": "You're at a newsagent's and ask for “the mint with the hole”. What do you get?",
@@ -1508255,7 +1508284,7 @@
       "hints": [
         "It's a small white ring-shaped mint.",
         "It was first made by a famous chocolate company in York.",
-        "It's sold in a long paper tube with a green and blue wrapper."
+        "Each mint has its brand name pressed into it, and they come in a long paper tube."
       ],
       "media": {
         "type": "image",
@@ -1508296,33 +1508325,40 @@
         "difficulty_estimate": 4,
         "notes": "The description's “famous for what's missing” just repeats the hole from the question rather than adding a joke. Hint 2 (the horse sport) gives the answer away, which is allowed for hint 2 but very strong. The slogan is better known by adults than by young kids."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 says the Polo wrapper is green and blue. The fact check says the classic wrapper is blue and white with a red logo, and green only appears on the spearmint version. I can't confirm either version, so hint 3 should drop the wrapper colours. One idea is to describe only the long paper tube. Another is to say each mint has the brand name pressed into it. The rest checks out: Rowntree's of York, launched in 1948, now made by Nestlé. Hint 2 now names York, so the rater's note about a \"horse sport\" hint is out of date. Fact check: wrong. Hint 3 is wrong. The classic Polo wrapper is blue and white with a red logo, not green and blue. Green is only used on the spearmint variant. The rest checks out.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 says the Polo wrapper is green and blue. The fact check says the classic wrapper is blue and white with a red logo, and green only appears on the spearmint version. I can't confirm either version, so hint 3 should drop the wrapper colours. One idea is to describe only the long paper tube. Another is to say each mint has the brand name pressed into it. The rest checks out: Rowntree's of York, launched in 1948, now made by Nestlé. Hint 2 now names York, so the rater's note about a \"horse sport\" hint is out of date. Fact check: wrong. Hint 3 is wrong. The classic Polo wrapper is blue and white with a red logo, not green and blue. Green is only used on the spearmint variant. The rest checks out.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the horse-sport hint, which gave the answer away, with the York clue, and changed the fun fact so it doesn't repeat that hint.",
+        "reason": "Hint 3 got the wrapper colours wrong, so it now uses the brand name pressed into each mint, which can be checked.",
         "previous": {
           "hints": [
             "It's a small white ring-shaped mint.",
-            "Its name is also a sport played on horses.",
+            "It was first made by a famous chocolate company in York.",
             "It's sold in a long paper tube with a green and blue wrapper."
-          ],
-          "fun_fact": "Polo mints were launched in Britain in 1948 by Rowntree's of York."
+          ]
         },
         "revised_on": "2026-11-14"
       }
@@ -1508633,19 +1508669,19 @@
     {
       "id": "q-19484",
       "status": "needs_work",
-      "difficulty": 2,
-      "description": "London's loudest alarm clock, and nobody is allowed to press snooze.",
-      "question": "You're standing next to Big Ben at midday as the great bell strikes the hour. How many bongs do you hear?",
-      "answer": "12",
+      "difficulty": 6,
+      "description": "A famous Londoner who has gone by a nickname for over 150 years.",
+      "question": "Strictly speaking, what is the name “Big Ben” given to?",
+      "answer": "The great bell",
       "wrong_answers": [
-        "1",
-        "6",
-        "24"
+        "The clock tower",
+        "The clock's minute hand",
+        "The clock's pendulum"
       ],
       "hints": [
-        "The bell rings once for each hour.",
-        "Look at the biggest number on a clock face.",
-        "It's a dozen."
+        "You can hear it far more often than you can see it.",
+        "It was cast in 1858 at a foundry in Whitechapel.",
+        "It bongs every hour."
       ],
       "media": {
         "type": "image",
@@ -1508663,7 +1508699,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Big Ben is really the nickname of the giant bell inside the tower; the tower itself has been called the Elizabeth Tower since 2012.",
+      "fun_fact": "Big Ben weighs about 13.7 tonnes, roughly as much as two big elephants.",
       "subcategory": "cities-and-towns",
       "style": null,
       "concept": "Big Ben",
@@ -1508691,18 +1508727,51 @@
       "batch": "batch-68",
       "review": {
         "decision": "needs_work",
-        "feedback": "This asks the same thing as approved q-5648: a clock bell strikes once per hour, so how many strikes at 12 o'clock? The answer is 12 in both. Hint 1 here even repeats q-5648's rule word for word, so seeing one question gives away the other. Big Ben needs a different question, for example about the bell's name or the tower's 2012 renaming.",
+        "feedback": "This repeats approved question q-9639 (\"What is Big Ben, strictly speaking?\" → The great bell). It's the same fact with the same answer, so one of the two should be dropped.",
         "problems": [
           "overlap"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same thing as approved q-5648: a clock bell strikes once per hour, so how many strikes at 12 o'clock? The answer is 12 in both. Hint 1 here even repeats q-5648's rule word for word, so seeing one question gives away the other. Big Ben needs a different question, for example about the bell's name or the tower's 2012 renaming.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 2,
+      "revision": {
+        "action": "revise",
+        "reason": "This repeated q-5648, so I replaced it with a different Big Ben question: what the name Big Ben really belongs to.",
+        "previous": {
+          "difficulty": 2,
+          "description": "London's loudest alarm clock, and nobody is allowed to press snooze.",
+          "question": "You're standing next to Big Ben at midday as the great bell strikes the hour. How many bongs do you hear?",
+          "answer": "12",
+          "wrong_answers": [
+            "1",
+            "6",
+            "24"
+          ],
+          "hints": [
+            "The bell rings once for each hour.",
+            "Look at the biggest number on a clock face.",
+            "It's a dozen."
+          ],
+          "fun_fact": "Big Ben is really the nickname of the giant bell inside the tower; the tower itself has been called the Elizabeth Tower since 2012."
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19485",
@@ -1509565,7 +1509634,7 @@
     },
     {
       "id": "q-19496",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "A shiny trophy that's been held up by more sweaty, happy hands than anyone can count.",
       "question": "You're watching the winning captain lift the FA Cup at Wembley. How many handles does the trophy have?",
@@ -1509577,7 +1509646,7 @@
       ],
       "hints": [
         "Many famous trophies share the same classic cup design.",
-        "Its nickname is “the old tin pot”.",
+        "Its two sides match, like a mirror image.",
         "Picture a big silver cup: left handle, right handle."
       ],
       "media": {
@@ -1509619,30 +1509688,38 @@
         "difficulty_estimate": 2,
         "notes": "Most cups have two handles, so players can guess it without knowing anything about football. Little payoff, and the numbers as options are weak. The fun fact repeats q-3463, but the question itself is a different fact."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 says the FA Cup's nickname is “the old tin pot”, and neither the fact check nor I can confirm it. The documented nickname is “the little tin idol”, and it belonged to the original 1871 trophy. Replace hint 2 with a hint that can be checked (or one that is plainly true, about the trophy's shape) or remove it. Fact check: uncertain. The answer (2 handles) is right, and the 1871–72 fun fact is true. But the hint saying the nickname is “the old tin pot” could not be verified. The documented nickname is “little tin idol”, and that was for the original 1871 trophy.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 says the FA Cup's nickname is “the old tin pot”, and neither the fact check nor I can confirm it. The documented nickname is “the little tin idol”, and it belonged to the original 1871 trophy. Replace hint 2 with a hint that can be checked (or one that is plainly true, about the trophy's shape) or remove it. Fact check: uncertain. The answer (2 handles) is right, and the 1871–72 fun fact is true. But the hint saying the nickname is “the old tin pot” could not be verified. The documented nickname is “little tin idol”, and that was for the original 1871 trophy.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2 because they settled the handle count; hint 3 is unchanged.",
+        "reason": "Replaced hint 2's unconfirmed “old tin pot” nickname with a plainly true hint about the trophy's shape.",
         "previous": {
           "hints": [
-            "The captain usually holds it with both hands.",
-            "There's one handle on each side.",
+            "Many famous trophies share the same classic cup design.",
+            "Its nickname is “the old tin pot”.",
             "Picture a big silver cup: left handle, right handle."
           ]
         },
@@ -1512320,10 +1512397,10 @@
     },
     {
       "id": "q-19532",
-      "status": "needs_work",
-      "difficulty": 1,
-      "description": "The scariest thing to see coming up the beach in the year 800.",
-      "question": "Raiders reaching Britain's coasts over 1,000 years ago sailed behind a carved head like this one. What was it fixed to?",
+      "status": "approved",
+      "difficulty": 2,
+      "description": "A wooden face with a very grumpy expression and a very long journey.",
+      "question": "Viking raiders came to Britain over 1,000 years ago with a carved head like this one at the front. What was it fixed to?",
       "answer": "A ship",
       "wrong_answers": [
         "A wagon",
@@ -1512340,14 +1512417,14 @@
         "role": "essential",
         "query": "Viking ship dragon head prow",
         "note": "Close-up of a carved dragon or animal head from the front of a Viking ship (a replica is fine); the rest of the ship should not be clearly visible.",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADragon%27s_head_on_Hugin%2C_Cliffsend.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Dragon%27s_head_on_Hugin%2C_Cliffsend.jpg/3840px-Dragon%27s_head_on_Hugin%2C_Cliffsend.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Nilfanion · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADraken_Harald_Harfagre_Viking_Ship_visiting_the_Michigan_Maritime_Museum%2C_South_Haven%2C_Michigan_01.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Draken_Harald_Harfagre_Viking_Ship_visiting_the_Michigan_Maritime_Museum%2C_South_Haven%2C_Michigan_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Stephanie A. Terry · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Nilfanion",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Nilfanion",
+        "author": "Stephanie A. Terry",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ranacrux&action=edit&redlink=1",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1512378,31 +1512455,38 @@
       "needs_media": true,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text answers itself: the raiders \"sailed behind\" the carved head, and of the four options only a ship can sail. The description (\"coming up the beach\") points to a ship as well. Reword so the clue comes from the carved head and the raiders, not from a verb like \"sailed\" (for example \"Viking raiders came to Britain behind a carved head like this one. What was it fixed to?\"), and change the description so it doesn't suggest something arriving from the sea.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text answers itself: the raiders \"sailed behind\" the carved head, and of the four options only a ship can sail. The description (\"coming up the beach\") points to a ship as well. Reword so the clue comes from the carved head and the raiders, not from a verb like \"sailed\" (for example \"Viking raiders came to Britain behind a carved head like this one. What was it fixed to?\"), and change the description so it doesn't suggest something arriving from the sea.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so each one no longer leaves only the answer standing.",
+        "reason": "Took out the verb “sailed” and the beach wording in the description, since both gave the ship away; raised the difficulty slightly to match.",
         "previous": {
-          "hints": [
-            "It went on water.",
-            "Its crew used oars and a big square sail.",
-            "The Vikings sailed in it."
-          ]
+          "difficulty": 1,
+          "description": "The scariest thing to see coming up the beach in the year 800.",
+          "question": "Raiders reaching Britain's coasts over 1,000 years ago sailed behind a carved head like this one. What was it fixed to?"
         },
         "revised_on": "2026-11-14"
-      }
+      },
+      "difficulty_original": 1
     },
     {
       "id": "q-19533",
@@ -1513280,10 +1513364,10 @@
     },
     {
       "id": "q-19544",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A bestseller from 1789 that changed far more than people's bookshelves.",
-      "question": "This man was enslaved as a boy, bought his own freedom and in 1789 wrote a bestselling book that helped the fight to end the British slave trade. Who is he?",
+      "question": "Who was enslaved as a boy, bought his own freedom and in 1789 wrote a bestselling book that helped the fight to end the British slave trade?",
       "answer": "Olaudah Equiano",
       "wrong_answers": [
         "Ignatius Sancho",
@@ -1513297,12 +1513381,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Olaudah Equiano portrait cropped",
-        "note": "The 1789 frontispiece portrait of Olaudah Equiano, cropped so his name and the book title are not visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Wedgwood anti-slavery medallion",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWedgwood_-_Anti-Slavery_Medallion_-_Walters_482597.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Wedgwood_-_Anti-Slavery_Medallion_-_Walters_482597.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Josiah Wedgwood / Josiah Wedgwood · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Josiah Wedgwood / Josiah Wedgwood",
+        "author_url": "https://en.wikipedia.org/wiki/en:Josiah_Wedgwood",
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-100"
+        ]
       },
       "fun_fact": "Equiano travelled around Britain giving talks about his book, making it one of the first bestsellers by a Black author in Britain.",
       "subcategory": "pioneers-and-heroes",
@@ -1513328,22 +1513421,48 @@
         "notes": "The frontispiece portrait is on Commons but has to be cropped to hide the caption, which is a risk. A serious and worthwhile topic, but it reads like a school question. Better rated around 12."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No usable image. Candidate 1 is the right 1789 frontispiece, but its engraved caption reads \"Olaudah Equiano or Gustavus Vassa\", which names the answer. Candidates 2 and 3 are \"Portrait of a Man in a Red Suit\", which was once said to show Equiano but is now doubted, so it does not show the frontispiece the note asks for. Either crop the caption off candidate 1 by hand, or make the slot an illustrative image without the answer (for example a page from an 18th-century book or an abolitionist medallion). The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No usable image. Candidate 1 is the right 1789 frontispiece, but its engraved caption reads \"Olaudah Equiano or Gustavus Vassa\", which names the answer. Candidates 2 and 3 are \"Portrait of a Man in a Red Suit\", which was once said to show Equiano but is now doubted, so it does not show the frontispiece the note asks for. Either crop the caption off candidate 1 by hand, or make the slot an illustrative image without the answer (for example a page from an 18th-century book or an abolitionist medallion). The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The portrait's caption names him, so I made it a text question with an illustrative abolitionist medallion image.",
+        "previous": {
+          "question": "This man was enslaved as a boy, bought his own freedom and in 1789 wrote a bestselling book that helped the fight to end the British slave trade. Who is he?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Olaudah Equiano portrait cropped",
+            "note": "The 1789 frontispiece portrait of Olaudah Equiano, cropped so his name and the book title are not visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19545",
@@ -1514116,7 +1514235,7 @@
     },
     {
       "id": "q-19555",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Bread that gets quartered and then fried, which seems a bit much.",
       "question": "In Northern Ireland, soda farls are fried golden in an Ulster fry. At which meal is an Ulster fry usually eaten?",
@@ -1514134,11 +1514253,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "soda farls griddle",
+        "query": "Belfast City Hall",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABelfast_City_Hall_007.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Belfast_City_Hall_007.jpg/3840px-Belfast_City_Hall_007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Simon Burchell · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Simon Burchell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Simon_Burchell",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "“Farl” comes from an old Scots word meaning “fourth part”, because the round of dough is cut into four quarters.",
       "subcategory": "regional-specialities",
@@ -1514167,28 +1514293,40 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text is fine, but none of the image candidates shows soda farls or an Ulster fry. They are all old scans: a school catalogue, US diner menus and a 1915 cookbook drawing of toast and griddle-cakes. A new search isn't allowed. Try a search like \"Ulster fry plate\" or \"soda farl bread\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine, but none of the image candidates shows soda farls or an Ulster fry. They are all old scans: a school catalogue, US diner menus and a 1915 cookbook drawing of toast and griddle-cakes. A new search isn't allowed. Try a search like \"Ulster fry plate\" or \"soda farl bread\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2 because comparing it to a full English gave away breakfast.",
+        "reason": "No farl image was found, so the illustrative image now uses a Northern Ireland landmark that doesn't show any meal.",
         "previous": {
-          "hints": [
-            "It's often served with eggs, bacon and sausages.",
-            "It's like the Northern Irish version of a full English.",
-            "You'd eat it first thing in the morning."
-          ]
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "soda farls griddle",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-14"
       }
@@ -1514423,7 +1514561,7 @@
     },
     {
       "id": "q-19559",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A word borrowed from a beehive and given a Mancunian accent.",
       "question": "Complete the meaning: if someone in Manchester says “I'm buzzin'!”, they're feeling really…",
@@ -1514434,7 +1514572,7 @@
         "Hungry and grumpy"
       ],
       "hints": [
-        "It's a good feeling, not a bad one.",
+        "This bit of slang first took off in the north-west of England.",
         "Think of all that energy in a busy bee.",
         "You'd say it after your team scores a last-minute winner."
       ],
@@ -1514481,35 +1514619,36 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“It's a good feeling, not a bad one.”) gives the answer away: all three wrong answers (tired and sleepy, cold and shivery, hungry and grumpy) are bad feelings, so the hint leaves only “Happy and excited”. Replace hint 1 with a vague hint that doesn't sort the options into good and bad feelings, for example one about where the slang comes from.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“It's a good feeling, not a bad one.”) gives the answer away: all three wrong answers (tired and sleepy, cold and shivery, hungry and grumpy) are bad feelings, so the hint leaves only “Happy and excited”. Replace hint 1 with a vague hint that doesn't sort the options into good and bad feelings, for example one about where the slang comes from.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Moved the setting to Manchester, where the slang is sourced, and updated the description, fun fact and image search to match.",
+        "reason": "Replaced hint 1, which sorted the options into good and bad feelings, with a vague hint about where the slang comes from.",
         "previous": {
-          "description": "A word borrowed from a beehive and given a Scouse accent.",
-          "question": "Complete the meaning: if someone in Liverpool says “I'm buzzin'!”, they're feeling really…",
-          "media": {
-            "type": "image",
-            "role": "illustrative",
-            "query": "Liverpool waterfront",
-            "note": null,
-            "source_url": null,
-            "file_url": null,
-            "credit": null
-          },
-          "fun_fact": "“Buzzin'” started out in the North West but is now heard all over Britain."
+          "hints": [
+            "It's a good feeling, not a bad one.",
+            "Think of all that energy in a busy bee.",
+            "You'd say it after your team scores a last-minute winner."
+          ]
         },
         "revised_on": "2026-11-14"
       }
@@ -1515164,7 +1515303,7 @@
     },
     {
       "id": "q-19569",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "The biscuit wearing more colours than a clown’s wardrobe.",
       "question": "These round biscuits have a hole in the middle and bright icing with feathery stripes. What are they called?",
@@ -1515182,20 +1515321,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "children's birthday party table",
+        "query": "birthday party balloons",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAgnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Agnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABirthday_party_decoration.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Birthday_party_decoration.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Abinayasekar357 · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": null,
-        "author_url": null,
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Abinayasekar357",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abinayasekar357&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The feathered pattern is made by dragging a line through two colours of wet icing.",
       "subcategory": "cakes-puddings-and-biscuits",
@@ -1515224,26 +1515361,59 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picture's licence was unsuitable, so the decorative image gets a new search term.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "children's birthday party table",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AAgnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Agnes%27_Birthday_Party_-_DPLA_-_f3efac94ccd4f080eb93ee3ab882ac96.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": null,
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19570",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "A bun so stuffed it can barely keep its mouth shut.",
-      "question": "Look at this cream bun from a British bakery. What is the red layer next to the cream usually made of?",
+      "question": "In a British bakery cream bun, what is the red layer next to the whipped cream usually made of?",
       "answer": "Jam",
       "wrong_answers": [
         "Red jelly",
@@ -1515257,12 +1515427,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Devonshire split jam cream",
-        "note": "A clear photo of a split cream bun filled with whipped cream and a red jam layer; no labels.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "bakery shop window",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWindow_display%2C_Baltzersen_Bakery%2C_High_Street%2C_Wetherby_%2826th_May_2022%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Window_display%2C_Baltzersen_Bakery%2C_High_Street%2C_Wetherby_%2826th_May_2022%29.jpg/3840px-Window_display%2C_Baltzersen_Bakery%2C_High_Street%2C_Wetherby_%2826th_May_2022%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Mtaylor848 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mtaylor848",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mtaylor848",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "In Devon and Cornwall, a soft bread roll split and filled with jam and cream is called a Devonshire or Cornish split.",
       "subcategory": "cakes-puddings-and-biscuits",
@@ -1515288,22 +1515465,48 @@
         "notes": "Fine. A clear photo of a cream bun is easy to find."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a split cream bun with a red jam layer, and the question depends on that photo (\"Look at this cream bun\"). No new search is allowed. Before re-sourcing, the slot needs a clear photo of a jam-and-cream bun (try \"cream bun jam\" or \"Cornish split\"). No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a split cream bun with a red jam layer, and the question depends on that photo (\"Look at this cream bun\"). No new search is allowed. Before re-sourcing, the slot needs a clear photo of a jam-and-cream bun (try \"cream bun jam\" or \"Cornish split\"). No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No suitable essential photo exists, so the question no longer needs one and gets a decorative bakery image.",
+        "previous": {
+          "question": "Look at this cream bun from a British bakery. What is the red layer next to the cream usually made of?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Devonshire split jam cream",
+            "note": "A clear photo of a split cream bun filled with whipped cream and a red jam layer; no labels.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19571",
@@ -1515594,14 +1515797,24 @@
       "batch": "batch-68",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: wrong. Hint 2 says Cumberbatch played an 'eager but hapless captain'. He played Martin Crieff, the first officer (who longs to be captain). The captain is Douglas Richardson (Roger Allam).",
+        "feedback": "Fact check: wrong. Hint 2 is false: Cumberbatch played Martin Crieff, the First Officer, not the captain (the captain is Douglas, played by Roger Allam). Martin only dreams of becoming captain.",
         "problems": [
           "fact"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. Hint 2 says Cumberbatch played an 'eager but hapless captain'. He played Martin Crieff, the first officer (who longs to be captain). The captain is Douglas Richardson (Roger Allam).",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
@@ -1517849,7 +1518062,7 @@
     },
     {
       "id": "q-19605",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A man who loved animals so much he gave them their own island holiday home.",
       "question": "Naturalist Gerald Durrell opened this zoo on the island of Jersey in 1959. What was its main purpose?",
@@ -1517860,7 +1518073,7 @@
         "To train animals for films"
       ],
       "hints": [
-        "Durrell worried that some animals were vanishing forever.",
+        "As a boy, Durrell collected creatures on the Greek island of Corfu.",
         "The zoo's logo is a dodo.",
         "Its animals are bred so their numbers in the wild can grow again."
       ],
@@ -1517907,19 +1518120,39 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"Durrell worried that some animals were vanishing forever\") is just the answer reworded, so it gives the answer away at the first hint. Hint 2 (the dodo logo) points the same way. Hint 1 should become vague, for example about Durrell's childhood on Corfu or his animal-collecting trips. Hint 2 can then carry the dodo clue, and hint 3 can stay close to the answer.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"Durrell worried that some animals were vanishing forever\") is just the answer reworded, so it gives the answer away at the first hint. Hint 2 (the dodo logo) points the same way. Hint 1 should become vague, for example about Durrell's childhood on Corfu or his animal-collecting trips. Hint 2 can then carry the dodo clue, and hint 3 can stay close to the answer.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 1 restated the answer, so it now gives a vague fact about Durrell's childhood on Corfu; hints 2 and 3 stay.",
+        "previous": {
+          "hints": [
+            "Durrell worried that some animals were vanishing forever.",
+            "The zoo's logo is a dodo.",
+            "Its animals are bred so their numbers in the wild can grow again."
+          ]
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19606",
@@ -1518463,10 +1518696,10 @@
     },
     {
       "id": "q-19613",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "A courtroom drama where everyone dresses up and nobody gets told off for it.",
-      "question": "Senior barristers who wear a gown like this are said to “take silk”. Which former barrister created the BBC legal drama Silk?",
+      "question": "Senior barristers who become QCs are said to “take silk”. Which former barrister created the BBC legal drama Silk?",
       "answer": "Peter Moffat",
       "wrong_answers": [
         "Jed Mercurio",
@@ -1518481,11 +1518714,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Queen's Counsel court dress",
+        "query": "Royal Courts of Justice London",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoyal_Courts_of_Justice_2019.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Royal_Courts_of_Justice_2019.jpg/3840px-Royal_Courts_of_Justice_2019.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "This image was produced by me, David Castor (user:dcastor). The pictures I submit to the Wikipedia Project are released to the public domain. This gives you the right to use them in any way you like, without any kind of notification. This said, I would still appreciate to be mentioned as the originator whenever you think it complies well with your use of the picture. A message to me  about how it has been used would also be welcome. You are obviously not required to respond to these wishes of mine, just in a friendly manner encouraged to. (All my photos are placed in Category:Images by David Castor or a subcategory thereof.)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dcastor",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Silk starred Maxine Peake as Martha Costello, a barrister fighting to become a QC.",
       "subcategory": "soaps-and-dramas",
@@ -1518511,22 +1518751,48 @@
         "notes": "Accurate, with well-chosen distractors (Mercurio, Abbott, McGovern). It's a dry pure-recall question about a screenwriter; the 'take silk' angle adds only a little interest."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates shows a QC's silk gown, and the question says \"a gown like this\", so it needs one. No new search is allowed. Media only: the text, facts and options are fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates shows a QC's silk gown, and the question says \"a gown like this\", so it needs one. No new search is allowed. Media only: the text, facts and options are fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of a silk gown was found, so the question no longer points to one and the image becomes an illustrative courts building.",
+        "previous": {
+          "question": "Senior barristers who wear a gown like this are said to “take silk”. Which former barrister created the BBC legal drama Silk?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Queen's Counsel court dress",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19614",
@@ -1519375,7 +1519641,7 @@
     },
     {
       "id": "q-19625",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Kicking someone in the head is usually frowned upon, unless there's a gold medal in it.",
       "question": "I'm from Flint in north Wales. People call me “the Headhunter” for my kicks, and I won taekwondo gold at London 2012 and Rio 2016. Who am I?",
@@ -1519393,21 +1519659,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "taekwondo match kick",
+        "query": "taekwondo competition",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ASajad_Sohrabzada%2C_left%2C_and_Ahmad_Walid%2C_practice_their_moves_with_a_sparring_match_during_a_demonstration_with_the_Afghanistan_National_Taekwondo_Federation_Junior_Team_at_the_International_Security_Assistance_111022-A-EM852-202.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Sajad_Sohrabzada%2C_left%2C_and_Ahmad_Walid%2C_practice_their_moves_with_a_sparring_match_during_a_demonstration_with_the_Afghanistan_National_Taekwondo_Federation_Junior_Team_at_the_International_Security_Assistance_111022-A-EM852-202.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "SGT April Campbell · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATaekwondo_tournament.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Taekwondo_tournament.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Mxtaek · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "SGT April Campbell",
-        "author_url": null,
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mxtaek",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mxtaek&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-USGov-Military-Army"
-        ],
-        "file_problem": "truncated (Premature end of JPEG file)"
+        "pd_reasons": []
       },
       "fun_fact": "After her 2012 win, Royal Mail painted a postbox gold in Flint in her honour.",
       "subcategory": "team-gb-and-olympians",
@@ -1519436,19 +1519699,53 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture is broken at the source (truncated (Premature end of JPEG file)).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture is broken at the source (truncated (Premature end of JPEG file)).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "The picked picture file was broken, so the image gets a new search term.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "taekwondo match kick",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ASajad_Sohrabzada%2C_left%2C_and_Ahmad_Walid%2C_practice_their_moves_with_a_sparring_match_during_a_demonstration_with_the_Afghanistan_National_Taekwondo_Federation_Junior_Team_at_the_International_Security_Assistance_111022-A-EM852-202.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Sajad_Sohrabzada%2C_left%2C_and_Ahmad_Walid%2C_practice_their_moves_with_a_sparring_match_during_a_demonstration_with_the_Afghanistan_National_Taekwondo_Federation_Junior_Team_at_the_International_Security_Assistance_111022-A-EM852-202.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "SGT April Campbell · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "SGT April Campbell",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-USGov-Military-Army"
+            ],
+            "file_problem": "truncated (Premature end of JPEG file)"
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19626",
@@ -1519608,7 +1519905,7 @@
     },
     {
       "id": "q-19628",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "Only the finest people ring this number. And the odd wrong number, of course.",
       "question": "Hyacinth picks up the phone in Keeping Up Appearances: “The Bouquet residence, the lady of the house…”. How does she finish?",
@@ -1519620,7 +1519917,7 @@
       ],
       "hints": [
         "She says it nearly every time the phone rings.",
-        "Her posh ending is actually a very ordinary word that anyone might use on the phone.",
+        "She wants every caller to think they've reached a very grand home.",
         "It's what you're doing when you talk."
       ],
       "media": {
@@ -1519666,26 +1519963,34 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"a very ordinary word that anyone might use on the phone\") gives the answer away. “At your service” is not one word, and “presiding” and “receiving” aren't ordinary phone words, so the hint leaves only “speaking”. Rewrite hint 2 to be vaguer, for example about her trying to sound grand while saying something plain, without pointing to a single everyday phone word.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"a very ordinary word that anyone might use on the phone\") gives the answer away. “At your service” is not one word, and “presiding” and “receiving” aren't ordinary phone words, so the hint leaves only “speaking”. Rewrite hint 2 to be vaguer, for example about her trying to sound grand while saying something plain, without pointing to a single everyday phone word.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed to only one option, with a vaguer one.",
+        "reason": "Hint 2 pointed to a single everyday phone word, so it now says something vaguer about her grand act.",
         "previous": {
           "hints": [
             "She says it nearly every time the phone rings.",
-            "It's the usual word for telling a caller who is on the line.",
+            "Her posh ending is actually a very ordinary word that anyone might use on the phone.",
             "It's what you're doing when you talk."
           ]
         },
@@ -1519912,7 +1520217,7 @@
     },
     {
       "id": "q-19632",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "In Barry, even a messy bedroom can be tidy, apparently.",
       "question": "In Gavin & Stacey, Nessa often sums things up with one Welsh slang word: “Tidy!”. What does she mean?",
@@ -1519930,21 +1520235,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Welsh seaside promenade",
+        "query": "Barry Island beach",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ARhyl._Parade_and_Palace_%28NBY_443940%29.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Rhyl._Parade_and_Palace_%28NBY_443940%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABarry_Island_-_Beach_Huts_-_geograph.org.uk_-_8036929.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Barry_Island_-_Beach_Huts_-_geograph.org.uk_-_8036929.jpg/3840px-Barry_Island_-_Beach_Huts_-_geograph.org.uk_-_8036929.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Colin Smith · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Unknown authorUnknown author",
-        "author_url": null,
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Colin Smith",
+        "author_url": "https://www.geograph.org.uk/profile/3972",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "In Wales, “tidy” can also mean big or very good, and across Britain a large amount of money is “a tidy sum”.",
       "subcategory": "sitcoms",
@@ -1519973,29 +1520275,50 @@
       "needs_media": false,
       "batch": "batch-68",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote hints 1 and 2 so they no longer say the word is positive, and fixed the fun fact about “a tidy sum”.",
+        "reason": "The picture's licence was unsuitable, so the image gets a new search term.",
         "previous": {
-          "hints": [
-            "It's a word of praise.",
-            "You'd say it about a good deal or a nice surprise.",
-            "It means the same as “lovely” or “brilliant”."
-          ],
-          "fun_fact": "In Wales, “tidy” can also mean big, as in a “tidy” amount of money."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Welsh seaside promenade",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3ARhyl._Parade_and_Palace_%28NBY_443940%29.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Rhyl._Parade_and_Palace_%28NBY_443940%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Unknown authorUnknown author",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-11-14"
       }
