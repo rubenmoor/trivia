@@ -283,7 +283,8 @@
     {
       "name": "Tower of London",
       "facet": "Famous landmarks and buildings",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Beefeaters, the Crown Jewels and the princes are already asked; nothing easy is left with these options."
     },
     {
       "name": "Edinburgh Castle",
@@ -1021,7 +1022,8 @@
     {
       "name": "Coronation Street",
       "facet": "Cities in songs, books and TV",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The cobbles riddle already covers this; small children don't watch the soap."
     },
     {
       "name": "EastEnders",

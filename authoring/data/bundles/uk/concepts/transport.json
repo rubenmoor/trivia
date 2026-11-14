@@ -81,7 +81,8 @@
     {
       "name": "Tube roundel",
       "facet": "London Underground and the Tube map",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The earlier Tube question already describes the roundel, and who designed it is far too hard for difficulty 1."
     },
     {
       "name": "Baker Street station",
@@ -116,7 +117,8 @@
     {
       "name": "Euston station",
       "facet": "Trains and railway stations",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Euston has no fact children know from pop culture, and a close-up photo wouldn't be recognisable."
     },
     {
       "name": "Clapham Junction",
@@ -131,7 +133,8 @@
     {
       "name": "HS2",
       "facet": "Trains and railway stations",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Dates and people linked to HS2 are far too hard for difficulty 1."
     },
     {
       "name": "Network Rail",
@@ -691,7 +694,8 @@
     {
       "name": "Luton Airport",
       "facet": "Airports and flying",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Luton Airport is only famous from a 1980s TV advert; none of the options works for young children."
     },
     {
       "name": "London City Airport",
@@ -701,7 +705,8 @@
     {
       "name": "Manchester Airport",
       "facet": "Airports and flying",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: There are no difficulty-1 facts about Manchester Airport that fit these options."
     },
     {
       "name": "Edinburgh Airport",

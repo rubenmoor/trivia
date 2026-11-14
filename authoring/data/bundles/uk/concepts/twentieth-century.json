@@ -395,7 +395,8 @@
     {
       "name": "Tony Blair",
       "facet": "Prime Ministers and politics",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Tony Blair's dates and policies are adult knowledge, nowhere near level 1."
     },
     {
       "name": "Clement Attlee",
@@ -1073,7 +1074,8 @@
     {
       "name": "Dolly the sheep",
       "facet": "British inventions and engineering",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Dolly's basic facts are already asked; what's left (the scientist, how the cloning worked) is hard and adult."
     },
     {
       "name": "Alexander Fleming",
@@ -1173,7 +1175,8 @@
     {
       "name": "Semi-detached house",
       "facet": "Everyday life, money and homes",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Terraced houses are already in the pool, and an odd-one-out about house types would be forced."
     },
     {
       "name": "Prefabs",
@@ -1213,7 +1216,8 @@
     {
       "name": "Woolworths",
       "facet": "Everyday life, money and homes",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The pick and mix counter, US origin and 2009 closure are already in the pool; nothing easy is left."
     },
     {
       "name": "Butlins",
