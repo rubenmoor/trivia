@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "59173be0",
+  "hash": "b4b03a07",
   "questions": [
     {
       "id": "q-9487",
@@ -43423,6 +43423,40 @@
       "background": null
     },
     {
+      "id": "q-18752",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "customs-and-ceremonies",
+      "bundle": "uk",
+      "description": "A secret hand trick that every teacher has spotted at least once.",
+      "question": "In the playground, when do children secretly cross their fingers behind their back?",
+      "answer": "When telling a fib",
+      "wrong_answers": [
+        "When saying thank you",
+        "When they sneeze",
+        "When the bell rings"
+      ],
+      "hints": [
+        "It's a playground custom that has been around for generations.",
+        "Grown-ups cross their fingers openly to wish for luck, but the hidden version means something else.",
+        "It's a sneaky trick when you say something you know is false."
+      ],
+      "fun_fact": "Crossing your fingers is often said to come from early Christians making a small secret cross for protection.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/School_playground%2C_Olvi-Pius_X_secondary_school%2C_Zele%2C_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchool_playground%2C_Olvi-Pius_X_secondary_school%2C_Zele%2C_2007.jpg",
+        "credit": "DimiTalen · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "DimiTalen",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-18753",
       "status": "approved",
       "difficulty": 11,
@@ -45701,6 +45735,40 @@
       "background": null
     },
     {
+      "id": "q-18825",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "pub-and-playground-games",
+      "bundle": "uk",
+      "description": "A number that makes grown adults in fancy dress leap out of their seats.",
+      "question": "The crowd waves cards for it, the caller roars it out, and it's the top score with three throws. Which game's maximum is “One hundred and eightyyy!”?",
+      "answer": "Darts",
+      "wrong_answers": [
+        "Snooker",
+        "Bowls",
+        "Cricket"
+      ],
+      "hints": [
+        "It's often played in pubs.",
+        "The target hangs on a wall.",
+        "You need three treble 20s."
+      ],
+      "fun_fact": "Darts players throw from behind a line called the oche, 2.37 metres (7 ft 9¼ in) from the board.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Crowd_in_Croke_Park.jpg/3840px-Crowd_in_Croke_Park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrowd_in_Croke_Park.jpg",
+        "credit": "Sheila1988 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Sheila1988",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Sheila1988"
+      },
+      "background": null
+    },
+    {
       "id": "q-18826",
       "status": "approved",
       "difficulty": 2,
@@ -46717,6 +46785,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Peter Barr",
         "author_url": "https://www.geograph.org.uk/profile/28954"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18858",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "home-and-public-services",
+      "bundle": "uk",
+      "description": "The only way to stick a royal head on an envelope without getting into trouble.",
+      "question": "In the UK, what do you get with a second-class stamp instead of a first-class one?",
+      "answer": "Cheaper, slower delivery",
+      "wrong_answers": [
+        "Cheaper, local delivery only",
+        "Same price, small letters only",
+        "Pricier, with a delivery receipt"
+      ],
+      "hints": [
+        "Think about trains: first class and second class.",
+        "It's about how much you pay and how long you wait.",
+        "Your letter costs less, but it takes a few more days."
+      ],
+      "fun_fact": "Royal Mail brought in first- and second-class post in 1968; before that, there was just one price for a letter.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Hillside_Avenue_Postbox_%5E_Royal_Mail_Dump_Box_-_geograph.org.uk_-_3853669.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHillside_Avenue_Postbox_%5E_Royal_Mail_Dump_Box_-_geograph.org.uk_-_3853669.jpg",
+        "credit": "Geographer · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Geographer",
+        "author_url": "https://www.geograph.org.uk/profile/2639"
       },
       "background": null
     },
@@ -48498,6 +48600,40 @@
       "background": null
     },
     {
+      "id": "q-18911",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "slang-and-words",
+      "bundle": "uk",
+      "description": "Britain's friendliest word, good for the bus driver, your nan and the dog next door.",
+      "question": "Which friendly British greeting is basically “hi” with a little extra sound on the end?",
+      "answer": "Hiya",
+      "wrong_answers": [
+        "Wotcha",
+        "Ey up",
+        "Morning"
+      ],
+      "hints": [
+        "You'll hear it in shops, at school and on the phone.",
+        "I mean the same as “hello”.",
+        "I rhyme with the name “Maya”."
+      ],
+      "fun_fact": "“Hello” only became a common greeting after Thomas Edison suggested it for answering the new telephone in the 1870s.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Garrison_Brasfield_and_Friends_%2835871178191%29.jpg/3840px-Garrison_Brasfield_and_Friends_%2835871178191%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGarrison_Brasfield_and_Friends_%2835871178191%29.jpg",
+        "credit": "Chris Hunkeler from Carlsbad, California, USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Chris Hunkeler from Carlsbad, California, USA",
+        "author_url": "https://www.flickr.com/people/14913305@N00"
+      },
+      "background": null
+    },
+    {
       "id": "q-18912",
       "status": "approved",
       "difficulty": 7,
@@ -48936,6 +49072,108 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Chris Whippet",
         "author_url": "https://www.geograph.org.uk/profile/27922"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18925",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "soaps-and-dramas",
+      "bundle": "uk",
+      "description": "Walford's most famous worrier, never far from a cup of tea and a cigarette.",
+      "question": "You're chatting with Dot Cotton in the Walford launderette. Which of these is she NOT known for?",
+      "answer": "Running the Queen Vic",
+      "wrong_answers": [
+        "Quoting the Bible",
+        "Her troublemaking son Nick",
+        "Her friendship with Ethel"
+      ],
+      "hints": [
+        "Three of these were part of Dot's life for years.",
+        "Dot spent most of her working life among the washing machines.",
+        "Dot never pulled pints as the landlady."
+      ],
+      "fun_fact": "June Brown played Dot on and off from 1985 to 2020.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Coin-operated_washing_machines_in_Seven_Dials_Launderette_%26_Dry_Cleaners%2C_Brighton.jpg/3840px-Coin-operated_washing_machines_in_Seven_Dials_Launderette_%26_Dry_Cleaners%2C_Brighton.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoin-operated_washing_machines_in_Seven_Dials_Launderette_%26_Dry_Cleaners%2C_Brighton.jpg",
+        "credit": "Andy Li · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Andy Li",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Onthewings"
+      },
+      "background": null
+    },
+    {
+      "id": "q-18926",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "soaps-and-dramas",
+      "bundle": "uk",
+      "description": "Accessories so loud they practically had their own theme tune.",
+      "question": "Which EastEnders character was famous for her huge, bright earrings?",
+      "answer": "Pat Butcher",
+      "wrong_answers": [
+        "Pauline Fowler",
+        "Peggy Mitchell",
+        "Ethel Skinner"
+      ],
+      "hints": [
+        "She was married to Frank, the car dealer.",
+        "She had a booming laugh and a big heart.",
+        "Her surname is also a job behind a meat counter."
+      ],
+      "fun_fact": "Pam St Clement played Pat from 1986 to 2012.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Earrings_MET_C.I.59.23.6ab_F2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEarrings_MET_C.I.59.23.6ab_F2.jpg",
+        "credit": "CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-18927",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "sporting-events",
+      "bundle": "uk",
+      "description": "The number that makes a whole pub stand up and shout.",
+      "question": "A darts caller roars “One hundred and eighty!” It's the top score you can get with three darts. What has the player hit?",
+      "answer": "Three treble 20s",
+      "wrong_answers": [
+        "Three bullseyes",
+        "Three double 20s",
+        "Two bullseyes and a treble 20"
+      ],
+      "hints": [
+        "All three darts landed in the same number.",
+        "It's the highest number on the board.",
+        "Each dart scored 60."
+      ],
+      "fun_fact": "A perfect nine-dart finish usually starts with two 180s in a row.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Wangies_dartboard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWangies_dartboard.jpg",
+        "credit": "Marnanel · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Marnanel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Marnanel"
       },
       "background": null
     },
