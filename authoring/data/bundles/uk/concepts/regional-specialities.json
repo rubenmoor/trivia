@@ -772,7 +772,8 @@
     {
       "name": "Ludlow Food Festival",
       "facet": "Food festivals and customs",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Too obscure, and the only fact to ask is a minor founding date."
     },
     {
       "name": "Abergavenny Food Festival",
@@ -802,7 +803,8 @@
     {
       "name": "Wimbledon strawberries and cream",
       "facet": "Food festivals and customs",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The link between Wimbledon and strawberries is already covered from both sides, and the odd-one-out options would be forced."
     }
   ]
 }

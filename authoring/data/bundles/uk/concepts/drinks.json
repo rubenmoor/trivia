@@ -627,7 +627,8 @@
     {
       "name": "Hot chocolate",
       "facet": "Hot drinks beyond tea",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Hot chocolate is already in the pool for this subcategory, and the options lead to non-British facts (Aztec origins) or forced questions."
     },
     {
       "name": "Cadbury hot chocolate",
@@ -653,7 +654,8 @@
     {
       "name": "Cocoa",
       "facet": "Hot drinks beyond tea",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Cocoa has been asked many times already, and none of the options (person answers, made_of) gives a fresh British question at level 1."
     },
     {
       "name": "Fry's cocoa",
