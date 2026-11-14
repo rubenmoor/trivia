@@ -1593441,10 +1593441,10 @@
     },
     {
       "id": "q-20573",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "An elephant who clearly lost a fight with a quilt.",
-      "question": "Which picture-book elephant has skin made of bright squares, just like this patchwork?",
+      "question": "Which picture-book elephant has skin made of bright colourful squares, like a patchwork quilt?",
       "answer": "Elmer",
       "wrong_answers": [
         "Babar",
@@ -1593458,12 +1593458,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "rainbow square patchwork quilt",
-        "note": "A clear photo of a brightly coloured patchwork quilt made of many square patches; no elephants or text.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "African elephant family",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFamily_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Family_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg/3840px-Family_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information.  Please contact me before commercial use.\n\n\n\nPlease do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
+        "author_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Family_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "David McKee's first Elmer book came out in 1968, and he also created Mr Benn.",
       "subcategory": "childrens-books-and-comics",
@@ -1593492,19 +1593499,44 @@
       "needs_media": true,
       "batch": "batch-77",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate shows a bright patchwork of plain coloured squares like Elmer's skin, which the question points to with \"just like this patchwork\". The candidates are a muted drawing with a signature (1), a duck appliqué (2), a two-colour quilt (3), star-block or hexagon quilts (4, 5) and a mostly cream quilt (6). A new search isn't allowed, so a better picture has to be found by hand (for example \"colorful square patchwork quilt\"). The text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows a bright patchwork of plain coloured squares like Elmer's skin, which the question points to with \"just like this patchwork\". The candidates are a muted drawing with a signature (1), a duck appliqué (2), a two-colour quilt (3), star-block or hexagon quilts (4, 5) and a mostly cream quilt (6). A new search isn't allowed, so a better picture has to be found by hand (for example \"colorful square patchwork quilt\"). The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable patchwork photo exists, so the question no longer points to a picture and the media becomes an illustrative elephant photo that gives nothing away.",
+        "previous": {
+          "question": "Which picture-book elephant has skin made of bright squares, just like this patchwork?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "rainbow square patchwork quilt",
+            "note": "A clear photo of a brightly coloured patchwork quilt made of many square patches; no elephants or text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20574",
@@ -1596604,7 +1596636,7 @@
     },
     {
       "id": "q-20615",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "They guard the Crown Jewels and pose for more holiday photos than a pop star.",
       "question": "The Yeoman Warders who guard the Tower of London have a famous nickname. Finish it: “Beef…”",
@@ -1596616,7 +1596648,7 @@
       ],
       "hints": [
         "They wear red and dark blue uniforms and give tours to visitors.",
-        "A famous brand of gin uses the same nickname and puts one of them on its bottle.",
+        "The missing part is something everyone does at mealtimes.",
         "Long ago, royal guards were said to get plenty of meat to… well, do this."
       ],
       "media": {
@@ -1596662,19 +1596694,39 @@
       "needs_media": false,
       "batch": "batch-77",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This asks the same fact as q-17880 (in the pool, status needs_work): \"The guards who wear this red-and-gold uniform have a famous nickname. What is it?\" → Beefeaters. Keep only one of the two. If this one stays, also replace hint 2 (the gin brand), since it doesn't suit a kids' question at difficulty 3.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This asks the same fact as q-17880 (in the pool, status needs_work): \"The guards who wear this red-and-gold uniform have a famous nickname. What is it?\" → Beefeaters. Keep only one of the two. If this one stays, also replace hint 2 (the gin brand), since it doesn't suit a kids' question at difficulty 3.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Kept this one over the duplicate q-17880, which still needs work, and replaced the gin-brand hint 2 with a kid-friendly one.",
+        "previous": {
+          "hints": [
+            "They wear red and dark blue uniforms and give tours to visitors.",
+            "A famous brand of gin uses the same nickname and puts one of them on its bottle.",
+            "Long ago, royal guards were said to get plenty of meat to… well, do this."
+          ]
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-20616",
