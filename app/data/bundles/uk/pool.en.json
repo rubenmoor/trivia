@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e1cffc30",
+  "hash": "8da68e86",
   "questions": [
     {
       "id": "q-9487",
@@ -94427,6 +94427,40 @@
       "background": null
     },
     {
+      "id": "q-20290",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "cakes-puddings-and-biscuits",
+      "bundle": "uk",
+      "description": "The quiet one in the biscuit tin, who never shows off.",
+      "question": "Which thin, pale and very plain British biscuit is famous for breaking off and sinking when you dunk it in a cuppa?",
+      "answer": "Rich Tea",
+      "wrong_answers": [
+        "Digestive",
+        "Malted Milk",
+        "Custard Cream"
+      ],
+      "hints": [
+        "It has no filling, no chocolate and no pictures on it.",
+        "Pieces of it often end up at the bottom of the mug.",
+        "Its name includes the drink it's dunked in."
+      ],
+      "fun_fact": "Rich Tea biscuits are said to have started in Yorkshire, as a light snack for wealthy families between meals.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/-2019-09-13_Tea_cup_and_saucer%2C_Wedgwood_%CE%84Mariposa%CE%84_%28C2103%29%2C_Susie_Cooper.JPG/3840px--2019-09-13_Tea_cup_and_saucer%2C_Wedgwood_%CE%84Mariposa%CE%84_%28C2103%29%2C_Susie_Cooper.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A-2019-09-13_Tea_cup_and_saucer%2C_Wedgwood_%CE%84Mariposa%CE%84_%28C2103%29%2C_Susie_Cooper.JPG",
+        "credit": "Kolforn (Kolforn) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kolforn (Kolforn)\nI'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope.\n\n\n\n This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Flag-globe-2.gif"
+      },
+      "background": null
+    },
+    {
       "id": "q-20291",
       "status": "approved",
       "difficulty": 3,
@@ -95209,6 +95243,40 @@
       "background": null
     },
     {
+      "id": "q-20315",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "landmarks-and-castles",
+      "bundle": "uk",
+      "description": "A cave in Somerset where something besides the stalactites is quietly getting older.",
+      "question": "Deep inside Wookey Hole Caves in Somerset, the air stays cool and damp all year. Which food is stored there for months to ripen?",
+      "answer": "Cheese",
+      "wrong_answers": [
+        "Bread",
+        "Ice cream",
+        "Chocolate"
+      ],
+      "hints": [
+        "It's made from milk.",
+        "It's often sold in big round wheels.",
+        "The famous Cheddar Gorge is just a few miles away."
+      ],
+      "fun_fact": "The caves stay at about 11 °C (52 °F) all year, which is just right for slowly ripening big wheels of Cheddar.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Stalactites_and_stalagmites_in_Elgood_Limestone_cave_at_Adventure_Waikato.jpg/3840px-Stalactites_and_stalagmites_in_Elgood_Limestone_cave_at_Adventure_Waikato.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStalactites_and_stalagmites_in_Elgood_Limestone_cave_at_Adventure_Waikato.jpg",
+        "credit": "Johnragla · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Johnragla",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Johnragla&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-20316",
       "status": "approved",
       "difficulty": 5,
@@ -95307,6 +95375,40 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "http://www.wyrdlight.com Author: Antony McCallum",
         "author_url": "http://www.wyrdlight.com"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20319",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "money-and-shopping",
+      "bundle": "uk",
+      "description": "Shopping for people who love parcels but don't trust the doorbell.",
+      "question": "You order something online, the shop gets it ready, and you pick it up yourself in store. What do Britons call this?",
+      "answer": "Click and collect",
+      "wrong_answers": [
+        "Cash and carry",
+        "Pick 'n' mix",
+        "Tap and go"
+      ],
+      "hints": [
+        "It's named after the two steps you take.",
+        "You choose and pay for it at home, but nobody brings it to your door.",
+        "Step one happens on a screen, step two at the shop counter."
+      ],
+      "fun_fact": "Some British supermarkets have drive-up collection points where staff load your shopping straight into the boot of your car.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C_%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5_%D0%A2%D0%BE%D0%BB%D0%B5_%D0%B1%D0%B8_64_%281%29.jpg/3840px-%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C_%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5_%D0%A2%D0%BE%D0%BB%D0%B5_%D0%B1%D0%B8_64_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%90%D0%BB%D0%BC%D0%B0%D1%82%D1%8B%2C_%D0%BF%D0%BE%D1%81%D1%82%D0%BE%D0%BC%D0%B0%D1%82_%D0%B2%D0%BE_%D0%B4%D0%B2%D0%BE%D1%80%D0%B5_%D0%A2%D0%BE%D0%BB%D0%B5_%D0%B1%D0%B8_64_%281%29.jpg",
+        "credit": "Nikolai Bulykin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nikolai Bulykin",
+        "author_url": "https://www.wikidata.org/wiki/Q99741741"
       },
       "background": null
     },
@@ -96361,6 +96463,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Aravind Sivaraj",
         "author_url": "https://commons.wikimedia.org/wiki/User:Yes.aravind"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20352",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Purr-fectly dressed for a very good night's sleep.",
+      "question": "In old slang, something excellent is called “the cat's…” what?",
+      "answer": "Pyjamas",
+      "wrong_answers": [
+        "Slippers",
+        "Dressing gown",
+        "Nightcap"
+      ],
+      "hints": [
+        "The saying comes from the same era as “the bee's knees”.",
+        "The saying first took off in America in the 1920s.",
+        "The word came into English from Hindi and Persian."
+      ],
+      "fun_fact": "The saying became popular in the 1920s, alongside other silly ones like “the bee's knees” and “the cat's whiskers”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2019-11-30_12_08_25_A_Tabby_cat_sleeping_on_a_bed_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/3840px-2019-11-30_12_08_25_A_Tabby_cat_sleeping_on_a_bed_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2019-11-30_12_08_25_A_Tabby_cat_sleeping_on_a_bed_in_the_Franklin_Farm_section_of_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
+        "credit": "Famartin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Famartin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Famartin"
       },
       "background": null
     },
