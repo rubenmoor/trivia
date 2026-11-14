@@ -491,7 +491,8 @@
     {
       "name": "Chester",
       "facet": "Historic and cathedral cities",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The Roman Deva fact is already asked; the riddle options at level 1 would be forced."
     },
     {
       "name": "Durham",
@@ -1259,7 +1260,8 @@
     {
       "name": "Blackpool Illuminations",
       "facet": "Festivals and events by town",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The autumn lights fact is already asked; the odd-one-out and sequence options would be forced at level 1."
     },
     {
       "name": "Whitby Goth Weekend",

@@ -96,7 +96,8 @@
     {
       "name": "Grampian Mountains",
       "facet": "Mountains and highest peaks",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: The Grampian Mountains with origin or who as a person, or an estimate, gives no fair easy question."
     },
     {
       "name": "Cross Fell",
@@ -151,7 +152,8 @@
     {
       "name": "Skiddaw",
       "facet": "Lake District and the Lakes",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: None of the options (origin with a body lens, count, when) gives a fair question about Skiddaw for young children."
     },
     {
       "name": "Great Gable",
@@ -301,7 +303,8 @@
     {
       "name": "Kinder Scout",
       "facet": "Moors and the Peak District",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: The record, count and origin options for Kinder Scout can't make a difficulty-1 question."
     },
     {
       "name": "Mam Tor",
@@ -944,7 +947,8 @@
     {
       "name": "Outlander",
       "facet": "Legends, writers and hills on screen",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Outlander is a drama for adults, and its nature word-meaning options can't make an easy question."
     },
     {
       "name": "Samuel Taylor Coleridge",

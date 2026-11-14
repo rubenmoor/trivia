@@ -592,7 +592,8 @@
     {
       "name": "Pride of Britain Awards",
       "facet": "Lifeboat crews and everyday bravery",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: The Pride of Britain Awards is an adult TV event; none of the options suits level 1."
     },
     {
       "name": "Blue Peter badge",
@@ -612,7 +613,8 @@
     {
       "name": "Diane Abbott",
       "facet": "Women's firsts in public life",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Diane Abbott (first Black woman MP) is political adult knowledge and can't give a level-1 question."
     },
     {
       "name": "Barbara Castle",

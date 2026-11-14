@@ -12,7 +12,8 @@
     "Everyday manners and pub etiquette",
     "Superstitions and lucky charms",
     "School and university traditions",
-    "Sporting occasions and their rituals"
+    "Sporting occasions and their rituals",
+    "Summer shows and festivals"
   ],
   "axis_fit": {
     "move": {
@@ -641,6 +642,26 @@
       "name": "University Boat Race",
       "facet": "Sporting occasions and their rituals",
       "known_at": 9
+    },
+    {
+      "name": "Searching the cellars",
+      "facet": "Parliament and state rituals",
+      "known_at": 11
+    },
+    {
+      "name": "Bognor Birdman",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 10
+    },
+    {
+      "name": "Dunking a biscuit",
+      "facet": "Everyday manners and pub etiquette",
+      "known_at": 4
+    },
+    {
+      "name": "Pinch, punch, first of the month",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 7
     }
   ],
   "top_ups": [
@@ -658,6 +679,11 @@
       "date": "2026-11-14",
       "added": 5,
       "unused": 26
+    },
+    {
+      "date": "2026-11-14",
+      "added": 4,
+      "unused": 30
     }
   ]
 }

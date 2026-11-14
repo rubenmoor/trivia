@@ -592,7 +592,8 @@
     {
       "name": "Coalition government",
       "facet": "Political parties and their colours",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The 2010 coalition, Cameron and Clegg are already well covered in the pool."
     },
     {
       "name": "Whigs",
@@ -1044,7 +1045,8 @@
     {
       "name": "First Minister of Scotland",
       "facet": "Devolved parliaments and assemblies",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Scotland-identification questions and the First Minister record are already used heavily."
     },
     {
       "name": "Alex Salmond",

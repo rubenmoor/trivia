@@ -204,7 +204,8 @@
     {
       "name": "Rhod Gilbert",
       "facet": "Stand-up comedians",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: An adult stand-up comedian with nothing a young child would know."
     },
     {
       "name": "Kevin Bridges",
@@ -313,7 +314,8 @@
     {
       "name": "Armstrong and Miller",
       "facet": "Comedy double acts and troupes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: An adult sketch double act that young children don't know, and none of the options fits."
     },
     {
       "name": "Fry and Laurie",
@@ -328,7 +330,8 @@
     {
       "name": "The Mighty Boosh",
       "facet": "Comedy double acts and troupes",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: A surreal cult comedy for adults; not something to ask at difficulty 1."
     },
     {
       "name": "The Comic Strip",
@@ -436,7 +439,8 @@
     {
       "name": "Jamie Redknapp",
       "facet": "Panel show hosts and team captains",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: A football pundit and panel show captain; no question about him that a 6-year-old could answer."
     },
     {
       "name": "Keith Lemon",
@@ -835,7 +839,8 @@
     {
       "name": "The Goon Show",
       "facet": "Radio comedy and panel games",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: A 1950s radio show; it can't be made answerable for small children."
     },
     {
       "name": "Round the Horne",
