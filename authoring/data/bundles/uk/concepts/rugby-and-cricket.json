@@ -101,7 +101,8 @@
     {
       "name": "Penalty kick",
       "facet": "Rugby union rules and positions",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The rugby penalty is already covered (3 points, kicked from the spot), and none of the person or time options gives a fair question for kids."
     },
     {
       "name": "Forward pass",
@@ -151,7 +152,8 @@
     {
       "name": "Winger",
       "facet": "Rugby union rules and positions",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The existing question already gives the winger's shirt numbers (11 and 14), so a count question is answered by it."
     },
     {
       "name": "Full-back",
@@ -271,7 +273,8 @@
     {
       "name": "99 call",
       "facet": "British and Irish Lions tours",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The 1974 '99' call was a signal for the whole team to join a fight. That doesn't suit a family game."
     },
     {
       "name": "1997 Lions tour of South Africa",
@@ -456,7 +459,8 @@
     {
       "name": "Jonny Wilkinson",
       "facet": "Famous rugby players and moments",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The famous 2003 drop goal is already asked. Other dates or analogies would be minor or forced."
     },
     {
       "name": "2003 Rugby World Cup final",

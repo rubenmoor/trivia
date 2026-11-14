@@ -376,12 +376,14 @@
     {
       "name": "Hypocaust",
       "facet": "Roman roads, walls and towns",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The hypocaust's name and purpose are already asked; the options only leave forced riddles or trivial dates."
     },
     {
       "name": "Mosaic",
       "facet": "Roman roads, walls and towns",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: What mosaics are made of is already asked; the other options would be much harder than difficulty 2."
     },
     {
       "name": "Roman villa",
@@ -841,7 +843,8 @@
     {
       "name": "Lady of the Lake",
       "facet": "Legends of early Britain",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Her famous role (giving Excalibur) is already asked; the remaining options (made_of, dates, estimates) would be forced."
     },
     {
       "name": "Round Table",

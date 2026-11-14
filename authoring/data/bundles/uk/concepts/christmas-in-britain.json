@@ -171,7 +171,8 @@
     {
       "name": "Elves",
       "facet": "Father Christmas and stockings",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Elves are heavily covered already and none of the options gives a question that needs any connection to the UK."
     },
     {
       "name": "Sleigh",
