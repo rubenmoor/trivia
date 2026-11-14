@@ -588,7 +588,8 @@
     {
       "name": "Guy Fawkes effigy",
       "facet": "Remembrance and Bonfire Night",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: The pool already asks who the Bonfire Night dummy is named after, and that answer gives away any other question about the dummy's name."
     },
     {
       "name": "The Last Post",
@@ -598,7 +599,8 @@
     {
       "name": "Sixpence in the Christmas pudding",
       "facet": "Christmas and Hogmanay customs",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The sixpence and the pudding are already asked. Any odd-one-out question about pudding customs would overlap with them or be forced."
     },
     {
       "name": "Magpie salute",
@@ -614,6 +616,31 @@
       "name": "Wimbledon all-white dress code",
       "facet": "Sporting occasions and their rituals",
       "known_at": 7
+    },
+    {
+      "name": "Red Budget box",
+      "facet": "Parliament and state rituals",
+      "known_at": 11
+    },
+    {
+      "name": "Lewes Bonfire Night",
+      "facet": "Remembrance and Bonfire Night",
+      "known_at": 12
+    },
+    {
+      "name": "Beating the bounds",
+      "facet": "Quirky village contests and folk customs",
+      "known_at": 13
+    },
+    {
+      "name": "Card from the King at 100",
+      "facet": "Weddings, christenings and life events",
+      "known_at": 9
+    },
+    {
+      "name": "University Boat Race",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 9
     }
   ],
   "top_ups": [
@@ -626,6 +653,11 @@
       "date": "2026-11-14",
       "added": 7,
       "unused": 32
+    },
+    {
+      "date": "2026-11-14",
+      "added": 5,
+      "unused": 26
     }
   ]
 }

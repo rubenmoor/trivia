@@ -768,7 +768,8 @@
     {
       "name": "Arsenal Women",
       "facet": "Women's football and the Lionesses",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The Arsenal Women record is already asked, and a photo count would need the club logo."
     },
     {
       "name": "Millie Bright",
@@ -1086,7 +1087,8 @@
     {
       "name": "EA Sports FC",
       "facet": "Football on TV, in films and games",
-      "known_at": 3
+      "known_at": 3,
+      "retired": "used_up: The FIFA rename is already asked, and the options give no UK-specific question."
     },
     {
       "name": "Match of the Day",

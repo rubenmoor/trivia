@@ -311,7 +311,8 @@
     {
       "name": "Pint glass",
       "facet": "Pubs and pub culture",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The pint measure and 'made of glass' are already asked many times; nothing fresh at this level."
     },
     {
       "name": "Speyside",
@@ -321,7 +322,8 @@
     {
       "name": "Highlands",
       "facet": "Scotch whisky regions",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Whisky regions can't make a fair question for young children."
     },
     {
       "name": "Lowlands",
@@ -940,7 +942,8 @@
     {
       "name": "Boston Tea Party",
       "facet": "Drinks in British history",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The existing question already gives away the year, the British tax and the event name; any new question would be answerable from it."
     },
     {
       "name": "Gin Act",

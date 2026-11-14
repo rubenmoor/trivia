@@ -501,7 +501,8 @@
     {
       "name": "By-election",
       "facet": "Elections and voting rights",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The riddle option would ask the same fact as the existing by-election question."
     },
     {
       "name": "First past the post",
