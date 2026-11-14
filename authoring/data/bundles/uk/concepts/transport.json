@@ -204,7 +204,8 @@
     {
       "name": "Megabus",
       "facet": "Buses and coaches",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: A bus brand; the person/riddle/count options give no fair question for kids."
     },
     {
       "name": "Victoria Coach Station",
@@ -503,7 +504,8 @@
     {
       "name": "National speed limit",
       "facet": "Driving rules and the Highway Code",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Record options don't fit this concept; 70 mph and the speed limit are already in the pool."
     },
     {
       "name": "70 mph motorway limit",

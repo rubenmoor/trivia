@@ -324,7 +324,8 @@
     {
       "name": "Break with Rome",
       "facet": "The Reformation and religious conflict",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Henry VIII breaking with the Pope has already been asked; the count and odd-one-out options are forced."
     },
     {
       "name": "Act of Supremacy",
@@ -334,7 +335,8 @@
     {
       "name": "Church of England",
       "facet": "The Reformation and religious conflict",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The obvious easy fact (Henry VIII made himself head of the church) has already been asked, and none of the options leave a new fact easy enough for difficulty 1."
     },
     {
       "name": "Dissolution of the Monasteries",
@@ -374,7 +376,8 @@
     {
       "name": "Puritans",
       "facet": "The Reformation and religious conflict",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Two Puritan questions already exist; the remaining options would be too hard or a repeat."
     },
     {
       "name": "Recusants",
@@ -671,7 +674,8 @@
     {
       "name": "Lobster-pot helmet",
       "facet": "The English Civil War",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already asks about the lobster-pot helmet's nickname and what it was for."
     },
     {
       "name": "Pikemen",
@@ -1028,7 +1032,8 @@
     {
       "name": "Hornbook",
       "facet": "Tudor and Stuart daily life",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: Too obscure for young players, and the count or record options would rest on shaky facts (how many letters were on a hornbook)."
     },
     {
       "name": "Grammar school",

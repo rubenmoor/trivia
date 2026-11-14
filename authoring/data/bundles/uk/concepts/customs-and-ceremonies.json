@@ -81,7 +81,8 @@
     {
       "name": "Ceremonial Mace",
       "facet": "Parliament and state rituals",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: A riddle already asks what the mace is and that parliaments carry it. A photo identification would repeat that."
     },
     {
       "name": "Division lobby",
@@ -576,13 +577,54 @@
     {
       "name": "Strawberries and cream at Wimbledon",
       "facet": "Sporting occasions and their rituals",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The snack's link to Wimbledon and summer is already asked. A new question would give the earlier answer away."
+    },
+    {
+      "name": "Royal Maundy money",
+      "facet": "Royal pageantry and coronations",
+      "known_at": 13
+    },
+    {
+      "name": "Guy Fawkes effigy",
+      "facet": "Remembrance and Bonfire Night",
+      "known_at": 5
+    },
+    {
+      "name": "The Last Post",
+      "facet": "Remembrance and Bonfire Night",
+      "known_at": 10
+    },
+    {
+      "name": "Sixpence in the Christmas pudding",
+      "facet": "Christmas and Hogmanay customs",
+      "known_at": 9
+    },
+    {
+      "name": "Magpie salute",
+      "facet": "Superstitions and lucky charms",
+      "known_at": 8
+    },
+    {
+      "name": "Leavers' hoodie",
+      "facet": "School and university traditions",
+      "known_at": 9
+    },
+    {
+      "name": "Wimbledon all-white dress code",
+      "facet": "Sporting occasions and their rituals",
+      "known_at": 7
     }
   ],
   "top_ups": [
     {
       "date": "2026-11-14",
       "added": 4,
+      "unused": 32
+    },
+    {
+      "date": "2026-11-14",
+      "added": 7,
       "unused": 32
     }
   ]

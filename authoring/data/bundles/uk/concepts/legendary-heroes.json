@@ -77,7 +77,8 @@
     {
       "name": "Battle of Camlann",
       "facet": "King Arthur and Camelot",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: The Battle of Camlann is far too obscure for difficulty 1."
     },
     {
       "name": "Battle of Badon",
@@ -87,7 +88,8 @@
     {
       "name": "Glastonbury Abbey",
       "facet": "King Arthur and Camelot",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Arthur's grave at the abbey is already given away by the Glastonbury Tor → King Arthur question."
     },
     {
       "name": "Cadbury Castle",
@@ -265,7 +267,8 @@
     {
       "name": "Sir Guy of Gisborne",
       "facet": "Robin Hood and his Merry Men",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already covers Gisborne not being a Merry Man. Nothing else fits difficulty 1."
     },
     {
       "name": "Lincoln green",
@@ -335,7 +338,8 @@
     {
       "name": "Ned Ludd",
       "facet": "Outlaws, rebels and highwaymen",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Ned Ludd and the Luddites are far too hard for difficulty 1."
     },
     {
       "name": "Swift Nick",
@@ -405,7 +409,8 @@
     {
       "name": "Rhiannon",
       "facet": "Welsh heroes and the Mabinogion",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Rhiannon from the Mabinogion is far too obscure for difficulty 1."
     },
     {
       "name": "Blodeuwedd",
@@ -704,7 +709,8 @@
     {
       "name": "Robin Hood: Prince of Thieves",
       "facet": "British heroes on screen and stage",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: A 1991 film isn't known to young children."
     },
     {
       "name": "Merlin (BBC series)",
@@ -734,27 +740,32 @@
     {
       "name": "Robin of Sherwood",
       "facet": "British heroes on screen and stage",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: A 1980s TV series isn't something children know."
     },
     {
       "name": "Maid Marian and Her Merry Men",
       "facet": "British heroes on screen and stage",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: A 1989 CBBC sitcom isn't known to young players. A difficulty-1 question isn't possible."
     },
     {
       "name": "The Green Knight (2021 film)",
       "facet": "British heroes on screen and stage",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: A 2021 arthouse film isn't something children know."
     },
     {
       "name": "King Arthur: Legend of the Sword",
       "facet": "British heroes on screen and stage",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The release date of a 2017 film is far from difficulty 1, and the pool already has decade questions."
     },
     {
       "name": "Outlaw King",
       "facet": "British heroes on screen and stage",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Outlaw King (Netflix, 2018) isn't something children know."
     },
     {
       "name": "Alan Rickman",

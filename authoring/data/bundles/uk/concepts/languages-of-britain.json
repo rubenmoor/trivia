@@ -320,7 +320,8 @@
     {
       "name": "Ogham",
       "facet": "Irish and Ulster Scots",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The letter count or people behind Ogham are too obscure for this audience, and the pool already covers the script."
     },
     {
       "name": "Banshee",
@@ -345,7 +346,8 @@
     {
       "name": "BSL Act 2022",
       "facet": "British Sign Language",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already asks about BSL being recognised in law, with a user-count estimate."
     },
     {
       "name": "Rose Ayling-Ellis",
