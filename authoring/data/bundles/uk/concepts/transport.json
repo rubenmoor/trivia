@@ -505,7 +505,8 @@
     {
       "name": "70 mph motorway limit",
       "facet": "Driving rules and the Highway Code",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The 70 mph limit is already in the pool for this subcategory."
     },
     {
       "name": "MOT test",

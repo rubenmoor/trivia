@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e0929845",
+  "hash": "7d012459",
   "questions": [
     {
       "id": "q-9487",
@@ -87784,6 +87784,3066 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Robert Graham",
         "author_url": "https://www.geograph.org.uk/profile/60711"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20091",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "A Cornish compliment that has lost a letter or two on the way to the beach.",
+      "question": "You'll hear it in Cornwall as a friendly “Alright, my ansum?”, and it can praise a tasty pasty too. Which English word does “ansum” come from?",
+      "answer": "Handsome",
+      "wrong_answers": [
+        "Awesome",
+        "Answer",
+        "Ransom"
+      ],
+      "hints": [
+        "It's a compliment.",
+        "The Cornish version drops two sounds from the original word.",
+        "Put an “h” at the front and a “d” in the middle."
+      ],
+      "fun_fact": "In Cornwall, “ansum” is used for almost anything good: a person, a sunny day or a perfectly crimped pasty.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Gorran_Haven%2C_Cornwall.jpg/3840px-Gorran_Haven%2C_Cornwall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGorran_Haven%2C_Cornwall.jpg",
+        "credit": "Roger Green · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Roger Green",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Roger_green&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20093",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "birds",
+      "bundle": "uk",
+      "description": "Birds that may be eyeing up your shiny earrings while you count them.",
+      "question": "Many people in Britain count birds like these with an old rhyme. What is the rhyme meant to tell you?",
+      "answer": "What luck is coming",
+      "wrong_answers": [
+        "What the weather will be",
+        "What time it is",
+        "How old you are"
+      ],
+      "hints": [
+        "The meaning changes with how many birds you spot at once.",
+        "Children in Britain often chant it on the way to school, and it was the theme song of an old children's TV show.",
+        "It begins “One for sorrow, two for joy…”."
+      ],
+      "fun_fact": "The rhyme counts all the way up to “seven for a secret, never to be told”.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Eurasian_magpie_2024_03_03_02.jpg/3840px-Eurasian_magpie_2024_03_03_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEurasian_magpie_2024_03_03_02.jpg",
+        "credit": "Alexis Lours · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Alexis Lours",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Alexis_Lours"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20094",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "birds",
+      "bundle": "uk",
+      "description": "Some of the most pampered birds in London, and they don't even pay rent.",
+      "question": "These ravens are kept at the Tower of London because of an old legend. What is said to happen if they ever leave?",
+      "answer": "The kingdom will fall",
+      "wrong_answers": [
+        "The Thames will flood",
+        "The Crown Jewels will vanish",
+        "Big Ben will stop"
+      ],
+      "hints": [
+        "It's about the whole country, not just London.",
+        "The story goes that even King Charles II worried about it.",
+        "Without them, the Tower and the crown would crumble."
+      ],
+      "fun_fact": "The ravens are looked after by a Yeoman Warder with the official title of Ravenmaster.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Jubilee_and_Munin%2C_Ravens%2C_Tower_of_London_2016-04-30.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJubilee_and_Munin%2C_Ravens%2C_Tower_of_London_2016-04-30.jpg",
+        "credit": "Colin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Colin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Colin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20095",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "birds",
+      "bundle": "uk",
+      "description": "A seabird with a beak so colourful it looks like it's been at the felt-tip pens.",
+      "question": "A famous British publisher is named after this seabird. Who are its books mainly written for?",
+      "answer": "Children",
+      "wrong_answers": [
+        "Cooks",
+        "Travellers",
+        "Scientists"
+      ],
+      "hints": [
+        "Its books are often found in school libraries.",
+        "It's the little sister of Penguin Books.",
+        "Its shelves are full of Roald Dahl stories."
+      ],
+      "fun_fact": "Puffin Books began in 1940, during the Second World War, as the children's branch of Penguin.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Papageitaucher_Fratercula_arctica.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APapageitaucher_Fratercula_arctica.jpg",
+        "credit": "Richard Bartz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Richard Bartz",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Richard_Bartz"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20096",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "comedians-and-panel-shows",
+      "bundle": "uk",
+      "description": "A detective so clumsy that the criminals felt perfectly safe.",
+      "question": "Peter Sellers played clumsy Inspector Clouseau in films named after a famous stolen diamond. Finish the title: The Pink…?",
+      "answer": "Panther",
+      "wrong_answers": [
+        "Elephant",
+        "Flamingo",
+        "Poodle"
+      ],
+      "hints": [
+        "The first film came out in 1963.",
+        "A cartoon character with the same name hardly ever speaks a word.",
+        "Its sneaky theme tune was written by Henry Mancini."
+      ],
+      "fun_fact": "The famous cartoon Pink Panther was first drawn for the opening titles of the 1963 film.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Diamond-1128734.jpg/3840px-Diamond-1128734.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADiamond-1128734.jpg",
+        "credit": "Jerry Cone · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jerry Cone",
+        "author_url": "https://www.mindat.org/user-33639.html"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20097",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "crown-and-state",
+      "bundle": "uk",
+      "description": "Every red postbox wears a royal signature, like a very stiff autograph.",
+      "question": "The letters on this postbox tell you who was monarch when it was put up. Who was it?",
+      "answer": "Queen Elizabeth II",
+      "wrong_answers": [
+        "Queen Victoria",
+        "King George VI",
+        "King Charles III"
+      ],
+      "hints": [
+        "The first letter is the monarch's name.",
+        "The “II” means they were the second with that name.",
+        "This monarch reigned for 70 years."
+      ],
+      "fun_fact": "After protests in the 1950s, new postboxes in Scotland stopped using the “E II R” cipher and got the Crown of Scotland instead, because Scotland never had a Queen Elizabeth I.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Elizabeth_II_pillar_box%2C_Bangor_-_geograph.org.uk_-_6229542.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElizabeth_II_pillar_box%2C_Bangor_-_geograph.org.uk_-_6229542.jpg",
+        "credit": "Meirion · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Meirion",
+        "author_url": "https://www.geograph.org.uk/profile/44814"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20098",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "crown-and-state",
+      "bundle": "uk",
+      "description": "A golden carriage with heated seats and electric windows, but no engine at all.",
+      "question": "This golden royal coach has no engine. Which animals pull it through London?",
+      "answer": "Horses",
+      "wrong_answers": [
+        "Oxen",
+        "Donkeys",
+        "Reindeer"
+      ],
+      "hints": [
+        "They go clip-clop on the road.",
+        "Knights rode these animals.",
+        "Riders sit on them with a saddle."
+      ],
+      "fun_fact": "The Diamond Jubilee State Coach contains bits of history, including wood from Nelson's ship HMS Victory and from Isaac Newton's apple tree.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Coach_Britannia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoach_Britannia.jpg",
+        "credit": "Grahamedown · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Grahamedown",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Grahamedown&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20099",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "crown-and-state",
+      "bundle": "uk",
+      "description": "A dragon so famous it got its own flag instead of a cave.",
+      "question": "Look at the dragon on this flag. How many legs does it have?",
+      "answer": "4",
+      "wrong_answers": [
+        "2",
+        "3",
+        "6"
+      ],
+      "hints": [
+        "Count carefully: one leg is lifted up.",
+        "Look for the claws at the bottom and at the front of the dragon.",
+        "Count two legs at the front and the legs it stands on at the back."
+      ],
+      "fun_fact": "The Welsh flag is the only flag of a UK nation that has an animal on it.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Wales_%281959%E2%80%93present%29.tif/lossy-page1-1920px-Flag_of_Wales_%281959%E2%80%93present%29.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlag_of_Wales_%281959%E2%80%93present%29.tif",
+        "credit": "CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20100",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "crown-and-state",
+      "bundle": "uk",
+      "description": "Hold onto your wallet: this one is worth more than all your pocket money.",
+      "question": "I'm red, I'm the Bank of England's highest-value note, and code-breaker Alan Turing is on my back. What am I?",
+      "answer": "The £50 note",
+      "wrong_answers": [
+        "The £20 note",
+        "The £10 note",
+        "The £5 note"
+      ],
+      "hints": [
+        "Most shops rarely see me.",
+        "The £20 note is purple, so I'm not that one.",
+        "My number is half of a hundred."
+      ],
+      "fun_fact": "The £50 note hides Alan Turing's birthday, 23 June 1912, written in binary code.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/1_Pound_-_British_Linen_Company_%281894%29_Bisco5_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A1_Pound_-_British_Linen_Company_%281894%29_Bisco5_01.jpg",
+        "credit": "The British Linen Company. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "The British Linen Company.",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20101",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "customs-and-ceremonies",
+      "bundle": "uk",
+      "description": "In London, one wrong step can earn you the sternest silent stare in Europe.",
+      "question": "On escalators like this one on the London Underground, people stand on the right. Who is the left side kept free for?",
+      "answer": "People walking up",
+      "wrong_answers": [
+        "Station staff",
+        "People with dogs",
+        "People with bags"
+      ],
+      "hints": [
+        "It's about speed.",
+        "Some people are late for the train.",
+        "They don't want to wait, so they use their legs."
+      ],
+      "fun_fact": "Some London Tube escalators are so long that a ride takes well over a minute.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Escalator_at_Knightsbridge_Underground_Station_-_geograph.org.uk_-_5652795.jpg/3840px-Escalator_at_Knightsbridge_Underground_Station_-_geograph.org.uk_-_5652795.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEscalator_at_Knightsbridge_Underground_Station_-_geograph.org.uk_-_5652795.jpg",
+        "credit": "Christine Matthews · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Christine Matthews",
+        "author_url": "https://www.geograph.org.uk/profile/1777"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20102",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "Some people move house with a van. Stone Age builders were a bit more ambitious.",
+      "question": "These smaller stones at Stonehenge are called bluestones. Scientists traced them to faraway hills. Where were they brought from?",
+      "answer": "Wales",
+      "wrong_answers": [
+        "Ireland",
+        "Cornwall",
+        "France"
+      ],
+      "hints": [
+        "They came from about 240 km (150 miles) away from Stonehenge.",
+        "They came from the Preseli Hills, in a country to the west of England.",
+        "That country has a red dragon on its flag."
+      ],
+      "fun_fact": "Some scientists think the bluestones first stood in a stone circle in Wales, and were later taken down and moved to Stonehenge.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Stonehenge_-_geograph.org.uk_-_1621121.jpg/3840px-Stonehenge_-_geograph.org.uk_-_1621121.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStonehenge_-_geograph.org.uk_-_1621121.jpg",
+        "credit": "Peter Trimming · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Peter Trimming",
+        "author_url": "https://www.geograph.org.uk/profile/34298"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20103",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "A nosy house tour of the poshest home in Roman Britain, 1,700 years before estate agents.",
+      "question": "You're visiting a rich family's Roman villa in Britain, around AD 300. Which of these would you NOT find there?",
+      "answer": "Electric lights",
+      "wrong_answers": [
+        "Mosaic floors",
+        "Underfloor heating",
+        "A bath house"
+      ],
+      "hints": [
+        "The Romans were clever builders, but some things came much later.",
+        "Romans lit their rooms with little oil lamps and candles.",
+        "This thing needs power from a plug or a switch."
+      ],
+      "fun_fact": "Roman underfloor heating, called a hypocaust, pushed hot air from a fire through gaps under the floor and up inside the walls.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/The_ruins_at_Chedworth_Roman_Villa_-_geograph.org.uk_-_5838965.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_ruins_at_Chedworth_Roman_Villa_-_geograph.org.uk_-_5838965.jpg",
+        "credit": "Steve Daniels · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Steve Daniels",
+        "author_url": "https://www.geograph.org.uk/profile/35305"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20104",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "The Middle Stone Age: not quite old, not quite new, just stuck in the middle.",
+      "question": "Britain's Middle Stone Age, the Mesolithic, was a time of hunters and fishers. It ended when farming arrived. About how long ago was that?",
+      "answer": "About 6,000 years ago",
+      "wrong_answers": [
+        "About 600 years ago",
+        "About 60,000 years ago",
+        "About 600,000 years ago"
+      ],
+      "hints": [
+        "It was long before the Romans came to Britain.",
+        "Stonehenge was started not very long after farming arrived.",
+        "Farming reached Britain around 4000 BC."
+      ],
+      "fun_fact": "Mesolithic hunters at Star Carr in Yorkshire made headdresses from red deer skulls with the antlers still on.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Four_Mesolithic_flint_microliths_%28FindID_195673%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFour_Mesolithic_flint_microliths_%28FindID_195673%29.jpg",
+        "credit": "Winchester Museum Service, Lucy Shipley, 2007-10-01 13:22:54 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Winchester Museum Service, Lucy Shipley, 2007-10-01 13:22:54",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20105",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "A Norwegian king who packed far more than a carry-on bag.",
+      "question": "In 1066, King Harald Hardrada of Norway sailed to invade England. About how many ships did he bring?",
+      "answer": "About 300",
+      "wrong_answers": [
+        "About 3",
+        "About 30",
+        "About 3,000"
+      ],
+      "hints": [
+        "He brought a whole army, not just a few friends.",
+        "Each longship could carry a few dozen warriors.",
+        "The number is in the hundreds."
+      ],
+      "fun_fact": "After his defeat, so few of his men were left that only about two dozen ships were needed to take them home.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/The_Viking_Ship_%27Hugin%27_%28Cliffs_End%29.JPG/3840px-The_Viking_Ship_%27Hugin%27_%28Cliffs_End%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Viking_Ship_%27Hugin%27_%28Cliffs_End%29.JPG",
+        "credit": "Quartettgeschwister · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Quartettgeschwister",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quartettgeschwister&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20106",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "Wearing one crown is hard work, but this Viking juggled three.",
+      "question": "I was a Viking who became king of England over 1,000 years ago. I also ruled Denmark and Norway. Legend says I told the waves to stop. Who am I?",
+      "answer": "Cnut",
+      "wrong_answers": [
+        "Alfred the Great",
+        "Eric Bloodaxe",
+        "Harold Godwinson"
+      ],
+      "hints": [
+        "I came to the throne in 1016.",
+        "In the story, I sat by the sea and still got my feet wet.",
+        "My name is sometimes written Canute."
+      ],
+      "fun_fact": "In the old story, Cnut ordered the tide to stop to show his courtiers that even a king can't control the sea.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Seal_Rocks%2C_Ocean_Beach%2C_San_Francisco.jpg/3840px-Seal_Rocks%2C_Ocean_Beach%2C_San_Francisco.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeal_Rocks%2C_Ocean_Beach%2C_San_Francisco.jpg",
+        "credit": "Radomianin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Radomianin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Radomianin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20107",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "A party hall with no lights, no music and a fire in the middle of the floor.",
+      "question": "King Théoden's Golden Hall in “The Lord of the Rings” is based on Anglo-Saxon mead halls. These long feasting halls were built mainly of what?",
+      "answer": "Wood",
+      "wrong_answers": [
+        "Stone",
+        "Brick",
+        "Marble"
+      ],
+      "hints": [
+        "The Anglo-Saxons had lots of forests.",
+        "Archaeologists find only the holes where the posts once stood.",
+        "It's the same stuff that comes from trees."
+      ],
+      "fun_fact": "Mead halls had no chimney: smoke from the central fire just drifted out through the thatched roof.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/An_Early_Medieval_%28Anglo_Saxon%29_to_Medieval_copper_alloy_zoomorphic%2C_socketed_drinking_horn_terminal_dating_from_11th-14th_century._%28FindID_869663%29.jpg/3840px-An_Early_Medieval_%28Anglo_Saxon%29_to_Medieval_copper_alloy_zoomorphic%2C_socketed_drinking_horn_terminal_dating_from_11th-14th_century._%28FindID_869663%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAn_Early_Medieval_%28Anglo_Saxon%29_to_Medieval_copper_alloy_zoomorphic%2C_socketed_drinking_horn_terminal_dating_from_11th-14th_century._%28FindID_869663%29.jpg",
+        "credit": "The Portable Antiquities Scheme, Stuart Wyatt, 2017-10-14 23:12:56 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The Portable Antiquities Scheme, Stuart Wyatt, 2017-10-14 23:12:56",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20108",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "A king's border so long you can spend two weeks walking it.",
+      "question": "You're walking along Offa's Dyke, the great border King Offa of Mercia built between England and Wales. What is it made of?",
+      "answer": "An earth bank and a ditch",
+      "wrong_answers": [
+        "A stone wall with towers",
+        "A tall wooden fence",
+        "A row of brick forts"
+      ],
+      "hints": [
+        "It's not like Hadrian's Wall.",
+        "Today it is often covered in grass.",
+        "Workers dug the ground and piled it up high."
+      ],
+      "fun_fact": "Offa's Dyke was built in the 700s, and a 177-mile (285 km) walking trail runs along the border today.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/20140818_I27_Offa%27s_Dyke_Path_-_Hatterall_Ridge_%2815117786361%29.jpg/3840px-20140818_I27_Offa%27s_Dyke_Path_-_Hatterall_Ridge_%2815117786361%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20140818_I27_Offa%27s_Dyke_Path_-_Hatterall_Ridge_%2815117786361%29.jpg",
+        "credit": "Sjaak Kempe from Groningen, The Netherlands · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Sjaak Kempe from Groningen, The Netherlands",
+        "author_url": "https://www.flickr.com/people/22991060@N04"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20109",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "The oldest action hero in English, and he did his own stunts.",
+      "question": "I'm the hero of a long Old English poem. I sailed to Denmark to free King Hrothgar's hall from the monster Grendel, and later fought a dragon. Who am I?",
+      "answer": "Beowulf",
+      "wrong_answers": [
+        "Sir Gawain",
+        "St George",
+        "Robin Hood"
+      ],
+      "hints": [
+        "My poem was written over 1,000 years ago.",
+        "Tolkien was a great fan of my story.",
+        "My name sounds a little like a wolf."
+      ],
+      "fun_fact": "Only one old copy of the poem survives, and it was nearly lost in a library fire in 1731.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Fyrkat_hus_stor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFyrkat_hus_stor.jpg",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20110",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "Iron Age bling, heavy enough to give you a stiff neck.",
+      "question": "This gold ring was worn around the neck by people in Iron Age Britain. What is it called?",
+      "answer": "A torc",
+      "wrong_answers": [
+        "A locket",
+        "A brooch",
+        "A tiara"
+      ],
+      "hints": [
+        "It's made of twisted metal strands.",
+        "Boudica is said to have worn a big gold one.",
+        "Its name is short and comes from a Latin word for “twisted”."
+      ],
+      "fun_fact": "The Snettisham Great Torc, found in Norfolk, is made from about 1 kg of gold and silver mixed together.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Snettisham_HoardDSCF6581.jpg/3840px-Snettisham_HoardDSCF6581.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnettisham_HoardDSCF6581.jpg",
+        "credit": "Johnbod · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Johnbod",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Johnbod"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20112",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "football",
+      "bundle": "uk",
+      "description": "A striker who never needed a stepladder to change a light bulb.",
+      "question": "Peter Crouch is one of the tallest players ever to play for England. About how tall is he?",
+      "answer": "About 2 m",
+      "wrong_answers": [
+        "About 1.50 m",
+        "About 2.50 m",
+        "About 3 m"
+      ],
+      "hints": [
+        "He was taller than nearly everyone else on the pitch.",
+        "He scored lots of goals with his head.",
+        "He has to duck to walk through a normal front door."
+      ],
+      "fun_fact": "Crouch is 2.01 m (6 ft 7 in) tall and became famous for celebrating goals with a robot dance.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Naz%C4%B1m_Sangar%C3%A9_with_a_header_in_the_international_match_%28November_2020%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANaz%C4%B1m_Sangar%C3%A9_with_a_header_in_the_international_match_%28November_2020%29.jpg",
+        "credit": "mlsz.hu – the official website of the Hungarian Football Federation · Attribution · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Attribution",
+        "license_url": null,
+        "author": "mlsz.hu – the official website of the Hungarian Football Federation",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20113",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "football",
+      "bundle": "uk",
+      "description": "Newcastle's favourite place to be very loud on a Saturday afternoon.",
+      "question": "St James' Park, the home of Newcastle United, stands right in the city centre. About how many fans fit inside?",
+      "answer": "About 52,000",
+      "wrong_answers": [
+        "About 5,000",
+        "About 150,000",
+        "About 500,000"
+      ],
+      "hints": [
+        "It's one of the biggest club grounds in England.",
+        "Old Trafford holds about 74,000, and this one is a bit smaller.",
+        "It's somewhere between 50,000 and 55,000."
+      ],
+      "fun_fact": "Football has been played at St James' Park since 1880, making it the oldest ground in the North East of England.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Newcastle_upon_Tyne_-_Tyne_Bridge.jpg/3840px-Newcastle_upon_Tyne_-_Tyne_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANewcastle_upon_Tyne_-_Tyne_Bridge.jpg",
+        "credit": "Benjamin Smith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Benjamin Smith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benjism89"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20114",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "football",
+      "bundle": "uk",
+      "description": "Ordering a drink here could count as your pre-match warm-up.",
+      "question": "The Tottenham Hotspur Stadium has a bar for fans that is said to be the longest in Britain. About how long is it?",
+      "answer": "65 m",
+      "wrong_answers": [
+        "6 m",
+        "650 m",
+        "6,500 m"
+      ],
+      "hints": [
+        "It's much longer than a bus.",
+        "It's a bit longer than an Olympic swimming pool.",
+        "You could walk from one end to the other in under a minute."
+      ],
+      "fun_fact": "The stadium's grass pitch slides away in three parts to reveal a second, artificial pitch for NFL games.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/London_Tottenham_Hotspur_Stadium.jpg/3840px-London_Tottenham_Hotspur_Stadium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Tottenham_Hotspur_Stadium.jpg",
+        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Arne Müseler",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arne_mueseler"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20115",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "Cornwall's wildest patch of ground, where nobody mows the lawn.",
+      "question": "You're walking across Bodmin Moor in Cornwall. Which of these animals would you NOT find grazing there?",
+      "answer": "Zebras",
+      "wrong_answers": [
+        "Ponies",
+        "Sheep",
+        "Cattle"
+      ],
+      "hints": [
+        "Farmers let their animals roam freely on the moor.",
+        "Think about which animal would cope with cold, wet, windy hills.",
+        "The odd one out has black and white stripes and lives in Africa."
+      ],
+      "fun_fact": "Bodmin Moor is home to Brown Willy, the highest hill in Cornwall, at 420 m (1,378 ft).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Brown_Willy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrown_Willy.jpg",
+        "credit": "Original uploader was StephenDawson at en.wikipedia · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Original uploader was StephenDawson at en.wikipedia",
+        "author_url": "https://en.wikipedia.org/wiki/User:StephenDawson"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20116",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "A contest where the athletes have four legs and the coach just whistles.",
+      "question": "You're watching a farmer whistle while a collie steers a few sheep around a field and into a small pen, against the clock. What contest is this?",
+      "answer": "A sheepdog trial",
+      "wrong_answers": [
+        "A dog show",
+        "A greyhound race",
+        "A ploughing match"
+      ],
+      "hints": [
+        "It happens on hill farms and village fields all over Britain.",
+        "The dog is doing the job it does every day on the farm.",
+        "The contest is named after the kind of dog that herds sheep."
+      ],
+      "fun_fact": "The first known sheepdog trial was held in Bala, in Wales, in 1873.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Sheep-dotted_hillside_-_geograph.org.uk_-_2979846.jpg/3840px-Sheep-dotted_hillside_-_geograph.org.uk_-_2979846.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASheep-dotted_hillside_-_geograph.org.uk_-_2979846.jpg",
+        "credit": "Bill Boaden · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Bill Boaden",
+        "author_url": "https://www.geograph.org.uk/profile/42541"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20117",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "A cliff so curvy it looks like the Dales got a giant bite taken out of them.",
+      "question": "Malham Cove in the Yorkshire Dales is a huge curved cliff of pale rock. About how tall is it?",
+      "answer": "About 80 m (260 ft)",
+      "wrong_answers": [
+        "About 8 m (26 ft)",
+        "About 800 m (2,600 ft)",
+        "About 8 km (5 miles)"
+      ],
+      "hints": [
+        "It's far taller than a house.",
+        "Water once poured over its edge as a huge waterfall at the end of the last Ice Age.",
+        "It's about as tall as a 25-storey tower block."
+      ],
+      "fun_fact": "The cracked limestone pavement on top of Malham Cove was a filming location for “Harry Potter and the Deathly Hallows – Part 1”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Limestone_pavement_at_the_top_of_Malham_Cove.jpg/3840px-Limestone_pavement_at_the_top_of_Malham_Cove.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALimestone_pavement_at_the_top_of_Malham_Cove.jpg",
+        "credit": "Tamsintj · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tamsintj",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Tamsintj&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20118",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "landmarks-and-castles",
+      "bundle": "uk",
+      "description": "Trafalgar Square's spare seat gets a brand-new guest every couple of years.",
+      "question": "In 2013 this giant statue stood on the Fourth Plinth in London's Trafalgar Square. What animal is it?",
+      "answer": "A cockerel",
+      "wrong_answers": [
+        "A peacock",
+        "A parrot",
+        "A duck"
+      ],
+      "hints": [
+        "It's a bird you might meet on a farm.",
+        "It's famous for waking everyone up early in the morning.",
+        "It shouts “cock-a-doodle-doo”."
+      ],
+      "fun_fact": "The Fourth Plinth was built in 1841 for a statue of a king on horseback that was never made, so it stood empty for more than 150 years.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/%27Hahn_Cock%27_by_Katharina_Fritsch%2C_Fourth_Plinth%2C_Trafalgar_Square_%2810595504745%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%27Hahn_Cock%27_by_Katharina_Fritsch%2C_Fourth_Plinth%2C_Trafalgar_Square_%2810595504745%29.jpg",
+        "credit": "Loz Pycock from London, UK · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Loz Pycock from London, UK",
+        "author_url": "https://www.flickr.com/people/99245765@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20119",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "landmarks-and-castles",
+      "bundle": "uk",
+      "description": "The ultimate bedroom with a view, as long as you don't mind lots of stairs.",
+      "question": "This Norman castle on a hill in Durham, shown here, is over 900 years old. Who lives in it today?",
+      "answer": "University students",
+      "wrong_answers": [
+        "The King",
+        "Monks",
+        "Soldiers"
+      ],
+      "hints": [
+        "They are young people who didn't buy it or win it in a battle.",
+        "They are there to learn.",
+        "The castle has belonged to Durham University since the 1830s."
+      ],
+      "fun_fact": "Students eat their dinners in the castle's medieval Great Hall, which is over 700 years old.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Sfec-durham-castle-2007-261.JPG/3840px-Sfec-durham-castle-2007-261.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASfec-durham-castle-2007-261.JPG",
+        "credit": "Steve F-E-Cameron (Merlin-UK) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Steve F-E-Cameron (Merlin-UK)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Merlin-UK"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20120",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "languages-of-britain",
+      "bundle": "uk",
+      "description": "They left behind beautiful carved stones and absolutely no phrasebook.",
+      "question": "You find a Pictish carved stone in Scotland, but nobody alive speaks Pictish any more. What is a language with no speakers left called?",
+      "answer": "A dead language",
+      "wrong_answers": [
+        "A mother tongue",
+        "A sign language",
+        "A second language"
+      ],
+      "hints": [
+        "Latin is often called this too, because nobody grows up speaking it at home.",
+        "Nobody alive learned it as a child, so it can't change any more.",
+        "It's the opposite of a living language."
+      ],
+      "fun_fact": "The Picts left hundreds of carved stones with strange symbols, but experts still can't fully read what they mean.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Pictish_symbol_stone_from_Dores.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APictish_symbol_stone_from_Dores.JPG",
+        "credit": "Kim Traynor · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Kim Traynor",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kim_Traynor"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20121",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "languages-of-britain",
+      "bundle": "uk",
+      "description": "A walk that's mostly uphill, with a café at the top as a reward.",
+      "question": "You've climbed to the top of Yr Wyddfa, the highest mountain in Wales. Roughly how high above sea level are you?",
+      "answer": "About 1,100 m",
+      "wrong_answers": [
+        "About 400 m",
+        "About 2,500 m",
+        "About 4,800 m"
+      ],
+      "hints": [
+        "It's the highest mountain in Britain outside Scotland.",
+        "Ben Nevis, Britain's highest, is only about 250 m taller.",
+        "It's just over one kilometre high."
+      ],
+      "fun_fact": "Yr Wyddfa is 1,085 m (3,560 ft) tall, and a little railway has carried visitors up it since 1896.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Clogwyn_Station_with_steam_train.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClogwyn_Station_with_steam_train.jpg",
+        "credit": "Denis Egan · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Denis Egan",
+        "author_url": "https://www.flickr.com/photos/61989207@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20122",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "middle-ages",
+      "bundle": "uk",
+      "description": "A king hiding in a cave gets a pep talk from a very unlikely coach.",
+      "question": "Legend says Robert the Bruce, hiding in a cave after six defeats, found the courage to try again by watching which creature?",
+      "answer": "A spider",
+      "wrong_answers": [
+        "A mouse",
+        "A robin",
+        "A snail"
+      ],
+      "hints": [
+        "It was a tiny creature that kept trying again and again.",
+        "It kept failing to reach the cave wall, then finally made it.",
+        "It has eight legs and spins a web."
+      ],
+      "fun_fact": "Several caves in Scotland and Ireland claim to be the place where Robert the Bruce watched his famous spider.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Approach_from_south_to_King%27s_Cave%2C_Arran.jpg/3840px-Approach_from_south_to_King%27s_Cave%2C_Arran.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AApproach_from_south_to_King%27s_Cave%2C_Arran.jpg",
+        "credit": "dave souza · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "dave souza",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dave_souza"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20123",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "money-and-shopping",
+      "bundle": "uk",
+      "description": "The only time grown-ups happily get up before sunrise to go shopping.",
+      "question": "Just after Christmas, British shops put up big “SALE” signs and people queue early outside. What does “sale” mean on those signs?",
+      "answer": "Prices are lower",
+      "wrong_answers": [
+        "The shop is closing",
+        "Everything is free",
+        "Only toys are sold"
+      ],
+      "hints": [
+        "Think about why people are so happy to queue in the cold.",
+        "A bargain is something you get for less money than usual.",
+        "You pay less than you would have paid before Christmas."
+      ],
+      "fun_fact": "In Britain, many “January sales” actually begin on Boxing Day, 26 December.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Record_Store_Day%2C_Repo_Records%2C_Philadelphia_%282016-04-16_14.09.27_by_David_Hilowitz%29.jpg/3840px-Record_Store_Day%2C_Repo_Records%2C_Philadelphia_%282016-04-16_14.09.27_by_David_Hilowitz%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARecord_Store_Day%2C_Repo_Records%2C_Philadelphia_%282016-04-16_14.09.27_by_David_Hilowitz%29.jpg",
+        "credit": "David Hilowitz from San Antonio, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "David Hilowitz from San Antonio, USA",
+        "author_url": "https://www.flickr.com/people/12176869@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20124",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "money-and-shopping",
+      "bundle": "uk",
+      "description": "Small change with big ears.",
+      "question": "I wear a blue jacket, I sneak into Mr McGregor's garden, and in 2016 I hopped onto Britain's 50p coins. Who am I?",
+      "answer": "Peter Rabbit",
+      "wrong_answers": [
+        "Bugs Bunny",
+        "The White Rabbit",
+        "Thumper"
+      ],
+      "hints": [
+        "I come from old British storybooks with soft painted pictures.",
+        "Beatrix Potter wrote my stories.",
+        "My first name is the same as a boy who never grows up in Neverland."
+      ],
+      "fun_fact": "The coins marked 150 years since the birth of Beatrix Potter, who was born in 1866.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Nether_Stowey%2C_Coleridge_Cottage%2C_Small_vegetable_patch_-_geograph.org.uk_-_6282878.jpg/3840px-Nether_Stowey%2C_Coleridge_Cottage%2C_Small_vegetable_patch_-_geograph.org.uk_-_6282878.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANether_Stowey%2C_Coleridge_Cottage%2C_Small_vegetable_patch_-_geograph.org.uk_-_6282878.jpg",
+        "credit": "Michael Garlick · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Michael Garlick",
+        "author_url": "https://www.geograph.org.uk/profile/118660"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20125",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "plants-and-gardens",
+      "bundle": "uk",
+      "description": "A walk in the woods that smells like a pizza restaurant.",
+      "question": "You're walking in a British wood that smells strongly of garlic, and the ground is white with wild garlic flowers. Which season is it?",
+      "answer": "Spring",
+      "wrong_answers": [
+        "Summer",
+        "Autumn",
+        "Winter"
+      ],
+      "hints": [
+        "The trees above you are only just getting their new leaves.",
+        "Bluebells flower in the same woods at about the same time.",
+        "It's the season of Easter and baby lambs."
+      ],
+      "fun_fact": "Wild garlic is also called ramsons, and some people blend its leaves into a bright green pesto.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Woodland_path_-_geograph.org.uk_-_5840206.jpg/3840px-Woodland_path_-_geograph.org.uk_-_5840206.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoodland_path_-_geograph.org.uk_-_5840206.jpg",
+        "credit": "Michael Dibb · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Michael Dibb",
+        "author_url": "https://www.geograph.org.uk/profile/41544"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20127",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "pop-and-rock",
+      "bundle": "uk",
+      "description": "Even the Beatles needed their five a day.",
+      "question": "The Beatles sang “___ Fields Forever”. Which fruit in this photo fills the gap?",
+      "answer": "Strawberry",
+      "wrong_answers": [
+        "Raspberry",
+        "Cherry",
+        "Blueberry"
+      ],
+      "hints": [
+        "It's red and has tiny seeds on the outside.",
+        "People eat it with cream at Wimbledon.",
+        "Its name starts with “straw”."
+      ],
+      "fun_fact": "Strawberry Field was a children's home in Liverpool near where John Lennon grew up, and he loved playing in its garden.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/A_Fresh_Healthy_Snack_%28Unsplash%29.jpg/3840px-A_Fresh_Healthy_Snack_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Fresh_Healthy_Snack_%28Unsplash%29.jpg",
+        "credit": "Jez Timms jeztimms · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jez Timms jeztimms",
+        "author_url": "https://unsplash.com/@jeztimms"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20128",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "Yorkshire folk have a word for this, and they've had over a thousand years of practice.",
+      "question": "In Yorkshire dialect, from an old Viking word, children say they're going “laikin'”. What are they doing?",
+      "answer": "Playing",
+      "wrong_answers": [
+        "Hiding",
+        "Fishing",
+        "Moaning"
+      ],
+      "hints": [
+        "It's a happy word.",
+        "Children often do it outside after school, sometimes until it gets dark.",
+        "In Norway a similar word, “leke”, is used for toys and games."
+      ],
+      "fun_fact": "“Laik” comes from the Old Norse word “leika”, brought to Yorkshire by Viking settlers more than 1,000 years ago.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Dry_stone_fences_in_the_Yorkshire_Dales%2C_England.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADry_stone_fences_in_the_Yorkshire_Dales%2C_England.jpg",
+        "credit": "Peter K Burian · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Peter K Burian",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peter_K_Burian"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20129",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "An actress from the Midlands who knows a thing or two about a very busy kitchen.",
+      "question": "Midlands-born actress Julie Walters played a mum of seven red-haired children whose family car could fly. In which film series?",
+      "answer": "Harry Potter",
+      "wrong_answers": [
+        "The Chronicles of Narnia",
+        "The Hunger Games",
+        "Pirates of the Caribbean"
+      ],
+      "hints": [
+        "The films are full of magic.",
+        "In the films, her children go to a boarding school in a castle.",
+        "Her family name is Weasley."
+      ],
+      "fun_fact": "Before becoming an actress, Julie Walters trained as a nurse in Birmingham.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/Worcester_and_Birmingham_Canal_in_Birmingham_-_geograph.org.uk_-_4692017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWorcester_and_Birmingham_Canal_in_Birmingham_-_geograph.org.uk_-_4692017.jpg",
+        "credit": "Mat Fascione · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Mat Fascione",
+        "author_url": "https://www.geograph.org.uk/profile/11776"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20130",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "birds",
+      "bundle": "uk",
+      "description": "A small bird that treats every supermarket car park like its own personal catwalk.",
+      "question": "Which small black-and-white bird is often seen darting across British car parks, chasing flies?",
+      "answer": "Pied wagtail",
+      "wrong_answers": [
+        "Magpie",
+        "Great tit",
+        "Starling"
+      ],
+      "hints": [
+        "It often runs quickly along the ground near puddles and lawns instead of hopping.",
+        "As it walks, it keeps flicking one part of its body up and down.",
+        "Think of what a happy dog does with its tail."
+      ],
+      "fun_fact": "On winter nights, hundreds of pied wagtails can sleep together in town-centre trees, because cities are warmer than the countryside.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Ehem._Tesco_Geb%C3%A4ude%2C_Parkplatz%2C_2021_Nagyk%C3%A1ta.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEhem._Tesco_Geb%C3%A4ude%2C_Parkplatz%2C_2021_Nagyk%C3%A1ta.jpg",
+        "credit": "Globetrotter19 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Globetrotter19",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Globetrotter19"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20131",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "birds",
+      "bundle": "uk",
+      "description": "A bird that clearly never got the memo about which way is up.",
+      "question": "This blue-grey bird with a black eye stripe is the only British bird that can walk down tree trunks head first. What is it?",
+      "answer": "Nuthatch",
+      "wrong_answers": [
+        "Treecreeper",
+        "Woodpecker",
+        "Blue tit"
+      ],
+      "hints": [
+        "It often visits garden bird feeders.",
+        "Underneath, it has a warm orange-buff belly.",
+        "It wedges hazelnuts into bark and hacks them open."
+      ],
+      "fun_fact": "Nuthatches plaster mud around the entrance hole of their nest until it's just the right size for them.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Tree_Bark_Detail.jpg/3840px-Tree_Bark_Detail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATree_Bark_Detail.jpg",
+        "credit": "Flappy Pigeon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Flappy Pigeon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Flappy_Pigeon"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20133",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "customs-and-ceremonies",
+      "bundle": "uk",
+      "description": "A gift that says “I love you” and also “please pass the soup”.",
+      "question": "In Wales, a young man once made a love spoon for his sweetheart, with hearts, knots and chains. What was it made from?",
+      "answer": "Wood",
+      "wrong_answers": [
+        "Silver",
+        "Pewter",
+        "Brass"
+      ],
+      "hints": [
+        "He made it himself, often on long winter evenings.",
+        "The oldest known Welsh love spoon dates from 1667.",
+        "It comes from a tree."
+      ],
+      "fun_fact": "Some love spoons have chains carved from one single piece of wood, with no joins at all.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Old_Stone_Cottage_%2823491051103%29.jpg/3840px-Old_Stone_Cottage_%2823491051103%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_Stone_Cottage_%2823491051103%29.jpg",
+        "credit": "GPS 56 from New Zealand · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "GPS 56 from New Zealand",
+        "author_url": "https://www.flickr.com/people/91807507@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20134",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "A royal nickname so bad it should come with a warning label.",
+      "question": "I was king of England around the year 1000, when Vikings kept attacking. My Old English nickname meant “badly advised”. What's my nickname today?",
+      "answer": "The Unready",
+      "wrong_answers": [
+        "The Confessor",
+        "The Great",
+        "The Bold"
+      ],
+      "hints": [
+        "My nickname is not a compliment.",
+        "My son Edward later got a much holier nickname than mine.",
+        "My name is Æthelred, and today my nickname makes people think I was never prepared."
+      ],
+      "fun_fact": "His name Æthelred means “noble counsel”, so his nickname “Unræd” (“no counsel”) was a joke on his own name.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Anglo-Saxon_silver_penny_%28FindID_526724%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnglo-Saxon_silver_penny_%28FindID_526724%29.jpg",
+        "credit": "Lincolnshire County Council, Adam Daubney, 2012-10-26 14:20:44 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Lincolnshire County Council, Adam Daubney, 2012-10-26 14:20:44",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20135",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "The original island getaway, with no flights and plenty of fruit.",
+      "question": "Avalon is a magical island whose name is linked to apples. After his last battle, King Arthur was taken there by boat. Why?",
+      "answer": "To be healed of his wounds",
+      "wrong_answers": [
+        "To be crowned king again",
+        "To search for the Holy Grail",
+        "To hide his sword Excalibur"
+      ],
+      "hints": [
+        "Arthur was in a very bad way after the battle.",
+        "Magical women on the island were said to have special powers.",
+        "Legend says he would one day come back, strong again."
+      ],
+      "fun_fact": "In the 1190s, monks at Glastonbury Abbey claimed they had found King Arthur's grave and that Glastonbury was the real Avalon.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Edgarley_in_the_mist_-_geograph.org.uk_-_7730462.jpg/3840px-Edgarley_in_the_mist_-_geograph.org.uk_-_7730462.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEdgarley_in_the_mist_-_geograph.org.uk_-_7730462.jpg",
+        "credit": "Neil Owen · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Neil Owen",
+        "author_url": "https://www.geograph.org.uk/profile/47623"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20136",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "The bravest knight of the Round Table, with a surname that sounds fancy until you translate it.",
+      "question": "Sir Lancelot, the most famous knight of King Arthur, is often called “Lancelot du Lac”. What does “du Lac” mean?",
+      "answer": "Of the Lake",
+      "wrong_answers": [
+        "Of the Sword",
+        "Of the Castle",
+        "Of the Forest"
+      ],
+      "hints": [
+        "“Du Lac” is French.",
+        "In the stories, he was raised by a magical lady as a baby.",
+        "Think of water, not land."
+      ],
+      "fun_fact": "Lancelot does not appear in the oldest Arthur stories: French writers added him in the 1100s.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/A_Knight_and_his_Horse.jpg/3840px-A_Knight_and_his_Horse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Knight_and_his_Horse.jpg",
+        "credit": "Sean Tbear · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Sean Tbear",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20137",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "Stonehenge's biggest stones finally get asked the awkward question: “So, where are you from?”",
+      "question": "In 2020, scientists tested the giant sarsen stones of Stonehenge to find where they came from. Where did most of them come from?",
+      "answer": "Nearby, in Wiltshire",
+      "wrong_answers": [
+        "The mountains of Wales",
+        "The Scottish Highlands",
+        "Across the sea in France"
+      ],
+      "hints": [
+        "Scientists compared the stones' chemistry with rocks from many possible sites.",
+        "The answer came from a core drilled out of one stone and kept for 60 years.",
+        "Their source, West Woods, is about 25 km (15 miles) away."
+      ],
+      "fun_fact": "The test used a core drilled out of a Stonehenge stone in 1958, which a workman took home and returned 60 years later.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/2_trilithons_at_Stonehenge.jpg/3840px-2_trilithons_at_Stonehenge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2_trilithons_at_Stonehenge.jpg",
+        "credit": "TobyEditor · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "TobyEditor",
+        "author_url": "https://commons.wikimedia.org/wiki/User:TobyEditor"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20138",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "football",
+      "bundle": "uk",
+      "description": "Every football club needs a nickname that fits nicely on a scarf.",
+      "question": "Arsenal is to the Gunners as Wolverhampton Wanderers is to…?",
+      "answer": "Wolves",
+      "wrong_answers": [
+        "Foxes",
+        "Magpies",
+        "Canaries"
+      ],
+      "hints": [
+        "The club comes from the West Midlands of England.",
+        "Their home ground is called Molineux.",
+        "The nickname is just a short form of the city's name."
+      ],
+      "fun_fact": "Molineux was one of the first British grounds to get floodlights, in 1953, and hosted famous night-time friendlies against top European teams.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Mecz_pi%C5%82karski_Wis%C5%82a_Krak%C3%B3w_-_Zag%C5%82%C4%99bie_Sosnwoiec%2C_28_pa%C5%BAdziernika_2022%2C_Po%C5%BCegnanie_Stadionu_Ludowego%2C_KP.jpg/3840px-Mecz_pi%C5%82karski_Wis%C5%82a_Krak%C3%B3w_-_Zag%C5%82%C4%99bie_Sosnwoiec%2C_28_pa%C5%BAdziernika_2022%2C_Po%C5%BCegnanie_Stadionu_Ludowego%2C_KP.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMecz_pi%C5%82karski_Wis%C5%82a_Krak%C3%B3w_-_Zag%C5%82%C4%99bie_Sosnwoiec%2C_28_pa%C5%BAdziernika_2022%2C_Po%C5%BCegnanie_Stadionu_Ludowego%2C_KP.jpg",
+        "credit": "Krzysztof Popławski · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Krzysztof Popławski",
+        "author_url": "https://commons.wikimedia.org/wiki/User:KrzysztofPoplawski"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20139",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "georgians-and-victorians",
+      "bundle": "uk",
+      "description": "A shiny pot with two big ears that grown footballers happily cry into every May.",
+      "question": "The FA Cup is the oldest national football competition in the world. Who was on the throne when it was first played?",
+      "answer": "Queen Victoria",
+      "wrong_answers": [
+        "King George III",
+        "King Edward VII",
+        "King George V"
+      ],
+      "hints": [
+        "The first final was played at the Kennington Oval in London in 1872.",
+        "This monarch reigned for more than 63 years.",
+        "A whole era of British history is named after her."
+      ],
+      "fun_fact": "The very first FA Cup trophy was stolen from a Birmingham shop window in 1895 and was never found.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/FA_Cup_Trophy_at_Manchester_National_Football_Museum_%28Ank_Kumar%29_01.jpg/3840px-FA_Cup_Trophy_at_Manchester_National_Football_Museum_%28Ank_Kumar%29_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFA_Cup_Trophy_at_Manchester_National_Football_Museum_%28Ank_Kumar%29_01.jpg",
+        "credit": "Ank Kumar · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ank Kumar",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ank_gsx"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20140",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "Britain's top fisherman never uses a rod, a net or a boat.",
+      "question": "This big bird of prey nests in the Scottish Highlands, dives feet first into lochs to catch fish, and flies to Africa for winter. What is it?",
+      "answer": "An osprey",
+      "wrong_answers": [
+        "A puffin",
+        "A heron",
+        "A kingfisher"
+      ],
+      "hints": [
+        "It's a hunter with sharp claws and a hooked beak.",
+        "It plunges into the water claws first, not beak first.",
+        "It's sometimes called the “sea hawk” or “fish hawk”."
+      ],
+      "fun_fact": "Ospreys died out in Britain, but a pair came back to nest at Loch Garten in Scotland in the 1950s, and today hundreds of pairs breed in the UK.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg/3840px-A_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_small_loch_in_the_saddle_between_Beinn_an_Dothaidh_and_Beinn_Dorain%2C_Scotland_01.jpg",
+        "credit": "Michal Klajban · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Michal Klajban",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Podzemnik"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20141",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "A plump moorland bird with bright red eyebrows and very loud opinions.",
+      "question": "Look at the photo: this is a red grouse. Where in the world does it live wild?",
+      "answer": "Only in Britain and Ireland",
+      "wrong_answers": [
+        "Across most of Europe",
+        "Only in Norway and Sweden",
+        "Only in Scotland"
+      ],
+      "hints": [
+        "It feeds almost entirely on heather shoots.",
+        "Its close cousins in Scandinavia turn white in winter, but it stays brown all year.",
+        "It's found on these islands and nowhere else."
+      ],
+      "fun_fact": "The red grouse's call sounds like it is shouting “go-back, go-back, go-back!”.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Red_Grouse_%282954268645%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed_Grouse_%282954268645%29.jpg",
+        "credit": "Alastair Rae from London, United Kingdom · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Alastair Rae from London, United Kingdom",
+        "author_url": "https://www.flickr.com/people/55663585@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20142",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "hills-moors-and-national-parks",
+      "bundle": "uk",
+      "description": "Moorland snack time: free fruit, and no queue at the checkout.",
+      "question": "Walkers on British moors pick wild bilberries in late summer. Which fruit is the bilberry a close cousin of?",
+      "answer": "Blueberry",
+      "wrong_answers": [
+        "Strawberry",
+        "Raspberry",
+        "Blackberry"
+      ],
+      "hints": [
+        "It grows on low bushes, not on thorny brambles.",
+        "Its berries are small, round and dark blue-purple.",
+        "Its shop-bought cousin often goes into muffins and on top of pancakes."
+      ],
+      "fun_fact": "Unlike most shop blueberries, bilberries are purple all the way through, so they stain your fingers and lips.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Heather%2C_Howden_Moors_-_geograph.org.uk_-_4135746.jpg/3840px-Heather%2C_Howden_Moors_-_geograph.org.uk_-_4135746.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeather%2C_Howden_Moors_-_geograph.org.uk_-_4135746.jpg",
+        "credit": "Peter Barr · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Peter Barr",
+        "author_url": "https://www.geograph.org.uk/profile/28954"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20143",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "landmarks-and-castles",
+      "bundle": "uk",
+      "description": "Newcastle's famous green arch has some very noisy lodgers.",
+      "question": "Every summer, which seabirds nest on the ledges of the Tyne Bridge in Newcastle?",
+      "answer": "Kittiwakes",
+      "wrong_answers": [
+        "Puffins",
+        "Gannets",
+        "Cormorants"
+      ],
+      "hints": [
+        "They usually nest on steep sea cliffs.",
+        "They are small gulls with black tips on their wings.",
+        "Their name sounds like their loud call."
+      ],
+      "fun_fact": "The Tyne Bridge kittiwakes are thought to be the furthest inland kittiwake colony in the world.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Newcastle_upon_Tyne_-_Tyne_Bridge.jpg/3840px-Newcastle_upon_Tyne_-_Tyne_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANewcastle_upon_Tyne_-_Tyne_Bridge.jpg",
+        "credit": "Benjamin Smith · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Benjamin Smith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benjism89"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20144",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "landmarks-and-castles",
+      "bundle": "uk",
+      "description": "Where Scotland's politicians argue under a roof that looks like nothing else on Earth.",
+      "question": "Scotland's Parliament meets in a modern building, opened in 2004 next to a royal palace. Which city is it in?",
+      "answer": "Edinburgh",
+      "wrong_answers": [
+        "Glasgow",
+        "Aberdeen",
+        "Inverness"
+      ],
+      "hints": [
+        "It's on the east side of Scotland.",
+        "It has a famous castle on top of an old volcano.",
+        "It's the capital of Scotland."
+      ],
+      "fun_fact": "Its Catalan architect, Enric Miralles, said parts of the design were inspired by boats turned upside down on a beach.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Scottish_Parliament_Debating_Chamber_3.jpg/3840px-Scottish_Parliament_Debating_Chamber_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScottish_Parliament_Debating_Chamber_3.jpg",
+        "credit": "Colin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Colin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Colin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20145",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "languages-of-britain",
+      "bundle": "uk",
+      "description": "A Welsh word you'll hear a lot from grans in the Valleys.",
+      "question": "In Welsh, what does the word “cariad” mean?",
+      "answer": "Love",
+      "wrong_answers": [
+        "Friend",
+        "Home",
+        "Peace"
+      ],
+      "hints": [
+        "Shopkeepers and grandparents in Wales use it with a warm smile.",
+        "You'll find it in lots of Welsh songs and poems.",
+        "It's often carved on wooden spoons given on St Dwynwen's Day, the Welsh Valentine's Day."
+      ],
+      "fun_fact": "In Wales, “cariad” is used like “darling” or “sweetheart”, even for people you've only just met.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Rugby_in_the_Welsh_valleys_-_geograph.org.uk_-_7594253.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARugby_in_the_Welsh_valleys_-_geograph.org.uk_-_7594253.jpg",
+        "credit": "Alan Hughes · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Alan Hughes",
+        "author_url": "https://www.geograph.org.uk/profile/121420"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20146",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "languages-of-britain",
+      "bundle": "uk",
+      "description": "A name so long the railway station sign needs its own postcode.",
+      "question": "The village with the longest place name in Britain, 58 letters long, is on which island?",
+      "answer": "Anglesey",
+      "wrong_answers": [
+        "The Isle of Wight",
+        "The Isle of Man",
+        "Skye"
+      ],
+      "hints": [
+        "The village's name is in the old language of the island's own country.",
+        "The Menai Bridge links it to the mainland of Wales.",
+        "In Welsh, the island is called Ynys Môn."
+      ],
+      "fun_fact": "The village's long name was stretched out in the 1860s, partly to draw tourists to its new railway station.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Church_of_St_Michael%2C_Ffestiniog_%28Llanffestiniog%29_19.jpg/3840px-Church_of_St_Michael%2C_Ffestiniog_%28Llanffestiniog%29_19.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChurch_of_St_Michael%2C_Ffestiniog_%28Llanffestiniog%29_19.jpg",
+        "credit": "Llywelyn2000 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Llywelyn2000",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Llywelyn2000"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20147",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "languages-of-britain",
+      "bundle": "uk",
+      "description": "The farmyard spoke one language, but the dinner table quietly learned another.",
+      "question": "Three of these meat words came into English from French. Which one did NOT?",
+      "answer": "Lamb",
+      "wrong_answers": [
+        "Veal",
+        "Venison",
+        "Mutton"
+      ],
+      "hints": [
+        "Think about which words the farmers in the fields would have used.",
+        "Its Old English ancestor was in use long before French words reached England.",
+        "The odd one out uses the same word for the young animal and its meat."
+      ],
+      "fun_fact": "“Mutton” comes from the Old French “moton”, meaning sheep, so Norman lords ate “sheep” while English farmers looked after them.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Banquet_de_Charles_V_le_Sage.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABanquet_de_Charles_V_le_Sage.jpg",
+        "credit": "Jean Fouquet · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jean Fouquet",
+        "author_url": "https://en.wikipedia.org/wiki/en:Jean_Fouquet"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20148",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "legendary-heroes",
+      "bundle": "uk",
+      "description": "The ultimate snooze button, pressed for about 1,500 years and counting.",
+      "question": "Legend says one king lies asleep with his knights and will wake up and come back when Britain needs him. Who is he?",
+      "answer": "King Arthur",
+      "wrong_answers": [
+        "King Alfred the Great",
+        "King Richard the Lionheart",
+        "Old King Cole"
+      ],
+      "hints": [
+        "His stories are full of brave knights and quests.",
+        "His wise wizard friend was Merlin.",
+        "As a boy, he pulled a sword out of a stone."
+      ],
+      "fun_fact": "Thomas Malory wrote in the 1400s that Arthur's grave said “here lies Arthur, the once and future king”, and T. H. White later used those words as the title of his Arthur novel.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Arthog_-_Barmouth_Bridge_-_20070915150033.jpg/3840px-Arthog_-_Barmouth_Bridge_-_20070915150033.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArthog_-_Barmouth_Bridge_-_20070915150033.jpg",
+        "credit": "Themountainphotographer · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Themountainphotographer",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Themountainphotographer&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20150",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "money-and-shopping",
+      "bundle": "uk",
+      "description": "A coin that retired from your pocket but still hides in sofa cushions.",
+      "question": "I was gold-coloured and thick, and in 2017 a new 12-sided coin replaced me. What am I?",
+      "answer": "The old £1 coin",
+      "wrong_answers": [
+        "The old £2 coin",
+        "The old threepenny bit",
+        "The old sixpence"
+      ],
+      "hints": [
+        "I first came out in 1983.",
+        "The design on my back changed often and included symbols of the four UK nations.",
+        "A hundred pennies made one of me."
+      ],
+      "fun_fact": "The Royal Mint thought about one in 30 round £1 coins was fake, which is why it was replaced.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/20250828_ceramic_piggy_banks.jpg/3840px-20250828_ceramic_piggy_banks.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20250828_ceramic_piggy_banks.jpg",
+        "credit": "Abraham · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Abraham",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Abraham"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20151",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "plants-and-gardens",
+      "bundle": "uk",
+      "description": "One of those Sundays important enough to get its very own name on the calendar.",
+      "question": "Each November, Britons pin red paper poppies to their coats for me. I'm the Sunday nearest the 11th. Which day am I?",
+      "answer": "Remembrance Sunday",
+      "wrong_answers": [
+        "Mothering Sunday",
+        "Palm Sunday",
+        "Stir-up Sunday"
+      ],
+      "hints": [
+        "I always come in autumn, not spring.",
+        "The King lays a wreath at the Cenotaph in London on me.",
+        "My name means the same as “remembering”."
+      ],
+      "fun_fact": "Wearing poppies started after the First World War, when poppies grew on the battlefields of Flanders.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Remembrance_Poppy.jpg/3840px-Remembrance_Poppy.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARemembrance_Poppy.jpg",
+        "credit": "Daniel Capilla · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daniel Capilla",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dcapillae"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20152",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "plants-and-gardens",
+      "bundle": "uk",
+      "description": "A war fought partly with spades and wellies.",
+      "question": "During the Second World War, the “Dig for Victory” campaign told Britons to turn their gardens and parks into what?",
+      "answer": "Vegetable plots",
+      "wrong_answers": [
+        "Air-raid shelters",
+        "Flower beds",
+        "Army training grounds"
+      ],
+      "hints": [
+        "Ships bringing food to Britain were hard to get through.",
+        "Food was rationed, so every family was asked to help.",
+        "Think of carrots, potatoes and cabbages."
+      ],
+      "fun_fact": "Even the moat of the Tower of London was dug up and turned into vegetable patches during the war.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/WWII_Ration_Books_%2813902590734%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWWII_Ration_Books_%2813902590734%29.jpg",
+        "credit": "Archives New Zealand from New Zealand · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Archives New Zealand from New Zealand",
+        "author_url": "https://www.flickr.com/people/35759981@N08"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20153",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "plants-and-gardens",
+      "bundle": "uk",
+      "description": "The vegetable that always gets elbowed off the plate by the roast potatoes.",
+      "question": "It's pale cream, and Britons roast it for Sunday lunch. Which part of the parsnip plant do you eat?",
+      "answer": "The root",
+      "wrong_answers": [
+        "The leaves",
+        "The stem",
+        "The bulb"
+      ],
+      "hints": [
+        "You have to dig it up to pick it.",
+        "It grows hidden in the soil.",
+        "It's the same part you eat on a carrot."
+      ],
+      "fun_fact": "Many gardeners say parsnips taste sweeter after a frost, because the cold turns some of their starch into sugar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/A_roast_lamb_dinner_at_Black_Horse_Inn%2C_Nuthurst_West_Sussex_England.jpg/3840px-A_roast_lamb_dinner_at_Black_Horse_Inn%2C_Nuthurst_West_Sussex_England.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_roast_lamb_dinner_at_Black_Horse_Inn%2C_Nuthurst_West_Sussex_England.jpg",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Acabashi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20154",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "plants-and-gardens",
+      "bundle": "uk",
+      "description": "A flower with a name that sounds like it belongs in the kitchen cupboard.",
+      "question": "This bright blue wildflower is called a cornflower. Why did it get that name?",
+      "answer": "It grew in fields of grain",
+      "wrong_answers": [
+        "It tastes like sweetcorn",
+        "Its seeds are yellow like corn",
+        "It was ground up to make flour"
+      ],
+      "hints": [
+        "The word “corn” hasn't always meant the yellow cobs it means today.",
+        "Think about where this flower used to grow wild every summer.",
+        "In Britain, “corn” used to mean wheat, barley and oats, and farmers kept finding this flower among them."
+      ],
+      "fun_fact": "The colour “cornflower blue” is named after this flower, which became rare in Britain when farmers began using weedkillers.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Very_Blue_Cornflower_%28226231707%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVery_Blue_Cornflower_%28226231707%29.jpeg",
+        "credit": "Terry Lucas · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Terry Lucas",
+        "author_url": "https://500px.com/tdlucas5000"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20155",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "rugby-and-cricket",
+      "bundle": "uk",
+      "description": "The morning the whole of England got up early on a Saturday, and didn't mind one bit.",
+      "question": "In November 2003, in Sydney, Jonny Wilkinson kicked a drop goal in the last minute of extra time. Why did England fans go wild?",
+      "answer": "England won the Rugby World Cup",
+      "wrong_answers": [
+        "England won the Tri Nations",
+        "England won Olympic rugby gold",
+        "England won the Commonwealth sevens"
+      ],
+      "hints": [
+        "It was the biggest prize in the sport.",
+        "England beat the hosts, Australia, in the final.",
+        "The trophy is the Webb Ellis Cup."
+      ],
+      "fun_fact": "With that win in 2003, England became the first men's team from the Northern Hemisphere to win the Rugby World Cup.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Sydney_Harbour_Bridge_from_Circular_Quay.jpg/3840px-Sydney_Harbour_Bridge_from_Circular_Quay.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASydney_Harbour_Bridge_from_Circular_Quay.jpg",
+        "credit": "JJ Harrison (https://www.jjharrison.com.au/) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "JJ Harrison (https://www.jjharrison.com.au/)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:JJ_Harrison"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20156",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "rugby-and-cricket",
+      "bundle": "uk",
+      "description": "The only time grown-ups happily stand in two straight lines without being told off.",
+      "question": "Cricketers sometimes line up in two rows and clap as a batter walks out between them. Who is this guard of honour usually for?",
+      "answer": "A player who is retiring",
+      "wrong_answers": [
+        "A player who is the new captain",
+        "A player who has a birthday",
+        "A player who lost the toss"
+      ],
+      "hints": [
+        "It's a way of saying thank you.",
+        "The person getting it has played for many years.",
+        "They won't be playing any more after this."
+      ],
+      "fun_fact": "Rugby and football teams often form a guard of honour too, clapping newly crowned champions onto the pitch.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Walker_Cricket_Ground_pavilion%2C_Southgate%2C_London%2C_England.jpg/3840px-Walker_Cricket_Ground_pavilion%2C_Southgate%2C_London%2C_England.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWalker_Cricket_Ground_pavilion%2C_Southgate%2C_London%2C_England.jpg",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Acabashi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20157",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Friendship status: it's complicated, and it depends on the forecast.",
+      "question": "I'm great fun when everything is going well, but when trouble comes, I'm nowhere to be found. What kind of friend am I?",
+      "answer": "A fair-weather friend",
+      "wrong_answers": [
+        "A stormy-weather friend",
+        "A rainy-day friend",
+        "A snowy-day friend"
+      ],
+      "hints": [
+        "Think about when this friend turns up, and when they vanish.",
+        "They only like the good times, never the bad.",
+        "They only stay around while the sky is sunny and fine."
+      ],
+      "fun_fact": "“Fair” is an old word for nice, dry weather, which is why sailors and farmers talked about “fair weather” long before it described friends.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Four_children_walking_together%2C_August_2018.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFour_children_walking_together%2C_August_2018.jpg",
+        "credit": "Tom Axford 1 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tom Axford 1",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tom_Axford_1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20158",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Your legs have officially gone on strike.",
+      "question": "A worn-out Brit might groan “I'm absolutely done…” what?",
+      "answer": "In",
+      "wrong_answers": [
+        "Up",
+        "Over",
+        "Out"
+      ],
+      "hints": [
+        "It's a very short word.",
+        "It means completely worn out.",
+        "It's the word you shout when someone knocks: “Come ___!”"
+      ],
+      "fun_fact": "Brits have loads of ways to say they're tired, including “knackered”, “shattered”, “cream crackered” and “dead on my feet”.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Tired_feet_507-0726.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATired_feet_507-0726.jpg",
+        "credit": "Mozzihh · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mozzihh",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mozzihh"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20159",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "No cats were harmed in the making of this saying, promise.",
+      "question": "Brits sometimes say “There's no room to swing a cat.” What does it mean?",
+      "answer": "It's very cramped",
+      "wrong_answers": [
+        "It's very messy",
+        "It's very cold",
+        "No pets are allowed"
+      ],
+      "hints": [
+        "People often say it when they walk into a room for the first time.",
+        "You might hear it about a tiny bedroom or a crowded lift.",
+        "There's hardly any room to move."
+      ],
+      "fun_fact": "Nobody really swings cats: many think the “cat” was an old name for a whip used on sailing ships, where space was very tight.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/A_small_tent_with_a_blue_tarp_draped_over_it_sits_in_a_clearing_between_trees._%2846645bde-1a56-4bca-bdcf-5d48330ee411%29.jpg/3840px-A_small_tent_with_a_blue_tarp_draped_over_it_sits_in_a_clearing_between_trees._%2846645bde-1a56-4bca-bdcf-5d48330ee411%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_small_tent_with_a_blue_tarp_draped_over_it_sits_in_a_clearing_between_trees._%2846645bde-1a56-4bca-bdcf-5d48330ee411%29.jpg",
+        "credit": "National Park Service · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "National Park Service",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20160",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "A saying that sounds like the start of a very strange cooking show.",
+      "question": "Brits say “butter wouldn't melt in their mouth” about some people. What does it mean?",
+      "answer": "They look too innocent to be naughty",
+      "wrong_answers": [
+        "They're very bad at keeping secrets",
+        "They're far too fussy about food",
+        "They always stay calm under pressure"
+      ],
+      "hints": [
+        "It's not really about butter at all.",
+        "It's about how someone looks, not what they did.",
+        "Their angel face says “It wasn't me!”"
+      ],
+      "fun_fact": "The saying is hundreds of years old and was already used in the 1500s about people who seemed far too calm and proper.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Antique_Art_Deco_Colorless_Glass_Butter_Dish.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntique_Art_Deco_Colorless_Glass_Butter_Dish.jpg",
+        "credit": "Illarion Kalashnikov · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Illarion Kalashnikov",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Illarion_Kalashnikov"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20161",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Everyone wants to stir, nobody wants to wash up.",
+      "question": "An old proverb warns that too many cooks will spoil it. What is it?",
+      "answer": "Broth",
+      "wrong_answers": [
+        "Custard",
+        "Gravy",
+        "Porridge"
+      ],
+      "hints": [
+        "It's made by boiling meat, fish or vegetables in water.",
+        "You might sip it when you feel poorly.",
+        "It's a clear soup, and the word rhymes with “cloth”."
+      ],
+      "fun_fact": "The proverb means a job goes wrong when too many people try to be in charge of it.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/DZ6_0553_Busy_kitchen_staff_prepare_meals_behind_the_counter_as_a_customer_waits_and_watches.jpg/3840px-DZ6_0553_Busy_kitchen_staff_prepare_meals_behind_the_counter_as_a_customer_waits_and_watches.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADZ6_0553_Busy_kitchen_staff_prepare_meals_behind_the_counter_as_a_customer_waits_and_watches.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20162",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "team-gb-and-olympians",
+      "bundle": "uk",
+      "description": "Win gold and suddenly everyone wants a little piece of you.",
+      "question": "After London 2012, every British gold medallist was printed on one of these within days. What are they?",
+      "answer": "Stamps",
+      "wrong_answers": [
+        "Banknotes",
+        "Coins",
+        "Bus tickets"
+      ],
+      "hints": [
+        "They're smaller than your thumb.",
+        "Each one showed a photo of the winner, and fans collected the whole set.",
+        "You find them in the corner of an envelope."
+      ],
+      "fun_fact": "Royal Mail also painted a postbox gold in the home town of every British gold medallist.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Olympic_Park%2C_London%2C_16_April_2012_%288%29.jpg/3840px-Olympic_Park%2C_London%2C_16_April_2012_%288%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOlympic_Park%2C_London%2C_16_April_2012_%288%29.jpg",
+        "credit": "EG Focus · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "EG Focus",
+        "author_url": "https://www.flickr.com/people/38865853@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20163",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "transport",
+      "bundle": "uk",
+      "description": "A dull-looking rectangle that the police find absolutely fascinating.",
+      "question": "British cars have had to show one since 1904. Today it's white at the front and yellow at the back. What is it?",
+      "answer": "A number plate",
+      "wrong_answers": [
+        "A tax disc",
+        "An MOT certificate",
+        "A parking permit"
+      ],
+      "hints": [
+        "You'll find one on both ends of the car.",
+        "The police use it to tell which car is which.",
+        "It shows the car's registration, like “AB12 CDE”."
+      ],
+      "fun_fact": "Britain's very first number plate was “A 1”, given out in London in 1903, and it later sold for a small fortune.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Stockleigh_English_%2C_Country_Lane_-_geograph.org.uk_-_6474483.jpg/3840px-Stockleigh_English_%2C_Country_Lane_-_geograph.org.uk_-_6474483.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStockleigh_English_%2C_Country_Lane_-_geograph.org.uk_-_6474483.jpg",
+        "credit": "Lewis Clarke · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Lewis Clarke",
+        "author_url": "https://www.geograph.org.uk/profile/11775"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20164",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "transport",
+      "bundle": "uk",
+      "description": "Named after a bird with a huge beak, and yet no feathers are allowed.",
+      "question": "One kind of British road crossing is called a toucan crossing. Who is it made for?",
+      "answer": "Walkers and cyclists",
+      "wrong_answers": [
+        "Horse riders only",
+        "Buses and taxis",
+        "Lorries and vans"
+      ],
+      "hints": [
+        "It's not for anything with an engine.",
+        "Two kinds of people can cross here together.",
+        "One of them is on two wheels."
+      ],
+      "fun_fact": "It's called a toucan because “two can” cross: people on foot and people on bikes.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Town_Clock_High_Street_Dunbar_-_geograph.org.uk_-_5432726.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATown_Clock_High_Street_Dunbar_-_geograph.org.uk_-_5432726.jpg",
+        "credit": "Jennifer Petrie · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Jennifer Petrie",
+        "author_url": "https://www.geograph.org.uk/profile/54223"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20166",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "Proof that good manners can be completely ruined by one muddy puddle.",
+      "question": "Legend says Walter Raleigh laid something over a puddle so Elizabeth I could keep her shoes dry. What was it?",
+      "answer": "His cloak",
+      "wrong_answers": [
+        "His hat",
+        "His shield",
+        "His map"
+      ],
+      "hints": [
+        "It was big enough to cover the puddle.",
+        "He had it on him because he was wearing it.",
+        "It's a bit like a cape."
+      ],
+      "fun_fact": "The story first appeared in print decades after Raleigh died, so it may never have happened at all.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Muddy_Puddle_on_a_Bridleway_-_geograph.org.uk_-_4021058.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuddy_Puddle_on_a_Bridleway_-_geograph.org.uk_-_4021058.jpg",
+        "credit": "J.Hannan-Briggs · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "J.Hannan-Briggs",
+        "author_url": "https://www.geograph.org.uk/profile/25219"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20167",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "The Tower of London's tradesmen's entrance, river edition.",
+      "question": "A water gate at the Tower of London once opened onto the River Thames. What was it famously used for?",
+      "answer": "Bringing prisoners in by boat",
+      "wrong_answers": [
+        "Letting royal swans in to nest",
+        "Loading cannons for battle",
+        "Delivering the king's dinner"
+      ],
+      "hints": [
+        "The Tower wasn't only a palace.",
+        "Anne Boleyn is said to have arrived this way.",
+        "Its name calls the people who came through it traitors."
+      ],
+      "fun_fact": "King Edward I built it in the 1270s as a grand river entrance for the king himself.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/La_Torre%2C_Londres%2C_Inglaterra%2C_2022-11-26%2C_DD_140.jpg/3840px-La_Torre%2C_Londres%2C_Inglaterra%2C_2022-11-26%2C_DD_140.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Torre%2C_Londres%2C_Inglaterra%2C_2022-11-26%2C_DD_140.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20168",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "Two words walked into a London pub and came out as one.",
+      "question": "It was the thick, dirty air of old London winters. Its name became popular in Britain over 100 years ago by joining two words. Which two?",
+      "answer": "Smoke and fog",
+      "wrong_answers": [
+        "Snow and fog",
+        "Smell and frost",
+        "Sleet and mist"
+      ],
+      "hints": [
+        "The word is still used today for dirty air over big cities.",
+        "The end of the word is a kind of grey, cloudy air near the ground.",
+        "One of the words is what comes out of chimneys and bonfires."
+      ],
+      "fun_fact": "The word “smog” was made popular by a London doctor, Henry Des Voeux, in 1905.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Big_Ben_at_sunset_-_2014-10-27_17-30.jpg/3840px-Big_Ben_at_sunset_-_2014-10-27_17-30.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABig_Ben_at_sunset_-_2014-10-27_17-30.jpg",
+        "credit": "Colin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Colin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Colin"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20169",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "The sky has terrible manners, and Britain has a word for every one of them.",
+      "question": "When just a few tiny drops of rain fall, Britons say the sky is doing what?",
+      "answer": "Spitting",
+      "wrong_answers": [
+        "Sneezing",
+        "Dribbling",
+        "Sulking"
+      ],
+      "hints": [
+        "It's a short, sharp word, a bit like the drops themselves.",
+        "It's also something people do with their mouths.",
+        "It's what a llama does when it's cross."
+      ],
+      "fun_fact": "British English has dozens of words for rain, from “mizzle” in Cornwall to “dreich” weather in Scotland.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Pacific_Spirit_Regional_Park_Viewpoint_%28122782173%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APacific_Spirit_Regional_Park_Viewpoint_%28122782173%29.jpeg",
+        "credit": "Jeff Macleod · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jeff Macleod",
+        "author_url": "https://500px.com/waxityourself122"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20171",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "rugby-and-cricket",
+      "bundle": "uk",
+      "description": "They've seen more cricket grounds than most cricketers, and sung in every one of them.",
+      "question": "We follow England's cricket team all over the world. We sing all day long, and our trumpeter keeps the tunes going. Who are we?",
+      "answer": "The Barmy Army",
+      "wrong_answers": [
+        "The Tartan Army",
+        "The Beige Brigade",
+        "The Fanatics"
+      ],
+      "hints": [
+        "We're fans, not players.",
+        "We got our name on an Ashes tour of Australia in the 1990s.",
+        "Our name means we're a little bit crazy."
+      ],
+      "fun_fact": "The Barmy Army got its name on the 1994–95 Ashes tour, when Australian newspapers called the fans “barmy” for cheering a losing team.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/MCG_Shane_Warne_Stand.png/3840px-MCG_Shane_Warne_Stand.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMCG_Shane_Warne_Stand.png",
+        "credit": "EchidnaLives · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EchidnaLives",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EchidnaLives"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20172",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "rugby-and-cricket",
+      "bundle": "uk",
+      "description": "If you need something off the top shelf, ask one of these two.",
+      "question": "In rugby union, the locks wear numbers 4 and 5 and are usually the tallest players. What are they best known for?",
+      "answer": "Jumping for the ball at lineouts",
+      "wrong_answers": [
+        "Kicking for goal after a try",
+        "Passing from the back of scrums",
+        "Catching high kicks at the back"
+      ],
+      "hints": [
+        "Think about why being tall helps.",
+        "It happens when the ball is thrown in from the side.",
+        "Teammates lift them into the air."
+      ],
+      "fun_fact": "Many international locks are over 2 metres (6 ft 7 in) tall.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Rugby_Sevens_Colorful_Crowd_%2872951293%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARugby_Sevens_Colorful_Crowd_%2872951293%29.jpeg",
+        "credit": "Nikolay Loubet · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Nikolay Loubet",
+        "author_url": "https://500px.com/kloubet"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20173",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Get ready for trouble, the old-fashioned and very soggy way.",
+      "question": "A big storm is coming and someone says, “Batten down the hatches!” Who first used this phrase?",
+      "answer": "Sailors",
+      "wrong_answers": [
+        "Farmers",
+        "Miners",
+        "Train drivers"
+      ],
+      "hints": [
+        "Hatches are openings you can close up tight.",
+        "These people had to keep water from pouring in during storms.",
+        "They worked on the decks of wooden ships."
+      ],
+      "fun_fact": "Sailors nailed thin strips of wood called battens over canvas covers to keep the sea out of the hatches in rough weather.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Brighton_stormy_sea_November_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrighton_stormy_sea_November_2009.jpg",
+        "credit": "Dominic Alves from Brighton, England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dominic Alves from Brighton, England",
+        "author_url": "https://www.flickr.com/people/64097751@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20174",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Heavy, loud and not to be trusted: a very bad pet.",
+      "question": "A “loose cannon” is a person nobody can control. Where did a real loose cannon first roll around dangerously?",
+      "answer": "On a sailing ship",
+      "wrong_answers": [
+        "In a castle",
+        "On a farm",
+        "In a toy shop"
+      ],
+      "hints": [
+        "The cannon was normally tied down tightly with thick ropes.",
+        "Bad weather could make it break free.",
+        "Think of old warships with sails."
+      ],
+      "fun_fact": "A heavy cannon that broke free of its ropes in a storm could crash about the deck and even smash through the side of the ship.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Cast_iron_cannon_%2832_pounder%29_at_Plaza_de_la_Constituci%C3%B3n%2C_St._Augustine.jpg/3840px-Cast_iron_cannon_%2832_pounder%29_at_Plaza_de_la_Constituci%C3%B3n%2C_St._Augustine.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACast_iron_cannon_%2832_pounder%29_at_Plaza_de_la_Constituci%C3%B3n%2C_St._Augustine.jpg",
+        "credit": "Kiran891 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kiran891",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kiran891"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20175",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Some people could chat until a whole farm runs out of legs.",
+      "question": "Brits say a very chatty person could talk the back legs off which animal?",
+      "answer": "A donkey",
+      "wrong_answers": [
+        "A horse",
+        "A cow",
+        "A dog"
+      ],
+      "hints": [
+        "It's a farm animal with four legs.",
+        "It has very long ears.",
+        "It goes “hee-haw”."
+      ],
+      "fun_fact": "Donkeys are famous for being stubborn, so getting their legs to move at all would take an awful lot of talking.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Open_countryside_near_Lacey_Green_-_geograph.org.uk_-_7305096.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOpen_countryside_near_Lacey_Green_-_geograph.org.uk_-_7305096.jpg",
+        "credit": "David Kemp · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "David Kemp",
+        "author_url": "https://www.geograph.org.uk/profile/4217"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20176",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sitcoms",
+      "bundle": "uk",
+      "description": "A country house where the guests never check out, mainly because they can't.",
+      "question": "In the BBC sitcom Ghosts, which ghost of Button House died the longest ago?",
+      "answer": "A caveman",
+      "wrong_answers": [
+        "A Regency poet",
+        "A 1980s scout leader",
+        "A wartime army captain"
+      ],
+      "hints": [
+        "He has been hanging around for much longer than the house has stood there.",
+        "He lived long before anyone could read or write.",
+        "He's called Robin, and he's very hairy and loves the stars."
+      ],
+      "fun_fact": "Ghosts was written by the same team that starred in the children's show Horrible Histories, and they play many of the ghosts themselves.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/A_stately_bench_for_a_stately_home_-_geograph.org.uk_-_7100886.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_stately_bench_for_a_stately_home_-_geograph.org.uk_-_7100886.jpg",
+        "credit": "A J Paxton · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "A J Paxton",
+        "author_url": "https://www.geograph.org.uk/profile/24602"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20177",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "team-gb-and-olympians",
+      "bundle": "uk",
+      "description": "A man who has spent so long on the water he probably keeps a lifejacket on the sofa.",
+      "question": "Sailor Ben Ainslie won Olympic silver in 1996, then gold in 2000, 2004, 2008 and 2012. How many Olympic medals is that?",
+      "answer": "5",
+      "wrong_answers": [
+        "3",
+        "4",
+        "6"
+      ],
+      "hints": [
+        "Don't forget to count the silver.",
+        "There were four golds.",
+        "One silver plus four golds."
+      ],
+      "fun_fact": "Ben Ainslie was knighted, becoming Sir Ben, and later led a British team in sailing's famous America's Cup.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Sailing_at_the_1988_Summer_Olympics.JPEG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASailing_at_the_1988_Summer_Olympics.JPEG",
+        "credit": "Ken Hackman, U.S. Air Force · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ken Hackman, U.S. Air Force",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20178",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "transport",
+      "bundle": "uk",
+      "description": "A walk so slow and peaceful that even the ducks overtake you.",
+      "question": "I'm a path running beside a canal. Long ago, horses walked along me, pulling boats with a long rope. Today, walkers and cyclists use me. What am I?",
+      "answer": "A towpath",
+      "wrong_answers": [
+        "A runway",
+        "A hard shoulder",
+        "A platform"
+      ],
+      "hints": [
+        "You'll find me right at the water's edge.",
+        "Narrowboats glide past me.",
+        "My name comes from the old word for pulling a boat with a rope."
+      ],
+      "fun_fact": "Britain has about 2,000 miles (3,200 km) of canals, so you could walk along towpaths for weeks.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Narrowboat_Alicia_on_Grand_Union_Canal%2C_Harefield_-_geograph.org.uk_-_4497912.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANarrowboat_Alicia_on_Grand_Union_Canal%2C_Harefield_-_geograph.org.uk_-_4497912.jpg",
+        "credit": "David Hawgood · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "David Hawgood",
+        "author_url": "https://www.geograph.org.uk/profile/560"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20179",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "A London street with a delicious name and a very bad Sunday.",
+      "question": "Thomas Farriner had a shop on Pudding Lane, and in 1666 the Great Fire of London started there. What did he make in his shop?",
+      "answer": "Bread",
+      "wrong_answers": [
+        "Candles",
+        "Barrels",
+        "Shoes"
+      ],
+      "hints": [
+        "He worked for King Charles II.",
+        "The fire began in the early hours of the morning while his household slept.",
+        "Think of loaves."
+      ],
+      "fun_fact": "The Monument to the Great Fire is 202 feet (61 m) tall, the same as its distance from where the bakery stood.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Relief_at_the_base_of_the_Monument_to_the_Great_Fire_of_London_2026-09-22.jpg/3840px-Relief_at_the_base_of_the_Monument_to_the_Great_Fire_of_London_2026-09-22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARelief_at_the_base_of_the_Monument_to_the_Great_Fire_of_London_2026-09-22.jpg",
+        "credit": "Andy Li · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Andy Li",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Onthewings"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20180",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "The safety rule that turned crossing the road into a superhero mission.",
+      "question": "You want to cross a busy road. The Green Cross Code says find a safe place, then stop. Where do you stand?",
+      "answer": "On the pavement, near the kerb",
+      "wrong_answers": [
+        "In the middle of the road",
+        "Between two parked cars",
+        "Just behind a parked bus"
+      ],
+      "hints": [
+        "You shouldn't be on the road yet.",
+        "Somewhere drivers can see you and you can see them.",
+        "It's on the edge of the pavement, before you step off."
+      ],
+      "fun_fact": "The Green Cross Man on 1970s TV was played by David Prowse, who also played the body of Darth Vader in Star Wars.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Pelican_crossing%2C_Brunswick_Street_-_geograph.org.uk_-_4668744.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APelican_crossing%2C_Brunswick_Street_-_geograph.org.uk_-_4668744.jpg",
+        "credit": "Bradley Michael · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Bradley Michael",
+        "author_url": "https://www.geograph.org.uk/profile/117973"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20181",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "A summer Saturday when half the planet watched the same telly.",
+      "question": "In July 1985, Live Aid filled Wembley Stadium with stars who played for free. Why was it held?",
+      "answer": "To raise money for hungry people in Africa",
+      "wrong_answers": [
+        "To celebrate a royal wedding",
+        "To pick Britain's Eurovision song",
+        "To open the new Wembley Stadium"
+      ],
+      "hints": [
+        "A second concert was held the same day in Philadelphia, USA.",
+        "Bob Geldof and Midge Ure organised it after their 1984 song “Do They Know It's Christmas?”.",
+        "It followed a terrible famine in Ethiopia."
+      ],
+      "fun_fact": "Phil Collins played Live Aid in London and then in Philadelphia on the same day, flying across the Atlantic on Concorde.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/One_Direction_-_Metlife_Stadium_Stage_%2814749661758%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOne_Direction_-_Metlife_Stadium_Stage_%2814749661758%29.jpg",
+        "credit": "Ianthebush · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Ianthebush",
+        "author_url": "https://www.flickr.com/people/72060323@N02"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20182",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "A royal who collected birthdays like other people collect stamps.",
+      "question": "I was born in 1900 and lived to 101. My husband was King George VI, and my elder daughter became queen in 1952. Who am I?",
+      "answer": "The Queen Mother",
+      "wrong_answers": [
+        "Queen Victoria",
+        "Princess Margaret",
+        "Queen Mary"
+      ],
+      "hints": [
+        "I was a queen, and later my title changed.",
+        "My daughter was Queen Elizabeth II.",
+        "My nickname tells you I was the mum of a queen."
+      ],
+      "fun_fact": "On her 100th birthday in 2000, she got a birthday card from her own daughter, the Queen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/London%2C_SW1_-_geograph.org.uk_-_3527950.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon%2C_SW1_-_geograph.org.uk_-_3527950.jpg",
+        "credit": "David Hallam-Jones · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "David Hallam-Jones",
+        "author_url": "https://www.geograph.org.uk/profile/61991"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20183",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "A word that sounds like a fruit drink, but nobody wants to be on it.",
+      "question": "In Britain, who is said to be “on the dole”?",
+      "answer": "Someone without a job",
+      "wrong_answers": [
+        "Someone who's just retired",
+        "Someone staying in hospital",
+        "Someone who's just got married"
+      ],
+      "hints": [
+        "It's about money from the government.",
+        "It was a huge worry in the 1930s and 1980s.",
+        "You might sign on at the job centre to get it."
+      ],
+      "fun_fact": "“Dole” is a very old English word meaning a share handed out, like bread given to the poor.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Britain_Queues_For_Food-_Rationing_and_Food_Shortages_in_Wartime%2C_London%2C_England%2C_UK%2C_1945_D25032.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABritain_Queues_For_Food-_Rationing_and_Food_Shortages_in_Wartime%2C_London%2C_England%2C_UK%2C_1945_D25032.jpg",
+        "credit": "Ministry of Information Photo Division Photographer · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ministry of Information Photo Division Photographer",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20184",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "The only swimming pool in Britain that fits next to the barbecue.",
+      "question": "It's made of plastic, sits on the lawn in a heatwave, and little ones splash about in it. What do you fill a paddling pool with?",
+      "answer": "Water",
+      "wrong_answers": [
+        "Sand",
+        "Mud",
+        "Snow"
+      ],
+      "hints": [
+        "You get wet when you jump in.",
+        "You can fill it from the garden hose.",
+        "It's the same thing that comes out of the tap."
+      ],
+      "fun_fact": "In the 1976 heatwave, water was so short in parts of Britain that people were asked to share baths.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Lawn_care_in_a_vibrant_garden_as_a_person_mows_the_grass_on_a_sunny_day.jpg/3840px-Lawn_care_in_a_vibrant_garden_as_a_person_mows_the_grass_on_a_sunny_day.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALawn_care_in_a_vibrant_garden_as_a_person_mows_the_grass_on_a_sunny_day.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20185",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "A friendship that is really cool, until it isn't.",
+      "question": "In Raymond Briggs's “The Snowman”, a boy and his snowman share a magical night. When does the boy find the snowman has melted?",
+      "answer": "The next morning",
+      "wrong_answers": [
+        "The next summer",
+        "A week later",
+        "At New Year"
+      ],
+      "hints": [
+        "The boy doesn't have to wait long.",
+        "He wakes up and runs outside.",
+        "It happens after just one night's sleep."
+      ],
+      "fun_fact": "The book “The Snowman” has no words at all: the whole story is told in pictures.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Winter_landscape_Telemark_%284489663931%29.jpg/3840px-Winter_landscape_Telemark_%284489663931%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWinter_landscape_Telemark_%284489663931%29.jpg",
+        "credit": "Randi Hausken from Bærum, Norway · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Randi Hausken from Bærum, Norway",
+        "author_url": "https://www.flickr.com/people/46406832@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20186",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "The only reason British children ever run towards a song.",
+      "question": "On a hot day, a tune like “Greensleeves” plays in the street and children run out with coins. What has just arrived?",
+      "answer": "An ice cream van",
+      "wrong_answers": [
+        "A fire engine",
+        "A bin lorry",
+        "A school bus"
+      ],
+      "hints": [
+        "It's very popular in summer.",
+        "It sells something cold and sweet.",
+        "You can buy a cone with a flake from its window."
+      ],
+      "fun_fact": "“Greensleeves” is a tune hundreds of years old, from the time of the Tudors.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Loch_Promenade_-_geograph.org.uk_-_7658228.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALoch_Promenade_-_geograph.org.uk_-_7658228.jpg",
+        "credit": "Gerald England · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Gerald England",
+        "author_url": "https://www.geograph.org.uk/profile/22742"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20187",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "weather-and-seasons",
+      "bundle": "uk",
+      "description": "Shepherds' weather forecasts: no satellites, just a good look at the sky.",
+      "question": "“Red sky at night, shepherd's delight.” According to the old saying, when is a red sky a shepherd's warning?",
+      "answer": "In the morning",
+      "wrong_answers": [
+        "At midnight",
+        "At lunchtime",
+        "At teatime"
+      ],
+      "hints": [
+        "Sailors use the same saying to guess the weather.",
+        "The warning half of the saying is about the other end of the day from the “delight” half.",
+        "It's around breakfast time."
+      ],
+      "fun_fact": "The saying often works in Britain, because most of our weather comes in from the west, where the sun sets.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/da/Sheep_grazing_on_a_hillside_-_geograph.org.uk_-_2047049.jpg/3840px-Sheep_grazing_on_a_hillside_-_geograph.org.uk_-_2047049.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASheep_grazing_on_a_hillside_-_geograph.org.uk_-_2047049.jpg",
+        "credit": "Bill Boaden · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Bill Boaden",
+        "author_url": "https://www.geograph.org.uk/profile/42541"
       },
       "background": null
     }

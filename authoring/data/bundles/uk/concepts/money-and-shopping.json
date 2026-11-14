@@ -438,7 +438,8 @@
     {
       "name": "Plastic bag charge",
       "facet": "Supermarkets and the weekly shop",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: The 5p charge is already in the pool, and the detail/photo options don't give a clear second fact."
     },
     {
       "name": "Self-checkout",

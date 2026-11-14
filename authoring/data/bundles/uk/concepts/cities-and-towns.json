@@ -182,7 +182,8 @@
     {
       "name": "Brummie",
       "facet": "City nicknames and residents' names",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Asking what people from Birmingham are called would be given away by the existing Brummie accent question."
     },
     {
       "name": "Glaswegian",
@@ -317,7 +318,8 @@
     {
       "name": "Westminster Abbey",
       "facet": "Famous landmarks and buildings",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The easy Westminster Abbey facts (royal wedding, coronations) are already asked."
     },
     {
       "name": "Clifton Suspension Bridge",
@@ -382,7 +384,8 @@
     {
       "name": "Scarborough",
       "facet": "Seaside resorts and coastal towns",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "unaskable: Scarborough isn't something young children know, and the options don't help."
     },
     {
       "name": "Whitby",

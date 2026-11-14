@@ -14,7 +14,8 @@
     "Royal titles and honours",
     "Royal emblems in everyday life",
     "Royal transport and vessels",
-    "National emblems and patron saints"
+    "National emblems and patron saints",
+    "Tower of London traditions"
   ],
   "axis_fit": {
     "move": {
@@ -311,7 +312,8 @@
     {
       "name": "Fleur-de-lis",
       "facet": "Royal arms, crests and badges",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The France connection is already in the pool, and the fleur-de-lis isn't really a UK topic."
     },
     {
       "name": "Heraldic supporters",
@@ -321,7 +323,8 @@
     {
       "name": "College of Arms",
       "facet": "Royal arms, crests and badges",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: The College of Arms is far too obscure for children."
     },
     {
       "name": "Acts of Union 1801",
@@ -450,7 +453,8 @@
     {
       "name": "Crown Estate",
       "facet": "Royal emblems in everyday life",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: The Crown Estate is property law, which isn't a topic for young players."
     },
     {
       "name": "Royal Parks",
@@ -545,7 +549,8 @@
     {
       "name": "King's Counsel",
       "facet": "Royal emblems in everyday life",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: King's Counsel is an adult legal title, and these options can't make a fair question from it."
     },
     {
       "name": "State Bentley",
@@ -556,6 +561,26 @@
       "name": "Leek and daffodil",
       "facet": "National emblems and patron saints",
       "known_at": 7
+    },
+    {
+      "name": "Union Flag",
+      "facet": "Union Flag and national flags",
+      "known_at": 2
+    },
+    {
+      "name": "Winston Churchill £5 note",
+      "facet": "Coins, banknotes and stamps",
+      "known_at": 8
+    },
+    {
+      "name": "Cross of St George",
+      "facet": "Union Flag and national flags",
+      "known_at": 4
+    },
+    {
+      "name": "John Bull",
+      "facet": "National emblems and patron saints",
+      "known_at": 12
     }
   ],
   "top_ups": [
@@ -573,6 +598,16 @@
       "date": "2026-11-14",
       "added": 5,
       "unused": 27
+    },
+    {
+      "date": "2026-11-14",
+      "added": 2,
+      "unused": 29
+    },
+    {
+      "date": "2026-11-14",
+      "added": 2,
+      "unused": 22
     }
   ]
 }

@@ -155,7 +155,8 @@
     {
       "name": "Peep Show",
       "facet": "Modern sitcoms since 2000",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Adult sitcom, unsuitable and unknown at difficulty 1."
     },
     {
       "name": "Miranda",
@@ -185,7 +186,8 @@
     {
       "name": "Peter Kay's Car Share",
       "facet": "Modern sitcoms since 2000",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Adult sitcom; no question near difficulty 1."
     },
     {
       "name": "Detectorists",
@@ -235,7 +237,8 @@
     {
       "name": "People Just Do Nothing",
       "facet": "Modern sitcoms since 2000",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Adult mockumentary unknown to young players; no fair question near difficulty 1."
     },
     {
       "name": "Stath Lets Flats",
@@ -823,7 +826,8 @@
     {
       "name": "Still Game",
       "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Scottish adult sitcom; far above difficulty 1 for any option."
     },
     {
       "name": "Jack and Victor",
@@ -888,12 +892,14 @@
     {
       "name": "Sister Michael",
       "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Derry Girls character, unknown to young children."
     },
     {
       "name": "Erin Quinn",
       "facet": "Sitcoms from Scotland, Wales and Northern Ireland",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Derry Girls character, unknown to young children."
     },
     {
       "name": "Give My Head Peace",

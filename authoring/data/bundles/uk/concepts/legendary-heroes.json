@@ -167,7 +167,8 @@
     {
       "name": "Sir Ector",
       "facet": "Knights of the Round Table",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already asks for Sir Ector as Arthur's foster father, and nothing else about him works at difficulty 1."
     },
     {
       "name": "King Pellinore",
@@ -620,7 +621,8 @@
     {
       "name": "Peeping Tom",
       "facet": "Folk heroes of towns and villages",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The Peeping Tom story hinges on Lady Godiva's naked ride, which isn't suitable for a family game."
     },
     {
       "name": "King Alfred and the cakes",
