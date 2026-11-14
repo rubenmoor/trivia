@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "bdc0a59a",
+  "hash": "1cefc29e",
   "questions": [
     {
       "id": "q-9487",
@@ -103752,6 +103752,40 @@
       "background": null
     },
     {
+      "id": "q-20573",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "childrens-books-and-comics",
+      "bundle": "uk",
+      "description": "An elephant who clearly lost a fight with a quilt.",
+      "question": "Which picture-book elephant has skin made of bright colourful squares, like a patchwork quilt?",
+      "answer": "Elmer",
+      "wrong_answers": [
+        "Babar",
+        "Dumbo",
+        "Horton"
+      ],
+      "hints": [
+        "He comes from a British picture book.",
+        "All his friends are plain grey.",
+        "His name starts with E and has five letters."
+      ],
+      "fun_fact": "David McKee's first Elmer book came out in 1968, and he also created Mr Benn.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Family_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg/3840px-Family_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFamily_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would much appreciate if you send me an email tagooty@yahoo.com or write on my talk page, for my information.  Please contact me before commercial use.\n\n\n\nPlease do not upload an edited image here without consulting me.  I would like to make corrections only at my own source to ensure that the changes improve the image and are preserved.Otherwise you may upload an edited image with a new name. Please use one of the templates derivative or extract.",
+        "author_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Family_African_Bush_Elephant_Kafue_Jul23_A7C_05571.jpg?utm_source=commons.wikimedia.org&utm_campaign=api&utm_content=original"
+      },
+      "background": null
+    },
+    {
       "id": "q-20574",
       "status": "approved",
       "difficulty": 2,
@@ -105108,6 +105142,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Raquel Baranow",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Raquel_Baranow&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20615",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "They guard the Crown Jewels and pose for more holiday photos than a pop star.",
+      "question": "The Yeoman Warders who guard the Tower of London have a famous nickname. Finish it: “Beef…”",
+      "answer": "…eaters",
+      "wrong_answers": [
+        "…keepers",
+        "…guards",
+        "…bakers"
+      ],
+      "hints": [
+        "They wear red and dark blue uniforms and give tours to visitors.",
+        "The missing part is something everyone does at mealtimes.",
+        "Long ago, royal guards were said to get plenty of meat to… well, do this."
+      ],
+      "fun_fact": "To become a Yeoman Warder you must have served at least 22 years in the armed forces.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Tower_of_London_viewed_from_the_River_Thames.jpg/3840px-Tower_of_London_viewed_from_the_River_Thames.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATower_of_London_viewed_from_the_River_Thames.jpg",
+        "credit": "Bob Collowan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Bob Collowan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bob_Collow%C3%A2n"
       },
       "background": null
     },
