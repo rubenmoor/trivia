@@ -181,12 +181,14 @@
     {
       "name": "Red rose of Lancaster",
       "facet": "National and regional plant emblems",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The rose as an emblem and the Yorkshire–Lancashire rivalry are already covered, so the answer would be obvious from earlier questions."
     },
     {
       "name": "White rose of York",
       "facet": "National and regional plant emblems",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The white rose, Yorkshire and the House of York are already covered several times."
     },
     {
       "name": "Wars of the Roses",

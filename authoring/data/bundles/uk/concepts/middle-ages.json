@@ -81,7 +81,8 @@
     {
       "name": "Edward II",
       "facet": "Kings and queens",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: Edward II's best-known easy fact (the Caernarfon prince) is already asked, and the options don't fit."
     },
     {
       "name": "Edward III",
@@ -96,7 +97,8 @@
     {
       "name": "Henry V",
       "facet": "Kings and queens",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The main Henry V fact (Agincourt) is already asked, and the options don't fit an easy question."
     },
     {
       "name": "Henry VI",
@@ -631,7 +633,8 @@
     {
       "name": "Speaker of the House of Commons",
       "facet": "Laws, Parliament and Magna Carta",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The Speaker riddle is already asked, and the other options don't fit."
     },
     {
       "name": "Woolsack",

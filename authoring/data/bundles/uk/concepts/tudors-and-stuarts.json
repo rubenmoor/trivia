@@ -1228,7 +1228,8 @@
     {
       "name": "Shakespeare's Birthplace",
       "facet": "Palaces, castles and buildings",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The pool already asks whose birthplace the house is; a record question about it would be forced."
     }
   ]
 }

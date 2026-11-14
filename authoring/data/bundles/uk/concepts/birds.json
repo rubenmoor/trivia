@@ -311,7 +311,8 @@
     {
       "name": "Cuckoo call",
       "facet": "Birdsong and calls",
-      "known_at": 2
+      "known_at": 2,
+      "retired": "used_up: The cuckoo's call is already asked as a sound question; the other options don't give a good question about the UK."
     },
     {
       "name": "Tawny owl hoot",
@@ -538,7 +539,8 @@
     {
       "name": "Swallows flying low before rain",
       "facet": "Birds in British folklore and sayings",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Already asked: the saying about swallows flying low before rain is in the pool, and every option would repeat it."
     },
     {
       "name": "Raven legend of the Tower",
@@ -574,7 +576,8 @@
     {
       "name": "Liver Bird",
       "facet": "Birds in British culture and royal traditions",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: A question already in the pool names the Liver bird, which gives away Liverpool."
     },
     {
       "name": "“The Lark Ascending”",
@@ -619,7 +622,8 @@
     {
       "name": "Newcastle United “The Magpies”",
       "facet": "Birds in British culture and royal traditions",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: A question already in the pool names Newcastle United and the Magpies together."
     },
     {
       "name": "Sheffield Wednesday “The Owls”",

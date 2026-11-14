@@ -375,7 +375,8 @@
     {
       "name": "BSL regional dialects",
       "facet": "British Sign Language",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Regional BSL signs can't be shown or dated reliably at any reasonable difficulty."
     },
     {
       "name": "Sign name",

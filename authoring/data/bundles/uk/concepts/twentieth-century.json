@@ -349,7 +349,8 @@
     {
       "name": "Alan Turing",
       "facet": "The Home Front in the Second World War",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Bombe, the £50 note and The Imitation Game are already covered; a photo ID would be too hard and forced."
     },
     {
       "name": "Enigma machine",
@@ -645,7 +646,8 @@
     {
       "name": "Wedding of Charles and Diana",
       "facet": "The royal family's century",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The year is given away by an existing question, and the other options are forced."
     },
     {
       "name": "Princess Margaret",

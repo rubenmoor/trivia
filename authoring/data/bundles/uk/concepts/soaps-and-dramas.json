@@ -96,7 +96,8 @@
     {
       "name": "Audrey Roberts",
       "facet": "Coronation Street and Weatherfield",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: A Coronation Street character only adult viewers know; no kid-level question."
     },
     {
       "name": "Steve McDonald",
@@ -131,7 +132,8 @@
     {
       "name": "Tyrone Dobbs",
       "facet": "Coronation Street and Weatherfield",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: A Coronation Street side character young children wouldn't know."
     },
     {
       "name": "Eileen Grimshaw",
@@ -141,7 +143,8 @@
     {
       "name": "Sally Webster",
       "facet": "Coronation Street and Weatherfield",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: A Coronation Street character only adults know."
     },
     {
       "name": "Underworld factory",
@@ -216,7 +219,8 @@
     {
       "name": "Stacey Slater",
       "facet": "EastEnders and Albert Square",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: An EastEnders character only adults know; the options don't fit."
     },
     {
       "name": "Mick Carter",
@@ -226,7 +230,8 @@
     {
       "name": "Linda Carter",
       "facet": "EastEnders and Albert Square",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: An EastEnders character only adults know; the Queen Vic photo angle is already in the pool."
     },
     {
       "name": "Shirley Carter",
@@ -412,7 +417,8 @@
     {
       "name": "Den Watts",
       "facet": "Iconic soap characters and families",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: An 1980s EastEnders character with adult storylines; unknown to children."
     },
     {
       "name": "Angie Watts",
@@ -458,7 +464,8 @@
     {
       "name": "Alfie Moon",
       "facet": "Iconic soap characters and families",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: An EastEnders character only adults know, and the 'Moon' word angle is already used up."
     },
     {
       "name": "Slater family",
@@ -508,7 +515,8 @@
     {
       "name": "Cain Dingle",
       "facet": "Iconic soap characters and families",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: An Emmerdale villain far outside young children's knowledge; the options don't fit."
     },
     {
       "name": "Kim Tate",
@@ -533,7 +541,8 @@
     {
       "name": "Who Killed Lucy Beale?",
       "facet": "Famous soap storylines and cliffhangers",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: A murder mystery storyline: not family-friendly as a topic, and far beyond young children."
     },
     {
       "name": "Den and Angie's divorce papers",
@@ -679,7 +688,8 @@
     {
       "name": "Line of Duty",
       "facet": "Crime and detective dramas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Line of Duty is an adult police drama about corruption, which the pool already covers; no question a young child could answer."
     },
     {
       "name": "AC-12",
@@ -874,7 +884,8 @@
     {
       "name": "Ackley Bridge",
       "facet": "Teen and school dramas",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: A Channel 4 teen drama that young children don't know; the options would be forced."
     },
     {
       "name": "Heartstopper",
@@ -1000,7 +1011,8 @@
     {
       "name": "British Soap Awards",
       "facet": "Actors, writers and TV awards",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "unaskable: An awards ceremony for adult soaps; no kid-level question that isn't a filler."
     },
     {
       "name": "BAFTA TV Awards",
