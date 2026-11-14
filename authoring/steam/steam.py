@@ -67,9 +67,30 @@ def bundles() -> list[str]:
     return sorted(d.name for d in (REPO / "app" / "data" / "bundles").iterdir() if d.is_dir())
 
 
+TOPIC_BAR = 2000  # stage-media.mjs TOPIC_BAR (decision 520)
+
+
 def has_pool(bundle: str) -> bool:
-    """A pool file makes a pack offered (decision 112: missing = not offered)."""
-    return any(re.fullmatch(r"pool(\.[\w-]+)?\.json", f.name) for f in (REPO / "app" / "data" / "bundles" / bundle).iterdir())
+    """A pool file in the build's data makes a pack offered (decision 112: missing = not offered)."""
+    built = DESKTOP / "build" / "data" / "bundles" / bundle  # stage-media.mjs leaves topic pools below the bar out
+    return any(re.fullmatch(r"pool(\.[\w-]+)?\.json", f.name) for f in (built if built.is_dir() else REPO / "app" / "data" / "bundles" / bundle).iterdir())
+
+
+def check_topic_pools(unpacked: Path) -> None:
+    """No topic pool in a build unless all five topics have TOPIC_BAR approved in that locale (decision 520)."""
+    topics = [b["id"] for b in json.loads((REPO / "app" / "data" / "bundles.json").read_text())["bundles"] if b["kind"] == "theme"]
+    root = unpacked / "resources" / "data" / "bundles"
+    def count(b: str, f: str) -> int:
+        p = root / b / f
+        return sum(q.get("status") == "approved" for q in json.loads(p.read_text())["questions"]) if p.is_file() else 0
+    bad = []
+    for f in sorted({f.name for b in topics for f in (root / b).iterdir() if re.fullmatch(r"pool(\.[\w-]+)?\.json", f.name)}):
+        low = [f"{b} {count(b, f)}" for b in topics if count(b, f) < TOPIC_BAR]
+        if low:
+            bad.append(f"{f}: below {TOPIC_BAR} approved: {', '.join(low)}")
+    if bad:
+        sys.exit(f"trivia-steam stage: topic pools in {root} before all five topics are at the bar (decision 520):\n  " + "\n  ".join(bad)
+                 + "\n  (trivia-desktop-build leaves them out via stage-media.mjs)")
 
 
 def packs(demo: bool = False) -> list[str]:
@@ -234,6 +255,8 @@ def stage(demo: bool = False) -> bool:
         check_demo_data(depots["windows"][0])
         dlc = {}
     else:
+        for d in ("windows", "linux"):
+            check_topic_pools(depots[d][0])
         dlc = stage_dlc(depots["linux"][0], content_root)
     out_media = {} if demo else pack_media()
     pack_files = {f"{content_path}/{f}" for p in out_media for f in out_media[p]}

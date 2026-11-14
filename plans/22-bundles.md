@@ -35,7 +35,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 - Per locale: a locale's pool file (`app/data/bundles/<id>/pool[.<locale>].json`) is present only for a locale at the bar, else "not offered" (decision 112)
 - Regional bundles: decision 520 names topic bundles only; they keep decision 110 (ship with what they have) until the developer says otherwise
 - Ship table (2026-11-14): each of the five × es, es-ES, en, de: "not offered" now; "release v<x>" or "patch (when at bar)" once all five are at the bar
-- The build must keep topic pools out until then (follow-up task in plan 89)
+- The build keeps topic pools out until then: `stage-media.mjs` writes `app/desktop/build/data/` (the build's `resources/data/`) without a topic `pool[.<locale>].json` unless all five topics have 2000 approved in that locale (counted in the exported pools); `trivia-steam stage` fails if a topic pool below the bar is in `win-unpacked`/`linux-unpacked`; no pool = not offered, no DLC depot (plan 89, `task 2033: Keep topic bundle pools out of builds until all five are at 2000 approved`)
 
 ## In the pipeline
 - **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The developer checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
