@@ -1,12 +1,13 @@
 // Pool media → build/media for a packaged build (plan 56): encoded under shippedName (decision 185),
 // hard links (or copies) from the encode cache work/ship-media/.
 // build/pack-media.json: per shipped bundle folder, the media only it uses (its DLC depot carries them, decision 66; [] without a pool).
+// build/data/: app/data/ without topic bundle pools until all five topics have 2000 approved per locale (decision 520).
 // --check: no encoding; build/media against the pools and media-budget.json, exit 1 on ✗.
 // --demo (or TRIVIA_DEMO=1, as the dist:*:demo scripts set it; decision 342): only app/data/demo/ pools (all locales) → build/media-demo/,
 // no packs, no pack-media.json; budget `demo.content`. Also build/data-demo/: app/data/ without bundles/ and the full pools, with demo/.
 import { execFile, execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
-import { copyFileSync, existsSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, cpSync, existsSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { availableParallelism } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -93,6 +94,13 @@ async function encode(src, name) {
 }
 
 const DATA = path.join(REPO, "app", "data");
+// Topic bundles ship only when all five have TOPIC_BAR questions per locale (decision 520); pool.json = es.
+const TOPIC_BAR = 2000;
+const poolLocale = (f) => /^pool(?:\.([\w-]+))?\.json$/.exec(f)?.[1] ?? (f === "pool.json" ? "es" : null);
+const topics = JSON.parse(readFileSync(path.join(DATA, "bundles.json"), "utf8")).bundles.filter((b) => b.kind === "theme").map((b) => b.id);
+const topicCount = (b, f) => JSON.parse(readFileSync(path.join(DATA, "bundles", b, f), "utf8")).questions.filter((q) => q.status === "approved").length;
+const atBar = (f) => topics.every((b) => existsSync(path.join(DATA, "bundles", b, f)) && topicCount(b, f) >= TOPIC_BAR);
+const shipsPool = (b, f) => !topics.includes(b) || atBar(f);
 const read = (file) => poolUrls(JSON.parse(readFileSync(file, "utf8")));
 const urls = new Set();
 const packMedia = {};
@@ -102,7 +110,7 @@ if (demo) {
 } else {
   const packs = readdirSync(path.join(DATA, "bundles"))
     .filter((b) => statSync(path.join(DATA, "bundles", b), { throwIfNoEntry: false })?.isDirectory())
-    .map((b) => [b, existsSync(path.join(DATA, "bundles", b, "pool.json")) ? read(path.join(DATA, "bundles", b, "pool.json")) : new Set()]); // no pool yet: a pack without media
+    .map((b) => [b, existsSync(path.join(DATA, "bundles", b, "pool.json")) && shipsPool(b, "pool.json") ? read(path.join(DATA, "bundles", b, "pool.json")) : new Set()]); // no pool yet: a pack without media
   for (const u of read(path.join(DATA, "pool.json"))) urls.add(u);
   const owners = new Map();
   for (const [b, own] of packs) for (const u of own) owners.set(u, urls.has(u) || owners.has(u) ? null : b);
@@ -161,6 +169,18 @@ if (demo) {
   for (const f of readdirSync(DATA, { withFileTypes: true }))
     if (f.isFile() && !/^pool(\.[\w-]+)?\.json$/.test(f.name)) copyFileSync(path.join(DATA, f.name), path.join(data, f.name));
   for (const f of readdirSync(path.join(DATA, "demo"))) copyFileSync(path.join(DATA, "demo", f), path.join(data, "demo", f));
+}
+if (!demo) {
+  // build/data/: app/data/ without the topic pools below the bar (the build's data dir)
+  const data = path.join(HERE, "build", "data");
+  rmSync(data, { recursive: true, force: true });
+  cpSync(DATA, data, {
+    recursive: true,
+    filter: (src) => {
+      const rel = path.relative(DATA, src).split(path.sep);
+      return !(rel[0] === "bundles" && rel.length === 3 && poolLocale(rel[2]) && !shipsPool(rel[1], rel[2]));
+    },
+  });
 }
 mkdirSync(encoded, { recursive: true });
 if (!demo) writeFileSync(path.join(HERE, "build", "pack-media.json"), JSON.stringify(packMedia, null, 2) + "\n");
