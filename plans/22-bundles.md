@@ -28,6 +28,15 @@ A **bundle** is a named set of questions that players can switch on or off befor
 | `movies` | theme | Paquete de preguntas de cine y series (en «Movies & Series questions bundle», de «Film- und Serien-Fragenpaket») | Film and TV series of every era and country, live action and animation, people, awards, screen history; reality TV and news stay in `base`. `languages: ["en"]`, target 2000, icon `reel`, taxonomy 11 categories, 53 subcategories, 22 with free media (`decision 404: movies taxonomy: categories and subcategories`); names `decision 369: Topic bundles: names, descriptions and rules`. |
 | `geography` | theme | Paquete de preguntas de geografía (en «Geography questions bundle», de «Erdkunde-Fragenpaket») | Present-day countries, cities, flags, maps, landforms, waters, climate zones; geology, weather physics and ecology are `stem`'s, historical borders `history`'s. `languages: ["en"]`, target 2000, icon `globe`, taxonomy 9 categories, 50 subcategories, present-day places only (`decision 410: geography taxonomy: categories and subcategories`); names `decision 369: Topic bundles: names, descriptions and rules`. |
 
+## Shipping non-base bundles (plan 189, decision 520)
+- Rule (decision 520: Topic bundles below 2000 approved: ship or hold?): nothing ships before every topic bundle (`stem`, `sports`, `history`, `movies`, `geography`) has 2000+ approved; the way there is generating more questions
+- So no topic bundle is in a release until all five are at the bar; then they come together, in the first release or content patch after that
+- At the bar = 2000 approved per question locale it ships in (`qgen report --bundle <id> --locale L`); the tile «2000+» (decision 267) is then true
+- Per locale: a locale's pool file (`app/data/bundles/<id>/pool[.<locale>].json`) is present only for a locale at the bar, else "not offered" (decision 112)
+- Regional bundles: decision 520 names topic bundles only; they keep decision 110 (ship with what they have) until the developer says otherwise
+- Ship table (2026-11-14): each of the five × es, es-ES, en, de: "not offered" now; "release v<x>" or "patch (when at bar)" once all five are at the bar
+- The build must keep topic pools out until then (follow-up task in plan 89)
+
 ## In the pipeline
 - **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The developer checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
 - **New questions:** until BN-8 the drafter picked the bundle by the rules. Since BN-8 the batch's bundle is set by the command (see "Batches per bundle"); the developer can still change it in the review tool.

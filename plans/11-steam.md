@@ -399,6 +399,7 @@ After launch, new and fixed questions reach players only as Steam patches: a new
 - Decision 96: monthly, only if ≥ 100 new approved per launch language or a player-reported fix is waiting.
 - New approved per language: `qgen patch-notes` (newest `v*` tag → working tree), "added" per locale.
 - Hotfix (wrong answer, crash): any time, no cadence wait.
+- A non-base bundle × locale reaching the bar: its pool, its `languages` entry, its DLC store language block (plan 187) in the next content patch; the patch notes count it. Topic bundles: none ships before all five have 2000+ approved (decision 520: Topic bundles below 2000 approved: ship or hold?).
 
 ### Patch path
 1. Questions: `qgen batch` per `authoring/RUNBOOK.md` (`--translate es|es-ES|en|de` for the translations, D-107).
