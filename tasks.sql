@@ -1,5 +1,5 @@
 -- pm database. Change it with pm; after a hand edit run `pm validate`.
-PRAGMA user_version = 30;
+PRAGMA user_version = 31;
 
 CREATE TABLE milestone (
     id             INTEGER PRIMARY KEY,
@@ -47,12 +47,12 @@ CREATE TABLE task (
 CREATE TABLE decision (
     id              INTEGER PRIMARY KEY,
     subject         TEXT NOT NULL CHECK (trim(subject) <> ''),
-    status          TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'answered', 'irrelevant')),
+    status          TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending', 'answered', 'irrelevant', 'returned')),
     options         TEXT NOT NULL DEFAULT '[]' CHECK (json_type(options) = 'array'),  -- recommended first
     body            TEXT NOT NULL DEFAULT '',
     intro           TEXT NOT NULL DEFAULT '',              -- plain English: what is to be decided; required since schema 23
     answer          TEXT,
-    reason          TEXT,
+    reason          TEXT,                                  -- irrelevant: why; returned: the human's feedback
     created_at      TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
     closed_at       TEXT,
     created_by_task INTEGER REFERENCES task (id),
@@ -62,12 +62,15 @@ CREATE TABLE decision (
     consequences    TEXT NOT NULL DEFAULT '',              -- what changed because of the answer; appended
     CONSTRAINT "a sign-off is only approved"
     CHECK (signoff IS NULL OR status <> 'irrelevant' AND coalesce(answer, 'approve') = 'approve'),
+    CONSTRAINT "only a plan or masterplan sign-off is returned"
+    CHECK (status <> 'returned' OR signoff IN ('masterplan', 'plan')),
     CONSTRAINT "only an answered question has a decider and consequences"
     CHECK (status = 'answered' AND signoff IS NULL OR decided_by_task IS NULL AND consequences = ''),
-    CONSTRAINT "pending: no answer, reason or closed_at; answered: answer and closed_at; irrelevant: reason and closed_at"
+    CONSTRAINT "pending: no answer, reason or closed_at; answered: answer and closed_at; irrelevant, returned: reason and closed_at"
     CHECK (status = 'pending' AND answer IS NULL AND reason IS NULL AND closed_at IS NULL
            OR status = 'answered' AND answer IS NOT NULL AND closed_at IS NOT NULL
-           OR status = 'irrelevant' AND reason IS NOT NULL AND closed_at IS NOT NULL)
+           OR status = 'irrelevant' AND reason IS NOT NULL AND closed_at IS NOT NULL
+           OR status = 'returned' AND answer IS NULL AND reason IS NOT NULL AND closed_at IS NOT NULL)
 ) STRICT;
 
 CREATE TABLE run (                                         -- one worker run of `pm run`
@@ -55922,6 +55925,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2211, 2032, '2026-11-14T21:01:17Z', '2026-11-14T21:04:01Z', 'done', NULL, 0, '1db800771394ba9f9c3ea328eb04992edc4e7b5b', 'questions', 'claude-sonnet-5-5', 'd32a98dc-9ebb-466b-aab1-a2b6b2df5c24', 2210, 9, 20, 3425, 739906, 36115, 0.46382490000000004, 92300, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2212, 1889, '2026-11-14T21:03:44Z', '2026-11-14T21:04:24Z', 'done', NULL, 0, '1db800771394ba9f9c3ea328eb04992edc4e7b5b', 'app', 'claude-sonnet-5-5', 'e346bfe2-5e26-40fd-9297-e4e9f6e8f8d0', NULL, 7, 14, 4749, 291869, 37148, 0.22529690000000002, 51952, 60, 118424);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2213, 2033, '2026-11-14T21:04:24Z', '2026-11-14T21:05:47Z', 'done', NULL, 0, 'e02f9ba60c8fcadcabc76a77afb0d4abfc748322', 'app', 'claude-sonnet-5-5', 'cfffd62a-8a39-4b4f-827c-0ebc93ba25b4', NULL, 18, 34, 8823, 970958, 57773, 0.41648579999999996, 72646, 60, 118424);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2214, 1666, '2026-11-14T21:05:47Z', '2026-11-14T21:06:16Z', 'blocked', NULL, 0, '0f73793d47eb960b9ef5b2d5e659bc9661281f54', 'app', 'claude-sonnet-5-5', 'd95183e4-d798-4eca-8649-07f7c1ea9297', NULL, 8, 18, 1716, 348097, 36746, 0.1989897, 51266, 60, 118424);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -56577,6 +56581,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1664, 371);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1666, 372);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1666, 373);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1666, 398);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1666, 400);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1667, 372);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1667, 373);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1667, 398);
