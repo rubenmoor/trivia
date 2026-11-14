@@ -76,7 +76,8 @@
     {
       "name": "George Harrison",
       "facet": "Beatles and the Sixties",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: The easy counting fact (four Beatles) is already in the pool, and the other counts aren't really about Harrison."
     },
     {
       "name": "Yellow Submarine",
@@ -754,7 +755,8 @@
     {
       "name": "Platinum disc",
       "facet": "Chart records and number ones",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Platinum being above gold for hit records is already given away by the existing riddle, and UK sales thresholds are too hard."
     },
     {
       "name": "The X Factor",
@@ -1000,7 +1002,8 @@
     {
       "name": "The Dark Side of the Moon",
       "facet": "Iconic British albums and covers",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The cover is already used, and the chart-run estimates are US records far above kid level."
     },
     {
       "name": "Animals",

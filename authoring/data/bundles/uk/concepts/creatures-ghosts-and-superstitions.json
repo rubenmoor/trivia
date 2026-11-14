@@ -487,7 +487,8 @@
     {
       "name": "Friday the 13th",
       "facet": "Everyday omens and sayings",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "unaskable: Friday the 13th is known around the world and across the English-speaking world, so answering needs no connection to the UK. It doesn't belong in the uk bundle."
     },
     {
       "name": "Hag stone",
@@ -573,7 +574,8 @@
     {
       "name": "Ghost light",
       "facet": "Theatre, sea and sport superstitions",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The theatre ghost light is a theatre tradition shared with the US and elsewhere, so it isn't British-specific. It's also nowhere near level 1."
     },
     {
       "name": "Whistling in a theatre",
@@ -598,12 +600,14 @@
     {
       "name": "Davy Jones' Locker",
       "facet": "Theatre, sea and sport superstitions",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: Davy Jones' Locker is an old sailors' saying used across the English-speaking world, made famous worldwide by Pirates of the Caribbean. Not British-only, and the photo/made_of options don't fit."
     },
     {
       "name": "Flying Dutchman",
       "facet": "Theatre, sea and sport superstitions",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "unaskable: The Flying Dutchman is a Dutch legend, also known from Wagner and SpongeBob, and both of those are already asked. There's no British-only fact at level 1."
     },
     {
       "name": "Renaming a boat",

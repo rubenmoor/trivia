@@ -77,7 +77,8 @@
     {
       "name": "George Mallory",
       "facet": "Polar and world explorers",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The easy fact (Everest) is already in the pool, and the rest would centre on his death."
     },
     {
       "name": "Ranulph Fiennes",
@@ -133,7 +134,8 @@
     {
       "name": "Chris Bonington",
       "facet": "Polar and world explorers",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Chris Bonington means nothing to young children, and Everest is already in the pool."
     },
     {
       "name": "Bear Grylls",
@@ -143,7 +145,8 @@
     {
       "name": "Charles Macintosh",
       "facet": "Inventors and engineers",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "used_up: The pool already asks about the invention itself, and the place and time options give nothing new and easy."
     },
     {
       "name": "Gerald Durrell",
@@ -214,7 +217,8 @@
     {
       "name": "Guy Gibson",
       "facet": "Wartime heroes and codebreakers",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: The Dambusters raid of 1943 is already in the pool through Barnes Wallis."
     },
     {
       "name": "Barnes Wallis",
@@ -240,7 +244,8 @@
     {
       "name": "Nicholas Winton",
       "facet": "Wartime heroes and codebreakers",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: The Kindertransport story is too heavy and too hard for difficulty 1."
     },
     {
       "name": "Rob Roy",
@@ -335,7 +340,8 @@
     {
       "name": "Bernard Lovell",
       "facet": "Aviation and space pioneers",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Questions about the year of Lovell's Jodrell Bank work can't be made easy."
     },
     {
       "name": "Jessica Ennis-Hill",
@@ -500,7 +506,8 @@
     {
       "name": "Eddie Izzard",
       "facet": "Speed and endurance record breakers",
-      "known_at": 12
+      "known_at": 12,
+      "retired": "unaskable: Eddie Izzard's marathon challenges are adult knowledge, far from difficulty 1."
     },
     {
       "name": "Grace Darling",
@@ -582,7 +589,8 @@
     {
       "name": "George Medal",
       "facet": "Lifeboat crews and everyday bravery",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "used_up: This would overlap with the George Cross question already in the pool, and nothing easy is left."
     },
     {
       "name": "Queen's Gallantry Medal",
@@ -608,7 +616,8 @@
     {
       "name": "Betty Boothroyd",
       "facet": "Women's firsts in public life",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Betty Boothroyd as first woman Speaker is adult political knowledge, far from difficulty 1."
     },
     {
       "name": "Diane Abbott",
@@ -634,7 +643,8 @@
     {
       "name": "Brenda Hale",
       "facet": "Women's firsts in public life",
-      "known_at": 13
+      "known_at": 13,
+      "retired": "unaskable: Only adults would know a Supreme Court president, and nothing gets close to difficulty 1."
     },
     {
       "name": "Moira Stuart",

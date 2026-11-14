@@ -147,7 +147,8 @@
     {
       "name": "Plymouth",
       "facet": "Capital and major cities",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The Mayflower and the Pilgrims are already in the earlier questions, so any new Plymouth question here would repeat or give them away."
     },
     {
       "name": "Inverness",
@@ -380,7 +381,8 @@
     {
       "name": "Brighton",
       "facet": "Seaside resorts and coastal towns",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The seagulls, the Fringe and north/south ideas are already used. The options left only give a forced photo question."
     },
     {
       "name": "Scarborough",
@@ -481,7 +483,8 @@
     {
       "name": "Canterbury",
       "facet": "Historic and cathedral cities",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: Canterbury's cathedral, Becket and the Archbishop are already asked. What's left is too hard for difficulty 1."
     },
     {
       "name": "Bath",
@@ -547,7 +550,8 @@
     {
       "name": "Norwich",
       "facet": "Historic and cathedral cities",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The Canaries, Colman's mustard and Alan Partridge are already used. Nothing left is easy enough for difficulty 1."
     },
     {
       "name": "Lichfield",
