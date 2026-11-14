@@ -351,7 +351,8 @@
     {
       "name": "Stewards' Enclosure",
       "facet": "Boat Race, Henley and sailing regattas",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: No fair count or made-of question about the Stewards' Enclosure from a photo."
     },
     {
       "name": "Rowing blazer",
@@ -432,7 +433,8 @@
     {
       "name": "Great North Run",
       "facet": "Marathons and mass road races",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: Name, route and charity angle are already covered; a purpose question would be a filler."
     },
     {
       "name": "Red Arrows",
@@ -758,7 +760,8 @@
     {
       "name": "Silverstone Wing",
       "facet": "British Grand Prix at Silverstone",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: The Silverstone Wing pit building is too obscure for a fair question in these forms."
     },
     {
       "name": "Highland dancing",
@@ -778,7 +781,8 @@
     {
       "name": "Cheese rolling",
       "facet": "Highland Games and quirky contests",
-      "known_at": 8
+      "known_at": 8,
+      "retired": "used_up: The key fact (a cheese is chased down Cooper's Hill) is already asked; none of the options gives a different question at difficulty 1."
     },
     {
       "name": "Cooper's Hill",

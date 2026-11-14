@@ -60,7 +60,8 @@
     {
       "name": "Isaac Newton",
       "facet": "Physics and astronomy pioneers",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: The only difficulty-1 angle is the falling apple, which overlaps the existing Apple-logo question (Newton under a tree). The prism and laws of motion are already asked."
     },
     {
       "name": "Stephen Hawking",
@@ -250,7 +251,8 @@
     {
       "name": "Robert Boyle",
       "facet": "Chemistry and the elements",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The existing riddle already covers the vacuum pump and gas law, so the photo options would repeat it."
     },
     {
       "name": "William Ramsay",
@@ -415,7 +417,8 @@
     {
       "name": "Stem cells",
       "facet": "DNA and modern biology",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already has a question that identifies stem cells, and the photo options would repeat it."
     },
     {
       "name": "Robert Stephenson",

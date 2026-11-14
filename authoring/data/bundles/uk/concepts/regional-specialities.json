@@ -76,7 +76,8 @@
     {
       "name": "Tattie scones",
       "facet": "Scottish dishes and sweets",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The pool already uses tattie scones, Scotland and potatoes, plus boxty and fadge, so nothing new is left to ask."
     },
     {
       "name": "Edinburgh rock",
@@ -117,7 +118,8 @@
     {
       "name": "Snowdon pudding",
       "facet": "Welsh food and bakes",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Recipe and origin facts are unsure, and the only fair clue (the mountain's name) makes it far too easy for a 15."
     },
     {
       "name": "Monmouth pudding",
@@ -294,7 +296,8 @@
     {
       "name": "Faggots and peas",
       "facet": "Midlands and East Anglian specialities",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: Many English speakers read the dish's name as a slur, so it doesn't suit a family game."
     },
     {
       "name": "Fidget pie",
@@ -494,7 +497,8 @@
     {
       "name": "Cotherstone cheese",
       "facet": "Cheeses named after places",
-      "known_at": 15
+      "known_at": 15,
+      "retired": "unaskable: Too obscure for fair options, and none of the options fit a place-based origin question."
     },
     {
       "name": "Craster kippers",
@@ -574,7 +578,8 @@
     {
       "name": "Newcastle Brown Ale",
       "facet": "Regional drinks and brews",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "unaskable: A beer brand can't make a family-friendly question at difficulty 2."
     },
     {
       "name": "Vimto",

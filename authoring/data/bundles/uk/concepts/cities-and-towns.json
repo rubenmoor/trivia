@@ -1217,7 +1217,8 @@
     {
       "name": "Wimbledon",
       "facet": "Festivals and events by town",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Wimbledon is heavily covered already; what's left (ball kids, Wombles) doesn't fit the options well."
     },
     {
       "name": "Henley Royal Regatta",

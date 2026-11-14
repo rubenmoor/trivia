@@ -653,7 +653,8 @@
     {
       "name": "Nathan Evans",
       "facet": "Sea shanties and work songs",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: A pool question already says he's a Scottish postman; his home town is too obscure."
     },
     {
       "name": "What Shall We Do with the Drunken Sailor?",
@@ -743,12 +744,14 @@
     {
       "name": "Riverdance",
       "facet": "Clog, step and Irish dancing",
-      "known_at": 6
+      "known_at": 6,
+      "retired": "used_up: Its Eurovision start and the decade are already asked; none of the options gives a fresh fact at difficulty 1."
     },
     {
       "name": "Michael Flatley",
       "facet": "Clog, step and Irish dancing",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Who he is and where he was born are already covered; nothing new is left at difficulty 1."
     },
     {
       "name": "Lord of the Dance",
@@ -798,7 +801,8 @@
     {
       "name": "Hornpipe",
       "facet": "Clog, step and Irish dancing",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The hornpipe and its sailor link are already asked, and slot 2 covers the Sailor's Hornpipe."
     },
     {
       "name": "Feis",
