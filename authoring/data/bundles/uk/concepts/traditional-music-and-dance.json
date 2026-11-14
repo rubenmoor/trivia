@@ -262,7 +262,8 @@
     {
       "name": "Caller",
       "facet": "Ceilidhs and country dancing",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: An existing pool question already names the caller who shouts out the steps, so identifying the word is given away."
     },
     {
       "name": "Scottish country dancing",
@@ -689,7 +690,8 @@
     {
       "name": "Shantyman",
       "facet": "Sea shanties and work songs",
-      "known_at": 11
+      "known_at": 11,
+      "retired": "used_up: The pool already asks about a shanty being led by one sailor, which is what a shantyman means."
     },
     {
       "name": "Capstan",

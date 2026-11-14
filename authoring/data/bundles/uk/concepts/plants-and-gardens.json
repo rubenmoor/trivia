@@ -211,7 +211,8 @@
     {
       "name": "England rugby rose",
       "facet": "National and regional plant emblems",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: The rose and the England rugby team are already covered from many angles."
     },
     {
       "name": "Twelve-sided pound coin",
@@ -221,7 +222,8 @@
     {
       "name": "St David's Day",
       "facet": "National and regional plant emblems",
-      "known_at": 7
+      "known_at": 7,
+      "retired": "used_up: An earlier question already gives the date and the customs. The options left would be forced."
     },
     {
       "name": "RHS Wisley",
@@ -859,7 +861,8 @@
     {
       "name": "Herb Robert",
       "facet": "Plant names and sayings",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: Sources disagree on which Robert the plant is named after, so no answer is safe."
     },
     {
       "name": "Shepherd's purse",

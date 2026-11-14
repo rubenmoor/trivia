@@ -433,7 +433,8 @@
     {
       "name": "Keith Lemon",
       "facet": "Panel show hosts and team captains",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "unaskable: Keith Lemon's shows are mostly adult humour and don't suit a family game."
     },
     {
       "name": "Nick Hancock",
@@ -543,7 +544,8 @@
     {
       "name": "Am I bovvered?",
       "facet": "Catchphrases and famous lines",
-      "known_at": 10
+      "known_at": 10,
+      "retired": "used_up: The main fact (Lauren, Tony Blair) is already in the pool; the other options would be forced."
     },
     {
       "name": "Yeah but no but",
@@ -768,7 +770,8 @@
     {
       "name": "The Stand Comedy Club",
       "facet": "Comedy festivals and venues",
-      "known_at": 14
+      "known_at": 14,
+      "retired": "unaskable: There's no fair word-meaning or count question about The Stand comedy club."
     },
     {
       "name": "Glasgow International Comedy Festival",

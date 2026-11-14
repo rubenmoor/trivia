@@ -326,7 +326,8 @@
     {
       "name": "King's Cross station",
       "facet": "The Tube and London transport",
-      "known_at": 5
+      "known_at": 5,
+      "retired": "used_up: Platform 9¾ is already in the pool and in slot 2. What's left is trivial (\"trains leave from a station\") or too hard."
     },
     {
       "name": "Paddington station",
@@ -1086,7 +1087,8 @@
     {
       "name": "Paddington Bear",
       "facet": "London in films, books and TV",
-      "known_at": 1
+      "known_at": 1,
+      "retired": "used_up: Peru is already asked, slot 6 uses the station's name, and the count options would be forced."
     },
     {
       "name": "Mary Poppins",
@@ -1206,7 +1208,8 @@
     {
       "name": "Wembley Stadium",
       "facet": "Sport, festivals and London traditions",
-      "known_at": 4
+      "known_at": 4,
+      "retired": "used_up: Wembley is already well covered, and an exact count at level 1 would be obscure."
     },
     {
       "name": "Lord's Cricket Ground",

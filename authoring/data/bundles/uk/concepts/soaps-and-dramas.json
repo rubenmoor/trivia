@@ -351,7 +351,8 @@
     {
       "name": "Roy's Rolls",
       "facet": "Soap pubs, cafés and launderettes",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Any question about Roy's Rolls names the café, which gives away the question already asked about its name."
     },
     {
       "name": "The Kabin",
@@ -898,7 +899,8 @@
     {
       "name": "Get outta my pub!",
       "facet": "Soap catchphrases, theme tunes and Christmas specials",
-      "known_at": 9
+      "known_at": 9,
+      "retired": "used_up: Peggy Mitchell's catchphrase (→ pub) is already in the pool; the number options don't fit."
     },
     {
       "name": "You ain't my mother!",
