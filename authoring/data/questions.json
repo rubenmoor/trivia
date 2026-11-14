@@ -1487498,9 +1487498,9 @@
     },
     {
       "id": "q-19214",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Welsh praise that has nothing to do with cleaning your bedroom.",
+      "description": "A Welsh word that has nothing to do with cleaning your bedroom.",
       "question": "When someone from Wales calls a meal “tidy”, what do they mean?",
       "answer": "It's really good",
       "wrong_answers": [
@@ -1487556,29 +1487556,32 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. It calls the word “Welsh praise”, which rules out “very small”, “very spicy” and “gone cold” before any hint. Rewrite it so it plays on the Welsh or food theme without saying that the word is positive.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. It calls the word “Welsh praise”, which rules out “very small”, “very spicy” and “gone cold” before any hint. Rewrite it so it plays on the Welsh or food theme without saying that the word is positive.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which gave the answer away, and rewrote the fun fact because “tidy sum” is used all over Britain, not just in Wales.",
+        "reason": "Rewrote the description so it no longer reveals that the word is positive.",
         "previous": {
-          "hints": [
-            "It's a compliment.",
-            "In Welsh English it's used a lot like “lovely”.",
-            "You'd say it if you wanted seconds."
-          ],
-          "fun_fact": "In Wales, “tidy” can also mean a lot: a “tidy sum” is plenty of money."
+          "description": "Welsh praise that has nothing to do with cleaning your bedroom."
         },
         "revised_on": "2026-11-14"
       }
@@ -1488296,7 +1488299,7 @@
     },
     {
       "id": "q-19224",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 9,
       "description": "Buckets, spades, and one of Britain's most outspoken artists.",
       "question": "Tracey Emin grew up in this seaside town in Kent, which she often talks about in her work. Which town is it?",
@@ -1488313,12 +1488316,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "bucket and spade sand",
-        "note": "A photo of Margate's sandy main beach and seafront, with no readable town name on signs.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASand_bucket.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sand_bucket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "David · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "David",
+        "author_url": "https://www.flickr.com/people/99255685@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Turner loved the town too and said the skies over Thanet were the loveliest in Europe.",
       "subcategory": "art-and-architecture",
@@ -1488344,22 +1488354,47 @@
         "notes": "The question says “in Kent”, which rules out Brighton (Sussex) and Blackpool (Lancashire) and leaves only Whitstable as a real alternative. The essential role is unnecessary because a beach photo doesn't identify Margate, so illustrative is better. Emin's hometown is not 9-level knowledge."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set to essential with a note asking for Margate's main beach and seafront, but every candidate is generic: bucket-and-spade close-ups (1, 2), children on unidentified beaches (3, 4, 5) and a US air-raid poster (6). None shows Margate, and no new search is allowed. The question doesn't need an essential image. Switch the role to illustrative, and candidate 1 (a blue bucket and spade on sand) would work. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set to essential with a note asking for Margate's main beach and seafront, but every candidate is generic: bucket-and-spade close-ups (1, 2), children on unidentified beaches (3, 4, 5) and a US air-raid poster (6). None shows Margate, and no new search is allowed. The question doesn't need an essential image. Switch the role to illustrative, and candidate 1 (a blue bucket and spade on sand) would work. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Switched the media from essential to illustrative (bucket and spade on sand), since the question doesn't need a Margate photo.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "bucket and spade sand",
+            "note": "A photo of Margate's sandy main beach and seafront, with no readable town name on signs.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19225",
@@ -1489514,7 +1489549,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Highland in Scotland map",
+        "query": "Highland council area locator map",
         "note": "Map of Scotland with the Highland council area shaded, with no labels or place names.",
         "source_url": null,
         "file_url": null,
@@ -1489548,18 +1489583,44 @@
       "batch": "batch-67",
       "review": {
         "decision": "needs_work",
-        "feedback": "The essential image slot needs a map of Scotland with the Highland council area shaded and no labels, but no candidate shows one. A new search isn't allowed this round. A better search term would be \"Highland UK location map\" or \"Highland council area locator map\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The essential image slot needs a map of Scotland with the Highland council area shaded and no labels, but no candidate shows one. A new search isn't allowed this round. A better search term would be \"Highland UK location map\" or \"Highland council area locator map\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to the reviewer's suggested locator-map term so an unlabelled map of Highland can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Highland in Scotland map",
+            "note": "Map of Scotland with the Highland council area shaded, with no labels or place names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19241",
@@ -1489653,7 +1489714,7 @@
       "media": {
         "type": "image",
         "role": "essential",
-        "query": "Essex county flag seaxes",
+        "query": "Flag of Essex",
         "note": "The Essex county flag: three white seaxes with gold handles on a red background.",
         "source_url": null,
         "file_url": null,
@@ -1489687,25 +1489748,51 @@
       "batch": "batch-67",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question needs a picture of the Essex flag, and none of the three candidates shows it. They are a staircase photo from Essex County, Virginia, and two Sanborn fire insurance maps of Essex County, Massachusetts. A new search isn't allowed, so this can't be fixed here. Commons has the flag as \"Flag of Essex.svg\"; it needs to be attached directly or searched for with a term like \"Flag of Essex\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question needs a picture of the Essex flag, and none of the three candidates shows it. They are a staircase photo from Essex County, Virginia, and two Sanborn fire insurance maps of Essex County, Massachusetts. A new search isn't allowed, so this can't be fixed here. Commons has the flag as \"Flag of Essex.svg\"; it needs to be attached directly or searched for with a term like \"Flag of Essex\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the media query to \"Flag of Essex\" so the Commons file Flag of Essex.svg is found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Essex county flag seaxes",
+            "note": "The Essex county flag: three white seaxes with gold handles on a red background.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19243",
-      "status": "needs_work",
-      "difficulty": 4,
+      "status": "approved",
+      "difficulty": 5,
       "description": "A royal title, a seaside pier and a lot of sheep on chalk hills.",
-      "question": "Prince Harry's royal title, Duke of …, comes from the county shown on this map. Which county?",
+      "question": "Prince Harry's royal title is Duke of … which English county?",
       "answer": "Sussex",
       "wrong_answers": [
         "Kent",
@@ -1489719,12 +1489806,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Sussex England locator map",
-        "note": "Map of England with historic Sussex (East and West Sussex together) shaded, with no labels or place names.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "sheep chalk downs England",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANova_Scotia_DSC01590_-_Southdown_%26_Cotswold_Sheep_%287815876676%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Nova_Scotia_DSC01590_-_Southdown_%26_Cotswold_Sheep_%287815876676%29.jpg/3840px-Nova_Scotia_DSC01590_-_Southdown_%26_Cotswold_Sheep_%287815876676%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dennis G. Jarvis · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Dennis G. Jarvis",
+        "author_url": "https://www.wikidata.org/wiki/Q122977591",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Sussex is split into two counties today, East Sussex and West Sussex.",
       "subcategory": "counties-and-regions",
@@ -1489750,22 +1489844,50 @@
         "notes": "Duke of Sussex is well known to UK teens and adults, but less so to 9–10-year-olds, so it's slightly underrated. Check that a Commons map of historic Sussex without labels exists."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate works as the essential map. Candidates 1 and 3 have “Sussex” printed in the title and on the shaded county, which gives the answer away. Candidate 2 shows only East Sussex, zoomed in with district lines, not historic Sussex in England. The rest are a field, a woodland and an old map of Pennsylvania. No new search is allowed, so this needs a hand-picked unlabelled locator map of historic Sussex, or the question must drop the map. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate works as the essential map. Candidates 1 and 3 have “Sussex” printed in the title and on the shaded county, which gives the answer away. Candidate 2 shows only East Sussex, zoomed in with district lines, not historic Sussex in England. The rest are a field, a woodland and an old map of Pennsylvania. No new search is allowed, so this needs a hand-picked unlabelled locator map of historic Sussex, or the question must drop the map. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "difficulty_original": 4,
+      "revision": {
+        "action": "revise",
+        "reason": "Removed the map, since every locator map found labels Sussex, and asked about the title directly with an illustrative chalk-hills image; difficulty raised slightly without the map's help.",
+        "previous": {
+          "difficulty": 4,
+          "question": "Prince Harry's royal title, Duke of …, comes from the county shown on this map. Which county?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Sussex England locator map",
+            "note": "Map of England with historic Sussex (East and West Sussex together) shaded, with no labels or place names.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19244",
@@ -1491396,9 +1491518,9 @@
     },
     {
       "id": "q-19265",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Ten points to whoever gets this one right.",
+      "description": "Hogwarts' grumpiest teacher has a favourite hobby, and it isn't potions.",
       "question": "At Hogwarts, Snape loves taking these away from Gryffindor, and many British schools hand them out too. What are they?",
       "answer": "House points",
       "wrong_answers": [
@@ -1491454,35 +1491576,32 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description \"Ten points to whoever gets this one right.\" contains the word \"points\", and \"House points\" is the only option with that word, so it gives the answer away before any hint. Rewrite the description so it plays on school or Hogwarts without mentioning points, scoring or a cup.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description \"Ten points to whoever gets this one right.\" contains the word \"points\", and \"House points\" is the only option with that word, so it gives the answer away before any hint. Rewrite the description so it plays on school or Hogwarts without mentioning points, scoring or a cup.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made “House points” the answer with a direct clue, swapped in same-form British school options and a vaguer hint 1, as the reviewer asked.",
+        "reason": "Rewrote the description so it no longer contains the word \"points\".",
         "previous": {
-          "question": "At Hogwarts, Snape loves taking them away from Gryffindor, and many British schools use them too. What are house points?",
-          "answer": "Points won for your team in the school",
-          "wrong_answers": [
-            "Marks for doing homework at home",
-            "Fines for being late to class",
-            "Scores in a cookery exam"
-          ],
-          "hints": [
-            "Pupils are split into groups that compete all year.",
-            "Good work earns them, breaking rules can lose them.",
-            "At the end of the year, the group with the most may win a cup."
-          ]
+          "description": "Ten points to whoever gets this one right."
         },
         "revised_on": "2026-11-14"
       }
@@ -1492639,7 +1492758,7 @@
     },
     {
       "id": "q-19281",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Survive twelve weeks of selling sausages in the rain, and this is what you get.",
       "question": "You've just won The Apprentice. How much does Lord Sugar invest in your business?",
@@ -1492652,7 +1492771,7 @@
       "hints": [
         "It's much more than a year's pay for most people.",
         "The winner becomes Lord Sugar's business partner.",
-        "It's ten times the smallest option and a tenth of the biggest."
+        "It's ten times the next option down and a tenth of the biggest."
       ],
       "media": {
         "type": "image",
@@ -1492693,31 +1492812,39 @@
         "difficulty_estimate": 7,
         "notes": "Hint 3 states the amount, which is acceptable for a third hint."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 is false: £250,000 is 100 times £2,500, not ten times. It is ten times £25,000 and a tenth of £2.5 million. Change hint 3 to something like \"It's ten times the next option down and a tenth of the biggest.\" Fact check: wrong. Hint 3 is false. £250,000 is 100 times the smallest option (£2,500), not ten times. It is ten times £25,000 and a tenth of £2.5 million.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 is false: £250,000 is 100 times £2,500, not ten times. It is ten times £25,000 and a tenth of £2.5 million. Change hint 3 to something like \"It's ten times the next option down and a tenth of the biggest.\" Fact check: wrong. Hint 3 is false. £250,000 is 100 times the smallest option (£2,500), not ten times. It is ten times £25,000 and a tenth of £2.5 million.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 3, which restated the exact amount, with a strong hint that doesn't give the number.",
+        "reason": "Fixed the false arithmetic in hint 3.",
         "previous": {
           "hints": [
             "It's much more than a year's pay for most people.",
             "The winner becomes Lord Sugar's business partner.",
-            "It's a quarter of a million pounds."
+            "It's ten times the smallest option and a tenth of the biggest."
           ]
         },
         "revised_on": "2026-11-14"
@@ -1492811,7 +1492938,7 @@
     },
     {
       "id": "q-19283",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Daytime telly's most nerve-racking bit of music.",
       "question": "On Countdown, what sound ends the clock's music when time runs out?",
@@ -1492865,19 +1492992,27 @@
         "difficulty_estimate": 7,
         "notes": "Calling the clock music's ending “a deep bong” is a loose description, but most people would call it that. Hints 2 and 3 narrow it strongly. An illustrative clock image would be safe here, so decorative is not needed."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. I couldn't confirm that the clock music ends with a deep \"bong\". A fan wiki says a bong was added at the end of the music in Series 2, but no source describes the exact closing sound. Alan Hawkshaw as the composer is confirmed.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. I couldn't confirm that the clock music ends with a deep \"bong\". A fan wiki says a bong was added at the end of the music in Series 2, but no source describes the exact closing sound. Alan Hawkshaw as the composer is confirmed.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
@@ -1494587,7 +1494722,7 @@
     },
     {
       "id": "q-19306",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "It's like a school class photo, if the class were enormous and everyone wore suits.",
       "question": "Each area of the UK elects one MP. About how many MPs sit in the House of Commons?",
@@ -1494598,7 +1494733,7 @@
         "65,000"
       ],
       "hints": [
-        "There are more than a hundred, but nowhere near thousands.",
+        "Every seat is up for grabs at each general election.",
         "Each MP speaks for an area of roughly 70,000 voters.",
         "The number is between 600 and 700."
       ],
@@ -1494645,24 +1494780,36 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"more than a hundred, but nowhere near thousands\") rules out all three wrong answers (65, 6,500 and 65,000), so it gives the answer away at the first hint. Hint 1 needs to be vague and must not rule out options, for example a clue about constituencies or general elections. The facts are fine: 650 MPs, roughly 70,000 voters per seat and about 427 seats in the chamber.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"more than a hundred, but nowhere near thousands\") rules out all three wrong answers (65, 6,500 and 65,000), so it gives the answer away at the first hint. Hint 1 needs to be vague and must not rule out options, for example a clue about constituencies or general elections. The facts are fine: 650 MPs, roughly 70,000 voters per seat and about 427 seats in the chamber.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Cut the election-night filler scene from the question text, as the reviewer asked.",
+        "reason": "Replaced hint 1, which ruled out all three wrong answers, with a vaguer clue about general elections.",
         "previous": {
-          "question": "You're watching election night on TV as each area of the UK picks one MP. About how many MPs sit in the House of Commons?"
+          "hints": [
+            "There are more than a hundred, but nowhere near thousands.",
+            "Each MP speaks for an area of roughly 70,000 voters.",
+            "The number is between 600 and 700."
+          ]
         },
         "revised_on": "2026-11-14"
       }
@@ -1495197,7 +1495344,7 @@
     },
     {
       "id": "q-19314",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Proof that giants also struggle with their building projects.",
       "question": "Legend says the giant Finn McCool built these stone columns on the Northern Irish coast. What did he build them for?",
@@ -1495209,7 +1495356,7 @@
       ],
       "hints": [
         "The legend involves a rival giant.",
-        "In the story, Finn wanted to reach his rival without getting his feet wet.",
+        "Finn's rival, Benandonner, didn't live in Ireland.",
         "The stones were supposed to stretch all the way to another country."
       ],
       "media": {
@@ -1495255,32 +1495402,34 @@
       "needs_media": true,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Finn wanted to reach his rival without getting his feet wet\") gives the answer away: of the four options, only \"a path across the sea to Scotland\" lets you reach someone without getting wet. Hint 2 should stay vaguer, for example about the rival giant living somewhere else, without describing a crossing. The facts are fine: the Finn McCool/Benandonner legend and the lava origin of the columns (about 50–60 million years ago) are both correct.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Finn wanted to reach his rival without getting his feet wet\") gives the answer away: of the four options, only \"a path across the sea to Scotland\" lets you reach someone without getting wet. Hint 2 should stay vaguer, for example about the rival giant living somewhere else, without describing a crossing. The facts are fine: the Finn McCool/Benandonner legend and the lava origin of the columns (about 50–60 million years ago) are both correct.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which mentioned Scotland, and evened out the option lengths.",
+        "reason": "Replaced hint 2, which described a dry crossing and gave the answer away, with a vaguer clue about where the rival lived.",
         "previous": {
-          "answer": "A path across the sea to fight a giant in Scotland",
-          "wrong_answers": [
-            "A staircase to climb up to the clouds",
-            "A wall to stop the sea flooding Ireland",
-            "A huge table for a giant's feast"
-          ],
           "hints": [
             "The legend involves a rival giant.",
-            "Similar columns can be found on the Scottish island of Staffa.",
+            "In the story, Finn wanted to reach his rival without getting his feet wet.",
             "The stones were supposed to stretch all the way to another country."
           ]
         },
@@ -1497054,7 +1497203,7 @@
     },
     {
       "id": "q-19338",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "A bird that has been perched on the same roof for over 100 years and still hasn't flown off.",
       "question": "Statues of this bird sit on top of a famous riverside building, and it appears on a big football club's badge. What is it called?",
@@ -1497071,12 +1497220,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Liver bird statue close-up",
-        "note": "Close photo of one of the Liver bird statues on top of the Royal Liver Building, without visible text or the club badge.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Royal Liver Building",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoyal--Liver--Building--Liverpool.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Royal--Liver--Building--Liverpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Acediscovery · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Acediscovery",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acediscovery",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Legend says that if the two Liver birds on the Royal Liver Building ever fly away, the city of Liverpool will cease to exist.",
       "subcategory": "cities-and-towns",
@@ -1497102,22 +1497258,47 @@
         "notes": "\"The Liver bird\" stands out as a special name next to three ordinary bird species, though each of those does match a club badge (Newcastle, Spurs, Norwich). The fun-fact legend is folklore, and it is presented as a legend, so that's acceptable. The essential photo of the statue is easy to find."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "No candidate gives the essential close-up of a Liver bird statue, and a new search isn't allowed. Candidate 1 shows the Royal Liver Building only from far away, with the birds as tiny specks, and 2–6 are unrelated (US Capitol repairs, a Leeds relief, a bench plaque, a Viking stone). Either find a close photo (e.g. \"Royal Liver Building Liver bird\"), or change the role to illustrative and use candidate 1. The question text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate gives the essential close-up of a Liver bird statue, and a new search isn't allowed. Candidate 1 shows the Royal Liver Building only from far away, with the birds as tiny specks, and 2–6 are unrelated (US Capitol repairs, a Leeds relief, a bench plaque, a Viking stone). Either find a close photo (e.g. \"Royal Liver Building Liver bird\"), or change the role to illustrative and use candidate 1. The question text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No close-up of the statue exists among the sources, so the media is now an illustrative photo of the Royal Liver Building, which the question already mentions.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Liver bird statue close-up",
+            "note": "Close photo of one of the Liver bird statues on top of the Royal Liver Building, without visible text or the club badge.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19339",
@@ -1498432,7 +1498613,7 @@
     },
     {
       "id": "q-19356",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Time travel tip: pack a warm cloak and leave your phone at home.",
       "question": "You've travelled back in time to see Celtic tribes, with chariots and hillforts, ruling all of Britain. When are you?",
@@ -1498445,7 +1498626,7 @@
       "hints": [
         "People lived in round houses with thatched roofs.",
         "This time is called the Iron Age.",
-        "Julius Caesar hadn't landed yet."
+        "The Romans hadn't conquered Britain yet."
       ],
       "media": {
         "type": "image",
@@ -1498490,31 +1498671,33 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 3 (\"Julius Caesar hadn't landed yet\") is wrong for most of the answer's period. The Roman invasion was in AD 43, so the century before it runs from about 57 BC to AD 43, and Caesar landed in 55 and 54 BC, inside that century. Replace hint 3 with a true clue, for example \"The Romans hadn't conquered Britain yet\" or \"Boudica's people lived then.\"",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 3 (\"Julius Caesar hadn't landed yet\") is wrong for most of the answer's period. The Roman invasion was in AD 43, so the century before it runs from about 57 BC to AD 43, and Caesar landed in 55 and 54 BC, inside that century. Replace hint 3 with a true clue, for example \"The Romans hadn't conquered Britain yet\" or \"Boudica's people lived then.\"",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Made all four options the same shape with a mix of “before” and “after”, and replaced hint 1, which ruled out every wrong option, with a vague hint that gives no date.",
+        "reason": "Replaced hint 3, since Caesar landed in 55 and 54 BC, inside the answer's century.",
         "previous": {
-          "answer": "Before the Romans arrived",
-          "wrong_answers": [
-            "After the Normans arrived",
-            "After the Vikings arrived",
-            "After the Tudors came to power"
-          ],
           "hints": [
-            "It's more than 2,000 years ago.",
+            "People lived in round houses with thatched roofs.",
             "This time is called the Iron Age.",
             "Julius Caesar hadn't landed yet."
           ]
@@ -1498760,7 +1498943,7 @@
     },
     {
       "id": "q-19360",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A goal record that waited years for someone to come along and pinch it.",
       "question": "In March 2023, Harry Kane scored his 54th goal for England, a new record. Whose record of 53 goals did he beat?",
@@ -1498791,7 +1498974,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "Rooney had taken the record from Sir Bobby Charlton, who had held it for about 47 years.",
+      "fun_fact": "Rooney had taken the record from Sir Bobby Charlton, whose 49 goals had stood as the record since 1970.",
       "subcategory": "football",
       "style": null,
       "concept": "Wayne Rooney",
@@ -1498814,28 +1498997,36 @@
         "difficulty_estimate": 7,
         "notes": "Fun fact is a bit off: Charlton held the record from 1968 to 2015, about 47 years, not 45. It shares Harry Kane with football-4 but asks a different fact. A difficulty of 5 is a little low for kids."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: wrong. The fun fact says Charlton held the record for about 47 years. Charlton set his 49-goal record in 1970 and Rooney broke it in 2015, so it stood for about 45 years.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: wrong. The fun fact says Charlton held the record for about 47 years. Charlton set his 49-goal record in 1970 and Rooney broke it in 2015, so it stood for about 45 years.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Corrected the fun fact: Charlton held the record for about 47 years (1968 to 2015).",
+        "reason": "Fixed the fun fact's wrong '47 years' by saying Charlton's record had stood since 1970.",
         "previous": {
-          "fun_fact": "Rooney had taken the record from Sir Bobby Charlton, who had held it for about 45 years."
+          "fun_fact": "Rooney had taken the record from Sir Bobby Charlton, who had held it for about 47 years."
         },
         "revised_on": "2026-11-14"
       }
@@ -1499204,7 +1499395,7 @@
     },
     {
       "id": "q-19366",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "A black chair, a spotlight and a man who never left a sentence unfinished.",
       "question": "I hosted Mastermind for 25 years, and I always said “I've started, so I'll finish.” Who am I?",
@@ -1499222,11 +1499413,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "empty chair stage spotlight",
+        "query": "black leather chair spotlight",
         "note": null,
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APainting_The_Chair_%28262694327%29.jpeg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Painting_The_Chair_%28262694327%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "J Carlos · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "J Carlos",
+        "author_url": "https://500px.com/teuc09",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "“I've started, so I'll finish” is now a saying people in Britain use for almost anything.",
       "subcategory": "game-shows-and-presenters",
@@ -1499255,23 +1499453,47 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text is fine, but none of the image candidates works. 1 and 2 show US politician Carly Fiorina at an \"Education Summit\" panel, with the event's name visible. 3 is an outdoor concert stage in a desert, which has nothing to do with a quiz studio. A new search isn't allowed, so the media slot needs a different source, for example a black leather chair under a spotlight on a dark studio stage. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text is fine, but none of the image candidates works. 1 and 2 show US politician Carly Fiorina at an \"Education Summit\" panel, with the event's name visible. 3 is an outdoor concert stage in a desert, which has nothing to do with a quiz studio. A new search isn't allowed, so the media slot needs a different source, for example a black leather chair under a spotlight on a dark studio stage. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query for a black chair under a spotlight, since none of the earlier pictures fit.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "empty chair stage spotlight",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19367",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A disco ball on a stick, and grown adults weep to hold it.",
       "question": "You're watching the first ever Strictly Come Dancing final, as Natasha Kaplinsky lifts the Glitterball. Which year is it?",
@@ -1499289,20 +1499511,18 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "ballroom dancing couple",
+        "query": "ballroom dance competition",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AVernon_and_Irene_Castle2.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vernon_and_Irene_Castle2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Johnston, Frances Benjamin, 1864-1952, photographer. · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABallroom_dance_competition_cha_cha.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Ballroom_dance_competition_cha_cha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "CC BY-SA 2.5 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Johnston, Frances Benjamin, 1864-1952, photographer.",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": null,
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": [
-          "PD-US"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "The first series had only eight couples and ran for eight weeks.",
       "subcategory": "game-shows-and-presenters",
@@ -1499331,19 +1499551,52 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-US).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New media query so a picture with a suitable licence can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "ballroom dancing couple",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AVernon_and_Irene_Castle2.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Vernon_and_Irene_Castle2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Johnston, Frances Benjamin, 1864-1952, photographer. · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Johnston, Frances Benjamin, 1864-1952, photographer.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-US"
+            ]
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19368",
@@ -1499647,7 +1499900,7 @@
     },
     {
       "id": "q-19372",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "Two sibling stations, sharing one dial and arguing over the remote since the 1970s.",
       "question": "BBC Wales runs Radio Wales and Radio Cymru. What is the main difference between them?",
@@ -1499658,8 +1499911,8 @@
         "Radio Cymru is for children"
       ],
       "hints": [
-        "The difference is in what you hear from the presenters, not in the songs or who listens.",
-        "It matters a lot to children who go to Welsh-medium schools.",
+        "Think about what makes Wales different from England.",
+        "“Cymru” is the Welsh name for Wales.",
         "Radio Wales speaks English to its listeners."
       ],
       "media": {
@@ -1499705,29 +1499958,35 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hints 1 and 2 give the answer away. Hint 1 (\"in what you hear from the presenters, not in the songs or who listens\") rules out all three wrong answers at once: music only, North Wales and children. Hint 2 (\"Welsh-medium schools\") then names the language. Hint 1 should be a vague hint about broadcasting in Wales, and hint 2 should not mention Welsh-medium education.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hints 1 and 2 give the answer away. Hint 1 (\"in what you hear from the presenters, not in the songs or who listens\") rules out all three wrong answers at once: music only, North Wales and children. Hint 2 (\"Welsh-medium schools\") then names the language. Hint 1 should be a vague hint about broadcasting in Wales, and hint 2 should not mention Welsh-medium education.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Dropped “two national” from the question, rewrote the description and made hints 1–2 vague so they no longer give away the language.",
+        "reason": "Rewrote hints 1 and 2, which ruled out every wrong answer and pointed to Welsh-medium schools, so they now go from vague to stronger.",
         "previous": {
-          "description": "Two radio stations, one name, and a translation that changes everything.",
-          "question": "BBC Wales runs two national radio stations: Radio Wales and Radio Cymru. What is the main difference between them?",
           "hints": [
-            "“Cymru” is not an English word.",
-            "Radio Wales speaks English to its listeners.",
-            "Think of S4C, but for your ears."
+            "The difference is in what you hear from the presenters, not in the songs or who listens.",
+            "It matters a lot to children who go to Welsh-medium schools.",
+            "Radio Wales speaks English to its listeners."
           ]
         },
         "revised_on": "2026-11-14"
@@ -1499951,7 +1500210,7 @@
     },
     {
       "id": "q-19376",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A survival expert whose idea of a nice day out involves frostbite.",
       "question": "In 1998, aged just 23, Bear Grylls climbed me, less than two years after breaking his back in a parachute accident. What am I?",
@@ -1499969,21 +1500228,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "ice axe climbing rope",
+        "query": "mountaineering ice axe rope",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APage_008_-_With_axe_and_rope_in_the_New_Zealand_Alps_-_Mannering.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Page_008_-_With_axe_and_rope_in_the_New_Zealand_Alps_-_Mannering.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Guy Mannering · Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrips_04_-_Joffree_Group_-_Slalok_w_Martys_scrawlings_%2890977255%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Trips_04_-_Joffree_Group_-_Slalok_w_Martys_scrawlings_%2890977255%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "McKay Savage from London, UK · CC BY 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Guy Mannering",
-        "author_url": "https://en.wikipedia.org/wiki/en:Guy_Mannering_(mountaineer)",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "McKay Savage from London, UK",
+        "author_url": "https://www.flickr.com/people/56796376@N00",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Bear Grylls later became Chief Scout, leading the UK's Scouts.",
       "subcategory": "pioneers-and-heroes",
@@ -1500012,26 +1500268,60 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "New decorative media query so a picture with a suitable licence can be found.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "ice axe climbing rope",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APage_008_-_With_axe_and_rope_in_the_New_Zealand_Alps_-_Mannering.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Page_008_-_With_axe_and_rope_in_the_New_Zealand_Alps_-_Mannering.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Guy Mannering · Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "Guy Mannering",
+            "author_url": "https://en.wikipedia.org/wiki/en:Guy_Mannering_(mountaineer)",
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19377",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Spare change with a surprisingly big job to do.",
-      "question": "You drop coins in a charity tin at the supermarket. Apart from lifeboats, which UK emergency service mostly runs on donations, not taxes?",
+      "question": "You drop coins in a charity tin at the supermarket. Apart from lifeboats and mountain rescue, which UK emergency service mostly runs on donations?",
       "answer": "Air ambulances",
       "wrong_answers": [
         "The police",
@@ -1500086,29 +1500376,32 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The clue fits something outside the options: UK mountain rescue teams (and cave and lowland search and rescue) are also volunteer charities that run mostly on donations, so \"Apart from lifeboats, which UK emergency service mostly runs on donations\" doesn't point to air ambulances alone. Add a detail only air ambulances have, e.g. \"which flying emergency service...\" or mention helicopters/doctors on board, or say \"apart from lifeboats and mountain rescue\".",
-        "problems": [
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The clue fits something outside the options: UK mountain rescue teams (and cave and lowland search and rescue) are also volunteer charities that run mostly on donations, so \"Apart from lifeboats, which UK emergency service mostly runs on donations\" doesn't point to air ambulances alone. Add a detail only air ambulances have, e.g. \"which flying emergency service...\" or mention helicopters/doctors on board, or say \"apart from lifeboats and mountain rescue\".",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Ruled out RNLI lifeboats in the question and reworded hints 1–2 so they're smoother and don't repeat each other.",
+        "reason": "Mountain rescue also fits the clue, so the question now excludes it explicitly.",
         "previous": {
-          "question": "You drop coins in a charity tin at the supermarket. Which of these UK emergency services mostly runs on donations like that, not taxes?",
-          "hints": [
-            "It's all about getting help to hurt people fast.",
-            "It reaches hurt people in places that are hard to get to quickly.",
-            "It can land in a field with a doctor and paramedic on board."
-          ]
+          "question": "You drop coins in a charity tin at the supermarket. Apart from lifeboats, which UK emergency service mostly runs on donations, not taxes?"
         },
         "revised_on": "2026-11-14"
       }
@@ -1503150,10 +1503443,10 @@
     },
     {
       "id": "q-19418",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "A jab in the arm with a very famous address.",
-      "question": "Scientists at the university in this city made a COVID-19 vaccine named after it. Which city is it?",
+      "question": "Scientists at a famous university made a COVID-19 vaccine named after its city. Which city is it?",
       "answer": "Oxford",
       "wrong_answers": [
         "Cambridge",
@@ -1503167,12 +1503460,21 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
+        "role": "illustrative",
         "query": "COVID vaccine vial syringe",
-        "note": "Clear photo of the Radcliffe Camera in Oxford, with no signs or text naming the city.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACOVID-19_Vaccine_vial_and_syringe_-_US_Census.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/COVID-19_Vaccine_vial_and_syringe_-_US_Census.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "United States Census · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "United States Census",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-DOC-Census"
+        ]
       },
       "fun_fact": "The first person in the world to get the Oxford vaccine outside a trial was 82-year-old Brian Pinker, on 4 January 2021.",
       "subcategory": "scientists-and-inventors",
@@ -1503198,22 +1503500,48 @@
         "notes": "Fun: a fairly plain recall question. Hint 1 already narrows the answer to Oxford or Cambridge."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot doesn't make sense. It is marked essential, and its note asks for the Radcliffe Camera in Oxford, which would show the answer outright. But the search was for vaccine vials, so no candidate matches the note. Change the slot to an illustrative image of a generic vaccine vial: candidate 2 (unbranded \"COVID-19 Vaccine\" vial and syringe) would work then. The question text, facts and hints are fine. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot doesn't make sense. It is marked essential, and its note asks for the Radcliffe Camera in Oxford, which would show the answer outright. But the search was for vaccine vials, so no candidate matches the note. Change the slot to an illustrative image of a generic vaccine vial: candidate 2 (unbranded \"COVID-19 Vaccine\" vial and syringe) would work then. The question text, facts and hints are fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media changed to an illustrative generic vaccine vial, and the question no longer points to a photo.",
+        "previous": {
+          "question": "Scientists at the university in this city made a COVID-19 vaccine named after it. Which city is it?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "COVID vaccine vial syringe",
+            "note": "Clear photo of the Radcliffe Camera in Oxford, with no signs or text naming the city.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19419",
@@ -1504093,20 +1504421,20 @@
     },
     {
       "id": "q-19431",
-      "status": "needs_work",
-      "difficulty": 7,
+      "status": "approved",
+      "difficulty": 5,
       "description": "Cobbles outside, a pint at the Rovers, and this tune before every episode.",
-      "question": "Coronation Street's famous theme tune, written by Eric Spear, opens with a slow, lonely solo on which instrument?",
-      "answer": "Cornet",
+      "question": "Coronation Street's famous theme tune, written by Eric Spear, opens with a slow, lonely solo from which kind of instrument?",
+      "answer": "Brass",
       "wrong_answers": [
-        "Violin",
-        "Harp",
-        "Bagpipes"
+        "Strings",
+        "Woodwind",
+        "Percussion"
       ],
       "hints": [
         "The tune is meant to sound like the band music of northern England.",
-        "You blow into it, and it's made of metal.",
-        "It looks like a short, chubby trumpet."
+        "You blow into it.",
+        "Think of a trumpet."
       ],
       "media": {
         "type": "image",
@@ -1504147,32 +1504475,52 @@
         "difficulty_estimate": 8,
         "notes": "Cornet is the only brass option, so anyone who remembers a brass sound gets it, and violin and harp are weak. Some sources call the solo a trumpet, but the cornet is the standard answer, and trumpet is wisely left out of the options. The question is a bit dry."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. Sources say the tune is led by a cornet, but Wikipedia's Eric Spear article says Ronnie Hunt, a cornet player, played trumpet on the original recording. The answer 'Cornet' is therefore disputed. The hint 'made of metal, short chubby trumpet' fits either way.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. Sources say the tune is led by a cornet, but Wikipedia's Eric Spear article says Ronnie Hunt, a cornet player, played trumpet on the original recording. The answer 'Cornet' is therefore disputed. The hint 'made of metal, short chubby trumpet' fits either way.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed the date from the fun fact and the decade from the description, so they no longer give away a related question about when the show started.",
+        "reason": "Sources disagree on cornet or trumpet, so the question now asks for the instrument family (brass), which is right either way.",
         "previous": {
-          "description": "Sixty-odd years of cobbles, and this tune still turns up before every pint is pulled.",
-          "fun_fact": "Eric Spear wrote the tune for the very first episode, shown on 9 December 1960."
+          "difficulty": 7,
+          "question": "Coronation Street's famous theme tune, written by Eric Spear, opens with a slow, lonely solo on which instrument?",
+          "answer": "Cornet",
+          "wrong_answers": [
+            "Violin",
+            "Harp",
+            "Bagpipes"
+          ],
+          "hints": [
+            "The tune is meant to sound like the band music of northern England.",
+            "You blow into it, and it's made of metal.",
+            "It looks like a short, chubby trumpet."
+          ]
         },
         "revised_on": "2026-11-14"
-      }
+      },
+      "difficulty_original": 7
     },
     {
       "id": "q-19432",
@@ -1504320,7 +1504668,7 @@
     },
     {
       "id": "q-19434",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Gritty streets, grim faces and a lot of rain on the windscreen.",
       "question": "ITV's police drama Taggart ran from 1983 to 2010. In which city were its detectives based?",
@@ -1504331,7 +1504679,7 @@
         "Dundee"
       ],
       "hints": [
-        "It's Scotland's largest city.",
+        "Its streets were filmed on location for the show.",
         "It was once a huge shipbuilding centre.",
         "The River Clyde flows through it."
       ],
@@ -1504378,27 +1504726,34 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“It's Scotland's largest city.”) gives the answer away on its own: all four options are Scottish cities, and most UK players know Glasgow is the largest, so it is as strong as hint 3. Replace hint 1 with a vague clue, for example that the city is in the west of Scotland's Central Belt, or something about the show's grim urban setting.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“It's Scotland's largest city.”) gives the answer away on its own: all four options are Scottish cities, and most UK players know Glasgow is the largest, so it is as strong as hint 3. Replace hint 1 with a vague clue, for example that the city is in the west of Scotland's Central Belt, or something about the show's grim urban setting.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Shortened the question to one fact and replaced the empty hint 1 and the giveaway hint 2 (Celtic and Rangers), as the reviewer asked.",
+        "reason": "Hint 1 gave the answer away, so it is now a vague clue.",
         "previous": {
-          "question": "Its detectives worked out of Maryhill police station, it ran on ITV from 1983 to 2010, and it was named after DCI Jim Taggart. In which city was Taggart set?",
           "hints": [
-            "The city is in Scotland, but that still leaves several choices.",
-            "Its football clubs include Celtic and Rangers.",
+            "It's Scotland's largest city.",
+            "It was once a huge shipbuilding centre.",
             "The River Clyde flows through it."
           ]
         },
@@ -1504725,7 +1505080,7 @@
     },
     {
       "id": "q-19439",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
       "description": "The only traffic jam in Berkshire that people pay to watch.",
       "question": "You're at Ascot's big race meeting at 2 pm, before the first race, when open horse-drawn carriages roll up the track. Who is riding in them?",
@@ -1504736,7 +1505091,7 @@
         "The Prime Minister and Cabinet"
       ],
       "hints": [
-        "The meeting is named after them.",
+        "This procession is a tradition almost 200 years old.",
         "Bookmakers used to take bets on the colour of one passenger's hat.",
         "They arrive from Windsor Castle nearby."
       ],
@@ -1504783,24 +1505138,36 @@
       "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (“The meeting is named after them.”) gives the answer away: the meeting is Royal Ascot, so anyone who knows the name gets “the monarch” from the first hint. It is also a stronger clue than hint 3. Hint 1 should be a vague clue, for example about the carriages' route or the tradition's age, and the royal link should be saved for hint 3 at most.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“The meeting is named after them.”) gives the answer away: the meeting is Royal Ascot, so anyone who knows the name gets “the monarch” from the first hint. It is also a stronger clue than hint 3. Hint 1 should be a vague clue, for example about the carriages' route or the tradition's age, and the royal link should be saved for hint 3 at most.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Removed “in June” so the question doesn't give away the answer to a related question about the month.",
+        "reason": "Hint 1 gave the answer away through the meeting's name, so it now mentions the tradition's age.",
         "previous": {
-          "question": "You're at Ascot in June at 2 pm, before the first race, when open horse-drawn carriages roll up the track. Who is riding in them?"
+          "hints": [
+            "The meeting is named after them.",
+            "Bookmakers used to take bets on the colour of one passenger's hat.",
+            "They arrive from Windsor Castle nearby."
+          ]
         },
         "revised_on": "2026-11-14"
       }
@@ -1504951,7 +1505318,7 @@
     },
     {
       "id": "q-19442",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 15,
       "description": "A golfer, a stream and a pair of rolled-up trousers walk onto the 18th hole.",
       "question": "At the 1999 Open, Jean van de Velde reached this final hole needing just a double-bogey 6 to win. How many shots did he take on it?",
@@ -1504963,7 +1505330,7 @@
       ],
       "hints": [
         "He didn't win the title outright.",
-        "He ended up in a play-off, which Paul Lawrie won.",
+        "One of his shots landed in the Barry Burn, the stream in front of the green.",
         "It was a triple bogey on a par 4."
       ],
       "media": {
@@ -1505009,19 +1505376,39 @@
       "needs_media": true,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. The question says he needed a 6 to win, so \"he ended up in a play-off\" means he tied, which can only be 7. Hint 1 already rules out 5 and 6. Hint 2 should be vaguer, for example the course or the burn without the play-off. The play-off fact could move to hint 3 or the fun fact.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. The question says he needed a 6 to win, so \"he ended up in a play-off\" means he tied, which can only be 7. Hint 1 already rules out 5 and 6. Hint 2 should be vaguer, for example the course or the burn without the play-off. The play-off fact could move to hint 3 or the fun fact.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Hint 2 gave the answer away through the play-off, so it now points to the Barry Burn instead.",
+        "previous": {
+          "hints": [
+            "He didn't win the title outright.",
+            "He ended up in a play-off, which Paul Lawrie won.",
+            "It was a triple bogey on a par 4."
+          ]
+        },
+        "revised_on": "2026-11-14"
+      }
     },
     {
       "id": "q-19443",
@@ -1505734,7 +1506121,7 @@
     },
     {
       "id": "q-19452",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
       "description": "The founder of a royal family that later starred in a dozen TV dramas.",
       "question": "This king won the Battle of Bosworth in 1485 and began the Tudor family's rule. Who is he?",
@@ -1505751,12 +1506138,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "Bosworth battlefield memorial",
-        "note": "The 1505 portrait of Henry VII (National Portrait Gallery), holding a red rose; no caption visible.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Bosworth battlefield sundial memorial",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASundial_Memorial_at_Bosworth_Battlefield_Heritage_Centre_-_geograph.org.uk_-_5796017.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Sundial_Memorial_at_Bosworth_Battlefield_Heritage_Centre_-_geograph.org.uk_-_5796017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Graham Hogg · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Graham Hogg",
+        "author_url": "https://www.geograph.org.uk/profile/47667",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Henry VII's Tudor rose joined the red rose of Lancaster and the white rose of York.",
       "subcategory": "tudors-and-stuarts",
@@ -1505782,22 +1506176,47 @@
         "notes": "The fun fact repeats what q-17892 asks (the Tudor rose joining Lancaster and York); the question itself asks a different fact. It is a fairly dry date-and-battle question."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-67",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set up wrongly. It is marked essential, and its note asks for the 1505 portrait of Henry VII, but the question never refers to a picture, and a sharp portrait of the answer would give it away. None of the candidates match the note anyway. They are Bosworth memorials (1, 2), Tippecanoe battlefield shots (3–5) and a sign for a Canadian memorial at Dury (6). Make the slot illustrative and use candidate 2, the Bosworth sundial memorial with no readable text. No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-14",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set up wrongly. It is marked essential, and its note asks for the 1505 portrait of Henry VII, but the question never refers to a picture, and a sharp portrait of the answer would give it away. None of the candidates match the note anyway. They are Bosworth memorials (1, 2), Tippecanoe battlefield shots (3–5) and a sign for a Canadian memorial at Dury (6). Make the slot illustrative and use candidate 2, the Bosworth sundial memorial with no readable text. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-14",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Media changed from an essential portrait of the answer to an illustrative Bosworth memorial.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "Bosworth battlefield memorial",
+            "note": "The 1505 portrait of Henry VII (National Portrait Gallery), holding a red rose; no caption visible.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-14"
+      }
     }
   ]
 }
