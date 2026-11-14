@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "dde6b090",
+  "hash": "e0929845",
   "questions": [
     {
       "id": "q-9487",
@@ -83912,6 +83912,74 @@
       "background": null
     },
     {
+      "id": "q-19977",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "crown-and-state",
+      "bundle": "uk",
+      "description": "Small, shiny and worth a lot more than a chocolate coin.",
+      "question": "In 2017, a new 12-sided coin replaced an old round one in the UK. How much is it worth?",
+      "answer": "One pound",
+      "wrong_answers": [
+        "Two pounds",
+        "Fifty pence",
+        "Twenty pence"
+      ],
+      "hints": [
+        "It's gold-coloured on the outside and silver-coloured in the middle.",
+        "It's the coin many people use to unlock a supermarket trolley.",
+        "People sometimes call it a “quid”."
+      ],
+      "fun_fact": "The old round pound was replaced because about one in every 30 of them was a fake.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/A_jar_of_world_coins.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_jar_of_world_coins.jpg",
+        "credit": "Billjones94 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Billjones94",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Billjones94"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19978",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "crown-and-state",
+      "bundle": "uk",
+      "description": "A flag with more big cats on it than a safari park.",
+      "question": "This is the King's flag, the Royal Standard. One of its lions, standing on its back legs, is Scotland's. How many lions are there in total?",
+      "answer": "7",
+      "wrong_answers": [
+        "4",
+        "6",
+        "9"
+      ],
+      "hints": [
+        "Count every lion in every corner.",
+        "Scotland's red lion stands alone in its corner.",
+        "England's lions walk in groups of three, and England shows up twice."
+      ],
+      "fun_fact": "In Scotland, a different version of the Royal Standard is flown, with Scotland's lion in two of the quarters.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Royal_Standard_of_the_United_Kingdom_Great_Britain_%26_Irland._Johnson%27s_new_chart_of_national_emblems%2C_1868.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoyal_Standard_of_the_United_Kingdom_Great_Britain_%26_Irland._Johnson%27s_new_chart_of_national_emblems%2C_1868.jpg",
+        "credit": "Alvin Jewett Johnson · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Alvin Jewett Johnson",
+        "author_url": "https://en.wikipedia.org/wiki/en:Alvin_J._Johnson"
+      },
+      "background": null
+    },
+    {
       "id": "q-19979",
       "status": "approved",
       "difficulty": 4,
@@ -83942,6 +84010,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "author": "User:Nino Barbieri",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nino_Barbieri"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19980",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "customs-and-ceremonies",
+      "bundle": "uk",
+      "description": "Britain has turned standing still into a sport, and this is its championship.",
+      "question": "Tennis fans join the famous Queue at Wimbledon to get tickets on the day. When do many of them arrive?",
+      "answer": "The night before",
+      "wrong_answers": [
+        "Just after lunch",
+        "Around teatime on the day",
+        "One minute before the gates open"
+      ],
+      "hints": [
+        "The best tickets go to the people at the very front.",
+        "Fans come from all over the world to join it.",
+        "They sleep there before the gates open in the morning."
+      ],
+      "fun_fact": "Everyone in the Queue gets a numbered Queue Card showing their place in line, so nobody can push in.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Grass_court_season_is_here%21_%2818161963964%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrass_court_season_is_here%21_%2818161963964%29.jpg",
+        "credit": "Carine06 from UK · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Carine06 from UK",
+        "author_url": "https://www.flickr.com/people/43555660@N00"
       },
       "background": null
     },
@@ -85170,6 +85272,40 @@
       "background": null
     },
     {
+      "id": "q-20017",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "london",
+      "bundle": "uk",
+      "description": "A football club named after a weapons factory, which is much less scary than it sounds.",
+      "question": "Arsenal FC play at the Emirates Stadium, and their fans call them “the Gunners”. Which city are they from?",
+      "answer": "London",
+      "wrong_answers": [
+        "Manchester",
+        "Liverpool",
+        "Birmingham"
+      ],
+      "hints": [
+        "It's a very big city.",
+        "It has more professional football clubs than any other city in the UK.",
+        "Big Ben and Buckingham Palace are there too."
+      ],
+      "fun_fact": "Arsenal began in 1886 as a team of workers at the Royal Arsenal, a weapons factory in Woolwich.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Emirates_Stadium_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmirates_Stadium_2016.jpg",
+        "credit": "Photo2023 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Photo2023",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Photo2023&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
       "id": "q-20018",
       "status": "approved",
       "difficulty": 2,
@@ -86224,6 +86360,40 @@
       "background": null
     },
     {
+      "id": "q-20049",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "rugby-and-cricket",
+      "bundle": "uk",
+      "description": "A rugby competition got one new member and had to buy new letterheads.",
+      "question": "Italy joined rugby's Five Nations, turning it into the Six Nations. In which year?",
+      "answer": "2000",
+      "wrong_answers": [
+        "1987",
+        "1993",
+        "2006"
+      ],
+      "hints": [
+        "Many of today's parents were already grown-ups when it happened.",
+        "It happened before England won the Rugby World Cup in 2003.",
+        "It was the year the world celebrated a brand-new millennium."
+      ],
+      "fun_fact": "Italy won their very first Six Nations match in 2000, beating Scotland in Rome.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Gilbert_rugby_ball_on_grass.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGilbert_rugby_ball_on_grass.jpg",
+        "credit": "Helene Brasseur · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Helene Brasseur",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-20050",
       "status": "approved",
       "difficulty": 7,
@@ -86598,6 +86768,40 @@
       "background": null
     },
     {
+      "id": "q-20061",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "Woodland trivia for people who get out more than the rest of us.",
+      "question": "Brits stuck on a hard question say “I'm stumped!” Cricket has three stumps at each end. And in a wood, what is a stump?",
+      "answer": "What's left of a chopped-down tree",
+      "wrong_answers": [
+        "A big pile of fallen leaves",
+        "A hole dug by a badger",
+        "A muddy puddle after rain"
+      ],
+      "hints": [
+        "You might find one on a walk in the woods.",
+        "Woodpeckers and mushrooms love them.",
+        "Count its rings to guess how old it was."
+      ],
+      "fun_fact": "In cricket, a batter is out “stumped” when the wicketkeeper knocks the bails off while the batter is out of their ground.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Cricket_stumps_without_bails.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACricket_stumps_without_bails.jpg",
+        "credit": "Aravind Sivaraj · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Aravind Sivaraj",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Yes.aravind"
+      },
+      "background": null
+    },
+    {
       "id": "q-20062",
       "status": "approved",
       "difficulty": 4,
@@ -86696,6 +86900,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "IDS.photos from Tiverton, UK",
         "author_url": "https://www.flickr.com/people/18557934@N03"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20065",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "uk",
+      "description": "The cheapest way to find out what's going on inside someone's head.",
+      "question": "When someone looks lost in a daydream, Brits ask “A … for your thoughts?” Which coin is offered in this very old saying?",
+      "answer": "A penny",
+      "wrong_answers": [
+        "A pound",
+        "A shilling",
+        "A sixpence"
+      ],
+      "hints": [
+        "It's a coin you can still use today.",
+        "It's copper-coloured.",
+        "When you have more than one, you call them “pence”."
+      ],
+      "fun_fact": "The saying is more than 500 years old, from a time when that one small coin could buy far more than it does now.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Colonial_Daydream_%28242522543%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AColonial_Daydream_%28242522543%29.jpeg",
+        "credit": "Eric Cosmides · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Eric Cosmides",
+        "author_url": "https://500px.com/cozm0"
       },
       "background": null
     },
@@ -87206,6 +87444,74 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Grenville Burrows",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20081",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "transport",
+      "bundle": "uk",
+      "description": "London, drawn as a giant dartboard with Big Ben near the bullseye.",
+      "question": "London's transport map splits the city into numbered rings called zones. What are they for?",
+      "answer": "Working out your ticket price",
+      "wrong_answers": [
+        "Showing the speed limits",
+        "Showing how deep the tunnels go",
+        "Showing where trains run at night"
+      ],
+      "hints": [
+        "Zone 1 is right in the middle of London.",
+        "The more rings you cross on your journey, the more it matters.",
+        "It's to do with how much you pay."
+      ],
+      "fun_fact": "Some London stations sit right on the border between two zones, so they count as being in both.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/London_Underground_platforms_at_Whitechapel_station%2C_August_2021_01.jpg/3840px-London_Underground_platforms_at_Whitechapel_station%2C_August_2021_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Underground_platforms_at_Whitechapel_station%2C_August_2021_01.jpg",
+        "credit": "TheFrog001 · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "TheFrog001",
+        "author_url": "https://commons.wikimedia.org/wiki/User:TheFrog001"
+      },
+      "background": null
+    },
+    {
+      "id": "q-20082",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "The box in the corner of the living room had to start somewhere, and it wasn't on catch-up.",
+      "question": "Scottish inventor John Logie Baird showed off the first working television in London. When was that?",
+      "answer": "About 100 years ago",
+      "wrong_answers": [
+        "About 10 years ago",
+        "About 500 years ago",
+        "About 1,000 years ago"
+      ],
+      "hints": [
+        "Your grandparents watched television when they were children.",
+        "It was long before mobile phones or colour TV, but there were already cars and radios.",
+        "Your great-great-grandparents might have read about it in the newspaper."
+      ],
+      "fun_fact": "The first face Baird ever showed on his television belonged to a ventriloquist's dummy called Stooky Bill.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/092_MNACTEC_%28Terrassa%29%2C_exposici%C3%B3_En%C3%A9rgeia%2C_r%C3%A0dio_J._Frutos_i_televisor_LMT.jpg/3840px-092_MNACTEC_%28Terrassa%29%2C_exposici%C3%B3_En%C3%A9rgeia%2C_r%C3%A0dio_J._Frutos_i_televisor_LMT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A092_MNACTEC_%28Terrassa%29%2C_exposici%C3%B3_En%C3%A9rgeia%2C_r%C3%A0dio_J._Frutos_i_televisor_LMT.jpg",
+        "credit": "Enric · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Enric",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Enric"
       },
       "background": null
     },
