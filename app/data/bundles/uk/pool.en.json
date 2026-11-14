@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f35adb14",
+  "hash": "f02e9798",
   "questions": [
     {
       "id": "q-9487",
@@ -51406,6 +51406,40 @@
       "background": null
     },
     {
+      "id": "q-18993",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "brands-and-adverts",
+      "bundle": "uk",
+      "description": "Three letters that can dig a hole faster than your dad can find the spade.",
+      "question": "It began in a lock-up garage in Uttoxeter in 1945, and Brits now call almost any yellow digger by its three letters. Where does the name JCB come from?",
+      "answer": "Its founder's initials",
+      "wrong_answers": [
+        "A Latin motto",
+        "Its first three customers",
+        "A wartime army code"
+      ],
+      "hints": [
+        "The firm started in Staffordshire just after the Second World War.",
+        "Its very first product was a tipping trailer built from war-surplus parts.",
+        "Joseph Cyril Bamford."
+      ],
+      "fun_fact": "In 2006 a JCB-built car, the Dieselmax, set a diesel land speed record of over 350 mph (563 km/h).",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Caterpillar_backhoe_loader_at_construction_site_in_Sunnyvale.jpg/3840px-Caterpillar_backhoe_loader_at_construction_site_in_Sunnyvale.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACaterpillar_backhoe_loader_at_construction_site_in_Sunnyvale.jpg",
+        "credit": "Grendelkhan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Grendelkhan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Grendelkhan"
+      },
+      "background": null
+    },
+    {
       "id": "q-18994",
       "status": "approved",
       "difficulty": 6,
@@ -51640,6 +51674,40 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Leonhard Lenz",
         "author_url": "https://commons.wikimedia.org/wiki/User:GPSLeo"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19002",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "christmas-in-britain",
+      "bundle": "uk",
+      "description": "Home of the plastic moustache and the fortune-telling fish.",
+      "question": "At British Christmas dinner, what do a paper crown, a tiny toy and a joke burst out of?",
+      "answer": "A Christmas cracker",
+      "wrong_answers": [
+        "A Christmas stocking",
+        "A Christmas pudding",
+        "An Advent calendar"
+      ],
+      "hints": [
+        "Two people hold one end each.",
+        "It goes off with a loud snap.",
+        "It's a paper tube twisted shut at both ends."
+      ],
+      "fun_fact": "Crackers were invented by London sweet-maker Tom Smith around 1847, and the first ones had sweets inside.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Christmas_Dinner_2014_Stuffed_Roast_Turkey_leg%2C_roast_potatoes%2C_parsnips%2C_brussel_sprouts%2C_pigs_in_blankets%2C_cranberry_sauce_%26_gravy_%2848122315877%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChristmas_Dinner_2014_Stuffed_Roast_Turkey_leg%2C_roast_potatoes%2C_parsnips%2C_brussel_sprouts%2C_pigs_in_blankets%2C_cranberry_sauce_%26_gravy_%2848122315877%29.jpg",
+        "credit": "CharmaineZoe's Marvelous Melange from England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "CharmaineZoe's Marvelous Melange from England",
+        "author_url": "https://www.flickr.com/people/53499099@N00"
       },
       "background": null
     },
@@ -52150,6 +52218,40 @@
         "license_url": null,
         "author": "Unknown artist from Lombardy",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-19018",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "georgians-and-victorians",
+      "bundle": "uk",
+      "description": "Oh no it isn't! Oh yes it is! Well, three of them are.",
+      "question": "Which of these stories is NOT a classic Christmas pantomime?",
+      "answer": "Hamlet",
+      "wrong_answers": [
+        "Cinderella",
+        "Aladdin",
+        "Jack and the Beanstalk"
+      ],
+      "hints": [
+        "Pantomimes are usually based on fairy tales.",
+        "Pantomimes are full of songs, silly jokes and a happy ending.",
+        "Its hero is a gloomy Danish prince."
+      ],
+      "fun_fact": "Aladdin pantomimes star the dame Widow Twankey, named after a type of Chinese tea.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Curtain_call_on_the_opening_night_of_the_Royal_Ballet%27s_Swan_Lake%2C_with_Rowena_Jackson%2C_at_the_Empire_Theatre%2C_Sydney%2C_11_September_1958_-_photographer_Ken_Redshaw_%288143610556%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACurtain_call_on_the_opening_night_of_the_Royal_Ballet%27s_Swan_Lake%2C_with_Rowena_Jackson%2C_at_the_Empire_Theatre%2C_Sydney%2C_11_September_1958_-_photographer_Ken_Redshaw_%288143610556%29.jpg",
+        "credit": "State Library of New South Wales collection · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "State Library of New South Wales collection",
+        "author_url": "https://www.flickr.com/people/29454428@N08"
       },
       "background": null
     },
@@ -54092,6 +54194,74 @@
       "background": null
     },
     {
+      "id": "q-19079",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "pop-and-rock",
+      "bundle": "uk",
+      "description": "Saturday night telly, where nerves and big dreams share one very bright stage.",
+      "question": "On this TV show, any kind of act can perform for judges, and the winner gets a spot at the Royal Variety Performance. Which show?",
+      "answer": "Britain's Got Talent",
+      "wrong_answers": [
+        "The X Factor",
+        "The Voice UK",
+        "Strictly Come Dancing"
+      ],
+      "hints": [
+        "Simon Cowell is a judge.",
+        "Judges can press a golden buzzer.",
+        "Ant and Dec present it."
+      ],
+      "fun_fact": "In 2012 it was won by Ashleigh Butler and her dancing dog, Pudsey.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg/3840px-783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg",
+        "credit": "Virtual-Pano · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Virtual-Pano",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Virtual-Pano"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19080",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "pub-and-playground-games",
+      "bundle": "uk",
+      "description": "A sport where a pirate ship can block your shot and nobody finds it odd.",
+      "question": "On a British seafront, in which game might you hit a small ball past a windmill with turning sails?",
+      "answer": "Crazy golf",
+      "wrong_answers": [
+        "Skittles",
+        "Croquet",
+        "Bar billiards"
+      ],
+      "hints": [
+        "You play it on holiday, often next to an amusement arcade.",
+        "You need a small ball and a club called a putter.",
+        "It's a small, silly version of a sport played on huge grassy courses."
+      ],
+      "fun_fact": "Americans call the same game “mini golf” or “miniature golf”.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/The_Promenade_at_Llandudno_-_geograph.org.uk_-_5073394.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Promenade_at_Llandudno_-_geograph.org.uk_-_5073394.jpg",
+        "credit": "Jeff Buck · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Jeff Buck",
+        "author_url": "https://www.geograph.org.uk/profile/12987"
+      },
+      "background": null
+    },
+    {
       "id": "q-19081",
       "status": "approved",
       "difficulty": 2,
@@ -54462,6 +54632,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "habiloid",
         "author_url": "https://www.geograph.org.uk/profile/127703"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19092",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "A family word from Manchester, best said loudly across a crowded room.",
+      "question": "Liam Gallagher calls his brother Noel “our …”, the Mancunian way to say brother. Complete the phrase.",
+      "answer": "Kid",
+      "wrong_answers": [
+        "Pal",
+        "Chum",
+        "Bud"
+      ],
+      "hints": [
+        "It's a short, three-letter word.",
+        "You'll hear it all over northern England, not just in Manchester.",
+        "It's also the name for a baby goat."
+      ],
+      "fun_fact": "Noel and Liam Gallagher grew up in Burnage, in south Manchester.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/The_engine_house_at_Ellenroad_Mill_in_September_2016.jpg/3840px-The_engine_house_at_Ellenroad_Mill_in_September_2016.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_engine_house_at_Ellenroad_Mill_in_September_2016.jpg",
+        "credit": "Tom Axford 1 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tom Axford 1",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tom_Axford_1"
       },
       "background": null
     },
@@ -55495,6 +55699,40 @@
       "background": null
     },
     {
+      "id": "q-19123",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "regional-specialities",
+      "bundle": "uk",
+      "description": "A Belfast breakfast so big that the frying pan needs a lie-down afterwards.",
+      "question": "In an Ulster fry, triangles of “fadge” sit next to the soda farls. What is fadge?",
+      "answer": "Potato bread",
+      "wrong_answers": [
+        "Wheaten bread",
+        "Black pudding",
+        "Oatcake"
+      ],
+      "hints": [
+        "It's flat and turns golden in the pan.",
+        "Like a soda farl, it's often cooked on a griddle as a round and cut into four.",
+        "It's mostly mashed potato mixed with flour."
+      ],
+      "fun_fact": "The triangles are called “farls”, from an old Scots word meaning “fourth part”, because the round is cut into quarters.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Belfast_City_Centre_-_Great_Victoria_Street_-_geograph.org.uk_-_3703226.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABelfast_City_Centre_-_Great_Victoria_Street_-_geograph.org.uk_-_3703226.jpg",
+        "credit": "Joseph Mischyshyn · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joseph Mischyshyn",
+        "author_url": "https://www.geograph.org.uk/profile/34083"
+      },
+      "background": null
+    },
+    {
       "id": "q-19124",
       "status": "approved",
       "difficulty": 6,
@@ -56311,6 +56549,40 @@
       "background": null
     },
     {
+      "id": "q-19148",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "Never trust a cellar where someone has stacked the firewood that neatly.",
+      "question": "In November 1605, guards searching a London cellar found 36 barrels hidden under firewood. What was inside?",
+      "answer": "Gunpowder",
+      "wrong_answers": [
+        "Wine",
+        "Ale",
+        "Gold coins"
+      ],
+      "hints": [
+        "It's black and grainy.",
+        "Cannons need it to fire.",
+        "One spark and it goes BANG."
+      ],
+      "fun_fact": "By some estimates, those 36 barrels held over a tonne of gunpowder, enough to flatten everything above the cellar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Guy_Fawkes_Lantern.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuy_Fawkes_Lantern.JPG",
+        "credit": "Geni · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Geni",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-19149",
       "status": "approved",
       "difficulty": 6,
@@ -56719,6 +56991,40 @@
       "background": null
     },
     {
+      "id": "q-19161",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "rivers-coasts-and-islands",
+      "bundle": "uk",
+      "description": "The only seaside ride with ears.",
+      "question": "Children have ridden these animals on British beaches for more than 100 years. What are they?",
+      "answer": "Donkeys",
+      "wrong_answers": [
+        "Ponies",
+        "Camels",
+        "Llamas"
+      ],
+      "hints": [
+        "They have long ears.",
+        "They say “hee-haw”.",
+        "Blackpool beach is famous for them."
+      ],
+      "fun_fact": "Since the 1940s, Blackpool's beach donkeys have had their own rules, including a day off every week.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Blackpool_Promenade.jpg/3840px-Blackpool_Promenade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlackpool_Promenade.jpg",
+        "credit": "Michael D Beckwith · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Michael D Beckwith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mdbeckwith"
+      },
+      "background": null
+    },
+    {
       "id": "q-19162",
       "status": "approved",
       "difficulty": 5,
@@ -56817,6 +57123,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Filori",
         "author_url": "https://commons.wikimedia.org/wiki/User:Filori"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19165",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "rugby-and-cricket",
+      "bundle": "uk",
+      "description": "A team so good at sharing that it needed a brand-new song to sing.",
+      "question": "The Ireland rugby union team has players from the Republic of Ireland and from which part of the UK?",
+      "answer": "Northern Ireland",
+      "wrong_answers": [
+        "Scotland",
+        "Wales",
+        "Cornwall"
+      ],
+      "hints": [
+        "The team plays in green and wears a shamrock badge.",
+        "It's the only part of the UK with a land border with another country.",
+        "Its capital is Belfast."
+      ],
+      "fun_fact": "Because the team stands for the whole island, a special song, “Ireland's Call”, was written for it in 1995.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Aviva_Stadium%28Dublin_Arena%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAviva_Stadium%28Dublin_Arena%29.JPG",
+        "credit": "Tarafuku10 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Tarafuku10",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tarafuku10"
       },
       "background": null
     },
@@ -58279,6 +58619,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "DeFacto",
         "author_url": "https://commons.wikimedia.org/wiki/User:DeFacto"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19209",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "twentieth-century",
+      "bundle": "uk",
+      "description": "The least fashionable accessory ever handed out by a government.",
+      "question": "Fearing poison gas bombs, the British government handed out gas masks in 1939. Who got one?",
+      "answer": "Everyone, babies included",
+      "wrong_answers": [
+        "All adults, but no children",
+        "Only people in big cities",
+        "Only soldiers and wardens"
+      ],
+      "hints": [
+        "Bombs could fall on any town, not just army camps.",
+        "About 38 million masks were handed out.",
+        "Even the very youngest had a special one they could lie inside."
+      ],
+      "fun_fact": "Young children were given colourful “Mickey Mouse” gas masks to make them less frightening, and gas bombs never fell on Britain.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Respirator_%28AM_607053-1%29.jpg/3840px-Respirator_%28AM_607053-1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARespirator_%28AM_607053-1%29.jpg",
+        "credit": "Unknown authorUnknown author · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Unknown authorUnknown author",
+        "author_url": null
       },
       "background": null
     },

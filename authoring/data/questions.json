@@ -1470380,7 +1470380,7 @@
     },
     {
       "id": "q-18993",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Three letters that can dig a hole faster than your dad can find the spade.",
       "question": "It began in a lock-up garage in Uttoxeter in 1945, and Brits now call almost any yellow digger by its three letters. Where does the name JCB come from?",
@@ -1470392,7 +1470392,7 @@
       ],
       "hints": [
         "The firm started in Staffordshire just after the Second World War.",
-        "Lots of family firms, from cars to biscuits, are named after a person.",
+        "Its very first product was a tipping trailer built from war-surplus parts.",
         "Joseph Cyril Bamford."
       ],
       "media": {
@@ -1470438,26 +1470438,34 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Lots of family firms, from cars to biscuits, are named after a person”) gives the answer away: it rules out the motto, customers and army code options and leaves only the founder's initials. Replace it with a hint that doesn't point at naming after a person, such as one about the founder's first products (tipping trailers made from war-surplus parts).",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Lots of family firms, from cars to biscuits, are named after a person”) gives the answer away: it rules out the motto, customers and army code options and leaves only the founder's initials. Replace it with a hint that doesn't point at naming after a person, such as one about the founder's first products (tipping trailers made from war-surplus parts).",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which pointed straight at the founder and his first initial.",
+        "reason": "Replaced hint 2, which pointed at naming after a person, with a hint about the firm's first product.",
         "previous": {
           "hints": [
-            "Think about who started the company.",
-            "The founder's first name was Joseph.",
+            "The firm started in Staffordshire just after the Second World War.",
+            "Lots of family firms, from cars to biscuits, are named after a person.",
             "Joseph Cyril Bamford."
           ]
         },
@@ -1470770,7 +1470778,7 @@
       "status": "needs_work",
       "difficulty": 5,
       "description": "The carrot's pale cousin, quietly waiting for its big moment next to the roast potatoes.",
-      "question": "Long before sugar was cheap in Britain, what were roots like these used for?",
+      "question": "Long before sugar was cheap in Britain, what were parsnips used for?",
       "answer": "Sweetening cakes and jams",
       "wrong_answers": [
         "Dyeing wool bright yellow",
@@ -1470784,9 +1470792,9 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "harvested parsnip roots",
-        "note": "Clear photo of whole raw parsnips, with no labels or text.",
+        "role": "illustrative",
+        "query": "parsnips Pastinaca sativa",
+        "note": null,
         "source_url": null,
         "file_url": null,
         "credit": null
@@ -1470815,22 +1470823,50 @@
         "notes": "Parsnips really were used as a sweetener before sugar was cheap. That said, 'cakes and jams' is a bit specific, and old jam recipes are thin evidence. Few 11-year-olds would know this history; it's more like a 7. They can reason towards it, though, since hints 1–2 point strongly at 'sweet'."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-66",
       "review": {
         "decision": "needs_work",
-        "feedback": "None of the candidates gives the essential slot what it needs: a clear photo of whole raw parsnips with no text. Candidates 1 and 2 are tall, grainy scans of a single odd-shaped root with a caption. Candidate 4 is a labelled catalogue drawing that looks like carrots. Candidates 3 and 5 are full catalogue pages of dense text, with parsley and okra pictured too. A new search isn't allowed, so the slot needs a modern parsnip photo, for example from the search \"parsnips Pastinaca sativa\". No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates gives the essential slot what it needs: a clear photo of whole raw parsnips with no text. Candidates 1 and 2 are tall, grainy scans of a single odd-shaped root with a caption. Candidate 4 is a labelled catalogue drawing that looks like carrots. Candidates 3 and 5 are full catalogue pages of dense text, with parsley and okra pictured too. A new search isn't allowed, so the slot needs a modern parsnip photo, for example from the search \"parsnips Pastinaca sativa\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No usable parsnip photo for the essential slot, so the question now names parsnips and the image is illustrative with a new search.",
+        "previous": {
+          "question": "Long before sugar was cheap in Britain, what were roots like these used for?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "harvested parsnip roots",
+            "note": "Clear photo of whole raw parsnips, with no labels or text.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-18999",
@@ -1471059,10 +1471095,10 @@
     },
     {
       "id": "q-19002",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
       "description": "Home of the plastic moustache and the fortune-telling fish.",
-      "question": "Look at these: a paper crown, a tiny toy and a joke. At British Christmas dinner, what do they burst out of?",
+      "question": "At British Christmas dinner, what do a paper crown, a tiny toy and a joke burst out of?",
       "answer": "A Christmas cracker",
       "wrong_answers": [
         "A Christmas stocking",
@@ -1471076,12 +1471112,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "paper crown cracker joke",
-        "note": "Close-up of the contents of an opened Christmas cracker (paper crown, small toy, joke slip), ideally without the cracker itself in view.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "roast turkey Christmas dinner",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChristmas_Dinner_2014_Stuffed_Roast_Turkey_leg%2C_roast_potatoes%2C_parsnips%2C_brussel_sprouts%2C_pigs_in_blankets%2C_cranberry_sauce_%26_gravy_%2848122315877%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Christmas_Dinner_2014_Stuffed_Roast_Turkey_leg%2C_roast_potatoes%2C_parsnips%2C_brussel_sprouts%2C_pigs_in_blankets%2C_cranberry_sauce_%26_gravy_%2848122315877%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "CharmaineZoe's Marvelous Melange from England · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "CharmaineZoe's Marvelous Melange from England",
+        "author_url": "https://www.flickr.com/people/53499099@N00",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Crackers were invented by London sweet-maker Tom Smith around 1847, and the first ones had sweets inside.",
       "subcategory": "christmas-in-britain",
@@ -1471107,22 +1471150,48 @@
         "notes": "Many photos of cracker contents also show the cracker itself, so the image search may give the answer away."
       },
       "fact_checked": true,
-      "needs_media": true,
+      "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the six candidates shows cracker contents: they're a coconut plate from a 1907 book and five 18th-century satirical prints (two titled \"Murder\"). This essential image needs a close-up of a paper crown, a small toy and a joke slip, but no new search is allowed. Search again with something like \"Christmas cracker contents\", or change the media role so the question no longer starts with \"Look at these\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the six candidates shows cracker contents: they're a coconut plate from a 1907 book and five 18th-century satirical prints (two titled \"Murder\"). This essential image needs a close-up of a paper crown, a small toy and a joke slip, but no new search is allowed. Search again with something like \"Christmas cracker contents\", or change the media role so the question no longer starts with \"Look at these\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No photo of cracker contents was found, so the question no longer says \"Look at these\" and the image is now decorative.",
+        "previous": {
+          "question": "Look at these: a paper crown, a tiny toy and a joke. At British Christmas dinner, what do they burst out of?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "paper crown cracker joke",
+            "note": "Close-up of the contents of an opened Christmas cracker (paper crown, small toy, joke slip), ideally without the cracker itself in view.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-19003",
@@ -1472273,7 +1472342,7 @@
     },
     {
       "id": "q-19018",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Oh no it isn't! Oh yes it is! Well, three of them are.",
       "question": "Which of these stories is NOT a classic Christmas pantomime?",
@@ -1472291,21 +1472360,18 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "query": "theatre stage red curtain",
+        "query": "red velvet theatre curtain",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AEnglert_Theatre_interior_showing_box_seating%2C_1918.tif",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Englert_Theatre_interior_showing_box_seating%2C_1918.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "credit": "Public domain · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACurtain_call_on_the_opening_night_of_the_Royal_Ballet%27s_Swan_Lake%2C_with_Rowena_Jackson%2C_at_the_Empire_Theatre%2C_Sydney%2C_11_September_1958_-_photographer_Ken_Redshaw_%288143610556%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Curtain_call_on_the_opening_night_of_the_Royal_Ballet%27s_Swan_Lake%2C_with_Rowena_Jackson%2C_at_the_Empire_Theatre%2C_Sydney%2C_11_September_1958_-_photographer_Ken_Redshaw_%288143610556%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "State Library of New South Wales collection · No restrictions · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "The 1918 journalism class at City High in an advertisement prepared by class members.  No copyright appears on this ad, nor in the volume itself. The notation \"C.W. & Geo. L. Rapp, Archts., Chicago, D1030\" appears in the lower right corner of the image.",
-        "author_url": null,
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "State Library of New South Wales collection",
+        "author_url": "https://www.flickr.com/people/29454428@N08",
         "restrictions": [],
-        "pd_reasons": [
-          "PD-1923",
-          "PD-US-expired"
-        ]
+        "pd_reasons": []
       },
       "fun_fact": "Aladdin pantomimes star the dame Widow Twankey, named after a type of Chinese tea.",
       "subcategory": "georgians-and-victorians",
@@ -1472334,28 +1472400,50 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The picked picture has an unsuitable licence (pd-us-only: PD-1923, PD-US-expired).",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which pointed to Shakespeare and so to the answer, with a vaguer hint about what pantomimes are like.",
+        "reason": "The picked image had a US-only public-domain licence, so the image needs a new search.",
         "previous": {
-          "hints": [
-            "Pantomimes are usually based on fairy tales.",
-            "One of these was written by Shakespeare.",
-            "Its hero is a gloomy Danish prince."
-          ]
+          "media": {
+            "type": "image",
+            "role": "decorative",
+            "query": "theatre stage red curtain",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3AEnglert_Theatre_interior_showing_box_seating%2C_1918.tif",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Englert_Theatre_interior_showing_box_seating%2C_1918.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "credit": "Public domain · Wikimedia Commons",
+            "provider": "commons",
+            "license": "Public domain",
+            "license_url": null,
+            "author": "The 1918 journalism class at City High in an advertisement prepared by class members.  No copyright appears on this ad, nor in the volume itself. The notation \"C.W. & Geo. L. Rapp, Archts., Chicago, D1030\" appears in the lower right corner of the image.",
+            "author_url": null,
+            "restrictions": [],
+            "pd_reasons": [
+              "PD-1923",
+              "PD-US-expired"
+            ]
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1473883,7 +1473971,7 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Highgrove House",
+        "query": "Highgrove Garden Gloucestershire",
         "note": null,
         "source_url": null,
         "file_url": null,
@@ -1473917,29 +1474005,41 @@
       "batch": "batch-66",
       "review": {
         "decision": "needs_work",
-        "feedback": "No candidate shows King Charles's Highgrove gardens in Gloucestershire. Candidates 1, 2 and 6 are a different Highgrove House in Eastcote, London. Candidate 3 is a plain field near a hotel of the same name. Candidates 4 and 5 are photos of visitors at Highgrove, with only a stone outbuilding behind them. The image needs a new search, for example \"Highgrove Garden Gloucestershire\" or \"Highgrove wildflower meadow\" (if the meadow is used, it must not stand out as the obvious answer). The text itself is fine. No suitable picture found for this question.",
+        "feedback": "No suitable picture found for this question.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "No candidate shows King Charles's Highgrove gardens in Gloucestershire. Candidates 1, 2 and 6 are a different Highgrove House in Eastcote, London. Candidate 3 is a plain field near a hotel of the same name. Candidates 4 and 5 are photos of visitors at Highgrove, with only a stone outbuilding behind them. The image needs a new search, for example \"Highgrove Garden Gloucestershire\" or \"Highgrove wildflower meadow\" (if the meadow is used, it must not stand out as the obvious answer). The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it doesn't mention weeds, made hint 2 less direct, and corrected the quote in the fun fact.",
+        "reason": "The image showed the wrong Highgrove, so it gets a new search for the Gloucestershire gardens.",
         "previous": {
-          "description": "A royal garden where even the weeds get a fair hearing.",
-          "hints": [
-            "Charles changed the way the gardens were run in the 1980s.",
-            "Its gardeners avoid anything artificial.",
-            "Think of what organic gardens ban."
-          ],
-          "fun_fact": "King Charles once admitted that he talks to his plants, and said they talk back."
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Highgrove House",
+            "note": null,
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
         },
         "revised_on": "2026-11-13"
       }
@@ -1476194,7 +1476294,7 @@
         "The Privy Council"
       ],
       "hints": [
-        "It's in the same building as the House of Commons.",
+        "Its members check new laws and can send them back to MPs with changes.",
         "Its benches are red.",
         "Its members are not elected."
       ],
@@ -1476242,30 +1476342,37 @@
       "batch": "batch-66",
       "review": {
         "decision": "needs_work",
-        "feedback": "Hint 1 (“It's in the same building as the House of Commons”) gives the answer away. Of the four options, only the House of Lords sits in the Palace of Westminster. The Supreme Court is in Middlesex Guildhall, the Cabinet meets at Downing Street, and the Privy Council usually meets at Buckingham Palace. Hint 1 should be a vague hint instead, for example about the second stage of law-making.",
+        "feedback": "The description gives the answer away. “Where grown-ups … shout ‘hear, hear’ and somehow make laws” describes a debating, law-making chamber. Of the four options, only the House of Lords is one: the Supreme Court, the Cabinet and the Privy Council are all ruled out before any hint. The description should play on the parliament theme without saying the answer makes laws or holds debates.",
         "problems": [
           "giveaway"
         ],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (“It's in the same building as the House of Commons”) gives the answer away. Of the four options, only the House of Lords sits in the Palace of Westminster. The Supreme Court is in Middlesex Guildhall, the Cabinet meets at Downing Street, and the Privy Council usually meets at Buckingham Palace. Hint 1 should be a vague hint instead, for example about the second stage of law-making.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Took “two chambers” out of the description and hint 1, cut the made-up frame, and made the fun fact independent of the changing membership number.",
+        "reason": "Replaced hint 1, which gave the answer away through the shared building, with a vaguer hint about its role.",
         "previous": {
-          "description": "Two chambers, lots of leather benches and an awful lot of “hear, hear”.",
-          "question": "You're following a new bill that MPs have just voted through the House of Commons. Where does it usually go next?",
           "hints": [
-            "Parliament has two chambers, and a bill must pass both.",
+            "It's in the same building as the House of Commons.",
             "Its benches are red.",
             "Its members are not elected."
-          ],
-          "fun_fact": "With around 800 members, the House of Lords is one of the largest law-making chambers in the world."
+          ]
         },
         "revised_on": "2026-11-13"
       }
@@ -1476954,7 +1477061,7 @@
     },
     {
       "id": "q-19079",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "Saturday night telly, where nerves and big dreams share one very bright stage.",
       "question": "On this TV show, any kind of act can perform for judges, and the winner gets a spot at the Royal Variety Performance. Which show?",
@@ -1476985,7 +1477092,7 @@
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "In 2012 it was won by Ashley and her dancing dog, Pudsey.",
+      "fun_fact": "In 2012 it was won by Ashleigh Butler and her dancing dog, Pudsey.",
       "subcategory": "pop-and-rock",
       "style": null,
       "concept": "Britain's Got Talent",
@@ -1477012,34 +1477119,42 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The fun fact misspells the 2012 winner's name: she is Ashleigh Butler, not \"Ashley\". Correct it to \"Ashleigh Butler and her dancing dog, Pudsey\". Everything else is fine: the clue (any kind of act, Royal Variety spot) fits only Britain's Got Talent.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact misspells the 2012 winner's name: she is Ashleigh Butler, not \"Ashley\". Correct it to \"Ashleigh Butler and her dancing dog, Pudsey\". Everything else is fine: the clue (any kind of act, Royal Variety spot) fits only Britain's Got Talent.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer says any act can enter or mentions animals.",
+        "reason": "Corrected the 2012 winner's name to Ashleigh Butler in the fun fact.",
         "previous": {
-          "description": "Singers, dancers, magicians and the odd dog walk into a theatre."
+          "fun_fact": "In 2012 it was won by Ashley and her dancing dog, Pudsey."
         },
         "revised_on": "2026-11-13"
       }
     },
     {
       "id": "q-19080",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 3,
       "description": "A sport where a pirate ship can block your shot and nobody finds it odd.",
-      "question": "Look at this windmill with turning sails. On a British seafront, which game would you find it in?",
+      "question": "On a British seafront, in which game might you hit a small ball past a windmill with turning sails?",
       "answer": "Crazy golf",
       "wrong_answers": [
         "Skittles",
@@ -1477053,12 +1477168,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "mini golf windmill obstacle",
-        "note": "Close-up of a windmill obstacle on a mini/crazy golf course; no sign or text naming the course.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "decorative",
+        "query": "British seaside promenade",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Promenade_at_Llandudno_-_geograph.org.uk_-_5073394.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/The_Promenade_at_Llandudno_-_geograph.org.uk_-_5073394.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Jeff Buck · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Jeff Buck",
+        "author_url": "https://www.geograph.org.uk/profile/12987",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Americans call the same game “mini golf” or “miniature golf”.",
       "subcategory": "pub-and-playground-games",
@@ -1477083,23 +1477205,49 @@
         "difficulty_estimate": 3,
         "notes": "A crazy golf windmill photo will probably show putting greens or holes, so the picture makes it easy. That suits an essential image at this level."
       },
-      "fact_checked": false,
-      "needs_media": true,
+      "fact_checked": true,
+      "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "None of the candidates gives a clear view of a crazy golf windmill, which is what the question (\"Look at this windmill…\") and the note ask for. Candidate 1 shows a whole mini golf course at dusk with only a tiny windmill far in the background. Candidates 2 and 3 show a statue and a lighthouse, and 4 and 5 are off-topic. The slot needs a new search such as \"crazy golf windmill\" or \"miniature golf windmill hole\". No suitable picture found for this question.",
-        "problems": [
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "None of the candidates gives a clear view of a crazy golf windmill, which is what the question (\"Look at this windmill…\") and the note ask for. Candidate 1 shows a whole mini golf course at dusk with only a tiny windmill far in the background. Candidates 2 and 3 show a statue and a lighthouse, and 4 and 5 are off-topic. The slot needs a new search such as \"crazy golf windmill\" or \"miniature golf windmill hole\". No suitable picture found for this question.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "No clear windmill photo was found, so the question now describes the windmill and the image is a decorative seafront scene.",
+        "previous": {
+          "question": "Look at this windmill with turning sails. On a British seafront, which game would you find it in?",
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "mini golf windmill obstacle",
+            "note": "Close-up of a windmill obstacle on a mini/crazy golf course; no sign or text naming the course.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          },
+          "needs_media": true
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-19081",
@@ -1477913,7 +1478061,7 @@
     },
     {
       "id": "q-19092",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 7,
       "description": "A family word from Manchester, best said loudly across a crowded room.",
       "question": "Liam Gallagher calls his brother Noel “our …”, the Mancunian way to say brother. Complete the phrase.",
@@ -1477925,7 +1478073,7 @@
       ],
       "hints": [
         "It's a short, three-letter word.",
-        "The same word also means a young child.",
+        "You'll hear it all over northern England, not just in Manchester.",
         "It's also the name for a baby goat."
       ],
       "media": {
@@ -1477971,26 +1478119,34 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“The same word also means a young child”) gives the answer away: of Kid, Pal, Chum and Bud, only “kid” means a young child, so the second hint already settles it. Replace hint 2 with a vaguer clue, for example that the phrase is common across northern England, and keep the young-child or baby-goat meaning for hint 3 only.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“The same word also means a young child”) gives the answer away: of Kid, Pal, Chum and Bud, only “kid” means a young child, so the second hint already settles it. Replace hint 2 with a vaguer clue, for example that the phrase is common across northern England, and keep the young-child or baby-goat meaning for hint 3 only.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced the rhyme hint, which gave the answer away, with a hint about the word's meaning.",
+        "reason": "Replaced hint 2, which gave the answer away, with a vaguer regional clue and left the meanings for hint 3.",
         "previous": {
           "hints": [
             "It's a short, three-letter word.",
-            "It rhymes with “lid”.",
+            "The same word also means a young child.",
             "It's also the name for a baby goat."
           ]
         },
@@ -1480323,9 +1480479,9 @@
     },
     {
       "id": "q-19123",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 8,
-      "description": "Belfast's breakfast plate has more bread on it than a bakery window.",
+      "description": "A Belfast breakfast so big that the frying pan needs a lie-down afterwards.",
       "question": "In an Ulster fry, triangles of “fadge” sit next to the soda farls. What is fadge?",
       "answer": "Potato bread",
       "wrong_answers": [
@@ -1480381,34 +1480537,32 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description says the plate has “more bread on it than a bakery window”. Read with only the four options, that tells players fadge is a bread, which rules out Black pudding (and arguably Oatcake). Rewrite it to joke about the Ulster fry or Belfast breakfasts without saying what kind of food fadge is.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description says the plate has “more bread on it than a bakery window”. Read with only the four options, that tells players fadge is a bread, which rules out Black pudding (and arguably Oatcake). Rewrite it to joke about the Ulster fry or Belfast breakfasts without saying what kind of food fadge is.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Replaced “Soda bread”, which the question rules out, and the hint 2 about the tattie scone, which gave the answer away, and rewrote the description so it no longer points to leftover mash.",
+        "reason": "Rewrote the description so it no longer says fadge is a bread.",
         "previous": {
-          "description": "Leftovers that went to Belfast and came back as breakfast.",
-          "wrong_answers": [
-            "Soda bread",
-            "Black pudding",
-            "Oatcake"
-          ],
-          "hints": [
-            "It's flat and turns golden in the pan.",
-            "In Scotland, the same thing is called a tattie scone.",
-            "It's mostly mashed potato mixed with flour."
-          ]
+          "description": "Belfast's breakfast plate has more bread on it than a bakery window."
         },
         "revised_on": "2026-11-13"
       }
@@ -1482220,10 +1482374,10 @@
     },
     {
       "id": "q-19148",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 2,
-      "description": "The cellar under Parliament has never been a good place for a party.",
-      "question": "You're searching the cellar under Parliament on 4 November 1605 and find 36 barrels hidden under firewood. What's inside?",
+      "description": "Never trust a cellar where someone has stacked the firewood that neatly.",
+      "question": "In November 1605, guards searching a London cellar found 36 barrels hidden under firewood. What was inside?",
       "answer": "Gunpowder",
       "wrong_answers": [
         "Wine",
@@ -1482238,20 +1482392,20 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "Palace of Westminster",
+        "query": "Guy Fawkes lantern Ashmolean",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3APalace_of_Westminster%2C_London_-_Feb_2007.jpg",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "credit": "Diliff · CC BY-SA 2.5 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuy_Fawkes_Lantern.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Guy_Fawkes_Lantern.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Geni · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.5",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
-        "author": "Diliff",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Diliff",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Geni",
+        "author_url": null,
         "restrictions": [],
         "pd_reasons": []
       },
-      "fun_fact": "By some estimates, those 36 barrels held over a tonne of gunpowder, enough to flatten the House of Lords.",
+      "fun_fact": "By some estimates, those 36 barrels held over a tonne of gunpowder, enough to flatten everything above the cellar.",
       "subcategory": "tudors-and-stuarts",
       "style": null,
       "concept": "Barrels of gunpowder",
@@ -1482278,19 +1482432,53 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This overlaps approved q-9800 (“Remember, remember…”: a plot to blow up what? → The Houses of Parliament). This question puts barrels of gunpowder in the cellar under Parliament in 1605, so anyone who sees it already knows q-9800's answer, and the reverse is nearly true too. Both are level-2 Gunpowder Plot basics. Drop one of them, or move this one to a Gunpowder Plot fact that doesn't name Parliament as the target.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This overlaps approved q-9800 (“Remember, remember…”: a plot to blow up what? → The Houses of Parliament). This question puts barrels of gunpowder in the cellar under Parliament in 1605, so anyone who sees it already knows q-9800's answer, and the reverse is nearly true too. Both are level-2 Gunpowder Plot basics. Drop one of them, or move this one to a Gunpowder Plot fact that doesn't name Parliament as the target.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Removed Parliament from the question, description, fun fact and image so this no longer gives away q-9800's answer.",
+        "previous": {
+          "description": "The cellar under Parliament has never been a good place for a party.",
+          "question": "You're searching the cellar under Parliament on 4 November 1605 and find 36 barrels hidden under firewood. What's inside?",
+          "media": {
+            "type": "image",
+            "role": "illustrative",
+            "query": "Palace of Westminster",
+            "note": null,
+            "source_url": "https://commons.wikimedia.org/wiki/File%3APalace_of_Westminster%2C_London_-_Feb_2007.jpg",
+            "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+            "credit": "Diliff · CC BY-SA 2.5 · Wikimedia Commons",
+            "provider": "commons",
+            "license": "CC BY-SA 2.5",
+            "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+            "author": "Diliff",
+            "author_url": "https://commons.wikimedia.org/wiki/User:Diliff",
+            "restrictions": [],
+            "pd_reasons": []
+          },
+          "fun_fact": "By some estimates, those 36 barrels held over a tonne of gunpowder, enough to flatten the House of Lords."
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-19149",
@@ -1483228,7 +1483416,7 @@
     },
     {
       "id": "q-19161",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 1,
       "description": "The only seaside ride with ears.",
       "question": "Children have ridden these animals on British beaches for more than 100 years. What are they?",
@@ -1483245,12 +1483433,19 @@
       ],
       "media": {
         "type": "image",
-        "role": "essential",
-        "query": "beach donkeys Blackpool",
-        "note": "A clear photo of donkeys giving rides on a British beach.",
-        "source_url": null,
-        "file_url": null,
-        "credit": null
+        "role": "illustrative",
+        "query": "Blackpool beach promenade",
+        "note": null,
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlackpool_Promenade.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Blackpool_Promenade.jpg/3840px-Blackpool_Promenade.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Michael D Beckwith · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Michael D Beckwith",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mdbeckwith",
+        "restrictions": [],
+        "pd_reasons": []
       },
       "fun_fact": "Since the 1940s, Blackpool's beach donkeys have had their own rules, including a day off every week.",
       "subcategory": "rivers-coasts-and-islands",
@@ -1483279,20 +1483474,44 @@
       "needs_media": true,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The media slot is set to essential with the note \"donkeys giving rides on a British beach\", but the question doesn't ask about the picture. Any matching photo shows the answer outright (candidates 1–4 all show donkeys). Change the slot to illustrative with a donkey-free British seaside image, e.g. candidate 5 (an empty Blackpool beach) or a search like \"Blackpool beach promenade\". The text itself is fine. No suitable picture found for this question.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The media slot is set to essential with the note \"donkeys giving rides on a British beach\", but the question doesn't ask about the picture. Any matching photo shows the answer outright (candidates 1–4 all show donkeys). Change the slot to illustrative with a donkey-free British seaside image, e.g. candidate 5 (an empty Blackpool beach) or a search like \"Blackpool beach promenade\". The text itself is fine. No suitable picture found for this question.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Changed the essential donkey photo to an illustrative British seaside image without donkeys, so the picture doesn't show the answer.",
+        "previous": {
+          "media": {
+            "type": "image",
+            "role": "essential",
+            "query": "beach donkeys Blackpool",
+            "note": "A clear photo of donkeys giving rides on a British beach.",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-19162",
@@ -1483525,7 +1483744,7 @@
     },
     {
       "id": "q-19165",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "A team so good at sharing that it needed a brand-new song to sing.",
       "question": "The Ireland rugby union team has players from the Republic of Ireland and from which part of the UK?",
@@ -1483537,8 +1483756,8 @@
       ],
       "hints": [
         "The team plays in green and wears a shamrock badge.",
-        "Belfast is its biggest city.",
-        "The Giant's Causeway is there."
+        "It's the only part of the UK with a land border with another country.",
+        "Its capital is Belfast."
       ],
       "media": {
         "type": "image",
@@ -1483585,28 +1483804,35 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Belfast is its biggest city.”) gives the answer away: naming Belfast identifies Northern Ireland outright, and it is a stronger clue than hint 3 (the Giant's Causeway). Hint 2 should be vaguer, for example that the part shares a land border with the Republic, and the Belfast clue could become hint 3. Also, “its” in hint 2 reads as if it refers to the team.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Belfast is its biggest city.”) gives the answer away: naming Belfast identifies Northern Ireland outright, and it is a stronger clue than hint 3 (the Giant's Causeway). Hint 2 should be vaguer, for example that the part shares a land border with the Republic, and the Belfast clue could become hint 3. Also, “its” in hint 2 reads as if it refers to the team.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
       "background": null,
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description and hints 1 and 3 because they gave the answer away by mentioning the island.",
+        "reason": "Made hint 2 vaguer (the land border) and moved the Belfast clue to hint 3, with clearer wording.",
         "previous": {
-          "description": "One island, one team, one anthem written especially so nobody feels left out.",
           "hints": [
-            "It's not on the island of Great Britain.",
+            "The team plays in green and wears a shamrock badge.",
             "Belfast is its biggest city.",
-            "It shares an island with Dublin."
+            "The Giant's Causeway is there."
           ]
         },
         "revised_on": "2026-11-13"
@@ -1486871,33 +1487097,33 @@
     },
     {
       "id": "q-19209",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 5,
       "description": "The least fashionable accessory ever handed out by a government.",
       "question": "Fearing poison gas bombs, the British government handed out gas masks in 1939. Who got one?",
-      "answer": "Everyone, even babies",
+      "answer": "Everyone, babies included",
       "wrong_answers": [
-        "Only soldiers",
-        "Only air raid wardens",
-        "Only factory workers"
+        "All adults, but no children",
+        "Only people in big cities",
+        "Only soldiers and wardens"
       ],
       "hints": [
         "Bombs could fall on any town, not just army camps.",
-        "Children had to carry theirs to school in a cardboard box.",
+        "About 38 million masks were handed out.",
         "Even the very youngest had a special one they could lie inside."
       ],
       "media": {
         "type": "image",
         "role": "illustrative",
-        "query": "civilian gas mask 1939",
+        "query": "WW2 civilian respirator",
         "note": null,
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AGas_mask_%28AM_1950.103-1%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Gas_mask_%28AM_1950.103-1%29.jpg/3840px-Gas_mask_%28AM_1950.103-1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARespirator_%28AM_607053-1%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Respirator_%28AM_607053-1%29.jpg/3840px-Respirator_%28AM_607053-1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Unknown authorUnknown author · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
-        "author": null,
+        "author": "Unknown authorUnknown author",
         "author_url": null,
         "restrictions": [],
         "pd_reasons": []
@@ -1486929,20 +1487155,46 @@
       "needs_media": false,
       "batch": "batch-66",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“Children had to carry theirs to school”) rules out all three “Only…” options, so it gives the answer away before hint 3. Hint 1 already points the same way. The answer “Everyone, even babies” also stands out in form from the three “Only…” options. Approved q-9808 shows 1939 children carrying gas mask boxes, which also gives this answer away. Hint 2 needs replacing with a vaguer clue, e.g. about how many millions of masks were made. Ideally the options would also have the same form, e.g. all “Every…/Only…” with similar length.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-13",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“Children had to carry theirs to school”) rules out all three “Only…” options, so it gives the answer away before hint 3. Hint 1 already points the same way. The answer “Everyone, even babies” also stands out in form from the three “Only…” options. Approved q-9808 shows 1939 children carrying gas mask boxes, which also gives this answer away. Hint 2 needs replacing with a vaguer clue, e.g. about how many millions of masks were made. Ideally the options would also have the same form, e.g. all “Every…/Only…” with similar length.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-13",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "uk",
       "locale": "en",
-      "background": null
+      "background": null,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which gave the answer away, with the number of masks, and made the options more alike in form with wrong answers that are harder to rule out.",
+        "previous": {
+          "answer": "Everyone, even babies",
+          "wrong_answers": [
+            "Only soldiers",
+            "Only air raid wardens",
+            "Only factory workers"
+          ],
+          "hints": [
+            "Bombs could fall on any town, not just army camps.",
+            "Children had to carry theirs to school in a cardboard box.",
+            "Even the very youngest had a special one they could lie inside."
+          ]
+        },
+        "revised_on": "2026-11-13"
+      }
     },
     {
       "id": "q-19210",
