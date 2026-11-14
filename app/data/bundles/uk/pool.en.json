@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "3e30d207",
+  "hash": "63177513",
   "questions": [
     {
       "id": "q-9487",
@@ -58793,6 +58793,40 @@
       "background": null
     },
     {
+      "id": "q-19214",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "accents-and-dialects",
+      "bundle": "uk",
+      "description": "A Welsh word that has nothing to do with cleaning your bedroom.",
+      "question": "When someone from Wales calls a meal “tidy”, what do they mean?",
+      "answer": "It's really good",
+      "wrong_answers": [
+        "It's very small",
+        "It's very spicy",
+        "It's gone cold"
+      ],
+      "hints": [
+        "You'll hear this word all the time in Cardiff and the Valleys.",
+        "Welsh people use it about far more than rooms: a rugby match or a night out can be “tidy” too.",
+        "You'd say it if you wanted seconds."
+      ],
+      "fun_fact": "“Tidy” is one of the best-known words of Welsh English, used for anything from a good dinner to a great try in rugby.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/Tatws_Popty.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATatws_Popty.jpg",
+        "credit": "Obscurasky · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Obscurasky",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Obscurasky"
+      },
+      "background": null
+    },
+    {
       "id": "q-19215",
       "status": "approved",
       "difficulty": 6,
@@ -59095,6 +59129,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Fred Romero from Paris, France",
         "author_url": "https://www.flickr.com/people/129231073@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19224",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "art-and-architecture",
+      "bundle": "uk",
+      "description": "Buckets, spades, and one of Britain's most outspoken artists.",
+      "question": "Tracey Emin grew up in this seaside town in Kent, which she often talks about in her work. Which town is it?",
+      "answer": "Margate",
+      "wrong_answers": [
+        "Brighton",
+        "Whitstable",
+        "Blackpool"
+      ],
+      "hints": [
+        "It's on the Isle of Thanet.",
+        "It has a famous old amusement park called Dreamland.",
+        "Its big gallery is named after the painter J.M.W. Turner."
+      ],
+      "fun_fact": "Turner loved the town too and said the skies over Thanet were the loveliest in Europe.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Sand_bucket.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASand_bucket.jpg",
+        "credit": "David · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "David",
+        "author_url": "https://www.flickr.com/people/99255685@N00"
       },
       "background": null
     },
@@ -59639,6 +59707,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Mike Hudson",
         "author_url": "https://web.archive.org/web/20161024164120/http://www.panoramio.com/user/469778?with_photo_id=89632286"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19243",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "counties-and-regions",
+      "bundle": "uk",
+      "description": "A royal title, a seaside pier and a lot of sheep on chalk hills.",
+      "question": "Prince Harry's royal title is Duke of … which English county?",
+      "answer": "Sussex",
+      "wrong_answers": [
+        "Kent",
+        "Surrey",
+        "Essex"
+      ],
+      "hints": [
+        "It's on England's south coast.",
+        "Brighton is in it.",
+        "Its name comes from the “South Saxons”."
+      ],
+      "fun_fact": "Sussex is split into two counties today, East Sussex and West Sussex.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Nova_Scotia_DSC01590_-_Southdown_%26_Cotswold_Sheep_%287815876676%29.jpg/3840px-Nova_Scotia_DSC01590_-_Southdown_%26_Cotswold_Sheep_%287815876676%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANova_Scotia_DSC01590_-_Southdown_%26_Cotswold_Sheep_%287815876676%29.jpg",
+        "credit": "Dennis G. Jarvis · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Dennis G. Jarvis",
+        "author_url": "https://www.wikidata.org/wiki/Q122977591"
       },
       "background": null
     },
@@ -60323,6 +60425,40 @@
       "background": null
     },
     {
+      "id": "q-19265",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "customs-and-ceremonies",
+      "bundle": "uk",
+      "description": "Hogwarts' grumpiest teacher has a favourite hobby, and it isn't potions.",
+      "question": "At Hogwarts, Snape loves taking these away from Gryffindor, and many British schools hand them out too. What are they?",
+      "answer": "House points",
+      "wrong_answers": [
+        "Gold stars",
+        "Detentions",
+        "Merit badges"
+      ],
+      "hints": [
+        "Teachers can give them or take them away in a moment.",
+        "Good work earns them, breaking rules can lose them.",
+        "At the end of the year, the group with the most may win a cup."
+      ],
+      "fun_fact": "Many British schools name their houses after local heroes, famous scientists or even rivers.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Sand_clock_Enschede.jpg/3840px-Sand_clock_Enschede.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASand_clock_Enschede.jpg",
+        "credit": "Gianluca Miscione · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Gianluca Miscione",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-19266",
       "status": "approved",
       "difficulty": 4,
@@ -60833,6 +60969,40 @@
       "background": null
     },
     {
+      "id": "q-19281",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "game-shows-and-presenters",
+      "bundle": "uk",
+      "description": "Survive twelve weeks of selling sausages in the rain, and this is what you get.",
+      "question": "You've just won The Apprentice. How much does Lord Sugar invest in your business?",
+      "answer": "£250,000",
+      "wrong_answers": [
+        "£2,500",
+        "£25,000",
+        "£2.5 million"
+      ],
+      "hints": [
+        "It's much more than a year's pay for most people.",
+        "The winner becomes Lord Sugar's business partner.",
+        "It's ten times the next option down and a tenth of the biggest."
+      ],
+      "fun_fact": "In the early series the prize was a job with Lord Sugar; it became a business investment from 2011.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Foggy_London_skyscrapers_%28Unsplash%29.jpg/3840px-Foggy_London_skyscrapers_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFoggy_London_skyscrapers_%28Unsplash%29.jpg",
+        "credit": "Rob Bye robertbye · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Rob Bye robertbye",
+        "author_url": "https://unsplash.com/@robertbye"
+      },
+      "background": null
+    },
+    {
       "id": "q-19282",
       "status": "approved",
       "difficulty": 9,
@@ -60863,6 +61033,40 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "electromechanic812291",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-19283",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "game-shows-and-presenters",
+      "bundle": "uk",
+      "description": "Daytime telly's most nerve-racking bit of music.",
+      "question": "On Countdown, what sound ends the clock's music when time runs out?",
+      "answer": "A deep “bong”",
+      "wrong_answers": [
+        "A whistle",
+        "A cuckoo call",
+        "An air horn"
+      ],
+      "hints": [
+        "It comes at the end of the clock's music.",
+        "It's a single low sound.",
+        "It sounds a bit like a big bell or drum."
+      ],
+      "fun_fact": "The Countdown clock music was written by Alan Hawkshaw.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Pgr_Napoli_-_Santa_Maria_del_Soccorso_all%27Arenella_2_o6o.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APgr_Napoli_-_Santa_Maria_del_Soccorso_all%27Arenella_2_o6o.jpg",
+        "credit": "Pere Garcia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pere Garcia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Pere_Garcia&action=edit&redlink=1"
       },
       "background": null
     },
@@ -61581,6 +61785,40 @@
       "background": null
     },
     {
+      "id": "q-19306",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "parliament-and-prime-ministers",
+      "bundle": "uk",
+      "description": "It's like a school class photo, if the class were enormous and everyone wore suits.",
+      "question": "Each area of the UK elects one MP. About how many MPs sit in the House of Commons?",
+      "answer": "650",
+      "wrong_answers": [
+        "65",
+        "6,500",
+        "65,000"
+      ],
+      "hints": [
+        "Every seat is up for grabs at each general election.",
+        "Each MP speaks for an area of roughly 70,000 voters.",
+        "The number is between 600 and 700."
+      ],
+      "fun_fact": "The Commons chamber only has seats for about 427 MPs, so on busy days many have to stand.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Palace_of_Westminster%2C_London_-_Feb_2007.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalace_of_Westminster%2C_London_-_Feb_2007.jpg",
+        "credit": "Diliff · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Diliff",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Diliff"
+      },
+      "background": null
+    },
+    {
       "id": "q-19307",
       "status": "approved",
       "difficulty": 8,
@@ -61815,6 +62053,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Artaxerxes",
         "author_url": "https://commons.wikimedia.org/wiki/User:Artaxerxes"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19314",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "pioneers-and-heroes",
+      "bundle": "uk",
+      "description": "Proof that giants also struggle with their building projects.",
+      "question": "Legend says the giant Finn McCool built these stone columns on the Northern Irish coast. What did he build them for?",
+      "answer": "A path across the sea to Scotland",
+      "wrong_answers": [
+        "A staircase up to the clouds",
+        "A wall to stop the sea flooding",
+        "A table for a giant's feast"
+      ],
+      "hints": [
+        "The legend involves a rival giant.",
+        "Finn's rival, Benandonner, didn't live in Ireland.",
+        "The stones were supposed to stretch all the way to another country."
+      ],
+      "fun_fact": "Scientists say the columns formed about 60 million years ago when lava cooled and cracked, but the giant story is much more fun.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Giant%27s_Causeway_basalt_columns_%282%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGiant%27s_Causeway_basalt_columns_%282%29.JPG",
+        "credit": "Adam Bishop · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Adam Bishop",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Adam_Bishop"
       },
       "background": null
     },
@@ -62601,6 +62873,40 @@
       "background": null
     },
     {
+      "id": "q-19338",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "cities-and-towns",
+      "bundle": "uk",
+      "description": "A bird that has been perched on the same roof for over 100 years and still hasn't flown off.",
+      "question": "Statues of this bird sit on top of a famous riverside building, and it appears on a big football club's badge. What is it called?",
+      "answer": "The Liver bird",
+      "wrong_answers": [
+        "The magpie",
+        "The cockerel",
+        "The canary"
+      ],
+      "hints": [
+        "It's a symbol of a whole city, not just the club.",
+        "The city it stands for is the home of the Beatles.",
+        "Its name is the first part of the city's name."
+      ],
+      "fun_fact": "Legend says that if the two Liver birds on the Royal Liver Building ever fly away, the city of Liverpool will cease to exist.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Royal--Liver--Building--Liverpool.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoyal--Liver--Building--Liverpool.jpg",
+        "credit": "Acediscovery · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Acediscovery",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acediscovery"
+      },
+      "background": null
+    },
+    {
       "id": "q-19339",
       "status": "approved",
       "difficulty": 4,
@@ -63145,6 +63451,40 @@
       "background": null
     },
     {
+      "id": "q-19356",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "early-britain",
+      "bundle": "uk",
+      "description": "Time travel tip: pack a warm cloak and leave your phone at home.",
+      "question": "You've travelled back in time to see Celtic tribes, with chariots and hillforts, ruling all of Britain. When are you?",
+      "answer": "In the century before the Roman invasion",
+      "wrong_answers": [
+        "In the century before the Norman Conquest",
+        "In the century after the first Viking raids",
+        "In the century after the Tudors took power"
+      ],
+      "hints": [
+        "People lived in round houses with thatched roofs.",
+        "This time is called the Iron Age.",
+        "The Romans hadn't conquered Britain yet."
+      ],
+      "fun_fact": "The Celtic languages spoken then are related to today's Welsh, Cornish and Gaelic.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/The_Iron_Age_Roundhouse%2C_Whithorn_%28geograph_5775890_by_Billy_McCrorie%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Iron_Age_Roundhouse%2C_Whithorn_%28geograph_5775890_by_Billy_McCrorie%29.jpg",
+        "credit": "Billy McCrorie · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Billy McCrorie",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-19357",
       "status": "approved",
       "difficulty": 4,
@@ -63243,6 +63583,40 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Masoud Shahristani",
         "author_url": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-19360",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "football",
+      "bundle": "uk",
+      "description": "A goal record that waited years for someone to come along and pinch it.",
+      "question": "In March 2023, Harry Kane scored his 54th goal for England, a new record. Whose record of 53 goals did he beat?",
+      "answer": "Wayne Rooney",
+      "wrong_answers": [
+        "Bobby Charlton",
+        "Gary Lineker",
+        "Alan Shearer"
+      ],
+      "hints": [
+        "This player's last England game was a farewell match in 2018.",
+        "He is also Manchester United's all-time top scorer.",
+        "He burst onto the scene as a 16-year-old at Everton."
+      ],
+      "fun_fact": "Rooney had taken the record from Sir Bobby Charlton, whose 49 goals had stood as the record since 1970.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/London_Wembley.jpg/3840px-London_Wembley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALondon_Wembley.jpg",
+        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Arne Müseler",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arne_mueseler"
       },
       "background": null
     },
@@ -63417,6 +63791,74 @@
       "background": null
     },
     {
+      "id": "q-19366",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "game-shows-and-presenters",
+      "bundle": "uk",
+      "description": "A black chair, a spotlight and a man who never left a sentence unfinished.",
+      "question": "I hosted Mastermind for 25 years, and I always said “I've started, so I'll finish.” Who am I?",
+      "answer": "Magnus Magnusson",
+      "wrong_answers": [
+        "Clive Myrie",
+        "John Humphrys",
+        "Bamber Gascoigne"
+      ],
+      "hints": [
+        "I hosted the show from the very start.",
+        "I said my line when time ran out mid-question.",
+        "My surname means “son of” my first name."
+      ],
+      "fun_fact": "“I've started, so I'll finish” is now a saying people in Britain use for almost anything.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Painting_The_Chair_%28262694327%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APainting_The_Chair_%28262694327%29.jpeg",
+        "credit": "J Carlos · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "J Carlos",
+        "author_url": "https://500px.com/teuc09"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19367",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "game-shows-and-presenters",
+      "bundle": "uk",
+      "description": "A disco ball on a stick, and grown adults weep to hold it.",
+      "question": "You're watching the first ever Strictly Come Dancing final, as Natasha Kaplinsky lifts the Glitterball. Which year is it?",
+      "answer": "2004",
+      "wrong_answers": [
+        "1998",
+        "2001",
+        "2008"
+      ],
+      "hints": [
+        "Bruce Forsyth was the host.",
+        "It's in the 21st century.",
+        "Athens hosted the Summer Olympics that same year."
+      ],
+      "fun_fact": "The first series had only eight couples and ran for eight weeks.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Ballroom_dance_competition_cha_cha.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABallroom_dance_competition_cha_cha.jpg",
+        "credit": "CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": null,
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-19368",
       "status": "approved",
       "difficulty": 9,
@@ -63553,6 +63995,40 @@
       "background": null
     },
     {
+      "id": "q-19372",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "languages-of-britain",
+      "bundle": "uk",
+      "description": "Two sibling stations, sharing one dial and arguing over the remote since the 1970s.",
+      "question": "BBC Wales runs Radio Wales and Radio Cymru. What is the main difference between them?",
+      "answer": "Radio Cymru is in Welsh",
+      "wrong_answers": [
+        "Radio Cymru plays only music",
+        "Radio Cymru is for North Wales",
+        "Radio Cymru is for children"
+      ],
+      "hints": [
+        "Think about what makes Wales different from England.",
+        "“Cymru” is the Welsh name for Wales.",
+        "Radio Wales speaks English to its listeners."
+      ],
+      "fun_fact": "Radio Cymru went on air in January 1977, almost two years before Radio Wales, so the Welsh-language station is the older of the two.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Vintage_RCA_Radiola_III_Radio%2C_Battery-Powered_Regenerative_Type_Receiver%2C_Circa_1924_%2819867577949%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_RCA_Radiola_III_Radio%2C_Battery-Powered_Regenerative_Type_Receiver%2C_Circa_1924_%2819867577949%29.jpg",
+        "credit": "Joe Haupt from USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Haupt from USA",
+        "author_url": "https://www.flickr.com/people/51764518@N02"
+      },
+      "background": null
+    },
+    {
       "id": "q-19373",
       "status": "approved",
       "difficulty": 7,
@@ -63651,6 +64127,74 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Fortheloveofknowledge",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Fortheloveofknowledge&action=edit&redlink=1"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19376",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "pioneers-and-heroes",
+      "bundle": "uk",
+      "description": "A survival expert whose idea of a nice day out involves frostbite.",
+      "question": "In 1998, aged just 23, Bear Grylls climbed me, less than two years after breaking his back in a parachute accident. What am I?",
+      "answer": "Mount Everest",
+      "wrong_answers": [
+        "K2",
+        "Mount Kilimanjaro",
+        "Mont Blanc"
+      ],
+      "hints": [
+        "I'm in the Himalayas.",
+        "Climbers need bottled oxygen near my top.",
+        "No mountain on Earth is taller than me."
+      ],
+      "fun_fact": "Bear Grylls later became Chief Scout, leading the UK's Scouts.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Trips_04_-_Joffree_Group_-_Slalok_w_Martys_scrawlings_%2890977255%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrips_04_-_Joffree_Group_-_Slalok_w_Martys_scrawlings_%2890977255%29.jpg",
+        "credit": "McKay Savage from London, UK · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "McKay Savage from London, UK",
+        "author_url": "https://www.flickr.com/people/56796376@N00"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19377",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "pioneers-and-heroes",
+      "bundle": "uk",
+      "description": "Spare change with a surprisingly big job to do.",
+      "question": "You drop coins in a charity tin at the supermarket. Apart from lifeboats and mountain rescue, which UK emergency service mostly runs on donations?",
+      "answer": "Air ambulances",
+      "wrong_answers": [
+        "The police",
+        "Fire and rescue services",
+        "NHS road ambulances"
+      ],
+      "hints": [
+        "It deals with medical emergencies.",
+        "It reaches injured people in places that are hard to get to by road.",
+        "It can land in a field with a doctor and paramedic on board."
+      ],
+      "fun_fact": "Most UK air ambulances are run by local charities, which raise millions of pounds a year to keep them flying.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Coin_donations.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoin_donations.jpg",
+        "credit": "Mx. Granger · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mx. Granger",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mx._Granger"
       },
       "background": null
     },
@@ -65015,6 +65559,40 @@
       "background": null
     },
     {
+      "id": "q-19418",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "uk",
+      "description": "A jab in the arm with a very famous address.",
+      "question": "Scientists at a famous university made a COVID-19 vaccine named after its city. Which city is it?",
+      "answer": "Oxford",
+      "wrong_answers": [
+        "Cambridge",
+        "Edinburgh",
+        "London"
+      ],
+      "hints": [
+        "It's one of the two oldest universities in England.",
+        "It's the home of the Bodleian Library.",
+        "Its rowing team races Cambridge every year."
+      ],
+      "fun_fact": "The first person in the world to get the Oxford vaccine outside a trial was 82-year-old Brian Pinker, on 4 January 2021.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/COVID-19_Vaccine_vial_and_syringe_-_US_Census.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACOVID-19_Vaccine_vial_and_syringe_-_US_Census.jpg",
+        "credit": "United States Census · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "United States Census",
+        "author_url": null
+      },
+      "background": null
+    },
+    {
       "id": "q-19419",
       "status": "approved",
       "difficulty": 15,
@@ -65423,6 +66001,40 @@
       "background": null
     },
     {
+      "id": "q-19431",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "soaps-and-dramas",
+      "bundle": "uk",
+      "description": "Cobbles outside, a pint at the Rovers, and this tune before every episode.",
+      "question": "Coronation Street's famous theme tune, written by Eric Spear, opens with a slow, lonely solo from which kind of instrument?",
+      "answer": "Brass",
+      "wrong_answers": [
+        "Strings",
+        "Woodwind",
+        "Percussion"
+      ],
+      "hints": [
+        "The tune is meant to sound like the band music of northern England.",
+        "You blow into it.",
+        "Think of a trumpet."
+      ],
+      "fun_fact": "In a traditional British brass band, the cornet, not the trumpet, plays the lead melody.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Rooftops_and_chimneys_-_geograph.org.uk_-_4949317.jpg/3840px-Rooftops_and_chimneys_-_geograph.org.uk_-_4949317.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARooftops_and_chimneys_-_geograph.org.uk_-_4949317.jpg",
+        "credit": "Ian Greig · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ian Greig",
+        "author_url": "https://www.geograph.org.uk/profile/9857"
+      },
+      "background": null
+    },
+    {
       "id": "q-19432",
       "status": "approved",
       "difficulty": 9,
@@ -65487,6 +66099,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Bill Boaden",
         "author_url": "https://www.geograph.org.uk/profile/42541"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19434",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "soaps-and-dramas",
+      "bundle": "uk",
+      "description": "Gritty streets, grim faces and a lot of rain on the windscreen.",
+      "question": "ITV's police drama Taggart ran from 1983 to 2010. In which city were its detectives based?",
+      "answer": "Glasgow",
+      "wrong_answers": [
+        "Edinburgh",
+        "Aberdeen",
+        "Dundee"
+      ],
+      "hints": [
+        "Its streets were filmed on location for the show.",
+        "It was once a huge shipbuilding centre.",
+        "The River Clyde flows through it."
+      ],
+      "fun_fact": "Taggart kept its title for years after Jim Taggart left the show, making it one of the UK's longest-running police dramas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Car_windscreen_in_the_rain.jpg/3840px-Car_windscreen_in_the_rain.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACar_windscreen_in_the_rain.jpg",
+        "credit": "Stanisław · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Stanisław",
+        "author_url": "https://www.flickr.com/people/77885672@N03"
       },
       "background": null
     },
@@ -65627,6 +66273,40 @@
       "background": null
     },
     {
+      "id": "q-19439",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "sporting-events",
+      "bundle": "uk",
+      "description": "The only traffic jam in Berkshire that people pay to watch.",
+      "question": "You're at Ascot's big race meeting at 2 pm, before the first race, when open horse-drawn carriages roll up the track. Who is riding in them?",
+      "answer": "The monarch and royal guests",
+      "wrong_answers": [
+        "Last year's winning jockeys",
+        "The Lord Mayor of London",
+        "The Prime Minister and Cabinet"
+      ],
+      "hints": [
+        "This procession is a tradition almost 200 years old.",
+        "Bookmakers used to take bets on the colour of one passenger's hat.",
+        "They arrive from Windsor Castle nearby."
+      ],
+      "fun_fact": "The carriage procession has opened each day of Royal Ascot since 1825, in the reign of George IV.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Ascot_Racecourse_Grandstand_-_geograph.org.uk_-_1852333.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAscot_Racecourse_Grandstand_-_geograph.org.uk_-_1852333.jpg",
+        "credit": "Colin Smith · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Colin Smith",
+        "author_url": "https://www.geograph.org.uk/profile/3972"
+      },
+      "background": null
+    },
+    {
       "id": "q-19440",
       "status": "approved",
       "difficulty": 12,
@@ -65691,6 +66371,40 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Ruaraidh Gillies",
         "author_url": "https://www.flickr.com/people/75354150@N06"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19442",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "sporting-events",
+      "bundle": "uk",
+      "description": "A golfer, a stream and a pair of rolled-up trousers walk onto the 18th hole.",
+      "question": "At the 1999 Open, Jean van de Velde reached this final hole needing just a double-bogey 6 to win. How many shots did he take on it?",
+      "answer": "7",
+      "wrong_answers": [
+        "5",
+        "6",
+        "8"
+      ],
+      "hints": [
+        "He didn't win the title outright.",
+        "One of his shots landed in the Barry Burn, the stream in front of the green.",
+        "It was a triple bogey on a par 4."
+      ],
+      "fun_fact": "Van de Velde took off his shoes and socks and waded into the Barry Burn, wondering whether to hit his ball out of the water.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/18th_Green_Championship_Course-Carnoustie-geograph-4747170-by-Jim-Smillie.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A18th_Green_Championship_Course-Carnoustie-geograph-4747170-by-Jim-Smillie.jpg",
+        "credit": "Jim Smillie · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Jim Smillie",
+        "author_url": "https://www.geograph.org.uk/profile/14055"
       },
       "background": null
     },
@@ -65997,6 +66711,40 @@
         "license_url": null,
         "author": "Sir Anthony Van Dyck (1599 - 1641) Details on Google Art Project",
         "author_url": "http://www.googleartproject.com/artist/anthony-van-dyck/4126009/"
+      },
+      "background": null
+    },
+    {
+      "id": "q-19452",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "tudors-and-stuarts",
+      "bundle": "uk",
+      "description": "The founder of a royal family that later starred in a dozen TV dramas.",
+      "question": "This king won the Battle of Bosworth in 1485 and began the Tudor family's rule. Who is he?",
+      "answer": "Henry VII",
+      "wrong_answers": [
+        "Henry VIII",
+        "Richard III",
+        "Edward IV"
+      ],
+      "hints": [
+        "He was Welsh on his father's side.",
+        "He married Elizabeth of York to unite two rival families.",
+        "His son had six wives."
+      ],
+      "fun_fact": "Henry VII's Tudor rose joined the red rose of Lancaster and the white rose of York.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Sundial_Memorial_at_Bosworth_Battlefield_Heritage_Centre_-_geograph.org.uk_-_5796017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASundial_Memorial_at_Bosworth_Battlefield_Heritage_Centre_-_geograph.org.uk_-_5796017.jpg",
+        "credit": "Graham Hogg · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Graham Hogg",
+        "author_url": "https://www.geograph.org.uk/profile/47667"
       },
       "background": null
     }
