@@ -1,5 +1,5 @@
 // Pool and category data (PORT-2): parsed JSON in, typed data out. Mirrors authoring/tools/categories.py.
-import type { Background, Category, Media, Status } from "../lib/types.ts";
+import type { Background, Category, Excerpt, Media, Status } from "../lib/types.ts";
 
 /** One entry of app/data/pool.json, with the answer (the client is the referee). */
 export interface PoolQuestion {
@@ -105,6 +105,25 @@ const str = (v: unknown): v is string => typeof v === "string" && v.trim() !== "
 const opt = (v: unknown): string | null => (typeof v === "string" ? v : null);
 const three = (v: unknown): v is string[] => Array.isArray(v) && v.length === 3 && v.every(str);
 
+/** Longest question audio/video window, seconds; mirrors MAX_AUDIO_SECONDS in authoring/tools/media.py. */
+const MAX_AUDIO_SECONDS = 60;
+
+/** A well-formed `media.excerpt` (decision 644: numbers, 0 ≤ start < end, ≤ 60 s) or null. Pure. */
+function parseExcerpt(v: unknown): Excerpt | null {
+  const e = v as Record<string, unknown> | null;
+  if (!e || typeof e !== "object") return null;
+  const { start, end } = e;
+  if (typeof start !== "number" || typeof end !== "number" || !Number.isFinite(start + end)) return null;
+  return start >= 0 && start < end && end - start <= MAX_AUDIO_SECONDS ? { start, end } : null;
+}
+
+/** The window to play in a file of `duration` s (NaN/unknown: unclamped); null = the whole file. */
+export function playWindow(excerpt: Excerpt | undefined, duration: number): Excerpt | null {
+  if (!excerpt) return null;
+  const end = Number.isFinite(duration) ? Math.min(excerpt.end, duration) : excerpt.end;
+  return excerpt.start < end ? { start: excerpt.start, end } : null;
+}
+
 /** A mod file_url → its URL under the bundle folder; null if not a plain relative path inside it. */
 function modUrl(bundle: string, rel: unknown): string | null {
   if (!str(rel) || /^[a-z][a-z0-9+.-]*:|^[/\\]/i.test(rel) || rel.includes("\\")) return null;
@@ -144,12 +163,13 @@ export function modPool(json: unknown, bundle: string, subcategories: Iterable<s
     const m = q.media as Record<string, unknown> | null | undefined;
     if (m) {
       const url = modUrl(bundle, m.file_url);
-      if (!url || !["image", "audio", "video"].includes(m.type as string)) {
+      const excerpt = m.excerpt === undefined || m.excerpt === null ? undefined : parseExcerpt(m.excerpt);
+      if (!url || !["image", "audio", "video"].includes(m.type as string) || excerpt === null || (excerpt && m.type === "image")) {
         if (m.role === "essential") return bad("bad_media");
         bad("bad_media", false);
       } else {
         const role = ["decorative", "illustrative", "essential"].includes(m.role as string) ? m.role : "illustrative";
-        media = { type: m.type, role, source_url: opt(m.source_url), file_url: url, credit: opt(m.credit) } as Media;
+        media = { type: m.type, role, source_url: opt(m.source_url), file_url: url, credit: opt(m.credit), ...(excerpt && { excerpt }) } as Media;
       }
     }
     let background: Background | null = null;

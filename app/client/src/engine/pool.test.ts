@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import type { Category } from "../lib/types.ts";
 import {
-  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, modSubcategories, parseAgeGroups, parseBundles, parsePool,
+  broadOf, byId, categoryOf, isModId, isOurs, loadCategories, modPool, modSubcategories, parseAgeGroups, playWindow, parseBundles, parsePool,
 } from "./pool.ts";
 import { data, fixture, realCategories } from "./test/fixtures.ts";
 
@@ -164,4 +164,27 @@ test("mod categories: subject optional, unknown dropped and reported", () => {
   const cats = loadCategories({ bundles: [{ id: "m" }] }, { m: file("sport", undefined, "foo") }, ids);
   assert.deepEqual(cats.map((c) => c.subject), ["sport", undefined, undefined]);
   assert.ok(!("subject" in cats[2]));
+});
+
+test("playWindow / modPool: excerpt shape, clamp, bad_media", () => {
+  assert.deepEqual(playWindow({ start: 2, end: 30 }, 10), { start: 2, end: 10 });
+  assert.deepEqual(playWindow({ start: 2, end: 30 }, NaN), { start: 2, end: 30 });
+  assert.equal(playWindow({ start: 12, end: 30 }, 10), null);
+  assert.equal(playWindow(undefined, 10), null);
+  const q = (media: object) => ({
+    id: "a", difficulty: 3, subcategory: "S", question: "¿?", answer: "a", wrong_answers: ["b", "c", "d"], hints: ["x", "y", "z"], media,
+  });
+  const run = (media: object) => modPool({ version: 1, questions: [q(media)] }, "m:p", ["S"]);
+  const au = { type: "audio", role: "essential", file_url: "a.ogg", credit: "x" };
+  assert.deepEqual(run({ ...au, excerpt: { start: 1, end: 9 } }).questions[0].media.excerpt, { start: 1, end: 9 });
+  assert.equal(run(au).questions[0].media.excerpt, undefined);
+  assert.deepEqual(run({ ...au, excerpt: { start: 1, end: 61 } }).questions[0].media.excerpt, { start: 1, end: 61 });
+  const badEx = [null, {}, { start: "1", end: 5 }, { start: 5, end: 5 }, { start: -1, end: 5 }, { start: 0, end: 61.5 }, { start: 0, end: NaN }];
+  for (const excerpt of badEx) assert.equal(run({ ...au, excerpt }).questions.length, excerpt === null ? 1 : 0);
+  for (const m of [{ ...au, excerpt: { start: 9, end: 1 } }, { ...au, type: "image", excerpt: { start: 1, end: 2 } }]) {
+    const out = run(m);
+    assert.equal(out.questions.length, 0);
+    assert.equal(out.reasons[0].reason, "bad_media");
+  }
+  assert.equal(run({ ...au, role: "illustrative", excerpt: "x" }).questions[0].media.file_url, null);
 });

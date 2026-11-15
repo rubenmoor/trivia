@@ -105,6 +105,7 @@ Difficulty means who can answer it, not how obscure the fact is.
   - `file_url`: path inside the bundle folder, e.g. `img/planet.png`; web addresses and paths outside the folder are dropped (an `essential` question with them too)
   - `credit`: required for every file you didn't make yourself: author · licence · source, e.g. `Jane Doe · CC BY 4.0 · Wikimedia Commons`; your own: e.g. `Jane Doe · CC0`
   - `source_url`: optional, the page you got it from
+  - `excerpt`: optional, `audio` and `video` only: `{ "start": 12.5, "end": 40 }` in seconds; the game plays only that window (and replays it); numbers, `0 ≤ start < end`, at most 60 s long; an `end` past the file's length is cut to it; without it the whole file plays
 - Credits appear on the game's Credits screen; use only files you may share (your own, CC0, CC BY, public domain).
 - Images: at most 1920 px wide, at most 500 KB each (PNG, JPG, WebP).
 - No picture? Leave `media` out: the question shows as text only.
@@ -137,7 +138,7 @@ Difficulty means who can answer it, not how obscure the fact is.
   - `difficulty`: not a whole number 1–15
   - `subcategory`: not in `categories.json`
   - `status`: something other than `approved`
-  - `bad_media`: `file_url` a web address or outside the folder; only the media is dropped, unless `essential`
+  - `bad_media`: `file_url` a web address or outside the folder, or a malformed `excerpt` (or one on an image); only the media is dropped, unless `essential`
 - Other errors: `media_missing` (file not found), `bad_categories`, `bundle_row`, `bad_field` (in `mod.json`), `no_pool` (no pool file for any language).
 - Warnings: `bad_names` (a names file not JSON, or a key not in `categories.json` / `bundles.json`), `no_pool_file`, `bundle_language`.
 
