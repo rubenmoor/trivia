@@ -6,6 +6,8 @@ files, seed by seed in yield order, and writes the queue to the run dir so a res
 `triage` probes and triages the queue (sonnet) until enough files are worth it; `design` writes an EN draft per
 worth file (opus), probes its excerpt window and checks it (`problems`, `giveaway`): one retry with the problems,
 then dropped. Results per file in <run>/media-first/{triage,design}.jsonl; passed drafts in <run>/drafts/mf-*.json.
+`qgen batch --media-first` runs these as its first steps (`inventory_step`, `probe_step`, `triage`, `design`,
+`check_drafts`), then qgen's; `check_fixed` is the giveaway check after `fix`.
 """
 import hashlib, json, re, threading
 from collections import defaultdict
@@ -130,6 +132,14 @@ def select(run_dir, limit=None):
     return queue
 
 
+def inventory_step(run_dir, limit=None):
+    """`qgen batch --media-first`'s first step: the run's queue (`select`); an empty one fails."""
+    from qgen import failed
+    n = len(select(run_dir, limit))
+    progress.say(f"  inventory: {n} file(s) queued")
+    return [] if n else failed("inventory: no surveyed file left to triage (more seeds: `qgen media-survey`)")
+
+
 def remaining(run_dir, run):
     """The queue's files not yet in the ledger and whose seed isn't skipped by now (the ledger grows during the run)."""
     done = {media_survey.norm_title(r["title"]) for r in ledger() if r["run"] == run}
@@ -169,6 +179,22 @@ def aids(p):
     return {"pictures_to_read": pics, **a}
 
 
+def round_size(todo, worth, target, jobs):
+    """Files per triage round: ≈ twice what is still needed (None: all)."""
+    return len(todo) if target is None else max(jobs, (target - worth) * 2)
+
+
+def probe_step(d, run, jobs=3, target=MF_DESIGNED):
+    """The `probe` step: the aids of the files triage's first round takes (later rounds probe inside triage)."""
+    from qgen import parallel
+    worth = sum(t["verdict"] == "worth" for t in triaged(d))
+    todo = remaining(d, run)
+    if target is not None and worth >= target:
+        return []
+    todo = todo[:round_size(todo, worth, target, jobs)]
+    return parallel(lambda f: probe(f["title"]), [{"id": f["title"], **f} for f in todo], jobs, "probe", "files")
+
+
 # --- giveaway (no LLM) -----------------------------------------------------------
 
 STOP = {"this", "that", "with", "from", "sound", "sounds", "audio", "video", "file", "files", "recording", "call",
@@ -192,6 +218,44 @@ def giveaway(q, p=None):
     `p`: the window's probe, else `media_first.probe`'s. Also after `fix`."""
     p = p or load_probe(q["media_first"]["probe"])
     return heard_giveaway(" ".join(t for t in (q["answer"], q.get("concept")) if t), p)
+
+
+def check_drafts(d):
+    """The `giveaway` step after design: a draft whose window names its answer leaves the run
+    (<run>/media-first/giveaway.jsonl)."""
+    from qgen import load_json, save_json
+    out, lock = steps_dir(d) / "giveaway.jsonl", threading.Lock()
+    for f in sorted((d / "drafts").glob("*.json")):
+        data = load_json(f)
+        keep = []
+        for q in data["questions"]:
+            hit = giveaway(q) if q.get("media_first") else []
+            if hit:
+                append(out, {"tmp_id": q["tmp_id"], "question": q["question"], "answer": q["answer"], "words": hit}, lock)
+                progress.detail(f"  giveaway: {q['tmp_id']}: dropped: {', '.join(hit)}")
+            else:
+                keep.append(q)
+        if len(keep) != len(data["questions"]):
+            save_json(f, {**data, "questions": keep})
+    return []
+
+
+def check_fixed(run):
+    """The `giveaway` step after `fix`: a revised question's giveaway words → reviews/<id>.json `giveaway`
+    (`record` makes it needs_work)."""
+    from qgen import load_json, save_json
+    from review_steps import batch_questions, fixed
+    n = 0
+    for q in batch_questions(run):
+        path = layout.WORK / run / "reviews" / f"{q['id']}.json"
+        r = load_json(path, {})
+        if q.get("media_first") and fixed(r):
+            r["giveaway"] = giveaway(q)
+            n += bool(r["giveaway"])
+            save_json(path, r)
+    if n:
+        progress.say(f"  giveaway: {n} fixed question(s) name the answer in the window; they become needs_work")
+    return []
 
 
 def problems(q, p, model_check=None):
@@ -340,7 +404,7 @@ def triage(d, run, jobs=3, model=TRIAGE_MODEL, target=MF_DESIGNED):
         todo = [f for f in remaining(d, run) if f["title"] not in failed]
         if not todo or (target is not None and worth >= target):
             break
-        chunk = todo[:len(todo) if target is None else max(jobs, (target - worth) * 2)]  # ≈ half the need per round
+        chunk = todo[:round_size(todo, worth, target, jobs)]
         errs = parallel(work, [{"id": f["title"], **f} for f in chunk], jobs, "triage", "files")
         failed |= {f["title"] for f in chunk} - {t["title"] for t in triaged(d)}
         errors += errs
