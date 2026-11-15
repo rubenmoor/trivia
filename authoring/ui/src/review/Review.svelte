@@ -20,6 +20,7 @@
   import type { AgeGroups, Bundle, Decision, Names, Question, Review, Slot, SpotCheckItem } from "../lib/types.ts";
   import Nav from "../lib/Nav.svelte";
   import FeedbackModal from "./FeedbackModal.svelte";
+  import MediaAidsPanel from "./MediaAidsPanel.svelte";
   import MediaPanel from "./MediaPanel.svelte";
   import ReviewBanners, { accepts } from "./ReviewBanners.svelte";
   import ReviewHeader from "./ReviewHeader.svelte";
@@ -560,9 +561,10 @@
         {#if blind}
           <section>
             <h2>Spot check (blind)</h2>
-            <p class="muted">The LLM's verdict, reasons and the audit show after your decision.</p>
+            <p class="muted">The LLM's verdict, reasons, the audit{current.media_aids ? " and the media aids" : ""} show after your decision.</p>
           </section>
         {:else}
+          {#if current.media_aids}<MediaAidsPanel aids={current.media_aids} />{/if}
           <section>
             <h2>Fact check</h2>
             <p>
