@@ -156,7 +156,7 @@ Not entered now: Steam shows every defined achievement, unreachable ones look br
 - **Windows** (x64) and **Linux** (x64) native builds; the **Deck** runs the Linux build. macOS later (needs a $99/year developer account and notarization).
 - **Resolutions:** 720p to 4K. The size unit `--u` scales with the width (D-29), so a 16:10 screen (Deck, 1280×800) has more height. Check every screen at 1280×800 and at 1280×720 (smallest). Valve's Deck legibility guideline is text ≥ 9 px at 1280×800.
 - **Windows specifics:** set explicit MIME types if any local serving remains; use atomic save writes with a retry (antivirus locks).
-- **Media size (SW-9, D-104):** the raw cache (2549 MB, 1100 files) ships re-encoded by `stage-media.mjs`, keys unchanged (D-17), names `shippedName(url)` (cache stem + shipped extension; resolver tries `cacheName`, then `shippedName`).
+- **Media size (SW-9, D-104):** the raw cache (2549 MB, 1100 files) ships re-encoded by `stage-media.mjs`, keys unchanged (D-17), names `shippedName(url)` (cache stem + shipped extension; resolver tries `cacheName`, then `shippedName`). Excerpt questions (decision 644): the built pools carry `<url>#t=start,end` instead of `media.excerpt` (`shipPool`, `resolve.mjs`), one cut file per window under its own `shippedName`; `credits_check.mjs` maps the cuts to the source's one credit.
   - images: WebP lossy, fit inside 3840×2160, never upscaled (D-48), q 82 → down to q 60 while > 1 MB; GIF, SVG as is
   - audio: Opus in Ogg, 96 kb/s; video: WebM VP9 CRF 33 + Opus 96k, ≤ 1920×1080
   - measured 2026-10-14: 2549 → 679 MB (1079 WebP, 17 Opus, 3 WebM, 1 GIF); `content` 630 MB, `colombia` DLC 50 MB; 58 files > 1 MB: 3 videos (60.7, 27.4, 10.0 MB; Apollo ships its whole 29 min), 55 WebP 1.0–2.3 MB

@@ -4,7 +4,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
-import { cacheName, shippedName } from "../../app/desktop/resolve.mjs";
+import { cacheName, shippedName, sourceUrl } from "../../app/desktop/resolve.mjs";
 
 const asar = createRequire(new URL("../../app/desktop/package.json", import.meta.url))("@electron/asar");
 
@@ -45,9 +45,24 @@ function check(root) {
 
   const shipped = new Set(files(path.join(res, "media")));
   const media = new Map();
+  // Excerpt questions ship one cut per window (`<url>#t=s,e` in the built pools) under one credit of the source file.
+  const cuts = new Map();
+  const dataDir = path.join(res, "data");
+  for (const f of existsSync(dataDir) ? readdirSync(dataDir, { recursive: true }) : []) {
+    if (!/(^|[\\/])pool(\.[\w-]+)?\.json$/.test(f)) continue;
+    const text = readFileSync(path.join(dataDir, f), "utf8");
+    if (!text.includes("#t=")) continue;
+    for (const q of JSON.parse(text).questions) {
+      const u = q.media?.file_url;
+      if (u && sourceUrl(u) !== u) cuts.set(sourceUrl(u), new Set([...(cuts.get(sourceUrl(u)) ?? []), u]));
+    }
+  }
   for (const m of credits.media) {
-    const name = shipped.has(cacheName(m.file_url)) ? cacheName(m.file_url) : shippedName(m.file_url);
-    media.set(name, (media.get(name) ?? 0) + 1);
+    const urls = cuts.has(m.file_url) ? [...cuts.get(m.file_url)] : [m.file_url];
+    for (const u of urls) {
+      const name = shipped.has(cacheName(u)) ? cacheName(u) : shippedName(u);
+      media.set(name, (media.get(name) ?? 0) + 1);
+    }
   }
   for (const f of shipped) if (!media.has(f)) problems.push(`media file without credit: media/${f}`);
   for (const [f, n] of media) {
