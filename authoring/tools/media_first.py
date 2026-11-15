@@ -66,7 +66,7 @@ def record(run, rows):
 
 
 def pilot_rows():
-    """The media pilot's triaged files (aided verdict, else blind): {title, seed, worth}."""
+    """The pilot's triaged files (history) (aided verdict, else blind): {title, seed, worth}."""
     by = {}
     for f in sorted((layout.WORK / "media-pilot").glob("*/triage.jsonl")):
         for r in read_jsonl(f):

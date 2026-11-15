@@ -13,7 +13,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    qgen batch
    ```
 
-   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle, drafted in English (plan 148). Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. If the user names a language ("translate questions into German", "Spanish questions"), run `qgen batch --translate <locale>` with that language's locale instead (D-87): `es` (Latin American Spanish, also plain "Spanish"), `es-ES` (Spain's Spanish), `en`, `de`; if they name a bundle too ("translate the Colombia questions into English"), add `--bundle <id>`. Use the same command, with the same `--bundle` or `--translate`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish. When Claude's usage limit is hit, it says so, waits until 5 minutes after the reset (possibly hours) and continues by itself; let it wait.
+   Outside the dev shell, use `nix develop -c qgen batch`. This writes questions for the `base` bundle, drafted in English (plan 148). Give it no arguments, with one exception: if the user names a bundle ("make Colombia questions", "a batch for the colombia bundle"), run `qgen batch --bundle <id>` with that bundle's id from `app/data/bundles.json`. If the user names a language ("translate questions into German", "Spanish questions"), run `qgen batch --translate <locale>` with that language's locale instead (D-87): `es` (Latin American Spanish, also plain "Spanish"), `es-ES` (Spain's Spanish), `en`, `de`; if they name a bundle too ("translate the Colombia questions into English"), add `--bundle <id>`. If the user asks for sound or video questions ("multimedia questions", "questions with audio", "from Commons media"), run `qgen batch --media-first` instead (see "Media-first batches" below); it takes no other arguments. Use the same command, with the same `--bundle`, `--translate` or `--media-first`, every time you rerun it in step 3. It takes from several minutes to an hour; let it finish. When Claude's usage limit is hit, it says so, waits until 5 minutes after the reset (possibly hours) and continues by itself; let it wait.
 3. **Act on the exit code:**
 
    | Exit code | Meaning | What you do |
@@ -23,7 +23,7 @@ One command does all the work: choosing subcategories, drafting, rating, fact-ch
    | 1 | A step failed | Run step 2 again. If it fails at the **same step three times in a row**, stop and give the user the last 30 lines of output verbatim (they end with the `claude:` line) |
    | other | Unexpected | Stop and give the user the last 30 lines of output verbatim |
 
-   If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so. Under `pm run`, "stop" and "tell the user" mean a pm decision: see below.
+   If the output says "More than one unfinished batch", stop and ask the user which one to finish. If it says a batch "is unfinished and writes for bundle …", stop and tell the user. Run the command it names only if they say so. If it says "<run> is an unfinished media-first run" or "unfinished batch run" (the open run is of the other mode, decision 646), stop and tell the user; run the command it names only if they say so. Under `pm run`, "stop" and "tell the user" mean a pm decision: see below.
 4. **Commit.** Run exactly the two `git add` / `git commit` lines printed after "Commit exactly this:". Nothing else goes into the commit. Don't push unless the user asks. Under `pm run`: stage only, see below.
 5. **Report.** Tell the user the "Done:" line, the `claude:` line (calls, tokens, $; printed last, also on a failure or stop, decision 208), the path of the report (`authoring/reports/<batch>.md`; `tr-<locale>-<n>.md` for a translation run), and that they can check the questions at http://127.0.0.1:8001/review?batch=<batch> (run `trivia-authoring`). Quality control of the batch follows `authoring/QC.md`; it is the developer's, not part of this procedure. Under `pm run`: into the task's note, see below.
 
@@ -53,6 +53,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
   | other exit code | `<batch>: exit <code>, how to go on?` | last 30 lines verbatim |
   | "More than one unfinished batch" | `Which unfinished batch to finish?` | the message |
   | "is unfinished and writes for bundle …" | `Unfinished batch for another bundle: run the named command?` | the message |
+  | "is an unfinished … run; this command doesn't finish it" | `Unfinished run of the other mode: run the named command?` | the message |
   | step 1: dirty tree | `Dirty tree before <task>'s batch: what to do?` | `git status --porcelain` |
 
 - **Step 4:** run exactly the printed `git add` line(s); don't run the printed `git commit` (pm commits as "task N: …"). Same for `qgen rework`, `tighten`, `neutralize`, `audit --backlog`.
@@ -64,10 +65,21 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Edit `authoring/data/questions.json`, `app/data/pool.json` or anything in `work/` by hand.
 - Pick, change or judge media yourself, or search Commons yourself.
 - Change prompts, `qgen.py`, `media.py` or the subcategory list to get past a failure.
-- Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch` other than a `--bundle` or `--translate` the user named. They exist for the developer's debugging.
+- Run single pipeline steps (`qgen concepts`, `qgen review`, …) or pass arguments to `qgen batch` other than a `--bundle`, `--translate` or `--media-first` the user named. `--files` and `--until` (media-first) are the developer's. They exist for the developer's debugging.
 - Create bundles (`qgen bundle new`), run `qgen taxonomy`, or edit any bundle's categories or category names (`names.<locale>.json`). That is the developer's call.
 - Approve, reject or revise questions that `qgen batch` marked `needs_work`. The developer decides those in the review tool, or asks for `qgen rework`: then run exactly that (with `--batch` only if the user names one), act on the exit code as in step 3, and commit what it prints. The same goes for `qgen tighten` and `qgen neutralize` (no arguments) when the developer asks for them.
 - Run `qgen audit --backlog` unless the developer asks for it (with `--slice N` only if they name a size); act on the exit code as in step 3 and commit what it prints.
+
+## Media-first batches
+
+`qgen batch --media-first` makes questions the other way round (plan 203, `milestone 21: add 1000 multimedia questions to the base bundle`): it starts from a free sound or video file on Wikimedia Commons and designs the question around it. Use it only when the user asks for sound or video questions; plain `qgen batch` otherwise. Same steps 1 to 5, same exit codes, same commit and report.
+
+- `base` only, English; no `--bundle`, `--subcategories` or `--count`.
+- Run name `batch-<n>` (one counter), `run.json` mode `media-first` (decision 646). A plain run is never resumed by `--media-first`, nor the reverse: the command stops and names the one that finishes the open run; that is a stop (step 3), not a failure.
+- Run size: files in seed-yield order until 120 designed questions (about 100 approved) or the inventory runs out.
+- Steps: inventory → probe → triage → design → giveaway → english-keys → rate → factcheck → revise → apply → rate → factcheck → merge → media (background image only) → sheets → review → fix → giveaway → research (background only) → media → sheets → review → record → audit → export → sync → batch-report → validate.
+- Questions with `media.excerpt` are held back from the playable pool until the game plays excerpts; the report counts them as "held".
+- Never touch the ledger `work/media-first/files.jsonl` or the survey `work/media-survey/`; the batch maintains them.
 
 ## What the batch does (for reference)
 
@@ -80,6 +92,7 @@ The fixed rules are in `authoring/tools/qgen.py` (`cmd_batch`):
 - **Subcategories:** the half with the fewest approved questions in that bundle, each weighted by its level's share of the gaps to `authoring/data/targets.json` (D-54; `base`: the draft gap over the four question locales, D-107; ties in the order of the bundle's categories file: `app/data/categories.json` for `base`, `app/data/bundles/<id>/categories.json` for another bundle, D-43). Keys are English slugs (decision 259), the same in every language; prompts and the report show names from `names.<locale>.json`.
 - **Steps:** concepts → draft → english-keys (en batches) → rate → factcheck → revise → apply → rate → factcheck → merge → media → sheets → review → fix → research → media → sheets → review → record → audit → export → sync → batch-report → validate. Each skips work already done, so rerunning continues where it stopped.
 - **English keys (decision 232):** an en batch's overlap checks (rate's candidates, merge's duplicates) see every source in another language through its en translation, else through `authoring/data/english-keys.json` (English answer + concept, `prompts/english-keys.md`); the step asks only new or changed sources. Commit the file with the batch.
+- **Media-first steps (plan 203, `authoring/tools/media_first.py`):** *inventory* queues surveyed Commons files not yet triaged (ledger `work/media-first/files.jsonl`, seeds by yield, zero-yield seeds skipped); *probe* measures them (transcript, OCR, frames, loudness); *triage* (`prompts/media-triage.md`) picks the worthwhile ones, with subject, category and difficulty, and drops subjects `base` already has; *design* (`prompts/media-design.md`) writes the English question around the file, the answer coming from what is heard or seen; *giveaway* (no LLM) drops questions whose answer is in the transcript or on-screen text, after one redesign. The file stays the question's only media candidate: the review can't swap it, "media unfit" makes the question `needs_work`. `pd-music` and `pd-film` files record the work in `media.work` (decision 640).
 - **Review:** one Claude call per question (`prompts/review.md`). It sees the question, the rater's notes, the fact check, related pool questions, and a contact sheet of the media candidates, and answers with a decision and a pick.
 - **Fix (QG-22):** for every text problem it can fix (a giveaway hint, a wrong fact, a second defensible option), the review says how in `fix`; the `fix` step revises the question once, fact-checks changed facts again, and the review looks at it again. Only what can't be fixed stays `needs_work`.
 - **Fixed rules on top of the review:** no adequate media after one new search (also when the image service failed with a 5xx or timeout: the slot is stored empty and the problem names the provider and error; a rate limit still stops the step and a rerun retries it), or a fact check that isn't confirmed, makes a question `needs_work`. Reviews are recorded as `reviewer: "llm"` with the model's id (D-33).
