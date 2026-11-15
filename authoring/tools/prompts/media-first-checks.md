@@ -8,7 +8,7 @@ A question with `media_first` was built around one Commons file: the file is fix
 - `excerpt`: the window the game plays (start, end seconds; null: the whole file), `duration`: the file's.
 - `commons`: the file's Commons `description` and `categories` (players never see them).
 - `aids`: numbers of the window (`integrated_lufs` loudness, `silence_share` 0–1, `true_peak_dbfs`), `speech` (whisper transcript `text`, `language` guess and its probability `language_p`; "[MUSIK]", "[Music]" and the like mean no words), `ocr` (text read in each frame, `<frame>: <text>`).
-- `mechanical`: what code found (`kind`, `check`, `note`, `hard`); `hard` ones make the question `needs_work` in code whatever you decide. Judge each against the text: a real one goes into `feedback`, `problems` and the `fix`; a false flag (a title word such as "symphony", or the composer's name when the answer is the piece, that neither answers nor narrows the question) is named as false in `reasons`, and the `fix` doesn't rewrite the text for it. Soft ones (`quiet`, `silent`) are numbers for you to judge.
+- `mechanical`: what code found (`kind`, `check`, `note`, `hard`); `hard` ones make the question `needs_work` in code whatever you decide. Judge each against the text: a real one goes into `feedback`, `problems` and the `fix`; a false flag (a title word such as "symphony", or the composer's name when the answer is the piece, that neither answers nor narrows the question) is named as false in `reasons`, and the `fix` doesn't rewrite the text for it. Soft ones (`title-words`, `quiet`, `silent`) are flags or numbers for you to judge.
 
 ## Checks
 `needs_work` when one of these fails, with the problem kind named:
