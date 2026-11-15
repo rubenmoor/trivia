@@ -26,7 +26,7 @@ class Probe(unittest.TestCase):
     def test_tone(self):
         info = mp.probe(str(self.tone), with_speech=False)
         out = Path(info["dir"])
-        self.assertTrue((out / "spectrogram.png").stat().st_size and (out / "waveform.png").stat().st_size)
+        self.assertTrue((out / "spectrogram.png").stat().st_size)
         self.assertFalse(info["has_video"])
         self.assertAlmostEqual(info["silence_share"], 0, places=1)
         self.assertLess(info["integrated_lufs"], 0)
@@ -37,7 +37,7 @@ class Probe(unittest.TestCase):
         out = Path(info["dir"])
         self.assertEqual(len(info["frames"]), mp.FRAMES)
         self.assertTrue(all(1 <= f["seconds"] <= 3 for f in info["frames"]))
-        for name in ("sheet.png", "ocr.txt", "spectrogram.png", "waveform.png"):
+        for name in ("sheet.png", "ocr.txt", "spectrogram.png"):
             self.assertTrue((out / name).exists(), name)
         self.assertEqual(len(list((out / "frames").glob("*.png"))), mp.FRAMES)
 

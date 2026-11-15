@@ -72,7 +72,6 @@ import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
 import flag_loop  # authoring/tools/flag_loop.py: open player flags, causes
 import media_first  # authoring/tools/media_first.py: `qgen batch --media-first` steps (plan 203)
-import media_pilot  # authoring/tools/media_pilot.py: `qgen media-pilot` (plan 201)
 import media_probe  # authoring/tools/media_probe.py: `qgen media-probe` (plan 201)
 import media_survey  # authoring/tools/media_survey.py: `qgen media-survey` (plan 201)
 import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 96)
@@ -2126,7 +2125,6 @@ def main():
     pn.add_argument("--json", action="store_true", help="JSON on stdout")
     media_survey.add_parser(sub)
     media_probe.add_parser(sub)
-    media_pilot.add_parser(sub)
     # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging
     add("media", cmd_media)
     add("sheets", cmd_sheets)

@@ -41,7 +41,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
   - Older text (`tasks.sql`: milestones, plans, tasks, decisions) still says "the gamemaster" for the developer: read it as "the developer"; new text says "the developer".
 
 ## Making questions
-- Asked to make, add, review or approve questions: follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly, nothing else. One command, `qgen batch` (`--bundle <id>` for a bundle other than `base`; `--translate <locale>` when a language is named).
+- Asked to make, add, review or approve questions: follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly, nothing else. One command, `qgen batch` (`--bundle <id>` for a bundle other than `base`; `--translate <locale>` when a language is named; `--media-first` for sound and video questions from Commons files, plan 203).
 - Don't run pipeline steps by hand, edit the pools or pick media.
 - `qgen rework`, `qgen tighten`, `qgen neutralize`: only when the developer asks.
 

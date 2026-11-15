@@ -3,6 +3,7 @@ import argparse, datetime, json, sys, time
 
 import layout  # paths (D-35)
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
+import media_first  # authoring/tools/media_first.py: fixed media slot checks (plan 203)
 import flag_loop  # authoring/tools/flag_loop.py
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
@@ -11,10 +12,11 @@ from qgen import FACT_FIELDS, STR, claude, cmd_export, cmd_sync_run, costs, load
 
 
 def revise_steps(ns, model, review_model):
-    """fix → fact check → review with a new media search → record: rework and the scan modes (QG-23);
+    """fix → fact check → review with a new media search (a media-first question: background only) → record: rework and the scan modes (QG-23);
     a scan run searches only slots without a kept pick (kept_slots)."""
     return [
         ("fix", cmd_fix, ns(model=model, check_model="sonnet")),
+        ("giveaway", lambda a: media_first.check_fixed(a.run), ns()),  # media-first questions only (plan 203)
         ("media", cmd_media, ns()),
         ("sheets", cmd_sheets, ns()),
         ("review 1", cmd_review, ns(model=review_model, round=1)),

@@ -950,8 +950,7 @@ def media_first_line(pool):
     m = media_first.multimedia_count(pool)
     share = f"{m['share']:.1%}" if m["share"] is not None else "-"
     return (f"multimedia (decision 641): {m['count']} approved audio/video, {m['added']} added since the start "
-            f"(goal {m['target']}, {max(0, m['target'] - m['count'])} to go), {share} of {m['total']} approved base, "
-            f"{m['held']} held (excerpt)")
+            f"(goal {m['target']}, {max(0, m['target'] - m['count'])} to go), {share} of {m['total']} approved base")
 
 
 def engine_model(results):

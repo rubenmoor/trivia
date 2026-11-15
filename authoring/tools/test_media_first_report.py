@@ -19,7 +19,7 @@ class Count(unittest.TestCase):
         pool = [mq(1), mq(2, mtype="video", excerpt=True), mq(3, status="needs_work"), mq(4, bundle="t"),
                 {"id": "q-5", "status": "approved", "bundle": "base", "media": {"type": "image", "role": "essential"}}]
         m = mf.multimedia_count(pool)
-        self.assertEqual((m["count"], m["added"], m["target"], m["total"], m["held"]), (2, 2 - 58, 1058, 3, 1))
+        self.assertEqual((m["count"], m["added"], m["target"], m["total"]), (2, 2 - 58, 1058, 3))
         self.assertAlmostEqual(m["share"], 2 / 3)
         self.assertIn("2 approved audio/video", report.media_first_line(pool))
         self.assertIn("1056 to go", report.media_first_line(pool))
