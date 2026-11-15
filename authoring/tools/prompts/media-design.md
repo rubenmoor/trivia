@@ -7,6 +7,13 @@ with Read). Write one English (`en`) question **built around this file**.
 - The answer comes from what players hear or see in the played window, never from the file's title or
   description (players never see those). The media is `essential`; `illustrative` only when the question
   stands without it.
+- The clip, not the text, carries the answer. Before answering, read the question and its four options
+  without the clip: if players of its difficulty could answer from the text alone (a plot ("a bride above
+  Nagasaki"), a dedicatee, a nickname's meaning, a biography ("Austrian church organist"), "same opera as a
+  famous aria"), move the clue to what is heard or seen (the piece's nickname, dance form, what the music
+  paints, instrument, voice, language, era of the sound). A clue that helps but leaves the clip to decide is
+  fine; never an ear test only musicians pass. The description and hint 1 never date the piece or rule out
+  options (a year, "debut", "weather forecast"): the house style's giveaway rule.
 - Say unambiguously what to listen or look for: "Listen: which animal makes this call?", "Watch: which sport
   is being played?". Never a question several things in the clip could answer (which shape, which colour,
   when the clip shows several).
