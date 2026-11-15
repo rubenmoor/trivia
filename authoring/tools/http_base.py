@@ -71,6 +71,10 @@ class BaseHandler(BaseHTTPRequestHandler):
         path = media_cache.cache_path(file_url)
         if not path.is_file():
             return self.send_json(404, {"error": "media_missing", "message": "not in the media cache; run trivia-media sync"})
+        try:
+            path = media_cache.playable_path(file_url)
+        except OSError as e:
+            return self.send_json(502, {"error": "convert_failed", "message": str(e)})
         return self.send_file(path)
 
     def send_static(self, url_path):

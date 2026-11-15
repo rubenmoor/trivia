@@ -12,6 +12,7 @@ import { availableParallelism } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
+import { VIDEO } from "./media-formats.mjs";
 import { cacheName, poolUrls, shippedName } from "./resolve.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -38,12 +39,6 @@ const TOOLS = check ? "" : `${version("ffmpeg", "-version")} | cwebp ${version("
 // Formats (decision 185); `args` and the version line make the settings hash.
 const IMAGE = { box: [3840, 2160], q: [82, 76, 70, 64, 60], args: ["-m", "6", "-metadata", "icc"] };
 const AUDIO = ["-vn", "-c:a", "libopus", "-b:a", "96k"];
-const VIDEO = [
-  ...["-map", "0:v:0", "-map", "0:a:0?"],
-  ...["-vf", "scale=w=min(1920\\,iw):h=min(1080\\,ih):force_original_aspect_ratio=decrease:force_divisible_by=2"],
-  ...["-c:v", "libvpx-vp9", "-crf", "33", "-b:v", "0", "-row-mt", "1", "-deadline", "good", "-cpu-used", "2"],
-  ...["-c:a", "libopus", "-b:a", "96k"],
-];
 const KIND = { ".webp": "image", ".opus": "audio", ".webm": "video" };
 const settings = { image: JSON.stringify(IMAGE), audio: JSON.stringify(AUDIO), video: JSON.stringify(VIDEO) };
 

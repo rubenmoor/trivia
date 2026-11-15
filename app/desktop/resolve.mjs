@@ -2,6 +2,7 @@
 import { createHash } from "node:crypto";
 import { open, readdir, readFile, realpath, stat } from "node:fs/promises";
 import path from "node:path";
+import { ensurePlayable, playableName } from "./playable.mjs";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
@@ -214,7 +215,7 @@ async function mergedBundles(data, mods) {
 
 // layers: enabled mods' folders, top first (plan 112); ours last. mods: the loaded ones { id, name, dir, entry?, bundles }, same order.
 // modsJs: `/mods.js` text (mods.mjs modsScript, decision 131).
-export function makeResolver({ dist, data, media, layers = [], mods = [], modsJs = "export default [];\n" }) {
+export function makeResolver({ dist, data, media, layers = [], mods = [], modsJs = "export default [];\n", playable = false }) {
   dist = path.resolve(dist);
   data = path.resolve(data);
   media = path.resolve(media);
@@ -261,7 +262,18 @@ export function makeResolver({ dist, data, media, layers = [], mods = [], modsJs
     if (rel === "/media") {
       const fileUrl = url.searchParams.get("url") ?? "";
       if (!(await urls()).has(fileUrl)) return json(404, { error: "not_found" });
-      const file = (await contained(media, cacheName(fileUrl))) ?? (await contained(media, shippedName(fileUrl)));
+      let file = await contained(media, cacheName(fileUrl));
+      const copy = file && playable && playableName(cacheName(fileUrl)); // dev: a WebM beside Theora and co
+      if (copy) {
+        const dst = path.join(media, copy);
+        try {
+          await ensurePlayable(file, dst);
+        } catch (e) {
+          return json(502, { error: "convert_failed", message: String(e.message).split("\n")[0] });
+        }
+        file = dst;
+      }
+      file ??= await contained(media, shippedName(fileUrl));
       return file ? sendFile(file, request) : json(404, { error: "media_missing" });
     }
     const file =

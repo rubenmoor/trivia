@@ -74,6 +74,7 @@ function mount(app: Connect.Server, dist: string | null): void {
     dist: dist ?? client,
     data: `${repo}app/data`,
     media: process.env.TRIVIA_MEDIA || `${repo}media`,
+    playable: true,
   });
   if (demo) console.log("trivia dev: demo");
   const save = makeSaveFile(saveDir());
