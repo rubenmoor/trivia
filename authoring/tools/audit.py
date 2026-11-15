@@ -5,6 +5,7 @@ from collections import Counter
 import layout  # paths (D-35)
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
+import media_first  # authoring/tools/media_first.py: review_input, the aids the review sees (decision 199)
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
@@ -147,6 +148,7 @@ def audit_input(q, pool, pool_en=None):
     return {"question": {k: named(q, translations.source_locale(q))[k] for k in ["id", "bundle", "subcategory", *QUESTION_FIELDS]}
                         | ({} if q.get("source") else {"locale": translations.source_locale(q)}),
             "media": slot(q["media"], "media"),
+            **({"media_first": media_first.review_input(q)} if q.get("media_first") and not q.get("source") else {}),
             "background": slot(q["background"], "background") if q.get("background") else None,
             "related": related_questions(q, pool, pool_en), **({"source": q["source"]} if q.get("source") else {})}
 
@@ -183,10 +185,12 @@ def audit_ids(run, ids, args):
     today = datetime.date.today().isoformat()
 
     def work(q):
-        user = "## Question to audit\n" + json.dumps(audit_input(q, pool, pool_en), ensure_ascii=False)
-        system = prompt(*names, locale=translations.source_locale(q), bundle=run_bundle(WORK / run),
-                        source_locale=q.get("source_locale"))
-        out, model = claude(system, user, AUDIT_SCHEMA, args.model, d, web=True, with_model=True)
+        inp = audit_input(q, pool, pool_en)
+        user = "## Question to audit\n" + json.dumps(inp, ensure_ascii=False)
+        mf = "media_first" in inp
+        system = prompt(*names, *(["media-first-checks"] if mf else []), locale=translations.source_locale(q),
+                        bundle=run_bundle(WORK / run), source_locale=q.get("source_locale"))
+        out, model = claude(system, user, AUDIT_SCHEMA, args.model, d, web=True, read=mf, with_model=True)
         if not lo <= out["difficulty_estimate"] <= hi:
             raise RuntimeError(f"difficulty_estimate {out['difficulty_estimate']} not {lo}–{hi}")
         save_json(d / f"{q['id']}.json", {**out, "model": model, "on": today})
