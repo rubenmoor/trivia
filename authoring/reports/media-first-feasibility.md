@@ -77,3 +77,22 @@ Ablation: blind triage (title + description) vs aided triage on the same 247 fil
 - Budget: media size: 54 % of files need an excerpt, so shipped excerpts must be cut (not whole files) to stay in the `app/desktop/media-budget.json` limits (`decision 185: Shipped media: formats, names and where the encode runs (SW-9)`).
 - Sample: 250 files of 6632, round-robin by seed; the yield has wide error bars per seed (1–5 files each).
 - Look share pending (`decision 642`); the estimates above assume nothing about it.
+
+## Shipped size and budget
+Measured 2026-11-15 (`task 2059: Media budget for 500 to 1000 more sound and video files: measure, decide, apply`): the pilot's 60 question media (`work/media-pilot/pilot-1/questions.jsonl`, 39 audio, 21 video) cut to their excerpts, levelled and encoded as `stage-media.mjs` does (Opus 96 kb/s; VP9 crf 33 ≤ 1080p), into a temp folder; per 100 new files and the totals against `app/desktop/media-budget.json`.
+- Per file, shipped: audio mean 0.56 MB (median 0.60, max 0.94; 46 s mean); video mean 9.68 MB (median 9.14, p90 21.3, max 22.9; 42 s mean, ≈ 14 MB per minute)
+- Same videos at 720p, crf 36: mean 5.66 MB (median 4.77, max 17.7): −42 %
+- Video share: 35 % in the pilot (21 of 60), 52 % of the survey's files (`work/media-survey/tally.json`, 4612 of 8912)
+- Per-file lines (`file` 5 MB, `video` 100 MB): no new file comes close
+- `audio` 7 MB is the music loops only: new question audio doesn't count there
+
+| Encode, video share | per 100 | 500 | 1000 |
+|---|---|---|---|
+| 1080p, 35 % | 375 MB | 1.9 GB | 3.8 GB |
+| 1080p, 52 % | 530 MB | 2.7 GB | 5.3 GB |
+| 720p, 35 % | 235 MB | 1.2 GB | 2.3 GB |
+| 720p, 52 % | 320 MB | 1.6 GB | 3.2 GB |
+| 1080p, video capped at 20 % | 240 MB | 1.2 GB | 2.4 GB |
+
+- `content` depot today, before any media-first file: 3097 MB of 950 MB (images 2783 MB, 5443 WebP); the line is broken already by the pool's growth
+- `content` with 1000 more at the pilot's mix, 1080p: ≈ 6.9 GB; installed ≈ 7.3 GB with the OS depot (store estimate today: 1.5 GB)
