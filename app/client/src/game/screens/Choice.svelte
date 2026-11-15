@@ -2,7 +2,7 @@
   // The Choice screen, the age screen (plans/04-ui-tv-display.md, "Choice"; plan 29, AG-7, BN-6; decision 314): «¿Cómo juega …?»,
   // after the Mode screen (and the Join screen in a multiplayer mode). Gamemaster mode: the configure game screen (MD-11, D-88):
   // difficulty, levels, cards, video, audio, answers (D-105), jokers; the other modes: the age group (1–4), one per seat in rr-competitive,
-  // and «Personalizar partida» (joker counts). «Seguir» goes to the Bundles screen, which holds the supply report and starts the game (decision 264).
+  // the video and audio switches (decision 645) and «Personalizar partida» (joker counts). «Seguir» goes to the Bundles screen, which holds the supply report and starts the game (decision 264).
   // Preset: the player's newest game (every field but the bundles and the mode), else the defaults; a returning draft wins. ↑/↓ move between lines, ←/→ change a value.
   import { onMount, untrack } from "svelte";
   import {
@@ -240,6 +240,10 @@
         {/each}
       </div>
       {/if}
+      <div class="lines switches">
+        {@render toggle("video", t("configure.video"), video, "film")}
+        {@render toggle("audio", t("configure.audio"), audio, "speaker")}
+      </div>
       {#if jokerMode}
       <div class="row" data-line>
         <button class="secondary customize" onclick={() => (customizing = true)} disabled={busy} data-focus-id="customize">
