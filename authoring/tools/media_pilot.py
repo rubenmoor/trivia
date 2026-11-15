@@ -6,18 +6,18 @@ each file the aided triage finds worth it, check it for giveaways. Throw-away pr
 (written on first run, editable; the real ones come in part 2). Output work/media-pilot/<run>/: sample.json,
 triage.jsonl, questions.jsonl (never a pool), calls.jsonl, pilot.md, look.html. Rerun = resume.
 """
-import html, json, random, re, threading, time
+import html, json, random, threading, time
 from collections import Counter, defaultdict
 from pathlib import Path
 
 import categories, layout, media_probe, progress
 from media import MAX_AUDIO_SECONDS, excerpt_schema  # authoring/tools/media.py
+from media_first import KINDS, STOP, heard_giveaway, words  # authoring/tools/media_first.py (plan 203)
 from media_survey import CLASSES, OUT as SURVEY
 
 OUT = layout.WORK / "media-pilot"
 PROMPTS = OUT / "prompts"
 SHARES = {"general": 0.64, "pd-music": 0.18, "pd-film": 0.18}  # pd classes apart (decision 640)
-KINDS = ("animal", "instrument", "language", "machine", "place", "event-person", "piece-film", "video-scene")
 AIDS = ("frame_sheet", "ocr", "spectrogram", "waveform", "loudness", "silence", "speech")
 EFFECTS = ("wrong_content", "spoken_giveaway", "written_giveaway", "quality_reject", "confirms", "none")
 
@@ -158,22 +158,6 @@ def aids_text(p):
     if p.get("speech"):
         a["speech"] = p["speech"]
     return {"pictures_to_read": pics, **a}
-
-
-def words(text):
-    return {w for w in re.findall(r"[a-zà-ÿ]{4,}", text.lower())}
-
-
-STOP = {"this", "that", "with", "from", "sound", "sounds", "audio", "video", "file", "files", "recording", "call",
-        "calls", "song", "music", "piece", "film", "footage", "scene", "view", "playing", "being"}
-
-
-def heard_giveaway(answer, probe):
-    """Words of the answer (4+ letters, no filler) in the speech or the OCR text: a giveaway the model missed."""
-    d = Path(probe["dir"])
-    said = (probe.get("speech") or {}).get("text") or ""
-    seen = (d / "ocr.txt").read_text() if (d / "ocr.txt").exists() else ""
-    return sorted((words(answer) - STOP) & words(said + " " + seen))
 
 
 def in_categories(subject, f):
