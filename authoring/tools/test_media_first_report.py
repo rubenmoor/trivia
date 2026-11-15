@@ -1,5 +1,5 @@
 """Media-first reports (plan 203): funnel per seed and class, decision 641 count, cost; fixture runs, no network."""
-import json, sys, tempfile, unittest
+import sys, tempfile, unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))

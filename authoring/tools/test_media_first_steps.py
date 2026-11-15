@@ -151,10 +151,25 @@ class Steps(unittest.TestCase):
         q = qgen.load_json(self.run / "drafts" / f"{mf.tmp_id(f['title'])}.json")["questions"][0]
         self.assertEqual(q["media"]["work"], work)
 
+    def test_answer_once_per_run(self):
+        a, b = survey_file("ode", "pd-music"), survey_file("egmont", "pd-music")
+        self.queue(a, b)
+        self.triage_done((a, "Ode to Joy"), (b, "Egmont Overture"))
+        work = {"title": "W", "creator": "Beethoven", "year": 1824, "basis": "composer died 1827"}
+        self.answers = {a["title"]: [design_out("Beethoven", work=work)],
+                        b["title"]: [design_out("Beethoven", work=work), design_out("Egmont", work=work)]}
+        mf.design(self.run, jobs=1)
+        self.assertEqual(self.calls[1][1]["run_answers"], ["Beethoven"])
+        self.assertIn("already has the answer", self.calls[2][1]["previous_attempt"]["problems"][0])
+        self.assertEqual(mf.run_answers(self.run), ["Beethoven", "Egmont"])
+
     def test_known_subject(self):
         self.assertEqual(mf.known_subject("Rooster crowing", ["Cat", "Rooster"]), "Rooster")
         self.assertIsNone(mf.known_subject("Thunderstorm", ["Thunder"]))
         self.assertEqual(mf.known_subject("cats meowing", ["Cat"]), "Cat")
+        self.assertEqual(mf.known_subject("Thunder and lightning during a storm", ["Thunder"]), "Thunder")
+        self.assertIsNone(mf.known_subject("Queen of the Night aria from Mozart's The Magic Flute", ["A flute"]))
+        self.assertIsNone(mf.known_subject("Opera aria (La mamma morta, Andrea Chénier)", ["An opera"]))
 
 
 if __name__ == "__main__":
