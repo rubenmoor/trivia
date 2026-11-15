@@ -41,10 +41,11 @@ const TOOLS = check ? "" : `${version("ffmpeg", "-version")} | cwebp ${version("
 
 // Formats (decision 185); `args` and the version line make the settings hash.
 const IMAGE = { box: [3840, 2160], q: [82, 76, 70, 64, 60], args: ["-m", "6", "-metadata", "icc"] };
+const GIF = { widths: [1280, 960, 640], q: [60, 40, 25], max: 4 * MB };
 const AUDIO = ["-vn", "-c:a", "libopus", "-b:a", "96k"];
 const KIND = { ".webp": "image", ".opus": "audio", ".webm": "video" };
 const LEVEL = `loudnorm ${TARGET_LUFS} ${TRUE_PEAK}`; // in the hash: a new target re-encodes
-const settings = { image: JSON.stringify(IMAGE), audio: JSON.stringify(AUDIO) + LEVEL, video: JSON.stringify(VIDEO) + LEVEL };
+const settings = { image: JSON.stringify(IMAGE) + JSON.stringify(GIF), audio: JSON.stringify(AUDIO) + LEVEL, video: JSON.stringify(VIDEO) + LEVEL };
 
 const ffmpeg = (src, args, dst) => run("ffmpeg", ["-nostdin", "-v", "error", "-y", "-i", src, ...args, "-map_metadata", "-1", dst]);
 
@@ -73,6 +74,16 @@ async function image(src, dst) {
   return s < 1;
 }
 
+// Animated GIF → animated WebP (ffmpeg): width and quality step down until it fits GIF.max.
+async function gif(src, dst) {
+  for (const w of GIF.widths)
+    for (const q of GIF.q) {
+      await ffmpeg(src, ["-vf", `scale=min(${w}\\,iw):-2`, "-c:v", "libwebp_anim", "-lossless", "0", "-q:v", String(q), "-loop", "0", "-an"], dst);
+      if (statSync(dst).size <= GIF.max) return true;
+    }
+  return true;
+}
+
 // → the encoded file in work/ship-media/ (new or cached) and whether it was encoded now.
 async function encode(src, name, excerpt) {
   const ext = path.extname(name);
@@ -85,7 +96,7 @@ async function encode(src, name, excerpt) {
   const tmp = `${file}.part${ext}`;
   let resized = false;
   let levelled = false;
-  if (kind === "image") resized = await image(src, tmp);
+  if (kind === "image") resized = path.extname(src).toLowerCase() === ".gif" ? await gif(src, tmp) : await image(src, tmp);
   else {
     const cut = excerpt ? ["-ss", String(excerpt.start), "-to", String(excerpt.end)] : [];
     const m = await measure(src, cut); // levelled after the cut; null: silent, left as is

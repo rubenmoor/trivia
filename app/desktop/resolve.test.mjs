@@ -267,7 +267,10 @@ test("/media: cacheName (raw cache), else shippedName (packaged)", async () => {
   const gif = "https://x.org/c/dance.gif";
   assert.equal(shippedName(raw), cacheName(raw).replace(/\.jpg$/, ".webp"));
   assert.equal(shippedName(enc), cacheName(enc).replace(/\.mp3$/, ".opus"));
-  assert.equal(shippedName(gif), cacheName(gif));
+  assert.equal(shippedName(gif), cacheName(gif).replace(/\.gif$/, ".webp"));
+  const svg = "https://x.org/c/logo.svg";
+  assert.equal(shippedName(svg), cacheName(svg));
+  assert.equal(shippedName("https://x.org/d/scan.TIF"), cacheName("https://x.org/d/scan.TIF").replace(/\.tif$/, ".webp"));
   put("mdata/pool.json", JSON.stringify({ questions: [{ media: { file_url: raw }, background: { file_url: enc } }] }));
   put(`mmedia/${cacheName(raw)}`, "raw owl");
   put(`mmedia/${shippedName(raw)}`, "webp owl");
