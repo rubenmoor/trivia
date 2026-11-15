@@ -47548,7 +47548,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Per file > 5 MB, shipped as is: `23c3200381d813b2.gif` 94.7 MB, `25d593dc66812533.tif` 46.1, `514ee0a8731edb2c.tif` 22.9, `4271dac78f4440ed.tif` 16.3, `9a77e9589a31342f.tif` 12.6, `6fc58e2e90ff0050.tif` 5.4 MB; content also holds `.tif`/`.tiff` (5), `.gif` (7), one `.xcf`, one `.mid`. `decision 185: Shipped media: formats, names and where the encode runs (SW-9)` says images become WebP (GIF/SVG as is): find why TIFs aren''t encoded (`app/desktop/stage-media.mjs`, `resolve.mjs` `shippedName`), whether XCF/MID questions belong in a pool at all (`qgen validate` gap?), and what to do with a 95 MB GIF (re-encode to WebM/animated WebP, or replace the media via the review page).
 - DLC depots: colombia 726 MB, mexico 812 MB of `default_dlc` 75 MB (`app/desktop/media-budget.json`); mostly WebP images. Measure, then raise a decision with options (raise the line / smaller images for packs).
 Done when: `stage-media.mjs --check` reports no per-file and no DLC failure; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T20:44:08Z', NULL, 2059, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2090, 202, 'merge the trunk and work tree app', 'merge', 'open', 502, NULL, 'The trunk and work tree app (this checkout, branch `pm/wt/app`) conflict: merging one into the other fails. The
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2090, 202, 'merge the trunk and work tree app', 'merge', 'done', 502, '2026-11-15, authoring/reports/media-first-feasibility.md: conflict was both sides appending a section at the end (task 2059 ''Shipped size and budget'', task 2066 ''Trial run''); kept both, removed markers', 'The trunk and work tree app (this checkout, branch `pm/wt/app`) conflict: merging one into the other fails. The
 work tree holds the work of `task 2059: Media budget for 500 to 1000 more sound and video files: measure, decide, apply`.
 * `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
   read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
@@ -47557,7 +47557,17 @@ work tree holds the work of `task 2059: Media budget for 500 to 1000 more sound 
   `git merge --abort`
 Your note on `pm task done`: what conflicted and how you resolved it.
 
-Conflicting files: authoring/reports/media-first-feasibility.md', '2026-11-15T20:44:25Z', NULL, NULL, 0, NULL, 'app');
+Conflicting files: authoring/reports/media-first-feasibility.md', '2026-11-15T20:44:25Z', '2026-11-15T20:44:41Z', NULL, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2091, 202, 'merge the trunk and work tree app', 'merge', 'open', 504, NULL, 'The trunk and work tree app (this checkout, branch `pm/wt/app`) conflict: merging one into the other fails. The
+work tree holds the work of `task 2059: Media budget for 500 to 1000 more sound and video files: measure, decide, apply`.
+* `git merge --no-commit main` (the trunk''s HEAD), then resolve every conflict so both sides'' intent survives;
+  read the tasks involved (`pm show <id>`) and the commits (`git log -p HEAD...main`) where it isn''t obvious
+* run the checks the project has for the files involved
+* stage the result (`git add`); pm commits the merge and merges this work tree into the trunk. Don''t
+  `git merge --abort`
+Your note on `pm task done`: what conflicted and how you resolved it.
+
+Conflicting files: authoring/reports/media-first-feasibility.md', '2026-11-15T20:44:44Z', NULL, NULL, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -56833,6 +56843,7 @@ log: /home/ruben/code/trivia/.git/pm-logs/task-2066-run-2253.log', -15, '8c2b250
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2254, 2066, '2026-11-15T19:49:04Z', '2026-11-15T20:43:04Z', 'done', NULL, 0, '8c2b250eb50af7b34dd17b85c583a67709623e3a', 'questions', 'claude-opus-5-5', 'a3ce6130-02e5-4509-bf53-c16efac67d19', NULL, 34, 66, 19965, 2494677, 90506, 1.6225474, 104859, 60, 1042222);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2255, 2059, '2026-11-15T19:49:04Z', '2026-11-15T20:44:25Z', 'blocked', NULL, 0, '8c2b250eb50af7b34dd17b85c583a67709623e3a', 'app', 'claude-opus-5-5', 'b120af2f-4f17-4c38-849c-be986a07a2d9', NULL, 26, 52, 14184, 1459085, 61648, 1.068889, 76871, 60, 1042222);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2256, 2067, '2026-11-15T20:43:05Z', NULL, 'running', NULL, NULL, 'aa09e4eb9f97447354f029776ccc0135bb55faed', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1042222);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2257, 2090, '2026-11-15T20:44:26Z', '2026-11-15T20:44:44Z', 'done', NULL, 0, '2c2db0e29892a23e77d8c48a8cc84ca8aab86889', 'app', 'claude-sonnet-5-5', '09fee758-0e18-470e-a54e-405b0240ff7c', NULL, 5, 10, 798, 158618, 23812, 0.1191098, 38309, 60, 1042222);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
