@@ -14,6 +14,12 @@ MEDIA_PLAY_FIELDS = ["type", "role", "file_url", "source_url", "credit", "provid
 BACKGROUND_PLAY_FIELDS = ["file_url", "source_url", "credit", "provider", "license", "license_url", "author", "author_url"]
 
 
+def held(q):
+    """True while the question stays out of the playable pools: it has `media.excerpt` and play can't
+    use it yet (`excerpt` not in MEDIA_PLAY_FIELDS, plan 203)."""
+    return bool((q.get("media") or {}).get("excerpt")) and "excerpt" not in MEDIA_PLAY_FIELDS
+
+
 def play_entry(q):
     """An approved question with only what play needs (no reviews, ratings, revisions or pipeline fields)."""
     e = {k: q[k] for k in PLAY_FIELDS}

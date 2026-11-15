@@ -11,7 +11,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import categories, layout, media_probe, progress
-from media import MAX_AUDIO_SECONDS  # authoring/tools/media.py
+from media import MAX_AUDIO_SECONDS, excerpt_schema  # authoring/tools/media.py
 from media_survey import CLASSES, OUT as SURVEY
 
 OUT = layout.WORK / "media-pilot"
@@ -113,11 +113,6 @@ def sample(files, n, seed):
 def slug_schema():
     cats = categories.load("base")
     return [c["slug"] for c in cats], sorted({s for c in cats for s in c["subcategories"]})
-
-
-def excerpt_schema():
-    return {"anyOf": [{"type": "null"}, {"type": "object", "additionalProperties": False, "required": ["start", "end"],
-                                         "properties": {"start": {"type": "number"}, "end": {"type": "number"}}}]}
 
 
 def triage_schema(aided):

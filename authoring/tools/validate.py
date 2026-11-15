@@ -7,6 +7,7 @@ import age_groups  # authoring/tools/age_groups.py: level ranges per group (plan
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # authoring/tools/media_cache.py: the media cache (D-17)
+import media_survey  # authoring/tools/media_survey.py: file classes (plan 201)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
@@ -14,6 +15,7 @@ import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 9
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import demo  # authoring/tools/demo.py: `qgen demo` (plan 174)
 
+from media import MAX_AUDIO_SECONDS  # authoring/tools/media.py
 from qgen import PROBLEMS, check_question_shape, load_age_groups, load_bundles, load_json, natural_key  # authoring/tools/qgen.py
 
 
@@ -58,6 +60,7 @@ def validate_pool():
         m = q.get("media", {})
         if m.get("type") not in {"image", "audio", "video"} or m.get("role") not in {"decorative", "illustrative", "essential"}:
             errors.append(f"{qid}: bad media type/role")
+        errors += [f"{qid}: {p}" for p in media_first_problems(q)]
         bg = q.get("background")
         if (bg is not None) != (m.get("type") == "audio"):
             errors.append(f"{qid}: background must be set exactly for audio questions (D-14)")
@@ -157,6 +160,48 @@ def released_ids():
         if re.fullmatch(r"app/data/(bundles/[^/]+/)?pool(\.[A-Za-z-]+)?\.json", f):
             ids |= {q["id"] for q in json.loads(git("show", f"{tags[0]}:{f}").stdout)["questions"]}
     return tags[0], ids
+
+
+def _num(x):
+    return isinstance(x, (int, float)) and not isinstance(x, bool)
+
+
+def media_first_problems(q):
+    """Problems of the media-first fields (plan 203, decisions 640, 644): media.excerpt, duration, work; media_first."""
+    m, mf, out = q.get("media") or {}, q.get("media_first"), []
+    timed = m.get("type") in {"audio", "video"}
+    d = m.get("duration")
+    if "duration" in m and not (timed and _num(d) and d > 0):
+        out.append("media.duration must be a number > 0 on audio/video media")
+    if m.get("excerpt") is not None:
+        x = m["excerpt"]
+        if not timed:
+            out.append("media.excerpt only on audio/video media")
+        elif not (isinstance(x, dict) and set(x) == {"start", "end"} and _num(x["start"]) and _num(x["end"])):
+            out.append("media.excerpt must be {start, end} numbers")
+        elif not 0 <= x["start"] < x["end"]:
+            out.append("media.excerpt needs 0 <= start < end")
+        elif x["end"] - x["start"] > MAX_AUDIO_SECONDS:
+            out.append(f"media.excerpt longer than {MAX_AUDIO_SECONDS} s")
+        elif _num(d) and x["end"] > d:
+            out.append("media.excerpt ends after media.duration")
+    cls = mf.get("class") if isinstance(mf, dict) else None
+    if mf is not None:
+        if not (isinstance(mf, dict) and set(mf) == {"seed", "class", "kind", "probe"}):
+            out.append("media_first must be {seed, class, kind, probe}")
+        else:
+            if cls not in media_survey.CLASSES:
+                out.append(f"media_first.class must be one of {', '.join(media_survey.CLASSES)}")
+            out += [f"media_first.{k} must be a non-empty string" for k in ("seed", "kind")
+                    if not (isinstance(mf[k], str) and mf[k])]
+    w = m.get("work")
+    if cls in {"pd-music", "pd-film"}:
+        if not (isinstance(w, dict) and set(w) == {"title", "creator", "year", "basis"}
+                and all(isinstance(w[k], (str, int)) and not isinstance(w[k], bool) and w[k] != "" for k in w)):
+            out.append(f"media.work {{title, creator, year, basis}} required for class {cls}")
+    elif w is not None:
+        out.append("media.work only for media_first class pd-music or pd-film")
+    return out
 
 
 def source_locale_problems(q, bundle):
