@@ -215,6 +215,36 @@ class FixedSlot(Base):
         self.assertIn("giveaway", q["review"]["problems"])
         self.assertEqual({k: q["media"][k] for k in self.q["media"]}, self.q["media"])
 
+    def test_review_and_fix_see_the_aids(self):
+        (self.work / "media-probe" / "lion" / "spectrogram.png").write_bytes(b"png")
+        self.patch(mf, "LEDGER", self.work / "media-first" / "files.jsonl")
+        mf.record("batch-1", [{"title": "File:lion.ogg", "seed": "s", "worth": True, "verdict": "worth"}])
+        mf.write_jsonl(self.d / mf.QUEUE, [{"title": "File:lion.ogg", "description": "A lion roaring at dusk",
+                                            "categories": ["Panthera leo"]}])
+        seen = []
+
+        def stub(system, user, schema, model, cwd, read=False, **kw):
+            seen.append((system, json.loads(user.split("\n", 1)[1]), read))
+            if "results" in schema["properties"]:
+                return {"results": []}
+            out = {"decision": "needs_work", "feedback": "f", "fix": "x", "pick": None, "background_pick": None,
+                   "new_query": None, "reasons": "r", "problems": ["giveaway"]}
+            return (out, "opus") if kw.get("with_model") else out
+        self.patch(review_steps, "claude", stub)
+        review_steps.cmd_review(argparse.Namespace(run="batch-1", round=1, jobs=1, model="opus"))
+        review_steps.cmd_fix(argparse.Namespace(run="batch-1", jobs=1, model="opus"))  # the stub answers no fix
+        (rs, review, rread), (fs, fix, fread) = seen
+        mfi, fixed = review["media_first"], fix[0]["media_first"]
+        self.assertTrue(rread and fread)
+        self.assertIn("Media-first questions", rs)
+        self.assertIn("Media-first questions", fs)
+        self.assertEqual(mfi["aids"]["pictures_to_read"], [str(self.work / "media-probe" / "lion" / "spectrogram.png")])
+        self.assertEqual(mfi["aids"]["speech"]["text"], "a lion roars")
+        self.assertEqual(mfi["commons"], {"description": "A lion roaring at dusk", "categories": ["Panthera leo"]})
+        self.assertEqual((mfi["file"], mfi["class"]), ("File:lion.ogg", "general"))
+        self.assertEqual([f["check"] for f in mfi["mechanical"]], ["answer-heard"])
+        self.assertEqual(fixed, mfi)
+
     def test_merge_keeps_media_and_provenance(self):
         self.pool.write_text(json.dumps({"questions": [{**self.q, "id": "q-0100", "status": "approved", "batch": "x",
                                                        "answer": "Zebra", "concept": "Zebra"}]}))

@@ -245,11 +245,10 @@ def cmd_review(args):
             "existing": rework,
         }
         if q.get("media_first") and not locale:
-            payload["media_first"] = {k: q["media_first"][k] for k in ("kind", "class")} | {
-                "excerpt": q["media"].get("excerpt"), "duration": q["media"].get("duration"),
-                "aids": media_first.aids(media_first.load_probe(q["media_first"]["probe"]))}
+            payload["media_first"] = media_first.review_input(q)
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
-        system = prompt(*names, locale=locale or translations.source_locale(q), bundle=run_bundle(d),
+        system = prompt(*names, *(["media-first-checks"] if "media_first" in payload else []),
+                        locale=locale or translations.source_locale(q), bundle=run_bundle(d),
                         source_locale=q.get("source_locale"))
         out, model = claude(system, user, REVIEW_SCHEMA, args.model, d, read=True, with_model=True)
         r[f"round{args.round}"] = {**out, "model": model}
@@ -305,10 +304,12 @@ def cmd_fix(args):
 
     def ask(group, items):
         """(q, path, r, rev, fix) per answered question; a malformed revision becomes action `malformed`."""
-        system = prompt("house-style", "revise", locale=translations.source_locale(group[0][0]), bundle=run_bundle(d),
+        mf = any("media_first" in x for x in items)
+        system = prompt("house-style", "revise", *(["media-first-checks"] if mf else []),
+                        locale=translations.source_locale(group[0][0]), bundle=run_bundle(d),
                         source_locale=group[0][0].get("source_locale"))
         out = claude(system, "## Questions with issues\n" + json.dumps(items, ensure_ascii=False), REVISE_SCHEMA,
-                     args.model, d)
+                     args.model, d, read=mf)
         got = {x["id"]: x for x in out["results"]}
         answered = []
         for q, path, r, _ in group:
@@ -331,7 +332,9 @@ def cmd_fix(args):
         answered, missing = ask(group, [
             {**for_review({**q, "tmp_id": q["id"]}), "issues": issues_of(issue, checks.get(tmp_of.get(q["id"]))),
              "background_query": (q.get("background") or {}).get("query", ""),
-             "needs_media": q.get("needs_media", False)} for q, _, _, issue in group])
+             "needs_media": q.get("needs_media", False),
+             **({"media_first": media_first.review_input(q)} if q.get("media_first") else {})}
+            for q, _, _, issue in group])
         changes, changed = {}, {}
         for q, _, _, rev, fix in answered:
             if fix["action"] == "revise" or (rework and fix["action"] == "keep"):

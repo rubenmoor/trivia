@@ -92,3 +92,11 @@ A first live run of the media-first pipeline, `qgen batch --media-first --files 
   - Same answer: 7 of the first 15 designs were "Which composer? Beethoven". Design now sees `run_answers` and must pick another answer that still comes from listening (nickname, dance form, what the music paints); 3 designs took a second attempt, two more were re-designed after asking about a city and a dedicatee.
 - Open: probe took 28m50s for 40 files (mean length 288 s: long music), against the pilot's 59 min for 250 mixed files. A 120-designed run (≈ 300 files) would spend hours probing: `task 2088: Media-first probe: faster on long files`.
 - For the review (`task 2071: Media-first review prompt with the judging aids`): pd-music questions lean on facts around the piece; the review must ask whether a listener can answer from the clip.
+
+## Trial re-review (task 2071)
+The trial's 17 designed questions went through the media-first review (`prompts/media-first-checks.md`, opus, aids and mechanical findings in the input) to check it judges the way the developer's pilot look did (`decision 642: Media-first pilot: how many would you approve?`). Results in `work/rereview-2071/` (first prompt in `work/rereview-2071-r1/`).
+
+- Good file, bad question → fix: 17 of 17 `needs_work` with a text `fix`, every file judged fit (loudness, spectrogram, licence, no names heard); none sent back for the media.
+- Why: question text answers alone 9 (Nagasaki, Napoleon, Nessun dorma, Jupiter, Goethe's Egmont…), description or hint 1 rules out options 7, wrong fact in a hint 3, a UK spelling 1. Duplicates: none reached design (triage dropped 6); unclear "what to listen for": none.
+- First prompt: fixes stripped harmless title words ("symphony", "Beethoven") because the hard `title-words` check fired on 10 of 17, and some turned questions into ear tests for musicians; the prompt now names false flags and keeps fixes playable (`task 2093: Media-first title-words check: soft, or only words that answer`, `task 2094: Media-first design: the clip, not the text, must carry the answer`).
+- Cost: 34 opus calls (two passes), $4.54, $0.13 per review.
