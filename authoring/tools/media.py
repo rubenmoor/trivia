@@ -35,6 +35,12 @@ MIN_ESSENTIAL_WIDTH = 800
 MAX_AUDIO_SECONDS = 60
 
 
+def excerpt_schema():
+    """JSON schema of `media.excerpt` (decision 644): null or {start, end} seconds."""
+    return {"anyOf": [{"type": "null"}, {"type": "object", "additionalProperties": False, "required": ["start", "end"],
+                                         "properties": {"start": {"type": "number"}, "end": {"type": "number"}}}]}
+
+
 def acceptable(c, role):
     if c["type"] == "image":
         min_w = MIN_ESSENTIAL_WIDTH if role == "essential" else MIN_DECORATIVE_WIDTH
