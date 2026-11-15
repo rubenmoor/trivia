@@ -86,6 +86,57 @@ def search(query, kind, limit=30):
     return out
 
 
+def members(category, kind):
+    """Titles directly in a category. kind: subcat | file. Pages through `cmcontinue`."""
+    out, cont = [], {}
+    while True:
+        r = api(list="categorymembers", cmtitle=category, cmtype=kind, cmlimit="max", **cont)
+        out += [m["title"] for m in r.get("query", {}).get("categorymembers", [])]
+        cont = r.get("continue")
+        if not cont:
+            return out
+
+
+def search_titles(query, filetype, limit=100):
+    """File titles for a search, best first (filetype: audio | video); no metadata."""
+    r = api(list="search", srnamespace=6, srlimit=min(limit, 500), srsearch=f"{query} filetype:{filetype}")
+    return [h["title"] for h in r.get("query", {}).get("search", [])]
+
+
+def file_records(titles):
+    """Survey metadata for a batch of file titles in one call: kind, size, duration, licence, author,
+    categories, description. Files without imageinfo (deleted) are left out."""
+    pages = {}
+    params = {"titles": "|".join(titles), "prop": "imageinfo|categories", "cllimit": "max",
+              "iiprop": "url|size|mime|mediatype|extmetadata",
+              "iiextmetadatafilter": "Artist|LicenseShortName|Restrictions|ImageDescription"}
+    cont = {}
+    while True:
+        r = api(**params, **cont)
+        for k, p in r.get("query", {}).get("pages", {}).items():
+            have = pages.setdefault(k, p)
+            if have is not p:
+                have["categories"] = have.get("categories", []) + p.get("categories", [])
+        cont = r.get("continue")
+        if not cont:
+            break
+    out = []
+    for p in pages.values():
+        if not p.get("imageinfo"):
+            continue
+        i = p["imageinfo"][0]
+        m = i.get("extmetadata") or {}
+        out.append({
+            "title": p["title"], "page_url": page_url(p["title"]), "file_url": i.get("url"),
+            "mediatype": (i.get("mediatype") or "").lower(), "mime": i.get("mime"),
+            "duration": i.get("duration"), "width": i.get("width"), "height": i.get("height"),
+            "license": plain(m.get("LicenseShortName", {}).get("value")),
+            "restrictions": restrictions(m), "author": plain(m.get("Artist", {}).get("value")),
+            "categories": [c["title"].removeprefix("Category:") for c in p.get("categories", [])],
+            "description": (plain(m.get("ImageDescription", {}).get("value")) or "")[:500]})
+    return out
+
+
 def download_url(candidate):
     """Large images as a thumbnail of IMAGE_WIDTH; everything else as found."""
     if candidate["type"] == "image" and (candidate["width"] or 0) > IMAGE_WIDTH:
