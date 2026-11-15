@@ -2,6 +2,7 @@
 // hard links (or copies) from the encode cache work/ship-media/.
 // build/pack-media.json: per shipped bundle folder, the media only it uses (its DLC depot carries them, decision 66; [] without a pool).
 // build/data/: app/data/ without topic bundle pools until all five topics have 2000 approved per locale (decision 520).
+// Audio and video sound is levelled to -18 LUFS after the cut (loudness.mjs).
 // Excerpt questions (decision 644): the build's pools point at `<url>#t=start,end`, one cut file per window; the media is cut to it.
 // --check: no encoding; build/media against the pools and media-budget.json, exit 1 on ✗.
 // --demo (or TRIVIA_DEMO=1, as the dist:*:demo scripts set it; decision 342): only app/data/demo/ pools (all locales) → build/media-demo/,
@@ -13,6 +14,7 @@ import { availableParallelism } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
+import { filter, measure, TARGET_LUFS, TRUE_PEAK } from "./loudness.mjs";
 import { VIDEO } from "./media-formats.mjs";
 import { cacheName, excerptOf, poolUrls, shipPool, shippedName, sourceUrl } from "./resolve.mjs";
 
@@ -41,7 +43,8 @@ const TOOLS = check ? "" : `${version("ffmpeg", "-version")} | cwebp ${version("
 const IMAGE = { box: [3840, 2160], q: [82, 76, 70, 64, 60], args: ["-m", "6", "-metadata", "icc"] };
 const AUDIO = ["-vn", "-c:a", "libopus", "-b:a", "96k"];
 const KIND = { ".webp": "image", ".opus": "audio", ".webm": "video" };
-const settings = { image: JSON.stringify(IMAGE), audio: JSON.stringify(AUDIO), video: JSON.stringify(VIDEO) };
+const LEVEL = `loudnorm ${TARGET_LUFS} ${TRUE_PEAK}`; // in the hash: a new target re-encodes
+const settings = { image: JSON.stringify(IMAGE), audio: JSON.stringify(AUDIO) + LEVEL, video: JSON.stringify(VIDEO) + LEVEL };
 
 const ffmpeg = (src, args, dst) => run("ffmpeg", ["-nostdin", "-v", "error", "-y", "-i", src, ...args, "-map_metadata", "-1", dst]);
 
@@ -81,10 +84,16 @@ async function encode(src, name, excerpt) {
   if (statSync(file, { throwIfNoEntry: false })) return { file, fresh: false };
   const tmp = `${file}.part${ext}`;
   let resized = false;
+  let levelled = false;
   if (kind === "image") resized = await image(src, tmp);
-  else await ffmpeg(src, [...(excerpt ? ["-ss", String(excerpt.start), "-to", String(excerpt.end)] : []), ...(kind === "audio" ? AUDIO : VIDEO)], tmp);
-  // Same format, not shrunk or resized (nor cut): the source is the better file.
-  if (!excerpt && path.extname(src) === ext && !resized && statSync(tmp).size >= size) copyFileSync(src, tmp);
+  else {
+    const cut = excerpt ? ["-ss", String(excerpt.start), "-to", String(excerpt.end)] : [];
+    const m = await measure(src, cut); // levelled after the cut; null: silent, left as is
+    levelled = !!m;
+    await ffmpeg(src, [...cut, ...(m ? ["-af", filter(m)] : []), ...(kind === "audio" ? AUDIO : VIDEO)], tmp);
+  }
+  // Same format, not shrunk or resized (nor cut or levelled): the source is the better file.
+  if (!excerpt && !levelled && path.extname(src) === ext && !resized && statSync(tmp).size >= size) copyFileSync(src, tmp);
   renameSync(tmp, file);
   return { file, fresh: true };
 }

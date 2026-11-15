@@ -75,6 +75,7 @@ Logged in [`open-questions.md`](open-questions.md) (frozen 2026-10-12; questions
 ## Risks
 - **Content volume and factual errors** are the most likely reason for bad reviews. A wrong answer in a public product costs more than at home. See 16 (quality bar) and 13 (a "report this question" action instead of the gamemaster's «Saltar y quemar para todos»).
 - **Media licensing:** ~290 Commons files under nine license types. ShareAlike, PD-US-only and GFDL need care in a worldwide commercial release (17). Freesound: its 2 picks dropped, audio Commons only (D-103, pm decision 184).
+- **Question media loudness (task 2058):** audio and video sound levelled to -18 LUFS (the music loops measure -18.0 ±0.1), true peak -1.5 dBTP, two-pass `loudnorm` after the excerpt cut (`app/desktop/loudness.mjs`, in the encode cache hash); silent files left as is.
 - **Install size:** ~1.1 GB installed (2026-10-14): media re-encoded for shipping (SW-9, D-104) 2549 → 679 MB; grows with the pool, capped by `app/desktop/media-budget.json` (`stage-media.mjs --check`, release check step `media-budget`).
 - **Engine port regressions:** the referee has subtle supply and matching rules. 12 builds fixtures from the Python engine before the port.
 - **Scope creep:** the three multiplayer modes (D-77, D-80) are `milestone 16: Local multiplayer: game modes and controls`; each ships when its mode is built. The release doesn't wait for them.
