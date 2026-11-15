@@ -1,7 +1,8 @@
 <script lang="ts">
   // The question's media (04-ui-tv-display.md): backdrop picture or video, the audio, the decorative mark, the credit.
   // Ready once loaded (UI-7); starts with the fade-in, not behind the black or while the overlay is open.
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
+  import { playWindow } from "../../engine/pool.ts";
   import type { Game } from "../../lib/types.ts";
   import { mediaVolume, music } from "../sound.svelte.ts";
   import Stage from "../Stage.svelte";
@@ -68,10 +69,30 @@
     return settled;
   }
 
+  // An excerpt (decision 644): play start→end, clamped to the file; polled, timeupdate is too coarse.
+  let watch: ReturnType<typeof setInterval> | undefined;
+  function begin() {
+    if (!player) return;
+    const w = playWindow(media.excerpt, player.duration);
+    clearInterval(watch);
+    if (w) {
+      player.currentTime = w.start;
+      watch = setInterval(() => {
+        if (player && player.currentTime >= w.end) {
+          clearInterval(watch);
+          player.pause();
+          onended();
+        }
+      }, 40);
+    }
+    player.play().catch(() => {});
+  }
+  onDestroy(() => clearInterval(watch));
+
   $effect(() => {
     if (!shown || paused || !player || started) return;
     started = true;
-    player.play().catch(() => {});
+    begin();
   });
 
   onMount(() => {
@@ -93,11 +114,12 @@
   export function replay() {
     if (!player || failed) return false;
     player.currentTime = 0;
-    player.play().catch(() => {});
+    begin();
     return true;
   }
 
   export function pause() {
+    clearInterval(watch);
     player?.pause();
   }
 </script>

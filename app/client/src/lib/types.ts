@@ -10,6 +10,13 @@ export interface Media {
   /** Exact URL of the picked file; served from the media cache (D-17). */
   file_url: string | null;
   credit: string | null;
+  /** Audio/video only: play just this window, seconds (decision 644); absent = the whole file. */
+  excerpt?: Excerpt;
+}
+
+export interface Excerpt {
+  start: number;
+  end: number;
 }
 
 /** Background image for audio questions (D-14). */
