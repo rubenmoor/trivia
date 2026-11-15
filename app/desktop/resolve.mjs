@@ -153,9 +153,9 @@ export function cacheName(url) {
   return createHash("sha1").update(url, "utf8").digest("hex").slice(0, 16) + ext;
 }
 
-// Packaged name (decision 185): cacheName's stem + the encoded format's extension.
+// Packaged name (decision 185): cacheName's stem + the encoded format's extension. TIF and GIF too (task 2089): browsers don't show TIF; GIFs go animated WebP.
 const SHIPPED = {
-  ...Object.fromEntries([".jpg", ".jpeg", ".png"].map((e) => [e, ".webp"])),
+  ...Object.fromEntries([".jpg", ".jpeg", ".png", ".tif", ".tiff", ".gif"].map((e) => [e, ".webp"])),
   ...Object.fromEntries([".mp3", ".ogg", ".oga", ".wav", ".flac", ".m4a"].map((e) => [e, ".opus"])),
   ...Object.fromEntries([".mp4", ".mov", ".ogv", ".mkv"].map((e) => [e, ".webm"])),
 };
