@@ -905,6 +905,8 @@ def multiplayer(r):
     r.settle(0.6)
     r.shot("join-5")
     seguir(r, '[data-focus-id^="group-"]')
+    r.settle(1)
+    r.shot("choice-rr-coop")
     seguir(r, ".bundles-screen")
     r.wait('[data-focus-id="start"]:enabled')
     r.settle(1)
@@ -929,6 +931,11 @@ def multiplayer(r):
     r.click('[data-focus-id="join-keyboard"]')
     type_key(r, "a")  # an answer letter: refused
     r.shot("join-keyboard-timed")
+    r.key("Escape")
+    r.settle(0.5)
+    seguir(r, '[data-focus-id^="group-"]')
+    r.settle(1)
+    r.shot("choice-timed")
     # Round-robin competitive: each seat its own age group; a short supply naming a seat.
     to_join(r, "rr-competitive", "short", pads=2)
     join_pads(r, 2)
@@ -1120,7 +1127,7 @@ STEPS = [
     (["flag-dialog", "flag-list"], flags),
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),
     (["mode-multi", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
-      "choice-rr-competitive", "bundles-session"], multiplayer),
+      "choice-rr-coop", "choice-timed", "choice-rr-competitive", "bundles-session"], multiplayer),
     (["start-resume-session", "menu-session", "seat-lost"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
       "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
