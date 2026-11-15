@@ -1,6 +1,7 @@
 // makeResolver: mod layers, path safety (plan 112), mod bundles (plan 115), /mods.js and /mods/<id>/ (plan 117). `npm test`
 import assert from "node:assert/strict";
-import { mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { existsSync, mkdirSync, mkdtempSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { after, test } from "node:test";
@@ -278,4 +279,23 @@ test("/media: cacheName (raw cache), else shippedName (packaged)", async () => {
   assert.equal(song.text, "opus song");
   assert.equal(song.type, "audio/ogg");
   assert.equal((await media(gif)).status, 404);
+});
+
+test("/media with playable: Theora-like sources get a WebM copy beside them, the original stays", async () => {
+  const ogv = "https://x.org/v/clip.ogv";
+  const src = path.join(tmp, "pmedia", cacheName(ogv));
+  mkdirSync(path.dirname(src), { recursive: true });
+  // A Matroska file stands in for Theora: same "needs a copy" extension rule .
+  execFileSync("ffmpeg", ["-nostdin", "-v", "error", "-y", "-f", "lavfi", "-i", "testsrc=size=64x48:rate=10:duration=1", "-c:v", "libvpx", "-f", "matroska", src]);
+  put("pdata/pool.json", JSON.stringify({ questions: [{ media: { file_url: ogv } }] }));
+  const dirs2 = { ...dirs, data: path.join(tmp, "pdata"), media: path.join(tmp, "pmedia") };
+  const url = "/media?url=" + encodeURIComponent(ogv);
+  const raw = await get(makeResolver(dirs2), url);
+  assert.equal(raw.status, 200);
+  assert.notEqual(raw.type, "video/webm");
+  const dev = await get(makeResolver({ ...dirs2, playable: true }), url);
+  assert.equal(dev.status, 200);
+  assert.equal(dev.type, "video/webm");
+  assert.ok(existsSync(path.join(tmp, "pmedia", "playable", cacheName(ogv).replace(/\.ogv$/, ".webm"))));
+  assert.ok(existsSync(src));
 });

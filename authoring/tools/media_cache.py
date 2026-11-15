@@ -4,7 +4,7 @@ Files are named after their URL: <TRIVIA_MEDIA or media/>/<sha1(file_url)[:16]><
 URLs that a question in the pool uses (`pool_urls`, app/desktop/resolve.mjs) and never downloads;
 `trivia-media sync` (authoring/tools/download.py) fills the cache ahead of game night.
 """
-import hashlib, json, re, urllib.parse
+import hashlib, json, re, subprocess, threading, urllib.parse
 from pathlib import Path
 
 from paths import MEDIA, pool_files
@@ -16,6 +16,38 @@ def cache_path(url):
     if not re.fullmatch(r"\.[a-z0-9]{1,5}", ext):
         ext = ".bin"
     return MEDIA / (hashlib.sha1(url.encode("utf-8")).hexdigest()[:16] + ext)
+
+
+# Chromium doesn't decode these; the review page gets a WebM copy (task 2053).
+NEEDS_PLAYABLE = {".ogv", ".mpg", ".mpeg", ".mov", ".mkv", ".mp4"}
+# Same args as app/desktop/media-formats.mjs VIDEO plus playable.mjs FAST.
+FFMPEG_VIDEO = [
+    "-map", "0:v:0", "-map", "0:a:0?",
+    "-vf", "scale=w=min(1920\\,iw):h=min(1080\\,ih):force_original_aspect_ratio=decrease:force_divisible_by=2",
+    "-c:v", "libvpx-vp9", "-crf", "33", "-b:v", "0", "-row-mt", "1", "-deadline", "good", "-cpu-used", "2",
+    "-c:a", "libopus", "-b:a", "96k", "-deadline", "realtime", "-cpu-used", "8",
+]
+_encode_lock = threading.Lock()
+
+
+def playable_path(url):
+    """The file to serve for url: the cached one, or for Theora and co a WebM copy at media/playable/<stem>.webm
+    (same name as app/desktop/playable.mjs playableName), made on first use. Raises OSError when ffmpeg fails."""
+    src = cache_path(url)
+    if src.suffix not in NEEDS_PLAYABLE or not src.is_file():
+        return src
+    dst = src.parent / "playable" / (src.stem + ".webm")
+    with _encode_lock:
+        if not dst.is_file():
+            dst.parent.mkdir(exist_ok=True)
+            tmp = dst.with_name(dst.stem + ".part.webm")
+            r = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-i", str(src), *FFMPEG_VIDEO,
+                                "-map_metadata", "-1", str(tmp)], capture_output=True, text=True)
+            if r.returncode:
+                tmp.unlink(missing_ok=True)
+                raise OSError("convert failed: " + (r.stderr.strip().splitlines() or ["ffmpeg"])[0])
+            tmp.replace(dst)
+    return dst
 
 
 def picked(q):
