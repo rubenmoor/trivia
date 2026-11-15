@@ -46,10 +46,10 @@ def resolve(arg):
 
 
 def streams(path):
-    r = run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type",
+    r = run(["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type:stream_disposition=attached_pic",
              "-of", "json", str(path)])
     j = json.loads(r.stdout)
-    kinds = {s["codec_type"] for s in j["streams"]}
+    kinds = {s["codec_type"] for s in j["streams"] if not s.get("disposition", {}).get("attached_pic")}  # cover art isn't video
     return float(j["format"].get("duration") or 0), "video" in kinds, "audio" in kinds
 
 
@@ -132,10 +132,20 @@ def speech(path, out, s, e):
     return {"language": m and m.group(1), "language_p": m and float(m.group(2)), "text": text}
 
 
+def out_dir(arg, start=None, end=None):
+    return OUT / hashlib.sha1(f"{arg}|{start}|{end}".encode()).hexdigest()[:16]
+
+
+def cached(arg, start=None, end=None):
+    """An earlier probe's probe.json dict (with its dir), else None."""
+    f = out_dir(arg, start, end) / "probe.json"
+    return json.loads(f.read_text()) | {"dir": str(f.parent)} if f.exists() else None
+
+
 def probe(arg, start=None, end=None, with_speech=True):
     """Write every artefact for one file; returns its probe.json dict."""
     path = resolve(arg)
-    out = OUT / hashlib.sha1(f"{arg}|{start}|{end}".encode()).hexdigest()[:16]
+    out = out_dir(arg, start, end)
     out.mkdir(parents=True, exist_ok=True)
     duration, has_video, has_audio = streams(path)
     s, e = window(duration, start, end)
