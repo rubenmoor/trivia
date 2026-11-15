@@ -1598128,6 +1598128,1451 @@
       "bundle": "uk",
       "locale": "en",
       "background": null
+    },
+    {
+      "id": "q-20634",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "A flute in such a hurry that it never stops to take a breath.",
+      "question": "Listen: who composed this lively piece with its racing flute melody?",
+      "answer": "Johann Sebastian Bach",
+      "wrong_answers": [
+        "Wolfgang Amadeus Mozart",
+        "Antonio Vivaldi",
+        "Pyotr Ilyich Tchaikovsky"
+      ],
+      "hints": [
+        "The composer lived in the Baroque era, around 300 years ago.",
+        "He wrote a huge amount of music for church services, including hundreds of cantatas.",
+        "He was a German organist who worked in Leipzig, and his works are numbered “BWV”."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_Chicago_Symphony_Orchestra%2C_Frederick_Stock_-_Orchestral_Suite_No._2_in_B_minor%2C_BWV_1067%2C_Polonaise_and_Double%2C_Minuet%2C_Badinerie_-_Bach_-_Hmv-d1674-6-0687.flac",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/PDP-CH_-_Chicago_Symphony_Orchestra%2C_Frederick_Stock_-_Orchestral_Suite_No._2_in_B_minor%2C_BWV_1067%2C_Polonaise_and_Double%2C_Minuet%2C_Badinerie_-_Bach_-_Hmv-d1674-6-0687.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-70"
+        ],
+        "role": "essential",
+        "query": "File:PDP-CH - Chicago Symphony Orchestra, Frederick Stock - Orchestral Suite No. 2 in B minor, BWV 1067, Polonaise and Double, Minuet, Badinerie - Bach - Hmv-d1674-6-0687.flac",
+        "note": "The Badinerie from Bach's Orchestral Suite No. 2: fast solo flute melody over strings. The start is estimated from the spectrogram (the louder section after ~150 s is likely the Minuet); confirm by ear that 210–268 s is inside the Badinerie.",
+        "duration": 268.46,
+        "excerpt": {
+          "start": 210,
+          "end": 268
+        },
+        "work": {
+          "title": "Orchestral Suite No. 2 in B minor, BWV 1067 (Badinerie)",
+          "creator": "Johann Sebastian Bach",
+          "year": "c. 1738",
+          "basis": "composer died 1750; 1928 recording, public domain"
+        }
+      },
+      "fun_fact": "This piece, the “Badinerie”, is the last movement of Bach's Orchestral Suite No. 2, and “badinerie” is French for joking or playful teasing.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Bach's Orchestral Suite No. 2 (Badinerie)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "The note admits the excerpt start was guessed from the spectrogram, so check by ear that 210–268 s really is the Badinerie. Hint 3 (J. S.) all but names Bach, which is allowed for a third hint."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "old concert hall interior",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpty_concert_hall_in_Katowice_%28Unsplash%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Empty_concert_hall_in_Katowice_%28Unsplash%29.jpg/3840px-Empty_concert_hall_in_Katowice_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Radek Grzybowski rgrzybowski · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Radek Grzybowski rgrzybowski",
+        "author_url": "https://unsplash.com/@rgrzybowski",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/fc051580d39f7fdd"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Took the date out of the description and replaced hint 2 with a weaker clue, moving the organist and Leipzig detail into hint 3, as the reviewer asked; the spectrogram shows steady music through the window.",
+        "previous": {
+          "description": "A flute in such a hurry that it forgot to take a breath for about 300 years.",
+          "hints": [
+            "The composer lived in the Baroque era, around 300 years ago.",
+            "He was a German organist who worked for many years in Leipzig.",
+            "His initials are J. S., and many of his works are numbered “BWV”."
+          ]
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20635",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "Trumpets and drums throw a party so loud that the whole concert hall wants to stand up and cheer.",
+      "question": "Listen: this is the blazing finale of a Beethoven overture written for a stage play. Which overture is it?",
+      "answer": "Egmont",
+      "wrong_answers": [
+        "Coriolan",
+        "Fidelio",
+        "The Creatures of Prometheus"
+      ],
+      "hints": [
+        "The play is about a real 16th-century count from the Low Countries who stood up to Spanish rule.",
+        "Goethe wrote the play, and Beethoven wrote its music for Vienna in 1810.",
+        "The title is the hero's name, and it starts with the letter E."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeethoven_-_Egmont_Overture%2C_Op._84_%28Musopen_Symphony%29.flac",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Beethoven_-_Egmont_Overture%2C_Op._84_%28Musopen_Symphony%29.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-author",
+          "PD-old-auto-expired"
+        ],
+        "role": "essential",
+        "query": "File:Beethoven - Egmont Overture, Op. 84 (Musopen Symphony).flac",
+        "note": "The loud, triumphant closing \"victory\" section of Beethoven's Egmont Overture, played by full orchestra with blazing brass and timpani.",
+        "duration": 540.9,
+        "excerpt": {
+          "start": 470,
+          "end": 530
+        },
+        "work": {
+          "title": "Egmont Overture, Op. 84",
+          "creator": "Ludwig van Beethoven",
+          "year": 1810,
+          "basis": "composer died 1827"
+        }
+      },
+      "fun_fact": "Beethoven admired Goethe deeply, and the two finally met in person in the spa town of Teplitz in 1812.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Beethoven's Egmont Overture",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 3,
+        "difficulty_estimate": 14,
+        "notes": "This is specialist knowledge and reads like a dry test. The description ('a hero who never gets to hear them') hints at Egmont's execution, which brushes against the tone rule. Fidelio is an opera, not a play overture, so it is a weaker distractor."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "orchestra concert hall stage",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Music_Centre_Concert_Hall_2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Helsinki_Music_Centre_Concert_Hall_2.jpg/3840px-Helsinki_Music_Centre_Concert_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Saruwine · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Saruwine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Saruwine",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/b8bcabd6be5a2c4e"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Moved the Goethe and Spanish-rule clues from the question into the hints so the clip decides, and rewrote the description so it no longer hints at the hero's fate.",
+        "previous": {
+          "description": "Trumpets, drums and a whole orchestra cheering for a hero who never gets to hear them.",
+          "question": "Listen: this Beethoven overture was written for a Goethe play about a nobleman who fought against Spanish rule. Which overture is it?",
+          "hints": [
+            "The play's hero was a real 16th-century count from the Low Countries.",
+            "Goethe finished the play in 1787, and Beethoven wrote music for a Vienna production in 1810.",
+            "The title is the hero's name, and it starts with the letter E."
+          ]
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20636",
+      "status": "needs_work",
+      "difficulty": 13,
+      "description": "An orchestra that drank three espressos before the concert and refuses to sit still.",
+      "question": "Listen to this fast, stormy symphony movement. Who composed it?",
+      "answer": "Ludwig van Beethoven",
+      "wrong_answers": [
+        "Wolfgang Amadeus Mozart",
+        "Joseph Haydn",
+        "Franz Schubert"
+      ],
+      "hints": [
+        "The composer was born in Bonn and spent most of his life in Vienna.",
+        "He kept writing music even after he went almost completely deaf.",
+        "His Fifth Symphony starts with the famous “da-da-da-DUM”."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeethoven_-_Symphony_No._3_in_E-flat_major%2C_Op._55_-_III._Scherzo_%28Berlin_Philharmonic%2C_Hans_Pfitzner%2C_1929%29_-_Polydor-66943a-925bi.oga",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Beethoven_-_Symphony_No._3_in_E-flat_major%2C_Op._55_-_III._Scherzo_%28Berlin_Philharmonic%2C_Hans_Pfitzner%2C_1929%29_-_Polydor-66943a-925bi.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Carl Flisch · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Carl Flisch",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-70"
+        ],
+        "role": "illustrative",
+        "query": "File:Beethoven - Symphony No. 3 in E-flat major, Op. 55 - III. Scherzo (Berlin Philharmonic, Hans Pfitzner, 1929) - Polydor-66943a-925bi.oga",
+        "note": "Orchestral music from the Scherzo (third movement) of Beethoven's Symphony No. 3 “Eroica”, Berlin Philharmonic conducted by Hans Pfitzner, 1929: quick staccato strings that build to loud full-orchestra passages. Instrumental only, no speech.",
+        "duration": 222.4,
+        "excerpt": {
+          "start": 30,
+          "end": 90
+        },
+        "work": {
+          "title": "Symphony No. 3 in E-flat major, Op. 55 “Eroica” – III. Scherzo",
+          "creator": "Ludwig van Beethoven",
+          "year": 1804,
+          "basis": "composer died 1827; recording of 1929 shared on Commons as public domain"
+        }
+      },
+      "fun_fact": "Beethoven first dedicated this symphony to Napoleon, then scratched out his name when Napoleon became emperor and renamed it the “Eroica” (Heroic).",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Beethoven's Eroica Symphony (No. 3), Scherzo",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "The media role is 'illustrative', but audio played during the question should be 'essential'. The Napoleon story is well known, which makes this fairly easy for adults. The answer Beethoven repeats other questions in the pool, but the fact asked is new."
+      },
+      "fact_checked": true,
+      "needs_media": false,
+      "batch": "batch-78",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "Hints 1 and 2 give the answer away: “born in Bonn, lived in Vienna” and especially “kept writing music after going almost completely deaf” name Beethoven outright among Mozart, Haydn and Schubert. The clip then doesn't matter. Hints 1 and 2 should stay vague and point back to the music, for example the era (around 1800) or a feature you can hear, such as the bold, restless energy that breaks with classical politeness. Only hint 3 may come close to the answer.",
+        "problems": [
+          "giveaway"
+        ],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "concert hall orchestra stage",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Music_Centre_Concert_Hall_2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Helsinki_Music_Centre_Concert_Hall_2.jpg/3840px-Helsinki_Music_Centre_Concert_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Saruwine · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Saruwine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Saruwine",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/887945c791dea932"
+      },
+      "difficulty_original": 11,
+      "revision": {
+        "action": "revise",
+        "reason": "Cut the Napoleon clue so players judge by ear (no year either, since 1804 alone would rule out Mozart), moved the dedication story into the fun fact, rewrote the description and raised the difficulty.",
+        "previous": {
+          "difficulty": 11,
+          "description": "A piece of music that got its fan mail torn up before it was even sent.",
+          "question": "Listen to this symphony. Its composer first dedicated it to Napoleon, then scratched out his name when Napoleon became emperor. Who was the composer?",
+          "fun_fact": "Beethoven renamed it the “Eroica” (Heroic) Symphony, and it was one of the first symphonies to use three horns instead of two."
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20637",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "A voice high enough to make every wine glass in the building nervous.",
+      "question": "Listen: this famous aria is full of very high, rapid staccato notes. Which opera is it from?",
+      "answer": "The Magic Flute",
+      "wrong_answers": [
+        "The Marriage of Figaro",
+        "Carmen",
+        "The Barber of Seville"
+      ],
+      "hints": [
+        "The opera premiered in Vienna in 1791, just weeks before its composer died.",
+        "Its story includes a bird catcher dressed in feathers, named Papageno.",
+        "The prince Tamino is given a magical musical instrument to protect him."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADer_Hoelle_Rache.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Der_Hoelle_Rache.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Trisdee na Patalung · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": null,
+        "author": "Trisdee na Patalung",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Der Hoelle Rache.ogg",
+        "note": "The opening of the Queen of the Night's aria “Der Hölle Rache”: a soprano singing over a stormy orchestra, including the first run of rapid high staccato notes. The window ends well before the applause at the end of the recording.",
+        "duration": 190.56,
+        "excerpt": {
+          "start": 10,
+          "end": 70
+        },
+        "work": {
+          "title": "Der Hölle Rache kocht in meinem Herzen (The Magic Flute)",
+          "creator": "Wolfgang Amadeus Mozart",
+          "year": 1791,
+          "basis": "composer died 1791"
+        }
+      },
+      "fun_fact": "The Queen of the Night's aria climbs to a high F, one of the highest notes in the standard opera repertoire, so only a few sopranos can sing the role.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Queen of the Night aria \"Der Hölle Rache\" from Mozart's The Magic Flute",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 5,
+        "description": 5,
+        "difficulty_estimate": 10,
+        "notes": "Hint 3 (the magical instrument) nearly gives the answer away, which is allowed. The Queen of the Night aria is famous, but young teens may still miss it."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "opera house stage curtain",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg/3840px-The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Anthony O'Neil · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Anthony O'Neil",
+        "author_url": "https://www.geograph.org.uk/profile/41966",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:opera aria recording",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/00113e0ac6f05886"
+      },
+      "difficulty_original": 9,
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the furious-queen clue with what is heard (very high, rapid staccato notes), rewrote the description around the singing, and raised the difficulty slightly.",
+        "previous": {
+          "difficulty": 9,
+          "description": "Somebody here is clearly not getting the mother-of-the-year award.",
+          "question": "Listen: this famous aria, with its very high notes, is sung by a furious queen. Which opera is it from?"
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20638",
+      "status": "approved",
+      "difficulty": 15,
+      "description": "Brass, timpani and strings all competing for the prize of loudest section in the room.",
+      "question": "Listen: this stormy scherzo, with pounding strings and blazing brass, comes from a 19th-century symphony. Who composed it?",
+      "answer": "Anton Bruckner",
+      "wrong_answers": [
+        "Gustav Mahler",
+        "Johannes Brahms",
+        "Antonín Dvořák"
+      ],
+      "hints": [
+        "He was famous for revising his symphonies again and again, so many of them exist in several versions.",
+        "He worshipped Richard Wagner and dedicated this very symphony to him.",
+        "He was the organist at Linz Cathedral, and the St. Florian monastery where he is buried is near the city."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnton_Bruckner_Symphony_no._3_3rd_movement_excerpt.mp3",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Anton_Bruckner_Symphony_no._3_3rd_movement_excerpt.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "hr-Sinfonieorchester · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "hr-Sinfonieorchester",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Anton Bruckner Symphony no. 3 3rd movement excerpt.mp3",
+        "note": "The loud opening of the scherzo (third movement) of Bruckner's Symphony No. 3, played by a full orchestra with driving strings and heavy brass. No speech.",
+        "duration": 133.97,
+        "excerpt": {
+          "start": 0,
+          "end": 48
+        },
+        "work": {
+          "title": "Symphony No. 3 in D minor, third movement (Scherzo)",
+          "creator": "Anton Bruckner",
+          "year": "1873 (revised 1877, 1889)",
+          "basis": "composer died 1896"
+        }
+      },
+      "fun_fact": "Bruckner showed Wagner two of his symphonies and let him pick which one would be dedicated to him, and Wagner chose this one, the Third.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Bruckner's Symphony No. 3 (scherzo)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "A dry question for specialists. The fun fact repeats hint 2 (the Wagner dedication), so it adds nothing new. The 'Austrian church organist' clue already narrows it to Bruckner for experts."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "symphony orchestra concert hall",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACBSO_Youth_Orchestra_in_Symphony_Hall_-_geograph.org.uk_-_7422392.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/CBSO_Youth_Orchestra_in_Symphony_Hall_-_geograph.org.uk_-_7422392.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Roger  D Kidd · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Roger  D Kidd",
+        "author_url": "https://www.geograph.org.uk/profile/12192",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/58320fb2050e2086"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Cut the Austrian-organist clue so the recording decides, rewrote the description without the revisions trait, and replaced the fun fact so it no longer repeats hint 2.",
+        "previous": {
+          "description": "Brass, timpani and a man who rewrote his homework for twenty years.",
+          "question": "Listen: this loud scherzo comes from a symphony by an Austrian church organist from the 1800s. Who composed it?",
+          "fun_fact": "Bruckner dedicated his Third Symphony to Richard Wagner, so people often call it the “Wagner Symphony”."
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20639",
+      "status": "needs_work",
+      "difficulty": 13,
+      "description": "A princess who would rather give her suitors an exam than go on a date with them.",
+      "question": "Listen: this soprano aria comes from an opera its composer left unfinished when he died. Who wrote it?",
+      "answer": "Giacomo Puccini",
+      "wrong_answers": [
+        "Giuseppe Verdi",
+        "Gioachino Rossini",
+        "Vincenzo Bellini"
+      ],
+      "hints": [
+        "He was Italian and came from a family of church musicians in the city of Lucca.",
+        "Many of his operas end tragically for their heroines, and he loved fast cars and hunting.",
+        "The opera is “Turandot”, about an icy princess in Beijing who sets riddles for her suitors."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMira_de_Simone-Puccini_Turandot-In_questa_reggia.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Mira_de_Simone-Puccini_Turandot-In_questa_reggia.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Mira de Simone, Marc de Simone · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Mira de Simone, Marc de Simone",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Mira de Simone-Puccini Turandot-In questa reggia.ogg",
+        "note": "The opening of “In questa reggia”: a soprano sings in Italian with full orchestra. No title or names are sung in this window.",
+        "duration": 352.47,
+        "excerpt": {
+          "start": 0,
+          "end": 55
+        },
+        "work": {
+          "title": "Turandot: “In questa reggia”",
+          "creator": "Giacomo Puccini",
+          "year": 1926,
+          "basis": "composer died 1924; aria is Puccini's own writing (not Alfano's completion); premiered and published 1926"
+        }
+      },
+      "fun_fact": "At the 1926 premiere, conductor Arturo Toscanini stopped the music at the point where the composer's own writing ended and told the audience that this was where the maestro had died.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Puccini's Turandot, aria \"In questa reggia\"",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Naming “Nessun dorma” makes this easier for the many adults who link it to Puccini, so about 12 rather than 13. The facts check out: Lucca, the unfinished Turandot, and Toscanini stopping the 1926 premiere."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "The description (“a princess who would rather give her suitors an exam”) describes Turandot's riddle plot, which gives away Puccini before any hint. The question text's “opera its composer left unfinished when he died” is Turandot's best-known fact too, so adults at this level can answer from the text alone and the clip isn't needed. Rewrite the description so it plays on opera in general, not on the riddles. Move the clue to what is heard (for example a soprano in a grand early-20th-century Italian style), or drop it.",
+        "problems": [
+          "giveaway"
+        ],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "opera house stage curtain",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg/3840px-The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Anthony O'Neil · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Anthony O'Neil",
+        "author_url": "https://www.geograph.org.uk/profile/41966",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:opera aria recording",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/bf6c5bfb0fcd72d6"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced the “Nessun dorma” giveaway with the unfinished-opera clue, made hint 2 vaguer, and reworded hint 3 so it doesn't repeat the question.",
+        "previous": {
+          "question": "Listen: this soprano aria is from the same opera as the famous tenor aria “Nessun dorma”. Which composer wrote it?",
+          "hints": [
+            "He was Italian and came from a family of church musicians in the city of Lucca.",
+            "He also wrote the operas “La bohème”, “Tosca” and “Madama Butterfly”.",
+            "He died in 1924 before he could finish this last opera, “Turandot”, about an icy princess in Beijing who sets riddles."
+          ]
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20640",
+      "status": "needs_work",
+      "difficulty": 13,
+      "description": "A composer who decided to sign off with the musical version of a fireworks show.",
+      "question": "Listen: this lively finale closes a composer's last symphony, written in 1788. Who composed it?",
+      "answer": "Wolfgang Amadeus Mozart",
+      "wrong_answers": [
+        "Joseph Haydn",
+        "Franz Schubert",
+        "Felix Mendelssohn"
+      ],
+      "hints": [
+        "He worked in Vienna in the late 1700s.",
+        "This symphony is nicknamed after the king of the Roman gods.",
+        "He was a child star from Salzburg who toured Europe at the age of six."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_London_Symphony_Orchestra_-_Albert_Coates_-_Symphony_No._41_in_C_major%2C_K._551_%28Mozart%29_-_1st_Movement_-_4th_Movement_-_Molto_allegro_%28first_record%29_-_Hmv-d1361-5-0647.flac",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/PDP-CH_-_London_Symphony_Orchestra_-_Albert_Coates_-_Symphony_No._41_in_C_major%2C_K._551_%28Mozart%29_-_1st_Movement_-_4th_Movement_-_Molto_allegro_%28first_record%29_-_Hmv-d1361-5-0647.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-70"
+        ],
+        "role": "essential",
+        "query": "File:PDP-CH - London Symphony Orchestra - Albert Coates - Symphony No. 41 in C major, K. 551 (Mozart) - 1st Movement - 4th Movement - Molto allegro (first record) - Hmv-d1361-5-0647.flac",
+        "note": "Orchestral recording (1927, London Symphony Orchestra) of the finale (Molto allegro) of Mozart's Symphony No. 41; play from where the music starts after the near-silent lead-in.",
+        "duration": 269.71,
+        "excerpt": {
+          "start": 13,
+          "end": 73
+        },
+        "work": {
+          "title": "Symphony No. 41 in C major, K. 551 “Jupiter” – 4th movement",
+          "creator": "Wolfgang Amadeus Mozart",
+          "year": 1788,
+          "basis": "composer died 1791; recording released 1928"
+        }
+      },
+      "fun_fact": "The nickname “Jupiter” wasn't the composer's idea: it seems to have come from the London concert promoter Johann Peter Salomon, years after Mozart's death.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Mozart's Symphony No. 41 \"Jupiter\", finale",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Most adults know the \"Jupiter Symphony\" as Mozart's, so about 12. The fun fact crediting Salomon with the nickname is hedged but traditional, not certain. The 1788 \"six weeks\" claim is correct."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "The question text can be answered without the clip. \"A composer's last symphony, written in 1788\" rules out Schubert (born 1797) and Mendelssohn (born 1809). It also points to Mozart for any well-read adult, since Mozart's last symphonies date from 1788 and Haydn kept writing symphonies until 1795. Move the clue to what can be heard, for example the finale's fugue-like weaving of several themes at once, or cut the year. The distractors should also be composers who were active in 1788.",
+        "problems": [
+          "giveaway"
+        ],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "concert hall orchestra stage",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Music_Centre_Concert_Hall_2.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Helsinki_Music_Centre_Concert_Hall_2.jpg/3840px-Helsinki_Music_Centre_Concert_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Saruwine · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Saruwine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Saruwine",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/57e93e14e67938cf"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Cut the Jupiter clue from the question and description, made hint 1 about the era, and turned the nickname into hint 2, as the reviewer asked; the “symphony” title-word flag is a false flag.",
+        "previous": {
+          "description": "A symphony so grand it borrowed its nickname from the boss of Mount Olympus's Roman branch office.",
+          "question": "Listen: this is the finale of a composer's last symphony, nicknamed after the king of the Roman gods. Who composed it?",
+          "hints": [
+            "The composer wrote this symphony in 1788 in Vienna, along with two others, in only about six weeks.",
+            "He wrote more than 600 works, including the operas “The Magic Flute” and “Don Giovanni”.",
+            "He was a child star from Salzburg who toured Europe at the age of six."
+          ]
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20641",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "Powdered wigs on, everyone: the orchestra is about to bow politely to its partner.",
+      "question": "Listen: this orchestral movement by Beethoven takes its rhythm from which old court dance?",
+      "answer": "Minuet",
+      "wrong_answers": [
+        "Sarabande",
+        "Gavotte",
+        "Bourrée"
+      ],
+      "hints": [
+        "The dance was a favorite at the French court of Louis XIV.",
+        "Count along: this dance goes ONE-two-three, at an elegant walking pace, not slow and solemn.",
+        "Its name may come from the French word for “small”, after its small, dainty steps."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALudwig_van_Beethoven_-_symphony_no._8_in_f_major%2C_op._93_-_iii._tempo_di_menuetto.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ludwig_van_Beethoven_-_symphony_no._8_in_f_major%2C_op._93_-_iii._tempo_di_menuetto.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-author",
+          "PD-old-100"
+        ],
+        "role": "essential",
+        "query": "File:Ludwig van Beethoven - symphony no. 8 in f major, op. 93 - iii. tempo di menuetto.ogg",
+        "note": "The opening of the third movement (Tempo di menuetto) of Beethoven's Symphony No. 8: the full orchestra in a steady, stately three-beat minuet rhythm with accented downbeats. Instrumental only, no speech.",
+        "duration": 298.14,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        },
+        "work": {
+          "title": "Symphony No. 8 in F major, Op. 93: III. Tempo di menuetto",
+          "creator": "Ludwig van Beethoven",
+          "year": 1812,
+          "basis": "composer died 1827"
+        }
+      },
+      "fun_fact": "Beethoven had mostly swapped the polite minuet for the faster, wilder scherzo, but in his Eighth Symphony he went back to an old-style minuet, almost as a joke.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Beethoven's Symphony No. 8, third movement (Tempo di menuetto)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "\"Old court dance in three beats\" also fits the sarabande (triple time). Only the gavotte and the bourrée are ruled out by the beat count, and the audio has to settle the rest. \"Minuet\" is the best-known court dance, so adults can reason their way to it: about 11. A fairly school-style question."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "orchestra concert hall",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Great_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "SintaBerzins · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "SintaBerzins",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SintaBerzins",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/09fa6b449e695921"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Removed “symphony” and “in three beats” so the listener has to hear the beat and pace, and replaced hint 2 with a listening clue.",
+        "previous": {
+          "question": "Listen: this movement from a Beethoven symphony takes its rhythm from which old court dance in three beats?",
+          "hints": [
+            "The dance was a favorite at the French court of Louis XIV.",
+            "Haydn and Mozart almost always put this dance as the third movement of their symphonies.",
+            "Its name may come from the French word for “small”, after its small, dainty steps."
+          ]
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20642",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "A tenor who has had this catchy tune stuck in his head forever and still can't stop showing it off.",
+      "question": "Listen: this famous opera tune is sung here in English. Which Italian composer wrote it?",
+      "answer": "Giuseppe Verdi",
+      "wrong_answers": [
+        "Giacomo Puccini",
+        "Gioachino Rossini",
+        "Gaetano Donizetti"
+      ],
+      "hints": [
+        "The composer was born in 1813, the same year as Richard Wagner, his great rival in opera, and died in 1901.",
+        "He also wrote “Aida”, the opera set in ancient Egypt.",
+        "His name translates as “Joe Green” in English."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Donna_e_mobile.oga",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/La_Donna_e_mobile.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ernest Pike / Giuseppe Verdi / Francesco Maria Piave / Manfredo Maggioni · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ernest Pike / Giuseppe Verdi / Francesco Maria Piave / Manfredo Maggioni",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Russia",
+          "PD-US-record-expired",
+          "PD-old-auto-expired",
+          "PD-two"
+        ],
+        "role": "essential",
+        "query": "File:La Donna e mobile.oga",
+        "note": "Old acoustic recording of a tenor singing the aria “La donna è mobile” from Rigoletto in English, with the instantly recognizable melody throughout the window.",
+        "duration": 63.92,
+        "excerpt": {
+          "start": 12,
+          "end": 62
+        },
+        "work": {
+          "title": "La donna è mobile (from Rigoletto)",
+          "creator": "Giuseppe Verdi",
+          "year": 1851,
+          "basis": "composer died 1901; early 20th-century public-domain recording"
+        }
+      },
+      "fun_fact": "Verdi reportedly kept “La donna è mobile” secret until just before the 1851 premiere of “Rigoletto”, so that the tune wouldn’t be whistled in the streets of Venice ahead of time.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "\"La donna è mobile\" from Verdi's Rigoletto",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "The facts check out: Verdi and Wagner were both born in 1813, Rigoletto premiered in Venice in 1851, and the secrecy story is well known. Many people know the tune from adverts, but naming the composer is a step harder. The three Italian distractors are well chosen. The 'Joe Green' hint 3 comes close to the answer, which is allowed."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "opera house stage curtain",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Teatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Accurimbono · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Accurimbono",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Accurimbono",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:opera aria recording",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/bf376b4584c537a6"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Took the time span out of the description so it no longer dates the tune; nothing else changed.",
+        "previous": {
+          "description": "A tenor who has been showing off this catchy tune for over 150 years and still can’t get it out of his head."
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20643",
+      "status": "approved",
+      "difficulty": 6,
+      "description": "Opera singers don't need a microphone, just a lot of breakfast.",
+      "question": "Listen: which kind of voice sings this aria by Puccini?",
+      "answer": "Soprano",
+      "wrong_answers": [
+        "Tenor",
+        "Baritone",
+        "Bass"
+      ],
+      "hints": [
+        "It is the voice type that usually plays the heroine in opera.",
+        "It is the highest of the main singing voices.",
+        "It is the highest woman's voice."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrances_Alda%2C_Ancora_un_passo_%28Madama_Butterfly%29.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Frances_Alda%2C_Ancora_un_passo_%28Madama_Butterfly%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Giacomo Puccini (1858–1924), Luigi Illica (1857–1919), Giuseppe Giacosa (1847–1906), Frances Alda (1879–1952)",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-auto-record-expired"
+        ],
+        "role": "essential",
+        "query": "File:Frances Alda, Ancora un passo (Madama Butterfly).ogg",
+        "note": "The soprano Frances Alda singing Butterfly's entrance, “Ancora un passo”, in a 1913 recording with orchestra; the soaring vocal line must be clearly audible throughout the window.",
+        "duration": 153.81,
+        "excerpt": {
+          "start": 48,
+          "end": 108
+        },
+        "work": {
+          "title": "Madama Butterfly: “Ancora un passo”",
+          "creator": "Giacomo Puccini",
+          "year": 1904,
+          "basis": "composer died 1924; recording made in 1913"
+        }
+      },
+      "fun_fact": "Frances Alda, the New Zealand-born singer on this 1913 recording, was married to the general manager of New York's Metropolitan Opera.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Puccini's Madama Butterfly, aria \"Ancora un passo\"",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Butterfly's entrance aria is much less famous than “Un bel dì”, so players really answer from the plot clue in the text, not from the audio. Hint 2 (geisha marrying an American naval officer) nearly gives the answer as early as hint 2. The facts are right: the 1904 flop at La Scala and the success of the revised version in Brescia."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "opera house stage curtain",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Teatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Accurimbono · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Accurimbono",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Accurimbono",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:opera aria recording",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/eecb2ec2d953aa34"
+      },
+      "difficulty_original": 12,
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote it as a voice-type question the clip answers (soprano against male voices), with new description, hints and fun fact, a neutral background and a lower difficulty, as the reviewer asked.",
+        "previous": {
+          "difficulty": 12,
+          "description": "A bride who would rather sing her way up a hill than take the elevator.",
+          "question": "Listen: in this Puccini aria, a young bride climbs a hill with her friends to meet her groom. Which opera is it from?",
+          "answer": "Madama Butterfly",
+          "wrong_answers": [
+            "Turandot",
+            "Tosca",
+            "La Bohème"
+          ],
+          "hints": [
+            "The opera premiered in Milan in 1904.",
+            "The bride is a young geisha who marries an American naval officer.",
+            "Her name is Cio-Cio-San, which can be translated as “Miss Butterfly”."
+          ],
+          "fun_fact": "Madama Butterfly flopped badly at its 1904 premiere at La Scala, but Puccini revised it, and a few months later it became a hit and one of the most performed operas in the world.",
+          "background": {
+            "query": "Japanese garden hill",
+            "source_url": null,
+            "file_url": null,
+            "credit": null
+          }
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20644",
+      "status": "needs_work",
+      "difficulty": 8,
+      "description": "A soprano pours her heart out over a crackly 1906 recording, and nobody even turned the hiss down.",
+      "question": "Listen: in which language is this opera aria sung?",
+      "answer": "Italian",
+      "wrong_answers": [
+        "French",
+        "German",
+        "Russian"
+      ],
+      "hints": [
+        "It is the language of most of the famous operas from the 1700s and 1800s.",
+        "It is the language of the country of Verdi and Puccini.",
+        "It is the language that gave the world words like “pizza” and “spaghetti”."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_mamma_morta._1906%2C_sung_of_Elda_Cavalieri.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/La_mamma_morta._1906%2C_sung_of_Elda_Cavalieri.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Umberto Giordano · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Umberto Giordano",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-70-expired"
+        ],
+        "role": "essential",
+        "query": "File:La mamma morta. 1906, sung of Elda Cavalieri.ogg",
+        "note": "A 1906 acoustic recording: a soprano sings the opening of the aria “La mamma morta” with orchestra. There is steady hiss, but the voice and the music are clear.",
+        "duration": 166.72,
+        "excerpt": {
+          "start": 5,
+          "end": 65
+        },
+        "work": {
+          "title": "La mamma morta (from Andrea Chénier)",
+          "creator": "Umberto Giordano",
+          "year": 1896,
+          "basis": "composer died 1948; libretto by Luigi Illica (died 1919); recording of 1906"
+        }
+      },
+      "fun_fact": "In the 1993 film “Philadelphia”, Tom Hanks's character explains the feelings in this very aria, “La mamma morta”, while Maria Callas sings it.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Giordano's Andrea Chénier, aria \"La mamma morta\"",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 3,
+        "difficulty_estimate": 14,
+        "notes": "Naming Andrea Chénier in the question lets anyone who knows the opera answer without listening, so the audio adds little. The verismo distractors (Mascagni, Leoncavallo) are strong. The fedora hint and the Philadelphia fun fact are true and nice. The description only describes the recording and is barely funny. q-5720 asks for André Chénier's birthplace, so it shares only the topic."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "Hints 1 and 2 give the answer away: in a question about an opera aria, “the language of most of the famous operas” and “the country of Verdi and Puccini” both clearly point to Italian. The clip may also not carry the answer. The spectrogram shows a loud, flat hiss band up to about 17 kHz over the whole window, and whisper couldn't make out a single word (it produced gibberish and guessed Latin). Players will probably fall back on “opera = Italian” instead of listening to the words, so this window may not work for a language question.",
+        "problems": [
+          "giveaway",
+          "media"
+        ],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "opera house stage curtain",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Teatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Accurimbono · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Accurimbono",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Accurimbono",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:opera aria recording",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/b06eaf7462410685"
+      },
+      "difficulty_original": 15,
+      "revision": {
+        "action": "revise",
+        "reason": "Naming the André Chénier opera gave the composer away; per the final reviewer the question now asks which language the aria is sung in (Italian), with new hints and difficulty 8.",
+        "previous": {
+          "difficulty": 15,
+          "question": "Listen: this aria comes from an 1896 opera about André Chénier, a poet of the French Revolution. Who composed it?",
+          "answer": "Umberto Giordano",
+          "wrong_answers": [
+            "Giacomo Puccini",
+            "Pietro Mascagni",
+            "Ruggero Leoncavallo"
+          ],
+          "hints": [
+            "He was an Italian composer of the “verismo” style, which put real-life drama on stage.",
+            "His other well-known opera is “Fedora”, based on the Sardou play that also gave the fedora hat its name.",
+            "He shares his first name with Umberto Eco, the author of “The Name of the Rose”."
+          ]
+        },
+        "revised_on": "2026-11-15"
+      }
+    },
+    {
+      "id": "q-20645",
+      "status": "approved",
+      "difficulty": 5,
+      "description": "Beethoven goes for a stroll in the countryside, and the whole orchestra insists on coming along.",
+      "question": "Listen: this movement from a famous 1808 symphony paints a scene from nature. What does the music depict?",
+      "answer": "A thunderstorm",
+      "wrong_answers": [
+        "A volcano erupting",
+        "A battle with cannons",
+        "A herd of stampeding horses"
+      ],
+      "hints": [
+        "The composer loved long walks in the countryside around Vienna.",
+        "Listen for the low rumbling in the double basses and the sudden loud crashes from the timpani.",
+        "Right after this movement, the next one is a shepherd's song of thanks once the rain clears."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALudwig_van_Beethoven_-_symphony_no._6_in_f_major_%27pastoral%27%2C_op._68_-_iv._allegro.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Ludwig_van_Beethoven_-_symphony_no._6_in_f_major_%27pastoral%27%2C_op._68_-_iv._allegro.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-author",
+          "PD-old-100"
+        ],
+        "role": "essential",
+        "query": "File:Ludwig van Beethoven - symphony no. 6 in f major 'pastoral', op. 68 - iv. allegro.ogg",
+        "note": "Orchestral audio: quiet, rumbling, tense opening (distant thunder, first raindrops in the strings) building to the full loud storm from about 28 s, with timpani thunder and rushing strings.",
+        "duration": 220.15,
+        "excerpt": {
+          "start": 15,
+          "end": 75
+        },
+        "work": {
+          "title": "Symphony No. 6 in F major, Op. 68 “Pastoral”, IV. Allegro (Thunderstorm)",
+          "creator": "Ludwig van Beethoven",
+          "year": 1808,
+          "basis": "composer died 1827"
+        }
+      },
+      "fun_fact": "Beethoven's Sixth, the “Pastoral” Symphony, is one of the few symphonies where each movement has a title. This one is called “Thunderstorm.”",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Beethoven's Pastoral Symphony (No. 6), the thunderstorm movement",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 3,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 4,
+        "notes": "The words 'a scene from nature' rule out 'a battle with cannons', which weakens the distractors. mf-72ebf3131d asks for the nickname of the same symphony, but that is a different fact. A nice listening question that kids can reason out."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "countryside meadow Austria",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2017-07-28_%28002%29_View_to_new_Bichl_and_Bichlh%C3%A4usl_from_old_Bichl_at_Haltgraben%2C_Frankenfels%2C_Austria.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/2017-07-28_%28002%29_View_to_new_Bichl_and_Bichlh%C3%A4usl_from_old_Bichl_at_Haltgraben%2C_Frankenfels%2C_Austria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "GT1976 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "GT1976",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GT1976",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/1e9e80002c46b8cf"
+      }
+    },
+    {
+      "id": "q-20646",
+      "status": "needs_work",
+      "difficulty": 15,
+      "description": "Vienna, around 1800: powdered wigs in every seat, and a young composer hoping nobody nods off.",
+      "question": "Listen to the opening: which Beethoven symphony begins like this?",
+      "answer": "Symphony No. 1",
+      "wrong_answers": [
+        "Symphony No. 2",
+        "Symphony No. 4",
+        "Symphony No. 8"
+      ],
+      "hints": [
+        "It opens with a slow introduction before the fast music starts.",
+        "The very first chord famously sounds “in the wrong key”, pulling away from home before the music settles.",
+        "Beethoven premiered it in Vienna in 1800, when he was 29."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASymphony_No._1_in_C_-_I._Adagio_molto%2C_Allegro_con_brio_-_Chamber_Orchestra_-_United_States_Marine_Band.opus",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Symphony_No._1_in_C_-_I._Adagio_molto%2C_Allegro_con_brio_-_Chamber_Orchestra_-_United_States_Marine_Band.opus?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military-Marines",
+          "PD-old-auto-expired"
+        ],
+        "role": "essential",
+        "query": "File:Symphony No. 1 in C - I. Adagio molto, Allegro con brio - Chamber Orchestra - United States Marine Band.opus",
+        "note": "The opening of the first movement: the slow Adagio molto introduction, starting with its famous off-key chords and leading towards the Allegro.",
+        "duration": 581.47,
+        "excerpt": {
+          "start": 0,
+          "end": 50
+        },
+        "work": {
+          "title": "Symphony No. 1 in C major, Op. 21",
+          "creator": "Ludwig van Beethoven",
+          "year": 1800,
+          "basis": "composer died 1827; performance by the US Marine Band, a US government work"
+        }
+      },
+      "fun_fact": "Early critics were startled that Beethoven's first symphony opens on a dissonant chord in a key other than its own C major, a daring start for 1800.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Beethoven's Symphony No. 1, first movement",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 2,
+        "description": 4,
+        "difficulty_estimate": 15,
+        "notes": "This is pure recognition by ear: telling Beethoven's 1st apart from his 2nd, 4th and 8th symphonies leaves almost nothing to reason with, apart from the off-key chord hint, and only specialists know that. It is a dry test rather than a satisfying puzzle. Hint 1 (slow introduction) also fits Nos. 2 and 4. The facts are correct: the opening C7 chord, and the 1800 premiere when Beethoven was 29."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-78",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "The description (\"Vienna, around 1800… a young composer\") gives the answer away. It dates the piece to about 1800, which rules out No. 4 (1807) and No. 8 (1814), and points to Beethoven's first symphony before anyone hears the clip. Separately, the clip test itself is a pure ear test: few listeners can tell the slow opening of No. 1 from those of Nos. 2 and 4. Players can only reason towards the answer from the text clues, so consider asking something the 50-second window lets them hear instead.",
+        "problems": [
+          "giveaway",
+          "media"
+        ],
+        "reviewed_on": "2026-11-15",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "concert hall stage",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:classical music recording symphony",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/9aacbaa1e97fea13"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer hints at the unusual opening chord, and removed “C major” from hint 2 because the key alone named Symphony No. 1.",
+        "previous": {
+          "description": "Forty musicians, a hall full of powdered wigs, and one chord that made all of Vienna raise an eyebrow.",
+          "hints": [
+            "It opens with a slow introduction before the fast music starts.",
+            "The very first chord famously sounds “in the wrong key”, pulling away from home before the music finds C major.",
+            "Beethoven premiered it in Vienna in 1800, when he was 29."
+          ]
+        },
+        "revised_on": "2026-11-15"
+      }
     }
   ]
 }

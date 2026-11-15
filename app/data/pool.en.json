@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "98e59ae9",
+  "hash": "2610649b",
   "questions": [
     {
       "id": "q-0001",
@@ -198417,6 +198417,382 @@
         "excerpt": null
       },
       "background": null
+    },
+    {
+      "id": "q-20634",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A flute in such a hurry that it never stops to take a breath.",
+      "question": "Listen: who composed this lively piece with its racing flute melody?",
+      "answer": "Johann Sebastian Bach",
+      "wrong_answers": [
+        "Wolfgang Amadeus Mozart",
+        "Antonio Vivaldi",
+        "Pyotr Ilyich Tchaikovsky"
+      ],
+      "hints": [
+        "The composer lived in the Baroque era, around 300 years ago.",
+        "He wrote a huge amount of music for church services, including hundreds of cantatas.",
+        "He was a German organist who worked in Leipzig, and his works are numbered “BWV”."
+      ],
+      "fun_fact": "This piece, the “Badinerie”, is the last movement of Bach's Orchestral Suite No. 2, and “badinerie” is French for joking or playful teasing.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/PDP-CH_-_Chicago_Symphony_Orchestra%2C_Frederick_Stock_-_Orchestral_Suite_No._2_in_B_minor%2C_BWV_1067%2C_Polonaise_and_Double%2C_Minuet%2C_Badinerie_-_Bach_-_Hmv-d1674-6-0687.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_Chicago_Symphony_Orchestra%2C_Frederick_Stock_-_Orchestral_Suite_No._2_in_B_minor%2C_BWV_1067%2C_Polonaise_and_Double%2C_Minuet%2C_Badinerie_-_Bach_-_Hmv-d1674-6-0687.flac",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 210,
+          "end": 268
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Empty_concert_hall_in_Katowice_%28Unsplash%29.jpg/3840px-Empty_concert_hall_in_Katowice_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpty_concert_hall_in_Katowice_%28Unsplash%29.jpg",
+        "credit": "Radek Grzybowski rgrzybowski · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Radek Grzybowski rgrzybowski",
+        "author_url": "https://unsplash.com/@rgrzybowski"
+      }
+    },
+    {
+      "id": "q-20635",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Trumpets and drums throw a party so loud that the whole concert hall wants to stand up and cheer.",
+      "question": "Listen: this is the blazing finale of a Beethoven overture written for a stage play. Which overture is it?",
+      "answer": "Egmont",
+      "wrong_answers": [
+        "Coriolan",
+        "Fidelio",
+        "The Creatures of Prometheus"
+      ],
+      "hints": [
+        "The play is about a real 16th-century count from the Low Countries who stood up to Spanish rule.",
+        "Goethe wrote the play, and Beethoven wrote its music for Vienna in 1810.",
+        "The title is the hero's name, and it starts with the letter E."
+      ],
+      "fun_fact": "Beethoven admired Goethe deeply, and the two finally met in person in the spa town of Teplitz in 1812.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Beethoven_-_Egmont_Overture%2C_Op._84_%28Musopen_Symphony%29.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeethoven_-_Egmont_Overture%2C_Op._84_%28Musopen_Symphony%29.flac",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 470,
+          "end": 530
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Helsinki_Music_Centre_Concert_Hall_2.jpg/3840px-Helsinki_Music_Centre_Concert_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Music_Centre_Concert_Hall_2.jpg",
+        "credit": "Saruwine · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Saruwine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Saruwine"
+      }
+    },
+    {
+      "id": "q-20637",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A voice high enough to make every wine glass in the building nervous.",
+      "question": "Listen: this famous aria is full of very high, rapid staccato notes. Which opera is it from?",
+      "answer": "The Magic Flute",
+      "wrong_answers": [
+        "The Marriage of Figaro",
+        "Carmen",
+        "The Barber of Seville"
+      ],
+      "hints": [
+        "The opera premiered in Vienna in 1791, just weeks before its composer died.",
+        "Its story includes a bird catcher dressed in feathers, named Papageno.",
+        "The prince Tamino is given a magical musical instrument to protect him."
+      ],
+      "fun_fact": "The Queen of the Night's aria climbs to a high F, one of the highest notes in the standard opera repertoire, so only a few sopranos can sing the role.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Der_Hoelle_Rache.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADer_Hoelle_Rache.ogg",
+        "credit": "Trisdee na Patalung · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": null,
+        "author": "Trisdee na Patalung",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 70
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg/3840px-The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg",
+        "credit": "Anthony O'Neil · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Anthony O'Neil",
+        "author_url": "https://www.geograph.org.uk/profile/41966"
+      }
+    },
+    {
+      "id": "q-20638",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Brass, timpani and strings all competing for the prize of loudest section in the room.",
+      "question": "Listen: this stormy scherzo, with pounding strings and blazing brass, comes from a 19th-century symphony. Who composed it?",
+      "answer": "Anton Bruckner",
+      "wrong_answers": [
+        "Gustav Mahler",
+        "Johannes Brahms",
+        "Antonín Dvořák"
+      ],
+      "hints": [
+        "He was famous for revising his symphonies again and again, so many of them exist in several versions.",
+        "He worshipped Richard Wagner and dedicated this very symphony to him.",
+        "He was the organist at Linz Cathedral, and the St. Florian monastery where he is buried is near the city."
+      ],
+      "fun_fact": "Bruckner showed Wagner two of his symphonies and let him pick which one would be dedicated to him, and Wagner chose this one, the Third.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/57/Anton_Bruckner_Symphony_no._3_3rd_movement_excerpt.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnton_Bruckner_Symphony_no._3_3rd_movement_excerpt.mp3",
+        "credit": "hr-Sinfonieorchester · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "hr-Sinfonieorchester",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 48
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/CBSO_Youth_Orchestra_in_Symphony_Hall_-_geograph.org.uk_-_7422392.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACBSO_Youth_Orchestra_in_Symphony_Hall_-_geograph.org.uk_-_7422392.jpg",
+        "credit": "Roger  D Kidd · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Roger  D Kidd",
+        "author_url": "https://www.geograph.org.uk/profile/12192"
+      }
+    },
+    {
+      "id": "q-20641",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Powdered wigs on, everyone: the orchestra is about to bow politely to its partner.",
+      "question": "Listen: this orchestral movement by Beethoven takes its rhythm from which old court dance?",
+      "answer": "Minuet",
+      "wrong_answers": [
+        "Sarabande",
+        "Gavotte",
+        "Bourrée"
+      ],
+      "hints": [
+        "The dance was a favorite at the French court of Louis XIV.",
+        "Count along: this dance goes ONE-two-three, at an elegant walking pace, not slow and solemn.",
+        "Its name may come from the French word for “small”, after its small, dainty steps."
+      ],
+      "fun_fact": "Beethoven had mostly swapped the polite minuet for the faster, wilder scherzo, but in his Eighth Symphony he went back to an old-style minuet, almost as a joke.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Ludwig_van_Beethoven_-_symphony_no._8_in_f_major%2C_op._93_-_iii._tempo_di_menuetto.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALudwig_van_Beethoven_-_symphony_no._8_in_f_major%2C_op._93_-_iii._tempo_di_menuetto.ogg",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Great_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg",
+        "credit": "SintaBerzins · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "SintaBerzins",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SintaBerzins"
+      }
+    },
+    {
+      "id": "q-20642",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A tenor who has had this catchy tune stuck in his head forever and still can't stop showing it off.",
+      "question": "Listen: this famous opera tune is sung here in English. Which Italian composer wrote it?",
+      "answer": "Giuseppe Verdi",
+      "wrong_answers": [
+        "Giacomo Puccini",
+        "Gioachino Rossini",
+        "Gaetano Donizetti"
+      ],
+      "hints": [
+        "The composer was born in 1813, the same year as Richard Wagner, his great rival in opera, and died in 1901.",
+        "He also wrote “Aida”, the opera set in ancient Egypt.",
+        "His name translates as “Joe Green” in English."
+      ],
+      "fun_fact": "Verdi reportedly kept “La donna è mobile” secret until just before the 1851 premiere of “Rigoletto”, so that the tune wouldn’t be whistled in the streets of Venice ahead of time.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/La_Donna_e_mobile.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Donna_e_mobile.oga",
+        "credit": "Ernest Pike / Giuseppe Verdi / Francesco Maria Piave / Manfredo Maggioni · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ernest Pike / Giuseppe Verdi / Francesco Maria Piave / Manfredo Maggioni",
+        "author_url": null,
+        "excerpt": {
+          "start": 12,
+          "end": 62
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Teatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG",
+        "credit": "Accurimbono · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Accurimbono",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Accurimbono"
+      }
+    },
+    {
+      "id": "q-20643",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Opera singers don't need a microphone, just a lot of breakfast.",
+      "question": "Listen: which kind of voice sings this aria by Puccini?",
+      "answer": "Soprano",
+      "wrong_answers": [
+        "Tenor",
+        "Baritone",
+        "Bass"
+      ],
+      "hints": [
+        "It is the voice type that usually plays the heroine in opera.",
+        "It is the highest of the main singing voices.",
+        "It is the highest woman's voice."
+      ],
+      "fun_fact": "Frances Alda, the New Zealand-born singer on this 1913 recording, was married to the general manager of New York's Metropolitan Opera.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Frances_Alda%2C_Ancora_un_passo_%28Madama_Butterfly%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrances_Alda%2C_Ancora_un_passo_%28Madama_Butterfly%29.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Giacomo Puccini (1858–1924), Luigi Illica (1857–1919), Giuseppe Giacosa (1847–1906), Frances Alda (1879–1952)",
+        "author_url": null,
+        "excerpt": {
+          "start": 48,
+          "end": 108
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Teatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG",
+        "credit": "Accurimbono · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Accurimbono",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Accurimbono"
+      }
+    },
+    {
+      "id": "q-20645",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Beethoven goes for a stroll in the countryside, and the whole orchestra insists on coming along.",
+      "question": "Listen: this movement from a famous 1808 symphony paints a scene from nature. What does the music depict?",
+      "answer": "A thunderstorm",
+      "wrong_answers": [
+        "A volcano erupting",
+        "A battle with cannons",
+        "A herd of stampeding horses"
+      ],
+      "hints": [
+        "The composer loved long walks in the countryside around Vienna.",
+        "Listen for the low rumbling in the double basses and the sudden loud crashes from the timpani.",
+        "Right after this movement, the next one is a shepherd's song of thanks once the rain clears."
+      ],
+      "fun_fact": "Beethoven's Sixth, the “Pastoral” Symphony, is one of the few symphonies where each movement has a title. This one is called “Thunderstorm.”",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Ludwig_van_Beethoven_-_symphony_no._6_in_f_major_%27pastoral%27%2C_op._68_-_iv._allegro.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALudwig_van_Beethoven_-_symphony_no._6_in_f_major_%27pastoral%27%2C_op._68_-_iv._allegro.ogg",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 15,
+          "end": 75
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/2017-07-28_%28002%29_View_to_new_Bichl_and_Bichlh%C3%A4usl_from_old_Bichl_at_Haltgraben%2C_Frankenfels%2C_Austria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2017-07-28_%28002%29_View_to_new_Bichl_and_Bichlh%C3%A4usl_from_old_Bichl_at_Haltgraben%2C_Frankenfels%2C_Austria.jpg",
+        "credit": "GT1976 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "GT1976",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GT1976"
+      }
     }
   ]
 }

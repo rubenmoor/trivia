@@ -85,7 +85,7 @@ def validate_pool():
             e, w = concepts.axes_problems(q["axes"], axes_of.get(key[0], axes_of["base"]))
             errors += [f"{qid}: {p}" for p in e]
             warnings += [f"{qid}: {p}" for p in w]
-        if q.get("concept") is not None and isinstance(q.get("subcategory"), str):
+        if q.get("concept") is not None and isinstance(q.get("subcategory"), str) and not q.get("media_first"):  # decision 654
             if key not in lists:
                 lists[key] = {c["name"] for c in (concepts.load(*key) or {}).get("concepts", [])}
             if q["concept"] not in lists[key]:
