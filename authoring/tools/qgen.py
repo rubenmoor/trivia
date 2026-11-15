@@ -71,6 +71,7 @@ import media as media_tool  # authoring/tools/media.py: candidates, sheets, pick
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import pool_export  # authoring/tools/pool_export.py (D-35)
 import flag_loop  # authoring/tools/flag_loop.py: open player flags, causes
+import media_first  # authoring/tools/media_first.py: `qgen batch --media-first` steps (plan 203)
 import media_pilot  # authoring/tools/media_pilot.py: `qgen media-pilot` (plan 201)
 import media_probe  # authoring/tools/media_probe.py: `qgen media-probe` (plan 201)
 import media_survey  # authoring/tools/media_survey.py: `qgen media-survey` (plan 201)
@@ -1422,7 +1423,7 @@ def cmd_merge(args):
                     "id": f"q-{next_id:04d}", "status": "draft",
                     "difficulty": q["difficulty"], "description": q["description"], "question": q["question"],
                     "answer": q["answer"], "wrong_answers": q["wrong_answers"], "hints": q["hints"],
-                    "media": media_tool.unpicked(q["media"]),
+                    "media": q["media"] if q.get("media_first") else media_tool.unpicked(q["media"]),  # fixed slot (plan 203)
                     "fun_fact": q["fun_fact"], "subcategory": q["subcategory"], "style": q.get("style"),
                     "concept": q.get("concept"), "axes": q.get("axes"),
                     "quality": {k: r.get(k) for k in [*RUBRIC, "difficulty_estimate", "notes"]},
@@ -1431,6 +1432,7 @@ def cmd_merge(args):
                     **({"locale": locale} if locale != "es" else {}),  # absent = es (decision 235)
                     "background": ({"query": q.get("background_query") or q["media"]["query"], "source_url": None,
                                     "file_url": None, "credit": None} if q["media"]["type"] == "audio" else None),
+                    **({"media_first": q["media_first"]} if q.get("media_first") else {}),
                 }
                 next_id += 1
                 pool.append(new); added.append(new["id"]); merged.add(tid); ids[tid] = new["id"]
@@ -1556,7 +1558,7 @@ def cmd_revise(args):
 def revise_in_pool(q, new, reason, today):
     """Write a revised question into pool question q; `revision.previous` keeps what changed
     (the review tool shows it). Returns the changed keys."""
-    new_media = {**q["media"], **new["media"], "note": new["media"]["note"] or None}
+    new_media = q["media"] if q.get("media_first") else {**q["media"], **new["media"], "note": new["media"]["note"] or None}
     media_changed = any(new_media[k] != q["media"][k] for k in ["type", "query"])
     if media_changed:
         new_media = media_tool.unpicked(new_media)
@@ -1655,7 +1657,7 @@ def apply_to_drafts(d, revisions, applied):
                 continue
             keys = [*QUESTION_FIELDS, "needs_media", "background_query"]
             moved.append({**q, **{k: new[k] for k in keys if k in new},
-                          "media": {**new["media"], "note": new["media"]["note"] or None},
+                          "media": q["media"] if q.get("media_first") else {**new["media"], "note": new["media"]["note"] or None},
                           "needs_fact_check": True, "revision_reason": rev["reason"]})
             c = checks.get(q["tmp_id"])
             if c and c["verdict"] == "confirmed" and all(new[k] == q[k] for k in FACT_FIELDS):
@@ -1746,16 +1748,26 @@ def cmd_batch_report(args):
     return []
 
 
-def next_batch():
-    """(run name, resuming?) — an unfinished `qgen batch` run is resumed; otherwise batch-<n+1>."""
+def next_batch(mode="batch"):
+    """(run name, resuming?) — an unfinished run of `mode` is resumed, one of the other mode stops (decision 646);
+    otherwise batch-<n+1> (one counter for both modes)."""
     open_runs = batches.unfinished_runs()
     if len(open_runs) > 1:
         sys.exit(f"More than one unfinished batch: {', '.join(open_runs)}. Ask the developer which to finish.")
     if open_runs:
+        check_mode(open_runs[0], mode)
         return open_runs[0], True
     names = {q.get("batch") for q in load_json(POOL)["questions"]} | {p.name for p in WORK.glob("batch-*") if p.is_dir()}
     numbers = [int(m.group(1)) for n in names if n and (m := re.fullmatch(r"batch-(\d+)", n))]
     return f"batch-{max(numbers, default=0) + 1}", False
+
+
+def check_mode(run, mode):
+    """Exit unless the unfinished run `run` is of `mode`: naming the command that finishes it (decision 646)."""
+    have = (load_json(WORK / run / "run.json", {}) or {}).get("mode")
+    if have != mode:
+        sys.exit(f"{run} is an unfinished {have} run; this command doesn't finish it. "
+                 f"Finish it first: {batches.MODES.get(have, 'ask the developer')}")
 
 
 def run_steps(steps, again, run=None, validate=True):
@@ -1824,18 +1836,25 @@ def lock_run(d):
 
 
 def cmd_batch(args):
-    """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped."""
+    """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped.
+    `--media-first` (plan 203): from surveyed Commons files instead of topics, base only."""
     if args.translate:
         return cmd_translate_batch(args)
     if args.ids or args.dry_run:
         sys.exit("--ids and --dry-run need --translate")
+    mode = "media-first" if args.media_first else "batch"
+    if not args.media_first and (args.files or args.until):
+        sys.exit("--files and --until need --media-first")
+    if args.media_first and (args.bundle != "base" or args.subcategories or args.count):
+        sys.exit("--media-first writes for base only, without --subcategories or --count")
     if args.run:
         run, resuming = args.run, (WORK / args.run / "run.json").exists()
     else:
-        run, resuming = next_batch()
+        run, resuming = next_batch(mode)
     d = WORK / run
     lock_run(d)
     if resuming:
+        check_mode(run, mode)
         open_bundle = load_json(d / "run.json").get("bundle", "base")
         if open_bundle != args.bundle:
             sys.exit(f"{run} is unfinished and writes for bundle {open_bundle!r}, not {args.bundle!r}. "
@@ -1845,50 +1864,47 @@ def cmd_batch(args):
         if warn := health.unacked_failure():  # decision 414: warning only
             print(warn, file=sys.stderr)
         check_bundle(args.bundle)
-        if args.subcategories:
+        if args.media_first:
+            subs = []
+        elif args.subcategories:
             subs = sub_keys(args.subcategories, args.bundle)
             unknown = not_in_bundle(subs, args.bundle)
             if unknown:
                 sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)}: {', '.join(unknown)}")
         else:
             subs = batches.subcategories(load_json(POOL)["questions"], args.count, args.bundle)  # D-46, D-54
-        save_json(d / "run.json", {"mode": "batch", "bundle": args.bundle, "subcategories": subs,
-                                   "draft_locale": translations.draft_locale(bundle_row(args.bundle)),
+        save_json(d / "run.json", {"mode": mode, "bundle": args.bundle, "subcategories": subs,
+                                   "draft_locale": "en" if args.media_first else translations.draft_locale(bundle_row(args.bundle)),
+                                   **({"files": args.files} if args.media_first else {}),
                                    "started": datetime.date.today().isoformat()})
-    subs, locale = load_json(d / "run.json")["subcategories"], text_locale(d)
+    cfg = load_json(d / "run.json")
+    subs, locale = cfg["subcategories"], text_locale(d)
     progress.verbose = False  # one summary per step, no detail line per item (QG-20)
-    print(f"{'Resuming' if resuming else 'Starting'} {run} for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories. "
-          "This takes from several minutes to an hour.", flush=True)
+    what = (f"from surveyed Commons files ({cfg['files'] or 'up to ' + str(media_first.MF_DESIGNED) + ' designed'})"
+            if args.media_first else f"for bundle {args.bundle} in {LANGUAGES[locale]}: {len(subs)} subcategories")
+    print(f"{'Resuming' if resuming else 'Starting'} {run} {what}. This takes from several minutes to an hour.", flush=True)
 
     def ns(**kw):
         return argparse.Namespace(run=run, jobs=args.jobs, **kw)
 
-    steps = [
-        ("concepts", cmd_concepts, ns(model="opus", subcategories=None, top_up=True)),
-        ("draft", cmd_draft, ns(model="opus", seed=1, slots=BATCH_SLOTS, subcategories=None, bundle=args.bundle)),
-        *([("english-keys", cmd_english_keys, ns(model="sonnet"))] if locale == "en" else []),
-        ("rate", cmd_rate, ns(model="opus")),
-        ("factcheck", cmd_factcheck, ns(model="sonnet")),
-        ("revise", cmd_revise, ns(model="opus")),
-        ("apply", cmd_apply, ns()),
-        ("rate", cmd_rate, ns(model="opus")),
-        ("factcheck", cmd_factcheck, ns(model="sonnet")),
-        ("merge", cmd_merge, ns(min_score=0)),
-        ("media", cmd_media, ns()),
-        ("sheets", cmd_sheets, ns()),
-        ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
-        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
-        ("research", cmd_research, ns()),
-        ("media", cmd_media, ns()),
-        ("sheets", cmd_sheets, ns()),
-        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
-        ("record", cmd_record, ns()),
-        ("audit", cmd_audit, ns(model="opus", batch=run)),
-        ("export", lambda a: cmd_export(a) or [], ns()),
-        ("sync", cmd_sync_run, ns()),
-        ("batch-report", cmd_batch_report, ns()),
-    ]
-    t0 = run_steps(steps, "qgen batch" + (f" --bundle {args.bundle}" if args.bundle != "base" else ""), run)
+    if args.media_first:
+        steps = media_first_steps(run, args.jobs, cfg.get("files"), ns)
+    else:
+        steps = [
+            ("concepts", cmd_concepts, ns(model="opus", subcategories=None, top_up=True)),
+            ("draft", cmd_draft, ns(model="opus", seed=1, slots=BATCH_SLOTS, subcategories=None, bundle=args.bundle)),
+            *([("english-keys", cmd_english_keys, ns(model="sonnet"))] if locale == "en" else []),
+            *pipeline_steps(run, ns),
+        ]
+    again = batches.MODES[mode] + (f" --bundle {args.bundle}" if args.bundle != "base" else "")
+    if args.until:
+        names = [n for n, _, _ in steps[:[n for n, _, _ in steps].index("merge")]]
+        if args.until not in names:
+            sys.exit(f"--until: one of {', '.join(dict.fromkeys(names))} (no merge before it)")
+        run_steps(steps[:names.index(args.until) + 1], again, run, validate=False)
+        print(f"\nStopped after {args.until} (--until): {run} is unfinished; `{again}` finishes it.")
+        return
+    t0 = run_steps(steps, again, run)
     cfg = load_json(d / "run.json")
     save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == run]
@@ -1901,7 +1917,50 @@ def cmd_batch(args):
           f"  git add authoring/data/questions.json {pool_file} app/data/bundles/ app/data/demo/ {concept_dir}/ authoring/reports/{run}.md authoring/reports/batches.md"
           + (" authoring/data/english-keys.json" if locale == "en" else "") + "\n"
           f"  git commit -m \"{run}: {len(qs)} {'' if args.bundle == 'base' else args.bundle + ' '}questions, "
-          f"{n_ok} approved (qgen batch)\"")
+          f"{n_ok} approved ({again})\"")
+
+
+def pipeline_steps(run, ns, after_fix=()):
+    """The steps from the drafts on: rate … batch-report (D-36); `after_fix` right after `fix`."""
+    return [
+        ("rate", cmd_rate, ns(model="opus")),
+        ("factcheck", cmd_factcheck, ns(model="sonnet")),
+        ("revise", cmd_revise, ns(model="opus")),
+        ("apply", cmd_apply, ns()),
+        ("rate", cmd_rate, ns(model="opus")),
+        ("factcheck", cmd_factcheck, ns(model="sonnet")),
+        ("merge", cmd_merge, ns(min_score=0)),
+        ("media", cmd_media, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
+        ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
+        *after_fix,
+        ("research", cmd_research, ns()),
+        ("media", cmd_media, ns()),
+        ("sheets", cmd_sheets, ns()),
+        ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
+        ("record", cmd_record, ns()),
+        ("audit", cmd_audit, ns(model="opus", batch=run)),
+        ("export", lambda a: cmd_export(a) or [], ns()),
+        ("sync", cmd_sync_run, ns()),
+        ("batch-report", cmd_batch_report, ns()),
+    ]
+
+
+def media_first_steps(run, jobs, files, ns):
+    """`qgen batch --media-first`'s steps (plan 203): media_first's, then english-keys and pipeline_steps;
+    media and research search only the background (review_steps.kept_slots). `files`: the queue's size (--files),
+    then triage takes them all, else it stops at MF_DESIGNED worth it."""
+    d, target = WORK / run, None if files else media_first.MF_DESIGNED
+    return [
+        ("inventory", lambda a: media_first.inventory_step(d, files), None),
+        ("probe", lambda a: media_first.probe_step(d, run, jobs, target), None),
+        ("triage", lambda a: media_first.triage(d, run, jobs, target=target), None),
+        ("design", lambda a: media_first.design(d, jobs), None),
+        ("giveaway", lambda a: media_first.check_drafts(d), None),
+        ("english-keys", cmd_english_keys, ns(model="sonnet")),
+        *pipeline_steps(run, ns, [("giveaway", lambda a: media_first.check_fixed(run), None)]),
+    ]
 
 
 # --- health ack, rework, scans: tighten, neutralize ---------------------------
@@ -2131,6 +2190,10 @@ def main():
                    help="translate the bundle's approved questions into this locale (plan 66); only when the user names a language")
     b.add_argument("--dry-run", action="store_true", help="with --translate: print the next run's sources, no LLM calls")
     b.add_argument("--ids", help=argparse.SUPPRESS)  # with --translate: these source ids (tests and debugging only)
+    b.add_argument("--media-first", action="store_true",
+                   help="base questions built around surveyed Commons audio and video files (plan 203)")
+    b.add_argument("--files", type=int, help=argparse.SUPPRESS)  # with --media-first: queue this many files (developer only)
+    b.add_argument("--until", help=argparse.SUPPRESS)  # with --media-first: stop after this step, before merge (developer only)
     args = ap.parse_args()
     errors = args.fn(args)
     limit = next((e for e in errors if isinstance(e, UsageLimit)), None) if isinstance(errors, list) else None

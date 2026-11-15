@@ -5,15 +5,16 @@ from layout import WORK
 import categories  # authoring/tools/categories.py: app/data/categories.json (D-19)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 
+MODES = {"batch": "qgen batch", "media-first": "qgen batch --media-first"}  # run.json mode → the command that finishes it (decision 646)
 SHARE = 0.5  # per batch: this share of the bundle's subcategories, those with the fewest approved questions (D-46)
 
 
 def unfinished_runs():
-    """Names of `qgen batch` runs in work/ that haven't finished, sorted."""
+    """Names of `qgen batch` and `qgen batch --media-first` runs in work/ that haven't finished, sorted."""
     out = []
     for p in WORK.glob("*/run.json"):
         run = json.loads(p.read_text(encoding="utf-8")) or {}
-        if run.get("mode") == "batch" and not run.get("done"):
+        if run.get("mode") in MODES and not run.get("done"):
             out.append(p.parent.name)
     return sorted(out)
 

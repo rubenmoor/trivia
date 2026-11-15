@@ -7,6 +7,7 @@ import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import media_cache as media  # authoring/tools/media_cache.py: the media cache (D-17)
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
+import media_first  # authoring/tools/media_first.py: probe aids (plan 203)
 import providers  # authoring/tools/providers/: where candidates come from (D-45)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
@@ -71,7 +72,10 @@ def slots_of(q):
 
 def kept_slots(run, q):
     """A scan run's (SCANS) slots that keep the pool's pick: still picked (revise_in_pool unpicks a slot only
-    when its type or query changed) and usable. No search, research, sheet or new pick for them (tasks 1194, 1244)."""
+    when its type or query changed) and usable. No search, research, sheet or new pick for them (tasks 1194, 1244).
+    A media-first run: `media`, the file the question was built around (plan 203)."""
+    if run_mode(run) == "media-first" and q.get("media_first"):
+        return {"media"}
     if run_mode(run) not in SCANS:
         return set()
     return {s for s in slots_of(q) if q[s].get("file_url") and providers.licence_verdict(q[s])[0] == "ok"}
@@ -235,11 +239,15 @@ def cmd_review(args):
             "related": related_questions(q, pool, pool_en),
             "media": slot_input(d, q, "media", "media" in kept),
             "background": slot_input(d, q, "background", "background" in kept) if q.get("background") else None,
-            "can_search_again": args.round == 1 and "media" not in kept,
+            "can_search_again": args.round == 1 and ("media" not in kept or bool(q.get("media_first") and q.get("background"))),
             "can_fix": args.round == 1 and not rework,
             "only_shortened": mode in SCANS,  # already in the game, only reworded
             "existing": rework,
         }
+        if q.get("media_first") and not locale:
+            payload["media_first"] = {k: q["media_first"][k] for k in ("kind", "class")} | {
+                "excerpt": q["media"].get("excerpt"), "duration": q["media"].get("duration"),
+                "aids": media_first.aids(media_first.load_probe(q["media_first"]["probe"]))}
         user = "## Question to review\n" + json.dumps(payload, ensure_ascii=False)
         system = prompt(*names, locale=locale or translations.source_locale(q), bundle=run_bundle(d),
                         source_locale=q.get("source_locale"))
@@ -411,32 +419,34 @@ def needs_recheck(fix, rework):
 
 
 def cmd_research(args):
-    """One new media search for questions whose round-1 review found no adequate media."""
+    """One new media search for questions whose round-1 review found no adequate media; in a media-first run
+    (fixed `media`, plan 203) for the background."""
     d = run_dir(args)
+    slot, key = ("background", "background_pick") if run_mode(args.run) == "media-first" else ("media", "pick")
     errors, todo, done = [], [], 0
     for q in batch_questions(args.run):
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         r1 = r.get("round1") or {}
         done += bool(r.get("researched"))
-        if (r1.get("pick") is None and r1.get("new_query") and not r.get("researched")
-                and "media" not in (r.get("fix") or {}).get("changed", []) and "media" not in kept_slots(args.run, q)):
+        if (q.get(slot) and r1.get(key) is None and r1.get("new_query") and not r.get("researched")
+                and slot not in (r.get("fix") or {}).get("changed", []) and slot not in kept_slots(args.run, q)):
             todo.append((q, path, r))
     progress.resumed("research", done, len(todo), "searches")
     with progress.Bar("research", len(todo), "searches") as bar:
         for q, path, r in todo:
             query = r["round1"]["new_query"].strip()
             try:
-                q["media"]["query"] = query
+                q[slot]["query"] = query
                 with progress.item("research", q["id"]):
-                    media_tool.fetch_for(q, "media", tolerate=True)
+                    media_tool.fetch_for(q, slot, tolerate=True)
             except Exception as e:  # noqa: BLE001
                 errors.append(e)
                 progress.fail(f"  FAILED research {q['id']}: {e}")
                 bar.finished(ok=False)
                 continue
-            update_pool({q["id"]: lambda x, s=query: x["media"].update(query=s)})
-            sheet_path(d, q["id"], "media").unlink(missing_ok=True)  # `sheets` builds the new one
+            update_pool({q["id"]: lambda x, s=query: x[slot].update(query=s)})
+            sheet_path(d, q["id"], slot).unlink(missing_ok=True)  # `sheets` builds the new one
             r["researched"] = query
             save_json(path, r)
             progress.detail(f"  research: {q['id']}: “{query}”")
@@ -454,11 +464,13 @@ RECORD_TEXT = {  # record's own feedback: Spanish for es-sourced questions, else
            "media pick": "La imagen elegida", "background pick": "La imagen de fondo elegida",
            "broken": " está dañada en la fuente ({}).", "licence": " tiene una licencia no adecuada ({}).",
            "fact": "Verificación de datos",
-           "service": "Falló el servicio de imágenes ({})."},
+           "service": "Falló el servicio de imágenes ({}).",
+           "giveaway": "El fragmento delata la respuesta: se oye o se ve «{}» (transcripción/OCR)."},
     "en": {"no media": "No suitable picture found for this question.", "no background": "No suitable background picture found.",
            "media pick": "The picked picture", "background pick": "The picked background picture",
            "broken": " is broken at the source ({}).", "licence": " has an unsuitable licence ({}).", "fact": "Fact check",
-           "service": "Image service failed ({})."},
+           "service": "Image service failed ({}).",
+           "giveaway": "The played window gives the answer away: “{}” is heard or seen (transcript/OCR)."},
 }
 
 
@@ -466,7 +478,8 @@ def cmd_record(args):
     """Write the reviews (D-33: reviewer llm + model) and the picks into the pool. Fixed rules on
     top of the model's decision: no adequate media, a pick whose licence verdict is replace or whose file is broken
     (each pick is downloaded to check it, task 1181), or a fact check that isn't confirmed, means needs_work.
-    A scan run's kept slots (kept_slots) stay as they are: no pick, no download."""
+    A scan run's kept slots (kept_slots) stay as they are: no pick, no download. A media-first question's fixed
+    `media` is checked like a pick (download, licence); a giveaway found after `fix` means needs_work (plan 203)."""
     d = run_dir(args)
     if run_locale(d):
         return record_translations(args, d)
@@ -483,6 +496,9 @@ def cmd_record(args):
             continue
         reviewed.append((q, full, r))
         kept = kept_slots(args.run, q)
+        if q.get("media_first") and "media" in kept:
+            picks[q["id"], "media"] = {k: q["media"][k] for k in ("type", "source_url", "file_url", "credit", *providers.LICENCE_FIELDS)
+                                       if k in q["media"]}
         for slot, key in [("media", "pick"), ("background", "background_pick")]:
             if slot not in slots_of(q) or slot in kept:
                 continue
@@ -519,6 +535,10 @@ def cmd_record(args):
             decision = "needs_work"
             kinds.add("fact")
             problems.append(f"{say['fact']}: {check['verdict']}. {check['problem']}".strip())
+        if full.get("giveaway"):  # media_first.check_fixed
+            decision = "needs_work"
+            kinds.add("giveaway")
+            problems.append(say["giveaway"].format(", ".join(full["giveaway"])))
         if decision == "needs_work" and not problems:
             problems.append(r["reasons"])
         review = {"decision": decision, "feedback": " ".join(problems) if decision == "needs_work" else None,
