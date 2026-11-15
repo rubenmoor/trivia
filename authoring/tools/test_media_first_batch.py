@@ -8,6 +8,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import qgen  # noqa: E402  (import order: the command modules import each other)
 import batches  # noqa: E402
 import categories  # noqa: E402
+import audit  # noqa: E402
 import health  # noqa: E402
 import layout  # noqa: E402
 import media as media_tool  # noqa: E402
@@ -244,6 +245,27 @@ class FixedSlot(Base):
         self.assertEqual((mfi["file"], mfi["class"]), ("File:lion.ogg", "general"))
         self.assertEqual([f["check"] for f in mfi["mechanical"]], ["answer-heard"])
         self.assertEqual(fixed, mfi)
+
+    def test_audit_sees_the_aids_not_the_review(self):
+        self.patch(audit, "WORK", self.work)
+        self.patch(audit, "POOL", self.pool)
+        self.patch(mf, "LEDGER", self.work / "media-first" / "files.jsonl")
+        self.review({"round1": {"decision": "needs_work", "feedback": "SECRET-VERDICT", "fix": "x", "problems": []}})
+        seen = []
+
+        def stub(system, user, schema, model, cwd, read=False, **kw):
+            seen.append((system, json.loads(user.split("\n", 1)[1]), read, user))
+            return ({"verdict": "ok", "problems": [], "severity": "minor", "difficulty_estimate": 3, "notes": "n"}, "opus")
+        self.patch(audit, "claude", stub)
+        self.patch(audit, "related_questions", lambda *a: [])
+        audit.audit_ids("batch-1", ["q-0001"], argparse.Namespace(jobs=1, model="opus"))
+        (system, inp, read, raw), = seen
+        self.assertTrue(read)
+        self.assertIn("Media-first questions", system)
+        self.assertEqual(inp["media_first"], mf.review_input(self.q))
+        self.assertEqual(inp["media_first"]["aids"]["speech"]["text"], "a lion roars")
+        self.assertNotIn("SECRET-VERDICT", raw)
+        self.assertNotIn("review", inp)
 
     def test_merge_keeps_media_and_provenance(self):
         self.pool.write_text(json.dumps({"questions": [{**self.q, "id": "q-0100", "status": "approved", "batch": "x",
