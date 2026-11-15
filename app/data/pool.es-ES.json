@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "a1090d02",
+  "hash": "5d07f344",
   "questions": [
     {
       "id": "q-0001",
@@ -137666,50 +137666,6 @@
       "background": null
     },
     {
-      "id": "q-4240",
-      "status": "approved",
-      "difficulty": 5,
-      "subcategory": "classical-music",
-      "bundle": "base",
-      "description": "Cuatro notas que llaman a tu puerta más fuerte que cualquier repartidor.",
-      "question": "Escucha: ¿qué pieza famosa empieza con este «ta-ta-ta-CHAN»?",
-      "answer": "Quinta Sinfonía de Beethoven",
-      "wrong_answers": [
-        "«Pequeña serenata nocturna» de Mozart",
-        "«Las cuatro estaciones» de Vivaldi",
-        "«El lago de los cisnes» de Chaikovski"
-      ],
-      "hints": [
-        "La toca una orquesta completa y tiene más de 200 años.",
-        "Su compositor siguió escribiendo música incluso después de quedarse sordo.",
-        "Es una sinfonía del compositor alemán de «Para Elisa»."
-      ],
-      "fun_fact": "Durante la Segunda Guerra Mundial, la BBC usó el famoso «ta-ta-ta-CHAN» del principio como señal, porque coincide con la letra V en código morse: punto-punto-punto-raya.",
-      "media": {
-        "type": "audio",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Beethoven_symphony_5_opening.mid?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeethoven_symphony_5_opening.mid",
-        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Ludwig van Beethoven",
-        "author_url": "https://en.wikipedia.org/wiki/en:Ludwig%20van%20Beethoven",
-        "excerpt": null
-      },
-      "background": {
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Amsterdam_-_Beurs_van_Berlage_-_1689.jpg/3840px-Amsterdam_-_Beurs_van_Berlage_-_1689.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmsterdam_-_Beurs_van_Berlage_-_1689.jpg",
-        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Jorge Royan",
-        "author_url": null
-      }
-    },
-    {
       "id": "q-4241",
       "status": "approved",
       "difficulty": 6,
@@ -199535,41 +199491,6 @@
         "license_url": null,
         "author": "user:Dustimagic",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dustimagic&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-6336",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "knights",
-      "bundle": "base",
-      "description": "Manualidades medievales, pero con un propósito muy serio.",
-      "question": "Los caballeros pintaban diseños como este en sus escudos. ¿Por qué?",
-      "answer": "Para mostrar quién iba dentro",
-      "wrong_answers": [
-        "Para hacer el escudo más fuerte",
-        "Para hacer el escudo más ligero",
-        "Para reflejar la luz del sol"
-      ],
-      "hints": [
-        "Piensa en cómo se veía de lejos un caballero con la armadura completa.",
-        "Cada familia tenía sus propios colores y animales.",
-        "Funcionaba un poco como una etiqueta con el nombre."
-      ],
-      "fun_fact": "Unos expertos llamados heraldos sabían reconocer el diseño de cada caballero; por eso el estudio de los escudos de armas se llama heráldica.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Heraldic_Ceiling%2C_Strawberry_Hill_House%2C_Twickenham.xcf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeraldic_Ceiling%2C_Strawberry_Hill_House%2C_Twickenham.xcf",
-        "credit": "Lobsterthermidor (talk) 09:57, 14 October 2022 (UTC) · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Lobsterthermidor (talk) 09:57, 14 October 2022 (UTC)",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Lobsterthermidor",
         "excerpt": null
       },
       "background": null

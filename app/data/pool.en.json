@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "346ff21f",
+  "hash": "98e59ae9",
   "questions": [
     {
       "id": "q-0001",
@@ -121320,50 +121320,6 @@
       "background": null
     },
     {
-      "id": "q-4240",
-      "status": "approved",
-      "difficulty": 5,
-      "subcategory": "classical-music",
-      "bundle": "base",
-      "description": "Four notes that knock on your door louder than any delivery driver.",
-      "question": "Listen: which famous piece starts with this “da-da-da-DUM”?",
-      "answer": "Beethoven's Fifth Symphony",
-      "wrong_answers": [
-        "Mozart's “Eine kleine Nachtmusik”",
-        "Vivaldi's “The Four Seasons”",
-        "Tchaikovsky's “Swan Lake”"
-      ],
-      "hints": [
-        "It's played by a full orchestra and is over 200 years old.",
-        "Its composer kept writing music even after going deaf.",
-        "It's a symphony by the German composer of “Für Elise”."
-      ],
-      "fun_fact": "During the Second World War, the BBC used the opening “da-da-da-DUM” as a signal, because it matches the letter V in Morse code: dot-dot-dot-dash.",
-      "media": {
-        "type": "audio",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Beethoven_symphony_5_opening.mid?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeethoven_symphony_5_opening.mid",
-        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Ludwig van Beethoven",
-        "author_url": "https://en.wikipedia.org/wiki/en:Ludwig%20van%20Beethoven",
-        "excerpt": null
-      },
-      "background": {
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Amsterdam_-_Beurs_van_Berlage_-_1689.jpg/3840px-Amsterdam_-_Beurs_van_Berlage_-_1689.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmsterdam_-_Beurs_van_Berlage_-_1689.jpg",
-        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Jorge Royan",
-        "author_url": null
-      }
-    },
-    {
       "id": "q-4241",
       "status": "approved",
       "difficulty": 7,
@@ -183294,41 +183250,6 @@
         "license_url": null,
         "author": "user:Dustimagic",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dustimagic&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-6336",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "knights",
-      "bundle": "base",
-      "description": "Medieval arts and crafts, with a very serious purpose.",
-      "question": "Knights painted designs like this one on their shields. Why?",
-      "answer": "To show who was inside",
-      "wrong_answers": [
-        "To make the shield stronger",
-        "To make the shield lighter",
-        "To reflect the sunlight"
-      ],
-      "hints": [
-        "Think about what a knight looked like in full armor from far away.",
-        "Each family had its own colors and animals.",
-        "It worked a bit like a name tag."
-      ],
-      "fun_fact": "Experts called heralds could recognize every knight's design, which is why the study of coats of arms is called heraldry.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Heraldic_Ceiling%2C_Strawberry_Hill_House%2C_Twickenham.xcf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeraldic_Ceiling%2C_Strawberry_Hill_House%2C_Twickenham.xcf",
-        "credit": "Lobsterthermidor (talk) 09:57, 14 October 2022 (UTC) · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Lobsterthermidor (talk) 09:57, 14 October 2022 (UTC)",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Lobsterthermidor",
         "excerpt": null
       },
       "background": null
