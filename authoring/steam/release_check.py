@@ -10,7 +10,7 @@ Steps, each ✓/✗ with its time; all automated steps run, exit 1 on any ✗:
   quality   qgen report --qc: release bar ✓ for the last two batches (pm decision 15)
   nix       nix build .#app (D-59)
   desktop   trivia-desktop-build --dir (stage-media's missing-file check) + trivia-steam stage
-  media-budget  node app/desktop/stage-media.mjs --check: every pool URL shipped, depot and file sizes within
+  media-budget  node app/desktop/stage-media.mjs --check: every pool URL shipped, file sizes (no depot line, decision 653) within
             app/desktop/media-budget.json (plan 132)
   report    the build's reportUrl (package.json in the Linux app.asar) non-empty, GET <url>/health → {"ok": true, "api": 1}
             within 10 s (plan 104); `--skip report` until the server is set up (plan 103 task 4)
