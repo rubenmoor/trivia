@@ -73,8 +73,8 @@ def slots_of(q):
 def kept_slots(run, q):
     """A scan run's (SCANS) slots that keep the pool's pick: still picked (revise_in_pool unpicks a slot only
     when its type or query changed) and usable. No search, research, sheet or new pick for them (tasks 1194, 1244).
-    A media-first run: `media`, the file the question was built around (plan 203)."""
-    if run_mode(run) == "media-first" and q.get("media_first"):
+    A media-first question, in any run (batch, rework, scans): `media`, the file it was built around (plan 203)."""
+    if q.get("media_first"):
         return {"media"}
     if run_mode(run) not in SCANS:
         return set()
@@ -420,11 +420,11 @@ def needs_recheck(fix, rework):
 
 def cmd_research(args):
     """One new media search for questions whose round-1 review found no adequate media; in a media-first run
-    (fixed `media`, plan 203) for the background."""
+    (fixed `media`, plan 203) for the background; per question, so a rework run too."""
     d = run_dir(args)
-    slot, key = ("background", "background_pick") if run_mode(args.run) == "media-first" else ("media", "pick")
     errors, todo, done = [], [], 0
     for q in batch_questions(args.run):
+        slot, key = ("background", "background_pick") if q.get("media_first") else ("media", "pick")
         path = d / "reviews" / f"{q['id']}.json"
         r = load_json(path, {})
         r1 = r.get("round1") or {}

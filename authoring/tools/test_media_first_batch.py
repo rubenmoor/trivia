@@ -13,6 +13,7 @@ import layout  # noqa: E402
 import media as media_tool  # noqa: E402
 import media_first as mf  # noqa: E402
 import review_steps  # noqa: E402
+import rework  # noqa: E402
 
 STEPS = ["inventory", "probe", "triage", "design", "giveaway", "english-keys", "rate", "factcheck", "revise", "apply",
          "rate", "factcheck", "merge", "media", "sheets", "review 1", "fix", "giveaway", "research", "media", "sheets",
@@ -177,6 +178,19 @@ class FixedSlot(Base):
         self.assertEqual(self.fetched[1:], [("q-0001", "background")])
         self.assertEqual(self.pooled()["background"]["query"], "grassland")
         self.assertEqual(self.pooled()["media"], self.q["media"])
+
+    def test_rework_run_keeps_media(self):
+        (self.d / "run.json").write_text(json.dumps({"mode": "rework", "ids": ["q-0001"]}))
+        self.pool.write_text(json.dumps({"questions": [{**self.q, "status": "draft", "batch": "batch-1"}]}))  # fix made it a draft
+        a = argparse.Namespace(run="batch-1", jobs=1)
+        self.assertEqual(review_steps.kept_slots("batch-1", self.q), {"media"})
+        review_steps.cmd_media(a)
+        self.assertEqual(self.fetched, [("q-0001", "background")])
+        self.review({"round1": {"decision": "needs_work", "pick": None, "background_pick": None, "new_query": "grassland"}})
+        review_steps.cmd_research(a)
+        self.assertEqual(self.fetched[1:], [("q-0001", "background")])
+        self.assertEqual(self.pooled()["media"], self.q["media"])
+        self.assertIn("giveaway", [n for n, *_ in rework.revise_steps(lambda **kw: None, "opus", "opus")])
 
     def test_revise_keeps_media(self):
         q = json.loads(json.dumps(self.q))
