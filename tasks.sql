@@ -834,6 +834,17 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 * DLC should smoothly integrate, e.g. no new badges, no changes when adding DLC
 * more ideas? e.g. progression outside from badges
 * any badge should always also be a steam achievement (the other way round: not the case)', '2026-11-01T01:38:28Z', NULL, 1);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (21, 'add 1000 multimedia questions to the base bundle', 'open', 'in oder to have more multimedia questions inside the base bundle, we can create them using a different strategy; multimedia here means either with audio or with video
+
+confirm first that this is indeed feasible:
+
+instead of generating question and then looking for appropriate media, check the available media on wikimedia commons and try to design a question around it. create a pipeline for this process, including the quality control via LLM and the human spotcheck
+
+this is finished when we have 1000 additional approved questions in the base bundle
+
+also, make sure that there is an option each to disable audio and to disable video questions somewhere in the screens that configure a game session.
+
+once these 1000 question are approved, make sure that the base bundle is advertised as 6000+ question everywhere', '2026-11-15T04:55:04Z', NULL, 1);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`"). Human reviews still happen, but no run waits for them (`decision 414: Human reviews don''t gate question generation or translation`). 5000 was reached with batch-14; batch-15 is the last batch, then the exit check.
 
@@ -11220,6 +11231,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - `trivia-release-check`''s `career` step is green and the `career` row is in `MANUAL`; the demo and mods runs check the career
 - The developer''s playtest decision answered «passed» (after any "again" round); milestone 20''s "Done when" checked clause by clause in the close-out', 'The game''s new career gives each family member badges, a score and a rank as they play; it is only finished when a real family has played it. This last step first lets the computer play a game that earns a badge on the packaged game, checks that the free demo shows none of it, that players'' own question packs count fairly and that adding or removing a paid add-on changes no badge, and keeps that check before every release. Then the developer plays the career on the TV with the family, and whatever goes wrong goes back to the part that built it.', '2026-11-13T00:52:58Z', 1883);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task) VALUES (200, 21, 'masterplan', 1000, 'tbd.', '', '2026-11-15T04:55:04Z', NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -46762,6 +46774,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - What: the desktop build / `stage` (not `qgen export`) leaves topic pool files out of the shipped build (and Steam depots, `trivia-steam stage`) unless all five are at the bar (`qgen report --bundle <id> --locale L`), per locale; without pools the bundle is "not offered" (`decision 112`).
 - Where: `app/desktop` build and stage scripts; `plans/22-bundles.md` "Shipping non-base bundles".
 - Done when: a build today contains no topic pool; a check (release check or stage) fails or warns if one slips in below the bar; the rule documented.', '2026-11-14T21:04:18Z', '2026-11-14T21:05:42Z', 1889, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2034, 200, 'write the masterplan of milestone 21: add 1000 multimedia questions to the base bundle', 'masterplan', 'open', NULL, NULL, 'Write plan 200, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-11-15T04:55:04Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
