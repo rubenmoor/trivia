@@ -14,7 +14,7 @@ Findings of `plan 201: Feasibility: Commons supply survey and pilot`: whether Wi
 | video | general | 3369 | 1816 | 1553 |
 | video | pd-film | 184 | 37 | 147 |
 
-- `audio/midi`: 82 of the audio files (64 pd-music, 18 general); not playable by the game's tools, to drop (`task 2050: Media survey: drop MIDI and unreadable files`).
+- `audio/midi`: 82 of the 6632 files first kept (64 pd-music, 18 general), no player and no probe; now a counted survey filter (85 files), kept total 6550 (`task 2050: Media survey: drop MIDI and unreadable files`). The tables above are the 6632 run; subtract the MIDI rows (pd-music audio 886 → 822, general 2193 → 2175).
 - Filtered out (counts): audio < 2 s 1619, video < 480p 701, not audio/video 621, video > 600 s 579, duplicate across seeds 303, audio > 600 s 205, licence 75, restriction 54, already in a pool 11.
 - Kinds by category (full table in `work/media-survey/tally.md`):
   - audio general: animal (animals 404, pets-and-farm 86, amazon 70, planet-earth 62, plants-and-environment 40), instrument (music 577), machine (transport 356, inventions-and-technology 264), place (architecture-and-landmarks 287, religion-and-philosophy 286, planet-earth 216, plants-and-environment 213)

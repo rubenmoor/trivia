@@ -40,6 +40,10 @@ class Filters(unittest.TestCase):
     def test_not_media(self):
         self.assertEqual(self.why(mediatype="bitmap"), "not audio or video")
 
+    def test_midi(self):
+        self.assertIn("MIDI", self.why(mime="audio/midi"))
+        self.assertIn("MIDI", self.why(title="File:A.mid"))
+
     def test_pool_and_duplicates(self):
         kept, counts = ms.apply_filters([(SEED, [rec("File:A b.ogg"), rec("File:A_b.ogg"), rec("File:C.ogg", duration=90)]),
                                          (SEED, [rec("File:C.ogg")])], {ms.norm_title("File:Z.ogg")})
