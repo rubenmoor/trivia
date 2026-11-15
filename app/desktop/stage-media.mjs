@@ -146,12 +146,13 @@ if (check) {
   const absent = [...urls].filter((u) => !size.has(shippedName(u))).sort();
   for (const u of absent) fails.push(`missing ${shippedName(u)}  ${u}`);
   const inPack = new Set(Object.values(shipped).flat());
-  const depots = [["content", [...size.keys()].filter((f) => !inPack.has(f)), (demo ? budget.demo : budget).content]];
-  for (const [b, files] of Object.entries(shipped)) depots.push([`dlc ${b}`, files, budget.dlc[b] ?? budget.default_dlc]);
+  // No size line for the base content or the packs (decision 653); only the demo has one.
+  const depots = [["content", [...size.keys()].filter((f) => !inPack.has(f)), demo ? budget.demo.content : null]];
+  for (const [b, files] of Object.entries(shipped)) depots.push([`dlc ${b}`, files, null]);
   for (const [name, files, max] of depots) {
     const mb = files.reduce((n, f) => n + (size.get(f) ?? 0), 0) / MB;
-    const over = mb > max;
-    console.log(`${over ? "✗" : "✓"} ${name}: ${files.length} files, ${mb.toFixed(0)} MB of ${max} MB`);
+    const over = max !== null && mb > max;
+    console.log(`${over ? "✗" : "✓"} ${name}: ${files.length} files, ${mb.toFixed(0)} MB${max === null ? "" : ` of ${max} MB`}`);
     if (over) fails.push(`${name} over budget: ${mb.toFixed(0)} > ${max} MB`);
   }
   const horizonDir = path.join(REPO, "app", "client", "public", "horizon");

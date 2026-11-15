@@ -1435,7 +1435,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 | Storage | 1.5 GB available space | 1.5 GB available space |
 | Additional notes | Native Linux build; plays offline | same |
 
-- Storage: per decision 90 (estimate, grows with content): 1.5 GB = measured 1.09 GB rounded up; the media budget (`app/desktop/media-budget.json`: 950 + 75 MB) plus the OS depot still fits
+- Storage: per decision 90 (estimate, grows with content): 1.5 GB = measured 1.09 GB rounded up; no size line for content or packs (decision 653)
 - Ubuntu 22.04: Electron's own floor, not tested; the non-Nix start test is the Steam beta test (decision 39, `task 263: write plan: Beta test and S5 close-out`): its distro replaces it
 - macOS: none (no build)
 
