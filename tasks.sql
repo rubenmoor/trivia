@@ -47032,8 +47032,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when: the filter has a test case in `authoring/tools/test_media_survey.py`, the tally shows the MIDI count, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T07:27:08Z', '2026-11-15T07:32:08Z', 2046, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2051, 202, 'create tasks for plan 202: Sound and video in the game', 'split', 'done', 1000, '2026-11-15, tasks 2054, 2055, 2056, 2057, 2058, 2059, 2060', 'Split plan 202 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-15T18:32:22Z', '2026-11-15T18:33:54Z', 2039, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2052, 203, 'create tasks for plan 203: Media-first pipeline', 'split', 'open', 1000, NULL, 'Split plan 203 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-15T18:33:08Z', NULL, 2037, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2052, 203, 'create tasks for plan 203: Media-first pipeline', 'split', 'done', 1000, '2026-11-15, tasks 2061-2068; no open decisions (640-646 cover the plan)', 'Split plan 203 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-15T18:33:08Z', '2026-11-15T18:35:29Z', 2037, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2053, 202, 'Media-first files in .ogv/Theora: playable in the dev game and review tool', 'work', 'open', NULL, NULL, '`decision 642: Media-first pilot: how many would you approve?`: the developer noted that the .ogv files "might cause trouble; convert all to the same format". Shipped builds are fine: `stage-media.mjs` encodes every video to WebM VP9 (`decision 185: Shipped media: formats, names and where the encode runs (SW-9)`). But the dev game (`trivia`, Node dev server) and the review tool (`trivia-authoring`) serve the media cache as-is, and Chromium (so Electron too) no longer decodes Theora video.
 
 - What: check which cached media-first files don''t play in Chromium (Theora .ogv, any other codec seen in `work/media-survey/files.jsonl` mimes); make them play in the dev game and the review tool, e.g. a playable WebM next to the cached file (from the `work/ship-media/` encode or its own cache) served in place of the original, the original kept for licence/source. One format for all, as the developer asked.
@@ -47108,6 +47108,95 @@ What:
 - No subtitles: no speech-led questions unless `task 2038: write plan: LLM quality control and spot check for media-first runs`''s plan allows them; if it does, add a follow-up task in `plan 202: Sound and video in the game` for subtitles.
 
 Done when: the developer approved on the TV; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass after any change.', '2026-11-15T18:33:51Z', NULL, 2051, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2061, 203, 'Media-first fields in the schema and qgen validate, excerpt export hold', 'work', 'open', NULL, NULL, 'Step 1 of `plan 203: Media-first pipeline`. Questions built around a Commons audio or video file carry new fields; `qgen validate` must check them before any run writes them.
+
+Binding: `decision 644: Question media excerpts: field shape`, `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`.
+
+What:
+- `media.excerpt` `{start, end}` s: optional, audio/video only, numbers, 0 ≤ start < end, end − start ≤ `MAX_AUDIO_SECONDS` (60), end ≤ `media.duration` when present.
+- `media.duration` (s, number > 0, audio/video).
+- `media.work` `{title, creator, year, basis}`: required when `media_first.class` is `pd-music` or `pd-film`, else absent.
+- `media_first` `{seed, class, kind, probe}`: provenance; class one of the survey''s classes (import from `media_survey`, no copy).
+- Where today''s media fields are checked (`authoring/tools/validate.py`, schema), not a new checker; import the shape from `media_pilot.excerpt_schema` or move it to a shared spot (decision 199).
+- Export hold: `authoring/tools/pool_export.py` leaves questions with `media.excerpt` out of the playable pools while `excerpt` is not in `MEDIA_PLAY_FIELDS`; one function the batch report can call to count them as "held".
+- Tests: valid and each invalid case; the hold.
+
+Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:02Z', NULL, 2052, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2062, 203, 'Media-first inventory and ledger: seed yield, skips, dedupe', 'work', 'open', NULL, NULL, 'Step 2 of `plan 203: Media-first pipeline`. A media-first run starts from a list of surveyed Commons files; the inventory picks which files a run looks at, never the same file twice.
+
+What (`authoring/tools/media_first.py`, new; import `media_survey`, no copies, decision 199):
+- `inventory(...)`: reads the survey''s `work/media-survey/files.jsonl` (crawl via `media_survey`, resumable, when missing or a seed is short).
+- Ledger `work/media-first/files.jsonl`: every file any run triaged, with run name and verdict; files in it are never offered again.
+- Drop files already used by a pool (`media_survey.pool_media`).
+- Seeds ordered by yield (worth-it share from the pilot''s results and the ledger); a seed with 0 worth it after 15 triaged files is skipped from then on; the zero-yield seeds of `authoring/reports/media-first-feasibility.md` (Lingua Libre, newsreels, church bells, trains/cars/aircraft audio, ambience) start skipped.
+- Run size: files in seed-yield order until `MF_DESIGNED` (120) designed questions or the inventory runs out; `--files N` limit; the selection is written to the run dir so a resume takes the same files.
+- Tests without network (fixture `files.jsonl`, ledger, pool).
+
+Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:02Z', NULL, 2052, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2063, 203, 'Media-first steps probe, triage, design, giveaway and their prompts', 'work', 'open', NULL, NULL, 'Step 3 of `plan 203: Media-first pipeline`. The core of media-first: look at a file, decide if it is worth a question, write the question around what is heard or seen, and catch questions that give the answer away.
+
+Binding: `decision 642: Media-first pilot: how many would you approve?` (subject dedupe before design, unambiguous about what to listen or look for, good file with a bad question → fix), `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`, `decision 644: Question media excerpts: field shape`, `decision 208: What must a script that calls claude report to its caller?`.
+
+What (`authoring/tools/media_first.py`; import `media_probe`, `media`, `providers`, qgen''s `claude`/usage helpers, decision 199):
+- Probe: `media_probe.probe` on each file (aids: transcript + language guess, OCR, frame sheet, spectrogram, loudness, silence); after design, again on the excerpt window.
+- Triage (sonnet), prompt `authoring/tools/prompts/media-triage.md` (promoted from `work/media-pilot/prompts/triage.md`): worth it?, subject, base category/subcategory (`app/data/categories.json`, gap weights from `targets.py`/`batches.py`), difficulty 1–5 toward the gaps, kind, class, excerpt, quality; gets the subcategory''s existing base subjects (English keys) and marks a subject base has as "duplicate"; one subject per run. Verdicts go to the ledger.
+- Design (opus), prompt `authoring/tools/prompts/media-design.md` (from the pilot''s `design.md`): EN question, answer from what is heard or seen, never from title or description; says what to listen or look for; four options, hints, fun fact per house style; `background` query for audio; `media.excerpt`; `media.work` for pd classes. Output is a draft question with `media` pre-filled from the file (type, role, `source_url`, `file_url`, credit/licence fields as `media.pick_fields`, `excerpt`, `duration`, `work`) and `media_first` `{seed, class, kind, probe}`.
+- Giveaway (no LLM; from `media_pilot.heard_giveaway`): answer or its English key in the excerpt''s transcript or OCR → back to design once with that note, then dropped. Callable again after `fix`.
+- Each step resumable per file (results in the run dir), calls and totals reported.
+- Tests with a stub claude: schemas, duplicate subject, giveaway retry and drop, pd `work` required.
+
+Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:03Z', NULL, 2052, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2064, 203, 'qgen batch --media-first: run mode, step list, resume, fixed media slot', 'work', 'open', NULL, NULL, 'Step 4 of `plan 203: Media-first pipeline`. One resumable command that turns surveyed Commons files into merged, reviewed, exported base questions, like `qgen batch` does from topics.
+
+Binding: `decision 646: Media-first runs: names and resume`, `decision 414: Human reviews don''t gate question generation or translation`, `decision 232`/`decision 236: English-first drafting for base: what drives drafting and which locales steer it` (english-keys).
+
+What (`authoring/tools/qgen.py` `cmd_batch`, reuse today''s steps, no copies):
+- `qgen batch --media-first`: run name `batch-<n>` (one counter), `run.json` `"mode": "media-first"`.
+- Steps: inventory → probe → triage → design → giveaway → english-keys → rate → factcheck → revise → apply → rate → factcheck → merge → media (background only) → sheets → review 1 → fix → giveaway → research (background only) → media → sheets → review 2 → record → audit → export → sync → batch-report → validate.
+- Resume: plain `qgen batch` never resumes a media-first run and `--media-first` never resumes a plain one; each stops and names the command that finishes the open run.
+- Fixed media slot: the pre-filled media is the only candidate; media/research search only the `background` image; review gets the probe artefacts'' paths; "media unfit" → `needs_work` (what the review prompts do with the aids is `task 2038: write plan: LLM quality control and spot check for media-first runs`).
+- Developer-only flags `--files N`, `--until <step>` (no merge before it).
+- Test with a stub claude: step order, resume after a kill at each step, the cross-mode refusal, media slot unchanged after media/research.
+
+Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:24Z', NULL, 2052, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2065, 203, 'Media-first reports: funnel per seed and class, decision 641 count, cost', 'work', 'open', NULL, NULL, 'Step 5 of `plan 203: Media-first pipeline`. The developer needs to see how far the 1000 extra sound and video questions have come and what each one costs.
+
+Binding: `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions`, `decision 208: What must a script that calls claude report to its caller?`.
+
+What:
+- Batch report (`cmd_batch_report`) of a media-first run: funnel per seed and per class: files → worth it → designed → passed giveaway → merged → approved, and "held" (excerpt questions out of the playable pools, step 1''s function); $ per approved.
+- `qgen report`: decision 641 count (approved base sources with `media.type` audio/video, minus the 58 at the start, target 1058), media share of base, cost of media-first runs (`--cost` too).
+- Tests on fixture runs.
+
+Done when: tests pass; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:25Z', NULL, 2052, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2066, 203, 'Media-first trial: 40 files up to design, compared with the pilot', 'work', 'open', NULL, NULL, 'Step 6 of `plan 203: Media-first pipeline`. Before real runs, a small live run checks that the pipeline finds and designs questions as well and as cheaply as the pilot did.
+
+What:
+- Run `qgen batch --media-first --files 40 --until design` in the main checkout''s `work/` (work tree symlinks per AGENTS.md "Work trees"); real claude and Commons.
+- Compare with `authoring/reports/media-first-feasibility.md`: worth-it share, designed per file, giveaway drops, duplicates caught, $ per designed; within the pilot''s range or a stated reason.
+- Fix the prompts (`authoring/tools/prompts/media-triage.md`, `media-design.md`) or step code where the trial shows a fault, re-run the affected files.
+- Short results section appended to the feasibility report (or a new `authoring/reports/` file named in it); the trial''s ledger entries stay (those files are triaged).
+
+Done when: yield within the pilot''s range (or the gap explained and a follow-up added); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:25Z', NULL, 2052, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2067, 203, 'Media-first docs: RUNBOOK, AGENTS.md; media pilot removed', 'work', 'open', NULL, NULL, 'Step 7 of `plan 203: Media-first pipeline`. Whoever makes questions follows the runbook, so it must say when and how to make sound and video questions; the one-off pilot code goes.
+
+What:
+- `authoring/RUNBOOK.md`: when to use `qgen batch --media-first`, same exit codes, the new stop row (open run of the other mode → the command that finishes it), "What the batch does" for the media-first steps.
+- AGENTS.md "Making questions" and Commands: the command and flags.
+- Remove `authoring/tools/media_pilot.py`, `test_media_pilot.py`, `qgen media-pilot` (helpers already moved in steps 1 and 3); `rg` old names (`media_pilot`, `media-pilot`) over code, comments and `.md`, fix every hit (decision 200); the feasibility report keeps its history wording.
+- `.md` style per AGENTS.md.
+
+Done when: `rg media.pilot` hits only history text; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:25Z', NULL, 2052, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2068, 203, 'Lift the excerpt export hold once the game plays excerpts', 'work', 'open', NULL, NULL, 'Follow-up in `plan 203: Media-first pipeline`. Sound and video questions that play only part of a file are kept out of the game until the game can play just that part; once it can, they must go in.
+
+Gap: plan 203 says `plan 202: Sound and video in the game` step 2 adds `excerpt` to `pool_export.MEDIA_PLAY_FIELDS`, but `task 2056: Media excerpts: pool check and playback of start to end` (work tree app) doesn''t list it, and `authoring/tools/pool_export.py` is authoring code.
+
+What:
+- Add `excerpt` to `MEDIA_PLAY_FIELDS` in `authoring/tools/pool_export.py`; the hold from `task 2061: Media-first fields in the schema and qgen validate, excerpt export hold` then lets them through (remove the hold code if it only existed for this).
+- `qgen export`; check that held questions are now in `app/data/` pools with `media.excerpt`, and that the batch report no longer counts them as held.
+- Test: an excerpt question exported with its excerpt.
+
+Done when: exported pools carry excerpts; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T18:35:25Z', NULL, 2052, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -56327,6 +56416,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2230, 2039, '2026-11-15T18:30:35Z', '2026-11-15T18:32:34Z', 'done', NULL, 0, '89b163c29d7e7c376929dc70be3ad0dea84e48fc', 'app', 'claude-opus-5-5', '620ee0df-32de-48aa-8ba4-f2f4b597a9d1', NULL, 14, 26, 9337, 707660, 74821, 0.926944, 75429, 60, 900963);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2231, 2051, '2026-11-15T18:32:23Z', '2026-11-15T18:34:04Z', 'done', NULL, 0, 'f4628e82f92d7eb63080e9f823f37465064dff13', NULL, 'claude-opus-5-5', '94b365e7-a8d0-4406-99e7-37bf24620b89', NULL, 10, 20, 8096, 462090, 46279, 0.62464999999999993, 60634, 60, 900963);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2232, 2053, '2026-11-15T18:33:56Z', NULL, 'running', NULL, NULL, 'f4628e82f92d7eb63080e9f823f37465064dff13', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 900963);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2233, 2052, '2026-11-15T18:34:04Z', '2026-11-15T18:35:37Z', 'done', NULL, 0, 'b6c94a4d88f65f27a2dea23f7beff1812760caf9', NULL, 'claude-opus-5-5', '0e76ceed-603a-4d86-a323-e88a28be3609', NULL, 10, 20, 7772, 427254, 41092, 0.5697068, 55442, 60, 900963);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -57344,6 +57434,14 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2057, 205
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2058, 2057);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2059, 2058);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2060, 2058);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2062, 2061);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2063, 2062);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2064, 2063);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2065, 2064);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2066, 2065);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2067, 2066);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2068, 2056);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2068, 2061);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
