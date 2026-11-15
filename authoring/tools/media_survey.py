@@ -177,6 +177,8 @@ def reject(rec, in_pool):
     t = TYPE_OF.get(rec["mediatype"])
     if not t:
         return "not audio or video"
+    if rec.get("mime") == "audio/midi" or rec["title"].lower().endswith((".mid", ".midi")):
+        return "MIDI (no player, no probe)"
     if norm_title(rec["title"]) in in_pool:
         return "already in a pool"
     if not providers.licence_kind(rec["license"]):
