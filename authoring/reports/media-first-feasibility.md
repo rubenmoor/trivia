@@ -96,6 +96,7 @@ Measured 2026-11-15 (`task 2059: Media budget for 500 to 1000 more sound and vid
 
 - `content` depot today, before any media-first file: 3097 MB of 950 MB (images 2783 MB, 5443 WebP); the line is broken already by the pool's growth
 - `content` with 1000 more at the pilot's mix, 1080p: ≈ 6.9 GB; installed ≈ 7.3 GB with the OS depot (store estimate today: 1.5 GB)
+- Applied: 1080p, no video cap, store storage 8 GB (`decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`); no `content` line at all (`decision 653: How large may a country pack's download be: raise the 75 MB line, shrink its pictures, or ship fewer?`); `stage-media.mjs --check` passes (content 2942 MB after task 2089's re-stage)
 
 ## Trial run (task 2066)
 A first live run of the media-first pipeline, `qgen batch --media-first --files 40 --until design` (`work/batch-78/`, 2026-11-15), checked whether it finds and designs questions as well and as cheaply as the pilot did. It stopped after design, so nothing was merged; the 40 files stay in the ledger as triaged.
