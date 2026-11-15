@@ -318,13 +318,17 @@ def band_levels(b, lo, hi):
     return [lvl for lvl in range(lo, hi + 1) if band(lvl, lo, hi) == b]
 
 
+FILLER = {"a", "an", "the", "of", "and", "s", "from", "in", "on", "at", "by", "for", "during", "with"}
+
+
 def known_subject(subject, keys):
-    """The first key whose stemmed words are all in the subject's ("Rooster" in "rooster crowing"), else None."""
+    """The first key whose stemmed words are all in the subject's and make ≥ 1/3 of them ("Rooster" in "rooster
+    crowing"; not "A flute" in "… from The Magic Flute": trial, task 2066), else None."""
     from qgen import stem
-    have = set(stem(subject, "en").split())
+    have = set(stem(subject, "en").split()) - FILLER - STOP
     for k in keys:
-        kw = set(stem(k, "en").split()) - STOP
-        if kw and kw <= have:
+        kw = set(stem(k, "en").split()) - FILLER - STOP
+        if kw and kw <= have and 3 * len(kw) >= len(have):
             return k
     return None
 
@@ -459,10 +463,15 @@ def designed(d):
     return read_jsonl(steps_dir(d) / "design.jsonl")
 
 
+def run_answers(d):
+    """Answers of the run's passed designs: one question per answer in a run (trial, task 2066: 7 of 15 Beethoven)."""
+    return [r["attempts"][-1]["question"]["answer"] for r in designed(d) if r["passed"]]
+
+
 def design(d, jobs=3, model=DESIGN_MODEL):
     """An EN draft per worth file not designed yet: design, probe the window, check (`problems`); on problems one
     more design with them as `previous_attempt`, then dropped. Passed drafts → drafts/mf-*.json. Errors."""
-    from qgen import claude, load_age_groups, parallel, save_json
+    from qgen import claude, load_age_groups, parallel, save_json, stem
     path, lock = steps_dir(d) / "design.jsonl", threading.Lock()
     files = {f["title"]: f for f in select(d)}
     done = {r["title"] for r in designed(d)}
@@ -470,6 +479,7 @@ def design(d, jobs=3, model=DESIGN_MODEL):
     progress.resumed("design", len(done), len(todo), "files")
     lo, hi = load_age_groups()["scale"]
     system = prompt_file("media-design", "house-style")
+    answers = {stem(a, "en"): a for a in run_answers(d)}
 
     def work(t):
         f = files[t["title"]]
@@ -479,10 +489,18 @@ def design(d, jobs=3, model=DESIGN_MODEL):
                 "target_levels": band_levels(t["difficulty"], lo, hi), "aids": aids(p)}
         tries = []
         for _ in range(2):
+            with lock:
+                user["run_answers"] = sorted(answers.values())
             out = claude(system, json.dumps(user, ensure_ascii=False, indent=1), design_schema(), model, d, read=True)
             window = probe(f["title"], out["excerpt"]) if out["excerpt"] else p
             q = draft(f, t, out, p, window)
             found = problems(q, window, out["giveaway"])
+            with lock:
+                if stem(q["answer"], "en") in answers:
+                    found.append(f"another question of this run already has the answer {q['answer']!r}: "
+                                 "ask about something else this file shows")
+                elif not found:
+                    answers[stem(q["answer"], "en")] = q["answer"]
             tries.append({"question": q, "problems": found})
             if not found:
                 break

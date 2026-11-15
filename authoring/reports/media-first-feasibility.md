@@ -77,3 +77,18 @@ Ablation: blind triage (title + description) vs aided triage on the same 247 fil
 - Budget: media size: 54 % of files need an excerpt, so shipped excerpts must be cut (not whole files) to stay in the `app/desktop/media-budget.json` limits (`decision 185: Shipped media: formats, names and where the encode runs (SW-9)`).
 - Sample: 250 files of 6632, round-robin by seed; the yield has wide error bars per seed (1–5 files each).
 - Look share pending (`decision 642`); the estimates above assume nothing about it.
+
+## Trial run (task 2066)
+A first live run of the media-first pipeline, `qgen batch --media-first --files 40 --until design` (`work/batch-78/`, 2026-11-15), checked whether it finds and designs questions as well and as cheaply as the pilot did. It stopped after design, so nothing was merged; the 40 files stay in the ledger as triaged.
+
+- Sample: 40 files, all `pd-music`: the queue starts at the pilot's best seeds (classical symphony 30 = `MAX_PER_SEED`, opera aria 10); compare with the pilot's pd-music row. General and pd-film come in the first real runs.
+- Worth it: 17 of 40 (42 %; pilot pd-music 44 %, its good seeds 44–56 %). First pass 15: two false duplicates, now fixed (below).
+- Duplicates caught: 6 (2 base: Beethoven's Fifth; 4 same work twice in the run: Eroica, Pastoral, Bach Suite No. 2).
+- Not worth 17: quiet 1929/1946 shellac transfers (−32 to −37 LUFS), movements families won't recognise, obscure arias.
+- Designed per file: 17 of 40 (0.43; pilot pd-music 0.44); giveaway drops 0 (pilot pd-music 0 of 20).
+- Cost: triage $0.07 per file (42 calls $2.94); per designed $0.28 on the first pass (pilot $0.31). $6.61 in all, re-runs included.
+- Faults found and fixed:
+  - Subject check in code: a one-word base key matched any subject containing it ("A flute" in "… The Magic Flute", "An opera" in "Opera aria …"): a key must now make up ≥ 1/3 of the subject's words. The two files were re-triaged: both worth.
+  - Same answer: 7 of the first 15 designs were "Which composer? Beethoven". Design now sees `run_answers` and must pick another answer that still comes from listening (nickname, dance form, what the music paints); 3 designs took a second attempt, two more were re-designed after asking about a city and a dedicatee.
+- Open: probe took 28m50s for 40 files (mean length 288 s: long music), against the pilot's 59 min for 250 mixed files. A 120-designed run (≈ 300 files) would spend hours probing: `task 2088: Media-first probe: faster on long files`.
+- For the review (`task 2071: Media-first review prompt with the judging aids`): pd-music questions lean on facts around the piece; the review must ask whether a listener can answer from the clip.
