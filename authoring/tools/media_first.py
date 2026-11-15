@@ -313,7 +313,7 @@ def title_words(title):
 def media_findings(q, p=None):
     """Mechanical faults of a media-first question, `[{kind, check, note, hard}]`, [] if clean. `kind` is one of
     `qgen.PROBLEMS`; `hard` ones make the question needs_work in `record`, the others are numbers for the
-    review (loudness and silence are judged by the model after this flag). `p`: the window's probe."""
+    review (title words, loudness and silence are judged by the model after this flag). `p`: the window's probe."""
     p = p or load_probe(q["media_first"]["probe"])
     m, mf, out = q["media"], q["media_first"], []
 
@@ -324,7 +324,7 @@ def media_findings(q, p=None):
     shown = " ".join([q["question"], *q["wrong_answers"], *q.get("hints", []), q.get("description") or ""])
     hit = sorted(title_words(m.get("query")) & words(shown) - words(q["answer"]))
     if hit:
-        add("giveaway", "title-words", f"the file's title words appear in the question text: {', '.join(hit)}")
+        add("giveaway", "title-words", f"the file's title words appear in the question text: {', '.join(hit)}", hard=False)
     hit = giveaway(q, p)
     if hit:
         add("giveaway", "answer-heard", f"answer words heard or seen in the window (transcript/OCR): {', '.join(hit)}")

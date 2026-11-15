@@ -99,6 +99,7 @@ class MediaFindings(unittest.TestCase):
     def test_title_words(self):
         q = self.q(); q["hints"][0] = "it is roaring"
         self.assertEqual(self.checks(q, self.probe()), {"title-words"})
+        self.assertFalse(any(x["hard"] for x in mf.media_findings(q, self.probe())))
 
     def test_answer_heard_and_ocr(self):
         self.assertEqual(self.checks(self.q(), self.probe(text="a lion")), {"answer-heard"})
