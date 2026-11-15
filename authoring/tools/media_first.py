@@ -19,6 +19,7 @@ import media_probe, media_survey
 from media import MAX_AUDIO_SECONDS, excerpt_schema, pick_fields  # authoring/tools/media.py
 
 MF_DESIGNED = 120        # designed questions per run (≈ 100 approved at the pilot's look share)
+PROBE_JOBS = 4          # probes are local (ffmpeg, whisper), more than the claude calls' 3
 SKIP_AFTER = 15          # a seed with 0 worth it after this many triaged files is skipped from then on
 MAX_PER_SEED = 30        # files of one seed in a run's queue (spread over seeds)
 PRIOR = 0.24             # pilot's worth-it share (authoring/reports/media-first-feasibility.md), smooths seed yield
@@ -184,7 +185,7 @@ def round_size(todo, worth, target, jobs):
     return len(todo) if target is None else max(jobs, (target - worth) * 2)
 
 
-def probe_step(d, run, jobs=3, target=MF_DESIGNED):
+def probe_step(d, run, jobs=PROBE_JOBS, target=MF_DESIGNED):
     """The `probe` step: the aids of the files triage's first round takes (later rounds probe inside triage)."""
     from qgen import parallel
     worth = sum(t["verdict"] == "worth" for t in triaged(d))
