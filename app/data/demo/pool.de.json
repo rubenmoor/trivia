@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "37cfeb97",
+  "hash": "f47415ec",
   "questions": [
     {
       "id": "q-0016",
@@ -32,7 +32,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Ricardo Liberato",
-        "author_url": "http://liberato.org"
+        "author_url": "http://liberato.org",
+        "excerpt": null
       },
       "background": null
     },
@@ -66,7 +67,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Adha65",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Adha65&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Adha65&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -100,7 +102,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Thomas Fuhrmann",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Snowmanstudios"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Snowmanstudios",
+        "excerpt": null
       },
       "background": null
     },
@@ -134,7 +137,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Aciarium",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Aciarium"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aciarium",
+        "excerpt": null
       },
       "background": null
     },
@@ -168,7 +172,8 @@
         "license": "CC BY 3.0",
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "GRAN",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -202,7 +207,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "SarahCartwright",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -236,7 +242,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Belikov Maxim",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:BelikovMaxim&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:BelikovMaxim&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -270,7 +277,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Giles Laurent",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Giles_Laurent",
+        "excerpt": null
       },
       "background": null
     },
@@ -304,7 +312,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Anna Hanks from Austin, Texas, USA",
-        "author_url": "https://www.flickr.com/people/23349893@N08"
+        "author_url": "https://www.flickr.com/people/23349893@N08",
+        "excerpt": null
       },
       "background": null
     },
@@ -338,7 +347,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "fading",
-        "author_url": "https://web.archive.org/web/20161021055257/http://www.panoramio.com/user/5397823?with_photo_id=66317669"
+        "author_url": "https://web.archive.org/web/20161021055257/http://www.panoramio.com/user/5397823?with_photo_id=66317669",
+        "excerpt": null
       },
       "background": null
     },
@@ -372,7 +382,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Martin Falbisoner",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -406,7 +417,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bernard Gagnon",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag",
+        "excerpt": null
       },
       "background": null
     },
@@ -440,7 +452,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Vu Hoang",
-        "author_url": "https://www.flickr.com/people/187794252@N03"
+        "author_url": "https://www.flickr.com/people/187794252@N03",
+        "excerpt": null
       },
       "background": null
     },
@@ -474,7 +487,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "APK",
-        "author_url": "https://commons.wikimedia.org/wiki/User:APK"
+        "author_url": "https://commons.wikimedia.org/wiki/User:APK",
+        "excerpt": null
       },
       "background": null
     },
@@ -508,7 +522,8 @@
         "license": "No restrictions",
         "license_url": "https://www.flickr.com/commons/usage/",
         "author": "Australian National Maritime Museum on The Commons",
-        "author_url": "https://www.flickr.com/people/33147718@N05"
+        "author_url": "https://www.flickr.com/people/33147718@N05",
+        "excerpt": null
       },
       "background": null
     },
@@ -542,7 +557,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "SPARKY358",
-        "author_url": "https://commons.wikimedia.org/wiki/User:SPARKY358"
+        "author_url": "https://commons.wikimedia.org/wiki/User:SPARKY358",
+        "excerpt": null
       },
       "background": null
     },
@@ -576,7 +592,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Obsidian Soul",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Obsidian_Soul"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Obsidian_Soul",
+        "excerpt": null
       },
       "background": null
     },
@@ -610,7 +627,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Wilfredor",
-        "author_url": "https://www.wikidata.org/wiki/Q115464159"
+        "author_url": "https://www.wikidata.org/wiki/Q115464159",
+        "excerpt": null
       },
       "background": null
     },
@@ -644,7 +662,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Kamilokardona",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kamilokardona&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kamilokardona&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -678,7 +697,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "McKay Savage from London, UK",
-        "author_url": "https://www.flickr.com/people/56796376@N00"
+        "author_url": "https://www.flickr.com/people/56796376@N00",
+        "excerpt": null
       },
       "background": null
     },
@@ -712,7 +732,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "excerpt": null
       },
       "background": null
     },
@@ -746,7 +767,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": null,
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -780,7 +802,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Jebulon",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jebulon",
+        "excerpt": null
       },
       "background": null
     },
@@ -814,7 +837,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Cosal",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Cosal"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cosal",
+        "excerpt": null
       },
       "background": null
     },
@@ -848,7 +872,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Kritheus",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Kritheus"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kritheus",
+        "excerpt": null
       },
       "background": null
     },
@@ -882,7 +907,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "Brocken Inaglory. The image was edited by user:Alvesgaspar",
-        "author_url": "https://sites.google.com/site/thebrockeninglory/"
+        "author_url": "https://sites.google.com/site/thebrockeninglory/",
+        "excerpt": null
       },
       "background": null
     },
@@ -916,7 +942,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Hamaredha",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Hamaredha&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Hamaredha&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -950,7 +977,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Wikimedia Commons / Mu",
-        "author_url": "https://commons.wikimedia.org/wiki/Main_Page"
+        "author_url": "https://commons.wikimedia.org/wiki/Main_Page",
+        "excerpt": null
       },
       "background": null
     },
@@ -984,7 +1012,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "I.Shevtsov",
-        "author_url": "https://commons.wikimedia.org/wiki/User:I.shevtsov"
+        "author_url": "https://commons.wikimedia.org/wiki/User:I.shevtsov",
+        "excerpt": null
       },
       "background": null
     },
@@ -1018,7 +1047,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Pascal Terjan",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -1052,7 +1082,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "John Robert McPherson",
-        "author_url": "https://commons.wikimedia.org/wiki/User:John_Robert_McPherson"
+        "author_url": "https://commons.wikimedia.org/wiki/User:John_Robert_McPherson",
+        "excerpt": null
       },
       "background": null
     },
@@ -1086,7 +1117,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "John T. Daniels",
-        "author_url": "https://en.wikipedia.org/wiki/en:John_T._Daniels"
+        "author_url": "https://en.wikipedia.org/wiki/en:John_T._Daniels",
+        "excerpt": null
       },
       "background": null
     },
@@ -1120,7 +1152,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Håkan Dahlström from Malmö, Sweden",
-        "author_url": "https://www.flickr.com/people/93755244@N00"
+        "author_url": "https://www.flickr.com/people/93755244@N00",
+        "excerpt": null
       },
       "background": null
     },
@@ -1154,7 +1187,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Drahkrub. Attribution must include the URL http://de.wikipedia.org/wiki/Benutzer:Drahkrub.",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Drahkrub"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Drahkrub",
+        "excerpt": null
       },
       "background": null
     },
@@ -1188,7 +1222,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Didier Descouens",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Archaeodontosaurus",
+        "excerpt": null
       },
       "background": null
     },
@@ -1222,7 +1257,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Benh LIEU SONG (Flickr)",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Benh"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benh",
+        "excerpt": null
       },
       "background": null
     },
@@ -1256,7 +1292,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Hans Hillewaert",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -1290,7 +1327,8 @@
         "license": "CC BY-SA 3.0 at",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
         "author": "Ralf Roletschek",
-        "author_url": "https://www.wikidata.org/wiki/Q15080600"
+        "author_url": "https://www.wikidata.org/wiki/Q15080600",
+        "excerpt": null
       },
       "background": null
     },
@@ -1324,7 +1362,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ximenajuregui",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ximenajuregui&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ximenajuregui&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -1358,7 +1397,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "El pitareio",
-        "author_url": "https://commons.wikimedia.org/wiki/User:El_pitareio"
+        "author_url": "https://commons.wikimedia.org/wiki/User:El_pitareio",
+        "excerpt": null
       },
       "background": null
     },
@@ -1392,7 +1432,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here not appropriate.\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
-        "author_url": "https://commons.wikimedia.org/wiki/File:Emblem-camera.svg"
+        "author_url": "https://commons.wikimedia.org/wiki/File:Emblem-camera.svg",
+        "excerpt": null
       },
       "background": null
     },
@@ -1426,7 +1467,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "excerpt": null
       },
       "background": null
     },
@@ -1460,7 +1502,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Infestor",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Infestor"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Infestor",
+        "excerpt": null
       },
       "background": null
     },
@@ -1494,7 +1537,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Claude Lorrain",
-        "author_url": "https://en.wikipedia.org/wiki/en:Claude_Lorrain"
+        "author_url": "https://en.wikipedia.org/wiki/en:Claude_Lorrain",
+        "excerpt": null
       },
       "background": null
     },
@@ -1528,7 +1572,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dukeabruzzi",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dukeabruzzi&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dukeabruzzi&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -1562,7 +1607,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "User: (WT-shared) Ethajek at  wts wikivoyage",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -1596,7 +1642,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Benh LIEU SONG (Flickr)",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Benh"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benh",
+        "excerpt": null
       },
       "background": null
     },
@@ -1630,7 +1677,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Steven Sobieszczyk, USGS. Public domain.",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -1664,7 +1712,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Straktur",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Straktur"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Straktur",
+        "excerpt": null
       },
       "background": null
     },
@@ -1698,7 +1747,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dr. Raju Kasambe",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Dr._Raju_Kasambe"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dr._Raju_Kasambe",
+        "excerpt": null
       },
       "background": null
     },
@@ -1732,7 +1782,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Philiptdotcom",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Philiptdotcom&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Philiptdotcom&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -1766,7 +1817,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Joachim Huber from Switzerland",
-        "author_url": "https://www.flickr.com/people/8942661@N02"
+        "author_url": "https://www.flickr.com/people/8942661@N02",
+        "excerpt": null
       },
       "background": null
     },
@@ -1800,7 +1852,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Garst, Warren, 1922-2016, photographer",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -1834,7 +1887,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Images Money",
-        "author_url": "https://www.flickr.com/photos/59937401@N07"
+        "author_url": "https://www.flickr.com/photos/59937401@N07",
+        "excerpt": null
       },
       "background": null
     },
@@ -1868,7 +1922,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Édouard Adam",
-        "author_url": "https://www.wikidata.org/wiki/Q3579712"
+        "author_url": "https://www.wikidata.org/wiki/Q3579712",
+        "excerpt": null
       },
       "background": null
     },
@@ -1902,7 +1957,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "NOAA Okeanos Explorer",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -1936,7 +1992,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Finoskov",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Finoskov"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Finoskov",
+        "excerpt": null
       },
       "background": null
     },
@@ -1970,7 +2027,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Joshua Tree National Park",
-        "author_url": "https://www.flickr.com/people/115357548@N08"
+        "author_url": "https://www.flickr.com/people/115357548@N08",
+        "excerpt": null
       },
       "background": null
     },
@@ -2004,7 +2062,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Marc Ryckaert",
-        "author_url": "https://commons.wikimedia.org/wiki/User:MJJR"
+        "author_url": "https://commons.wikimedia.org/wiki/User:MJJR",
+        "excerpt": null
       },
       "background": null
     },
@@ -2038,7 +2097,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "IrenicRhonda",
-        "author_url": "https://www.geograph.org.uk/profile/44001"
+        "author_url": "https://www.geograph.org.uk/profile/44001",
+        "excerpt": null
       },
       "background": null
     },
@@ -2072,7 +2132,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Charles J. Sharp",
-        "author_url": "https://www.wikidata.org/wiki/Q54800218"
+        "author_url": "https://www.wikidata.org/wiki/Q54800218",
+        "excerpt": null
       },
       "background": null
     },
@@ -2106,7 +2167,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Wilfredor",
-        "author_url": "https://www.wikidata.org/wiki/Q115464159"
+        "author_url": "https://www.wikidata.org/wiki/Q115464159",
+        "excerpt": null
       },
       "background": null
     },
@@ -2140,7 +2202,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "14GTR",
-        "author_url": "https://commons.wikimedia.org/wiki/User:14GTR"
+        "author_url": "https://commons.wikimedia.org/wiki/User:14GTR",
+        "excerpt": null
       },
       "background": null
     },
@@ -2174,7 +2237,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Frank Hurley",
-        "author_url": "https://en.wikipedia.org/wiki/en:Frank_Hurley"
+        "author_url": "https://en.wikipedia.org/wiki/en:Frank_Hurley",
+        "excerpt": null
       },
       "background": null
     },
@@ -2208,7 +2272,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Marvin Nauman",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -2242,7 +2307,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Indrajit Das",
-        "author_url": "https://www.wikidata.org/wiki/Q56173187"
+        "author_url": "https://www.wikidata.org/wiki/Q56173187",
+        "excerpt": null
       },
       "background": null
     },
@@ -2276,7 +2342,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Abinayasekar357",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abinayasekar357&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abinayasekar357&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -2310,7 +2377,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Ocdp",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Ocdp"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ocdp",
+        "excerpt": null
       },
       "background": null
     },
@@ -2344,7 +2412,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Pacific Southwest Region 5",
-        "author_url": "https://www.flickr.com/people/39108150@N05"
+        "author_url": "https://www.flickr.com/people/39108150@N05",
+        "excerpt": null
       },
       "background": null
     },
@@ -2378,7 +2447,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Missvain",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Missvain"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Missvain",
+        "excerpt": null
       },
       "background": null
     },
@@ -2412,7 +2482,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Vyacheslav Argenberg",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "excerpt": null
       },
       "background": null
     },
@@ -2446,7 +2517,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Silver Dovelet",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Silver_Dovelet&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Silver_Dovelet&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -2480,7 +2552,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Dennis G. Jarvis",
-        "author_url": "https://www.wikidata.org/wiki/Q122977591"
+        "author_url": "https://www.wikidata.org/wiki/Q122977591",
+        "excerpt": null
       },
       "background": null
     },
@@ -2514,7 +2587,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Alex Abair",
-        "author_url": "https://www.inaturalist.org/users/434305"
+        "author_url": "https://www.inaturalist.org/users/434305",
+        "excerpt": null
       },
       "background": null
     },
@@ -2548,7 +2622,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Alexis",
-        "author_url": "https://www.inaturalist.org/users/999066"
+        "author_url": "https://www.inaturalist.org/users/999066",
+        "excerpt": null
       },
       "background": null
     },
@@ -2582,7 +2657,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Dave Goodman",
-        "author_url": "https://www.flickr.com/people/22464562@N00"
+        "author_url": "https://www.flickr.com/people/22464562@N00",
+        "excerpt": null
       },
       "background": null
     },
@@ -2616,7 +2692,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Quartettgeschwister",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quartettgeschwister&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quartettgeschwister&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -2650,7 +2727,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Helgi Halldórsson from Reykjavík, Iceland",
-        "author_url": "https://www.flickr.com/people/8058853@N06"
+        "author_url": "https://www.flickr.com/people/8058853@N06",
+        "excerpt": null
       },
       "background": null
     },
@@ -2684,7 +2762,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "NASA",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -2718,7 +2797,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Jukka Kuusisto",
-        "author_url": "https://www.wikidata.org/wiki/Q123556133"
+        "author_url": "https://www.wikidata.org/wiki/Q123556133",
+        "excerpt": null
       },
       "background": null
     },
@@ -2752,7 +2832,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Diego Delso",
-        "author_url": "https://www.wikidata.org/wiki/Q28147777"
+        "author_url": "https://www.wikidata.org/wiki/Q28147777",
+        "excerpt": null
       },
       "background": null
     },
@@ -2786,7 +2867,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "GuiltyGearFan37",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GuiltyGearFan37&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GuiltyGearFan37&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -2820,7 +2902,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Z3lvs",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -2854,7 +2937,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ingo Mehling",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Imehling"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Imehling",
+        "excerpt": null
       },
       "background": null
     },
@@ -2888,7 +2972,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Liam Quin",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -2922,7 +3007,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "HopsonRoad",
-        "author_url": "https://commons.wikimedia.org/wiki/User:HopsonRoad"
+        "author_url": "https://commons.wikimedia.org/wiki/User:HopsonRoad",
+        "excerpt": null
       },
       "background": null
     },
@@ -2956,7 +3042,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Xlanu",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Xlanu&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Xlanu&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -2990,7 +3077,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "veeterzy veeterzy",
-        "author_url": "https://unsplash.com/@veeterzy"
+        "author_url": "https://unsplash.com/@veeterzy",
+        "excerpt": null
       },
       "background": null
     },
@@ -3024,7 +3112,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Daderot",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Daderot",
+        "excerpt": null
       },
       "background": null
     },
@@ -3058,7 +3147,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "YegorGeologist",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:YegorGeologist&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:YegorGeologist&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -3092,7 +3182,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Ectopistes666",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ectopistes666&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ectopistes666&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -3126,7 +3217,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Faruk Ateş from Vancouver & SF",
-        "author_url": "https://www.flickr.com/people/62449696@N00"
+        "author_url": "https://www.flickr.com/people/62449696@N00",
+        "excerpt": null
       },
       "background": null
     },
@@ -3160,7 +3252,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Hinnerk Rümenapf (Hinnerk R)",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Hinnerk_R"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hinnerk_R",
+        "excerpt": null
       },
       "background": null
     },
@@ -3194,7 +3287,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Chris Olszewski",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Kgbo"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kgbo",
+        "excerpt": null
       },
       "background": null
     },
@@ -3228,7 +3322,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Brandon Antonio Segura Torres & Priscilla Vieto Bonilla",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Micro.Cosmonauta&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Micro.Cosmonauta&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -3262,7 +3357,8 @@
         "license": "CC BY 2.5",
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "author": "Spamguy at English Wikipedia",
-        "author_url": "https://en.wikipedia.org/wiki/User:Spamguy"
+        "author_url": "https://en.wikipedia.org/wiki/User:Spamguy",
+        "excerpt": null
       },
       "background": null
     },
@@ -3296,7 +3392,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
         "author": "wrcomms",
-        "author_url": "https://www.flickr.com/photos/134037448@N03"
+        "author_url": "https://www.flickr.com/photos/134037448@N03",
+        "excerpt": null
       },
       "background": null
     },
@@ -3330,7 +3427,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Vyacheslav Argenberg",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "excerpt": null
       },
       "background": null
     },
@@ -3364,7 +3462,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Pentachlorphenol",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Pentachlorphenol"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Pentachlorphenol",
+        "excerpt": null
       },
       "background": null
     },
@@ -3398,7 +3497,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Jackson Elizabeth, U.S. Fish and Wildlife Service",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -3432,7 +3532,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Martin Falbisoner",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -3466,7 +3567,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Quantum Information Retrieval",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quantum_Information_Retrieval&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Quantum_Information_Retrieval&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -3500,7 +3602,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ufficio Comunicazione, Azienda Ospedaliera SS. Antonio e Biagio e Cesare Arrigo, Alessandria, Biblioteca Biomedica Centro di Documentazione",
-        "author_url": "https://commons.wikimedia.org/wiki/User:PescediBabele"
+        "author_url": "https://commons.wikimedia.org/wiki/User:PescediBabele",
+        "excerpt": null
       },
       "background": null
     },
@@ -3534,7 +3637,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Unknown authorUnknown author",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -3568,7 +3672,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PinkBeachPlanet",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:PinkBeachPlanet&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -3602,7 +3707,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Jeff Sheldon ugmonk",
-        "author_url": "http://unsplash.com/@ugmonk"
+        "author_url": "http://unsplash.com/@ugmonk",
+        "excerpt": null
       },
       "background": null
     },
@@ -3636,7 +3742,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Lspigon",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Lspigon&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Lspigon&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -3670,7 +3777,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "excerpt": null
       },
       "background": null
     },
@@ -3704,7 +3812,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Joe Gratz",
-        "author_url": "https://www.flickr.com/people/63126465@N00"
+        "author_url": "https://www.flickr.com/people/63126465@N00",
+        "excerpt": null
       },
       "background": null
     },
@@ -3738,7 +3847,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Rohit Sharma",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Rohit14400"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rohit14400",
+        "excerpt": null
       },
       "background": null
     },
@@ -3772,7 +3882,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Martín Vasco",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Martin.vascovinueza"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Martin.vascovinueza",
+        "excerpt": null
       },
       "background": null
     },
@@ -3806,7 +3917,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
         "author": "Tom Habibi",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Tomhab&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Tomhab&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -3840,7 +3952,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Elmschrat",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Elmschrat"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Elmschrat",
+        "excerpt": null
       },
       "background": null
     },
@@ -3874,7 +3987,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Gary Todd from Xinzheng, China",
-        "author_url": "https://www.flickr.com/people/101561334@N08"
+        "author_url": "https://www.flickr.com/people/101561334@N08",
+        "excerpt": null
       },
       "background": null
     },
@@ -3908,7 +4022,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "University of the Fraser Valley",
-        "author_url": "https://www.flickr.com/people/21187388@N06"
+        "author_url": "https://www.flickr.com/people/21187388@N06",
+        "excerpt": null
       },
       "background": null
     },
@@ -3942,7 +4057,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Dietmar Rabich",
-        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
+        "excerpt": null
       },
       "background": null
     },
@@ -3976,7 +4092,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Carcharoth (Commons)",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Carcharoth_(Commons)"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Carcharoth_(Commons)",
+        "excerpt": null
       },
       "background": null
     },
@@ -4010,7 +4127,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "WorldwrestlingfederationVKM",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:WorldwrestlingfederationVKM&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:WorldwrestlingfederationVKM&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -4044,7 +4162,8 @@
         "license": "CC BY-SA 3.0 ch",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/ch/deed.en",
         "author": "A. Buser",
-        "author_url": "https://commons.wikimedia.org/wiki/User:AmBu"
+        "author_url": "https://commons.wikimedia.org/wiki/User:AmBu",
+        "excerpt": null
       },
       "background": null
     },
@@ -4078,7 +4197,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Harrison Keely",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Hkeely"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Hkeely",
+        "excerpt": null
       },
       "background": null
     },
@@ -4112,7 +4232,8 @@
         "license": "No restrictions",
         "license_url": "https://www.flickr.com/commons/usage/",
         "author": "Internet Archive Book Images",
-        "author_url": "https://www.flickr.com/people/126377022@N07"
+        "author_url": "https://www.flickr.com/people/126377022@N07",
+        "excerpt": null
       },
       "background": null
     },
@@ -4146,7 +4267,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Vyacheslav Argenberg",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "excerpt": null
       },
       "background": null
     },
@@ -4180,7 +4302,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "DarkF 77",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:DarkF_77&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:DarkF_77&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -4214,7 +4337,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Peachyeung316",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Peachyeung316",
+        "excerpt": null
       },
       "background": null
     },
@@ -4248,7 +4372,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Moheen Reeyad",
-        "author_url": "https://www.wikidata.org/wiki/Q28709819"
+        "author_url": "https://www.wikidata.org/wiki/Q28709819",
+        "excerpt": null
       },
       "background": null
     },
@@ -4282,7 +4407,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Pearson Scott Foresman",
-        "author_url": "https://en.wikipedia.org/wiki/Pearson_Scott_Foresman"
+        "author_url": "https://en.wikipedia.org/wiki/Pearson_Scott_Foresman",
+        "excerpt": null
       },
       "background": null
     },
@@ -4316,7 +4442,8 @@
         "license": "CC BY 3.0",
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Evilscaught",
-        "author_url": "https://web.archive.org/web/20161026122723/http://www.panoramio.com/user/3056394?with_photo_id=76950149"
+        "author_url": "https://web.archive.org/web/20161026122723/http://www.panoramio.com/user/3056394?with_photo_id=76950149",
+        "excerpt": null
       },
       "background": null
     },
@@ -4350,7 +4477,8 @@
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Charles J. Sharp",
-        "author_url": "https://www.wikidata.org/wiki/Q54800218"
+        "author_url": "https://www.wikidata.org/wiki/Q54800218",
+        "excerpt": null
       },
       "background": null
     },
@@ -4384,7 +4512,8 @@
         "license": "CC BY-SA 3.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Hakan Albağ",
-        "author_url": "https://500px.com/halbag"
+        "author_url": "https://500px.com/halbag",
+        "excerpt": null
       },
       "background": null
     },
@@ -4418,7 +4547,8 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Jason Hollinger",
-        "author_url": "https://www.flickr.com/people/7147684@N03"
+        "author_url": "https://www.flickr.com/people/7147684@N03",
+        "excerpt": null
       },
       "background": null
     },
@@ -4452,7 +4582,8 @@
         "license": "CC0",
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Mx. Granger",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Mx._Granger"
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mx._Granger",
+        "excerpt": null
       },
       "background": null
     },
@@ -4486,7 +4617,8 @@
         "license": "CC BY 2.5",
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "author": "Keitei",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Keitei&action=edit&redlink=1"
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Keitei&action=edit&redlink=1",
+        "excerpt": null
       },
       "background": null
     },
@@ -4520,7 +4652,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "DesiBoy101",
-        "author_url": "https://commons.wikimedia.org/wiki/User:DesiBoy101"
+        "author_url": "https://commons.wikimedia.org/wiki/User:DesiBoy101",
+        "excerpt": null
       },
       "background": null
     },
@@ -4554,7 +4687,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "U.S. Air Force photo by Airman 1st Class Regan Enriquez",
-        "author_url": "https://www.dvidshub.net/portfolio/1734692"
+        "author_url": "https://www.dvidshub.net/portfolio/1734692",
+        "excerpt": null
       },
       "background": null
     },
@@ -4588,7 +4722,8 @@
         "license": "CC BY-SA 2.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Lori from New York, NY, United States",
-        "author_url": "https://www.flickr.com/photos/74405061@N00"
+        "author_url": "https://www.flickr.com/photos/74405061@N00",
+        "excerpt": null
       },
       "background": null
     },
@@ -4622,7 +4757,8 @@
         "license": "CC BY 3.0",
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Chad Ajamian",
-        "author_url": "https://500px.com/cajamian"
+        "author_url": "https://500px.com/cajamian",
+        "excerpt": null
       },
       "background": null
     },
@@ -4656,7 +4792,8 @@
         "license": "CC BY 4.0",
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Rubin Observatory/NSF/AURA",
-        "author_url": null
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
@@ -4690,7 +4827,8 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Michelangelo",
-        "author_url": "https://en.wikipedia.org/wiki/en:Michelangelo"
+        "author_url": "https://en.wikipedia.org/wiki/en:Michelangelo",
+        "excerpt": null
       },
       "background": null
     }

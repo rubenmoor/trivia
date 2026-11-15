@@ -52,20 +52,16 @@ class Fields(unittest.TestCase):
         self.bad(q({"work": WORK}), "only for")
 
 
-class Hold(unittest.TestCase):
-    def test_held(self):
-        self.assertTrue(pool_export.held(q({"excerpt": {"start": 0, "end": 5}})))
-        self.assertFalse(pool_export.held(q()))
-        self.assertFalse(pool_export.held(q({"excerpt": None})))
-
-    def test_play_entries_skip_held(self):
+class Export(unittest.TestCase):
+    def test_play_entry_keeps_excerpt(self):
         base = {"id": "q-1", "status": "approved", "difficulty": 1, "subcategory": "x", "bundle": "base",
                 "description": "", "question": "?", "answer": "a", "wrong_answers": [], "hints": [], "fun_fact": "",
                 "background": None}
-        ok = {**base, "media": {"type": "audio", "role": "essential"}}
-        held = {**base, "id": "q-2", "media": {"type": "audio", "role": "essential", "excerpt": {"start": 0, "end": 5}}}
-        out = translations.play_entries("es", {"questions": [ok, held]})
-        self.assertEqual([e["id"] for e in out], ["q-1"])
+        ex = {"start": 0, "end": 5}
+        e = pool_export.play_entry({**base, "media": {"type": "audio", "role": "essential", "excerpt": ex}})
+        self.assertEqual(e["media"]["excerpt"], ex)
+        out = translations.play_entries("es", {"questions": [{**base, "media": {"type": "audio", "role": "essential", "excerpt": ex}}]})
+        self.assertEqual(out[0]["media"]["excerpt"], ex)
 
 
 if __name__ == "__main__":

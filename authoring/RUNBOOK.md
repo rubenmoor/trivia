@@ -78,7 +78,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Run name `batch-<n>` (one counter), `run.json` mode `media-first` (decision 646). A plain run is never resumed by `--media-first`, nor the reverse: the command stops and names the one that finishes the open run; that is a stop (step 3), not a failure.
 - Run size: files in seed-yield order until 120 designed questions (about 100 approved) or the inventory runs out.
 - Steps: inventory → probe → triage → design → giveaway → english-keys → rate → factcheck → revise → apply → rate → factcheck → merge → media (background image only) → sheets → review → fix → giveaway → research (background only) → media → sheets → review → record → audit → export → sync → batch-report → validate.
-- Questions with `media.excerpt` are held back from the playable pool until the game plays excerpts; the report counts them as "held".
+- Questions with `media.excerpt` go into the playable pools with it (`pool_export.MEDIA_PLAY_FIELDS`).
 - Never touch the ledger `work/media-first/files.jsonl` or the survey `work/media-survey/`; the batch maintains them.
 
 ## What the batch does (for reference)

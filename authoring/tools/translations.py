@@ -118,8 +118,6 @@ def play_entries(locale, source_pool):
     by_id = {t["id"]: t for t in load(locale)["questions"]} if path(locale).exists() else {}
     out = []
     for q in source_pool["questions"]:
-        if pool_export.held(q):
-            continue
         if source_locale(q) == locale:
             if q["status"] == "approved":
                 out.append(pool_export.play_entry(q))

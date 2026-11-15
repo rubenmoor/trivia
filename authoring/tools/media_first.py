@@ -521,7 +521,7 @@ def design(d, jobs=3, model=DESIGN_MODEL):
 # --- reports (decision 641) --------------------------------------------------------
 
 MM_START, MM_TARGET = 58, 1058   # decision 641: multimedia base questions at the start, and the goal (start + 1000)
-FUNNEL = ("files", "worth", "designed", "passed", "merged", "approved", "held")
+FUNNEL = ("files", "worth", "designed", "passed", "merged", "approved")
 
 
 def is_multimedia(q):
@@ -531,18 +531,15 @@ def is_multimedia(q):
 def multimedia_count(pool):
     """Decision 641: approved base sources with audio/video media (any role), the 58 at the start taken off;
     also the media share of approved base questions."""
-    import pool_export
     base = [q for q in pool if q["status"] == "approved" and q.get("bundle", "base") == "base"]
     n = sum(map(is_multimedia, base))
     return {"count": n, "added": n - MM_START, "target": MM_TARGET, "total": len(base),
-            "share": n / len(base) if base else None,
-            "held": sum(map(pool_export.held, base))}
+            "share": n / len(base) if base else None}
 
 
 def funnel(d, qs):
     """{"seed": {seed: row}, "class": {class: row}}, row = FUNNEL counts for the run dir `d` and its merged
-    questions `qs`: files triaged → worth it → designed → passed (giveaway and shape) → merged → approved, held."""
-    import pool_export
+    questions `qs`: files triaged → worth it → designed → passed (giveaway and shape) → merged → approved."""
     cls = {}
     out = {"seed": defaultdict(lambda: dict.fromkeys(FUNNEL, 0)), "class": defaultdict(lambda: dict.fromkeys(FUNNEL, 0))}
 
@@ -565,8 +562,7 @@ def funnel(d, qs):
         m = q.get("media_first") or {}
         if not m:
             continue
-        for key in ("merged", *(("approved",) if q["status"] == "approved" else ()),
-                    *(("held",) if pool_export.held(q) else ())):
+        for key in ("merged", *(("approved",) if q["status"] == "approved" else ())):
             bump(m["seed"], m["class"], key)
     return {k: dict(v) for k, v in out.items()}
 
@@ -582,7 +578,5 @@ def funnel_lines(d, qs, cost, approved):
                   "|" + "---|" * (len(FUNNEL) + 1)]
         lines += [f"| {n} | " + " | ".join(str(r[k]) for k in FUNNEL) + " |" for n, r in rows + [("total", tot)]]
         lines.append("")
-    lines += [f"- Held (excerpt questions outside the playable pools until the game plays excerpts): "
-              f"{sum(r['held'] for r in f['seed'].values())}",
-              "- $ per approved: " + (f"${cost / approved:.2f}" if approved else "-"), ""]
+    lines += ["- $ per approved: " + (f"${cost / approved:.2f}" if approved else "-"), ""]
     return lines
