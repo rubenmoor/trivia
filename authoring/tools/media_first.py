@@ -345,6 +345,26 @@ def media_findings(q, p=None):
     return out
 
 
+def commons_file(title):
+    """The Commons description and categories of a triaged file (ledger → its run's queue), or None."""
+    t = media_survey.norm_title(title)
+    run = next((r["run"] for r in ledger() if media_survey.norm_title(r["title"]) == t), None)
+    f = next((r for r in read_jsonl(layout.WORK / run / QUEUE) if media_survey.norm_title(r["title"]) == t),
+             None) if run else None
+    return {k: f.get(k) for k in ("description", "categories")} if f else None
+
+
+def review_input(q):
+    """`media_first` of a review or fix input (plan 204, prompts/media-first-checks.md): the file, its work,
+    Commons text, the played window's aids and the mechanical findings."""
+    p = load_probe(q["media_first"]["probe"])
+    m = q["media"]
+    return {k: q["media_first"][k] for k in ("kind", "class")} | {
+        "file": m.get("query"), "license": m.get("license"), "work": m.get("work"),
+        "excerpt": m.get("excerpt"), "duration": m.get("duration"), "commons": commons_file(m.get("query")),
+        "aids": aids(p), "mechanical": media_findings(q, p)}
+
+
 # --- shared inputs ---------------------------------------------------------------
 
 def taxonomy_text(bundle="base"):
