@@ -10,12 +10,13 @@ then dropped. Results per file in <run>/media-first/{triage,design}.jsonl; passe
 `check_drafts`), then qgen's; `check_fixed` is the giveaway check after `fix`.
 """
 import hashlib, json, re, threading
+from datetime import date
 from collections import defaultdict
 from pathlib import Path
 from types import SimpleNamespace
 
 import atomic, categories, layout, progress
-import media_probe, media_survey
+import media_probe, media_survey, providers
 from media import MAX_AUDIO_SECONDS, excerpt_schema, pick_fields  # authoring/tools/media.py
 
 MF_DESIGNED = 120        # designed questions per run (≈ 100 approved at the pilot's look share)
@@ -272,6 +273,75 @@ def problems(q, p, model_check=None):
         out.append(f"giveaway: answer words heard or seen in the window (transcript/OCR): {', '.join(hit)}")
     if model_check and not model_check["passes"]:
         out.append(f"giveaway (your own check): {model_check['notes']}")
+    return out
+
+
+# --- mechanical media checks (plan 204) --------------------------------------------
+
+# Floors on the played window, measured on the pilot's 280 probed files (work/media-probe/, plan 201;
+# authoring/reports/media-first-feasibility.md): median −19 LUFS, 10th percentile −35; quiet files at −37 to −43
+# drove most quality rejects, 1929/1946 shellac transfers (−32 to −37) were "not worth" in the trial (task 2066).
+MIN_LUFS = -32.0
+# 90 % of files with sound have ≤ 0.33 silence; a window over half silent has too little to hear.
+MAX_SILENCE = 0.5
+# The free-use basis of a `media.work` (decision 640), classified from its text and year
+WORK_BASES = ("died-70-years", "pre-1930-film", "government-work", "traditional")
+
+
+def work_basis(w, today_year=None):
+    """Which of WORK_BASES `media.work` states, or None. Died ≥ 71 years ago; a film of 1929 or earlier."""
+    year = today_year or date.today().year
+    text = str(w.get("basis") or "").lower()
+    if re.search(r"government|\bgov\b|\bnasa\b|public service", text):
+        return "government-work"
+    if re.search(r"traditional|anthem|folk|anonymous", text):
+        return "traditional"
+    died = re.search(r"(?:died|d\.|†)\s*(?:c\.\s*)?(\d{4})", text)
+    if died and int(died.group(1)) <= year - 71:
+        return "died-70-years"
+    made = re.search(r"\b(\d{4})\b", f"{w.get('year') or ''} {text}")
+    if "film" in text and made and int(made.group(1)) < 1930:
+        return "pre-1930-film"
+    return None
+
+
+def title_words(title):
+    name = re.sub(r"^File:|\.[A-Za-z0-9]{2,4}$", "", title or "")
+    return words(name.replace("_", " ")) - STOP
+
+
+def media_findings(q, p=None):
+    """Mechanical faults of a media-first question, `[{kind, check, note, hard}]`, [] if clean. `kind` is one of
+    `qgen.PROBLEMS`; `hard` ones make the question needs_work in `record`, the others are numbers for the
+    review (loudness and silence are judged by the model after this flag). `p`: the window's probe."""
+    p = p or load_probe(q["media_first"]["probe"])
+    m, mf, out = q["media"], q["media_first"], []
+
+    def add(kind, check, note, hard=True):
+        out.append({"kind": kind, "check": check, "note": note, "hard": hard})
+
+    # the answer is one of the options by design: its own words in the title are no leak
+    shown = " ".join([q["question"], *q["wrong_answers"], *q.get("hints", []), q.get("description") or ""])
+    hit = sorted(title_words(m.get("query")) & words(shown) - words(q["answer"]))
+    if hit:
+        add("giveaway", "title-words", f"the file's title words appear in the question text: {', '.join(hit)}")
+    hit = giveaway(q, p)
+    if hit:
+        add("giveaway", "answer-heard", f"answer words heard or seen in the window (transcript/OCR): {', '.join(hit)}")
+    if providers.licence_kind(m.get("license")) is None:
+        add("media", "licence", f"the recording's licence “{m.get('license')}” is not on the allowlist")
+    if mf["class"] in PD_CLASSES:
+        w = m.get("work")
+        if not isinstance(w, dict) or not {"title", "creator", "year", "basis"} <= set(w):
+            add("media", "work", "media.work {title, creator, year, basis} is missing")
+        elif work_basis(w) is None:
+            add("media", "work-basis", f"media.work basis “{w['basis']}” is none of: {', '.join(WORK_BASES)}")
+    if p.get("has_audio") and p.get("integrated_lufs") is not None:
+        if p["integrated_lufs"] < MIN_LUFS:
+            add("media", "quiet", f"the window is quiet: {p['integrated_lufs']} LUFS (floor {MIN_LUFS})", hard=False)
+        if p.get("silence_share", 0) > MAX_SILENCE:
+            add("media", "silent", f"{round(p['silence_share'] * 100)} % of the window is silent (limit "
+                f"{round(MAX_SILENCE * 100)} %)", hard=False)
     return out
 
 

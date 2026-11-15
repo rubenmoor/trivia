@@ -539,6 +539,11 @@ def cmd_record(args):
             decision = "needs_work"
             kinds.add("giveaway")
             problems.append(say["giveaway"].format(", ".join(full["giveaway"])))
+        for fnd in (media_first.media_findings(q) if q.get("media_first") else []):  # plan 204: mechanical checks
+            if fnd["hard"]:
+                decision = "needs_work"
+                kinds.add(fnd["kind"])
+                problems.append(f"{fnd['note'][0].upper()}{fnd['note'][1:]}.")
         if decision == "needs_work" and not problems:
             problems.append(r["reasons"])
         review = {"decision": decision, "feedback": " ".join(problems) if decision == "needs_work" else None,
