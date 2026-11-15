@@ -29,7 +29,7 @@ export const defaultDraft = (): ChoiceDraft => ({
   budget: { ...STANDARD_JOKERS },
 });
 
-/** The choice's body with the picked bundles; the jokers go only when they differ from the standard set (never in timed). */
+/** The choice's body with the picked bundles (video and audio in every mode, decision 645); the jokers go only when they differ from the standard set (never in timed). */
 export function bodyOf(d: ChoiceDraft, bundles: string[]): ChoiceBody {
   if (d.mode === "gamemaster") {
     return {
@@ -39,7 +39,7 @@ export function bodyOf(d: ChoiceDraft, bundles: string[]): ChoiceBody {
   }
   const jokers = d.mode !== "timed" && presetOf(d.jokers) !== "standard" ? { jokers: { ...d.jokers } } : {};
   // rr-competitive: every seat picks its own age group on the Join screen
-  return { ...(d.mode === "rr-competitive" ? {} : { age_group: d.group }), bundles: [...bundles], ...jokers };
+  return { ...(d.mode === "rr-competitive" ? {} : { age_group: d.group }), bundles: [...bundles], video: d.video, audio: d.audio, ...jokers };
 }
 
 export const choiceOf = (d: ChoiceDraft, bundles: string[]): ChoiceBody & { mode: GameMode } => ({ mode: d.mode, ...bodyOf(d, bundles) });
