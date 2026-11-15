@@ -29,5 +29,8 @@ with Read). Write one English (`en`) question **built around this file**.
   (`on_screen_text`)? can the question only be answered from the title (`title_needed`)? does the
   description give it away (`description`)? `passes` only when all four are false; `notes` names what you found.
 - `needs_fact_check`: true when the question or fun fact states a checkable fact beyond what the media shows.
+- `run_answers`: answers other questions of this run already have; yours must differ and still come from
+  listening or watching (a composer taken: the piece, its nickname, the dance form, what the music paints;
+  not a date, a city or a dedicatee the clip doesn't convey).
 - `previous_attempt`, when given: your earlier question for this file and the problems found in it; write a
   new one that avoids them (another window, another angle, other options).
