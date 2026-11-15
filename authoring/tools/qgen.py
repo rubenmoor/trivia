@@ -1724,7 +1724,7 @@ def cmd_batch_report(args):
     work = [q for q in qs if q["status"] == "needs_work"]
     not_cached = load_json(d / "not-cached.json", [])
     lines = [f"# {args.run}", "",
-             f"Made by `qgen batch` on {datetime.date.today().isoformat()} (plans/19-repo-layout.md, D-36). "
+             f"Made by `qgen batch{" --media-first" if cfg.get("mode") == "media-first" else ""}` on {datetime.date.today().isoformat()} (plans/19-repo-layout.md, D-36). "
              "Generated file: don't edit by hand.", "",
              f"- Bundle: {cfg.get('bundle', 'base')}",
              f"- Language: {LANGUAGES[text_locale(d)]}",
@@ -1733,9 +1733,12 @@ def cmd_batch_report(args):
              f"- Approved: {len(approved)}", f"- Needs work: {len(work)}",
              f"- Dropped by the pipeline: {len(dropped)}",
              f"- Reviewed by: {', '.join(models) or '-'}",
-             f"- Claude calls: {len(calls)}, about ${sum(calls):.2f} at list price",
+             f"- Claude calls: {len(calls)}, about ${sum(calls):.2f} at list price"
+             + (f"; ${sum(calls) / len(approved):.2f} per approved" if approved else ""),
              f"- Picked files not cached yet: {len(not_cached)}" + (" (run `trivia-media sync --status approved`)" if not_cached else ""),
-             "", *health.health_section(args.run), *audit_section(args.run), *qc_section(args.run), "## Needs work", ""]
+             "", *health.health_section(args.run), *audit_section(args.run), *qc_section(args.run),
+             *(media_first.funnel_lines(d, qs, sum(calls), len(approved)) if cfg.get("mode") == "media-first" else []),
+             "## Needs work", ""]
     lines += [f"- **{q['id']}** ({q['subcategory']}) {q['question']} → {q['answer']}: {q['review']['feedback']}" for q in work] or ["None."]
     lines += ["", "## Question axes", ""]
     lines += [f"- {a}: " + ", ".join(f"{v} {n}" for v, n in count(qs, lambda q, a=a: (q.get('axes') or {}).get(a)).items())

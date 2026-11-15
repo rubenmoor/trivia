@@ -4,6 +4,7 @@ from pathlib import Path
 from collections import Counter
 
 import layout  # paths (D-35)
+import media_first  # authoring/tools/media_first.py: decision 641 count, funnel
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
@@ -640,7 +641,8 @@ def cost_runs(pool):
             approved = sum(status.get(i) == "approved" for i in ids)
         elif any(q.get("batch") == run for q in pool):
             approved = sum(q.get("batch") == run and q["status"] == "approved" for q in pool)
-        runs.append({"run": run, "kind": kind, "bundle": bundle, "locale": locale, "calls": len(own) + len(audit), "cost": sum(own),
+        mode = (load_json(d / "run.json", {}) or {}).get("mode") if kind == "batch" else None
+        runs.append({"run": run, "kind": kind, "mode": mode, "bundle": bundle, "locale": locale, "calls": len(own) + len(audit), "cost": sum(own),
                      "audit": sum(audit), "approved": approved, "merged": kind != "batch" or run in merged,
                      "per_approved": sum(own) / approved if approved else None})
     have = {r["run"] for r in runs}
@@ -683,7 +685,13 @@ def cost_report(pool):
                            "cost": n * rate * (1 + (ratio or 0)) if rate is not None else 0 if not n else None,
                            "note": None if tr[l] or not n else "no pilot yet", "spent": spent[l], "budget": budget.get(l)})
     by_bundle = bundle_costs(pool, runs, rates, ratio)
-    return {"runs": runs, "rates": rates, "projection": projection, "bundles": by_bundle, "drafting": drafting,
+    mf_runs = [r for r in runs if r["mode"] == "media-first" and r["merged"]]
+    mf_n = sum(r["approved"] or 0 for r in mf_runs)
+    mf_cost = sum(r["cost"] + r["audit"] for r in mf_runs)
+    media_first_cost = {"runs": [r["run"] for r in mf_runs], "approved": mf_n, "cost": mf_cost,
+                        "per_approved": sum(r["cost"] for r in mf_runs) / mf_n if mf_n else None,
+                        **media_first.multimedia_count(pool)}
+    return {"runs": runs, "rates": rates, "media_first": media_first_cost, "projection": projection, "bundles": by_bundle, "drafting": drafting,
             "skipped": skipped}
 
 
@@ -727,6 +735,9 @@ def report_cost(args):
     widths = [max(len(row[i]) for row in rows) for i in range(len(rows[0]))]
     for row in rows:
         print("  " + "  ".join(c.ljust(w) if i < 2 else c.rjust(w) for i, (c, w) in enumerate(zip(row, widths))))
+    m = r["media_first"]
+    print(f"media-first runs (plan 203): {len(m['runs'])} merged ({', '.join(m['runs']) or '-'}), {m['approved']} approved, "
+          f"spent {usd(m['cost'])} with audits, {usd(m['per_approved'])} per approved (own calls)")
     k = r["rates"]
     print("per kind:")
     for l, v in k["draft"].items():
@@ -934,6 +945,15 @@ def report_played(args):
         print(f"review candidates: {n} → {url}" + (f"&locale={l}" if l else " (sources)"))
 
 
+def media_first_line(pool):
+    """Decision 641's count: approved base audio/video questions, the 58 at the start taken off."""
+    m = media_first.multimedia_count(pool)
+    share = f"{m['share']:.1%}" if m["share"] is not None else "-"
+    return (f"multimedia (decision 641): {m['count']} approved audio/video, {m['added']} added since the start "
+            f"(goal {m['target']}, {max(0, m['target'] - m['count'])} to go), {share} of {m['total']} approved base, "
+            f"{m['held']} held (excerpt)")
+
+
 def engine_model(results):
     return next((r["model"]["typical_p"] for r in results if r.get("result") == "ok"), None)
 
@@ -972,6 +992,7 @@ def cmd_report(args):
     broad = categories.broad_of()
     cat = lambda q: (c := broad.get(categories.key(q))) and categories.sub_key(c["bundle"], c["slug"])
     print(f"pool: {len(pool)} questions")
+    print(media_first_line(pool))
     print(flag_loop.open_lines()[0])
     for title, key in [("status", lambda q: q["status"]), ("difficulty", lambda q: q["difficulty"]),
                        ("category", cat), ("style", lambda q: q.get("style")),

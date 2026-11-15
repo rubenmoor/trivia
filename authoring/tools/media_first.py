@@ -498,3 +498,73 @@ def design(d, jobs=3, model=DESIGN_MODEL):
         progress.detail(f"  design: {t['subject']}: " + ("passed" if ok else "dropped: " + "; ".join(tries[-1]["problems"])))
 
     return parallel(work, [{"id": t["title"], **t} for t in todo], jobs, "design", "files")
+
+
+# --- reports (decision 641) --------------------------------------------------------
+
+MM_START, MM_TARGET = 58, 1058   # decision 641: multimedia base questions at the start, and the goal (start + 1000)
+FUNNEL = ("files", "worth", "designed", "passed", "merged", "approved", "held")
+
+
+def is_multimedia(q):
+    return (q.get("media") or {}).get("type") in ("audio", "video")
+
+
+def multimedia_count(pool):
+    """Decision 641: approved base sources with audio/video media (any role), the 58 at the start taken off;
+    also the media share of approved base questions."""
+    import pool_export
+    base = [q for q in pool if q["status"] == "approved" and q.get("bundle", "base") == "base"]
+    n = sum(map(is_multimedia, base))
+    return {"count": n, "added": n - MM_START, "target": MM_TARGET, "total": len(base),
+            "share": n / len(base) if base else None,
+            "held": sum(map(pool_export.held, base))}
+
+
+def funnel(d, qs):
+    """{"seed": {seed: row}, "class": {class: row}}, row = FUNNEL counts for the run dir `d` and its merged
+    questions `qs`: files triaged → worth it → designed → passed (giveaway and shape) → merged → approved, held."""
+    import pool_export
+    cls = {}
+    out = {"seed": defaultdict(lambda: dict.fromkeys(FUNNEL, 0)), "class": defaultdict(lambda: dict.fromkeys(FUNNEL, 0))}
+
+    def bump(seed, c, key):
+        out["seed"][seed][key] += 1
+        out["class"][c][key] += 1
+
+    for t in triaged(d):
+        cls[t["title"]] = (t["seed"], t["class"])
+        bump(*cls[t["title"]], "files")
+        if t["verdict"] == "worth":
+            bump(*cls[t["title"]], "worth")
+    for r in designed(d):
+        seed_class = cls.get(r["title"])
+        if seed_class:
+            bump(*seed_class, "designed")
+            if r["passed"]:
+                bump(*seed_class, "passed")
+    for q in qs:
+        m = q.get("media_first") or {}
+        if not m:
+            continue
+        for key in ("merged", *(("approved",) if q["status"] == "approved" else ()),
+                    *(("held",) if pool_export.held(q) else ())):
+            bump(m["seed"], m["class"], key)
+    return {k: dict(v) for k, v in out.items()}
+
+
+def funnel_lines(d, qs, cost, approved):
+    """Markdown lines of the batch report's media-first section."""
+    f = funnel(d, qs)
+    lines = ["## Media-first funnel", ""]
+    for title, key in (("Per seed", "seed"), ("Per class", "class")):
+        rows = sorted(f[key].items())
+        tot = {k: sum(r[k] for _, r in rows) for k in FUNNEL}
+        lines += [f"### {title}", "", "| " + key + " | " + " | ".join(FUNNEL) + " |",
+                  "|" + "---|" * (len(FUNNEL) + 1)]
+        lines += [f"| {n} | " + " | ".join(str(r[k]) for k in FUNNEL) + " |" for n, r in rows + [("total", tot)]]
+        lines.append("")
+    lines += [f"- Held (excerpt questions outside the playable pools until the game plays excerpts): "
+              f"{sum(r['held'] for r in f['seed'].values())}",
+              "- $ per approved: " + (f"${cost / approved:.2f}" if approved else "-"), ""]
+    return lines
