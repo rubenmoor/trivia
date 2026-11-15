@@ -47624,7 +47624,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Health ✗ → `pm decision list --grep "<run>: health"`, else `pm decision add "<run>: health ✗, look at it?"`, no task linked, go on.
 - Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (media-first)…?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop with nothing staged.
 - The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-15T22:05:50Z', NULL, 2077, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2097, NULL, 'Language screen: only English can be picked, every other language reloads the same screen', 'exec', 'open', NULL, NULL, 'Bug the developer found in the browser game (`trivia`, :8000, built client).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2097, NULL, 'Language screen: only English can be picked, every other language reloads the same screen', 'exec', 'done', NULL, '2026-11-15, app/client/src/lib/store.ts, store.test.ts', 'Bug the developer found in the browser game (`trivia`, :8000, built client).
 
 ## Symptom
 - The language screen at the very start: picking English works; picking any other language (es, es-ES, de, …) shows the same language screen again instead of going on.
@@ -47640,7 +47640,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - A language that really can''t be used (no pool): not offered, or a clear notice, never a silent loop back to the screen.
 - Test for the regression (engine or client test), plus a `trivia-gallery --set task-<id> --only language,start` review set.
 
-Done when: the developer can pick each offered language in the browser game and in the desktop shell; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T23:09:19Z', NULL, NULL, 0, NULL, NULL);
+Done when: the developer can pick each offered language in the browser game and in the desktop shell; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T23:09:19Z', '2026-11-15T23:21:09Z', NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -56998,6 +56998,8 @@ last tool call: Bash: cd /home/ruben/code/trivia-worktrees/questions; nix develo
 likely cause: `pm run` stopped now
 left behind: 1 file, stashed as a0f177b9 (pm: task 2096 run 2279 failed); get them back with `git stash apply a0f177b9`
 log: /home/ruben/code/trivia/.git/pm-logs/task-2096-run-2279.log', -15, '1f3b9f90fcf2173c74e408ca56dffec3ac817481', 'questions', 'claude-sonnet-5-5', NULL, 2278, NULL, NULL, NULL, NULL, NULL, NULL, 61051, 60, 1042222);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2280, 2097, '2026-11-15T23:11:50Z', '2026-11-15T23:21:37Z', 'done', NULL, 0, 'f4d8e5a56e875138b7be2682a68cc579184eeb02', NULL, 'claude-sonnet-5-5', 'f8738e6a-c341-4ebe-b353-0ddd0abb326a', NULL, 48, 94, 15229, 2959371, 74327, 0.74572310000000019, 89310, 60, 12429);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2281, 2096, '2026-11-15T23:21:11Z', NULL, 'running', NULL, NULL, 'f4d8e5a56e875138b7be2682a68cc579184eeb02', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 12429);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);

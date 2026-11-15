@@ -124,16 +124,31 @@ export class FileStore extends TextStore {
   }
 }
 
-/** No valid Steam user (decision 111): starts empty, keeps the save in memory, nothing on disk. */
+const LANG_KEY = "trivia.language";
+
+/** No valid Steam user (decision 111): starts empty, keeps the save in memory, nothing on disk.
+ * Only the UI language survives a page reload (tab session storage): a language change reloads the app. */
 export class MemoryStore extends TextStore {
   override notice: SaveNotice | null = { kind: "unsaved" };
   private text: string | null = null;
   protected readonly queue = new WriteQueue(async (text) => {
     this.text = text;
+    try {
+      sessionStorage.setItem(LANG_KEY, (JSON.parse(text) as SaveData).language ?? "");
+    } catch {
+      // no session storage: the language is lost on reload, as before
+    }
   });
 
   protected read(): Promise<string | null> {
-    return Promise.resolve(this.text);
+    if (this.text !== null) return Promise.resolve(this.text);
+    let language: string | null = null;
+    try {
+      language = sessionStorage.getItem(LANG_KEY);
+    } catch {
+      // see above
+    }
+    return Promise.resolve(language ? JSON.stringify({ ...emptySave(), language }) : null);
   }
 
   protected backup(): Promise<string> {
