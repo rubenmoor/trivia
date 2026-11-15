@@ -256,6 +256,15 @@ def spot_passes(n, agreed, quality):
     return n >= quality["spot_check_size"] and agreed >= quality["min_agreement"] * n
 
 
+def run_quality(run):
+    """The quality bar of a run: targets.json `quality`; a media-first run's own (decision 647), its spot-check
+    size the run's (60 for the first media-first run, 40 after)."""
+    if not is_media_first(run):
+        return targets.load_quality()
+    q = targets.load_quality(targets.MEDIA_FIRST)
+    return q and {k: v for k, v in q.items() if k != "first_run_size"} | {"spot_check_size": spot_check_size(run)}
+
+
 def qc_stats(batch, checks):
     """Spot check and audit numbers of a batch (plan 16); counts, rates are left to the reader."""
     items = {i: it for i, it in (checks.get(batch) or {}).get("items", {}).items() if it.get("human")}
@@ -264,8 +273,8 @@ def qc_stats(batch, checks):
     accept = lambda d: d == "approved"
     audited = [it for it in items.values() if it.get("audit")]
     false_approve = [i for i, it in items.items() if accept(it["llm"]) and not accept(it["human"])]
-    q = targets.load_quality()
-    return {"audit_n": len(found),
+    q = run_quality(batch)
+    return {"mode": "media-first" if is_media_first(batch) else "batch", "quality": q, "audit_n": len(found),
             "audit_approved": len([i for i in found if dec.get(i) == "approved"]),
             "audit_major_approved": sum(is_major(a) for i, a in found.items() if dec.get(i) == "approved"),
             "human_n": n, "agreed": agreed, "false_approve": false_approve,
@@ -281,7 +290,7 @@ def qc_stats(batch, checks):
 
 def release_failures(s):
     """Failed limits of the release bar (D-79 = D-56's numbers); [] = release-ready."""
-    q, n = targets.load_quality(), s["human_n"]
+    q, n = s["quality"], s["human_n"]
     if not q:
         return ["no quality keys in targets.json"]
     if not n:
@@ -307,7 +316,8 @@ def qc_section(batch, pool=None):
         return []
     pool = pool if pool is not None else run_questions(batch)
     by_id = {q["id"]: q for q in pool}
-    s, q = qc_stats(batch, checks), targets.load_quality()
+    s = qc_stats(batch, checks)
+    q = s["quality"]
     n = s["human_n"]
     verdict = "" if s["passes"] is None else (
         f" {'✓' if s['passes'] else '✗'} (bar: ≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %)")
@@ -380,7 +390,8 @@ def qc_trend(pool=None):
     cols = [qc_stats(r, checks) for r in runs]
     q = targets.load_quality()
     pct = lambda n, of: f"{100 * n / of:.0f} %" if of else "–"
-    rows = [("audit n", lambda s: str(s["audit_n"])),
+    rows = [("mode", lambda s: s["mode"]),
+            ("audit n", lambda s: str(s["audit_n"])),
             ("major among approved", lambda s: pct(s["audit_major_approved"], s["audit_approved"])),
             ("human n", lambda s: str(s["human_n"])),
             ("agreement", lambda s: pct(s["agreed"], s["human_n"])),
@@ -388,6 +399,9 @@ def qc_trend(pool=None):
             ("difficulty |Δ| ≥ 2", lambda s: pct(s["difficulty_2"], s["human_n"])),
             ("audit/human agreement", lambda s: pct(s["audit_human_agreed"], s["audit_human_n"]))]
     bar = f"≥ {q['spot_check_size']} questions, ≥ {100 * q['min_agreement']:.0f} %" if q else "no quality keys"
+    mf_q = targets.load_quality(targets.MEDIA_FIRST)
+    if any(s["mode"] == "media-first" for s in cols) and mf_q:
+        bar += f"; media-first: ≥ {mf_q['spot_check_size']} ({mf_q['first_run_size']} the first run), ≥ {100 * mf_q['min_agreement']:.0f} %"
     src = {x["id"]: translations.source_locale(x) for x in pool}
 
     def source(r):
@@ -399,7 +413,24 @@ def qc_trend(pool=None):
             "| source locale | " + " | ".join(map(source, runs)) + " |",
             *[f"| {k} | " + " | ".join(f(s) for s in cols) + " |" for k, f in rows],
             f"| **release** ({bar}, D-79) | " + " | ".join("✗ " + ", ".join(f) if (f := release_failures(s)) else "✓"
-                                                            for s in cols) + " |"]
+                                                            for s in cols) + " |",
+            *media_first_summary(cols)]
+
+
+def media_first_summary(cols):
+    """Rows under the trend table for the media-first runs together (plan 204, decision 647): agreement across their
+    spot checks against the bar, and the disagreements per problem kind (decision 647: ≥ 90 %, as for any batch)."""
+    mf = [s for s in cols if s["mode"] == "media-first" and s["human_n"]]
+    if not mf:
+        return []
+    n, agreed = sum(s["human_n"] for s in mf), sum(s["agreed"] for s in mf)
+    q = targets.load_quality(targets.MEDIA_FIRST)
+    kinds = Counter(p for s in mf for i in s["false_approve"] + s["false_needs_work"]
+                    for p in s["items"][i]["problems"] or ["no problem given"])
+    ok = "" if not q else " ✓" if agreed >= q["min_agreement"] * n else " ✗"
+    cells = [f"agreement {agreed}/{n} ({100 * agreed / n:.0f} %){ok} over {len(mf)} media-first run(s)",
+             "disagreements: " + (", ".join(f"{p} {c}" for p, c in kinds.most_common()) or "none")]
+    return [f"| **media-first, all runs** | {'; '.join(cells)} |" + " |" * (len(cols) - 1)]
 
 
 def report_qc(batch, changes=None):
@@ -442,7 +473,7 @@ def exit_check(pool, bundle):
         parts, ok = [], True
         for r in runs:
             n, agreed = spot_agreement(r, checks)
-            ok &= spot_passes(n, agreed, quality)
+            ok &= spot_passes(n, agreed, run_quality(r))
             parts.append(f"{r}: {agreed}/{n} ({100 * agreed / n:.0f} %)" if n else f"{r}: no spot check")
         out.append((ok, f"last two spot checks: ≥ {size} questions, ≥ {100 * rate:.0f} % agreement", "; ".join(parts)))
     errors, _ = validate_pool()
@@ -1038,6 +1069,6 @@ def cmd_report(args):
 
 
 # the other command groups, after everything here is defined (they import each other)
-from audit import audits, is_major, llm_decisions, run_questions  # authoring/tools/audit.py
+from audit import audits, is_major, is_media_first, llm_decisions, run_questions, spot_check_size  # authoring/tools/audit.py
 from translate import text_locale  # authoring/tools/translate.py
 from validate import validate_pool  # authoring/tools/validate.py

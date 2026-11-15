@@ -11,6 +11,7 @@ import audit  # authoring/tools/audit.py
 import report  # authoring/tools/report.py
 import translate  # authoring/tools/translate.py
 import review_steps  # authoring/tools/review_steps.py
+import media_first  # authoring/tools/media_first.py: giveaway step, mechanical media checks (plan 204)
 
 HIGH = range(11, 16)  # the levels plan 13 aims at
 
@@ -93,6 +94,22 @@ def media_funnel(d, qs):
     return {k: out[k] for k in keys}
 
 
+def media_first_rows(d, qs, kept):
+    """Rows only a media-first run has (plan 204; None for others): the giveaway step's drop rate (drafts it removed of those
+    designed) and the mechanical-check rate (merged questions with a hard finding of media_findings, as `record` counts)."""
+    keys = ["giveaway-step drop rate", "mechanical-check rate"]
+    if not audit.is_media_first(d.name):
+        return dict.fromkeys(keys)
+    gone = len(media_first.read_jsonl(media_first.steps_dir(d) / "giveaway.jsonl"))
+    hard = 0
+    for q in qs:
+        try:
+            hard += any(f["hard"] for f in media_first.media_findings(q)) if q.get("media_first") else 0
+        except FileNotFoundError:  # probe gone from work/: not counted
+            pass
+    return dict(zip(keys, [rate(gone, gone + kept), rate(hard, len(qs))]))
+
+
 def batch_health(run, pool=None):
     """{metric: value} for one run; None = n/a. Keys and order: ROWS."""
     d = WORK / run
@@ -109,7 +126,8 @@ def batch_health(run, pool=None):
     loc = translate.text_locale(d)
     earlier = [r for r in batch_runs() if qgen.natural_key(r) < qgen.natural_key(run)]
     first = earlier and all(translate.text_locale(WORK / r) != loc for r in earlier)
-    h = {"source locale": f"{loc} (first {loc} batch)" if first else loc, "drafts": n, "skipped slots": skipped, "dropped": len(dropped), "drop rate": rate(len(dropped), n)}
+    h = {"source locale": f"{loc} (first {loc} batch)" if first else loc,
+         "mode": "media-first" if audit.is_media_first(run) else "batch", "drafts": n, "skipped slots": skipped, "dropped": len(dropped), "drop rate": rate(len(dropped), n)}
     kinds = Counter(k for x in dropped for k in drop_kind(x["reason"]))
     for k in [*(f"hard fail {c}" for c in qgen.HARD_CRITERIA if c != "no_overlap"), "overlap", "duplicate", "fact-check wrong"]:
         h[f"dropped: {k}"] = kinds[k]
@@ -136,6 +154,7 @@ def batch_health(run, pool=None):
         c = Counter(q["axes"].get(a) for q in with_axes)
         h[f"top {a}"] = rate(c.most_common(1)[0][1], len(with_axes)) if c else None
         h[f"values {a}"] = len(c) if c else None
+    h |= media_first_rows(d, qs, n)
     h["media share"] = rate(sum(q["axes"].get("stimulus") != "none" for q in with_axes), len(with_axes))
     fun = [r["fun"] for r in ratings.values() if "fun" in r]
     h["mean fun"] = sum(fun) / len(fun) if fun else None
@@ -152,13 +171,14 @@ def batch_health(run, pool=None):
 
 EACH_PROBLEM = "needs_work: each problem"
 THRESHOLDABLE = {"drop rate", "needs_work rate", "overlap rate", "merged/slots 11–15", "max final−target gap 11–15",
-                 "media share", "mean fun", "$ per approved", EACH_PROBLEM,
+                 "media share", "mean fun", "$ per approved", EACH_PROBLEM, "giveaway-step drop rate", "mechanical-check rate",
                  *(f"needs_work: {p}" for p in qgen.PROBLEMS), *(f"top {a}" for a in concepts.AXES)}
 
 
-def thresholds():
-    """{metric: {"min"/"max": x}} from targets.json, «each problem» spread out; None before they're stored."""
-    t = targets.load_batch_health()
+def thresholds(run=None):
+    """{metric: {"min"/"max": x}} from targets.json, «each problem» spread out; None before they're stored.
+    A media-first run (plan 204): the media-first block over them."""
+    t = targets.load_batch_health(targets.MEDIA_FIRST if run and audit.is_media_first(run) else None)
     if t is None: return None
     each = t.get(EACH_PROBLEM)
     spread = {f"needs_work: {p}": each for p in qgen.PROBLEMS} if each else {}
@@ -174,7 +194,7 @@ def passes(value, bounds):
 def failures(run, pool=None, h=None):
     """Names of the thresholds the run fails ([] = pass), None while targets.json has no thresholds.
     An ack doesn't change this (plan 12's exit check)."""
-    t = thresholds()
+    t = thresholds(run)
     if t is None: return None
     h = h or batch_health(run, pool)
     return [k for k, b in t.items() if passes(h.get(k), b) is False]
@@ -202,7 +222,7 @@ def unacked_failure():
             f"with: qgen health ack {run} \"<note>\"")
 
 
-PCT = {"drop rate", "needs_work rate", "overlap rate", "rejected rate", "audit/review agreement", "merged/slots 11–15", "media share",
+PCT = {"drop rate", "giveaway-step drop rate", "mechanical-check rate", "needs_work rate", "overlap rate", "rejected rate", "audit/review agreement", "merged/slots 11–15", "media share",
        *(f"needs_work: {p}" for p in qgen.PROBLEMS), *(f"top {a}" for a in concepts.AXES)}
 
 
@@ -221,15 +241,17 @@ def bound_text(key, b):
     return f"≥ {fmt(key, b['min'])}" if "min" in b else f"≤ {fmt(key, b['max'])}"
 
 
-def metric_table(runs, cols, t, verdict):
-    """Markdown table: one row per metric of `cols`, one column per run; ✓/✗ against `t`, then a
-    «health» row of verdict(run, col) when there are thresholds."""
+def metric_table(runs, cols, t, verdict, own=None):
+    """Markdown table: one row per metric of `cols`, one column per run; ✓/✗ against `t` (a run in `own`: against
+    its own thresholds, plan 204), then a «health» row of verdict(run, col) when there are thresholds."""
+    own = own or {}
     mark = {True: " ✓", False: " ✗", None: ""}
     lines = ["| metric | threshold | " + " | ".join(runs) + " |", "|---|---|" + "---:|" * len(runs)]
     for key in cols[0]:
         b = t.get(key)
+        bs = [own[r].get(key) if r in own else b for r in runs]
         lines.append(f"| {key} | {bound_text(key, b)} | "
-                     + " | ".join(fmt(key, c[key]) + (mark[passes(c[key], b)] if b else "") for c in cols) + " |")
+                     + " | ".join(fmt(key, c[key]) + (mark[passes(c[key], x)] if x else "") for c, x in zip(cols, bs)) + " |")
     if t:
         lines.append("| **health** | | " + " | ".join(verdict(r, c) for r, c in zip(runs, cols)) + " |")
     return lines
@@ -241,8 +263,9 @@ def table(runs, pool=None):
     pool = pool if pool is not None else load(POOL)["questions"]
     cols = [batch_health(r, pool) for r in runs]
     t, acked = thresholds() or {}, acks()
+    own = {r: thresholds(r) or {} for r in runs if audit.is_media_first(r)}
     return metric_table(runs, cols, t, lambda r, c: "✓ pass" if not failures(r, h=c)
-                        else "✗ fail, acked" if r in acked else "✗ fail")
+                        else "✗ fail, acked" if r in acked else "✗ fail", own)
 
 
 def ack_lines():
