@@ -212,6 +212,7 @@
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
               tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
+              pkgs.ffmpeg-headless pkgs.tesseract pkgs.whisper-cpp  # qgen media-probe (plan 201): authoring only, nothing ships
             ] ++ nixpkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
               tools.trivia-steam tools.trivia-release-check tools.steamcmd  # SteamCMD: x86_64-linux only
               # smoke.mjs: an FHS runtime like Steam's, plus what Electron links
