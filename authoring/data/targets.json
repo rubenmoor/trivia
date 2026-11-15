@@ -84,12 +84,31 @@
     },
     "$ per approved": {
       "max": 0.35
+    },
+    "media-first": {
+      "about": "Per-mode block of `qgen batch --media-first` runs (plan 204, decision 647): overrides the metrics above; null = not applied. Starting numbers from the pilot and the trial (authoring/reports/media-first-feasibility.md: ≈ $0.31 per designed, $0.13 per review, 88 % look share): adjust after the first runs.",
+      "media share": null,
+      "giveaway-step drop rate": {
+        "max": 0.3
+      },
+      "mechanical-check rate": {
+        "max": 0.2
+      },
+      "$ per approved": {
+        "max": 0.6
+      }
     }
   },
   "quality": {
     "about": "Quality bar per batch (plan 16, pm decision 2): human spot-check size and min. share where the human agrees with the LLM review, in each of the last two batches. Also the Steam release bar per batch/back-audit slice (D-79, pm decision 15).",
     "spot_check_size": 30,
-    "min_agreement": 0.9
+    "min_agreement": 0.9,
+    "media_first": {
+      "about": "Media-first runs (decision 647): spot-check size per run, `first_run_size` for the first media-first run while new; agreement as above.",
+      "spot_check_size": 40,
+      "first_run_size": 60,
+      "min_agreement": 0.9
+    }
   },
   "usa": {
     "total": 2000,

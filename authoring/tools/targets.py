@@ -34,43 +34,72 @@ def scaled(total, like="base"):
     return {"total": total, "difficulty": out}
 
 
-def load_quality():
-    """{"spot_check_size": n, "min_agreement": fraction} (plan 16, pm decision 2), or None before it's stored."""
+MEDIA_FIRST = "media-first"  # run.json mode with its own quality and health numbers (plan 204, decision 647)
+
+
+def load_quality(mode=None):
+    """{"spot_check_size": n, "min_agreement": fraction} (plan 16, pm decision 2), or None before it's stored.
+    mode MEDIA_FIRST: the media-first numbers over these, plus "first_run_size" (decision 647)."""
     t = load_all().get("quality")
-    return t and {k: v for k, v in t.items() if k != "about"}
+    base = t and {k: v for k, v in t.items() if k not in ("about", "media_first")}
+    own = (t or {}).get("media_first")
+    if mode != MEDIA_FIRST or not own:
+        return base
+    return {**base, **{k: v for k, v in own.items() if k != "about"}}
+
+
+def _number(x, lo=None):
+    return isinstance(x, (int, float)) and not isinstance(x, bool) and (lo is None or x >= lo)
 
 
 def quality_problems():
-    """Errors in targets.json's "quality": spot_check_size an integer ≥ 1, min_agreement a fraction in (0, 1]."""
-    t = load_quality()
+    """Errors in targets.json's "quality": spot_check_size an integer ≥ 1, min_agreement a fraction in (0, 1];
+    "media_first" the same plus first_run_size."""
+    t = load_all().get("quality")
     if t is None:
         return []
     out = []
-    if set(t) != {"spot_check_size", "min_agreement"}:
-        out.append(f"{REL}: quality: keys must be spot_check_size and min_agreement")
-    n, rate = t.get("spot_check_size"), t.get("min_agreement")
-    if not isinstance(n, int) or isinstance(n, bool) or n < 1:
-        out.append(f"{REL}: quality: spot_check_size must be an integer ≥ 1")
-    if not isinstance(rate, (int, float)) or isinstance(rate, bool) or not 0 < rate <= 1:
-        out.append(f"{REL}: quality: min_agreement must be a fraction in (0, 1]")
+
+    def check(where, d, keys):
+        if set(d) - {"about"} != keys:
+            out.append(f"{REL}: {where}: keys must be {', '.join(sorted(keys))}")
+        for k in keys & {"spot_check_size", "first_run_size"}:
+            if not isinstance(d.get(k), int) or isinstance(d.get(k), bool) or d[k] < 1:
+                out.append(f"{REL}: {where}: {k} must be an integer ≥ 1")
+        rate = d.get("min_agreement")
+        if not _number(rate) or not 0 < rate <= 1:
+            out.append(f"{REL}: {where}: min_agreement must be a fraction in (0, 1]")
+    own = t.get("media_first")
+    check("quality", {k: v for k, v in t.items() if k != "media_first"}, {"spot_check_size", "min_agreement"})
+    if own is not None:
+        check("quality.media_first", own, {"spot_check_size", "first_run_size", "min_agreement"})
     return out
 
 
-def load_batch_health():
-    """{metric: {"min"/"max": x}} (plan 15, pm decision 13), or None before it's stored."""
+def load_batch_health(mode=None):
+    """{metric: {"min"/"max": x}} (plan 15, pm decision 13), or None before it's stored.
+    mode MEDIA_FIRST: the media-first block over these; a null there drops the metric (plan 204)."""
     t = load_all().get("batch_health")
-    return t and {k: v for k, v in t.items() if k != "about"}
+    base = t and {k: v for k, v in t.items() if k not in ("about", MEDIA_FIRST)}
+    if mode != MEDIA_FIRST or base is None:
+        return base
+    own = {k: v for k, v in (t.get(MEDIA_FIRST) or {}).items() if k != "about"}
+    return {k: v for k, v in {**base, **own}.items() if v is not None}
 
 
 def health_problems(metrics):
-    """Errors in targets.json's "batch_health": known metric names, only numeric min/max."""
+    """Errors in targets.json's "batch_health": known metric names, only numeric min/max (null allowed in the media-first block)."""
     out = []
-    for k, v in (load_batch_health() or {}).items():
-        if k not in metrics:
-            out.append(f"{REL}: batch_health: unknown metric {k!r}")
-        elif not isinstance(v, dict) or not v or set(v) - {"min", "max"} \
-                or not all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in v.values()):
-            out.append(f"{REL}: batch_health: {k}: must be {{\"min\": n, \"max\": n}} (one or both)")
+    t = load_all().get("batch_health") or {}
+    for where, block in (("batch_health", {k: v for k, v in t.items() if k not in ("about", MEDIA_FIRST)}),
+                         (f"batch_health.{MEDIA_FIRST}", {k: v for k, v in (t.get(MEDIA_FIRST) or {}).items() if k != "about"})):
+        for k, v in block.items():
+            if k not in metrics:
+                out.append(f"{REL}: {where}: unknown metric {k!r}")
+            elif v is None and where != "batch_health":
+                continue
+            elif not isinstance(v, dict) or not v or set(v) - {"min", "max"} or not all(_number(x) for x in v.values()):
+                out.append(f"{REL}: {where}: {k}: must be {{\"min\": n, \"max\": n}} (one or both)")
     return out
 
 

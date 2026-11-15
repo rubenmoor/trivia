@@ -1,5 +1,5 @@
 """`qgen audit` and the back-audit (plan 16, D-56). Never ships (D-35)."""
-import datetime, json, random, sys
+import datetime, json, random, re, sys
 from collections import Counter
 
 import layout  # paths (D-35)
@@ -45,10 +45,27 @@ def llm_decisions(run):
 SPOT_CHECK_SIZE = 30  # pm decision 2; without targets.json "quality"
 
 
+def is_media_first(run):
+    return run_mode(run) == targets.MEDIA_FIRST
+
+
+def first_media_first_run():
+    """The oldest media-first run in work/ (plan 204, decision 647: its check is larger while new)."""
+    runs = [p.parent.name for p in WORK.glob("*/run.json") if is_media_first(p.parent.name)]
+    return min(runs, key=lambda r: [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", r)], default=None)
+
+
 def spot_check_size(run=None):
-    """The run's spot-check size: its spot-checks.json "size" (e.g. batch-8's 120, decision 228), else quality.spot_check_size."""
+    """The run's spot-check size: its spot-checks.json "size" (e.g. batch-8's 120, decision 228), else a media-first
+    run's (decision 647: 60 for the first, 40 after), else quality.spot_check_size."""
     own = (load_json(layout.SPOT_CHECKS, {}) or {}).get(run, {}).get("size") if run else None
-    return own or (targets.load_quality() or {}).get("spot_check_size", SPOT_CHECK_SIZE)
+    if own:
+        return own
+    if run and is_media_first(run):
+        q = targets.load_quality(targets.MEDIA_FIRST) or {}
+        first = run == first_media_first_run()
+        return (q.get("first_run_size") if first else None) or q.get("spot_check_size", SPOT_CHECK_SIZE)
+    return (targets.load_quality() or {}).get("spot_check_size", SPOT_CHECK_SIZE)
 
 
 def audit_size(run):

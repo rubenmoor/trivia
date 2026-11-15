@@ -32,6 +32,19 @@ The steps run in order; a pm worker raises each decision and never waits on it (
    - Once answered (by the next QC task): each approved change becomes a task in its plan (`pm task add <plan>`, the plan's priority, so above the -100 batch tasks). Then `qgen report --qc <batch> --changes "<task ids>"` (or `"none"`) writes the report's "Changes from this QC" line.
 5. **Next batch doesn't wait.** The next batch task runs without the answers (decision 414); answered decisions become change tasks, which outrank it (plan 17 "Per-batch pattern"), so they run first if they exist by then.
 
+## Media-first runs
+
+`qgen batch --media-first` runs (`batch-<n>`, `run.json` `"mode": "media-first"`, plan 203, decision 646) follow the steps above with their own numbers (decision 647) and a spot check that plays sound and video. Pacing (500 first, then steps of 100) is the content runs' (decision 643), not this file's.
+
+- Same steps 1–5; `qgen report --qc` and `qgen report --batches` read the mode from `run.json`.
+- Spot-check size (`quality.media_first` in `authoring/data/targets.json`): 40 per run, 60 for the first media-first run while new (`first_run_size`); the first 30 stay a prefix of the audit sample; the audit reads up to that size; `size` in `spot-checks.json` still overrides.
+- Agreement ≥ 90 % as for any batch (`quality.media_first.min_agreement`); the release bar per run uses the run's own size.
+- The spot check (`/review?batch=<run>&sample=1`) plays `media.excerpt` start→end as the game does, with the background picture; aids (transcript, OCR, sheets), the LLM verdict and the mechanical findings stay hidden until you decide.
+  - Check by ear and eye: recognisable from the window, no giveaway (spoken name, caption, logo, file name in the picture), content matches the answer, licence and `media.work` for public-domain music/film, sound quality, speech only where the words needn't be understood (decision 648). Mark the problem kinds: `giveaway`, `media`, `fact`, `ambiguity`.
+- `qgen report --qc` trend: a "mode" row marks each column; below the table one row sums agreement across all media-first runs (✓/✗ against the bar) and counts their disagreements per problem kind.
+- Batch health (`batch_health.media-first` in `targets.json`, over the base thresholds): `media share` not applied; new rows `giveaway-step drop rate` (drafts the giveaway step removed, of those designed) and `mechanical-check rate` (questions with a hard mechanical finding at record); `$ per approved` ≤ $0.60. Starting numbers from the pilot and trial: adjust after the first runs.
+- Findings → proposals (step 4) as above; the media prompts are `review.md` and `audit.md` media-first sections and `media-design.md`.
+
 ## Neutralize runs
 
 A `qgen neutralize` run (D-83) changes approved questions, so it gets the same steps as a batch, with `neutralize-<n>` in place of `<batch>`.
