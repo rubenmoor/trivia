@@ -1421,7 +1421,7 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 | Graphics | DirectX 11 GPU with VP9 video decode (Intel HD 520 or better; else software decode) | any GPU from 2018 on |
 | DirectX | Version 11 | Version 11 |
 | Network | none | none |
-| Storage | 1.5 GB available space | 1.5 GB available space |
+| Storage | 8 GB available space | 8 GB available space |
 | Additional notes | Plays offline; 1280×720 or larger; keyboard, mouse or gamepads; best on a TV | same |
 
 ### Requirements (SteamOS + Linux)
@@ -1432,10 +1432,10 @@ Values for Steamworks → Edit Store Page → "Basic Info" (requirements, langua
 | Memory | 4 GB RAM | 8 GB RAM |
 | Graphics | GPU with OpenGL/Vulkan and VP9 video decode (else software decode) | any GPU from 2018 on |
 | Network | none | none |
-| Storage | 1.5 GB available space | 1.5 GB available space |
+| Storage | 8 GB available space | 8 GB available space |
 | Additional notes | Native Linux build; plays offline | same |
 
-- Storage: per decision 90 (estimate, grows with content): 1.5 GB = measured 1.09 GB rounded up; no size line for content or packs (decision 653)
+- Storage: per decision 90 (estimate, grows with content): 8 GB = today ≈ 3.4 GB installed (content 2.9 GB, 2026-11-15) + 1000 media-first questions ≈ 3.8 GB at 1080p, rounded up (decision 651); no size line for content or packs (decision 653)
 - Ubuntu 22.04: Electron's own floor, not tested; the non-Nix start test is the Steam beta test (decision 39, `task 263: write plan: Beta test and S5 close-out`): its distro replaces it
 - macOS: none (no build)
 
