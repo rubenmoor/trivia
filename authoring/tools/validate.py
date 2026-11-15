@@ -1,5 +1,6 @@
 """`qgen validate`: checks of the source pool and its export (QP-7). Never ships (D-35)."""
-import json, re, subprocess, sys
+import json, re, subprocess, sys, urllib.parse
+from pathlib import Path
 
 import layout  # paths (D-35)
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
@@ -72,6 +73,9 @@ def validate_pool():
                     warnings.append(f"{qid}: approved but no {label} picked")
                 elif not media.cache_path(slot["file_url"]).is_file():
                     warnings.append(f"{qid}: {label} not cached")
+                bad = playable_problem(slot, "image" if label == "background" else m.get("type"))
+                if bad:
+                    errors.append(f"{qid}: approved {label}: {bad}")
                 verdict, reasons = providers.licence_verdict(slot) if slot.get("file_url") else ("ok", [])
                 if verdict == "replace":  # plans/26, plans/53
                     unlicensed.append(f"{qid} {label} ({'; '.join(reasons)})")
@@ -160,6 +164,24 @@ def released_ids():
         if re.fullmatch(r"app/data/(bundles/[^/]+/)?pool(\.[A-Za-z-]+)?\.json", f):
             ids |= {q["id"] for q in json.loads(git("show", f"{tags[0]}:{f}").stdout)["questions"]}
     return tags[0], ids
+
+
+PLAYABLE_EXT = {  # by media type: what the game shows or plays (shipped as WebP/Opus/WebM, decision 185)
+    "image": {".jpg", ".jpeg", ".png", ".webp", ".gif", ".tif", ".tiff", ".svg"},
+    "audio": {".opus", ".ogg", ".oga", ".mp3", ".wav", ".flac", ".m4a", ".aac"},
+    "video": {".webm", ".mp4", ".ogv", ".mov", ".mkv", ".mpg", ".mpeg"},
+}
+
+
+def playable_problem(slot, kind):
+    """A picked file whose extension the game can't show or play (task 2092), else None."""
+    url = (slot or {}).get("file_url")
+    if not url:
+        return None
+    ext = Path(urllib.parse.urlsplit(url).path).suffix.lower()
+    if ext not in PLAYABLE_EXT.get(kind, set()):
+        return f"{kind} file {ext or 'without extension'} can't be shown or played in the game"
+    return None
 
 
 def _num(x):

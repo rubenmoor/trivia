@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b5ec8a47",
+  "hash": "c53f0eed",
   "questions": [
     {
       "id": "q-0001",
@@ -137596,50 +137596,6 @@
       "background": null
     },
     {
-      "id": "q-4240",
-      "status": "approved",
-      "difficulty": 5,
-      "subcategory": "classical-music",
-      "bundle": "base",
-      "description": "Vier Töne, die lauter an die Tür klopfen als jeder Paketbote.",
-      "question": "Hör zu: Welches berühmte Stück beginnt mit diesem „Ta-ta-ta-TAAA“?",
-      "answer": "Beethovens 5. Sinfonie",
-      "wrong_answers": [
-        "Mozarts „Eine kleine Nachtmusik“",
-        "Vivaldis „Die vier Jahreszeiten“",
-        "Tschaikowskis „Schwanensee“"
-      ],
-      "hints": [
-        "Ein ganzes Orchester spielt es, und es ist über 200 Jahre alt.",
-        "Sein Komponist schrieb weiter Musik, auch als er schon taub war.",
-        "Es ist eine Sinfonie des deutschen Komponisten von „Für Elise“."
-      ],
-      "fun_fact": "Im Zweiten Weltkrieg nutzte die BBC das „Ta-ta-ta-TAAA“ als Erkennungszeichen, weil es dem Buchstaben V im Morsecode entspricht: kurz-kurz-kurz-lang.",
-      "media": {
-        "type": "audio",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/48/Beethoven_symphony_5_opening.mid?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeethoven_symphony_5_opening.mid",
-        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Ludwig van Beethoven",
-        "author_url": "https://en.wikipedia.org/wiki/en:Ludwig%20van%20Beethoven",
-        "excerpt": null
-      },
-      "background": {
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Amsterdam_-_Beurs_van_Berlage_-_1689.jpg/3840px-Amsterdam_-_Beurs_van_Berlage_-_1689.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmsterdam_-_Beurs_van_Berlage_-_1689.jpg",
-        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Jorge Royan",
-        "author_url": null
-      }
-    },
-    {
       "id": "q-4241",
       "status": "approved",
       "difficulty": 4,
@@ -199325,41 +199281,6 @@
         "license_url": null,
         "author": "user:Dustimagic",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dustimagic&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-6336",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "knights",
-      "bundle": "base",
-      "description": "Mittelalterliches Basteln, aber mit einem sehr ernsten Zweck.",
-      "question": "Ritter bemalten ihre Schilde mit Mustern wie diesem. Warum?",
-      "answer": "Um zu zeigen, wer in der Rüstung steckte",
-      "wrong_answers": [
-        "Um den Schild deutlich stabiler zu machen",
-        "Um den Schild deutlich leichter zu machen",
-        "Um das Sonnenlicht stark zu spiegeln"
-      ],
-      "hints": [
-        "Überleg mal, wie ein Ritter in voller Rüstung von Weitem aussah.",
-        "Jede Familie hatte ihre eigenen Farben und Tiere.",
-        "Es funktionierte ein bisschen wie ein Namensschild."
-      ],
-      "fun_fact": "Experten, die Herolde, erkannten das Zeichen jedes Ritters, darum heißt die Wappenkunde bis heute Heraldik.",
-      "media": {
-        "type": "image",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/79/Heraldic_Ceiling%2C_Strawberry_Hill_House%2C_Twickenham.xcf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeraldic_Ceiling%2C_Strawberry_Hill_House%2C_Twickenham.xcf",
-        "credit": "Lobsterthermidor (talk) 09:57, 14 October 2022 (UTC) · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "Lobsterthermidor (talk) 09:57, 14 October 2022 (UTC)",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Lobsterthermidor",
         "excerpt": null
       },
       "background": null

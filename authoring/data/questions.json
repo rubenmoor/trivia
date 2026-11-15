@@ -327191,7 +327191,7 @@
     },
     {
       "id": "q-4240",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 5,
       "description": "Four notes that knock on your door louder than any delivery driver.",
       "question": "Listen: which famous piece starts with this “da-da-da-DUM”?",
@@ -327251,13 +327251,20 @@
       "needs_media": true,
       "batch": "batch-11",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-17",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Reporte de jugador (v0.1.0, 2026-11-15, en): media file is .mid: browsers can't play it, needs another audio file · Vista: «»",
+        "reviewed_on": "2026-11-15",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -489997,7 +490004,7 @@
     },
     {
       "id": "q-6336",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 4,
       "description": "Medieval arts and crafts, with a very serious purpose.",
       "question": "Knights painted designs like this one on their shields. Why?",
@@ -490055,13 +490062,20 @@
       "needs_media": true,
       "batch": "batch-15",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-23",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Reporte de jugador (v0.1.0, 2026-11-15, en): media file is .xcf: browsers can't show it, needs another image · Vista: «»",
+        "reviewed_on": "2026-11-15",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-23",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
