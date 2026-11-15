@@ -6,7 +6,7 @@ Raw records per seed go to work/media-survey/raw/<seed>.jsonl (a finished seed i
 the filters run over all raw records at the end, so a changed filter needs no new crawl.
 Output: files.jsonl (kept files), tally.json, tally.md. Writes nothing outside work/media-survey/.
 """
-import json, re, sys, time, urllib.parse
+import json, re, time, urllib.parse
 from collections import Counter, defaultdict
 
 import atomic, layout, progress, providers
