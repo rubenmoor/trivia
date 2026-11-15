@@ -267,6 +267,18 @@ class FixedSlot(Base):
         self.assertNotIn("SECRET-VERDICT", raw)
         self.assertNotIn("review", inp)
 
+    def test_review_page_aids(self):
+        sys.path.insert(0, str(Path(__file__).parent.parent / "server"))
+        import main as server  # noqa: E402
+        self.patch(server.layout, "WORK", self.work)
+        (self.work / "media-probe" / "lion" / "spectrogram.png").write_bytes(b"png")
+        a = server.media_aids(self.q)
+        self.assertEqual(a["pictures"], ["/probe/lion/spectrogram.png"])
+        self.assertEqual(a["speech"]["text"], "a lion roars")
+        self.assertEqual([f["check"] for f in a["mechanical"]], ["answer-heard"])
+        self.assertIsNone(server.media_aids({"id": "q-2"}))
+        self.assertIsNone(server.media_aids({**self.q, "media_first": {**self.q["media_first"], "probe": "media-probe/none"}}))
+
     def test_merge_keeps_media_and_provenance(self):
         self.pool.write_text(json.dumps({"questions": [{**self.q, "id": "q-0100", "status": "approved", "batch": "x",
                                                        "answer": "Zebra", "concept": "Zebra"}]}))

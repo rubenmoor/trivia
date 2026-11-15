@@ -71,12 +71,13 @@ API:
                                                    {"id", "note"} edits, {"id", "remove": true} removes; returns all flags
     GET  /gallery/[sets/<name>/]<locale>/<shot>.png  a shot from work/gallery/
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
+    GET  /probe/<sha>/<sheet|spectrogram>.png      a media-first probe's picture (work/media-probe/, plan 204)
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
                                                    source pool, approved or not); downloaded first on a miss
     Other /api/ paths: 404; a bad body or query: 400; a crash: 500 {"error": "server error: …"}.
 Questions in responses carry `media_candidates` and `background_candidates`
 (from work/media/, or null if not fetched) and `audit` (the newest back-audit, else work/<batch>/audit/<id>.json,
-or null; plans 16, 57), `licence`: per picked slot {"verdict": "ok"|"replace", "reasons": [...]}
+or null; plans 16, 57), `media_aids` (media-first: probe aids, picture URLs, mechanical findings; else null), `licence`: per picked slot {"verdict": "ok"|"replace", "reasons": [...]}
 (providers.licence_verdict, plan 53) and `played`: per age group with played data
 [{group, n, right, rated, observed, bound}] (played.review_data, state/played/stats.json; [] without, plan 109).
 """
@@ -92,6 +93,7 @@ import categories  # noqa: E402  (authoring/tools/categories.py)
 from http_base import BaseHandler  # noqa: E402  (authoring/tools/http_base.py)
 import download  # noqa: E402  (authoring/tools/download.py)
 import media  # noqa: E402  (authoring/tools/media.py)
+import media_first  # noqa: E402  (authoring/tools/media_first.py)
 import media_cache  # noqa: E402  (authoring/tools/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
 import ui_flags  # noqa: E402  (authoring/server/ui_flags.py)
@@ -126,6 +128,20 @@ def locale_of(value):
     return value
 
 
+def media_aids(q):
+    """A media-first question's aids for the review page (plan 204): the probe's numbers, transcript and OCR,
+    its pictures as /probe/ URLs, and the mechanical findings; None for other questions or a missing probe."""
+    if not q.get("media_first"):
+        return None
+    try:
+        p = media_first.load_probe(q["media_first"]["probe"])
+        a = media_first.aids(p)
+        pics = [f"/probe/{q['media_first']['probe'].removeprefix('media-probe/')}/{Path(x).name}" for x in a.pop("pictures_to_read")]
+        return {**a, "pictures": pics, "mechanical": media_first.media_findings(q, p)}
+    except (OSError, KeyError, ValueError):
+        return None
+
+
 def with_extras(q, data=None, locale=None):
     """data: played.review_data, loaded once per request (None: no played data); locale: the item's language,
     default the source's (decision 235)."""
@@ -134,7 +150,7 @@ def with_extras(q, data=None, locale=None):
     bg = media.load_candidates(q["id"], "background") if q.get("background") else None
     return {**q, "media_candidates": found["candidates"] if found else None,
             "background_candidates": bg["candidates"] if bg else None, "audit": audit_of(q) or None,
-            "licence": media.licence_of(q), "played": data["played"].get((q["id"], locale), []) if data else [],
+            "media_aids": media_aids(q), "licence": media.licence_of(q), "played": data["played"].get((q["id"], locale), []) if data else [],
             "locale": locale}
 
 
@@ -425,9 +441,17 @@ class Handler(BaseHandler):
         if url.path.startswith("/gallery/") and url.path.endswith(".png"):
             path = ui_flags.shot_path(url.path.removeprefix("/gallery/"))
             return self.send_file(path) if path else self.send_json(404, {"error": "no such shot: run trivia-gallery"})
+        if url.path.startswith("/probe/"):  # a media-first probe's picture (plan 204)
+            return self.send_probe(url.path.removeprefix("/probe/"))
         if url.path == "/media":
             return self.send_media(parse_qs(url.query).get("url", [""])[0])
         return self.send_static(url.path)
+
+    def send_probe(self, rel):
+        """work/media-probe/<sha>/<sheet|spectrogram>.png."""
+        m = re.fullmatch(r"([\w.-]+)/(sheet|spectrogram)\.png", rel)
+        path = layout.WORK / "media-probe" / m[1] / f"{m[2]}.png" if m else None
+        return self.send_file(path) if path and path.is_file() else self.send_json(404, {"error": f"no picture {rel}"})
 
     def send_report(self, name):
         """authoring/reports/<name>.md as plain text, so the browser shows it instead of downloading it."""

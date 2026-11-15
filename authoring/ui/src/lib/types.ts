@@ -112,6 +112,17 @@ interface Audit {
   on: string;
 }
 
+/** The probe's aids of a media-first question and the mechanical findings (authoring/server/main.py media_aids). */
+export interface MediaAids {
+  pictures: string[];
+  integrated_lufs?: number;
+  silence_share?: number;
+  true_peak_dbfs?: number;
+  speech?: { text: string; language?: string; language_p?: number };
+  ocr?: string[];
+  mechanical: { kind: string; check: string; note: string; hard: boolean }[];
+}
+
 /** One question's spot check in authoring/data/spot-checks.json (plan 16). */
 export interface SpotCheckItem {
   llm: Decision;
@@ -161,6 +172,8 @@ export interface Question {
   revision?: Revision | null;
   /** Added by the server: null when not audited. */
   audit: Audit | null;
+  /** Added by the server for media-first questions (plan 204): the played window's aids, null without. */
+  media_aids?: MediaAids | null;
   /** Added by the server: null when candidates were never fetched. */
   media_candidates: MediaCandidate[] | null;
   background_candidates: MediaCandidate[] | null;

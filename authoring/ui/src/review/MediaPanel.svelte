@@ -1,10 +1,12 @@
 <script lang="ts">
   // One media slot (the question's media, or the background of an audio question, D-14):
   // what is picked or suggested, plus the alternatives from the media providers (plans/06-images.md, D-45).
+  import ExcerptPlayer from "./ExcerptPlayer.svelte";
   import type { LicenceRecord, LicenceVerdict, MediaCandidate } from "../lib/types.ts";
 
   interface MediaSlot extends LicenceRecord {
     type: "image" | "audio" | "video";
+    excerpt?: { start: number; end: number };
     query: string;
     note?: string | null;
     source_url: string | null;
@@ -105,6 +107,8 @@
           <img src={fileUrl} alt={slot.query} />
           {#if decorative}<span class="mark" aria-hidden="true">?</span>{/if}
         </div>
+      {:else if slot.excerpt}
+        <ExcerptPlayer src={fileUrl} type={slot.type} excerpt={slot.excerpt} />
       {:else if slot.type === "audio"}
         <audio controls src={fileUrl}></audio>
       {:else}
