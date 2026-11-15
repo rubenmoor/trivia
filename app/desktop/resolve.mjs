@@ -165,6 +165,23 @@ export function shippedName(url) {
   return name.slice(0, -ext.length) + (SHIPPED[ext] ?? ext);
 }
 
+// A shipped excerpt question's file_url: the source URL + `#t=start,end` (media fragment), so every window is its own
+// key, shippedName and file; the built pools carry it instead of `media.excerpt` (decision 644). cacheName ignores the hash.
+const FRAGMENT = /#t=([^,]+),([^,]+)$/;
+export const sourceUrl = (url) => url.replace(FRAGMENT, "");
+export function excerptOf(url) {
+  const m = FRAGMENT.exec(url);
+  return m ? { start: Number(m[1]), end: Number(m[2]) } : null;
+}
+const cut = (m) => {
+  const e = m?.excerpt;
+  if (!m?.file_url || !e || !["audio", "video"].includes(m.type) || !(e.start >= 0 && e.end > e.start)) return m;
+  const { excerpt, ...rest } = m;
+  return { ...rest, file_url: `${m.file_url}#t=${e.start},${e.end}` };
+};
+// The pool as the build ships it: excerpt questions point at their cut, no excerpt left (the player plays the whole file).
+export const shipPool = (pool) => ({ ...pool, questions: pool.questions.map((q) => (q.media?.excerpt ? { ...q, media: cut(q.media) } : q)) });
+
 // Every picked file_url in the pool, like authoring/tools/media_cache.py pool_urls; stage-media.mjs ships the same set.
 export const poolUrls = ({ questions }) =>
   new Set(questions.flatMap((q) => [q.media?.file_url, q.background?.file_url]).filter(Boolean));

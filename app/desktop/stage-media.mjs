@@ -2,6 +2,7 @@
 // hard links (or copies) from the encode cache work/ship-media/.
 // build/pack-media.json: per shipped bundle folder, the media only it uses (its DLC depot carries them, decision 66; [] without a pool).
 // build/data/: app/data/ without topic bundle pools until all five topics have 2000 approved per locale (decision 520).
+// Excerpt questions (decision 644): the build's pools point at `<url>#t=start,end`, one cut file per window; the media is cut to it.
 // --check: no encoding; build/media against the pools and media-budget.json, exit 1 on ✗.
 // --demo (or TRIVIA_DEMO=1, as the dist:*:demo scripts set it; decision 342): only app/data/demo/ pools (all locales) → build/media-demo/,
 // no packs, no pack-media.json; budget `demo.content`. Also build/data-demo/: app/data/ without bundles/ and the full pools, with demo/.
@@ -13,7 +14,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 import { VIDEO } from "./media-formats.mjs";
-import { cacheName, poolUrls, shippedName } from "./resolve.mjs";
+import { cacheName, excerptOf, poolUrls, shipPool, shippedName, sourceUrl } from "./resolve.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, "..", "..");
@@ -70,20 +71,20 @@ async function image(src, dst) {
 }
 
 // → the encoded file in work/ship-media/ (new or cached) and whether it was encoded now.
-async function encode(src, name) {
+async function encode(src, name, excerpt) {
   const ext = path.extname(name);
   const kind = KIND[ext];
   if (!kind) return { file: src, fresh: false };  // GIF, SVG: as is
   const { size, mtimeMs } = statSync(src);
-  const hash = createHash("sha1").update(`${TOOLS}\n${settings[kind]}\n${size} ${mtimeMs}`).digest("hex").slice(0, 10);
+  const hash = createHash("sha1").update(`${TOOLS}\n${settings[kind]}\n${size} ${mtimeMs}${excerpt ? ` ${excerpt.start}-${excerpt.end}` : ""}`).digest("hex").slice(0, 10);
   const file = path.join(encoded, `${name.slice(0, -ext.length)}-${hash}${ext}`);
   if (statSync(file, { throwIfNoEntry: false })) return { file, fresh: false };
   const tmp = `${file}.part${ext}`;
   let resized = false;
   if (kind === "image") resized = await image(src, tmp);
-  else await ffmpeg(src, kind === "audio" ? AUDIO : VIDEO, tmp);
-  // Same format, not shrunk or resized: the source is the better file.
-  if (path.extname(src) === ext && !resized && statSync(tmp).size >= size) copyFileSync(src, tmp);
+  else await ffmpeg(src, [...(excerpt ? ["-ss", String(excerpt.start), "-to", String(excerpt.end)] : []), ...(kind === "audio" ? AUDIO : VIDEO)], tmp);
+  // Same format, not shrunk or resized (nor cut): the source is the better file.
+  if (!excerpt && path.extname(src) === ext && !resized && statSync(tmp).size >= size) copyFileSync(src, tmp);
   renameSync(tmp, file);
   return { file, fresh: true };
 }
@@ -96,7 +97,7 @@ const topics = JSON.parse(readFileSync(path.join(DATA, "bundles.json"), "utf8"))
 const topicCount = (b, f) => JSON.parse(readFileSync(path.join(DATA, "bundles", b, f), "utf8")).questions.filter((q) => q.status === "approved").length;
 const atBar = (f) => topics.every((b) => existsSync(path.join(DATA, "bundles", b, f)) && topicCount(b, f) >= TOPIC_BAR);
 const shipsPool = (b, f) => !topics.includes(b) || atBar(f);
-const read = (file) => poolUrls(JSON.parse(readFileSync(file, "utf8")));
+const read = (file) => poolUrls(shipPool(JSON.parse(readFileSync(file, "utf8"))));
 const urls = new Set();
 const packMedia = {};
 if (demo) {
@@ -177,6 +178,15 @@ if (!demo) {
     },
   });
 }
+// The built pools: excerpts folded into file_url (shipPool).
+const shipPools = (dir) => {
+  for (const f of readdirSync(dir, { recursive: true }).filter((f) => /(^|[\\/])pool(\.[\w-]+)?\.json$/.test(f))) {
+    const file = path.join(dir, f);
+    const text = readFileSync(file, "utf8");
+    if (text.includes('"excerpt"')) writeFileSync(file, JSON.stringify(shipPool(JSON.parse(text))) + "\n");
+  }
+};
+shipPools(path.join(HERE, "build", demo ? "data-demo" : "data"));
 mkdirSync(encoded, { recursive: true });
 if (!demo) writeFileSync(path.join(HERE, "build", "pack-media.json"), JSON.stringify(packMedia, null, 2) + "\n");
 
@@ -184,9 +194,9 @@ const missing = [];
 const jobs = [];
 for (const url of [...urls].sort()) {
   const name = shippedName(url);
-  const src = path.join(cache, cacheName(url));
+  const src = path.join(cache, cacheName(sourceUrl(url)));
   const st = statSync(src, { throwIfNoEntry: false });
-  if (st) jobs.push({ name, src, before: st.size });
+  if (st) jobs.push({ name, src, before: st.size, excerpt: excerptOf(url) });
   else missing.push(`  ${name}  ${url}`);
 }
 jobs.sort((a, b) => b.before - a.before);  // videos first: the longest encodes
@@ -199,7 +209,7 @@ const kept = new Set();
 async function worker() {
   for (let job = jobs[next++]; job; job = jobs[next++]) {
     try {
-      const r = await encode(job.src, job.name);
+      const r = await encode(job.src, job.name, job.excerpt);
       if (r.fresh) fresh++;
       kept.add(path.basename(r.file));
       try {

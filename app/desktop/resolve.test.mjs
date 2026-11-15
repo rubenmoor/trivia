@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { after, test } from "node:test";
 import { arrange, bundleRows, modsScript, readManifest } from "./mods.mjs";
-import { cacheName, makeResolver, shippedName } from "./resolve.mjs";
+import { cacheName, excerptOf, makeResolver, shipPool, shippedName, sourceUrl } from "./resolve.mjs";
 
 const tmp = mkdtempSync(path.join(tmpdir(), "trivia-resolve-"));
 after(() => rmSync(tmp, { recursive: true, force: true }));
@@ -298,4 +298,24 @@ test("/media with playable: Theora-like sources get a WebM copy beside them, the
   assert.equal(dev.type, "video/webm");
   assert.ok(existsSync(path.join(tmp, "pmedia", "playable", cacheName(ogv).replace(/\.ogv$/, ".webm"))));
   assert.ok(existsSync(src));
+});
+
+test("shipPool: excerpt → `#t=` file_url, no excerpt; one shipped name per window", () => {
+  const src = "https://x.org/a/long.ogg";
+  const q = (media) => ({ id: "q", media });
+  const media = { type: "audio", role: "essential", file_url: src, credit: "x", excerpt: { start: 12.5, end: 40 } };
+  const { questions } = shipPool({ version: 1, questions: [q(media), q({ ...media, excerpt: { start: 1, end: 9 } }), q({ ...media, excerpt: undefined }), q({ ...media, type: "image" })] });
+  const [a, b, whole, image] = questions.map((x) => x.media);
+  assert.equal(a.file_url, `${src}#t=12.5,40`);
+  assert.equal("excerpt" in a, false);
+  assert.deepEqual(excerptOf(a.file_url), { start: 12.5, end: 40 });
+  assert.equal(sourceUrl(a.file_url), src);
+  assert.equal(whole.file_url, src);
+  assert.equal(image.file_url, src);
+  assert.equal(excerptOf(src), null);
+  assert.notEqual(shippedName(a.file_url), shippedName(b.file_url));
+  assert.notEqual(shippedName(a.file_url), shippedName(src));
+  assert.equal(shippedName(a.file_url), shippedName(`${src}#t=12.5,40`));
+  assert.ok(shippedName(a.file_url).endsWith(".opus"));
+  assert.equal(cacheName(a.file_url).slice(-4), ".ogg");
 });
