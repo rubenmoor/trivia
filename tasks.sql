@@ -47875,6 +47875,30 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - What: the `probe` step of `qgen batch --media-first` exits 1 on the same 4 files every time: three old `.ogv` videos (`File:Rotting carrot time lapse video.ogv`, `File:Time-Lapse-Imaging-Reveals-…pone.0025303.s008.ogv`, `File:Time-Lapse-Imaging-of-the-Dynamics-…pone.0030775.s007.ogv`) where the cached preview `work/media-probe/<hash>/frames/10.png` is missing (urlopen error, No such file), and `File:Manchukuo National Anthem 1933-1942 Chinese Korean.ogg` where reading its metadata fails with a utf-8 decode error.
 - Fix: in the probe, a missing frame or undecodable metadata skips that file (logged, counted as dropped in the funnel), never fails the step. Check similar probe code for the same pattern (earlier fix: task 2104).
 - Done when: a test covers both cases; `npm run check`, `npm test`, `qgen validate` pass.', '2026-11-16T21:13:57Z', '2026-11-16T21:19:27Z', 2109, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2119, NULL, 'Player screen: Enter hint vanishes on arrow focus; global badges button, bottom submit, delete dialog hint', 'exec', 'open', NULL, NULL, 'The developer''s report on the «Who''s playing?» screen (`app/client/src/game/screens/Player.svelte`, `app/client/src/game/NamePicker.svelte`, keys `player.*` in `app/client/src/locales/`), plus a broader look for the same bug class.
+
+## 1. Investigate: the `Enter` hint disappears after arrow-key focus
+- Seen: a player/team button shows its `Enter` key hint (pressing Enter picks that team and advances); after moving focus with the arrow keys between buttons, the hint is suddenly gone from the focused button.
+- Focusing a button must never change its contents. Something ties the hint to state that focus/arrow handling changes (hover vs focus, a "last input" mode, a shared "active" index, a re-render that drops the hint…).
+- Find the root cause, not a per-screen patch. The developer suspects a bad inconsistency in the shared key-hint / focus logic that also affects other screens: check every screen and dialog that shows key hints, list what you find, fix it at the shared source.
+
+## 2. Player screen redesign
+- Layout: the list of existing players/teams, exactly one selected (if any exist), then the new-name input, then one big submit button at the bottom of the page.
+- Selecting ≠ advancing: arrows/click/pad select a player without leaving the screen. The bottom button («Let''s play!») is the general "advance to next screen" for the selected player.
+- New name: typing a name and submitting uses the same bottom button; remove the submit button from the name input''s form group.
+- Only when no players exist at all is nothing selected.
+- Badges: drop the per-player badges button that appears on hover. One global, big button «Show badges & awards» with an award icon (not a checkmark); it always refers to the selected player and is disabled when none is selected. It should invite being clicked.
+- Delete: keep the small trash bin per player, but not hover-only: no controls that appear on hover (unnecessary complexity, unusable on TV/pad).
+- New strings in all UI locales; read `locales/style/<locale>.md` first.
+
+## 3. Delete confirm dialog: «Yes, delete» has no `Enter` hint
+- Every button must show how to reach it by keyboard or gamepad. Find why this one lacks it and how that was possible; if buttons can be rendered without a hint at all, close that gap (shared component or a check in `npm run check`/tests) so it can''t recur, and fix any other button found without one.
+
+## Done when
+- Root cause of 1 named in the task note, fixed at the source; other affected screens listed and fixed.
+- Player screen and delete dialog as above, keyboard, mouse and gamepad.
+- Review set: `trivia-gallery --set task-<id> --only <player and delete-dialog shots>` for the developer''s review; a decision asks for approval.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-16T21:44:32Z', NULL, NULL, 0, 'fable', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -57501,6 +57525,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2310, 2109, '2026-11-16T21:13:20Z', '2026-11-16T21:14:15Z', 'blocked', NULL, 0, '32663c7b4075f853a25554184c78fada67607a9b', 'questions', 'claude-sonnet-5-5', '205b84ad-85d6-4523-bee2-89b6b4c4788c', 2308, 13, 28, 3572, 838805, 14128, 0.47241510000000003, 74587, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2311, 2117, '2026-11-16T21:13:56Z', '2026-11-16T21:14:17Z', 'done', NULL, 0, 'ead47c8ecb444c82daeaccfdb2db2a23a52e5dca', NULL, 'claude-opus-5-5', 'c74a6383-f08d-4db9-880c-d880be688617', NULL, 4, 8, 977, 132095, 33744, 0.315943, 46558, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2312, 2118, '2026-11-16T21:14:15Z', '2026-11-16T21:19:33Z', 'done', NULL, 0, 'ead47c8ecb444c82daeaccfdb2db2a23a52e5dca', 'questions', 'claude-sonnet-5-5', '862710ea-8a8f-4d27-ba48-6e085415f238', NULL, 17, 34, 5048, 751146, 41564, 0.2919186, 56335, 60, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2313, 2109, '2026-11-16T21:19:33Z', NULL, 'running', NULL, NULL, 'f614ea1c890e9180ebacd9754ed3aa0c31e36973', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1136664);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
