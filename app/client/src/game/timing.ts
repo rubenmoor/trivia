@@ -59,5 +59,7 @@ export const SPLASH_HOLD_MS = 2000;
 export const SPLASH_EXIT_MS = 700;
 /** The subcategory's exit may start or end this much after the category's. */
 export const SPLASH_SUB_MAX_MS = 100;
+/** The splash's dark backdrop (task 2120): opaque this long from the entrance, then fading until the exit ends. */
+export const SPLASH_SHADE_HOLD_MS = 1000;
 
 export const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));

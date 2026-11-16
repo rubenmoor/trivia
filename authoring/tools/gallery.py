@@ -691,11 +691,13 @@ ENTRANCES = ["slam", "pop", "slide", "drop", "letters"]  # SPLASH_ENTRANCES in q
 
 def splash(r):
     # The splash frozen at its hold (window.__gallerySplash); the second shot on a long category and subcategory;
-    # `entrance` freezes a forced entrance midway instead (question-splash-in-<id>).
+    # `entrance` freezes a forced entrance midway instead (question-splash-in-<id>); `backdrop` holds the dark
+    # backdrop half faded (question-splash-fading).
     hold = "window.__gallerySplash = %s"
     for name, topic, save in [("question-splash", "{}", "question"),
                               ("question-splash-long", '{topic: {category: "inventions-and-technology", '
                                'subcategory: "consoles-and-game-companies"}}', "question"),
+                              ("question-splash-fading", "{backdrop: 0.5}", "question"),
                               ("timed-splash", "{}", "timed-q"),
                               *[(f"question-splash-in-{e}", f'{{entrance: "{e}"}}', "question") for e in ENTRANCES]]:
         if r.only and name not in r.only:
@@ -1126,7 +1128,7 @@ STEPS = [
     (["level", "select", "game-settings"], table),
     (["question", "question-locked", "joker-hint-armed", "joker-hint", "joker-skip", "joker-category", "joker-snipe",
       "joker-easier"], question),
-    (["question-splash", "question-splash-long", "timed-splash", *[f"question-splash-in-{e}" for e in ENTRANCES]], splash),
+    (["question-splash", "question-splash-long", "question-splash-fading", "timed-splash", *[f"question-splash-in-{e}" for e in ENTRANCES]], splash),
     (["question-waiting", "correct", "wrong", "victory"], results),
     (["correct-score", "wrong-score", "session-correct-score", "timed-score"], scores),
     (["victory-rank", "wrong-rank", "session-victory-rank", "rank-first"], ranks),

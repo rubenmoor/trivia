@@ -283,7 +283,7 @@ let current: Loop | null = null;
 let override: SoundtrackId | undefined;
 const LOOPS: Track[] = ["normal", "question", "submitted", "timed"];
 
-/** Switch the music loop; null = silence. Screen changes fade out and in (04, "Transitions");
+/** Switch the music loop; null = silence. A screen change to another track fades out and in (04, "Transitions");
  * on the Question screen the changes are sharp cuts: locking in, unlocking, the drum roll, the
  * reveal (developer feedback: the music has to jump when an answer is clicked). */
 export function music(track: Track | null, opts: { soundtrack?: SoundtrackId } = {}) {

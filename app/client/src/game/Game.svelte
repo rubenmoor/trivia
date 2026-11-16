@@ -31,7 +31,7 @@
   import Overlay from "./Overlay.svelte";
   import SeatLost from "./SeatLost.svelte";
   import SeatTag from "./SeatTag.svelte";
-  import { music, sfx, unlock, type Cue, type Track } from "./sound.svelte.ts";
+  import { music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte.ts";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
   import CornerButtons from "./CornerButtons.svelte";
@@ -253,10 +253,11 @@
 
   /** The transition routine (04, "Transitions"): effect, fade to black, switch, fade in, music.
    * `apply` runs behind the black: a new game state that the old screen can't show (no question
-   * any more, a different `last`) must not land before the screen switches. */
+   * any more, a different `last`) must not land before the screen switches. A loop the next
+   * screen keeps plays on uncut (task 2120). */
   async function go(next: Screen, effect: Cue | null, apply?: () => void) {
     busy = true;
-    music(null);
+    if (MUSIC[next] !== sound.music) music(null);
     if (effect) sfx(effect);
     veil = effect === "rewind" ? "rewind" : "black";
     black = true;

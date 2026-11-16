@@ -1,12 +1,13 @@
 <script lang="ts">
   // The category splash (plans 181, 191): subcategory big and centred (the category alone without one), category small below; both come in with one of the
   // silent entrances in splash.ts, hold, then leave with one of the exits and its sound. Over the whole screen, never in the way of play.
+  // Under them a dark backdrop (task 2120): opaque for SPLASH_SHADE_HOLD_MS, then fading, gone exactly when the exit ends.
   import { untrack } from "svelte";
   import { displayName, questionLocale } from "../../lib/names.svelte.ts";
   import BundleMark_ from "../BundleMark.svelte";
   import type { BundleMark } from "../BundleMark.svelte";
   import { sfx } from "../sound.svelte.ts";
-  import { REDUCED_FADE_MS, SPLASH_EXIT_MS, SPLASH_HOLD_MS, SPLASH_IN_MS, SPLASH_SUB_MAX_MS, reducedMotion } from "../timing.ts";
+  import { REDUCED_FADE_MS, SPLASH_EXIT_MS, SPLASH_HOLD_MS, SPLASH_IN_MS, SPLASH_SHADE_HOLD_MS, SPLASH_SUB_MAX_MS, reducedMotion } from "../timing.ts";
   import { SPLASH_ENTRANCES, galleryHold, pickEntrance, pickExit, type SplashEntrance, type SplashExit } from "./splash.ts";
 
   let {
@@ -84,14 +85,20 @@
     }
   });
 
+  /** The dark backdrop (task 2120): opaque from the entrance, fading linearly (`ms`) to be gone exactly with the exit. */
+  let shade = $state({ opacity: 1, ms: 0 });
+  const EXIT_TOTAL_MS = SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS;
+
   let timers: ReturnType<typeof setTimeout>[] = [];
   let left = false;
   function exitNow() {
     if (galleryHold()) return;
     timers.forEach(clearTimeout);
     phase = "exit";
+    // An early exit retargets the fade; on time, the slope is the one already running
+    shade = { opacity: 0, ms: EXIT_TOTAL_MS };
     sfx(picked.cue);
-    timers = [setTimeout(() => (phase = "gone"), SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS)];
+    timers = [setTimeout(() => (phase = "gone"), EXIT_TOTAL_MS)];
   }
 
   $effect(() => {
@@ -100,6 +107,12 @@
       setTimeout(() => {
         if (left) return;
         phase = "in";
+        shade = { opacity: hook?.backdrop ?? 1, ms: 0 };
+        if (!hook) {
+          timers.push(
+            setTimeout(() => (shade = { opacity: 0, ms: SPLASH_IN_MS + SPLASH_HOLD_MS + EXIT_TOTAL_MS - SPLASH_SHADE_HOLD_MS }), SPLASH_SHADE_HOLD_MS),
+          );
+        }
         timers.push(
           setTimeout(() => {
             if (hook?.entrance) return;
@@ -123,6 +136,7 @@
 
 {#if phase === "in" || phase === "hold" || phase === "exit"}
   <div class="splash" bind:this={box} aria-hidden="true" style:--exit="{SPLASH_EXIT_MS}ms" style:--in="{SPLASH_IN_MS}ms" style:--lag="{LAG_MS}ms" style:--fade="{REDUCED_FADE_MS}ms">
+    <div class="shade" style:opacity={shade.opacity} style:--shade="{shade.ms}ms"></div>
     <div class="box" class:long>
       {#if bundle}<span class="mark {phase === "in" ? (reduced ? "in-fade" : "in-rise") : "fade"}" class:go={phase === "exit"} style:--delay="0ms"><BundleMark_ {bundle} /></span>{/if}
       <p
@@ -163,7 +177,14 @@
     pointer-events: none;
     overflow: hidden;
   }
+  .shade {
+    position: absolute;
+    inset: 0;
+    background: var(--night-800);
+    transition: opacity var(--shade) linear;
+  }
   .box {
+    position: relative;
     width: 88%;
     display: flex;
     flex-direction: column;

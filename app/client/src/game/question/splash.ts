@@ -69,9 +69,10 @@ export const pickExit = (table: SplashExit[] = SPLASH_EXITS): SplashExit => pick
 /** A random entrance not among the last 2 picked. */
 export const pickEntrance = (table: SplashEntrance[] = SPLASH_ENTRANCES): SplashEntrance => pick(table, recentEntrances, ENTRANCES_KEEP);
 
-type GalleryHook = { topic?: { category: string; subcategory: string | null }; entrance?: string };
+type GalleryHook = { topic?: { category: string; subcategory: string | null }; entrance?: string; backdrop?: number };
 
-/** Gallery hook (trivia-gallery): `window.__gallerySplash` freezes the splash at its hold, optionally on another topic; `entrance` forces that entrance and freezes it midway instead. */
+/** Gallery hook (trivia-gallery): `window.__gallerySplash` freezes the splash at its hold, optionally on another topic; `entrance` forces that
+ * entrance and freezes it midway instead; `backdrop` holds the backdrop at that opacity (default 1). */
 export function galleryHold(): GalleryHook | undefined {
   return (window as unknown as { __gallerySplash?: GalleryHook }).__gallerySplash;
 }
