@@ -47809,6 +47809,44 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Health ✗ → `pm decision list --grep "<run>: health"`, else `pm decision add "<run>: health ✗, look at it?"`, no task linked, go on.
 - Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (media-first)…?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop with nothing staged.
 - The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-16T19:16:23Z', NULL, 2103, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2114, NULL, 'Pre-session menus: player''s last choice as default, Enter/A always submits, consistent controls and focus', 'exec', 'open', NULL, NULL, 'Follow-up of task 2107 (commit ee914da4), which set Mode.svelte''s start pick to "solo" but left the default at gamemaster mode, untested.
+
+## 1. Defaults: the player''s last choice, else standard
+- Cause: Mode.svelte''s onMount preset → `fetchPlayerMode` → `playerMode()` (`engine/game.ts:299`) returns "gamemaster" for a player without games, so the "solo" start value never shows.
+- Wanted, general mechanism: every screen before the session preselects the player''s last choice (the mode of their newest game, as MD-7 says); only a player without a usable last choice gets the standard default.
+- Mode: no games, or a last mode no longer built/shown → standard mode ("solo") on the single-player step; with multiplayer modes shown, the first step preselects «Solo o en grupo».
+- Last mode a multiplayer one: restore it too (kind "multi" and that mode), dropping task 2107''s `isSession(last) && !launch` exclusion; Join then asks for seats as usual.
+- `?mode=` and Back from a later screen (`pickedMode` in Game.svelte) keep winning.
+- `playerMode()`: return null (or no fallback) for "no last choice" and let the Mode screen own the standard default; keep `gameMode()`''s gamemaster fallback (old saves, decisions.md MD-7 consequences).
+- Check every other "gamemaster" default on the way to a new game (`defaultDraft()` in choiceDraft.ts, `engine/api.ts` start defaults) for whether it can still decide a new game''s mode; fix any that can.
+- Check the other pre-session screens for the same mechanism: Player (most recent player preselected), Choice (`gameChoice`, the newest game''s settings), Bundles (last picked bundles); fix gaps, same rule: last choice, else a sensible default.
+- Update the docs that describe the preset and its fallback (rg `newest game`, MD-7, plans/13, plans/04, Mode.svelte header).
+
+## 2. Controls, focus, submit: one rule for every screen before the session
+Screens: Start, Language, Player (NamePicker), Mode, Join, Choice (+ Customize), Bundles, Mods, and every dialog opened from them.
+- Rule (replaces IN-3''s "Enter presses the ring''s control" for these screens):
+  - Enter / pad A: the screen''s primary action («Seguir», «¡A jugar!», …), whatever has focus, also in a text field.
+  - Space / pad X: activates the focused control (pick a tile, toggle a bundle, press a button). Never the primary action unless that button has focus.
+  - A shortcut letter: does its thing and moves the focus ring onto that control.
+  - Arrows / stick: move focus only. Backspace / pad B: back. Esc: menu. Click: that control.
+  - A screen without one primary action (e.g. a pure list such as Start''s menu or Language): Enter/A activates the focused entry; name each such screen in the docs.
+- Found so far: `toIntent()` maps Enter and Space both to `confirm`; `route()` presses the focused control on `confirm`; scopes opt out with `pressable` (Mode now lets Space go on); Bundles has its own `toggle` for Space/X; a key no scope handles is not `preventDefault`ed, so a focused `<button>` may also click itself natively on Space (verify). The Enter/Space mixup is likely a symptom: find the root cause rather than patching per screen.
+- Deep analysis first: every `pushScope` reached before the session (keys, pad, pressable, handle, root), `lib/focus.ts` (`press`, `data-focus-default`, focus memory), native button and form behaviour, pad mappings, on-screen prompts (Prompt.svelte, key labels, glyphs). Write the screen × input table (Enter, Space, A, X, B, letters, arrows, click) as found and as fixed; fix every mismatch with the rule; prompts show the right key per action.
+- Prefer one mechanism in input.svelte.ts / focus.ts (e.g. a scope''s declared primary action) over per-screen exceptions; remove `pressable` uses that the new mechanism makes redundant.
+- Known bugs from task 2107 to confirm fixed: Enter/A after picking standard or gamemaster mode goes on; on Bundles the ring follows a shortcut-toggled bundle and Enter/A always means «¡A jugar!»; with multiplayer modes shown and no last choice the default is single-player.
+- In-game screens (Question, Level, Correct, …) are out of scope for changes: list their inconsistencies with the rule as `pm task add`.
+- Docs: the rule and the table in plans/14-input.md (IN-3 note revised), the short rule in plans/04-ui-tv-display.md "Input"; rg old wording (decision 200).
+- UI strings changed: read `locales/style/<locale>.md` first.
+
+## 3. Tests: required, not optional
+- Unit tests: the Mode preset (no games → standard; last game gamemaster → gamemaster; last game solo → standard; last game multiplayer → that mode; last mode unbuilt → standard; `?mode=`; Back) and the key → intent → action mapping (Enter vs Space, with focus on a tile, a toggle, a button, a text field).
+- A repeatable browser check committed to the repo, with trusted key presses and fake pads (`authoring/steam/fake_pads.js`, as smoke.mjs does) against the built client (`npm run serve -w app/client`, temp save dir), at least:
+  - fresh save: only Enter from Start to the first question → a standard-mode game with a suggested team name and default settings; the same with only pad A;
+  - that player plays a gamemaster game; next time, only Enter → gamemaster mode preselected and played;
+  - Space on a focused Mode tile or bundle tile only picks/toggles it; Enter/A with focus on any tile or bundle goes on / starts the game;
+  - a bundle shortcut moves the ring.
+- smoke.mjs flows that relied on the old Enter/Space behaviour: update; run what can run without a release build and say what wasn''t run.
+- Done note: the check''s command and its result.', '2026-11-16T19:59:16Z', NULL, NULL, 0, 'fable', NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -54993,6 +55031,37 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 | days |  | 1 | 1 | n/a |
 | **health** | | ✗ fail | ✗ fail | ✗ fail |', 'A run that makes new sound and video quiz questions from free recordings has finished, and its automatic health check flagged several numbers outside their targets: many drafted questions were dropped, a few overlapped existing ones, the media share was low and the cost per approved question was high. Nothing waits on this; the choice is whether to look at the run''s questions and numbers now or simply note the warning.', NULL, NULL, '2026-11-16T19:11:26Z', NULL, 2102, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (666, 'Spot check batch-79 (media-first) done?', 'pending', '["done"]', 'Run trivia-authoring, open http://127.0.0.1:8001/review?batch=batch-79&sample=1 (40 questions, decision 647). Check by ear and eye: recognisable from the window, no giveaway (spoken name, caption, logo, file name), content matches the answer, licence and work for public-domain music/film, sound quality, speech only where the words needn''t be understood. Mark problem kinds giveaway, media, fact, ambiguity.', 'Each batch of new sound- and video-based quiz questions is checked by the developer listening to and watching a sample, to confirm the automatic reviewer judges as a person would. The answer lets the next quality report measure how often the two agree.', NULL, NULL, '2026-11-16T19:12:27Z', NULL, 2103, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (667, 'Continue batch-80 (media-first) after the probe step failed 3 times?', 'pending', '["Fix probe so a missing frame or undecodable metadata skips that file, then resume batch-80 (rerun qgen batch --media-first)", "Leave as is and retry later"]', 'batch-80, step probe, exit 1 three times; same 4 files each time (media-probe frames/10.png missing for three .ogv files; utf-8 decode error on Manchukuo National Anthem .ogg). No claude calls made by the failed steps. Last 30 lines:
+
+Resuming batch-80 from surveyed Commons files (up to 120 designed). This takes from several minutes to an hour.
+
+== [1/28] inventory
+  inventory: 922 file(s) queued
+   inventory took 0s (batch: 0s)
+
+== [2/28] probe
+14:38:22 Wikimedia Commons preview 10 probe File:Rotting carrot time lapse video.ogv
+14:38:22 Wikimedia Commons preview 10 probe File:Rotting carrot time lapse video.ogv failed: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/23c4a3edb9a7f1fb/frames/10.png''> 0s
+  FAILED probe File:Rotting carrot time lapse video.ogv: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/23c4a3edb9a7f1fb/frames/10.png''>
+14:38:24 Wikimedia Commons preview 10 probe File:Time-Lapse-Imaging-Reveals-Symmetric-Neurogenic-Cell-Division-of-GFAP-Expressing-Progenitors-for-pone.0025303.s008.ogv
+14:38:24 Wikimedia Commons preview 10 probe File:Time-Lapse-Imaging-Reveals-Symmetric-Neurogenic-Cell-Division-of-GFAP-Expressing-Progenitors-for-pone.0025303.s008.ogv failed: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/4ee5b629ad7ce723/frames/10.png''> 0s
+  FAILED probe File:Time-Lapse-Imaging-Reveals-Symmetric-Neurogenic-Cell-Division-of-GFAP-Expressing-Progenitors-for-pone.0025303.s008.ogv: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/4ee5b629ad7ce723/frames/10.png''>
+14:38:27 Wikimedia Commons preview 10 probe File:Time-Lapse-Imaging-of-the-Dynamics-of-CNS-Glial-Axonal-Interactions-In-Vitro-and-Ex-Vivo-pone.0030775.s007.ogv
+14:38:27 Wikimedia Commons preview 10 probe File:Time-Lapse-Imaging-of-the-Dynamics-of-CNS-Glial-Axonal-Interactions-In-Vitro-and-Ex-Vivo-pone.0030775.s007.ogv failed: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/5c1f03380570644a/frames/10.png''> 0s
+  FAILED probe File:Time-Lapse-Imaging-of-the-Dynamics-of-CNS-Glial-Axonal-Interactions-In-Vitro-and-Ex-Vivo-pone.0030775.s007.ogv: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/5c1f03380570644a/frames/10.png''>
+  FAILED probe File:Manchukuo National Anthem 1933-1942 Chinese Korean.ogg: ''utf-8'' codec can''t decode bytes in position 439-440: invalid continuation byte
+  probe: 240/240 files in 11s, 4 failed
+4 item(s) failed; rerun the same command to retry them.
+   probe took 11s (batch: 11s)
+
+Failures in `probe`:
+  FAILED probe File:Rotting carrot time lapse video.ogv: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/23c4a3edb9a7f1fb/frames/10.png''>
+  FAILED probe File:Time-Lapse-Imaging-Reveals-Symmetric-Neurogenic-Cell-Division-of-GFAP-Expressing-Progenitors-for-pone.0025303.s008.ogv: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/4ee5b629ad7ce723/frames/10.png''>
+  FAILED probe File:Time-Lapse-Imaging-of-the-Dynamics-of-CNS-Glial-Axonal-Interactions-In-Vitro-and-Ex-Vivo-pone.0030775.s007.ogv: <urlopen error [Errno 2] No such file or directory: ''/home/ruben/code/trivia/work/media-probe/5c1f03380570644a/frames/10.png''>
+  FAILED probe File:Manchukuo National Anthem 1933-1942 Chinese Korean.ogg: ''utf-8'' codec can''t decode bytes in position 439-440: invalid continuation byte
+
+Stopped at `probe` with 4 error(s). Run `qgen batch --media-first` again; if the same step fails three times in a row, stop and report the output.
+exit 1', 'A batch of new sound and video questions stopped at its first step, which measures each Commons file. The same four files fail every time: three old video files and one audio file with an unreadable title or description. Either the batch is fixed so it skips such files and then continues, or those files are left as they are.', NULL, NULL, '2026-11-16T19:38:39Z', NULL, 2109, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -57389,6 +57458,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2298, 2108, '2026-11-16T19:08:42Z', '2026-11-16T19:09:32Z', 'done', NULL, 0, 'ee914da4bcb4a6de243b6f817522d15409d6cb63', 'questions', 'claude-sonnet-5-5', 'c92252fc-67ad-4c6c-bd80-bcf4bfea1402', NULL, 14, 26, 4168, 566463, 37742, 0.24934630000000002, 52567, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2299, 2102, '2026-11-16T19:09:33Z', '2026-11-16T19:11:54Z', 'done', NULL, 0, 'c4d9658f1c387c4adbb353e2664dac411d1661d3', 'questions', 'claude-opus-5-5', '3c73bfe3-49d7-4095-9e2b-b1948ec18762', NULL, 16, 32, 5113, 762962, 45118, 0.61592439999999982, 59473, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2300, 2103, '2026-11-16T19:11:56Z', '2026-11-16T19:16:37Z', 'done', NULL, 0, 'c9d65a6e9e5ee4390fd828512bd169f3d56591a9', 'questions', 'claude-sonnet-5-5', '31f5f35a-ed18-4175-afd3-9923e9981b2e', NULL, 15, 30, 6168, 863987, 60422, 0.38982670000000008, 74698, 60, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2301, 2080, '2026-11-16T19:16:38Z', '2026-11-16T19:17:05Z', 'blocked', NULL, 0, '1b77a601a04284d39cb79a21d07aa6ce3565bb72', 'questions', 'claude-sonnet-5-5', 'd38f8359-07e9-4a63-ba22-07b78f7e1b3b', NULL, 6, 14, 935, 216710, 28798, 0.146241, 43307, 60, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2302, 2109, '2026-11-16T19:17:05Z', '2026-11-16T19:38:46Z', 'blocked', NULL, 0, '1b77a601a04284d39cb79a21d07aa6ce3565bb72', 'questions', 'claude-sonnet-5-5', '6907a71e-9ee3-4451-98b1-8319261bef89', NULL, 8, 16, 2021, 342581, 38360, 0.20794010000000002, 53141, 60, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2303, 2111, '2026-11-16T19:38:46Z', NULL, 'running', NULL, NULL, '1b77a601a04284d39cb79a21d07aa6ce3565bb72', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1136664);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -58121,6 +58193,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 660);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 661);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 663);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 664);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2109, 667);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
@@ -58456,6 +58529,11 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 207
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2095);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2096);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2103);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2109);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2110);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2111);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2112);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2113);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2081, 2080);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2082, 2081);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2083, 2081);
