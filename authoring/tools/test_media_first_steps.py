@@ -90,6 +90,24 @@ class Steps(unittest.TestCase):
         mf.triage(self.run, "batch-1", jobs=1, target=None)
         self.assertEqual(len(self.calls), 4)
 
+    def test_failed_probe_drops_file(self):
+        bad = {"File:bad.ogg": ValueError("utf-8 codec can't decode"), "File:gone.ogg": OSError("urlopen error: No such file")}
+
+        def probe(title, excerpt=None):
+            if title in bad:
+                raise bad[title]
+            return self.probe(title, excerpt)
+
+        self.queue(survey_file("bad"), survey_file("gone"), survey_file("lion"))
+        self.answers = {"File:lion.ogg": [triage_out("Lion")]}
+        with mock.patch.object(mf, "probe", probe):
+            self.assertEqual(mf.probe_step(self.run, "batch-1", jobs=1, target=None), [])
+            self.assertEqual(mf.triage(self.run, "batch-1", jobs=1, target=None), [])
+        got = {t["title"]: t["verdict"] for t in mf.triaged(self.run)}
+        self.assertEqual(got, {"File:bad.ogg": "not_worth", "File:gone.ogg": "not_worth", "File:lion.ogg": "worth"})
+        self.assertEqual(mf.funnel(self.run, [])["class"]["general"]["files"], 3)
+        self.assertEqual(len(self.calls), 1)
+
     def test_target_stops_triage(self):
         self.queue(*(survey_file(f"f{i}") for i in range(6)))
         self.answers = {f"File:f{i}.ogg": [triage_out(f"Subject{i}")] for i in range(6)}
