@@ -44,12 +44,12 @@
       whileBusy: true,
       root: () => dialog,
       text: () => input,
+      // a pad's A in the field opens the letter picker (null: the scope takes it)
+      primary: (a) => (a?.device === "gamepad" && document.activeElement === input ? null : dialog?.querySelector<HTMLElement>(".choices .candy")),
       handle: (a) => {
         if (a.type === "back" || a.type === "menu" || (a.type === "flag" && a.device === "gamepad")) onclose();
-        else if (a.type === "confirm" && document.activeElement === input) {
-          if (a.device === "gamepad") picking = true;
-          else submit();
-        } else if (a.type !== "flag") return false;
+        else if (a.type === "confirm" && document.activeElement === input) picking = true;
+        else if (a.type !== "flag") return false;
         return true;
       },
     });

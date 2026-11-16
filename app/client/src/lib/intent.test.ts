@@ -34,3 +34,11 @@ test("a list screen (no primary action): Enter and Space press the ring's contro
   assert.equal(activation("confirm", "no", false), "confirm");
   assert.equal(activation("press", "no", false), "confirm");
 });
+
+test("in-game Question (task 2115): Enter submits whatever has the ring, Space locks the ringed tile; an armed joker is a list", () => {
+  assert.equal(activation("confirm", "yes", true), "primary"); // «Respuesta final», also with the ring on a tile
+  assert.equal(activation("press", "yes", true), "focused"); // lock / unlock the tile, or press a joker token
+  assert.equal(activation("press", "yes", false), "press"); // nothing to press: nothing happens
+  assert.equal(activation("confirm", "no", false), "confirm"); // armed joker, Francotirador: Enter fires
+  assert.equal(activation("press", "no", false), "confirm"); // and so does Space
+});

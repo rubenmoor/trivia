@@ -73,11 +73,11 @@
       modal: true,
       whileBusy: true,
       root: () => dialog,
+      primary: () => dialog?.querySelector<HTMLElement>(".choices .candy"),
       pressable: (el) => !(el instanceof HTMLDivElement && el.dataset.step),
       handle: (a) => {
         const id = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.step : undefined;
         if (a.type === "navigate" && id && (a.dir === "left" || a.dir === "right")) step(id, a.dir === "right" ? 1 : -1);
-        else if (a.type === "confirm") apply();
         else if (a.type === "back" || a.type === "menu") {
           if (!busy) onclose();
         }

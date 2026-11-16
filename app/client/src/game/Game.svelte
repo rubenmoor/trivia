@@ -683,11 +683,7 @@
       else newGame();
     } else if (on === "start" && a.type === "new") newGame();
     else if (on === "start" && a.type === "language" && !notice) openLanguage();
-    else if (on === "level" && a.type === "confirm" && !game?.session?.timed) go(table(game), "paper"); // timed: the countdown
     else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
-    else if ((on === "correct" || on === "next") && a.type === "confirm") toLevel();
-    else if (on === "wrong" && a.type === "confirm" && outGoesOn) afterOut();
-    else if ((on === "wrong" || on === "victory" || on === "completed") && a.type === "confirm") toStart();
     else return false;
     return true;
   }
@@ -713,6 +709,8 @@
       pad: on === "start" ? () => ({ 3: { type: "language" } }) : undefined,
       handle: (a) => onScreen(on, a),
       root: () => main,
+      // the continue button of Level, Correct, Wrong, Victory, Completed (timed Level: none, the countdown)
+      primary: on === "start" || on === "select" ? undefined : () => main?.querySelector<HTMLElement>("button[data-focus-default]"),
       keep: on === "start",
       shared: on === "start" || on === "wrong" || on === "victory" || on === "completed", // Start: timed has no seat to act
     });

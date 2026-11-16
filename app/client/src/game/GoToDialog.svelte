@@ -51,12 +51,11 @@
       whileBusy: true,
       root: () => dialog,
       text: () => input,
+      primary: (a) => (a?.device === "gamepad" && document.activeElement === input ? null : dialog?.querySelector<HTMLElement>(".choices .candy")),
       handle: (a) => {
         if (a.type === "back" || a.type === "menu") onclose();
-        else if (a.type === "confirm" && document.activeElement === input) {
-          if (a.device === "gamepad") void write();
-          else void submit();
-        } else return false;
+        else if (a.type === "confirm" && document.activeElement === input) void write();
+        else return false;
         return true;
       },
     });
