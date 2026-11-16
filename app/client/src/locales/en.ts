@@ -503,6 +503,7 @@ export const en = {
       confirmBody: "This deletes the name and {lose}. Questions already seen still count as seen. This can't be undone.",
       confirmBadges: "Their career badges are deleted too.",
       badges: "{name}'s badges",
+      showBadges: "Show badges & awards",
       confirm: "Yes, delete",
     },
     join: {

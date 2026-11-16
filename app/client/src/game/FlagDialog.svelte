@@ -82,7 +82,7 @@
     </div>
     <div class="choices">
       <button class="secondary" onclick={onclose}>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
-      {#if flagged}<button class="secondary" onclick={onunflag} disabled={busy}>{t("flag.unflag")}</button>{/if}
+      {#if flagged}<button class="secondary" onclick={onunflag} disabled={busy}>{t("flag.unflag")} <Prompt action="confirm" off={busy} /></button>{/if}
       <button class="candy" onclick={submit} disabled={busy}>{t(flagged ? "flag.save" : "flag.confirm")} <Prompt action="confirm" /></button>
     </div>
   </div>

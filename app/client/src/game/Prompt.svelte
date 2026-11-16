@@ -1,6 +1,9 @@
 <script lang="ts">
   // A key prompt (plans/14-input.md, IN-5): the key with keyboard or mouse, the pad button's glyph
   // with a pad (from the pad map incl. the scopes' overrides); nothing if the pad has no binding.
+  // A confirm chip inside a button says how that button is activated right now (section 4, task 2119): Enter/A on the
+  // scope's primary; on another button Space/X while it has the ring, else nothing (space kept); on a list screen
+  // Enter/A on the ringed button, or on every one while nothing is ringed.
   import { BUTTONS, padButton, type PadStyle } from "../lib/gamepad.ts";
   import { padStyle } from "../lib/gamepad.svelte.ts";
   import { keyLabel, lastDevice, padMap, primaryControl, scopes, type Device, type Intent } from "../lib/input.svelte.ts";
@@ -26,9 +29,9 @@
     hold?: boolean;
     /** Nothing with keyboard or mouse (the answer tiles' letters are the keys). */
     padOnly?: boolean;
-    /** A on this button even while another control has the ring (the armed joker's bubble). */
+    /** Confirm on this button even while another control has the ring (the armed joker's bubble). */
     fixed?: boolean;
-    /** No glyph, space kept: the pad button does nothing right now. */
+    /** No glyph, space kept: the button does nothing right now. */
     off?: boolean;
     /** This device's prompt, not the last input's: the turn seat's (`seatDevice`, plan 163). */
     device?: { device: Device; style?: PadStyle } | null;
@@ -39,26 +42,34 @@
   const style = $derived(device?.style ?? padStyle.current);
 
   const intent = (a: Named | Intent): Intent => (typeof a === "string" ? { type: a } : a);
-  const key = $derived(keyLabel(intent(action)));
-  const button = $derived.by(() => {
-    if (!pads) return null;
-    void scopes.version;
-    return padButton(intent(pad ?? action), padMap(BUTTONS));
-  });
-  // A is the screen's primary action where the scope declares one, else it presses the ringed control: on another button
-  // the A would mislead.
-  const away = $derived.by(() => {
-    if (off) return true;
+  /** The ring, else (keys only: Enter clicks it natively) the focused button. */
+  function ringed(): Element | null {
+    const ring = document.querySelector("[data-nav]");
+    if (ring || pads) return ring;
+    return document.activeElement instanceof HTMLButtonElement ? document.activeElement : null;
+  }
+  /** What this chip stands for: the intent as given, `press` for a ringed non-primary button, null for nothing right now. */
+  const shown = $derived.by((): Intent | null => {
+    if (off) return null;
     void scopes.version;
     const own = chip?.closest("button");
-    if (fixed || intent(pad ?? action).type !== "confirm" || !own || primaryControl() === own) return false;
-    const ring = document.querySelector("[data-nav]");
-    return ring !== null && ring !== own;
+    const a = intent(action);
+    if (fixed || a.type !== "confirm" || !own) return a;
+    const primary = primaryControl();
+    const ring = ringed();
+    if (primary) return primary === own ? a : ring === own ? { type: "press" } : null;
+    return ring === null || ring === own ? a : null;
   });
+  const key = $derived(keyLabel(shown ?? intent(action)));
+  const button = $derived.by(() => {
+    void scopes.version;
+    return padButton(shown ?? intent(pad ?? action), padMap(BUTTONS));
+  });
+  const away = $derived(shown === null);
 </script>
 
 {#if !pads}
-  {#if !padOnly && key}<kbd>{key}</kbd>{/if}
+  {#if !padOnly && key}<kbd class:hold={away} bind:this={chip}>{key}</kbd>{/if}
 {:else if button !== null}
   <kbd class="pad" class:hold={away} bind:this={chip}><Glyph {button} set={style} size="1.7em" /></kbd>
 {:else if hold && key}

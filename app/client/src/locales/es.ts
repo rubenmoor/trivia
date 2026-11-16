@@ -558,6 +558,8 @@ const es = {
       confirmBody: "Se borran el nombre y {lose}. Las preguntas que ya vio siguen contando como vistas. No se puede deshacer.",
       confirmBadges: "Se borran también sus insignias de la carrera.",
       badges: "Insignias de {name}",
+      /** The badges button under the names, for the selected one (task 2119). */
+      showBadges: "Ver insignias y premios",
       confirm: "Sí, borrar",
     },
     /** Local multiplayer seats (plan 162): who plays with which device. */

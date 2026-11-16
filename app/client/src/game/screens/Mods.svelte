@@ -187,9 +187,9 @@
         {t("mods.order")}
       {/if}
     </p>
-    <button class="secondary" onclick={refresh} disabled={!list} data-focus-id="refresh"><Icon name="refresh" /> {t("mods.refresh")}</button>
-    <button class="secondary" onclick={allOff} disabled={!anyOn} data-focus-id="all-off"><Icon name="power" /> {t("mods.allOff")}</button>
-    <button class="candy" onclick={() => guarded(anyOn, restart)} disabled={!dirty} data-focus-id="restart"><Icon name="rocket" /> {t("mods.restart")}</button>
+    <button class="secondary" onclick={refresh} disabled={!list} data-focus-id="refresh"><Icon name="refresh" /> {t("mods.refresh")} <Prompt action="confirm" off={!list} /></button>
+    <button class="secondary" onclick={allOff} disabled={!anyOn} data-focus-id="all-off"><Icon name="power" /> {t("mods.allOff")} <Prompt action="confirm" off={!anyOn} /></button>
+    <button class="candy" onclick={() => guarded(anyOn, restart)} disabled={!dirty} data-focus-id="restart"><Icon name="rocket" /> {t("mods.restart")} <Prompt action="confirm" off={!dirty} /></button>
     <button class="secondary" onclick={() => onclose(list)} data-focus-id="back" data-focus-default><Icon name="back" /> {t("action.back")} <Prompt action="menu" pad="back" /></button>
   </header>
 

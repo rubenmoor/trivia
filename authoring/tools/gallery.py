@@ -444,10 +444,17 @@ def player(r):
     r.wait(".name-button")
     r.settle(2.5)
     r.shot("player")
+    r.key("ArrowDown")  # the ring: the selected name, then the badges button (its Space chip, task 2119)
+    r.key("ArrowDown")
+    r.settle(0.6)
+    r.shot("player-nav")
     r.click(".player .delete")
     r.wait(".player .dialog")
     r.settle(0.6)
     r.shot("player-delete")
+    r.key("ArrowRight")  # the ring onto «Sí, borrar»: its Enter chip
+    r.settle(0.6)
+    r.shot("player-delete-confirm")
     r.key("Escape")
     r.settle(0.6)
     r.click("#new-player")
@@ -513,7 +520,7 @@ def choice(r):
     r.click('[data-focus-id="main"]')
     r.wait(".name-button")
     r.settle(0.8)
-    r.click(".name-button")
+    r.click('[data-focus-id="play"]')
     r.wait('[data-focus-id="kind-single"]:enabled')
     r.settle(1.5)
     r.shot("mode-kind")
@@ -560,7 +567,7 @@ def supply(r):
         r.click('[data-focus-id="main"]')
         r.wait(".name-button")
         r.settle(0.8)
-        r.click(".name-button")
+        r.click('[data-focus-id="play"]')
         to_bundles(r)
         r.wait('[data-focus-id="start"]:enabled')
         r.settle(1)
@@ -573,7 +580,7 @@ def supply(r):
         r.click('[data-focus-id="main"]')
         r.wait(".name-button")
         r.settle(0.8)
-        r.click(".name-button")
+        r.click('[data-focus-id="play"]')
         to_bundles(r)
         r.wait(f".bundles-screen {sel}")
         r.settle(1.2)
@@ -599,7 +606,7 @@ def topics(r):
         r.click('[data-focus-id="main"]')
         r.wait(".name-button")
         r.settle(0.8)
-        r.click(".name-button")
+        r.click('[data-focus-id="play"]')
         to_bundles(r)
         r.settle(1)
         r.shot("bundles-topics")
@@ -843,7 +850,7 @@ def to_mode(r, save="base", pads=0):
     r.click('[data-focus-id="main"]')
     r.wait(".name-button")
     r.settle(0.8)
-    r.click(".name-button")
+    r.click('[data-focus-id="play"]')
     r.wait('[data-focus-id="kind-multi"]:enabled')
 
 
@@ -870,7 +877,7 @@ def name_seat(r, i):
     r.click(f'[data-focus-id="seat-name-{i}"]')
     r.wait(".join-name, .backdrop .name-button")
     r.settle(0.5)
-    r.click(".backdrop .name-button")
+    r.click('.backdrop [data-focus-id="play"]')
     r.settle(0.4)
 
 
@@ -901,7 +908,7 @@ def multiplayer(r):
     r.wait(".backdrop .name-button")
     r.settle(0.8)
     r.shot("join-name-picker")
-    r.click(".backdrop .name-button")
+    r.click('.backdrop [data-focus-id="play"]')
     r.settle(0.6)
     r.shot("join-5")
     seguir(r, '[data-focus-id^="group-"]')
@@ -1091,7 +1098,7 @@ def demo_bundles(r):
     r.click('[data-focus-id="main"]')
     r.wait(".name-button")
     r.settle(0.8)
-    r.click(".name-button")
+    r.click('[data-focus-id="play"]')
     to_bundles(r)
     r.wait('[data-focus-id="start"]:enabled')
     r.settle(1.5)
@@ -1110,7 +1117,7 @@ DEMO_STEPS = [
 STEPS = [
     (["language", "consent"], first_start),
     (["start", "language-from-start", "start-resume", "start-save-notice"], start),
-    (["player", "player-delete", "letter-picker"], player),
+    (["player", "player-nav", "player-delete", "player-delete-confirm", "letter-picker"], player),
     (["career", "career-full", "career-off"], career),
     (["career-new", "career-new-many", "career-new-session"], celebration),
     (["mode-kind", "mode-single", "choice-gamemaster", "choice-solo", "customize", "bundles", "greeting"], choice),

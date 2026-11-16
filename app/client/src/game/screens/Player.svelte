@@ -1,8 +1,8 @@
 <script lang="ts">
-  // The Player screen (plans/04-ui-tv-display.md, "Player", D-28, UI-16): «¿Quién juega?» with the
-  // known names and a field for a new one (NamePicker). Names are labels; what the
-  // family saw counts for the whole save (plan 65). Each name can be deleted with its games, after a
-  // confirmation (GF-7); its seen questions stay seen. The Choice screen comes next (plan 151).
+  // The Player screen (plans/04-ui-tv-display.md, "Player", D-28, UI-16): «¿Quién juega?» with the known names, one
+  // selected, a field for a new one, the badges button for the selected name and «¡A jugar!» at the bottom (NamePicker).
+  // Names are labels; what the family saw counts for the whole save (plan 65). Each name can be deleted with its games,
+  // after a confirmation (GF-7); its seen questions stay seen. The Mode screen comes next.
   import { onMount } from "svelte";
   import { deletePlayer, fetchPlayers } from "../../lib/api.ts";
   import { buildInfo } from "../../lib/build.ts";
@@ -102,7 +102,7 @@
         </p>
         <div class="row">
           <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>
-          <button class="danger" onclick={confirmDelete} disabled={deleting}><Icon name="trash" /> {t("screen.player.confirm")}</button>
+          <button class="danger" onclick={confirmDelete} disabled={deleting}><Icon name="trash" /> {t("screen.player.confirm")} <Prompt action="confirm" off={deleting} /></button>
         </div>
       </div>
     </div>

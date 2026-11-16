@@ -314,7 +314,7 @@ async function newPlayer() {
     i.value = ${JSON.stringify(PLAYER)};
     i.dispatchEvent(new Event("input", { bubbles: true }));
   })()`);
-  await h.click('.new button[type="submit"]');
+  await h.click('[data-focus-id="play"]');
 }
 
 /** Mode screens → age → the Bundles screen (packs show there; in the demo one tile, no pack) → Start: the bundles offered. */
@@ -766,7 +766,7 @@ async function setup(r) {
     if (!i) continue;
     await h.click(`[data-focus-id="seat-name-${i}"]`);
     await setText(".backdrop #new-player", NAMES[i]);
-    await h.click('.backdrop .new button[type="submit"]');
+    await h.click('.backdrop [data-focus-id="play"]');
     await h.waitFor(`document.querySelector('[data-focus-id="seat-name-${i}"]')?.textContent.includes(${JSON.stringify(NAMES[i])})`, `seat ${i} named`);
   }
   at(`${r.label}: age, bundles`);

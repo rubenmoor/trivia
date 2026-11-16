@@ -161,6 +161,10 @@
   {:else if name === "seal"}
     <path d="M12 2.5l2.3 1.7 2.8-.2.9 2.7 2.3 1.6-.9 2.7.9 2.7-2.3 1.6-.9 2.7-2.8-.2-2.3 1.7-2.3-1.7-2.8.2-.9-2.7L4.6 14.7l.9-2.7-.9-2.7 2.3-1.6.9-2.7 2.8.2z" fill="currentColor" fill-opacity="0.25" />
     <path d="M8.5 12.2l2.4 2.4 4.6-4.8" />
+  {:else if name === "award"}
+    <circle cx="12" cy="9" r="6" fill="currentColor" fill-opacity="0.25" />
+    <path d="M12 6.2l.9 1.9 2.1.3-1.5 1.5.4 2.1-1.9-1-1.9 1 .4-2.1-1.5-1.5 2.1-.3z" fill="currentColor" stroke="none" />
+    <path d="M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7" />
   {:else if name === "gamepad"}
     <path d="M7.5 7h9a4.5 4.5 0 0 1 4.4 3.6l.9 4.7a2.6 2.6 0 0 1-4.5 2.2L15.5 15.5h-7l-1.8 2a2.6 2.6 0 0 1-4.5-2.2l.9-4.7A4.5 4.5 0 0 1 7.5 7z" fill="currentColor" fill-opacity="0.25" />
     <path d="M8 9.5v3.5M6.25 11.25h3.5" />

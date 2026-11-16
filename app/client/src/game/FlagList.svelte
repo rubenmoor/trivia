@@ -116,10 +116,10 @@
     <h2>{t("flag.list")}</h2>
     <div class="buttons">
       {#if flags.length}
-        <button class="secondary" onclick={() => copy(flags, "*")}>{copied === "*" ? t("flag.copied") : t("flag.copyAll")}</button>
+        <button class="secondary" onclick={() => copy(flags, "*")}>{copied === "*" ? t("flag.copied") : t("flag.copyAll")} <Prompt action="confirm" /></button>
       {/if}
       {#if canSend && unsent.length}
-        <button class="secondary" onclick={() => send(unsent)} disabled={busy}>{t("flag.sendAll")}</button>
+        <button class="secondary" onclick={() => send(unsent)} disabled={busy}>{t("flag.sendAll")} <Prompt action="confirm" off={busy} /></button>
       {/if}
       <button class="candy" bind:this={backButton} onclick={onclose} data-focus-default>{t("action.back")} <Prompt action="menu" pad="back" /></button>
     </div>
@@ -139,10 +139,10 @@
           {#if f.note}<p class="note">{t("flag.note")}: {f.note}</p>{/if}
           <div class="actions">
             <button class="secondary small" onclick={() => copy([f], f.question_id)}>
-              {copied === f.question_id ? t("flag.copied") : t("flag.copy")}
+              {copied === f.question_id ? t("flag.copied") : t("flag.copy")} <Prompt action="confirm" />
             </button>
             {#if canSend}
-              <button class="secondary small" onclick={() => send([f])} disabled={busy}>{t("flag.send")}</button>
+              <button class="secondary small" onclick={() => send([f])} disabled={busy}>{t("flag.send")} <Prompt action="confirm" off={busy} /></button>
             {/if}
             {#if st === "sending"}
               <span class="status">{t("flag.sending")}</span>

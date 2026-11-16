@@ -86,6 +86,7 @@
     {#if mods && !notice}
       <button class="secondary" onclick={onmods} disabled={busy} data-focus-id="mods">
         <Icon name="puzzle" /> {t("mods.open")}{#if mods.loaded}<span class="count">{mods.loaded}</span>{/if}
+        <Prompt action="confirm" />
       </button>
     {/if}
   </div>

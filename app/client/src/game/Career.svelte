@@ -167,7 +167,7 @@
     </div>
     {#if view && !after}
       <button class="secondary switch" onclick={toggle} disabled={busy} aria-pressed={!view.off}>
-        <Icon name="seal" /> {view.off ? t("career.page.turnOn") : t("career.page.turnOff")}
+        <Icon name="seal" /> {view.off ? t("career.page.turnOn") : t("career.page.turnOff")} <Prompt action="confirm" off={busy} />
       </button>
     {/if}
   </header>

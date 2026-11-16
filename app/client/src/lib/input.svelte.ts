@@ -122,10 +122,11 @@ function rooted(): [Scope, HTMLElement] | null {
   return null;
 }
 
-/** Focus a control: with the ring, unless the mouse was last (a dialog's first button). */
+/** Focus a control: with the ring, unless the mouse was last (a dialog's first button). Untracked: called from a scope's
+ * `$effect`, a device switch must not rerun it (the ring jumped back to the default on the first key, task 2119). */
 export function focusControl(el: HTMLElement | null | undefined) {
   if (!el) return;
-  if (lastDevice.current === "mouse") el.focus();
+  if (untrack(() => lastDevice.current) === "mouse") el.focus();
   else show(el);
 }
 
@@ -199,7 +200,10 @@ function route(action: Action): boolean {
   }
   if (action.type !== "navigate" || busy()) return false;
   const at = rooted();
-  return at ? navigate(action.dir, at[0].name, at[1]) : false;
+  if (!at) return false;
+  const moved = navigate(action.dir, at[0].name, at[1]);
+  bump(); // the ring may move without a focus event (back onto the focused control)
+  return moved;
 }
 
 /** The top scope's primary control for the prompts (null: none, or none right now). */

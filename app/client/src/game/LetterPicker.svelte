@@ -79,9 +79,9 @@
       {/each}
     </div>
     <div class="row">
-      <button class="secondary" onclick={() => type(" ")}>{t("picker.space")}</button>
+      <button class="secondary" onclick={() => type(" ")}>{t("picker.space")} <Prompt action="confirm" /></button>
       <button class="secondary" onclick={erase}>⌫ {t("picker.erase")} <Prompt action="back" padOnly /></button>
-      <button class="candy" onclick={done} disabled={busy || (!typed && !note)}>{t("picker.done")}</button>
+      <button class="candy" onclick={done} disabled={busy || (!typed && !note)}>{t("picker.done")} <Prompt action="confirm" off={busy || (!typed && !note)} /></button>
     </div>
   </div>
 </div>

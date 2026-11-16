@@ -502,6 +502,7 @@ export const de = {
       confirmBody: "Gelöscht werden der Name und {lose}. Schon gesehene Fragen zählen weiter als gesehen. Das lässt sich nicht rückgängig machen.",
       confirmBadges: "Auch seine Karriere-Abzeichen werden gelöscht.",
       badges: "Abzeichen von {name}",
+      showBadges: "Abzeichen und Auszeichnungen anzeigen",
       confirm: "Ja, löschen",
     },
     join: {

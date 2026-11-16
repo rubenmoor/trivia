@@ -33,7 +33,7 @@
     <p>{t("mods.notice.body")}</p>
     <p class="crash">{t("mods.notice.crash")}</p>
     <div class="buttons">
-      <button class="candy" onclick={onallow}><Icon name="check" /> {t("mods.notice.allow")}</button>
+      <button class="candy" onclick={onallow}><Icon name="check" /> {t("mods.notice.allow")} <Prompt action="confirm" /></button>
       <button class="secondary" bind:this={cancel} onclick={oncancel} data-focus-default><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>
     </div>
   </div>

@@ -98,7 +98,7 @@ async function toChoice(saveDir, data, ui, mode, shot) {
   await click("button.candy");
   await waitFor(visibleEl(".name-button"), "player screen");
   await sleep(800);
-  await click(".name-button");
+  await click('[data-focus-id="play"]');
   await waitFor(visibleEl('[data-focus-id="kind-single"]'), "mode screen");
   await click('[data-focus-id="kind-single"]');
   await click('[data-focus-id="next"]');

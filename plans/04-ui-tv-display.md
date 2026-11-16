@@ -74,7 +74,7 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 |---|---|---|---|
 | Language | First start (D-86) or Start's language button (D-96): «Elige el idioma», languages by flags + endonym (decision 186), guess preselected | Click / `Enter` / pad A / `1`–`n`; from Start: «Atrás» / `Backspace` / pad B | Normal |
 | Start | Title, «¡Jugar!», "continue game" if one is running; along the bottom third a horizon of Commons cut-outs (`Horizon.svelte`, `public/horizon/`, plan 150), same in every language, behind the content; demo build: a quiet line «Versión de demostración gratuita» (`screen.start.demo`) under the subtitle in every state, not focusable (plan 176) | Click / `Enter` | Normal |
-| Player | «¿Quién juega?»: known names, new name (a suggested team name when none, task 2107) | Click a name / `1`–`9` / `Enter` (the ring's name; nothing focused: the most recent) / type + `Enter` | Normal |
+| Player | «¿Quién juega?»: known names with one selected (the most recent at first), «Ver insignias y premios» for the selected one, new name (a suggested team name when none, task 2107), «¡A jugar!» at the bottom (task 2119) | Click / `Space` / X / `1`–`9` select a name, typing selects the field; «¡A jugar!» / `Enter` / A go on | Normal |
 | Mode | «¿Cómo se juega?»: «Solo o en grupo» or «Multijugador», then «Modo de juego»: Estándar or Modo anfitrión, or the multiplayer modes in two groups (decision 314); preset the player's last mode, else Estándar | «Seguir» / `Enter` / A; `Space` / X / letter pick a tile; «Atrás» / `Backspace` | Normal |
 | Choice | «¿Cómo juega …?», the age screen: gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers); the other modes: age group (rr-competitive: one per seat), video and audio switches (decision 645), «Personalizar partida»; no bundles, no supply | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Join | Multiplayer modes only: «press A to join» per pad, keyboard card, seat cards (colour, device, name, rr-competitive: age group) | «Seguir» (≥ 2 seats, all named) / `Enter`; «Atrás» / `Backspace` | Normal |
@@ -116,16 +116,16 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 - Demo gallery (plan 176): `trivia-gallery --demo` shoots language, start, start-resume, start-save-notice, menu-start, bundles, game-settings, level from demo-pool saves into `work/gallery-demo/`; the manifest lists PLACEHOLDER texts seen on those shots (the timed round screen's `PLACEHOLDER(1453)` is outside the set); `/gallery?demo`, review sets `/gallery?demo&set=<name>`.
 
 ### Player (D-28)
-- «¿Quién juega?»: the known player names as big buttons (most recent first, keys `1`–`9`), plus «Nuevo jugador» with a text field (the TV machine's keyboard, OQ-11).
-- A chosen name goes to the Mode screen; the supply check is on the Bundles screen after it.
-- Each name can be deleted with all its games and progress (GF-7): a small trash button on hover or keyboard focus, then a confirmation.
+- «¿Quién juega?» (task 2119): the known player names as tiles (most recent first, keys `1`–`9`), exactly one selected while any exist (the most recent at first; click, `Space`/X or a digit select, never advance), then «¿Alguien nuevo?» with a text field (the TV machine's keyboard, OQ-11; typing makes the field the selection, an emptied field gives it back to the names), then one big «¡A jugar!» at the bottom: the screen's primary (`Enter`/A anywhere, also in the field), disabled only with no names and an empty field.
+- «¡A jugar!» goes to the Mode screen with the selection; the supply check is on the Bundles screen after it.
+- Each name can be deleted with all its games and progress (GF-7): a small trash button at the tile's corner, always visible (nothing appears on hover only: unusable on a TV with a pad), then a confirmation; its «Sí, borrar» shows its `Enter`/A once ringed («Cancelar» is ringed at first).
 - Letter picker for a pad (plan 46, SW-4): `game/LetterPicker.svelte`, modal over the screen; keyboard and mouse never see it.
   - Opens on pad A with the field focused, or the «Ⓐ Escribir» button next to the field (shown only when the pad was last).
   - 9-column grid `A`–`Z`, `Ñ`, `Á É Í Ó Ú Ü`, `-`; row «Espacio», «⌫ Borrar», «Listo»; spatial focus, default «A».
   - Auto-capital (`game/letters.ts`): first letter and after space or `-` upper case, rest lower; 30 chars.
   - A types; B deletes, on an empty name closes; Start closes; text stays in the field. «Listo» = «¡A jugar!».
   - Mouse clicks on keys; physical letters, `Backspace`, `Enter` (focused key), `Esc` (close) while open.
-- Badges button per name (hover or focus, next to the trash; not in the demo): opens the Career layer. The delete confirmation adds that the career badges go too (decision 590).
+- One big «Ver insignias y premios» button under the names (award icon; not in the demo; task 2119): opens the selected name's Career layer, disabled while the field is the selection. The delete confirmation adds that the career badges go too (decision 590).
 - Idle animation so the TV doesn't look frozen, e.g. the empty foundation slowly breathing, or floating question marks.
 
 ### Career (plan 197, `game/Career.svelte`)
