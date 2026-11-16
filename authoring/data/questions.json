@@ -1606890,15 +1606890,15 @@
     },
     {
       "id": "q-20663",
-      "status": "needs_work",
-      "difficulty": 8,
-      "description": "A very polite voice, recorded back when radios were the size of a cupboard.",
-      "question": "Listen: a young woman gives a radio speech to millions of listeners around the world. Whose voice is this?",
+      "status": "approved",
+      "difficulty": 9,
+      "description": "Pin your ears back: this voice once had millions of people sitting very still next to the radio.",
+      "question": "Listen: a young woman speaks to millions of listeners at the end of a very big day. Whose voice is this?",
       "answer": "Queen Elizabeth II",
       "wrong_answers": [
-        "Queen Victoria",
-        "Margaret Thatcher",
-        "Princess Diana"
+        "Princess Margaret",
+        "Grace Kelly",
+        "Audrey Hepburn"
       ],
       "hints": [
         "Listen for the words “parliaments and peoples.”",
@@ -1606949,15 +1606949,23 @@
       "needs_media": true,
       "batch": "batch-79",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text answers the question without the clip. The description's \"back when radios were the size of a cupboard\" places the voice around the 1930s–50s, which rules out Princess Diana. Radio already rules out Queen Victoria. \"A young woman gives a radio speech to millions of listeners around the world\" then leaves only Elizabeth II, because Thatcher never gave a worldwide broadcast as a young woman. The description should play on the theme without dating the recording. The question should leave the decision to the voice, for example with distractors who were young women on air in the same era.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text answers the question without the clip. The description's \"back when radios were the size of a cupboard\" places the voice around the 1930s–50s, which rules out Princess Diana. Radio already rules out Queen Victoria. \"A young woman gives a radio speech to millions of listeners around the world\" then leaves only Elizabeth II, because Thatcher never gave a worldwide broadcast as a young woman. The description should play on the theme without dating the recording. The question should leave the decision to the voice, for example with distractors who were young women on air in the same era.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1606982,16 +1606990,20 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1 with words that are really in the clip, and replaced hint 2's reign-length giveaway with a milder Commonwealth clue.",
+        "reason": "I rewrote the description and question so they no longer date the recording or narrow the answer, and swapped in distractors who were young women with famous English voices in the same era, so the voice and words in the clip decide it.",
         "previous": {
-          "hints": [
-            "The speaker talks about her “peoples” spread across every continent and ocean.",
-            "She stayed in her role for more than 70 years, longer than anyone else on the British throne.",
-            "She was 27 when she gave this speech, on the evening of the day she was crowned at Westminster Abbey."
+          "difficulty": 8,
+          "description": "A very polite voice, recorded back when radios were the size of a cupboard.",
+          "question": "Listen: a young woman gives a radio speech to millions of listeners around the world. Whose voice is this?",
+          "wrong_answers": [
+            "Queen Victoria",
+            "Margaret Thatcher",
+            "Princess Diana"
           ]
         },
         "revised_on": "2026-11-16"
-      }
+      },
+      "difficulty_original": 8
     },
     {
       "id": "q-20664",
@@ -1608291,19 +1608303,19 @@
     },
     {
       "id": "q-20678",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "A train dressed as a lime that's scared of missing its flight.",
       "question": "Watch: this bright green double-decker express was built to link a European capital’s center nonstop with its airport. Which city?",
       "answer": "Vienna",
       "wrong_answers": [
-        "Zurich",
-        "Munich",
-        "Prague"
+        "Budapest",
+        "Prague",
+        "Warsaw"
       ],
       "hints": [
         "The logo on the front of the train is just three letters: the initials of what it is in English.",
-        "The city is famous for its waltzes, its coffee houses and its grand old palaces.",
+        "The city lies on one of Europe's longest rivers.",
         "The Danube flows through this city, where Mozart spent the last ten years of his life."
       ],
       "media": {
@@ -1608346,15 +1608358,23 @@
       "needs_media": true,
       "batch": "batch-79",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (waltzes, coffee houses, grand palaces) clearly gives away Vienna, and hints 1 and 2 must not do that. Calling it a \"European capital\" also rules out two options from the text alone: Zurich is not a national capital, and Munich is only a state capital. Prague then stands as the only real alternative. Make hint 2 vaguer (for example, the country's language, or that the city lies on a big river without naming it). Either drop \"capital\" or swap Zurich and Munich for capitals such as Budapest and Warsaw.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (waltzes, coffee houses, grand palaces) clearly gives away Vienna, and hints 1 and 2 must not do that. Calling it a \"European capital\" also rules out two options from the text alone: Zurich is not a national capital, and Munich is only a state capital. Prague then stands as the only real alternative. Make hint 2 vaguer (for example, the country's language, or that the city lies on a big river without naming it). Either drop \"capital\" or swap Zurich and Munich for capitals such as Budapest and Warsaw.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1608367,10 +1608387,18 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Reworded the question and fun fact so they stay true while the train service is replaced by buses.",
+        "reason": "I replaced Zurich and Munich, which aren't national capitals, with the capitals Budapest and Warsaw, and made hint 2 vaguer so it no longer gives Vienna away.",
         "previous": {
-          "question": "Watch: this bright green double-decker express runs nonstop between a European capital’s center and its airport. Which city?",
-          "fun_fact": "The City Airport Train takes only about 16 minutes to get from Wien Mitte station in the city center to Vienna Airport, without stopping once."
+          "wrong_answers": [
+            "Zurich",
+            "Munich",
+            "Prague"
+          ],
+          "hints": [
+            "The logo on the front of the train is just three letters: the initials of what it is in English.",
+            "The city is famous for its waltzes, its coffee houses and its grand old palaces.",
+            "The Danube flows through this city, where Mozart spent the last ten years of his life."
+          ]
         },
         "revised_on": "2026-11-16"
       }
@@ -1610452,10 +1610480,10 @@
     },
     {
       "id": "q-20702",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A telescope gets the window seat to end all window seats, and it doesn't even need a ticket.",
-      "question": "Watch: this NASA science balloon is lifting a telescope. Why does it look so baggy and half-empty at launch?",
+      "question": "Watch: this NASA science balloon is lifting a telescope. Why is the balloon shaped like this at launch?",
       "answer": "Its gas will expand as the air pressure drops higher up",
       "wrong_answers": [
         "Its gas will shrink as it climbs, pulling the skin tight",
@@ -1610511,15 +1610539,23 @@
       "needs_media": true,
       "batch": "batch-79",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The question text describes exactly what the clip shows (\"baggy and half-empty\"), so players can answer from the text alone and the video isn't needed. Move that clue into the clip: ask something like \"Watch: this NASA science balloon is lifting a telescope. Why is it only partly filled at launch?\" or \"Why is it shaped like this at launch?\", so that players have to look at the balloon's shape.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text describes exactly what the clip shows (\"baggy and half-empty\"), so players can answer from the text alone and the video isn't needed. Move that clue into the clip: ask something like \"Watch: this NASA science balloon is lifting a telescope. Why is it only partly filled at launch?\" or \"Why is it shaped like this at launch?\", so that players have to look at the balloon's shape.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1610532,14 +1610568,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "The question now lets the video show the half-filled balloon instead of stating it, and hint 2 says “snack bag” instead of the US-only “bag of chips”.",
+        "reason": "The frames show the partly filled balloon, so I reworded the question to ask why it is “shaped like this” instead of describing the shape, which means players now have to look at the clip.",
         "previous": {
-          "question": "Watch: this NASA science balloon is lifting a telescope, but it is only partly filled at launch. Why?",
-          "hints": [
-            "Think about what happens to the air around the balloon as it climbs.",
-            "A sealed bag of chips puffs up on a mountain road or on a plane.",
-            "With less push from the outside, the gas inside takes up more room."
-          ]
+          "question": "Watch: this NASA science balloon is lifting a telescope. Why does it look so baggy and half-empty at launch?"
         },
         "revised_on": "2026-11-16"
       }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "6f256360",
+  "hash": "69cc68c6",
   "questions": [
     {
       "id": "q-0001",
@@ -202021,6 +202021,53 @@
       "background": null
     },
     {
+      "id": "q-20663",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "british-royals",
+      "bundle": "base",
+      "description": "Pin your ears back: this voice once had millions of people sitting very still next to the radio.",
+      "question": "Listen: a young woman speaks to millions of listeners at the end of a very big day. Whose voice is this?",
+      "answer": "Queen Elizabeth II",
+      "wrong_answers": [
+        "Princess Margaret",
+        "Grace Kelly",
+        "Audrey Hepburn"
+      ],
+      "hints": [
+        "Listen for the words “parliaments and peoples.”",
+        "She was speaking to listeners across the Commonwealth, on one of the biggest days of her life.",
+        "She was 27 when she gave this speech, on the evening of the day she was crowned at Westminster Abbey."
+      ],
+      "fun_fact": "Her coronation in 1953 was one of the first big events shown on live TV, and many families bought their first TV set just to watch it.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Elizabeth_II_Coronation_speech.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElizabeth_II_Coronation_speech.ogg",
+        "credit": "Elizabeth II · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Elizabeth II",
+        "author_url": null,
+        "excerpt": {
+          "start": 304,
+          "end": 364
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Vintage_Little_Wonder_Microphone%2C_Attach_It_To_Your_Radio%2C_%22Latest_Radio_Sensation%2C_Broadcast_Over_Your_Own_Radio%2C_Talk-Sing-Play%2C_Impersonate_Your_Radio_Favorites%22%2C_Circa_1930s_%289758965504%29.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_Little_Wonder_Microphone%2C_Attach_It_To_Your_Radio%2C_%22Latest_Radio_Sensation%2C_Broadcast_Over_Your_Own_Radio%2C_Talk-Sing-Play%2C_Impersonate_Your_Radio_Favorites%22%2C_Circa_1930s_%289758965504%29.jpg",
+        "credit": "Joe Haupt from USA · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Joe Haupt from USA",
+        "author_url": "https://www.flickr.com/people/51764518@N02"
+      }
+    },
+    {
       "id": "q-20664",
       "status": "approved",
       "difficulty": 6,
@@ -202526,6 +202573,41 @@
         "author": "Anthony O'Neil",
         "author_url": "https://www.geograph.org.uk/profile/41966"
       }
+    },
+    {
+      "id": "q-20678",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "A train dressed as a lime that's scared of missing its flight.",
+      "question": "Watch: this bright green double-decker express was built to link a European capital’s center nonstop with its airport. Which city?",
+      "answer": "Vienna",
+      "wrong_answers": [
+        "Budapest",
+        "Prague",
+        "Warsaw"
+      ],
+      "hints": [
+        "The logo on the front of the train is just three letters: the initials of what it is in English.",
+        "The city lies on one of Europe's longest rivers.",
+        "The Danube flows through this city, where Mozart spent the last ten years of his life."
+      ],
+      "fun_fact": "The City Airport Train was built to cover the trip from Wien Mitte station to Vienna Airport in only about 16 minutes, without stopping once.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/CAT-Video-02.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACAT-Video-02.ogv",
+        "credit": "Priwo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Priwo",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
     },
     {
       "id": "q-20679",
@@ -203331,6 +203413,44 @@
         "excerpt": {
           "start": 0,
           "end": 22
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20702",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "A telescope gets the window seat to end all window seats, and it doesn't even need a ticket.",
+      "question": "Watch: this NASA science balloon is lifting a telescope. Why is the balloon shaped like this at launch?",
+      "answer": "Its gas will expand as the air pressure drops higher up",
+      "wrong_answers": [
+        "Its gas will shrink as it climbs, pulling the skin tight",
+        "It will suck in outside air through a valve as it climbs",
+        "The Sun will warm it and make more gas inside it"
+      ],
+      "hints": [
+        "Think about what happens to the air around the balloon as it climbs.",
+        "A sealed snack bag puffs up on a mountain road or on a plane.",
+        "With less push from the outside, the gas inside takes up more room."
+      ],
+      "fun_fact": "Once fully swollen at around 40 km (25 miles) up, NASA's biggest science balloons are large enough to hold a whole sports stadium.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/EXCITE_2024-_Launch_and_Recovery_%28SVS14726_-_EXCITE_Launch_Vertical_Video%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEXCITE_2024-_Launch_and_Recovery_%28SVS14726_-_EXCITE_Launch_Vertical_Video%29.webm",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA's Scientific Visualization Studio - Advocates in Manpower Management, Inc./Sophia Roberts, University of Maryland College Park/Jeanette Kazmierczak",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 42.29
         }
       },
       "background": null
