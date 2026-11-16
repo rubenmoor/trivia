@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "fdae0d11",
+  "hash": "efcecc7c",
   "questions": [
     {
       "id": "q-0001",
@@ -205186,6 +205186,41 @@
       "background": null
     },
     {
+      "id": "q-20756",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Dough that took up spinning as a hobby and got very good at it.",
+      "question": "Watch: dough wound on wooden rollers turns over hot charcoal. Which treat, sold on almost every street in Prague's Old Town, is this?",
+      "answer": "Trdelník",
+      "wrong_answers": [
+        "Baumkuchen",
+        "Šakotis",
+        "Strudel"
+      ],
+      "hints": [
+        "Similar spit-baked pastries are sold at Christmas markets all over Central Europe.",
+        "After baking, it is rolled in sugar and nuts, and these days often filled with ice cream.",
+        "In English it is often called a “chimney cake” because it is hollow, like a tube."
+      ],
+      "fun_fact": "Though sold in Prague as an old Czech tradition, the trdelník from Skalica in Slovakia is the one with protected EU status.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Cooking_the_Trdeln%C3%ADk.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACooking_the_Trdeln%C3%ADk.webm",
+        "credit": "Charlie · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "Charlie",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-20757",
       "status": "approved",
       "difficulty": 11,
@@ -205839,6 +205874,50 @@
       "background": null
     },
     {
+      "id": "q-20778",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "The kind of music that makes everyone in a stadium suddenly stand up very straight.",
+      "question": "Listen: this is a country's national anthem. What kind of group is playing it?",
+      "answer": "A military wind band",
+      "wrong_answers": [
+        "A string quartet",
+        "A solo pianist",
+        "A pipe organ"
+      ],
+      "hints": [
+        "Groups like this often play at big official ceremonies and sports events.",
+        "This group is loud enough to be heard clearly outdoors, across a whole town square.",
+        "Trumpets, trombones, clarinets and drums, often in uniform."
+      ],
+      "fun_fact": "This is Sudan's national anthem, recorded by the US Navy Band, which keeps recordings of the anthems of almost every country for official visits.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Sudanese_national_anthem%2C_performed_by_the_U.S._Navy_Band.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASudanese_national_anthem%2C_performed_by_the_U.S._Navy_Band.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Lenzkirch%2C_Rathaus_--_2025_--_7736-9.jpg/3840px-Lenzkirch%2C_Rathaus_--_2025_--_7736-9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALenzkirch%2C_Rathaus_--_2025_--_7736-9.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      }
+    },
+    {
       "id": "q-20779",
       "status": "approved",
       "difficulty": 10,
@@ -206000,6 +206079,53 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "LlDayo",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:LlDayo&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20785",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Tubas are so heavy that every player who marches with one deserves a medal.",
+      "question": "Listen to this brass march. At which kind of event would you most likely hear music like this?",
+      "answer": "A funeral",
+      "wrong_answers": [
+        "A wedding",
+        "A birthday party",
+        "A carnival parade"
+      ],
+      "hints": [
+        "Listen to the mood more than the instruments: is it happy or serious?",
+        "The beat drags slowly, like heavy footsteps, and nobody would dance to it.",
+        "It is a farewell ceremony where people remember someone."
+      ],
+      "fun_fact": "The most famous funeral march of all comes from a piano sonata by Frédéric Chopin, and it was played at the funeral of John F. Kennedy.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Kevin_MacLeod_-_Funeral_March_for_Brass.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKevin_MacLeod_-_Funeral_March_for_Brass.ogg",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 40
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Sura_Compet-Close_up.jpg/3840px-Sura_Compet-Close_up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASura_Compet-Close_up.jpg",
+        "credit": "Abhishek Kumar Dash · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Abhishek Kumar Dash",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abhishek_Kumar_Dash&action=edit&redlink=1"
       }
     },
     {
@@ -206751,6 +206877,41 @@
         "author": "Michael J. Bennett",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bennett000"
       }
+    },
+    {
+      "id": "q-20808",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Home cooking where the smell alone is enough to call the whole family to the table.",
+      "question": "Watch: which flatbread is this cook making in her Kenyan home?",
+      "answer": "Chapati",
+      "wrong_answers": [
+        "Injera",
+        "Naan",
+        "Crêpe"
+      ],
+      "hints": [
+        "It's made from a simple dough of wheat flour, water and a little salt or oil, not from a runny batter.",
+        "People tear it by hand and use it to scoop up stews and beans.",
+        "Its name comes from a Hindi word meaning “flat” or “slapped”, from patting the dough between the hands."
+      ],
+      "fun_fact": "Chapati came to East Africa with Indian traders and workers more than 100 years ago, and today many Kenyan families serve it at holidays and celebrations.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/A_Kenyan_woman_cooking_chapatis_in_her_home.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Kenyan_woman_cooking_chapatis_in_her_home.webm",
+        "credit": "Queen Asali · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Queen Asali",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
     },
     {
       "id": "q-20809",

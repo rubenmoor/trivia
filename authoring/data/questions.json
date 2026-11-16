@@ -1615342,10 +1615342,10 @@
     },
     {
       "id": "q-20756",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Dough that took up spinning as a hobby and got very good at it.",
-      "question": "Watch: strips of dough are wound around wooden rollers and turned over hot charcoal. Which Central European treat is being baked?",
+      "question": "Watch: dough wound on wooden rollers turns over hot charcoal. Which treat, sold on almost every street in Prague's Old Town, is this?",
       "answer": "Trdelník",
       "wrong_answers": [
         "Baumkuchen",
@@ -1615395,15 +1615395,23 @@
       "needs_media": true,
       "batch": "batch-80",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The clip, and the question's clue (\"Central European treat\" baked on wooden rollers over charcoal), fit Hungary's kürtőskalács just as well as trdelník. The two look the same on the spit, so a Hungarian player would rightly name the other pastry. The text needs a clue that only trdelník has, for example that it is sold all over Prague's Old Town or that it is the Czech and Slovak version. Then the clip shows the baking and the text picks out which name is meant.",
-        "problems": [
-          "ambiguity"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The clip, and the question's clue (\"Central European treat\" baked on wooden rollers over charcoal), fit Hungary's kürtőskalács just as well as trdelník. The two look the same on the spit, so a Hungarian player would rightly name the other pastry. The text needs a clue that only trdelník has, for example that it is sold all over Prague's Old Town or that it is the Czech and Slovak version. Then the clip shows the baking and the text picks out which name is meant.",
+          "problems": [
+            "ambiguity"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1615416,13 +1615424,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which named Prague and pointed to the only Czech option, with a vague Central European hint.",
+        "reason": "Added a Prague clue only trdelník has, so Hungary's look-alike kürtőskalács no longer fits the question.",
         "previous": {
-          "hints": [
-            "Tourists often buy it from street stalls in Prague’s Old Town.",
-            "After baking, it is rolled in sugar and nuts, and these days often filled with ice cream.",
-            "In English it is often called a “chimney cake” because it is hollow, like a tube."
-          ]
+          "question": "Watch: strips of dough are wound around wooden rollers and turned over hot charcoal. Which Central European treat is being baked?"
         },
         "revised_on": "2026-11-16"
       }
@@ -1617349,7 +1617353,7 @@
     },
     {
       "id": "q-20778",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The kind of music that makes everyone in a stadium suddenly stand up very straight.",
       "question": "Listen: this is a country's national anthem. What kind of group is playing it?",
@@ -1617361,7 +1617365,7 @@
       ],
       "hints": [
         "Groups like this often play at big official ceremonies and sports events.",
-        "Listen for the instruments you blow into, not ones with strings or keys.",
+        "This group is loud enough to be heard clearly outdoors, across a whole town square.",
         "Trumpets, trombones, clarinets and drums, often in uniform."
       ],
       "media": {
@@ -1617412,28 +1617416,36 @@
       "needs_media": true,
       "batch": "batch-80",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (\"Listen for the instruments you blow into, not ones with strings or keys\") rules out all three wrong answers: the string quartet and pianist have strings or keys, and the organ is played from keys. So hint 2 gives the answer away. Make hint 2 vaguer, for example about how loud the group is or how many players it has, and keep the instrument families for hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (\"Listen for the instruments you blow into, not ones with strings or keys\") rules out all three wrong answers: the string quartet and pianist have strings or keys, and the organ is played from keys. So hint 2 gives the answer away. Make hint 2 vaguer, for example about how loud the group is or how many players it has, and keep the instrument families for hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": {
         "query": "flags on flagpoles",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmerican_Flag_on_Home_Flagpole_at_Sunrise.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/American_Flag_on_Home_Flagpole_at_Sunrise.jpg/3840px-American_Flag_on_Home_Flagpole_at_Sunrise.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Noah Wulf · CC BY-SA 4.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALenzkirch%2C_Rathaus_--_2025_--_7736-9.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Lenzkirch%2C_Rathaus_--_2025_--_7736-9.jpg/3840px-Lenzkirch%2C_Rathaus_--_2025_--_7736-9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Noah Wulf",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Noah_Wulf",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1617445,10 +1617457,10 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which pointed to the only marching option, with a vague hint about the occasion.",
+        "reason": "Rewrote hint 2 so it no longer rules out all three wrong answers; the instrument families stay in hint 3.",
         "previous": {
           "hints": [
-            "You'd hear this group marching in a parade more often than in a quiet concert hall.",
+            "Groups like this often play at big official ceremonies and sports events.",
             "Listen for the instruments you blow into, not ones with strings or keys.",
             "Trumpets, trombones, clarinets and drums, often in uniform."
           ]
@@ -1617982,9 +1617994,9 @@
     },
     {
       "id": "q-20785",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
-      "description": "Trumpets and tubas that clearly woke up on the wrong side of the bed.",
+      "description": "Tubas are so heavy that every player who marches with one deserves a medal.",
       "question": "Listen to this brass march. At which kind of event would you most likely hear music like this?",
       "answer": "A funeral",
       "wrong_answers": [
@@ -1618039,15 +1618051,23 @@
       "needs_media": true,
       "batch": "batch-80",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (\"Trumpets and tubas that clearly woke up on the wrong side of the bed\") tells players the music is in a bad, gloomy mood. That is the one trait the clip is meant to show, and it rules out the three happy options (wedding, birthday party, carnival) before anyone listens. Rewrite it so it plays on brass bands or marching without describing the mood, for example a joke about tubas being heavy to carry.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (\"Trumpets and tubas that clearly woke up on the wrong side of the bed\") tells players the music is in a bad, gloomy mood. That is the one trait the clip is meant to show, and it rules out the three happy options (wedding, birthday party, carnival) before anyone listens. Rewrite it so it plays on brass bands or marching without describing the mood, for example a joke about tubas being heavy to carry.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1618072,15 +1618092,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Removed the mood words from the question, replaced the funeral-clothing hint with a hint about the music, and kept only Kennedy in the fun fact.",
+        "reason": "Rewrote the description so it jokes about heavy tubas instead of revealing the gloomy mood.",
         "previous": {
-          "question": "Listen to this slow, solemn brass march. At which kind of event would you most likely hear music like this?",
-          "hints": [
-            "Listen to the mood more than the instruments: is it happy or serious?",
-            "People walking to this music move slowly and quietly, often dressed in black.",
-            "It is a farewell ceremony where people remember someone."
-          ],
-          "fun_fact": "The most famous funeral march of all comes from a piano sonata by Frédéric Chopin, and it was later played at the funerals of Winston Churchill and John F. Kennedy."
+          "description": "Trumpets and tubas that clearly woke up on the wrong side of the bed."
         },
         "revised_on": "2026-11-16"
       }
@@ -1618222,14 +1618236,24 @@
       "batch": "batch-80",
       "review": {
         "decision": "needs_work",
-        "feedback": "The text is fine. The only problem is the media metadata, and code makes it needs_work. The work basis “composed in the 19th century; the composer died long ago” is not one of the allowed bases. Karl Gustavus Schmitt died around 1900, so the basis should be recorded as died-70-years. The recording itself is free (PD Mark / CC BY 3.0 from nationalanthems.info). Once the basis is corrected, this can be approved with background pick 4. Media.work basis “composed in the 19th century; the composer died long ago; public domain” is none of: died-70-years, pre-1930-film, government-work, traditional.",
+        "feedback": "The hard mechanical flag is real: media_first.work.basis says \"composed in the 19th century; the composer died long ago\", which isn't an accepted basis. Karl Gustavus Schmitt died in 1900, so set the basis to died-70-years; the work itself is public domain. There is also a fit concern: almost no player can tell Tonga's anthem from Samoa's, Fiji's or Tuvalu's by ear, so the hints (Sipi Tau, the only Pacific king) decide the answer, not the clip. Consider retiring the question or asking about something players can actually hear in the window. Media.work basis “composed in the 19th century; the composer died long ago; public domain” is none of: died-70-years, pre-1930-film, government-work, traditional.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text is fine. The only problem is the media metadata, and code makes it needs_work. The work basis “composed in the 19th century; the composer died long ago” is not one of the allowed bases. Karl Gustavus Schmitt died around 1900, so the basis should be recorded as died-70-years. The recording itself is free (PD Mark / CC BY 3.0 from nationalanthems.info). Once the basis is corrected, this can be approved with background pick 4. Media.work basis “composed in the 19th century; the composer died long ago; public domain” is none of: died-70-years, pre-1930-film, government-work, traditional.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1618251,6 +1618275,12 @@
         "class": "pd-music",
         "kind": "piece-film",
         "probe": "media-probe/db2b7590e1792592"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Only the work's basis metadata needs fixing: set it to “died-70-years” (Karl Gustavus Schmitt died around 1900). The text stays unchanged.",
+        "previous": {},
+        "revised_on": "2026-11-16"
       }
     },
     {
@@ -1620090,9 +1620120,9 @@
     },
     {
       "id": "q-20808",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
-      "description": "Proof that the best kitchen gadget is still a rolling pin and a lot of patience.",
+      "description": "Home cooking where the smell alone is enough to call the whole family to the table.",
       "question": "Watch: which flatbread is this cook making in her Kenyan home?",
       "answer": "Chapati",
       "wrong_answers": [
@@ -1620143,15 +1620173,23 @@
       "needs_media": true,
       "batch": "batch-80",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description (“the best kitchen gadget is still a rolling pin”) says the bread is made from rolled dough, so it rules out injera and crêpe, both poured batters, before the clip plays. Rewrite it so it plays on home cooking or flatbreads without naming rolling or any other way of shaping the bread.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description (“the best kitchen gadget is still a rolling pin”) says the bread is made from rolled dough, so it rules out injera and crêpe, both poured batters, before the clip plays. Rewrite it so it plays on home cooking or flatbreads without naming rolling or any other way of shaping the bread.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1620164,14 +1620202,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Cut the method and India clues from the question so the clip decides, and replaced hint 2 (which ruled out naan) with a hint about how it is eaten.",
+        "reason": "Rewrote the description so it no longer mentions rolling the dough, which ruled out the batter breads.",
         "previous": {
-          "question": "Watch: in this Kenyan home, dough is rolled thin and cooked with oil on a hot griddle. Which flatbread, also eaten across India, is it?",
-          "hints": [
-            "It's made from a simple dough of wheat flour, water and a little salt or oil, not from a runny batter.",
-            "Unlike naan, it isn't baked against the wall of a hot clay oven.",
-            "Its name comes from a Hindi word meaning “flat” or “slapped”, from patting the dough between the hands."
-          ]
+          "description": "Proof that the best kitchen gadget is still a rolling pin and a lot of patience."
         },
         "revised_on": "2026-11-16"
       }
