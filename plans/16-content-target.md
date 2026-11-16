@@ -72,3 +72,4 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - [x] CT-5 Quality sampling: spot-check size and error limit per batch; `qgen.py` support for drawing the sample. *2026-10-24, plan 57: bar 30 / ≥ 90 %, back-audit 1039 questions, 99 major (9.5 %), $51.49; spot checks pending.*
   - Family pool: closed 2026-10-11 (pm decision 2: 30 per batch, ≥ 90 % agreement; `qgen report --exit-check`). Open for the public release: pm plan 57 (release bar, back-audit).
   - Release bar: D-79 = D-56's numbers (pm decision 15); `qgen report --qc` row "release" (2026-10-12, task 336). Back-audit open.
+- Media-first sources in de (plan 205): 2026-11-16, task 2113: `tr-de-25`, 258 translated, 250 approved, 8 need work, 0 not travelling, $0.11 per approved translation (audit $3.38), audit agreement 57 %, health ✗; 145 of 146 approved media-first sources (batch-78, batch-79, batch-80) now in de.
