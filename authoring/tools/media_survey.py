@@ -179,6 +179,8 @@ def reject(rec, in_pool):
         return "not audio or video"
     if rec.get("mime") == "audio/midi" or rec["title"].lower().endswith((".mid", ".midi")):
         return "MIDI (no player, no probe)"
+    if t == "video" and rec["title"].lower().endswith(".ogg"):
+        return "Ogg video named .ogg (ships as audio, decision 185)"
     if norm_title(rec["title"]) in in_pool:
         return "already in a pool"
     if not providers.licence_kind(rec["license"]):

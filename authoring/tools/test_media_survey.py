@@ -33,7 +33,7 @@ class Filters(unittest.TestCase):
         self.assertIsNone(self.why(duration=300))  # > 60 s is kept, needs an excerpt
 
     def test_video_height(self):
-        v = dict(mediatype="video", duration=30)
+        v = dict(mediatype="video", duration=30, title="File:A.ogv")
         self.assertIn("below", self.why(**v, height=360))
         self.assertIsNone(self.why(**v, height=720))
 
@@ -43,6 +43,10 @@ class Filters(unittest.TestCase):
     def test_midi(self):
         self.assertIn("MIDI", self.why(mime="audio/midi"))
         self.assertIn("MIDI", self.why(title="File:A.mid"))
+
+    def test_ogg_video(self):
+        self.assertIn("Ogg video", self.why(mediatype="video", height=720, duration=30))
+        self.assertIsNone(self.why(mediatype="video", height=720, duration=30, title="File:A.ogv"))
 
     def test_pool_and_duplicates(self):
         kept, counts = ms.apply_filters([(SEED, [rec("File:A b.ogg"), rec("File:A_b.ogg"), rec("File:C.ogg", duration=90)]),

@@ -96,6 +96,9 @@ class MediaFindings(unittest.TestCase):
     def test_clean(self):
         self.assertEqual(mf.media_findings(self.q(), self.probe()), [])
 
+    def test_ogg_video(self):
+        self.assertEqual(self.checks(self.q(type="video"), self.probe()), {"ogg-video"})
+
     def test_title_words(self):
         q = self.q(); q["hints"][0] = "it is roaring"
         self.assertEqual(self.checks(q, self.probe()), {"title-words"})
