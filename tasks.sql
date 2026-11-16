@@ -47741,6 +47741,12 @@ after selecting standard or gamemaster mode supposedely enter presses the next b
 bundle selection is even worse: the shortcuts work (to toggle a bundle on off), but the outline remains with whatever bundle even after pressing the shortcut and enter supposedly to press "let''s play" keeps toggling the focused bundle. enter (or a on the gamepad) must always press "let''s play", toggling the bundles needs a different button
 
 with multiplayer enabled, the default is single-player', '2026-11-16T19:01:23Z', '2026-11-16T19:04:53Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2108, 205, 'Media-first: record keeps a hard mechanical finding from demoting a question an earlier record already approved', 'work', 'open', NULL, NULL, 'batch-79 (`task 2102: run batch-<n> (media-first)`) stops at `validate` with `q-20688: approved media: video file .ogg can''t be shown or played in the game`, even after `task 2105: Media-first: Ogg video (.ogg) from Commons passes the pipeline but fails qgen validate` and `task 2106: Media-first: ogg-video check misses Commons file URLs with a query string`.
+
+Cause: `cmd_record` (`authoring/tools/review_steps.py`) takes only `batch_questions(args.run)`, whose default `statuses=("draft",)`. q-20688 was approved by a record pass before the ogg-video check existed, so a resumed run never looks at it again; `media_first.media_findings(q-20688)` does return the hard `ogg-video` finding today.
+
+What: on a media-first run, record (or a step right after it) also applies `media_findings`'' hard findings to the run''s questions already recorded by this run (`recorded.json`) and still `approved`: set `needs_work` with the finding''s note, as record does for drafts; keep the `review.previous` chain right. No pool hand edits.
+Done when: a test in `authoring/tools/test_review_steps.py` (or the matching test file) covers an approved, already-recorded media-first question with a hard finding → `needs_work`; rerunning `qgen batch --media-first` on batch-79 passes `validate` (that rerun is task 2102''s, not this task''s).', '2026-11-16T19:08:21Z', NULL, 2102, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -54828,6 +54834,45 @@ Last 30 lines:
     q-20688: approved media: video file .ogg can''t be shown or played in the game
     
     `qgen validate` failed. Stop and report the output.', 'The job that makes new sound and video questions from free recordings ran to the end again, but its last check still refused the same video question. The earlier repair to keep such video files out looked at the file''s web address, and that address carries extra text after the file name, so the repair never noticed the file. The choice is whether to fix that small fault and let the job finish, or to give up on this batch and start a new one.', 'Resume batch-79 once task 2106 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T18:56:58Z', '2026-11-16T19:02:14Z', 2102, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (664, 'Continue batch-79 (media-first) after record re-checks approved questions?', 'answered', '["Resume batch-79 once task 2108 is done (rerun qgen batch --media-first)", "Developer sets q-20688 to needs_work by hand in ../trivia-review; resume batch-79 then", "Drop batch-79 and start a new media-first run after task 2108"]', 'batch-79 resumed after `task 2106: Media-first: ogg-video check misses Commons file URLs with a query string` and stopped at `validate` three times in a row (exit 1), again on q-20688.
+
+Cause: `record` only looks at the run''s questions still in `draft`. q-20688 was approved by a record pass before the ogg-video check (tasks 2105, 2106) existed, so the fixed check never reaches it on a resume; `media_findings` itself now flags it (hard `ogg-video`). The fix is `task 2108: Media-first: record keeps a hard mechanical finding from demoting a question an earlier record already approved`; `task 2102: run batch-<n> (media-first)` requires it.
+
+Alternative: you set q-20688 to needs_work by hand in ../trivia-review, merge into main, and the run resumes without task 2108 (the gap stays for later runs).
+
+Nothing staged: the run''s changes (`authoring/data/questions.json`, `app/data/pool.en.json`, `authoring/data/english-keys.json`, `authoring/reports/batches.md`, `authoring/reports/batch-79.md`) stay unstaged in the questions work tree (pm stashes them for the next run).
+
+Last 30 lines:
+    exported 2046 en question(s) to app/data/bundles/germany/pool.en.json
+    exported 2048 en question(s) to app/data/bundles/mexico/pool.en.json
+    exported 2005 en question(s) to app/data/bundles/spain/pool.en.json
+    exported 321 en question(s) to app/data/bundles/stem/pool.en.json
+    exported 3140 en question(s) to app/data/bundles/uk/pool.en.json
+    exported 2130 en question(s) to app/data/bundles/usa/pool.en.json
+      en translations: 5 stale, 0 left out (source not approved or not translatable)
+    exported 6114 de question(s) to app/data/pool.de.json
+    exported 2226 de question(s) to app/data/bundles/germany/pool.de.json
+    exported 299 de question(s) to app/data/bundles/stem/pool.de.json
+      de translations: 1 stale, 2 left out (source not approved or not translatable)
+    exported 138 demo question(s) to app/data/demo/pool.json
+    exported 138 demo question(s) to app/data/demo/pool.es-ES.json
+    exported 138 demo question(s) to app/data/demo/pool.en.json
+    exported 138 demo question(s) to app/data/demo/pool.de.json
+       export took 4s (batch: 19s)
+    
+    == [26/28] sync
+      sync: all done earlier, skipped (127 files)
+       sync took 0s (batch: 19s)
+    
+    == [27/28] batch-report
+      report: authoring/reports/batch-79.md
+      report: authoring/reports/batches.md
+       batch-report took 6s (batch: 26s)
+    
+    == [28/28] validate
+    q-20688: approved media: video file .ogg can''t be shown or played in the game
+    
+    `qgen validate` failed. Stop and report the output.', 'The job that makes new sound and video questions from free recordings finished again, but its last check still refused one video question in a format the game can''t play. The earlier repairs only catch such files in questions not yet approved, and this one had been approved before the repairs existed. The choice is whether to repair the step so it also re-checks already approved questions and then let the job finish, to have the developer mark this one question by hand, or to give up on this batch.', 'Resume batch-79 once task 2108 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T19:08:28Z', '2026-11-16T19:09:18Z', 2102, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -57220,7 +57265,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2294, 2102, '2026-11-16T18:53:39Z', '2026-11-16T18:57:09Z', 'blocked', 'left 5 files unstaged, stashed as ce6462bc for the task''s next run', 0, '5a27c2d1f91f1839b874498493972420645e98ca', 'questions', 'claude-opus-5-5', 'd9b79ab7-cc81-41d6-94d8-a64e17f2f5c9', NULL, 18, 34, 6444, 916327, 52267, 0.73041740000000011, 66623, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2295, 2106, '2026-11-16T18:57:12Z', '2026-11-16T18:58:56Z', 'done', NULL, 0, '5a27c2d1f91f1839b874498493972420645e98ca', 'questions', 'claude-sonnet-5-5', '1e72577b-94f1-4cae-8ec0-0bf48a6fab4b', NULL, 8, 16, 1763, 291290, 27128, 0.15530299999999997, 41775, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2296, 2107, '2026-11-16T19:01:23Z', '2026-11-16T19:04:59Z', 'done', NULL, 0, 'b0ea0c3c729c9b265719a66cb072cec947f8df6a', NULL, 'claude-sonnet-5-5', '05b854ce-24c6-4c72-91ab-638bc34f6f67', NULL, 25, 50, 12027, 1555495, 68148, 0.54851149999999993, 82955, 60, 1136664);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2297, 2102, '2026-11-16T19:04:54Z', NULL, 'running', NULL, NULL, 'b0ea0c3c729c9b265719a66cb072cec947f8df6a', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2297, 2102, '2026-11-16T19:04:54Z', '2026-11-16T19:08:38Z', 'blocked', 'left 5 files unstaged, stashed as 1b8f9490 for the task''s next run', 0, 'b0ea0c3c729c9b265719a66cb072cec947f8df6a', 'questions', 'claude-opus-5-5', 'b9a61709-29e5-4104-ae94-3858a3ec5ac1', NULL, 21, 42, 7722, 1047685, 47996, 0.74811299999999992, 62351, 60, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2298, 2108, '2026-11-16T19:08:42Z', NULL, 'running', NULL, NULL, 'ee914da4bcb4a6de243b6f817522d15409d6cb63', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1136664);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -57952,6 +57998,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2095, 654);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 660);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 661);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 663);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2102, 664);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
@@ -58304,6 +58351,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2096, 209
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2102, 2104);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2102, 2105);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2102, 2106);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2102, 2108);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2103, 2102);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2106, 2105);
 
