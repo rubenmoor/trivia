@@ -1,5 +1,5 @@
 """reject_for_sources: a source marked translatable: false loses its translations in the other locales."""
-import sys, tempfile, unittest
+import contextlib, io, sys, tempfile, unittest
 from pathlib import Path
 from unittest import mock
 
@@ -33,6 +33,18 @@ class CommitFiles(unittest.TestCase):
             self.assertIn(translations.path(l), files)
             self.assertIn(translate.layout.POOL_FILE(l, "base"), files)
         self.assertEqual(len(files), len(set(files)))
+
+
+class StaleLines(unittest.TestCase):
+    def test_printed_paths_are_real_pools(self):
+        import rework
+        with mock.patch.object(translations, "path", lambda l: Path(__file__)), \
+             mock.patch.object(translations, "load", lambda l: {"questions": []}), \
+             contextlib.redirect_stdout(io.StringIO()):
+            files = rework.stale_lines(set(), {})
+        for f in files:
+            self.assertTrue((translate.ROOT / f).exists(), f)
+        self.assertNotIn("app/data/pool.es.json", files)
 
 
 class LostMerge(unittest.TestCase):
