@@ -47730,6 +47730,17 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Fix: test the URL path without its query string (or `query`, or both), per `decision 662: Ogg video named .ogg: kept out of media-first, not accepted as video` (validate''s playable-extension check stays as is). Check `media_survey.py`''s reject too for the same pattern.
 - A test in `test_media_first.py` with a Commons-style URL carrying `?utm_...`; standard checks (`npm run check`, `npm test`, `npm run build`).
 - Done when: `qgen batch --media-first` (run by `task 2102`) records q-20688 as needs_work and `qgen validate` passes; no hand edit of the pool.', '2026-11-16T18:56:51Z', '2026-11-16T18:58:52Z', 2102, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2107, NULL, 'hitting enter or A on the gamepad repeatedly should start a game with meaningful defaults', 'exec', 'open', NULL, NULL, 'start the game (maybe select a language), just hitting enter or A on the gamepad must lead directly to a game session
+
+this means: if there are players, the most recent gets selected; if there are no players the game must suggest a funny name for "who''s playing" that can be confirmed with enter or A. make a list of 100 funny team names, completely generic, and translated for that purpose
+
+the default gamemode is not gamemaster but, the standard game mode.
+
+after selecting standard or gamemaster mode supposedely enter presses the next button, but it doesn''t work. must  also work with gamepad, after selecting standard or gamemaster mode, A must press the next button
+
+bundle selection is even worse: the shortcuts work (to toggle a bundle on off), but the outline remains with whatever bundle even after pressing the shortcut and enter supposedly to press "let''s play" keeps toggling the focused bundle. enter (or a on the gamepad) must always press "let''s play", toggling the bundles needs a different button
+
+with multiplayer enabled, the default is single-player', '2026-11-16T19:01:23Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
