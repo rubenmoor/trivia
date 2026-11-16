@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "69cc68c6",
+  "hash": "fdae0d11",
   "questions": [
     {
       "id": "q-0001",
@@ -204326,6 +204326,2562 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Fabioarg",
         "author_url": "https://commons.wikimedia.org/wiki/User:Fabioarg"
+      }
+    },
+    {
+      "id": "q-20729",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "natural-phenomena",
+      "bundle": "base",
+      "description": "Astronauts get the best window seat on the whole planet, and no one even asks them to close the blind.",
+      "question": "Watch: this was filmed from the International Space Station. What is the glowing light swirling over Earth?",
+      "answer": "An aurora (polar lights)",
+      "wrong_answers": [
+        "A lightning storm",
+        "The lights of a big city",
+        "A meteor shower"
+      ],
+      "hints": [
+        "It isn't made by people, and it doesn't come from a storm.",
+        "It happens when tiny particles from the Sun crash into the air high above Earth.",
+        "People travel to Norway, Iceland and Canada to see it dance across the night sky."
+      ],
+      "fun_fact": "An aurora's green color comes from oxygen high in the air, and astronauts on the space station sometimes fly right through the glowing curtains.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Alexander_Gerst%E2%80%99s_Earth_timelapses_%282017_reissue%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlexander_Gerst%E2%80%99s_Earth_timelapses_%282017_reissue%29.webm",
+        "credit": "Video: ESA – European Space Agency 2017, CC BY-SA 3.0 IGO · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Video: ESA – European Space Agency 2017, CC BY-SA 3.0 IGO\n\nAudio: “Anaxagoras” by Peter Kirn/Establishment Records, CC BY-SA 3.0",
+        "author_url": null,
+        "excerpt": {
+          "start": 4,
+          "end": 40
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20730",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "natural-phenomena",
+      "bundle": "base",
+      "description": "Someone left a camera on a hill for half an hour, and the sky put on a whole show for it.",
+      "question": "Watch this sped-up video from a hill. In which direction is the camera pointing?",
+      "answer": "East",
+      "wrong_answers": [
+        "West",
+        "North",
+        "South"
+      ],
+      "hints": [
+        "Watch the Sun closely: is it climbing up or sinking down?",
+        "In this clip, the Sun is coming up, not going down.",
+        "It's the opposite of the side where the Sun sets in the evening."
+      ],
+      "fun_fact": "The Sun rises exactly due east only around the two equinoxes in March and September; in summer, places north of the equator see it come up in the northeast.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Time-lapse_sunrise_Berlin_Drachenberg.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_sunrise_Berlin_Drachenberg.webm",
+        "credit": "NutzerAusBerlin · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "NutzerAusBerlin",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20731",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Somewhere in South India, breakfast is coming along nicely over a wood fire.",
+      "question": "Watch: which South Indian dish is being cooked here?",
+      "answer": "Paniyaram",
+      "wrong_answers": [
+        "Idli",
+        "Dosa",
+        "Vada"
+      ],
+      "hints": [
+        "It's a popular breakfast and snack in Tamil Nadu, eaten with chutney.",
+        "It's often made from the same fermented rice-and-lentil batter as two of the other options.",
+        "The heavy pan full of little hollows gives it its other name, “kuzhi”, meaning “pit” or “hollow”."
+      ],
+      "fun_fact": "Japanese takoyaki and Danish æbleskiver are cooked in very similar pans full of round hollows.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/A_video_of_Paniyaram_Making.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_video_of_Paniyaram_Making.ogv",
+        "credit": "Thamizhpparithi Maari · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Thamizhpparithi Maari",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20732",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "capital-cities",
+      "bundle": "base",
+      "description": "Thirty-four years of a city growing up, seen by a satellite that never blinks.",
+      "question": "Watch: this satellite time-lapse, with north at the top, shows a Caribbean island's capital spreading since 1984. Which city is it?",
+      "answer": "San Juan",
+      "wrong_answers": [
+        "Havana",
+        "Santo Domingo",
+        "Kingston"
+      ],
+      "hints": [
+        "The sea is at the top of the picture, so the city lies on its island's north coast.",
+        "Its old town sits on a narrow islet guarding a bay, defended by a Spanish fort called El Morro.",
+        "Its island is a US territory, and people there pay with US dollars."
+      ],
+      "fun_fact": "Old San Juan was founded in the 1520s, which makes it one of the oldest cities built by Europeans in the Americas, and its forts are a UNESCO World Heritage Site.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Costa_de_San_Juan%2C_Puerto_Rico.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACosta_de_San_Juan%2C_Puerto_Rico.webm",
+        "credit": "Google Earth · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Google Earth",
+        "author_url": null,
+        "excerpt": {
+          "start": 5,
+          "end": 37
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20734",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Even a spaceship sometimes needs someone to give it a piggyback ride home.",
+      "question": "Watch: which airplane is carrying the Space Shuttle on its back?",
+      "answer": "Boeing 747",
+      "wrong_answers": [
+        "Airbus A380",
+        "Antonov An-225",
+        "Lockheed C-5 Galaxy"
+      ],
+      "hints": [
+        "Count the engines under its wings: how many do you see?",
+        "Look at the front of the plane: only the nose part has an upper deck, which makes a famous hump.",
+        "It was the first “Jumbo Jet”, made by an American company whose planes have numbers like 737 and 777."
+      ],
+      "fun_fact": "NASA used two modified Boeing 747s to fly the Space Shuttle across the United States, and gave them extra fins on their tails to stay steady with the orbiter on top.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/SCA_takeoff_and_landing.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASCA_takeoff_and_landing.ogv",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20736",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "An orchestra on a 1927 record, sounding a little homesick and a lot crackly.",
+      "question": "Listen: this slow, homesick melody comes from a famous symphony. What is that symphony's nickname?",
+      "answer": "“From the New World”",
+      "wrong_answers": [
+        "“Pastoral”",
+        "“Italian”",
+        "“Unfinished”"
+      ],
+      "hints": [
+        "The composer wrote it far from his home in Bohemia.",
+        "He composed it in 1893, while he was working in New York.",
+        "The nickname points across the Atlantic, to the Americas."
+      ],
+      "fun_fact": "Neil Armstrong took a recording of Dvořák's “New World” Symphony to the Moon on Apollo 11.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/PDP-CH_-_Royal_Albert_Hall_Orchestra_-_Landon_Ronald_-_Symphony_No._9%2C_in_E_minor%2C_op._95_-_2nd_Movement%2C_Largo%2C_3rd_record_-_Anton%C3%ADn_Dvo%C5%99%C3%A1k_-_Hmv-d1252-5-0518.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_Royal_Albert_Hall_Orchestra_-_Landon_Ronald_-_Symphony_No._9%2C_in_E_minor%2C_op._95_-_2nd_Movement%2C_Largo%2C_3rd_record_-_Anton%C3%ADn_Dvo%C5%99%C3%A1k_-_Hmv-d1252-5-0518.flac",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 50,
+          "end": 110
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Concert_stage_of_Severance_Hall.jpg/3840px-Concert_stage_of_Severance_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConcert_stage_of_Severance_Hall.jpg",
+        "credit": "Cbusram · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Cbusram",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cbusram&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20737",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Iceland's most scenic shower, and nobody has ever managed to turn it off.",
+      "question": "Watch: this tall, narrow waterfall in Iceland is one of the country's most photographed. Which waterfall is it?",
+      "answer": "Seljalandsfoss",
+      "wrong_answers": [
+        "Skógafoss",
+        "Gullfoss",
+        "Dettifoss"
+      ],
+      "hints": [
+        "Its cliff was once Iceland's coastline, before the sea moved back.",
+        "Its river comes down from near Eyjafjallajökull, the volcano whose ash cloud stopped flights across Europe in 2010.",
+        "A footpath leads into a hollow behind the falling water, so visitors can walk all the way around it."
+      ],
+      "fun_fact": "Seljalandsfoss drops about 60 m (200 ft), and it is one of the few waterfalls where a path lets you walk right behind the curtain of water.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/203_Seljalandsfoss_long_exposure_timelapse_Video_by_Giles_Laurent.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A203_Seljalandsfoss_long_exposure_timelapse_Video_by_Giles_Laurent.webm",
+        "credit": "Giles Laurent · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Giles Laurent",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20738",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "A tiny homeowner doing all the building work without one power tool.",
+      "question": "Watch: which bird is this, busy at its nest?",
+      "answer": "Yellow warbler",
+      "wrong_answers": [
+        "American goldfinch",
+        "Eurasian golden oriole",
+        "Yellowhammer"
+      ],
+      "hints": [
+        "This bird mostly eats insects, such as caterpillars it picks from leaves.",
+        "The male has thin reddish streaks on his yellow breast.",
+        "It spends the winter in Central and South America, and its name is its color plus a word for a bird that sings in trills."
+      ],
+      "fun_fact": "When a cowbird sneaks its egg into a yellow warbler's nest, the warbler often just builds a new floor on top and lays its eggs again, sometimes making nests several stories high.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/20240504_yellow_warbler_nest_building.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20240504_yellow_warbler_nest_building.webm",
+        "credit": "Paul Danese · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Paul Danese",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20740",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "When you run out of beach, apparently you just order more from the sand shop.",
+      "question": "Watch: satellite images from 1984 to 2018 show this desert coast changing. Which city is this?",
+      "answer": "Dubai",
+      "wrong_answers": [
+        "Doha",
+        "Abu Dhabi",
+        "Muscat"
+      ],
+      "hints": [
+        "This city sits on the Arabian Peninsula and grew from a small fishing and pearl-diving town.",
+        "Since the 1990s, it has built whole new islands in the sea, in shapes you see best from space.",
+        "It is the largest city of the United Arab Emirates, but not its capital."
+      ],
+      "fun_fact": "Palm Jumeirah, the first of the palm-shaped islands, was built from about 94 million cubic meters of sand dredged from the seabed and sprayed into shape.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Dubai%2C_UAE.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADubai%2C_UAE.webm",
+        "credit": "Google Earth · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Google Earth",
+        "author_url": null,
+        "excerpt": {
+          "start": 5,
+          "end": 37
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20741",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "Eight legs, zero hurry, and a web wider than your sofa.",
+      "question": "Watch: which spider is sitting in this huge web?",
+      "answer": "Joro spider",
+      "wrong_answers": [
+        "Wasp spider",
+        "Redback spider",
+        "European garden spider"
+      ],
+      "hints": [
+        "Its silk can shine with a golden tint in the sunlight.",
+        "It is an orb-weaver native to East Asia, and lately it has also spread across the southeastern United States.",
+        "Its name comes from a shape-shifting spider-woman in Japanese folklore."
+      ],
+      "fun_fact": "Young Joro spiders can “balloon”: they let out a silk thread and ride the wind, sometimes for many kilometers.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Joro_spider_in_a_large_web.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJoro_spider_in_a_large_web.webm",
+        "credit": "The Nature Box · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 50
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20742",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "Nobody told this forest stroller that the hidden camera was rolling.",
+      "question": "Watch: which animal is walking through this forest in South America?",
+      "answer": "Anteater",
+      "wrong_answers": [
+        "Armadillo",
+        "Tapir",
+        "Coati"
+      ],
+      "hints": [
+        "It has no teeth at all.",
+        "Look at its long, thin head and its huge, bushy tail.",
+        "Its favorite food is the tiny insects that live by the thousands in big hills."
+      ],
+      "fun_fact": "A giant anteater has no teeth, but its sticky tongue can reach about 60 cm (2 ft) and flick in and out up to 150 times a minute.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Giant_anteater_in_Santa_Fe_do_Sul_Hunter_camera.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGiant_anteater_in_Santa_Fe_do_Sul_Hunter_camera.webm",
+        "credit": "Miguelrangeljr · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Miguelrangeljr",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20743",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "strange-creatures",
+      "bundle": "base",
+      "description": "A lodger who never pays rent for the aquarium.",
+      "question": "Watch: which animal is crawling around this fish tank?",
+      "answer": "Shrimp",
+      "wrong_answers": [
+        "Crab",
+        "Lobster",
+        "Crayfish"
+      ],
+      "hints": [
+        "It has ten thin legs and long feelers on its head.",
+        "Many people keep it in home aquariums to help clean up algae.",
+        "Paella and pad thai often have it on top, cooked pink."
+      ],
+      "fun_fact": "A shrimp's heart sits in its head, just behind its eyes.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Freshwater_shrimp_%28Paratya_compressa%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFreshwater_shrimp_%28Paratya_compressa%29.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 50
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20744",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Somewhere in the desert, a pilot in a very big helmet is about to have a great day at the office.",
+      "question": "Watch: which famous aircraft is taking off here?",
+      "answer": "SR-71 Blackbird",
+      "wrong_answers": [
+        "F-117 Nighthawk",
+        "MiG-25 Foxbat",
+        "B-2 Spirit"
+      ],
+      "hints": [
+        "It was built in the 1960s as a spy plane, not to fight or drop bombs.",
+        "It flew higher than 25 km (80,000 ft) at more than three times the speed of sound.",
+        "Its nickname comes from a bird with dark feathers that sings in gardens."
+      ],
+      "fun_fact": "Its fuel tanks leaked on the ground on purpose: the panels only sealed tight once the heat of flying at top speed made the metal expand.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/SR-71_Takeoff_at_Edwards_Air_Force_Base.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASR-71_Takeoff_at_Edwards_Air_Force_Base.webm",
+        "credit": "NASA Armstrong Flight Research Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Armstrong Flight Research Center",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20745",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "fish",
+      "bundle": "base",
+      "description": "This fish has a calmer life than anyone who ever had to feed it.",
+      "question": "Watch: which kind of fish is swimming in this park pond?",
+      "answer": "Koi",
+      "wrong_answers": [
+        "Trout",
+        "Clownfish",
+        "Pufferfish"
+      ],
+      "hints": [
+        "This fish is kept for its beauty, not for dinner.",
+        "You often see it in garden ponds, in white, orange, red and black patterns.",
+        "It is a fancy, colorful kind of carp first bred in Japan."
+      ],
+      "fun_fact": "Koi can live for decades, and a famous Japanese koi called Hanako was said to be over 200 years old.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Koi_carp_in_a_park.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKoi_carp_in_a_park.webm",
+        "credit": "The Nature Box · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 40
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20746",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "A tune that makes a whole stadium take off its hats and stand up very straight.",
+      "question": "Listen: this is the national anthem of which country?",
+      "answer": "Canada",
+      "wrong_answers": [
+        "Australia",
+        "New Zealand",
+        "Ireland"
+      ],
+      "hints": [
+        "Its music was composed in the 19th century, long before it became the official anthem.",
+        "Its best-known English words were only written in 1908, almost 30 years after the music.",
+        "This country's flag shows a red maple leaf."
+      ],
+      "fun_fact": "“O Canada” was first performed in Quebec City in 1880, but it only became Canada's official national anthem 100 years later, on July 1, 1980.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/%22O_Canada%22%2C_performed_by_the_United_States_Third_Marine_Aircraft_Wing_Band.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22O_Canada%22%2C_performed_by_the_United_States_Third_Marine_Aircraft_Wing_Band.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20747",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Music so delicate it sounds like it might break if you sneeze.",
+      "question": "Listen: this tinkling, tiptoeing tune is a famous dance from which ballet?",
+      "answer": "The Nutcracker",
+      "wrong_answers": [
+        "Swan Lake",
+        "The Sleeping Beauty",
+        "Giselle"
+      ],
+      "hints": [
+        "You often hear this melody in shops and ads around the same time every year.",
+        "In the story, a girl gets a present on Christmas Eve that comes to life at night.",
+        "The ballet takes its name from a wooden toy soldier that cracks open shells."
+      ],
+      "fun_fact": "For the original “Dance of the Sugar Plum Fairy,” Tchaikovsky used the celesta, a bell-like keyboard instrument that he had found in Paris and kept secret so other composers wouldn't use it first.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Kevin_MacLeod_-_P_I_Tchaikovsky_Dance_of_the_Sugar_Plum_Fairy.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKevin_MacLeod_-_P_I_Tchaikovsky_Dance_of_the_Sugar_Plum_Fairy.ogg",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 50
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Curtain-939464.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACurtain-939464.jpg",
+        "credit": "tommybuddy · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "tommybuddy",
+        "author_url": null
+      }
+    },
+    {
+      "id": "q-20748",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Music so calm that even your alarm clock would press snooze.",
+      "question": "Listen: which composer wrote this slow, dreamy piece?",
+      "answer": "Erik Satie",
+      "wrong_answers": [
+        "Claude Debussy",
+        "Frédéric Chopin",
+        "Maurice Ravel"
+      ],
+      "hints": [
+        "The composer was French and lived from the 1860s to the 1920s.",
+        "He played in Montmartre cabarets and owned several identical gray velvet suits.",
+        "He wrote a set of three “Gymnopédies” and a piece with the direction to repeat it 840 times."
+      ],
+      "fun_fact": "Satie's piece “Vexations” comes with a note to play it 840 times in a row, and a 1963 performance led by John Cage took over 18 hours.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Kevin_MacLeod_-_Erik_Satie_Gymnopedie_No_2.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKevin_MacLeod_-_Erik_Satie_Gymnopedie_No_2.ogg",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/At_the_Caf%C3%A9%2C_Morning_in_Paris_%28M%C3%A4rtha_Tynell%29_-_Nationalmuseum_-_28349.tif/lossy-page1-3840px-At_the_Caf%C3%A9%2C_Morning_in_Paris_%28M%C3%A4rtha_Tynell%29_-_Nationalmuseum_-_28349.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAt_the_Caf%C3%A9%2C_Morning_in_Paris_%28M%C3%A4rtha_Tynell%29_-_Nationalmuseum_-_28349.tif",
+        "credit": "Märtha Tynell · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Märtha Tynell",
+        "author_url": "https://www.wikidata.org/wiki/Q49103512"
+      }
+    },
+    {
+      "id": "q-20749",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "Ten thousand guests hanging around in a tree, and not one of them was invited.",
+      "question": "Watch: thousands of honey bees are hanging together on a pine branch. What are they doing?",
+      "answer": "Waiting while scouts look for a new home",
+      "wrong_answers": [
+        "Sleeping together through the cold winter",
+        "Drinking sweet sap from inside the tree",
+        "Guarding a store of honey hidden in the bark"
+      ],
+      "hints": [
+        "Look at the green grass and leafy bushes below the tree and the bright, warm light: this is not winter, and the bees aren't eating.",
+        "This happens when a hive gets too crowded and the old queen leaves with about half the bees.",
+        "Within hours or a few days, the whole ball flies off together to settle in a hollow tree or another sheltered place."
+      ],
+      "fun_fact": "Scout bees pick the new home by “voting” with waggle dances, and the swarm only takes off once enough scouts agree on the same spot.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Swarm_of_Bees_%2835280627481%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASwarm_of_Bees_%2835280627481%29.webm",
+        "credit": "U.S. Fish and Wildlife Service - Midwest Region · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Fish and Wildlife Service - Midwest Region",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20750",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A tune so catchy that people who have never been to an opera can still hum it in the shower.",
+      "question": "Listen: the opera this famous song comes from is set in which country?",
+      "answer": "Spain",
+      "wrong_answers": [
+        "Italy",
+        "France",
+        "Mexico"
+      ],
+      "hints": [
+        "The opera is named after its heroine, a fiery woman who works in a cigarette factory.",
+        "The man singing this song in the opera is a famous bullfighter.",
+        "The story takes place in and around the city of Seville."
+      ],
+      "fun_fact": "Bizet's opera “Carmen” got a cool reception at its 1875 premiere in Paris, and Bizet died three months later, before it became one of the most performed operas in the world.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/%22Votre_Toast%22_from_Carmen_-_Singing_Sergeants_-_United_States_Air_Force_Band.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22Votre_Toast%22_from_Carmen_-_Singing_Sergeants_-_United_States_Air_Force_Band.mp3",
+        "credit": "Georges Bizet · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Georges Bizet",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 70
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg/3840px-The_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_stage_of_Buxton_Opera-geograph-4115173-by-Anthony-ONeil.jpg",
+        "credit": "Anthony O'Neil · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Anthony O'Neil",
+        "author_url": "https://www.geograph.org.uk/profile/41966"
+      }
+    },
+    {
+      "id": "q-20751",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "A tiny garden visitor in a polka-dot raincoat, playing hide-and-seek with the camera.",
+      "question": "Watch: this little spotted insect belongs to which big group of animals?",
+      "answer": "Beetles",
+      "wrong_answers": [
+        "Flies",
+        "Wasps",
+        "Moths"
+      ],
+      "hints": [
+        "Look at the shiny, hard, dome-shaped shell on its back.",
+        "That hard shell is really a pair of front wings that cover thin flying wings underneath.",
+        "Its relatives include fireflies and the sacred scarab of ancient Egypt."
+      ],
+      "fun_fact": "Beetles are the biggest group of animals on Earth: about 400,000 kinds are known, roughly one in every four animal species.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Harlequin_ladybirds_%28Harmonia_axyridis%29_in_Tokyo.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHarlequin_ladybirds_%28Harmonia_axyridis%29_in_Tokyo.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 28,
+          "end": 55.6
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20753",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Fasten your seatbelt and put your tray table up: this question is cleared for takeoff.",
+      "question": "Watch: what kind of engines power this airliner?",
+      "answer": "Turboprop engines",
+      "wrong_answers": [
+        "Turbofan jet engines",
+        "Piston engines",
+        "Electric motors"
+      ],
+      "hints": [
+        "Look closely at what's spinning on the front of each wing.",
+        "Inside the engine is a gas turbine, like in a jet, but the thrust doesn't mostly come from hot exhaust.",
+        "It's a jet-style turbine that turns a propeller."
+      ],
+      "fun_fact": "The plane in the clip is an ATR 72, built by a French-Italian company. Turboprops like it burn much less fuel than jets on short flights, so they are popular on regional routes all over the world.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/4X-ATI_takeoff_LLET_14-02-2019.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A4X-ATI_takeoff_LLET_14-02-2019.webm",
+        "credit": "Oyoyoy · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Oyoyoy",
+        "author_url": null,
+        "excerpt": {
+          "start": 20,
+          "end": 80
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20755",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "A summer concert where the singer never once opens its mouth.",
+      "question": "Watch and listen: how does this insect make its loud song?",
+      "answer": "By clicking drum-like membranes on its body",
+      "wrong_answers": [
+        "By rubbing its back legs against its wings",
+        "By rubbing one wing against the other wing",
+        "By beating its wings very fast in the air"
+      ],
+      "hints": [
+        "The insect in the clip is a cicada, filmed in Tokyo.",
+        "Only the males sing, and their song can be heard from far away on hot summer days.",
+        "The sound comes from its belly, which works like a tiny drum with a hollow inside."
+      ],
+      "fun_fact": "Some cicadas sing at over 100 decibels, which makes them some of the loudest insects on Earth.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Japanese_cicada_%28Meimuna_opalifera%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJapanese_cicada_%28Meimuna_opalifera%29.webm",
+        "credit": "The Nature Box · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20757",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Fashion advice for jets: always turn your edges up, darling.",
+      "question": "Watch the tips of this jet’s wings, which bend upward. What is the main job of these upturned tips?",
+      "answer": "Cutting air drag to save fuel",
+      "wrong_answers": [
+        "Steering the plane left and right",
+        "Stopping ice from forming on the wings",
+        "Helping the plane brake after landing"
+      ],
+      "hints": [
+        "Air likes to spill around the end of a wing and swirl behind it.",
+        "Those swirls hold the plane back, so the engines must work harder.",
+        "Airlines add them to burn a few percent less fuel on long trips."
+      ],
+      "fun_fact": "The upturned wingtips, called winglets, were partly inspired by soaring birds like eagles and condors, which spread their wingtip feathers upward as they fly.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/UPS_767-300F_%28N310UP%29_Takeoff_Portland_Airport_%28PDX%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUPS_767-300F_%28N310UP%29_Takeoff_Portland_Airport_%28PDX%29.ogv",
+        "credit": "PDX Aviation - HD(ish) Plane Spotting · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "PDX Aviation - HD(ish) Plane Spotting",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20758",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "A guest who mows your lawn for free, one tiny bite at a time.",
+      "question": "Watch: which animal is having lunch on this lawn?",
+      "answer": "Rabbit",
+      "wrong_answers": [
+        "Squirrel",
+        "Guinea pig",
+        "Raccoon"
+      ],
+      "hints": [
+        "It's a wild mammal that loves meadows, gardens and fresh green plants.",
+        "It has long ears, a twitchy nose and moves by hopping.",
+        "Peter, the hero of Beatrix Potter's famous stories, is one."
+      ],
+      "fun_fact": "The rabbit in this clip is an eastern cottontail, named for its fluffy white tail that looks like a ball of cotton.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Cottontail_Lunch_%2827710445765%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACottontail_Lunch_%2827710445765%29.webm",
+        "credit": "U.S. Fish and Wildlife Service - Midwest Region · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Fish and Wildlife Service - Midwest Region",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 9.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20759",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Raise your glass, or at least your hand, if you know where this tune comes from.",
+      "question": "Listen: from which famous opera does this lively party tune come?",
+      "answer": "La traviata",
+      "wrong_answers": [
+        "Carmen",
+        "The Magic Flute",
+        "Aida"
+      ],
+      "hints": [
+        "The opera is sung in Italian.",
+        "Its story comes from a 19th-century French novel that was also turned into a play.",
+        "The heroine of this opera by Giuseppe Verdi is Violetta, a famous Paris party hostess."
+      ],
+      "fun_fact": "Verdi's “La traviata” is one of the most performed operas in the world, yet its first night in Venice in 1853 was a flop.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/%22Brindisi%22_from_La_Traviata_-_Singing_Sergeants_-_United_States_Air_Force_Band.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22Brindisi%22_from_La_Traviata_-_Singing_Sergeants_-_United_States_Air_Force_Band.mp3",
+        "credit": "Giuseppe Verdi · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Giuseppe Verdi",
+        "author_url": null,
+        "excerpt": {
+          "start": 70,
+          "end": 125
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Boston_Opera_House_Citizens_Bank_Opera_House_Chandelier.jpg/3840px-Boston_Opera_House_Citizens_Bank_Opera_House_Chandelier.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoston_Opera_House_Citizens_Bank_Opera_House_Chandelier.jpg",
+        "credit": "EgorovaSvetlana · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EgorovaSvetlana",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EgorovaSvetlana"
+      }
+    },
+    {
+      "id": "q-20760",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Put your feet up: this is the part of the concert where nobody is in a hurry.",
+      "question": "Listen: this calm, pastoral melody is part of the overture to which opera?",
+      "answer": "William Tell",
+      "wrong_answers": [
+        "The Barber of Seville",
+        "The Magic Flute",
+        "Carmen"
+      ],
+      "hints": [
+        "The opera's story takes place among mountains and lakes.",
+        "It was its Italian composer's last opera, though he lived almost 40 more years.",
+        "The same overture ends in a famous galloping finale, and its hero shoots an apple off his son's head."
+      ],
+      "fun_fact": "A “ranz des vaches” is a traditional tune Swiss herders played or sang to call their cows, and Rossini copied its sound with the English horn and an echoing flute.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/Kevin_MacLeod_-_Gioachino_Rossini_Ranz_des_Vaches.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKevin_MacLeod_-_Gioachino_Rossini_Ranz_des_Vaches.ogg",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mountain_meadow_near_Pumphouse_Hill%2C_July_16.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMountain_meadow_near_Pumphouse_Hill%2C_July_16.jpg",
+        "credit": "An Errant Knight · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "An Errant Knight",
+        "author_url": "https://commons.wikimedia.org/wiki/User:An_Errant_Knight"
+      }
+    },
+    {
+      "id": "q-20761",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "A grandparent of the skies that still carries heavy luggage long after most of its classmates retired.",
+      "question": "Watch: which classic four-engine jet is taking off here?",
+      "answer": "Douglas DC-8",
+      "wrong_answers": [
+        "Boeing 707",
+        "Convair 990",
+        "Ilyushin Il-62"
+      ],
+      "hints": [
+        "Look at the wings: all four engines hang below them, so a jet with its engines at the tail is out.",
+        "Its maker was a California company best known for propeller airliners, and this was its first jet airliner.",
+        "Its maker shares its name with a famous North American fir tree."
+      ],
+      "fun_fact": "The DC-8 first flew in 1958, and in the 1980s many were fitted with new, quieter CFM56 engines, which kept some flying cargo for decades.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Samaritan%27s_Purse_DC-8-72CF_%28N782SP%29_Takeoff_Portland_Airport_%28PDX%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASamaritan%27s_Purse_DC-8-72CF_%28N782SP%29_Takeoff_Portland_Airport_%28PDX%29.webm",
+        "credit": "PDX Aviation · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "PDX Aviation",
+        "author_url": null,
+        "excerpt": {
+          "start": 58,
+          "end": 73
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20762",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A parade so grand you can almost hear the horses checking their hooves for dust.",
+      "question": "Listen: which composer wrote this orchestral piece?",
+      "answer": "Georges Bizet",
+      "wrong_answers": [
+        "Hector Berlioz",
+        "Camille Saint-Saëns",
+        "Jules Massenet"
+      ],
+      "hints": [
+        "The bold opening tune is an old Christmas carol from the south of France.",
+        "The composer was French and died young, at just 36.",
+        "His most famous opera is about a free-spirited woman in Seville and has a famous “Toreador Song”."
+      ],
+      "fun_fact": "This march theme is the Provençal carol “March of the Kings”, which Bizet borrowed for music he wrote in 1872 for Alphonse Daudet's play “L'Arlésienne”, the woman from Arles who never appears on stage.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Georges_Bizet_L%27Arl%C3%A9sienne_Suite_no._1_1st_movement_excerpt.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGeorges_Bizet_L%27Arl%C3%A9sienne_Suite_no._1_1st_movement_excerpt.mp3",
+        "credit": "hr-Sinfonieorchester · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "hr-Sinfonieorchester",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 33
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Helsinki_Music_Centre_Concert_Hall_2.jpg/3840px-Helsinki_Music_Centre_Concert_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Music_Centre_Concert_Hall_2.jpg",
+        "credit": "Saruwine · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Saruwine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Saruwine"
+      }
+    },
+    {
+      "id": "q-20763",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "A big brown-and-white delivery van that decided roads were too slow.",
+      "question": "Watch this cargo jet take off. Which airliner model is it?",
+      "answer": "Boeing 767",
+      "wrong_answers": [
+        "Airbus A330",
+        "Boeing 777",
+        "Boeing 787"
+      ],
+      "hints": [
+        "It's a twin-engine wide-body jet with one aisle on each side of the passenger cabin, but it's smaller than the biggest twin jets.",
+        "Look at the wheels: each main landing gear has four wheels, not six, and the wingtips curve up into tall winglets.",
+        "Its maker's model numbers run from 707 to 787, and this one comes just before the 777."
+      ],
+      "fun_fact": "The Boeing 767 first flew in 1981, and many old passenger 767s were later turned into cargo planes. It's still built today as a freighter and as a military air-to-air refueling tanker.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/UPS_767-300ER_%28N359UP%29_Takeoff_Portland_Airport_%28PDX%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUPS_767-300ER_%28N359UP%29_Takeoff_Portland_Airport_%28PDX%29.ogv",
+        "credit": "PDX Aviation - HD(ish) Plane Spotting · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "PDX Aviation - HD(ish) Plane Spotting",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20764",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "capital-cities",
+      "bundle": "base",
+      "description": "A city that stayed up all night just so you could watch it in fast forward.",
+      "question": "Watch: this timelapse shows the skyline and streets of which African capital city?",
+      "answer": "Nairobi",
+      "wrong_answers": [
+        "Addis Ababa",
+        "Kampala",
+        "Lusaka"
+      ],
+      "hints": [
+        "This city lies in East Africa, just south of the equator, more than 1,600 m (5,250 ft) above sea level.",
+        "The round tower with a flat, saucer-like top is a conference center named after the country's first president.",
+        "Lions, zebras and giraffes live in a national park right on the edge of this city, with skyscrapers in the background."
+      ],
+      "fun_fact": "The name Nairobi comes from the Maasai words “Enkare Nairobi”, meaning “cool water”, after a stream that flowed there.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Nairobi-_A_Timelapse_Portrait.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANairobi-_A_Timelapse_Portrait.webm",
+        "credit": "xixo collective · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "xixo collective",
+        "author_url": null,
+        "excerpt": {
+          "start": 40,
+          "end": 100
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20765",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Somebody clearly told this piano it owed them money.",
+      "question": "Listen: which composer wrote this stormy piano piece?",
+      "answer": "Frédéric Chopin",
+      "wrong_answers": [
+        "Franz Liszt",
+        "Johannes Brahms",
+        "Sergei Rachmaninoff"
+      ],
+      "hints": [
+        "He was a Romantic composer who wrote nearly all his music for the piano.",
+        "He died young, at 39, and never wrote a symphony or an opera.",
+        "Born near Warsaw, he spent most of his adult life in Paris."
+      ],
+      "fun_fact": "This scherzo comes from the same sonata as one of the most famous funeral marches ever written, and that march was later played at Chopin's own funeral.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Frederic_Chopin_Piano_Sonata_No.2_in_B_flat_minor_Op35_-_II_Scherzo.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrederic_Chopin_Piano_Sonata_No.2_in_B_flat_minor_Op35_-_II_Scherzo.ogg",
+        "credit": "Frédéric Chopin · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Frédéric Chopin",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Grand_H%C3%B4tel_d%27Ardolaz%2C_les_partitions_de_Dragan_Zmadjevic.jpg/3840px-Grand_H%C3%B4tel_d%27Ardolaz%2C_les_partitions_de_Dragan_Zmadjevic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrand_H%C3%B4tel_d%27Ardolaz%2C_les_partitions_de_Dragan_Zmadjevic.jpg",
+        "credit": "Stephane Gaudry · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Stephane Gaudry",
+        "author_url": "https://www.flickr.com/people/65854785@N08"
+      }
+    },
+    {
+      "id": "q-20766",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "A tiny striped worker that clocks in at every flower in the meadow and never asks for a day off.",
+      "question": "Watch: what is this insect doing as it visits one flower after another?",
+      "answer": "Pollinating them",
+      "wrong_answers": [
+        "Eating their petals",
+        "Laying eggs in them",
+        "Spreading their seeds"
+      ],
+      "hints": [
+        "Without this job, many fruits and vegetables would never grow.",
+        "Its fuzzy body brushes against each flower it lands on, and it carries something away.",
+        "It carries pollen from one flower to the next so the plant can make seeds."
+      ],
+      "fun_fact": "Bumblebees can do “buzz pollination”: they shake their flight muscles so fast that pollen bursts out of flowers like tomatoes.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Rusty_patched_bumble_bee_%2854736134677%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARusty_patched_bumble_bee_%2854736134677%29.webm",
+        "credit": "U.S. Fish and Wildlife Service - Midwest Region · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Fish and Wildlife Service - Midwest Region",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20768",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A holiday souvenir that fits in no suitcase but fills a whole concert hall.",
+      "question": "Listen: this orchestral piece opens with a bright trumpet fanfare. Which composer wrote it?",
+      "answer": "Pyotr Ilyich Tchaikovsky",
+      "wrong_answers": [
+        "Nikolai Rimsky-Korsakov",
+        "Felix Mendelssohn",
+        "Hector Berlioz"
+      ],
+      "hints": [
+        "The composer wrote it as a musical souvenir of a winter holiday far from home.",
+        "The opening call is a bugle signal he heard every day from army barracks next to his hotel in Rome.",
+        "The same composer wrote the music for “Swan Lake” and “The Nutcracker”."
+      ],
+      "fun_fact": "Tchaikovsky's “Capriccio Italien” begins with a real bugle call that he heard from the cavalry barracks next to his hotel in Rome in 1880.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/PDP-CH_-_Berlin_Philharmonic%2C_Erich_Kleiber_-_Capriccio_Italien%2C_Op._45%2C_Part_1_-_Tchaikovsky_-_Telefunken-e1406-019117.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_Berlin_Philharmonic%2C_Erich_Kleiber_-_Capriccio_Italien%2C_Op._45%2C_Part_1_-_Tchaikovsky_-_Telefunken-e1406-019117.flac",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam"
+      }
+    },
+    {
+      "id": "q-20769",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "These little models hold perfectly still on their sticks, because every star deserves a close-up.",
+      "question": "Watch: what kind of insect is shown in these close-ups?",
+      "answer": "Dragonfly",
+      "wrong_answers": [
+        "Butterfly",
+        "Grasshopper",
+        "Moth"
+      ],
+      "hints": [
+        "It is one of the fastest-flying insects in the world.",
+        "It has a long thin body, huge eyes and four see-through wings.",
+        "It zooms over ponds, catches mosquitoes in mid-air and can even fly backwards."
+      ],
+      "fun_fact": "About 300 million years ago, giant relatives of dragonflies called griffinflies had wings about 70 cm (28 in) across.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Dragonflies_%2828406411183%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADragonflies_%2828406411183%29.webm",
+        "credit": "U.S. Fish and Wildlife Service - Midwest Region · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Fish and Wildlife Service - Midwest Region",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20771",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "This statue has spent its whole career spitting into the water, and the tourists still clap for it.",
+      "question": "Watch: in which city does this statue spout water into the bay?",
+      "answer": "Singapore",
+      "wrong_answers": [
+        "Hong Kong",
+        "Kuala Lumpur",
+        "Bangkok"
+      ],
+      "hints": [
+        "The city lies just above the equator, at the southern tip of a peninsula.",
+        "Its port is one of the busiest in the world.",
+        "Its name comes from old words meaning “lion city”."
+      ],
+      "fun_fact": "The Merlion has a lion's head for the city's name, “lion city”, and a fish's body for its past as a small fishing village.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Time-lapse_video_of_the_Merlion_statue%2C_Merlion_Park%2C_Singapore_-_20160614.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_video_of_the_Merlion_statue%2C_Merlion_Park%2C_Singapore_-_20160614.webm",
+        "credit": "everyhk. · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "everyhk.",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20772",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "capital-cities",
+      "bundle": "base",
+      "description": "Skyscrapers in a hurry: a whole day squeezed into a minute, and the clouds can barely keep up.",
+      "question": "Watch: which Australian state capital is shown in this timelapse?",
+      "answer": "Brisbane",
+      "wrong_answers": [
+        "Perth",
+        "Adelaide",
+        "Melbourne"
+      ],
+      "hints": [
+        "Its downtown sits inside a tight loop of a winding river.",
+        "It is the capital of the sunny state of Queensland.",
+        "This city will host the 2032 Summer Olympics."
+      ],
+      "fun_fact": "The city and its river are named after Sir Thomas Brisbane, a governor and keen astronomer whose observatory near Sydney charted thousands of southern stars.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Brisbane_Hyperlapse_2013.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrisbane_Hyperlapse_2013.ogv",
+        "credit": "Daduxio · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Daduxio",
+        "author_url": null,
+        "excerpt": {
+          "start": 55,
+          "end": 115
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20773",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A piano piece in such a hurry it's over before the page-turner can even stand up.",
+      "question": "Listen: in this whirlwind piano finale, what do the pianist's two hands do almost the whole time?",
+      "answer": "Play the same notes together, an octave apart",
+      "wrong_answers": [
+        "Left hand plays chords, right hand a slow tune",
+        "Take turns, one hand answering the other",
+        "Hold long chords while one finger trills"
+      ],
+      "hints": [
+        "Count how many separate musical lines you can hear at once.",
+        "There is no accompaniment and no real tune, just one fast stream of notes.",
+        "The left hand copies the right hand note for note, only lower."
+      ],
+      "fun_fact": "This is the finale of Chopin's Piano Sonata No. 2, whose third movement is the famous Funeral March, and pianists have compared this last movement to night wind sweeping over graves.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/73/Frederic_Chopin_Piano_Sonata_No.2_in_B_flat_minor_Op35_-_IV_Finale_Presto.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrederic_Chopin_Piano_Sonata_No.2_in_B_flat_minor_Op35_-_IV_Finale_Presto.ogg",
+        "credit": "Frédéric Chopin · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Frédéric Chopin",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Part_of_a_modern_piano_%2842603499014%29.jpg/3840px-Part_of_a_modern_piano_%2842603499014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APart_of_a_modern_piano_%2842603499014%29.jpg",
+        "credit": "Dejan Krsmanovic · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dejan Krsmanovic",
+        "author_url": "https://www.flickr.com/people/155403590@N07"
+      }
+    },
+    {
+      "id": "q-20777",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "skyscrapers",
+      "bundle": "base",
+      "description": "A city that stayed up all night just to watch itself wake up.",
+      "question": "Watch: in which city was this timelapse of skyscrapers along a river filmed?",
+      "answer": "Chicago",
+      "wrong_answers": [
+        "Toronto",
+        "Philadelphia",
+        "Pittsburgh"
+      ],
+      "hints": [
+        "The world’s first skyscraper with a steel frame went up in this city in 1885.",
+        "The city lies on the shore of Lake Michigan.",
+        "Its nickname is “the Windy City”."
+      ],
+      "fun_fact": "In 1900, engineers reversed the flow of the Chicago River so it ran away from Lake Michigan instead of into it.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Chicago_Lights_-_City_Timelapse.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChicago_Lights_-_City_Timelapse.webm",
+        "credit": "Franklin Tello · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Franklin Tello",
+        "author_url": null,
+        "excerpt": {
+          "start": 30,
+          "end": 90
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20779",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Days of slow, patient blooming, squeezed into less time than it takes to sneeze.",
+      "question": "Watch: which flower, often grown indoors from a big bulb in winter, is opening in this time-lapse?",
+      "answer": "Amaryllis",
+      "wrong_answers": [
+        "Tulip",
+        "Hibiscus",
+        "Peony"
+      ],
+      "hints": [
+        "Its large flowers sit together at the top of a tall, hollow, leafless stalk.",
+        "Each flower is a wide trumpet with six petals and long stamens poking out.",
+        "Its name comes from a shepherdess in ancient Greek and Roman poems, and it is a favorite Christmas gift plant."
+      ],
+      "fun_fact": "Most “amaryllis” sold for Christmas actually belong to the South American genus Hippeastrum; the true Amaryllis grows wild in South Africa.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Time-lapse_video_of_a_Hippeastrum_cultivar.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_video_of_a_Hippeastrum_cultivar.ogv",
+        "credit": "Amada44 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Amada44",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20782",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "A sky so orange it looks like someone spilled a giant glass of orange juice.",
+      "question": "Watch: at what time of day was this clip filmed?",
+      "answer": "Evening",
+      "wrong_answers": [
+        "Morning",
+        "Noon",
+        "Midnight"
+      ],
+      "hints": [
+        "Look at which way the sun moves: up or down?",
+        "When the clip ends, it is almost dark.",
+        "Soon it will be time for dinner and bed."
+      ],
+      "fun_fact": "The sun looks orange or red when it is low because its light travels through much more air, and the air scatters the blue light away.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Free_HD_Stock_Video_-_Time_lapse_sunset_%28see_description_for_HQ_download%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFree_HD_Stock_Video_-_Time_lapse_sunset_%28see_description_for_HQ_download%29.webm",
+        "credit": "Johann Mynhardt · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Johann Mynhardt",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20783",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Stand up, put your hand on your heart, and try to look like you know this tune.",
+      "question": "Listen: this slow, hymn-like piece is a national anthem. Which Nordic country does it belong to?",
+      "answer": "Iceland",
+      "wrong_answers": [
+        "Norway",
+        "Finland",
+        "Denmark"
+      ],
+      "hints": [
+        "Its title translates as “Hymn of Praise”, and it is famous for being very hard to sing.",
+        "It was written in 1874 for the 1,000th anniversary of the country's first settlers arriving.",
+        "This country is an island known for geysers, glaciers and volcanoes."
+      ],
+      "fun_fact": "The music was written by Sveinbjörn Sveinbjörnsson, who spent most of his life living in Edinburgh, Scotland.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Lofs%C3%B6ngur_%28%C3%93_Gu%C3%B0_vors_lands%29.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALofs%C3%B6ngur_%28%C3%93_Gu%C3%B0_vors_lands%29.wav",
+        "credit": "Lyrics: Matthías Jochumsson; Music: Sveinbjörn Sveinbjörnsson. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Lyrics: Matthías Jochumsson; Music: Sveinbjörn Sveinbjörnsson.",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/14/Great_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_Amber_Concert_Hall%2C_Liep%C4%81ja_Symphony_Orchestra%2C_Matthias_Manasi.jpg",
+        "credit": "SintaBerzins · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "SintaBerzins",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SintaBerzins"
+      }
+    },
+    {
+      "id": "q-20784",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Put on your fanciest shoes, because this orchestra has rolled up the carpet.",
+      "question": "Listen: which dance is this orchestra playing?",
+      "answer": "A waltz",
+      "wrong_answers": [
+        "A polka",
+        "A tango",
+        "A march"
+      ],
+      "hints": [
+        "Count along with the beat: how many beats before the pattern starts again?",
+        "Couples spin around the ballroom to it, counting “one-two-three, one-two-three”.",
+        "Vienna’s grand balls are famous for this swirling dance, and Johann Strauss II was its “king”."
+      ],
+      "fun_fact": "This waltz is the second movement of Hector Berlioz’s “Symphonie fantastique” (1830), where an artist glimpses his dream love across a crowded ballroom.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Hector_Berlioz_Symphonie_fantastique_2nd_movement_excerpt.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHector_Berlioz_Symphonie_fantastique_2nd_movement_excerpt.mp3",
+        "credit": "hr-Sinfonieorchester · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "hr-Sinfonieorchester",
+        "author_url": null,
+        "excerpt": {
+          "start": 25,
+          "end": 85
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Grand_Ballroom_at_the_Omni_Homestead_Resort.jpg/3840px-Grand_Ballroom_at_the_Omni_Homestead_Resort.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrand_Ballroom_at_the_Omni_Homestead_Resort.jpg",
+        "credit": "LlDayo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "LlDayo",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:LlDayo&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20786",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "A noisy giant dragonfly that has somewhere important to be.",
+      "question": "Watch this aircraft take off. What does it NOT need to get into the air, unlike most airplanes?",
+      "answer": "A runway",
+      "wrong_answers": [
+        "A pilot",
+        "An engine",
+        "Fuel"
+      ],
+      "hints": [
+        "Look at the ground under it before it lifts off.",
+        "Most airplanes have to speed along the ground before they can fly.",
+        "It goes straight up from a small square pad, with no long road to race along."
+      ],
+      "fun_fact": "Helicopters can fly backward and sideways, and can even hover in one spot in the air.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/4X-BDI_takeoff_at_LLRS_22-05-2015.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A4X-BDI_takeoff_at_LLRS_22-05-2015.webm",
+        "credit": "Oyoyoy · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Oyoyoy",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20789",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "This goose takes bath time very seriously, one splash and one fluffed feather at a time.",
+      "question": "Watch: this rare goose lives in the wild only on which islands?",
+      "answer": "Hawaii",
+      "wrong_answers": [
+        "The Galápagos Islands",
+        "The Falkland Islands",
+        "The Canary Islands"
+      ],
+      "hints": [
+        "Its feet are less webbed than most geese, which helps it walk on rough, rocky ground.",
+        "Those rocky slopes are made of old lava flows.",
+        "Its local name is “nēnē”, and it is the official bird of a US state in the middle of the Pacific."
+      ],
+      "fun_fact": "By the early 1950s only about 30 nēnē were left in the wild, and captive breeding brought them back to thousands today.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Video_credit-_Jennifer_Waipa-USFWS_%2839932789814%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVideo_credit-_Jennifer_Waipa-USFWS_%2839932789814%29.webm",
+        "credit": "USFWS Pacific · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USFWS Pacific",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20790",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "The uninvited guest at every summer picnic is taking a little break between sandwiches.",
+      "question": "Watch: what is this fly doing with its legs?",
+      "answer": "Cleaning itself",
+      "wrong_answers": [
+        "Laying eggs",
+        "Building a nest",
+        "Drinking water"
+      ],
+      "hints": [
+        "Flies do this many times a day, often right after they land or eat.",
+        "Cats spend hours every day doing the same thing, but with their tongues.",
+        "It’s a bit like taking a bath without any water."
+      ],
+      "fun_fact": "Flies have taste sensors on their feet, so keeping them clean helps them “taste” where they land.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Fly_cleaning_itself.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFly_cleaning_itself.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 30,
+          "end": 58.9
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20791",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A singer, a full orchestra and a lot of feelings, all squeezed onto one old record.",
+      "question": "Listen: which composer wrote this song for voice and orchestra?",
+      "answer": "Gustav Mahler",
+      "wrong_answers": [
+        "Richard Strauss",
+        "Johannes Brahms",
+        "Franz Schubert"
+      ],
+      "hints": [
+        "He was even more famous as a conductor than as a composer while he was alive.",
+        "His huge symphonies include one nicknamed the “Symphony of a Thousand” because of how many performers it needs.",
+        "He ran the Vienna Court Opera and later conducted the New York Philharmonic, and once said, “My time will come.”"
+      ],
+      "fun_fact": "The singer on this 1950 recording is Marian Anderson, the American contralto whose 1939 open-air concert at the Lincoln Memorial drew about 75,000 people.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Mahler_-_Kindertotenlieder%2C_IV_%28Anderson%2C_Monteux%2C_1950%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMahler_-_Kindertotenlieder%2C_IV_%28Anderson%2C_Monteux%2C_1950%29.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Gustav Mahler, enregistré par Marian Anderson, contralto, avec le San Francisco Symphony Orchestra, dirigé par Pierre Monteux.",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Monte_Carlo_Casino_theatre_interior_1878-79_-_Leniaud_2003_p78.jpg/3840px-Monte_Carlo_Casino_theatre_interior_1878-79_-_Leniaud_2003_p78.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonte_Carlo_Casino_theatre_interior_1878-79_-_Leniaud_2003_p78.jpg",
+        "credit": "Jean Gilletta / Charles Garnier · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jean Gilletta / Charles Garnier",
+        "author_url": "https://en.wikipedia.org/wiki/en:Jean_Gilletta"
+      }
+    },
+    {
+      "id": "q-20792",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "strange-creatures",
+      "bundle": "base",
+      "description": "The beach is fully booked, and nobody here brought a towel.",
+      "question": "Watch: which kind of crab is crossing this Australian beach at low tide?",
+      "answer": "Soldier crabs",
+      "wrong_answers": [
+        "Hermit crabs",
+        "Fiddler crabs",
+        "Coconut crabs"
+      ],
+      "hints": [
+        "They feed by sifting the wet sand for tiny scraps of food, leaving little sand balls behind.",
+        "Unlike most crabs, these walk forwards instead of sideways.",
+        "They come out in their thousands and move together like a marching army."
+      ],
+      "fun_fact": "When danger comes, soldier crabs spin down into the wet sand like little corkscrews and vanish in seconds.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Light-blue_soldier_crabs_on_Bribie_Island.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALight-blue_soldier_crabs_on_Bribie_Island.webm",
+        "credit": "Watermark Resort Caloundra · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Watermark Resort Caloundra",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20793",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "The tune that plays just before a gold medal gets hung around someone’s neck.",
+      "question": "Listen: which country’s national anthem is this band playing?",
+      "answer": "The United States",
+      "wrong_answers": [
+        "The United Kingdom",
+        "France",
+        "Australia"
+      ],
+      "hints": [
+        "This country reaches from the Atlantic Ocean to the Pacific Ocean.",
+        "Its capital city is named after its first president.",
+        "Its flag has 50 stars, one for each state."
+      ],
+      "fun_fact": "The melody of “The Star-Spangled Banner” was borrowed from an 18th-century song written for a gentlemen’s music club in London.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/%22The_Star-Spangled_Banner%22%2C_MCB_Camp_Pendleton%2C_February_2012.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22The_Star-Spangled_Banner%22%2C_MCB_Camp_Pendleton%2C_February_2012.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 55
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/San-francisco-lesbian-gay-freedom-band-40th-anniversary-concert-band.jpg/3840px-San-francisco-lesbian-gay-freedom-band-40th-anniversary-concert-band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASan-francisco-lesbian-gay-freedom-band-40th-anniversary-concert-band.jpg",
+        "credit": "Pedroacevedo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Pedroacevedo",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Pedroacevedo&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20794",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "A palace so fancy that even the pigeons outside feel underdressed.",
+      "question": "Watch: in which city stands this white marble palace with its orange and gold dome?",
+      "answer": "Mexico City",
+      "wrong_answers": [
+        "Buenos Aires",
+        "Havana",
+        "Madrid"
+      ],
+      "hints": [
+        "The palace is a famous concert hall and art museum, finished in 1934.",
+        "Building it took about 30 years, partly because a revolution broke out in the country while work was going on.",
+        "Inside are murals by Diego Rivera, and the city is its country's capital."
+      ],
+      "fun_fact": "The theater's stage curtain is made of nearly a million pieces of Tiffany glass and shows two snowy volcanoes that stand near the city.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Palacio_de_Bellas_Artes%2C_Mexico_City%2C_MX_-_timelapse_-_2025-11-28.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APalacio_de_Bellas_Artes%2C_Mexico_City%2C_MX_-_timelapse_-_2025-11-28.webm",
+        "credit": "User:Fuzheado · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "User:Fuzheado",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20795",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "An orchestra in a hurry, as if the coach turns back into a pumpkin at midnight.",
+      "question": "Listen: this fast finale comes from a Mozart symphony. By which nickname is that symphony known?",
+      "answer": "Haffner",
+      "wrong_answers": [
+        "Jupiter",
+        "Prague",
+        "Linz"
+      ],
+      "hints": [
+        "The symphony began as music for a celebration in Mozart's hometown of Salzburg.",
+        "Mozart wrote it in 1782, soon after he moved from Salzburg to Vienna.",
+        "Mozart had already written a famous wedding serenade for the same family, years earlier."
+      ],
+      "fun_fact": "In a letter to his father, Mozart asked for this finale to be played “as fast as possible”.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/PDP-CH_-_NBC_Symphony_Orchestra_-_Arturo_Toscanini_-_Symphony_No._35_in_D_major%2C_K._385_-_Part_5-5-_4th_Movement-_Finale%3B_Presto_-_Wolfgang_Amadeus_Mozart_-_Rcavictor-dm1172-119905b-119903a.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_NBC_Symphony_Orchestra_-_Arturo_Toscanini_-_Symphony_No._35_in_D_major%2C_K._385_-_Part_5-5-_4th_Movement-_Finale%3B_Presto_-_Wolfgang_Amadeus_Mozart_-_Rcavictor-dm1172-119905b-119903a.flac",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 50
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam"
+      }
+    },
+    {
+      "id": "q-20796",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "A tune that lost its job, then got rehired as a part-timer.",
+      "question": "Listen: this old national anthem was retired, but part of its melody lives on in which country's anthem today?",
+      "answer": "South Africa",
+      "wrong_answers": [
+        "Namibia",
+        "Zimbabwe",
+        "New Zealand"
+      ],
+      "hints": [
+        "Today's anthem of this country mixes five languages in a single song.",
+        "The old anthem was sung in Afrikaans and was replaced during the 1990s.",
+        "Nelson Mandela became this country's president in 1994."
+      ],
+      "fun_fact": "Since 1997, South Africa's anthem has joined “Nkosi Sikelel' iAfrika” with part of this old anthem, “Die Stem”, and is sung in five languages: Xhosa, Zulu, Sesotho, Afrikaans and English.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/%22Die_Stem_van_Suid-Afrika%22_performed_at_the_White_House_in_1994.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%22Die_Stem_van_Suid-Afrika%22_performed_at_the_White_House_in_1994.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20798",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "science",
+      "bundle": "base",
+      "description": "Somewhere in a lab, a crowd of invisible tenants just moved in and started throwing a party.",
+      "question": "Watch: this lab container is filmed over almost four days. What is it called?",
+      "answer": "A Petri dish",
+      "wrong_answers": [
+        "A watch glass",
+        "An evaporating dish",
+        "A crucible"
+      ],
+      "hints": [
+        "It's one of the most common pieces of equipment in a biology lab.",
+        "Scientists fill it with a jelly called agar, mixed with food for germs.",
+        "It's named after a German scientist who worked with the famous germ hunter Robert Koch."
+      ],
+      "fun_fact": "The Petri dish is named after Julius Richard Petri, who worked in Robert Koch's lab in Germany and described it in 1887.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Time-lapse_video_of_Bacillus_cereus_growing.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_video_of_Bacillus_cereus_growing.webm",
+        "credit": "okimotor · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "okimotor",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20799",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "A tune so stirring that whole stadiums stand up for it before kick-off.",
+      "question": "Listen: which country has this as its national anthem?",
+      "answer": "South Korea",
+      "wrong_answers": [
+        "Japan",
+        "Vietnam",
+        "Philippines"
+      ],
+      "hints": [
+        "Its name simply means “Song of Love for the Country”.",
+        "The words praise a sea, a mountain and a flower: the East Sea, Mount Baekdu and the rose of Sharon.",
+        "The country's flag shows a red and blue circle in the middle, with four black bar patterns around it."
+      ],
+      "fun_fact": "The melody was written by Ahn Eak-tai, and in 2005 his widow gave its copyright to the South Korean state, so anyone may use it for free.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/National_Anthem_of_South_Korea_%28Instrumental%2C_One_Verse%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANational_Anthem_of_South_Korea_%28Instrumental%2C_One_Verse%29.ogg",
+        "credit": "Government of South Korea · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Government of South Korea",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Pel%C3%A9_watching_NY_Cosmos_1975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APel%C3%A9_watching_NY_Cosmos_1975.jpg",
+        "credit": "Associated Press · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Associated Press",
+        "author_url": "https://en.wikipedia.org/wiki/en:Associated_Press"
+      }
+    },
+    {
+      "id": "q-20800",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "Fresh from the hairdresser and clearly not in the mood to talk about it.",
+      "question": "Watch: which animal is this, resting in its pen and chewing?",
+      "answer": "Alpaca",
+      "wrong_answers": [
+        "Camel",
+        "Goat",
+        "Sheep"
+      ],
+      "hints": [
+        "Its wild relatives live high in the Andes mountains of South America.",
+        "It is raised for its soft, warm wool, and this one has just had a haircut.",
+        "It looks like a small llama, but has shorter, spear-shaped ears and a smaller face."
+      ],
+      "fun_fact": "Alpacas hum softly to each other, and a whole herd will use one shared spot as a toilet.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Willowbank_Wildlife_Reserve_Video_mammal.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWillowbank_Wildlife_Reserve_Video_mammal.ogv",
+        "credit": "Superchilum · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Superchilum",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20801",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "A whole country's pride, squeezed into less time than it takes to boil an egg.",
+      "question": "Listen: this short national anthem, one of the shortest in the world, belongs to which African country?",
+      "answer": "Uganda",
+      "wrong_answers": [
+        "Kenya",
+        "Tanzania",
+        "Ghana"
+      ],
+      "hints": [
+        "This country got its independence from Britain in the early 1960s.",
+        "This East African country sits right on the equator.",
+        "Its capital is Kampala, and the River Nile begins at Jinja, where it flows out of Lake Victoria."
+      ],
+      "fun_fact": "Uganda's anthem, “Oh Uganda, Land of Beauty”, was written in 1962 by George Kakoma, reportedly in about a day.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/89/Ugandan_national_anthem%2C_performed_by_the_U.S._Navy_Band.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUgandan_national_anthem%2C_performed_by_the_U.S._Navy_Band.wav",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg/3840px-U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02"
+      }
+    },
+    {
+      "id": "q-20802",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "A navy band in crisp uniforms plays a tune from far away, and not one of them gets seasick.",
+      "question": "Listen: this anthem's melody began as a church hymn in Spanish colonial times. Which country's national anthem is it?",
+      "answer": "Nicaragua",
+      "wrong_answers": [
+        "Honduras",
+        "El Salvador",
+        "Costa Rica"
+      ],
+      "hints": [
+        "The country lies on the narrow strip of land that joins North and South America.",
+        "Its huge freshwater lake is home to bull sharks that swim upriver from the sea.",
+        "Its capital is Managua."
+      ],
+      "fun_fact": "Nicaragua's anthem, “Salve a ti, Nicaragua”, is a song of peace: its words say the roar of the cannon is heard no more.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/National_Anthem_of_Nicaragua_by_US_Navy_Band.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANational_Anthem_of_Nicaragua_by_US_Navy_Band.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20803",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "The orchestra politely steps aside so one player can show off for a few minutes.",
+      "question": "Listen: which instrument plays the solo part in this concerto?",
+      "answer": "Bassoon",
+      "wrong_answers": [
+        "Clarinet",
+        "Oboe",
+        "Cello"
+      ],
+      "hints": [
+        "It belongs to the woodwind family and is played with a double reed.",
+        "Its tube is so long, about 2.5 m (8 ft), that it is folded back on itself.",
+        "In Italian it is called the “fagotto”, which means a bundle of sticks."
+      ],
+      "fun_fact": "Mozart wrote this bassoon concerto in 1774, when he was only 18, and it is still a staple of the bassoon repertoire and a frequent orchestra audition piece.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mozart_-_Bassoon_Concerto_in_Bb_major_-_Allegro.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMozart_-_Bassoon_Concerto_in_Bb_major_-_Allegro.ogg",
+        "credit": "Wolfgang Amadeus Mozart · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": null,
+        "author": "Wolfgang Amadeus Mozart",
+        "author_url": null,
+        "excerpt": {
+          "start": 45,
+          "end": 105
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam"
+      }
+    },
+    {
+      "id": "q-20804",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Four engines, a lot of blades, and a ground crew that needs a very long coffee break after counting them.",
+      "question": "Watch the engines closely: what kind of propellers does this military transport plane have?",
+      "answer": "Contra-rotating propellers",
+      "wrong_answers": [
+        "Tilt-rotor propellers",
+        "Pusher propellers",
+        "Folding propellers"
+      ],
+      "hints": [
+        "Look closely at the front of each engine, not at the wings.",
+        "Each engine has two sets of blades, one right behind the other.",
+        "The two sets of blades turn in opposite directions, so their twisting forces cancel out."
+      ],
+      "fun_fact": "On the Antonov An-70, each engine turns an eight-blade propeller in front of a six-blade one, and the two spin in opposite directions.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Medium_military_transport_aircraft_An-70.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMedium_military_transport_aircraft_An-70.webm",
+        "credit": "Antonov Company · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Antonov Company",
+        "author_url": null,
+        "excerpt": {
+          "start": 11,
+          "end": 62
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20805",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "A grand piano, a grand composer, and ten fingers working serious overtime.",
+      "question": "Listen: from which era of Western classical music does this piano piece come?",
+      "answer": "The Romantic era",
+      "wrong_answers": [
+        "The Baroque era",
+        "The Classical era",
+        "The Renaissance"
+      ],
+      "hints": [
+        "Listen to how freely the music swings between dark, slow chords and restless, rushing passion.",
+        "It was written in the years when trains and photography were brand new.",
+        "This is the era of Chopin, Liszt and Schumann, the great pianist-composers."
+      ],
+      "fun_fact": "This is the first movement of Chopin's Piano Sonata No. 2. Its third movement is the famous funeral march, which Chopin wrote about two years before the rest of the sonata.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Frederic_Chopin_Piano_Sonata_No.2_in_B_flat_minor_Op35_-_I_Grave_Doppio_Movimento.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrederic_Chopin_Piano_Sonata_No.2_in_B_flat_minor_Op35_-_I_Grave_Doppio_Movimento.ogg",
+        "credit": "Frédéric Chopin · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Frédéric Chopin",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/P%C3%A9ter_Bence_%E2%80%94_MVM_Dome%2C_Budapest_-_10_October_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AP%C3%A9ter_Bence_%E2%80%94_MVM_Dome%2C_Budapest_-_10_October_2026.jpg",
+        "credit": "Bánhalmi Norbert · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bánhalmi Norbert",
+        "author_url": "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert"
+      }
+    },
+    {
+      "id": "q-20807",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Somewhere out in space, a planet is humming along to this and pretending it wrote it.",
+      "question": "Listen: this tune comes from a famous orchestral suite where each part is named after a planet. Which planet's part is it?",
+      "answer": "Jupiter",
+      "wrong_answers": [
+        "Mars",
+        "Venus",
+        "Mercury"
+      ],
+      "hints": [
+        "Each part of the suite paints the character of the Roman god the planet is named after.",
+        "This part's full title calls its planet “the Bringer of Jollity”.",
+        "The planet is named after the king of the Roman gods, and it is the biggest one in our solar system."
+      ],
+      "fun_fact": "Gustav Holst later turned this melody into the hymn “I Vow to Thee, My Country,” and it became the tune of the Rugby World Cup anthem “World in Union.”",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Kevin_MacLeod_-_Gustav_Holst_Thaxted.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKevin_MacLeod_-_Gustav_Holst_Thaxted.oga",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": {
+          "start": 25,
+          "end": 85
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Night_Sky_Stars_Trees_02.jpg/3840px-Night_Sky_Stars_Trees_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANight_Sky_Stars_Trees_02.jpg",
+        "credit": "Michael J. Bennett · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Michael J. Bennett",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bennett000"
+      }
+    },
+    {
+      "id": "q-20809",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "An orchestra that clearly had three espressos before the rehearsal.",
+      "question": "Listen to the very first notes: which nickname does music theory give this quick broken-chord figure?",
+      "answer": "Mannheim rocket",
+      "wrong_answers": [
+        "Alberti bass",
+        "Neapolitan sixth",
+        "Picardy third"
+      ],
+      "hints": [
+        "Listen to which way the melody moves in the first second, and how fast.",
+        "The name comes from an 18th-century German court orchestra famous for this effect.",
+        "The notes climb steeply and quickly, like fireworks lifting off the ground."
+      ],
+      "fun_fact": "The Mannheim court orchestra was so admired in the 1700s that the young Mozart visited it and borrowed its tricks, like this rising figure and big crescendos.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Mozart_-_Symphony_No._40_in_G_minor%2C_K550_-_IV._Finale._Allegro_assai_%28Musopen_Symphony%29.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMozart_-_Symphony_No._40_in_G_minor%2C_K550_-_IV._Finale._Allegro_assai_%28Musopen_Symphony%29.flac",
+        "credit": "Wolfgang Amadeus Mozart · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Wolfgang Amadeus Mozart",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Helsinki_Music_Centre_Concert_Hall_2.jpg/3840px-Helsinki_Music_Centre_Concert_Hall_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHelsinki_Music_Centre_Concert_Hall_2.jpg",
+        "credit": "Saruwine · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Saruwine",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Saruwine"
+      }
+    },
+    {
+      "id": "q-20810",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "The best seat on a tram is the back one, where you can watch everything you just missed.",
+      "question": "Watch: this tram ride rolls along a grand ring boulevard and past a famous opera house. Which city is it?",
+      "answer": "Vienna",
+      "wrong_answers": [
+        "Budapest",
+        "Prague",
+        "Munich"
+      ],
+      "hints": [
+        "The trams in this city are painted red and white.",
+        "Look for the big stone opera house near the end of the ride.",
+        "Mozart, Beethoven and Johann Strauss all worked in this capital on the Danube."
+      ],
+      "fun_fact": "The Ringstrasse was begun after Emperor Franz Joseph ordered the old city walls torn down in 1857, and it opened in 1865.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Tram_1_timelapse_--_Ring%2C_Volkstheater_-_Paulanergasse.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATram_1_timelapse_--_Ring%2C_Volkstheater_-_Paulanergasse.ogv",
+        "credit": "Robot8A · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Robot8A",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 26
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20811",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Powdered wig optional, but strongly recommended while listening.",
+      "question": "Listen: what kind of piece by Mozart is this?",
+      "answer": "A piano sonata",
+      "wrong_answers": [
+        "A symphony",
+        "A violin concerto",
+        "An opera aria"
+      ],
+      "hints": [
+        "Count how many instruments you can hear.",
+        "Pieces like this were often played at home, not only in big concert halls.",
+        "Its name comes from the Italian for “sounded”: played, not sung."
+      ],
+      "fun_fact": "Mozart wrote about 18 piano sonatas, and this cheerful one in C major dates from around 1783.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Mozart%2C_Wolfgang_Amadeus_%E2%80%94_Piano_Sonata_No._10_in_C_major%2C_K._330_%E2%80%94_1st_movement_%E2%80%94_Bui-Nguyen_Trieu-Tuong_%E2%80%94_MusOpen_Project.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMozart%2C_Wolfgang_Amadeus_%E2%80%94_Piano_Sonata_No._10_in_C_major%2C_K._330_%E2%80%94_1st_movement_%E2%80%94_Bui-Nguyen_Trieu-Tuong_%E2%80%94_MusOpen_Project.mp3",
+        "credit": "Wolfgang Amadeus Mozart · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Wolfgang Amadeus Mozart",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Studovna_Hudebniho_Oddeleni_Klementina_A.jpg/3840px-Studovna_Hudebniho_Oddeleni_Klementina_A.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStudovna_Hudebniho_Oddeleni_Klementina_A.jpg",
+        "credit": "Mojmir Churavy · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mojmir Churavy",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mojmir_Churavy"
       }
     }
   ]
