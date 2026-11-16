@@ -96,6 +96,10 @@ class MediaFindings(unittest.TestCase):
     def test_clean(self):
         self.assertEqual(mf.media_findings(self.q(), self.probe()), [])
 
+    def test_ogg_video_url_query_string(self):
+        url = "https://upload.wikimedia.org/x/Lion.ogg?utm_source=commons.wikimedia.org&utm_content=original"
+        self.assertEqual(self.checks(self.q(type="video", file_url=url, query="File:Lion"), self.probe()), {"ogg-video"})
+
     def test_ogg_video(self):
         self.assertEqual(self.checks(self.q(type="video"), self.probe()), {"ogg-video"})
 
