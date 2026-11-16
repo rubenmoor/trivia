@@ -47673,7 +47673,7 @@ Cause: `stale_lines` in `authoring/tools/rework.py` (≈ line 174) appends `layo
 - Fix: use `paths.pool(l)` (es → `pool.json`) and drop duplicates, or skip `es`. Check `translate.py:401`''s file list the same way.
 - Test next to the existing rework tests: every printed path exists after an export with an `es` translations file.
 - Done when: the test passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-16T02:17:50Z', '2026-11-16T02:22:04Z', 2096, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2102, 205, 'run batch-<n> (media-first)', 'work', 'open', NULL, NULL, '- `nix develop -c qgen batch --media-first` (`authoring/RUNBOOK.md`, media-first rows); after the run, rename this task and its QC task to the batch name `qgen` printed (`pm task set <id> --subject "run batch-<k> (media-first)"`, same for QC).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2102, 205, 'run batch-<n> (media-first)', 'work', 'done', NULL, '2026-11-16, Done: batch-79: 82 merged, 64 approved, 18 needs work (resume took 39s; no claude calls in the resume, no claude: line), report authoring/reports/batch-79.md; funnel files 550 → worth 121 → designed 121 → passed giveaway 112 → merged 82 → approved 64 (general 42, pd-music 22); held: none listed in the report; health ✗ (drop rate 45.6 %, overlap 2.9 %/38.4 %, media share 11.8 %, $ per approved $0.39 over 3 runs) → decision 665: batch-79: health ✗, look at it?; decision 641 count 133, added 75 (goal 1058, 925 to go); qgen report --cost: media-first 2 runs, 72 approved, $98.25, $1.29 per approved (batch-79 alone $1.33); task subject could not be renamed while running (pm refuses), QC task 2103 already named batch-79; files: authoring/data/questions.json, app/data/pool.en.json, authoring/data/english-keys.json, authoring/reports/batch-79.md, authoring/reports/batches.md', '- `nix develop -c qgen batch --media-first` (`authoring/RUNBOOK.md`, media-first rows); after the run, rename this task and its QC task to the batch name `qgen` printed (`pm task set <id> --subject "run batch-<k> (media-first)"`, same for QC).
 - Note on done: the "Done:" line, report path, funnel (files → worth → designed → passed giveaway → merged → approved, held), health result, `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions` count and added (count − 58) after the run (`qgen report`), `qgen report --cost` (media-first $ per approved).
 
 ## pm-run rules
@@ -47682,7 +47682,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `tasks.sql` alone is not a dirty tree. Stage exactly the `git add` paths the command prints (plus `plans/16-content-target.md` where the task writes a line); do not commit.
 - Health ✗ → `pm decision list --grep "<run>: health"`, else `pm decision add "<run>: health ✗, look at it?"`, no task linked, go on.
 - Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (media-first)…?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop with nothing staged.
-- The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-16T02:17:56Z', NULL, 2096, 0, NULL, 'questions');
+- The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-16T02:17:56Z', '2026-11-16T19:11:35Z', 2096, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2103, 205, 'QC batch-79 (media-first)', 'work', 'open', NULL, NULL, '`authoring/QC.md` steps 1–4 and its "Media-first runs" section, without waits:
 1. Answered review decisions of earlier media-first runs not yet acted on (`pm decision list --answered --grep "(media-first)"`, `--grep "<run>"`: health, spot checks, QC proposals) → change tasks (pipeline: `plan 203: Media-first pipeline`; review/QC: `plan 204: Media-first quality control and spot check`, while those have open tasks; else a new plan in milestone 21), report lines; unanswered ones stay open.
 2. `pm decision add "Spot check batch-<n> (media-first) done?"` (developer; review link `/review?batch=<run>&sample=1`; size per QC.md / `decision 647: Media-first runs: spot-check size and agreement threshold?`), raised, not waited on.
@@ -54757,7 +54757,9 @@ Last 30 lines:
     Failures in `probe`:
       FAILED probe File:NASA and NOAA Launch A Trio of Sun-Studying Satellites (CIRA 2025-09-24 - labels).webm: magick montage: montage: no decode delegate for this image format `/home/ruben/code/trivia-worktrees/questions/work/media-probe/35f39d6869e6da52/thumbs/f650e58627c4125b.img'' @ error/constitute.…
     
-    Stopped at `probe` with 1 error(s). Run `qgen batch --media-first` again; if the same step fails three times in a row, stop and report the output.', 'The job that makes new sound and video questions from free recordings stopped early three times in a row. One video''s preview picture had been saved as an empty file, and the tool that lays the previews out on a sheet can''t read it. The choice is whether to fix that small fault and let the job continue, or to do something else with this batch.', 'Resume batch-79 once task 2104 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T15:10:09Z', '2026-11-16T15:54:15Z', 2102, NULL, 'rule', NULL, '2026-11-16, task 2102: batch-79 resumed in task 2102 after task 2104: probe passed (the empty cached preview no longer stops it); the run then reached validate and stopped on an .ogg video (decision 661, task 2105).');
+    Stopped at `probe` with 1 error(s). Run `qgen batch --media-first` again; if the same step fails three times in a row, stop and report the output.', 'The job that makes new sound and video questions from free recordings stopped early three times in a row. One video''s preview picture had been saved as an empty file, and the tool that lays the previews out on a sheet can''t read it. The choice is whether to fix that small fault and let the job continue, or to do something else with this batch.', 'Resume batch-79 once task 2104 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T15:10:09Z', '2026-11-16T15:54:15Z', 2102, NULL, 'rule', NULL, '2026-11-16, task 2102: batch-79 resumed in task 2102 after task 2104: probe passed (the empty cached preview no longer stops it); the run then reached validate and stopped on an .ogg video (decision 661, task 2105).
+
+2026-11-16, task 2102: batch-79 resumed after tasks 2104, 2105, 2106, 2108 and finished on 2026-11-16 (exit 0, qgen validate passes): 82 merged, 64 approved, 18 needs_work; no hand edits to the pool; nothing else changed.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (661, 'Continue batch-79 (media-first) after the Ogg video fix?', 'answered', '["Resume batch-79 once task 2105 is done (rerun qgen batch --media-first)", "Drop batch-79 and start a new media-first run after the fix"]', 'batch-79 got past probe after `task 2104: make_sheet: an empty cached preview stops the media-first probe` (decision 660). Three attempts in this task, each exit 1 at a different step:
 1. `triage`: 7 videos failed with a missing `frames/NN.png` in `work/media-probe/` (passed on the rerun).
 2. `fix`: "no fix result for q-20676" (passed on the rerun).
@@ -54795,7 +54797,7 @@ Last 30 lines:
     q-20688: approved media: video file .ogg can''t be shown or played in the game
     
     `qgen validate` failed. Stop and report the output.
-    claude: 93 calls (0 failed, 0 retried), opus 92 / sonnet 1, 245 turns, 2.4M tokens (2.3M cache), $8.03, 24m47s in calls', 'The job that makes new sound and video questions from free recordings ran to the end this time, but its last check refused one approved question. That question uses a video saved in a file format the check doesn''t count as video, even though it is the same format as a type it accepts. The choice is whether to fix that check (or keep such files out earlier) and let the job finish, or to give up on this batch and start a new one.', 'Resume batch-79 once task 2105 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T18:21:04Z', '2026-11-16T18:53:38Z', 2102, NULL, 'rule', NULL, '');
+    claude: 93 calls (0 failed, 0 retried), opus 92 / sonnet 1, 245 turns, 2.4M tokens (2.3M cache), $8.03, 24m47s in calls', 'The job that makes new sound and video questions from free recordings ran to the end this time, but its last check refused one approved question. That question uses a video saved in a file format the check doesn''t count as video, even though it is the same format as a type it accepts. The choice is whether to fix that check (or keep such files out earlier) and let the job finish, or to give up on this batch and start a new one.', 'Resume batch-79 once task 2105 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T18:21:04Z', '2026-11-16T18:53:38Z', 2102, NULL, 'rule', NULL, '2026-11-16, task 2102: batch-79 resumed after tasks 2104, 2105, 2106, 2108 and finished on 2026-11-16 (exit 0, qgen validate passes): 82 merged, 64 approved, 18 needs_work; no hand edits to the pool; nothing else changed.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (662, 'Ogg video named .ogg: kept out of media-first, not accepted as video', 'answered', '[]', 'Accepting .ogg as video would need the ending-based mapping to guess audio vs video in shippedName (app/desktop/resolve.mjs: .ogg → .opus), playable.mjs and media_cache.py, so one container would mean two things (decision 185: shipped as WebP/Opus/WebM). Rejecting is one rule at two places: authoring/tools/media_survey.py reject() and media_first.py media_findings(). Tests: test_media_survey, test_media_first.', 'Some free videos come as files ending in .ogg, the same ending used for sound. The game decides how to prepare a file for players by its ending, so a video with that ending would be treated as sound and break. The choice was between accepting such files as video or keeping them out of the question-making job.', 'Keep them out: the file survey drops video files named .ogg, and a media-first question that still has one gets a hard mechanical finding (ogg-video), so record makes it needs_work. The playable-extension check in validate stays as is.', NULL, '2026-11-16T18:25:34Z', '2026-11-16T18:25:34Z', 2105, NULL, 'rule', 2105, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (663, 'Continue batch-79 (media-first) after the ogg-video check fix?', 'answered', '["Resume batch-79 once task 2106 is done (rerun qgen batch --media-first)", "Drop batch-79 and start a new media-first run after the fix"]', 'batch-79 resumed after `task 2105: Media-first: Ogg video (.ogg) from Commons passes the pipeline but fails qgen validate` and stopped at `validate` three times in a row (exit 1), on the same question q-20688.
 
@@ -54833,7 +54835,7 @@ Last 30 lines:
     == [28/28] validate
     q-20688: approved media: video file .ogg can''t be shown or played in the game
     
-    `qgen validate` failed. Stop and report the output.', 'The job that makes new sound and video questions from free recordings ran to the end again, but its last check still refused the same video question. The earlier repair to keep such video files out looked at the file''s web address, and that address carries extra text after the file name, so the repair never noticed the file. The choice is whether to fix that small fault and let the job finish, or to give up on this batch and start a new one.', 'Resume batch-79 once task 2106 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T18:56:58Z', '2026-11-16T19:02:14Z', 2102, NULL, 'rule', NULL, '');
+    `qgen validate` failed. Stop and report the output.', 'The job that makes new sound and video questions from free recordings ran to the end again, but its last check still refused the same video question. The earlier repair to keep such video files out looked at the file''s web address, and that address carries extra text after the file name, so the repair never noticed the file. The choice is whether to fix that small fault and let the job finish, or to give up on this batch and start a new one.', 'Resume batch-79 once task 2106 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T18:56:58Z', '2026-11-16T19:02:14Z', 2102, NULL, 'rule', NULL, '2026-11-16, task 2102: batch-79 resumed after tasks 2104, 2105, 2106, 2108 and finished on 2026-11-16 (exit 0, qgen validate passes): 82 merged, 64 approved, 18 needs_work; no hand edits to the pool; nothing else changed.');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (664, 'Continue batch-79 (media-first) after record re-checks approved questions?', 'answered', '["Resume batch-79 once task 2108 is done (rerun qgen batch --media-first)", "Developer sets q-20688 to needs_work by hand in ../trivia-review; resume batch-79 then", "Drop batch-79 and start a new media-first run after task 2108"]', 'batch-79 resumed after `task 2106: Media-first: ogg-video check misses Commons file URLs with a query string` and stopped at `validate` three times in a row (exit 1), again on q-20688.
 
 Cause: `record` only looks at the run''s questions still in `draft`. q-20688 was approved by a record pass before the ogg-video check (tasks 2105, 2106) existed, so the fixed check never reaches it on a resume; `media_findings` itself now flags it (hard `ogg-video`). The fix is `task 2108: Media-first: record keeps a hard mechanical finding from demoting a question an earlier record already approved`; `task 2102: run batch-<n> (media-first)` requires it.
@@ -54872,7 +54874,62 @@ Last 30 lines:
     == [28/28] validate
     q-20688: approved media: video file .ogg can''t be shown or played in the game
     
-    `qgen validate` failed. Stop and report the output.', 'The job that makes new sound and video questions from free recordings finished again, but its last check still refused one video question in a format the game can''t play. The earlier repairs only catch such files in questions not yet approved, and this one had been approved before the repairs existed. The choice is whether to repair the step so it also re-checks already approved questions and then let the job finish, to have the developer mark this one question by hand, or to give up on this batch.', 'Resume batch-79 once task 2108 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T19:08:28Z', '2026-11-16T19:09:18Z', 2102, NULL, 'rule', NULL, '');
+    `qgen validate` failed. Stop and report the output.', 'The job that makes new sound and video questions from free recordings finished again, but its last check still refused one video question in a format the game can''t play. The earlier repairs only catch such files in questions not yet approved, and this one had been approved before the repairs existed. The choice is whether to repair the step so it also re-checks already approved questions and then let the job finish, to have the developer mark this one question by hand, or to give up on this batch.', 'Resume batch-79 once task 2108 is done (rerun qgen batch --media-first)', NULL, '2026-11-16T19:08:28Z', '2026-11-16T19:09:18Z', 2102, NULL, 'rule', NULL, '2026-11-16, task 2102: batch-79 resumed after tasks 2104, 2105, 2106, 2108 and finished on 2026-11-16 (exit 0, qgen validate passes): 82 merged, 64 approved, 18 needs_work; no hand edits to the pool; nothing else changed.');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (665, 'batch-79: health ✗, look at it?', 'pending', '["Noted; the QC of batch-79 (media-first) looks at it", "Look at it now before the next run"]', '| metric | threshold | batch-77 | batch-78 | batch-79 |
+|---|---|---:|---:|---:|
+| source locale |  | en | en | en |
+| mode |  | batch | media-first | media-first |
+| drafts |  | 125 | 17 | 112 |
+| skipped slots |  | 379 | 0 | 0 |
+| dropped |  | 57 | 4 | 30 |
+| drop rate | ≤ 20.0 % | 45.6 % ✗ | 23.5 % ✗ | 26.8 % ✗ |
+| dropped: hard fail correct |  | 0 | 0 | 1 |
+| dropped: hard fail unambiguous |  | 0 | 0 | 2 |
+| dropped: hard fail no_giveaway |  | 11 | 1 | 5 |
+| dropped: overlap |  | 46 | 3 | 23 |
+| dropped: duplicate |  | 0 | 0 | 0 |
+| dropped: fact-check wrong |  | 0 | 0 | 0 |
+| merged |  | 68 | 13 | 82 |
+| approved |  | 65 | 8 | 64 |
+| needs_work |  | 3 | 5 | 18 |
+| needs_work rate | ≤ 20.0 % | 4.4 % ✓ | 38.5 % ✗ | 22.0 % ✗ |
+| needs_work: giveaway | ≤ 10.0 % | 0.0 % ✓ | 38.5 % ✗ | 4.9 % ✓ |
+| needs_work: fact | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 1.2 % ✓ |
+| needs_work: ambiguity | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 1.2 % ✓ |
+| needs_work: overlap | ≤ 1.0 % | 2.9 % ✗ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: media | ≤ 10.0 % | 1.5 % ✓ | 15.4 % ✗ | 17.1 % ✗ |
+| media: no pick in review 1 |  | 7 | 1 | 2 |
+| media: recovered by research |  | 6 | 0 | 0 |
+| media: no pick at record |  | 1 | 13 | 82 |
+| needs_work: difficulty | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 1.2 % ✓ |
+| needs_work: style | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: other | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| problems guessed |  | no | no | no |
+| overlap rate | ≤ 20.0 % | 38.4 % ✗ | 17.6 % ✓ | 20.5 % ✗ |
+| merged/slots 11–15 | ≥ 55.0 % | n/a | n/a | n/a |
+| max final−target gap 11–15 | ≤ 1.50 | n/a | n/a | n/a |
+| approved 11–15 |  | 2 | 6 | 39 |
+| top move | ≤ 25.0 % | 13.2 % ✓ | n/a | n/a |
+| values move |  | 13 | n/a | n/a |
+| top stimulus |  | 88.2 % | n/a | n/a |
+| values stimulus |  | 3 | n/a | n/a |
+| top clue | ≤ 60.0 % | 36.8 % ✓ | n/a | n/a |
+| values clue |  | 5 | n/a | n/a |
+| top answer_kind | ≤ 40.0 % | 23.5 % ✓ | n/a | n/a |
+| values answer_kind |  | 7 | n/a | n/a |
+| top lens | ≤ 25.0 % | 22.1 % ✓ | n/a | n/a |
+| values lens |  | 11 | n/a | n/a |
+| giveaway-step drop rate |  | n/a | 0.0 % ✓ | 0.0 % ✓ |
+| mechanical-check rate |  | n/a | 0.0 % ✓ | 3.7 % ✓ |
+| media share | 15.0 %–50.0 % | 11.8 % ✗ | n/a | n/a |
+| mean fun | ≥ 3.40 | 3.47 ✓ | 3.47 ✓ | 3.46 ✓ |
+| cost $ |  | $25.19 | $12.37 | $80.81 |
+| $ per approved | ≤ $0.35 | $0.39 ✗ | $1.55 ✗ | $1.26 ✗ |
+| calls |  | 178 | 130 | 942 |
+| calls per approved |  | 2.74 | 16.25 | 14.72 |
+| wall time h |  | 0.86 | 0.90 | 2.75 |
+| days |  | 1 | 1 | n/a |
+| **health** | | ✗ fail | ✗ fail | ✗ fail |', 'A run that makes new sound and video quiz questions from free recordings has finished, and its automatic health check flagged several numbers outside their targets: many drafted questions were dropped, a few overlapped existing ones, the media share was low and the cost per approved question was high. Nothing waits on this; the choice is whether to look at the run''s questions and numbers now or simply note the warning.', NULL, NULL, '2026-11-16T19:11:26Z', NULL, 2102, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -57267,6 +57324,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2296, 2107, '2026-11-16T19:01:23Z', '2026-11-16T19:04:59Z', 'done', NULL, 0, 'b0ea0c3c729c9b265719a66cb072cec947f8df6a', NULL, 'claude-sonnet-5-5', '05b854ce-24c6-4c72-91ab-638bc34f6f67', NULL, 25, 50, 12027, 1555495, 68148, 0.54851149999999993, 82955, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2297, 2102, '2026-11-16T19:04:54Z', '2026-11-16T19:08:38Z', 'blocked', 'left 5 files unstaged, stashed as 1b8f9490 for the task''s next run', 0, 'b0ea0c3c729c9b265719a66cb072cec947f8df6a', 'questions', 'claude-opus-5-5', 'b9a61709-29e5-4104-ae94-3858a3ec5ac1', NULL, 21, 42, 7722, 1047685, 47996, 0.74811299999999992, 62351, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2298, 2108, '2026-11-16T19:08:42Z', '2026-11-16T19:09:32Z', 'done', NULL, 0, 'ee914da4bcb4a6de243b6f817522d15409d6cb63', 'questions', 'claude-sonnet-5-5', 'c92252fc-67ad-4c6c-bd80-bcf4bfea1402', NULL, 14, 26, 4168, 566463, 37742, 0.24934630000000002, 52567, 60, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2299, 2102, '2026-11-16T19:09:33Z', '2026-11-16T19:11:54Z', 'done', NULL, 0, 'c4d9658f1c387c4adbb353e2664dac411d1661d3', 'questions', 'claude-opus-5-5', '3c73bfe3-49d7-4095-9e2b-b1948ec18762', NULL, 16, 32, 5113, 762962, 45118, 0.61592439999999982, 59473, 60, 1136664);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
