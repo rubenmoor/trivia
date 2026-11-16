@@ -562,9 +562,27 @@ def cmd_record(args):
         changes[q["id"]] = change
         snapshot[q["id"]] = {"decision": review["decision"], "problems": review["problems"]}
         progress.detail(f"  record: {q['id']}: {decision}")
+    for q in batch_questions(args.run, ("approved",)):  # approved by an earlier record, before a hard check existed
+        hard = [f for f in (media_first.media_findings(q) if q.get("media_first") else []) if f["hard"]]
+        if q["id"] in snapshot and q["id"] not in changes and hard:
+            demote_approved(q, hard, today, changes, snapshot)
     update_pool(changes)
     save_json(d / "recorded.json", snapshot)  # record's decisions, for batch health (plan 15)
     return failed(f"{len(missing)} question(s) without a review: {', '.join(missing)}") if missing else []
+
+
+def demote_approved(q, hard, today, changes, snapshot):
+    """An already recorded, approved media-first question that fails a hard mechanical finding: needs_work,
+    the approved review becomes `previous`."""
+    kinds = {f["kind"] for f in hard}
+    old = {k: v for k, v in (q.get("review") or {}).items() if k != "previous"}
+    review = {"decision": "needs_work", "feedback": " ".join(f"{f['note'][0].upper()}{f['note'][1:]}." for f in hard),
+              "problems": [p for p in PROBLEMS if p in kinds], "reviewed_on": today, "reviewer": "llm",
+              "model": old.get("model")}
+    changes[q["id"]] = lambda x, review=review, old=old: x.update(review={**review, "previous": old or None},
+                                                                  status="needs_work")
+    snapshot[q["id"]] = {"decision": "needs_work", "problems": review["problems"]}
+    progress.detail(f"  record: {q['id']}: needs_work (approved earlier, now {', '.join(sorted(kinds))})")
 
 
 def check_picks(picks, jobs):

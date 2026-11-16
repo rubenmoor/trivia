@@ -233,6 +233,22 @@ class FixedSlot(Base):
         self.assertIn("giveaway", q["review"]["problems"])
         self.assertEqual({k: q["media"][k] for k in self.q["media"]}, self.q["media"])
 
+    def test_record_demotes_an_approved_recorded_question_with_a_hard_finding(self):
+        ogg = {**self.q["media"], "type": "video", "file_url": "https://upload.wikimedia.org/x/lion.ogg?v=1"}
+        was = {"decision": "approved", "feedback": None, "problems": [], "reviewed_on": "2026-11-01", "reviewer": "llm",
+               "model": "opus"}
+        q = {**self.q, "media": ogg, "status": "approved", "batch": "batch-1", "review": was}
+        self.pool.write_text(json.dumps({"questions": [q]}))
+        (self.d / "recorded.json").write_text(json.dumps({"q-0001": {"decision": "approved", "problems": []}}))
+        self.assertEqual(review_steps.cmd_record(argparse.Namespace(run="batch-1", jobs=1)), [])
+        got = self.pooled()
+        self.assertEqual(got["status"], "needs_work")
+        self.assertEqual(got["review"]["decision"], "needs_work")
+        self.assertIn("media", got["review"]["problems"])
+        self.assertIn("can't play it", got["review"]["feedback"])
+        self.assertEqual(got["review"]["previous"], was)
+        self.assertEqual(json.loads((self.d / "recorded.json").read_text())["q-0001"]["decision"], "needs_work")
+
     def test_review_and_fix_see_the_aids(self):
         (self.work / "media-probe" / "lion" / "spectrogram.png").write_bytes(b"png")
         self.patch(mf, "LEDGER", self.work / "media-first" / "files.jsonl")
