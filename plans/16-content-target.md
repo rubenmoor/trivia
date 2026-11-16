@@ -62,6 +62,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - Numbers 2026-10-24 (`colombia` es pilot, 2014 approved; details in `plans/15c-regional-questions.md` "Pilot effort, es done"): 11 batches, spent $643.00, $0.33 per approved (batch-12 $0.28 → batch-22..25 $0.38–0.40 as overlap rises, drop rate 25 % → 41 %); review time 35 min per 100 verdicts (28 timed verdicts, small sample); information only.
 
 - Media-first sources in es (plan 205): 2026-11-16, task 2111: `tr-es-18`, 168 translated, 161 approved, 7 need work, 0 not travelling, $0.11 per approved translation (audit $3.31), audit agreement 75 %; 77 of 79 approved media-first sources (batch-78, batch-79) now in es.
+- Media-first sources in es-ES (plan 205): 2026-11-16, task 2112: `tr-es-ES-25`, 184 translated, 177 approved, 7 need work, 0 not travelling, $0.11 per approved translation (audit $3.33), audit agreement 63.3 %, health ✗; 78 of 79 approved media-first sources (batch-78, batch-79) now in es-ES.
 
 ## Tasks
 - [x] CT-1 Decide the target (OQ-32): 5000 approved per launch language, D-53's mix, no games number (2026-10-12, D-75). CT-2 (S4) reports games per player.
