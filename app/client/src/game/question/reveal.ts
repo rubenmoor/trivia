@@ -1,6 +1,6 @@
 // An answer tile's look from the Question screen's state (screens/Question.svelte): lock, reveal, Francotirador.
 import type { Game } from "../../lib/types.ts";
-import type { IconName } from "../Icon.svelte";
+import type { IconName } from "../icon-name.ts";
 
 export type AnswerView = {
   struck: number[];

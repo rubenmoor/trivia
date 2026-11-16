@@ -133,6 +133,9 @@ export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bund
 
 /** What the Choice screen offers (plan 29): age groups in file order, the new game's locale's bundles
  * (plan 71), both with their names in that locale; `scope` "game": the running game's locale (MD-12). */
+/** What a bundle mark shows (decision 367). */
+export type BundleMark = Pick<ChoiceOptions["bundles"][number], "base" | "region" | "country" | "icon" | "source">;
+
 export interface ChoiceOptions {
   /** `span`: lowest and highest difficulty of its levels (the «Custom» start, D-88). */
   groups: { id: string; name: string; ages: readonly [number, number | null]; span: readonly [number, number] }[];

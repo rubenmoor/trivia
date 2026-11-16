@@ -1,6 +1,6 @@
 // Category and subcategory names in the question locale, bundle names in the UI language, of the last engine call (plan 68, D-81).
 import { catKey, categoryOf, subName, subOf } from "../engine/pool.ts";
-import type { BundleMark } from "../game/BundleMark.svelte";
+import type { BundleMark } from "./api.ts";
 import type { EngineData } from "../engine/state.ts";
 
 let data = $state.raw<EngineData | null>(null);

@@ -1,5 +1,5 @@
 // The five joker tokens in tray order (plans/09-jokers.md): name, label, key and icon.
-import type { IconName } from "./Icon.svelte";
+import type { IconName } from "./icon-name.ts";
 import type { JokerBudget, JokerName } from "../lib/types.ts";
 import { STANDARD_JOKERS } from "../lib/api.ts";
 import { t } from "../lib/i18n.ts";
