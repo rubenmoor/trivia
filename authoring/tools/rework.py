@@ -164,14 +164,14 @@ def cmd_tighten(args):
 
 def stale_lines(revised, by_id):
     """Prints per locale how many translations the rewritten questions staled (D-81); returns the
-    app/data/pool.<locale>.json paths export rewrote."""
+    base pool paths (`es`: pool.json) export rewrote."""
     files = []
     for l in translations.LOCALES:
         if translations.path(l).exists():
             src = translations.load(l)["questions"]
             n = sum(t["id"] in by_id and translations.is_stale(t, by_id[t["id"]]) for t in src if t["id"] in revised)
             print(f"  {l}: {n} translation(s) stale from this run (D-81)")
-            files.append(layout.LOCALE_POOL(l).relative_to(ROOT).as_posix())
+            files.append(layout.POOL_FILE(l, "base").relative_to(ROOT).as_posix())
     return files
 
 
