@@ -157,6 +157,20 @@ def probe(title, excerpt=None):
     return media_probe.cached(title, s, e) or media_probe.probe(title, s, e)
 
 
+def probe_or_drop(d, run, f):
+    """The file's probe, or None after a failed probe (missing frame, undecodable metadata): the file is
+    recorded as not worth it (triage row and ledger, so a funnel counts it as dropped) and the step goes on."""
+    try:
+        return probe(f["title"])
+    except Exception as e:  # noqa: BLE001 — one bad file never stops the step
+        progress.detail(f"  probe: {f['title']}: dropped: {progress.short(e, 200)}")
+        t = {"title": f["title"], "seed": f["seed"], "class": f["class"], "category": None, "verdict": "not_worth",
+             "subject": "", "why_not": f"probe failed: {progress.short(e, 200)}"}
+        append(steps_dir(d) / "triage.jsonl", t, threading.Lock())
+        record(run, [ledger_row(t)])
+        return None
+
+
 def probe_ref(p):
     """A probe's dir as stored in `media_first.probe`: relative to work/."""
     return Path(p["dir"]).resolve().relative_to(layout.WORK.resolve()).as_posix()
@@ -194,7 +208,7 @@ def probe_step(d, run, jobs=PROBE_JOBS, target=MF_DESIGNED):
     if target is not None and worth >= target:
         return []
     todo = todo[:round_size(todo, worth, target, jobs)]
-    return parallel(lambda f: probe(f["title"]), [{"id": f["title"], **f} for f in todo], jobs, "probe", "files")
+    return parallel(lambda f: probe_or_drop(d, run, f), [{"id": f["title"], **f} for f in todo], jobs, "probe", "files")
 
 
 # --- giveaway (no LLM) -----------------------------------------------------------
@@ -479,7 +493,9 @@ def triage(d, run, jobs=3, model=TRIAGE_MODEL, target=MF_DESIGNED):
     failed, errors = set(), []
 
     def work(f):
-        p = probe(f["title"])
+        p = probe_or_drop(d, run, f)
+        if p is None:
+            return
         cats = f.get("base_categories") or []
         user = {"file": file_text(f), "aids": aids(p), **need,
                 "base_subjects": {s: subjects.get(s, []) for c in cats for s in by_cat.get(c, [])},
