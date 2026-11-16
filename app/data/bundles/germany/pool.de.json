@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "a83bec5a",
+  "hash": "05ca22bd",
   "questions": [
     {
       "id": "q-9120",
@@ -768,6 +768,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Maja Dumat from Deutschland (Germany)",
         "author_url": "https://www.flickr.com/people/47439717@N05",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9143",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "cakes-and-sweets",
+      "bundle": "germany",
+      "description": "Schuhputzen war noch nie so aufregend wie in dieser Nacht.",
+      "question": "Viele Kinder putzen am 5. Dezember ihre Stiefel und stellen sie vor die Tür. Wofür?",
+      "answer": "Damit der Nikolaus sie füllt",
+      "wrong_answers": [
+        "Damit das Christkind sie anzieht",
+        "Damit sie über Nacht trocknen",
+        "Damit der Osterhase sie findet"
+      ],
+      "hints": [
+        "Am nächsten Morgen ist etwas drin.",
+        "Es gibt Nüsse, Mandarinen und Schokolade.",
+        "Der Besucher kommt am 6. Dezember und hat einen langen Bart."
+      ],
+      "fun_fact": "Der Nikolaustag erinnert an den Bischof Nikolaus von Myra, der Kindern heimlich Geschenke gemacht haben soll.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Boot_on_snow.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoot_on_snow.jpg",
+        "credit": "Oto Zapletal · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Oto Zapletal",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Oto_Zapletal",
         "excerpt": null
       },
       "background": null
@@ -1888,6 +1923,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Basile Morin",
         "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9176",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "cities-and-towns",
+      "bundle": "germany",
+      "description": "Ein Gebäude, das aussieht, als hätte der Ostseewind es geformt.",
+      "question": "Ein großes weißes Museum am Hafen von Stralsund wurde 2010 Europäisches Museum des Jahres. Was gibt es darin?",
+      "answer": "Große Aquarien mit Meerestieren",
+      "wrong_answers": [
+        "Ein Planetarium mit Sternenkuppel",
+        "Eine Werft für Segelschiffe",
+        "Ein Wellenbad mit Rutschen"
+      ],
+      "hints": [
+        "Die Ausstellung führt von der Ostsee bis in den Nordatlantik.",
+        "Unter der Decke hängen lebensgroße Modelle von Walen.",
+        "Es zeigt, was in Nord- und Ostsee lebt."
+      ],
+      "fun_fact": "Im Ozeaneum hängen in einer großen Halle lebensgroße Modelle von Walen, als würden sie über den Köpfen der Besucher schwimmen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Stralsund_harbour_seen_from_ferry_in_Strelasund_2023-06-11_01.jpg/3840px-Stralsund_harbour_seen_from_ferry_in_Strelasund_2023-06-11_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStralsund_harbour_seen_from_ferry_in_Strelasund_2023-06-11_01.jpg",
+        "credit": "Leonhard Lenz · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Leonhard Lenz",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GPSLeo",
         "excerpt": null
       },
       "background": null
@@ -3533,6 +3603,41 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Bjankuloski06",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bjankuloski06",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9225",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "family-customs-and-dress",
+      "bundle": "germany",
+      "description": "Lärm auf Rädern – diesmal ganz ohne Strafzettel.",
+      "question": "Zu welchem Anlass bindet man oft klappernde Blechdosen hinten ans Auto?",
+      "answer": "Hochzeit",
+      "wrong_answers": [
+        "Taufe",
+        "Einschulung",
+        "Konfirmation"
+      ],
+      "hints": [
+        "Es ist ein Fest für zwei Erwachsene.",
+        "Oft gibt es dabei eine große Torte und viele Gäste in festlicher Kleidung.",
+        "Am Ende sagt man „Ja“."
+      ],
+      "fun_fact": "Der Lärm der Dosen sollte nach altem Glauben böse Geister vom Brautpaar fernhalten.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Heap_of_cans_South_Korea_Pavilion_Expo_2015.JPG/3840px-Heap_of_cans_South_Korea_Pavilion_Expo_2015.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHeap_of_cans_South_Korea_Pavilion_Expo_2015.JPG",
+        "credit": "Gzzz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Gzzz",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gzzz",
         "excerpt": null
       },
       "background": null
@@ -17127,6 +17232,41 @@
       "background": null
     },
     {
+      "id": "q-10931",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "national-symbols-and-state",
+      "bundle": "germany",
+      "description": "Kleingeld mit ganz großem Bauwerk.",
+      "question": "Welches Bauwerk ist auf den deutschen 10-, 20- und 50-Cent-Münzen zu sehen?",
+      "answer": "Brandenburger Tor",
+      "wrong_answers": [
+        "Holstentor",
+        "Reichstagsgebäude",
+        "Siegessäule"
+      ],
+      "hints": [
+        "Es steht in Berlin.",
+        "Es hat fünf Durchgänge zwischen Säulen.",
+        "Oben fährt eine Göttin mit vier Pferden."
+      ],
+      "fun_fact": "Auf den deutschen 1-, 2- und 5-Cent-Münzen ist dagegen ein Eichenzweig zu sehen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Finnish_markka_coins_in_wallet.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFinnish_markka_coins_in_wallet.jpg",
+        "credit": "Santeri Viinamäki · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Santeri Viinamäki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zunter",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10932",
       "status": "approved",
       "difficulty": 6,
@@ -18772,6 +18912,41 @@
       "background": null
     },
     {
+      "id": "q-10980",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "transport",
+      "bundle": "germany",
+      "description": "Blau, rund und ziemlich bestimmt im Ton.",
+      "question": "Ein rundes blaues Schild zeigt drei weiße Pfeile, die im Kreis hintereinander herlaufen. Was kommt gleich?",
+      "answer": "Kreisverkehr",
+      "wrong_answers": [
+        "Kreuzung",
+        "Einbahnstraße",
+        "Wendeplatz"
+      ],
+      "hints": [
+        "Hier fährst du nicht einfach geradeaus.",
+        "Das Schild schreibt dir vor, in welche Richtung du fahren musst.",
+        "Man fährt rund um eine Insel herum."
+      ],
+      "fun_fact": "Im Kreisverkehr hat in Deutschland meist Vorfahrt, wer schon drin ist.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Country_road_%2824152507477%29.jpg/3840px-Country_road_%2824152507477%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACountry_road_%2824152507477%29.jpg",
+        "credit": "Rolf Dietrich Brecher from Germany · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Rolf Dietrich Brecher from Germany",
+        "author_url": "https://www.flickr.com/people/104249543@N07",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10981",
       "status": "approved",
       "difficulty": 11,
@@ -19332,6 +19507,41 @@
       "background": null
     },
     {
+      "id": "q-10997",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "dialects-and-regional-words",
+      "bundle": "germany",
+      "description": "Manche Kekse gehen vor dem Essen erst noch baden.",
+      "question": "So isst man gern Keks oder Brötchen. In welchen Bundesländern sagt man dazu besonders oft „ditschen“?",
+      "answer": "Sachsen und Thüringen",
+      "wrong_answers": [
+        "Schleswig-Holstein und Hamburg",
+        "Bremen und Niedersachsen",
+        "Schleswig-Holstein und Mecklenburg-Vorpommern"
+      ],
+      "hints": [
+        "Die beiden Bundesländer grenzen direkt aneinander.",
+        "Eines der beiden Länder grenzt an Tschechien.",
+        "Die Landeshauptstädte heißen Dresden und Erfurt."
+      ],
+      "fun_fact": "Die Sachsen waren im 18. Jahrhundert so verrückt nach Kaffee, dass man sie „Kaffeesachsen“ nannte.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Dunking_a_biscuit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADunking_a_biscuit.jpg",
+        "credit": "Peter Morgan · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Peter Morgan",
+        "author_url": "https://www.flickr.com/photos/64588110@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10998",
       "status": "approved",
       "difficulty": 7,
@@ -19712,6 +19922,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Friedrich Haag",
         "author_url": "https://commons.wikimedia.org/wiki/User:F._Riedelio",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11009",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "home-and-public-life",
+      "bundle": "germany",
+      "description": "Eine Behörde, die sich neu angezogen hat, aber jeder erkennt sie trotzdem.",
+      "question": "Bis 2004 hieß die Agentur für Arbeit noch anders. Wie lautet der alte Name: „Arbeits…“?",
+      "answer": "Arbeitsamt",
+      "wrong_answers": [
+        "Arbeitszentrale",
+        "Arbeitsbüro",
+        "Arbeitskammer"
+      ],
+      "hints": [
+        "Das Wort klingt sehr nach Behörde.",
+        "Viele Erwachsene nennen die Behörde bis heute so.",
+        "Das fehlende Stück hat nur drei Buchstaben, wie beim Bürger…."
+      ],
+      "fun_fact": "Die Bundesagentur für Arbeit hat ihren Hauptsitz in Nürnberg.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Social_Distanced_Waiting_Room%2C_LSU_Healthcare%2C_New_Orleans%2C_Sept_2022_01.jpg/3840px-Social_Distanced_Waiting_Room%2C_LSU_Healthcare%2C_New_Orleans%2C_Sept_2022_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASocial_Distanced_Waiting_Room%2C_LSU_Healthcare%2C_New_Orleans%2C_Sept_2022_01.jpg",
+        "credit": "Infrogmation of New Orleans · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Infrogmation of New Orleans",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Infrogmation",
         "excerpt": null
       },
       "background": null
@@ -22482,6 +22727,41 @@
       "background": null
     },
     {
+      "id": "q-11089",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "shows-and-presenters",
+      "bundle": "germany",
+      "description": "Ein Juror, der mit zwei Wörtern mehr sagt als andere mit zwanzig.",
+      "question": "Bruce Darnell, Laufstegtrainer und „Supertalent“-Juror, hat einen berühmten Spruch. Wie geht er weiter: „Drama, …!“?",
+      "answer": "Baby",
+      "wrong_answers": [
+        "Darling",
+        "Honey",
+        "Lady"
+      ],
+      "hints": [
+        "Das Wort ist englisch.",
+        "Das Wort benutzt man im Deutschen genauso wie im Englischen.",
+        "Man sagt es eigentlich zu ganz kleinen Kindern."
+      ],
+      "fun_fact": "Bevor er „Supertalent“-Juror wurde, brachte Bruce Darnell bei „Germany's Next Topmodel“ den Kandidatinnen das Laufen auf dem Laufsteg bei.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Catwalk_fashion_week_westergas_2010.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACatwalk_fashion_week_westergas_2010.jpg",
+        "credit": "Michiel · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Michiel",
+        "author_url": "https://www.flickr.com/photos/michiel/",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-11090",
       "status": "approved",
       "difficulty": 14,
@@ -23177,6 +23457,41 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0/de/deed.en",
         "author": "Bayerische Vermessungsverwaltung – www.geodaten.bayern.de",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11110",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "transport",
+      "bundle": "germany",
+      "description": "Ein einziger Buchstabe, der ein ganzes rundes Schild für sich allein bekommt.",
+      "question": "Ein rundes gelbes Schild mit einem grünen „H“ steht am Straßenrand. Was zeigt es an?",
+      "answer": "Haltestelle",
+      "wrong_answers": [
+        "Hotel",
+        "Hafen",
+        "Hubschrauberlandeplatz"
+      ],
+      "hints": [
+        "Hier stehen oft Leute und schauen auf die Uhr.",
+        "Davor hält regelmäßig ein großes Fahrzeug.",
+        "Hier steigst du in den Bus ein."
+      ],
+      "fun_fact": "Das gelbe Schild mit dem grünen H ist in der Straßenverkehrsordnung als Zeichen 224 geführt.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/K%C3%B6nigheim%2C_district_Main-Tauber%2C_view_to_the_town_hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AK%C3%B6nigheim%2C_district_Main-Tauber%2C_view_to_the_town_hall.jpg",
+        "credit": "Nemracc · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Nemracc",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nemracc",
         "excerpt": null
       },
       "background": null
@@ -25737,6 +26052,41 @@
       "background": null
     },
     {
+      "id": "q-12021",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "childrens-books-and-comics",
+      "bundle": "germany",
+      "description": "Eine Mädchenbande, bei der Gackern ausdrücklich erlaubt ist.",
+      "question": "Was gehört NICHT zur Bande „Die Wilden Hühner“ von Cornelia Funke?",
+      "answer": "Baumhaus als Hauptquartier",
+      "wrong_answers": [
+        "Hühnerfeder als Bandenzeichen",
+        "Wohnwagen als Hauptquartier",
+        "Sprotte als Anführerin"
+      ],
+      "hints": [
+        "Die Mädchen sind stolz auf ihr eigenes Hauptquartier und ihr Bandenzeichen.",
+        "Die Anführerin der Bande trägt den Namen eines kleinen Fisches.",
+        "Das Hauptquartier der Hühner steht auf Rädern, nicht in Ästen."
+      ],
+      "fun_fact": "Die Bücher wurden ab 2006 mit großem Erfolg verfilmt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Daniel_Adolphe_Roberts_Jones_%281806-1874%29_-_Landscape_with_Dogs_and_Chickens_in_a_Farmyard_-_RCIN_406249_-_Royal_Collection.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADaniel_Adolphe_Roberts_Jones_%281806-1874%29_-_Landscape_with_Dogs_and_Chickens_in_a_Farmyard_-_RCIN_406249_-_Royal_Collection.jpg",
+        "credit": "Daniël-Adolphe Roberts-Jones · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Daniël-Adolphe Roberts-Jones",
+        "author_url": "https://www.wikidata.org/wiki/Q2748704",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12022",
       "status": "approved",
       "difficulty": 7,
@@ -28082,6 +28432,41 @@
       "background": null
     },
     {
+      "id": "q-12089",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "home-and-public-life",
+      "bundle": "germany",
+      "description": "Ein Mülleimer in Schokoladenbraun – leider ist keine Schokolade drin.",
+      "question": "Was gehört in Deutschland in die braune Tonne?",
+      "answer": "Obst- und Gemüsereste",
+      "wrong_answers": [
+        "Plastikverpackungen",
+        "Altpapier und Pappe",
+        "Leere Glasflaschen"
+      ],
+      "hints": [
+        "Hier landet, was von selbst verrotten würde.",
+        "Regenwürmer hätten an dem Inhalt ihre Freude.",
+        "Apfelgehäuse und Kartoffelschalen kommen hier hinein."
+      ],
+      "fun_fact": "Aus dem Inhalt der Biotonne entstehen Kompost und Biogas, mit dem sogar Strom erzeugt wird.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Wheelie_bins_-_Het_Park_-_Scheepvaartkwartier_-_Centrum_-_Rotterdam_-_two_secured_green_bins_side_by_side.jpg/3840px-Wheelie_bins_-_Het_Park_-_Scheepvaartkwartier_-_Centrum_-_Rotterdam_-_two_secured_green_bins_side_by_side.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWheelie_bins_-_Het_Park_-_Scheepvaartkwartier_-_Centrum_-_Rotterdam_-_two_secured_green_bins_side_by_side.jpg",
+        "credit": "AgainErick · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "AgainErick",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:AgainErick&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12090",
       "status": "approved",
       "difficulty": 8,
@@ -28287,6 +28672,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Andreas Schepers from Darmstadt, Germany",
         "author_url": "https://www.flickr.com/people/11327011@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12096",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "inventors-and-scientists",
+      "bundle": "germany",
+      "description": "Wenn der Rasen zum Schlammbad wird, hilft nur noch ein Schraubenzieher.",
+      "question": "Beim WM-Finale 1954 in Bern regnet es, und Deutschlands Spieler schrauben längere Stollen unter die Schuhe. Von welcher Firma stammen die Schuhe?",
+      "answer": "Adidas",
+      "wrong_answers": [
+        "Puma",
+        "Nike",
+        "Diadora"
+      ],
+      "hints": [
+        "Die Firma sitzt im fränkischen Herzogenaurach.",
+        "Der Gründer hat die Firma nach seinem eigenen Namen benannt.",
+        "Ihr Logo zeigt drei Streifen."
+      ],
+      "fun_fact": "Adi Dassler saß beim Finale 1954 selbst am Spielfeldrand und half beim Wechseln der Stollen.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/ETH-BIB-Bern%2C_Wankdorf-Stadion%2C_Fussballspiel-LBS_H1-016067_crop.tif/lossy-page1-3840px-ETH-BIB-Bern%2C_Wankdorf-Stadion%2C_Fussballspiel-LBS_H1-016067_crop.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AETH-BIB-Bern%2C_Wankdorf-Stadion%2C_Fussballspiel-LBS_H1-016067_crop.tif",
+        "credit": "https://commons.wikimedia.org/wiki/User:ETH-Bibliothek · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "https://commons.wikimedia.org/wiki/User:ETH-Bibliothek",
+        "author_url": "https://commons.wikimedia.org/wiki/User:ETH-Bibliothek",
         "excerpt": null
       },
       "background": null
@@ -28532,6 +28952,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Kingfisher",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kingfiser",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12104",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "national-team",
+      "bundle": "germany",
+      "description": "Ein Mann, der 15 Jahre lang am Spielfeldrand stand und dabei fast nie die Frisur verlor.",
+      "question": "Wer war 15 Jahre lang Bundestrainer der deutschen Männer-Nationalmannschaft?",
+      "answer": "Joachim Löw",
+      "wrong_answers": [
+        "Hansi Flick",
+        "Julian Nagelsmann",
+        "Jürgen Klinsmann"
+      ],
+      "hints": [
+        "Bei der Heim-WM 2006 war er noch Co-Trainer.",
+        "Unter ihm wurde Deutschland 2014 Weltmeister.",
+        "Sein Spitzname ist „Jogi“."
+      ],
+      "fun_fact": "Löw betreute die Nationalmannschaft in 198 Länderspielen, mehr als jeder andere Bundestrainer.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/The_home_dugout_at_the_Jonny-Rocks_Stadium_-_geograph.org.uk_-_6969353.jpg/3840px-The_home_dugout_at_the_Jonny-Rocks_Stadium_-_geograph.org.uk_-_6969353.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_home_dugout_at_the_Jonny-Rocks_Stadium_-_geograph.org.uk_-_6969353.jpg",
+        "credit": "Steve Daniels · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Steve Daniels",
+        "author_url": "https://www.geograph.org.uk/profile/35305",
         "excerpt": null
       },
       "background": null
@@ -30497,6 +30952,41 @@
       "background": null
     },
     {
+      "id": "q-12162",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "national-team",
+      "bundle": "germany",
+      "description": "Schwarz-Rot-Gold, so weit das Auge reicht – und alle schreien gleichzeitig.",
+      "question": "Tausende Fans schauen ein WM-Spiel gemeinsam unter freiem Himmel vor einer Riesenleinwand. Wie nennt man das in Deutschland?",
+      "answer": "Public Viewing",
+      "wrong_answers": [
+        "Open Air",
+        "Livestream",
+        "Flashmob"
+      ],
+      "hints": [
+        "Eine Eintrittskarte fürs Stadion braucht man dafür nicht.",
+        "Richtig bekannt wurde der Begriff bei der Heim-WM 2006.",
+        "Wörtlich übersetzt heißt es etwa „öffentliches Anschauen“."
+      ],
+      "fun_fact": "Der Begriff klingt englisch, wird in dieser Bedeutung aber vor allem in Deutschland benutzt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/World_Cup_2006_German_fans_at_Bochum.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWorld_Cup_2006_German_fans_at_Bochum.jpg",
+        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Arne Müseler",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Arne_mueseler",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12163",
       "status": "approved",
       "difficulty": 9,
@@ -31402,6 +31892,41 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Alexander Scholten",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12189",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "transport",
+      "bundle": "germany",
+      "description": "Hier lernt man, dass das Auto nicht nur zum Radiohören da ist.",
+      "question": "In der Fahrstunde sitzt der Fahrlehrer neben dir. Was ist im Fahrschulauto extra für ihn ein zweites Mal eingebaut?",
+      "answer": "Bremspedal",
+      "wrong_answers": [
+        "Lenkrad",
+        "Hupe",
+        "Schaltknüppel"
+      ],
+      "hints": [
+        "Es ist für Notfälle da.",
+        "Damit verhindert er, dass etwas passiert.",
+        "Damit bringt er das Auto zum Stehen."
+      ],
+      "fun_fact": "Mit dem „Begleiteten Fahren ab 17“ darf man in Deutschland schon vor dem 18. Geburtstag Auto fahren, aber nur mit Begleitperson.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/%2798-%2700_Toyota_Corolla_Driving_School_Car.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%2798-%2700_Toyota_Corolla_Driving_School_Car.JPG",
+        "credit": "Bull-Doser · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Bull-Doser",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bull-Doser",
         "excerpt": null
       },
       "background": null
@@ -32767,6 +33292,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ciell",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ciell",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12231",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "states-and-capitals",
+      "bundle": "germany",
+      "description": "Ein Nachbar, dem man über den Gartenzaun ganz gut zuwinken kann.",
+      "question": "Welches Nachbarland Deutschlands nennen seine Bewohner wegen seiner Form gern „das Sechseck“?",
+      "answer": "Frankreich",
+      "wrong_answers": [
+        "Polen",
+        "Österreich",
+        "Tschechien"
+      ],
+      "hints": [
+        "Das Land liegt westlich von Deutschland.",
+        "Das Land hat Küsten am Atlantik und am Mittelmeer.",
+        "In seiner Hauptstadt steht ein berühmter eiserner Turm."
+      ],
+      "fun_fact": "Frankreich ist das flächenmäßig größte Land der Europäischen Union.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Young_woman_holds_vintage_globe_in_cozy_room_while_contemplating_travel_dreams_and_adventures_for_the_future.jpg/3840px-Young_woman_holds_vintage_globe_in_cozy_room_while_contemplating_travel_dreams_and_adventures_for_the_future.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYoung_woman_holds_vintage_globe_in_cozy_room_while_contemplating_travel_dreams_and_adventures_for_the_future.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
         "excerpt": null
       },
       "background": null
@@ -35047,6 +35607,41 @@
       "background": null
     },
     {
+      "id": "q-13004",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "drinks",
+      "bundle": "germany",
+      "description": "Ein Bier, das sich die Lippen rot oder grün schminkt.",
+      "question": "Du bestellst eine „Weiße mit Schuss“ und bekommst sie rot mit Himbeersirup. In welcher Stadt ist das Tradition?",
+      "answer": "Berlin",
+      "wrong_answers": [
+        "München",
+        "Köln",
+        "Hamburg"
+      ],
+      "hints": [
+        "Das Bier darunter ist eher sauer und wird oft mit Strohhalm aus einem breiten Kelchglas getrunken.",
+        "Statt rot gibt es sie dort auch grün, mit Waldmeister.",
+        "Das Bier ist nach der Hauptstadt benannt."
+      ],
+      "fun_fact": "Napoleons Soldaten sollen die Berliner Weiße wegen ihres Prickelns den „Champagner des Nordens“ genannt haben.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Pub_beer_garden_The_Swan_Great_Easton_Essex_England_01.jpg/3840px-Pub_beer_garden_The_Swan_Great_Easton_Essex_England_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APub_beer_garden_The_Swan_Great_Easton_Essex_England_01.jpg",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Acabashi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Acabashi",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13005",
       "status": "approved",
       "difficulty": 14,
@@ -35497,6 +36092,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Jörg Zägel",
         "author_url": "https://commons.wikimedia.org/wiki/User:J%C3%B6rg_Z%C3%A4gel",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13018",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "family-customs-and-dress",
+      "bundle": "germany",
+      "description": "Das gemütlichste Schuhwerk der Welt: Es kommt nie weiter als bis zum Kühlschrank.",
+      "question": "In vielen deutschen Wohnungen zieht man an der Haustür Hausschuhe an. Was bleibt dadurch sauber?",
+      "answer": "Fußboden",
+      "wrong_answers": [
+        "Bettdecke",
+        "Küchentisch",
+        "Badewanne"
+      ],
+      "hints": [
+        "Diese Schuhe trägt man nur drinnen.",
+        "Draußen holen die Straßenschuhe Matsch und Steinchen an die Sohle.",
+        "Darauf läuft man in der Wohnung herum."
+      ],
+      "fun_fact": "Wer zu Besuch kommt, bekommt in manchen deutschen Familien extra „Gästepantoffeln“ an der Tür.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/32/Italy%2C_Venice%2C_early_18th_century_-_Pair_of_Slippers_-_1947.104_-_Cleveland_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AItaly%2C_Venice%2C_early_18th_century_-_Pair_of_Slippers_-_1947.104_-_Cleveland_Museum_of_Art.jpg",
+        "credit": "CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": null,
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -42660,6 +43290,41 @@
       "background": null
     },
     {
+      "id": "q-13976",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "athletes-and-other-sports",
+      "bundle": "germany",
+      "description": "Hier muss das Pferd die schwierigsten Schritte lernen, nicht der Mensch.",
+      "question": "Isabell Werth holte 2024 in Paris noch Olympia-Gold im Dressurreiten. In welchem Jahrzehnt gewann sie ihr erstes?",
+      "answer": "1990er-Jahre",
+      "wrong_answers": [
+        "1970er-Jahre",
+        "1980er-Jahre",
+        "2000er-Jahre"
+      ],
+      "hints": [
+        "Sie gehört zu den erfolgreichsten Reiterinnen aller Zeiten.",
+        "Ihr erstes Gold holte sie nicht allein, sondern mit der Mannschaft.",
+        "Die Spiele fanden damals in Spanien statt."
+      ],
+      "fun_fact": "Keine Reiterin und kein Reiter hat mehr olympische Medaillen gewonnen als Isabell Werth.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Dressage_arena_at_Chatsworth_Horse_Trials_-_geograph.org.uk_-_5402513.jpg/3840px-Dressage_arena_at_Chatsworth_Horse_Trials_-_geograph.org.uk_-_5402513.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADressage_arena_at_Chatsworth_Horse_Trials_-_geograph.org.uk_-_5402513.jpg",
+        "credit": "Jonathan Hutchins · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Jonathan Hutchins",
+        "author_url": "https://www.geograph.org.uk/profile/35615",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13977",
       "status": "approved",
       "difficulty": 12,
@@ -43640,6 +44305,41 @@
       "background": null
     },
     {
+      "id": "q-14006",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "dialects-and-regional-words",
+      "bundle": "germany",
+      "description": "Ein Gruß, der klingt, als hätte jemand mitten im Satz die Lust verloren.",
+      "question": "Ich begrüße dich mit „Ei gude wie?“ und trinke am liebsten Apfelwein aus dem gerippten Glas. Wer bin ich?",
+      "answer": "Ein Hesse",
+      "wrong_answers": [
+        "Ein Schwabe",
+        "Ein Sachse",
+        "Ein Ostfriese"
+      ],
+      "hints": [
+        "Ich wohne ziemlich in der Mitte Deutschlands.",
+        "Zu meinem Apfelwein esse ich gern Handkäs mit Musik.",
+        "Meine Landeshauptstadt ist Wiesbaden."
+      ],
+      "fun_fact": "„Gude“ kommt von „guten Tag“ und funktioniert in Hessen sowohl als Hallo wie auch als Tschüss.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Adriaen_Brouwer_-_Tavern_Scene.jpg/3840px-Adriaen_Brouwer_-_Tavern_Scene.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAdriaen_Brouwer_-_Tavern_Scene.jpg",
+        "credit": "Adriaen Brouwer · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Adriaen Brouwer",
+        "author_url": "https://en.wikipedia.org/wiki/en:Adriaen_Brouwer",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14007",
       "status": "approved",
       "difficulty": 5,
@@ -44545,6 +45245,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Marvin A go\n\nKai Dolata, urbikon.com",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Marvin_A_go&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14033",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Knabberzeug, bei dem Kinder plötzlich Lust aufs Lesen bekommen.",
+      "question": "Dieses knusprige Gebäck aus Eiweiß, Zucker und Mehl hat die Form von Buchstaben und wurde in der DDR in Dresden gebacken. Wie heißt es?",
+      "answer": "Russisch Brot",
+      "wrong_answers": [
+        "Baiser",
+        "Zwieback",
+        "Löffelbiskuit"
+      ],
+      "hints": [
+        "Viele Kinder legen damit erst ihren Namen, bevor sie es essen.",
+        "Es ist hart, knusprig und hält sich sehr lange.",
+        "Im Namen steckt das größte Land der Erde."
+      ],
+      "fun_fact": "Der Legende nach brachte der Dresdner Bäcker Ferdinand Wilhelm Hanke das Rezept um 1844/45 aus Sankt Petersburg mit.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Dresden%2C_Frauenkirche_--_2023_--_9387.jpg/3840px-Dresden%2C_Frauenkirche_--_2023_--_9387.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADresden%2C_Frauenkirche_--_2023_--_9387.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
         "excerpt": null
       },
       "background": null
@@ -46085,6 +46820,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Shixart1985",
         "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14078",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "native-animals",
+      "bundle": "germany",
+      "description": "Ein Waldbewohner, der sich auch ohne Spiegel für den Schönsten hält.",
+      "question": "Wie nennt man ein ausgewachsenes männliches Wildschwein in der Jägersprache?",
+      "answer": "Keiler",
+      "wrong_answers": [
+        "Bache",
+        "Frischling",
+        "Überläufer"
+      ],
+      "hints": [
+        "Ausgewachsene Männchen leben meist als Einzelgänger.",
+        "Die Weibchen und die Jungtiere haben andere Namen.",
+        "Das Wort beginnt mit K und hat sechs Buchstaben."
+      ],
+      "fun_fact": "Die langen, nach oben gebogenen Eckzähne eines Keilers nennen Jäger „Gewaff“.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Langaa_egeskov_rimfrost.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALangaa_egeskov_rimfrost.jpg",
+        "credit": "Malene Thyssen · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": "https://creativecommons.org/licenses/by/2.5",
+        "author": "Malene Thyssen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Malene",
         "excerpt": null
       },
       "background": null
@@ -49083,6 +49853,41 @@
       "background": null
     },
     {
+      "id": "q-14166",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "rivers-lakes-and-coasts",
+      "bundle": "germany",
+      "description": "Hier wird gebuddelt, bis irgendwann ein Badesee übrig bleibt.",
+      "question": "In Kiesgruben wird Kies abgebaut. Wofür wird er vor allem gebraucht?",
+      "answer": "Für Beton und Straßen",
+      "wrong_answers": [
+        "Für Papier und Pappe",
+        "Für Dünger auf Feldern",
+        "Für Strom aus Kraftwerken"
+      ],
+      "hints": [
+        "Fast jeder nutzt jeden Tag, was daraus entsteht, ohne es zu merken.",
+        "Dort, wo neue Häuser entstehen, wird er lastwagenweise angeliefert.",
+        "Daraus entstehen Wände, Brücken und Fahrbahnen."
+      ],
+      "fun_fact": "In Deutschland werden jedes Jahr über 200 Millionen Tonnen Sand und Kies abgebaut.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Caterpillar_231D_LC_Tj%C3%A4rnan.jpg/3840px-Caterpillar_231D_LC_Tj%C3%A4rnan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACaterpillar_231D_LC_Tj%C3%A4rnan.jpg",
+        "credit": "Calle Eklund · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Calle Eklund",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Vivo",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14167",
       "status": "approved",
       "difficulty": 3,
@@ -50028,6 +50833,41 @@
       "background": null
     },
     {
+      "id": "q-14194",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "states-and-capitals",
+      "bundle": "germany",
+      "description": "Hier riecht jedes Dorffest nach Holzkohle und Senf.",
+      "question": "Aus welchem Bundesland stammt die berühmte Rostbratwurst, die seinen Namen trägt?",
+      "answer": "Thüringen",
+      "wrong_answers": [
+        "Sachsen",
+        "Hessen",
+        "Sachsen-Anhalt"
+      ],
+      "hints": [
+        "Es liegt ziemlich genau in der Mitte Deutschlands.",
+        "Durch seinen großen Wald führt ein berühmter Wanderweg, der Rennsteig.",
+        "Man nennt es auch das „grüne Herz Deutschlands“."
+      ],
+      "fun_fact": "Die älteste bekannte Erwähnung einer Thüringer Bratwurst stammt aus dem Jahr 1404 aus Arnstadt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bratw%C3%BCrste_auf_dem_Grill.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABratw%C3%BCrste_auf_dem_Grill.JPG",
+        "credit": "4028mdk09 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "4028mdk09",
+        "author_url": "https://commons.wikimedia.org/wiki/User:4028mdk09",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14195",
       "status": "approved",
       "difficulty": 6,
@@ -50128,6 +50968,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "JoachimKohler-HB",
         "author_url": "https://commons.wikimedia.org/wiki/User:JoachimKohler-HB",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14198",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "states-and-capitals",
+      "bundle": "germany",
+      "description": "Ein Muster, das aussieht wie ein Himmel voller Karos.",
+      "question": "Ein blau-weißes Rautenmuster ist das Erkennungszeichen von wem?",
+      "answer": "die Bayern",
+      "wrong_answers": [
+        "die Sachsen",
+        "die Hessen",
+        "die Friesen"
+      ],
+      "hints": [
+        "Das Muster stammt aus dem Wappen der Wittelsbacher, einer alten Herrscherfamilie.",
+        "Man sieht es überall auf dem Oktoberfest.",
+        "Ihre Landeshauptstadt ist München."
+      ],
+      "fun_fact": "Die Rauten kamen vor fast 800 Jahren nach Bayern: Die Wittelsbacher erbten sie von den Grafen von Bogen.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Deutsche_Flaggen._%28German_Flags_encyclopedia_plate%29_Meyers_Gro%C3%9Fes_Konversations-Lexikon%2C_Band_4._Leipzig%2C_Germany_1906._Wm04798b.jpg/3840px-Deutsche_Flaggen._%28German_Flags_encyclopedia_plate%29_Meyers_Gro%C3%9Fes_Konversations-Lexikon%2C_Band_4._Leipzig%2C_Germany_1906._Wm04798b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADeutsche_Flaggen._%28German_Flags_encyclopedia_plate%29_Meyers_Gro%C3%9Fes_Konversations-Lexikon%2C_Band_4._Leipzig%2C_Germany_1906._Wm04798b.jpg",
+        "credit": "Uncredited author; unknown or anonymous illustrator or designer. · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Uncredited author; unknown or anonymous illustrator or designer. \n\nThe 6th edition of the encyclopedia, and all previous editions, are in the public domain in Germany, the United States, and all countries where the copyright term of anonymous or pseudonymous works is 100 years or fewer since publication.",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -50863,6 +51738,41 @@
         "license_url": null,
         "author": "Carl Spitzweg",
         "author_url": "https://en.wikipedia.org/wiki/en:Carl_Spitzweg",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14947",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "art-architecture-and-museums",
+      "bundle": "germany",
+      "description": "Ein Souvenir, das 45 Jahre lang niemand vermissen sollte.",
+      "question": "Kostbare Stücke aus dem Quedlinburger Domschatz verschwanden 1945 und tauchten 1990 wieder auf. Wer hatte sie mitgenommen?",
+      "answer": "Ein amerikanischer Offizier",
+      "wrong_answers": [
+        "Ein sowjetischer Offizier",
+        "Ein britischer Kunsthändler",
+        "Ein Quedlinburger Pfarrer"
+      ],
+      "hints": [
+        "Die Stücke landeten nicht in einem Museum, sondern in einem gewöhnlichen Privathaus.",
+        "Als seine Erben ihn verkaufen wollten, flog alles auf.",
+        "Der Schatz lag jahrzehntelang in Texas."
+      ],
+      "fun_fact": "Der Leutnant Joe Tom Meador schickte die Schätze per Feldpost nach Hause, 1993 kehrten sie nach Quedlinburg zurück.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/48/Quedlinburg_asv2018-10_img03_Castle.jpg/3840px-Quedlinburg_asv2018-10_img03_Castle.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQuedlinburg_asv2018-10_img03_Castle.jpg",
+        "credit": "A.Savin · FAL · Wikimedia Commons",
+        "provider": "commons",
+        "license": "FAL",
+        "license_url": "http://artlibre.org/licence/lal/en",
+        "author": "A.Savin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:A.Savin",
         "excerpt": null
       },
       "background": null
@@ -58498,6 +59408,41 @@
       "background": null
     },
     {
+      "id": "q-15169",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "sausages-and-cheese",
+      "bundle": "germany",
+      "description": "Zwiebelringe obendrauf, Pfeffer drüber, fertig ist der Klassiker der Frühstückspause.",
+      "question": "Mett ist gewürztes Schweinehackfleisch, das man aufs Brötchen streicht. Warum muss man es noch am selben Tag essen?",
+      "answer": "Weil das Fleisch roh ist",
+      "wrong_answers": [
+        "Weil es sonst zu hart wird",
+        "Weil die Zwiebeln braun werden",
+        "Weil die Gewürze verfliegen"
+      ],
+      "hints": [
+        "Viele essen Mettbrötchen zum Frühstück oder in der Pause.",
+        "Für Mett gelten beim Metzger strengere Hygieneregeln als für fast jede andere Wurst.",
+        "Aufs Brötchen kommt Mett, ohne vorher gebraten oder gekocht zu werden."
+      ],
+      "fun_fact": "In Deutschland gibt es strenge Regeln für Hackfleisch: Mett muss besonders frisch und gekühlt verkauft werden.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Florenz_fleischtheke.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlorenz_fleischtheke.jpg",
+        "credit": "Moritz Zimmermann · CC BY-SA 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.5",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
+        "author": "Moritz Zimmermann",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Caaz",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15170",
       "status": "approved",
       "difficulty": 3,
@@ -63390,6 +64335,41 @@
       "background": null
     },
     {
+      "id": "q-16003",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "gdr-everyday-life",
+      "bundle": "germany",
+      "description": "Ein Gericht mit einem Namen, bei dem Kinder erst mal den Teller wegschieben.",
+      "question": "Ein Gericht heißt im Osten scherzhaft „Tote Oma“. Woraus besteht die dunkle Masse darin hauptsächlich?",
+      "answer": "Gebratene Grützwurst",
+      "wrong_answers": [
+        "Gebratene Leberwurst",
+        "Geschmortes Rinderhack",
+        "Zerdrückte Bratkartoffeln"
+      ],
+      "hints": [
+        "Die Masse ist eine Wurstsorte.",
+        "Darin steckt viel Getreide, zum Beispiel Graupen.",
+        "Sie ist eng mit der Blutwurst verwandt."
+      ],
+      "fun_fact": "Dazu gibt es meist Salzkartoffeln und Sauerkraut, und es ist bis heute in Kantinen in Ostdeutschland beliebt.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Wellfleisch_Sauerkraut_Kloss.JPG/3840px-Wellfleisch_Sauerkraut_Kloss.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWellfleisch_Sauerkraut_Kloss.JPG",
+        "credit": "Benreis · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Benreis",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Benreis",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16004",
       "status": "approved",
       "difficulty": 12,
@@ -67100,6 +68080,41 @@
       "background": null
     },
     {
+      "id": "q-16111",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "federal-republic-and-reunification",
+      "bundle": "germany",
+      "description": "Ein Umriss, den man im Erdkundeunterricht nachmalt, wenn gerade niemand hinschaut.",
+      "question": "In welchem Bundesland wurde die Fußball-Legende Franz Beckenbauer geboren?",
+      "answer": "Bayern",
+      "wrong_answers": [
+        "Baden-Württemberg",
+        "Nordrhein-Westfalen",
+        "Niedersachsen"
+      ],
+      "hints": [
+        "Es ist das größte Bundesland Deutschlands.",
+        "Es liegt ganz im Südosten und grenzt an Österreich.",
+        "Seine Landeshauptstadt ist München."
+      ],
+      "fun_fact": "Beckenbauer wurde 1945 in München-Giesing geboren, einem Arbeiterviertel.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Kwu_Tung_Grass_Pitch_201708.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKwu_Tung_Grass_Pitch_201708.jpg",
+        "credit": "Wpcpey · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Wpcpey",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Wpcpey&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16112",
       "status": "approved",
       "difficulty": 7,
@@ -69860,6 +70875,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "skhakirov from Donetsk, Ukraine",
         "author_url": "https://www.flickr.com/people/7615484@N03",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16883",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "brands-and-products",
+      "bundle": "germany",
+      "description": "Ein Tütchen Pulver, das so tut, als hättest du stundenlang am Herd gestanden.",
+      "question": "„Knorr Fix“ ist ein Pulver im Tütchen, das man mit Wasser und zum Beispiel Hackfleisch in die Pfanne gibt. Wofür ist es?",
+      "answer": "Für eine Soße",
+      "wrong_answers": [
+        "Zum Brotbacken",
+        "Für einen Pudding",
+        "Zum Entkalken"
+      ],
+      "hints": [
+        "„Fix“ heißt so viel wie „schnell“.",
+        "Es kommt zu Nudeln oder Kartoffeln dazu.",
+        "Danach hat man zum Beispiel Bolognese in der Pfanne."
+      ],
+      "fun_fact": "Knorr wurde in Heilbronn gegründet und hat dort bis heute ein großes Werk.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Frying_pan_pan.jpg/3840px-Frying_pan_pan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFrying_pan_pan.jpg",
+        "credit": "Superspidey33 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Superspidey33",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Superspidey33&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -73885,6 +74935,41 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Isohypse",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Isohypse&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17002",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "chancellors-and-presidents",
+      "bundle": "germany",
+      "description": "Ein Parteitag im Zeichen eines Zuges, der danach ziemlich viel Verspätung bekam.",
+      "question": "Mit wie viel Prozent der gültigen Stimmen wählte die SPD Martin Schulz im März 2017 zu ihrem Vorsitzenden?",
+      "answer": "100 Prozent",
+      "wrong_answers": [
+        "89 Prozent",
+        "94 Prozent",
+        "81 Prozent"
+      ],
+      "hints": [
+        "Er war vorher Präsident des Europäischen Parlaments.",
+        "Damals sprach man vom „Schulz-Zug“ und vom „Schulz-Effekt“.",
+        "Keine einzige gültige Stimme war gegen ihn."
+      ],
+      "fun_fact": "Kein SPD-Vorsitzender der Nachkriegszeit war je mit einem so hohen Ergebnis gewählt worden.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Willy-Brandt-Haus%2C_Berlin%2C_151024%2C_ako.jpg/3840px-Willy-Brandt-Haus%2C_Berlin%2C_151024%2C_ako.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWilly-Brandt-Haus%2C_Berlin%2C_151024%2C_ako.jpg",
+        "credit": "Ansgar Koreng · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Ansgar Koreng",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Code",
         "excerpt": null
       },
       "background": null

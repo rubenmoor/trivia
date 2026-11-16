@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "474c1939",
+  "hash": "b33f71e8",
   "questions": [
     {
       "id": "q-8833",
@@ -8053,6 +8053,41 @@
       "background": null
     },
     {
+      "id": "q-9068",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "A capital so hot it should come with oven mitts.",
+      "question": "What is the capital of Arizona?",
+      "answer": "Phoenix",
+      "wrong_answers": [
+        "Tucson",
+        "Flagstaff",
+        "Santa Fe"
+      ],
+      "hints": [
+        "It sits in a wide desert valley in the middle of the state.",
+        "The capital is the biggest city in the state.",
+        "It's named after a mythical bird that rises again from its ashes."
+      ],
+      "fun_fact": "Phoenix gets over 100 days a year above 100 °F (38 °C), making it one of the hottest big cities in the United States.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Desert_Cactus_at_Saguaro_NP_in_AZ_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADesert_Cactus_at_Saguaro_NP_in_AZ_3.jpg",
+        "credit": "Jeffhollett · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jeffhollett",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jeffhollett",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-9069",
       "status": "approved",
       "difficulty": 5,
@@ -8083,6 +8118,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Martin Falbisoner",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9070",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "Every state has a capital, but some hide theirs better than others.",
+      "question": "What is the capital of Idaho?",
+      "answer": "Boise",
+      "wrong_answers": [
+        "Pocatello",
+        "Helena",
+        "Coeur d'Alene"
+      ],
+      "hints": [
+        "It sits in the southwest of the state, not far from Oregon.",
+        "It's also the state's biggest city.",
+        "Its name comes from the French word for “wooded.”"
+      ],
+      "fun_fact": "Boise State University's football field is blue, and fans call it “the Smurf Turf.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c0/Potato_harvest_and_sorting_near_Yale_Rd_%2820181008-KS-Reclamation-0068%29.jpg/3840px-Potato_harvest_and_sorting_near_Yale_Rd_%2820181008-KS-Reclamation-0068%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APotato_harvest_and_sorting_near_Yale_Rd_%2820181008-KS-Reclamation-0068%29.jpg",
+        "credit": "USDAgov · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDAgov",
+        "author_url": "https://www.flickr.com/people/usdagov/",
         "excerpt": null
       },
       "background": null
@@ -9243,6 +9313,41 @@
       "background": null
     },
     {
+      "id": "q-9104",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "weather-and-seasons",
+      "bundle": "usa",
+      "description": "California's hair dryer, stuck on the highest setting.",
+      "question": "Southern California's Santa Ana winds are hot, fast, and so dry they fan wildfires every fall. Why are they so dry?",
+      "answer": "They blow in from inland deserts",
+      "wrong_answers": [
+        "They blow in off the Pacific Ocean",
+        "They blow down from the Arctic",
+        "They blow up from the Gulf of Mexico"
+      ],
+      "hints": [
+        "Ocean air would bring moisture, not take it away.",
+        "They blow from east to west, toward the coast.",
+        "They start over the Great Basin and the Mojave."
+      ],
+      "fun_fact": "As the air sinks from the high deserts toward the coast, it gets squeezed and warms up, which makes it even hotter.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Santa_Rosa_Hills_from_Simpson_Park%2C_Hemet%2C_California.jpg/3840px-Santa_Rosa_Hills_from_Simpson_Park%2C_Hemet%2C_California.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASanta_Rosa_Hills_from_Simpson_Park%2C_Hemet%2C_California.jpg",
+        "credit": "Z3lvs · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Z3lvs",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Z3lvs",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-9105",
       "status": "approved",
       "difficulty": 10,
@@ -10258,6 +10363,41 @@
       "background": null
     },
     {
+      "id": "q-10505",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "american-literature",
+      "bundle": "usa",
+      "description": "A breakfast so strange, it took a whole book to talk someone into it.",
+      "question": "In the Dr. Seuss book “Green Eggs and Ham,” who keeps asking his grumpy friend to try the dish, “here or there”?",
+      "answer": "Sam-I-Am",
+      "wrong_answers": [
+        "The Cat in the Hat",
+        "The Grinch",
+        "The Lorax"
+      ],
+      "hints": [
+        "He follows his grumpy friend everywhere: on a train, in a box, with a fox.",
+        "He is small and very, very pushy.",
+        "His name tells you who he is, three words with dashes."
+      ],
+      "fun_fact": "At the end, the grumpy guy finally tries the dish, and he likes it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Ham_and_fried_egg_with_toast.jpg/3840px-Ham_and_fried_egg_with_toast.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHam_and_fried_egg_with_toast.jpg",
+        "credit": "Apeach316 · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Apeach316",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10506",
       "status": "approved",
       "difficulty": 3,
@@ -10288,6 +10428,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "ChadPerez49",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:ChadPerez49&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10507",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "american-literature",
+      "bundle": "usa",
+      "description": "Some people follow maps; she followed the road's paint job.",
+      "question": "In “The Wonderful Wizard of Oz,” which girl follows the yellow brick road to find the Wizard?",
+      "answer": "Dorothy",
+      "wrong_answers": [
+        "Alice",
+        "Wendy",
+        "Goldilocks"
+      ],
+      "hints": [
+        "A big storm carries her house far away.",
+        "She comes from a farm in Kansas.",
+        "Her little dog is called Toto."
+      ],
+      "fun_fact": "In the 1900 book, Dorothy's magic shoes are silver, not red.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Konza_Prairie%2C_Geary_County%2C_%28Ashland%29_Kansas_2005_%286550732639%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKonza_Prairie%2C_Geary_County%2C_%28Ashland%29_Kansas_2005_%286550732639%29.jpg",
+        "credit": "inkknife_2000 (7.5 million views +) · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "inkknife_2000 (7.5 million views +)",
+        "author_url": "https://www.flickr.com/people/23155134@N06",
         "excerpt": null
       },
       "background": null
@@ -13828,6 +14003,41 @@
       "background": null
     },
     {
+      "id": "q-10611",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "money-and-shopping",
+      "bundle": "usa",
+      "description": "The only place in the store where “thin” is a full sentence.",
+      "question": "At a supermarket counter, you take a number, ask for “half a pound, sliced thin,” and watch it go through a spinning blade. What do people mostly buy there?",
+      "answer": "Lunch meats and cheese",
+      "wrong_answers": [
+        "Fresh fish and shrimp",
+        "Cakes and pastries",
+        "Fruits and vegetables"
+      ],
+      "hints": [
+        "It's where many Americans get what goes inside a sandwich.",
+        "Ham, turkey and salami are popular choices.",
+        "The counter's name is short for “delicatessen.”"
+      ],
+      "fun_fact": "The word “delicatessen” came to the US with German immigrants and means something like “delicious things to eat.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Shopping_cart_of_Prisma_shop.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShopping_cart_of_Prisma_shop.JPG",
+        "credit": "Dmitry G · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Dmitry G",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dmitry_G",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10612",
       "status": "approved",
       "difficulty": 9,
@@ -14668,6 +14878,41 @@
       "background": null
     },
     {
+      "id": "q-10636",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "national-symbols",
+      "bundle": "usa",
+      "description": "The most famous hat in New York, and it has never been to a hair salon.",
+      "question": "Lady Liberty's crown has seven rays. Finish the phrase: they stand for the seven seas and the seven…",
+      "answer": "continents",
+      "wrong_answers": [
+        "wonders",
+        "days",
+        "colors"
+      ],
+      "hints": [
+        "Think of a map of the whole world.",
+        "They are the huge pieces of land you can count on a globe.",
+        "Asia is the biggest one."
+      ],
+      "fun_fact": "Visitors can climb 162 steps from the pedestal to stand inside the crown and look out its windows.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Statue_of_liberty_head_2013-10-28.jpg/3840px-Statue_of_liberty_head_2013-10-28.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStatue_of_liberty_head_2013-10-28.jpg",
+        "credit": "Ronile · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Ronile",
+        "author_url": "https://pixabay.com/users/ronile-126846/",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10637",
       "status": "approved",
       "difficulty": 5,
@@ -14698,6 +14943,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Noah Wulf",
         "author_url": "https://commons.wikimedia.org/wiki/User:Noah_Wulf",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10638",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "national-symbols",
+      "bundle": "usa",
+      "description": "Folding a flag is like folding a fitted sheet, if the sheet were very, very important.",
+      "question": "The US flag is often folded into a neat triangle. What is the shape said to recall?",
+      "answer": "A three-cornered hat",
+      "wrong_answers": [
+        "A sailboat sail",
+        "A slice of pie",
+        "A pyramid"
+      ],
+      "hints": [
+        "It goes back to the American Revolution.",
+        "Soldiers of the Continental Army wore it.",
+        "George Washington is often painted wearing one on his head."
+      ],
+      "fun_fact": "The flag is folded 13 times to make the triangle, a number often linked to the original 13 colonies.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/US_Navy_051013-N-6106R-117_A_member_of_the_flag_detail_prepares_to_present_a_folded_American_flag_to_Chief_Aviation_Boatswain%27s_Mate_Michael_Berry_at_his_retirement_ceremony.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUS_Navy_051013-N-6106R-117_A_member_of_the_flag_detail_prepares_to_present_a_folded_American_flag_to_Chief_Aviation_Boatswain%27s_Mate_Michael_Berry_at_his_retirement_ceremony.jpg",
+        "credit": "U.S. Navy photo · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy photo",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -19393,6 +19673,41 @@
       "background": null
     },
     {
+      "id": "q-10773",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "traditional-songs",
+      "bundle": "usa",
+      "description": "A song that told the whole world exactly who was coming, but not exactly where.",
+      "question": "George M. Cohan wrote “Over There” in 1917. It tells Johnnie to get his gun, and warns that “the Yanks are coming.” Where was “over there”?",
+      "answer": "Europe",
+      "wrong_answers": [
+        "Cuba",
+        "Mexico",
+        "Japan"
+      ],
+      "hints": [
+        "It was across an ocean.",
+        "1917 is when the US joined World War I.",
+        "Many US soldiers landed in France."
+      ],
+      "fun_fact": "In 1936 Congress gave Cohan a gold medal for “Over There” and another patriotic song, “You're a Grand Old Flag.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Bugle_%28AM_2016.45.1-2%29.jpg/3840px-Bugle_%28AM_2016.45.1-2%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABugle_%28AM_2016.45.1-2%29.jpg",
+        "credit": "Henry Potter and Co · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Henry Potter and Co",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10774",
       "status": "approved",
       "difficulty": 12,
@@ -21348,6 +21663,41 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Orderinchaos",
         "author_url": "https://commons.wikimedia.org/wiki/User:Orderinchaos",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11744",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "cryptids-and-ufos",
+      "bundle": "usa",
+      "description": "Someone left a very big shoe size behind, and it wasn't a basketball player.",
+      "question": "Bigfoot is said to leave giant, human-like footprints in the woods. In which region of the US are most Bigfoot sightings reported?",
+      "answer": "The Pacific Northwest",
+      "wrong_answers": [
+        "New England",
+        "The Gulf Coast",
+        "The Great Plains"
+      ],
+      "hints": [
+        "Bigfoot is said to love huge, thick forests.",
+        "Think of rainy woods full of tall evergreen trees.",
+        "Washington and Oregon are in this region."
+      ],
+      "fun_fact": "Washington state has more reported Bigfoot sightings than any other state, according to fan groups that keep count.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Bigfoot_Trails_Statue%2C_Cataloochee%2C_NC_%2846721642951%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABigfoot_Trails_Statue%2C_Cataloochee%2C_NC_%2846721642951%29.jpg",
+        "credit": "Warren LeMay from Cincinnati, OH, United States · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Warren LeMay from Cincinnati, OH, United States",
+        "author_url": "https://www.flickr.com/people/59081381@N03",
         "excerpt": null
       },
       "background": null
@@ -27088,6 +27438,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Matt Joseph",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Mattnotmatte&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11914",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "Four words that make Texans stand a little taller.",
+      "question": "Texas began using the slogan “Don't Mess with Texas” in 1986. Who was it first aimed at?",
+      "answer": "People tossing trash from cars",
+      "wrong_answers": [
+        "Drivers going too fast",
+        "Cattle thieves",
+        "Out-of-state tourists"
+      ],
+      "hints": [
+        "It began as a campaign by the state highway department.",
+        "Famous Texan musicians starred in its TV ads.",
+        "Think of soda cans and fast-food bags."
+      ],
+      "fun_fact": "The slogan became so popular that it is a registered trademark of the Texas Department of Transportation.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Bluebonnets_College_Station_Texas.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABluebonnets_College_Station_Texas.jpg",
+        "credit": "Mikecm · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Mikecm",
+        "author_url": "https://en.wikipedia.org/wiki/User:Mikecm",
         "excerpt": null
       },
       "background": null
@@ -38372,6 +38757,41 @@
       "background": null
     },
     {
+      "id": "q-13775",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "Bunk beds, beans and a very early wake-up call.",
+      "question": "Old lumber camps, where the first Paul Bunyan tales were told, filled the forests of which states?",
+      "answer": "Michigan, Wisconsin and Minnesota",
+      "wrong_answers": [
+        "Arizona, Nevada and Utah",
+        "Kansas, Nebraska and Iowa",
+        "Texas, Oklahoma and Louisiana"
+      ],
+      "hints": [
+        "You need thick forests for a lumber camp.",
+        "Winters there are long and snowy.",
+        "These states sit around the Great Lakes."
+      ],
+      "fun_fact": "Loggers worked mostly in winter, because sleds could slide the heavy logs over frozen snow.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Hume-Camp-Cookhouse.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHume-Camp-Cookhouse.jpg",
+        "credit": "Hume-Bennett Lumber Company · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Hume-Bennett Lumber Company",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13776",
       "status": "approved",
       "difficulty": 11,
@@ -38967,6 +39387,41 @@
       "background": null
     },
     {
+      "id": "q-13794",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "home-cooking",
+      "bundle": "usa",
+      "description": "Backyard chefs everywhere take their spatula work very seriously.",
+      "question": "Which food is made with a round, flat patty that people flip on the grill and serve in a bun?",
+      "answer": "A burger",
+      "wrong_answers": [
+        "A bowl of soup",
+        "A glass of milk",
+        "A scoop of ice cream"
+      ],
+      "hints": [
+        "It's a favorite at summer cookouts.",
+        "It's often topped with a slice of cheese.",
+        "It's usually made of ground beef."
+      ],
+      "fun_fact": "Americans eat billions of burgers every year, and many of them are flipped on backyard grills in summer.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/QuinteIsle03_%282412115898%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AQuinteIsle03_%282412115898%29.jpg",
+        "credit": "rdoroshenko · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "rdoroshenko",
+        "author_url": "https://www.flickr.com/people/12452304@N08",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13795",
       "status": "approved",
       "difficulty": 4,
@@ -39102,6 +39557,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Raziakhatun12",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Raziakhatun12&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13799",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "hosts-and-game-shows",
+      "bundle": "usa",
+      "description": "A psychic who could read your mind, as long as your mind was sealed in an envelope.",
+      "question": "On The Tonight Show, I wore a giant turban, held a sealed envelope to my forehead, said the answer, then opened it to read the question. Who am I?",
+      "answer": "Carnac the Magnificent",
+      "wrong_answers": [
+        "Zoltar the Great",
+        "The Amazing Kreskin",
+        "Swami Rajah"
+      ],
+      "hints": [
+        "Ed McMahon handed me my envelopes.",
+        "A very famous late-night host put on the turban to play me.",
+        "I was introduced as the great seer, soothsayer and sage from the East."
+      ],
+      "fun_fact": "The envelopes were said to have been kept “hermetically sealed in a mayonnaise jar on Funk & Wagnalls' porch.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/67/Newone_-_square_fancy_tracing_paper_envelope_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANewone_-_square_fancy_tracing_paper_envelope_01.jpg",
+        "credit": "Newone · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Newone",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Newone",
         "excerpt": null
       },
       "background": null
@@ -45066,6 +45556,41 @@
       "background": null
     },
     {
+      "id": "q-14734",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "american-literature",
+      "bundle": "usa",
+      "description": "Poets talking back to each other, decades apart, without a single text message.",
+      "question": "Langston Hughes's poem that begins “I, too, sing America” answers “I Hear America Singing.” Who wrote that one?",
+      "answer": "Walt Whitman",
+      "wrong_answers": [
+        "Henry Wadsworth Longfellow",
+        "Herman Melville",
+        "Mark Twain"
+      ],
+      "hints": [
+        "He wrote mostly free verse, without rhymes.",
+        "He was a nurse in hospitals during the Civil War.",
+        "His most famous book is “Leaves of Grass.”"
+      ],
+      "fun_fact": "Whitman self-published “Leaves of Grass” in 1855 and even wrote some glowing reviews of it himself, without signing them.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Langston-hughes-house-20e127.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALangston-hughes-house-20e127.jpg",
+        "credit": "Americasroof · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Americasroof",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Americasroof",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14735",
       "status": "approved",
       "difficulty": 13,
@@ -45696,6 +46221,41 @@
       "background": null
     },
     {
+      "id": "q-14755",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "college-sports",
+      "bundle": "usa",
+      "description": "Where gym socks smell like victory and bragging rights last until lunch.",
+      "question": "I'm the games students play against other students from their own school, not other schools. My name comes from Latin for “within the walls.” What am I?",
+      "answer": "Intramural sports",
+      "wrong_answers": [
+        "Varsity sports",
+        "Club sports",
+        "Interscholastic sports"
+      ],
+      "hints": [
+        "Anyone can usually sign up, even if they never made a school team.",
+        "My name starts with a prefix that means “inside.”",
+        "A mural is a painting on a wall."
+      ],
+      "fun_fact": "Many US colleges have dozens of intramural sports, from basketball to inner-tube water polo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/The_large_gym_at_Z%C3%A1kladn%C3%A1_%C5%A1kola_Dru%C5%BEicov%C3%A1_4%2C_Ko%C5%A1ice%2C_view_from_the_southeast_corner_%28gym_entrance%29.jpg/3840px-The_large_gym_at_Z%C3%A1kladn%C3%A1_%C5%A1kola_Dru%C5%BEicov%C3%A1_4%2C_Ko%C5%A1ice%2C_view_from_the_southeast_corner_%28gym_entrance%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_large_gym_at_Z%C3%A1kladn%C3%A1_%C5%A1kola_Dru%C5%BEicov%C3%A1_4%2C_Ko%C5%A1ice%2C_view_from_the_southeast_corner_%28gym_entrance%29.jpg",
+        "credit": "Základná škola Družicová 4, Košice · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Základná škola Družicová 4, Košice",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Z%C3%A1kladn%C3%A1_%C5%A1kola_Dru%C5%BEicov%C3%A1_4,_Ko%C5%A1ice",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14756",
       "status": "approved",
       "difficulty": 6,
@@ -45866,6 +46426,41 @@
         "license_url": null,
         "author": "U.S. Department of Agriculture",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14762",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "cryptids-and-ufos",
+      "bundle": "usa",
+      "description": "For some stargazers, the night sky is less a view and more a guest list.",
+      "question": "Zeta Reticuli is a pair of Sun-like stars about 39 light-years away. UFO fans call it the home of the gray aliens. What made them link it to aliens?",
+      "answer": "A star map from the Betty and Barney Hill story",
+      "wrong_answers": [
+        "A strange radio signal picked up by an Ohio telescope",
+        "A NASA photo showing lights near the two stars",
+        "A crop circle pattern found in an English field"
+      ],
+      "hints": [
+        "In the 1970s, astronomers argued about it in the pages of a science magazine.",
+        "Someone tried to check it by building a model of the stars near the Sun.",
+        "It was a drawing that a woman said she was shown aboard a spaceship in 1961."
+      ],
+      "fun_fact": "Ohio schoolteacher Marjorie Fish built a 3D model of nearby stars from beads and string to match Betty Hill's map, and her version pointed to Zeta Reticuli.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Starry_night_%28175371483%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStarry_night_%28175371483%29.jpg",
+        "credit": "Chad Ajamian · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Chad Ajamian",
+        "author_url": "https://500px.com/cajamian",
         "excerpt": null
       },
       "background": null
@@ -46291,6 +46886,41 @@
       "background": null
     },
     {
+      "id": "q-14775",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "holidays",
+      "bundle": "usa",
+      "description": "Your wallet already holds a stack of plastic cards, so why not one more?",
+      "question": "It's a plastic card from a store, someone puts money on it for you, and you use it to buy whatever you like there. What is it?",
+      "answer": "A gift card",
+      "wrong_answers": [
+        "A credit card",
+        "A library card",
+        "A report card"
+      ],
+      "hints": [
+        "It's about the same size as the other cards in a wallet.",
+        "Stores sell them on racks near the checkout.",
+        "It's popular when you can't decide what to buy someone for their birthday."
+      ],
+      "fun_fact": "The video rental store Blockbuster was one of the first to sell plastic gift cards, in the 1990s.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Melbourne_Old_Post_Office_%28Shopping_Mall_Interior%29.jpg/3840px-Melbourne_Old_Post_Office_%28Shopping_Mall_Interior%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMelbourne_Old_Post_Office_%28Shopping_Mall_Interior%29.jpg",
+        "credit": "Donaldytong · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Donaldytong",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Donaldytong",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14776",
       "status": "approved",
       "difficulty": 1,
@@ -46496,6 +47126,41 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Nihali Barman",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nihali_Barman",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14783",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "household-brands",
+      "bundle": "usa",
+      "description": "A game where you can get married, have twins and buy a house before dinner is ready.",
+      "question": "You're setting up the classic board game The Game of Life. Which of these is NOT in the box?",
+      "answer": "Dice",
+      "wrong_answers": [
+        "A spinner",
+        "Little plastic cars",
+        "Play money"
+      ],
+      "hints": [
+        "The 1960 Milton Bradley version had a 3D board with hills and buildings.",
+        "Along the way you pick a career and collect a salary on payday.",
+        "Classic Life players spin, they don't roll."
+      ],
+      "fun_fact": "The first version from 1860, The Checkered Game of Life, used a spinning top instead of dice, because many people back then linked dice with gambling.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Family_Board_Game_Night-U.S._Army_Garrison_Humphreys%2C_South_Korea_-_18_September_2014_%2815098350338%29.jpg/3840px-Family_Board_Game_Night-U.S._Army_Garrison_Humphreys%2C_South_Korea_-_18_September_2014_%2815098350338%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFamily_Board_Game_Night-U.S._Army_Garrison_Humphreys%2C_South_Korea_-_18_September_2014_%2815098350338%29.jpg",
+        "credit": "USAG- Humphreys · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "USAG- Humphreys",
+        "author_url": "https://www.flickr.com/people/31687107@N07",
         "excerpt": null
       },
       "background": null
@@ -46951,6 +47616,41 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Wilfredor",
         "author_url": "https://www.wikidata.org/wiki/Q115464159",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14797",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "kids-tv",
+      "bundle": "usa",
+      "description": "Every show needs a star, and this one never lets anyone forget who it is.",
+      "question": "I'm a glamorous star with blond hair, I do karate chops when I'm angry, and I'm madly in love with a green frog named Kermit. Who am I?",
+      "answer": "Miss Piggy",
+      "wrong_answers": [
+        "Peppa Pig",
+        "Porky Pig",
+        "Fozzie Bear"
+      ],
+      "hints": [
+        "I'm one of the Muppets.",
+        "I'm a pig.",
+        "I want everyone to call me “Miss.”"
+      ],
+      "fun_fact": "Frank Oz, who performed Miss Piggy for over 25 years, was also the voice of Yoda in “Star Wars.”",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg/3840px-783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A783_3_%28%2B_3%29_dancers_performing_on_stage_V-P.jpg",
+        "credit": "Virtual-Pano · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Virtual-Pano",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Virtual-Pano",
         "excerpt": null
       },
       "background": null
@@ -47691,6 +48391,76 @@
       "background": null
     },
     {
+      "id": "q-14820",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "nineteenth-century",
+      "bundle": "usa",
+      "description": "Before ambulances had sirens, someone had to show up with the bandages.",
+      "question": "Clara Barton brought bandages and food to Civil War field hospitals. Soldiers called her the “Angel of the…”",
+      "answer": "Battlefield",
+      "wrong_answers": [
+        "Frontier",
+        "Prairie",
+        "Union"
+      ],
+      "hints": [
+        "The nickname describes where she did her work.",
+        "She often worked within sound of the guns.",
+        "It's the place where armies fight."
+      ],
+      "fun_fact": "After the war, Clara Barton founded the American Red Cross in 1881.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Field%2C_camp%2C_hospital_and_prison_in_the_civil_war%2C_1863-1865%3B_Charles_A._Humphreys%2C_chaplain%2C_Second_Massachusetts_cavalry_volunteers_%281918%29_%2814576006929%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AField%2C_camp%2C_hospital_and_prison_in_the_civil_war%2C_1863-1865%3B_Charles_A._Humphreys%2C_chaplain%2C_Second_Massachusetts_cavalry_volunteers_%281918%29_%2814576006929%29.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14821",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "nineteenth-century",
+      "bundle": "usa",
+      "description": "A very long walk to the beach that nobody along the way enjoyed.",
+      "question": "In 1864, Union General William T. Sherman led his “March to the Sea” across the state on this map. Which state is it?",
+      "answer": "Georgia",
+      "wrong_answers": [
+        "Alabama",
+        "South Carolina",
+        "Tennessee"
+      ],
+      "hints": [
+        "The state is on the Atlantic coast.",
+        "It's famous for its peaches.",
+        "The march started in Atlanta and ended at Savannah."
+      ],
+      "fun_fact": "Sherman sent President Lincoln a telegram offering him the city of Savannah as a Christmas present in December 1864.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Georgia_Midland_Railroad_route_map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGeorgia_Midland_Railroad_route_map.png",
+        "credit": "Sean Lamb (User:Slambo) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Sean Lamb (User:Slambo)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Slambo",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14822",
       "status": "approved",
       "difficulty": 8,
@@ -47721,6 +48491,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "inkknife_2000 (7.5 million views +)",
         "author_url": "https://www.flickr.com/people/23155134@N06",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14823",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "nineteenth-century",
+      "bundle": "usa",
+      "description": "Life on the prairie: lots of cows, lots of sky, and very few hat shops.",
+      "question": "Cowboys worked outside all day, rode for hours across open land, and often had no roof nearby. Why did their hats have such wide brims?",
+      "answer": "To keep off sun and rain",
+      "wrong_answers": [
+        "To carry their money",
+        "To scare the cattle",
+        "To look taller"
+      ],
+      "hints": [
+        "Think about the weather out on the open land.",
+        "On a hot day, you look for shade.",
+        "The brim works like a small umbrella."
+      ],
+      "fun_fact": "John B. Stetson's 1865 “Boss of the Plains” hat became the model for the classic cowboy hat.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Cowboy_Lars_Hollis%2C_atop_his_horse_Catote%2C_among_longhorn_steers_at_the_1%2C800-acre_Lonesome_Pine_Ranch%2C_a_working_cattle_ranch_that_is_part_of_the_Texas_Ranch_Life_ranch_resort_near_Chappell_Hill_in_LCCN2014632368.tif/lossy-page1-3840px-thumbnail.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACowboy_Lars_Hollis%2C_atop_his_horse_Catote%2C_among_longhorn_steers_at_the_1%2C800-acre_Lonesome_Pine_Ranch%2C_a_working_cattle_ranch_that_is_part_of_the_Texas_Ranch_Life_ranch_resort_near_Chappell_Hill_in_LCCN2014632368.tif",
+        "credit": "Carol M. Highsmith · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Carol M. Highsmith",
+        "author_url": "https://en.wikipedia.org/wiki/en:Carol_M._Highsmith",
         "excerpt": null
       },
       "background": null
@@ -48001,6 +48806,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Kiddo27",
         "author_url": "https://commons.wikimedia.org/wiki/User:Kiddo27",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14832",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "A Massachusetts town that swallows half its letters and then makes plastic.",
+      "question": "Leominster, Massachusetts, is said “LEM-in-ster,” was the birthplace of Johnny Appleseed, and was a plastics capital. Which lawn decoration was born there in 1957?",
+      "answer": "The pink flamingo",
+      "wrong_answers": [
+        "The garden gnome",
+        "The gazing ball",
+        "The pinwheel"
+      ],
+      "hints": [
+        "It was first made by a local plastics company called Union Products.",
+        "It became a symbol of kitschy 1950s front yards.",
+        "It copies a tall wading bird that gets its color from eating shrimp."
+      ],
+      "fun_fact": "Designer Don Featherstone's signature was added to the mold in 1987 for the bird's 30th birthday, and fans still look for it.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Apple_trees_-_Nagog_Hill_Orchard.jpg/3840px-Apple_trees_-_Nagog_Hill_Orchard.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AApple_trees_-_Nagog_Hill_Orchard.jpg",
+        "credit": "Muffet · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Muffet",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -48386,6 +49226,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Atwngirl",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Atwngirl&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14845",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "cities-and-towns",
+      "bundle": "usa",
+      "description": "Superman needed a home, and the ancient Greeks lent him the word.",
+      "question": "Superman's home city, Metropolis, has a name from Greek that once meant “mother city.” What does “metropolis” mean today?",
+      "answer": "A very large, busy city",
+      "wrong_answers": [
+        "A city built on water",
+        "A city ruled by a king",
+        "A city with old stone walls"
+      ],
+      "hints": [
+        "Today the word is used for places, not for people or things.",
+        "Geography books use the word for places like Tokyo and Mexico City.",
+        "Think of the biggest, most crowded city you know."
+      ],
+      "fun_fact": "Superman's creators based Metropolis largely on New York City, and a real town called Metropolis, Illinois, now has a giant Superman statue.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Classic_Comics_%28Unsplash%29.jpg/3840px-Classic_Comics_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClassic_Comics_%28Unsplash%29.jpg",
+        "credit": "Mitch Rosen focusmitch · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Mitch Rosen focusmitch",
+        "author_url": "https://unsplash.com/@focusmitch",
         "excerpt": null
       },
       "background": null
@@ -49336,6 +50211,41 @@
       "background": null
     },
     {
+      "id": "q-14873",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "kids-tv",
+      "bundle": "usa",
+      "description": "Some channels are all cartoons, all day, and one of these shows snuck in from next door.",
+      "question": "Three of these shows come from Cartoon Network. Which one does NOT?",
+      "answer": "Bluey",
+      "wrong_answers": [
+        "The Powerpuff Girls",
+        "Ben 10",
+        "The Amazing World of Gumball"
+      ],
+      "hints": [
+        "The odd one out is a show for very young kids.",
+        "The odd one out was made in Australia.",
+        "Its heroes are a family of dogs, and the star is a blue heeler puppy."
+      ],
+      "fun_fact": "Cartoon Network began in 1992 and at first showed mostly old cartoons from the Hanna-Barbera library.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/2000s_home_theater%2C_%22California_Casual%22.jpg/3840px-2000s_home_theater%2C_%22California_Casual%22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2000s_home_theater%2C_%22California_Casual%22.jpg",
+        "credit": "PascalSijen · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "PascalSijen",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14874",
       "status": "approved",
       "difficulty": 8,
@@ -49506,6 +50416,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "(User:Wgreaves)",
         "author_url": "https://commons.wikimedia.org/wiki/User_talk:Wgreaves",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14879",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "money-and-shopping",
+      "bundle": "usa",
+      "description": "You walk into a stranger's house, look around, and nobody calls the police.",
+      "question": "At an American estate sale, often held after a family moves away, shoppers walk through the home and buy what?",
+      "answer": "The things inside the home",
+      "wrong_answers": [
+        "The house and its land",
+        "The family's cars",
+        "The garden plants"
+      ],
+      "hints": [
+        "The house itself is usually not part of the deal.",
+        "Prices are often stuck on furniture, dishes and clothes.",
+        "Think of the stuff inside, room by room."
+      ],
+      "fun_fact": "Estate sales are often run by professional companies that price every item, down to the spoons.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/USVI_IMG_5227_-_Cozy_eclectic_living_room_with_exposed_beams_stone_walls_and_vintage_furniture_featuring_a_large_bookshelf_art_displays_and_warm_lighting.jpg/3840px-USVI_IMG_5227_-_Cozy_eclectic_living_room_with_exposed_beams_stone_walls_and_vintage_furniture_featuring_a_large_bookshelf_art_displays_and_warm_lighting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUSVI_IMG_5227_-_Cozy_eclectic_living_room_with_exposed_beams_stone_walls_and_vintage_furniture_featuring_a_large_bookshelf_art_displays_and_warm_lighting.jpg",
+        "credit": "Category:Government of the United States Virgin Islands · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Category:Government of the United States Virgin Islands",
+        "author_url": "https://commons.wikimedia.org/wiki/Category:Government_of_the_United_States_Virgin_Islands",
         "excerpt": null
       },
       "background": null
@@ -49891,6 +50836,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Minnesota Historical Society",
         "author_url": "https://www.flickr.com/people/7409083@N03",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14891",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "nineteenth-century",
+      "bundle": "usa",
+      "description": "Some of history's bravest routes never showed up on any map.",
+      "question": "This woman escaped slavery in 1849 and went back many times to guide others to freedom. What was the secret escape network called?",
+      "answer": "The Underground Railroad",
+      "wrong_answers": [
+        "The Freedom Trail",
+        "The Midnight Road",
+        "The Northern Express"
+      ],
+      "hints": [
+        "It used safe houses, called “stations,” to hide people.",
+        "Its helpers were called “conductors.”",
+        "It wasn't really under the ground, and it had no trains."
+      ],
+      "fun_fact": "Harriet Tubman said she never lost a single passenger on her trips to freedom.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Carte-de-visite_portrait_of_Harriet_Tubman_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarte-de-visite_portrait_of_Harriet_Tubman_%28cropped%29.jpg",
+        "credit": "Powelson, Benjamin F. 1823 - 1885 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Powelson, Benjamin F. 1823 - 1885",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -50596,6 +51576,41 @@
       "background": null
     },
     {
+      "id": "q-14912",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "roads-and-landmarks",
+      "bundle": "usa",
+      "description": "A building that wears its own light show like a party hat.",
+      "question": "Salesforce Tower, opened in 2018 with a glowing crown of LED lights, is the tallest building in which city?",
+      "answer": "San Francisco",
+      "wrong_answers": [
+        "Seattle",
+        "Chicago",
+        "Houston"
+      ],
+      "hints": [
+        "The city sits on the West Coast.",
+        "Big tech companies have offices all over town, and cable cars still climb its hills.",
+        "The Golden Gate Bridge is just a few miles away."
+      ],
+      "fun_fact": "The tower's crown holds about 11,000 LED lights that show moving artwork at night.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Sunlight_on_the_curved_honeycomb_glass_fa%C3%A7ade_of_the_hotel_Andaz_mixed_with_interior_lighting_at_sunset_in_Singapore.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASunlight_on_the_curved_honeycomb_glass_fa%C3%A7ade_of_the_hotel_Andaz_mixed_with_interior_lighting_at_sunset_in_Singapore.jpg",
+        "credit": "Basile Morin · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Basile Morin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Basile_Morin",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-14913",
       "status": "approved",
       "difficulty": 8,
@@ -51186,6 +52201,111 @@
         "license_url": null,
         "author": "Unknown authorUnknown author or not provided",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14930",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "A capital city where the forts are older than the country that owns them.",
+      "question": "The capital of the US territory of Puerto Rico is named after a saint. Which city is it?",
+      "answer": "San Juan",
+      "wrong_answers": [
+        "Ponce",
+        "Hagåtña",
+        "Charlotte Amalie"
+      ],
+      "hints": [
+        "This island is in the Caribbean, east of the Dominican Republic.",
+        "People here are US citizens, and most of them speak Spanish.",
+        "In Spanish, the city's name means “Saint John.”"
+      ],
+      "fun_fact": "San Juan was founded in 1521, so it is older than any city in the 50 states.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Coqui_Frog_Puerto_Rico.JPG/3840px-Coqui_Frog_Puerto_Rico.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoqui_Frog_Puerto_Rico.JPG",
+        "credit": "Cathybwl · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Cathybwl",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cathybwl&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14931",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "People from here never get lost, because they carry a map of home everywhere they go.",
+      "question": "Which US state is famous for being shaped like a mitten?",
+      "answer": "Michigan",
+      "wrong_answers": [
+        "Wisconsin",
+        "Minnesota",
+        "Ohio"
+      ],
+      "hints": [
+        "It is in the Midwest, right next to Canada.",
+        "It touches four of the five Great Lakes.",
+        "Its biggest city, Detroit, is famous for making cars."
+      ],
+      "fun_fact": "The two halves of Michigan are joined by the Mackinac Bridge, about 5 miles (8 km) long.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Great_Lakes_Seaway_Trail_-_Erie_Bluffs_Shoreline_-_NARA_-_7718816.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreat_Lakes_Seaway_Trail_-_Erie_Bluffs_Shoreline_-_NARA_-_7718816.jpg",
+        "credit": "Unknown authorUnknown author or not provided · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author or not provided",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14932",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "The capital got the title, but another city got the crowds.",
+      "question": "Annapolis is the capital of Maryland. What is the state's largest city?",
+      "answer": "Baltimore",
+      "wrong_answers": [
+        "Frederick",
+        "Rockville",
+        "Hagerstown"
+      ],
+      "hints": [
+        "The city sits on a big bay and is famous for its crabs.",
+        "Its NFL team is named after a bird from an Edgar Allan Poe poem.",
+        "The Ravens and the Orioles both play here."
+      ],
+      "fun_fact": "“The Star-Spangled Banner” was written in 1814 while a British fleet attacked Baltimore's Fort McHenry.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Maryland_State_House_from_College_Ave.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaryland_State_House_from_College_Ave.JPG",
+        "credit": "Martin Falbisoner · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Martin Falbisoner",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Martin_Falbisoner",
         "excerpt": null
       },
       "background": null
@@ -55295,6 +56415,41 @@
       "background": null
     },
     {
+      "id": "q-15780",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "regional-dishes",
+      "bundle": "usa",
+      "description": "The taco that shatters as soon as you look at it.",
+      "question": "A hard-shell taco is crunchy, U-shaped, and falls apart at the first bite. What is its shell?",
+      "answer": "A fried corn tortilla",
+      "wrong_answers": [
+        "A folded cracker",
+        "A baked bread roll",
+        "A slice of fried cheese"
+      ],
+      "hints": [
+        "It starts out flat and soft.",
+        "It's cooked in hot oil to make it crispy.",
+        "Break it into triangles and you'd have chips."
+      ],
+      "fun_fact": "In Mexico, tacos are almost always soft; the crunchy U-shaped shell became famous in the United States.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Tlacolula_Market_230122_93.jpg/3840px-Tlacolula_Market_230122_93.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATlacolula_Market_230122_93.jpg",
+        "credit": "Bluerasberry · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bluerasberry",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bluerasberry",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15781",
       "status": "approved",
       "difficulty": 3,
@@ -56345,6 +57500,41 @@
       "background": null
     },
     {
+      "id": "q-15811",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "folk-heroes-and-tall-tales",
+      "bundle": "usa",
+      "description": "They danced all day long, but nobody ever bought a ticket to watch.",
+      "question": "In the old US, workers nicknamed “gandy dancers” sang to keep the rhythm as they swung heavy hammers onto iron spikes. Who were they?",
+      "answer": "Railroad track workers",
+      "wrong_answers": [
+        "Lumberjacks",
+        "Coal miners",
+        "Riverboat crews"
+      ],
+      "hints": [
+        "Their work helped connect the East and West of the country.",
+        "The spikes held long steel bars onto wooden ties.",
+        "Trains roll along the tracks they built."
+      ],
+      "fun_fact": "In 1869, a golden spike was tapped in at Promontory, Utah, to finish the first railroad across the US.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Sledgehammer_%283586724830%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASledgehammer_%283586724830%29.jpg",
+        "credit": "The National Guard · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "The National Guard",
+        "author_url": "https://www.flickr.com/people/33252741@N08",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15812",
       "status": "approved",
       "difficulty": 6,
@@ -56620,6 +57810,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Moheen Reeyad",
         "author_url": "https://www.wikidata.org/wiki/Q28709819",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15820",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "national-parks",
+      "bundle": "usa",
+      "description": "A cross-country trip from New York to South Dakota, with a lot more running than driving.",
+      "question": "In a 1959 Hitchcock thriller, Cary Grant dodges a crop-duster and hangs off Mount Rushmore. What do the villains hide inside a small statue?",
+      "answer": "Microfilm",
+      "wrong_answers": [
+        "Diamonds",
+        "Gold coins",
+        "A treasure map"
+      ],
+      "hints": [
+        "The villains want to sneak it out of the country.",
+        "The villain is a spy who sells government secrets.",
+        "Think of a roll of camera film, shrunk way down."
+      ],
+      "fun_fact": "The Park Service wouldn't allow a chase on the real carved faces, so Hitchcock filmed the ending on a studio copy of Mount Rushmore.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Grumman_G-164_Ag-Cat_-_DPLA_-_fe34929db6428f699fd6e51998fb6e2c_%28page_1%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrumman_G-164_Ag-Cat_-_DPLA_-_fe34929db6428f699fd6e51998fb6e2c_%28page_1%29.jpg",
+        "credit": "Schweizer Aircraft Corporation · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Schweizer Aircraft Corporation",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -57740,6 +58965,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Michael Barera",
         "author_url": "https://commons.wikimedia.org/wiki/User:Michael_Barera",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15853",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "state-symbols",
+      "bundle": "usa",
+      "description": "Two states, one airplane, and a family argument that never ends.",
+      "question": "Which state's license plates read “Birthplace of Aviation,” even though the first airplane flight happened in another state?",
+      "answer": "Ohio",
+      "wrong_answers": [
+        "Michigan",
+        "Indiana",
+        "Pennsylvania"
+      ],
+      "hints": [
+        "It isn't the state where the plane actually took off.",
+        "The Wright brothers built their planes in their bicycle shop there.",
+        "Their hometown was Dayton."
+      ],
+      "fun_fact": "Ohio's state quarter shows the Wright Flyer next to an astronaut, since Neil Armstrong and John Glenn were Ohioans too.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/First_flight3.jpg/3840px-First_flight3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFirst_flight3.jpg",
+        "credit": "John T. Daniels · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "John T. Daniels",
+        "author_url": "https://en.wikipedia.org/wiki/en:John_T._Daniels",
         "excerpt": null
       },
       "background": null
@@ -60825,6 +62085,41 @@
       "background": null
     },
     {
+      "id": "q-16661",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "hosts-and-game-shows",
+      "bundle": "usa",
+      "description": "He came from Boston, and he kept coming back.",
+      "question": "How many different seasons of Survivor did “Boston Rob” Mariano play as a contestant?",
+      "answer": "5",
+      "wrong_answers": [
+        "2",
+        "3",
+        "8"
+      ],
+      "hints": [
+        "He finally won on his fourth try, in Survivor: Redemption Island in 2011.",
+        "His first season aired in 2002, and his last one came 18 years later, in 2020.",
+        "Count the fingers on one hand."
+      ],
+      "fun_fact": "Boston Rob married Amber Brkich, the castaway he met on Survivor: All-Stars, and she won that season.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Resort_Camping.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AResort_Camping.jpg",
+        "credit": "Totoyba2 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Totoyba2",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Totoyba2&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16662",
       "status": "approved",
       "difficulty": 15,
@@ -63520,6 +64815,41 @@
       "background": null
     },
     {
+      "id": "q-16743",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "household-brands",
+      "bundle": "usa",
+      "description": "The jar that has fixed chapped lips, squeaky hinges and stuck rings for over 150 years.",
+      "question": "In 1859, a young chemist saw workers rubbing a waxy goo on their cuts, and Vaseline was born. What is Vaseline made from?",
+      "answer": "Crude oil",
+      "wrong_answers": [
+        "Beeswax",
+        "Pine tree sap",
+        "Whale fat"
+      ],
+      "hints": [
+        "The story begins in Pennsylvania in the mid-1800s.",
+        "Gasoline and plastic are made from the same stuff.",
+        "The goo kept clogging the workers' pumps at the wells."
+      ],
+      "fun_fact": "Its inventor, Robert Chesebrough, said he ate a spoonful of Vaseline every day and lived to 96.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Antique_medicine_and_chemical_bottles_in_Cedar_Key_Historical_Museum_in_Cedar_Key%2C_Florida%2C_US%2C_on_23_January_2021.jpg/3840px-Antique_medicine_and_chemical_bottles_in_Cedar_Key_Historical_Museum_in_Cedar_Key%2C_Florida%2C_US%2C_on_23_January_2021.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntique_medicine_and_chemical_bottles_in_Cedar_Key_Historical_Museum_in_Cedar_Key%2C_Florida%2C_US%2C_on_23_January_2021.jpg",
+        "credit": "MatthewHoobin · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "MatthewHoobin",
+        "author_url": "https://commons.wikimedia.org/wiki/User:MatthewHoobin",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16744",
       "status": "approved",
       "difficulty": 5,
@@ -64390,6 +65720,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Rathlin48",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Rathlin48&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16772",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "usa",
+      "description": "Some people work their way to the top. Others just ripen there.",
+      "question": "“Top banana,” meaning the boss, began as a name for the lead comic in American stage comedy. In which century did it appear?",
+      "answer": "The 1900s",
+      "wrong_answers": [
+        "The 1600s",
+        "The 1700s",
+        "The 1800s"
+      ],
+      "hints": [
+        "Think of vaudeville and burlesque shows.",
+        "Those variety shows mixed slapstick, silly props and song-and-dance acts.",
+        "It's the same century as the first moon landing."
+      ],
+      "fun_fact": "Comedian Phil Silvers won a Tony Award for playing the lead in the 1951 Broadway musical “Top Banana.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/STAGE_FRONT_AND_PROSCENIUM_ARCH%2C_INTERIOR_-_Pantages_Theatre_and_Jones_Building%2C_901-909_Broadway%2C_Tacoma%2C_Pierce_County%2C_WA_HABS_WASH%2C27-TACO%2C5-5.tif/lossy-page1-3840px-STAGE_FRONT_AND_PROSCENIUM_ARCH%2C_INTERIOR_-_Pantages_Theatre_and_Jones_Building%2C_901-909_Broadway%2C_Tacoma%2C_Pierce_County%2C_WA_HABS_WASH%2C27-TACO%2C5-5.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASTAGE_FRONT_AND_PROSCENIUM_ARCH%2C_INTERIOR_-_Pantages_Theatre_and_Jones_Building%2C_901-909_Broadway%2C_Tacoma%2C_Pierce_County%2C_WA_HABS_WASH%2C27-TACO%2C5-5.tif",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -65300,6 +66665,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "slgckgc",
         "author_url": "https://www.flickr.com/people/14771153@N04",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16800",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "sayings-and-idioms",
+      "bundle": "usa",
+      "description": "Cowboy talk for “put your shoes on, we're leaving.”",
+      "question": "In cowboy movies, when it's time to ride out, the boss yells “Saddle…!” Which word finishes it?",
+      "answer": "Up",
+      "wrong_answers": [
+        "Down",
+        "Over",
+        "Off"
+      ],
+      "hints": [
+        "The cowboys are getting ready to go.",
+        "They put saddles on their horses and climb on.",
+        "It's the opposite of down."
+      ],
+      "fun_fact": "Americans say “Saddle up!” for any big start, even when the only thing they're riding is a minivan.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Cowboys_on_Horses_KAC7942_%281%29.jpg/3840px-Cowboys_on_Horses_KAC7942_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACowboys_on_Horses_KAC7942_%281%29.jpg",
+        "credit": "Katyprairie · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Katyprairie",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Katyprairie&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -69750,6 +71150,76 @@
       "background": null
     },
     {
+      "id": "q-17541",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "If you build it, the quiz will come.",
+      "question": "In the film “Field of Dreams,” a farmer builds a baseball field in his cornfield. Which state is his farm in?",
+      "answer": "Iowa",
+      "wrong_answers": [
+        "Nebraska",
+        "Kansas",
+        "Illinois"
+      ],
+      "hints": [
+        "Its eastern and western borders are both big rivers.",
+        "A ghost player asks if this place is heaven.",
+        "Its four-letter name starts and ends with a vowel."
+      ],
+      "fun_fact": "The field built for the 1989 film in Dyersville still draws visitors, and Major League Baseball played a game there in 2021.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Cornfield_%2848404972882%29.jpg/3840px-Cornfield_%2848404972882%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACornfield_%2848404972882%29.jpg",
+        "credit": "U.S. Fish and Wildlife Service - Midwest Region · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Fish and Wildlife Service - Midwest Region",
+        "author_url": "https://www.flickr.com/people/usfwsmidwest/",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17542",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "place-names",
+      "bundle": "usa",
+      "description": "Same name as a European capital, totally different accent.",
+      "question": "Madrid, an old coal-mining town on the Turquoise Trail, is said “MAD-rid,” not like Spain's capital. Which state is it in?",
+      "answer": "New Mexico",
+      "wrong_answers": [
+        "Arizona",
+        "Colorado",
+        "Nevada"
+      ],
+      "hints": [
+        "The Turquoise Trail is a scenic road through high desert hills.",
+        "The road links two of the state's biggest cities.",
+        "The state capital, Santa Fe, is less than an hour's drive away."
+      ],
+      "fun_fact": "After its mines closed, Madrid nearly became a ghost town, and later it was a filming spot for the 2007 comedy “Wild Hogs.”",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Calico_Ghost_Town_2012_%2810%29.jpg/3840px-Calico_Ghost_Town_2012_%2810%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACalico_Ghost_Town_2012_%2810%29.jpg",
+        "credit": "PIERRE ANDRE LECLERCQ · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PIERRE ANDRE LECLERCQ",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PIERRE_ANDRE_LECLERCQ",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-17543",
       "status": "approved",
       "difficulty": 11,
@@ -71675,6 +73145,41 @@
       "background": null
     },
     {
+      "id": "q-17598",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "states-and-capitals",
+      "bundle": "usa",
+      "description": "The country's birthday party, with no candles but plenty of things that go boom.",
+      "question": "Fourth of July fireworks celebrate the Declaration of Independence. In which city was it adopted in 1776?",
+      "answer": "Philadelphia",
+      "wrong_answers": [
+        "Boston",
+        "New York City",
+        "Washington, D.C."
+      ],
+      "hints": [
+        "For a few years, it was the young country's capital.",
+        "The Liberty Bell hangs there today.",
+        "Its nickname is “the City of Brotherly Love.”"
+      ],
+      "fun_fact": "John Adams thought Americans would celebrate on July 2, the day Congress voted for independence, not July 4.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Fourth_of_July_Fireworks_%283692307592%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFourth_of_July_Fireworks_%283692307592%29.jpg",
+        "credit": "Jeremy Nicholson from Fuquay Varina, NC, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Jeremy Nicholson from Fuquay Varina, NC, USA",
+        "author_url": "https://www.flickr.com/people/10910924@N04",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-17599",
       "status": "approved",
       "difficulty": 10,
@@ -71774,6 +73279,41 @@
         "license": "Public domain",
         "license_url": null,
         "author": "Margot Murphy (Massachusetts Governor’s Press Office)",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17602",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "trailblazers",
+      "bundle": "usa",
+      "description": "Proof that a rags-to-riches story can start with a washtub and a big dream.",
+      "question": "Madam C.J. Walker, daughter of formerly enslaved parents, became one of America's first self-made female millionaires with her own line of what?",
+      "answer": "Hair care products",
+      "wrong_answers": [
+        "Women's hats",
+        "Laundry soaps",
+        "Sewing patterns"
+      ],
+      "hints": [
+        "Her customers were mainly Black women.",
+        "She came up with her first product after a scalp problem of her own.",
+        "Her sales agents gave treatments in customers' homes, and she opened beauty schools to train them."
+      ],
+      "fun_fact": "Madam C.J. Walker's real name was Sarah Breedlove, and she trained thousands of women to sell her products.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Monument_Circle_-_2016-03-14_-_Deb_Nystrom.jpg/3840px-Monument_Circle_-_2016-03-14_-_Deb_Nystrom.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMonument_Circle_-_2016-03-14_-_Deb_Nystrom.jpg",
+        "credit": "Deb Nystrom · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Deb Nystrom",
         "author_url": null,
         "excerpt": null
       },

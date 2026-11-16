@@ -1,0 +1,58 @@
+[
+  {
+    "date": "2026-11-15",
+    "run": "rework-72",
+    "id": "q-4240",
+    "cause": "media",
+    "action": "revise",
+    "reason": "The .mid file can't play in browsers, so the query now looks for a real public-domain orchestral recording (OGG) of the first movement."
+  },
+  {
+    "date": "2026-11-15",
+    "run": "rework-72",
+    "id": "q-6336",
+    "cause": "media",
+    "action": "revise",
+    "reason": "The picked file was an .xcf that browsers can't show; new query and note for a regular shield image."
+  },
+  {
+    "date": "2026-11-15",
+    "run": "rework-72",
+    "id": "q-7049",
+    "cause": "other",
+    "action": "revise",
+    "reason": "The belief about witches in the house corners couldn't be sourced, so I changed it to the well-documented folk belief that holy water drives away evil spirits, and adjusted the hints."
+  },
+  {
+    "date": "2026-11-15",
+    "run": "rework-72",
+    "id": "q-7365",
+    "cause": "wrong_fact",
+    "action": "revise",
+    "reason": "Removed the unconfirmed 'almost one metre of ice' claim from the fun fact."
+  },
+  {
+    "date": "2026-11-15",
+    "run": "rework-72",
+    "id": "q-7416",
+    "cause": "other",
+    "action": "revise",
+    "reason": "Garavito is no longer on the 20,000-peso note since the 2016 series (now López Michelsen), so the question uses past tense and 'el antiguo billete'."
+  },
+  {
+    "date": "2026-11-15",
+    "run": "rework-72",
+    "id": "q-7821",
+    "cause": "wrong_fact",
+    "action": "revise",
+    "reason": "I changed the answer from the informal 'pegao' to the more common 'la pega', made the question text gender-neutral and rewrote the fun fact to mention 'cucayo', the Caribbean coast name."
+  },
+  {
+    "date": "2026-11-15",
+    "run": "rework-72",
+    "id": "q-8225",
+    "cause": "wrong_fact",
+    "action": "revise",
+    "reason": "Sources disagree on whether the song is a pasillo or a bambuco, so the riddle now says «canción paisa» and names no genre."
+  }
+]

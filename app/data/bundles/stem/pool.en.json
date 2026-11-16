@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "796875c7",
+  "hash": "a6367444",
   "questions": [
     {
       "id": "q-8506",
@@ -1053,6 +1053,41 @@
       "background": null
     },
     {
+      "id": "q-8538",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "cells-and-genetics",
+      "bundle": "stem",
+      "description": "Tiny power stations that came with a very particular family delivery service.",
+      "question": "You got your mitochondria, the tiny power stations in your cells, from just one person. Who?",
+      "answer": "Your mother",
+      "wrong_answers": [
+        "Your father",
+        "Your father's father",
+        "Your mother's father"
+      ],
+      "hints": [
+        "It's a close relative, not a stranger.",
+        "Mitochondria carry their own small set of DNA, separate from the cell's nucleus.",
+        "That person got them from her own mother."
+      ],
+      "fun_fact": "Mitochondria have their own small DNA, left over from when they were free-living bacteria more than a billion years ago.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/PDNA_transfer_via_PepFect14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDNA_transfer_via_PepFect14.jpg",
+        "credit": "Ivo Kruusamägi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Ivo Kruusamägi",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kruusam%C3%A4gi",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8539",
       "status": "approved",
       "difficulty": 9,
@@ -1328,6 +1363,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Ufficio Comunicazione, Azienda Ospedaliera SS. Antonio e Biagio e Cesare Arrigo, Alessandria, Biblioteca Biomedica Centro di Documentazione",
         "author_url": "https://commons.wikimedia.org/wiki/User:PescediBabele",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8547",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "cells-and-genetics",
+      "bundle": "stem",
+      "description": "Racing fans, wrong track: this F1 grows in a garden.",
+      "question": "Geneticists call the offspring of a first cross “F1”, for “first filial generation”. “Filial” comes from the Latin for…",
+      "answer": "Son or daughter",
+      "wrong_answers": [
+        "Flower",
+        "Seed",
+        "Father"
+      ],
+      "hints": [
+        "Geneticists started using these labels in the early 1900s, after Mendel's pea experiments were rediscovered.",
+        "In English, “filial” shows up in old phrases about family duty and respect.",
+        "Spanish “hijo” and French “fils” come from the same Latin root."
+      ],
+      "fun_fact": "Gardeners buy “F1 hybrid” seeds because plants from a first cross are often extra strong and very even.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/-2022-06-13_Forming_garden_pea_pods_%28Pisum_sativum%29%2C_Trimingham%2C_Norfolk.JPG/3840px--2022-06-13_Forming_garden_pea_pods_%28Pisum_sativum%29%2C_Trimingham%2C_Norfolk.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A-2022-06-13_Forming_garden_pea_pods_%28Pisum_sativum%29%2C_Trimingham%2C_Norfolk.JPG",
+        "credit": "Kolforn (Kolforn) · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Kolforn (Kolforn)\nI'd appreciate if you could mail me (Kolforn@gmail.com) if you want to use this picture out of the Wikimedia project scope.\n\n\n\n This file is licensed under the Creative Commons Attribution-Share Alike 4.0 International license.\nYou are free:\nto share – to copy, distribute and transmit the work\nto remix – to adapt the work\nUnder the following conditions:\nattribution – You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nshare alike – If you remix, transform, or build upon the material, you must distribute your contributions under the same or compatible license as the original.https://creativecommons.org/licenses/by-sa/4.0CC BY-SA 4.0 Creative Commons Attribution-Share Alike 4.0 truetrue",
+        "author_url": "https://commons.wikimedia.org/wiki/File:Flag-globe-2.gif",
         "excerpt": null
       },
       "background": null
@@ -1853,6 +1923,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Goddards Pies Limited",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Goddardspies&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8563",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "chemical-reactions",
+      "bundle": "stem",
+      "description": "Tiny workers who eat your spaghetti stains and never ask for a salary.",
+      "question": "“Bio” laundry detergents contain proteins taken from microbes. They work in cool water and break down egg, blood and grass stains. What are these proteins called?",
+      "answer": "Enzymes",
+      "wrong_answers": [
+        "Vitamins",
+        "Hormones",
+        "Antibiotics"
+      ],
+      "hints": [
+        "Your own stomach uses the same kind of helpers to digest food.",
+        "They speed up a reaction without being used up.",
+        "Their name ends in “-zymes”."
+      ],
+      "fun_fact": "Some enzymes in laundry detergents come from bacteria that live in very hot or very salty places.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Drum_of_a_washing_machine_%28Bosch_Maxx_WFO_2440%29.jpg/3840px-Drum_of_a_washing_machine_%28Bosch_Maxx_WFO_2440%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADrum_of_a_washing_machine_%28Bosch_Maxx_WFO_2440%29.jpg",
+        "credit": "Petar Milošević · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Petar Milošević",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PetarM",
         "excerpt": null
       },
       "background": null
@@ -8101,6 +8206,41 @@
         "license_url": null,
         "author": "Archivo General de la Nación",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8744",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "bones-muscles-and-skin",
+      "bundle": "stem",
+      "description": "Your body's own bungee cord, no bridge required.",
+      "question": "The Achilles tendon is a tough cord at the back of the ankle. What does a tendon join together?",
+      "answer": "A muscle to a bone",
+      "wrong_answers": [
+        "A bone to another bone",
+        "The skin to a bone",
+        "A nerve to a muscle"
+      ],
+      "hints": [
+        "It gets to work every time you take a step.",
+        "When this part pulls, something hard moves.",
+        "It carries the pull of your calf down to your heel."
+      ],
+      "fun_fact": "The Achilles tendon is the strongest tendon in your body. When you run, it carries several times your body weight with every step.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flickr_-_mrhayata_-_Runner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlickr_-_mrhayata_-_Runner.jpg",
+        "credit": "Masahiro Hayata · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Masahiro Hayata",
+        "author_url": "https://www.flickr.com/people/36516818@N00",
         "excerpt": null
       },
       "background": null
