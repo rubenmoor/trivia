@@ -11559,6 +11559,13 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Done when
 - The count (or the developer''s new goal) is met and written down; the developer''s playtest decision answered «passed» (after any "again" round); D-13 and the media docs match decision 640; milestone 21''s goal checked clause by clause.', 'The game is getting hundreds of new questions built around a sound or a video clip, and players can now switch sound questions or video questions off. This last step counts whether the goal the developer set has really been reached, has the family play on the TV in each language with sound and video on and with each switch off, and brings the project''s written rules up to date: they used to forbid questions built on music recordings or film footage, and now allow free, old recordings and footage from the shared media library.', '2026-11-15T18:48:33Z', 2042, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (208, 21, 'Media-first pipeline fixes found in content runs', NULL, 'Follow-up fixes to `plan 203: Media-first pipeline` found by the content runs of `plan 205: Media-first content runs` (plan 203 is closed). Each task: the fix, a test, the standard checks; the run or QC task that found it requires it and resumes afterwards.
+
+## Tasks
+- research step uses the wrong media slot in a rework run that mixes media-first and plain questions (found by `task 2096: QC batch-78 (media-first)`).
+
+## Done when
+- Every task here done and the run that found it resumed past the failed step.', 'The tool that turns free sound and video recordings into quiz questions is finished, but running it for real turns up small faults. This collects the fixes for those faults so the regular question batches can keep going. Each fix is small and stops a batch from finishing until it is done.', '2026-11-16T01:55:31Z', 2096, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -47641,6 +47648,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Test for the regression (engine or client test), plus a `trivia-gallery --set task-<id> --only language,start` review set.
 
 Done when: the developer can pick each offered language in the browser game and in the desktop shell; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-15T23:09:19Z', '2026-11-15T23:21:09Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2098, 208, 'create tasks for plan 208: Media-first pipeline fixes found in content runs', 'split', 'open', 1000, NULL, 'Split plan 208 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-16T01:55:31Z', NULL, 2096, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -56999,7 +57008,17 @@ likely cause: `pm run` stopped now
 left behind: 1 file, stashed as a0f177b9 (pm: task 2096 run 2279 failed); get them back with `git stash apply a0f177b9`
 log: /home/ruben/code/trivia/.git/pm-logs/task-2096-run-2279.log', -15, '1f3b9f90fcf2173c74e408ca56dffec3ac817481', 'questions', 'claude-sonnet-5-5', NULL, 2278, NULL, NULL, NULL, NULL, NULL, NULL, 61051, 60, 1042222);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2280, 2097, '2026-11-15T23:11:50Z', '2026-11-15T23:21:37Z', 'done', NULL, 0, 'f4d8e5a56e875138b7be2682a68cc579184eeb02', NULL, 'claude-sonnet-5-5', 'f8738e6a-c341-4ebe-b353-0ddd0abb326a', NULL, 48, 94, 15229, 2959371, 74327, 0.74572310000000019, 89310, 60, 12429);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2281, 2096, '2026-11-15T23:21:11Z', NULL, 'running', NULL, NULL, 'f4d8e5a56e875138b7be2682a68cc579184eeb02', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 12429);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2281, 2096, '2026-11-15T23:21:11Z', '2026-11-15T23:45:46Z', 'failed', 'interrupted (SIGTERM), after 24m05s, no result
+last tool call: Bash: cd /home/ruben/code/trivia-worktrees/questions; nix develop -c qgen rework --batch batch-78 > /tmp/rework-2096.log 2>&1; echo exit $?; tail -30 /tmp/rework-2096.log; git status --short
+likely cause: `pm run` stopped now
+left behind: 1 file, stashed as 22d03fb9 (pm: task 2096 run 2281 failed); get them back with `git stash apply 22d03fb9`
+log: /home/ruben/code/trivia/.git/pm-logs/task-2096-run-2281.log', -15, 'f4d8e5a56e875138b7be2682a68cc579184eeb02', 'questions', 'claude-opus-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 56986, 60, 12429);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2282, 2096, '2026-11-16T00:18:22Z', '2026-11-16T00:28:56Z', 'failed', 'interrupted (SIGTERM), after 9m55s, no result
+last tool call: Bash: cd /home/ruben/code/trivia-worktrees/questions; nix develop -c qgen rework > /tmp/t2096/rework.log 2>&1; echo exit $?; grep -v "claude sonnet fix factcheck\|claude opus" /tmp/t2096/rework.log | tail -40
+likely cause: `pm run` stopped now
+left behind: 1 file, stashed as d319606d (pm: task 2096 run 2282 failed); get them back with `git stash apply d319606d`
+log: /home/ruben/code/trivia/.git/pm-logs/task-2096-run-2282.log', -15, 'f64e1bfbaf2183265e438c91252409d9a9384e6f', 'questions', 'claude-opus-5-5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 77631, 60, 6586);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2283, 2096, '2026-11-16T00:37:27Z', NULL, 'running', NULL, NULL, 'f64e1bfbaf2183265e438c91252409d9a9384e6f', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7522);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
