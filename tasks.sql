@@ -47664,8 +47664,50 @@ Cause: `cmd_research` in `authoring/tools/review_steps.py` picks `slot` per ques
 - Fix: carry the slot in `todo` (e.g. `todo.append((q, path, r, slot))`) and use it in the second loop, including the lambda (bind `slot` as a default argument).
 - Test in `authoring/tools/` (next to `test_media_first_batch.py`): a rework batch with a plain question that needs research, followed by a media-first question; research touches only the plain question''s `media`.
 - Done when: the test passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass. Resuming rework-72 is not part of this task: `task 2096: QC batch-78 (media-first)` does it once this task is done.', '2026-11-16T01:55:38Z', '2026-11-16T01:59:04Z', 2096, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2100, 209, 'create tasks for plan 209: Tool fixes found in media-first QC runs', 'split', 'open', 1000, NULL, 'Split plan 209 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-16T02:17:45Z', NULL, 2096, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2100, 209, 'create tasks for plan 209: Tool fixes found in media-first QC runs', 'split', 'done', 1000, '2026-11-15, tasks 2101 (already matched the plan; no new tasks or decisions)', 'Split plan 209 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-16T02:17:45Z', '2026-11-16T02:18:03Z', 2096, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2101, 209, 'qgen rework: printed git add line names app/data/pool.es.json, which doesn''t exist', 'work', 'open', NULL, NULL, '`qgen rework` (rework-72, run by `task 2096: QC batch-78 (media-first)`) printed `git add … app/data/pool.es.json …`; that file doesn''t exist (the `es` pool is `app/data/pool.json`), so the printed line fails with `pathspec … did not match` and stages nothing.
+
+Cause: `stale_lines` in `authoring/tools/rework.py` (≈ line 174) appends `layout.LOCALE_POOL(l)` (`paths.locale_pool`: always `pool.<locale>.json`) for every translation locale, `es` included since the English-first base.
+
+- Fix: use `paths.pool(l)` (es → `pool.json`) and drop duplicates, or skip `es`. Check `translate.py:401`''s file list the same way.
+- Test next to the existing rework tests: every printed path exists after an export with an `es` translations file.
+- Done when: the test passes; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-16T02:17:50Z', NULL, 2096, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2102, 205, 'run batch-<n> (media-first)', 'work', 'open', NULL, NULL, '- `nix develop -c qgen batch --media-first` (`authoring/RUNBOOK.md`, media-first rows); after the run, rename this task and its QC task to the batch name `qgen` printed (`pm task set <id> --subject "run batch-<k> (media-first)"`, same for QC).
+- Note on done: the "Done:" line, report path, funnel (files → worth → designed → passed giveaway → merged → approved, held), health result, `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions` count and added (count − 58) after the run (`qgen report`), `qgen report --cost` (media-first $ per approved).
+
+## pm-run rules
+- D-36: workers only run `qgen batch --media-first` and `qgen batch --translate <L>`; no prompt, pool, media or `qgen.py` changes in a run or QC task; findings become decisions or tasks in their own plans.
+- One open pair at a time; one open translation run per locale across `plan 205: Media-first content runs` and `plan 84: Release content runs`.
+- `tasks.sql` alone is not a dirty tree. Stage exactly the `git add` paths the command prints (plus `plans/16-content-target.md` where the task writes a line); do not commit.
+- Health ✗ → `pm decision list --grep "<run>: health"`, else `pm decision add "<run>: health ✗, look at it?"`, no task linked, go on.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (media-first)…?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop with nothing staged.
+- The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-16T02:17:56Z', NULL, 2096, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2103, 205, 'QC batch-<n> (media-first)', 'work', 'open', NULL, NULL, '`authoring/QC.md` steps 1–4 and its "Media-first runs" section, without waits:
+1. Answered review decisions of earlier media-first runs not yet acted on (`pm decision list --answered --grep "(media-first)"`, `--grep "<run>"`: health, spot checks, QC proposals) → change tasks (pipeline: `plan 203: Media-first pipeline`; review/QC: `plan 204: Media-first quality control and spot check`, while those have open tasks; else a new plan in milestone 21), report lines; unanswered ones stay open.
+2. `pm decision add "Spot check batch-<n> (media-first) done?"` (developer; review link `/review?batch=<run>&sample=1`; size per QC.md / `decision 647: Media-first runs: spot-check size and agreement threshold?`), raised, not waited on.
+3. `qgen report --qc <run>` → `pm decision add "QC batch-<n> (media-first): which changes?"` (recommended option names the change tasks), raised; none → `qgen report --qc <run> --changes none`.
+4. Decision 3''s `qgen rework` once (`task 2075: qgen rework keeps the fixed media slot of media-first questions` is done).
+5. Translations: per L in `es`, `es-ES`, `de`: no open `run tr-<L>-<n>` task (plan 205 or plan 84) and ≥ 50 approved media-first sources not yet in L → add `run tr-<L>-<n> (media-first)` in plan 205, `--worktree questions`, body C: 
+   - `nix develop -c qgen batch --translate <L>` (base; picks any approved source not yet in L); rename to the real run name.
+   - Note on done: "Done:" line, report path, numbers from `authoring/reports/<run>.md` and `qgen report --cost` (selected, translated, approved, needs_work, rejected, not travelling, $ per approved translation, audit agreement, health result). No spot check, no QC decision; decision 45 thresholds reported, never a stop; no human control of translations (`plan 171: Translations without human control`).
+   - A progress line in `plans/16-content-target.md` (media-first sources in L); stage it.
+   - After the run: ≥ 50 approved media-first sources not yet in L left → add the next `run tr-<L>-<n+1> (media-first)` (body C); else none.
+   - Same pm-run rules.
+6. Next, first that applies:
+   - added ≥ 1000 (count ≥ 1058) → no next pair; closing notes (`plan 205: Media-first content runs` "Closing notes").
+   - added reached the current step (500, then 600, 700, 800, 900) → step decision (below); then add the next pair (bodies A and B), its run task `pm task-pending-decision` on the step decision.
+   - else the next pair, same bodies (priority: the plan''s, −100, per `decision 649: Media-first runs: pace against the topic bundles and regional runs`).
+- Step decision: `pm decision add "Media-first: <added> added, go on with 100 more?"`, intro for an outsider; body: added and count, approved/needs_work/rejected per run of the step, spot-check agreement per run and across media-first runs (`qgen report --qc`, its media-first row), the spot checks still unanswered named, giveaway-step drop rate, $ per approved, held count (excerpt hold), media budget (`stage-media.mjs --check`), inventory left per seed and class (`qgen report`). Options: (1) 100 more (recommended unless agreement is below decision 647''s threshold or the inventory is short); (2) 100 more after prompt changes (names the change tasks; the next run also requires them); (3) stop at this count: the chain ends, the developer changes milestone 21''s goal and decision 641''s count. On the answer the next run task records consequences; for 3 it drops itself with the reason and notes that `plan 200: masterplan` parts 6 and 7 depend on the developer''s new goal.
+- Note on done: QC numbers (approved, needs_work, rejected, agreement once answered, $ per approved), decisions raised, tasks added.
+
+## pm-run rules
+- D-36: workers only run `qgen batch --media-first` and `qgen batch --translate <L>`; no prompt, pool, media or `qgen.py` changes in a run or QC task; findings become decisions or tasks in their own plans.
+- One open pair at a time; one open translation run per locale across `plan 205: Media-first content runs` and `plan 84: Release content runs`.
+- `tasks.sql` alone is not a dirty tree. Stage exactly the `git add` paths the command prints (plus `plans/16-content-target.md` where the task writes a line); do not commit.
+- Health ✗ → `pm decision list --grep "<run>: health"`, else `pm decision add "<run>: health ✗, look at it?"`, no task linked, go on.
+- Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (media-first)…?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop with nothing staged.
+- The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-16T02:17:56Z', NULL, 2096, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -57040,6 +57082,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2284, 2098, '2026-11-16T01:55:33Z', '2026-11-16T01:56:05Z', 'done', NULL, 0, 'e7ac260c8ed3d56cd007da6502db8c5a2421d5ce', NULL, 'claude-opus-5-5', '779896e5-c472-4dff-a1a4-660f98a3553b', NULL, 5, 10, 1032, 187217, 33719, 0.3278754, 48493, 60, 7522);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2285, 2099, '2026-11-16T01:57:12Z', '2026-11-16T01:59:09Z', 'done', NULL, 0, '2416ec2120045cd6308155faf87d26ecc2cdff38', 'questions', 'claude-sonnet-5-5', 'b3b27a2b-58ee-499a-af08-79768a5cc6af', NULL, 10, 20, 2576, 372353, 31730, 0.18995530000000002, 44687, 60, 7522);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2286, 2096, '2026-11-16T01:59:09Z', NULL, 'running', NULL, NULL, '3e205f901b9a808d44ba8d0b8a661d524ad9cdfb', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 7522);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2287, 2100, '2026-11-16T02:17:46Z', '2026-11-16T02:18:09Z', 'done', NULL, 0, '89864cd498ef3d419d58f1a819e14feb4a0bea56', NULL, 'claude-opus-5-5', '8e0fd932-d339-4ff1-b79c-9b0ac8fc7aba', NULL, 4, 8, 733, 130903, 29363, 0.2757766, 43714, 60, 7522);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -58102,6 +58145,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 206
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2077);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2095);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2096);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2080, 2103);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2081, 2080);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2082, 2081);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2083, 2081);
@@ -58116,6 +58160,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2086, 208
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2087, 2086);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2096, 2095);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2096, 2099);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2103, 2102);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
