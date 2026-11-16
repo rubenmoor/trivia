@@ -61,6 +61,8 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 - Numbers 2026-10-21 (`qgen report --cost`, list price, information only, no budget; task 1506): translation $/approved per direction: pilots `tr-en-1` (es → en) $0.12, `tr-de-1` (es → de) $0.14, `tr-es-ES-1` (es → es-ES) $0.11, `tr-es-1` (en → es) $0.11; per locale with full runs: es $0.11, es-ES $0.09, en $0.10, de $0.10; en drafts $0.26 (batch-9..11), es drafts $0.23; overhead 0.24 of batch cost. Projection to base targets: es 2945 to go ≈ $412, es-ES 4655 ≈ $527, en 1506 translations ≈ $186, de 4657 ≈ $567, en drafts ≈ $163.
 - Numbers 2026-10-24 (`colombia` es pilot, 2014 approved; details in `plans/15c-regional-questions.md` "Pilot effort, es done"): 11 batches, spent $643.00, $0.33 per approved (batch-12 $0.28 → batch-22..25 $0.38–0.40 as overlap rises, drop rate 25 % → 41 %); review time 35 min per 100 verdicts (28 timed verdicts, small sample); information only.
 
+- Media-first sources in es (plan 205): 2026-11-16, task 2111: `tr-es-18`, 168 translated, 161 approved, 7 need work, 0 not travelling, $0.11 per approved translation (audit $3.31), audit agreement 75 %; 77 of 79 approved media-first sources (batch-78, batch-79) now in es.
+
 ## Tasks
 - [x] CT-1 Decide the target (OQ-32): 5000 approved per launch language, D-53's mix, no games number (2026-10-12, D-75). CT-2 (S4) reports games per player.
 - [x] CT-2 `qgen.py report --simulate` on the engine: games per new player per language, region, mode and age group; information only (D-75). (2026-10-12, task 412: `authoring/tools/engine.py`, `qgen.py` `report --simulate`; default matrix 56 s; es today: adults typical ≈ 68 solo games, strong 28; exit 1: es 1136/5000, en/de no pool.)
