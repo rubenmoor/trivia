@@ -1,7 +1,7 @@
 <script lang="ts">
   // «Personalizar partida» (MD-7): joker counts for a «Solo o en grupo» game, 0–9 or ∞ like the
   // overlay's budget (MD-4), below a preset row (decision 99). ↑/↓ move, ←/→ or −/+ change a count or the
-  // preset, Enter/Esc/⌫ close.
+  // preset, Enter/A («Listo», primary, whatever has focus), Esc/⌫/B close.
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import type { JokerBudget, JokerName } from "../lib/types.ts";
@@ -17,6 +17,7 @@
   }: { jokers: JokerBudget; onchange: (jokers: JokerBudget) => void; onclose: () => void } = $props();
 
   let dialog = $state<HTMLDivElement>();
+  let doneButton = $state<HTMLButtonElement>();
 
   function step(name: JokerName | "preset", by: number) {
     sfx("tick");
@@ -33,11 +34,11 @@
       name: "customize",
       modal: true,
       root: () => dialog,
-      pressable: (el) => !el.dataset.joker,
+      primary: () => doneButton,
       handle: (a) => {
         const name = jokerOf(document.activeElement);
         if (a.type === "navigate" && name && (a.dir === "left" || a.dir === "right")) step(name, a.dir === "right" ? 1 : -1);
-        else if (a.type === "back" || a.type === "menu" || a.type === "confirm") onclose();
+        else if (a.type === "back" || a.type === "menu") onclose();
         else return false;
         return true;
       },
@@ -69,7 +70,7 @@
       </div>
     {/each}
     <div class="choices">
-      <button class="candy" onclick={onclose}><Icon name="check" /> {t("customize.done")} <Prompt action="confirm" /></button>
+      <button class="candy" bind:this={doneButton} onclick={onclose}><Icon name="check" /> {t("customize.done")} <Prompt action="confirm" /></button>
     </div>
   </div>
 </div>

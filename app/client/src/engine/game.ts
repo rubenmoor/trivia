@@ -23,6 +23,9 @@ export const BUILT_MODES: readonly GameMode[] = ["gamemaster", "solo"];
 /** The game's mode; missing = gamemaster (games from before plan 36). */
 export const gameMode = (state: GameState): GameMode => state.settings.mode ?? "gamemaster";
 
+/** A local multiplayer mode (seats, the Join screen; decision 291). */
+export const isSession = (mode: GameMode): boolean => mode !== "solo" && mode !== "gamemaster";
+
 /** Undo, skip, joker budget and the other cheats: gamemaster mode only (D-74, D-88). */
 function gamemasterOnly(state: GameState, what: string): void {
   if (gameMode(state) !== "gamemaster") throw new GameError("gamemaster_only", { action: what });
@@ -295,11 +298,11 @@ function newestGame(save: SaveData, player?: unknown): GameRow | null {
     : newest(save.games.filter((g) => g.player_id === pid));
 }
 
-/** The mode of the player's newest game if built, else gamemaster (MD-7). */
-export function playerMode(save: SaveData, player?: unknown): GameMode {
+/** The player's last choice of mode: their newest game's, null without one (the Mode screen owns the standard default
+ * and the built check; MD-7, task 2114). */
+export function playerMode(save: SaveData, player?: unknown): GameMode | null {
   const row = newestGame(save, player);
-  const mode = row ? gameMode(withDefaults(structuredClone(row.state))) : "gamemaster";
-  return BUILT_MODES.includes(mode) ? mode : "gamemaster";
+  return row ? gameMode(withDefaults(structuredClone(row.state))) : null;
 }
 
 /** The choice of the player's newest game (its budget as now), else the defaults with the first base
@@ -385,7 +388,7 @@ export function newSession(
     throw new GameError("player_twice", { name: names.find((n) => seen.size === seen.add(casefold(n)).size)! });
   }
   if (names.length < MIN_SEATS) throw new GameError("players_too_few", { min: MIN_SEATS });
-  if (mode === "gamemaster" || mode === "solo") throw new GameError("mode_single", { mode });
+  if (!isSession(mode as GameMode)) throw new GameError("mode_single", { mode }); // the line above checked it is a mode
   const timed = mode === "timed";
   const { jokers: _, age_groups, devices, ...rest } = timed ? { ...args, cards: 0 } : args;
   const choice = resolveChoice(data, rest);

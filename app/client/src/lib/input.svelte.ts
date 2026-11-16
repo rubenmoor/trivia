@@ -2,8 +2,9 @@
 // actions, and the top scope of a stack gets them. The only keydown listener of the client. In a local multiplayer
 // session only the seat that may act gets through (plan 161, seats.ts).
 import { untrack } from "svelte";
-import { forget, keyPressed, navigate, opener, press, show, track } from "./focus.ts";
+import { forget, keyPressed, navigate, opener, pressTarget, show, track } from "./focus.ts";
 import { t } from "./i18n.ts";
+import { activation, toIntent } from "./intent.ts";
 import { may, seatOf, type Source } from "./seats.ts";
 import { acting, seating } from "./seats.svelte.ts";
 import type { JokerName } from "./types.ts";
@@ -11,9 +12,10 @@ import type { JokerName } from "./types.ts";
 export type Device = "keyboard" | "mouse" | "gamepad";
 export type Dir = "up" | "down" | "left" | "right";
 export type Intent =
+  /** Enter / pad A: the screen's primary action where the scope declares one, else the ring's control. */
   | { type: "confirm" }
-  /** Space / pad X: flips the focused switch where Enter does something else (Bundles). */
-  | { type: "toggle" }
+  /** Space / pad X: the ring's control (a tile, a switch, a button); never a primary action. */
+  | { type: "press" }
   | { type: "back" }
   | { type: "menu" }
   | { type: "pick"; n: number }
@@ -41,9 +43,13 @@ export type Scope = {
   keys?: Keys;
   /** True if handled; false passes the action down (unless `modal`). */
   handle: (action: Action) => boolean;
-  /** Where arrows move focus and confirm presses the focused control; a scope without one keeps confirm. */
+  /** Where arrows move focus and press (and confirm without `primary`) presses the focused control; a scope without one keeps them. */
   root?: () => HTMLElement | undefined;
-  /** False: confirm on this shown control goes to `handle` instead of clicking it (a locked answer submits, a pad joins). */
+  /** The screen's primary action («Seguir», «¡A jugar!»): confirm clicks it whatever has focus (disabled: nothing); null:
+   * confirm goes to `handle` this time (an unbound pad's A joins); `action` null when a prompt asks. Scopes without one are
+   * lists: confirm presses the ring's control, else `handle` (plans/14-input.md, "Before the session"). */
+  primary?: (action: Action | null) => HTMLElement | null | undefined;
+  /** False: confirm or press on this shown control goes to `handle` instead of clicking it (a locked answer submits). */
   pressable?: (el: HTMLElement, action: Action) => boolean;
   /** Keeps its focus memory when pushed again (Start); others start fresh (new content). */
   keep?: boolean;
@@ -64,30 +70,10 @@ export const lastDevice = $state({ current: "keyboard" as Device });
 export const scopes = $state({ version: 0 });
 const bump = () => untrack(() => scopes.version++);
 
-const ARROWS: Record<string, Dir> = { ArrowUp: "up", ArrowDown: "down", ArrowLeft: "left", ArrowRight: "right" };
-
-type Key = Pick<KeyboardEvent, "key" | "ctrlKey" | "metaKey" | "altKey">;
-
-/** Key + scope keys → intent; `text`: a text field has focus. */
-function toIntent(e: Key, keys: Keys = {}, text = false): Intent | null {
-  if (e.key === "Enter") return { type: "confirm" };
-  if (e.key === "Escape") return { type: "menu" };
-  const dir = ARROWS[e.key];
-  if (text) return dir === "up" || dir === "down" ? { type: "navigate", dir } : null;
-  if (dir) return { type: "navigate", dir };
-  if (e.ctrlKey || e.metaKey || e.altKey) return null;
-  if (e.key === " ") return keys[" "] ?? { type: "confirm" };
-  if (e.key === "Backspace") return { type: "back" };
-  const k = e.key.toLowerCase();
-  if (k in keys) return keys[k];
-  if (/^[1-9]$/.test(k)) return { type: "pick", n: Number(k) };
-  if (k === t("flag.key").toLowerCase()) return { type: "flag" };
-  return null;
-}
-
 /** On-screen key labels (IN-5): the one copy, read by Prompt.svelte. A function: catalogs load after import. */
 const keyLabels = (): Partial<Record<Intent["type"], string>> => ({
   confirm: "Enter",
+  press: t("picker.space"),
   submit: "Enter",
   back: "⌫",
   menu: "Esc",
@@ -189,7 +175,23 @@ function route(action: Action): boolean {
   const always = action.type === "menu" || action.type === "flag" || (action.type === "peek" && !action.down);
   const top = stack.at(-1);
   const root = top?.root?.();
-  if (action.type === "confirm" && root && !busy() && press(root, top?.pressable && ((el) => top.pressable!(el, action)))) return true;
+  if ((action.type === "confirm" || action.type === "press") && top && !busy()) {
+    const primary = action.type === "confirm" && top.primary ? top.primary(action) : undefined;
+    const target = root ? pressTarget(root, top.pressable && ((el) => top.pressable!(el, action))) : null;
+    switch (activation(action.type, !top.primary ? "no" : primary === null ? "later" : "yes", target !== null)) {
+      case "primary":
+        if (primary && !primary.matches(":disabled")) primary.click();
+        return true;
+      case "focused":
+        target!.click();
+        return true;
+      case "confirm":
+        action = { ...action, type: "confirm" }; // a list screen: Space is Enter
+        break;
+      case "press":
+        break;
+    }
+  }
   for (let i = stack.length - 1; i >= 0; i--) {
     const s = stack[i];
     if ((always || s.whileBusy || !busy()) && s.handle(action)) return true;
@@ -198,6 +200,11 @@ function route(action: Action): boolean {
   if (action.type !== "navigate" || busy()) return false;
   const at = rooted();
   return at ? navigate(action.dir, at[0].name, at[1]) : false;
+}
+
+/** The top scope's primary control for the prompts (null: none, or none right now). */
+export function primaryControl(): HTMLElement | null {
+  return stack.at(-1)?.primary?.(null) ?? null;
 }
 
 /** The pad mapping: `base` with the scopes' overrides, top wins, none from below a modal scope. */
@@ -218,7 +225,7 @@ function keydown(e: KeyboardEvent, first: () => void) {
   first();
   const text = textField(document.activeElement);
   const keys = Object.assign({}, ...stack.map((s) => s.keys ?? {}));
-  const intent = toIntent(e, keys, text);
+  const intent = toIntent(e, keys, text, t("flag.key"));
   if (!gate("keyboard", intent ?? undefined).ok) return e.preventDefault(); // no Tab focus move either
   lastDevice.current = "keyboard";
   resetTravel();

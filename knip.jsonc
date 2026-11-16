@@ -14,7 +14,7 @@
     ".": {
       "entry": [
         "authoring/{steam,store}/*.mjs!",
-        "authoring/tools/{gallery_saves,demo_saves}.mjs!",
+        "authoring/tools/{gallery_saves,demo_saves,menu_check}.mjs!",
         "authoring/tools/supply.ts!",
         "authoring/tools/demo.ts!",
         "authoring/tools/sim/{simulate,career}.ts!",

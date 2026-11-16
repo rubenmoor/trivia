@@ -3,7 +3,7 @@
   // with a pad (from the pad map incl. the scopes' overrides); nothing if the pad has no binding.
   import { BUTTONS, padButton, type PadStyle } from "../lib/gamepad.ts";
   import { padStyle } from "../lib/gamepad.svelte.ts";
-  import { keyLabel, lastDevice, padMap, scopes, type Device, type Intent } from "../lib/input.svelte.ts";
+  import { keyLabel, lastDevice, padMap, primaryControl, scopes, type Device, type Intent } from "../lib/input.svelte.ts";
   import Glyph from "./Glyph.svelte";
 
   /** Intents without fields, named by their type. */
@@ -45,12 +45,13 @@
     void scopes.version;
     return padButton(intent(pad ?? action), padMap(BUTTONS));
   });
-  // A presses the ringed control: on another button the A would mislead.
+  // A is the screen's primary action where the scope declares one, else it presses the ringed control: on another button
+  // the A would mislead.
   const away = $derived.by(() => {
     if (off) return true;
     void scopes.version;
     const own = chip?.closest("button");
-    if (fixed || intent(pad ?? action).type !== "confirm" || !own) return false;
+    if (fixed || intent(pad ?? action).type !== "confirm" || !own || primaryControl() === own) return false;
     const ring = document.querySelector("[data-nav]");
     return ring !== null && ring !== own;
   });

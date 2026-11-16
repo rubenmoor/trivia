@@ -221,8 +221,8 @@ export async function noteRunningOut(body: ChoiceBody, shown: string[]): Promise
   await run((save, data) => engine.noteRunningOut(save, data, { ...body, shown }), "next");
 }
 
-/** The mode of the player's newest game, else gamemaster (MD-7). */
-export async function fetchPlayerMode(player: string): Promise<GameMode> {
+/** The mode of the player's newest game, null without one (MD-7). */
+export async function fetchPlayerMode(player: string): Promise<GameMode | null> {
   return read((save) => ({ save, status: 200, body: playerMode(save, player) }), "next");
 }
 
@@ -300,4 +300,4 @@ export async function setLanguage(language: Language): Promise<Language> {
 }
 
 /** Choice limits and defaults for the configure screen and overlay (engine/choice.ts). */
-export { BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";
+export { BUILT_MODES, CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, isSession, LEVELS_MAX, STANDARD_JOKERS } from "../engine/game.ts";

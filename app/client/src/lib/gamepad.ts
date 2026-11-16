@@ -7,10 +7,11 @@ export type Pad = { buttons: readonly boolean[]; axes: readonly number[] };
 export type PadState = { buttons: readonly boolean[]; stick: Dir | "held" | null; right: boolean };
 export type PadStyle = "xbox" | "playstation";
 
-/** Standard mapping: A, B, Y, LB/RB, View, Start, D-pad; X and triggers only per scope (Scope.pad). */
+/** Standard mapping: A, B, X, Y, LB/RB, View, Start, D-pad; triggers only per scope (Scope.pad). */
 export const BUTTONS: Record<number, Intent> = {
   0: { type: "confirm" },
   1: { type: "back" },
+  2: { type: "press" },
   3: { type: "replay" },
   4: { type: "joker-focus", step: -1 },
   5: { type: "joker-focus", step: 1 },

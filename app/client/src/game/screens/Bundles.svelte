@@ -10,7 +10,8 @@
   import { GameError } from "../../lib/http.ts";
   import { errorText } from "../../lib/errors.ts";
   import { t } from "../../lib/i18n.ts";
-  import { pushScope, type Intent, type Keys } from "../../lib/input.svelte.ts";
+  import { show } from "../../lib/focus.ts";
+  import { pushScope, type Keys } from "../../lib/input.svelte.ts";
   import BundleSelector, { bundleKeys, orderBundles, toggled, type Bundle } from "../BundleSelector.svelte";
   import type { GameMode, Supply } from "../../lib/types.ts";
   import { bodyOf, choiceOf, isSession, type ChoiceDraft } from "../choiceDraft.ts";
@@ -60,6 +61,7 @@
   let options = $state<ChoiceOptions | null>(null);
   let error = $state<string | null>(null);
   let section = $state<HTMLElement>();
+  let startButton = $state<HTMLButtonElement>();
   /** The supply of the current choice; null while unknown or refused. */
   let supply = $state<Supply | null>(null);
   /** Why the engine refuses the current choice (the selection has no question, `no_questions`). */
@@ -137,30 +139,22 @@
   const keyOf = (b: Bundle) => letters[shown.indexOf(b)] ?? "";
   const keys = $derived<Keys>(Object.fromEntries(letters.filter(Boolean).map((key) => [key, { type: "letter", key }])));
 
-  // A bundle's letter toggles it and scrolls it into view (focus stays, Enter/A always starts, Space/X toggles the focused tile); arrows move between tiles and buttons, Enter/A presses a focused button;
-  // Backspace/B goes back; Esc falls through to the overlay.
+  // A bundle's letter toggles it and takes the ring; Enter/A is «¡A jugar!» (primary), Space/X toggles the ring's tile or
+  // presses its button; arrows move between tiles and buttons; Backspace/B goes back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
       name: "bundles",
       root: () => section,
-      pressable: (el) => !el.dataset.focusId?.startsWith("bundle-"),
-      pad: () => ({ 2: { type: "toggle" } }),
+      primary: () => startButton,
       get keys() {
-        return { ...keys, " ": { type: "toggle" } satisfies Intent };
+        return keys;
       },
       handle: (a) => {
-        if (a.type === "toggle") {
-          const id = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.focusId : undefined;
-          const f = options?.bundles.find((x) => `bundle-${x.id}` === id);
-          if (f && options) pick(toggled(options.bundles, selected, f));
-          return true;
-        }
         const b = a.type === "letter" ? options?.bundles.find((x) => keyOf(x) === a.key) : undefined;
         if (b && options) {
           pick(toggled(options.bundles, selected, b));
-          section?.querySelector(`[data-focus-id="bundle-${b.id}"]`)?.scrollIntoView({ block: "nearest" });
+          if (section) show(section.querySelector<HTMLElement>(`[data-focus-id="bundle-${b.id}"]`), "bundles", section);
         }
-        else if (a.type === "confirm") start();
         else if (a.type === "back") onback();
         else return false;
         return true;
@@ -182,7 +176,7 @@
 
       <div class="actions">
         <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
-        <button class="candy" onclick={start} disabled={busy || !ready} data-focus-default data-focus-id="start"><Icon name="rocket" /> {t("choice.start")} <Prompt action="confirm" off={!ready} /></button>
+        <button class="candy" bind:this={startButton} onclick={start} disabled={busy || !ready} data-focus-default data-focus-id="start"><Icon name="rocket" /> {t("choice.start")} <Prompt action="confirm" off={!ready} /></button>
       </div>
 
       {#if shownRefusal?.supply}

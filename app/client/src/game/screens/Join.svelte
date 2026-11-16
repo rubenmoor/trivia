@@ -2,7 +2,8 @@
   // The Join screen (plans/04-ui-tv-display.md, "Join"; plan 162, decision 292): who plays a local multiplayer
   // session, with which device. An unbound pad's A joins it, a bound pad's B leaves its seat, the keyboard joins by its
   // card; every device drives the rest. Keyboard-only `timed` seats pick their claim key (decision 290). Seats, names
-  // and groups are Game.svelte's draft (rr-competitive's groups are set on the Choice screen, decision 314); «Seguir» goes to the Choice screen.
+  // and groups are Game.svelte's draft (rr-competitive's groups are set on the Choice screen, decision 314); «Seguir» (Enter, a
+  // bound pad's A, primary) goes to the Choice screen; Space/X presses the ring's control.
   import { onMount, tick, untrack } from "svelte";
   import { casefold } from "../../engine/pycompat.ts";
   import { MIN_SEATS } from "../../engine/game.ts";
@@ -65,6 +66,7 @@
   let keyRefusal = $state<string | null>(null);
   let keyField = $state<HTMLInputElement>();
   let section = $state<HTMLElement>();
+  let nextButton = $state<HTMLButtonElement>();
   let padTick = $state(0);
 
   onMount(() => {
@@ -191,12 +193,12 @@
     onnext();
   }
 
-  // An unbound pad's A joins, a bound pad's B leaves; Backspace and an unbound pad's B go back.
+  // An unbound pad's A joins (its confirm is the scope's, not «Seguir»), a bound pad's B leaves; Backspace and an unbound pad's B go back.
   $effect(() =>
     pushScope({
       name: "join",
       root: () => section,
-      pressable: (_, a) => unboundPad(a.source, a, bindings) === null,
+      primary: (a) => (a && unboundPad(a.source, a, bindings) !== null ? null : nextButton),
       handle: (a) => {
         padTick++;
         const pad = unboundPad(a.source, a, bindings);
@@ -206,7 +208,6 @@
           if (at >= 0) leave(at);
           else onback();
         }
-        else if (a.type === "confirm") next();
         else return false;
         return true;
       },
@@ -273,7 +274,7 @@
 
   <div class="actions">
     <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
-    <button class="candy" onclick={next} disabled={busy || why !== null} data-focus-id="next"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" off={why !== null} /></button>
+    <button class="candy" bind:this={nextButton} onclick={next} disabled={busy || why !== null} data-focus-id="next"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" off={why !== null} /></button>
   </div>
   {#if why}<p class="label">{why}</p>{/if}
   {#if error}<p class="error">{error}</p>{/if}

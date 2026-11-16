@@ -3,7 +3,8 @@
   // after the Mode screen (and the Join screen in a multiplayer mode). Gamemaster mode: the configure game screen (MD-11, D-88):
   // difficulty, levels, cards, video, audio, answers (D-105), jokers; the other modes: the age group (1–4), one per seat in rr-competitive,
   // the video and audio switches (decision 645) and «Personalizar partida» (joker counts). «Seguir» goes to the Bundles screen, which holds the supply report and starts the game (decision 264).
-  // Preset: the player's newest game (every field but the bundles and the mode), else the defaults; a returning draft wins. ↑/↓ move between lines, ←/→ change a value.
+  // Preset: the player's newest game (every field but the bundles and the mode), else the defaults; a returning draft wins. ↑/↓ move between lines, ←/→ change a value;
+  // Enter/A is «Seguir» (primary), Space/X flips the ring's switch or presses its button.
   import { onMount, untrack } from "svelte";
   import {
     CARDS_MAX, DEFAULT_AGE_GROUP, fetchChoice, fetchChoiceOptions, LEVELS_MAX, type ChoiceOptions,
@@ -45,7 +46,7 @@
     onback: () => void;
   } = $props();
 
-  const start = untrack(() => draft) ?? defaultDraft();
+  const start = untrack(() => draft) ?? defaultDraft(untrack(() => mode));
   let options = $state<ChoiceOptions | null>(null);
   let group = $state(start.group);
   /** «Solo o en grupo»'s joker counts; a difference from the standard set makes the game customized. */
@@ -62,6 +63,7 @@
   let budget = $state(start.budget);
   let error = $state<string | null>(null);
   let section = $state<HTMLElement>();
+  let nextButton = $state<HTMLButtonElement>();
 
   onMount(async () => {
     try {
@@ -156,13 +158,13 @@
     return hi === null ? t("choice.agesFrom", { lo }) : t("choice.ages", { lo, hi });
   }
 
-  // 1–4 pick a group, the customize letter opens the dialog (solo); ↑/↓ lines, ←/→ a configure value; Enter starts (on a switch: toggles),
-  // Backspace goes back; Esc falls through to the overlay.
+  // 1–4 pick a group, the customize letter takes the ring and opens the dialog (solo); ↑/↓ lines, ←/→ a configure value; Enter/A
+  // is «Seguir» (primary), Space/X a switch; Backspace goes back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
       name: "choice",
       root: () => section,
-      pressable: (el) => !(el instanceof HTMLDivElement && el.dataset.step),
+      primary: () => nextButton,
       get keys() {
         return keys;
       },
@@ -170,9 +172,11 @@
         const stepping = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.step : undefined;
         if (a.type === "navigate" && (a.dir === "up" || a.dir === "down")) return moveLine(a.dir);
         if (a.type === "navigate" && stepping) step(stepping, a.dir === "right" ? 1 : -1);
-        else if (a.type === "letter" && jokerMode && a.key === CUSTOMIZE_KEY) customizing = !busy;
+        else if (a.type === "letter" && jokerMode && a.key === CUSTOMIZE_KEY) {
+          if (section) show(section.querySelector<HTMLElement>('[data-focus-id="customize"]'), "choice", section);
+          customizing = !busy;
+        }
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
-        else if (a.type === "confirm") next();
         else if (a.type === "back") onback();
         else return false;
         return true;
@@ -256,7 +260,7 @@
 
     <div class="row actions" data-line>
       <button class="secondary" onclick={onback} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
-      <button class="candy" onclick={next} disabled={busy || !options} data-focus-default data-focus-id="next"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" /></button>
+      <button class="candy" bind:this={nextButton} onclick={next} disabled={busy || !options} data-focus-default data-focus-id="next"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" /></button>
     </div>
   {/if}
 

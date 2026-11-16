@@ -1,5 +1,6 @@
 // The Choice screen's picks, kept in Game.svelte while the Bundles screen follows (plan 151).
 import { CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, STANDARD_JOKERS, type ChoiceBody } from "../lib/api.ts";
+export { isSession } from "../lib/api.ts";
 import type { Difficulty, GameMode, JokerBudget } from "../lib/types.ts";
 import { presetOf } from "./jokers.ts";
 import { DEFAULT_LEVELS } from "./levels.ts";
@@ -20,11 +21,9 @@ export interface ChoiceDraft {
   budget: JokerBudget;
 }
 
-/** A local multiplayer mode: the Join screen comes between Choice and Bundles (decision 291). */
-export const isSession = (mode: GameMode): boolean => mode !== "solo" && mode !== "gamemaster";
-
-export const defaultDraft = (): ChoiceDraft => ({
-  mode: "gamemaster", group: DEFAULT_AGE_GROUP, jokers: { ...STANDARD_JOKERS }, custom: false,
+/** A fresh draft for the Mode screen's pick (the mode is never defaulted here, task 2114). */
+export const defaultDraft = (mode: GameMode): ChoiceDraft => ({
+  mode, group: DEFAULT_AGE_GROUP, jokers: { ...STANDARD_JOKERS }, custom: false,
   difficulty: { start: 1, end: DIFFICULTY_MAX }, levels: DEFAULT_LEVELS, cards: CARDS_MAX, video: true, audio: true, answers: true,
   budget: { ...STANDARD_JOKERS },
 });

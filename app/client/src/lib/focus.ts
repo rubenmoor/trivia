@@ -1,5 +1,5 @@
 // Spatial focus (plans/14-input.md, IN-3; plan 44): arrows move DOM focus inside the top scope's root,
-// the ring shows on `[data-nav]`, and confirm presses only a control focused by arrows or Tab.
+// the ring shows on `[data-nav]`, and press (or confirm on a list screen) presses only a control focused by arrows or Tab.
 import type { Dir } from "./input.svelte.ts";
 
 export type Rect = { left: number; top: number; width: number; height: number };
@@ -39,7 +39,7 @@ export function candidates(root: HTMLElement): HTMLElement[] {
   );
 }
 
-/** The control focused by arrows or Tab: it shows the ring and confirm presses it. */
+/** The control focused by arrows or Tab: it shows the ring and press (Space, X) presses it. */
 let shown: HTMLElement | null = null;
 /** Per scope: the last shown control's `data-focus-id`, else its index among the candidates. */
 const memory = new Map<string, string | number>();
@@ -88,13 +88,12 @@ export function navigate(dir: Dir, scope: string, root: HTMLElement): boolean {
   return true;
 }
 
-/** Confirm: clicks the shown control if it's inside `root`; false otherwise (the screen's default runs). */
-export function press(root: HTMLElement, pressable?: (el: HTMLElement) => boolean): boolean {
+/** Press: the shown control if it's inside `root` and may be clicked, else null (the screen's handler runs). */
+export function pressTarget(root: HTMLElement, pressable?: (el: HTMLElement) => boolean): HTMLElement | null {
   const el = shown;
-  if (!el || el !== document.activeElement || !root.contains(el) || !candidates(root).includes(el)) return false;
-  if (el instanceof HTMLInputElement || pressable?.(el) === false) return false;
-  el.click();
-  return true;
+  if (!el || el !== document.activeElement || !root.contains(el) || !candidates(root).includes(el)) return null;
+  if (el instanceof HTMLInputElement || pressable?.(el) === false) return null;
+  return el;
 }
 
 /** A new scope starts without memory, unless it keeps it (Start). */

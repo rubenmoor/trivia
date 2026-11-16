@@ -122,8 +122,8 @@ function openSocket(url) {
   });
 }
 
-/** The app:// page on `--remote-debugging-pipe`: the child's fds 3 (in) and 4 (out), NUL-separated. */
-export async function connectPipe(child) {
+/** The app:// page (or the first `isPage` target) on `--remote-debugging-pipe`: the child's fds 3 (in) and 4 (out), NUL-separated. */
+export async function connectPipe(child, isPage = (t) => t.url.startsWith("app://")) {
   const [, , , input, output] = child.stdio;
   let buf = "";
   const browser = rpc((s) => input.write(s + "\0"), () => input.end());
@@ -139,7 +139,7 @@ export async function connectPipe(child) {
   exited.catch(() => {});
   for (let i = 0; i < 100; i++) {
     const { targetInfos } = await Promise.race([browser.send("Target.getTargets"), exited]);
-    const page = targetInfos.find((t) => t.type === "page" && t.url.startsWith("app://"));
+    const page = targetInfos.find((t) => t.type === "page" && isPage(t));
     if (page) {
       const { sessionId } = await browser.send("Target.attachToTarget", { targetId: page.targetId, flatten: true });
       return { send: (method, params) => browser.send(method, params, sessionId), close: browser.close };

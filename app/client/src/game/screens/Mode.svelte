@@ -3,15 +3,18 @@
   // «Solo o en grupo» or «Multijugador», then the mode itself: standard or gamemaster mode, or the multiplayer modes in
   // two groups (collaborative: rr-coop; competitive: rr-competitive, timed), one pick. Only the built modes show (dev mode
   // shows the unbuilt ones marked, decision 293); with no multiplayer mode to show, the first step is skipped.
-  // Preset: `?mode=`, else the player's newest game's mode. «Seguir» goes on, Back goes a step back.
+  // Preset (modePreset.ts, task 2114): the pick kept for Back, else `?mode=`, else the player's last choice (their newest
+  // game's mode, if shown), else the standard mode; with the kind step, that mode's kind. «Seguir» (Enter/A anywhere) goes
+  // on, Space/X picks the ring's tile, a tile's letter picks it and moves the ring, Back goes a step back.
   import { onMount, untrack } from "svelte";
   import { BUILT_MODES, fetchPlayerMode } from "../../lib/api.ts";
   import { devMode } from "../../lib/desktop.ts";
+  import { show } from "../../lib/focus.ts";
   import { t } from "../../lib/i18n.ts";
   import type { TextKey } from "../../locales/es.ts";
   import { pushScope, type Keys } from "../../lib/input.svelte.ts";
   import type { GameMode } from "../../lib/types.ts";
-  import { isSession } from "../choiceDraft.ts";
+  import { modePreset, type Kind, type Stage } from "../modePreset.ts";
   import Icon, { type IconName } from "../Icon.svelte";
   import Prompt from "../Prompt.svelte";
 
@@ -66,23 +69,19 @@
     { id: "multi", name: t("mode.multi"), about: t("mode.multiAbout"), key: t("mode.multiKey").toLowerCase(), icon: "gamepad" as IconName },
   ].filter((k) => k.id === "single" || MULTI.length);
 
-  type Stage = "kind" | "single" | "multi";
-  const start = untrack(() => mode);
-  let pick = $state<GameMode>(start ?? "solo");
-  const startKind = start && isSession(start) && MULTI.length ? "multi" : "single";
-  let kind = $state<"single" | "multi">(startKind);
-  // coming back from a later screen: the mode step the pick was made on
-  let stage = $state<Stage>(start ? startKind : KINDS.length > 1 ? "kind" : "single");
+  const SHOWN = [...SINGLE, ...MULTI].map((m) => m.id);
+  const kept = untrack(() => mode);
+  const preset = (last: GameMode | null) => modePreset(kept, last, SHOWN, KINDS.length);
+  let pick = $state<GameMode>(preset(null).pick);
+  let kind = $state<Kind>(preset(null).kind);
+  let stage = $state<Stage>(preset(null).stage);
   let section = $state<HTMLElement>();
+  let nextButton = $state<HTMLButtonElement>();
 
   onMount(async () => {
-    if (start) return;
+    if (kept) return;
     const launch = new URLSearchParams(location.search).get("mode") as GameMode | null;
-    const last = launch ?? (await fetchPlayerMode(player).catch(() => null));
-    if (!last || ![...SINGLE, ...MULTI].some((m) => m.id === last)) return;
-    if (isSession(last) && !launch) return; // multiplayer needs seats: single-player stays the default
-    pick = last;
-    kind = isSession(last) ? "multi" : "single";
+    ({ pick, kind } = preset(launch ?? (await fetchPlayerMode(player).catch(() => null))));
   });
 
   const list = $derived(stage === "single" ? SINGLE : MULTI);
@@ -104,12 +103,13 @@
     Object.fromEntries((stage === "kind" ? KINDS : list).map((m) => [m.key, { type: "letter", key: m.key }])),
   );
 
-  // A tile's letter picks it; Enter/A goes on, also on a tile, Backspace back; Esc falls through to the overlay.
+  // A tile's letter picks it and takes the ring; Enter/A is «Seguir» (primary), Space/X the ring's tile, Backspace back;
+  // Esc falls through to the overlay.
   $effect(() =>
     pushScope({
       name: "mode",
       root: () => section,
-      pressable: (el) => el.getAttribute("role") !== "radio", // Enter/A on a tile goes on
+      primary: () => nextButton,
       get keys() {
         return keys;
       },
@@ -117,10 +117,10 @@
         if (a.type === "letter") {
           const hit = (stage === "kind" ? KINDS : list).find((m) => m.key === a.key);
           if (!hit) return false;
-          if (stage === "kind") kind = hit.id as "single" | "multi";
+          if (stage === "kind") kind = hit.id as Kind;
           else pick = hit.id as GameMode;
-        } else if (a.type === "confirm") next();
-        else if (a.type === "back") back();
+          if (section) show(section.querySelector<HTMLElement>(`[data-focus-id="${stage === "kind" ? "kind" : "mode"}-${hit.id}"]`), "mode", section);
+        } else if (a.type === "back") back();
         else return false;
         return true;
       },
@@ -134,7 +134,7 @@
   {#if stage === "kind"}
     <div class="pick-row" role="radiogroup" data-line>
       {#each KINDS as k, i (k.id)}
-        {@render card(`kind-${k.id}`, k.name, k.about, k.key, k.icon, k.id === kind, i, () => (kind = k.id as "single" | "multi"))}
+        {@render card(`kind-${k.id}`, k.name, k.about, k.key, k.icon, k.id === kind, i, () => (kind = k.id as Kind))}
       {/each}
     </div>
   {:else if stage === "single"}
@@ -160,7 +160,7 @@
 
   <div class="pick-row actions" data-line>
     <button class="secondary" onclick={back} disabled={busy} data-focus-id="back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
-    <button class="candy" onclick={next} disabled={busy} data-focus-default data-focus-id="next"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" /></button>
+    <button class="candy" bind:this={nextButton} onclick={next} disabled={busy} data-focus-default data-focus-id="next"><Icon name="next" /> {t("action.next")} <Prompt action="confirm" /></button>
   </div>
 </section>
 

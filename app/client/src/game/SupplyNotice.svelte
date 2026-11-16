@@ -7,7 +7,7 @@
 
 <script lang="ts">
   // The supply notice (plan 65, decision 31): after «¡A jugar!», before level 1; informational.
-  // Enter presses the focused button («¡A jugar!» first), Backspace/Esc go back to the Choice screen.
+  // Enter/A is «¡A jugar!» (primary, whatever has focus), Space/X the focused button, Backspace/Esc/B go back.
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import { displayName } from "../lib/names.svelte.ts";
@@ -17,6 +17,7 @@
   let { outlook, onplay, onback }: { outlook: Outlook; onplay: () => void; onback: () => void } = $props();
 
   let dialog = $state<HTMLDivElement>();
+  let playButton = $state<HTMLButtonElement>();
   const ranges = $derived(outlook.tight.map(([lo, hi]) => (lo === hi ? String(lo) : `${lo}–${hi}`)).join(", "));
   const warned = $derived(outlook.none || outlook.tight.length > 0);
 
@@ -25,9 +26,9 @@
       name: "supply-notice",
       modal: true,
       root: () => dialog,
+      primary: () => playButton,
       handle: (a) => {
         if (a.type === "back" || a.type === "menu") onback();
-        else if (a.type === "confirm") onplay();
         else return false;
         return true;
       },
@@ -48,7 +49,7 @@
     {/if}
     <div class="choices">
       <button class="secondary" onclick={onback} data-focus-id="notice-back"><Icon name="back" /> {t("action.back")} <Prompt action="back" /></button>
-      <button class="candy" onclick={onplay} data-focus-default data-focus-id="notice-play"><Icon name="rocket" /> {t("choice.start")} <Prompt action="confirm" /></button>
+      <button class="candy" bind:this={playButton} onclick={onplay} data-focus-default data-focus-id="notice-play"><Icon name="rocket" /> {t("choice.start")} <Prompt action="confirm" /></button>
     </div>
   </div>
 </div>
