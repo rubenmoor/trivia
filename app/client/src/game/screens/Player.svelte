@@ -84,7 +84,7 @@
 <section class="player">
   <h1 class="title">{t("screen.player.title")}</h1>
 
-  {#if loaded}<NamePicker {players} {busy} scope="player" {onchoose} ondelete={(p) => (doomed = p)} onbadges={demo ? undefined : (p) => (careerOf = p.name)} />{/if}
+  {#if loaded}<NamePicker {players} {busy} scope="player" suggest {onchoose} ondelete={(p) => (doomed = p)} onbadges={demo ? undefined : (p) => (careerOf = p.name)} />{/if}
 
   {#if careerOf}<Career name={careerOf} onclose={() => (careerOf = null)} />{/if}
 

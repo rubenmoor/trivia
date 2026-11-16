@@ -2,8 +2,9 @@
   // Picking a name (plans/04-ui-tv-display.md, "Player"): the known names (most recent first, keys 1–9) and a field for
   // a new one. With a pad, A on the field opens Steam's floating keyboard (Big Picture/Deck, plan 85), else the letter
   // picker (plan 46). The Player screen and the Join screen's name dialog (plan 162).
+  import { untrack } from "svelte";
   import { steam } from "../lib/desktop.ts";
-  import { t } from "../lib/i18n.ts";
+  import { t, variants } from "../lib/i18n.ts";
   import { focusControl, lastDevice, pushScope, scopes } from "../lib/input.svelte.ts";
   import type { Player } from "../lib/types.ts";
   import Icon from "./Icon.svelte";
@@ -16,6 +17,7 @@
     busy,
     scope,
     modal = false,
+    suggest = false,
     refusal = null,
     submitLabel = t("screen.player.submit"),
     onchoose,
@@ -29,6 +31,8 @@
     scope: string;
     /** In a dialog: the focus starts inside, Back and Esc close it. */
     modal?: boolean;
+    /** With no known names: a funny team name is filled in, Enter or A confirms it. */
+    suggest?: boolean;
     /** Why the last pick was refused, under the field. */
     refusal?: string | null;
     /** The new name's button. */
@@ -43,7 +47,11 @@
 
   const MAX_SHOWN = 9;
 
-  let name = $state("");
+  const suggestion = untrack(() => {
+    const names = variants("screen.player.teamNames");
+    return suggest && players.length === 0 ? names[Math.floor(Math.random() * names.length)] : "";
+  });
+  let name = $state(suggestion);
   let input = $state<HTMLInputElement>();
   let box = $state<HTMLElement>();
   let picking = $state(false);
@@ -100,7 +108,7 @@
       handle: (a) => {
         if (a.type === "pick" && a.n <= shown.length) onchoose(shown[a.n - 1].name);
         else if (a.type === "confirm" && document.activeElement === input) {
-          if (a.device === "gamepad") void write();
+          if (a.device === "gamepad" && !(suggestion && name === suggestion)) void write();
           else submit();
         }
         else if (a.type === "confirm" && free && !busy) onchoose(shown[0].name);

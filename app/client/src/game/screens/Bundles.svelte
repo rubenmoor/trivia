@@ -10,7 +10,7 @@
   import { GameError } from "../../lib/http.ts";
   import { errorText } from "../../lib/errors.ts";
   import { t } from "../../lib/i18n.ts";
-  import { pushScope, type Keys } from "../../lib/input.svelte.ts";
+  import { pushScope, type Intent, type Keys } from "../../lib/input.svelte.ts";
   import BundleSelector, { bundleKeys, orderBundles, toggled, type Bundle } from "../BundleSelector.svelte";
   import type { GameMode, Supply } from "../../lib/types.ts";
   import { bodyOf, choiceOf, isSession, type ChoiceDraft } from "../choiceDraft.ts";
@@ -137,16 +137,24 @@
   const keyOf = (b: Bundle) => letters[shown.indexOf(b)] ?? "";
   const keys = $derived<Keys>(Object.fromEntries(letters.filter(Boolean).map((key) => [key, { type: "letter", key }])));
 
-  // A bundle's letter toggles it and scrolls it into view (focus stays, Enter still continues); arrows move between tiles and buttons, Enter/A presses the focused one;
+  // A bundle's letter toggles it and scrolls it into view (focus stays, Enter/A always starts, Space/X toggles the focused tile); arrows move between tiles and buttons, Enter/A presses a focused button;
   // Backspace/B goes back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
       name: "bundles",
       root: () => section,
+      pressable: (el) => !el.dataset.focusId?.startsWith("bundle-"),
+      pad: () => ({ 2: { type: "toggle" } }),
       get keys() {
-        return keys;
+        return { ...keys, " ": { type: "toggle" } satisfies Intent };
       },
       handle: (a) => {
+        if (a.type === "toggle") {
+          const id = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.focusId : undefined;
+          const f = options?.bundles.find((x) => `bundle-${x.id}` === id);
+          if (f && options) pick(toggled(options.bundles, selected, f));
+          return true;
+        }
         const b = a.type === "letter" ? options?.bundles.find((x) => keyOf(x) === a.key) : undefined;
         if (b && options) {
           pick(toggled(options.bundles, selected, b));

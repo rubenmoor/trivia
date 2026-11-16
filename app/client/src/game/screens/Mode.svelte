@@ -68,7 +68,7 @@
 
   type Stage = "kind" | "single" | "multi";
   const start = untrack(() => mode);
-  let pick = $state<GameMode>(start ?? "gamemaster");
+  let pick = $state<GameMode>(start ?? "solo");
   const startKind = start && isSession(start) && MULTI.length ? "multi" : "single";
   let kind = $state<"single" | "multi">(startKind);
   // coming back from a later screen: the mode step the pick was made on
@@ -80,6 +80,7 @@
     const launch = new URLSearchParams(location.search).get("mode") as GameMode | null;
     const last = launch ?? (await fetchPlayerMode(player).catch(() => null));
     if (!last || ![...SINGLE, ...MULTI].some((m) => m.id === last)) return;
+    if (isSession(last) && !launch) return; // multiplayer needs seats: single-player stays the default
     pick = last;
     kind = isSession(last) ? "multi" : "single";
   });
@@ -103,11 +104,12 @@
     Object.fromEntries((stage === "kind" ? KINDS : list).map((m) => [m.key, { type: "letter", key: m.key }])),
   );
 
-  // A tile's letter picks it; Enter goes on (on a tile: picks), Backspace back; Esc falls through to the overlay.
+  // A tile's letter picks it; Enter/A goes on, also on a tile, Backspace back; Esc falls through to the overlay.
   $effect(() =>
     pushScope({
       name: "mode",
       root: () => section,
+      pressable: (el) => el.getAttribute("role") !== "radio", // Enter/A on a tile goes on
       get keys() {
         return keys;
       },

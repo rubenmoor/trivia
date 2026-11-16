@@ -12,6 +12,8 @@ export type Device = "keyboard" | "mouse" | "gamepad";
 export type Dir = "up" | "down" | "left" | "right";
 export type Intent =
   | { type: "confirm" }
+  /** Space / pad X: flips the focused switch where Enter does something else (Bundles). */
+  | { type: "toggle" }
   | { type: "back" }
   | { type: "menu" }
   | { type: "pick"; n: number }
