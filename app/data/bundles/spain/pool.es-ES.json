@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f0bfe6bf",
+  "hash": "0ae1adca",
   "questions": [
     {
       "id": "q-0975",
@@ -418,6 +418,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Diliff",
         "author_url": "https://commons.wikimedia.org/wiki/User:Diliff",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9844",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "20th-century",
+      "bundle": "spain",
+      "description": "Barcelona, años veinte: una ciudad con más tensión que un ascensor lleno un lunes por la mañana.",
+      "question": "¿Cuál de estos grupos NO participó en el «pistolerismo» que sacudió Barcelona entre 1917 y 1923?",
+      "answer": "Falange Española",
+      "wrong_answers": [
+        "La CNT",
+        "Los Sindicatos Libres",
+        "La Federación Patronal"
+      ],
+      "hints": [
+        "Fue una época muy agitada en la ciudad, con enfrentamientos entre bandos.",
+        "Terminó poco antes de que empezara la dictadura de Primo de Rivera.",
+        "Este grupo se fundó en 1933."
+      ],
+      "fun_fact": "El dirigente anarcosindicalista Salvador Seguí era conocido como «el Noi del Sucre», «el chico del azúcar».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Street_front_in_Barcelona%2C_Spain_LCCN2016826296.tif/lossy-page1-3840px-Street_front_in_Barcelona%2C_Spain_LCCN2016826296.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AStreet_front_in_Barcelona%2C_Spain_LCCN2016826296.tif",
+        "credit": "National Photo Company Collection · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "National Photo Company Collection",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -5598,6 +5633,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Nicolás Pérez Gimilio",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Nicondarreta&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-9993",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "regional-dishes",
+      "bundle": "spain",
+      "description": "Un cacharro de cocina con más fiestas de pueblo a sus espaldas que el alcalde.",
+      "question": "Mira esta imagen de cerca. ¿Cómo se llama este recipiente?",
+      "answer": "Paellera",
+      "wrong_answers": [
+        "Cazuela",
+        "Olla",
+        "Wok"
+      ],
+      "hints": [
+        "Es muy ancho y muy poco profundo.",
+        "Se usa mucho en Valencia, a veces sobre fuego de leña.",
+        "En él se cocina el arroz más famoso de España."
+      ],
+      "fun_fact": "En valenciano, la palabra «paella» significa en origen «sartén», así que el plato tomó el nombre del recipiente.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Concurso_Internacional_de_Paella_de_Sueca_2016_-_44.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConcurso_Internacional_de_Paella_de_Sueca_2016_-_44.jpg",
+        "credit": "Carlos Delgado · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Carlos Delgado",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Kadellar",
         "excerpt": null
       },
       "background": null
@@ -12901,6 +12971,41 @@
       "background": null
     },
     {
+      "id": "q-11175",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "folk-music-and-dance",
+      "bundle": "spain",
+      "description": "Una canción en la que los peces tienen más vida social que tú en diciembre.",
+      "question": "Es Navidad y en casa cantas «Los peces en el río». Según la canción, ¿qué hacen los peces una y otra vez?",
+      "answer": "Beben",
+      "wrong_answers": [
+        "Nadan",
+        "Saltan",
+        "Duermen"
+      ],
+      "hints": [
+        "En la canción lo hacen «por ver a Dios nacido».",
+        "En el estribillo, esa acción suena tres veces en una sola frase.",
+        "Se hace con agua, zumo o leche."
+      ],
+      "fun_fact": "Es un villancico tradicional español que se canta desde hace generaciones, a menudo con zambomba y pandereta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Clear_water_streams_near_dhauladhar_mountain_range.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClear_water_streams_near_dhauladhar_mountain_range.jpg",
+        "credit": "Gayatri Priyadarshini · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Gayatri Priyadarshini",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Gayatri_Priya",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-11176",
       "status": "approved",
       "difficulty": 3,
@@ -14681,6 +14786,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Kurnosem",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kurnosem&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11229",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "painting-and-architecture",
+      "bundle": "spain",
+      "description": "En la procesión todo el mundo tiene su papel, aunque alguno se ha equivocado de fiesta.",
+      "question": "Estás viendo pasar un paso de Semana Santa por la calle. ¿Quién de estos NO forma parte de la procesión?",
+      "answer": "El picador",
+      "wrong_answers": [
+        "El nazareno",
+        "El costalero",
+        "El capataz"
+      ],
+      "hints": [
+        "En las procesiones suena música de banda y huele a incienso.",
+        "Los otros tres solo tienen sentido alrededor de un paso.",
+        "Su sitio es la plaza de toros."
+      ],
+      "fun_fact": "Los costaleros cargan el paso desde debajo, sin ver la calle, y siguen las órdenes que les da el capataz en voz alta.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Seville%2C_cathedral_at_night_2.jpg/3840px-Seville%2C_cathedral_at_night_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeville%2C_cathedral_at_night_2.jpg",
+        "credit": "Andreas Jaffke · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Andreas Jaffke",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ajaffke&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -26236,6 +26376,41 @@
       "background": null
     },
     {
+      "id": "q-12386",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "al-andalus-and-reconquista",
+      "bundle": "spain",
+      "description": "Un palacio de reyes moros que acabó con inquilinos nuevos sin pasar por la inmobiliaria.",
+      "question": "En 1118 Alfonso I el Batallador conquistó la ciudad que era capital de una taifa andalusí del norte. ¿Cuál es?",
+      "answer": "Zaragoza",
+      "wrong_answers": [
+        "Toledo",
+        "Valencia",
+        "Sevilla"
+      ],
+      "hints": [
+        "Su palacio andalusí, la Aljafería, sigue en pie.",
+        "Hoy ese palacio acoge un parlamento autonómico.",
+        "Está a orillas del Ebro y es la capital de Aragón."
+      ],
+      "fun_fact": "La Aljafería alberga hoy las Cortes de Aragón, así que ahí se siguen tomando decisiones casi mil años después.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Group_of_medieval_warriors_in_armor_training_at_a_historical_site_during_a_reenactment_event_in_a_castle_setting.jpg/3840px-Group_of_medieval_warriors_in_armor_training_at_a_historical_site_during_a_reenactment_event_in_a_castle_setting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGroup_of_medieval_warriors_in_armor_training_at_a_historical_site_during_a_reenactment_event_in_a_castle_setting.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12387",
       "status": "approved",
       "difficulty": 5,
@@ -30326,6 +30501,41 @@
         "license_url": null,
         "author": "Anton Raphael Mengs",
         "author_url": "https://en.wikipedia.org/wiki/en:Anton_Raphael_Mengs",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13225",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "bourbons-and-19th-century",
+      "bundle": "spain",
+      "description": "Pelucas empolvadas, palacios enormes y lacayos con medias hasta la rodilla.",
+      "question": "Reino en el siglo XVIII: el rey manda en todo, pero quiere escuelas, ciencia y progreso. Mi lema: «Todo para el pueblo, pero sin el pueblo». ¿Qué soy?",
+      "answer": "El despotismo ilustrado",
+      "wrong_answers": [
+        "El liberalismo",
+        "El parlamentarismo",
+        "El feudalismo"
+      ],
+      "hints": [
+        "Mezclo el poder absoluto con las ideas de los filósofos.",
+        "Carlos III de España y Federico II de Prusia me practicaron.",
+        "Mi nombre junta la palabra «déspota» con el siglo de las Luces."
+      ],
+      "fun_fact": "En francés, la lengua de la Ilustración, el famoso lema suele citarse como «Tout pour le peuple, rien par le peuple».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/212a_Smaller_throne_room.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A212a_Smaller_throne_room.jpg",
+        "credit": "Czaich Á. Gilbert és Fráter Aladár . Budapest 1907 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Czaich Á. Gilbert és Fráter Aladár . Budapest 1907",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -36850,6 +37060,41 @@
       "background": null
     },
     {
+      "id": "q-13413",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sweets-and-desserts",
+      "bundle": "spain",
+      "description": "Antes de las consolas, a los niños les bastaba con un palo. Literalmente.",
+      "question": "Hace décadas, los niños en España compraban palitos secos de la raíz de una planta. ¿Para qué los querían?",
+      "answer": "Para masticarlos como golosina",
+      "wrong_answers": [
+        "Para escribir en la pizarra",
+        "Para hacer silbatos caseros",
+        "Para usarlos como cebo de pesca"
+      ],
+      "hints": [
+        "A cada niño le duraba un buen rato.",
+        "La planta crece en suelos húmedos, a menudo cerca de los ríos.",
+        "Se vendían en los quioscos, junto a otras chucherías."
+      ],
+      "fun_fact": "En muchas partes de España a estos palitos se les llamaba «paloduz», que viene de «palo dulce».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Spanish_traditional_Village.jpg/3840px-Spanish_traditional_Village.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpanish_traditional_Village.jpg",
+        "credit": "Dieglop · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dieglop",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dieglop&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13414",
       "status": "approved",
       "difficulty": 12,
@@ -37300,6 +37545,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Micheal Kaluba",
         "author_url": "https://commons.wikimedia.org/wiki/User:Micheal_Kaluba",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13427",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "sayings",
+      "bundle": "spain",
+      "description": "Un animal que escala montañas sin pedir permiso a nadie.",
+      "question": "«Estar como una cabra» es estar un poco loco. ¿Con cuál de estas comparaciones NO se dice lo mismo?",
+      "answer": "«Como un roble»",
+      "wrong_answers": [
+        "«Como una regadera»",
+        "«Como un cencerro»",
+        "«Como una chota»"
+      ],
+      "hints": [
+        "Tres de ellas son para alguien que hace locuras.",
+        "La que sobra habla de salud y fuerza.",
+        "Es un árbol muy duro y resistente."
+      ],
+      "fun_fact": "Algunas cabras trepan por paredes casi verticales, e incluso se suben a los árboles para comer.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/%28Illegally%29_roaming_goats_on_the_cliffs_of_Sint_Eustatius.jpg/3840px-%28Illegally%29_roaming_goats_on_the_cliffs_of_Sint_Eustatius.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%28Illegally%29_roaming_goats_on_the_cliffs_of_Sint_Eustatius.jpg",
+        "credit": "GIS Statia · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "GIS Statia",
+        "author_url": "https://commons.wikimedia.org/wiki/User:GIS_Statia",
         "excerpt": null
       },
       "background": null
@@ -39925,6 +40205,76 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Panpanchik",
         "author_url": "https://commons.wikimedia.org/wiki/User:Panpanchik",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14247",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "co-official-languages",
+      "bundle": "spain",
+      "description": "Un embutido tan blandito que se deja untar sin protestar.",
+      "question": "La sobrasada, ese embutido rojo que se unta en el pan, tiene un sello de calidad oficial con el nombre de una isla. ¿Cuál?",
+      "answer": "Mallorca",
+      "wrong_answers": [
+        "Menorca",
+        "Tenerife",
+        "Gran Canaria"
+      ],
+      "hints": [
+        "Es una isla del Mediterráneo.",
+        "Es la mayor de las Baleares.",
+        "Su capital es Palma."
+      ],
+      "fun_fact": "La sobrasada se hace con carne de cerdo y pimentón, que es lo que le da su color rojo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Tapas._Plato_con_embutidos_y_pan_restregado_con_tomate_de_colgar_%28Castell%C3%B3n%2C_Espa%C3%B1a%29.jpg/3840px-Tapas._Plato_con_embutidos_y_pan_restregado_con_tomate_de_colgar_%28Castell%C3%B3n%2C_Espa%C3%B1a%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATapas._Plato_con_embutidos_y_pan_restregado_con_tomate_de_colgar_%28Castell%C3%B3n%2C_Espa%C3%B1a%29.jpg",
+        "credit": "Juan Emilio Prades Bel · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Juan Emilio Prades Bel",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Emilio_Prades_Bel",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14248",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "co-official-languages",
+      "bundle": "spain",
+      "description": "Una comunidad donde en marzo los bomberos no descansan ni un minuto.",
+      "question": "¿En qué comunidad autónoma se plantan y se queman cada marzo «les Falles»?",
+      "answer": "La Comunidad Valenciana",
+      "wrong_answers": [
+        "Cataluña",
+        "La Región de Murcia",
+        "Andalucía"
+      ],
+      "hints": [
+        "Está en la costa mediterránea.",
+        "La fiesta acaba la noche de San José, el 19 de marzo.",
+        "Sus provincias son Castellón, Valencia y Alicante."
+      ],
+      "fun_fact": "Las Fallas son Patrimonio Cultural Inmaterial de la Humanidad de la UNESCO desde 2016.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Fallas_at_night_-_Flickr_-_keith_ellwood.jpg/3840px-Fallas_at_night_-_Flickr_-_keith_ellwood.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFallas_at_night_-_Flickr_-_keith_ellwood.jpg",
+        "credit": "keith ellwood from Valencia    Spain, Spain · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "keith ellwood from Valencia    Spain, Spain",
+        "author_url": "https://www.flickr.com/people/76377775@N05",
         "excerpt": null
       },
       "background": null
@@ -48505,6 +48855,41 @@
       "background": null
     },
     {
+      "id": "q-15224",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "ancient-hispania",
+      "bundle": "spain",
+      "description": "Tres remolinos que llevan siglos dando vueltas sin marearse.",
+      "question": "Este símbolo de tres espirales, el trisquel, se ve por toda Galicia y Asturias. ¿Con qué pueblo antiguo se relaciona?",
+      "answer": "Con los celtas",
+      "wrong_answers": [
+        "Con los fenicios",
+        "Con los romanos",
+        "Con los visigodos"
+      ],
+      "hints": [
+        "Es un pueblo anterior a los romanos",
+        "También se asocia a Irlanda y Escocia",
+        "Hoy su música suena con gaita"
+      ],
+      "fun_fact": "En Ortigueira (A Coruña) se celebra cada verano un festival de música celta que reúne a miles de personas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Triskelion_Fa%C3%A7ade_storefront_detail_South_Market_Building_Faneuil_Hall_Marketplace_Boston_Massachusetts.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATriskelion_Fa%C3%A7ade_storefront_detail_South_Market_Building_Faneuil_Hall_Marketplace_Boston_Massachusetts.jpg",
+        "credit": "EgorovaSvetlana · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "EgorovaSvetlana",
+        "author_url": "https://commons.wikimedia.org/wiki/User:EgorovaSvetlana",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-15225",
       "status": "approved",
       "difficulty": 4,
@@ -55815,6 +56200,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "GuillemMedina",
         "author_url": "https://commons.wikimedia.org/wiki/User:GuillemMedina",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15436",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "tv-series",
+      "bundle": "spain",
+      "description": "En Mirador de Montepinar, ninguna junta de vecinos termina sin gritos y frases para enmarcar.",
+      "question": "¿A qué personaje de «La que se avecina» da vida el actor Pablo Chiapella?",
+      "answer": "Amador Rivas",
+      "wrong_answers": [
+        "Antonio Recio",
+        "Enrique Pastor",
+        "Fermín Trujillo"
+      ],
+      "hints": [
+        "Es uno de los vecinos más vagos de Mirador de Montepinar.",
+        "Su mujer en la serie se llama Maite.",
+        "Su nombre de pila empieza por «Ama»."
+      ],
+      "fun_fact": "Las frases de Amador se han convertido en algunos de los memes más compartidos de Internet en España.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Apartment_building_balconies_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AApartment_building_balconies_%28Unsplash%29.jpg",
+        "credit": "Naomi Hutchinson naomihutchinson · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Naomi Hutchinson naomihutchinson",
+        "author_url": "https://unsplash.com/@naomihutchinson",
         "excerpt": null
       },
       "background": null
@@ -63835,6 +64255,41 @@
       "background": null
     },
     {
+      "id": "q-16387",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "spanish-cinema",
+      "bundle": "spain",
+      "description": "Cuatro actores y cuatro cabezones de bronce, pero uno de ellos se coló en la categoría equivocada.",
+      "question": "¿Cuál de estos actores NUNCA ha ganado el Goya al mejor actor protagonista?",
+      "answer": "Dani Rovira",
+      "wrong_answers": [
+        "Javier Bardem",
+        "Antonio Banderas",
+        "Antonio de la Torre"
+      ],
+      "hints": [
+        "El que buscas sí tiene un Goya, pero de otra categoría.",
+        "Su Goya fue el de mejor actor revelación.",
+        "Lo ganó haciendo de sevillano que se finge vasco en una comedia de 2014."
+      ],
+      "fun_fact": "Javier Bardem tiene el récord de Goyas al mejor actor protagonista: cinco, el último por «El buen patrón».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Clapperboard%2C_O2_film%2C_September_2008.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AClapperboard%2C_O2_film%2C_September_2008.jpg",
+        "credit": "Mattbr · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Mattbr",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=Utente:Mattbr&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16388",
       "status": "approved",
       "difficulty": 7,
@@ -65405,6 +65860,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.5",
         "author": "Willi Heidelbach",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17112",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "comics-and-childrens-books",
+      "bundle": "spain",
+      "description": "Gloria Fuertes, unas rimas y un bicho que echa fuego por la boca: ¿qué podría salir mal?",
+      "question": "Gloria Fuertes, que adoraba las rimas, tituló un cuento «El dragón…». ¿Qué palabra viene después?",
+      "answer": "tragón",
+      "wrong_answers": [
+        "glotón",
+        "gruñón",
+        "dormilón"
+      ],
+      "hints": [
+        "Rima con «dragón», como todas las opciones.",
+        "Tiene que ver con comer muchísimo.",
+        "Viene del verbo que usas cuando la comida baja por la garganta."
+      ],
+      "fun_fact": "Gloria Fuertes escribió muchísimos libros infantiles y se hizo famosa presentando poemas en la televisión para niños.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Dragon_on_the_Dragon_Bridge%2C_Ljubljana%2C_20240502_1822_7813.jpg/3840px-Dragon_on_the_Dragon_Bridge%2C_Ljubljana%2C_20240502_1822_7813.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADragon_on_the_Dragon_Bridge%2C_Ljubljana%2C_20240502_1822_7813.jpg",
+        "credit": "Jakub Hałun · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Jakub Hałun",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jakubhal",
         "excerpt": null
       },
       "background": null

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "16e91afd",
+  "hash": "0cacb936",
   "questions": [
     {
       "id": "q-0002",
@@ -7213,6 +7213,41 @@
       "background": null
     },
     {
+      "id": "q-5113",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "19th-century",
+      "bundle": "colombia",
+      "description": "Un papel firmado en 1851 que valió más que cualquier billete.",
+      "question": "Completa: 'En 1851, bajo el gobierno de José Hilario López, se aprobó la ley que abolió la…'",
+      "answer": "Esclavitud",
+      "wrong_answers": [
+        "Monarquía",
+        "Inquisición",
+        "Pena de muerte"
+      ],
+      "hints": [
+        "Tiene que ver con la libertad de las personas.",
+        "La ley empezó a regir el 1.º de enero de 1852.",
+        "Desde entonces nadie podía ser dueño de otra persona."
+      ],
+      "fun_fact": "El Día de la Afrocolombianidad se celebra el 21 de mayo porque ese día de 1851 se firmó esa ley.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Capitolio_Nacional_de_Colombia_%28Bogot%C3%A1%29_02.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACapitolio_Nacional_de_Colombia_%28Bogot%C3%A1%29_02.JPG",
+        "credit": "Racso (Oscar Fernando Gómez) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Racso (Oscar Fernando Gómez)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Racso",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-5114",
       "status": "approved",
       "difficulty": 10,
@@ -7733,6 +7768,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Nicholas A. Tonelli from Northeast Pennsylvania, USA",
         "author_url": "https://www.flickr.com/people/14922165@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-5129",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "traditional-games",
+      "bundle": "colombia",
+      "description": "Un tablero donde los primos dejan de ser familia por un rato.",
+      "question": "En el parqués, ¿qué tienes que sacar en los dados para que una ficha salga de la cárcel?",
+      "answer": "Los dos dados iguales",
+      "wrong_answers": [
+        "Un seis en un dado",
+        "Un cinco en un dado",
+        "Una suma de siete"
+      ],
+      "hints": [
+        "Mucha gente se queda varios turnos encerrada esperándolo.",
+        "Hay que fijarse en los dos dados a la vez.",
+        "Los jugadores le dicen «sacar pares»."
+      ],
+      "fun_fact": "El parqués se juega con dos dados, mientras que el Ludo inglés usa uno solo.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Dice_on_the_table_six_and_five.jpg/3840px-Dice_on_the_table_six_and_five.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADice_on_the_table_six_and_five.jpg",
+        "credit": "Sankar 1995 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Sankar 1995",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Sankar_1995&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -9313,6 +9383,41 @@
       "background": null
     },
     {
+      "id": "q-5175",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "poetry-and-childrens-stories",
+      "bundle": "colombia",
+      "description": "Rafael Pombo tenía un zoológico escondido entre sus versos.",
+      "question": "En un cuento en verso de Rafael Pombo, un gatico se escapa de su casa para volverse bandido. ¿Cómo se llama?",
+      "answer": "Michín",
+      "wrong_answers": [
+        "Simón el Bobito",
+        "La pobre viejecita",
+        "Pastorcita"
+      ],
+      "hints": [
+        "Su historia es una lección para los niños desobedientes.",
+        "Al final de su aventura vuelve a casa muy arrepentido.",
+        "Es el protagonista de «El gato bandido»."
+      ],
+      "fun_fact": "Rafael Pombo escribió sus «Cuentos pintados» cuando vivía en Nueva York y trabajaba como traductor.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Vintage_cats_illustration_%2846785854271%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVintage_cats_illustration_%2846785854271%29.jpg",
+        "credit": "Rawpixel Ltd · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Rawpixel Ltd",
+        "author_url": "https://www.flickr.com/people/153584064@N07",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-5176",
       "status": "approved",
       "difficulty": 7,
@@ -10148,6 +10253,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Roman Savulyak",
         "author_url": "https://web.archive.org/web/20161012174516/http://www.panoramio.com/user/2350947?with_photo_id=17786465",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-5202",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Un bicho con más apodos que un tío en una fiesta familiar.",
+      "question": "¿Cuál de estos nombres NO se le da al insecto que transmite el mal de Chagas?",
+      "answer": "Zancudo",
+      "wrong_answers": [
+        "Pito",
+        "Vinchuca",
+        "Chinche besucona"
+      ],
+      "hints": [
+        "Suele esconderse en las grietas de las paredes y techos de las casas del campo, y sale de noche.",
+        "En Colombia lo llaman con el nombre de algo que suena.",
+        "El que no es, es el que transmite el dengue."
+      ],
+      "fun_fact": "La enfermedad se llama así por el médico brasileño Carlos Chagas, que la describió en 1909.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/A_Wall_Of_Indigenous_House_%28152178415%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Wall_Of_Indigenous_House_%28152178415%29.jpeg",
+        "credit": "Jusezam · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jusezam",
+        "author_url": "https://500px.com/jusezam",
         "excerpt": null
       },
       "background": null
@@ -13412,6 +13552,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Robbie Shade",
         "author_url": "https://www.flickr.com/people/89466603@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-6824",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "cycling",
+      "bundle": "colombia",
+      "description": "Parece prestada del hermanito menor, pero ya le trajo oro olímpico a Colombia.",
+      "question": "Mariana Pajón ganó dos oros olímpicos montando bicicleta. ¿En qué tipo de carreras compite?",
+      "answer": "Carreras cortas con saltos y curvas",
+      "wrong_answers": [
+        "Carreras largas por carretera",
+        "Carreras en velódromo cubierto",
+        "Paseos tranquilos por la ciudad"
+      ],
+      "hints": [
+        "Las carreras duran menos de un minuto",
+        "La pista suele ser de tierra y tiene subidas y bajadas",
+        "Los corredores despegan del suelo en los montículos"
+      ],
+      "fun_fact": "Mariana Pajón ganó el oro en BMX en Londres 2012 y en Río 2016.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Seoul_88_olympic_medals_%28no_background%29.jpg/3840px-Seoul_88_olympic_medals_%28no_background%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeoul_88_olympic_medals_%28no_background%29.jpg",
+        "credit": "Arne Müseler · CC BY-SA 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 de",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "author": "Arne Müseler",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -18877,6 +19052,41 @@
       "background": null
     },
     {
+      "id": "q-6985",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "vallenato",
+      "bundle": "colombia",
+      "description": "Tiene nombre de pájaro, pero ni vuela ni pone huevos: solo pone sabor.",
+      "question": "La guacharaca del conjunto vallenato lleva el nombre de un ave de la costa. ¿A qué familia de instrumentos pertenece?",
+      "answer": "De percusión",
+      "wrong_answers": [
+        "De viento",
+        "De cuerda",
+        "De teclado"
+      ],
+      "hints": [
+        "Es uno de los tres instrumentos del vallenato tradicional, junto al acordeón y la caja.",
+        "Se toca con un trinche de alambre que se pasa por sus ranuras.",
+        "Hace 'ras-ras' para marcar el ritmo, igual que la caja que suena a su lado."
+      ],
+      "fun_fact": "Se dice que la guacharaca imita el canto del ave del mismo nombre, que en las mañanas de la costa grita sin parar.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Raining_in_Valledupar.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARaining_in_Valledupar.jpg",
+        "credit": "--F3rn4nd0 06:17, 27 March 2007 (UTC) · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "--F3rn4nd0 06:17, 27 March 2007 (UTC)",
+        "author_url": "https://commons.wikimedia.org/wiki/User:F3rn4nd0",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-6986",
       "status": "approved",
       "difficulty": 14,
@@ -20942,6 +21152,41 @@
       "background": null
     },
     {
+      "id": "q-7046",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "drinks",
+      "bundle": "colombia",
+      "description": "El calcetín más trabajador de la cocina colombiana.",
+      "question": "Estás colando el tinto en un colador de tela. ¿Cómo se llama el café molido y mojado que queda adentro?",
+      "answer": "La borra",
+      "wrong_answers": [
+        "La nata",
+        "La melaza",
+        "La espuma"
+      ],
+      "hints": [
+        "Es oscura, húmeda y huele a café.",
+        "Mucha gente la echa a las matas como abono.",
+        "Hay quien dice que lee la suerte en la que queda en el fondo del pocillo."
+      ],
+      "fun_fact": "La borra del café se usa como abono porque le aporta nutrientes a la tierra de las plantas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Coffee_cup_on_coffee_beans.jpg/3840px-Coffee_cup_on_coffee_beans.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoffee_cup_on_coffee_beans.jpg",
+        "credit": "Toni Cuenca · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Toni Cuenca",
+        "author_url": "https://www.pexels.com/@ifreestock/",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7047",
       "status": "approved",
       "difficulty": 8,
@@ -21007,6 +21252,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Spukjania_Langpen",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Spukjania_Langpen&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7049",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "ghosts-and-creatures",
+      "bundle": "colombia",
+      "description": "Una limpieza de la casa que no necesita ni trapero ni jabón.",
+      "question": "Según la tradición popular, si rocías agua bendita por toda la casa, ¿a quiénes espantas?",
+      "answer": "A los malos espíritus",
+      "wrong_answers": [
+        "A los ladrones",
+        "A los vecinos",
+        "A los cobradores"
+      ],
+      "hints": [
+        "No vienen a pedir plata prestada.",
+        "No se ven, pero dicen que asustan de noche.",
+        "Son como fantasmas que traen mala suerte."
+      ],
+      "fun_fact": "El agua bendita se guarda en pilas a la entrada de las iglesias, y mucha gente se lleva un frasquito para la casa.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Holy_water_font_at_Ballyhale_Church.jpg/3840px-Holy_water_font_at_Ballyhale_Church.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHoly_water_font_at_Ballyhale_Church.jpg",
+        "credit": "A.-K. D. · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "A.-K. D.",
+        "author_url": "https://commons.wikimedia.org/wiki/User:A.-K._D.",
         "excerpt": null
       },
       "background": null
@@ -22232,6 +22512,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Yeabdesign",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Yeabdesign&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7087",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "painters-sculptors-and-museums",
+      "bundle": "colombia",
+      "description": "Escaleras, anillos de piedra y nada de ascensor: la vida en la Sierra era puro ejercicio.",
+      "question": "Los taironas construyeron muchas terrazas circulares de piedra en Ciudad Perdida. ¿Para qué servían?",
+      "answer": "Bases para casas y templos",
+      "wrong_answers": [
+        "Canchas para juegos de pelota",
+        "Corrales para animales",
+        "Tumbas para sus jefes"
+      ],
+      "hints": [
+        "Ciudad Perdida fue un gran poblado en la Sierra Nevada de Santa Marta.",
+        "En la selva lluviosa, el suelo se volvía barro y se derrumbaba.",
+        "Encima de cada círculo había un bohío de madera y paja."
+      ],
+      "fun_fact": "Ciudad Perdida es unos 650 años más antigua que Machu Picchu y para llegar hay que caminar varios días por la selva.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Koguis_Tribesman.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKoguis_Tribesman.jpg",
+        "credit": "Dwayne Reilander · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dwayne Reilander",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dwayne_Reilander",
         "excerpt": null
       },
       "background": null
@@ -23807,6 +24122,41 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Z3lvs",
         "author_url": "https://commons.wikimedia.org/wiki/User:Z3lvs",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7134",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "salsa-and-tropical-music",
+      "bundle": "colombia",
+      "description": "Un baile tan elegante que hasta las manos van bien vestidas.",
+      "question": "Según la tradición, ¿qué llevan en la mano las bailarinas de cumbia mientras bailan en la rueda?",
+      "answer": "Un manojo de velas encendidas",
+      "wrong_answers": [
+        "Un abanico de plumas blancas",
+        "Una sombrilla de colores",
+        "Una cinta de seda larga"
+      ],
+      "hints": [
+        "Lo que llevan se va gastando a medida que avanza la noche.",
+        "Lo sostienen en alto con la mano derecha mientras giran alrededor de los músicos.",
+        "Se prende con un fósforo."
+      ],
+      "fun_fact": "La cumbia nació en la costa Caribe colombiana, de la mezcla de tradiciones indígenas, africanas y españolas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Pedestrianized_river_front_in_Mompox%2C_Colombia.jpg/3840px-Pedestrianized_river_front_in_Mompox%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APedestrianized_river_front_in_Mompox%2C_Colombia.jpg",
+        "credit": "GKantaris · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "GKantaris",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:GKantaris&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -27129,6 +27479,41 @@
       "background": null
     },
     {
+      "id": "q-7229",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "cinema",
+      "bundle": "colombia",
+      "description": "Un cuarto secreto que viajó más lejos que muchos colombianos en vacaciones.",
+      "question": "'La cara oculta' (2011), el thriller de Andrés Baiz sobre una mujer atrapada en un cuarto secreto, tuvo una nueva versión. ¿Cuál?",
+      "answer": "Una película de Bollywood",
+      "wrong_answers": [
+        "Una telenovela mexicana",
+        "Una película de Hollywood",
+        "Un anime japonés"
+      ],
+      "hints": [
+        "La nueva versión se rodó en otro continente.",
+        "Se estrenó en 2013 con el título 'Murder 3'.",
+        "En ella se habla hindi."
+      ],
+      "fun_fact": "Andrés Baiz también dirigió capítulos de la serie 'Narcos'.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/A_display_full_of_vintage_film_projectors_and_film_memorabilia_-_0735.jpg/3840px-A_display_full_of_vintage_film_projectors_and_film_memorabilia_-_0735.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_display_full_of_vintage_film_projectors_and_film_memorabilia_-_0735.jpg",
+        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jorge Royan",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7230",
       "status": "approved",
       "difficulty": 15,
@@ -30314,6 +30699,41 @@
       "background": null
     },
     {
+      "id": "q-7321",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "popular-and-andean-music",
+      "bundle": "colombia",
+      "description": "Un nombre que salió del campo boyacense y terminó con festival, discos y todo.",
+      "question": "Jorge Velosa bautizó su música como \"carranga\". En el campo, ¿a qué se refería originalmente esa palabra?",
+      "answer": "A la carne de reses muertas",
+      "wrong_answers": [
+        "A una ruana vieja y remendada",
+        "A una fiesta de cosecha de papa",
+        "A un tiple con las cuerdas rotas"
+      ],
+      "hints": [
+        "La palabra no tenía nada que ver con la música.",
+        "Un \"carranguero\" era alguien que se ganaba la vida con este producto.",
+        "Tiene que ver con animales que se morían en el potrero y no en el matadero."
+      ],
+      "fun_fact": "Velosa ha contado que la palabra salió de su canción 'El carranguero', sobre un señor que vendía carne de reses muertas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Plaza_Mayor%2C_Villa_de_Leyva_02.jpg/3840px-Plaza_Mayor%2C_Villa_de_Leyva_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_Mayor%2C_Villa_de_Leyva_02.jpg",
+        "credit": "Bernard Gagnon · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Bernard Gagnon",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bgag",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7322",
       "status": "approved",
       "difficulty": 7,
@@ -30589,6 +31009,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bernard Gagnon",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bgag",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7330",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "pre-columbian-cultures",
+      "bundle": "colombia",
+      "description": "Una palabra que ha viajado tanto que ya ni ella se acuerda de dónde salió.",
+      "question": "La palabra «guaricha» viene de una lengua indígena del norte de Sudamérica. ¿Qué significaba originalmente?",
+      "answer": "Muchacha o mujer joven",
+      "wrong_answers": [
+        "Guerrero valiente",
+        "Canoa de río",
+        "Fiesta de cosecha"
+      ],
+      "hints": [
+        "Se usaba para hablar de personas, no de cosas.",
+        "Describía a alguien según su edad y si era hombre o mujer.",
+        "Hoy en Colombia diríamos que es una «pelada»."
+      ],
+      "fun_fact": "«Guaricha» es una de las muchas palabras de lenguas indígenas americanas que hoy aparecen en el diccionario del español.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Herrera_y_Tordesillas_Descripcion_de_las_Yndias_Ocidentales_1601_UTA.jpg/3840px-Herrera_y_Tordesillas_Descripcion_de_las_Yndias_Ocidentales_1601_UTA.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHerrera_y_Tordesillas_Descripcion_de_las_Yndias_Ocidentales_1601_UTA.jpg",
+        "credit": "Antonio de Herrera · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Antonio de Herrera",
+        "author_url": "https://en.wikipedia.org/wiki/en:Antonio_de_Herrera_y_Tordesillas",
         "excerpt": null
       },
       "background": null
@@ -35459,6 +35914,41 @@
       "background": null
     },
     {
+      "id": "q-7474",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "natural-parks-and-ecosystems",
+      "bundle": "colombia",
+      "description": "Un lugar tan nublado que hasta los colibríes andan con bufanda.",
+      "question": "Soy un parque nacional del Cauca, cerca de El Tambo. En mis bosques de niebla vive el zamarrito multicolor, un colibrí que casi no se encuentra en ningún otro lugar del mundo. ¿Qué parque soy?",
+      "answer": "Munchique",
+      "wrong_answers": [
+        "Puracé",
+        "Farallones de Cali",
+        "Las Orquídeas"
+      ],
+      "hints": [
+        "En mis montañas llueve muchísimo y casi siempre estoy cubierto de niebla.",
+        "Ese colibrí fue descrito por la ciencia en los años 60 y está en peligro de extinción.",
+        "Mi nombre empieza por «Mun»."
+      ],
+      "fun_fact": "El zamarrito multicolor fue descrito apenas en 1967 y sigue teniendo una de las áreas de distribución más pequeñas de todas las aves de Colombia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/WLE2026_CO_-_Bosque_alto_andino_entre_nubes%2C_PNN_Chingaza_%2844%29.jpg/3840px-WLE2026_CO_-_Bosque_alto_andino_entre_nubes%2C_PNN_Chingaza_%2844%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWLE2026_CO_-_Bosque_alto_andino_entre_nubes%2C_PNN_Chingaza_%2844%29.jpg",
+        "credit": "Jedidiahhorne · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Jedidiahhorne",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jedidiahhorne&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7475",
       "status": "approved",
       "difficulty": 4,
@@ -39808,6 +40298,41 @@
       "background": null
     },
     {
+      "id": "q-7603",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "20th-century",
+      "bundle": "colombia",
+      "description": "Una voz que suena a río, a tambor y a pueblo de la orilla.",
+      "question": "Soy cantadora del Caribe colombiano. En 1982 canté en Estocolmo para el Nobel de Gabo, y en 2011 con Calle 13. ¿Quién soy?",
+      "answer": "Totó la Momposina",
+      "wrong_answers": [
+        "Petrona Martínez",
+        "Leonor González Mina",
+        "Etelvina Maldonado"
+      ],
+      "hints": [
+        "Nací en el departamento de Bolívar.",
+        "Mi canción «La sombra negra» ha sonado en medio mundo.",
+        "Mi nombre artístico viene de Santa Cruz de Mompox."
+      ],
+      "fun_fact": "Su nombre real es Sonia Bazanta Vides.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Canoa_en_el_Alto_Magdalena.jpg/3840px-Canoa_en_el_Alto_Magdalena.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanoa_en_el_Alto_Magdalena.jpg",
+        "credit": "Carlos Castillo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Carlos Castillo",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Ilkarlo&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7604",
       "status": "approved",
       "difficulty": 14,
@@ -40153,6 +40678,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Wolfgang Sauber",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7615",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "banknotes-and-coins",
+      "bundle": "colombia",
+      "description": "Un político con tanta voz que hasta se oía desde la billetera.",
+      "question": "¿Qué político liberal salía en el viejo billete colombiano de 1000 pesos?",
+      "answer": "Jorge Eliécer Gaitán",
+      "wrong_answers": [
+        "Luis Carlos Galán",
+        "Rafael Uribe Uribe",
+        "Alfonso López Pumarejo"
+      ],
+      "hints": [
+        "Fue alcalde de Bogotá en los años 30.",
+        "Es famoso por la frase «Yo no soy un hombre, soy un pueblo».",
+        "Sus iniciales son J. E. G."
+      ],
+      "fun_fact": "Antes de ser candidato presidencial, Gaitán fue alcalde de Bogotá entre 1936 y 1937.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Plaza_de_Bolivar_-_Bogota_-_ANDREA_GAETANO.JPG/3840px-Plaza_de_Bolivar_-_Bogota_-_ANDREA_GAETANO.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaza_de_Bolivar_-_Bogota_-_ANDREA_GAETANO.JPG",
+        "credit": "Andrea Gaetano · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Andrea Gaetano",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Andreagaetano&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -43618,6 +44178,41 @@
         "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
         "author": "Mussi Katz from Israel",
         "author_url": "https://www.flickr.com/people/52775988@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7715",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "poetry-and-childrens-stories",
+      "bundle": "colombia",
+      "description": "Un trabalenguas que deja la lengua más cansada que el pico de Pepe.",
+      "question": "En el trabalenguas «Pepe Pecas pica papas con un pico», ¿qué son las pecas que le dan su apodo a Pepe?",
+      "answer": "Manchitas cafés en la piel",
+      "wrong_answers": [
+        "Granitos rojos en la piel",
+        "Arruguitas en la piel",
+        "Pelitos finos en la piel"
+      ],
+      "hints": [
+        "No se quitan lavándose la cara.",
+        "Salen más cuando tomas mucho sol.",
+        "Son puntitos cafés, como si te hubieran salpicado."
+      ],
+      "fun_fact": "Las pecas son pequeños grupos de melanina, el mismo pigmento que nos pone morenos al sol.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/MashedPotatoes.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMashedPotatoes.jpg",
+        "credit": "Renee Comet (photographer) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Renee Comet (photographer)",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -47648,6 +48243,41 @@
       "background": null
     },
     {
+      "id": "q-7835",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "indigenous-myths-and-folk-beliefs",
+      "bundle": "colombia",
+      "description": "Pobres mesas: llevan siglos aguantando nudillazos sin quejarse.",
+      "question": "Es un agüero: se golpea una mesa o una puerta con los nudillos y se dice «toco madera». ¿Para qué se hace?",
+      "answer": "Para no salarse",
+      "wrong_answers": [
+        "Para que llueva",
+        "Para encontrar algo perdido",
+        "Para que llegue visita"
+      ],
+      "hints": [
+        "Se hace justo después de decir algo bueno, como «este año no me he enfermado».",
+        "Es para que esa buena racha no se dañe.",
+        "En Colombia, cuando a alguien todo le sale mal, se dice que está «salado»."
+      ],
+      "fun_fact": "Tocar madera se hace en muchos países, desde Colombia hasta Inglaterra, y en algunos lugares se toca hasta la propia cabeza «por si acaso es de palo».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Tavolino_DSC_0482.tif/lossy-page1-3840px-Tavolino_DSC_0482.tif.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATavolino_DSC_0482.tif",
+        "credit": "CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7836",
       "status": "approved",
       "difficulty": 3,
@@ -50973,6 +51603,41 @@
       "background": null
     },
     {
+      "id": "q-7932",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "tv-shows-and-series",
+      "bundle": "colombia",
+      "description": "Lo que más responde la gente no siempre es lo más inteligente.",
+      "question": "En «100 colombianos dicen», dos familias adivinan las respuestas más comunes de una encuesta a cien personas. ¿De qué país viene ese formato?",
+      "answer": "Estados Unidos",
+      "wrong_answers": [
+        "México",
+        "Argentina",
+        "Japón"
+      ],
+      "hints": [
+        "El formato original nació en los años 70.",
+        "Allá lo ha presentado el comediante Steve Harvey.",
+        "Es el mismo país de Hollywood."
+      ],
+      "fun_fact": "El original estadounidense, «Family Feud», se estrenó en 1976 y ha vuelto a la televisión en varias épocas.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/ART_TV_studio_floor.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AART_TV_studio_floor.jpg",
+        "credit": "Nikola Smolenski · CC BY-SA 3.0 rs · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 rs",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/rs/deed.en",
+        "author": "Nikola Smolenski",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nikola_Smolenski",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7933",
       "status": "approved",
       "difficulty": 10,
@@ -52198,6 +52863,41 @@
       "background": null
     },
     {
+      "id": "q-7968",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "20th-century",
+      "bundle": "colombia",
+      "description": "Un atajo de agua para que los barcos no tengan que darle la vuelta a Suramérica.",
+      "question": "¿Qué país terminó de construir el Canal de Panamá en 1914 y lo manejó hasta 1999?",
+      "answer": "Estados Unidos",
+      "wrong_answers": [
+        "Francia",
+        "Inglaterra",
+        "Colombia"
+      ],
+      "hints": [
+        "Ese país tiene costas en el Atlántico y en el Pacífico.",
+        "Apoyó la separación de Panamá en 1903 para poder hacer la obra.",
+        "Su moneda, el dólar, también se usa en Panamá."
+      ],
+      "fun_fact": "En 1881, cuando Panamá aún era colombiano, los franceses empezaron a construir el canal, pero fracasaron.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Locomotives_Tow_Container_Ship_through_Miraflores_Locks_-_Panama_Canal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALocomotives_Tow_Container_Ship_through_Miraflores_Locks_-_Panama_Canal.jpg",
+        "credit": "Adam Jones · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Adam Jones",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7969",
       "status": "approved",
       "difficulty": 12,
@@ -52793,6 +53493,76 @@
       "background": null
     },
     {
+      "id": "q-7987",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Un carnaval donde en vez de echar harina, la gente se echa perdones.",
+      "question": "Viven en el Valle de Sibundoy, celebran el Carnaval del Perdón y hablan una lengua sin parientes conocidos. ¿Qué pueblo indígena es?",
+      "answer": "Los kamëntšá",
+      "wrong_answers": [
+        "Los misak",
+        "Los emberá",
+        "Los kogui"
+      ],
+      "hints": [
+        "Viven en el sur del país, en el Putumayo",
+        "Comparten su valle con el pueblo inga",
+        "En su lengua, el Carnaval del Perdón se llama Bëtscnaté"
+      ],
+      "fun_fact": "La lengua kamëntšá es una lengua aislada: no se le ha encontrado ningún pariente en el mundo.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Inhabitants_of_Sibundoy%2C_Colombia%2C_playing_Andean_music.jpg/3840px-Inhabitants_of_Sibundoy%2C_Colombia%2C_playing_Andean_music.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AInhabitants_of_Sibundoy%2C_Colombia%2C_playing_Andean_music.jpg",
+        "credit": "BarcarolIa · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "BarcarolIa",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:BarcarolIa&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-7988",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "crafts-and-traditional-dress",
+      "bundle": "colombia",
+      "description": "Una palabra que suena a botiquín de enfermería pero vive en La Guajira.",
+      "question": "En una mochila wayuu, ¿qué es la gaza?",
+      "answer": "La correa larga para colgarla",
+      "wrong_answers": [
+        "El fondo redondo de la mochila",
+        "El cordón que la cierra arriba",
+        "Los flecos de colores"
+      ],
+      "hints": [
+        "No es parte del cuerpo de la mochila",
+        "Se teje aparte, a veces en un telar",
+        "Es lo que te pones sobre el hombro"
+      ],
+      "fun_fact": "La gaza de una mochila wayuu se suele tejer en un telar aparte y después se cose a la mochila.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/CAMELLON_Y_MOCHILAS.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACAMELLON_Y_MOCHILAS.JPG",
+        "credit": "Miller Sierra · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Miller Sierra",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Miller_Sierra&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7989",
       "status": "approved",
       "difficulty": 7,
@@ -53243,6 +54013,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Jedidiahhorne",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Jedidiahhorne&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8002",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Antes de cualquier paseo en Colombia, la pregunta obligada es: «¿y allá qué clima hace?».",
+      "question": "Las costas, los Llanos y la Amazonia lo comparten. ¿Qué piso térmico ocupa la mayor parte del territorio de Colombia?",
+      "answer": "El cálido",
+      "wrong_answers": [
+        "El templado",
+        "El frío",
+        "El de páramo"
+      ],
+      "hints": [
+        "Va desde el nivel del mar hasta unos 1000 metros de altura.",
+        "Allí la temperatura pasa de 24 °C.",
+        "Es la «tierra caliente»."
+      ],
+      "fun_fact": "Cerca de cuatro de cada cinco partes del territorio colombiano están en piso térmico cálido.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Aerial_view_of_the_Amazon_Rainforest.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_view_of_the_Amazon_Rainforest.jpg",
+        "credit": "lubasi · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "lubasi",
+        "author_url": "https://www.flickr.com/people/44577875@N08",
         "excerpt": null
       },
       "background": null
@@ -54298,6 +55103,41 @@
       "background": null
     },
     {
+      "id": "q-8033",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "ghosts-and-creatures",
+      "bundle": "colombia",
+      "description": "Ni con un hueso gigante se le quita lo bravo a este perrito.",
+      "question": "En la leyenda, un perro enorme y negro, con ojos rojos como brasas, recorre los caminos de noche. ¿Qué va arrastrando?",
+      "answer": "Cadenas",
+      "wrong_answers": [
+        "Una carreta",
+        "Un costal",
+        "Una soga"
+      ],
+      "hints": [
+        "Se le oye antes de verlo.",
+        "Cuando lo oyen venir, en el pueblo cierran las puertas.",
+        "En las películas viejas, los presos las llevan en los pies."
+      ],
+      "fun_fact": "Hay leyendas de un perro negro espantoso en muchos países, desde Colombia y Venezuela hasta Inglaterra y Escocia.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Spring_Night_in_rural_Ontario%2C_Canada.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpring_Night_in_rural_Ontario%2C_Canada.jpg",
+        "credit": "JohannaRegan · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "JohannaRegan",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:JohannaRegan&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8034",
       "status": "approved",
       "difficulty": 3,
@@ -54508,6 +55348,41 @@
       "background": null
     },
     {
+      "id": "q-8040",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Un ecosistema colombiano tan escaso que casi hay que pedir cita para visitarlo.",
+      "question": "Mira la foto. ¿Qué ecosistema es?",
+      "answer": "El bosque seco tropical",
+      "wrong_answers": [
+        "El bosque de niebla",
+        "El páramo",
+        "El manglar"
+      ],
+      "hints": [
+        "Solo le llueve unos pocos meses al año.",
+        "Antes cubría gran parte de los valles del Caribe y del Magdalena; hoy queda muy poco.",
+        "Su nombre dice lo contrario de «húmedo»."
+      ],
+      "fun_fact": "En Colombia queda menos del 10 % del bosque seco tropical que existía originalmente.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Dry_Forest_Theppakadu_Mudumalai_Mar21_A7C_00505.jpg/3840px-Dry_Forest_Theppakadu_Mudumalai_Mar21_A7C_00505.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADry_Forest_Theppakadu_Mudumalai_Mar21_A7C_00505.jpg",
+        "credit": "Timothy A. Gonsalves · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Timothy A. Gonsalves",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tagooty",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8041",
       "status": "approved",
       "difficulty": 7,
@@ -54643,6 +55518,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Richard Humphrey",
         "author_url": "https://www.geograph.org.uk/profile/39484",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8045",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "olympic-medallists",
+      "bundle": "colombia",
+      "description": "Un piyama blanco, mucho respeto y un nudo bien apretado en la cintura.",
+      "question": "Los judocas colombianos usan cinturones de colores. ¿Qué significa uno del color del de la foto?",
+      "answer": "Que tiene un nivel avanzado",
+      "wrong_answers": [
+        "Que apenas está empezando",
+        "Que es la jueza del combate",
+        "Que hoy va perdiendo"
+      ],
+      "hints": [
+        "El judo nació en Japón, y allá el cinturón se cambia por grados.",
+        "Los principiantes empiezan con uno blanco.",
+        "Es el color de los maestros."
+      ],
+      "fun_fact": "Jigoro Kano, el creador del judo, introdujo en Japón el sistema de rangos con cinturones blanco y negro.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Black_belt_tied.jpg/3840px-Black_belt_tied.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_belt_tied.jpg",
+        "credit": "NainDeathlegs · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "NainDeathlegs",
+        "author_url": "https://commons.wikimedia.org/wiki/User:NainDeathlegs",
         "excerpt": null
       },
       "background": null
@@ -56952,6 +57862,41 @@
         "license": "CC BY 2.0",
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Jay",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8113",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "banknotes-and-coins",
+      "bundle": "colombia",
+      "description": "Cambiar un billete grande en la tienda: el deporte extremo del tendero.",
+      "question": "Quieres cambiar un billete de 50 000 pesos solo por billetes de 2000. ¿Cuántos te tienen que dar?",
+      "answer": "25",
+      "wrong_answers": [
+        "20",
+        "30",
+        "15"
+      ],
+      "hints": [
+        "Piensa cuántas veces cabe 2 en 50.",
+        "Con 10 billetes de 2000 apenas tienes 20 000.",
+        "Es la mitad de 50."
+      ],
+      "fun_fact": "El billete de 50 000 pesos lleva en su reverso la Ciudad Perdida de la Sierra Nevada de Santa Marta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg",
+        "credit": "El Banco De Oriente. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "El Banco De Oriente.",
         "author_url": null,
         "excerpt": null
       },
@@ -62558,6 +63503,41 @@
       "background": null
     },
     {
+      "id": "q-8278",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "mountains-and-landscapes",
+      "bundle": "colombia",
+      "description": "Aquí nadie te mira raro si sales en chanclas, excepto en uno de estos lugares.",
+      "question": "¿Cuál de estos lugares de Colombia NO es de tierra caliente?",
+      "answer": "Tunja",
+      "wrong_answers": [
+        "Cartagena",
+        "Barranquilla",
+        "Girardot"
+      ],
+      "hints": [
+        "Tres de ellos son perfectos para piscina todo el día.",
+        "El intruso está en lo alto de la cordillera.",
+        "Allá la gente sale con chaqueta y ruana."
+      ],
+      "fun_fact": "Girardot es tan caliente que es uno de los paseos de fin de semana favoritos de los bogotanos que quieren calentarse.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/DFC_0558_Rows_of_colorful_beach_umbrellas_tilting_toward_the_sea_on_a_calm_sunny_day.jpg/3840px-DFC_0558_Rows_of_colorful_beach_umbrellas_tilting_toward_the_sea_on_a_calm_sunny_day.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADFC_0558_Rows_of_colorful_beach_umbrellas_tilting_toward_the_sea_on_a_calm_sunny_day.jpg",
+        "credit": "PattayaPatrol · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PattayaPatrol",
+        "author_url": "https://www.flickr.com/people/PattayaPatrol/",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8279",
       "status": "approved",
       "difficulty": 4,
@@ -65703,6 +66683,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Over Doz",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8369",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "colombia",
+      "description": "Un guaduero con tan buen pulso que hasta Humboldt, que era muy exigente, se quitó el sombrero.",
+      "question": "Francisco Javier Matís nació en Guaduas en 1763, y Alexander von Humboldt lo llamó el mejor pintor del mundo de un tema. ¿Cuál?",
+      "answer": "Flores",
+      "wrong_answers": [
+        "Aves",
+        "Volcanes",
+        "Mapas"
+      ],
+      "hints": [
+        "Pintaba con lupa y pincel finísimo, con detalles que parecen fotos.",
+        "Trabajó casi 30 años para el sabio gaditano José Celestino Mutis.",
+        "Sus láminas muestran orquídeas, quinas y pasifloras."
+      ],
+      "fun_fact": "Miles de láminas de la Expedición Botánica se guardan hoy en el Real Jardín Botánico de Madrid.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Catedral_de_San_Miguel_Arc%C3%A1ngel%2C_Guaduas_%28Cundinamarca%29%2C_Colombia.JPG/3840px-Catedral_de_San_Miguel_Arc%C3%A1ngel%2C_Guaduas_%28Cundinamarca%29%2C_Colombia.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACatedral_de_San_Miguel_Arc%C3%A1ngel%2C_Guaduas_%28Cundinamarca%29%2C_Colombia.JPG",
+        "credit": "Kamilokardona · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Kamilokardona",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Kamilokardona&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "fb988e6c",
+  "hash": "8ffb38fc",
   "questions": [
     {
       "id": "q-0711",
@@ -1263,6 +1263,41 @@
       "background": null
     },
     {
+      "id": "q-10180",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "christmas-season",
+      "bundle": "mexico",
+      "description": "Ponche calientito, piñata y velitas: la fiesta más cantada de diciembre.",
+      "question": "En las posadas mexicanas, los peregrinos cargan unas figuritas mientras piden posada. ¿A quiénes representan?",
+      "answer": "José y María",
+      "wrong_answers": [
+        "Adán y Eva",
+        "Melchor y Gaspar",
+        "Isabel y Zacarías"
+      ],
+      "hints": [
+        "Iban de viaje y no encontraban dónde dormir.",
+        "Ella va montada en un burrito.",
+        "Son los papás del Niño Dios."
+      ],
+      "fun_fact": "Las posadas se hacen nueve noches seguidas, y cada noche una casa distinta suele hacer de “mesón” y abrir la puerta.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Pi%C3%B1atas_on_Independencia_Street_in_the_city_of_Tlaxcala.jpg/3840px-Pi%C3%B1atas_on_Independencia_Street_in_the_city_of_Tlaxcala.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APi%C3%B1atas_on_Independencia_Street_in_the_city_of_Tlaxcala.jpg",
+        "credit": "Isaacvp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Isaacvp",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Isaacvp",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10181",
       "status": "approved",
       "difficulty": 5,
@@ -1788,6 +1823,41 @@
       "background": null
     },
     {
+      "id": "q-10196",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "civic-holidays",
+      "bundle": "mexico",
+      "description": "Una ciudad tan vieja que sus primeros vecinos ya no se acuerdan ni de la mudanza.",
+      "question": "Estás en honores a la bandera y miras el escudo, que recuerda la fundación de Tenochtitlan. ¿En qué año ocurrió, según la tradición?",
+      "answer": "1325",
+      "wrong_answers": [
+        "1428",
+        "1492",
+        "1521"
+      ],
+      "hints": [
+        "Fue mucho antes de que llegaran los españoles.",
+        "Antes de fundarla, los mexicas peregrinaron muchos años desde Aztlán.",
+        "Pasaron casi 200 años antes de que Hernán Cortés la viera."
+      ],
+      "fun_fact": "Sobre las ruinas de Tenochtitlan se construyó la Ciudad de México, y el Templo Mayor se puede visitar en el Centro Histórico.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/Mexican_flag.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMexican_flag.jpg",
+        "credit": "Jorge Mendoza · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Jorge Mendoza",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bibliothecamex",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-10197",
       "status": "approved",
       "difficulty": 5,
@@ -1853,6 +1923,41 @@
         "license_url": "https://creativecommons.org/licenses/by/2.0",
         "author": "Adam Jones",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10199",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "civic-holidays",
+      "bundle": "mexico",
+      "description": "Uniforme de gala, escolta bien formada y el himno a todo pulmón.",
+      "question": "¿Qué día de la semana se hacen los honores a la bandera en las escuelas de México?",
+      "answer": "El lunes",
+      "wrong_answers": [
+        "El miércoles",
+        "El viernes",
+        "El sábado"
+      ],
+      "hints": [
+        "Es un día de clases.",
+        "Es el día en que a mucha gente le cuesta más trabajo levantarse.",
+        "Es el día después del domingo."
+      ],
+      "fun_fact": "La ley mexicana sobre los símbolos patrios pide hacer honores a la bandera en las escuelas los lunes, al inicio de labores.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Bandera_del_zocalo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABandera_del_zocalo.JPG",
+        "credit": "Victormoz · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Victormoz",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Victormoz",
         "excerpt": null
       },
       "background": null
@@ -2518,6 +2623,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Marc Ryckaert (MJJR)",
         "author_url": "https://commons.wikimedia.org/wiki/User:MJJR",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-10219",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "crafts-and-dress",
+      "bundle": "mexico",
+      "description": "Bolitas de colores tan chiquitas que se pierden si estornudas.",
+      "question": "¿Cuál de estas cosas NO se hace tradicionalmente con chaquira?",
+      "answer": "Un comal",
+      "wrong_answers": [
+        "Una pulsera",
+        "Un collar",
+        "Unos aretes"
+      ],
+      "hints": [
+        "La chaquira es tan pequeña que se ensarta en hilo con aguja.",
+        "Los artesanos huicholes la usan para adornarse.",
+        "El intruso es un utensilio de cocina para calentar tortillas."
+      ],
+      "fun_fact": "La chaquira de vidrio llegó a México con los europeos; antes, las cuentas se hacían con semillas, conchas y piedras.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Perline_di_conteria.jpg/3840px-Perline_di_conteria.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APerline_di_conteria.jpg",
+        "credit": "Albarubescens · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Albarubescens",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Albarubescens&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -13618,6 +13758,41 @@
       "background": null
     },
     {
+      "id": "q-11473",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "folk-beliefs",
+      "bundle": "mexico",
+      "description": "Un animal de varias toneladas que cabe en la repisa de la sala.",
+      "question": "En muchas casas y negocios de México hay una figurita de elefante con la trompa hacia arriba. Según la creencia, ¿qué atrae?",
+      "answer": "La buena suerte y la prosperidad",
+      "wrong_answers": [
+        "La lluvia y las buenas cosechas",
+        "El amor y los novios",
+        "El sueño y el descanso"
+      ],
+      "hints": [
+        "Es muy común verlo en tienditas y en la caja de los negocios.",
+        "Muchas veces lo adornan con un listón rojo o lo regalan cuando alguien estrena casa.",
+        "A los comerciantes les interesa mucho que llegue esto."
+      ],
+      "fun_fact": "Según la creencia, la trompa del elefante debe ir hacia arriba: con la trompa hacia abajo, dicen, no trae la misma suerte.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2xyL21pYTgxNzM1LWltYWdlLmpwZw.jpg",
+        "source_url": "https://www.rawpixel.com/image/7655228/photo-image-vintage-art-public-domain",
+        "credit": "CC0 1.0 · Rawpixel via Openverse",
+        "provider": "openverse",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-11474",
       "status": "approved",
       "difficulty": 4,
@@ -15613,6 +15788,41 @@
       "background": null
     },
     {
+      "id": "q-11531",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "national-team",
+      "bundle": "mexico",
+      "description": "Un portero al que se le veía desde el espacio.",
+      "question": "Jorge Campos fue portero y también delantero, medía cerca de 1,68 metros y diseñaba sus uniformes fosforescentes inspirado en el surf. ¿De qué ciudad es?",
+      "answer": "Acapulco",
+      "wrong_answers": [
+        "Guadalajara",
+        "Monterrey",
+        "Mazatlán"
+      ],
+      "hints": [
+        "Es una ciudad que recibe muchísimos turistas.",
+        "Está en el estado de Guerrero.",
+        "Su bahía, la de Santa Lucía, es una de las playas más famosas de México desde los años cincuenta."
+      ],
+      "fun_fact": "Campos fue portero del Tri en los Mundiales de 1994 y 1998, y en su club llegó a meter goles como delantero.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Football_goalkeeper_gloves_Force_1000.jpg/3840px-Football_goalkeeper_gloves_Force_1000.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFootball_goalkeeper_gloves_Force_1000.jpg",
+        "credit": "Santeri Viinamäki · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Santeri Viinamäki",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Zunter",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-11532",
       "status": "approved",
       "difficulty": 3,
@@ -17083,6 +17293,41 @@
       "background": null
     },
     {
+      "id": "q-11574",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "transport",
+      "bundle": "mexico",
+      "description": "Millones de chilangos lo usan cada día, y casi ninguno llega con su espacio personal intacto.",
+      "question": "En una estación del Metro, ¿cómo se llama la plataforma junto a las vías donde esperas el tren?",
+      "answer": "El andén",
+      "wrong_answers": [
+        "El torniquete",
+        "La taquilla",
+        "El vagón"
+      ],
+      "hints": [
+        "No es donde compras tu boleto ni donde pasas tu tarjeta.",
+        "Ahí hay una línea amarilla que no debes cruzar.",
+        "En las estaciones de tren también se llama así, y empieza con «an»."
+      ],
+      "fun_fact": "En las horas pico, en algunos andenes del Metro de la CDMX hay zonas separadas solo para mujeres y niños.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Metro_de_la_Ciudad_de_M%C3%A9xico_23_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetro_de_la_Ciudad_de_M%C3%A9xico_23_07.jpg",
+        "credit": "Juan Carlos Fonseca Mata · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Juan Carlos Fonseca Mata",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Juan_Carlos_Fonseca_Mata",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-11575",
       "status": "approved",
       "difficulty": 5,
@@ -17603,6 +17848,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Will Fisher from Richmond, VA, United States",
         "author_url": "https://www.flickr.com/people/50204706@N07",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11590",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "contemporary-cinema",
+      "bundle": "mexico",
+      "description": "Ser princesa no es tan fácil: primero hay que completar la tarea.",
+      "question": "Estás viendo «El laberinto del fauno»: ¿cuántas pruebas le pide el fauno a Ofelia antes de la luna llena?",
+      "answer": "3",
+      "wrong_answers": [
+        "2",
+        "5",
+        "7"
+      ],
+      "hints": [
+        "El fauno le da un libro mágico que se va llenando de instrucciones.",
+        "En una debe enfrentar a un sapo gigante.",
+        "Es el mismo número que los cochinitos del cuento."
+      ],
+      "fun_fact": "El actor estadounidense Doug Jones, que hizo del fauno, se aprendió sus diálogos en español aunque no hablaba el idioma.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Olkhon%2C_Stone_labyrinths%2C_mazes%2C_Lake_Baikal%2C_Russia.jpg/3840px-Olkhon%2C_Stone_labyrinths%2C_mazes%2C_Lake_Baikal%2C_Russia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOlkhon%2C_Stone_labyrinths%2C_mazes%2C_Lake_Baikal%2C_Russia.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
         "excerpt": null
       },
       "background": null
@@ -19673,6 +19953,41 @@
       "background": null
     },
     {
+      "id": "q-11650",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "school-and-services",
+      "bundle": "mexico",
+      "description": "Toga, birrete, vals y lagrimitas de las tías.",
+      "question": "Los graduados me eligen, casi siempre entre sus maestros. Salgo en la invitación, en la foto del grupo y en la ceremonia. ¿Quién soy?",
+      "answer": "El padrino de generación",
+      "wrong_answers": [
+        "El jefe de grupo",
+        "El abanderado",
+        "El director de la escuela"
+      ],
+      "hints": [
+        "No soy alumno.",
+        "En la invitación, mi nombre suele ir junto al nombre de la generación.",
+        "Me toca 'apadrinar' a toda la generación."
+      ],
+      "fun_fact": "En México hasta los niños de kínder tienen graduación con toga y birrete.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Elementary_Graduation_in_the_Philippines.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElementary_Graduation_in_the_Philippines.jpg",
+        "credit": "Julan Shirwod Nueva · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Julan Shirwod Nueva",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jsnueva1022",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-11651",
       "status": "approved",
       "difficulty": 3,
@@ -21418,6 +21733,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
         "author": "Louise Palanker from Los Angeles/Santa Barbara, USA",
         "author_url": "https://www.flickr.com/people/15244580@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-11701",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "tv-shows-and-hosts",
+      "bundle": "mexico",
+      "description": "Un programa de domingo donde cambiar de opinión podía costarte una licuadora.",
+      "question": "En «En Familia con Chabelo», el concursante podía cambiar su premio por otro escondido sin saber si era mejor o peor. ¿Cómo se llamaba ese juego?",
+      "answer": "La catafixia",
+      "wrong_answers": [
+        "La tómbola",
+        "La ruleta",
+        "El cofre"
+      ],
+      "hints": [
+        "Podías salir ganando… o arrepentirte de inmediato.",
+        "Podías ganar un carro… o un montón de jabones.",
+        "Empieza con «cata»."
+      ],
+      "fun_fact": "Chabelo condujo su programa durante 48 años, de 1967 a 2015.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Valentine%27s_day_gift_box.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AValentine%27s_day_gift_box.jpg",
+        "credit": "Olugold · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Olugold",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Olugold",
         "excerpt": null
       },
       "background": null
@@ -23943,6 +24293,41 @@
       "background": null
     },
     {
+      "id": "q-12555",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "lucha-libre",
+      "bundle": "mexico",
+      "description": "La cuenta más tensa de la vida, después de la del súper.",
+      "question": "En la lucha libre, cuando un luchador queda de espaldas sobre la lona, ¿hasta qué número cuenta el réferi para que se gane la caída?",
+      "answer": "3",
+      "wrong_answers": [
+        "5",
+        "8",
+        "10"
+      ],
+      "hints": [
+        "Es un número muy pequeño.",
+        "Es menos que los dedos de una mano.",
+        "Es el número de cuerdas que suele tener el ring."
+      ],
+      "fun_fact": "En el boxeo, en cambio, el réferi cuenta hasta diez.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Lucha_libre_m%C3%A1scaras.JPG/3840px-Lucha_libre_m%C3%A1scaras.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALucha_libre_m%C3%A1scaras.JPG",
+        "credit": "Jonathan McIntosh · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jonathan McIntosh",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Thehero",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12556",
       "status": "approved",
       "difficulty": 4,
@@ -25872,6 +26257,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
         "author": "Thomas Wolf, www.foto-tw.de",
         "author_url": "https://commons.wikimedia.org/wiki/User:Der_Wolf_im_Wald",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-12613",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "brands-and-snacks",
+      "bundle": "mexico",
+      "description": "Una botana que viene con advertencia incluida: prepara un vaso de agua.",
+      "question": "Son botanas enrolladas, saben a chile con limón y la bolsa de los Fuego es morada. ¿De qué país son los Takis?",
+      "answer": "México",
+      "wrong_answers": [
+        "Estados Unidos",
+        "Japón",
+        "España"
+      ],
+      "hints": [
+        "Se hicieron famosísimos entre los adolescentes de muchos países.",
+        "Los hace Barcel, de la misma empresa que el pan Bimbo.",
+        "Es el país de los tacos, que les dan su nombre."
+      ],
+      "fun_fact": "Los Takis salieron a la venta a finales de los años 90 y hoy se comen en decenas de países.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Tortilla_chips.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATortilla_chips.JPG",
+        "credit": "BrokenSphere · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "BrokenSphere",
+        "author_url": "https://commons.wikimedia.org/wiki/User:BrokenSphere",
         "excerpt": null
       },
       "background": null
@@ -28747,6 +29167,41 @@
       "background": null
     },
     {
+      "id": "q-12696",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "traditional-dances",
+      "bundle": "mexico",
+      "description": "Cuando los diablos salen a bailar a la calle, ni el calendario se atreve a decirles que no.",
+      "question": "Estás en Cuajinicuilapa, Guerrero, y por la calle bailan diablos con máscaras de crin al ritmo de una quijada de burro. ¿En qué fecha del año es?",
+      "answer": "En Día de Muertos",
+      "wrong_answers": [
+        "En Semana Santa",
+        "En Carnaval",
+        "En las fiestas patrias de septiembre"
+      ],
+      "hints": [
+        "Es una tradición de los pueblos afromexicanos de la Costa Chica.",
+        "La danza recorre la comunidad de casa en casa.",
+        "Es cuando se ponen ofrendas con cempasúchil."
+      ],
+      "fun_fact": "La quijada de burro suena porque, al golpearla, sus dientes flojos vibran y castañetean.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Ventura_Beach_in_Guerrero%2C_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVentura_Beach_in_Guerrero%2C_Mexico.jpg",
+        "credit": "Gary Denness from Mexico DF, Mexico · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Gary Denness from Mexico DF, Mexico",
+        "author_url": "https://www.flickr.com/people/49467596@N00",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-12697",
       "status": "approved",
       "difficulty": 7,
@@ -30195,6 +30650,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Efras",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Efras&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13489",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "animals",
+      "bundle": "mexico",
+      "description": "Un cerro con un inquilino muy saltarín.",
+      "question": "El glifo mexica de un lugar de la Ciudad de México es un chapulín sobre un cerro. ¿Qué lugar es?",
+      "answer": "Chapultepec",
+      "wrong_answers": [
+        "Coyoacán",
+        "Xochimilco",
+        "Tlatelolco"
+      ],
+      "hints": [
+        "Los mexicas ya comían chapulines, como hoy se comen en Oaxaca.",
+        "El nombre del lugar en náhuatl describe justo lo que se ve en el glifo.",
+        "Su nombre empieza casi igual que «chapulín»."
+      ],
+      "fun_fact": "Coyoacán, otra de las opciones, significa «lugar de coyotes».",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Grasshopper_on_High_Rocks_Loop_trail%2C_Capen_Hill_Nature_Sanctuary_2026-07-10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrasshopper_on_High_Rocks_Loop_trail%2C_Capen_Hill_Nature_Sanctuary_2026-07-10.jpg",
+        "credit": "Peter Cooper Jr. · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Peter Cooper Jr.",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PeterCooperJr",
         "excerpt": null
       },
       "background": null
@@ -36185,6 +36675,41 @@
       "background": null
     },
     {
+      "id": "q-13662",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "landmarks",
+      "bundle": "mexico",
+      "description": "Una fila tan larga que hasta Frida habría pintado un autorretrato mientras esperaba.",
+      "question": "El Mercado de Coyoacán está a unas cuadras de la Casa Azul de Frida Kahlo, y sus puestos más famosos tienen fila. ¿Qué venden?",
+      "answer": "Tostadas y antojitos",
+      "wrong_answers": [
+        "Libros y revistas usados",
+        "Artesanías y alebrijes",
+        "Flores y plantas"
+      ],
+      "hints": [
+        "Es un mercado tradicional de barrio al que los vecinos van desde hace décadas.",
+        "Es un mercado techado, con pasillos llenos de puestos de todo tipo.",
+        "Se comen con crema, salsa y, a veces, ceviche o pata."
+      ],
+      "fun_fact": "Junto a las tostadas, los esquites y los churros son otra parada obligada al pasear por el centro de Coyoacán.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Coyoac%C3%A1n_-_Plaza_Hidalgo%2C_Coyoacan_-_Mexico_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoyoac%C3%A1n_-_Plaza_Hidalgo%2C_Coyoacan_-_Mexico_2024.jpg",
+        "credit": "José Luiz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "José Luiz",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13663",
       "status": "approved",
       "difficulty": 12,
@@ -36780,6 +37305,41 @@
       "background": null
     },
     {
+      "id": "q-13681",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "painters-and-muralists",
+      "bundle": "mexico",
+      "description": "Un dibujante tan famoso por su apodo que casi nadie recuerda su nombre.",
+      "question": "Mario Moreno es a «Cantinflas» como el caricaturista Ernesto García Cabral es a…",
+      "answer": "«El Chango»",
+      "wrong_answers": [
+        "«El Fisgón»",
+        "«Rius»",
+        "«El Santo»"
+      ],
+      "hints": [
+        "Dibujó portadas para «Revista de Revistas» y para «Excélsior».",
+        "Nació en Huatusco, Veracruz.",
+        "Su apodo es un animal que vive en los árboles."
+      ],
+      "fun_fact": "García Cabral estudió en París con una beca del gobierno de Francisco I. Madero.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Nib_of_a_pen.jpg/3840px-Nib_of_a_pen.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANib_of_a_pen.jpg",
+        "credit": "Gausanchennai · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Gausanchennai",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Gausanchennai&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-13682",
       "status": "approved",
       "difficulty": 11,
@@ -37300,6 +37860,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Yerpo",
         "author_url": "https://commons.wikimedia.org/wiki/User:Yerpo",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-13697",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "scientists-and-inventors",
+      "bundle": "mexico",
+      "description": "Un turista que no se conformó con la foto: se subió hasta el cráter.",
+      "question": "En 1803, un famoso naturalista europeo que recorría la Nueva España subió al volcán Jorullo, en Michoacán. ¿Quién?",
+      "answer": "Alexander von Humboldt",
+      "wrong_answers": [
+        "Charles Darwin",
+        "James Cook",
+        "Carlos Linneo"
+      ],
+      "hints": [
+        "Viajó por América entre 1799 y 1804",
+        "Una corriente marina del Pacífico y un pingüino llevan su apellido",
+        "Era alemán y lo llamaron «el segundo descubridor de América»"
+      ],
+      "fun_fact": "Humboldt escribió el «Ensayo político sobre el reino de la Nueva España», y en México hay calles y escuelas con su nombre.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Plate_XV._In_the_valley_of_Jorullo._A_naturalist_in_Mexico%2C_1895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlate_XV._In_the_valley_of_Jorullo._A_naturalist_in_Mexico%2C_1895.jpg",
+        "credit": "Internet Archive Book Images · No restrictions · Wikimedia Commons",
+        "provider": "commons",
+        "license": "No restrictions",
+        "license_url": "https://www.flickr.com/commons/usage/",
+        "author": "Internet Archive Book Images",
+        "author_url": "https://www.flickr.com/people/126377022@N07",
         "excerpt": null
       },
       "background": null
@@ -38630,6 +39225,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Micheal Kaluba",
         "author_url": "https://commons.wikimedia.org/wiki/User:Micheal_Kaluba",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-14508",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "brands-and-snacks",
+      "bundle": "mexico",
+      "description": "Sandía, pepino y jícama entraron a un vaso y salieron enchilados.",
+      "question": "En la calle te venden un vaso de mango, pepino y jícama con chile y limón. ¿Quién lo vende?",
+      "answer": "El frutero",
+      "wrong_answers": [
+        "El elotero",
+        "El paletero",
+        "El tamalero"
+      ],
+      "hints": [
+        "Su carrito suele tener una vitrina con todo picado.",
+        "Sabe pelar mangos en forma de flor.",
+        "Su nombre viene de lo que corta todo el día."
+      ],
+      "fun_fact": "Tajín, el chile en polvo con limón más famoso para la fruta, nació en Jalisco en 1985.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Unriped_Mango_With_Chilli_Powder_And_Salt.jpg/3840px-Unriped_Mango_With_Chilli_Powder_And_Salt.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnriped_Mango_With_Chilli_Powder_And_Salt.jpg",
+        "credit": "Looze Nutz · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Looze Nutz",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Looze_Nutz&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -47249,6 +47879,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "PattayaPatrol",
         "author_url": "https://www.flickr.com/people/PattayaPatrol/",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-15482",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "drinks",
+      "bundle": "mexico",
+      "description": "Una pantera con músculos de caricatura y bigote de chocolate.",
+      "question": "Viene en lata, su mascota es Pancho Pantera y se prepara en un vaso frío. Su nombre junta «choco» con una palabra en inglés. ¿Qué significa?",
+      "answer": "Leche",
+      "wrong_answers": [
+        "Polvo",
+        "Fuerza",
+        "Dulce"
+      ],
+      "hints": [
+        "La marca se vende en México desde hace muchas décadas.",
+        "Es de las primeras palabras que aprendes en inglés, junto con «water» y «bread».",
+        "Es blanca y va con el cereal."
+      ],
+      "fun_fact": "Pancho Pantera ha sido la cara de Chocomilk durante décadas y hasta tuvo sus propias historietas.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Woman_enjoys_breakfast_with_fruits_yogurt_and_tea_in_a_cozy_kitchen_setting.jpg/3840px-Woman_enjoys_breakfast_with_fruits_yogurt_and_tea_in_a_cozy_kitchen_setting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWoman_enjoys_breakfast_with_fruits_yogurt_and_tea_in_a_cozy_kitchen_setting.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985",
         "excerpt": null
       },
       "background": null
@@ -58489,6 +59154,41 @@
       "background": null
     },
     {
+      "id": "q-16551",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "money",
+      "bundle": "mexico",
+      "description": "La moneda que más presume dentro de tu monedero.",
+      "question": "¿Cuántas monedas de 20 pesos necesitas para juntar 100 pesos?",
+      "answer": "5",
+      "wrong_answers": [
+        "2",
+        "4",
+        "10"
+      ],
+      "hints": [
+        "Necesitas más de dos y menos de diez.",
+        "Con dos monedas juntas 40 pesos.",
+        "Cuenta de 20 en 20 hasta llegar a 100."
+      ],
+      "fun_fact": "Muchas monedas de 20 pesos son conmemorativas, como las de los 500 años de la fundación de Veracruz.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Coins_of_Mexico.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoins_of_Mexico.jpg",
+        "credit": "Aurelio Sandoval · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Aurelio Sandoval",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aurelio_Sandoval",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-16552",
       "status": "approved",
       "difficulty": 1,
@@ -59429,6 +60129,41 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Yavidaxiu",
         "author_url": "https://commons.wikimedia.org/wiki/User:Yavidaxiu",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-16581",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "traditional-games",
+      "bundle": "mexico",
+      "description": "Una carta con cara de pocos amigos, pero el gritón no le tiene nada de miedo.",
+      "question": "Al cantar El Valiente en la lotería, el verso tradicional dice: «¿Por qué le corres, ___…?». ¿Qué palabra falta?",
+      "answer": "cobarde",
+      "wrong_answers": [
+        "compadre",
+        "amigo",
+        "muchacho"
+      ],
+      "hints": [
+        "El verso se burla de él",
+        "La palabra empieza con «co», igual que otra de las opciones",
+        "Es lo contrario de lo que dice el nombre de la carta"
+      ],
+      "fun_fact": "Muchas cartas de la lotería tienen su verso tradicional, y los jugadores los saben de memoria aunque nadie se los haya enseñado.",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Loteria_Mexicana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALoteria_Mexicana.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -63774,6 +64509,41 @@
       "background": null
     },
     {
+      "id": "q-17364",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "pop-and-rock",
+      "bundle": "mexico",
+      "description": "En este colegio de ricos las calificaciones importaban menos que el peinado.",
+      "question": "Estás viendo «Rebelde»: Dulce María es a Roberta como Anahí es a…",
+      "answer": "Mía",
+      "wrong_answers": [
+        "Lupita",
+        "Celina",
+        "Vico"
+      ],
+      "hints": [
+        "Es la chava más fresa y popular del colegio.",
+        "Su papá es un diseñador de moda muy famoso.",
+        "Su apellido es Colucci."
+      ],
+      "fun_fact": "Anahí empezó a actuar de niña, en el programa infantil «Chiquilladas».",
+      "media": {
+        "type": "image",
+        "role": "decorative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Hallway_of_school.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHallway_of_school.JPG",
+        "credit": "ChadPerez49 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "ChadPerez49",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:ChadPerez49&action=edit&redlink=1",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-17365",
       "status": "approved",
       "difficulty": 8,
@@ -64503,6 +65273,41 @@
         "license": "Public domain",
         "license_url": null,
         "author": "God (1531 presented by Juan Diego)",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17386",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "contemporary-cinema",
+      "bundle": "mexico",
+      "description": "Un cine donde nadie te pide silencio aunque cantes a todo volumen.",
+      "question": "¿Cómo se le llama en México al cine al aire libre donde ves la película sin bajarte del carro?",
+      "answer": "Autocinema",
+      "wrong_answers": [
+        "Cineteca",
+        "Cine IMAX",
+        "Cineclub"
+      ],
+      "hints": [
+        "Se ve la película de noche, en un gran estacionamiento.",
+        "El sonido muchas veces se escucha por el radio del vehículo.",
+        "Su nombre empieza con una palabra que también significa «carro»."
+      ],
+      "fun_fact": "En 2020, por la pandemia, los autocinemas volvieron a ponerse de moda en México porque permitían ver películas sin salir del carro.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/A_display_full_of_vintage_film_projectors_and_film_memorabilia_-_0735.jpg/3840px-A_display_full_of_vintage_film_projectors_and_film_memorabilia_-_0735.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_display_full_of_vintage_film_projectors_and_film_memorabilia_-_0735.jpg",
+        "credit": "Jorge Royan · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Jorge Royan",
         "author_url": null,
         "excerpt": null
       },
@@ -66429,6 +67234,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Own work",
         "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17447",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "revolution",
+      "bundle": "mexico",
+      "description": "Bigote poblado y un pecho con más medallas que un campeón olímpico.",
+      "question": "¿Quién gobernó México durante unos 30 años, hasta 1911?",
+      "answer": "Porfirio Díaz",
+      "wrong_answers": [
+        "Benito Juárez",
+        "Victoriano Huerta",
+        "Venustiano Carranza"
+      ],
+      "hints": [
+        "Nació en Oaxaca.",
+        "Fue héroe de la batalla del 5 de mayo de 1862.",
+        "Su largo gobierno lleva su nombre de pila."
+      ],
+      "fun_fact": "En 1910, Díaz celebró en grande el Centenario de la Independencia e inauguró el Ángel de la Independencia.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Angel_de_la_independencia170409.jpg/3840px-Angel_de_la_independencia170409.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAngel_de_la_independencia170409.jpg",
+        "credit": "Carlos Valenzuela · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Carlos Valenzuela",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Cvmontuy",
         "excerpt": null
       },
       "background": null
@@ -70769,6 +71609,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Emmanuel Eslava",
         "author_url": "https://commons.wikimedia.org/wiki/User:Emmanuel_Eslava",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-17743",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "landscapes",
+      "bundle": "mexico",
+      "description": "Un estado con más peces que semáforos y más arena que banquetas.",
+      "question": "¿En qué estado de México está Cabo San Lucas, famoso por su arco de roca en el mar?",
+      "answer": "Baja California Sur",
+      "wrong_answers": [
+        "Baja California",
+        "Sonora",
+        "Sinaloa"
+      ],
+      "hints": [
+        "Está en una península larga y angosta.",
+        "Tiene costa en el Pacífico y en el mar de Cortés.",
+        "Su capital es La Paz."
+      ],
+      "fun_fact": "Baja California Sur es el estado con más kilómetros de costa de todo México.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/El_Arco%2C_Cabo_San_Lucas%2C_M%C3%A9xico%2C_2024-12-22%2C_DD_03.jpg/3840px-El_Arco%2C_Cabo_San_Lucas%2C_M%C3%A9xico%2C_2024-12-22%2C_DD_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEl_Arco%2C_Cabo_San_Lucas%2C_M%C3%A9xico%2C_2024-12-22%2C_DD_03.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777",
         "excerpt": null
       },
       "background": null
