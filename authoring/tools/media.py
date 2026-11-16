@@ -254,13 +254,16 @@ def make_sheet(candidates, out, thumbs):
         if c["type"] == "audio" or not c.get("preview_url"):
             continue
         f = thumbs / (hashlib.sha1(c["preview_url"].encode("utf-8")).hexdigest()[:16] + ".img")  # not by number: a new search renumbers
-        if not f.exists():
+        if not f.exists() or not f.stat().st_size:  # an empty cached file is a cut-off download
             try:
                 with progress.waiting(f"{providers.provider_of(c).NAME} preview {i}"):
-                    f.write_bytes(http_get(c["preview_url"]))
+                    data = http_get(c["preview_url"])
             except (urllib.error.HTTPError, RateLimited) as e:  # one dead thumbnail doesn't stop the sheet
                 failed.append(e)
                 continue
+            if not data:  # an empty download is a dead thumbnail too, never cached
+                continue
+            f.write_bytes(data)
         args += ["-label", str(i), f"{f}[0]"]
         shown.append(i)
     if not shown:
