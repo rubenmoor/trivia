@@ -434,10 +434,10 @@ def cmd_research(args):
         done += bool(r.get("researched"))
         if (q.get(slot) and r1.get(key) is None and r1.get("new_query") and not r.get("researched")
                 and slot not in (r.get("fix") or {}).get("changed", []) and slot not in kept_slots(args.run, q)):
-            todo.append((q, path, r))
+            todo.append((q, path, r, slot))
     progress.resumed("research", done, len(todo), "searches")
     with progress.Bar("research", len(todo), "searches") as bar:
-        for q, path, r in todo:
+        for q, path, r, slot in todo:
             query = r["round1"]["new_query"].strip()
             try:
                 q[slot]["query"] = query
@@ -448,7 +448,7 @@ def cmd_research(args):
                 progress.fail(f"  FAILED research {q['id']}: {e}")
                 bar.finished(ok=False)
                 continue
-            update_pool({q["id"]: lambda x, s=query: x[slot].update(query=s)})
+            update_pool({q["id"]: lambda x, s=query, sl=slot: x[sl].update(query=s)})
             sheet_path(d, q["id"], slot).unlink(missing_ok=True)  # `sheets` builds the new one
             r["researched"] = query
             save_json(path, r)

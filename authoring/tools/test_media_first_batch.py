@@ -193,6 +193,23 @@ class FixedSlot(Base):
         self.assertEqual(self.pooled()["media"], self.q["media"])
         self.assertIn("giveaway", [n for n, *_ in rework.revise_steps(lambda **kw: None, "opus", "opus")])
 
+    def test_mixed_rework_research_uses_each_questions_slot(self):
+        (self.d / "run.json").write_text(json.dumps({"mode": "rework", "ids": ["q-0002", "q-0001"]}))
+        plain = {**self.q, "id": "q-0002", "media": {"type": "image", "role": "illustrative", "query": "old", "note": None,
+                 "file_url": None}, "background": None, "status": "draft", "batch": "batch-1"}
+        del plain["media_first"]
+        self.pool.write_text(json.dumps({"questions": [plain, {**self.q, "status": "draft", "batch": "batch-1"}]}))
+        for qid in ("q-0002", "q-0001"):
+            (self.d / "reviews").mkdir(exist_ok=True)
+            (self.d / "reviews" / f"{qid}.json").write_text(json.dumps(
+                {"round1": {"decision": "needs_work", "pick": None, "background_pick": None, "new_query": f"new {qid}"}}))
+        self.assertEqual(review_steps.cmd_research(argparse.Namespace(run="batch-1", jobs=1)), [])
+        by_id = {x["id"]: x for x in json.loads(self.pool.read_text())["questions"]}
+        self.assertEqual(by_id["q-0002"]["media"]["query"], "new q-0002")
+        self.assertIsNone(by_id["q-0002"]["background"])
+        self.assertEqual(by_id["q-0001"]["background"]["query"], "new q-0001")
+        self.assertEqual(by_id["q-0001"]["media"], self.q["media"])
+
     def test_revise_keeps_media(self):
         q = json.loads(json.dumps(self.q))
         new = {**{k: q[k] for k in qgen.QUESTION_FIELDS}, "needs_media": True, "background_query": "savanna",
