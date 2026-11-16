@@ -1,0 +1,92 @@
+# tr-es-ES-25
+
+Made by `qgen batch --translate es-ES` on 2026-11-16 (plan 66, D-81): `base` questions translated into Spanish (Spain). Generated file: don't edit by hand.
+
+- Sources: 184 (1 stale re-translated)
+- Translated: 184
+- Approved: 177
+- Needs work: 7
+- Not travelling: 0 (0 confirmed → `translatable: false`, 0 translated again next run)
+- Claude calls: 438, about $22.62 at list price; $0.11 per approved translation (without the audit)
+- Review (optional): http://127.0.0.1:8001/review?batch=tr-es-ES-25&locale=es-ES
+
+## Health
+
+Translation run health (plan 66): this run and the two before it of the same locale, ✓/✗ against the thresholds that apply to translations (`health.py`); audit/review agreement only counts from the spot-check size on. A ✗ is reported, never a stop (decision 414); `qgen health ack` records the developer's look.
+
+| metric | threshold | tr-es-ES-23 | tr-es-ES-24 | tr-es-ES-25 |
+|---|---|---:|---:|---:|
+| sources |  | 193 | 300 | 184 |
+| stale re-translated |  | 0 | 0 | 1 |
+| translated |  | 193 | 300 | 184 |
+| not travelling |  | 0 | 0 | 0 |
+| not travelling confirmed |  | 0 | 0 | 0 |
+| rejected rate | ≤ 20.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| approved |  | 186 | 299 | 177 |
+| needs_work |  | 7 | 1 | 7 |
+| needs_work rate | ≤ 20.0 % | 3.6 % ✓ | 0.3 % ✓ | 3.8 % ✓ |
+| needs_work: giveaway | ≤ 10.0 % | 0.0 % ✓ | 0.3 % ✓ | 0.0 % ✓ |
+| needs_work: fact | ≤ 10.0 % | 3.6 % ✓ | 0.0 % ✓ | 3.8 % ✓ |
+| needs_work: ambiguity | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: overlap | ≤ 1.0 % | 0.0 % ✓ | 0.3 % ✓ | 0.0 % ✓ |
+| needs_work: media | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: difficulty | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: style | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: other | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| audited |  | 60 | 60 | 60 |
+| audit/review agreement | ≥ 90.0 % | 98.3 % ✓ | 100.0 % ✓ | 63.3 % ✗ |
+| cost $ |  | $23.93 | $23.42 | $19.29 |
+| $ per approved |  | $0.13 | $0.08 | $0.11 |
+| **health** | | ✓ pass | ✓ pass | ✗ fail |
+
+## Audit
+
+A second LLM reader of a seeded sample (plan 16, `prompts/audit.md`), blind to the review. It changes nothing in the pool; the developer decides its findings in the review tool.
+
+- Major among review approved: 20 of 58 (34 %)
+- Major among review needs work: 0 of 2 (0 %)
+- Problems by kind: fact 2 (1 major), overlap 2 (0 major), media 26 (20 major), style 2 (2 major)
+- Mean |audit − final difficulty|: 0.4; ≥ 3 on 0 of 60 (0 %)
+- Audit/review agreement (both accept or both not): 38 of 60 (63 %)
+- Sample: 60 audited of 60; 60 Claude calls, about $3.33
+
+Major findings on approved questions:
+
+- **q-20649**: media — The question needs an essential video ("Mira: esta tripulación…", and hint 1 asks players to listen to the language spoken), but no file was picked (title null), so it can't be played as it is. The translation is otherwise faithful and natural for Spain ("monos a juego", «unión»). The facts check out: the Sokol suits date from 1973, Soyuz has flown crews since 1967, and the wrong options are all genuine other crew vehicles. (http://127.0.0.1:8001/review/q-20649)
+- **q-20660**: media — The question needs a video ("Mira: ¿cómo se llama esta danza…?"), but its essential media has no file (title null), so it can't be played as written. The translation itself is faithful and in natural Spain Spanish. I checked the facts: intore is Rwanda's dance of the royal court warriors, and the name means «los elegidos». Haka, adumu and the gumboot dance are all clearly wrong. The difficulty is about right. (http://127.0.0.1:8001/review/q-20660)
+- **q-20663**: media — The essential audio has no file (media title is null). The question depends on hearing the 1953 coronation-night broadcast, so it can't be played without it, and a Freesound/Commons clip of that speech may not exist. The translation itself is faithful and natural es-ES: the hints, the fun fact, the description and the female options all agree in gender. Its facts are correct: she was 27, the broadcast went to the Commonwealth, it includes the words «parliaments and peoples», and the 1953 coronation was broadcast live on TV. (http://127.0.0.1:8001/review/q-20663)
+- **q-20667**: media — Essential audio has no picked file (media.title is null), and the question depends on the recording, so it can't be played as it is. This is a source-level gap; only the background image is set. The translation is faithful and natural es-ES. The hints match Leonora's Act II prayer «Madre, pietosa Vergine», and the fun fact (Saint Petersburg, 1862) is correct. (http://127.0.0.1:8001/review/q-20667)
+- **q-20668**: media — The question needs its essential audio (the anthem), but media.title is null, so no recording was picked and the question can't be played as it is. The translation itself is faithful: the 1949 music by Chagla, independence in 1947 and the Hafeez Jalandhari lyrics approved in 1954 all check out. One small wording point: the description would read more naturally as «Ponte firme y con la mano en el pecho». (http://127.0.0.1:8001/review/q-20668)
+- **q-20669**: media, style — The question needs its audio to be played, but the essential audio has no file (media title is null), so it can't be played as it stands. In the description, «que no se note que vas a adivinar» reads as translationese; «que estás adivinando» would sound natural. The facts all check out: the lyrics are by Dun Karm Psaila, the music by the doctor Robert Samut, Maltese comes from Siculo-Arabic and uses the Latin alphabet, and the George Cross was awarded to Malta in 1942. The translation keeps the source's meaning. (http://127.0.0.1:8001/review/q-20669)
+- **q-20670**: media, style — The question has essential video media, but no file was picked (title is null). Since it asks about "esta animación", it can't be played without the animation of the 2017 eclipse shadow. Apart from that, the translation is faithful and the facts check out: the 2017 eclipse was the first coast-to-coast one since 1918, and the Moon is about 384 000 km away. One small style point: "¿de qué es la sombra la pequeña mancha negra…?" sounds awkward; "¿de qué es sombra la pequeña mancha negra…?" or "¿qué proyecta la pequeña mancha negra…?" would read more naturally. (http://127.0.0.1:8001/review/q-20670)
+- **q-20673**: media — The question depends on an essential video (the NASA GISS temperature-anomaly map from the 1880s to the 2010s), but media.title is null. If no file is attached, players can't play the question. The translation itself is faithful and reads naturally in Spain's Spanish («ponerse colorado», «Fíjate»). The options agree in gender, and the fact about Arctic amplification (3–4 times faster) is right. (http://127.0.0.1:8001/review/q-20673)
+- **q-20682**: media — The media is an essential video, but no file was picked (title is null). The question depends on the footage ("Mira: ¿dónde está…?"), so it can't be played until the source gets a video. I'm reporting this as a source problem, not a translation problem. The translation itself is faithful and natural es-ES: the answer, options, hints, description and fun fact all match the source. The facts check out (about 16 orbits a day, about 2 hours of exercise a day), and the options agree in grammar. (http://127.0.0.1:8001/review/q-20682)
+- **q-20683**: media — The media is an essential video, but no file was picked (the title is null). The question («Mira: un tren de cercanías…») can't be played without the footage of the train heading towards the CN Tower. Everything else is fine: the translation matches the source, the wording is natural Spain Spanish («hora punta», «tren de cercanías») and the facts check out (CN Tower about 553 m, tallest freestanding structure from 1975 until the Burj Khalifa passed it in 2007). (http://127.0.0.1:8001/review/q-20683)
+- **q-20692**: media — The audio is essential to this question, but its media title is null, so no anthem recording appears to be attached and the question can't be played without it. Check that the source's file was carried over. The translation itself is fine: it is faithful, uses Spain's spellings (Kenia, Acra, «Estrellas Negras») and the options agree in grammar. The hints and fun fact are true; Ghana in 1957 is the usual 'first sub-Saharan independence' fact. Hint 3 names the capital, which is allowed. (http://127.0.0.1:8001/review/q-20692)
+- **q-20693**: media, fact — The video is essential ("Mira: ¿en qué país se baila esta danza festiva?"), but no file was picked (title null), so nobody can answer the question as played. The source also contradicts itself, so the Spanish does too. Hint 1 describes white cloth wrapped around the legs with red and pink sashes and turbans, but the fun fact names the Gussadi dance, whose dancers wear peacock-feather headdresses. That fact may not match whatever footage gets used. The Spanish translation itself is faithful and reads naturally. (http://127.0.0.1:8001/review/q-20693)
+- **q-20694**: media — The question is built on an essential video ("Mira: … en este vídeo"), but media.title is null. Without the Taal footage nobody can tell which kind of eruption it is, so the question can't be played. The translation itself is faithful and reads naturally in Spain's Spanish. The facts check out: "phreatic" comes from the Greek phrear, "well", and Taal does sit on an island in a lake inside an older caldera. (http://127.0.0.1:8001/review/q-20694)
+- **q-20695**: media — The essential audio has no file (media title is null). Without the recording, players can't answer «Escucha: ¿cómo se llama esta…?». Everything else checks out: the translation matches the source, «Aria en la cuerda de sol» is a usual Spanish title, the options agree grammatically, and the Wilhelmj 1871 fun fact is correct. Difficulty 11 is fair. (http://127.0.0.1:8001/review/q-20695)
+- **q-20702**: media — The essential video is missing (title is null), but the question says «Mira: este globo… ¿Por qué tiene esta forma?». Without the video, players can't see the partly inflated launch shape the question asks about. The translation itself is faithful and reads naturally in Spain's Spanish. The physics answer (gas expanding as outside pressure drops) is correct, the hints and fun fact (fully inflated at about 40 km, big enough to hold a stadium) match NASA's descriptions, and the difficulty of about 11 is within range. (http://127.0.0.1:8001/review/q-20702)
+- **q-20706**: media — The question has no media file. It is set as an essential video with title null, but the text says «Mira: … este animal marino», so players need the jellyfish footage to know which animal is meant. As it stands, the question can't be played. The translation itself is faithful and natural Spanish from Spain, and the facts hold up: jellyfish have a mouth, tentacles and stinging cells, but no brain, only a nerve net. (http://127.0.0.1:8001/review/q-20706)
+- **q-20707**: media — No file was picked for the essential video (media title is null). The question says «Mira… en este vídeo», so it can't be played without the footage. The translation itself is faithful and reads naturally in Spain's Spanish ("siluro", "barbillas" and "huevas" are fine). The facts check out: sturgeons have bony plates (scutes), four barbels, adults have no teeth, and the lineage goes back about 200 million years. (http://127.0.0.1:8001/review/q-20707)
+- **q-20709**: media — The essential video has no file (title is null). The question says «Mira: … que se ve aquí», so it can't be played without footage of the sky-crane descent. The translation itself is faithful and natural es-ES («grúa celeste», «róver», «Mira:»). The options, hints and fun fact match the source, and the facts are correct for the Curiosity and Perseverance landings. (http://127.0.0.1:8001/review/q-20709)
+- **q-20711**: media — The media is marked as essential video, but its title is null, so no file was picked. The question opens with «Mira:» and points to «este pajarito» and «este agujero», so it can't be played as it stands. The translation itself is faithful and natural es-ES. The fun fact is correct: the prothonotary warbler and Lucy's warbler are the only North American warblers that nest in tree holes. The options are all «Para…» phrases of similar length, and there is no overlap with the related questions; q-2279 asks what a nest is for in general. (http://127.0.0.1:8001/review/q-20711)
+- **q-20721**: media — The question needs an essential video, but the media title is null, so no file was picked. Without the video, «Mira: ¿qué es esto que no para de retorcerse…?» can't be answered and also fits the earthworm. Apart from that the translation is faithful and natural es-ES: «salamanquesas» for geckos, «lución» for slow worm, and the options agree in article and gender. The facts check out: slow worms are lizards that blink and can drop their tails. (http://127.0.0.1:8001/review/q-20721)
+
+## Needs work
+
+- **q-0748** (greek-heroes) En la mitología romana: Zeus es a Júpiter como Hades es a… → Plutón: source: Hint 1 («Los romanos también llamaban así a un planeta») is false. Pluto was discovered and named in 1930, so the Romans never named a planet after the god. The source hint should be reworded, for example «Hoy también se llama así a un planeta… o casi planeta». The translation itself copies the source faithfully and is fine for Spain.
+- **q-20715** (space-race-and-astronauts) Mira: grabado desde la ventanilla de una cápsula tripulada durante el lanzamiento, ¿qué es la torre puntiaguda que sale volando? → Sistema de escape de lanzamiento: Fact check: uncertain. The answer and wrong answers hold up. The hints fit the abort tower, which is jettisoned a few minutes after liftoff, and its main abort motor goes unused on a normal flight. The fun fact's figure is loose. NASA and Northrop Grumman say the crew module goes from 0 to 400–500 mph (about 640–805 km/h) in 2 seconds, and Northrop gives 405 mph (about 650 km/h) for a pad abort. 'Unos 800 km/h' is only the top of that range. I couldn't verify the clip's contents.
+- **q-3136** (wonders-of-the-world) El Cristo Redentor se alza en lo alto del monte Corcovado, en Río de Janeiro. ¿Qué altura tiene, más o menos, el monte? → Unos 700 m: Fact check: wrong. The text facts hold. Corcovado is about 710 m, so "unos 700 m" is right. The statue is 30 m tall with a 28 m arm span. 700 m is about twice the Eiffel Tower's height (about 330 m). The three wrong answers are clearly wrong. However, the media query is "Rio de Janeiro Sugarloaf Mountain". That is a different mountain (Pan de Azúcar, about 396 m), not Corcovado, so the image would mislead.
+- **q-4079** (world-war-ii) Cuando la guerra impidió que el jarabe de Coca-Cola llegara a Alemania, allí se inventó un nuevo refresco de naranja: la Fanta. ¿En qué década? → Los años 40: Source: the original German Fanta of 1940 was not an orange soda. It was made from leftovers such as whey and apple pomace, and orange Fanta first appeared in Italy in 1955. The source should drop the word "orange", for example "a new soda, Fanta". The Spanish text copies this error faithfully, so the source needs to be corrected first.
+- **q-5458** (famous-philosophers) Este pensador alemán con barba dijo que la historia es una lucha entre clases sociales, y todo un movimiento lleva su nombre. ¿Quién es? → Karl Marx: Source: the fun fact calls the head on Marx's tomb in Highgate a "huge stone head", but it is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth. Correct the source to "huge bronze bust". The Spanish would then read «…donde su enorme busto de bronce sigue atrayendo a visitantes de todo el mundo.» Fact check: wrong. The answer and wrong answers are fine. Marx was German, and Darwin (English), Tolstoy (Russian) and Freud (Austrian) are not. He lived in London from 1849 until his death in 1883. «Marx» has four letters. The fun fact has one error: the huge head on Marx's tomb in Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. This is from memory. I did not run any searches.
+- **q-5869** (athletics) En 1986, ¿qué prueba de lanzamiento del atletismo estrenó un diseño que vuela menos, porque los mejores lanzamientos ya llegaban casi al final del campo? → Jabalina: source: the fun fact says Hohn's 104,80 m throw went farther than a football pitch. The standard international pitch is 105 m long, so the claim isn't true as written. The same claim is in the English source, which needs to be corrected first (e.g. "casi la longitud de un campo de fútbol"). The rest of the translation is faithful and reads naturally in Spain's Spanish. The options have no articles, so the answer doesn't stand out by gender. Fact check: wrong. The answer (Jabalina) and the hints are right. The men's javelin with a forward-shifted centre of gravity was introduced in 1986, after Uwe Hohn threw 104.80 m on 20 July 1984 in Berlin. The fun fact is shaky: 104.80 m is not farther than a standard international football pitch, which is 105 m long. Pitch lengths range from 90 to 120 m.
+- **q-6635** (explorers-and-discoveries) Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal produce el hilo para hacerla? → Gusano de seda: source: hint 2 («Este animal es tan pequeño que cabría en la punta de tu dedo» / "so small it could sit on your fingertip") is wrong. A full-grown silkworm, the one that spins the cocoon, is about 7–8 cm long, and only a newly hatched larva would fit on a fingertip. Fix the source hint, for example "When it hatches it is so small it could sit on your fingertip" or "It is a caterpillar that eats mulberry leaves", and then re-translate it. The rest of the translation is faithful and reads as natural Spain Spanish. Fact check: uncertain. The answer (gusano de seda) is correct. Sheep, camel and goat give wool or hair, not silk. Silk did originate in ancient China, which kept the process secret. A cocoon is one continuous thread, commonly cited as about 300–900 m. The weak point is hint 2. A full-grown silkworm that spins its cocoon is about 7–8 cm long, so it would not fit on a fingertip. Only newly hatched larvae (a few mm) would. I did not run web searches, so this rests on general knowledge.
+
+## Not travelling
+
+None.
+
+## Stale re-translated
+
+- q-6706: approved
