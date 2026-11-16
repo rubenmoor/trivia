@@ -328,7 +328,7 @@ def media_findings(q, p=None):
     hit = giveaway(q, p)
     if hit:
         add("giveaway", "answer-heard", f"answer words heard or seen in the window (transcript/OCR): {', '.join(hit)}")
-    if m.get("type") == "video" and str(m.get("file_url") or m.get("query") or "").lower().endswith(".ogg"):
+    if m.get("type") == "video" and any(str(m.get(k) or "").split("?")[0].lower().endswith(".ogg") for k in ("file_url", "query")):
         add("media", "ogg-video", "a video file named .ogg ships as audio; the game can't play it")
     if providers.licence_kind(m.get("license")) is None:
         add("media", "licence", f"the recording's licence “{m.get('license')}” is not on the allowlist")
