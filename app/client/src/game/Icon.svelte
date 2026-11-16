@@ -1,14 +1,11 @@
 <script lang="ts" module>
   // The game's icons (plans/10-visual-design.md, VD-8): small inline SVGs in one rounded style,
   // drawn in currentColor. No emoji on the TV: they look different on every system.
-  export type IconName = "lock" | "unlock" | "speaker" | "film" | "check" | "cross" | "crown" | "trash"
-    | "flag" | "idea" | "broom" | "wand" | "point" | "trick-shot" | "crosshair" | "puzzle"
-    | "rocket" | "play" | "sparkle" | "next" | "back" | "person" | "person-plus" | "pencil" | "family" | "mic"
-    | "balloon" | "skateboard" | "headphones" | "mug" | "sliders" | "book" | "pin" | "refresh" | "power" | "globe" | "exit" | "seal"
-    | "gamepad" | "keyboard" | "heart" | "flask" | "ball" | "scroll" | "reel";
+  export type { IconName } from "./icon-name.ts";
 </script>
 
 <script lang="ts">
+  import type { IconName } from "./icon-name.ts";
   let { name, size = "1em" }: { name: IconName; size?: string } = $props();
 </script>
 

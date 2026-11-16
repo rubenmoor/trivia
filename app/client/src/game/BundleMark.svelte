@@ -1,10 +1,9 @@
 <script lang="ts" module>
-  import type { Bundle } from "./BundleSelector.svelte";
-
-  export type BundleMark = Pick<Bundle, "base" | "region" | "country" | "icon" | "source">;
+  export type { BundleMark } from "../lib/api.ts";
 </script>
 
 <script lang="ts">
+  import type { BundleMark } from "../lib/api.ts";
   // A bundle's mark: its country's flag for a regional one, else its symbol (decision 367).
   import { bundleIcon } from "./BundleSelector.svelte";
   import Flags from "./Flags.svelte";
