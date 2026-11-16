@@ -340,7 +340,7 @@
   const KEYS = questionKeys();
   // Pad (decision 9): Y/B/X/A pick (PAD_PICKS), RT submits, LT unlocks; on a token A/B are confirm/back.
   const PAD_FINAL: Record<number, Intent> = { 6: { type: "back" }, 7: { type: "submit" }, 11: { type: "peek", down: true } };
-  const PAD_TOKEN: Record<number, Intent> = { 0: { type: "confirm" }, 1: { type: "back" } };
+  const PAD_TOKEN: Record<number, Intent> = { 0: { type: "press" }, 1: { type: "back" } };
   function padMap(): Record<number, Intent> {
     const f = document.activeElement;
     const other = f instanceof HTMLElement && f.hasAttribute("data-nav") && !tiles.includes(f as HTMLButtonElement);
@@ -362,13 +362,14 @@
       keys: KEYS,
       pad: padMap,
       root: () => screenEl,
-      pressable: (el) => locked === null || el !== tiles[locked],
+      // Enter / A: «Respuesta final» (or the reveal, answers off); Space: lock or unlock the ringed tile
+      primary: () => screenEl?.querySelector<HTMLElement>(".final-button, .reveal-button"),
       handle: (a) => {
         const i = answer(a);
         if (a.type === "joker") press(a.name);
         else if (i !== null) tap(i);
         else if (a.type === "back") unlock();
-        else if (a.type === "confirm" || a.type === "submit") (answersOff ? reveal : submit)();
+        else if (a.type === "submit") (answersOff ? reveal : submit)();
         else if (a.type === "joker-focus") focusToken(a.step);
         else if (a.type === "replay") replay();
         else if (a.type === "peek") peeking = a.down;

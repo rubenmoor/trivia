@@ -79,10 +79,10 @@ The joker sub-states (skip choice, category picker, snipe aiming) are detailed i
 | Choice | «¿Cómo juega …?», the age screen: gamemaster mode: the configure game screen (MD-11: difficulty, levels, cards, video, audio, answers (D-105), jokers); the other modes: age group (rr-competitive: one per seat), video and audio switches (decision 645), «Personalizar partida»; no bundles, no supply | «Seguir» / `Enter`; «Atrás» / `Backspace` | Normal |
 | Join | Multiplayer modes only: «press A to join» per pad, keyboard card, seat cards (colour, device, name, rr-competitive: age group) | «Seguir» (≥ 2 seats, all named) / `Enter`; «Atrás» / `Backspace` | Normal |
 | Bundles | «¿Qué preguntas juega …?»: the question bundles (plan 151); demo build: one tile, «Paquete de demostración» with the demo pool's rounded count (decision 341); the supply report | «¡A jugar!» / `Enter` / A; `Space` / X / letter toggle a tile; «Atrás» / `Backspace` | Normal |
-| Level | The tower, «Nivel N de 12» | Click / `Enter` / `Space` | Normal |
+| Level | The tower, «Nivel N de 12» | Click / `Enter` / A (primary «Seguir»); `Space`/X only a ringed control | Normal |
 | Select | 4 description cards | Click a card / `1`–`4` | Normal |
 | Question | Question, 4 answers, media, lock, final button, joker tray | Final answer; jokers Paso y fuera / Tiro mágico hit | Intense (off while question media plays); after submitting: most intense |
-| Correct | Fanfare, fireworks overlay, correct answer, `fun_fact` | Click / `Enter` | Fanfare replaces the music, then Normal |
+| Correct | Fanfare, fireworks overlay, correct answer, `fun_fact` | Click / `Enter` / A (primary «Seguir») | Fanfare replaces the music, then Normal |
 | Wrong | Dark animation, correct answer, consolation | «Volver al inicio» | Off; a sad sting |
 | Victory | Full 12-block tower, big finale | «Volver al inicio» | «Pomp and Circumstance» (`victory`), over cheers |
 | Next | Answers off (D-105): «Siguiente ronda», the correct answer, `fun_fact` | Click / `Enter` / A | Normal |
@@ -337,6 +337,8 @@ The detailed action set and any extra keys are owned by `05-gamemaster-controls.
 **Rule (IN-1): no action without a clickable control.** A key is a shortcut shown on its button (`<kbd>`), never the only way. The overlay opens with `Esc` or the faint ☰ button in the top right corner.
 
 Everything works with a mouse and with the keyboard of the TV machine (OQ-11): `Enter` / pad A = the screen's primary action («Seguir», «¡A jugar!», continue) or, on a list screen, the ring's entry; `Space` / pad X = the ring's control (a tile, a switch, a button), never the primary action (task 2114; the rule and the screen table: [14](14-input.md) "Before the session"), `1`–`4` / `A`–`D` = pick a card or an answer (Choice: an age group; ↑/↓ lines and ←/→ values on the configure screen; a mode's letter picks it, es `A` `G`; `P` «Personalizar partida»; Bundles: a bundle's letter toggles it; a letter also moves the ring onto its control), `R` = replay media, `S` `P` `F` `T` `X` = jokers (09, D-30), `Backspace` = unlock or cancel, (answers off, D-105) `Enter` / pad A = the padlock reveal, `M` = flag the question for review (GM-5), `Esc` = admin overlay. A clicker or phone remote can map to these later.
+
+In game (task 2115) the same rule holds: continue buttons (Level, Correct, Next, Wrong, Victory, Completed) are the primary; on Question the primary is «Respuesta final» (`Space` locks or unlocks the ringed tile); the Esc menu, Select, the Cambiazo picker and Career are lists; dialogs have their own primary («Aplicar», «Marcar», «Ir», «Paso»). Details: `plans/14-input.md` section 4.
 
 **Rule (IN-2, IN-3): actions, not keys.** Screens and dialogs listen to actions from `app/client/src/lib/input.svelte.ts` (`pushScope`), never to `keydown`; `grep -rn "keydown\|KeyboardEvent" app/client/src` lists only that file. Each screen and dialog declares a focus default (`data-focus-default`) and a `root`, so arrows + `Enter`/`Space` + `Esc`/`Backspace` play it (spatial focus, ring, memory: `lib/focus.ts`, plan 44); a screen with one primary action declares it (`Scope.primary`): `Enter`/A click it whatever has the ring, `Space`/X press the ring's control (task 2114). ☰ and flag stay unfocusable (`data-nofocus`).
 

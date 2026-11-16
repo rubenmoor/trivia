@@ -26,6 +26,7 @@
       name: "question-skip",
       modal: true,
       root: () => dialog,
+      primary: () => dialog?.querySelector<HTMLElement>(".candy"),
       handle: (a) => {
         if (a.type === "back" || a.type === "menu") oncancel();
         else if (a.type === "pick" && a.n === 1) onpick(false);
