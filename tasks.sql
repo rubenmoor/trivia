@@ -48874,8 +48874,40 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The re-check''s run and the `qgen validate` rule belong to `plan 203: Media-first pipeline` (task 2157: revise plan 203: Media-first pipeline: video at most 30 s); refer to it, don''t duplicate it.
 
 Done when: plan 204''s body has the section and its split is queued.', '2026-11-17T17:03:45Z', NULL, 2143, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2159, 202, 'create tasks for plan 202: Sound and video in the game', 'split', 'open', 1000, NULL, 'Split plan 202 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T17:05:04Z', NULL, 2144, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2159, 202, 'create tasks for plan 202: Sound and video in the game', 'split', 'done', 1000, '2026-11-17, tasks 2160, 2161, 2162 (steps 7–9); task 2060 (step 6) kept, pending on decision 652; no new decisions: the milestone fixes 30 s, the 8 Mbit/s ceiling and the budget line', 'Split plan 202 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T17:05:04Z', '2026-11-17T17:06:06Z', 2144, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2160, 202, 'Video plays at most 30 s in the game: playWindow, pool check, player', 'work', 'open', NULL, NULL, 'Step 7 of `plan 202: Sound and video in the game`. Milestone 21 "video length and size" (developer, 2026-11-17): a video question plays at most 30 s; audio keeps 60 s (`decision 644: Question media excerpts: field shape`).
+
+What:
+- `app/client/src/engine/pool.ts`: a `MAX_VIDEO_SECONDS = 30` beside `MAX_AUDIO_SECONDS`; `parseExcerpt` (and `modPool`) take the media kind: a video excerpt longer than 30 s is `bad_media`, as audio over 60 s is today.
+- `playWindow`: for a video, no excerpt → `{start: 0, end: min(30, duration)}`; an excerpt keeps its start, end capped at start + 30 s. Audio unchanged.
+- `app/client/src/game/question/Media.svelte`: a video stops at the capped end and replays from the window''s start (check every caller of `playWindow` passes the kind).
+- Tests for `parseExcerpt` / `playWindow` / `modPool` (video without excerpt, long file, short file ≤ 30 s, excerpt over 30 s, audio unchanged).
+- `modding/` docs (`bundles.md`, template, `bundle-prompt.md` where excerpts are described): video ≤ 30 s, audio ≤ 60 s.
+- `authoring/tools/media.py` mirrors `MAX_AUDIO_SECONDS`: the qgen side (`qgen validate` 30 s rule) belongs to `plan 203: Media-first pipeline`; only keep the mirror comments right (decision 199).
+- `rg` old wording "≤ 60 s" for video in `.md` files and comments (decision 200).
+
+Done when: in the dev game a video question without excerpt stops at 30 s and replays from 0, one with an excerpt stops at start + 30 s at the latest; a mod with a 40 s video excerpt drops that media as `bad_media`; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-17T17:06:02Z', NULL, 2159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2161, 202, 'Shipped video cut to its 30 s window and encoded under an 8 Mbit/s ceiling', 'work', 'open', NULL, NULL, 'Step 8 of `plan 202: Sound and video in the game`. Milestone 21 "video length and size" (developer, 2026-11-17): the shipped video is cut to its play window, 1080p as today, with a bitrate ceiling of 8 Mbit/s on top of the quality setting; a ceiling against single huge files, not a squeeze (`decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?` otherwise stands; `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`).
+
+What:
+- `app/desktop/media-formats.mjs` VP9 settings: add `-maxrate 8M -bufsize 16M` beside `-crf 33 -b:v 0`.
+- `app/desktop/resolve.mjs` (`excerptOf`, `shipPool`, `shippedName`) and `app/desktop/stage-media.mjs`: every video is cut to its play window as the game computes it (needs the previous task''s `playWindow`): excerpt capped at start + 30 s; no excerpt → first 30 s; a file ≤ 30 s untouched. The built pools point at the cut file; shipped name and encode-cache key (`work/ship-media/`) change with the window and the new settings, so old cached encodes aren''t reused.
+- A comment at the 30 s constant in the `.mjs` names `app/client/src/engine/pool.ts` as its source (decision 199: can''t import client TS).
+- Demo too: `stage-media.mjs --demo` (`decision 342: Demo packaging: own staging folders, three depots, own reports, no nix output`).
+- Loudness levelling (task 2058) still runs after the cut.
+- Tests for the window / name logic where `app/desktop` has them.
+
+Done when: a `trivia-desktop-build --dir` build ships every video ≤ 30 s (ffprobe over the staged `.webm` files), ≤ 1080p, peak bitrate under the ceiling; an excerpt video plays its window in the packaged build; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-17T17:06:02Z', NULL, 2159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2162, 202, 'Per-file video budget line down to 30 s at 8 Mbit/s; shipped size re-measured', 'work', 'open', NULL, NULL, 'Step 9 of `plan 202: Sound and video in the game`. Milestone 21 "video length and size" (developer, 2026-11-17): `media-budget.json` per-file `video` line from 100 MB down to fit 30 s at the ceiling.
+
+What:
+- `app/desktop/media-budget.json` `video`: 100 → what 30 s at 8 Mbit/s plus Opus 96 kb/s sound needs (≈ 31 MB), rounded up (e.g. 32).
+- `stage-media.mjs --check` passes over base and the demo with the new line; a file over it is a bug in the previous task''s cut or ceiling: fix there or add a follow-up task.
+- Re-measure the shipped size after the cut; update `plans/11-steam.md` install size and `plans/17a-store-page.md` storage if they change (`decision 90: Store requirements, languages and controller flags?`, `decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`''s 8 GB stays unless the developer changes it); `authoring/reports/media-first-feasibility.md` "Shipped size and budget" projections if they move.
+- `plans/decisions.md` budget lines and any `.md` or comment naming the 100 MB video line (decision 200, `rg "100 MB"`).
+
+Done when: the `video` line is lowered, `stage-media.mjs --check` passes for base and demo, the size lines in the plans match the new measurement; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-17T17:06:02Z', NULL, 2159, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -58654,6 +58686,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2353, 2156, '2026-11-17T16:57:04Z', '2026-11-17T17:02:49Z', 'blocked', NULL, 0, '317388038385043a1499097c4395b626f078d4c3', 'app', 'claude-sonnet-5-5', '241a7d30-a6a9-4b82-96d1-dfb2fd7d377b', 2352, 6, 12, 1212, 409643, 9909, 0.54674200000000017, 86671, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2354, 2143, '2026-11-17T17:02:46Z', '2026-11-17T17:03:56Z', 'done', NULL, 0, 'de9461e3cf3578d1f27e5f8ba88d35edd1be0105', NULL, 'claude-opus-5-5', '76e96f7b-3948-43a3-8820-8e08c972e1b3', NULL, 9, 18, 3573, 372782, 34335, 0.42076840000000004, 49182, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2355, 2144, '2026-11-17T17:03:57Z', '2026-11-17T17:05:17Z', 'done', NULL, 0, '45c8e2d88c139117dd7d93bf1ade860fd096b16a', NULL, 'claude-opus-5-5', 'caa68bf5-a2eb-4261-af3c-26be07fc325e', NULL, 6, 12, 5731, 256365, 40965, 0.493661, 55978, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2356, 2159, '2026-11-17T17:05:18Z', '2026-11-17T17:06:14Z', 'done', NULL, 0, 'bfa4ac5fa76990558d50dbd4dc7c009589856b50', NULL, 'claude-opus-5-5', 'e357f55e-0c29-40f4-821d-4b6231be69eb', NULL, 6, 12, 4101, 236079, 34594, 0.40603580000000006, 48944, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2357, 2160, '2026-11-17T17:06:09Z', NULL, 'running', NULL, NULL, 'bfa4ac5fa76990558d50dbd4dc7c009589856b50', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -59772,6 +59806,8 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2132, 213
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2133, 2132);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2140, 2139);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2156, 2155);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2161, 2160);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2162, 2161);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
