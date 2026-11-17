@@ -3,8 +3,8 @@ re-checked (plan 216, milestone 21 "video length and size"). Developer-run, like
 
 Picks video questions (any bundle, any batch, not rejected) whose window plays more than 30 s or whose
 `media.duration` is unknown: the duration is probed and filled, the window cut to `media.play_window`
-({start, start + 30}; no excerpt → {0, 30}). An approved question's cut window is probed, run through the
-giveaway step and `media_first.judge_window`: pass → stays approved with the cut excerpt; fail → needs_work
+({start, start + 30}; no excerpt → {0, 30}). An approved question's cut window is probed and judged by
+`media_first.judge_window` (a giveaway hit is one of its mechanical findings, the verdict decides): pass → stays approved with the cut excerpt; fail → needs_work
 (problem media, "clue outside the 30 s window"), kept with the cut window for `qgen rework`. Other statuses
 only get the cut. Translations need nothing: export takes media and status from the source.
 
@@ -61,9 +61,7 @@ def check(q, model):
         p = media_first.probe(media_first.file_title(m), w)
         if q.get("media_first"):
             fields["probe"] = media_first.probe_ref(p)
-        hits = media_first.giveaway(q, p)
-        v = ({"verdict": "needs_work", "problem": "giveaway", "note": f"answer heard or seen in it: {', '.join(hits)}"}
-             if hits else media_first.judge_window({**q, "media": m}, w, p, model))
+        v = media_first.judge_window({**q, "media": m}, w, p, model)  # a giveaway hit reaches it as a mechanical finding
         row |= v
         if v["verdict"] == "needs_work":
             review = needs_work_review(q, v)
