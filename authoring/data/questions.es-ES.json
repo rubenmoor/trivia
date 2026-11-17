@@ -59088,42 +59088,50 @@
     },
     {
       "id": "q-20715",
-      "question": "Mira: grabado desde la ventanilla de una cápsula durante el lanzamiento, ¿qué es la torre puntiaguda que se ve salir volando?",
-      "answer": "Sistema de escape de lanzamiento",
+      "question": "Mira: grabado desde la ventanilla de una cápsula durante el lanzamiento, ¿qué es la torre puntiaguda que sale volando?",
+      "answer": "El sistema de escape de lanzamiento",
       "wrong_answers": [
-        "Propulsor de combustible sólido",
-        "Escudo térmico",
-        "Etapa superior del cohete"
+        "El propulsor de combustible sólido",
+        "El escudo térmico",
+        "La etapa superior"
       ],
       "hints": [
-        "Va justo encima de la nave, sobre la cabeza de los astronautas.",
-        "Si la subida sale bien, su gran motor principal nunca se usa. Toda la torre se desecha pocos minutos después del despegue.",
-        "En una emergencia, sus propios cohetes arrancarían la cápsula y a la tripulación de un cohete averiado."
+        "Va justo encima de la nave, por encima de la cabeza de los astronautas.",
+        "Si todo va bien durante el ascenso, su gran motor principal no se usa nunca. La torre entera se suelta pocos minutos después del despegue.",
+        "En una emergencia, sus propios cohetes alejarían de golpe la cápsula y a la tripulación de un cohete averiado."
       ],
-      "description": "No todas las piezas de un cohete están invitadas al viaje completo.",
+      "description": "No todas las piezas de un cohete están invitadas hasta el final del viaje.",
       "fun_fact": "El sistema de escape de la cápsula Orion de la NASA puede pasar de 0 a unos 800 km/h en solo 2 segundos.",
-      "difficulty": 13,
-      "status": "needs_work",
-      "batch": "tr-es-ES-26",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Source: the fun fact's figure (0 to about 800 km/h / 500 mph in 2 seconds) could not be confirmed. NASA's Pad Abort 1 test reports about 716 km/h (445 mph) within about 3 seconds. Correct the source's fun fact to that verified figure, then re-translate. The rest of the Spanish translation is faithful and natural. Fact check: uncertain. The answer (launch abort system) and the wrong answers are fine. The hints are plausible: the tower sits above the capsule, its abort motor is normally unused, and it is jettisoned about 3 minutes after liftoff. The fun fact's \"0 to ~800 km/h in 2 seconds\" is not supported. NASA's Pad Abort 1 test reached about 445 mph (716 km/h) in the first 3 seconds. A 2017 Orbital ATK summary gives 400–500 mph in about 2 s, and the motor burns for about 2 s in the test. I found no source for 800 km/h.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-11-16",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Fact check: uncertain. The answer and wrong answers hold up. The hints fit the abort tower, which is jettisoned a few minutes after liftoff, and its main abort motor goes unused on a normal flight. The fun fact's figure is loose. NASA and Northrop Grumman say the crew module goes from 0 to 400–500 mph (about 640–805 km/h) in 2 seconds, and Northrop gives 405 mph (about 650 km/h) for a pad abort. 'Unos 800 km/h' is only the top of that range. I couldn't verify the clip's contents.",
+          "feedback": "Source: the fun fact's figure (0 to about 800 km/h / 500 mph in 2 seconds) could not be confirmed. NASA's Pad Abort 1 test reports about 716 km/h (445 mph) within about 3 seconds. Correct the source's fun fact to that verified figure, then re-translate. The rest of the Spanish translation is faithful and natural. Fact check: uncertain. The answer (launch abort system) and the wrong answers are fine. The hints are plausible: the tower sits above the capsule, its abort motor is normally unused, and it is jettisoned about 3 minutes after liftoff. The fun fact's \"0 to ~800 km/h in 2 seconds\" is not supported. NASA's Pad Abort 1 test reached about 445 mph (716 km/h) in the first 3 seconds. A 2017 Orbital ATK summary gives 400–500 mph in about 2 s, and the motor burns for about 2 s in the test. I found no source for 800 km/h.",
           "problems": [
             "fact"
           ],
           "reviewed_on": "2026-11-16",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "Fact check: uncertain. The answer and wrong answers hold up. The hints fit the abort tower, which is jettisoned a few minutes after liftoff, and its main abort motor goes unused on a normal flight. The fun fact's figure is loose. NASA and Northrop Grumman say the crew module goes from 0 to 400–500 mph (about 640–805 km/h) in 2 seconds, and Northrop gives 405 mph (about 650 km/h) for a pad abort. 'Unos 800 km/h' is only the top of that range. I couldn't verify the clip's contents.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-11-16",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "6ef39552222f"
@@ -61769,6 +61777,156 @@
       "source_hash": "85be6ad9ce19"
     },
     {
+      "id": "q-20814",
+      "question": "Escucha: ¿de qué país europeo es este himno nacional?",
+      "answer": "Eslovaquia",
+      "wrong_answers": [
+        "República Checa",
+        "Eslovenia",
+        "Polonia"
+      ],
+      "hints": [
+        "El país está en Europa Central y no tiene costa.",
+        "Se separó pacíficamente de su vecino el 1 de enero de 1993.",
+        "Su título dice que relampaguea sobre los montes Tatra."
+      ],
+      "description": "Una canción que pone en pie a todo un estadio, incluso a quienes solo se saben el primer verso.",
+      "fun_fact": "Cuando existía Checoslovaquia, su himno eran dos canciones seguidas: primero el himno checo y luego este eslovaco.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "52b10a5ff497"
+    },
+    {
+      "id": "q-20815",
+      "question": "Mira: ¿qué felino salvaje pasó por delante de esta cámara de fototrampeo nocturna?",
+      "answer": "Ocelote",
+      "wrong_answers": [
+        "Serval",
+        "Pantera nebulosa",
+        "Lince boreal"
+      ],
+      "hints": [
+        "Fíjate bien en el pelaje: las manchas oscuras se unen formando cadenas y rayas en vez de simples lunares redondos.",
+        "Este felino tiene más o menos el doble de tamaño que un gato doméstico, caza sobre todo de noche y en el suelo, y trepa y nada bien.",
+        "El pintor Salvador Dalí paseaba por la ciudad con uno de estos felinos, llamado Babou."
+      ],
+      "description": "Alguien ha activado el sensor de movimiento antes del amanecer, y no ha sido el gato del vecino.",
+      "fun_fact": "El dibujo del pelaje de cada ocelote es único, así que los científicos pueden distinguir a cada ejemplar en las fotos de fototrampeo, como si fueran huellas dactilares.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "66818211fd34"
+    },
+    {
+      "id": "q-20816",
+      "question": "Mira: estos bailarines con mantos de color rosa intenso están en una famosa fiesta de carnaval de los Andes. ¿En qué país se celebra?",
+      "answer": "Bolivia",
+      "wrong_answers": [
+        "Perú",
+        "Ecuador",
+        "Guatemala"
+      ],
+      "hints": [
+        "La fiesta se llama Pujllay, una palabra quechua que significa «juego».",
+        "Fíjate en los escudos bordados de algunos mantos: muestran un escudo nacional con un cóndor, una llama y una montaña de plata.",
+        "El pueblo, Tarabuco, está a poca distancia en coche de Sucre, una de las dos capitales de este país."
+      ],
+      "description": "Mantos rosas, banderas blancas y bordados para tener entretenida a una abuela diez años seguidos.",
+      "fun_fact": "El Pujllay de Tarabuco recuerda una batalla ganada en 1816, y la UNESCO incluyó su música y sus danzas en su lista de patrimonio cultural inmaterial en 2014.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "70cea063e8dc"
+    },
+    {
+      "id": "q-20817",
+      "question": "Escucha: esta famosa canción popular la cantaban los trabajadores que arrastraban pesadas barcazas por un río. ¿De qué país es?",
+      "answer": "Rusia",
+      "wrong_answers": [
+        "Hungría",
+        "Irlanda",
+        "Grecia"
+      ],
+      "hints": [
+        "La canción lleva el nombre del río por el que los trabajadores tiraban de los barcos.",
+        "Ese río es el más largo de Europa.",
+        "El río es el Volga, que desemboca en el mar Caspio."
+      ],
+      "description": "Una melodía tan pesada que parece que alguien la arrastra despacito cuesta arriba.",
+      "fun_fact": "El pintor Iliá Repin hizo famosos a los sirgadores del Volga en un enorme cuadro de la década de 1870 que muestra a un grupo de hombres tirando de un barco con cuerdas sobre los hombros.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d6da03c558e2"
+    },
+    {
+      "id": "q-20819",
+      "question": "Escucha: estos gruñidos graves son de una gran ave acuática que come en bandada. ¿Qué ave es?",
+      "answer": "Pelícano común",
+      "wrong_answers": [
+        "Grulla común",
+        "Cisne vulgar",
+        "Colimbo grande"
+      ],
+      "hints": [
+        "Es una de las aves más pesadas que todavía pueden volar.",
+        "Nadan en grupo para empujar a los peces hacia aguas poco profundas.",
+        "Su enorme pico tiene una bolsa elástica en la garganta para atrapar peces."
+      ],
+      "description": "Charla de sobremesa en el lago, de unos invitados que nunca aprendieron a comer con la boca cerrada.",
+      "fun_fact": "Los pelícanos comunes suelen pescar en equipo: nadan formando una herradura para acorralar a los peces y luego meten el pico todos a la vez.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5898448a465f"
+    },
+    {
       "id": "q-2082",
       "question": "Me llamo igual que la parte de tu espalda llena de vértebras, y en los edificios estoy de pie del suelo al techo. ¿Para qué sirvo?",
       "answer": "Para sostener el peso del edificio",
@@ -61797,6 +61955,276 @@
         "previous": null
       },
       "source_hash": "a39ca09de719"
+    },
+    {
+      "id": "q-20820",
+      "question": "Escucha: ¿de qué época de la música occidental es esta pieza para piano solo?",
+      "answer": "El Clasicismo",
+      "wrong_answers": [
+        "El Barroco",
+        "El Romanticismo",
+        "El Impresionismo"
+      ],
+      "hints": [
+        "Fíjate en cómo la mano derecha lleva la melodía mientras la izquierda mantiene un acompañamiento suave.",
+        "Fue la época de las pelucas empolvadas y de las primeras grandes sinfonías y cuartetos de cuerda.",
+        "Es la época de Haydn y del joven Beethoven, más o menos de 1750 a 1820."
+      ],
+      "description": "Ochenta y ocho teclas, y ninguna abre la puerta de casa.",
+      "fun_fact": "Es el primer movimiento de la Sonata para piano n.º 13 de Mozart (K. 333), que probablemente compuso hacia 1783, quizá en Linz.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5a40caf794c8"
+    },
+    {
+      "id": "q-20821",
+      "question": "Mira: mientras el hielo marino se reduce de la primavera al verano, ¿qué isla es la gran mancha blanca de la derecha que sigue helada?",
+      "answer": "Groenlandia",
+      "wrong_answers": [
+        "Islandia",
+        "Isla de Baffin",
+        "Svalbard"
+      ],
+      "hints": [
+        "Incluso a finales de julio apenas cambia. Su hielo está sobre tierra firme, no sobre el mar.",
+        "Es la isla más grande del mundo.",
+        "Pertenece al Reino de Dinamarca, aunque su nombre significa «tierra verde»."
+      ],
+      "description": "Una cámara espacial hace girar el globo para pillar a quien no se ha quitado el abrigo de invierno en todo el verano.",
+      "fun_fact": "El manto de hielo de Groenlandia llega a tener unos 3 km de grosor, y si se derritiera entero, el nivel de los océanos subiría unos 7 metros.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4f239c5c8b5b"
+    },
+    {
+      "id": "q-20823",
+      "question": "Escucha: ¿qué ave nocturna de los trópicos americanos canta esto?",
+      "answer": "Nictibio urutaú",
+      "wrong_answers": [
+        "Guácharo",
+        "Chotacabras pauraque",
+        "Autillo chóliba"
+      ],
+      "hints": [
+        "Su canto ha inspirado leyendas populares en toda Sudamérica sobre un espíritu que llora en el bosque.",
+        "De día se queda totalmente inmóvil sobre una rama rota, y sus plumas parecen parte del árbol.",
+        "Con sus enormes ojos amarillos y su boca ancha, parece un búho con cara de rana, asustado y erguido sobre un tocón."
+      ],
+      "description": "Este trabajador del turno de noche de la selva ficha al atardecer y no se va hasta mucho después de que los demás estemos roncando.",
+      "fun_fact": "Los nictibios tienen pequeñas rendijas en los párpados, así que pueden ver el peligro incluso con los ojos cerrados.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "987f0233abdc"
+    },
+    {
+      "id": "q-20824",
+      "question": "Mira: ¿cómo se llama este tipo de nube, que suele formarse sobre las montañas?",
+      "answer": "Nube lenticular",
+      "wrong_answers": [
+        "Nube cumulonimbo",
+        "Nube mammatus",
+        "Nube noctilucente"
+      ],
+      "hints": [
+        "Fíjate en lo lisa y estratificada que es su forma, nada que ver con un montón esponjoso.",
+        "Se forma donde el viento pasa sobre las montañas en ondas, y puede quedarse sobre el mismo punto durante horas.",
+        "Su nombre viene de la palabra latina para «lenteja», la misma raíz que «lente», y a menudo se confunde con un ovni."
+      ],
+      "description": "El proyecto artístico del cielo: alguien se dejó la nata montada al viento.",
+      "fun_fact": "Las nubes lenticulares pueden quedarse en el mismo sitio durante horas, incluso con viento fuerte, porque el aire las atraviesa sin parar: se forman por un lado y se deshacen por el otro.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2b89cfabc0e9"
+    },
+    {
+      "id": "q-20825",
+      "question": "Escucha: este tema lento y solemne dio su apodo a todo el cuarteto de cuerda. ¿Cómo se llama el cuarteto?",
+      "answer": "«La muerte y la doncella»",
+      "wrong_answers": [
+        "«Emperador»",
+        "«Rosamunda»",
+        "«La alondra»"
+      ],
+      "hints": [
+        "Fíjate en el ambiente: lento, oscuro, en tono menor, con un paso firme como de marcha.",
+        "El tema procede de una canción del mismo compositor, un diálogo entre dos personajes.",
+        "En la canción, una muchacha asustada suplica a un visitante sombrío que pase de largo."
+      ],
+      "description": "Cuatro músicos, dieciséis cuerdas y una regla de oro: nadie empieza hasta que el primer violín asiente.",
+      "fun_fact": "Schubert compuso este cuarteto en 1824 estando gravemente enfermo, y no se publicó hasta 1831, tres años después de su muerte.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b3b68e6c3b5e"
+    },
+    {
+      "id": "q-20826",
+      "question": "Escucha este final de piano rápido y furioso. ¿Qué apodo tiene la sonata a la que pertenece?",
+      "answer": "Sonata «Claro de luna»",
+      "wrong_answers": [
+        "Sonata «Patética»",
+        "Sonata «Appassionata»",
+        "Sonata «La tempestad»"
+      ],
+      "hints": [
+        "El compositor también escribió la pieza breve para piano «Para Elisa».",
+        "La misma sonata empieza con un movimiento lento y soñador mucho más famoso que este.",
+        "A un crítico, ese comienzo soñador le recordaba una barca en el lago de Lucerna de noche."
+      ],
+      "description": "Una pieza de piano que suena como si sus propios deberes la persiguieran escaleras abajo.",
+      "fun_fact": "Beethoven nunca la llamó «Claro de luna»: el crítico musical Ludwig Rellstab inventó el nombre años después de la muerte de Beethoven.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bed917bf30d3"
+    },
+    {
+      "id": "q-20827",
+      "question": "Mira: unos astronautas con traje espacial entrenan en el fondo de una piscina gigante. ¿De qué nave hay allí copias a tamaño real?",
+      "answer": "La Estación Espacial Internacional",
+      "wrong_answers": [
+        "El transbordador espacial",
+        "El telescopio espacial Hubble",
+        "El módulo lunar del Apolo"
+      ],
+      "hints": [
+        "Fíjate en los grandes tubos blancos con asideros: son copias de habitaciones donde vive gente.",
+        "En la real vive gente sin interrupción desde el año 2000, a unos 400 km sobre la Tierra.",
+        "La real la construyeron juntos varios países, entre ellos Estados Unidos, Rusia, Japón, Canadá y países europeos."
+      ],
+      "description": "La única piscina en la que el socorrista necesita un título de ingeniero aeroespacial.",
+      "fun_fact": "El Laboratorio de Flotabilidad Neutra de la NASA en Houston tiene unos 23 millones de litros de agua, y los astronautas pueden pasar seis horas seguidas dentro ensayando un solo paseo espacial.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ebef3ccbb273"
+    },
+    {
+      "id": "q-20828",
+      "question": "Mira: una cámara de fototrampeo en Wyoming (Estados Unidos) grabó a estas curiosas visitantes. ¿Qué animal son?",
+      "answer": "Wapití (ciervo canadiense)",
+      "wrong_answers": [
+        "Reno",
+        "Ciervo mulo",
+        "Gamo"
+      ],
+      "hints": [
+        "Son hembras, así que ahora mismo no tienen cuernos. A los machos les vuelve a crecer una cornamenta enorme cada año.",
+        "En otoño, los machos lanzan una llamada potente y aguda, casi como un silbido.",
+        "Es uno de los miembros más grandes de la familia de los ciervos. Su nombre indígena norteamericano, usado por los shawnee y los cree, significa «trasero blanco»."
+      ],
+      "description": "Hay visitas que no saben lo que es el espacio personal, y estas encima vienen con pezuñas.",
+      "fun_fact": "En el inglés de Europa «elk» suele significar alce, así que en Norteamérica muchos llaman a este animal por su nombre indígena, wapití, para evitar confusiones.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bd56bc1728b8"
+    },
+    {
+      "id": "q-20829",
+      "question": "Escucha: esta melodía abría el antiguo himno del Reino de Yugoslavia. ¿De qué país es hoy el himno nacional?",
+      "answer": "Serbia",
+      "wrong_answers": [
+        "Croacia",
+        "Eslovenia",
+        "Montenegro"
+      ],
+      "hints": [
+        "La melodía se compuso en la década de 1870 como música para una obra de teatro.",
+        "Su título significa «Dios de la justicia».",
+        "La capital de este país está donde el río Sava desemboca en el Danubio."
+      ],
+      "description": "Un reino, un himno y una melodía que sobrevivió al reino para el que sonaba.",
+      "fun_fact": "La música de «Bože pravde» la compuso Davorin Jenko, un compositor esloveno, no serbio.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d8a0d67f3f87"
     },
     {
       "id": "q-2083",
@@ -61829,6 +62257,306 @@
       "source_hash": "f496533b839d"
     },
     {
+      "id": "q-20830",
+      "question": "Mira: ¿qué tipo de pato es el adulto que nada con estos patitos?",
+      "answer": "Ánade real",
+      "wrong_answers": [
+        "Pato mandarín",
+        "Pato joyuyo",
+        "Eider común"
+      ],
+      "hints": [
+        "Es uno de los patos salvajes más comunes del mundo y vive en parques y estanques de todo el hemisferio norte.",
+        "Fíjate en el color de la cabeza del adulto y en el fino anillo blanco de su cuello.",
+        "Los machos tienen la cabeza verde brillante, y las hembras, pardas, hacen el típico «cuac» fuerte que todo el mundo conoce."
+      ],
+      "description": "Hoy hay clase de natación en el estanque: sin monitor, sin silbato, solo mucho chapoteo.",
+      "fun_fact": "Casi todos los patos de granja del mundo, salvo el pato criollo, descienden del ánade real salvaje.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9e0379b44122"
+    },
+    {
+      "id": "q-20831",
+      "question": "Escucha: ¿qué compositor escribió esta famosa pieza orquestal que parece ir al galope?",
+      "answer": "Richard Wagner",
+      "wrong_answers": [
+        "Giuseppe Verdi",
+        "Piotr Ilich Chaikovski",
+        "Johann Strauss hijo"
+      ],
+      "hints": [
+        "El compositor vivió en el siglo XIX y también escribió música para el teatro.",
+        "Pertenece a un enorme ciclo de cuatro óperas basado en antiguas leyendas nórdicas y germánicas.",
+        "En la pieza, unas guerreras de la mitología nórdica cabalgan por el cielo en caballos voladores."
+      ],
+      "description": "La banda sonora oficial de toda escena de helicópteros y de toda familia corriendo al coche un lunes por la mañana.",
+      "fun_fact": "El ciclo completo de «El anillo del nibelungo», del que sale esta pieza, dura unas 15 horas, así que suele representarse en cuatro noches.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "df2acdd74a40"
+    },
+    {
+      "id": "q-20832",
+      "question": "Escucha: ¿qué instrumento tradicional de arco está tocando esta melodía?",
+      "answer": "Lira cretense",
+      "wrong_answers": [
+        "Erhu",
+        "Violín de Hardanger",
+        "Sarangi"
+      ],
+      "hints": [
+        "Su hogar está en el Mediterráneo.",
+        "El músico lo sostiene vertical sobre la rodilla, y el arco a veces lleva cascabeles diminutos.",
+        "Comparte nombre con el antiguo instrumento de Orfeo y viene de la isla más grande de Grecia."
+      ],
+      "description": "Un arco, unas pocas cuerdas y energía suficiente para tener a todo un pueblo bailando hasta el amanecer.",
+      "fun_fact": "Los arcos tradicionales de la lira cretense solían llevar atados pequeños «cascabeles de halcón», así que el instrumento tintineaba al ritmo del arco.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d7556bcfdfa6"
+    },
+    {
+      "id": "q-20833",
+      "question": "Mira: ¿qué modelo de avión de pasajeros despega en este vídeo?",
+      "answer": "McDonnell Douglas MD-11",
+      "wrong_answers": [
+        "Lockheed L-1011 TriStar",
+        "Boeing 727",
+        "Boeing 747"
+      ],
+      "hints": [
+        "Cuenta los motores y fíjate bien en dónde está el de la cola.",
+        "El motor de cola atraviesa en línea recta la base de la deriva. No va metido en la parte trasera del fuselaje con una toma de aire encima.",
+        "Es un sucesor alargado del DC-10, con pequeños winglets en las puntas de las alas."
+      ],
+      "description": "En algún lugar de su barriga, el paquete de alguien que llega tardísimo por fin está en camino.",
+      "fun_fact": "El MD-11 fue el último avión de pasajeros de fuselaje ancho con tres motores que se fabricó; su producción terminó en 2001, tras unas 200 unidades.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "56bd10811ced"
+    },
+    {
+      "id": "q-20834",
+      "question": "Mira: ¿cómo se llama el gran tambor que toca el músico sentado para los bailarines?",
+      "answer": "Tapan",
+      "wrong_answers": [
+        "Djembé",
+        "Bodhrán",
+        "Darbuka"
+      ],
+      "hints": [
+        "El tambor cuelga de lado, así que el músico golpea sus dos parches.",
+        "Se le oye en bodas y fiestas de pueblo desde los Balcanes hasta Turquía.",
+        "En Turquía el mismo tambor se llama davul, y suele sonar junto a la estridente zurna."
+      ],
+      "description": "El comensal más ruidoso del restaurante, y nadie se atreve a pedirle que baje la voz.",
+      "fun_fact": "Los tamborileros del tapan suelen usar una maza gruesa en un parche para los golpes graves y una varilla fina en el otro para los chasquidos secos, así que un solo músico suena como dos.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0fe39231956b"
+    },
+    {
+      "id": "q-20835",
+      "question": "Escucha: este es el final de una de las sonatas para piano de Beethoven. ¿Qué sonata es?",
+      "answer": "Sonata «Waldstein»",
+      "wrong_answers": [
+        "Sonata «Appassionata»",
+        "Sonata «Patética»",
+        "Sonata «Hammerklavier»"
+      ],
+      "hints": [
+        "Fíjate en la melodía suave, como de campanas, que flota sobre una nota grave sostenida. Enseguida vuelve fuerte y con todo el sonido del piano.",
+        "Este final es un rondó en una tonalidad mayor luminosa, y termina con pasajes rapidísimos y brillantes.",
+        "El apodo de la sonata homenajea a un conde de Bonn que apoyó al joven Beethoven y lo envió a estudiar a Viena."
+      ],
+      "description": "Diez dedos, ochenta y ocho teclas y un compositor que nunca aguantaba mucho rato tocando bajito.",
+      "fun_fact": "Cuando Beethoven se fue de Bonn en 1792, el conde Ferdinand von Waldstein le escribió en su álbum que recibiría «el espíritu de Mozart de manos de Haydn».",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d501b120f723"
+    },
+    {
+      "id": "q-20836",
+      "question": "Escucha: en muchas celebraciones, esta melodía suena cuando entra una persona especial. ¿Quién es?",
+      "answer": "La novia",
+      "wrong_answers": [
+        "La nueva reina",
+        "La recién graduada",
+        "La capitana del equipo"
+      ],
+      "hints": [
+        "Los invitados suelen ponerse de pie y darse la vuelta cuando empieza esta música.",
+        "Esta persona suele llevar meses planeando este preciso momento.",
+        "Esta persona suele llevar un largo vestido blanco y velo."
+      ],
+      "description": "Una melodía tan famosa que hasta quien nunca va a conciertos sabe tararearla.",
+      "fun_fact": "En la ópera «Lohengrin» de Wagner, este coro se canta después de la boda, cuando llevan a la pareja a su habitación, no mientras la novia avanza hacia el altar.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3a18bc0cbd19"
+    },
+    {
+      "id": "q-20837",
+      "question": "Mira: ¿cómo se llama en el ferrocarril el tipo de vagón de mercancías que arrastra este tren?",
+      "answer": "Vagón tolva",
+      "wrong_answers": [
+        "Vagón cisterna",
+        "Vagón plataforma",
+        "Vagón portacoches"
+      ],
+      "hints": [
+        "Fíjate bien en los extremos inclinados y en la parte de abajo de los vagones.",
+        "Estos vagones llevan carga suelta, como el trigo, que tiene que mantenerse seca, así que tienen techo.",
+        "La carga cae por unas bocas en forma de embudo que hay debajo, como el embudo por el que cae el grano en un molino."
+      ],
+      "description": "Largo, lento y lleno de grafitis: quizá la galería de arte ambulante más paciente del mundo.",
+      "fun_fact": "Los vagones tolva se vacían por unas compuertas en el suelo, así que la gravedad los descarga y nadie tiene que levantar nada.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "37a2cb740ae0"
+    },
+    {
+      "id": "q-20838",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Países Bajos",
+      "wrong_answers": [
+        "Bélgica",
+        "Dinamarca",
+        "Suecia"
+      ],
+      "hints": [
+        "Su letra se escribió durante una larga lucha por liberarse del dominio español.",
+        "Las primeras letras de sus estrofas forman el nombre de un príncipe.",
+        "Ese príncipe era Guillermo de Orange, y el naranja sigue siendo el color de sus equipos deportivos."
+      ],
+      "description": "Una banda de la marina con los zapatos muy relucientes toca una melodía de la tierra de otros.",
+      "fun_fact": "Las primeras letras de las 15 estrofas del himno forman «Willem van Nassov», así que es un acróstico gigante, y su letra es del siglo XVI.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3dee95810e6d"
+    },
+    {
+      "id": "q-20839",
+      "question": "Mira: la sonda Juno de la NASA tomó estas imágenes de cerca de una de las lunas de Júpiter. ¿Qué luna es?",
+      "answer": "Europa",
+      "wrong_answers": [
+        "Ío",
+        "Ganímedes",
+        "Calisto"
+      ],
+      "hints": [
+        "Es una de las cuatro grandes lunas que descubrió Galileo en 1610.",
+        "Su superficie clara casi no tiene cráteres, pero está cubierta de largas líneas de color marrón rojizo, que son grietas en una capa de hielo.",
+        "Los científicos creen que bajo su corteza helada hay un enorme océano salado, y la NASA envió allí su misión Clipper para saber más."
+      ],
+      "description": "Júpiter tiene decenas de lunas, pero solo unas pocas son lo bastante fotogénicas para un primer plano.",
+      "fun_fact": "El océano bajo el hielo de Europa podría contener unas dos veces más agua que todos los océanos de la Tierra juntos.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "15c4413b48d9"
+    },
+    {
       "id": "q-2084",
       "question": "Si una casa es «sismorresistente», ¿qué quiere decir?",
       "answer": "Que aguanta los terremotos sin caerse",
@@ -61857,6 +62585,216 @@
         "previous": null
       },
       "source_hash": "9c63d01bf714"
+    },
+    {
+      "id": "q-20840",
+      "question": "Mira: ¿qué tipo de ciervo está pastando en esta manada?",
+      "answer": "Gamo",
+      "wrong_answers": [
+        "Ciervo común",
+        "Corzo",
+        "Ciervo de cola blanca"
+      ],
+      "hints": [
+        "Esta especie vive en libertad en Europa, pero desde hace siglos también se ha llevado a parques de todo el mundo.",
+        "La mayoría de los ciervos pierden sus manchas blancas al crecer, pero los adultos de esta especie las mantienen todo el verano.",
+        "Fíjate en la parte trasera: una mancha blanca rodeada de negro. Y los machos tienen cuernos anchos y planos, como palas."
+      ],
+      "description": "Una pausa para comer en la que todos han traído la misma ensalada y a nadie le importa.",
+      "fun_fact": "Los machos de esta especie tienen cuernos anchos y planos llamados «palmeados», y los romanos ayudaron a extenderla por toda Europa.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6881c51f133b"
+    },
+    {
+      "id": "q-20841",
+      "question": "Mira este mapa de lluvias de la NASA: ¿cómo se llama la larga franja de lluvias intensas que ves?",
+      "answer": "Zona de Convergencia Intertropical",
+      "wrong_answers": [
+        "Frente polar",
+        "Corriente en chorro",
+        "Latitudes del caballo"
+      ],
+      "hints": [
+        "Fíjate bien en qué parte del globo está la franja.",
+        "Se mantiene cerca del ecuador, donde el Sol calienta más el océano.",
+        "Los antiguos marinos llamaban a sus zonas tranquilas y sin viento «las calmas ecuatoriales»."
+      ],
+      "description": "El accesorio favorito del planeta: un cinturón que nunca, jamás, se seca.",
+      "fun_fact": "La franja sigue al Sol: se desplaza hacia el norte en julio y hacia el sur en enero, y trae la estación de lluvias a gran parte de los trópicos.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3e737de405e4"
+    },
+    {
+      "id": "q-20842",
+      "question": "Escucha: ¿en qué baile rápido se inspira el ritmo inquieto y galopante del final de este cuarteto de cuerda?",
+      "answer": "Tarantela",
+      "wrong_answers": [
+        "Vals",
+        "Polonesa",
+        "Zarabanda"
+      ],
+      "hints": [
+        "Fíjate en cómo los pulsos llegan en grupos rápidos de tres, una y otra vez, casi sin respirar.",
+        "El baile viene del sur de Italia y suele tocarse con panderetas.",
+        "Su nombre está ligado a la ciudad de Tarento y a la picadura de una araña legendaria."
+      ],
+      "description": "Cuatro músicos de cuerda con un caso grave de piernas inquietas.",
+      "fun_fact": "Schubert compuso este cuarteto en 1824, pero no se publicó hasta 1831, tres años después de su muerte.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "1f09733dace1"
+    },
+    {
+      "id": "q-20845",
+      "question": "Mira: ¿en qué ciudad japonesa se grabaron estas animadas escenas callejeras?",
+      "answer": "Osaka",
+      "wrong_answers": [
+        "Tokio",
+        "Kioto",
+        "Yokohama"
+      ],
+      "hints": [
+        "En todo Japón, la gente de aquí tiene fama de graciosa y de que le encanta comer fuera.",
+        "El takoyaki, la bolita de pulpo para picar, se inventó en esta ciudad.",
+        "El barrio del canal con el cartel gigante del hombre corriendo, Dotonbori, está en la ciudad que acogió la Expo 2025."
+      ],
+      "description": "Horas de vida urbana comprimidas en segundos, como ir al trabajo a cámara rápida.",
+      "fun_fact": "El cartel del «hombre corriendo» de Glico ilumina Dotonbori desde 1935 y se ha sustituido por versiones nuevas varias veces desde entonces.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "167b14f7cca1"
+    },
+    {
+      "id": "q-20846",
+      "question": "Mira: esta animación de la NASA muestra la mitad norte de nuestro planeta. ¿Qué representa la franja roja que serpentea alrededor del globo?",
+      "answer": "La corriente en chorro",
+      "wrong_answers": [
+        "La corriente del Golfo",
+        "Los vientos alisios",
+        "La aurora boreal"
+      ],
+      "hints": [
+        "Fíjate bien: la franja cruza tierra y océano por igual y cambia de forma en pocos días.",
+        "Sopla a unos 9-12 km de altura, más o menos donde vuelan los aviones de pasajeros.",
+        "Los vuelos de América a Europa suelen aprovecharla para llegar antes y ahorrar combustible."
+      ],
+      "description": "La Tierra se prueba su bufanda roja más ondulada y no hay manera de que se quede quieta para la foto.",
+      "fun_fact": "La corriente en chorro polar puede superar los 160 km/h, y sus grandes curvas pueden llevar calor o frío intenso muy lejos de donde suele estar.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b2ab29a14bd3"
+    },
+    {
+      "id": "q-20847",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Argelia",
+      "wrong_answers": [
+        "Marruecos",
+        "Túnez",
+        "Egipto"
+      ],
+      "hints": [
+        "La letra de este himno se escribió durante una guerra de independencia.",
+        "El poeta escribió la letra mientras estaba encerrado en una cárcel francesa en 1955.",
+        "Es el país más grande de África por superficie, y el Sáhara cubre la mayor parte."
+      ],
+      "description": "Una banda de la marina con uniformes blancos impecables está a punto de poner firme a todo un país.",
+      "fun_fact": "El nombre del himno, «Kassaman», significa «Juramos», y su poeta, Moufdi Zakaria, escribió la letra en una celda de una cárcel francesa en 1955.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3752e55bda12"
+    },
+    {
+      "id": "q-20848",
+      "question": "Mira: esta animación atraviesa una nube luminosa de dos lóbulos hasta la pareja de estrellas gigantes que la expulsó. ¿Qué sistema estelar es?",
+      "answer": "Eta Carinae",
+      "wrong_answers": [
+        "Sirio",
+        "Alfa Centauri",
+        "Rigel"
+      ],
+      "hints": [
+        "Se ve mejor desde el hemisferio sur.",
+        "En la década de 1840 brilló tanto que, durante un tiempo, fue la segunda estrella más brillante del cielo nocturno.",
+        "Su nombre la sitúa en la constelación de Carina, la quilla de un barco."
+      ],
+      "description": "El zum espacial definitivo: no para hasta que algo brilla muchísimo.",
+      "fun_fact": "La nube luminosa, llamada nebulosa del Homúnculo, se expulsó en la década de 1840 y contiene al menos 10 veces la masa de nuestro Sol.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "701cc8937e6d"
     },
     {
       "id": "q-2085",
@@ -61889,6 +62827,246 @@
       "source_hash": "2464feecc106"
     },
     {
+      "id": "q-20850",
+      "question": "Mira: esta cámara grabó algo oscuro pasando por delante del Sol. ¿Qué está cruzando el Sol?",
+      "answer": "La luna marciana Fobos",
+      "wrong_answers": [
+        "La Luna de la Tierra",
+        "El planeta Venus",
+        "El planeta Mercurio"
+      ],
+      "hints": [
+        "Fíjate bien en el contorno de la forma oscura: ¿es un círculo perfecto?",
+        "Los planetas y nuestra Luna se ven redondos. Las lunas pequeñas pueden ser irregulares, como una patata.",
+        "La cámara iba en un robot explorador, lejos de la Tierra, en el planeta rojo."
+      ],
+      "description": "Al Sol le han colado a alguien en la foto, y esta vez no ha sido una paloma.",
+      "fun_fact": "Fobos da unas tres vueltas a Marte al día, así que, vista desde Marte, sale por el oeste y se pone por el este.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "644e3d79926a"
+    },
+    {
+      "id": "q-20851",
+      "question": "Mira: este animal puede pasar todo el invierno bajo el hielo de un estanque sin subir a respirar. ¿Cómo consigue algo de oxígeno?",
+      "answer": "Por la piel cerca de la cola",
+      "wrong_answers": [
+        "Por branquias ocultas tras la cabeza",
+        "Del aire guardado dentro del caparazón",
+        "Por agujeritos que derrite en el hielo"
+      ],
+      "hints": [
+        "Tiene pulmones, pero durante meses no puede llegar a la superficie para usarlos.",
+        "El oxígeno sale directamente del agua fría que lo rodea.",
+        "Los científicos llaman a este truco, en broma, «respirar por el culete»."
+      ],
+      "description": "No todos los visitantes del estanque helado se acordaron de traer los patines.",
+      "fun_fact": "Las tortugas pintadas pueden sobrevivir meses bajo el hielo casi sin oxígeno, y su caparazón libera minerales que ayudan a neutralizar el ácido que se acumula en su cuerpo.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5b28cfe4310e"
+    },
+    {
+      "id": "q-20852",
+      "question": "Mira el techo de la locomotora roja: ¿cómo se llama el brazo plegable que toca los cables de arriba?",
+      "answer": "Pantógrafo",
+      "wrong_answers": [
+        "Catenaria",
+        "Bogie",
+        "Enganche"
+      ],
+      "hints": [
+        "Su nombre se usó primero para un instrumento de dibujo.",
+        "Ese antiguo instrumento copiaba dibujos más grandes o más pequeños con un armazón plegable de barras articuladas.",
+        "La palabra empieza como «panda» y termina como «fotógrafo»."
+      ],
+      "description": "Toneladas de acero reluciente atraviesan traqueteando una tranquila estación francesa, y nadie compra ni un billete.",
+      "fun_fact": "El pantógrafo debe su nombre a un instrumento de dibujo con un armazón plegable, que se usa desde el siglo XVII para copiar dibujos a otro tamaño.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7575c4b112d2"
+    },
+    {
+      "id": "q-20854",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Noruega",
+      "wrong_answers": [
+        "Suecia",
+        "Dinamarca",
+        "Finlandia"
+      ],
+      "hints": [
+        "La letra la escribió un poeta que más tarde ganó el Premio Nobel de Literatura.",
+        "Este país celebra su fiesta nacional el 17 de mayo con grandes desfiles infantiles.",
+        "Este país es famoso por sus profundos fiordos y su larga costa atlántica."
+      ],
+      "description": "La única melodía que levanta a todo el salón del sofá, con la mano en el pecho.",
+      "fun_fact": "El compositor, Rikard Nordraak, murió en 1866 con solo 23 años, pero su país lleva más de 150 años cantando su melodía.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6f473d7021ab"
+    },
+    {
+      "id": "q-20855",
+      "question": "Escucha: esta pieza para piano lleva el nombre de un baile popular. ¿De qué país es ese baile?",
+      "answer": "Polonia",
+      "wrong_answers": [
+        "España",
+        "Argentina",
+        "Hungría"
+      ],
+      "hints": [
+        "El baile tiene tres tiempos por compás, a menudo con un acento fuerte en el segundo o el tercero.",
+        "El compositor fue una estrella romántica del piano que se marchó de casa a los 20 años y vivió el resto de su vida en París.",
+        "El baile se llama mazurca, por una región cercana a Varsovia."
+      ],
+      "description": "Una melodía que te quiere en la pista de baile, aunque solo la toque una persona.",
+      "fun_fact": "Chopin compuso unas 60 mazurcas, y el himno nacional de Polonia, «Polonia aún no ha muerto», también es una mazurca.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9cc87c249b19"
+    },
+    {
+      "id": "q-20856",
+      "question": "Escucha: tras la entrada de las trompas, dos solistas tocan juntos la melodía principal, uno una octava por encima del otro. ¿Qué dos instrumentos son?",
+      "answer": "Violín y violonchelo",
+      "wrong_answers": [
+        "Violín y viola",
+        "Dos violines",
+        "Violonchelo y contrabajo"
+      ],
+      "hints": [
+        "Los dos solistas tocan instrumentos de cuerda con arco.",
+        "Escucha la voz grave: suena mucho más profunda que la aguda.",
+        "Uno de los solistas sujeta el instrumento bajo la barbilla; el otro toca sentado con él entre las rodillas."
+      ],
+      "description": "Dos solistas que comparten escenario y melodía, y ninguno de los dos está de morros.",
+      "fun_fact": "Brahms compuso este Doble concierto en 1887 en parte para hacer las paces con su amigo el violinista Joseph Joachim, y fue la última obra orquestal que escribió.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d3a58bb32f4b"
+    },
+    {
+      "id": "q-20857",
+      "question": "Escucha: ¿en qué tipo de celebración suena tradicionalmente esta famosa melodía?",
+      "answer": "Una boda",
+      "wrong_answers": [
+        "Un funeral",
+        "Una fiesta de cumpleaños",
+        "Una graduación"
+      ],
+      "hints": [
+        "La gente suele ponerse su mejor ropa para esta ocasión.",
+        "Después, los invitados suelen lanzar pétalos de flores, arroz o confeti.",
+        "Suena mientras alguien con un largo vestido blanco avanza despacio por el pasillo."
+      ],
+      "description": "Que alguien traiga pañuelos, que la tía Rosa ya está llorando desde la primera nota.",
+      "fun_fact": "Es el coro nupcial de la ópera «Lohengrin» de Richard Wagner, de 1850, y en la ópera la boda que celebra se va al traste esa misma noche.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "afa4877b89af"
+    },
+    {
+      "id": "q-20859",
+      "question": "Escucha: estos chillidos tan fuertes se grabaron en una ciudad alemana. ¿Qué ave los hace?",
+      "answer": "Cotorra de Kramer",
+      "wrong_answers": [
+        "Arrendajo euroasiático",
+        "Vencejo común",
+        "Estornino pinto"
+      ],
+      "hints": [
+        "Se ve y se oye mucho en los parques y jardines de las ciudades.",
+        "Vive en bandadas ruidosas que por la noche se juntan a dormir en los mismos árboles grandes.",
+        "Tiene las plumas de un verde intenso, los machos lucen un fino collar rosa y negro, y sus antepasados eran mascotas que se escaparon."
+      ],
+      "description": "Algunos vecinos del parque no se han enterado de que existe el horario de descanso.",
+      "fun_fact": "Hoy viven bandadas salvajes de estas cotorras, descendientes de mascotas escapadas o liberadas, en muchas ciudades europeas, como Londres, Bruselas, Ámsterdam y Roma.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7de7bf5e5a55"
+    },
+    {
       "id": "q-2086",
       "question": "La tela más fina y valorada de esta camisa filipina se teje con fibras de las hojas de una planta frutal. ¿Cuál?",
       "answer": "Piña",
@@ -61917,6 +63095,246 @@
         "previous": null
       },
       "source_hash": "ba77c597688e"
+    },
+    {
+      "id": "q-20860",
+      "question": "Escucha este coro de una misa de Mozart. ¿Qué forma musical está cantando?",
+      "answer": "Fuga",
+      "wrong_answers": [
+        "Coral",
+        "Rondó",
+        "Pasacalle"
+      ],
+      "hints": [
+        "Fíjate en cómo empieza el canto: no todas las voces entran a la vez.",
+        "Una melodía corta, el tema, pasa de un grupo de cantantes al siguiente y se van entrelazando.",
+        "Johann Sebastian Bach fue el gran maestro de esta forma, como en su «Tocata y ___ en re menor»."
+      ],
+      "description": "Palabras en latín, pelucas empolvadas y un coro que, claramente, ya se ha tomado el café de la mañana.",
+      "fun_fact": "Mozart nunca terminó su Gran Misa en do menor, pero mientras la escribía en Viena estudió a fondo las fugas de Bach, y en este movimiento se nota.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d971357e7188"
+    },
+    {
+      "id": "q-20862",
+      "question": "Escucha: ¿qué melodía famosa toca esta banda de jazz primitivo en una grabación de 1922?",
+      "answer": "«St. Louis Blues»",
+      "wrong_answers": [
+        "«Maple Leaf Rag»",
+        "«Tiger Rag»",
+        "«When the Saints Go Marching In»"
+      ],
+      "hints": [
+        "Se publicó por primera vez en 1914 y fue una de las canciones más grabadas de su época.",
+        "Su compositor le dio a una parte de la melodía un ritmo de tango, algo poco habitual en una canción de su estilo.",
+        "Su título nombra una gran ciudad a orillas del río Misisipi, famosa por su enorme arco Gateway."
+      ],
+      "description": "Tus tatarabuelos también tenían su lista de éxitos, y esta canción estaba en ella.",
+      "fun_fact": "En la grabación de «St. Louis Blues» que hizo la cantante Bessie Smith en 1925, la corneta la toca un joven Louis Armstrong.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "20e20189ad3d"
+    },
+    {
+      "id": "q-20863",
+      "question": "Escucha: ¿qué compositor escribió esta famosa pieza?",
+      "answer": "Johann Pachelbel",
+      "wrong_answers": [
+        "Johann Sebastian Bach",
+        "Antonio Vivaldi",
+        "Georg Friedrich Händel"
+      ],
+      "hints": [
+        "Fue un compositor y organista alemán del Barroco, hacia 1700.",
+        "Casi todo el mundo conoce esta pieza suya, pero apenas nadie conoce el resto de su música.",
+        "La pieza es su «Canon en re», y muchas novias entran en la iglesia con ella."
+      ],
+      "description": "Una melodía tan tranquila que podría hacer que un niño pequeño se estuviera quieto, casi.",
+      "fun_fact": "El Canon de Pachelbel estuvo casi olvidado unos 250 años, hasta que una grabación de 1968 lo convirtió en una de las piezas más tocadas del mundo.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "882b96678d89"
+    },
+    {
+      "id": "q-20865",
+      "question": "Mira: la Tierra de noche gira y empieza sobre Asia. Justo después de pasar Europa y África, ¿qué océano ocupa el centro del globo?",
+      "answer": "Océano Atlántico",
+      "wrong_answers": [
+        "Océano Índico",
+        "Océano Pacífico",
+        "Océano Ártico"
+      ],
+      "hints": [
+        "Fíjate adónde van las luces de Europa y qué zona oscura viene detrás.",
+        "La Tierra gira hacia el este, así que después aparecen los lugares que están más al oeste.",
+        "Cristóbal Colón lo cruzó en barco en 1492."
+      ],
+      "description": "El planeta ha apagado la luz grande y solo ha dejado encendidas las lucecitas de noche.",
+      "fun_fact": "El océano Atlántico se ensancha unos centímetros cada año, porque América se va separando poco a poco de Europa y África.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0e165aa16635"
+    },
+    {
+      "id": "q-20866",
+      "question": "Mira: ¿cómo se llama el utensilio que usa este cocinero?",
+      "answer": "Wok",
+      "wrong_answers": [
+        "Tajín",
+        "Paellera",
+        "Crepera"
+      ],
+      "hints": [
+        "Es un utensilio estrella de los restaurantes asiáticos de todo el mundo.",
+        "Viene de China, donde se usa para freír muy rápido a fuego muy fuerte.",
+        "Los fideos fritos como el chow mein suelen saltearse en uno de estos."
+      ],
+      "description": "La cena está servida, con espectáculo de fuego de regalo.",
+      "fun_fact": "Los cocineros chinos llaman «wok hei», que significa «aliento del wok», al sabor ahumado que deja un wok muy caliente.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "75e0c018c3f4"
+    },
+    {
+      "id": "q-20867",
+      "question": "Mira: ¿de qué país es típico este famoso pan de queso?",
+      "answer": "Georgia",
+      "wrong_answers": [
+        "Grecia",
+        "Hungría",
+        "Ucrania"
+      ],
+      "hints": [
+        "El país está en el Cáucaso, entre el mar Negro y el mar Caspio.",
+        "Su capital es Tiflis y su alfabeto no se parece a ningún otro del mundo.",
+        "Este país se llama igual que un estado de Estados Unidos."
+      ],
+      "description": "Un pan que zarpa con la bodega llena de queso fundido.",
+      "fun_fact": "El jachapuri adjario viene de Adjaria, en la costa del mar Negro, y se dice que su forma de barca representa un barco, con la yema como el sol.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4d4a9ce41317"
+    },
+    {
+      "id": "q-20868",
+      "question": "Escucha: ¿con qué apodo es famosa esta sonata para piano de Beethoven?",
+      "answer": "Sonata «Appassionata»",
+      "wrong_answers": [
+        "Sonata «Patética»",
+        "Sonata «La tempestad»",
+        "Sonata «Hammerklavier»"
+      ],
+      "hints": [
+        "Empieza en voz baja, en los graves, y estalla de golpe en arrebatos fuertes, todo en tono menor.",
+        "Beethoven la compuso entre 1804 y 1806, más o menos cuando su sinfonía «Heroica».",
+        "Su apodo se parece muchísimo a la palabra «apasionada»."
+      ],
+      "description": "Ochenta y ocho teclas, un solo hombre y un humor que más vale no interrumpir.",
+      "fun_fact": "Beethoven nunca la llamó «Appassionata»: el nombre se lo puso un editor de Hamburgo en 1838, once años después de su muerte.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "70f690510a3e"
+    },
+    {
+      "id": "q-20869",
+      "question": "Mira: ¿qué es la franja luminosa que cruza el cielo nocturno en este vídeo a cámara rápida?",
+      "answer": "La Vía Láctea",
+      "wrong_answers": [
+        "La galaxia de Andrómeda",
+        "La aurora boreal",
+        "La nebulosa de Orión"
+      ],
+      "hints": [
+        "Se ve mejor desde lugares muy oscuros, lejos de las luces de la ciudad, como esta cima de una montaña en el desierto.",
+        "Nuestro Sol es solo una de los cientos de miles de millones de estrellas que hay en ella.",
+        "Es nuestra galaxia, y su nombre tiene que ver con lo que muchos se echan en los cereales del desayuno."
+      ],
+      "description": "Una noche tan oscura que por fin ves lo que las farolas te estaban escondiendo.",
+      "fun_fact": "La palabra «galaxia» viene del griego «gala», que significa leche, así que «galaxia Vía Láctea» dice «leche» dos veces.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "900b46f1757d"
     },
     {
       "id": "q-2087",
@@ -61957,6 +63375,276 @@
       "source_hash": "fc7e59344dce"
     },
     {
+      "id": "q-20870",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Bielorrusia",
+      "wrong_answers": [
+        "Ucrania",
+        "Lituania",
+        "Kazajistán"
+      ],
+      "hints": [
+        "Este país formó parte de la Unión Soviética.",
+        "Su bandera roja y verde tiene a un lado una franja con un dibujo tradicional rojo y blanco.",
+        "Su capital es Minsk."
+      ],
+      "description": "Una melodía que hace que todo un estadio se ponga firme y serio a la vez.",
+      "fun_fact": "La melodía se compuso en 1955 para la Bielorrusia soviética, y el país la conservó tras la independencia, aunque no le puso letra nueva hasta 2002.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a8fa55ea0e0d"
+    },
+    {
+      "id": "q-20871",
+      "question": "Mira: este brazo robótico está colocando una pieza nueva en una estación espacial. ¿Qué país construyó el brazo?",
+      "answer": "Canadá",
+      "wrong_answers": [
+        "Japón",
+        "China",
+        "Italia"
+      ],
+      "hints": [
+        "El mismo país construyó un brazo robótico anterior para el transbordador espacial de la NASA.",
+        "Chris Hadfield, astronauta de este país, llegó a ser comandante de la estación que ves aquí.",
+        "El nombre del brazo, en inglés, empieza por el nombre de su país."
+      ],
+      "description": "El apretón de manos a más distancia de la historia, a 400 km de cualquiera que pueda aplaudir.",
+      "fun_fact": "El Canadarm2, de 17,6 m, puede «caminar» por la Estación Espacial Internacional dando vueltas de extremo a extremo, como una oruga, entre unos puntos de anclaje especiales.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d97e4558c94f"
+    },
+    {
+      "id": "q-20873",
+      "question": "Mira: bailarines con collares de coral y telas de cuadros anudadas bailan al son de tambores. ¿De qué país es esta danza tradicional?",
+      "answer": "Nigeria",
+      "wrong_answers": [
+        "Etiopía",
+        "Senegal",
+        "Kenia"
+      ],
+      "hints": [
+        "En el sur de este país, las cuentas de coral rojo como estas son un símbolo clásico de riqueza y de fiesta.",
+        "La danza procede de un pueblo que vive en un enorme delta fluvial famoso por su petróleo.",
+        "Es el país más poblado de África."
+      ],
+      "description": "Dos tambores, un patio y nadie tiene permiso para quedarse quieto.",
+      "fun_fact": "Los ijaw, que bailan esta danza, son uno de los mayores grupos étnicos de Nigeria, y muchos viven entre los canales del delta del Níger, donde la pesca es desde hace siglos un modo de vida.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f70155854bba"
+    },
+    {
+      "id": "q-20874",
+      "question": "Mira cómo despega este avión de carga. ¿Qué modelo de avión es?",
+      "answer": "Airbus A300",
+      "wrong_answers": [
+        "Boeing 747",
+        "McDonnell Douglas MD-11",
+        "Boeing 767"
+      ],
+      "hints": [
+        "Fíjate bien en la cola: ¿lleva algo montado?",
+        "Cuenta los motores: el MD-11 tiene tres y el 747, cuatro.",
+        "Su fabricante es una empresa europea que monta sus aviones en Toulouse, Francia."
+      ],
+      "description": "Una furgoneta de reparto que se hartó de los atascos y se salió de la carretera por arriba.",
+      "fun_fact": "El Airbus A300, que voló por primera vez en 1972, fue el primer avión de pasajeros de fuselaje ancho del mundo con solo dos motores.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "cd49edb45b38"
+    },
+    {
+      "id": "q-20875",
+      "question": "Mira: ¿qué ave es esta, con unas carnosidades rojas colgando junto al pico?",
+      "answer": "Tieke",
+      "wrong_answers": [
+        "Kokako",
+        "Tui",
+        "Tordo sargento"
+      ],
+      "hints": [
+        "En libertad solo vive en islas sin depredadores y en reservas valladas de un país del Pacífico.",
+        "Pertenece a una antigua familia de pájaros con carúnculas que no existe en ningún otro lugar de la Tierra.",
+        "En inglés se llama «saddleback», «lomo de silla de montar», por la franja castaña de su espalda."
+      ],
+      "description": "Esta modelo con plumas desfila por la barandilla como si fuera una pasarela.",
+      "fun_fact": "El tieke de la Isla Norte llegó a quedar en una sola isla pequeña, Hen Island; desde los años sesenta, los conservacionistas llevaron aves a otras islas sin depredadores y hoy hay miles.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0da7b7c5291d"
+    },
+    {
+      "id": "q-20876",
+      "question": "Mira: ¿qué tipo de mosca está posada en esta hoja?",
+      "answer": "Mosca asesina",
+      "wrong_answers": [
+        "Mosca de las flores",
+        "Tábano",
+        "Típula"
+      ],
+      "hints": [
+        "Fíjate bien en sus patas largas y peludas y en sus enormes ojos.",
+        "Atrapa a otros insectos al vuelo, incluso abejas y libélulas.",
+        "Por su nombre, parece la criminal más temida del mundo de los insectos."
+      ],
+      "description": "Está quietecita en una hoja de un parque de Tokio, posando como una diminuta supermodelo.",
+      "fun_fact": "Las moscas asesinas tienen un «bigote» espeso de cerdas en la cara que les protege los ojos mientras su presa forcejea.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "32c726271a6e"
+    },
+    {
+      "id": "q-20877",
+      "question": "Escucha: ¿qué ave sudamericana canta este trino fuerte y vibrante?",
+      "answer": "Hornero común",
+      "wrong_answers": [
+        "Bienteveo común",
+        "Avefría tero",
+        "Chingolo común"
+      ],
+      "hints": [
+        "Es el ave nacional de un país famoso por el tango.",
+        "Es un pájaro sencillo de color pardo rojizo que suele caminar por el suelo en parques, granjas y jardines.",
+        "Construye en los postes nidos de barro redondos y duros, como pequeñas cúpulas de arcilla."
+      ],
+      "description": "Seis segundos de pura energía de pájaro sudamericano, sin calentamiento previo.",
+      "fun_fact": "Las parejas de hornero suelen cantar juntas a dúo, y su nido de barro puede pesar hasta unos 5 kg.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "39ed29bb4eb9"
+    },
+    {
+      "id": "q-20878",
+      "question": "Mira: esta danza popular del pueblo bodo, de Assam (India), tiene un apodo que viene del animal que imitan sus bailarinas. ¿Cuál?",
+      "answer": "Mariposa",
+      "wrong_answers": [
+        "Pavo real",
+        "Cisne",
+        "Águila"
+      ],
+      "hints": [
+        "Fíjate en lo que hacen las bailarinas con los chales de colores que llevan sobre los hombros.",
+        "Observa lo pequeños, rápidos y ligeros que son los movimientos, nada majestuosos ni de alto vuelo.",
+        "Empieza su vida siendo una oruga."
+      ],
+      "description": "En algún lugar del noreste de la India, un chal está viviendo el mejor día de su vida.",
+      "fun_fact": "La danza se llama bagurumba y suelen bailarla las mujeres en el Bwisagu, la fiesta del Año Nuevo bodo, que se celebra en primavera.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6ae93b35c701"
+    },
+    {
+      "id": "q-20879",
+      "question": "Escucha: ¿en qué idioma canta este coro?",
+      "answer": "Latín",
+      "wrong_answers": [
+        "Italiano",
+        "Alemán",
+        "Eslavo eclesiástico"
+      ],
+      "hints": [
+        "El autor de esta música nació en Salzburgo, pero esta letra no está en su propio idioma.",
+        "Hoy nadie crece hablando este idioma en casa.",
+        "Julio César lo hablaba a diario."
+      ],
+      "description": "Decenas de cantantes, una orquesta completa y ni una sola palabra que puedas tararear.",
+      "fun_fact": "Mozart nunca terminó su Gran Misa en do menor, pero aun así se interpretó en Salzburgo en 1783, y su esposa Constanze cantó una de las partes de soprano.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "341fc13182a7"
+    },
+    {
       "id": "q-2088",
       "question": "Retuerzo globos largos y flacos hasta convertirlos en perritos, espadas y flores. ¿Quién soy?",
       "answer": "El globoflexista",
@@ -61985,6 +63673,216 @@
         "previous": null
       },
       "source_hash": "732954a3e57f"
+    },
+    {
+      "id": "q-20880",
+      "question": "Mira: este mapa de satélite muestra el dióxido de carbono durante un año, y el rojo indica más. ¿Qué hace que el rojo se apague en el norte hacia el final?",
+      "answer": "Plantas en crecimiento",
+      "wrong_answers": [
+        "Nieve que se derrite",
+        "Tormentas en el océano",
+        "Volcanes más tranquilos"
+      ],
+      "hints": [
+        "El rojo se apaga durante los meses más cálidos del norte.",
+        "Las hojas absorben este gas y usan la luz del sol para fabricar alimento con él.",
+        "El proceso se llama fotosíntesis."
+      ],
+      "description": "Un planeta con el anillo del humor estropeado, que cambia de color cada pocos segundos.",
+      "fun_fact": "Medida durante décadas, esta subida y bajada anual hace que la famosa curva de Keeling, del Mauna Loa en Hawái, parezca una hoja de sierra, como si la Tierra respirara.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "319783d55128"
+    },
+    {
+      "id": "q-20881",
+      "question": "Escucha: en este pasaje lento de una misa en latín, el coro repite un nombre una y otra vez. ¿De qué parte de la misa es?",
+      "answer": "Gloria",
+      "wrong_answers": [
+        "Kyrie",
+        "Credo",
+        "Agnus Dei"
+      ],
+      "hints": [
+        "Fíjate en el nombre que repite el coro.",
+        "Este himno alegre de alabanza se omite casi todos los domingos de Adviento y Cuaresma.",
+        "Empieza con las palabras que los ángeles dirigieron a los pastores la noche en que nació Jesús."
+      ],
+      "description": "Deberes de latín, pero con orquesta completa y un coro que te grita las respuestas.",
+      "fun_fact": "Mozart nunca terminó su Gran Misa en do menor, pero solo el Gloria ya ocupa muchos movimientos distintos.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a065f72d0388"
+    },
+    {
+      "id": "q-20882",
+      "question": "Escucha: ¿qué pieza para piano de Franz Liszt es esta?",
+      "answer": "Consolación n.º 3",
+      "wrong_answers": [
+        "Rapsodia húngara n.º 2",
+        "La Campanella",
+        "Vals Mefisto n.º 1"
+      ],
+      "hints": [
+        "Está en re bemol mayor, como «Clair de lune» de Debussy.",
+        "Forma parte de una serie de seis piezas cortas y tranquilas.",
+        "Su título es una palabra para lo que le das a alguien que está triste para animarlo."
+      ],
+      "description": "Melena, piano de cola y fans gritando: Liszt era una estrella del rock antes de que existiera el rock.",
+      "fun_fact": "Los conciertos de Liszt causaban tanta euforia que el poeta Heinrich Heine le puso nombre: «lisztomanía».",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bfab7c304ebb"
+    },
+    {
+      "id": "q-20883",
+      "question": "Mira: esta nube enorme y esponjosa creció con el calor de un gran incendio forestal. ¿Cómo se llama este tipo de nube?",
+      "answer": "Pirocúmulo",
+      "wrong_answers": [
+        "Altocúmulo",
+        "Estratocúmulo",
+        "Cirrocúmulo"
+      ],
+      "hints": [
+        "Su nombre tiene dos partes: una dice de dónde viene el calor y la otra nombra la forma de la nube.",
+        "Los bomberos están atentos a ella, porque indica que el fuego es tan fuerte que crea su propio tiempo atmosférico.",
+        "La primera parte viene de la palabra griega para «fuego», como en «pirotecnia»."
+      ],
+      "description": "Algunas nubes nacen en el cielo; esta tuvo un comienzo muy caliente en el suelo.",
+      "fun_fact": "La nube de este vídeo se formó sobre el incendio de 2022 en la Suiza Bohemia, el mayor incendio forestal de la historia de Chequia, y las nubes de fuego más grandes pueden incluso generar sus propios rayos.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0f2b9b43afa8"
+    },
+    {
+      "id": "q-20885",
+      "question": "Mira: ¿qué modelo de avión de pasajeros despega del aeropuerto en este vídeo?",
+      "answer": "McDonnell Douglas DC-10",
+      "wrong_answers": [
+        "Lockheed L-1011 TriStar",
+        "Boeing 747",
+        "Airbus A300"
+      ],
+      "hints": [
+        "Cuenta los motores: entre las alas y la cola suman tres, así que es un trirreactor.",
+        "Este modelo voló por primera vez en 1970, y muchos se convirtieron después en aviones de carga.",
+        "Lo fabricó en California la empresa que más tarde creó el MD-11, una versión alargada de este mismo avión."
+      ],
+      "description": "Aficionados a los aviones al atardecer: los únicos que celebran un despegue con más ganas que el piloto.",
+      "fun_fact": "El motor de cola del DC-10 va en un tubo recto que atraviesa la deriva, mientras que su rival, el Lockheed TriStar, escondía el tercer motor en la parte trasera del fuselaje y le llevaba el aire por un conducto en forma de S.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "499b9e03f8f0"
+    },
+    {
+      "id": "q-20886",
+      "question": "Escucha esta famosa pieza para piano. ¿Qué palabra italiana de tempo escribió su compositor al principio de la partitura?",
+      "answer": "Adagio",
+      "wrong_answers": [
+        "Presto",
+        "Allegro",
+        "Andante"
+      ],
+      "hints": [
+        "Fíjate en lo rápido o lo despacio que avanza la música.",
+        "Dos de estas palabras piden a los músicos que toquen rápido o con viveza.",
+        "Esta palabra viene del italiano «con calma, a gusto» y se usa para música lenta y tranquila."
+      ],
+      "description": "Beethoven dejó una nota al principio de la página, y por desgracia no era «por favor, no derraméis café encima».",
+      "fun_fact": "Beethoven nunca la llamó sonata «Claro de luna»: un crítico musical le puso ese apodo unos cinco años después de la muerte del compositor.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "adcfd94d39af"
+    },
+    {
+      "id": "q-20887",
+      "question": "Escucha: ¿cómo se llama la técnica que usan los instrumentos de cuerda en esta pieza orquestal?",
+      "answer": "Pizzicato",
+      "wrong_answers": [
+        "Trémolo",
+        "Col legno",
+        "Glissando"
+      ],
+      "hints": [
+        "Es una palabra italiana, como muchas palabras de la música.",
+        "Fíjate en el sonido corto y seco de cada nota, como un tictac: ninguna se alarga.",
+        "La palabra significa «pellizcado» en italiano."
+      ],
+      "description": "La sección de cuerda ha decidido probar algo un poco distinto hoy, y al director le parece bien.",
+      "fun_fact": "Es el tercer movimiento de la Cuarta sinfonía de Chaikovski, en el que las cuerdas pellizcan de principio a fin y nunca cogen el arco.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-ES-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "809a583eff8b"
     },
     {
       "id": "q-2089",
@@ -120748,7 +122646,7 @@
     },
     {
       "id": "q-4079",
-      "question": "Cuando la guerra impidió que el jarabe de Coca-Cola llegara a Alemania, allí se inventó un nuevo refresco de naranja, la Fanta. ¿En qué década?",
+      "question": "Cuando la guerra impidió que el jarabe de Coca-Cola llegara a Alemania, allí se inventó un nuevo refresco de naranja, Fanta. ¿En qué década?",
       "answer": "Los años 40",
       "wrong_answers": [
         "Los años 20",
@@ -120758,25 +122656,23 @@
       "hints": [
         "La Coca-Cola ya era popular en Alemania antes de que pasara esto.",
         "Fue más de 50 años después de que se inventara la Coca-Cola, en 1886.",
-        "La Segunda Guerra Mundial estaba en marcha."
+        "Estaba en marcha la Segunda Guerra Mundial."
       ],
-      "description": "Una bebida que nació porque alguien se quedó sin otra bebida.",
-      "fun_fact": "El nombre Fanta viene de la palabra alemana «Fantasie», que significa «imaginación».",
+      "description": "Un refresco que nació porque a alguien se le acabó otro refresco.",
+      "fun_fact": "El nombre Fanta viene de la palabra alemana «Fantasie», que significa imaginación.",
       "difficulty": 6,
-      "status": "needs_work",
-      "batch": "tr-es-ES-26",
+      "status": "approved",
+      "batch": "tr-es-ES-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: the question calls the wartime German Fanta \"a new orange soda\", which is wrong. The Fanta of 1940 was made from whatever was available, such as whey and apple pomace, and its flavour varied. Orange Fanta first appeared in Italy in 1955. The source should drop \"orange\" and say \"un nuevo refresco\" / \"a new soda\"; the answer (the 1940s) stays the same. The Spanish translation itself is faithful and natural.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-11-16",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Source: the original German Fanta of 1940 was not an orange soda. It was made from leftovers such as whey and apple pomace, and orange Fanta first appeared in Italy in 1955. The source should drop the word \"orange\", for example \"a new soda, Fanta\". The Spanish text copies this error faithfully, so the source needs to be corrected first.",
+          "feedback": "source: the question calls the wartime German Fanta \"a new orange soda\", which is wrong. The Fanta of 1940 was made from whatever was available, such as whey and apple pomace, and its flavour varied. Orange Fanta first appeared in Italy in 1955. The source should drop \"orange\" and say \"un nuevo refresco\" / \"a new soda\"; the answer (the 1940s) stays the same. The Spanish translation itself is faithful and natural.",
           "problems": [
             "fact"
           ],
@@ -120785,23 +122681,33 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the fact is wrong. Wartime German Fanta (1940) was not an orange soda; it was made from whey, apple pomace and other leftovers, and orange Fanta only appeared in Italy in 1955. The English source should drop \"orange\" (e.g. \"a new soda, Fanta\"), and the translation should then follow it. The fact_check's 'confirmed' overlooks this, though the rater and translator both flagged it.",
+            "feedback": "Source: the original German Fanta of 1940 was not an orange soda. It was made from leftovers such as whey and apple pomace, and orange Fanta first appeared in Italy in 1955. The source should drop the word \"orange\", for example \"a new soda, Fanta\". The Spanish text copies this error faithfully, so the source needs to be corrected first.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-10-30",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "source: the question calls the original German Fanta (1940) \"a new orange soda\", but it wasn't orange-flavoured. It was made from leftovers such as whey and apple pomace, and orange Fanta first came out in Italy in 1955. The source should drop \"orange\" (for example \"a new soda\" or \"a new fruit soda\"), and the translation should then follow it. Apart from this, the Spanish translation is faithful and reads naturally.",
+              "feedback": "source: the fact is wrong. Wartime German Fanta (1940) was not an orange soda; it was made from whey, apple pomace and other leftovers, and orange Fanta only appeared in Italy in 1955. The English source should drop \"orange\" (e.g. \"a new soda, Fanta\"), and the translation should then follow it. The fact_check's 'confirmed' overlooks this, though the rater and translator both flagged it.",
               "problems": [
                 "fact"
               ],
-              "reviewed_on": "2026-10-24",
+              "reviewed_on": "2026-10-30",
               "reviewer": "llm",
               "model": "claude-opus-5-5",
-              "previous": null
+              "previous": {
+                "decision": "needs_work",
+                "feedback": "source: the question calls the original German Fanta (1940) \"a new orange soda\", but it wasn't orange-flavoured. It was made from leftovers such as whey and apple pomace, and orange Fanta first came out in Italy in 1955. The source should drop \"orange\" (for example \"a new soda\" or \"a new fruit soda\"), and the translation should then follow it. Apart from this, the Spanish translation is faithful and reads naturally.",
+                "problems": [
+                  "fact"
+                ],
+                "reviewed_on": "2026-10-24",
+                "reviewer": "llm",
+                "model": "claude-opus-5-5",
+                "previous": null
+              }
             }
           }
         }
@@ -153857,27 +155763,27 @@
         "Sigmund Freud"
       ],
       "hints": [
-        "Vivió en el siglo XIX y pasó casi toda la segunda mitad de su vida en Londres.",
-        "Escribió sobre los obreros, los dueños de las fábricas y el dinero.",
+        "Vivió en el siglo XIX y pasó la mayor parte de sus últimos años en Londres.",
+        "Escribió sobre obreros, dueños de fábricas y dinero.",
         "Su movimiento se llama «…ismo» por su apellido, que tiene cuatro letras."
       ],
-      "description": "Una barba tan famosa que tiene su propio club de fans por todo el mundo.",
+      "description": "Una barba tan famosa que tiene club de fans por todo el mundo.",
       "fun_fact": "Marx está enterrado en el cementerio de Highgate, en Londres, donde su enorme cabeza de piedra sigue atrayendo a visitantes de todo el mundo.",
-      "difficulty": 8,
+      "difficulty": 7,
       "status": "needs_work",
-      "batch": "tr-es-ES-26",
+      "batch": "tr-es-ES-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "Source: the fun fact is wrong in the source and so in the translation. Marx's tomb at Highgate has a large bronze bust (by Laurence Bradshaw, 1956) on a marble plinth, not a stone head. The source needs its fun fact corrected, for example to \"huge bronze bust\", and then the translation should follow it (\"enorme busto de bronce\"). Apart from that, the translation is faithful and reads naturally in Spain's Spanish.",
+        "feedback": "Source: the fun fact says Marx's tomb in Highgate has a huge stone head, but it is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth. The translation copies this faithfully, so the English source needs correcting first (e.g. \"his huge bronze bust\"). The Spanish can then read «…donde su enorme busto de bronce sigue atrayendo a visitantes de todo el mundo». Fact check: wrong. The answer, hints and distractors are fine. The fun fact is wrong about the material: Marx's tomb in Highgate Cemetery is topped by a large bronze bust (Laurence Bradshaw, 1956) on a granite plinth. The head is not stone.",
         "problems": [
           "fact"
         ],
-        "reviewed_on": "2026-11-16",
+        "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Source: the fun fact calls the head on Marx's tomb in Highgate a \"huge stone head\", but it is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth. Correct the source to \"huge bronze bust\". The Spanish would then read «…donde su enorme busto de bronce sigue atrayendo a visitantes de todo el mundo.» Fact check: wrong. The answer and wrong answers are fine. Marx was German, and Darwin (English), Tolstoy (Russian) and Freud (Austrian) are not. He lived in London from 1849 until his death in 1883. «Marx» has four letters. The fun fact has one error: the huge head on Marx's tomb in Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. This is from memory. I did not run any searches.",
+          "feedback": "Source: the fun fact is wrong in the source and so in the translation. Marx's tomb at Highgate has a large bronze bust (by Laurence Bradshaw, 1956) on a marble plinth, not a stone head. The source needs its fun fact corrected, for example to \"huge bronze bust\", and then the translation should follow it (\"enorme busto de bronce\"). Apart from that, the translation is faithful and reads naturally in Spain's Spanish.",
           "problems": [
             "fact"
           ],
@@ -153886,16 +155792,16 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the fun fact is wrong in the English source as well as in the translation. The head on Marx's Highgate tomb is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth, not stone. Correct the source to 'huge bronze bust', then the Spanish can follow: 'su enorme busto de bronce'. Fact check: wrong. The fun fact says Marx's huge head at Highgate is made of stone. The monument is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth. Everything else checks out.",
+            "feedback": "Source: the fun fact calls the head on Marx's tomb in Highgate a \"huge stone head\", but it is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth. Correct the source to \"huge bronze bust\". The Spanish would then read «…donde su enorme busto de bronce sigue atrayendo a visitantes de todo el mundo.» Fact check: wrong. The answer and wrong answers are fine. Marx was German, and Darwin (English), Tolstoy (Russian) and Freud (Austrian) are not. He lived in London from 1849 until his death in 1883. «Marx» has four letters. The fun fact has one error: the huge head on Marx's tomb in Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. This is from memory. I did not run any searches.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-10-30",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "source: the fun fact is wrong. The head on Marx's Highgate tomb is bronze on a stone (marble) plinth, not stone. The translation copies this faithfully as «enorme cabeza de piedra». Correct the source (e.g. \"huge bronze head\"), then carry the change into the translation («enorme cabeza de bronce»).",
+              "feedback": "source: the fun fact is wrong in the English source as well as in the translation. The head on Marx's Highgate tomb is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth, not stone. Correct the source to 'huge bronze bust', then the Spanish can follow: 'su enorme busto de bronce'. Fact check: wrong. The fun fact says Marx's huge head at Highgate is made of stone. The monument is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth. Everything else checks out.",
               "problems": [
                 "fact"
               ],
@@ -153904,7 +155810,7 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "source: the fun fact says Marx's head at Highgate is stone, but the monument's head is a bronze bust on a marble plinth. The English source needs correcting (\"huge bronze head\"), and the Spanish then follows («enorme cabeza de bronce»). The translation is otherwise faithful and natural.",
+                "feedback": "source: the fun fact is wrong. The head on Marx's Highgate tomb is bronze on a stone (marble) plinth, not stone. The translation copies this faithfully as «enorme cabeza de piedra». Correct the source (e.g. \"huge bronze head\"), then carry the change into the translation («enorme cabeza de bronce»).",
                 "problems": [
                   "fact"
                 ],
@@ -153913,7 +155819,7 @@
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "source: the fun fact is wrong in the source and the translation copies it faithfully. The huge head on Marx's tomb at Highgate is bronze (Laurence Bradshaw's bust, 1956), not stone. Correct the source to \"bronze bust\" and carry the change over: «…donde su enorme busto de bronce sigue atrayendo a visitantes de todo el mundo». Fact check: wrong. The answer, wrong answers and hints are fine. The fun fact is slightly wrong: the huge head on Marx's tomb in Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not stone. I did not run a web search. This comes from my own knowledge.",
+                  "feedback": "source: the fun fact says Marx's head at Highgate is stone, but the monument's head is a bronze bust on a marble plinth. The English source needs correcting (\"huge bronze head\"), and the Spanish then follows («enorme cabeza de bronce»). The translation is otherwise faithful and natural.",
                   "problems": [
                     "fact"
                   ],
@@ -153922,7 +155828,7 @@
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "source: the fun fact is wrong in both the English source and this translation. The monument at Highgate is a bronze bust by Laurence Bradshaw (1956) on a granite plinth, not a 'stone head'. Correct the source to 'huge bronze bust' and the Spanish to 'enorme busto de bronce'. Fact check: wrong. The fun fact says the monument at Highgate is a huge 'stone head'. It is a bronze bust (by Laurence Bradshaw, 1956) on a large granite plinth. The rest of the question checks out.",
+                    "feedback": "source: the fun fact is wrong in the source and the translation copies it faithfully. The huge head on Marx's tomb at Highgate is bronze (Laurence Bradshaw's bust, 1956), not stone. Correct the source to \"bronze bust\" and carry the change over: «…donde su enorme busto de bronce sigue atrayendo a visitantes de todo el mundo». Fact check: wrong. The answer, wrong answers and hints are fine. The fun fact is slightly wrong: the huge head on Marx's tomb in Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not stone. I did not run a web search. This comes from my own knowledge.",
                     "problems": [
                       "fact"
                     ],
@@ -153931,7 +155837,7 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "source: the fun fact says Marx's tomb in Highgate has a huge stone head, but the head is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth. The translation copies the error faithfully («cabeza de piedra»). Fix the source to say bronze, then the translation to «cabeza de bronce». Fact check: wrong. The answer and hints are correct. Marx's tomb in Highgate Cemetery has a large bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, so the fun fact's \"cabeza de piedra\" is inaccurate.",
+                      "feedback": "source: the fun fact is wrong in both the English source and this translation. The monument at Highgate is a bronze bust by Laurence Bradshaw (1956) on a granite plinth, not a 'stone head'. Correct the source to 'huge bronze bust' and the Spanish to 'enorme busto de bronce'. Fact check: wrong. The fun fact says the monument at Highgate is a huge 'stone head'. It is a bronze bust (by Laurence Bradshaw, 1956) on a large granite plinth. The rest of the question checks out.",
                       "problems": [
                         "fact"
                       ],
@@ -153940,16 +155846,16 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "Source: the fun fact calls the head on Marx's Highgate tomb a stone head, but it is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth. The translation copies the error. Correct the source's fun fact to \"bronze bust\", then translate it again. Apart from that, the Spanish translation is faithful and reads naturally. Fact check: wrong. The answer and the hints are fine. The fun fact is wrong in one detail. The large head on Marx's tomb at Highgate is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. I did not run a search; this is from memory.",
+                        "feedback": "source: the fun fact says Marx's tomb in Highgate has a huge stone head, but the head is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth. The translation copies the error faithfully («cabeza de piedra»). Fix the source to say bronze, then the translation to «cabeza de bronce». Fact check: wrong. The answer and hints are correct. Marx's tomb in Highgate Cemetery has a large bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, so the fun fact's \"cabeza de piedra\" is inaccurate.",
                         "problems": [
                           "fact"
                         ],
-                        "reviewed_on": "2026-10-29",
+                        "reviewed_on": "2026-10-30",
                         "reviewer": "llm",
                         "model": "claude-opus-5-5",
                         "previous": {
                           "decision": "needs_work",
-                          "feedback": "Source: the fun fact is wrong. Marx's tomb at Highgate has a large bronze bust (Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The Spanish «enorme cabeza de piedra» repeats the source's mistake. Fix the source's fun fact (e.g. \"huge bronze bust\") and then re-translate it as «su enorme busto de bronce». Fact check: wrong. The answer (Karl Marx) and the wrong answers are fine. The hints are fine too: Marx is German, lived in London from 1849 and died there, and 'Marx' has four letters. The fun fact is inaccurate. The big head on Marx's tomb at Highgate is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head.",
+                          "feedback": "Source: the fun fact calls the head on Marx's Highgate tomb a stone head, but it is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth. The translation copies the error. Correct the source's fun fact to \"bronze bust\", then translate it again. Apart from that, the Spanish translation is faithful and reads naturally. Fact check: wrong. The answer and the hints are fine. The fun fact is wrong in one detail. The large head on Marx's tomb at Highgate is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. I did not run a search; this is from memory.",
                           "problems": [
                             "fact"
                           ],
@@ -153958,14 +155864,24 @@
                           "model": "claude-opus-5-5",
                           "previous": {
                             "decision": "needs_work",
-                            "feedback": "source: the fun fact calls the head on Marx's Highgate tomb a stone head (\"stone head\" / \"cabeza de piedra\"), but it is a bronze bust by Laurence Bradshaw (1956) on a granite base. Correct the source to \"bronze bust\" (Spanish: \"busto de bronce\"), then re-translate. Fact check: wrong. The answer (Karl Marx) and the wrong answers are fine, and so are the hints. The fun fact is inaccurate. The big head on Marx's tomb in Highgate Cemetery is a bronze bust by Laurence Bradshaw (1956) on a granite plinth. It is not a 'cabeza de piedra'. This is from memory and was not checked with a search.",
+                            "feedback": "Source: the fun fact is wrong. Marx's tomb at Highgate has a large bronze bust (Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The Spanish «enorme cabeza de piedra» repeats the source's mistake. Fix the source's fun fact (e.g. \"huge bronze bust\") and then re-translate it as «su enorme busto de bronce». Fact check: wrong. The answer (Karl Marx) and the wrong answers are fine. The hints are fine too: Marx is German, lived in London from 1849 and died there, and 'Marx' has four letters. The fun fact is inaccurate. The big head on Marx's tomb at Highgate is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head.",
                             "problems": [
                               "fact"
                             ],
-                            "reviewed_on": "2026-10-24",
+                            "reviewed_on": "2026-10-29",
                             "reviewer": "llm",
                             "model": "claude-opus-5-5",
-                            "previous": null
+                            "previous": {
+                              "decision": "needs_work",
+                              "feedback": "source: the fun fact calls the head on Marx's Highgate tomb a stone head (\"stone head\" / \"cabeza de piedra\"), but it is a bronze bust by Laurence Bradshaw (1956) on a granite base. Correct the source to \"bronze bust\" (Spanish: \"busto de bronce\"), then re-translate. Fact check: wrong. The answer (Karl Marx) and the wrong answers are fine, and so are the hints. The fun fact is inaccurate. The big head on Marx's tomb in Highgate Cemetery is a bronze bust by Laurence Bradshaw (1956) on a granite plinth. It is not a 'cabeza de piedra'. This is from memory and was not checked with a search.",
+                              "problems": [
+                                "fact"
+                              ],
+                              "reviewed_on": "2026-10-24",
+                              "reviewer": "llm",
+                              "model": "claude-opus-5-5",
+                              "previous": null
+                            }
                           }
                         }
                       }
@@ -166091,7 +168007,7 @@
     },
     {
       "id": "q-5869",
-      "question": "¿Qué artefacto de lanzamiento de atletismo se rediseñó en 1986 para volar menos, porque los mejores lanzamientos se acercaban al final del campo?",
+      "question": "En 1986, ¿qué prueba de lanzamiento de atletismo cambió su diseño para volar menos, porque los mejores lanzamientos casi llegaban al final del campo?",
       "answer": "Jabalina",
       "wrong_answers": [
         "Disco",
@@ -166100,33 +168016,41 @@
       ],
       "hints": [
         "Es una de las pruebas de lanzamiento de los Juegos Olímpicos.",
-        "Con el nuevo diseño baja antes de punta, así que se clava en el césped.",
-        "Se parece a una lanza de la Antigüedad."
+        "El nuevo diseño hace que apunte antes hacia abajo, así que la punta se clava en el césped.",
+        "Parece una lanza de la Antigüedad."
       ],
-      "description": "El atletismo guarda más cachivaches raros que un trastero, y cada uno tiene su propia prueba.",
-      "fun_fact": "En 1984, Uwe Hohn, de Alemania del Este, lanzó la antigua jabalina a 104,80 m, más que la longitud de un campo de fútbol.",
+      "description": "El atletismo tiene más trastos raros que un trastero, y cada uno tiene su propia prueba.",
+      "fun_fact": "En 1984, el alemán oriental Uwe Hohn lanzó la jabalina antigua a 104,80 m, más lejos de lo que mide un campo de fútbol.",
       "difficulty": 8,
-      "status": "needs_work",
-      "batch": "tr-es-ES-26",
+      "status": "approved",
+      "batch": "tr-es-ES-27",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: the fun fact says Hohn's 104,80 m throw was longer than a football field, but the standard international pitch is 105 m long, so the claim is wrong in the source as well as in the translation. The source fun fact should say something like \"más de 100 metros, casi la longitud de un campo de fútbol\", and the translation should then follow it. The rest of the translation is faithful and natural. Fact check: wrong. La respuesta (jabalina) es correcta. El rediseño masculino de 1986 adelantó el centro de gravedad tras el récord de Uwe Hohn de 104,80 m, lanzado en 1984 en Berlín. Pero el dato curioso es dudoso. 104,80 m es menos que el campo de fútbol estándar internacional (105 m), así que no es 'más que la longitud de un campo de fútbol'. Esta parte la comprobé de memoria, sin buscar en la web.",
-        "problems": [
-          "fact"
-        ],
-        "reviewed_on": "2026-11-16",
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: the fun fact says Hohn's 104,80 m throw went farther than a football pitch. The standard international pitch is 105 m long, so the claim isn't true as written. The same claim is in the English source, which needs to be corrected first (e.g. \"casi la longitud de un campo de fútbol\"). The rest of the translation is faithful and reads naturally in Spain's Spanish. The options have no articles, so the answer doesn't stand out by gender. Fact check: wrong. The answer (Jabalina) and the hints are right. The men's javelin with a forward-shifted centre of gravity was introduced in 1986, after Uwe Hohn threw 104.80 m on 20 July 1984 in Berlin. The fun fact is shaky: 104.80 m is not farther than a standard international football pitch, which is 105 m long. Pitch lengths range from 90 to 120 m.",
+          "feedback": "source: the fun fact says Hohn's 104,80 m throw was longer than a football field, but the standard international pitch is 105 m long, so the claim is wrong in the source as well as in the translation. The source fun fact should say something like \"más de 100 metros, casi la longitud de un campo de fútbol\", and the translation should then follow it. The rest of the translation is faithful and natural. Fact check: wrong. La respuesta (jabalina) es correcta. El rediseño masculino de 1986 adelantó el centro de gravedad tras el récord de Uwe Hohn de 104,80 m, lanzado en 1984 en Berlín. Pero el dato curioso es dudoso. 104,80 m es menos que el campo de fútbol estándar internacional (105 m), así que no es 'más que la longitud de un campo de fútbol'. Esta parte la comprobé de memoria, sin buscar en la web.",
           "problems": [
             "fact"
           ],
           "reviewed_on": "2026-11-16",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "source: the fun fact says Hohn's 104,80 m throw went farther than a football pitch. The standard international pitch is 105 m long, so the claim isn't true as written. The same claim is in the English source, which needs to be corrected first (e.g. \"casi la longitud de un campo de fútbol\"). The rest of the translation is faithful and reads naturally in Spain's Spanish. The options have no articles, so the answer doesn't stand out by gender. Fact check: wrong. The answer (Jabalina) and the hints are right. The men's javelin with a forward-shifted centre of gravity was introduced in 1986, after Uwe Hohn threw 104.80 m on 20 July 1984 in Berlin. The fun fact is shaky: 104.80 m is not farther than a standard international football pitch, which is 105 m long. Pitch lengths range from 90 to 120 m.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-11-16",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "90bf88420cbc"
@@ -188661,7 +190585,7 @@
     },
     {
       "id": "q-6635",
-      "question": "Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal produce el hilo con el que se teje?",
+      "question": "Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal produce el hilo con el que se hace?",
       "answer": "Gusano de seda",
       "wrong_answers": [
         "Oveja",
@@ -188671,32 +190595,42 @@
       "hints": [
         "La antigua China guardó en secreto el trabajo de este animal durante muchísimo tiempo.",
         "Este animal es tan pequeño que cabría en la punta de tu dedo.",
-        "Se envuelve en un capullo hecho de un único hilo muy largo."
+        "Se envuelve en un capullo hecho de un único hilo larguísimo."
       ],
-      "description": "Túnicas reales, corbatas elegantes y pijamas dignos de una reina, todo gracias a un secreto que China guardó durante siglos.",
+      "description": "Túnicas de reyes, corbatas elegantes y pijamas dignos de una reina, todo gracias a un secreto que China guardó durante siglos.",
       "fun_fact": "Un solo capullo de gusano de seda está hecho de un único hilo que puede medir hasta unos 900 metros.",
       "difficulty": 4,
       "status": "needs_work",
-      "batch": "tr-es-ES-26",
+      "batch": "tr-es-ES-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "Source: hint 2 (\"so small it could sit on your fingertip\") is inaccurate. A full-grown silkworm caterpillar is about 7–8 cm long, so it would not fit on a fingertip; only a newly hatched larva is that small. The fact check also flagged this as uncertain. Please fix the source hint, for example \"This animal eats only mulberry leaves\", and the Spanish translation will follow. The translation itself is faithful and reads naturally in Spain's Spanish. Fact check: uncertain. The answer (silkworm) is right. Sheep, camel and goat give wool or hair, not silk, so the wrong answers are wrong. Silk did originate in ancient China, and China kept the secret for centuries. The 900 m fun fact is in the usual range of 300–900 m, and some sources give up to about 1,500 m. Hint 2 is doubtful. A full-grown silkworm is about 7–8 cm long, so it would not fit on a fingertip. Only a newly hatched larva or a cocoon is that small. This is from memory, because I ran no searches.",
+        "feedback": "source: Hint 2 (\"so small it could sit on your fingertip\") is false. A fully grown silkworm caterpillar is about 7–8 cm long, and only a newly hatched larva is that small. The translation copies this error faithfully, so the English source needs correcting first, e.g. to \"This animal is actually a caterpillar that eats only mulberry leaves.\" Fact check: wrong. La respuesta (gusano de seda) es correcta, y las respuestas incorrectas (oveja, camello, cabra dan lana o pelo, no seda) también lo son. El dato curioso (un solo hilo de hasta ~900 m) es aceptable, porque las fuentes dan entre 600 y 900 m o más. La segunda pista es falsa: una oruga adulta del gusano de seda mide unos 7-8 cm, así que no cabe en la punta de un dedo. Solo la larva recién nacida (unos 2-3 mm) es así de pequeña. Esta comprobación se hizo de memoria, sin búsqueda web.",
         "problems": [
           "fact"
         ],
-        "reviewed_on": "2026-11-16",
+        "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: hint 2 («Este animal es tan pequeño que cabría en la punta de tu dedo» / \"so small it could sit on your fingertip\") is wrong. A full-grown silkworm, the one that spins the cocoon, is about 7–8 cm long, and only a newly hatched larva would fit on a fingertip. Fix the source hint, for example \"When it hatches it is so small it could sit on your fingertip\" or \"It is a caterpillar that eats mulberry leaves\", and then re-translate it. The rest of the translation is faithful and reads as natural Spain Spanish. Fact check: uncertain. The answer (gusano de seda) is correct. Sheep, camel and goat give wool or hair, not silk. Silk did originate in ancient China, which kept the process secret. A cocoon is one continuous thread, commonly cited as about 300–900 m. The weak point is hint 2. A full-grown silkworm that spins its cocoon is about 7–8 cm long, so it would not fit on a fingertip. Only newly hatched larvae (a few mm) would. I did not run web searches, so this rests on general knowledge.",
+          "feedback": "Source: hint 2 (\"so small it could sit on your fingertip\") is inaccurate. A full-grown silkworm caterpillar is about 7–8 cm long, so it would not fit on a fingertip; only a newly hatched larva is that small. The fact check also flagged this as uncertain. Please fix the source hint, for example \"This animal eats only mulberry leaves\", and the Spanish translation will follow. The translation itself is faithful and reads naturally in Spain's Spanish. Fact check: uncertain. The answer (silkworm) is right. Sheep, camel and goat give wool or hair, not silk, so the wrong answers are wrong. Silk did originate in ancient China, and China kept the secret for centuries. The 900 m fun fact is in the usual range of 300–900 m, and some sources give up to about 1,500 m. Hint 2 is doubtful. A full-grown silkworm is about 7–8 cm long, so it would not fit on a fingertip. Only a newly hatched larva or a cocoon is that small. This is from memory, because I ran no searches.",
           "problems": [
             "fact"
           ],
           "reviewed_on": "2026-11-16",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "source: hint 2 («Este animal es tan pequeño que cabría en la punta de tu dedo» / \"so small it could sit on your fingertip\") is wrong. A full-grown silkworm, the one that spins the cocoon, is about 7–8 cm long, and only a newly hatched larva would fit on a fingertip. Fix the source hint, for example \"When it hatches it is so small it could sit on your fingertip\" or \"It is a caterpillar that eats mulberry leaves\", and then re-translate it. The rest of the translation is faithful and reads as natural Spain Spanish. Fact check: uncertain. The answer (gusano de seda) is correct. Sheep, camel and goat give wool or hair, not silk. Silk did originate in ancient China, which kept the process secret. A cocoon is one continuous thread, commonly cited as about 300–900 m. The weak point is hint 2. A full-grown silkworm that spins its cocoon is about 7–8 cm long, so it would not fit on a fingertip. Only newly hatched larvae (a few mm) would. I did not run web searches, so this rests on general knowledge.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-11-16",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "70584797025e"
