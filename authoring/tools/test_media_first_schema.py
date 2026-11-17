@@ -37,6 +37,15 @@ class Fields(unittest.TestCase):
         self.bad(q({"excerpt": {"start": 0}}), "numbers")
         self.bad(q({"type": "image", "duration": None, "excerpt": {"start": 0, "end": 5}}), "only on audio/video")
 
+    def test_video_30_s(self):
+        v = {"type": "video"}
+        self.bad(q(v | {"excerpt": {"start": 0, "end": 31}}), "longer than 30 s")
+        self.bad(q(v | {"duration": None}, False), "needs a media.duration")
+        self.bad(q(v | {"duration": 40}, False), "at most 30 s")
+        self.assertEqual(validate.media_first_problems(q(v | {"excerpt": {"start": 10, "end": 40}})), [])
+        self.assertEqual(validate.media_first_problems(q(v | {"duration": 30}, False)), [])
+        self.assertEqual(validate.media_first_problems(q({"excerpt": {"start": 0, "end": 60}}, False)), [])
+
     def test_duration(self):
         self.bad(q({"duration": 0}), "duration")
         self.bad(q({"type": "image", "duration": 3}), "duration")
