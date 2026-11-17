@@ -49077,6 +49077,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `keep_urls()` adds the picks of those pools; a checkout that doesn''t exist is skipped
 - Test: a temp layout with a pick only in a second checkout, only in `app/data/`, only in `mods/`: prune keeps each
 - Done when: test passes; README/RUNBOOK `--prune` lines name the extra sources', '2026-11-17T19:08:45Z', NULL, NULL, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2182, 218, 'work/ GC: finished batches'' sheets and probe frames', 'work', 'open', NULL, NULL, '`work/` is 39 GB: `work/batch-*/sheets` 15 GB (contact sheets), `work/media-probe/<sha>/` 16 GB (mostly `frames/`, `thumbs/`, `sheet.png`, `spectrogram.png`, `waveform.png`; `probe.json` is small and saves re-probing). `work/ship-media` (5.3 GB, the build''s encode cache) stays.
+
+- First check which pages and tools read these files (`trivia-authoring` review and spot-check pages, `qgen report`, audit, QC tasks, `video-window`) and for which batches
+- For a finished batch (`run.json` has `done`) whose spot check and QC task are done: delete what nothing reads any more (its `sheets/`, its probes'' frames/thumbs/images); keep `probe.json`, `speech.txt`, `ocr.txt`
+- A command (e.g. `qgen gc` or `trivia-media sync --prune --work`) with `--dry-run`; prints count and bytes freed; safe to repeat
+- Re-creating a deleted image later (a re-review): regenerated on demand, or the page says it''s gone — check, don''t guess
+- Test: temp `work/` with a finished and an unfinished batch: only the finished one''s images go, `probe.json` stays
+- Done when: test passes; README/RUNBOOK say what it deletes and when to run it', '2026-11-17T19:08:46Z', NULL, NULL, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
