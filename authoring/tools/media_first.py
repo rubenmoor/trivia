@@ -9,7 +9,7 @@ then dropped. Results per file in <run>/media-first/{triage,design}.jsonl; passe
 `qgen batch --media-first` runs these as its first steps (`inventory_step`, `probe_step`, `triage`, `design`,
 `check_drafts`), then qgen's; `check_fixed` is the giveaway check after `fix`.
 """
-import hashlib, json, re, threading
+import errno, hashlib, json, re, threading
 from datetime import date
 from collections import defaultdict
 from pathlib import Path
@@ -44,7 +44,18 @@ ZERO_YIELD = {
 
 
 def read_jsonl(path):
-    return [json.loads(l) for l in path.read_text(encoding="utf-8").split("\n") if l] if path.exists() else []
+    """The rows of a jsonl file; an unparseable final line (a cut-off append) is ignored, one in the middle fails."""
+    if not path.exists():
+        return []
+    lines = [l for l in path.read_text(encoding="utf-8").split("\n") if l]
+    rows = []
+    for i, l in enumerate(lines):
+        try:
+            rows.append(json.loads(l))
+        except json.JSONDecodeError:
+            if i < len(lines) - 1:
+                raise
+    return rows
 
 
 def write_jsonl(path, rows):
@@ -157,18 +168,42 @@ def probe(title, excerpt=None):
     return media_probe.cached(title, s, e) or media_probe.probe(title, s, e)
 
 
+# Errors of the machine, not of a file: the file is not ledgered, the step stops and a resume probes it again.
+ENV_ERRNOS = {errno.ENOSPC, errno.EDQUOT, errno.EROFS, errno.EMFILE, errno.ENFILE, errno.ENOMEM}
+STALE_WHY = "probe failed: [Errno 28]"  # rows of a full disk, written before this fix
+
+
+def heal_triage(d):
+    """Resume: rewrite triage.jsonl without a cut-off last line and without disk-full probe failures."""
+    path = steps_dir(d) / "triage.jsonl"
+    if not path.exists():
+        return
+    rows = read_jsonl(path)
+    keep = [t for t in rows if not (t.get("why_not") or "").startswith(STALE_WHY)]
+    if len(keep) != len(rows) or not path.read_text(encoding="utf-8").endswith("\n"):
+        write_jsonl(path, keep)
+
+
 def probe_or_drop(d, run, f):
     """The file's probe, or None after a failed probe (missing frame, undecodable metadata): the file is
     recorded as not worth it (triage row and ledger, so a funnel counts it as dropped) and the step goes on."""
     try:
         return probe(f["title"])
+    except OSError as e:
+        if e.errno in ENV_ERRNOS:
+            raise RuntimeError(f"probe stopped on {f['title']}: {e} (disk or resources; free them and rerun)") from e
+        return drop_probe(d, run, f, e)
     except Exception as e:  # noqa: BLE001 — one bad file never stops the step
-        progress.detail(f"  probe: {f['title']}: dropped: {progress.short(e, 200)}")
-        t = {"title": f["title"], "seed": f["seed"], "class": f["class"], "category": None, "verdict": "not_worth",
-             "subject": "", "why_not": f"probe failed: {progress.short(e, 200)}"}
-        append(steps_dir(d) / "triage.jsonl", t, threading.Lock())
-        record(run, [ledger_row(t)])
-        return None
+        return drop_probe(d, run, f, e)
+
+
+def drop_probe(d, run, f, e):
+    progress.detail(f"  probe: {f['title']}: dropped: {progress.short(e, 200)}")
+    t = {"title": f["title"], "seed": f["seed"], "class": f["class"], "category": None, "verdict": "not_worth",
+         "subject": "", "why_not": f"probe failed: {progress.short(e, 200)}"}
+    append(steps_dir(d) / "triage.jsonl", t, threading.Lock())
+    record(run, [ledger_row(t)])
+    return None
 
 
 def probe_ref(p):
@@ -203,6 +238,7 @@ def round_size(todo, worth, target, jobs):
 def probe_step(d, run, jobs=PROBE_JOBS, target=MF_DESIGNED):
     """The `probe` step: the aids of the files triage's first round takes (later rounds probe inside triage)."""
     from qgen import parallel
+    heal_triage(d)
     worth = sum(t["verdict"] == "worth" for t in triaged(d))
     todo = remaining(d, run)
     if target is not None and worth >= target:
@@ -480,6 +516,7 @@ def triage(d, run, jobs=3, model=TRIAGE_MODEL, target=MF_DESIGNED):
     queue). A subject base or this run already has is `duplicate`; verdicts go to the run and the ledger. Errors."""
     from qgen import POOL, claude, load_json, parallel
     path, lock = steps_dir(d) / "triage.jsonl", threading.Lock()
+    heal_triage(d)
     rows = triaged(d)
     record(run, [ledger_row(t) for t in rows])  # a kill between the two writes
     pool = load_json(POOL)["questions"]

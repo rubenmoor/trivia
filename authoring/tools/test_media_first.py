@@ -134,3 +134,44 @@ class MediaFindings(unittest.TestCase):
         self.assertEqual({x["check"] for x in f}, {"quiet", "silent"})
         self.assertFalse(any(x["hard"] for x in f))
         self.assertEqual(mf.media_findings(self.q(), self.probe(integrated_lufs=-31.0)), [])
+
+
+class ResumeRobustness(unittest.TestCase):
+    def setUp(self):
+        self.d = Path(tempfile.mkdtemp())
+        self.path = self.d / "triage.jsonl"
+        p = mock.patch.object(mf, "steps_dir", lambda d: self.d)
+        p.start()
+        self.addCleanup(p.stop)
+
+    def test_cut_off_last_line_is_ignored_and_dropped(self):
+        self.path.write_text('{"title": "a"}\n{"title": "b", "ver')
+        self.assertEqual(mf.read_jsonl(self.path), [{"title": "a"}])
+        mf.heal_triage(self.d)
+        self.assertEqual(self.path.read_text(), '{"title": "a"}\n')
+
+    def test_bad_middle_line_fails(self):
+        self.path.write_text('{"title": "a"}\n{oops\n{"title": "c"}\n')
+        with self.assertRaises(ValueError):
+            mf.read_jsonl(self.path)
+
+    def test_disk_full_probe_stops_and_is_not_ledgered(self):
+        full = OSError(28, "No space left on device")
+        file = {"title": "File:x.ogg", "seed": "s", "class": "general"}
+        with mock.patch.object(mf, "probe", side_effect=full), mock.patch.object(mf, "record") as rec:
+            with self.assertRaisesRegex(RuntimeError, "free them"):
+                mf.probe_or_drop(self.d, "batch-1", file)
+        rec.assert_not_called()
+        self.assertFalse(self.path.exists())
+
+    def test_other_probe_failure_is_still_dropped(self):
+        file = {"title": "File:x.ogg", "seed": "s", "class": "general"}
+        with mock.patch.object(mf, "probe", side_effect=ValueError("bad")), mock.patch.object(mf, "record"):
+            self.assertIsNone(mf.probe_or_drop(self.d, "batch-1", file))
+        self.assertIn("probe failed: bad", self.path.read_text())
+
+    def test_heal_drops_errno_28_rows(self):
+        mf.write_jsonl(self.path, [{"title": "a", "why_not": "probe failed: [Errno 28] No space"},
+                                   {"title": "b", "why_not": "probe failed: bad"}, {"title": "c"}])
+        mf.heal_triage(self.d)
+        self.assertEqual([t["title"] for t in mf.read_jsonl(self.path)], ["b", "c"])
