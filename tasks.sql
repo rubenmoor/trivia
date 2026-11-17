@@ -1086,7 +1086,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - New bundles, regional packs (`plans/15c-regional-questions.md`); `chinese-base` (milestone 12).
 - Batches per age group (AG-8), targets from the windows (D-53).
 - Mixed-age sessions; log in `plans/open-questions.md` if it comes up.', '', '2026-10-11T21:54:56Z', NULL, NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold, and the right-answer fanfare gets recorded variants (developer, 2026-10-31). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (6, 6, 'masterplan', 1000, 'Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold, and the right-answer fanfare gets recorded variants (developer, 2026-10-31); a blurred picture gets sharp once the answer is submitted (developer, 2026-11-17). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
 
 **This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
 
@@ -1134,8 +1134,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Part 8: Category splash on the question screen, priority 300
 - Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`; those exits, sounds and sizes stay.
-- Open, entrances (developer, 2026-10-31): the splash just appears, and without movement it doesn''t draw the eye to the category and subcategory.
-- Not a new plan: `plan 181: Category splash on the question screen` takes it; its tasks are all done, so no revision was queued: a `--kind plan` task of this masterplan (`extend plan 181: splash entrances and longer hold`) edits it:
+- Entrances and longer hold (developer, 2026-10-31): planned in `plan 191: Category splash entrances and longer hold` (written by task 1859); no new plan.
   - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed
   - silent: no new cues; the exits keep their sounds
   - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends (`game/timing.ts`)
@@ -1152,9 +1151,22 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Sourced, converted and credited as plan 32 (D-45, CC0 first; a row per file in `CREDITS.md`); within `app/desktop/media-budget.json` (audio 7 MB; raise it only with the size stated); `/?efectos` lists every variant.
 - Check: a developer decision on the TV (`/?efectos` and a real game); options «approve» / «changes: …».
 
+## Part 10: Blurred picture revealed after submit, priority 300
+- New plan: `pm plan add 6 "Blurred picture revealed after submit"`, priority 300 (visual design); small, one implementation task plus the check.
+- What (developer, 2026-11-17): a picture shown blurred behind the question (D-15: role `decorative`, and the background picture of audio questions) gets sharp once the answer is submitted, not only darker.
+- Today: `question/Media.svelte` `dark` (Question: `submitted && !revealed`; Timed: `held && !revealed`) only darkens `img.blurred` (`brightness(0.3) saturate(0.3)`), and after the reveal it goes back to blurred.
+- The plan decides and states:
+  - the moment: from submit (Question) / the held pick (Timed) on, through the reveal, until the screen leaves; a smooth unblur transition (≈ 0.5–1 s), `reducedMotion()`: no animated filter, a short fade or instant
+  - the darkening while waiting: kept lighter or dropped, so the sharp picture reads; answer tiles and «Respuesta final» stay legible (glass over a sharp, bright picture: VD-9)
+  - the big «?» mark: fades out with the blur, or stays until the reveal
+  - full-bleed cover kept (decorative stays full-bleed, D-51 fit only for illustrative/essential), unless the plan finds the sharp crop looks wrong
+  - Peek (plan 113) unchanged: still not on decorative questions
+- Docs: D-15 in `plans/decisions.md` (amend: sharp after submit), `plans/04-ui-tv-display.md` (line on decorative images, Question/Timed reveal), `plans/10-visual-design.md` "Decorative images".
+- Check: a screen-gallery review set (`trivia-gallery --set task-<id> --only <shots>`: a decorative and an audio question, before and after submit, Question and Timed); developer decision, options «approve» / «changes: …».
+
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
-- D-45 licences only; everything offline; no new npm or Python dependencies.', 'This part of the work finishes the look and sound of the family trivia game on the TV. Most of it is done: screens load their pictures before they appear, the buttons before a game have playful icons, languages show flags, the start screen has a colourful skyline of pictures from around the world, and the family can choose between several soundtracks. What remains is a last check of three joker sounds and a livelier topic announcement: the topic that flashes up on each new question will now arrive with a moving entrance and stay a little longer, so the eye goes to it.', '2026-10-11T21:54:56Z', NULL, NULL);
+- D-45 licences only; everything offline; no new npm or Python dependencies.', 'This part of the work finishes the look and sound of the family trivia game on the TV. Most of it is done: screens load their pictures before they appear, the buttons before a game have playful icons, languages show flags, the start screen has a colourful skyline of pictures from around the world, and the family can choose between several soundtracks. What remains is a last check of three joker sounds, a livelier topic announcement on each new question, more variety in the cheer for a right answer, and a blurred background picture that turns sharp once the family has locked in its answer.', '2026-10-11T21:54:56Z', NULL, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (7, 7, 'masterplan', 1000, 'Milestone 7 is S2 of the Steam track (D-34, `plans/11-steam.md`): it settles what the product is before anything Steam-specific gets built. Most of it is decisions, not code. Workers research each question, write the options with a recommendation as a pm decision, and record the gamemaster''s answer in `plans/decisions.md` (next free D-number). Then they resolve the question in `plans/open-questions.md` and update the owning plan file. The few S2 tasks that are code or files (MD-6, MD-7, the gamemaster mode''s configure screen, menu and «select answer» setting, PUB-4''s `LICENSE`) follow once their decision is in.
 
 **The tasks of this masterplan are not implementation work: each one writes the plan for one part below** (`pm plan add 7 …`, priority as suggested), and that plan''s tasks do the work. Parts 1–11 have their plans already (plans 34–43, 59); part 12 needs its plan; a revision edits a part''s plan (`pm plan edit`) only where its body contradicts this masterplan.
@@ -48131,8 +48143,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Done when: test passes; RUNBOOK/README note that media-first runs clean their downloads after merge', '2026-11-17T16:23:17Z', NULL, 2138, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2141, 200, 'revise the masterplan of milestone 21: add 1000 multimedia questions to the base bundle', 'revise', 'done', 1000, '2026-11-17, plan 200 body: video ≤ 30 s and 8 Mbit/s ceiling routed to parts 2, 3, 4; builds-on updated with decisions 643–653', '`milestone 21: add 1000 multimedia questions to the base bundle` changed. Bring `plan 200: masterplan`, the masterplan, in line with it (`pm plan edit 200 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-17T16:49:11Z', '2026-11-17T16:50:08Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2142, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-17T16:49:25Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2142, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'done', 1000, '2026-11-17, plan 6 body: Part 10 (blurred picture sharp after submit, new plan), Part 8 points at plan 191, intro', '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-17T16:49:25Z', '2026-11-17T16:51:20Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2143, 200, 'create tasks for plan 200: masterplan', 'split', 'open', 1000, NULL, 'Split plan 200 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2144, 202, 'revise plan 202: Sound and video in the game', 'revise', 'open', 1000, NULL, '`plan 200: masterplan`, the plan above `plan 202: Sound and video in the game`, changed; it is quoted below. Bring `plan 202: Sound and video in the game` in line with it
@@ -48515,6 +48527,269 @@ Each part: one `--kind plan` task of this masterplan, in order; priorities for t
 7. **Close-out** (plan priority 100)
    - Count check (decision 641), family play-test decision on the TV with audio and video on and with each switch off, per launch language.
    - Docs: D-13 amended per decision 640, `plans/06-images.md`, `plans/23-media-providers.md`, `plans/16-content-target.md`, `directory.md` if a new tool folder; milestone 21 done.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2149, 6, 'create tasks for plan 6: masterplan', 'split', 'open', 1000, NULL, 'Split plan 6 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T16:51:19Z', NULL, 2142, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2150, 32, 'revise plan 32: Recorded sound effects (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 32: Recorded sound effects (UI-10)`, changed; it is quoted below. Bring `plan 32: Recorded sound effects (UI-10)` in line with it
+(`pm plan edit 32 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold, and the right-answer fanfare gets recorded variants (developer, 2026-10-31); a blurred picture gets sharp once the answer is submitted (developer, 2026-11-17). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; the TV check is answered: `decision 81: Recorded sound effects: approve on the TV?` (changes for three jokers, Part 7; the other effects approved).
+- Part 7 is the rest of that work.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; the TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong: keep them as one soundtrack, add more, make it selectable; Part 6).
+- Open: `task 150: Close UI-10 in the plans` (after Parts 6, 7 and 9: UI-10 closes with soundtracks, the new joker sounds and the fanfare variants).
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
+- Done: `plan 150: Start screen horizon` (tasks 1327–1331, 1362): picks approved, assets and credits, gallery review and fixes.
+
+## Part 6: Soundtracks, priority 180
+- Done: `plan 182: Soundtracks` (tasks 1602–1605), default picked. As specified, after plan 33 (reuses its pipeline, loop points, budget conventions and `/?efectos`).
+- What (developer, 2026-10-17, decision 83): the music becomes a choice of soundtracks; each soundtrack is one matched set of three loops: menu (`normal`), question, question submitted; tension clearly rises at each step, the menu loop calm and relaxing (the synthesized loops are the model: chill, with a clear rise on submit).
+- Soundtracks:
+  - the synthesized loops (`startTrack()` scheduler in `app/client/src/game/sound.svelte.ts`) as one soundtrack
+  - plan 33''s recorded set (`musica-normal.m4a`, `musica-pregunta.m4a`, `musica-enviada.m4a`) as one soundtrack, unchanged
+  - 3–4 more recorded ones: sourced like plan 33 (Kenney.nl, OpenGameArt, Freesound; D-45 allowlist, CC0 preferred), matched sets (one piece at three intensities, or stems; same key and tempo family so the ~80 ms cuts `question` ↔ `submitted` don''t clash); credited in `app/client/public/audio/CREDITS.md` (Credits screen and the release check''s credits step read it); within `app/desktop/media-budget.json` (the plan sets the audio budget for the extra loops; raise it only with the size stated)
+- File layout: the plan decides (e.g. `musica-<soundtrack>-<track>.m4a`, flat like today, or a subfolder; then `credits.ts`, `credits_check.mjs`, `stage-media.mjs` follow); names ASCII.
+- Picker: the Esc menu''s «Sonido» section gets «Banda sonora» (the soundtracks by name, all four catalogs; `locales/style/<locale>.md` read first); saved like the volumes; switches live (the playing track crossfades to the same track of the new soundtrack), so the developer can compare on the TV; pad, keyboard and mouse like the volume rows.
+- `timed` (Competitive mode, `plan 164: Timed game screens, drama and sound`): a recorded soundtrack uses its question loop; the synthesized one keeps its own timed track; the plan checks plan 164''s sound wiring and fits into it.
+- Unchanged: `roll`, `victory`, effects, fades, cuts, ducking (04 "Music").
+- Audition: `/?efectos` lists every soundtrack''s three loops and the cut; the picker itself is the TV comparison.
+- Default: synthesized until the developer picks; last task: a developer decision (listen on the TV, pick the default; options per soundtrack), then set it and update 04 "Music".
+- Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
+
+## Part 7: Joker sounds that say what the joker does, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` took it: `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand` done; open: `task 146: Developer check of the three new joker sounds on the TV`.
+- What (developer, 2026-10-17, `decision 81: Recorded sound effects: approve on the TV?`):
+  - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
+  - Soplo (Hint): a microwave bell «bing»
+  - Hada madrina (Fairy): a fairy''s magic wand sprinkling fairy dust (replaces the swanee whistle `silbato`)
+  - Doña Exigente (Ms Picky), Tiro mágico (Trick Shot): unchanged
+- Sourced, converted, credited and budgeted as plan 32 (D-45, `CREDITS.md`, synth recipe as the fallback); `plans/09-jokers.md` "Sound assets" updated.
+- Check: a developer decision after the swap (`/?efectos` and a real game on the TV).
+
+## Part 8: Category splash on the question screen, priority 300
+- Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`; those exits, sounds and sizes stay.
+- Entrances and longer hold (developer, 2026-10-31): planned in `plan 191: Category splash entrances and longer hold` (written by task 1859); no new plan.
+  - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed
+  - silent: no new cues; the exits keep their sounds
+  - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends (`game/timing.ts`)
+  - `reducedMotion()`: plain fade
+  - all entrances play on `/?efectos`
+- Check: a screen-gallery review set of the entrances and hold (`trivia-gallery --set task-<id> --only <shots>`), developer decision; `plans/04-ui-tv-display.md` "Category splash" updated.
+
+## Part 9: Correct-answer sound variants, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` takes it (recorded effects, same pipeline; its revision adds the tasks).
+- What (developer, 2026-10-31): the fanfare is great but gets repetitive within a game.
+  - today''s `fanfarria` stays, plus 4–5 more recorded variants in `fanfare` (`sound.svelte.ts`), all the same kind of short, triumphant jingle, about its length (4.5 s)
+  - random, never the same one twice in a row; both call sites: Question and Timed (same cue, so one change); 04 already says "several variants", "3+ fanfares"
+  - the synthesized `fanfare` recipe stays the fallback; Answers off stays silent; `sad-trombone` and `whistle-down` unchanged
+- Sourced, converted and credited as plan 32 (D-45, CC0 first; a row per file in `CREDITS.md`); within `app/desktop/media-budget.json` (audio 7 MB; raise it only with the size stated); `/?efectos` lists every variant.
+- Check: a developer decision on the TV (`/?efectos` and a real game); options «approve» / «changes: …».
+
+## Part 10: Blurred picture revealed after submit, priority 300
+- New plan: `pm plan add 6 "Blurred picture revealed after submit"`, priority 300 (visual design); small, one implementation task plus the check.
+- What (developer, 2026-11-17): a picture shown blurred behind the question (D-15: role `decorative`, and the background picture of audio questions) gets sharp once the answer is submitted, not only darker.
+- Today: `question/Media.svelte` `dark` (Question: `submitted && !revealed`; Timed: `held && !revealed`) only darkens `img.blurred` (`brightness(0.3) saturate(0.3)`), and after the reveal it goes back to blurred.
+- The plan decides and states:
+  - the moment: from submit (Question) / the held pick (Timed) on, through the reveal, until the screen leaves; a smooth unblur transition (≈ 0.5–1 s), `reducedMotion()`: no animated filter, a short fade or instant
+  - the darkening while waiting: kept lighter or dropped, so the sharp picture reads; answer tiles and «Respuesta final» stay legible (glass over a sharp, bright picture: VD-9)
+  - the big «?» mark: fades out with the blur, or stays until the reveal
+  - full-bleed cover kept (decorative stays full-bleed, D-51 fit only for illustrative/essential), unless the plan finds the sharp crop looks wrong
+  - Peek (plan 113) unchanged: still not on decorative questions
+- Docs: D-15 in `plans/decisions.md` (amend: sharp after submit), `plans/04-ui-tv-display.md` (line on decorative images, Question/Timed reveal), `plans/10-visual-design.md` "Decorative images".
+- Check: a screen-gallery review set (`trivia-gallery --set task-<id> --only <shots>`: a decorative and an audio question, before and after submit, Question and Timed); developer decision, options «approve» / «changes: …».
+
+## Order and constraints
+- Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', NULL, 2142, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2151, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
+(`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold, and the right-answer fanfare gets recorded variants (developer, 2026-10-31); a blurred picture gets sharp once the answer is submitted (developer, 2026-11-17). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; the TV check is answered: `decision 81: Recorded sound effects: approve on the TV?` (changes for three jokers, Part 7; the other effects approved).
+- Part 7 is the rest of that work.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; the TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong: keep them as one soundtrack, add more, make it selectable; Part 6).
+- Open: `task 150: Close UI-10 in the plans` (after Parts 6, 7 and 9: UI-10 closes with soundtracks, the new joker sounds and the fanfare variants).
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
+- Done: `plan 150: Start screen horizon` (tasks 1327–1331, 1362): picks approved, assets and credits, gallery review and fixes.
+
+## Part 6: Soundtracks, priority 180
+- Done: `plan 182: Soundtracks` (tasks 1602–1605), default picked. As specified, after plan 33 (reuses its pipeline, loop points, budget conventions and `/?efectos`).
+- What (developer, 2026-10-17, decision 83): the music becomes a choice of soundtracks; each soundtrack is one matched set of three loops: menu (`normal`), question, question submitted; tension clearly rises at each step, the menu loop calm and relaxing (the synthesized loops are the model: chill, with a clear rise on submit).
+- Soundtracks:
+  - the synthesized loops (`startTrack()` scheduler in `app/client/src/game/sound.svelte.ts`) as one soundtrack
+  - plan 33''s recorded set (`musica-normal.m4a`, `musica-pregunta.m4a`, `musica-enviada.m4a`) as one soundtrack, unchanged
+  - 3–4 more recorded ones: sourced like plan 33 (Kenney.nl, OpenGameArt, Freesound; D-45 allowlist, CC0 preferred), matched sets (one piece at three intensities, or stems; same key and tempo family so the ~80 ms cuts `question` ↔ `submitted` don''t clash); credited in `app/client/public/audio/CREDITS.md` (Credits screen and the release check''s credits step read it); within `app/desktop/media-budget.json` (the plan sets the audio budget for the extra loops; raise it only with the size stated)
+- File layout: the plan decides (e.g. `musica-<soundtrack>-<track>.m4a`, flat like today, or a subfolder; then `credits.ts`, `credits_check.mjs`, `stage-media.mjs` follow); names ASCII.
+- Picker: the Esc menu''s «Sonido» section gets «Banda sonora» (the soundtracks by name, all four catalogs; `locales/style/<locale>.md` read first); saved like the volumes; switches live (the playing track crossfades to the same track of the new soundtrack), so the developer can compare on the TV; pad, keyboard and mouse like the volume rows.
+- `timed` (Competitive mode, `plan 164: Timed game screens, drama and sound`): a recorded soundtrack uses its question loop; the synthesized one keeps its own timed track; the plan checks plan 164''s sound wiring and fits into it.
+- Unchanged: `roll`, `victory`, effects, fades, cuts, ducking (04 "Music").
+- Audition: `/?efectos` lists every soundtrack''s three loops and the cut; the picker itself is the TV comparison.
+- Default: synthesized until the developer picks; last task: a developer decision (listen on the TV, pick the default; options per soundtrack), then set it and update 04 "Music".
+- Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
+
+## Part 7: Joker sounds that say what the joker does, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` took it: `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand` done; open: `task 146: Developer check of the three new joker sounds on the TV`.
+- What (developer, 2026-10-17, `decision 81: Recorded sound effects: approve on the TV?`):
+  - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
+  - Soplo (Hint): a microwave bell «bing»
+  - Hada madrina (Fairy): a fairy''s magic wand sprinkling fairy dust (replaces the swanee whistle `silbato`)
+  - Doña Exigente (Ms Picky), Tiro mágico (Trick Shot): unchanged
+- Sourced, converted, credited and budgeted as plan 32 (D-45, `CREDITS.md`, synth recipe as the fallback); `plans/09-jokers.md` "Sound assets" updated.
+- Check: a developer decision after the swap (`/?efectos` and a real game on the TV).
+
+## Part 8: Category splash on the question screen, priority 300
+- Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`; those exits, sounds and sizes stay.
+- Entrances and longer hold (developer, 2026-10-31): planned in `plan 191: Category splash entrances and longer hold` (written by task 1859); no new plan.
+  - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed
+  - silent: no new cues; the exits keep their sounds
+  - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends (`game/timing.ts`)
+  - `reducedMotion()`: plain fade
+  - all entrances play on `/?efectos`
+- Check: a screen-gallery review set of the entrances and hold (`trivia-gallery --set task-<id> --only <shots>`), developer decision; `plans/04-ui-tv-display.md` "Category splash" updated.
+
+## Part 9: Correct-answer sound variants, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` takes it (recorded effects, same pipeline; its revision adds the tasks).
+- What (developer, 2026-10-31): the fanfare is great but gets repetitive within a game.
+  - today''s `fanfarria` stays, plus 4–5 more recorded variants in `fanfare` (`sound.svelte.ts`), all the same kind of short, triumphant jingle, about its length (4.5 s)
+  - random, never the same one twice in a row; both call sites: Question and Timed (same cue, so one change); 04 already says "several variants", "3+ fanfares"
+  - the synthesized `fanfare` recipe stays the fallback; Answers off stays silent; `sad-trombone` and `whistle-down` unchanged
+- Sourced, converted and credited as plan 32 (D-45, CC0 first; a row per file in `CREDITS.md`); within `app/desktop/media-budget.json` (audio 7 MB; raise it only with the size stated); `/?efectos` lists every variant.
+- Check: a developer decision on the TV (`/?efectos` and a real game); options «approve» / «changes: …».
+
+## Part 10: Blurred picture revealed after submit, priority 300
+- New plan: `pm plan add 6 "Blurred picture revealed after submit"`, priority 300 (visual design); small, one implementation task plus the check.
+- What (developer, 2026-11-17): a picture shown blurred behind the question (D-15: role `decorative`, and the background picture of audio questions) gets sharp once the answer is submitted, not only darker.
+- Today: `question/Media.svelte` `dark` (Question: `submitted && !revealed`; Timed: `held && !revealed`) only darkens `img.blurred` (`brightness(0.3) saturate(0.3)`), and after the reveal it goes back to blurred.
+- The plan decides and states:
+  - the moment: from submit (Question) / the held pick (Timed) on, through the reveal, until the screen leaves; a smooth unblur transition (≈ 0.5–1 s), `reducedMotion()`: no animated filter, a short fade or instant
+  - the darkening while waiting: kept lighter or dropped, so the sharp picture reads; answer tiles and «Respuesta final» stay legible (glass over a sharp, bright picture: VD-9)
+  - the big «?» mark: fades out with the blur, or stays until the reveal
+  - full-bleed cover kept (decorative stays full-bleed, D-51 fit only for illustrative/essential), unless the plan finds the sharp crop looks wrong
+  - Peek (plan 113) unchanged: still not on decorative questions
+- Docs: D-15 in `plans/decisions.md` (amend: sharp after submit), `plans/04-ui-tv-display.md` (line on decorative images, Question/Timed reveal), `plans/10-visual-design.md` "Decorative images".
+- Check: a screen-gallery review set (`trivia-gallery --set task-<id> --only <shots>`: a decorative and an audio question, before and after submit, Question and Timed); developer decision, options «approve» / «changes: …».
+
+## Order and constraints
+- Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', NULL, 2142, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2152, 191, 'revise plan 191: Category splash entrances and longer hold', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 191: Category splash entrances and longer hold`, changed; it is quoted below. Bring `plan 191: Category splash entrances and longer hold` in line with it
+(`pm plan edit 191 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 6: masterplan
+
+Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (UI-7) and recorded sounds for everything still synthesized (UI-10), and adds playful visuals to the screens before a game session: icons on their buttons, national flags for the languages (developer, 2026-10-14), and a colourful horizon of Commons cut-outs along the bottom of Start (developer, 2026-10-16). After the TV checks of the recordings (developer, 2026-10-17), it adds selectable soundtracks and three joker sounds that say what the joker does; the category splash gets entrance animations and a longer hold, and the right-answer fanfare gets recorded variants (developer, 2026-10-31); a blurred picture gets sharp once the answer is submitted (developer, 2026-11-17). Owner plan files: `plans/04-ui-tv-display.md` ("Transitions", "Music", "Sound assets", UI-7, UI-10), `plans/09-jokers.md` ("Sound assets", JK-9), `plans/10-visual-design.md` (VD-8 icon set, palettes).
+
+**This masterplan''s tasks are not implementation work: each of them writes the plan for one part below** (`pm plan add 6 …`), with that part''s tasks.
+
+## Part 1: Preload the next screen''s media (UI-7), priority 500
+- Done: `plan 31: Preload the next screen''s media (UI-7)` (tasks 140, 141); `Placeholder.svelte` is gone.
+
+## Part 2: Recorded sound effects (UI-10), priority 200
+- Planned and built: `plan 32: Recorded sound effects (UI-10)`; the TV check is answered: `decision 81: Recorded sound effects: approve on the TV?` (changes for three jokers, Part 7; the other effects approved).
+- Part 7 is the rest of that work.
+
+## Part 3: Recorded music loops (UI-10), priority 190
+- Planned and built: `plan 33: Recorded music loops (UI-10)`; the TV check is answered: `decision 83: Recorded music loops: approve on the TV?` (the recordings sound better, the vibe is wrong: keep them as one soundtrack, add more, make it selectable; Part 6).
+- Open: `task 150: Close UI-10 in the plans` (after Parts 6, 7 and 9: UI-10 closes with soundtracks, the new joker sounds and the fanfare variants).
+
+## Part 4: Playful icons and language flags before a game session, priority 400
+- Done: `plan 135: Playful icons and language flags before a game session` (tasks 1081, 1082, 1083, 1103); flags per `decision 186: Language flags instead of the globe`.
+
+## Part 5: Start screen horizon, priority 300
+- Done: `plan 150: Start screen horizon` (tasks 1327–1331, 1362): picks approved, assets and credits, gallery review and fixes.
+
+## Part 6: Soundtracks, priority 180
+- Done: `plan 182: Soundtracks` (tasks 1602–1605), default picked. As specified, after plan 33 (reuses its pipeline, loop points, budget conventions and `/?efectos`).
+- What (developer, 2026-10-17, decision 83): the music becomes a choice of soundtracks; each soundtrack is one matched set of three loops: menu (`normal`), question, question submitted; tension clearly rises at each step, the menu loop calm and relaxing (the synthesized loops are the model: chill, with a clear rise on submit).
+- Soundtracks:
+  - the synthesized loops (`startTrack()` scheduler in `app/client/src/game/sound.svelte.ts`) as one soundtrack
+  - plan 33''s recorded set (`musica-normal.m4a`, `musica-pregunta.m4a`, `musica-enviada.m4a`) as one soundtrack, unchanged
+  - 3–4 more recorded ones: sourced like plan 33 (Kenney.nl, OpenGameArt, Freesound; D-45 allowlist, CC0 preferred), matched sets (one piece at three intensities, or stems; same key and tempo family so the ~80 ms cuts `question` ↔ `submitted` don''t clash); credited in `app/client/public/audio/CREDITS.md` (Credits screen and the release check''s credits step read it); within `app/desktop/media-budget.json` (the plan sets the audio budget for the extra loops; raise it only with the size stated)
+- File layout: the plan decides (e.g. `musica-<soundtrack>-<track>.m4a`, flat like today, or a subfolder; then `credits.ts`, `credits_check.mjs`, `stage-media.mjs` follow); names ASCII.
+- Picker: the Esc menu''s «Sonido» section gets «Banda sonora» (the soundtracks by name, all four catalogs; `locales/style/<locale>.md` read first); saved like the volumes; switches live (the playing track crossfades to the same track of the new soundtrack), so the developer can compare on the TV; pad, keyboard and mouse like the volume rows.
+- `timed` (Competitive mode, `plan 164: Timed game screens, drama and sound`): a recorded soundtrack uses its question loop; the synthesized one keeps its own timed track; the plan checks plan 164''s sound wiring and fits into it.
+- Unchanged: `roll`, `victory`, effects, fades, cuts, ducking (04 "Music").
+- Audition: `/?efectos` lists every soundtrack''s three loops and the cut; the picker itself is the TV comparison.
+- Default: synthesized until the developer picks; last task: a developer decision (listen on the TV, pick the default; options per soundtrack), then set it and update 04 "Music".
+- Docs: `plans/04-ui-tv-display.md` ("Music", "Sound assets", UI-10 note).
+
+## Part 7: Joker sounds that say what the joker does, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` took it: `task 1599: Joker sounds that say what the joker does: broom, microwave bing, fairy wand` done; open: `task 146: Developer check of the three new joker sounds on the TV`.
+- What (developer, 2026-10-17, `decision 81: Recorded sound effects: approve on the TV?`):
+  - Paso y fuera (Pass & Purge): a broom sweeping (today''s `escoba` doesn''t read as a broom)
+  - Soplo (Hint): a microwave bell «bing»
+  - Hada madrina (Fairy): a fairy''s magic wand sprinkling fairy dust (replaces the swanee whistle `silbato`)
+  - Doña Exigente (Ms Picky), Tiro mágico (Trick Shot): unchanged
+- Sourced, converted, credited and budgeted as plan 32 (D-45, `CREDITS.md`, synth recipe as the fallback); `plans/09-jokers.md` "Sound assets" updated.
+- Check: a developer decision after the swap (`/?efectos` and a real game on the TV).
+
+## Part 8: Category splash on the question screen, priority 300
+- Done: `plan 181: Category splash on the question screen` (tasks 1586–1590); sizes swapped per `decision 353: Category splash on the question screen: approve the exits and sounds?`; those exits, sounds and sizes stay.
+- Entrances and longer hold (developer, 2026-10-31): planned in `plan 191: Category splash entrances and longer hold` (written by task 1859); no new plan.
+  - 4–5 entrance animations, picked at random like the exits (`question/splash.ts`, none of the recent ones again), on Question and Timed
+  - silent: no new cues; the exits keep their sounds
+  - `SPLASH_HOLD_MS` doubled, 1000 → 2000 ms, counted after the entrance ends (`game/timing.ts`)
+  - `reducedMotion()`: plain fade
+  - all entrances play on `/?efectos`
+- Check: a screen-gallery review set of the entrances and hold (`trivia-gallery --set task-<id> --only <shots>`), developer decision; `plans/04-ui-tv-display.md` "Category splash" updated.
+
+## Part 9: Correct-answer sound variants, priority 200
+- Not a new plan: `plan 32: Recorded sound effects (UI-10)` takes it (recorded effects, same pipeline; its revision adds the tasks).
+- What (developer, 2026-10-31): the fanfare is great but gets repetitive within a game.
+  - today''s `fanfarria` stays, plus 4–5 more recorded variants in `fanfare` (`sound.svelte.ts`), all the same kind of short, triumphant jingle, about its length (4.5 s)
+  - random, never the same one twice in a row; both call sites: Question and Timed (same cue, so one change); 04 already says "several variants", "3+ fanfares"
+  - the synthesized `fanfare` recipe stays the fallback; Answers off stays silent; `sad-trombone` and `whistle-down` unchanged
+- Sourced, converted and credited as plan 32 (D-45, CC0 first; a row per file in `CREDITS.md`); within `app/desktop/media-budget.json` (audio 7 MB; raise it only with the size stated); `/?efectos` lists every variant.
+- Check: a developer decision on the TV (`/?efectos` and a real game); options «approve» / «changes: …».
+
+## Part 10: Blurred picture revealed after submit, priority 300
+- New plan: `pm plan add 6 "Blurred picture revealed after submit"`, priority 300 (visual design); small, one implementation task plus the check.
+- What (developer, 2026-11-17): a picture shown blurred behind the question (D-15: role `decorative`, and the background picture of audio questions) gets sharp once the answer is submitted, not only darker.
+- Today: `question/Media.svelte` `dark` (Question: `submitted && !revealed`; Timed: `held && !revealed`) only darkens `img.blurred` (`brightness(0.3) saturate(0.3)`), and after the reveal it goes back to blurred.
+- The plan decides and states:
+  - the moment: from submit (Question) / the held pick (Timed) on, through the reveal, until the screen leaves; a smooth unblur transition (≈ 0.5–1 s), `reducedMotion()`: no animated filter, a short fade or instant
+  - the darkening while waiting: kept lighter or dropped, so the sharp picture reads; answer tiles and «Respuesta final» stay legible (glass over a sharp, bright picture: VD-9)
+  - the big «?» mark: fades out with the blur, or stays until the reveal
+  - full-bleed cover kept (decorative stays full-bleed, D-51 fit only for illustrative/essential), unless the plan finds the sharp crop looks wrong
+  - Peek (plan 113) unchanged: still not on decorative questions
+- Docs: D-15 in `plans/decisions.md` (amend: sharp after submit), `plans/04-ui-tv-display.md` (line on decorative images, Question/Timed reveal), `plans/10-visual-design.md` "Decorative images".
+- Check: a screen-gallery review set (`trivia-gallery --set task-<id> --only <shots>`: a decorative and an audio question, before and after submit, Question and Timed); developer decision, options «approve» / «changes: …».
+
+## Order and constraints
+- Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', NULL, 2142, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -58281,6 +58556,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2342, 2132, '2026-11-17T16:18:09Z', NULL, 'running', NULL, NULL, 'f65849805b52a459ba002bc0f9fa5d906329e023', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2343, 2138, '2026-11-17T16:22:45Z', '2026-11-17T16:23:27Z', 'done', NULL, 0, 'b9177bfc26bb2f0f13b28df45f56aa6a6fb5b415', NULL, 'claude-opus-5-5', '227f8c92-5a93-4443-9b03-fd6cf8f47a93', NULL, 8, 16, 3079, 302807, 31992, 0.37814139999999996, 46644, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2344, 2141, '2026-11-17T16:49:14Z', '2026-11-17T16:50:16Z', 'done', NULL, 0, '60004a72af37516870d97923c4e8df10c136cdcc', NULL, 'claude-opus-5-5', '863274cd-6000-40ba-bcc8-a926c2176911', NULL, 8, 16, 5419, 354870, 42398, 0.5186019999999999, 57430, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2345, 2142, '2026-11-17T16:50:16Z', '2026-11-17T16:51:26Z', 'done', NULL, 0, '977ae3110f1c4541a2469b3884abf44864acfd97', NULL, 'claude-opus-5-5', '15ac21e7-eda1-41da-8c9d-a0310d70877a', NULL, 9, 18, 4179, 387781, 38990, 0.4731282, 53823, 60, 978519);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
