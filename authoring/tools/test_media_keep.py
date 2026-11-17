@@ -39,6 +39,12 @@ class Prune(unittest.TestCase):
                 mock.patch("batches.WORK", work):
             for n in names:
                 mc.cache_path(url(n)).write_bytes(b"xx")
+            (work / "batch-2" / "ids.json").write_text("{}")
+            (work / "batch-2" / "media-first-files.jsonl").write_text("".join(
+                json.dumps({"file_url": url(n)}) + "\n" for n in ["old", "base", "flight", "gone"]))
+            self.assertEqual(mk.release_run("batch-2"), (1, 2))  # not the pick, not the in-flight file
+            self.assertEqual(mk.release_run("batch-2"), (0, 0))  # repeat: nothing, no error
+            mc.cache_path(url("old")).write_bytes(b"xx")
             (media / "stray.part").write_bytes(b"x")
             self.assertEqual(mk.prune(dry_run=True), (3, 5))
             self.assertEqual(mk.prune(), (3, 5))

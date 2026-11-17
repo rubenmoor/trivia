@@ -66,6 +66,7 @@ import batches  # authoring/tools/batches.py: what the next batch does (D-36)
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
+import media_keep  # authoring/tools/media_keep.py: cache cleanup after a merged run (task 2140)
 import media_cache as media  # authoring/tools/media_cache.py: the media cache (D-17)
 import download  # authoring/tools/download.py: fills the media cache
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
@@ -1910,6 +1911,9 @@ def cmd_batch(args):
     t0 = run_steps(steps, again, run)
     cfg = load_json(d / "run.json")
     save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
+    if args.media_first:
+        n, size = media_keep.release_run(run)  # task 2140: triage downloads no pool pick uses
+        print(f"Cleaned {n} unused download(s) of {run}, freed {size / 1e9:.2f} GB.")
     qs = [q for q in load_json(POOL)["questions"] if q.get("batch") == run]
     n_ok = sum(q["status"] == "approved" for q in qs)
     print(f"\nDone: {run}: {len(qs)} merged, {n_ok} approved, {len(qs) - n_ok} needs work "
