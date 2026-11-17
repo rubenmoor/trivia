@@ -1014,7 +1014,7 @@ Template:
   - name: `shippedName(url)` (`resolve.mjs`) = `cacheName`'s stem + shipped extension; resolver tries `cacheName` (raw cache, dev), then `shippedName` (packaged); no manifest, D-17 keys unchanged
   - encode cache `work/ship-media/<stem>-<settings hash>.<ext>` (hash: tool versions + parameters), hard links into `build/media/`
   - one `credits.json` / `CREDITS.md` for all depots, no per-DLC split
-  - budget `app/desktop/media-budget.json` (MB): `content` 950, `dlc` per pack (`colombia` 75), `default_dlc` 75, `file` 5, `video` 100; `stage-media.mjs --check` = release check step `media-budget`
+  - budget `app/desktop/media-budget.json` (MB): `content` 950, `dlc` per pack (`colombia` 75), `default_dlc` 75, `file` 5, `video` 32; `stage-media.mjs --check` = release check step `media-budget`
 - Consequences:
   - 2549 → 679 MB (content 630, colombia 50); archives ~0.83 GB; store storage 3 → 1.5 GB (`17a-store-page.md`)
   - 58 files still > 1 MB (3 videos, 55 WebP up to 2.3 MB): listed, not a failure
