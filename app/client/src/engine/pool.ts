@@ -105,23 +105,30 @@ const str = (v: unknown): v is string => typeof v === "string" && v.trim() !== "
 const opt = (v: unknown): string | null => (typeof v === "string" ? v : null);
 const three = (v: unknown): v is string[] => Array.isArray(v) && v.length === 3 && v.every(str);
 
-/** Longest question audio/video window, seconds; mirrors MAX_AUDIO_SECONDS in authoring/tools/media.py. */
+/** Longest question audio window, seconds; mirrors MAX_AUDIO_SECONDS in authoring/tools/media.py. */
 const MAX_AUDIO_SECONDS = 60;
+/** Longest video window, seconds (milestone 21, 2026-11-17); mirrors MAX_VIDEO_SECONDS in authoring/tools/media.py. */
+const MAX_VIDEO_SECONDS = 30;
+const maxSeconds = (kind: unknown) => (kind === "video" ? MAX_VIDEO_SECONDS : MAX_AUDIO_SECONDS);
 
-/** A well-formed `media.excerpt` (decision 644: numbers, 0 ≤ start < end, ≤ 60 s) or null. Pure. */
-function parseExcerpt(v: unknown): Excerpt | null {
+/** A well-formed `media.excerpt` (decision 644: numbers, 0 ≤ start < end, ≤ 60 s audio, ≤ 30 s video) or null. Pure. */
+function parseExcerpt(v: unknown, kind: unknown): Excerpt | null {
   const e = v as Record<string, unknown> | null;
   if (!e || typeof e !== "object") return null;
   const { start, end } = e;
   if (typeof start !== "number" || typeof end !== "number" || !Number.isFinite(start + end)) return null;
-  return start >= 0 && start < end && end - start <= MAX_AUDIO_SECONDS ? { start, end } : null;
+  return start >= 0 && start < end && end - start <= maxSeconds(kind) ? { start, end } : null;
 }
 
-/** The window to play in a file of `duration` s (NaN/unknown: unclamped); null = the whole file. */
-export function playWindow(excerpt: Excerpt | undefined, duration: number): Excerpt | null {
-  if (!excerpt) return null;
-  const end = Number.isFinite(duration) ? Math.min(excerpt.end, duration) : excerpt.end;
-  return excerpt.start < end ? { start: excerpt.start, end } : null;
+/** The window to play in a file of `duration` s (NaN/unknown: unclamped). Audio: null = the whole file.
+ * Video: never null for a playable file, at most 30 s (no excerpt: from 0; an excerpt keeps its start). */
+export function playWindow(kind: "audio" | "video", excerpt: Excerpt | undefined, duration: number): Excerpt | null {
+  if (!excerpt && kind !== "video") return null;
+  const start = excerpt?.start ?? 0;
+  let end = excerpt?.end ?? Infinity;
+  if (kind === "video") end = Math.min(end, start + MAX_VIDEO_SECONDS);
+  if (Number.isFinite(duration)) end = Math.min(end, duration);
+  return start < end ? { start, end } : null;
 }
 
 /** A mod file_url → its URL under the bundle folder; null if not a plain relative path inside it. */
@@ -163,7 +170,7 @@ export function modPool(json: unknown, bundle: string, subcategories: Iterable<s
     const m = q.media as Record<string, unknown> | null | undefined;
     if (m) {
       const url = modUrl(bundle, m.file_url);
-      const excerpt = m.excerpt === undefined || m.excerpt === null ? undefined : parseExcerpt(m.excerpt);
+      const excerpt = m.excerpt === undefined || m.excerpt === null ? undefined : parseExcerpt(m.excerpt, m.type);
       if (!url || !["image", "audio", "video"].includes(m.type as string) || excerpt === null || (excerpt && m.type === "image")) {
         if (m.role === "essential") return bad("bad_media");
         bad("bad_media", false);

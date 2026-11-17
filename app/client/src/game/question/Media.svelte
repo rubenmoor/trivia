@@ -79,7 +79,7 @@
   let watch: ReturnType<typeof setInterval> | undefined;
   function begin() {
     if (!player) return;
-    const w = playWindow(media.excerpt, player.duration);
+    const w = playWindow(media.type as "audio" | "video", media.excerpt, player.duration);
     clearInterval(watch);
     if (w) {
       player.currentTime = w.start;
