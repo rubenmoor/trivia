@@ -204,7 +204,7 @@ const shipPools = (dir) => {
   for (const f of readdirSync(dir, { recursive: true }).filter((f) => /(^|[\\/])pool(\.[\w-]+)?\.json$/.test(f))) {
     const file = path.join(dir, f);
     const text = readFileSync(file, "utf8");
-    if (text.includes('"excerpt"')) writeFileSync(file, JSON.stringify(shipPool(JSON.parse(text))) + "\n");
+    if (text.includes('"excerpt"') || text.includes('"video"')) writeFileSync(file, JSON.stringify(shipPool(JSON.parse(text))) + "\n");
   }
 };
 shipPools(path.join(HERE, "build", demo ? "data-demo" : "data"));

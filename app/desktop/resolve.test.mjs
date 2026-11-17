@@ -322,3 +322,17 @@ test("shipPool: excerpt → `#t=` file_url, no excerpt; one shipped name per win
   assert.ok(shippedName(a.file_url).endsWith(".opus"));
   assert.equal(cacheName(a.file_url).slice(-4), ".ogg");
 });
+
+test("shipPool: every video is cut to its window of at most 30 s; audio keeps its whole file", () => {
+  const src = "https://x.org/a/clip.ogv";
+  const q = (media) => ({ id: "q", media });
+  const v = { type: "video", role: "essential", file_url: src, credit: "x" };
+  const { questions } = shipPool({ version: 1, questions: [q(v), q({ ...v, excerpt: { start: 10, end: 25 } }), q({ ...v, excerpt: { start: 10, end: 70 } }), q({ ...v, type: "audio" })] });
+  const [whole, short, long, audio] = questions.map((x) => x.media);
+  assert.deepEqual(excerptOf(whole.file_url), { start: 0, end: 30 });
+  assert.deepEqual(excerptOf(short.file_url), { start: 10, end: 25 });
+  assert.deepEqual(excerptOf(long.file_url), { start: 10, end: 40 });
+  assert.equal("excerpt" in long, false);
+  assert.equal(audio.file_url, src);
+  assert.notEqual(shippedName(whole.file_url), shippedName(long.file_url));
+});
