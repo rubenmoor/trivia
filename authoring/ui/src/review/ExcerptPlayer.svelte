@@ -5,10 +5,13 @@
   import { mediaVolume } from "$app/game/sound.svelte.ts";
   import type { Excerpt } from "$app/lib/types.ts";
 
-  let { src, type, excerpt }: { src: string; type: "audio" | "video"; excerpt: Excerpt } = $props();
+  let { src, type, excerpt }: { src: string; type: "audio" | "video"; excerpt?: Excerpt } = $props();
 
   let player = $state<HTMLMediaElement>();
   let playing = $state(false);
+  let duration = $state(NaN);
+  // The window the game plays (a video without excerpt: the first 30 s)
+  const win = $derived(playWindow(type, excerpt, duration) ?? { start: 0, end: duration });
   let watch: ReturnType<typeof setInterval> | undefined;
 
   function stop() {
@@ -35,12 +38,12 @@
 
 {#if type === "video"}
   <!-- svelte-ignore a11y_media_has_caption -->
-  <video bind:this={player} {src} preload="auto" onended={stop}></video>
+  <video bind:this={player} {src} preload="auto" onended={stop} onloadedmetadata={() => (duration = player?.duration ?? NaN)}></video>
 {:else}
-  <audio bind:this={player} {src} preload="auto" onended={stop}></audio>
+  <audio bind:this={player} {src} preload="auto" onended={stop} onloadedmetadata={() => (duration = player?.duration ?? NaN)}></audio>
 {/if}
 <button class="play" onclick={() => (playing ? stop() : play())}>
-  {playing ? "■ stop" : "▶ play the excerpt"} ({excerpt.start}–{excerpt.end} s)
+  {playing ? "■ stop" : "▶ play the excerpt"} ({+win.start.toFixed(1)}–{Number.isFinite(win.end) ? +win.end.toFixed(1) : "…"} s)
 </button>
 
 <style>
