@@ -27,6 +27,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen telemetry --pull [--url URL] [--from FILE] [--dry-run]   # opt-in telemetry sessions → state/played/stats.json, then acked (plan 109)
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
+    qgen video-window [--dry-run] [--model opus]   # every video question cut to its 30 s window and re-checked (plan 216)
     qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen neutralize [--dry-run]     # reword Colombian usage in base's es-sourced questions into neutral Spanish (plan 64)
     qgen export                     # app/data/pool.json (+ packs' bundles/<id>/pool.json) from authoring/data/questions.json
@@ -2125,6 +2126,7 @@ def main():
     pn.add_argument("--json", action="store_true", help="JSON on stdout")
     media_survey.add_parser(sub)
     media_probe.add_parser(sub)
+    video_window.add_parser(sub)
     # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging
     add("media", cmd_media)
     add("sheets", cmd_sheets)
@@ -2214,6 +2216,7 @@ from rework import cmd_neutralize, cmd_rework, cmd_tighten
 from taxonomy import cmd_bundle_new, cmd_remap, cmd_taxonomy
 from translate import LANGUAGES, cmd_translate, cmd_translate_batch, in_locale, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
 from validate import cmd_validate, validate_pool
+import video_window  # authoring/tools/video_window.py: `qgen video-window` (plan 216)
 
 
 if __name__ == "__main__":
