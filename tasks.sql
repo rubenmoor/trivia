@@ -342,6 +342,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
   - today''s fanfare stays, with 4–5 more recorded variants in `fanfare` (`sound.svelte.ts`), all the same kind of short, triumphant jingle and about the same length
   - picked at random, never the same one twice in a row; on Question and Timed
   - licences as in D-45 (CC0 first), credited, within the media budget
+- Blurred picture revealed (developer, 2026-11-17): a picture shown blurred behind the question gets sharp once the answer is submitted, not only darker
 
 ## Constraints
 - CC0 or otherwise allowlisted licenses only (D-45); assets stay offline.
@@ -354,6 +355,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - The developer picked the default soundtrack on the TV.
 - The developer approved the splash entrances and hold in a screen-gallery review set.
 - The developer approved the correct-answer sounds on the TV.
+- The developer approved the sharp picture after submit in a screen-gallery review set.
 
 Plan files: `plans/04-ui-tv-display.md`.', '2026-10-11T21:54:56Z', NULL, 0);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (7, 'Steam S2: product definition', 'implemented', 'The first phase of the Steam track (D-34) is decisions, not code: what the product is before anything Steam-specific gets built. It can run alongside the other milestones.
@@ -11241,19 +11243,31 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - `trivia-release-check`''s `career` step is green and the `career` row is in `MANUAL`; the demo and mods runs check the career
 - The developer''s playtest decision answered «passed» (after any "again" round); milestone 20''s "Done when" checked clause by clause in the close-out', 'The game''s new career gives each family member badges, a score and a rank as they play; it is only finished when a real family has played it. This last step first lets the computer play a game that earns a badge on the packaged game, checks that the free demo shows none of it, that players'' own question packs count fairly and that adding or removing a paid add-on changes no badge, and keeps that check before every release. Then the developer plays the career on the TV with the family, and whatever goes wrong goes back to the part that built it.', '2026-11-13T00:52:58Z', 1883, NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (200, 21, 'masterplan', 1000, 'Milestone 21: 1000 more approved base questions with audio or video, made media-first from Wikimedia Commons, with LLM quality control and the developer''s spot check; a switch each for audio and video questions in the session setup; then base advertised as «6000+» everywhere. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 21 …`), which is then split into tasks.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (200, 21, 'masterplan', 1000, 'Milestone 21: 1000 more approved base questions with audio or video, made media-first from Wikimedia Commons, with LLM quality control and the developer''s spot check; a switch each for audio and video questions in the session setup; video questions play at most 30 s and ship capped in bitrate; then base advertised as «6000+» everywhere. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 21 …`), which is then split into tasks.
 
 ## Builds on (binding)
 - `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions`: approved base sources with `media.type` audio or video ≥ 1058 (58 at the start, 2026-11-15); translations don''t count extra.
-- `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?` (open): scope of D-13 ("no songs or film clips") for Commons-hosted public-domain works; part 1 counts both classes apart, part 2 waits for the answer.
+- `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`: scope of D-13 ("no songs or film clips") for Commons-hosted public-domain works.
+- `decision 643: Media-first questions: go, go with a smaller goal, or stop?`: go, 500 first, then steps of 100 with spot checks.
+- `decision 644: Question media excerpts: field shape`: optional `media.excerpt` `{start, end}`, ≤ 60 s; for video narrowed by the milestone to ≤ 30 s (below).
+- `decision 645: Audio and video switches: where in modes other than gamemaster`; `decision 647: Media-first runs: spot-check size and agreement threshold?`; `decision 649: Media-first runs: pace against the topic bundles and regional runs`.
+- `decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`: 1080p, no video cap; `decision 653: How large may a country pack''s download be: raise the 75 MB line, shrink its pictures, or ship fewer?`: no content or pack size line; per-file lines stay.
 - D-13, D-14 (`plans/decisions.md`): media from Commons; audio questions get a decorative `background` image that doesn''t give the answer away.
 - `plans/23-media-providers.md`: licence allowlist in code (`providers.licence_kind`), audio from Commons only (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), NASA for space video; `MAX_AUDIO_SECONDS` 60.
-- `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`: Opus 96 kb/s, WebM VP9 ≤ 1080p; budgets `app/desktop/media-budget.json` (`content` 950 MB, `video` 100, `file` 5).
-- `decision 33: Configure game screen: which fields?`: video and audio switches (default on) already exist: `Choice.svelte` toggles, `choice.ts` media filter, `configure.video`/`configure.audio` strings.
+- `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`: Opus 96 kb/s, WebM VP9 ≤ 1080p; per-file lines in `app/desktop/media-budget.json` (`file` 5 MB, `video` 100 MB until the milestone''s line below).
+- `decision 33: Configure game screen: which fields?`: video and audio switches (default on), `choice.ts` media filter, `configure.video`/`configure.audio` strings.
 - `decision 267: Bundle tiles: question count strings`: base «5000+» as a fixed string from `targets.json`; the release bar, not the tile, makes it true; mod base bundles capped at the same string.
-- `decision 414: Human reviews don''t gate question generation or translation`; `authoring/QC.md` (spot check of 30, agreement ≥ 90 %, release bar `decision 15`); `decision 208: What must a script that calls claude report to its caller?`.
-- AGENTS.md "Making questions" and `authoring/RUNBOOK.md`: questions only through one `qgen batch` command; workers never search Commons or pick media by hand: the new path is a `qgen` mode, not hand work.
+- `decision 414: Human reviews don''t gate question generation or translation`; `authoring/QC.md` (spot check, release bar `decision 15`); `decision 208: What must a script that calls claude report to its caller?`.
+- AGENTS.md "Making questions" and `authoring/RUNBOOK.md`: questions only through one `qgen batch` command (`--media-first`); workers never search Commons or pick media by hand.
 - Base runs draft English (`decision 236: English-first drafting for base: what drives drafting and which locales steer it`); translations through `qgen batch --translate <L>`.
+
+## Video length and size (milestone, 2026-11-17)
+- Every video question, whatever batch made it, plays at most 30 s: a window keeps its start, end ≤ start + 30 s; no window → first 30 s of the file. Audio keeps decision 644''s 60 s.
+- Windows cut shorter: re-checked that the clue is still inside the 30 s; failing questions → `needs_work`.
+- Shipped video cut to that window, 1080p, plus a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. `-maxrate 8M -bufsize 16M`): against single huge files, not a squeeze; decision 651 otherwise stands.
+- `media-budget.json` per-file `video` line from 100 MB down to what 30 s at the ceiling needs.
+- `qgen validate` rejects a video question that would play > 30 s; media-first design picks video windows ≤ 30 s.
+- Where it goes: question side (validate, media-first window choice, re-check and re-window of existing video questions) → part 2''s plan, the re-check''s judgement through part 3''s review prompts; game side (playback cap without a window, cut, bitrate ceiling, budget line) → part 4''s plan.
 
 ## Gaps today
 - Pipeline is question-first (concepts → draft → media search); nothing starts from a file.
@@ -11261,6 +11275,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - No excerpts: the game plays a file from its start (`game/question/Media.svelte`); `stage-media.mjs` encodes whole files; anthems and recordings longer than 60 s are filtered out (`media.acceptable`).
 - No loudness levelling between files; with ~1000 sound/video files on a TV that matters.
 - Budget: 1000 media files (video especially) don''t fit `media-budget.json`''s `video` and likely `content` limits; store''s storage estimate (`decision 90: Store requirements, languages and controller flags?`) grows.
+- Video length: windows up to 60 s and whole files without a window; no bitrate ceiling on the shipped encode.
 - «5000+» is hard-coded in `BundleSelector.svelte` (cap), locale comments, `modding/bundles.md`, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`; store copy (`plans/17a-store-page.md`, `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) to check.
 
 ## Parts
@@ -11275,14 +11290,17 @@ Each part: one `--kind plan` task of this masterplan, in order; priorities for t
    - One command (e.g. `qgen batch --media-first`, the part''s plan names it), resumable, steps: inventory (survey''s crawl, dedupe against pools and earlier runs) → triage (per file: worth a question? which subcategory, difficulty, question kind) → design (draft around the file: the answer must come from the media, not its title; distractors; hints) → then today''s rate → factcheck → revise → merge → review → fix → record → audit → export → sync → batch-report → validate, with the media slot pre-filled (role essential or illustrative) and only the `background` image searched (D-14).
    - Subcategories from base''s taxonomy (`app/data/categories.json`), difficulty aimed at `targets.json` gaps; overlap/duplicate checks against the pool (english keys, decision 232).
    - Excerpt fields where a file is long (start/end seconds, chosen in design, checked in review); the schema and `qgen validate` side here, the playing side in part 4.
+   - Video ≤ 30 s (milestone, 2026-11-17): `qgen validate` rule, media-first design picks video windows ≤ 30 s; a re-check of every approved video question from any batch (window end ≤ start + 30 s, or the first 30 s), clue no longer inside → `needs_work`.
    - RUNBOOK and AGENTS.md "Making questions": the new command next to `qgen batch`, same exit codes and pm rules; `qgen report` (cost, media share, counts per decision 641).
 3. **LLM quality control and the developer''s spot check for media-first runs** (questions, plan priority 690; after part 2)
    - Review and audit prompts see what part 1 found to work (frame sheets, spectrogram, transcript, excerpt bounds) and check: answer recognisable from the media, no giveaway (spoken name, caption, watermark, filename shown nowhere), the file''s own description agrees with the answer, licence of recording and work (decision 640), sound quality.
    - Review tool: spot-check sample plays the excerpt as the game would; blind as `authoring/QC.md`; spot-check size and agreement threshold for media-first runs (larger than 30 while new?).
    - `authoring/QC.md`: media-first runs get the same steps (spot-check decision, `qgen report --qc`, proposals decision), with their own row in the trend table; health thresholds for them.
+   - The 30 s video re-check judges the cut window (frame sheet of the 30 s), not the whole file.
 4. **Sound and video in the game** (app, plan priority 500)
    - Play the excerpt (start/end) in `Media.svelte`, replay from the excerpt''s start; the engine''s pool check accepts the fields; `stage-media.mjs` cuts and encodes only the excerpt and levels loudness (EBU R128), shipped name stable.
-   - Budgets: `media-budget.json` `content`/`video` for ~1000 more files, measured; the store storage estimate (decision 90) updated; a decision if a new limit is the developer''s call.
+   - Budgets: measured and decided (decisions 651, 653).
+   - Video ≤ 30 s (milestone, 2026-11-17): playback stops at 30 s without a window; `stage-media.mjs` cuts video to its window (or the first 30 s), 1080p, bitrate ceiling 8 Mbit/s (`-maxrate 8M -bufsize 16M`); `media-budget.json` per-file `video` line lowered to fit 30 s at the ceiling.
    - Audio/video switches (decision 33): already on the Choice screen; check every mode that sets up a session shows them (solo, group, gamemaster, the multiplayer modes, timed), the supply report and outlook respect them with the larger media share; add them where a mode lacks them; gallery review set.
    - The TV: volume of question audio against the music (ducking), a video''s sound on/off, subtitles not needed (no speech-led questions unless part 3 allows).
 5. **Content runs** (questions, plan priority −100)
@@ -48111,8 +48129,392 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Print the count and GB freed in the run''s output
 - Test: temp cache with a merged run''s downloads: one picked by the pool, one used by another unmerged run, one unused; only the unused one is deleted
 - Done when: test passes; RUNBOOK/README note that media-first runs clean their downloads after merge', '2026-11-17T16:23:17Z', NULL, 2138, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2141, 200, 'revise the masterplan of milestone 21: add 1000 multimedia questions to the base bundle', 'revise', 'open', 1000, NULL, '`milestone 21: add 1000 multimedia questions to the base bundle` changed. Bring `plan 200: masterplan`, the masterplan, in line with it (`pm plan edit 200 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-17T16:49:11Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2141, 200, 'revise the masterplan of milestone 21: add 1000 multimedia questions to the base bundle', 'revise', 'done', 1000, '2026-11-17, plan 200 body: video ≤ 30 s and 8 Mbit/s ceiling routed to parts 2, 3, 4; builds-on updated with decisions 643–653', '`milestone 21: add 1000 multimedia questions to the base bundle` changed. Bring `plan 200: masterplan`, the masterplan, in line with it (`pm plan edit 200 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-17T16:49:11Z', '2026-11-17T16:50:08Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2142, 6, 'revise the masterplan of milestone 6: Screen polish leftovers', 'revise', 'open', 1000, NULL, '`milestone 6: Screen polish leftovers` changed. Bring `plan 6: masterplan`, the masterplan, in line with it (`pm plan edit 6 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-17T16:49:25Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2143, 200, 'create tasks for plan 200: masterplan', 'split', 'open', 1000, NULL, 'Split plan 200 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2144, 202, 'revise plan 202: Sound and video in the game', 'revise', 'open', 1000, NULL, '`plan 200: masterplan`, the plan above `plan 202: Sound and video in the game`, changed; it is quoted below. Bring `plan 202: Sound and video in the game` in line with it
+(`pm plan edit 202 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 200: masterplan
+
+Milestone 21: 1000 more approved base questions with audio or video, made media-first from Wikimedia Commons, with LLM quality control and the developer''s spot check; a switch each for audio and video questions in the session setup; video questions play at most 30 s and ship capped in bitrate; then base advertised as «6000+» everywhere. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 21 …`), which is then split into tasks.
+
+## Builds on (binding)
+- `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions`: approved base sources with `media.type` audio or video ≥ 1058 (58 at the start, 2026-11-15); translations don''t count extra.
+- `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`: scope of D-13 ("no songs or film clips") for Commons-hosted public-domain works.
+- `decision 643: Media-first questions: go, go with a smaller goal, or stop?`: go, 500 first, then steps of 100 with spot checks.
+- `decision 644: Question media excerpts: field shape`: optional `media.excerpt` `{start, end}`, ≤ 60 s; for video narrowed by the milestone to ≤ 30 s (below).
+- `decision 645: Audio and video switches: where in modes other than gamemaster`; `decision 647: Media-first runs: spot-check size and agreement threshold?`; `decision 649: Media-first runs: pace against the topic bundles and regional runs`.
+- `decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`: 1080p, no video cap; `decision 653: How large may a country pack''s download be: raise the 75 MB line, shrink its pictures, or ship fewer?`: no content or pack size line; per-file lines stay.
+- D-13, D-14 (`plans/decisions.md`): media from Commons; audio questions get a decorative `background` image that doesn''t give the answer away.
+- `plans/23-media-providers.md`: licence allowlist in code (`providers.licence_kind`), audio from Commons only (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), NASA for space video; `MAX_AUDIO_SECONDS` 60.
+- `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`: Opus 96 kb/s, WebM VP9 ≤ 1080p; per-file lines in `app/desktop/media-budget.json` (`file` 5 MB, `video` 100 MB until the milestone''s line below).
+- `decision 33: Configure game screen: which fields?`: video and audio switches (default on), `choice.ts` media filter, `configure.video`/`configure.audio` strings.
+- `decision 267: Bundle tiles: question count strings`: base «5000+» as a fixed string from `targets.json`; the release bar, not the tile, makes it true; mod base bundles capped at the same string.
+- `decision 414: Human reviews don''t gate question generation or translation`; `authoring/QC.md` (spot check, release bar `decision 15`); `decision 208: What must a script that calls claude report to its caller?`.
+- AGENTS.md "Making questions" and `authoring/RUNBOOK.md`: questions only through one `qgen batch` command (`--media-first`); workers never search Commons or pick media by hand.
+- Base runs draft English (`decision 236: English-first drafting for base: what drives drafting and which locales steer it`); translations through `qgen batch --translate <L>`.
+
+## Video length and size (milestone, 2026-11-17)
+- Every video question, whatever batch made it, plays at most 30 s: a window keeps its start, end ≤ start + 30 s; no window → first 30 s of the file. Audio keeps decision 644''s 60 s.
+- Windows cut shorter: re-checked that the clue is still inside the 30 s; failing questions → `needs_work`.
+- Shipped video cut to that window, 1080p, plus a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. `-maxrate 8M -bufsize 16M`): against single huge files, not a squeeze; decision 651 otherwise stands.
+- `media-budget.json` per-file `video` line from 100 MB down to what 30 s at the ceiling needs.
+- `qgen validate` rejects a video question that would play > 30 s; media-first design picks video windows ≤ 30 s.
+- Where it goes: question side (validate, media-first window choice, re-check and re-window of existing video questions) → part 2''s plan, the re-check''s judgement through part 3''s review prompts; game side (playback cap without a window, cut, bitrate ceiling, budget line) → part 4''s plan.
+
+## Gaps today
+- Pipeline is question-first (concepts → draft → media search); nothing starts from a file.
+- The LLM can''t hear audio: the review sees audio candidates as text only (`media.make_sheet` skips them) and a video as its poster thumbnail only.
+- No excerpts: the game plays a file from its start (`game/question/Media.svelte`); `stage-media.mjs` encodes whole files; anthems and recordings longer than 60 s are filtered out (`media.acceptable`).
+- No loudness levelling between files; with ~1000 sound/video files on a TV that matters.
+- Budget: 1000 media files (video especially) don''t fit `media-budget.json`''s `video` and likely `content` limits; store''s storage estimate (`decision 90: Store requirements, languages and controller flags?`) grows.
+- Video length: windows up to 60 s and whole files without a window; no bitrate ceiling on the shipped encode.
+- «5000+» is hard-coded in `BundleSelector.svelte` (cap), locale comments, `modding/bundles.md`, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`; store copy (`plans/17a-store-page.md`, `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) to check.
+
+## Parts
+Each part: one `--kind plan` task of this masterplan, in order; priorities for the part''s plan as given.
+
+1. **Feasibility: Commons supply survey and pilot** (questions, plan priority 710)
+   - Script (in `authoring/tools/`, Commons API through `providers/commons.py`''s throttle and token; no pool edits, output in `work/`): crawl audio and video categories and searches (animal sounds, instruments, languages / Lingua Libre, places and city sounds, machines, nature, NASA, historic speeches, public-domain music and film counted apart per decision 640), filter by licence allowlist, duration, resolution, not already in a pool; tally per base category and question kind.
+   - Pilot of ≈ 50 questions through a throw-away triage + design prompt on surveyed files, kept in `work/` (no `questions.json`): yield per surveyed file, $ per question (decision 208), share the developer would approve (a small look decision).
+   - How the LLM judges what it can''t hear or watch: video frame sheets (ffmpeg), audio spectrogram/waveform, local speech-to-text for spoken files (giveaways: a speaker naming the answer), on-screen text in frames; which of these work, measured in the pilot.
+   - Ends with a go/no-go decision for the developer: numbers (usable files per category, expected approved, cost), the risks, options go / go with a smaller goal / stop; parts 2–7 wait for a "go".
+2. **Media-first pipeline** (questions, plan priority 700; after part 1''s go and decision 640)
+   - One command (e.g. `qgen batch --media-first`, the part''s plan names it), resumable, steps: inventory (survey''s crawl, dedupe against pools and earlier runs) → triage (per file: worth a question? which subcategory, difficulty, question kind) → design (draft around the file: the answer must come from the media, not its title; distractors; hints) → then today''s rate → factcheck → revise → merge → review → fix → record → audit → export → sync → batch-report → validate, with the media slot pre-filled (role essential or illustrative) and only the `background` image searched (D-14).
+   - Subcategories from base''s taxonomy (`app/data/categories.json`), difficulty aimed at `targets.json` gaps; overlap/duplicate checks against the pool (english keys, decision 232).
+   - Excerpt fields where a file is long (start/end seconds, chosen in design, checked in review); the schema and `qgen validate` side here, the playing side in part 4.
+   - Video ≤ 30 s (milestone, 2026-11-17): `qgen validate` rule, media-first design picks video windows ≤ 30 s; a re-check of every approved video question from any batch (window end ≤ start + 30 s, or the first 30 s), clue no longer inside → `needs_work`.
+   - RUNBOOK and AGENTS.md "Making questions": the new command next to `qgen batch`, same exit codes and pm rules; `qgen report` (cost, media share, counts per decision 641).
+3. **LLM quality control and the developer''s spot check for media-first runs** (questions, plan priority 690; after part 2)
+   - Review and audit prompts see what part 1 found to work (frame sheets, spectrogram, transcript, excerpt bounds) and check: answer recognisable from the media, no giveaway (spoken name, caption, watermark, filename shown nowhere), the file''s own description agrees with the answer, licence of recording and work (decision 640), sound quality.
+   - Review tool: spot-check sample plays the excerpt as the game would; blind as `authoring/QC.md`; spot-check size and agreement threshold for media-first runs (larger than 30 while new?).
+   - `authoring/QC.md`: media-first runs get the same steps (spot-check decision, `qgen report --qc`, proposals decision), with their own row in the trend table; health thresholds for them.
+   - The 30 s video re-check judges the cut window (frame sheet of the 30 s), not the whole file.
+4. **Sound and video in the game** (app, plan priority 500)
+   - Play the excerpt (start/end) in `Media.svelte`, replay from the excerpt''s start; the engine''s pool check accepts the fields; `stage-media.mjs` cuts and encodes only the excerpt and levels loudness (EBU R128), shipped name stable.
+   - Budgets: measured and decided (decisions 651, 653).
+   - Video ≤ 30 s (milestone, 2026-11-17): playback stops at 30 s without a window; `stage-media.mjs` cuts video to its window (or the first 30 s), 1080p, bitrate ceiling 8 Mbit/s (`-maxrate 8M -bufsize 16M`); `media-budget.json` per-file `video` line lowered to fit 30 s at the ceiling.
+   - Audio/video switches (decision 33): already on the Choice screen; check every mode that sets up a session shows them (solo, group, gamemaster, the multiplayer modes, timed), the supply report and outlook respect them with the larger media share; add them where a mode lacks them; gallery review set.
+   - The TV: volume of question audio against the music (ducking), a video''s sound on/off, subtitles not needed (no speech-led questions unless part 3 allows).
+5. **Content runs** (questions, plan priority −100)
+   - Start task in the pattern of `plan 84: Release content runs` (run + QC pair per run, iterating) until decision 641''s count is reached; translation runs `qgen batch --translate es|es-ES|de` so the new questions play in every question locale.
+   - Pace against topic-bundle and regional runs: a decision with `qgen report --cost` projections before the first start task.
+6. **Base advertised as «6000+»** (app, plan priority 400; after part 5 reaches the count)
+   - Condition: decision 641 met and every base question-locale pool ≥ 6000 approved (`qgen report --simulate`).
+   - `targets.json` base total 6000 (difficulty mix scaled), a decision superseding decision 267''s base string, `BundleSelector.svelte` cap, locales (comments and any count string), `modding/bundles.md` mod base cap, store copy per language (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)` or its successor), trailer or screenshots if they show the tile, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`, README; `rg` for «5000», «5.000», «5,000» in code, docs and store texts.
+   - Ships as a content patch if the game is already out (`plan 96: Content updates as patches (ST-5)`).
+7. **Close-out** (plan priority 100)
+   - Count check (decision 641), family play-test decision on the TV with audio and video on and with each switch off, per launch language.
+   - Docs: D-13 amended per decision 640, `plans/06-images.md`, `plans/23-media-providers.md`, `plans/16-content-target.md`, `directory.md` if a new tool folder; milestone 21 done.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2145, 205, 'revise plan 205: Media-first content runs', 'revise', 'open', 1000, NULL, '`plan 200: masterplan`, the plan above `plan 205: Media-first content runs`, changed; it is quoted below. Bring `plan 205: Media-first content runs` in line with it
+(`pm plan edit 205 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 200: masterplan
+
+Milestone 21: 1000 more approved base questions with audio or video, made media-first from Wikimedia Commons, with LLM quality control and the developer''s spot check; a switch each for audio and video questions in the session setup; video questions play at most 30 s and ship capped in bitrate; then base advertised as «6000+» everywhere. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 21 …`), which is then split into tasks.
+
+## Builds on (binding)
+- `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions`: approved base sources with `media.type` audio or video ≥ 1058 (58 at the start, 2026-11-15); translations don''t count extra.
+- `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`: scope of D-13 ("no songs or film clips") for Commons-hosted public-domain works.
+- `decision 643: Media-first questions: go, go with a smaller goal, or stop?`: go, 500 first, then steps of 100 with spot checks.
+- `decision 644: Question media excerpts: field shape`: optional `media.excerpt` `{start, end}`, ≤ 60 s; for video narrowed by the milestone to ≤ 30 s (below).
+- `decision 645: Audio and video switches: where in modes other than gamemaster`; `decision 647: Media-first runs: spot-check size and agreement threshold?`; `decision 649: Media-first runs: pace against the topic bundles and regional runs`.
+- `decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`: 1080p, no video cap; `decision 653: How large may a country pack''s download be: raise the 75 MB line, shrink its pictures, or ship fewer?`: no content or pack size line; per-file lines stay.
+- D-13, D-14 (`plans/decisions.md`): media from Commons; audio questions get a decorative `background` image that doesn''t give the answer away.
+- `plans/23-media-providers.md`: licence allowlist in code (`providers.licence_kind`), audio from Commons only (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), NASA for space video; `MAX_AUDIO_SECONDS` 60.
+- `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`: Opus 96 kb/s, WebM VP9 ≤ 1080p; per-file lines in `app/desktop/media-budget.json` (`file` 5 MB, `video` 100 MB until the milestone''s line below).
+- `decision 33: Configure game screen: which fields?`: video and audio switches (default on), `choice.ts` media filter, `configure.video`/`configure.audio` strings.
+- `decision 267: Bundle tiles: question count strings`: base «5000+» as a fixed string from `targets.json`; the release bar, not the tile, makes it true; mod base bundles capped at the same string.
+- `decision 414: Human reviews don''t gate question generation or translation`; `authoring/QC.md` (spot check, release bar `decision 15`); `decision 208: What must a script that calls claude report to its caller?`.
+- AGENTS.md "Making questions" and `authoring/RUNBOOK.md`: questions only through one `qgen batch` command (`--media-first`); workers never search Commons or pick media by hand.
+- Base runs draft English (`decision 236: English-first drafting for base: what drives drafting and which locales steer it`); translations through `qgen batch --translate <L>`.
+
+## Video length and size (milestone, 2026-11-17)
+- Every video question, whatever batch made it, plays at most 30 s: a window keeps its start, end ≤ start + 30 s; no window → first 30 s of the file. Audio keeps decision 644''s 60 s.
+- Windows cut shorter: re-checked that the clue is still inside the 30 s; failing questions → `needs_work`.
+- Shipped video cut to that window, 1080p, plus a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. `-maxrate 8M -bufsize 16M`): against single huge files, not a squeeze; decision 651 otherwise stands.
+- `media-budget.json` per-file `video` line from 100 MB down to what 30 s at the ceiling needs.
+- `qgen validate` rejects a video question that would play > 30 s; media-first design picks video windows ≤ 30 s.
+- Where it goes: question side (validate, media-first window choice, re-check and re-window of existing video questions) → part 2''s plan, the re-check''s judgement through part 3''s review prompts; game side (playback cap without a window, cut, bitrate ceiling, budget line) → part 4''s plan.
+
+## Gaps today
+- Pipeline is question-first (concepts → draft → media search); nothing starts from a file.
+- The LLM can''t hear audio: the review sees audio candidates as text only (`media.make_sheet` skips them) and a video as its poster thumbnail only.
+- No excerpts: the game plays a file from its start (`game/question/Media.svelte`); `stage-media.mjs` encodes whole files; anthems and recordings longer than 60 s are filtered out (`media.acceptable`).
+- No loudness levelling between files; with ~1000 sound/video files on a TV that matters.
+- Budget: 1000 media files (video especially) don''t fit `media-budget.json`''s `video` and likely `content` limits; store''s storage estimate (`decision 90: Store requirements, languages and controller flags?`) grows.
+- Video length: windows up to 60 s and whole files without a window; no bitrate ceiling on the shipped encode.
+- «5000+» is hard-coded in `BundleSelector.svelte` (cap), locale comments, `modding/bundles.md`, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`; store copy (`plans/17a-store-page.md`, `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) to check.
+
+## Parts
+Each part: one `--kind plan` task of this masterplan, in order; priorities for the part''s plan as given.
+
+1. **Feasibility: Commons supply survey and pilot** (questions, plan priority 710)
+   - Script (in `authoring/tools/`, Commons API through `providers/commons.py`''s throttle and token; no pool edits, output in `work/`): crawl audio and video categories and searches (animal sounds, instruments, languages / Lingua Libre, places and city sounds, machines, nature, NASA, historic speeches, public-domain music and film counted apart per decision 640), filter by licence allowlist, duration, resolution, not already in a pool; tally per base category and question kind.
+   - Pilot of ≈ 50 questions through a throw-away triage + design prompt on surveyed files, kept in `work/` (no `questions.json`): yield per surveyed file, $ per question (decision 208), share the developer would approve (a small look decision).
+   - How the LLM judges what it can''t hear or watch: video frame sheets (ffmpeg), audio spectrogram/waveform, local speech-to-text for spoken files (giveaways: a speaker naming the answer), on-screen text in frames; which of these work, measured in the pilot.
+   - Ends with a go/no-go decision for the developer: numbers (usable files per category, expected approved, cost), the risks, options go / go with a smaller goal / stop; parts 2–7 wait for a "go".
+2. **Media-first pipeline** (questions, plan priority 700; after part 1''s go and decision 640)
+   - One command (e.g. `qgen batch --media-first`, the part''s plan names it), resumable, steps: inventory (survey''s crawl, dedupe against pools and earlier runs) → triage (per file: worth a question? which subcategory, difficulty, question kind) → design (draft around the file: the answer must come from the media, not its title; distractors; hints) → then today''s rate → factcheck → revise → merge → review → fix → record → audit → export → sync → batch-report → validate, with the media slot pre-filled (role essential or illustrative) and only the `background` image searched (D-14).
+   - Subcategories from base''s taxonomy (`app/data/categories.json`), difficulty aimed at `targets.json` gaps; overlap/duplicate checks against the pool (english keys, decision 232).
+   - Excerpt fields where a file is long (start/end seconds, chosen in design, checked in review); the schema and `qgen validate` side here, the playing side in part 4.
+   - Video ≤ 30 s (milestone, 2026-11-17): `qgen validate` rule, media-first design picks video windows ≤ 30 s; a re-check of every approved video question from any batch (window end ≤ start + 30 s, or the first 30 s), clue no longer inside → `needs_work`.
+   - RUNBOOK and AGENTS.md "Making questions": the new command next to `qgen batch`, same exit codes and pm rules; `qgen report` (cost, media share, counts per decision 641).
+3. **LLM quality control and the developer''s spot check for media-first runs** (questions, plan priority 690; after part 2)
+   - Review and audit prompts see what part 1 found to work (frame sheets, spectrogram, transcript, excerpt bounds) and check: answer recognisable from the media, no giveaway (spoken name, caption, watermark, filename shown nowhere), the file''s own description agrees with the answer, licence of recording and work (decision 640), sound quality.
+   - Review tool: spot-check sample plays the excerpt as the game would; blind as `authoring/QC.md`; spot-check size and agreement threshold for media-first runs (larger than 30 while new?).
+   - `authoring/QC.md`: media-first runs get the same steps (spot-check decision, `qgen report --qc`, proposals decision), with their own row in the trend table; health thresholds for them.
+   - The 30 s video re-check judges the cut window (frame sheet of the 30 s), not the whole file.
+4. **Sound and video in the game** (app, plan priority 500)
+   - Play the excerpt (start/end) in `Media.svelte`, replay from the excerpt''s start; the engine''s pool check accepts the fields; `stage-media.mjs` cuts and encodes only the excerpt and levels loudness (EBU R128), shipped name stable.
+   - Budgets: measured and decided (decisions 651, 653).
+   - Video ≤ 30 s (milestone, 2026-11-17): playback stops at 30 s without a window; `stage-media.mjs` cuts video to its window (or the first 30 s), 1080p, bitrate ceiling 8 Mbit/s (`-maxrate 8M -bufsize 16M`); `media-budget.json` per-file `video` line lowered to fit 30 s at the ceiling.
+   - Audio/video switches (decision 33): already on the Choice screen; check every mode that sets up a session shows them (solo, group, gamemaster, the multiplayer modes, timed), the supply report and outlook respect them with the larger media share; add them where a mode lacks them; gallery review set.
+   - The TV: volume of question audio against the music (ducking), a video''s sound on/off, subtitles not needed (no speech-led questions unless part 3 allows).
+5. **Content runs** (questions, plan priority −100)
+   - Start task in the pattern of `plan 84: Release content runs` (run + QC pair per run, iterating) until decision 641''s count is reached; translation runs `qgen batch --translate es|es-ES|de` so the new questions play in every question locale.
+   - Pace against topic-bundle and regional runs: a decision with `qgen report --cost` projections before the first start task.
+6. **Base advertised as «6000+»** (app, plan priority 400; after part 5 reaches the count)
+   - Condition: decision 641 met and every base question-locale pool ≥ 6000 approved (`qgen report --simulate`).
+   - `targets.json` base total 6000 (difficulty mix scaled), a decision superseding decision 267''s base string, `BundleSelector.svelte` cap, locales (comments and any count string), `modding/bundles.md` mod base cap, store copy per language (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)` or its successor), trailer or screenshots if they show the tile, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`, README; `rg` for «5000», «5.000», «5,000» in code, docs and store texts.
+   - Ships as a content patch if the game is already out (`plan 96: Content updates as patches (ST-5)`).
+7. **Close-out** (plan priority 100)
+   - Count check (decision 641), family play-test decision on the TV with audio and video on and with each switch off, per launch language.
+   - Docs: D-13 amended per decision 640, `plans/06-images.md`, `plans/23-media-providers.md`, `plans/16-content-target.md`, `directory.md` if a new tool folder; milestone 21 done.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2146, 206, 'revise plan 206: Base advertised as 6000+', 'revise', 'open', 1000, NULL, '`plan 200: masterplan`, the plan above `plan 206: Base advertised as 6000+`, changed; it is quoted below. Bring `plan 206: Base advertised as 6000+` in line with it
+(`pm plan edit 206 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 200: masterplan
+
+Milestone 21: 1000 more approved base questions with audio or video, made media-first from Wikimedia Commons, with LLM quality control and the developer''s spot check; a switch each for audio and video questions in the session setup; video questions play at most 30 s and ship capped in bitrate; then base advertised as «6000+» everywhere. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 21 …`), which is then split into tasks.
+
+## Builds on (binding)
+- `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions`: approved base sources with `media.type` audio or video ≥ 1058 (58 at the start, 2026-11-15); translations don''t count extra.
+- `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`: scope of D-13 ("no songs or film clips") for Commons-hosted public-domain works.
+- `decision 643: Media-first questions: go, go with a smaller goal, or stop?`: go, 500 first, then steps of 100 with spot checks.
+- `decision 644: Question media excerpts: field shape`: optional `media.excerpt` `{start, end}`, ≤ 60 s; for video narrowed by the milestone to ≤ 30 s (below).
+- `decision 645: Audio and video switches: where in modes other than gamemaster`; `decision 647: Media-first runs: spot-check size and agreement threshold?`; `decision 649: Media-first runs: pace against the topic bundles and regional runs`.
+- `decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`: 1080p, no video cap; `decision 653: How large may a country pack''s download be: raise the 75 MB line, shrink its pictures, or ship fewer?`: no content or pack size line; per-file lines stay.
+- D-13, D-14 (`plans/decisions.md`): media from Commons; audio questions get a decorative `background` image that doesn''t give the answer away.
+- `plans/23-media-providers.md`: licence allowlist in code (`providers.licence_kind`), audio from Commons only (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), NASA for space video; `MAX_AUDIO_SECONDS` 60.
+- `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`: Opus 96 kb/s, WebM VP9 ≤ 1080p; per-file lines in `app/desktop/media-budget.json` (`file` 5 MB, `video` 100 MB until the milestone''s line below).
+- `decision 33: Configure game screen: which fields?`: video and audio switches (default on), `choice.ts` media filter, `configure.video`/`configure.audio` strings.
+- `decision 267: Bundle tiles: question count strings`: base «5000+» as a fixed string from `targets.json`; the release bar, not the tile, makes it true; mod base bundles capped at the same string.
+- `decision 414: Human reviews don''t gate question generation or translation`; `authoring/QC.md` (spot check, release bar `decision 15`); `decision 208: What must a script that calls claude report to its caller?`.
+- AGENTS.md "Making questions" and `authoring/RUNBOOK.md`: questions only through one `qgen batch` command (`--media-first`); workers never search Commons or pick media by hand.
+- Base runs draft English (`decision 236: English-first drafting for base: what drives drafting and which locales steer it`); translations through `qgen batch --translate <L>`.
+
+## Video length and size (milestone, 2026-11-17)
+- Every video question, whatever batch made it, plays at most 30 s: a window keeps its start, end ≤ start + 30 s; no window → first 30 s of the file. Audio keeps decision 644''s 60 s.
+- Windows cut shorter: re-checked that the clue is still inside the 30 s; failing questions → `needs_work`.
+- Shipped video cut to that window, 1080p, plus a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. `-maxrate 8M -bufsize 16M`): against single huge files, not a squeeze; decision 651 otherwise stands.
+- `media-budget.json` per-file `video` line from 100 MB down to what 30 s at the ceiling needs.
+- `qgen validate` rejects a video question that would play > 30 s; media-first design picks video windows ≤ 30 s.
+- Where it goes: question side (validate, media-first window choice, re-check and re-window of existing video questions) → part 2''s plan, the re-check''s judgement through part 3''s review prompts; game side (playback cap without a window, cut, bitrate ceiling, budget line) → part 4''s plan.
+
+## Gaps today
+- Pipeline is question-first (concepts → draft → media search); nothing starts from a file.
+- The LLM can''t hear audio: the review sees audio candidates as text only (`media.make_sheet` skips them) and a video as its poster thumbnail only.
+- No excerpts: the game plays a file from its start (`game/question/Media.svelte`); `stage-media.mjs` encodes whole files; anthems and recordings longer than 60 s are filtered out (`media.acceptable`).
+- No loudness levelling between files; with ~1000 sound/video files on a TV that matters.
+- Budget: 1000 media files (video especially) don''t fit `media-budget.json`''s `video` and likely `content` limits; store''s storage estimate (`decision 90: Store requirements, languages and controller flags?`) grows.
+- Video length: windows up to 60 s and whole files without a window; no bitrate ceiling on the shipped encode.
+- «5000+» is hard-coded in `BundleSelector.svelte` (cap), locale comments, `modding/bundles.md`, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`; store copy (`plans/17a-store-page.md`, `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) to check.
+
+## Parts
+Each part: one `--kind plan` task of this masterplan, in order; priorities for the part''s plan as given.
+
+1. **Feasibility: Commons supply survey and pilot** (questions, plan priority 710)
+   - Script (in `authoring/tools/`, Commons API through `providers/commons.py`''s throttle and token; no pool edits, output in `work/`): crawl audio and video categories and searches (animal sounds, instruments, languages / Lingua Libre, places and city sounds, machines, nature, NASA, historic speeches, public-domain music and film counted apart per decision 640), filter by licence allowlist, duration, resolution, not already in a pool; tally per base category and question kind.
+   - Pilot of ≈ 50 questions through a throw-away triage + design prompt on surveyed files, kept in `work/` (no `questions.json`): yield per surveyed file, $ per question (decision 208), share the developer would approve (a small look decision).
+   - How the LLM judges what it can''t hear or watch: video frame sheets (ffmpeg), audio spectrogram/waveform, local speech-to-text for spoken files (giveaways: a speaker naming the answer), on-screen text in frames; which of these work, measured in the pilot.
+   - Ends with a go/no-go decision for the developer: numbers (usable files per category, expected approved, cost), the risks, options go / go with a smaller goal / stop; parts 2–7 wait for a "go".
+2. **Media-first pipeline** (questions, plan priority 700; after part 1''s go and decision 640)
+   - One command (e.g. `qgen batch --media-first`, the part''s plan names it), resumable, steps: inventory (survey''s crawl, dedupe against pools and earlier runs) → triage (per file: worth a question? which subcategory, difficulty, question kind) → design (draft around the file: the answer must come from the media, not its title; distractors; hints) → then today''s rate → factcheck → revise → merge → review → fix → record → audit → export → sync → batch-report → validate, with the media slot pre-filled (role essential or illustrative) and only the `background` image searched (D-14).
+   - Subcategories from base''s taxonomy (`app/data/categories.json`), difficulty aimed at `targets.json` gaps; overlap/duplicate checks against the pool (english keys, decision 232).
+   - Excerpt fields where a file is long (start/end seconds, chosen in design, checked in review); the schema and `qgen validate` side here, the playing side in part 4.
+   - Video ≤ 30 s (milestone, 2026-11-17): `qgen validate` rule, media-first design picks video windows ≤ 30 s; a re-check of every approved video question from any batch (window end ≤ start + 30 s, or the first 30 s), clue no longer inside → `needs_work`.
+   - RUNBOOK and AGENTS.md "Making questions": the new command next to `qgen batch`, same exit codes and pm rules; `qgen report` (cost, media share, counts per decision 641).
+3. **LLM quality control and the developer''s spot check for media-first runs** (questions, plan priority 690; after part 2)
+   - Review and audit prompts see what part 1 found to work (frame sheets, spectrogram, transcript, excerpt bounds) and check: answer recognisable from the media, no giveaway (spoken name, caption, watermark, filename shown nowhere), the file''s own description agrees with the answer, licence of recording and work (decision 640), sound quality.
+   - Review tool: spot-check sample plays the excerpt as the game would; blind as `authoring/QC.md`; spot-check size and agreement threshold for media-first runs (larger than 30 while new?).
+   - `authoring/QC.md`: media-first runs get the same steps (spot-check decision, `qgen report --qc`, proposals decision), with their own row in the trend table; health thresholds for them.
+   - The 30 s video re-check judges the cut window (frame sheet of the 30 s), not the whole file.
+4. **Sound and video in the game** (app, plan priority 500)
+   - Play the excerpt (start/end) in `Media.svelte`, replay from the excerpt''s start; the engine''s pool check accepts the fields; `stage-media.mjs` cuts and encodes only the excerpt and levels loudness (EBU R128), shipped name stable.
+   - Budgets: measured and decided (decisions 651, 653).
+   - Video ≤ 30 s (milestone, 2026-11-17): playback stops at 30 s without a window; `stage-media.mjs` cuts video to its window (or the first 30 s), 1080p, bitrate ceiling 8 Mbit/s (`-maxrate 8M -bufsize 16M`); `media-budget.json` per-file `video` line lowered to fit 30 s at the ceiling.
+   - Audio/video switches (decision 33): already on the Choice screen; check every mode that sets up a session shows them (solo, group, gamemaster, the multiplayer modes, timed), the supply report and outlook respect them with the larger media share; add them where a mode lacks them; gallery review set.
+   - The TV: volume of question audio against the music (ducking), a video''s sound on/off, subtitles not needed (no speech-led questions unless part 3 allows).
+5. **Content runs** (questions, plan priority −100)
+   - Start task in the pattern of `plan 84: Release content runs` (run + QC pair per run, iterating) until decision 641''s count is reached; translation runs `qgen batch --translate es|es-ES|de` so the new questions play in every question locale.
+   - Pace against topic-bundle and regional runs: a decision with `qgen report --cost` projections before the first start task.
+6. **Base advertised as «6000+»** (app, plan priority 400; after part 5 reaches the count)
+   - Condition: decision 641 met and every base question-locale pool ≥ 6000 approved (`qgen report --simulate`).
+   - `targets.json` base total 6000 (difficulty mix scaled), a decision superseding decision 267''s base string, `BundleSelector.svelte` cap, locales (comments and any count string), `modding/bundles.md` mod base cap, store copy per language (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)` or its successor), trailer or screenshots if they show the tile, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`, README; `rg` for «5000», «5.000», «5,000» in code, docs and store texts.
+   - Ships as a content patch if the game is already out (`plan 96: Content updates as patches (ST-5)`).
+7. **Close-out** (plan priority 100)
+   - Count check (decision 641), family play-test decision on the TV with audio and video on and with each switch off, per launch language.
+   - Docs: D-13 amended per decision 640, `plans/06-images.md`, `plans/23-media-providers.md`, `plans/16-content-target.md`, `directory.md` if a new tool folder; milestone 21 done.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2147, 207, 'revise plan 207: Multimedia questions close-out', 'revise', 'open', 1000, NULL, '`plan 200: masterplan`, the plan above `plan 207: Multimedia questions close-out`, changed; it is quoted below. Bring `plan 207: Multimedia questions close-out` in line with it
+(`pm plan edit 207 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 200: masterplan
+
+Milestone 21: 1000 more approved base questions with audio or video, made media-first from Wikimedia Commons, with LLM quality control and the developer''s spot check; a switch each for audio and video questions in the session setup; video questions play at most 30 s and ship capped in bitrate; then base advertised as «6000+» everywhere. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 21 …`), which is then split into tasks.
+
+## Builds on (binding)
+- `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions`: approved base sources with `media.type` audio or video ≥ 1058 (58 at the start, 2026-11-15); translations don''t count extra.
+- `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`: scope of D-13 ("no songs or film clips") for Commons-hosted public-domain works.
+- `decision 643: Media-first questions: go, go with a smaller goal, or stop?`: go, 500 first, then steps of 100 with spot checks.
+- `decision 644: Question media excerpts: field shape`: optional `media.excerpt` `{start, end}`, ≤ 60 s; for video narrowed by the milestone to ≤ 30 s (below).
+- `decision 645: Audio and video switches: where in modes other than gamemaster`; `decision 647: Media-first runs: spot-check size and agreement threshold?`; `decision 649: Media-first runs: pace against the topic bundles and regional runs`.
+- `decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`: 1080p, no video cap; `decision 653: How large may a country pack''s download be: raise the 75 MB line, shrink its pictures, or ship fewer?`: no content or pack size line; per-file lines stay.
+- D-13, D-14 (`plans/decisions.md`): media from Commons; audio questions get a decorative `background` image that doesn''t give the answer away.
+- `plans/23-media-providers.md`: licence allowlist in code (`providers.licence_kind`), audio from Commons only (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), NASA for space video; `MAX_AUDIO_SECONDS` 60.
+- `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`: Opus 96 kb/s, WebM VP9 ≤ 1080p; per-file lines in `app/desktop/media-budget.json` (`file` 5 MB, `video` 100 MB until the milestone''s line below).
+- `decision 33: Configure game screen: which fields?`: video and audio switches (default on), `choice.ts` media filter, `configure.video`/`configure.audio` strings.
+- `decision 267: Bundle tiles: question count strings`: base «5000+» as a fixed string from `targets.json`; the release bar, not the tile, makes it true; mod base bundles capped at the same string.
+- `decision 414: Human reviews don''t gate question generation or translation`; `authoring/QC.md` (spot check, release bar `decision 15`); `decision 208: What must a script that calls claude report to its caller?`.
+- AGENTS.md "Making questions" and `authoring/RUNBOOK.md`: questions only through one `qgen batch` command (`--media-first`); workers never search Commons or pick media by hand.
+- Base runs draft English (`decision 236: English-first drafting for base: what drives drafting and which locales steer it`); translations through `qgen batch --translate <L>`.
+
+## Video length and size (milestone, 2026-11-17)
+- Every video question, whatever batch made it, plays at most 30 s: a window keeps its start, end ≤ start + 30 s; no window → first 30 s of the file. Audio keeps decision 644''s 60 s.
+- Windows cut shorter: re-checked that the clue is still inside the 30 s; failing questions → `needs_work`.
+- Shipped video cut to that window, 1080p, plus a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. `-maxrate 8M -bufsize 16M`): against single huge files, not a squeeze; decision 651 otherwise stands.
+- `media-budget.json` per-file `video` line from 100 MB down to what 30 s at the ceiling needs.
+- `qgen validate` rejects a video question that would play > 30 s; media-first design picks video windows ≤ 30 s.
+- Where it goes: question side (validate, media-first window choice, re-check and re-window of existing video questions) → part 2''s plan, the re-check''s judgement through part 3''s review prompts; game side (playback cap without a window, cut, bitrate ceiling, budget line) → part 4''s plan.
+
+## Gaps today
+- Pipeline is question-first (concepts → draft → media search); nothing starts from a file.
+- The LLM can''t hear audio: the review sees audio candidates as text only (`media.make_sheet` skips them) and a video as its poster thumbnail only.
+- No excerpts: the game plays a file from its start (`game/question/Media.svelte`); `stage-media.mjs` encodes whole files; anthems and recordings longer than 60 s are filtered out (`media.acceptable`).
+- No loudness levelling between files; with ~1000 sound/video files on a TV that matters.
+- Budget: 1000 media files (video especially) don''t fit `media-budget.json`''s `video` and likely `content` limits; store''s storage estimate (`decision 90: Store requirements, languages and controller flags?`) grows.
+- Video length: windows up to 60 s and whole files without a window; no bitrate ceiling on the shipped encode.
+- «5000+» is hard-coded in `BundleSelector.svelte` (cap), locale comments, `modding/bundles.md`, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`; store copy (`plans/17a-store-page.md`, `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) to check.
+
+## Parts
+Each part: one `--kind plan` task of this masterplan, in order; priorities for the part''s plan as given.
+
+1. **Feasibility: Commons supply survey and pilot** (questions, plan priority 710)
+   - Script (in `authoring/tools/`, Commons API through `providers/commons.py`''s throttle and token; no pool edits, output in `work/`): crawl audio and video categories and searches (animal sounds, instruments, languages / Lingua Libre, places and city sounds, machines, nature, NASA, historic speeches, public-domain music and film counted apart per decision 640), filter by licence allowlist, duration, resolution, not already in a pool; tally per base category and question kind.
+   - Pilot of ≈ 50 questions through a throw-away triage + design prompt on surveyed files, kept in `work/` (no `questions.json`): yield per surveyed file, $ per question (decision 208), share the developer would approve (a small look decision).
+   - How the LLM judges what it can''t hear or watch: video frame sheets (ffmpeg), audio spectrogram/waveform, local speech-to-text for spoken files (giveaways: a speaker naming the answer), on-screen text in frames; which of these work, measured in the pilot.
+   - Ends with a go/no-go decision for the developer: numbers (usable files per category, expected approved, cost), the risks, options go / go with a smaller goal / stop; parts 2–7 wait for a "go".
+2. **Media-first pipeline** (questions, plan priority 700; after part 1''s go and decision 640)
+   - One command (e.g. `qgen batch --media-first`, the part''s plan names it), resumable, steps: inventory (survey''s crawl, dedupe against pools and earlier runs) → triage (per file: worth a question? which subcategory, difficulty, question kind) → design (draft around the file: the answer must come from the media, not its title; distractors; hints) → then today''s rate → factcheck → revise → merge → review → fix → record → audit → export → sync → batch-report → validate, with the media slot pre-filled (role essential or illustrative) and only the `background` image searched (D-14).
+   - Subcategories from base''s taxonomy (`app/data/categories.json`), difficulty aimed at `targets.json` gaps; overlap/duplicate checks against the pool (english keys, decision 232).
+   - Excerpt fields where a file is long (start/end seconds, chosen in design, checked in review); the schema and `qgen validate` side here, the playing side in part 4.
+   - Video ≤ 30 s (milestone, 2026-11-17): `qgen validate` rule, media-first design picks video windows ≤ 30 s; a re-check of every approved video question from any batch (window end ≤ start + 30 s, or the first 30 s), clue no longer inside → `needs_work`.
+   - RUNBOOK and AGENTS.md "Making questions": the new command next to `qgen batch`, same exit codes and pm rules; `qgen report` (cost, media share, counts per decision 641).
+3. **LLM quality control and the developer''s spot check for media-first runs** (questions, plan priority 690; after part 2)
+   - Review and audit prompts see what part 1 found to work (frame sheets, spectrogram, transcript, excerpt bounds) and check: answer recognisable from the media, no giveaway (spoken name, caption, watermark, filename shown nowhere), the file''s own description agrees with the answer, licence of recording and work (decision 640), sound quality.
+   - Review tool: spot-check sample plays the excerpt as the game would; blind as `authoring/QC.md`; spot-check size and agreement threshold for media-first runs (larger than 30 while new?).
+   - `authoring/QC.md`: media-first runs get the same steps (spot-check decision, `qgen report --qc`, proposals decision), with their own row in the trend table; health thresholds for them.
+   - The 30 s video re-check judges the cut window (frame sheet of the 30 s), not the whole file.
+4. **Sound and video in the game** (app, plan priority 500)
+   - Play the excerpt (start/end) in `Media.svelte`, replay from the excerpt''s start; the engine''s pool check accepts the fields; `stage-media.mjs` cuts and encodes only the excerpt and levels loudness (EBU R128), shipped name stable.
+   - Budgets: measured and decided (decisions 651, 653).
+   - Video ≤ 30 s (milestone, 2026-11-17): playback stops at 30 s without a window; `stage-media.mjs` cuts video to its window (or the first 30 s), 1080p, bitrate ceiling 8 Mbit/s (`-maxrate 8M -bufsize 16M`); `media-budget.json` per-file `video` line lowered to fit 30 s at the ceiling.
+   - Audio/video switches (decision 33): already on the Choice screen; check every mode that sets up a session shows them (solo, group, gamemaster, the multiplayer modes, timed), the supply report and outlook respect them with the larger media share; add them where a mode lacks them; gallery review set.
+   - The TV: volume of question audio against the music (ducking), a video''s sound on/off, subtitles not needed (no speech-led questions unless part 3 allows).
+5. **Content runs** (questions, plan priority −100)
+   - Start task in the pattern of `plan 84: Release content runs` (run + QC pair per run, iterating) until decision 641''s count is reached; translation runs `qgen batch --translate es|es-ES|de` so the new questions play in every question locale.
+   - Pace against topic-bundle and regional runs: a decision with `qgen report --cost` projections before the first start task.
+6. **Base advertised as «6000+»** (app, plan priority 400; after part 5 reaches the count)
+   - Condition: decision 641 met and every base question-locale pool ≥ 6000 approved (`qgen report --simulate`).
+   - `targets.json` base total 6000 (difficulty mix scaled), a decision superseding decision 267''s base string, `BundleSelector.svelte` cap, locales (comments and any count string), `modding/bundles.md` mod base cap, store copy per language (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)` or its successor), trailer or screenshots if they show the tile, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`, README; `rg` for «5000», «5.000», «5,000» in code, docs and store texts.
+   - Ships as a content patch if the game is already out (`plan 96: Content updates as patches (ST-5)`).
+7. **Close-out** (plan priority 100)
+   - Count check (decision 641), family play-test decision on the TV with audio and video on and with each switch off, per launch language.
+   - Docs: D-13 amended per decision 640, `plans/06-images.md`, `plans/23-media-providers.md`, `plans/16-content-target.md`, `directory.md` if a new tool folder; milestone 21 done.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2148, 213, 'revise plan 213: Media cache GC', 'revise', 'open', 1000, NULL, '`plan 200: masterplan`, the plan above `plan 213: Media cache GC`, changed; it is quoted below. Bring `plan 213: Media cache GC` in line with it
+(`pm plan edit 213 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 200: masterplan
+
+Milestone 21: 1000 more approved base questions with audio or video, made media-first from Wikimedia Commons, with LLM quality control and the developer''s spot check; a switch each for audio and video questions in the session setup; video questions play at most 30 s and ship capped in bitrate; then base advertised as «6000+» everywhere. **This masterplan''s own tasks are not implementation work: each writes the plan for one part** (`pm plan add 21 …`), which is then split into tasks.
+
+## Builds on (binding)
+- `decision 641: Milestone 21''s count: what makes 1000 additional multimedia questions`: approved base sources with `media.type` audio or video ≥ 1058 (58 at the start, 2026-11-15); translations don''t count extra.
+- `decision 640: Media-first questions: may a question be built around a free recording of a public-domain piece of music or a public-domain film excerpt from Commons?`: scope of D-13 ("no songs or film clips") for Commons-hosted public-domain works.
+- `decision 643: Media-first questions: go, go with a smaller goal, or stop?`: go, 500 first, then steps of 100 with spot checks.
+- `decision 644: Question media excerpts: field shape`: optional `media.excerpt` `{start, end}`, ≤ 60 s; for video narrowed by the milestone to ≤ 30 s (below).
+- `decision 645: Audio and video switches: where in modes other than gamemaster`; `decision 647: Media-first runs: spot-check size and agreement threshold?`; `decision 649: Media-first runs: pace against the topic bundles and regional runs`.
+- `decision 651: Shipped media budget for 500 to 1000 sound and video questions: raise the limit, shrink the video, or cap the video share?`: 1080p, no video cap; `decision 653: How large may a country pack''s download be: raise the 75 MB line, shrink its pictures, or ship fewer?`: no content or pack size line; per-file lines stay.
+- D-13, D-14 (`plans/decisions.md`): media from Commons; audio questions get a decorative `background` image that doesn''t give the answer away.
+- `plans/23-media-providers.md`: licence allowlist in code (`providers.licence_kind`), audio from Commons only (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), NASA for space video; `MAX_AUDIO_SECONDS` 60.
+- `decision 185: Shipped media: formats, names and where the encode runs (SW-9)`: Opus 96 kb/s, WebM VP9 ≤ 1080p; per-file lines in `app/desktop/media-budget.json` (`file` 5 MB, `video` 100 MB until the milestone''s line below).
+- `decision 33: Configure game screen: which fields?`: video and audio switches (default on), `choice.ts` media filter, `configure.video`/`configure.audio` strings.
+- `decision 267: Bundle tiles: question count strings`: base «5000+» as a fixed string from `targets.json`; the release bar, not the tile, makes it true; mod base bundles capped at the same string.
+- `decision 414: Human reviews don''t gate question generation or translation`; `authoring/QC.md` (spot check, release bar `decision 15`); `decision 208: What must a script that calls claude report to its caller?`.
+- AGENTS.md "Making questions" and `authoring/RUNBOOK.md`: questions only through one `qgen batch` command (`--media-first`); workers never search Commons or pick media by hand.
+- Base runs draft English (`decision 236: English-first drafting for base: what drives drafting and which locales steer it`); translations through `qgen batch --translate <L>`.
+
+## Video length and size (milestone, 2026-11-17)
+- Every video question, whatever batch made it, plays at most 30 s: a window keeps its start, end ≤ start + 30 s; no window → first 30 s of the file. Audio keeps decision 644''s 60 s.
+- Windows cut shorter: re-checked that the clue is still inside the 30 s; failing questions → `needs_work`.
+- Shipped video cut to that window, 1080p, plus a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. `-maxrate 8M -bufsize 16M`): against single huge files, not a squeeze; decision 651 otherwise stands.
+- `media-budget.json` per-file `video` line from 100 MB down to what 30 s at the ceiling needs.
+- `qgen validate` rejects a video question that would play > 30 s; media-first design picks video windows ≤ 30 s.
+- Where it goes: question side (validate, media-first window choice, re-check and re-window of existing video questions) → part 2''s plan, the re-check''s judgement through part 3''s review prompts; game side (playback cap without a window, cut, bitrate ceiling, budget line) → part 4''s plan.
+
+## Gaps today
+- Pipeline is question-first (concepts → draft → media search); nothing starts from a file.
+- The LLM can''t hear audio: the review sees audio candidates as text only (`media.make_sheet` skips them) and a video as its poster thumbnail only.
+- No excerpts: the game plays a file from its start (`game/question/Media.svelte`); `stage-media.mjs` encodes whole files; anthems and recordings longer than 60 s are filtered out (`media.acceptable`).
+- No loudness levelling between files; with ~1000 sound/video files on a TV that matters.
+- Budget: 1000 media files (video especially) don''t fit `media-budget.json`''s `video` and likely `content` limits; store''s storage estimate (`decision 90: Store requirements, languages and controller flags?`) grows.
+- Video length: windows up to 60 s and whole files without a window; no bitrate ceiling on the shipped encode.
+- «5000+» is hard-coded in `BundleSelector.svelte` (cap), locale comments, `modding/bundles.md`, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`; store copy (`plans/17a-store-page.md`, `plan 88: Store page and AI disclosure (PUB-8, LUI-6)`) to check.
+
+## Parts
+Each part: one `--kind plan` task of this masterplan, in order; priorities for the part''s plan as given.
+
+1. **Feasibility: Commons supply survey and pilot** (questions, plan priority 710)
+   - Script (in `authoring/tools/`, Commons API through `providers/commons.py`''s throttle and token; no pool edits, output in `work/`): crawl audio and video categories and searches (animal sounds, instruments, languages / Lingua Libre, places and city sounds, machines, nature, NASA, historic speeches, public-domain music and film counted apart per decision 640), filter by licence allowlist, duration, resolution, not already in a pool; tally per base category and question kind.
+   - Pilot of ≈ 50 questions through a throw-away triage + design prompt on surveyed files, kept in `work/` (no `questions.json`): yield per surveyed file, $ per question (decision 208), share the developer would approve (a small look decision).
+   - How the LLM judges what it can''t hear or watch: video frame sheets (ffmpeg), audio spectrogram/waveform, local speech-to-text for spoken files (giveaways: a speaker naming the answer), on-screen text in frames; which of these work, measured in the pilot.
+   - Ends with a go/no-go decision for the developer: numbers (usable files per category, expected approved, cost), the risks, options go / go with a smaller goal / stop; parts 2–7 wait for a "go".
+2. **Media-first pipeline** (questions, plan priority 700; after part 1''s go and decision 640)
+   - One command (e.g. `qgen batch --media-first`, the part''s plan names it), resumable, steps: inventory (survey''s crawl, dedupe against pools and earlier runs) → triage (per file: worth a question? which subcategory, difficulty, question kind) → design (draft around the file: the answer must come from the media, not its title; distractors; hints) → then today''s rate → factcheck → revise → merge → review → fix → record → audit → export → sync → batch-report → validate, with the media slot pre-filled (role essential or illustrative) and only the `background` image searched (D-14).
+   - Subcategories from base''s taxonomy (`app/data/categories.json`), difficulty aimed at `targets.json` gaps; overlap/duplicate checks against the pool (english keys, decision 232).
+   - Excerpt fields where a file is long (start/end seconds, chosen in design, checked in review); the schema and `qgen validate` side here, the playing side in part 4.
+   - Video ≤ 30 s (milestone, 2026-11-17): `qgen validate` rule, media-first design picks video windows ≤ 30 s; a re-check of every approved video question from any batch (window end ≤ start + 30 s, or the first 30 s), clue no longer inside → `needs_work`.
+   - RUNBOOK and AGENTS.md "Making questions": the new command next to `qgen batch`, same exit codes and pm rules; `qgen report` (cost, media share, counts per decision 641).
+3. **LLM quality control and the developer''s spot check for media-first runs** (questions, plan priority 690; after part 2)
+   - Review and audit prompts see what part 1 found to work (frame sheets, spectrogram, transcript, excerpt bounds) and check: answer recognisable from the media, no giveaway (spoken name, caption, watermark, filename shown nowhere), the file''s own description agrees with the answer, licence of recording and work (decision 640), sound quality.
+   - Review tool: spot-check sample plays the excerpt as the game would; blind as `authoring/QC.md`; spot-check size and agreement threshold for media-first runs (larger than 30 while new?).
+   - `authoring/QC.md`: media-first runs get the same steps (spot-check decision, `qgen report --qc`, proposals decision), with their own row in the trend table; health thresholds for them.
+   - The 30 s video re-check judges the cut window (frame sheet of the 30 s), not the whole file.
+4. **Sound and video in the game** (app, plan priority 500)
+   - Play the excerpt (start/end) in `Media.svelte`, replay from the excerpt''s start; the engine''s pool check accepts the fields; `stage-media.mjs` cuts and encodes only the excerpt and levels loudness (EBU R128), shipped name stable.
+   - Budgets: measured and decided (decisions 651, 653).
+   - Video ≤ 30 s (milestone, 2026-11-17): playback stops at 30 s without a window; `stage-media.mjs` cuts video to its window (or the first 30 s), 1080p, bitrate ceiling 8 Mbit/s (`-maxrate 8M -bufsize 16M`); `media-budget.json` per-file `video` line lowered to fit 30 s at the ceiling.
+   - Audio/video switches (decision 33): already on the Choice screen; check every mode that sets up a session shows them (solo, group, gamemaster, the multiplayer modes, timed), the supply report and outlook respect them with the larger media share; add them where a mode lacks them; gallery review set.
+   - The TV: volume of question audio against the music (ducking), a video''s sound on/off, subtitles not needed (no speech-led questions unless part 3 allows).
+5. **Content runs** (questions, plan priority −100)
+   - Start task in the pattern of `plan 84: Release content runs` (run + QC pair per run, iterating) until decision 641''s count is reached; translation runs `qgen batch --translate es|es-ES|de` so the new questions play in every question locale.
+   - Pace against topic-bundle and regional runs: a decision with `qgen report --cost` projections before the first start task.
+6. **Base advertised as «6000+»** (app, plan priority 400; after part 5 reaches the count)
+   - Condition: decision 641 met and every base question-locale pool ≥ 6000 approved (`qgen report --simulate`).
+   - `targets.json` base total 6000 (difficulty mix scaled), a decision superseding decision 267''s base string, `BundleSelector.svelte` cap, locales (comments and any count string), `modding/bundles.md` mod base cap, store copy per language (`plan 88: Store page and AI disclosure (PUB-8, LUI-6)` or its successor), trailer or screenshots if they show the tile, `plans/22-bundles.md`, `plans/04-ui-tv-display.md`, `plans/decisions.md`, README; `rg` for «5000», «5.000», «5,000» in code, docs and store texts.
+   - Ships as a content patch if the game is already out (`plan 96: Content updates as patches (ST-5)`).
+7. **Close-out** (plan priority 100)
+   - Count check (decision 641), family play-test decision on the TV with audio and video on and with each switch off, per launch language.
+   - Docs: D-13 amended per decision 640, `plans/06-images.md`, `plans/23-media-providers.md`, `plans/16-content-target.md`, `directory.md` if a new tool folder; milestone 21 done.', '2026-11-17T16:50:05Z', NULL, 2141, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -57878,6 +58280,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2341, 2132, '2026-11-17T14:23:06Z', '2026-11-17T16:18:04Z', 'failed', 'interrupted', NULL, '745225c3eb55c1407edc8ead9767fcf570cad464', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2363177);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2342, 2132, '2026-11-17T16:18:09Z', NULL, 'running', NULL, NULL, 'f65849805b52a459ba002bc0f9fa5d906329e023', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2343, 2138, '2026-11-17T16:22:45Z', '2026-11-17T16:23:27Z', 'done', NULL, 0, 'b9177bfc26bb2f0f13b28df45f56aa6a6fb5b415', NULL, 'claude-opus-5-5', '227f8c92-5a93-4443-9b03-fd6cf8f47a93', NULL, 8, 16, 3079, 302807, 31992, 0.37814139999999996, 46644, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2344, 2141, '2026-11-17T16:49:14Z', '2026-11-17T16:50:16Z', 'done', NULL, 0, '60004a72af37516870d97923c4e8df10c136cdcc', NULL, 'claude-opus-5-5', '863274cd-6000-40ba-bcc8-a926c2176911', NULL, 8, 16, 5419, 354870, 42398, 0.5186019999999999, 57430, 60, 978519);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
