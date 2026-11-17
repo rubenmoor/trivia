@@ -83,11 +83,14 @@ class VideoWindow(unittest.TestCase):
         self.assertEqual(r["previous"]["decision"], "approved")
         self.assertIn("1 needs_work", self.out)
 
-    def test_giveaway_needs_work(self):
+    def test_giveaway_hit_judged(self):
         self.said = "look a lion"
         got = self.run_cmd([video_q("q-1", duration=90)])["q-1"]
+        self.assertEqual(got["status"], "approved")  # judgement keep decides
+        self.assertIn("answer-heard", json.dumps(self.calls[0]["user"]["media_first"]["mechanical"]))
+        self.reply = {"verdict": "needs_work", "problem": "giveaway", "note": "says lion"}
+        got = self.run_cmd([video_q("q-1", duration=90)])["q-1"]
         self.assertEqual((got["status"], got["review"]["problems"]), ("needs_work", ["giveaway", "media"]))
-        self.assertEqual(self.calls, [])
 
     def test_media_first_probe_ref(self):
         q = video_q("q-1", duration=90, excerpt={"start": 0, "end": 60}) | {"media_first": {"class": "general", "probe": "old"}}
