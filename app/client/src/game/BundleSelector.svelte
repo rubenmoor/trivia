@@ -141,20 +141,20 @@
     disabled={busy}
     data-focus-id="bundle-{b.id}"
   >
-    {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
-    <span class="name-text">
-      <BundleMark bundle={b} />
-      {b.base && buildInfo().demo ? t("bundles.demoName") : b.name}
+    <span class="mark"><BundleMark bundle={b} /></span>
+    <span class="body">
+      {#if key}<Prompt action={{ type: "letter", key }} hold />{/if}
+      <span class="name-text">{b.base && buildInfo().demo ? t("bundles.demoName") : b.name}</span>
+      {#if large}
+        {@const c = countShown(b)}
+        <span class="label count">{t(c.plus ? "bundles.countPlus" : "bundles.count", { n: c.n })}</span>
+        {#if on}<span class="check"><Icon name="check" /></span>{/if}
+      {:else}
+        <span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>
+      {/if}
+      {#if !large}<span class="label description">{b.description}</span>{/if}
+      {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
     </span>
-    {#if large}
-      {@const c = countShown(b)}
-      <span class="label count">{t(c.plus ? "bundles.countPlus" : "bundles.count", { n: c.n })}</span>
-      {#if on}<span class="check"><Icon name="check" /></span>{/if}
-    {:else}
-      <span class="switch label">{t(on ? "choice.on" : "choice.off")}</span>
-    {/if}
-    {#if !large}<span class="label description">{b.description}</span>{/if}
-    {#if b.source === "mod"}<span class="label made"><Icon name="puzzle" /> {t("bundles.playerMade", { mod: b.modName ?? "" })}</span>{/if}
   </button>
 {/snippet}
 
@@ -179,10 +179,9 @@
     border-radius: calc(0.1 * var(--u));
   }
   .tile {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: calc(1 * var(--u));
+    display: flex;
     align-items: center;
+    gap: calc(1 * var(--u));
     min-width: calc(20 * var(--u));
     max-width: calc(34 * var(--u));
     padding: calc(1 * var(--u)) calc(1.6 * var(--u));
@@ -194,11 +193,19 @@
       opacity 0.2s;
     animation: arrive 0.5s calc(0.15s + var(--i) * 0.05s) var(--spring) backwards;
   }
-  .tile > :global(kbd) {
-    grid-row: span 4;
+  /* Icon column (left, centred, 150% of the name), content column (right) */
+  .mark {
+    flex: none;
+    display: flex;
+    align-items: center;
+    font-size: calc(3 * var(--u));
   }
-  .tile > :not(:global(kbd)) {
-    grid-column: 2;
+  .body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   .tile:hover:not(:disabled) {
     transform: translateY(calc(-0.3 * var(--u)));
@@ -213,9 +220,6 @@
     font-size: calc(2 * var(--u));
     font-weight: 800;
     line-height: 1.1;
-  }
-  .name-text > :global(.flags) {
-    vertical-align: -0.15em;
   }
   .bundle:not(.on) .name-text,
   .bundle:not(.on) .switch {
@@ -268,7 +272,12 @@
     max-width: none;
     min-width: 0;
     padding: calc(1 * var(--u)) calc(3.4 * var(--u)) calc(1 * var(--u)) calc(1.4 * var(--u));
-    row-gap: calc(0.2 * var(--u));
+  }
+  .large .body {
+    gap: calc(0.2 * var(--u));
+  }
+  .large .mark {
+    font-size: calc(2.85 * var(--u));
   }
   .large .tile:hover:not(:disabled) {
     transform: translateY(calc(-0.3 * var(--u)));
