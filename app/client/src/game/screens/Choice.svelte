@@ -151,7 +151,7 @@
   /** «Personalizar partida»: every mode but gamemaster and timed (no jokers). */
   const jokerMode = $derived(mode !== "gamemaster" && mode !== "timed");
   const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();
-  const GROUP_ICONS: Record<string, IconName> = { kids: "balloon", young_teens: "skateboard", young_adults: "headphones", adults: "mug" };
+  const GROUP_ICONS: Record<string, IconName> = { kids: "balloon", young_teens: "skateboard", young_adults: "book", adults: "mug" };
   const VIDEO_KEY = t("configure.videoKey").toLowerCase();
   const AUDIO_KEY = t("configure.audioKey").toLowerCase();
   const keys = $derived<Keys>({
