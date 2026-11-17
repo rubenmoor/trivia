@@ -108,7 +108,7 @@
         <button class="row switch" class:on={answers} data-step="answers" role="switch" aria-checked={answers}
           onclick={() => step("answers", 1)} disabled={busy}>
           <span><Icon name="lock" /> {t("configure.answers")}</span>
-          <span class="value">{t(answers ? "choice.on" : "choice.off")}</span>
+          <span class="value">{t(answers ? "configure.answersOn" : "configure.answersOff")}</span>
         </button>
       </div>
       <BundleSelector bundles={options.bundles} selected={bundles} {busy} onchange={(ids) => ((bundles = ids), (error = null))} />

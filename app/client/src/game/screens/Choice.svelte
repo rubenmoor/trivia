@@ -211,7 +211,7 @@
           {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
           {@render toggle("video", t("configure.video"), video, "film", VIDEO_KEY)}
           {@render toggle("audio", t("configure.audio"), audio, "speaker", AUDIO_KEY)}
-          {@render toggle("answers", t("configure.answers"), answers, "lock")}
+          {@render toggle("answers", t("configure.answers"), answers, "lock", undefined, [t("configure.answersOn"), t("configure.answersOff")])}
         </div>
         <div class="lines">
           <p class="label pick-heading">{t("configure.jokers")}</p>
@@ -289,10 +289,10 @@
   </div>
 {/snippet}
 
-{#snippet toggle(id: string, label: string, on: boolean, icon: IconName, key?: string)}
+{#snippet toggle(id: string, label: string, on: boolean, icon: IconName, key?: string, values?: [string, string])}
   <button class="line glass" class:on data-line data-step={id} data-focus-id="config-{id}" role="switch" aria-checked={on} onclick={() => step(id, 1)} disabled={busy}>
     <span class="label line-name"><Icon name={icon} /> {label}</span>
-    <span class="value switch">{#if key}<Prompt action={{ type: "letter", key }} /> {/if}{t(on ? "choice.on" : "choice.off")}</span>
+    <span class="value switch">{#if key}<Prompt action={{ type: "letter", key }} /> {/if}{values ? values[on ? 0 : 1] : t(on ? "choice.on" : "choice.off")}</span>
   </button>
 {/snippet}
 

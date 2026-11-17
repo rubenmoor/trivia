@@ -374,7 +374,9 @@ const es = {
     audio: "Preguntas con audio",
     audioKey: "A",
     /** Switch (D-105): off = the padlock reveals the correct answer, every question advances one level. */
-    answers: "Responder para avanzar",
+    answers: "Avanzar a la siguiente pregunta",
+    answersOn: "Requiere enviar una respuesta (predeterminado)",
+    answersOff: "No requiere enviar una respuesta",
     jokers: "Comodines",
     /** The jokers preset row (decision 99): picking one fills the counts; edited counts show `custom`. */
     preset: "Conjunto",
