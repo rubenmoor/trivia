@@ -107,13 +107,10 @@
           <img src={fileUrl} alt={slot.query} />
           {#if decorative}<span class="mark" aria-hidden="true">?</span>{/if}
         </div>
-      {:else if slot.excerpt}
+      {:else if slot.excerpt || slot.type === "video"}
         <ExcerptPlayer src={fileUrl} type={slot.type} excerpt={slot.excerpt} />
       {:else if slot.type === "audio"}
         <audio controls src={fileUrl}></audio>
-      {:else}
-        <!-- svelte-ignore a11y_media_has_caption -->
-        <video controls src={fileUrl}></video>
       {/if}
       {#if slot.credit}<p class="credit">{slot.credit}</p>{/if}
       {#if licence?.verdict === "replace"}<p class="replace">replace: {licence.reasons.map(reason).join("; ")}</p>{/if}
