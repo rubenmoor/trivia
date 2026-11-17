@@ -41,6 +41,19 @@ def max_seconds(media_type):
     return MAX_VIDEO_SECONDS if media_type == "video" else MAX_AUDIO_SECONDS
 
 
+def play_window(m):
+    """The {start, end} seconds a media dict plays, None = the whole file (audio without excerpt). Mirrors
+    `playWindow` in app/client/src/engine/pool.ts: video capped at start + 30 s, no excerpt → the first 30 s."""
+    x, kind = m.get("excerpt"), m.get("type")
+    if kind != "video":
+        return {"start": x["start"], "end": x["end"]} if x else None
+    start = x["start"] if x else 0
+    end = min(x["end"] if x else start + MAX_VIDEO_SECONDS, start + MAX_VIDEO_SECONDS)
+    if m.get("duration"):
+        end = min(end, m["duration"])
+    return {"start": start, "end": end} if start < end else None
+
+
 def excerpt_schema():
     """JSON schema of `media.excerpt` (decision 644): null or {start, end} seconds."""
     return {"anyOf": [{"type": "null"}, {"type": "object", "additionalProperties": False, "required": ["start", "end"],

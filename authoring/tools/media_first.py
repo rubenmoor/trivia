@@ -17,7 +17,7 @@ from types import SimpleNamespace
 
 import atomic, categories, layout, progress
 import media_probe, media_survey, providers
-from media import MAX_AUDIO_SECONDS, MAX_VIDEO_SECONDS, excerpt_schema, max_seconds, pick_fields  # authoring/tools/media.py
+from media import MAX_AUDIO_SECONDS, MAX_VIDEO_SECONDS, excerpt_schema, max_seconds, pick_fields, play_window  # authoring/tools/media.py
 
 MF_DESIGNED = 120        # designed questions per run (≈ 100 approved at the pilot's look share)
 PROBE_JOBS = 4          # probes are local (ffmpeg, whisper), more than the claude calls' 3
@@ -432,9 +432,12 @@ def review_input(q):
     Commons text, the played window's aids and the mechanical findings."""
     p = load_probe(q["media_first"]["probe"])
     m = q["media"]
+    w = play_window(m)
+    if w and m.get("type") == "video" and p.get("window") != [w["start"], round(w["end"], 2)]:
+        p = probe(m["query"], w)  # the stored probe is of another window
     return {k: q["media_first"][k] for k in ("kind", "class")} | {
         "file": m.get("query"), "license": m.get("license"), "work": m.get("work"),
-        "excerpt": m.get("excerpt"), "duration": m.get("duration"), "commons": commons_file(m.get("query")),
+        "excerpt": w, "duration": m.get("duration"), "commons": commons_file(m.get("query")),
         "aids": aids(p), "mechanical": media_findings(q, p)}
 
 
