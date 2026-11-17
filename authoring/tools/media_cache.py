@@ -52,7 +52,7 @@ def playable_path(url):
 
 def picked(q):
     """(label, file_url) for every picked file of a question."""
-    out = [(q["id"], q["media"].get("file_url"))]
+    out = [(q["id"], (q.get("media") or {}).get("file_url"))]
     if q.get("background"):
         out.append((f"{q['id']} background", q["background"].get("file_url")))
     return [(label, url) for label, url in out if url]

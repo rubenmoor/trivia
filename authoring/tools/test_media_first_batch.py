@@ -66,6 +66,7 @@ class Orchestration(Base):
             self.patch(mf, fn, lambda *a, step=step, **kw: self.step(step))
         self.patch(mf, "check_drafts", lambda d: self.step("giveaway"))
         self.patch(mf, "check_fixed", lambda run: self.step("giveaway"))
+        self.patch(qgen.media_keep, "release_run", lambda run: (0, 0))  # never touch the real cache
 
     def step(self, name, a=None):
         if a is not None:
