@@ -1,11 +1,11 @@
 <script lang="ts">
   // The letter picker (plans/04-ui-tv-display.md, "Player"; plan 46, SW-4): a new name with a pad only;
   // `note`: the flag dialog's note (digits and punctuation too, may stay empty).
-  // Opens only for a pad; A types the focused key, B deletes (closes on an empty name), Start closes.
-  // Letters, Backspace, Enter and Esc work too (a Deck with a keyboard); the text stays on close.
+  // Opens only for a pad; X types the ringed key, Y a space, B deletes (closes on an empty name), A is «Listo», Start closes.
+  // Letters, Space, Backspace, Enter and Esc work too (a Deck with a keyboard); the text stays on close.
   import { tick } from "svelte";
   import { t } from "../lib/i18n.ts";
-  import { focusControl, pushScope, type Keys } from "../lib/input.svelte.ts";
+  import { focusControl, pushScope, type Intent, type Keys } from "../lib/input.svelte.ts";
   import { typeKey } from "./letters.ts";
   import Prompt from "./Prompt.svelte";
 
@@ -25,11 +25,13 @@
 
   // svelte-ignore state_referenced_locally
   const LETTERS = [...t("picker.letters"), ...(note ? t("picker.marks") : "")];
-  const KEYS: Keys = Object.fromEntries(LETTERS.map((l) => [l.toLowerCase(), { type: "letter", key: l.toLowerCase() }]));
+  const SPACE: Intent = { type: "letter", key: " " };
+  const KEYS: Keys = { ...Object.fromEntries(LETTERS.map((l) => [l.toLowerCase(), { type: "letter", key: l.toLowerCase() }])), " ": SPACE };
   /** Characters shown of a long note: its end, where typing happens. */
   const SHOWN = 32;
 
   let panel = $state<HTMLDivElement>();
+  let doneButton = $state<HTMLButtonElement>();
   const typed = $derived(name.trim());
   const shown = $derived(name.length > SHOWN ? `…${name.slice(-SHOWN)}` : name);
 
@@ -53,7 +55,9 @@
       modal: true,
       whileBusy: true,
       keys: KEYS,
+      pad: () => ({ 3: SPACE }),
       root: () => panel,
+      primary: () => doneButton,
       handle: (a) => {
         if (a.type === "letter") type(a.key);
         else if (a.type === "back") {
@@ -79,9 +83,9 @@
       {/each}
     </div>
     <div class="row">
-      <button class="secondary" onclick={() => type(" ")}>{t("picker.space")} <Prompt action="confirm" /></button>
+      <button class="secondary" onclick={() => type(" ")}>{t("picker.space")} <Prompt action={SPACE} /></button>
       <button class="secondary" onclick={erase}>⌫ {t("picker.erase")} <Prompt action="back" padOnly /></button>
-      <button class="candy" onclick={done} disabled={busy || (!typed && !note)}>{t("picker.done")} <Prompt action="confirm" off={busy || (!typed && !note)} /></button>
+      <button class="candy" bind:this={doneButton} onclick={done} disabled={busy || (!typed && !note)}>{t("picker.done")} <Prompt action="confirm" off={busy || (!typed && !note)} /></button>
     </div>
   </div>
 </div>

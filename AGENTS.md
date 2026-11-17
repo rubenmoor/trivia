@@ -37,6 +37,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 - A script that calls claude reports its calls and totals (decision 208: What must a script that calls claude report to its caller?).
 - Changing UI strings (`app/client/src/locales/`): read `locales/style/<locale>.md` first; new bad patterns found go into it.
 - Unpolished game parts: `PLACEHOLDER(<task id>)` in code and on screen.
+- Key chips are labels, not predictions (decision 671): a button shows its one fixed shortcut (`Enter`/A only on the scope's primary; else a letter, pad button, `Esc`/B, digit), the same whatever has focus; never compute a button's text or chip from focus, the ring, hover or "what the key would do now"; ring + `Space`/X and clicks press any control unlabelled (`plans/14-input.md` section 4).
 - "Gamemaster": only the in-game role (Gamemaster mode); the human is "the developer".
   - Older text (`tasks.sql`: milestones, plans, tasks, decisions) still says "the gamemaster" for the developer: read it as "the developer"; new text says "the developer".
 

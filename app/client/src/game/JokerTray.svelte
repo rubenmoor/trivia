@@ -70,7 +70,7 @@
       </button>
       {#if !readonly}
         {#if armed === tok.name}
-          <button class="bubble arm glass-strong" onclick={() => onpress?.(tok.name)}>{t("joker.arm", { name: tok.label })} <Prompt action="confirm" fixed /></button>
+          <button class="bubble arm glass-strong" onclick={() => onpress?.(tok.name)}>{t("joker.arm", { name: tok.label })} <Prompt action="confirm" /></button>
         {:else}
           <span class="bubble name glass-strong">
             {tok.label}{#if off && state?.reason}<span class="reason">{reasonText(state.reason)}</span>{/if}

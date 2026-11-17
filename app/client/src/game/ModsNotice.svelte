@@ -1,5 +1,5 @@
 <script lang="ts">
-  // One-time notice before the first mod runs (plan 118, decision 151): Allow or Cancel; Esc/B cancels.
+  // One-time notice before the first mod runs (plan 118, decision 151): Allow (Enter/A, the primary) or Cancel (ringed first; Esc/B).
   import { t } from "../lib/i18n.ts";
   import { focusControl, pushScope } from "../lib/input.svelte.ts";
   import Icon from "./Icon.svelte";
@@ -9,6 +9,7 @@
 
   let dialog = $state<HTMLDivElement>();
   let cancel = $state<HTMLButtonElement>();
+  let allow = $state<HTMLButtonElement>();
 
   $effect(() => {
     const pop = pushScope({
@@ -16,6 +17,7 @@
       modal: true,
       whileBusy: true,
       root: () => dialog,
+      primary: () => allow,
       handle: (a) => {
         if (a.type !== "back" && a.type !== "menu") return false;
         oncancel();
@@ -33,7 +35,7 @@
     <p>{t("mods.notice.body")}</p>
     <p class="crash">{t("mods.notice.crash")}</p>
     <div class="buttons">
-      <button class="candy" onclick={onallow}><Icon name="check" /> {t("mods.notice.allow")} <Prompt action="confirm" /></button>
+      <button class="candy" bind:this={allow} onclick={onallow}><Icon name="check" /> {t("mods.notice.allow")} <Prompt action="confirm" /></button>
       <button class="secondary" bind:this={cancel} onclick={oncancel} data-focus-default><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>
     </div>
   </div>

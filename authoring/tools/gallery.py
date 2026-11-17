@@ -444,7 +444,7 @@ def player(r):
     r.wait(".name-button")
     r.settle(2.5)
     r.shot("player")
-    r.key("ArrowDown")  # the ring: the selected name, then the badges button (its Space chip, task 2119)
+    r.key("ArrowDown")  # the ring: the selected name, then the badges button; no chip changes (decision 671)
     r.key("ArrowDown")
     r.settle(0.6)
     r.shot("player-nav")
@@ -452,13 +452,13 @@ def player(r):
     r.wait(".player .dialog")
     r.settle(0.6)
     r.shot("player-delete")
-    r.key("ArrowRight")  # the ring onto «Sí, borrar»: its Enter chip
+    r.key("ArrowRight")  # the ring onto «Sí, borrar»; its Enter chip is there either way
     r.settle(0.6)
     r.shot("player-delete-confirm")
     r.key("Escape")
     r.settle(0.6)
     r.click("#new-player")
-    r.pad(0)
+    r.pad(3)  # Y writes (task 2119)
     r.wait(".backdrop .candy")
     r.settle(0.8)
     r.shot("letter-picker")
@@ -799,7 +799,7 @@ def overlay(r):
     r.wait(".overlay .dialog")
     r.settle(0.6)
     r.shot("goto")
-    r.pad(0)
+    r.pad(3)  # Y writes
     r.settle(1)
     r.shot("goto-letter-picker")
     on_question(r)

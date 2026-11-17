@@ -678,12 +678,10 @@
 
   /** Screen actions; the scope of the screen on top passes the rest down. */
   function onScreen(on: Screen, a: Action): boolean {
-    if (on === "start" && notice && (a.type === "confirm" || a.type === "new")) notice = null;
-    else if (on === "start" && a.type === "confirm") {
-      if (running) resume();
-      else newGame();
-    } else if (on === "start" && a.type === "new") newGame();
+    if (on === "start" && notice && a.type === "new") notice = null;
+    else if (on === "start" && a.type === "new") newGame();
     else if (on === "start" && a.type === "language" && !notice) openLanguage();
+    else if (on === "start" && a.type === "letter" && !notice && startMods) modsOpen = true;
     else if (on === "select" && a.type === "pick" && a.n <= 4 && picked === null) pick(a.n - 1);
     else return false;
     return true;
@@ -706,12 +704,13 @@
     if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "mode" || on === "choice" || on === "join" || on === "question" || on === "timed" || on === "badges") return; // they push their own
     return pushScope({
       name: on,
-      keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" } } : undefined,
+      keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" }, [MODS_KEY]: { type: "letter", key: MODS_KEY } } : undefined,
       pad: on === "start" ? () => ({ 3: { type: "language" } }) : undefined,
       handle: (a) => onScreen(on, a),
       root: () => main,
-      // the continue button of Level, Correct, Wrong, Victory, Completed (timed Level: none, the countdown)
-      primary: on === "start" || on === "select" ? undefined : () => main?.querySelector<HTMLElement>("button[data-focus-default]"),
+      // Start's «¡Jugar!» / «Continuar» / the notice's «Seguir»; the continue button of Level, Correct, Wrong, Victory, Completed
+      // (timed Level: none, the countdown); Select is a list (the cards)
+      primary: on === "select" ? undefined : () => main?.querySelector<HTMLElement>("button[data-focus-default]"),
       keep: on === "start",
       shared: on === "start" || on === "wrong" || on === "victory" || on === "completed", // Start: timed has no seat to act
     });
@@ -748,6 +747,7 @@
 
   const NEW_KEY = t("screen.start.newKey").toLowerCase();
   const LANGUAGE_KEY = t("screen.start.languageKey").toLowerCase();
+  const MODS_KEY = t("mods.openKey").toLowerCase();
 </script>
 
 {#snippet tray(g: Game)}

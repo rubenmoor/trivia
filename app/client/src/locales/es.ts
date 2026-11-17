@@ -34,14 +34,17 @@ const es = {
     confirm: "Marcar",
     save: "Guardar nota",
     unflag: "Quitar marca",
+    unflagKey: "Q",
     list: "Preguntas marcadas",
     empty: "Todavía no hay preguntas marcadas.",
     copy: "Copiar",
     copied: "Copiado",
     copyFailed: "No se pudo copiar: seleccionen el texto y cópienlo.",
     copyAll: "Copiar todo",
+    copyAllKey: "C",
     send: "Enviar",
     sendAll: "Enviar todas",
+    sendAllKey: "E",
     sending: "Enviando…",
     sent: "Enviada {date}",
     sendOffline: "Sin conexión: no se pudo enviar.",
@@ -174,6 +177,7 @@ const es = {
   /** The Mods screen (plan 118); codes from the shell (plan 112, 114) and lib/mods.ts (plan 117). */
   mods: {
     open: "Mods",
+    openKey: "O",
     title: "Mods",
     /** Start screen, while the notice isn't accepted. */
     held: { one: "1 mod encontrado, apagado hasta que lo permitan", other: "{n} mods encontrados, apagados hasta que los permitan" },
@@ -185,7 +189,9 @@ const es = {
     turnOn: "Encender",
     turnOff: "Apagar",
     refresh: "Actualizar",
+    refreshKey: "A",
     allOff: "Apagar todos",
+    allOffKey: "T",
     restart: "Reiniciar para aplicar",
     local: "Carpeta local",
     workshop: "Workshop de Steam · {id}",
@@ -560,6 +566,7 @@ const es = {
       badges: "Insignias de {name}",
       /** The badges button under the names, for the selected one (task 2119). */
       showBadges: "Ver insignias y premios",
+      badgesKey: "I",
       confirm: "Sí, borrar",
     },
     /** Local multiplayer seats (plan 162): who plays with which device. */
@@ -723,6 +730,7 @@ const es = {
       off: "Seguimiento de la carrera desactivado",
       turnOff: "Desactivar el seguimiento de la carrera",
       turnOn: "Activar el seguimiento de la carrera",
+      toggleKey: "S",
       offText: "El seguimiento de la carrera está desactivado: no se muestran insignias. Lo que se juegue sigue contando.",
       locked: "Aún sin conseguir",
       got: "Conseguida el {date}",

@@ -133,10 +133,13 @@ const CATALOGS = {
   en: (await import("../src/locales/en.ts")).en,
   de: (await import("../src/locales/de.ts")).de,
 };
-/** Shortcut keys live together; `flag.key` works on every screen. `join` binds no catalog key. */
+/** Shortcut keys live together; `flag.key` works on every screen. `join` binds no catalog key. A dialog's keys join the
+ * screen it opens over (the flag dialog over Question, Mods and the badge page over Start / Player). */
 const SCREENS = {
-  question: ["joker.hint.key", "joker.skip.key", "joker.easier.key", "joker.category.key", "joker.snipe.key", "screen.question.replayKey", "screen.question.peekKey"],
-  start: ["screen.start.newKey", "screen.start.languageKey"],
+  question: ["joker.hint.key", "joker.skip.key", "joker.easier.key", "joker.category.key", "joker.snipe.key", "screen.question.replayKey", "screen.question.peekKey", "flag.unflagKey"],
+  start: ["screen.start.newKey", "screen.start.languageKey", "mods.openKey", "mods.refreshKey", "mods.allOffKey"],
+  player: ["screen.player.badgesKey", "career.page.toggleKey"],
+  flags: ["flag.copyAllKey", "flag.sendAllKey"],
   mode: ["mode.gamemasterKey", "mode.soloKey", "mode.multiKey", "mode.rrCoopKey", "mode.rrCompetitiveKey", "mode.timedKey"],
   choice: ["customize.openKey"],
 };

@@ -1,6 +1,6 @@
 <script lang="ts">
   // «Ir a pregunta…» (dev mode, plan 85): a question id (`q-0007` or `7`) replaces the one on screen.
-  // Enter opens it, Esc/⌫ cancel; a pad's A on the field opens Steam's keyboard, else the letter picker.
+  // Enter opens it, Esc/⌫ cancel; a pad's Y opens Steam's keyboard, else the letter picker.
   import { tick } from "svelte";
   import { steam } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
@@ -23,7 +23,6 @@
   let picking = $state(false);
   let dialog = $state<HTMLDivElement>();
   let input = $state<HTMLInputElement>();
-  let onField = $state(false);
 
   async function submit() {
     if (busy || !id.trim()) return;
@@ -51,10 +50,11 @@
       whileBusy: true,
       root: () => dialog,
       text: () => input,
-      primary: (a) => (a?.device === "gamepad" && document.activeElement === input ? null : dialog?.querySelector<HTMLElement>(".choices .candy")),
+      pad: () => ({ 3: { type: "write" } }),
+      primary: () => dialog?.querySelector<HTMLElement>(".choices .candy"),
       handle: (a) => {
         if (a.type === "back" || a.type === "menu") onclose();
-        else if (a.type === "confirm" && document.activeElement === input) void write();
+        else if (a.type === "write") void write();
         else return false;
         return true;
       },
@@ -76,12 +76,10 @@
         autocomplete="off"
         spellcheck="false"
         data-focus-default
-        onfocus={() => (onField = true)}
-        onblur={() => (onField = false)}
       />
       {#if lastDevice.current === "gamepad"}
         <button class="secondary" onclick={() => void write()} data-nofocus tabindex="-1">
-          <Prompt action="confirm" fixed off={!onField} />
+          <Prompt action="write" />
           {t("picker.write")}
         </button>
       {/if}

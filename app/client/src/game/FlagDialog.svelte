@@ -1,9 +1,9 @@
 <script lang="ts">
   // The flag dialog (GM-5, decision 60): flag icon or M. An optional note; Enter flags (or saves the
-  // note of a flagged question), Esc/⌫ cancel. A pad's A on the field opens the letter picker.
+  // note of a flagged question), Esc/⌫ cancel; «Quitar marca» by its letter; a pad's Y opens the letter picker.
   import { tick } from "svelte";
   import { t } from "../lib/i18n.ts";
-  import { focusControl, lastDevice, pushScope } from "../lib/input.svelte.ts";
+  import { focusControl, lastDevice, pushScope, type Intent } from "../lib/input.svelte.ts";
   import LetterPicker from "./LetterPicker.svelte";
   import { MAX_NOTE } from "./letters.ts";
   import Prompt from "./Prompt.svelte";
@@ -30,7 +30,7 @@
   let picking = $state(false);
   let dialog = $state<HTMLDivElement>();
   let input = $state<HTMLInputElement>();
-  let onField = $state(false);
+  const UNFLAG: Extract<Intent, { type: "letter" }> = { type: "letter", key: t("flag.unflagKey").toLowerCase() };
 
   function submit() {
     if (!busy) onflag(note);
@@ -44,11 +44,13 @@
       whileBusy: true,
       root: () => dialog,
       text: () => input,
-      // a pad's A in the field opens the letter picker (null: the scope takes it)
-      primary: (a) => (a?.device === "gamepad" && document.activeElement === input ? null : dialog?.querySelector<HTMLElement>(".choices .candy")),
+      keys: flagged ? { [UNFLAG.key]: UNFLAG } : undefined,
+      pad: () => ({ 3: { type: "write" } }),
+      primary: () => dialog?.querySelector<HTMLElement>(".choices .candy"),
       handle: (a) => {
         if (a.type === "back" || a.type === "menu" || (a.type === "flag" && a.device === "gamepad")) onclose();
-        else if (a.type === "confirm" && document.activeElement === input) picking = true;
+        else if (a.type === "write") picking = true;
+        else if (a.type === "letter" && flagged && !busy) onunflag();
         else if (a.type !== "flag") return false;
         return true;
       },
@@ -70,19 +72,17 @@
         autocomplete="off"
         placeholder={t("flag.notePlaceholder")}
         data-focus-default
-        onfocus={() => (onField = true)}
-        onblur={() => (onField = false)}
       />
       {#if lastDevice.current === "gamepad"}
         <button class="secondary" onclick={() => (picking = true)} data-nofocus tabindex="-1">
-          <Prompt action="confirm" fixed off={!onField} />
+          <Prompt action="write" />
           {t("picker.write")}
         </button>
       {/if}
     </div>
     <div class="choices">
       <button class="secondary" onclick={onclose}>{t("action.cancel")} <Prompt action="menu" pad="back" /></button>
-      {#if flagged}<button class="secondary" onclick={onunflag} disabled={busy}>{t("flag.unflag")} <Prompt action="confirm" off={busy} /></button>{/if}
+      {#if flagged}<button class="secondary" onclick={onunflag} disabled={busy}>{t("flag.unflag")} <Prompt action={UNFLAG} off={busy} /></button>{/if}
       <button class="candy" onclick={submit} disabled={busy}>{t(flagged ? "flag.save" : "flag.confirm")} <Prompt action="confirm" /></button>
     </div>
   </div>

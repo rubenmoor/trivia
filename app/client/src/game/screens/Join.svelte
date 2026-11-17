@@ -242,9 +242,8 @@
           {#if pad !== null}<SeatDevice binding={s.binding} />
           {:else if s.binding === "kbm" || !timed}<SeatDevice binding={s.binding} /> {t("screen.join.keyboardMouse")}
           {:else}
-            <button class="secondary small" onclick={() => (capture = { seat: i })} disabled={busy} data-focus-id="seat-key-{i}">
+            <button class="secondary small" onclick={() => (capture = { seat: i })} disabled={busy} data-focus-id="seat-key-{i}" data-ringed>
               {#if key}<SeatDevice binding={s.binding} /> {t("screen.join.changeKey")}{:else}<Icon name="keyboard" /> {t("screen.join.pickKey")}{/if}
-              <Prompt action="confirm" off={busy} />
             </button>
           {/if}
           <button class="remove" onclick={() => leave(i)} disabled={busy} title={t("screen.join.remove")} data-focus-id="seat-remove-{i}">

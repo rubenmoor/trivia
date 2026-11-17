@@ -5,7 +5,7 @@
   import { markReported } from "../lib/api.ts";
   import { report, type ReportResult } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
-  import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import { focusControl, pushScope, type Intent } from "../lib/input.svelte.ts";
   import type { Flagged } from "../lib/types.ts";
   import Prompt from "./Prompt.svelte";
   import { consent, poolsFor, reportFields, reportText } from "./report.ts";
@@ -27,6 +27,8 @@
   let asking = $state<Flagged[] | null>(null);
   let dialog = $state<HTMLDivElement>();
   let confirmButton = $state<HTMLButtonElement>();
+  const COPY_ALL: Extract<Intent, { type: "letter" }> = { type: "letter", key: t("flag.copyAllKey").toLowerCase() };
+  const SEND_ALL: Extract<Intent, { type: "letter" }> = { type: "letter", key: t("flag.sendAllKey").toLowerCase() };
 
   const when = (iso: string) => iso.slice(0, 16).replace("T", " ");
   const answerOf = (f: Flagged) => f.answer ?? t("flag.hidden");
@@ -91,7 +93,14 @@
       modal: true,
       whileBusy: true,
       root: () => panel,
-      handle: (a) => (a.type === "back" || a.type === "menu") && (onclose(), true),
+      keys: { [COPY_ALL.key]: COPY_ALL, [SEND_ALL.key]: SEND_ALL },
+      handle: (a) => {
+        if (a.type === "back" || a.type === "menu") onclose();
+        else if (a.type === "letter" && a.key === COPY_ALL.key && flags.length) void copy(flags, "*");
+        else if (a.type === "letter" && a.key === SEND_ALL.key && canSend && unsent.length && !busy) void send(unsent);
+        else return false;
+        return true;
+      },
     });
     focusControl(backButton);
     return pop;
@@ -104,6 +113,7 @@
       modal: true,
       whileBusy: true,
       root: () => dialog,
+      primary: () => confirmButton,
       handle: (a) => (a.type === "back" || a.type === "menu") && ((asking = null), true),
     });
     focusControl(confirmButton);
@@ -116,10 +126,10 @@
     <h2>{t("flag.list")}</h2>
     <div class="buttons">
       {#if flags.length}
-        <button class="secondary" onclick={() => copy(flags, "*")}>{copied === "*" ? t("flag.copied") : t("flag.copyAll")} <Prompt action="confirm" /></button>
+        <button class="secondary" onclick={() => copy(flags, "*")}>{copied === "*" ? t("flag.copied") : t("flag.copyAll")} <Prompt action={COPY_ALL} /></button>
       {/if}
       {#if canSend && unsent.length}
-        <button class="secondary" onclick={() => send(unsent)} disabled={busy}>{t("flag.sendAll")} <Prompt action="confirm" off={busy} /></button>
+        <button class="secondary" onclick={() => send(unsent)} disabled={busy}>{t("flag.sendAll")} <Prompt action={SEND_ALL} off={busy} /></button>
       {/if}
       <button class="candy" bind:this={backButton} onclick={onclose} data-focus-default>{t("action.back")} <Prompt action="menu" pad="back" /></button>
     </div>
@@ -138,11 +148,11 @@
           <p class="answer">{t("flag.answer")}: <b>{answerOf(f)}</b></p>
           {#if f.note}<p class="note">{t("flag.note")}: {f.note}</p>{/if}
           <div class="actions">
-            <button class="secondary small" onclick={() => copy([f], f.question_id)}>
-              {copied === f.question_id ? t("flag.copied") : t("flag.copy")} <Prompt action="confirm" />
+            <button class="secondary small" onclick={() => copy([f], f.question_id)} data-ringed>
+              {copied === f.question_id ? t("flag.copied") : t("flag.copy")}
             </button>
             {#if canSend}
-              <button class="secondary small" onclick={() => send([f])} disabled={busy}>{t("flag.send")} <Prompt action="confirm" off={busy} /></button>
+              <button class="secondary small" onclick={() => send([f])} disabled={busy} data-ringed>{t("flag.send")}</button>
             {/if}
             {#if st === "sending"}
               <span class="status">{t("flag.sending")}</span>

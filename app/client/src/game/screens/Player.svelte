@@ -36,6 +36,7 @@
   let careerOf = $state<string | null>(null);
   const demo = buildInfo().demo;
   let cancelButton = $state<HTMLButtonElement>();
+  let deleteButton = $state<HTMLButtonElement>();
   let dialog = $state<HTMLDivElement>();
 
   onMount(async () => {
@@ -62,7 +63,8 @@
     }
   }
 
-  // The delete confirmation gets every action; Esc/Backspace cancel, Enter and Tab work on its buttons.
+  // The delete confirmation gets every action: Enter/A is «Sí, borrar», Esc/Backspace/B cancel; the ring starts on
+  // «Cancelar» (Space/X), so it takes a deliberate Enter here.
   $effect(() => {
     if (!doomed) return;
     const pop = pushScope({
@@ -70,13 +72,14 @@
       modal: true,
       whileBusy: true,
       root: () => dialog,
+      primary: () => deleteButton,
       handle: (a) => {
         if (a.type !== "back" && a.type !== "menu") return false;
         doomed = null;
         return true;
       },
     });
-    focusControl(cancelButton); // a stray Enter must not delete anyone
+    focusControl(cancelButton);
     return pop;
   });
 </script>
@@ -102,7 +105,7 @@
         </p>
         <div class="row">
           <button class="secondary" bind:this={cancelButton} onclick={() => (doomed = null)} data-focus-default><Icon name="back" /> {t("action.cancel")} <Prompt action="menu" pad="back" /></button>
-          <button class="danger" onclick={confirmDelete} disabled={deleting}><Icon name="trash" /> {t("screen.player.confirm")} <Prompt action="confirm" off={deleting} /></button>
+          <button class="danger" bind:this={deleteButton} onclick={confirmDelete} disabled={deleting}><Icon name="trash" /> {t("screen.player.confirm")} <Prompt action="confirm" off={deleting} /></button>
         </div>
       </div>
     </div>

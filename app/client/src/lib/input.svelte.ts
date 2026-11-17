@@ -14,8 +14,10 @@ export type Dir = "up" | "down" | "left" | "right";
 export type Intent =
   /** Enter / pad A: the screen's primary action where the scope declares one, else the ring's control. */
   | { type: "confirm" }
-  /** Space / pad X: the ring's control (a tile, a switch, a button); never a primary action. */
+  /** Space / pad X: the ring's control (a tile, a switch, a button); never a primary action, never shown as a shortcut. */
   | { type: "press" }
+  /** Pad Y on a screen with a text field: write into it (Steam's keyboard or the letter picker). */
+  | { type: "write" }
   | { type: "back" }
   | { type: "menu" }
   | { type: "pick"; n: number }
@@ -46,8 +48,8 @@ export type Scope = {
   /** Where arrows move focus and press (and confirm without `primary`) presses the focused control; a scope without one keeps them. */
   root?: () => HTMLElement | undefined;
   /** The screen's primary action («Seguir», «¡A jugar!»): confirm clicks it whatever has focus (disabled: nothing); null:
-   * confirm goes to `handle` this time (an unbound pad's A joins); `action` null when a prompt asks. Scopes without one are
-   * lists: confirm presses the ring's control, else `handle` (plans/14-input.md, "Before the session"). */
+   * confirm goes to `handle` this time (an unbound pad's A joins). The only button that carries an Enter/A chip. Scopes
+   * without one are lists: confirm presses the ring's control, else `handle` (plans/14-input.md, "Before the session"). */
   primary?: (action: Action | null) => HTMLElement | null | undefined;
   /** False: confirm or press on this shown control goes to `handle` instead of clicking it (a locked answer submits). */
   pressable?: (el: HTMLElement, action: Action) => boolean;
@@ -66,14 +68,14 @@ export type Scope = {
 };
 
 export const lastDevice = $state({ current: "keyboard" as Device });
-/** Bumped when scopes or focus change: prompts re-read the pad map (IN-5). */
+/** Bumped when scopes change: prompts re-read the pad map (IN-5). */
 export const scopes = $state({ version: 0 });
 const bump = () => untrack(() => scopes.version++);
 
-/** On-screen key labels (IN-5): the one copy, read by Prompt.svelte. A function: catalogs load after import. */
+/** On-screen key labels (IN-5): the one copy, read by Prompt.svelte. A function: catalogs load after import.
+ * `press` has none: Space/X is how a ringed control is pressed, not a shortcut (decision 671). */
 const keyLabels = (): Partial<Record<Intent["type"], string>> => ({
   confirm: "Enter",
-  press: t("picker.space"),
   submit: "Enter",
   back: "⌫",
   menu: "Esc",
@@ -89,7 +91,7 @@ const ARROW_LABELS: Record<Dir, string> = { up: "↑", down: "↓", left: "←",
 export function keyLabel(i: Intent): string | null {
   if (i.type === "pick") return String(i.n);
   if (i.type === "navigate") return ARROW_LABELS[i.dir];
-  if (i.type === "letter") return i.key.toUpperCase();
+  if (i.type === "letter") return i.key === " " ? t("picker.space") : i.key.toUpperCase();
   if (i.type === "claim") return i.key?.toUpperCase() ?? t("picker.space");
   return keyLabels()[i.type] ?? null;
 }
@@ -200,15 +202,7 @@ function route(action: Action): boolean {
   }
   if (action.type !== "navigate" || busy()) return false;
   const at = rooted();
-  if (!at) return false;
-  const moved = navigate(action.dir, at[0].name, at[1]);
-  bump(); // the ring may move without a focus event (back onto the focused control)
-  return moved;
-}
-
-/** The top scope's primary control for the prompts (null: none, or none right now). */
-export function primaryControl(): HTMLElement | null {
-  return stack.at(-1)?.primary?.(null) ?? null;
+  return at ? navigate(action.dir, at[0].name, at[1]) : false;
 }
 
 /** The pad mapping: `base` with the scopes' overrides, top wins, none from below a modal scope. */
@@ -295,8 +289,6 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
   window.addEventListener("pointerdown", onpointer);
   window.addEventListener("pointermove", pointermove);
   window.addEventListener("click", opts.first);
-  window.addEventListener("focusin", bump);
-  window.addEventListener("focusout", bump);
   return () => {
     window.removeEventListener("pointerdown", gateClick, true);
     window.removeEventListener("click", gateClick, true);
@@ -307,8 +299,6 @@ export function listen(opts: { busy: () => boolean; first: () => void }): () => 
     window.removeEventListener("pointerdown", onpointer);
     window.removeEventListener("pointermove", pointermove);
     window.removeEventListener("click", opts.first);
-    window.removeEventListener("focusin", bump);
-    window.removeEventListener("focusout", bump);
     untrackFocus();
   };
 }

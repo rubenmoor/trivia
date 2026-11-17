@@ -28,7 +28,7 @@
   import { tick } from "svelte";
   import { flush } from "../../lib/engine.ts";
   import { endonym, has, t, type Params } from "../../lib/i18n.ts";
-  import { focusControl, lastDevice, pushScope, type Action } from "../../lib/input.svelte.ts";
+  import { focusControl, lastDevice, pushScope, type Action, type Intent } from "../../lib/input.svelte.ts";
   import { modIssues } from "../../lib/data.ts";
   import { modErrors } from "../../lib/mods.ts";
   import ModsNotice from "../ModsNotice.svelte";
@@ -45,6 +45,7 @@
   /** Waits for the notice: runs after «Allow mods». */
   let pending = $state<(() => Promise<void>) | null>(null);
   let panel = $state<HTMLDivElement>();
+  let restartButton = $state<HTMLButtonElement>();
 
   const rows = $derived(list ? [...byPosition(list.mods.filter(movable)), ...list.mods.filter((m) => !movable(m))] : []);
   const order = $derived(rows.filter(movable));
@@ -147,9 +148,14 @@
     }
   }
 
+  const REFRESH: Extract<Intent, { type: "letter" }> = { type: "letter", key: t("mods.refreshKey").toLowerCase() };
+  const ALL_OFF: Extract<Intent, { type: "letter" }> = { type: "letter", key: t("mods.allOffKey").toLowerCase() };
+
   function handle(a: Action): boolean {
     if (pending) return false;
     if (a.type === "back" || a.type === "menu") onclose(list);
+    else if (a.type === "letter" && a.key === REFRESH.key) void refresh();
+    else if (a.type === "letter" && a.key === ALL_OFF.key) void allOff();
     else if (a.type === "joker-focus") {
       const m = order.find((x) => keyOf(x) === focused);
       if (m) move(m, a.step);
@@ -157,7 +163,8 @@
     return true;
   }
 
-  $effect(() => pushScope({ name: "mods", modal: true, whileBusy: true, root: () => panel, handle }));
+  // Enter/A: «Reiniciar para aplicar» (the primary); the letters refresh and switch all off; a row is ringed and pressed with Space/X.
+  $effect(() => pushScope({ name: "mods", modal: true, whileBusy: true, root: () => panel, keys: { [REFRESH.key]: REFRESH, [ALL_OFF.key]: ALL_OFF }, primary: () => restartButton, handle }));
 
   fetchModList().then(
     async (l) => {
@@ -187,9 +194,9 @@
         {t("mods.order")}
       {/if}
     </p>
-    <button class="secondary" onclick={refresh} disabled={!list} data-focus-id="refresh"><Icon name="refresh" /> {t("mods.refresh")} <Prompt action="confirm" off={!list} /></button>
-    <button class="secondary" onclick={allOff} disabled={!anyOn} data-focus-id="all-off"><Icon name="power" /> {t("mods.allOff")} <Prompt action="confirm" off={!anyOn} /></button>
-    <button class="candy" onclick={() => guarded(anyOn, restart)} disabled={!dirty} data-focus-id="restart"><Icon name="rocket" /> {t("mods.restart")} <Prompt action="confirm" off={!dirty} /></button>
+    <button class="secondary" onclick={refresh} disabled={!list} data-focus-id="refresh"><Icon name="refresh" /> {t("mods.refresh")} <Prompt action={REFRESH} off={!list} /></button>
+    <button class="secondary" onclick={allOff} disabled={!anyOn} data-focus-id="all-off"><Icon name="power" /> {t("mods.allOff")} <Prompt action={ALL_OFF} off={!anyOn} /></button>
+    <button class="candy" bind:this={restartButton} onclick={() => guarded(anyOn, restart)} disabled={!dirty} data-focus-id="restart"><Icon name="rocket" /> {t("mods.restart")} <Prompt action="confirm" off={!dirty} /></button>
     <button class="secondary" onclick={() => onclose(list)} data-focus-id="back" data-focus-default><Icon name="back" /> {t("action.back")} <Prompt action="menu" pad="back" /></button>
   </header>
 
@@ -237,7 +244,6 @@
                 <span class="state" class:bad={m.state === "invalid"}>{stateText(m)}</span>
                 {#each warnings(m) as w (w)}<span class="warning">{w}</span>{/each}
               </span>
-              {#if focused === key && can}<Prompt action="confirm" />{/if}
             </button>
             {#if can}
               <button class="step" aria-label={t("mods.up")} aria-disabled={i === 0} data-focus-id="up:{key}" onclick={() => move(m, -1)}>▲</button>

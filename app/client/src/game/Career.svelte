@@ -11,7 +11,7 @@
   import { revealStep, unshown } from "../lib/celebration.ts";
   import { errorText } from "../lib/errors.ts";
   import { lang, t } from "../lib/i18n.ts";
-  import { focusControl, pushScope } from "../lib/input.svelte.ts";
+  import { focusControl, pushScope, type Intent } from "../lib/input.svelte.ts";
   import { badgeNames, displayName } from "../lib/names.svelte.ts";
   import Fireworks from "./Fireworks.svelte";
   import Icon from "./Icon.svelte";
@@ -43,6 +43,8 @@
   let focused = $state<string | null>(null);
   let panel = $state<HTMLDivElement>();
   let backButton = $state<HTMLButtonElement>();
+  /** The career switch's letter (the badge page from the Player screen). */
+  const TOGGLE: Extract<Intent, { type: "letter" }> = { type: "letter", key: t("career.page.toggleKey").toLowerCase() };
 
   const load = (all: Record<string, CareerView>) => (view = all[name] ?? null);
   fetchCareers().then((all) => (load(all), celebrate()), (e: unknown) => (error = errorText(e)));
@@ -134,9 +136,12 @@
       whileBusy: !after,
       shared: after,
       root: () => panel,
+      keys: after ? undefined : { [TOGGLE.key]: TOGGLE },
+      primary: after ? () => backButton : undefined,
       pressable: () => !revealing,
       handle: (a) => {
-        if (a.type === "confirm" && (after || revealing)) confirm();
+        if (a.type === "confirm" && revealing) confirm();
+        else if (a.type === "letter" && !after && view) void toggle();
         else if (a.type === "back" || (a.type === "menu" && !after)) close();
         else return false;
         return true;
@@ -167,7 +172,7 @@
     </div>
     {#if view && !after}
       <button class="secondary switch" onclick={toggle} disabled={busy} aria-pressed={!view.off}>
-        <Icon name="seal" /> {view.off ? t("career.page.turnOn") : t("career.page.turnOff")} <Prompt action="confirm" off={busy} />
+        <Icon name="seal" /> {view.off ? t("career.page.turnOn") : t("career.page.turnOff")} <Prompt action={TOGGLE} off={busy} />
       </button>
     {/if}
   </header>

@@ -2,13 +2,14 @@
   // Picking a name (plans/04-ui-tv-display.md, "Player"; task 2119): the known names (most recent first, keys 1–9) with
   // exactly one selected while any exist, a field for a new one, and one big button at the bottom that goes on with the
   // selection (the scope's primary: Enter/A anywhere, also in the field). Click, Space/X or a digit select a name; typing
-  // makes the field the selection. With a pad, A on the field opens Steam's floating keyboard (Big Picture/Deck,
-  // plan 85), else the letter picker (plan 46). The Player screen and the Join screen's name dialog (plan 162).
+  // makes the field the selection. The badges button has its letter and the pad's View button. With a pad, Y writes:
+  // Steam's floating keyboard (Big Picture/Deck, plan 85), else the letter picker (plan 46). The Player screen and the
+  // Join screen's name dialog (plan 162).
   import { untrack } from "svelte";
   import { steam } from "../lib/desktop.ts";
   import { show } from "../lib/focus.ts";
   import { t, variants } from "../lib/i18n.ts";
-  import { focusControl, lastDevice, pushScope } from "../lib/input.svelte.ts";
+  import { focusControl, lastDevice, pushScope, type Intent } from "../lib/input.svelte.ts";
   import type { Player } from "../lib/types.ts";
   import Icon from "./Icon.svelte";
   import { MAX_NAME } from "./letters.ts";
@@ -59,7 +60,7 @@
   let box = $state<HTMLElement>();
   let playButton = $state<HTMLButtonElement>();
   let picking = $state(false);
-  let onField = $state(false);
+  const BADGES: Extract<Intent, { type: "letter" }> = { type: "letter", key: t("screen.player.badgesKey").toLowerCase() };
   /** The name selected by click, Space or digit; null: none yet. */
   let picked = $state<string | null>(null);
   /** Typed since the last pick: the field is the selection while it has text. */
@@ -114,21 +115,24 @@
     return p.won ? t("screen.player.gamesWon", { games: n, won: t("screen.player.won", { n: p.won }) }) : n;
   }
 
-  // 1–9 select a name and take the ring; Enter/A is the bottom button, except a pad's A on the field, which writes; a letter
-  // elsewhere goes into the field (input.svelte.ts).
-  const writes = (a: { device: string } | null) => a?.device === "gamepad" && document.activeElement === input && !(suggestion && name === suggestion);
+  // 1–9 select a name and take the ring; Enter/A is the bottom button; the badges letter (or View) opens the selected name's
+  // badges; Y writes; any other letter goes into the field (input.svelte.ts).
   $effect(() =>
     pushScope({
       name: scope,
       modal,
       root: () => box,
       text: () => input,
-      primary: (a) => (writes(a) ? null : playButton),
+      keys: onbadges ? { [BADGES.key]: BADGES } : undefined,
+      pad: (): Record<number, Intent> => (onbadges ? { 3: { type: "write" }, 8: BADGES } : { 3: { type: "write" } }),
+      primary: () => playButton,
       handle: (a) => {
         if (a.type === "pick" && a.n <= shown.length) {
           select(shown[a.n - 1]);
           if (box) show(box.querySelector<HTMLElement>(`[data-focus-id="name-${a.n}"]`), scope, box);
-        } else if (a.type === "confirm" && writes(a)) void write();
+        } else if (a.type === "letter" && onbadges) {
+          if (selectedPlayer) onbadges(selectedPlayer);
+        } else if (a.type === "write") void write();
         else if (modal && (a.type === "back" || a.type === "menu")) onclose?.();
         else return false;
         return true;
@@ -167,7 +171,7 @@
     </div>
     {#if onbadges}
       <button class="secondary badges" onclick={() => selectedPlayer && onbadges(selectedPlayer)} disabled={busy || !selectedPlayer}>
-        <Icon name="award" /> {t("screen.player.showBadges")} <Prompt action="confirm" off={!selectedPlayer} />
+        <Icon name="award" /> {t("screen.player.showBadges")} <Prompt action={BADGES} off={!selectedPlayer} />
       </button>
     {/if}
   {/if}
@@ -186,12 +190,10 @@
         disabled={busy}
         data-focus-default={shown.length === 0 || undefined}
         oninput={() => (typing = true)}
-        onfocus={() => (onField = true)}
-        onblur={() => (onField = false)}
       />
       {#if lastDevice.current === "gamepad"}
         <button class="secondary" type="button" onclick={() => void write()} disabled={busy} data-nofocus tabindex="-1">
-          <Prompt action="confirm" fixed off={!onField} />
+          <Prompt action="write" />
           <Icon name="pencil" /> {t("picker.write")}
         </button>
       {/if}
