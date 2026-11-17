@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b9885d68",
+  "hash": "c8a4f76b",
   "questions": [
     {
       "id": "q-0001",
@@ -207333,6 +207333,53 @@
       "background": null
     },
     {
+      "id": "q-20823",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "This rainforest night-shift worker clocks in at sunset and clocks out long after the rest of us are snoring.",
+      "question": "Listen: which night bird of the American tropics sings this song?",
+      "answer": "Common potoo",
+      "wrong_answers": [
+        "Oilbird",
+        "Common pauraque",
+        "Tropical screech owl"
+      ],
+      "hints": [
+        "Its song has inspired folk legends across South America about a grieving spirit in the forest.",
+        "By day it sits completely still on a broken branch, its feathers looking just like the tree.",
+        "With its huge yellow eyes and wide gaping mouth, it looks like a startled, frog-faced owl sitting upright on a stump."
+      ],
+      "fun_fact": "Potoos have tiny slits in their eyelids, so they can still see danger with their eyes closed.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Common_Potoo_%28Nyctibius_griseus%29_%28W1CDR0000523_BD1%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Potoo_%28Nyctibius_griseus%29_%28W1CDR0000523_BD1%29.ogg",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 3,
+          "end": 48
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Amazon_rainforest_night_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmazon_rainforest_night_-_panoramio.jpg",
+        "credit": "James Martins · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "James Martins",
+        "author_url": "https://web.archive.org/web/20161028062252/http://www.panoramio.com/user/4429178?with_photo_id=107324272"
+      }
+    },
+    {
       "id": "q-20824",
       "status": "approved",
       "difficulty": 12,
@@ -207580,6 +207627,41 @@
         "author": "Hjart",
         "author_url": "https://commons.wikimedia.org/wiki/User:Hjart"
       }
+    },
+    {
+      "id": "q-20830",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Swimming lessons on the pond today: no swim coach, no whistle, just a lot of paddling.",
+      "question": "Watch: which kind of duck is the adult swimming with these ducklings?",
+      "answer": "Mallard",
+      "wrong_answers": [
+        "Mandarin duck",
+        "Wood duck",
+        "Common eider"
+      ],
+      "hints": [
+        "It is one of the most common wild ducks in the world, found in parks and ponds across the Northern Hemisphere.",
+        "Look at the adult's head color and the thin white ring around its neck.",
+        "The males have shiny green heads, and the brown females make the classic loud “quack” that everyone knows."
+      ],
+      "fun_fact": "Almost all farm ducks in the world, except the Muscovy duck, are descended from wild mallards.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Mallard_Drake_With_Young_%2818955798721%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMallard_Drake_With_Young_%2818955798721%29.webm",
+        "credit": "U.S. Fish and Wildlife Service - Midwest Region · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Fish and Wildlife Service - Midwest Region",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
     },
     {
       "id": "q-20831",
@@ -208531,6 +208613,53 @@
       }
     },
     {
+      "id": "q-20859",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Some park residents clearly never got the memo about quiet hours.",
+      "question": "Listen: these loud screeches were recorded in a German city. Which bird is making them?",
+      "answer": "Rose-ringed parakeet",
+      "wrong_answers": [
+        "Eurasian jay",
+        "Common swift",
+        "Common starling"
+      ],
+      "hints": [
+        "It is a common sight and sound in city parks and gardens.",
+        "It lives in noisy flocks that gather to sleep together in the same big trees at night.",
+        "Its feathers are bright green, males have a thin pink and black neck ring, and its ancestors were pets that escaped."
+      ],
+      "fun_fact": "Wild flocks of these parakeets, descended from escaped or released pets, now live in many European cities, including London, Brussels, Amsterdam and Rome.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Halsbandsittich.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHalsbandsittich.ogg",
+        "credit": "own source · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "own source",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Central_Park_New_York_City_New_York_23_cropped.jpg/3840px-Central_Park_New_York_City_New_York_23_cropped.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACentral_Park_New_York_City_New_York_23_cropped.jpg",
+        "credit": "Jet Lowe · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jet Lowe",
+        "author_url": "https://en.wikipedia.org/wiki/en:Jet_Lowe"
+      }
+    },
+    {
       "id": "q-20860",
       "status": "approved",
       "difficulty": 13,
@@ -209301,6 +209430,53 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Pom²",
         "author_url": "https://commons.wikimedia.org/wiki/User:Pom%C2%B2"
+      }
+    },
+    {
+      "id": "q-20882",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Long hair, a grand piano and screaming fans: Liszt was a rock star before rock existed.",
+      "question": "Listen: which piano piece by Franz Liszt is this?",
+      "answer": "Consolation No. 3",
+      "wrong_answers": [
+        "Hungarian Rhapsody No. 2",
+        "La Campanella",
+        "Mephisto Waltz No. 1"
+      ],
+      "hints": [
+        "It is in the key of D-flat major, like Debussy's “Clair de lune”.",
+        "It belongs to a set of six short, quiet pieces.",
+        "Its title is a word for the comfort you give someone who is sad."
+      ],
+      "fun_fact": "Liszt's concerts caused such wild excitement that the poet Heinrich Heine gave it a name: “Lisztomania”.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Franz_Liszt_-_Consolation_3.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFranz_Liszt_-_Consolation_3.ogg",
+        "credit": "Pracchia-78 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Pracchia-78",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Candlelight_Piano_%2840179956%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACandlelight_Piano_%2840179956%29.jpeg",
+        "credit": "Stefan Roiss · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Stefan Roiss",
+        "author_url": "https://500px.com/BlackLynx"
       }
     },
     {

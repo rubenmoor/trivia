@@ -1621515,9 +1621515,9 @@
     },
     {
       "id": "q-20823",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
-      "description": "This rainforest night-shift worker clocks in at sunset and never sleeps on the job, only on a branch.",
+      "description": "This rainforest night-shift worker clocks in at sunset and clocks out long after the rest of us are snoring.",
       "question": "Listen: which night bird of the American tropics sings this song?",
       "answer": "Common potoo",
       "wrong_answers": [
@@ -1621572,15 +1621572,23 @@
       "needs_media": true,
       "batch": "batch-81",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description's \"never sleeps on the job, only on a branch\" gives away the potoo's defining trait: by day it roosts on a branch, disguised as part of it, which hint 2 also uses as the clue. It also rules out the oilbird, which roosts in caves, and the pauraque, which rests on the ground. Rewrite the description to play on the night-shift theme without saying where the bird rests.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description's \"never sleeps on the job, only on a branch\" gives away the potoo's defining trait: by day it roosts on a branch, disguised as part of it, which hint 2 also uses as the clue. It also rules out the oilbird, which roosts in caves, and the pauraque, which rests on the ground. Rewrite the description to play on the night-shift theme without saying where the bird rests.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1621605,15 +1621613,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Cut “sad, falling” from the question, rewrote the description without the mood, and replaced the English-only rhyme hint with a visual hint that works in any language.",
+        "reason": "Rewrote the description so it keeps the night-shift joke without revealing that the bird rests on a branch.",
         "previous": {
-          "description": "The rainforest's night shift has a singer who only knows sad songs.",
-          "question": "Listen: which night bird of the American tropics sings this sad, falling song?",
-          "hints": [
-            "Its song has inspired folk legends across South America about a grieving spirit in the forest.",
-            "By day it sits completely still on a broken branch, its feathers looking just like the tree.",
-            "Its name rhymes with “tattoo”."
-          ]
+          "description": "This rainforest night-shift worker clocks in at sunset and never sleeps on the job, only on a branch."
         },
         "revised_on": "2026-11-16"
       }
@@ -1622150,9 +1622152,9 @@
     },
     {
       "id": "q-20830",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
-      "description": "Swimming lessons on the pond today: no armbands, no whistle, just a lot of paddling.",
+      "description": "Swimming lessons on the pond today: no swim coach, no whistle, just a lot of paddling.",
       "question": "Watch: which kind of duck is the adult swimming with these ducklings?",
       "answer": "Mallard",
       "wrong_answers": [
@@ -1622205,15 +1622207,23 @@
       "needs_media": true,
       "batch": "batch-81",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description uses \"armbands\", a British word for swimming aids. American English says \"water wings\" or \"floaties\", and the house style asks for wording all English speakers share. Reword it with neutral words (for example \"no floaties, no whistle\" or \"no swim coach, no whistle\"). Everything else passes: the clip clearly shows a mallard drake with ducklings.",
-        "problems": [
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description uses \"armbands\", a British word for swimming aids. American English says \"water wings\" or \"floaties\", and the house style asks for wording all English speakers share. Reword it with neutral words (for example \"no floaties, no whistle\" or \"no swim coach, no whistle\"). Everything else passes: the clip clearly shows a mallard drake with ducklings.",
+          "problems": [
+            "style"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1622226,13 +1622236,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced the English-only “mall” plus “lard” wordplay in hint 3 with a strong hint that works in any language.",
+        "reason": "Replaced the British word “armbands” in the description with neutral wording.",
         "previous": {
-          "hints": [
-            "It is one of the most common wild ducks in the world, found in parks and ponds across the Northern Hemisphere.",
-            "Look at the adult's head color and the thin white ring around its neck.",
-            "Its name sounds a bit like “mall” plus “lard”, and the males are famous for their shiny green heads."
-          ]
+          "description": "Swimming lessons on the pond today: no armbands, no whistle, just a lot of paddling."
         },
         "revised_on": "2026-11-16"
       }
@@ -1623513,14 +1623519,24 @@
       "batch": "batch-81",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question text is fine. The only problem is the media's `work.basis`, \"Public-domain newsreel, as marked on Wikimedia Commons\", which isn't one of the accepted bases, so the code check fails as a hard error. The file's Commons categories include \"PD US USIA\": News of Iran was made by the US Information Agency. Change the basis to government-work (US government work, USIA) and re-run. No text change is needed. Media.work basis “Public-domain newsreel, as marked on Wikimedia Commons” is none of: died-70-years, pre-1930-film, government-work, traditional.",
+        "feedback": "The only problem is the work-basis metadata: the hard flag is correct that \"Public-domain newsreel, as marked on Wikimedia Commons\" is not an accepted basis. The film itself is public domain. News of Iran was made by the USIA, and the Commons categories include \"PD US USIA\" (and \"PD Iran\"). Change media_first.work.basis to government-work (USIA newsreel) and the question can pass as written. Media.work basis “Public-domain newsreel, as marked on Wikimedia Commons” is none of: died-70-years, pre-1930-film, government-work, traditional.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text is fine. The only problem is the media's `work.basis`, \"Public-domain newsreel, as marked on Wikimedia Commons\", which isn't one of the accepted bases, so the code check fails as a hard error. The file's Commons categories include \"PD US USIA\": News of Iran was made by the US Information Agency. Change the basis to government-work (US government work, USIA) and re-run. No text change is needed. Media.work basis “Public-domain newsreel, as marked on Wikimedia Commons” is none of: died-70-years, pre-1930-film, government-work, traditional.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1624821,7 +1624837,7 @@
     },
     {
       "id": "q-20859",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 11,
       "description": "Some park residents clearly never got the memo about quiet hours.",
       "question": "Listen: these loud screeches were recorded in a German city. Which bird is making them?",
@@ -1624833,7 +1624849,7 @@
       ],
       "hints": [
         "It is a common sight and sound in city parks and gardens.",
-        "It nests in tree holes and has a strong, hooked red beak.",
+        "It lives in noisy flocks that gather to sleep together in the same big trees at night.",
         "Its feathers are bright green, males have a thin pink and black neck ring, and its ancestors were pets that escaped."
       ],
       "media": {
@@ -1624878,15 +1624894,23 @@
       "needs_media": true,
       "batch": "batch-81",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. A \"strong, hooked red beak\" means a parrot, and only one of the four options is a parrot, so players can answer without hearing the clip. Rewrite hint 2 so it narrows things down without naming parrot traits, for example by saying the bird is not originally from Europe, or that it lives in noisy flocks that sleep together in the same trees.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. A \"strong, hooked red beak\" means a parrot, and only one of the four options is a parrot, so players can answer without hearing the clip. Rewrite hint 2 so it narrows things down without naming parrot traits, for example by saying the bird is not originally from Europe, or that it lives in noisy flocks that sleep together in the same trees.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1624914,13 +1624938,12 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Changed “city park” to “German city” to match the file, and rewrote the hints so hints 1 and 2 no longer rule out the native birds or name the parrot family.",
+        "reason": "Replaced hint 2, whose hooked red beak gave away the only parrot among the options, with a flock-roosting clue that leaves the clip to decide.",
         "previous": {
-          "question": "Listen: these loud screeches were recorded in a city park in Germany. Which bird is making them?",
           "hints": [
-            "Its original home is in Africa and South Asia, far from Germany.",
-            "It belongs to the parrot family.",
-            "Its feathers are bright green, and males have a thin pink and black ring around the neck."
+            "It is a common sight and sound in city parks and gardens.",
+            "It nests in tree holes and has a strong, hooked red beak.",
+            "Its feathers are bright green, males have a thin pink and black neck ring, and its ancestors were pets that escaped."
           ]
         },
         "revised_on": "2026-11-16"
@@ -1626906,9 +1626929,9 @@
     },
     {
       "id": "q-20882",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 10,
-      "description": "Soft music for when your soul needs a warm blanket and a cup of cocoa.",
+      "description": "Long hair, a grand piano and screaming fans: Liszt was a rock star before rock existed.",
       "question": "Listen: which piano piece by Franz Liszt is this?",
       "answer": "Consolation No. 3",
       "wrong_answers": [
@@ -1626917,7 +1626940,7 @@
         "Mephisto Waltz No. 1"
       ],
       "hints": [
-        "Listen to the mood: this music wants to soothe you, not to show off.",
+        "It is in the key of D-flat major, like Debussy's “Clair de lune”.",
         "It belongs to a set of six short, quiet pieces.",
         "Its title is a word for the comfort you give someone who is sad."
       ],
@@ -1626965,15 +1626988,23 @@
       "needs_media": true,
       "batch": "batch-81",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. “Soft music for when your soul needs a warm blanket” states the defining trait (soothing, comforting) and paraphrases the title “Consolation”. With only the four options, before any listening, that rules out the three famously showy pieces (Hungarian Rhapsody No. 2, La Campanella, Mephisto Waltz). Hint 1 (“wants to soothe you, not to show off”) does the same. The description should play on the piano or Liszt theme without naming the mood, and hint 1 should point to something other than “calm versus showy”.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. “Soft music for when your soul needs a warm blanket” states the defining trait (soothing, comforting) and paraphrases the title “Consolation”. With only the four options, before any listening, that rules out the three famously showy pieces (Hungarian Rhapsody No. 2, La Campanella, Mephisto Waltz). Hint 1 (“wants to soothe you, not to show off”) does the same. The description should play on the piano or Liszt theme without naming the mood, and hint 1 should point to something other than “calm versus showy”.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1626999,20 +1627030,13 @@
       "difficulty_original": 14,
       "revision": {
         "action": "revise",
-        "reason": "Asking for the composer was an ear test only experts pass; now names Liszt and asks which piece, with fast, fiery Liszt pieces as wrong answers the calm clip rules out, and rewritten hints.",
+        "reason": "Rewrote the description and hint 1 so they no longer name the calm, soothing mood; now the clip decides between the quiet piece and the showy ones (the title-words flag for Liszt's name is a false alarm).",
         "previous": {
-          "difficulty": 14,
-          "question": "Listen: which composer wrote this gentle solo piano piece?",
-          "answer": "Franz Liszt",
-          "wrong_answers": [
-            "Frédéric Chopin",
-            "Robert Schumann",
-            "Johannes Brahms"
-          ],
+          "description": "Soft music for when your soul needs a warm blanket and a cup of cocoa.",
           "hints": [
-            "The composer was the biggest piano superstar of the 19th century, and fans fought over his gloves and handkerchiefs.",
-            "He was born in 1811 in the Kingdom of Hungary and wrote a famous set of “Hungarian Rhapsodies”.",
-            "This calm piece belongs to his six “Consolations”, written around the same time as his dreamy “Liebesträume”."
+            "Listen to the mood: this music wants to soothe you, not to show off.",
+            "It belongs to a set of six short, quiet pieces.",
+            "Its title is a word for the comfort you give someone who is sad."
           ]
         },
         "revised_on": "2026-11-16"
