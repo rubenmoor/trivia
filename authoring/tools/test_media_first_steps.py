@@ -190,5 +190,26 @@ class Steps(unittest.TestCase):
         self.assertIsNone(mf.known_subject("Opera aria (La mamma morta, Andrea Chénier)", ["An opera"]))
 
 
+class WindowLimits(unittest.TestCase):
+    def problems(self, mtype, duration, excerpt=None):
+        q = {"media": {"type": mtype, "duration": duration, "excerpt": excerpt}}
+        with mock.patch.object(qgen, "check_question_shape", return_value=[]), \
+                mock.patch("validate.media_first_problems", return_value=[]), mock.patch.object(mf, "giveaway", return_value=[]):
+            return mf.problems(q, {})
+
+    def test_video_window(self):
+        self.assertEqual(self.problems("video", 100, {"start": 0, "end": 30}), [])
+        self.assertIn("at most 30 s", self.problems("video", 100, {"start": 5, "end": 36})[0])
+
+    def test_video_file_needs_excerpt(self):
+        self.assertIn("needs an excerpt of at most 30 s", self.problems("video", 40)[0])
+        self.assertEqual(self.problems("video", 30), [])
+
+    def test_audio_unchanged(self):
+        self.assertEqual(self.problems("audio", 60), [])
+        self.assertEqual(self.problems("audio", 100, {"start": 0, "end": 60}), [])
+        self.assertIn("needs an excerpt of at most 60 s", self.problems("audio", 61)[0])
+
+
 if __name__ == "__main__":
     unittest.main()

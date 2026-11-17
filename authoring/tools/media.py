@@ -33,7 +33,12 @@ MAX_CANDIDATES = 6
 MIN_DECORATIVE_WIDTH = 1920
 MIN_ESSENTIAL_WIDTH = 800
 MAX_AUDIO_SECONDS = 60
-# Video: 30 s, MAX_VIDEO_SECONDS in app/client/src/engine/pool.ts; the qgen rule is plan 203's.
+MAX_VIDEO_SECONDS = 30  # app/client/src/engine/pool.ts MAX_VIDEO_SECONDS
+
+
+def max_seconds(media_type):
+    """Longest play window of a media type: 30 s video, 60 s audio."""
+    return MAX_VIDEO_SECONDS if media_type == "video" else MAX_AUDIO_SECONDS
 
 
 def excerpt_schema():

@@ -37,6 +37,16 @@ class Filters(unittest.TestCase):
         self.assertIn("below", self.why(**v, height=360))
         self.assertIsNone(self.why(**v, height=720))
 
+    def test_needs_excerpt_per_type(self):
+        def flag(**kw):
+            seed = {**SEED, "type": kw.get("mediatype", "audio")}
+            return ms.apply_filters([(seed, [rec(**kw)])], set())[0][0]["needs_excerpt"]
+        self.assertFalse(flag(duration=60))  # audio: 60 s fits
+        self.assertTrue(flag(duration=61))
+        v = dict(mediatype="video", title="File:A.ogv", height=720)
+        self.assertFalse(flag(**v, duration=30))  # video: 30 s fits
+        self.assertTrue(flag(**v, duration=31))
+
     def test_not_media(self):
         self.assertEqual(self.why(mediatype="bitmap"), "not audio or video")
 

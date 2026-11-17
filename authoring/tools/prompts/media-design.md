@@ -26,9 +26,9 @@ with Read). Write one English (`en`) question **built around this file**.
   event by its sound). No question about what is said; no subtitles in the game.
 - `subcategory`: the triage's, unless another fits clearly better. `difficulty` on the shared scale, inside
   `target_levels` unless the question clearly belongs elsewhere.
-- `excerpt`: the window to play (start, end seconds) when the file is longer than {max_s} s, or when a
+- `excerpt`: the window to play (start, end seconds) when the file is longer than its limit ({max_video_s} s for video, {max_audio_s} s for audio), or when a
   shorter window is fairer or hides a giveaway (a caption, a spoken name); null for the whole file. At most
-  {max_s} s, inside the file's duration. The triage's excerpt is a proposal.
+  {max_video_s} s for video, {max_audio_s} s for audio, inside the file's duration. The triage's excerpt is a proposal.
 - `media_note`: what must be heard or seen in the window.
 - `background_query`: for audio, as the house style says (it must not show the answer); empty string for video.
 - `giveaway`: check before you answer, against the aids for the window: does the speech name the answer or
