@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b94383d8",
+  "hash": "b6382796",
   "questions": [
     {
       "id": "q-0001",
@@ -210534,6 +210534,41 @@
       "background": null
     },
     {
+      "id": "q-20915",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Before a rocket can stand up tall, it has to get out of bed like everyone else.",
+      "question": "Watch: thin poles even taller than the rocket stand around this launch pad. What is their main job?",
+      "answer": "Catching lightning before it hits the rocket",
+      "wrong_answers": [
+        "Holding floodlights for night launches",
+        "Measuring the wind before liftoff",
+        "Sending radio signals to the rocket"
+      ],
+      "hints": [
+        "Their height is the whole point: they have to be the tallest things on the pad.",
+        "A rocket full of fuel standing in an open field during a thunderstorm is a big worry.",
+        "Benjamin Franklin invented a much smaller version for rooftops."
+      ],
+      "fun_fact": "At NASA's Launch Pad 39B in Florida, wires strung between tall towers form a giant net that protects rockets from lightning.",
+      "media": {
+        "type": "video",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Antares_Raising_-_20161014.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntares_Raising_-_20161014.webm",
+        "credit": "Bill Ingalls · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Bill Ingalls",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-20917",
       "status": "approved",
       "difficulty": 13,
@@ -211158,6 +211193,44 @@
       "background": null
     },
     {
+      "id": "q-20937",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Hold hands, step, kick, repeat, and never let go of your neighbor's little finger.",
+      "question": "Watch: the men wear baggy trousers and wide cloth sashes, and everyone dances linked in a line. Which people's folk dance is this?",
+      "answer": "The Kurds",
+      "wrong_answers": [
+        "The Greeks",
+        "The Georgians",
+        "The Serbs"
+      ],
+      "hints": [
+        "Look at the men: their wide trousers are gathered at the ankle, and the sash is wound many times around the waist.",
+        "Dancers like these celebrate a New Year that falls on the first day of spring.",
+        "This people lives where Turkey, Iran, Iraq and Syria meet, and dances like this around bonfires at their New Year, Newroz, in cities such as Erbil."
+      ],
+      "fun_fact": "Kurdish line dances are often called “govend” or “halay”, and the leader at the front of the line waves a handkerchief to set the steps.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/World_Culture_Festival_2011_-_Kurdish_Folk_Dance_from_Iraq.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWorld_Culture_Festival_2011_-_Kurdish_Folk_Dance_from_Iraq.webm",
+        "credit": "Silke Blumbach · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Silke Blumbach",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
       "id": "q-20938",
       "status": "approved",
       "difficulty": 10,
@@ -211481,6 +211554,50 @@
         "excerpt": null
       },
       "background": null
+    },
+    {
+      "id": "q-20947",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Bird-watchers pack binoculars, a raincoat and a whole lot of patience for this one.",
+      "question": "Listen: which bird of the Central American cloud forests is singing?",
+      "answer": "Resplendent quetzal",
+      "wrong_answers": [
+        "Scarlet macaw",
+        "Keel-billed toucan",
+        "Three-wattled bellbird"
+      ],
+      "hints": [
+        "It's not a harsh screech, a frog-like croak or a loud metallic “bonk”: just a gentle, falling whistle.",
+        "The Maya and Aztecs prized this bird's long, shining green tail feathers.",
+        "It is Guatemala's national bird, and the country's money is named after it."
+      ],
+      "fun_fact": "Guatemala's currency is called the quetzal, after this bird, and the male's green tail streamers can grow to about 65 cm (2 ft) long.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/91/Resplendent_Quetzal_song_%28Pharomachrus_mocinno%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AResplendent_Quetzal_song_%28Pharomachrus_mocinno%29.ogg",
+        "credit": "Leander Khil · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Leander Khil",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Misty_Forest_%28227339925%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMisty_Forest_%28227339925%29.jpeg",
+        "credit": "Artem Kavalerov · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Artem Kavalerov",
+        "author_url": "https://500px.com/Kavalerov"
+      }
     },
     {
       "id": "q-20948",

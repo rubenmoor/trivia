@@ -1630159,20 +1630159,20 @@
     },
     {
       "id": "q-20915",
-      "status": "needs_work",
-      "difficulty": 8,
+      "status": "approved",
+      "difficulty": 9,
       "description": "Before a rocket can stand up tall, it has to get out of bed like everyone else.",
-      "question": "Watch: next to this rocket stands a tall tower with a big tank on top. What does that tank hold for launch day?",
-      "answer": "Water to soak up noise and heat",
+      "question": "Watch: thin poles even taller than the rocket stand around this launch pad. What is their main job?",
+      "answer": "Catching lightning before it hits the rocket",
       "wrong_answers": [
-        "Extra fuel to fill the rocket",
-        "Liquid oxygen for the engines",
-        "Fresh air for the crew"
+        "Holding floodlights for night launches",
+        "Measuring the wind before liftoff",
+        "Sending radio signals to the rocket"
       ],
       "hints": [
-        "None of it ever goes inside the rocket.",
-        "At liftoff, the rocket's roar and blast are strong enough to damage its own launch pad.",
-        "Firefighters would find this tank very useful too."
+        "Their height is the whole point: they have to be the tallest things on the pad.",
+        "A rocket full of fuel standing in an open field during a thunderstorm is a big worry.",
+        "Benjamin Franklin invented a much smaller version for rooftops."
       ],
       "media": {
         "type": "video",
@@ -1630193,7 +1630193,7 @@
         "note": "Whole 11 s clip: a white rocket is raised from lying down to upright on its launch pad, with the tall white water tower with a round tank on top clearly visible on the right. No sound, no readable text.",
         "duration": 11.4
       },
-      "fun_fact": "At liftoff, launch pads pour out a flood of water, and much of the huge white cloud you see is steam, not smoke.",
+      "fun_fact": "At NASA's Launch Pad 39B in Florida, wires strung between tall towers form a giant net that protects rockets from lightning.",
       "subcategory": "space",
       "style": null,
       "concept": "Antares rocket being raised upright on its launch pad (Wallops, Virginia)",
@@ -1630211,18 +1630211,26 @@
         "notes": "The correct option is the only one that explains a purpose (“to soak up noise and heat”), so it stands out by its wording. Surprising fact that players can reason towards."
       },
       "fact_checked": true,
-      "needs_media": false,
+      "needs_media": true,
       "batch": "batch-82",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This repeats approved q-20684 (\"this system is tested at a rocket launch pad. What is its main job when a rocket lifts off?\" → to soften the rocket's sound waves). Both ask about the launch pad's water sound-suppression system, so seeing one gives away the other. Also, the correct option is the only one that gives a purpose (\"to soak up noise and heat\"), so it stands out. If this clip is used again, ask something else it shows, like why the rocket is carried out lying down and then raised upright.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This repeats approved q-20684 (\"this system is tested at a rocket launch pad. What is its main job when a rocket lifts off?\" → to soften the rocket's sound waves). Both ask about the launch pad's water sound-suppression system, so seeing one gives away the other. Also, the correct option is the only one that gives a purpose (\"to soak up noise and heat\"), so it stands out. If this clip is used again, ask something else it shows, like why the rocket is carried out lying down and then raised upright.",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1630232,6 +1630240,29 @@
         "class": "general",
         "kind": "video-scene",
         "probe": "media-probe/3783c9eed6894e48"
+      },
+      "difficulty_original": 8,
+      "revision": {
+        "action": "revise",
+        "reason": "Moved away from the water tower, which duplicated q-20684, to the tall lightning masts the clip clearly shows; options now share one form.",
+        "previous": {
+          "difficulty": 8,
+          "question": "Watch: next to this rocket stands a tall tower with a big tank on top. What does that tank hold for launch day?",
+          "answer": "Water to soak up noise and heat",
+          "wrong_answers": [
+            "Extra fuel to fill the rocket",
+            "Liquid oxygen for the engines",
+            "Fresh air for the crew"
+          ],
+          "hints": [
+            "None of it ever goes inside the rocket.",
+            "At liftoff, the rocket's roar and blast are strong enough to damage its own launch pad.",
+            "Firefighters would find this tank very useful too."
+          ],
+          "fun_fact": "At liftoff, launch pads pour out a flood of water, and much of the huge white cloud you see is steam, not smoke.",
+          "needs_media": false
+        },
+        "revised_on": "2026-11-17"
       }
     },
     {
@@ -1632104,7 +1632135,7 @@
     },
     {
       "id": "q-20937",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Hold hands, step, kick, repeat, and never let go of your neighbor's little finger.",
       "question": "Watch: the men wear baggy trousers and wide cloth sashes, and everyone dances linked in a line. Which people's folk dance is this?",
@@ -1632116,7 +1632147,7 @@
       ],
       "hints": [
         "Look at the men: their wide trousers are gathered at the ankle, and the sash is wound many times around the waist.",
-        "This dance comes from the mountains of the Middle East, not from Europe or the Caucasus.",
+        "Dancers like these celebrate a New Year that falls on the first day of spring.",
         "This people lives where Turkey, Iran, Iraq and Syria meet, and dances like this around bonfires at their New Year, Newroz, in cities such as Erbil."
       ],
       "media": {
@@ -1632161,15 +1632192,23 @@
       "needs_media": true,
       "batch": "batch-82",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. “From the mountains of the Middle East, not from Europe or the Caucasus” rules out the Greeks, the Serbs and the Georgians all at once, so only the Kurds are left. Hint 2 should not exclude options so directly. It should say something softer, for example that the dance is done at a spring festival, without naming regions that rule out the wrong options.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. “From the mountains of the Middle East, not from Europe or the Caucasus” rules out the Greeks, the Serbs and the Georgians all at once, so only the Kurds are left. Hint 2 should not exclude options so directly. It should say something softer, for example that the dance is done at a spring festival, without naming regions that rule out the wrong options.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1632182,12 +1632221,12 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hints 1 and 2, which each named the Kurds outright, with a clip-based hint and a vague regional hint; hint 3 now carries the strong clues.",
+        "reason": "Rewrote hint 2 so it no longer rules out the Greeks, Georgians and Serbs by region; it now points softly to the spring New Year festival.",
         "previous": {
           "hints": [
-            "This people lives mainly in the mountains where four countries meet: Turkey, Iran, Iraq and Syria.",
-            "They are often called the largest people in the world without a country of their own.",
-            "Their New Year festival, Newroz, is celebrated with bonfires and dancing like this in cities such as Erbil."
+            "Look at the men: their wide trousers are gathered at the ankle, and the sash is wound many times around the waist.",
+            "This dance comes from the mountains of the Middle East, not from Europe or the Caucasus.",
+            "This people lives where Turkey, Iran, Iraq and Syria meet, and dances like this around bonfires at their New Year, Newroz, in cities such as Erbil."
           ]
         },
         "revised_on": "2026-11-17"
@@ -1632961,9 +1633000,9 @@
     },
     {
       "id": "q-20947",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
-      "description": "A bird so shy that even its singing sounds like it's apologizing for interrupting.",
+      "description": "Bird-watchers pack binoculars, a raincoat and a whole lot of patience for this one.",
       "question": "Listen: which bird of the Central American cloud forests is singing?",
       "answer": "Resplendent quetzal",
       "wrong_answers": [
@@ -1633014,15 +1633053,23 @@
       "needs_media": true,
       "batch": "batch-82",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives away the answer by naming the trait that rules out options. It calls the song so soft that it “sounds like it's apologizing”. That rules out the screeching macaw and the bellbird, one of the loudest birds in the world. With “cloud forest” in the question, only the quetzal is left, before any sound plays. Rewrite the description to play on the cloud-forest or bird-watching theme without saying how the song sounds.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives away the answer by naming the trait that rules out options. It calls the song so soft that it “sounds like it's apologizing”. That rules out the screeching macaw and the bellbird, one of the loudest birds in the world. With “cloud forest” in the question, only the quetzal is left, before any sound plays. Rewrite the description to play on the cloud-forest or bird-watching theme without saying how the song sounds.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1633047,9 +1633094,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Removed the description of the sound from the question so the recording decides.",
+        "reason": "Replaced the description, which hinted at the soft song and ruled out the loud options, with a bird-watching joke that says nothing about the sound.",
         "previous": {
-          "question": "Listen: which bird of the Central American cloud forests is singing these soft, repeated whistles?"
+          "description": "A bird so shy that even its singing sounds like it's apologizing for interrupting."
         },
         "revised_on": "2026-11-17"
       }
