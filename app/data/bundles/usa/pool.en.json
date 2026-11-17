@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b33f71e8",
+  "hash": "f6592caf",
   "questions": [
     {
       "id": "q-8833",
@@ -52936,7 +52936,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Asclepioss",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Asclepioss&action=edit&redlink=1",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -68100,7 +68103,10 @@
         "license_url": null,
         "author": "NASA Johnson",
         "author_url": "https://www.youtube.com/user/ReelNASA",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },

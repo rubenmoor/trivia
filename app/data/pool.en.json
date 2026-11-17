@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "c8a4f76b",
+  "hash": "0e5086d8",
   "questions": [
     {
       "id": "q-0001",
@@ -1197,41 +1197,6 @@
         "license_url": null,
         "author": "NASA",
         "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-0055",
-      "status": "approved",
-      "difficulty": 4,
-      "subcategory": "space",
-      "bundle": "base",
-      "description": "A walk in the most expensive boots in history.",
-      "question": "Who was the first person to walk on the Moon?",
-      "answer": "Neil Armstrong",
-      "wrong_answers": [
-        "Yuri Gagarin",
-        "Buzz Aldrin",
-        "Michael Collins"
-      ],
-      "hints": [
-        "It happened in 1969.",
-        "He flew on the Apollo 11 mission.",
-        "He said: “That's one small step for man...”"
-      ],
-      "fun_fact": "Yuri Gagarin was the first person to travel into space, in 1961.",
-      "media": {
-        "type": "video",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3e/Historic_Apollo_11_Moon_Landing_Footage.webm/Historic_Apollo_11_Moon_Landing_Footage.webm.480p.vp9.webm",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AHistoric_Apollo_11_Moon_Landing_Footage.webm",
-        "credit": "NASA · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "NASA",
-        "author_url": "https://www.youtube.com/@NASA",
         "excerpt": null
       },
       "background": null
@@ -11944,7 +11909,10 @@
         "license_url": null,
         "author": "NOAA Okeanos Explorer",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -58583,7 +58551,10 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Frédéric Gadmer",
         "author_url": "https://www.wikidata.org/wiki/Q108937326",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -117613,7 +117584,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "The Nature Box",
         "author_url": "https://commons.wikimedia.org/wiki/User:The_Nature_Box",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -143532,7 +143506,10 @@
         "license_url": null,
         "author": "NASA Johnson",
         "author_url": "https://www.youtube.com/@ReelNASA",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -187590,7 +187567,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Nayan j Nath",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nayan_j_Nath",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -201640,7 +201620,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -201772,7 +201752,7 @@
         "author_url": null,
         "excerpt": {
           "start": 90,
-          "end": 150
+          "end": 120
         }
       },
       "background": null
@@ -201892,7 +201872,7 @@
         "author_url": null,
         "excerpt": {
           "start": 12,
-          "end": 46
+          "end": 42
         }
       },
       "background": null
@@ -201930,7 +201910,7 @@
         "author_url": null,
         "excerpt": {
           "start": 40,
-          "end": 99.5
+          "end": 70
         }
       },
       "background": null
@@ -202133,7 +202113,10 @@
         "license_url": null,
         "author": "Free Videos",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -202356,7 +202339,10 @@
         "license_url": null,
         "author": "NASA/Goddard Space Flight Center Scientific Visualization Studio",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -202406,41 +202392,6 @@
         "author": "Saruwine",
         "author_url": "https://commons.wikimedia.org/wiki/User:Saruwine"
       }
-    },
-    {
-      "id": "q-20673",
-      "status": "approved",
-      "difficulty": 8,
-      "subcategory": "weather-and-climate",
-      "bundle": "base",
-      "description": "A world map that takes 130 years to slowly blush.",
-      "question": "Watch this NASA map change from the 1880s to the 2010s. Which part of the world turns the deepest red?",
-      "answer": "The Arctic",
-      "wrong_answers": [
-        "The equator",
-        "The Sahara Desert",
-        "Australia"
-      ],
-      "hints": [
-        "Keep your eyes on the last few seconds, when the whole map is at its reddest.",
-        "The deepest red isn't in the middle of the map: look toward one of its edges.",
-        "Look at the very top of the map, where polar bears live."
-      ],
-      "fun_fact": "The Arctic is warming about three to four times faster than the planet as a whole, which scientists call “Arctic amplification.”",
-      "media": {
-        "type": "video",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/2016_Was_the_Warmest_Year_on_Record.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A2016_Was_the_Warmest_Year_on_Record.webm",
-        "credit": "NASA's Goddard Space Flight Center · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "NASA's Goddard Space Flight Center",
-        "author_url": null,
-        "excerpt": null
-      },
-      "background": null
     },
     {
       "id": "q-20674",
@@ -202522,7 +202473,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -202640,7 +202591,10 @@
         "license_url": null,
         "author": "USFWS Mountain-Prairie",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -202724,7 +202678,7 @@
         "author_url": null,
         "excerpt": {
           "start": 33,
-          "end": 93
+          "end": 63
         }
       },
       "background": null
@@ -202797,7 +202751,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 55
+          "end": 30
         }
       },
       "background": null
@@ -202877,7 +202831,10 @@
         "license_url": null,
         "author": "NASA's Goddard Space Flight Center",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -202914,7 +202871,7 @@
         "author_url": null,
         "excerpt": {
           "start": 15,
-          "end": 75
+          "end": 45
         }
       },
       "background": null
@@ -203088,7 +203045,10 @@
         "license_url": null,
         "author": "Varaprasad Sidam",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -203125,7 +203085,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 45
+          "end": 30
         }
       },
       "background": null
@@ -203208,7 +203168,10 @@
         "license_url": null,
         "author": "U.S. Fish and Wildlife Service - Midwest Region",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -203245,7 +203208,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -203450,7 +203413,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 42.29
+          "end": 30
         }
       },
       "background": null
@@ -203533,7 +203496,10 @@
         "license_url": null,
         "author": "Codas",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -203614,7 +203580,7 @@
         "author_url": null,
         "excerpt": {
           "start": 44,
-          "end": 104
+          "end": 74
         }
       },
       "background": null
@@ -203655,44 +203621,6 @@
       "background": null
     },
     {
-      "id": "q-20709",
-      "status": "approved",
-      "difficulty": 11,
-      "subcategory": "space",
-      "bundle": "base",
-      "description": "The most expensive delivery service in the solar system, and it still doesn't ring the doorbell.",
-      "question": "Watch: what is the name of the landing method shown here, used to set a rover down on Mars?",
-      "answer": "Sky crane",
-      "wrong_answers": [
-        "Airbag bounce",
-        "Tripod lander",
-        "Runway glide"
-      ],
-      "hints": [
-        "Look closely at what happens during the last few seconds before the wheels touch the ground.",
-        "A rocket-powered stage hovers above the rover and doesn't touch the ground itself.",
-        "The rover hangs from cables, like a load swinging from a machine on a building site."
-      ],
-      "fun_fact": "The descent stage cuts the cables after touchdown and flies off to crash a safe distance away, so it can't land on the rover it just delivered.",
-      "media": {
-        "type": "video",
-        "role": "essential",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/NASA%27s_Mars_2020_Perseverance_Rover_Landing_Animations-rzmd7RouGrM.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA%27s_Mars_2020_Perseverance_Rover_Landing_Animations-rzmd7RouGrM.webm",
-        "credit": "NASA Jet Propulsion Laboratory · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "NASA Jet Propulsion Laboratory",
-        "author_url": null,
-        "excerpt": {
-          "start": 85,
-          "end": 143
-        }
-      },
-      "background": null
-    },
-    {
       "id": "q-20711",
       "status": "approved",
       "difficulty": 3,
@@ -203723,7 +203651,10 @@
         "license_url": null,
         "author": "U.S. Fish and Wildlife Service - Midwest Region",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -203807,7 +203738,7 @@
         "author_url": null,
         "excerpt": {
           "start": 5,
-          "end": 37
+          "end": 35
         }
       },
       "background": null
@@ -204044,7 +203975,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -204361,7 +204292,7 @@
         "author_url": null,
         "excerpt": {
           "start": 4,
-          "end": 40
+          "end": 34
         }
       },
       "background": null
@@ -204399,7 +204330,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -204472,7 +204403,7 @@
         "author_url": null,
         "excerpt": {
           "start": 5,
-          "end": 37
+          "end": 35
         }
       },
       "background": null
@@ -204508,7 +204439,10 @@
         "license_url": null,
         "author": "NASA",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -204625,7 +204559,10 @@
         "license_url": null,
         "author": "Paul Danese",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -204662,7 +204599,7 @@
         "author_url": null,
         "excerpt": {
           "start": 5,
-          "end": 37
+          "end": 35
         }
       },
       "background": null
@@ -204700,7 +204637,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 50
+          "end": 30
         }
       },
       "background": null
@@ -204773,7 +204710,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 50
+          "end": 30
         }
       },
       "background": null
@@ -204809,7 +204746,10 @@
         "license_url": null,
         "author": "NASA Armstrong Flight Research Center",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -204846,7 +204786,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 40
+          "end": 30
         }
       },
       "background": null
@@ -205145,7 +205085,7 @@
         "author_url": null,
         "excerpt": {
           "start": 20,
-          "end": 80
+          "end": 50
         }
       },
       "background": null
@@ -205181,7 +205121,10 @@
         "license_url": null,
         "author": "The Nature Box",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -205253,7 +205196,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -205508,7 +205451,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -205546,7 +205489,7 @@
         "author_url": null,
         "excerpt": {
           "start": 40,
-          "end": 100
+          "end": 70
         }
       },
       "background": null
@@ -205783,7 +205726,7 @@
         "author_url": null,
         "excerpt": {
           "start": 55,
-          "end": 115
+          "end": 85
         }
       },
       "background": null
@@ -205868,7 +205811,7 @@
         "author_url": null,
         "excerpt": {
           "start": 30,
-          "end": 90
+          "end": 60
         }
       },
       "background": null
@@ -206194,7 +206137,10 @@
         "license_url": null,
         "author": "USFWS Pacific",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -206525,7 +206471,10 @@
         "license_url": null,
         "author": "okimotor",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -206779,7 +206728,7 @@
         "author_url": null,
         "excerpt": {
           "start": 11,
-          "end": 62
+          "end": 41
         }
       },
       "background": null
@@ -207328,7 +207277,10 @@
         "license_url": null,
         "author": "NASA's Scientific Visualization Studio AMSR2 data courtesy of the Japan Aerospace Exploration Agency (JAXA).",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -207541,7 +207493,7 @@
         "author_url": null,
         "excerpt": {
           "start": 60,
-          "end": 110
+          "end": 90
         }
       },
       "background": null
@@ -207785,7 +207737,10 @@
         "license_url": null,
         "author": "PDX Aviation - HD(ish) Plane Spotting",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -207951,7 +207906,7 @@
         "author_url": null,
         "excerpt": {
           "start": 15,
-          "end": 75
+          "end": 45
         }
       },
       "background": null
@@ -208031,7 +207986,10 @@
         "license_url": null,
         "author": "Andrea Luck",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -208068,7 +208026,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "background": null
@@ -208191,7 +208149,7 @@
         "author_url": null,
         "excerpt": {
           "start": 145,
-          "end": 205
+          "end": 175
         }
       },
       "background": null
@@ -208309,7 +208267,10 @@
         "license_url": null,
         "author": "NASA Goddard CI Lab",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -208346,7 +208307,7 @@
         "author_url": null,
         "excerpt": {
           "start": 35,
-          "end": 68
+          "end": 65
         }
       },
       "background": null
@@ -208906,7 +208867,7 @@
         "author_url": null,
         "excerpt": {
           "start": 12,
-          "end": 59.1
+          "end": 42
         }
       },
       "background": null
@@ -209076,7 +209037,7 @@
         "author_url": null,
         "excerpt": {
           "start": 69,
-          "end": 129
+          "end": 99
         }
       },
       "background": null
@@ -209112,7 +209073,10 @@
         "license_url": null,
         "author": "ABORISADEADETONA",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -209149,7 +209113,7 @@
         "author_url": null,
         "excerpt": {
           "start": 0,
-          "end": 50
+          "end": 30
         }
       },
       "background": null
@@ -209220,7 +209184,10 @@
         "license_url": null,
         "author": "The Nature Box",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -209301,7 +209268,7 @@
         "author_url": null,
         "excerpt": {
           "start": 60,
-          "end": 120
+          "end": 90
         }
       },
       "background": null
@@ -209510,7 +209477,10 @@
         "license_url": null,
         "author": "Phoenix CZE",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },

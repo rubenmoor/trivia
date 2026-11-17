@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "c5276780",
+  "hash": "94f12a36",
   "questions": [
     {
       "id": "q-0016",
@@ -1958,7 +1958,10 @@
         "license_url": null,
         "author": "NOAA Okeanos Explorer",
         "author_url": null,
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },

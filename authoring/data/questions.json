@@ -4305,7 +4305,7 @@
     },
     {
       "id": "q-0055",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 7,
       "description": "Un paseo con las botas más caras de la historia.",
       "question": "¿Quién fue la primera persona en caminar sobre la Luna?",
@@ -4337,7 +4337,12 @@
         "pd_reasons": [
           "PD-NASA",
           "PD-USGov-NASA"
-        ]
+        ],
+        "duration": 1745.8,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Yuri Gagarin fue la primera persona en viajar al espacio, en 1961.",
       "subcategory": "space",
@@ -4357,12 +4362,21 @@
       "needs_media": null,
       "batch": "first-120",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "reviewed_on": "2026-10-06",
-        "reviewer": "human",
-        "model": null,
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Clue outside the 30 s window: All of frames 1–10 (1.5–28.5 s) show the same blurry close-up of the Apollo 11 patch on a suit under an \"Apollo 11: Crew Activities\" caption, with almost no sound. The 0–30 s window never shows the lunar surface or anyone walking on the Moon, so even as an illustrative clip it no longer shows what the question is about..",
+        "problems": [
+          "media"
+        ],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "opus",
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "reviewed_on": "2026-10-06",
+          "reviewer": "human",
+          "model": null
+        }
       },
       "background": null,
       "concept": "Neil Armstrong",
@@ -41979,7 +41993,12 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov-NOAA"
-        ]
+        ],
+        "duration": 279.62,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Los científicos en expediciones de mar profundo suelen decorar vasos de espuma de poliestireno, los mandan al fondo y vuelven como recuerdos del tamaño de un dedal.",
       "subcategory": "oceans",
@@ -183997,7 +184016,12 @@
         "author": "Frédéric Gadmer",
         "author_url": "https://www.wikidata.org/wiki/Q108937326",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 90.4,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "In March 2021, the giant ship Ever Given got stuck across the Suez Canal and blocked it for six days.",
       "subcategory": "continents",
@@ -311540,7 +311564,8 @@
         "author": "Anna Frodesiak",
         "author_url": "https://commons.wikimedia.org/wiki/User:Anna_Frodesiak",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 16.08
       },
       "fun_fact": "A hamster can run several kilometers on its wheel in a single night.",
       "subcategory": "unusual-pets",
@@ -317283,7 +317308,12 @@
         "author": "The Nature Box",
         "author_url": "https://commons.wikimedia.org/wiki/User:The_Nature_Box",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 35.57,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Madagascar broke away from India about 88 million years ago, so its animals had a very long time to go their own way.",
       "subcategory": "african-wildlife",
@@ -358150,7 +358180,8 @@
         "author": "SystemBuilder",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:SystemBuilder&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 7.2
       },
       "fun_fact": "Shark nostrils are only for smelling, not breathing: sharks breathe through their gills.",
       "subcategory": "fish",
@@ -366473,7 +366504,8 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov-NASA"
-        ]
+        ],
+        "duration": 15.07
       },
       "fun_fact": "Three Moon cars from Apollo 15, 16 and 17 are still parked on the Moon today.",
       "subcategory": "space-race-and-astronauts",
@@ -376398,7 +376430,12 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov-NASA"
-        ]
+        ],
+        "duration": 120.19,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The six Apollo landings brought back 382 kg (842 lb) of Moon rocks and soil to Earth.",
       "subcategory": "space-race-and-astronauts",
@@ -381690,7 +381727,8 @@
         "author": "Arthro",
         "author_url": "https://commons.wikimedia.org/wiki/User:Arthro",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 19.23
       },
       "fun_fact": "Crabs walk sideways because their legs bend best that way, so it's the fastest way for them to move.",
       "subcategory": "the-sea",
@@ -386133,7 +386171,8 @@
         "author": "Subhashish Panigrahi",
         "author_url": "https://commons.wikimedia.org/wiki/User:Psubhashish",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 29.57
       },
       "fun_fact": "Farmers in India depend so much on the monsoon that its yearly arrival is followed in the news like a big sports event.",
       "subcategory": "weather-and-climate",
@@ -409314,7 +409353,8 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov"
-        ]
+        ],
+        "duration": 6.5
       },
       "fun_fact": "The Amazon rainforest is so wet that fires there rarely start by themselves.",
       "subcategory": "amazon-animals",
@@ -452686,7 +452726,8 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov-NASA"
-        ]
+        ],
+        "duration": 20.02
       },
       "fun_fact": "Scientists really call this stretching “spaghettification”.",
       "subcategory": "stars-and-galaxies",
@@ -496594,7 +496635,12 @@
         "author": "Nayan j Nath",
         "author_url": "https://commons.wikimedia.org/wiki/User:Nayan_j_Nath",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 78.8,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "People were baking clay into pots more than 18,000 years ago, long before they had metal tools.",
       "subcategory": "planet-earth",
@@ -518659,7 +518705,8 @@
         "author": "Lorie Shaull / Lorie Shaull",
         "author_url": "https://www.flickr.com/photos/number7cloud/",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 24.31
       },
       "fun_fact": "A frozen soap bubble can crack and shatter like very thin glass.",
       "subcategory": "science",
@@ -676403,7 +676450,8 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov-NASA"
-        ]
+        ],
+        "duration": 15.93
       },
       "fun_fact": "Three Moon buggies are still parked on the Moon, where the Apollo 15, 16 and 17 crews left them.",
       "subcategory": "moons-comets-and-asteroids",
@@ -707866,7 +707914,8 @@
         "author": "Daniel Spiess",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 9.96
       },
       "fun_fact": "The bats are Brazilian free-tailed bats, and visitors can watch their flight from a stone amphitheater by the cave mouth.",
       "subcategory": "wildlife",
@@ -723336,7 +723385,12 @@
         "author": "Helge Klaus Rieder",
         "author_url": "https://commons.wikimedia.org/wiki/User:HelgeRieder",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 215.45,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Die Martinsgans soll daher kommen, dass sich Martin der Legende nach in einem Gänsestall versteckte, um nicht Bischof werden zu müssen – die schnatternden Gänse verrieten ihn.",
       "subcategory": "parks-weather-and-climate",
@@ -737113,7 +737167,8 @@
         "author": "Cornelst",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cornelst&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 26.94
       },
       "fun_fact": "Some woodpeckers drum on metal poles and even satellite dishes, because they sound so loud.",
       "subcategory": "birds",
@@ -1046156,7 +1046211,8 @@
         "author": "https://www.flickr.com/photos/gails_pictures/",
         "author_url": "https://www.flickr.com/photos/gails_pictures/",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 13.49
       },
       "fun_fact": "La garza real vuela con el cuello doblado en forma de S, a diferencia de cigüeñas y grullas, que lo estiran.",
       "subcategory": "wildlife",
@@ -1057459,7 +1057515,12 @@
         "author": "Exec8",
         "author_url": "https://commons.wikimedia.org/wiki/User:Exec8",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 33.9,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "La Ciudad de México está construida sobre un antiguo lago, por eso al agua de lluvia le cuesta tanto trabajo salir.",
       "subcategory": "reserves-and-climate",
@@ -1057751,7 +1057812,12 @@
         "author": "Nature video, HD - 4K",
         "author_url": "https://www.youtube.com/@naturevideohd-4k232",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 56.02,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Antes de un tsunami, a veces el mar se retira de golpe y deja la playa al descubierto: es una señal para huir.",
       "subcategory": "reserves-and-climate",
@@ -1094114,7 +1094180,8 @@
         "author": "Leonora Enking",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 8.14
       },
       "fun_fact": "Der Hirschkäfer ist der größte Käfer Deutschlands – die geweihartigen Zangen haben nur die Männchen.",
       "subcategory": "native-animals",
@@ -1218772,7 +1218839,12 @@
         "author": "Asclepioss",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Asclepioss&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 202.53,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The first cheerleader is said to be Johnny Campbell, a college student who led the crowd at a Minnesota football game in 1898.",
       "subcategory": "american-football",
@@ -1254091,7 +1254163,12 @@
         "author": "Colin Kranz",
         "author_url": "https://commons.wikimedia.org/wiki/User:Colin_Kranz",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 35.66,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Hagelkörner wandern oft mehrmals in der Wolke auf und ab und wachsen dabei Schicht um Schicht wie eine Zwiebel.",
       "subcategory": "parks-weather-and-climate",
@@ -1302593,7 +1302670,8 @@
         "author": "SURFit",
         "author_url": null,
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 18.89
       },
       "fun_fact": "Florida springs stay about 72 °F (22 °C) all year, so hundreds of manatees can pack into one spring on a cold day.",
       "subcategory": "national-parks",
@@ -1309237,7 +1309315,12 @@
         "restrictions": [],
         "pd_reasons": [
           "PD-USGov"
-        ]
+        ],
+        "duration": 209.99,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The eye of a hurricane can be calm and sunny, but the strongest winds of the whole storm spin in the wall of clouds right around it.",
       "subcategory": "weather-and-seasons",
@@ -1342176,7 +1342259,12 @@
         "author": "Zachzr",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Zachzr&action=edit&redlink=1",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 31.71,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Muchas golondrinas vuelven cada año al mismo nido de barro que dejaron el año anterior.",
       "subcategory": "wildlife",
@@ -1472878,7 +1472966,12 @@
         "author": "Lubo Ondrasko",
         "author_url": "https://vimeo.com/user9788409",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 102.64,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Some badger setts in Britain have been used by families of badgers for over 100 years.",
       "subcategory": "wildlife",
@@ -1549803,7 +1549896,12 @@
         "author": "Stinglehammer",
         "author_url": "https://commons.wikimedia.org/wiki/User:Stinglehammer",
         "restrictions": [],
-        "pd_reasons": []
+        "pd_reasons": [],
+        "duration": 46.6,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "More than a third of all the world's grey seals live around the coasts of Britain.",
       "subcategory": "rivers-coasts-and-islands",
@@ -1605640,7 +1605738,7 @@
         "duration": 270.71,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "Soyuz has carried crews into space since 1967, longer than any other spacecraft in history.",
@@ -1605679,7 +1605777,7 @@
         "seed": "q:video:space station astronaut video",
         "class": "general",
         "kind": "event-person",
-        "probe": "media-probe/1c7974022991a9ea"
+        "probe": "media-probe/5fadb95c1fb6f2c5"
       }
     },
     {
@@ -1606222,7 +1606320,7 @@
         "duration": 454.47,
         "excerpt": {
           "start": 90,
-          "end": 150
+          "end": 120
         }
       },
       "fun_fact": "Atatürk was born Mustafa; in 1934 the Turkish parliament gave him the surname “Atatürk,” meaning “Father of the Turks,” and nobody else may use it.",
@@ -1606261,7 +1606359,7 @@
         "seed": "q:video:traditional dance video",
         "class": "general",
         "kind": "event-person",
-        "probe": "media-probe/c8154acfc2ef5ab5"
+        "probe": "media-probe/f711d55ff8913dfd"
       }
     },
     {
@@ -1606485,7 +1606583,7 @@
         "duration": 46.14,
         "excerpt": {
           "start": 12,
-          "end": 46
+          "end": 42
         }
       },
       "fun_fact": "Ingenuity was built to try just 5 flights but ended up making 72, and it carried a tiny piece of fabric from the Wright brothers' first airplane.",
@@ -1606524,7 +1606622,7 @@
         "seed": "q:video:rover mars video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/2da6201e6e97477e"
+        "probe": "media-probe/ecc0d7d0a466e14a"
       },
       "revision": {
         "action": "revise",
@@ -1606672,7 +1606770,7 @@
         "duration": 119.77,
         "excerpt": {
           "start": 40,
-          "end": 99.5
+          "end": 70
         }
       },
       "fun_fact": "Intore dancers were once the elite warriors of the royal court of Rwanda's kings, and their dance showed off their skill and courage.",
@@ -1606711,7 +1606809,7 @@
         "seed": "q:video:traditional dance video",
         "class": "general",
         "kind": "event-person",
-        "probe": "media-probe/57384c7b40fefd33"
+        "probe": "media-probe/70817091bf8be900"
       }
     },
     {
@@ -1607110,7 +1607208,11 @@
         "role": "essential",
         "query": "File:City Timelapse - Free video.webm",
         "note": "Silent timelapse: a sunset over the water with a long arched bridge, then a busy lit street at night, and finally the old town at night with the tall, dark, lacy cast-iron spire of Riddarholmen Church above a busy road bridge (from about 24 s). No sign names the city; the only lit sign reads “East Capital”.",
-        "duration": 35.34
+        "duration": 35.34,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The open cast-iron spire of Riddarholmen Church, seen at the end of the clip, was built after lightning burned down the old spire in 1835.",
       "subcategory": "capital-cities",
@@ -1607148,7 +1607250,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/be5efb106c94a221"
+        "probe": "media-probe/55ef223e06c01cdf"
       }
     },
     {
@@ -1607590,7 +1607692,11 @@
         "role": "essential",
         "query": "File:2017 Total Solar Eclipse in the U.S.webm",
         "note": "The whole 48 s animation: the globe turns to North America, and the small black shadow spot (umbra) with its shaded rings moves from the Pacific across the USA, leaving a red path, and out over the Atlantic. No sound.",
-        "duration": 48.0
+        "duration": 48.0,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The total solar eclipse of August 21, 2017, was the first one to cross the United States from coast to coast since 1918.",
       "subcategory": "natural-phenomena",
@@ -1607628,7 +1607734,7 @@
         "seed": "cat:Videos by NASA",
         "class": "general",
         "kind": "event-person",
-        "probe": "media-probe/d99b7c0d6bfec78b"
+        "probe": "media-probe/baf5364b06c71ad9"
       }
     },
     {
@@ -1607840,7 +1607946,7 @@
     },
     {
       "id": "q-20673",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 8,
       "description": "A world map that takes 130 years to slowly blush.",
       "question": "Watch this NASA map change from the 1880s to the 2010s. Which part of the world turns the deepest red?",
@@ -1607872,7 +1607978,11 @@
         "role": "essential",
         "query": "File:2016 Was the Warmest Year on Record.webm",
         "note": "NASA world temperature map animated from 1888–1892 to 2012–2016, going from blue/white to orange and deep red; by the end, the widest deep-red band runs across the top of the map (the Arctic).",
-        "duration": 48.97
+        "duration": 48.97,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The Arctic is warming about three to four times faster than the planet as a whole, which scientists call “Arctic amplification.”",
       "subcategory": "weather-and-climate",
@@ -1607895,13 +1608005,22 @@
       "needs_media": true,
       "batch": "batch-79",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-16",
+        "decision": "needs_work",
+        "feedback": "Clue outside the 30 s window: The cut window stops at the 1976–1980 map (frame 10, 28.5 s), so the 2010s map and its deep-red Arctic are missing; in the window the top of the map is still white or blue (frame 9, 25.5 s) or no redder than other areas (frames 6 and 10), even though the question says \"to the 2010s\" and hint 1 points to the reddest final seconds..",
+        "problems": [
+          "media"
+        ],
+        "reviewed_on": "2026-11-17",
         "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "model": "opus",
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5"
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1607910,7 +1608029,7 @@
         "seed": "cat:Videos by NASA",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/177eb5018deb7ef2"
+        "probe": "media-probe/ff064c3c68405d44"
       },
       "revision": {
         "action": "revise",
@@ -1608057,7 +1608176,7 @@
         "duration": 118.68,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "Soft “chamois leather” used for cleaning cars and windows got its name from this animal, whose skin was once used to make it.",
@@ -1608096,7 +1608215,7 @@
         "seed": "cat:Videos of animals",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/1c23a7ded31c13a1"
+        "probe": "media-probe/f57d7faba68eea79"
       }
     },
     {
@@ -1608435,7 +1608554,11 @@
         "role": "essential",
         "query": "File:Moose (Alces Alces) in Seedskadee National Wildlife Refuge.webm",
         "note": "A young bull moose stands in a shallow river browsing on willow bushes, then walks across the water to the right; its long snout, shoulder hump and small antlers are clearly visible. Only ambient river sound.",
-        "duration": 31.03
+        "duration": 31.03,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "In Britain this animal is called an “elk”, but in North America “elk” is the name of a different, smaller deer.",
       "subcategory": "mammals",
@@ -1608473,7 +1608596,7 @@
         "seed": "q:video:animal video wildlife",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/2707566a8bb2e124"
+        "probe": "media-probe/7a324d481a018eee"
       }
     },
     {
@@ -1608714,7 +1608837,7 @@
         "duration": 140.14,
         "excerpt": {
           "start": 33,
-          "end": 93
+          "end": 63
         }
       },
       "fun_fact": "Astronauts on the space station exercise about two hours a day, because without gravity their muscles and bones would quickly grow weaker.",
@@ -1608753,7 +1608876,7 @@
         "seed": "q:video:space station astronaut video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/21f97b94721ee7e0"
+        "probe": "media-probe/11081b9800946783"
       }
     },
     {
@@ -1608878,7 +1609001,7 @@
         "duration": 99.31,
         "excerpt": {
           "start": 0,
-          "end": 55
+          "end": 30
         }
       },
       "fun_fact": "In this 2018 test at Kennedy Space Center's Launch Pad 39B, the water shot about 30 m (100 ft) into the air.",
@@ -1608917,7 +1609040,7 @@
         "seed": "q:video:NASA video launch",
         "class": "general",
         "kind": "event-person",
-        "probe": "media-probe/0061517f05ead8e8"
+        "probe": "media-probe/1daded72421e6602"
       }
     },
     {
@@ -1609061,7 +1609184,11 @@
         "role": "essential",
         "query": "File:2013 Daily Arctic Sea Ice from AMSR2 - May - September 2013.ogv",
         "note": "The whole 30-second NASA animation (no sound): a globe seen from above the North Pole, with North America and Greenland visible, as the white sea ice and snow shrink from May to September 2013. Only a date label in the top left is shown on screen.",
-        "duration": 30.07
+        "duration": 30.07,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The sea ice in this ocean usually reaches its smallest size each September, then freezes and grows back over the winter.",
       "subcategory": "environment",
@@ -1609099,7 +1609226,7 @@
         "seed": "cat:Videos by NASA",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/9c6a6055d574768d"
+        "probe": "media-probe/8f55cdedc2cb478c"
       },
       "revision": {
         "action": "revise",
@@ -1609150,7 +1609277,7 @@
         "duration": 102.09,
         "excerpt": {
           "start": 15,
-          "end": 75
+          "end": 45
         }
       },
       "fun_fact": "The Chain Bridge opened in 1849 and was the first permanent bridge across the Danube in Hungary. Its stone lions are said to have no tongues, but they do have them; you just can't see them from below.",
@@ -1609189,7 +1609316,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/9db48b9ee7164d62"
+        "probe": "media-probe/eee3a64ca09e6681"
       }
     },
     {
@@ -1609713,7 +1609840,11 @@
         "role": "essential",
         "query": "File:Traditional Gussadi Dance of the Gond Tribe.webm",
         "note": "The whole clip: men in white dhotis and kurtas with red and pink sashes and turbans dance in a circle under a striped canopy. One dancer wears a yellow mask, others have large dark feather headdresses, and loud drums play throughout. No speech and no readable text.",
-        "duration": 56.73
+        "duration": 56.73,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "This is the Gussadi dance of the Gond people. Dancers wear huge headdresses made of peacock feathers during the Dandari festival, held around Diwali.",
       "subcategory": "celebrations-around-the-world",
@@ -1609751,7 +1609882,7 @@
         "seed": "q:video:traditional dance video",
         "class": "general",
         "kind": "event-person",
-        "probe": "media-probe/23bd70c8947ed7fc"
+        "probe": "media-probe/729524e70348ef9f"
       },
       "revision": {
         "action": "revise",
@@ -1609804,7 +1609935,7 @@
         "duration": 101.29,
         "excerpt": {
           "start": 0,
-          "end": 45
+          "end": 30
         }
       },
       "fun_fact": "This is Taal in the Philippines, a volcano on an island in a lake, and that lake itself sits inside the crater of a much bigger, older volcano.",
@@ -1609843,7 +1609974,7 @@
         "seed": "q:video:volcano eruption video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/4bea2b24adf11576"
+        "probe": "media-probe/fc0662179cffceff"
       }
     },
     {
@@ -1609973,7 +1610104,11 @@
         "role": "essential",
         "query": "File:Bald Eagles (18731656064).webm",
         "note": "Whole clip: bald eagles with white head, yellow beak and dark brown body, in flight, sitting on a big stick nest and perched on branches; a flock of ducks briefly flies past around 29–34 s. Audio is near silent (faint birdsong) and not needed.",
-        "duration": 39.91
+        "duration": 39.91,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Bald eagles keep adding sticks to the same nest year after year, and the biggest nests ever found weighed more than 2 tonnes, more than a car.",
       "subcategory": "birds",
@@ -1610011,7 +1610146,7 @@
         "seed": "q:video:animal video wildlife",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/2564d56dc59cec01"
+        "probe": "media-probe/0f08bc26e7c3f37f"
       },
       "revision": {
         "action": "revise",
@@ -1610062,7 +1610197,7 @@
         "duration": 60.05,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "We have seasons because Earth's axis is tilted by about 23.4 degrees, not because Earth gets closer to or farther from the Sun.",
@@ -1610101,7 +1610236,7 @@
         "seed": "q:video:time-lapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/b49909711efa62df"
+        "probe": "media-probe/23694ef5855c363e"
       },
       "revision": {
         "action": "revise",
@@ -1610515,7 +1610650,7 @@
         "duration": 42.29,
         "excerpt": {
           "start": 0,
-          "end": 42.29
+          "end": 30
         }
       },
       "fun_fact": "Once fully swollen at around 40 km (25 miles) up, NASA's biggest science balloons are large enough to hold a whole sports stadium.",
@@ -1610564,7 +1610699,7 @@
         "seed": "q:video:NASA video launch",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/3ced6832c0a97e1c"
+        "probe": "media-probe/1f59597d8f9c9ca5"
       },
       "revision": {
         "action": "revise",
@@ -1610708,7 +1610843,11 @@
         "role": "essential",
         "query": "File:Traditional chinese dance in Gubei.webm",
         "note": "The whole clip: one dancer on a red-curtained stage, in a red Ming-style hanfu (a long jacket with white-cuffed wide sleeves over a pleated, gold-banded horse-face skirt), with a floral hair ornament, dancing slowly.",
-        "duration": 38.83
+        "duration": 38.83,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The pleated red-and-gold skirt in this outfit is called a “horse-face skirt”, a Ming dynasty design that became a hugely popular fashion item again around 2022.",
       "subcategory": "traditional-dress",
@@ -1610746,7 +1610885,7 @@
         "seed": "q:video:traditional dance video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/c6affa3b794c60ca"
+        "probe": "media-probe/389b1bc20f000dbb"
       }
     },
     {
@@ -1610880,7 +1611019,7 @@
         "duration": 136.6,
         "excerpt": {
           "start": 44,
-          "end": 104
+          "end": 74
         }
       },
       "fun_fact": "Jellyfish have no brain, no heart and no bones, yet they have drifted through the oceans for more than 500 million years.",
@@ -1610919,7 +1611058,7 @@
         "seed": "cat:Videos of animals",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/1c9609405dfe9dfc"
+        "probe": "media-probe/59556a9f8d08e982"
       }
     },
     {
@@ -1611098,7 +1611237,7 @@
     },
     {
       "id": "q-20709",
-      "status": "approved",
+      "status": "needs_work",
       "difficulty": 11,
       "description": "The most expensive delivery service in the solar system, and it still doesn't ring the doorbell.",
       "question": "Watch: what is the name of the landing method shown here, used to set a rover down on Mars?",
@@ -1611133,7 +1611272,7 @@
         "duration": 190.28,
         "excerpt": {
           "start": 85,
-          "end": 143
+          "end": 115
         }
       },
       "fun_fact": "The descent stage cuts the cables after touchdown and flies off to crash a safe distance away, so it can't land on the rover it just delivered.",
@@ -1611157,13 +1611296,22 @@
       "needs_media": true,
       "batch": "batch-79",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-11-16",
+        "decision": "needs_work",
+        "feedback": "Clue outside the 30 s window: The 85–115 s cut shows only the entry and powered-descent stages (heat shield in frame 2, rocket descent with the rover still attached in frames 4–8, the descent stage from above in frames 9–10), and nothing in the frames shows the rover hanging from cables or touching down, so the sky-crane step that the question and hints point to (\"last few seconds before the wheels touch the ground\") was cut away with the old 115–143 s part..",
+        "problems": [
+          "media"
+        ],
+        "reviewed_on": "2026-11-17",
         "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "model": "opus",
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-11-16",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5"
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1611172,7 +1611320,7 @@
         "seed": "q:video:rover mars video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/0e2ac18009fcd501"
+        "probe": "media-probe/a1c52e98b89e8c5f"
       }
     },
     {
@@ -1611307,7 +1611455,11 @@
         "role": "essential",
         "query": "File:Prothonotary warbler feeding nestlings (35134317631).webm",
         "note": "A small bird with a golden-yellow head and body and plain blue-gray wings with no wing bars perches at a hole in a dark tree trunk and feeds the chicks inside, against green leaves; faint chirping only.",
-        "duration": 42.58
+        "duration": 42.58,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "This is a prothonotary warbler, one of only two North American warblers that nest in tree holes, often old woodpecker holes.",
       "subcategory": "birds",
@@ -1611345,7 +1611497,7 @@
         "seed": "q:video:animal video wildlife",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/4c49c1741edd6909"
+        "probe": "media-probe/6dd8c508e3a88444"
       },
       "difficulty_original": 14,
       "revision": {
@@ -1611600,7 +1611752,7 @@
         "duration": 37.12,
         "excerpt": {
           "start": 5,
-          "end": 37
+          "end": 35
         }
       },
       "fun_fact": "Since 2015, Egypt has been building a whole New Administrative Capital in the desert east of Cairo, to take over the government offices.",
@@ -1611639,7 +1611791,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/c01e32dc5bcd7cea"
+        "probe": "media-probe/981f3f1c3f143476"
       }
     },
     {
@@ -1612310,7 +1612462,7 @@
         "duration": 62.14,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "In the US state of Minnesota, the public votes on names for snowplows, and one of the winning names was “Plowy McPlowface”.",
@@ -1612349,7 +1612501,7 @@
         "seed": "q:video:train video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/f87f798458b4dfb7"
+        "probe": "media-probe/8f25356ee3a72fb6"
       }
     },
     {
@@ -1612999,7 +1613151,7 @@
         "duration": 357.78,
         "excerpt": {
           "start": 4,
-          "end": 40
+          "end": 34
         }
       },
       "fun_fact": "An aurora's green color comes from oxygen high in the air, and astronauts on the space station sometimes fly right through the glowing curtains.",
@@ -1613038,7 +1613190,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/3742486386e38992"
+        "probe": "media-probe/11ec4756ebac38e3"
       }
     },
     {
@@ -1613076,7 +1613228,7 @@
         "duration": 60.48,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "The Sun rises exactly due east only around the two equinoxes in March and September; in summer, places north of the equator see it come up in the northeast.",
@@ -1613115,7 +1613267,7 @@
         "seed": "q:video:time-lapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/32ce419add8d9e01"
+        "probe": "media-probe/5f8a4ad17cf0d7ad"
       }
     },
     {
@@ -1613238,7 +1613390,7 @@
         "duration": 37.12,
         "excerpt": {
           "start": 5,
-          "end": 37
+          "end": 35
         }
       },
       "fun_fact": "Old San Juan was founded in the 1520s, which makes it one of the oldest cities built by Europeans in the Americas, and its forts are a UNESCO World Heritage Site.",
@@ -1613277,7 +1613429,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/3c56e5892613f520"
+        "probe": "media-probe/8d145ef2825ab269"
       }
     },
     {
@@ -1613413,7 +1613565,11 @@
         "role": "essential",
         "query": "File:SCA takeoff and landing.ogv",
         "note": "Silent NASA footage: the Shuttle Carrier Aircraft with an orbiter on top, first parked in side view (showing the 747's hump and four engines), then taking off and landing.",
-        "duration": 31.27
+        "duration": 31.27,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "NASA used two modified Boeing 747s to fly the Space Shuttle across the United States, and gave them extra fins on their tails to stay steady with the orbiter on top.",
       "subcategory": "planes",
@@ -1613451,7 +1613607,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/9e736bdd7e2e460f"
+        "probe": "media-probe/4e635887e64130fe"
       },
       "revision": {
         "action": "revise",
@@ -1613772,7 +1613928,11 @@
         "role": "essential",
         "query": "File:20240504 yellow warbler nest building.webm",
         "note": "The whole clip: a bright, all-yellow small songbird (yellow wings, no black cap or black wings) moving on a cup nest among bare gray twigs.",
-        "duration": 38.56
+        "duration": 38.56,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "When a cowbird sneaks its egg into a yellow warbler's nest, the warbler often just builds a new floor on top and lays its eggs again, sometimes making nests several stories high.",
       "subcategory": "birds",
@@ -1613810,7 +1613970,7 @@
         "seed": "q:video:animal video wildlife",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/2eb4ba2b93f5a3d5"
+        "probe": "media-probe/455b92b1c2906f47"
       },
       "revision": {
         "action": "revise",
@@ -1613957,7 +1614117,7 @@
         "duration": 37.12,
         "excerpt": {
           "start": 5,
-          "end": 37
+          "end": 35
         }
       },
       "fun_fact": "Palm Jumeirah, the first of the palm-shaped islands, was built from about 94 million cubic meters of sand dredged from the seabed and sprayed into shape.",
@@ -1613996,7 +1614156,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/f2675bdf997f4602"
+        "probe": "media-probe/b89bb1d0afdd2bae"
       },
       "revision": {
         "action": "revise",
@@ -1614047,7 +1614207,7 @@
         "duration": 140.95,
         "excerpt": {
           "start": 0,
-          "end": 50
+          "end": 30
         }
       },
       "fun_fact": "Young Joro spiders can “balloon”: they let out a silk thread and ride the wind, sometimes for many kilometers.",
@@ -1614086,7 +1614246,7 @@
         "seed": "cat:Videos of animals",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/bb32b6e5044096ca"
+        "probe": "media-probe/79dca6b317f5cd7e"
       }
     },
     {
@@ -1614205,7 +1614365,7 @@
         "duration": 164.82,
         "excerpt": {
           "start": 0,
-          "end": 50
+          "end": 30
         }
       },
       "fun_fact": "A shrimp's heart sits in its head, just behind its eyes.",
@@ -1614244,7 +1614404,7 @@
         "seed": "cat:Videos of animals",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/3e06d6081fd88e19"
+        "probe": "media-probe/6e16ff46a7528b54"
       },
       "revision": {
         "action": "revise",
@@ -1614295,7 +1614455,11 @@
         "role": "essential",
         "query": "File:SR-71 Takeoff at Edwards Air Force Base.webm",
         "note": "Silent video: the black, long-nosed twin-engine jet rolls down a desert runway, seen head-on and from the side, then lifts off with glowing engines.",
-        "duration": 44.14
+        "duration": 44.14,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Its fuel tanks leaked on the ground on purpose: the panels only sealed tight once the heat of flying at top speed made the metal expand.",
       "subcategory": "planes",
@@ -1614333,7 +1614497,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/3fe694bba3fda894"
+        "probe": "media-probe/6e24423b392d4a1e"
       },
       "revision": {
         "action": "revise",
@@ -1614379,7 +1614543,7 @@
         "duration": 104.63,
         "excerpt": {
           "start": 0,
-          "end": 40
+          "end": 30
         }
       },
       "fun_fact": "Koi can live for decades, and a famous Japanese koi called Hanako was said to be over 200 years old.",
@@ -1614418,7 +1614582,7 @@
         "seed": "cat:Videos of animals",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/5b8d8d51786ffa3a"
+        "probe": "media-probe/dd6aac7600544175"
       }
     },
     {
@@ -1615113,7 +1615277,7 @@
         "duration": 100.04,
         "excerpt": {
           "start": 20,
-          "end": 80
+          "end": 50
         }
       },
       "fun_fact": "The plane in the clip is an ATR 72, built by a French-Italian company. Turboprops like it burn much less fuel than jets on short flights, so they are popular on regional routes all over the world.",
@@ -1615152,7 +1615316,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/4a4f6bbfed670c82"
+        "probe": "media-probe/27211f5627465b3e"
       }
     },
     {
@@ -1615287,7 +1615451,11 @@
         "role": "essential",
         "query": "File:Japanese cicada (Meimuna opalifera).webm",
         "note": "A cicada sits on a sunlit tree trunk while its repeated buzzing song plays the whole time. Its body can be seen pulsing in the later close-up frames.",
-        "duration": 45.63
+        "duration": 45.63,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Some cicadas sing at over 100 decibels, which makes them some of the loudest insects on Earth.",
       "subcategory": "insects",
@@ -1615325,7 +1615493,7 @@
         "seed": "cat:Videos of animals",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/590da4ba11925c8e"
+        "probe": "media-probe/8be7a4dcf9c6bdb7"
       },
       "revision": {
         "action": "revise",
@@ -1615466,7 +1615634,7 @@
         "duration": 65.09,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "The upturned wingtips, called winglets, were partly inspired by soaring birds like eagles and condors, which spread their wingtip feathers upward as they fly.",
@@ -1615505,7 +1615673,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/6ea70f602a88e71a"
+        "probe": "media-probe/e9516289c5c6404a"
       }
     },
     {
@@ -1616013,7 +1616181,7 @@
         "duration": 60.07,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "The Boeing 767 first flew in 1981, and many old passenger 767s were later turned into cargo planes. It's still built today as a freighter and as a military air-to-air refueling tanker.",
@@ -1616052,7 +1616220,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/9b9aef455961e14f"
+        "probe": "media-probe/d26627b5d735947f"
       }
     },
     {
@@ -1616090,7 +1616258,7 @@
         "duration": 108.82,
         "excerpt": {
           "start": 40,
-          "end": 100
+          "end": 70
         }
       },
       "fun_fact": "The name Nairobi comes from the Maasai words “Enkare Nairobi”, meaning “cool water”, after a stream that flowed there.",
@@ -1616129,7 +1616297,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/db88255915f7d4e0"
+        "probe": "media-probe/9e63d0796236a0cf"
       }
     },
     {
@@ -1616827,7 +1616995,7 @@
         "duration": 147.4,
         "excerpt": {
           "start": 55,
-          "end": 115
+          "end": 85
         }
       },
       "fun_fact": "The city and its river are named after Sir Thomas Brisbane, a governor and keen astronomer whose observatory near Sydney charted thousands of southern stars.",
@@ -1616866,7 +1617034,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/c4993d141bf2c5f3"
+        "probe": "media-probe/b2c945cce2787635"
       },
       "revision": {
         "action": "revise",
@@ -1617309,7 +1617477,7 @@
         "duration": 142.12,
         "excerpt": {
           "start": 30,
-          "end": 90
+          "end": 60
         }
       },
       "fun_fact": "In 1900, engineers reversed the flow of the Chicago River so it ran away from Lake Michigan instead of into it.",
@@ -1617348,7 +1617516,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/4d67d79615f2b97d"
+        "probe": "media-probe/213508cb911befb5"
       }
     },
     {
@@ -1618414,7 +1618582,11 @@
         "role": "essential",
         "query": "File:Video credit- Jennifer Waipa-USFWS (39932789814).webm",
         "note": "Vertical video of a nēnē (Hawaiian goose) bathing in a shallow pool in front of a reddish rock wall: its buff cheeks, black face and furrowed, striped neck are clearly visible as it splashes, flaps and preens. Audio is near-silent and not needed.",
-        "duration": 34.3
+        "duration": 34.3,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "By the early 1950s only about 30 nēnē were left in the wild, and captive breeding brought them back to thousands today.",
       "subcategory": "birds",
@@ -1618452,7 +1618624,7 @@
         "seed": "q:video:animal video wildlife",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/2eb58b47ec91f275"
+        "probe": "media-probe/9fb0c78ab76c3124"
       }
     },
     {
@@ -1619232,7 +1619404,11 @@
         "role": "essential",
         "query": "File:Time-lapse video of Bacillus cereus growing.webm",
         "note": "Silent time-lapse of a clear, round, lidded dish of agar. Creamy bacterial colonies appear and spread along streak lines over the whole 35 s.",
-        "duration": 35.0
+        "duration": 35.0,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The Petri dish is named after Julius Richard Petri, who worked in Robert Koch's lab in Germany and described it in 1887.",
       "subcategory": "science",
@@ -1619270,7 +1619446,7 @@
         "seed": "q:video:time-lapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/72ebe2900126dde3"
+        "probe": "media-probe/31aab21d991d6a8e"
       },
       "revision": {
         "action": "revise",
@@ -1619794,7 +1619970,7 @@
         "duration": 78.66,
         "excerpt": {
           "start": 11,
-          "end": 62
+          "end": 41
         }
       },
       "fun_fact": "On the Antonov An-70, each engine turns an eight-blade propeller in front of a six-blade one, and the two spin in opposite directions.",
@@ -1619833,7 +1620009,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/dc31df1acc440a0f"
+        "probe": "media-probe/e8fc7cc624eebe2a"
       }
     },
     {
@@ -1621375,7 +1621551,11 @@
         "role": "essential",
         "query": "File:AMSR2 Daily Arctic Sea Ice - 2014.ogv",
         "note": "NASA globe animation of the Arctic from March to July 2014: the sea ice around North America shrinks, while Greenland's ice sheet stays a large white shape on the right of the globe the whole time. Only dates appear on screen.",
-        "duration": 32.75
+        "duration": 32.75,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Greenland's ice sheet is up to about 3 km (2 miles) thick, and if it all melted, the world's oceans would rise by about 7 m (23 ft).",
       "subcategory": "islands",
@@ -1621413,7 +1621593,7 @@
         "seed": "cat:Videos by NASA",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/ebe8bdb7505a261a"
+        "probe": "media-probe/28806ea08fc71693"
       }
     },
     {
@@ -1621925,7 +1622105,7 @@
         "duration": 176.89,
         "excerpt": {
           "start": 60,
-          "end": 110
+          "end": 90
         }
       },
       "fun_fact": "NASA's Neutral Buoyancy Laboratory in Houston holds about 23 million liters (6.2 million gallons) of water, and astronauts can spend six hours at a time in it practicing a single spacewalk.",
@@ -1621964,7 +1622144,7 @@
         "seed": "q:video:space station astronaut video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/be96e67de82dae07"
+        "probe": "media-probe/39af33b15e026698"
       },
       "revision": {
         "action": "revise",
@@ -1622469,7 +1622649,11 @@
         "role": "essential",
         "query": "File:UPS N292UP MD-11 Takeoff Portland Airport (PDX).ogv",
         "note": "A rear view of a wide-body jet as it rolls down the runway and lifts off. You can clearly see the two wing engines and the third engine mounted through the base of the tail fin (about 12–35 s). It lifts off at about 42 s. At about 7 s you see the side of the plane with its UPS cargo colors, but no model name.",
-        "duration": 50.04
+        "duration": 50.04,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The MD-11 was the last three-engine wide-body airliner ever built, and production ended in 2001 after about 200 had been made.",
       "subcategory": "planes",
@@ -1622507,7 +1622691,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/09075ad594e57081"
+        "probe": "media-probe/b19b1f85d21f3ee4"
       },
       "revision": {
         "action": "revise",
@@ -1622851,7 +1623035,7 @@
         "duration": 89.24,
         "excerpt": {
           "start": 15,
-          "end": 75
+          "end": 45
         }
       },
       "fun_fact": "Covered hoppers empty through gates in their floors, so gravity unloads them and nobody has to lift a thing.",
@@ -1622890,7 +1623074,7 @@
         "seed": "q:video:train video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/1cd49a5753a363b1"
+        "probe": "media-probe/90d2f1f8dc908ee6"
       },
       "revision": {
         "action": "revise",
@@ -1623045,7 +1623229,11 @@
         "role": "essential",
         "query": "File:Video 1-2 - Europa Flyby - NASA Juno's orbit n 45 (52409123119).webm",
         "note": "Silent video of Juno images of a half-lit, pale pinkish moon with a smooth surface criss-crossed by reddish-brown lines and almost no craters, on black. No captions or names visible.",
-        "duration": 33.61
+        "duration": 33.61,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The ocean under Europa’s ice may hold about twice as much water as all of Earth’s oceans together.",
       "subcategory": "solar-system",
@@ -1623083,7 +1623271,7 @@
         "seed": "q:video:NASA video launch",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/2f31be91e20907b1"
+        "probe": "media-probe/d4fdfd9c1de083eb"
       }
     },
     {
@@ -1623121,7 +1623309,7 @@
         "duration": 122.61,
         "excerpt": {
           "start": 0,
-          "end": 60
+          "end": 30
         }
       },
       "fun_fact": "Fallow deer bucks grow wide, flat “palmate” antlers, and the Romans helped spread the species across Europe.",
@@ -1623160,7 +1623348,7 @@
         "seed": "q:video:animal video wildlife",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/01c9edff061d14a9"
+        "probe": "media-probe/8ae47bafa1799b70"
       }
     },
     {
@@ -1623488,7 +1623676,7 @@
         "duration": 466.97,
         "excerpt": {
           "start": 300,
-          "end": 360
+          "end": 330
         },
         "work": {
           "title": "News of Iran (Akhbar-e Iran), episode 3",
@@ -1623595,7 +1623783,7 @@
         "duration": 271.18,
         "excerpt": {
           "start": 145,
-          "end": 205
+          "end": 175
         }
       },
       "fun_fact": "The Glico “Running Man” sign has been lighting up Dotonbori since 1935 and has been replaced with new versions several times since.",
@@ -1623634,7 +1623822,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "place",
-        "probe": "media-probe/0cb1408cb320444e"
+        "probe": "media-probe/10d1d645f12701a9"
       }
     },
     {
@@ -1623844,7 +1624032,11 @@
         "role": "essential",
         "query": "File:Animation of Eta Carinae and its surrounding.webm",
         "note": "Play the full silent 30 s animation: it starts on the reddish, peanut-shaped two-lobed Homunculus Nebula, zooms into it, and ends on two bright stars orbiting in blue gas.",
-        "duration": 30.37
+        "duration": 30.37,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The glowing cloud, called the Homunculus Nebula, was blown out in the 1840s and holds at least 10 times the mass of our Sun.",
       "subcategory": "stars-and-galaxies",
@@ -1623882,7 +1624074,7 @@
         "seed": "cat:Videos by NASA",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/b4b576eb0efa6b05"
+        "probe": "media-probe/af78566b1bffbf91"
       }
     },
     {
@@ -1624019,7 +1624211,7 @@
         "duration": 89.19,
         "excerpt": {
           "start": 35,
-          "end": 68
+          "end": 65
         }
       },
       "fun_fact": "Phobos circles Mars about three times a day, so it rises in the west and sets in the east, seen from Mars.",
@@ -1624058,7 +1624250,7 @@
         "seed": "q:video:rover mars video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/9c0f863f19b10fb9"
+        "probe": "media-probe/dcce06596605f200"
       }
     },
     {
@@ -1625623,7 +1625815,7 @@
         "duration": 59.15,
         "excerpt": {
           "start": 12,
-          "end": 59.1
+          "end": 42
         }
       },
       "fun_fact": "Adjarian khachapuri comes from Adjara on the Black Sea coast, and its boat shape is said to stand for a ship, with the yolk as the sun.",
@@ -1625662,7 +1625854,7 @@
         "seed": "q:video:cooking video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/d3f79e421c974630"
+        "probe": "media-probe/eb65e10151643636"
       },
       "revision": {
         "action": "revise",
@@ -1626000,7 +1626192,7 @@
         "duration": 154.22,
         "excerpt": {
           "start": 69,
-          "end": 129
+          "end": 99
         }
       },
       "fun_fact": "The 17.6 m (58 ft) Canadarm2 can “walk” around the International Space Station, moving end over end like an inchworm between special docking points.",
@@ -1626039,7 +1626231,7 @@
         "seed": "q:video:time-lapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/777b1e8c01514f21"
+        "probe": "media-probe/9d19ac4ca7562f87"
       }
     },
     {
@@ -1626171,7 +1626363,11 @@
         "role": "essential",
         "query": "File:A typical Ijaw traditional dancer and drummers.webm",
         "note": "The whole clip: a woman in a red outfit with coral beads and a man in a white shirt, hat and checked (madras-style) wrapper dancing in a courtyard, other women in coral beads behind, young men seated playing drums. No text or speech.",
-        "duration": 37.87
+        "duration": 37.87,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The Ijaw people who perform this dance are one of Nigeria's largest ethnic groups, and many live in the creeks of the Niger Delta, where fishing has long been a way of life.",
       "subcategory": "celebrations-around-the-world",
@@ -1626209,7 +1626405,7 @@
         "seed": "q:video:traditional dance video",
         "class": "general",
         "kind": "event-person",
-        "probe": "media-probe/f0977c172e58d66e"
+        "probe": "media-probe/234cd7ccccc25951"
       }
     },
     {
@@ -1626247,7 +1626443,7 @@
         "duration": 60.4,
         "excerpt": {
           "start": 0,
-          "end": 50
+          "end": 30
         }
       },
       "fun_fact": "The Airbus A300, first flown in 1972, was the world's first wide-body airliner with only two engines.",
@@ -1626286,7 +1626482,7 @@
         "seed": "q:video:aircraft takeoff video",
         "class": "general",
         "kind": "machine",
-        "probe": "media-probe/7c1eab6a79e46016"
+        "probe": "media-probe/2a87bff16c109bb1"
       }
     },
     {
@@ -1626394,7 +1626590,11 @@
         "role": "essential",
         "query": "File:Shioya-abu robber fly (Promachus yesonicus).webm",
         "note": "A robber fly perched on a dead leaf in grass, clearly showing its large eyes, long bristly legs, slender tapering abdomen (white tip) and folded wings; quiet birdsong in the background.",
-        "duration": 45.34
+        "duration": 45.34,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "Robber flies have a bushy “moustache” of bristles on their face that protects their eyes while their prey struggles.",
       "subcategory": "insects",
@@ -1626432,7 +1626632,7 @@
         "seed": "cat:Videos of animals",
         "class": "general",
         "kind": "animal",
-        "probe": "media-probe/65f3f8780d39c26a"
+        "probe": "media-probe/01051893dd1ab77d"
       }
     },
     {
@@ -1626569,7 +1626769,7 @@
         "duration": 184.93,
         "excerpt": {
           "start": 60,
-          "end": 120
+          "end": 90
         }
       },
       "fun_fact": "The dance is called Bagurumba, and women usually perform it at Bwisagu, the Bodo New Year festival held in spring.",
@@ -1626608,7 +1626808,7 @@
         "seed": "q:video:traditional dance video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/b93ed4cc97dba88b"
+        "probe": "media-probe/aedcb027941936d9"
       },
       "revision": {
         "action": "revise",
@@ -1627074,7 +1627274,11 @@
         "role": "illustrative",
         "query": "File:Pyrocumulus 2022 Czechia.webm",
         "note": "Silent timelapse (whole 35 s): a white, cauliflower-shaped cloud billows up from behind a tree line across a river, under a blue sky. No text or speech.",
-        "duration": 35.1
+        "duration": 35.1,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "fun_fact": "The cloud in this clip rose over the 2022 wildfire in Bohemian Switzerland, the largest forest fire in Czech history, and the biggest fire clouds can even make their own lightning.",
       "subcategory": "weather-and-climate",
@@ -1627112,7 +1627316,7 @@
         "seed": "q:video:city timelapse video",
         "class": "general",
         "kind": "video-scene",
-        "probe": "media-probe/91845970ec69ac1e"
+        "probe": "media-probe/c1787e54b184d301"
       }
     },
     {
@@ -1627150,7 +1627354,7 @@
         "duration": 85.32,
         "excerpt": {
           "start": 0,
-          "end": 45
+          "end": 30
         }
       },
       "fun_fact": "Bananas Foster, a famous flambéed banana dessert, was created at a restaurant in New Orleans in 1951.",

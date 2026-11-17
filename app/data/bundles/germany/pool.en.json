@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "ef36e869",
+  "hash": "718fae14",
   "questions": [
     {
       "id": "q-9120",
@@ -6412,7 +6412,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Helge Klaus Rieder",
         "author_url": "https://commons.wikimedia.org/wiki/User:HelgeRieder",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -63490,7 +63493,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Colin Kranz",
         "author_url": "https://commons.wikimedia.org/wiki/User:Colin_Kranz",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
