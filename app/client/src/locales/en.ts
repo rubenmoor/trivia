@@ -638,7 +638,7 @@ export const en = {
       ],
     },
   },
-  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject} / {subjectLc} subject, {group} age group. */
+  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject} / {subjectLc} subject, {group} difficulty name. */
   career: {
     grade: { elementary: "Elementary School", middle: "Middle School", high: "High School", college: "College" },
     subject: {
@@ -651,7 +651,7 @@ export const en = {
       high: { name: "High School Diploma", desc: "Pass High School in all 7 subjects." },
     },
     college: { name: "College", desc: "Answer {n} college-level questions right." },
-    year: { name: "School Year: {group}", desc: "Finish {n} games in the {group} age group." },
+    year: { name: "Difficulty: {group}", desc: "Finish {n} games on {group} difficulty." },
     score: { name: "{n} Points", desc: "Reach {n} points." },
     /** The celebration on the badge page (plan 197). */
     new: { one: "New badge!", other: "{n} new badges!" },

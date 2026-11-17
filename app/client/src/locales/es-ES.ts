@@ -140,6 +140,5 @@ export const esES = {
     diploma: {
       middle: { name: "Graduado en ESO", desc: "Aprobar secundaria (ESO) en las 7 asignaturas." },
     },
-    year: { name: "Curso escolar: {group}" },
   },
 } satisfies Override;

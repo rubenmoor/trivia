@@ -637,7 +637,7 @@ export const de = {
       ],
     },
   },
-  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject} / {subjectLc} subject, {group} age group. */
+  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject} / {subjectLc} subject, {group} difficulty name. */
   career: {
     grade: { elementary: "Grundschule", middle: "Mittelstufe", high: "Oberstufe", college: "Universität" },
     subject: {
@@ -650,7 +650,7 @@ export const de = {
       high: { name: "Abitur", desc: "Die Oberstufe in allen 7 Fächern bestehen." },
     },
     college: { name: "Universität", desc: "{n} Fragen auf Universitätsniveau richtig beantworten." },
-    year: { name: "Schuljahr: {group}", desc: "{n} Spiele in der Altersgruppe {group} zu Ende spielen." },
+    year: { name: "Schwierigkeit: {group}", desc: "{n} Spiele auf Schwierigkeit {group} zu Ende spielen." },
     score: { name: "{n} Punkte", desc: "{n} Punkte erreichen." },
     /** The celebration on the badge page (plan 197). */
     new: { one: "Neues Abzeichen!", other: "{n} neue Abzeichen!" },
