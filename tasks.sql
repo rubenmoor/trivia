@@ -847,7 +847,14 @@ this is finished when we have 1000 additional approved questions in the base bun
 
 also, make sure that there is an option each to disable audio and to disable video questions somewhere in the screens that configure a game session.
 
-once these 1000 question are approved, make sure that the base bundle is advertised as 6000+ question everywhere', '2026-11-15T04:55:04Z', NULL, 1);
+once these 1000 question are approved, make sure that the base bundle is advertised as 6000+ question everywhere
+
+video length and size (developer, 2026-11-17):
+- a video question plays at most 30 s: its excerpt window keeps its start, end ≤ start + 30 s; without a window, the first 30 s of the file. applies to every video question, whatever batch it came from; audio keeps decision 644''s 60 s
+- windows cut shorter: re-checked that the clue is still inside the 30 s; failing ones to needs_work
+- the shipped video is cut to that window, 1080p as today, with a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. -maxrate 8M -bufsize 16M): a ceiling against single huge files, not a squeeze; decision 651 otherwise stands
+- media-budget.json per-file video line from 100 MB down to fit 30 s at the ceiling
+- qgen validate rejects a video question that would play more than 30 s; media-first picks video windows of at most 30 s', '2026-11-15T04:55:04Z', NULL, 1);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`"). Human reviews still happen, but no run waits for them (`decision 414: Human reviews don''t gate question generation or translation`). 5000 was reached with batch-14; batch-15 is the last batch, then the exit check.
 
@@ -48104,6 +48111,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Print the count and GB freed in the run''s output
 - Test: temp cache with a merged run''s downloads: one picked by the pool, one used by another unmerged run, one unused; only the unused one is deleted
 - Done when: test passes; RUNBOOK/README note that media-first runs clean their downloads after merge', '2026-11-17T16:23:17Z', NULL, 2138, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2141, 200, 'revise the masterplan of milestone 21: add 1000 multimedia questions to the base bundle', 'revise', 'open', 1000, NULL, '`milestone 21: add 1000 multimedia questions to the base bundle` changed. Bring `plan 200: masterplan`, the masterplan, in line with it (`pm plan edit 200 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-11-17T16:49:11Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
