@@ -150,6 +150,18 @@ class ResumeRobustness(unittest.TestCase):
         mf.heal_triage(self.d)
         self.assertEqual(self.path.read_text(), '{"title": "a"}\n')
 
+    def test_glued_middle_line_keeps_complete_row(self):
+        self.path.write_text('{"title": "a"}\n{"title": "b", "ver{"title": "c"}\n{"title": "d"}\n{"title": "e", "x')
+        self.assertEqual([t["title"] for t in mf.read_jsonl(self.path)], ["a", "c", "d"])
+        mf.heal_triage(self.d)
+        self.assertEqual(self.path.read_text(), '{"title": "a"}\n{"title": "c"}\n{"title": "d"}\n')
+
+    def test_append_after_cut_off_line_starts_new_line(self):
+        self.path.write_text('{"title": "a"}\n{"title": "b", "ver')
+        mf.append(self.path, {"title": "c"}, mf.threading.Lock())
+        self.assertEqual(self.path.read_text(), '{"title": "a"}\n{"title": "b", "ver\n{"title": "c"}\n')
+        self.assertEqual([t["title"] for t in mf.read_jsonl(self.path)], ["a", "c"])
+
     def test_bad_middle_line_fails(self):
         self.path.write_text('{"title": "a"}\n{oops\n{"title": "c"}\n')
         with self.assertRaises(ValueError):

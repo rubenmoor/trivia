@@ -44,7 +44,8 @@ ZERO_YIELD = {
 
 
 def read_jsonl(path):
-    """The rows of a jsonl file; an unparseable final line (a cut-off append) is ignored, one in the middle fails."""
+    """The rows of a jsonl file; a cut-off line (it ends where the text ends) is ignored, any other bad line in the middle fails.
+    A glued line (a cut-off prefix, then a full row) keeps its complete row."""
     if not path.exists():
         return []
     lines = [l for l in path.read_text(encoding="utf-8").split("\n") if l]
@@ -52,10 +53,26 @@ def read_jsonl(path):
     for i, l in enumerate(lines):
         try:
             rows.append(json.loads(l))
-        except json.JSONDecodeError:
-            if i < len(lines) - 1:
+        except json.JSONDecodeError as e:
+            row = glued_row(l)
+            if row is not None:
+                rows.append(row)
+            elif i == len(lines) - 1 or "Unterminated" in e.msg or e.pos >= len(l):
+                pass  # cut off: nothing follows the cut
+            else:
                 raise
     return rows
+
+
+def glued_row(line):
+    """The complete row at the end of a line with a cut-off prefix before it, else None."""
+    for i in (m.start() for m in re.finditer(r'\{"', line)):
+        if i:
+            try:
+                return json.loads(line[i:])
+            except json.JSONDecodeError:
+                pass
+    return None
 
 
 def write_jsonl(path, rows):
@@ -180,7 +197,7 @@ def heal_triage(d):
         return
     rows = read_jsonl(path)
     keep = [t for t in rows if not (t.get("why_not") or "").startswith(STALE_WHY)]
-    if len(keep) != len(rows) or not path.read_text(encoding="utf-8").endswith("\n"):
+    if path.read_text(encoding="utf-8") != "".join(json.dumps(t, ensure_ascii=False) + "\n" for t in keep):
         write_jsonl(path, keep)
 
 
@@ -488,8 +505,11 @@ def steps_dir(d):
 
 
 def append(path, rec, lock):
-    with lock, open(path, "a", encoding="utf-8") as fh:
-        fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
+    with lock, open(path, "a+b") as fh:
+        end = fh.seek(0, 2)
+        nl = b"\n" if end and (fh.seek(end - 1) or fh.read(1)) != b"\n" else b""
+        fh.seek(0, 2)
+        fh.write(nl + (json.dumps(rec, ensure_ascii=False) + "\n").encode("utf-8"))
 
 
 # --- triage (sonnet) -------------------------------------------------------------
