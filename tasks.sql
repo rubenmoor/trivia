@@ -48889,14 +48889,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - A «changes» answer: a follow-up task in plan 214 (what, where, done when) plus a new review set; «approve»: `pm decision consequences`
 
 Done when: the developer''s answer is in and recorded as consequences.', '2026-11-17T16:53:28Z', NULL, 2154, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2157, 200, 'revise plan 203: Media-first pipeline: video at most 30 s', 'plan', 'open', 1000, NULL, 'Part 2 of `plan 200: masterplan`, section "Video length and size (milestone, 2026-11-17)": the question side of the 30 s video limit. `plan 203: Media-first pipeline` has no open tasks, so the milestone edit queued no revision of it.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2157, 200, 'revise plan 203: Media-first pipeline: video at most 30 s', 'plan', 'done', 1000, '2026-11-17, plan 203 is done and pm refuses edits, so its 30 s video section went into new plan 216: Media-first pipeline: video at most 30 s (priority 700, split queued); no files', 'Part 2 of `plan 200: masterplan`, section "Video length and size (milestone, 2026-11-17)": the question side of the 30 s video limit. `plan 203: Media-first pipeline` has no open tasks, so the milestone edit queued no revision of it.
 
 - Edit plan 203''s body (`pm plan edit 203 --body -`); this queues its split into tasks.
 - Plan content: `qgen validate` rejects a video question that would play > 30 s (window end > start + 30 s, or no window on a file > 30 s); media-first design picks video windows ≤ 30 s; a re-check of every approved video question from any batch: window cut to start + 30 s (or the first 30 s), clue no longer inside → `needs_work`. Audio keeps the 60 s of `decision 644: Question media excerpts: field shape`.
 - The re-check''s judgement (frame sheet of the cut 30 s) uses part 3''s review prompts: refer to `plan 204: Media-first quality control and spot check` (see the sibling task for plan 204), don''t duplicate it.
 - Game-side parts (playback cap, cut, bitrate ceiling, budget line) belong to `plan 202: Sound and video in the game` (task 2144: revise plan 202: Sound and video in the game).
 
-Done when: plan 203''s body has the section and its split is queued.', '2026-11-17T17:03:38Z', NULL, 2143, 0, NULL, 'questions');
+Done when: plan 203''s body has the section and its split is queued.', '2026-11-17T17:03:38Z', '2026-11-17T17:17:39Z', 2143, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2158, 200, 'revise plan 204: Media-first quality control: judging the 30 s video window', 'plan', 'open', 1000, NULL, 'Part 3 of `plan 200: masterplan`, section "Video length and size (milestone, 2026-11-17)": the review side of the 30 s video limit. `plan 204: Media-first quality control and spot check` has no open tasks, so the milestone edit queued no revision of it.
 
 - Edit plan 204''s body (`pm plan edit 204 --body -`); this queues its split into tasks.
@@ -48949,8 +48949,50 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Batch-82''s existing line 718 must be read by the fix as it is (no hand edit of the work dir), so the resumed batch-82 passes `batch-report`.
 - Test: a `calls.jsonl` with a cut-off line in the middle and at the end; `calls()` returns the whole records, no exception; an append after a cut-off line starts a new line.
 - Done when: the test passes and the standard checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) pass.', '2026-11-17T17:15:50Z', NULL, 2132, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2166, 216, 'create tasks for plan 216: Media-first pipeline: video at most 30 s', 'split', 'open', 1000, NULL, 'Split plan 216 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T17:17:36Z', NULL, 2157, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2166, 216, 'create tasks for plan 216: Media-first pipeline: video at most 30 s', 'split', 'done', 1000, '2026-11-17, tasks 2167, 2168, 2169, 2170', 'Split plan 216 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T17:17:36Z', '2026-11-17T17:18:27Z', 2157, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2167, 216, 'Video windows at most 30 s in media-first design', 'work', 'open', NULL, NULL, 'Step 1 of `plan 216: Media-first pipeline: video at most 30 s`: media-first design picks video windows ≤ 30 s; audio keeps 60 s (`decision 644: Question media excerpts: field shape`).
+
+- `authoring/tools/media.py`: `MAX_VIDEO_SECONDS = 30` next to `MAX_AUDIO_SECONDS`, comment names its source `app/client/src/engine/pool.ts` `MAX_VIDEO_SECONDS` (decision 199); `max_seconds(type)` → 30 for video, 60 for audio.
+- `media_first.problems`: a video longer than 30 s without an excerpt is a problem (needs an excerpt); a video excerpt longer than 30 s is a problem; back to design once, as today; audio unchanged.
+- `media_survey`: `needs_excerpt` per type via `max_seconds`.
+- Prompts `media-triage.md`, `media-design.md`: video windows ≤ 30 s, audio ≤ 60 s.
+- Not here: `qgen validate`''s 30 s rule (`validate.media_first_problems` and every pool): existing video questions still have longer windows until the re-check runs; that is step 4''s task, so `qgen validate` keeps passing.
+- Tests with a stub claude: video window 31 s → problem, 30 s → ok; video file 40 s without excerpt → problem; audio 60 s ok; survey flag per type.
+
+Done when: the above, plus `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-17T17:18:00Z', NULL, 2166, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2168, 216, 'qgen video-window: re-check every video question on its 30 s window', 'work', 'open', NULL, NULL, 'Step 2 of `plan 216: Media-first pipeline: video at most 30 s`: a developer-run command (like `qgen rework`) that cuts every video question''s window to 30 s and re-checks the clue is still inside (milestone 21, "video length and size").
+
+Before you start: the judgement comes from part 3, `plan 204: Media-first quality control and spot check` (revised by task 2158: revise plan 204: Media-first quality control: judging the 30 s video window). `pm show p204`: if its task that judges the 30 s video window (review/audit on the cut window''s frame sheet and probe; the re-check of cut windows) isn''t done, `pm task requires <this task> <its id>` and stop.
+
+- `qgen video-window [--dry-run] [--model …]` over all source pools (base, topic, regional bundles), whatever batch made the question.
+- Picks video questions whose play window exceeds 30 s or whose `media.duration` is unknown: probe and fill `media.duration`; window cut to `{start, start + 30}` (`max_seconds` / `MAX_VIDEO_SECONDS` from `authoring/tools/media.py`, task 2167); no excerpt and file > 30 s → `{0, 30}`; file ≤ 30 s without excerpt: only the duration filled, no re-check.
+- Cut window probed (`media_probe` per window), the media-first giveaway step run on it, then plan 204''s judgement on the cut window''s frame sheet (import its prompt/function, don''t copy, decision 199).
+- Pass → stays approved with the cut excerpt; fail (clue gone or giveaway) → `needs_work`, problem `media`, note "clue outside the 30 s window", kept with the cut window so `qgen rework` starts from it.
+- `--dry-run`: lists per pool what would change (cut, duration filled), no claude calls.
+- Resumable: a rerun skips questions already done (state under `work/`).
+- Reports its claude calls and totals (`decision 208: What must a script that calls claude report to its caller?`).
+- Pool writes through the existing locked writer; locale pools follow the source as `qgen export` does (excerpt, status).
+- Tests with a stub claude: cut from excerpt, cut from no excerpt, duration fill, pass/fail paths, dry run, resume.
+
+Done when: the above, plus `npm run check`, `npm test`, `npm run build`, `qgen validate` pass. Running it on the real pools is the next task, not this one.', '2026-11-17T17:18:15Z', NULL, 2166, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2169, 216, 'Run qgen video-window on all pools', 'work', 'open', NULL, NULL, 'Step 3 of `plan 216: Media-first pipeline: video at most 30 s`: run the re-check of task 2168 (qgen video-window: re-check every video question on its 30 s window) on the real pools.
+
+- `qgen video-window --dry-run` first, then `qgen video-window` on all pools (resume on interruption by rerunning it).
+- Then `qgen export`, `trivia-media sync --status approved`.
+- No hand edits to the pools (AGENTS.md "Making questions"); `needs_work` ones are left to the developer''s `qgen rework`.
+- A tool failure: fix not here; `pm task add 216 …` for the fix, `pm task requires <this task> <fix>`, stop.
+- Report in `pm task done`: per pool cut, duration filled, still approved, `needs_work`, claude calls and $.
+
+Done when: no video question in any pool plays more than 30 s (excerpt ≤ 30 s, or known duration ≤ 30 s); `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-17T17:18:25Z', NULL, 2166, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2170, 216, 'qgen validate rejects a video question that plays more than 30 s', 'work', 'open', NULL, NULL, 'Step 4 of `plan 216: Media-first pipeline: video at most 30 s`: the lasting check, after the re-check run (task 2169: Run qgen video-window on all pools) made the pools pass.
+
+- `authoring/tools/validate.py`: in every pool, every video question (not only `media_first` ones): `media.excerpt` end − start ≤ 30 (`max_seconds` / `MAX_VIDEO_SECONDS` from `authoring/tools/media.py`); no excerpt → `media.duration` known and ≤ 30; else an error. `validate.media_first_problems` uses `max_seconds(type)` instead of `MAX_AUDIO_SECONDS` for every window. Audio keeps 60 s.
+- Tests: video excerpt 31 s, video without excerpt and duration, video file 40 s without excerpt → rejected; 30 s ok; audio 60 s ok.
+- Docs: `authoring/RUNBOOK.md`, `authoring/QC.md`, AGENTS.md Commands name `qgen video-window` (what it does, developer-run).
+- `rg` docs and prompts (`authoring/prompts/`, `plans/`, `.md` files) for claims that video plays or may be up to 60 s; fix every hit (decision 200).
+
+Done when: the above; `qgen validate` passes on the re-checked pools; `npm run check`, `npm test`, `npm run build` pass.', '2026-11-17T17:18:25Z', NULL, 2166, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -58775,7 +58817,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2362, 2161, '2026-11-17T17:11:37Z', NULL, 'running', NULL, NULL, 'e59488729512976cacc092c774c15039278b2697', 'app', NULL, NULL, 2357, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2363, 2148, '2026-11-17T17:12:22Z', '2026-11-17T17:12:42Z', 'done', NULL, 0, '4ab0cc8e5b770e38a1bb6270aedbc196130b6158', NULL, 'claude-opus-5-5', '3fa409bd-313f-49c2-9841-f89698ae7277', NULL, 3, 6, 690, 95136, 28294, 0.2592032, 42899, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2364, 2164, '2026-11-17T17:15:46Z', '2026-11-17T17:16:28Z', 'done', NULL, 0, '792fc165632053251d832b7fceaa9c557cc52e64', NULL, 'claude-opus-5-5', '3f68473c-a099-4fcf-bafb-1eef9c30d196', NULL, 9, 18, 3095, 367795, 37237, 0.43342699999999995, 51586, 60, 978519);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2365, 2157, '2026-11-17T17:16:10Z', NULL, 'running', NULL, NULL, '792fc165632053251d832b7fceaa9c557cc52e64', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2365, 2157, '2026-11-17T17:16:10Z', '2026-11-17T17:17:51Z', 'done', NULL, 0, '792fc165632053251d832b7fceaa9c557cc52e64', 'questions', 'claude-opus-5-5', 'f8f96f37-416d-4d86-a7d4-4bbdc8f7b134', NULL, 12, 24, 8649, 661101, 53241, 0.7312242000000001, 67591, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2366, 2166, '2026-11-17T17:17:38Z', '2026-11-17T17:18:35Z', 'done', NULL, 0, '81066e1e839ad8afe261842011b08b57c3332328', NULL, 'claude-opus-5-5', 'a2a3552f-0faa-4d7d-802f-f95545ac26f0', NULL, 7, 14, 4820, 288261, 36277, 0.4443242, 50626, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2367, 2158, '2026-11-17T17:17:51Z', NULL, 'running', NULL, NULL, '81066e1e839ad8afe261842011b08b57c3332328', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -59904,6 +59948,10 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2140, 213
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2156, 2155);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2161, 2160);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2162, 2161);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2168, 2158);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2168, 2167);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2169, 2168);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2170, 2169);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
