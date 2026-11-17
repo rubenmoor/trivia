@@ -48075,8 +48075,14 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Same file, line ~168: a probe exception becomes a `not_worth` triage row "probe failed: …". For OSError ENOSPC (and other environment errors, not file faults) stop the step with a clear message instead, so the file is retried on resume and never ledgered as not worth.
 - Existing rows: on resume, drop triage rows whose `why_not` starts with `probe failed: [Errno 28]` so those files are probed again (batch-82 has 19 in `work/batch-82/media-first/triage.jsonl`; none in `work/media-first/files.jsonl`). Harmless if the developer picks another option of decision 687.
 - Done when: tests for the three cases, `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-17T07:56:41Z', '2026-11-17T07:59:43Z', 2132, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2136, 212, 'create tasks for plan 212: Media-first tool fixes found in content runs, part 5', 'split', 'open', 1000, NULL, 'Split plan 212 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T13:46:52Z', NULL, 2132, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2136, 212, 'create tasks for plan 212: Media-first tool fixes found in content runs, part 5', 'split', 'done', 1000, '2026-11-17, tasks 2137 (kept, body sharpened: decision 688, test cases, checks); no decisions needed', 'Split plan 212 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T13:46:52Z', '2026-11-17T13:47:21Z', 2132, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2137, 212, 'Media-first: a cut-off line in the middle of triage.jsonl still breaks the resume', 'work', 'open', NULL, NULL, '- Found by `task 2132: run batch-<n> (media-first)` (batch-82), after `task 2135: Media-first: a cut-off jsonl line or a disk-full probe failure breaks or poisons the resume`; the run waits on `decision 688: Continue batch-82 (media-first) after a cut-off line in the middle of its triage file?`.
+- What: when the disk filled, an append to `work/batch-82/media-first/triage.jsonl` was cut off without a newline; a later append glued a full row onto it. Line 319 of 336 is now `{"title": "File:Musoke Deo … .webm", …, "ver{"title": "File:Mother’s Day Eisa Dance 2025 (963551).webm", …}`; the last line (336) is cut off too.
+- `read_jsonl` (`authoring/tools/media_first.py`) ignores only an unparseable *last* line and raises on one in the middle, so `heal_triage` → `probe_step` crashes: `json.decoder.JSONDecodeError: Expecting '':'' delimiter: line 1 column 185`.
+- Fix: the resume heals such lines, e.g. `heal_triage` (and any other appended jsonl the resume reads) keeps the complete row after a glued cut-off prefix (or drops the line: the file is probed again); append writers (`open(path, "a")`, ~line 491) start with a newline when the file doesn''t end in one, so a cut-off append never glues onto the next row. A middle line bad for any other reason still fails.
+- Test (`authoring/tools/test_media_first.py`): a triage file with a glued line in the middle and a cut-off last line heals to the complete rows; an append after a cut-off line starts a new line.
+- Done when: fix and test in; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; `nix develop -c qgen batch --media-first` gets batch-82 past `probe` (that rerun is `task 2132`''s, not this task''s).', '2026-11-17T13:46:58Z', NULL, 2132, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -55366,7 +55372,43 @@ Last 30 lines:
     obj, end = self.scan_once(s, idx)
                ~~~~~~~~~~~~~~^^^^^^^^
 json.decoder.JSONDecodeError: Expecting '':'' delimiter: line 1 column 185 (char 184)
-```', 'A batch that makes new sound and video questions stopped when the computer''s disk ran full. It left a half-written line in one of its working files, so it can no longer resume, and it wrongly marked about twenty media files as not worth using because they could not be measured. Someone has to choose whether to repair the run by hand, wait for a tool fix, or start a fresh batch.', 'Wait for the tool fix (cut-off last line ignored, disk-full probe failures retried instead of marked not_worth), then rerun the same command; it resumes batch-82', NULL, '2026-11-17T07:56:17Z', '2026-11-17T13:43:26Z', 2132, NULL, 'rule', NULL, '');
+```', 'A batch that makes new sound and video questions stopped when the computer''s disk ran full. It left a half-written line in one of its working files, so it can no longer resume, and it wrongly marked about twenty media files as not worth using because they could not be measured. Someone has to choose whether to repair the run by hand, wait for a tool fix, or start a fresh batch.', 'Wait for the tool fix (cut-off last line ignored, disk-full probe failures retried instead of marked not_worth), then rerun the same command; it resumes batch-82', NULL, '2026-11-17T07:56:17Z', '2026-11-17T13:43:26Z', 2132, NULL, 'rule', NULL, '2026-11-17, task 2132: Waited for task 2135''s fix (cut-off last line ignored, disk-full probe rows healed); the rerun on 2026-11-17 still stopped at probe on a glued cut-off line in the middle of batch-82''s triage.jsonl, which that fix doesn''t cover: task 2137 and decision 688 take over.');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (688, 'Continue batch-82 (media-first) after a cut-off line in the middle of its triage file?', 'pending', '["Wait for task 2137''s fix, then rerun the same command; it resumes batch-82", "Drop batch-82 and start a fresh media-first batch now"]', 'Rerun of \`nix develop -c qgen batch --media-first\` (resume batch-82, after \`task 2135: Media-first: a cut-off jsonl line or a disk-full probe failure breaks or poisons the resume\`) exited 1 at step 2/28 \`probe\`: \`work/batch-82/media-first/triage.jsonl\` line 319 of 336 holds a cut-off row with a full row glued on; task 2135 only skips an unparseable *last* line. Fix: \`task 2137: Media-first: a cut-off line in the middle of triage.jsonl still breaks the resume\`.
+
+Last 30 lines:
+
+```
+    main()
+    ~~~~^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 2199, in main
+    errors = args.fn(args)
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 1909, in cmd_batch
+    t0 = run_steps(steps, again, run)
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 1790, in run_steps
+    errors = fn(a) or []
+             ~~^^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 1959, in <lambda>
+    ("probe", lambda a: media_first.probe_step(d, run, jobs, target), None),
+                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/media_first.py", line 241, in probe_step
+    heal_triage(d)
+    ~~~~~~~~~~~^^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/media_first.py", line 181, in heal_triage
+    rows = read_jsonl(path)
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/media_first.py", line 54, in read_jsonl
+    rows.append(json.loads(l))
+                ~~~~~~~~~~^^^
+  File "/nix/store/xahxrjs30p3mw0a42bqg9ikgkikskw8m-python3-3.14.8/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/nix/store/xahxrjs30p3mw0a42bqg9ikgkikskw8m-python3-3.14.8/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/xahxrjs30p3mw0a42bqg9ikgkikskw8m-python3-3.14.8/lib/python3.14/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting '':'' delimiter: line 1 column 185 (char 184)
+```', 'A batch of new sound and video questions stopped again while resuming: when the disk filled up earlier, one saved line was cut off and the next line glued onto it, and the tool only knows how to skip a cut-off line at the very end of the file. The choice is between waiting for a small tool fix that repairs such lines and then resuming the same batch, or giving up on this batch and starting a fresh one. Waiting keeps the files already checked; a fresh batch costs that work again.', NULL, NULL, '2026-11-17T13:47:04Z', NULL, 2132, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -57800,7 +57842,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2335, 2134, '2026-11-17T07:56:35Z', '2026-11-17T07:57:26Z', 'done', NULL, 0, '5ac8555a921c5948bbf979483a1531163ca39e8f', NULL, 'claude-opus-5-5', '86baf274-72a9-4211-ba74-c99e062584c7', NULL, 7, 14, 2552, 264907, 33250, 0.37007739999999995, 47601, 60, 2465554);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2336, 2135, '2026-11-17T07:57:21Z', '2026-11-17T07:59:47Z', 'done', NULL, 0, '5ac8555a921c5948bbf979483a1531163ca39e8f', 'questions', 'claude-sonnet-5-5', 'd4ba4065-d629-4adb-92a6-669e97a6a615', NULL, 15, 30, 5857, 617331, 51405, 0.3259831, 51917, 60, 2465554);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2337, 2132, '2026-11-17T13:43:32Z', '2026-11-17T13:44:32Z', 'failed', 'interrupted', NULL, 'fce5bd2bcab1e702e922483256a6c973a7368d37', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2465554);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2338, 2132, '2026-11-17T13:44:35Z', NULL, 'running', NULL, NULL, '61c11dc90e4705dd512ce4ab1446261dfc0f38e1', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2363177);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2338, 2132, '2026-11-17T13:44:35Z', '2026-11-17T13:47:17Z', 'blocked', NULL, 0, '61c11dc90e4705dd512ce4ab1446261dfc0f38e1', 'questions', 'claude-opus-5-5', '4c678b95-1aa3-4d0c-960a-d27c69c8d16a', NULL, 13, 26, 4706, 528667, 33279, 0.46618940000000003, 47630, 60, 2363177);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2339, 2136, '2026-11-17T13:46:54Z', '2026-11-17T13:47:31Z', 'done', NULL, 0, '6b500ccf4855f4a61e76498d5780376e9dc18541', NULL, 'claude-opus-5-5', '7c531242-0dd8-47dd-bbd6-cb0071ed3895', NULL, 8, 16, 2461, 322258, 33889, 0.3848476, 48692, 60, 2363177);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2340, 2137, '2026-11-17T13:47:23Z', NULL, 'running', NULL, NULL, '6b500ccf4855f4a61e76498d5780376e9dc18541', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2363177);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -58538,6 +58582,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2115, 669);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2119, 671);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2119, 680);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2132, 687);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2132, 688);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
