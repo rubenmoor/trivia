@@ -412,8 +412,7 @@ class Calls:
             if not self.all:
                 atexit.register(self.summary)
             self.all.append(rec)
-            with open(Path(cwd) / "calls.jsonl", "a", encoding="utf-8") as f:
-                f.write(json.dumps(rec) + "\n")
+            media_first.append(Path(cwd) / "calls.jsonl", rec, threading.Lock())  # starts a new line after a cut-off one
         tok = sum(rec[k] or 0 for k, *_ in TOKENS)
         return " ".join(([f"${rec['usd']:.2f}"] if rec["usd"] is not None else []) + ([f"{human(tok)} tok"] if tok else []))
 
@@ -490,8 +489,7 @@ def calls(d):
     old, new = d / "costs.log", d / "calls.jsonl"
     cells = [line.split("\t") for line in old.read_text(encoding="utf-8").splitlines()] if old.exists() else []
     return ([{"model": c[0], "usd": None if c[1] in ("None", "") else float(c[1])} for c in cells if len(c) == 2]
-            + ([json.loads(line) for line in new.read_text(encoding="utf-8").splitlines() if line.strip()]
-               if new.exists() else []))
+            + media_first.read_jsonl(new))  # tolerates cut-off and glued lines
 
 
 def costs(d):
