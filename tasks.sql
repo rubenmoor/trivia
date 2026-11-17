@@ -47968,6 +47968,29 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Health ✗ → `pm decision list --grep "<run>: health"`, else `pm decision add "<run>: health ✗, look at it?"`, no task linked, go on.
 - Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (media-first)…?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop with nothing staged.
 - The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-16T23:04:26Z', NULL, 2110, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2125, NULL, 'rename the age brackets', 'exec', 'open', NULL, NULL, 'instead of age brackets, those now become difficulty levels (for the session, the difficulty per question is not affected):
+
+difficulty (instead of age)
+
+easy: getting started with trivia
+normal: enjoying a challenge
+hard: testing your limits
+expert: you like to suffer
+
+(with appropriate translations)
+
+the icons for the difficulty levels may stay
+
+also increase the number of jokers available in the default settings:
+
+
+5 hints
+2 pass & purge
+1 fairy
+1 ms picky
+2 trick shots
+
+the toggle for "video questions" and "audio questions" are missing keyboard shortcuts', '2026-11-17T00:46:16Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
