@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "63829f0f",
+  "hash": "d35fdc1c",
   "questions": [
     {
       "id": "q-9837",
@@ -70025,7 +70025,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Zachzr",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Zachzr&action=edit&redlink=1",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },

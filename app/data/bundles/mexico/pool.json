@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "8ffb38fc",
+  "hash": "11be8761",
   "questions": [
     {
       "id": "q-0711",
@@ -35060,7 +35060,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Exec8",
         "author_url": "https://commons.wikimedia.org/wiki/User:Exec8",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -35200,7 +35203,10 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Nature video, HD - 4K",
         "author_url": "https://www.youtube.com/@naturevideohd-4k232",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b641ebb1",
+  "hash": "061005c9",
   "questions": [
     {
       "id": "q-9487",
@@ -52088,7 +52088,10 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Lubo Ondrasko",
         "author_url": "https://vimeo.com/user9788409",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
@@ -86118,7 +86121,10 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Stinglehammer",
         "author_url": "https://commons.wikimedia.org/wiki/User:Stinglehammer",
-        "excerpt": null
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
       },
       "background": null
     },
