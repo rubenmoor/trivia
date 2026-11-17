@@ -31,6 +31,7 @@ Not problems: a dry question, weak distractors, a joke that isn't funny, a hint 
 
 ## Media-first questions
 When `media_first` is in the input, a "Media-first questions" text follows this prompt. Read it for the input (`media_first`) and its numbered Checks, and open every path in `media_first.aids.pictures_to_read` with Read before you decide. You are blind to the review: judge the window's aids yourself.
+- Judge only what plays inside `media_first.excerpt` (a video: at most {max_video_s} s); a clue outside it is a `media` problem.
 - The answer format above applies, not the review's: ignore `needs_work`, `feedback`, `fix`, `new_query` and the sections "Media slot" and "Fixing".
 - A failed Check is a problem: Check 1 → `media` (or `giveaway` when the text alone answers), 2 → `giveaway`, 3 → `fact`, 4 and 5 → `media`, 6 → `style`; it is `major` unless a player could still play the question as it is.
 - `mechanical` findings: judge each against the text as the Checks say; a false flag isn't a problem.
