@@ -28,9 +28,11 @@ test("rr-coop: turns rotate, shared jokers, «Paso» keeps the turn, a wrong ans
   assert.equal(act(save, "pick", { index: 0, seat: 1 }).error, "not_your_turn");
 
   save = act(save, "pick", { index: 0, seat: 0 }).save;
-  save = act(save, "joker", { joker: "skip", seat: 0 }).save; // the shared set's one «Paso»
+  save = act(save, "joker", { joker: "skip", seat: 0 }).save; // the shared set's «Paso» (two)
   assert.equal(row(save).turn, 0);
   assert.equal(row(save).state.history.at(-1)!.seat, 0);
+  save = act(save, "pick", { index: 0, seat: 0 }).save;
+  save = act(save, "joker", { joker: "skip", seat: 0 }).save;
   save = act(save, "pick", { index: 0, seat: 0 }).save;
   save = act(save, "answer", { index: correct(save), seat: 0 }).save;
   assert.equal(row(save).turn, 1);

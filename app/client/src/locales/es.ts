@@ -138,7 +138,7 @@ const es = {
   /** First-start telemetry question (plan 108; PRIVACY.md has the long version). */
   consent: {
     title: "¿Nos ayudas a mejorar el juego?",
-    body: "Si aceptas, al cerrarse el juego envía datos anónimos de las partidas: qué preguntas se respondieron, si bien o mal, nivel, grupo de edad y comodines.",
+    body: "Si aceptas, al cerrarse el juego envía datos anónimos de las partidas: qué preguntas se respondieron, si bien o mal, nivel, dificultad y comodines.",
     noNames: "Sin nombres, sin cuenta de Steam, sin dirección IP.",
     change: "Lo puedes cambiar en el menú.",
     no: "No",
@@ -309,14 +309,13 @@ const es = {
     titleClose: "?",
     /** Title in the multiplayer modes: no single name. */
     titleMany: "¿Cómo juegan?",
-    groups: "Edad",
-    ages: "{lo}–{hi} años",
-    agesFrom: "{lo}+ años",
+    groups: "Dificultad",
+    groupAbout: { kids: "Empezando con las trivias", young_teens: "Disfrutando del reto", young_adults: "Al límite de tus fuerzas", adults: "Te gusta sufrir" },
     on: "activado",
     off: "desactivado",
     start: "¡A jugar!",
     /** The running game's choice in the overlay, two rows. */
-    lineGroup: "Edad: {group}",
+    lineGroup: "Dificultad: {group}",
     lineBundles: "Paquetes de preguntas: {bundles}",
     /** A custom difficulty in place of the group (D-88). */
     difficulty: "Dificultad {start}–{end}",
@@ -371,7 +370,9 @@ const es = {
     /** 0 cards: the question shows at once. */
     noCards: "pregunta directa",
     video: "Preguntas con video",
+    videoKey: "V",
     audio: "Preguntas con audio",
+    audioKey: "A",
     /** Switch (D-105): off = the padlock reveals the correct answer, every question advances one level. */
     answers: "Responder para avanzar",
     jokers: "Comodines",

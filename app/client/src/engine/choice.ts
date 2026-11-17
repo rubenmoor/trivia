@@ -8,7 +8,7 @@ import { GameError } from "./state.ts";
 
 export const JOKERS: readonly JokerName[] = ["hint", "skip", "easier", "category", "snipe"];
 /** Standard joker set of every non-gamemaster game (13, "Implementation notes"). */
-export const STANDARD_JOKERS: JokerBudget = { hint: 3, skip: 1, easier: 1, category: 1, snipe: 1 };
+export const STANDARD_JOKERS: JokerBudget = { hint: 5, skip: 2, easier: 1, category: 1, snipe: 2 };
 /** Competitive timed (plan 159): per question, between hints, after a claim; lives per seat. */
 export const QUESTION_MS = 30000;
 export const HINT_MS = 8000;

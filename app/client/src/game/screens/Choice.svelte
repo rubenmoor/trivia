@@ -152,11 +152,16 @@
   const jokerMode = $derived(mode !== "gamemaster" && mode !== "timed");
   const CUSTOMIZE_KEY = t("customize.openKey").toLowerCase();
   const GROUP_ICONS: Record<string, IconName> = { kids: "balloon", young_teens: "skateboard", young_adults: "headphones", adults: "mug" };
-  const keys = $derived<Keys>(jokerMode ? { [CUSTOMIZE_KEY]: { type: "letter", key: CUSTOMIZE_KEY } } : {});
+  const VIDEO_KEY = t("configure.videoKey").toLowerCase();
+  const AUDIO_KEY = t("configure.audioKey").toLowerCase();
+  const keys = $derived<Keys>({
+    [VIDEO_KEY]: { type: "letter", key: VIDEO_KEY },
+    [AUDIO_KEY]: { type: "letter", key: AUDIO_KEY },
+    ...(jokerMode ? { [CUSTOMIZE_KEY]: { type: "letter", key: CUSTOMIZE_KEY } } : {}),
+  });
   const customized = $derived(presetOf(jokers) !== "standard");
-  function ages([lo, hi]: readonly [number, number | null]) {
-    return hi === null ? t("choice.agesFrom", { lo }) : t("choice.ages", { lo, hi });
-  }
+  const about = (id: string) =>
+    ({ kids: t("choice.groupAbout.kids"), young_teens: t("choice.groupAbout.young_teens"), young_adults: t("choice.groupAbout.young_adults"), adults: t("choice.groupAbout.adults") })[id] ?? "";
 
   // 1–4 pick a group, the customize letter takes the ring and opens the dialog (solo); ↑/↓ lines, ←/→ a configure value; Enter/A
   // is «Seguir» (primary), Space/X a switch; Backspace goes back; Esc falls through to the overlay.
@@ -176,6 +181,7 @@
           if (section) show(section.querySelector<HTMLElement>('[data-focus-id="customize"]'), "choice", section);
           customizing = !busy;
         }
+        else if (a.type === "letter" && (a.key === VIDEO_KEY || a.key === AUDIO_KEY)) step(a.key === VIDEO_KEY ? "video" : "audio", 1);
         else if (a.type === "pick" && options && a.n <= options.groups.length) pickGroup(options.groups[a.n - 1].id);
         else if (a.type === "back") onback();
         else return false;
@@ -198,13 +204,13 @@
         <div class="lines">
           <p class="label pick-heading">{t("configure.game")}</p>
           {@render stepper("difficulty", t("configure.difficulty"), custom ? t("configure.custom") : (g?.name ?? group),
-            custom ? "" : g ? ages(g.ages) : "")}
+            custom ? "" : g ? about(g.id) : "")}
           {@render stepper("start", t("configure.start"), String(span.start), "", false, !custom)}
           {@render stepper("end", t("configure.end"), String(span.end), "", false, !custom)}
           {@render stepper("levels", t("configure.levels"), String(levels))}
           {@render stepper("cards", t("configure.cards"), String(cards), cards ? "" : t("configure.noCards"))}
-          {@render toggle("video", t("configure.video"), video, "film")}
-          {@render toggle("audio", t("configure.audio"), audio, "speaker")}
+          {@render toggle("video", t("configure.video"), video, "film", VIDEO_KEY)}
+          {@render toggle("audio", t("configure.audio"), audio, "speaker", AUDIO_KEY)}
           {@render toggle("answers", t("configure.answers"), answers, "lock")}
         </div>
         <div class="lines">
@@ -221,7 +227,7 @@
         <div class="seat-groups" data-nav-scroll>
           {#each seats as s, i (i)}
             {@const g = options.groups.find((x) => x.id === s.group)}
-            {@render stepper(`seat-group-${i}`, s.name ?? String(i + 1), g?.name ?? s.group, g ? ages(g.ages) : "", false, false, undefined, seatColor(i))}
+            {@render stepper(`seat-group-${i}`, s.name ?? String(i + 1), g?.name ?? s.group, g ? about(g.id) : "", false, false, undefined, seatColor(i))}
           {/each}
         </div>
       {:else}
@@ -239,14 +245,14 @@
           >
             <Prompt action={{ type: "pick", n: i + 1 }} hold />
             <span class="pick-name">{#if GROUP_ICONS[g.id]}<Icon name={GROUP_ICONS[g.id]} />{/if} {g.name}</span>
-            <span class="label">{ages(g.ages)}</span>
+            <span class="label">{about(g.id)}</span>
           </button>
         {/each}
       </div>
       {/if}
       <div class="lines switches">
-        {@render toggle("video", t("configure.video"), video, "film")}
-        {@render toggle("audio", t("configure.audio"), audio, "speaker")}
+        {@render toggle("video", t("configure.video"), video, "film", VIDEO_KEY)}
+        {@render toggle("audio", t("configure.audio"), audio, "speaker", AUDIO_KEY)}
       </div>
       {#if jokerMode}
       <div class="row" data-line>
@@ -283,10 +289,10 @@
   </div>
 {/snippet}
 
-{#snippet toggle(id: string, label: string, on: boolean, icon: IconName)}
+{#snippet toggle(id: string, label: string, on: boolean, icon: IconName, key?: string)}
   <button class="line glass" class:on data-line data-step={id} data-focus-id="config-{id}" role="switch" aria-checked={on} onclick={() => step(id, 1)} disabled={busy}>
     <span class="label line-name"><Icon name={icon} /> {label}</span>
-    <span class="value switch">{t(on ? "choice.on" : "choice.off")}</span>
+    <span class="value switch">{#if key}<Prompt action={{ type: "letter", key }} /> {/if}{t(on ? "choice.on" : "choice.off")}</span>
   </button>
 {/snippet}
 

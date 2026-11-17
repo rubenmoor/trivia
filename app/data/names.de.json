@@ -52,10 +52,10 @@
     }
   },
   "age_groups": {
-    "kids": "Kinder",
-    "young_teens": "Jugendliche",
-    "young_adults": "Junge Erwachsene",
-    "adults": "Erwachsene"
+    "kids": "Leicht",
+    "young_teens": "Normal",
+    "young_adults": "Schwer",
+    "adults": "Experte"
   },
   "categories": {
     "holidays-and-traditions": "Feste und Bräuche",

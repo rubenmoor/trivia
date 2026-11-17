@@ -28,11 +28,11 @@ const seen = (save: SaveData, ...ids: string[]) =>
   ({ ...save, seen: ids.map((id) => ({ question_id: id, game_id: 1, seen_on: "x" })) });
 
 test("outlook: k, bottleneck (plan 65)", () => {
-  // b = 16/12: 4 + ceil(4k/3) ≤ 10 → k = 4.
+  // b = 18/12: 4 + ceil(3k/2) ≤ 10 → k = 4.
   assert.deepEqual(outlook(emptySave(), data, solo),
     { k: 4, bottleneck: [[7, 7]], tight: [], none: false, bundleHint: null, runningOut: [] });
-  assert.equal(outlook(emptySave(), data, { ...solo, bundles: ["base", "colombia"] }).k, 12);
-  assert.equal(outlook(seen(emptySave(), "b7-0", "b7-1"), data, solo).k, 3);
+  assert.equal(outlook(emptySave(), data, { ...solo, bundles: ["base", "colombia"] }).k, 10);
+  assert.equal(outlook(seen(emptySave(), "b7-0", "b7-1"), data, solo).k, 2);
   assert.equal(outlook(emptySave(), data, { ...solo, mode: "rr-competitive", players: 2 }).k, 2);
   // timed, 3 players (decision 276): 3 + 3k ≤ 10 → k = 2.
   assert.equal(outlook(emptySave(), data, { ...solo, mode: "timed", cards: 0, players: 3 }).k, 2);
