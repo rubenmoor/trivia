@@ -4403,6 +4403,1896 @@
       "source_hash": "85be6ad9ce19"
     },
     {
+      "id": "q-20814",
+      "question": "Escucha: ¿de qué país europeo es este himno nacional?",
+      "answer": "Eslovaquia",
+      "wrong_answers": [
+        "República Checa",
+        "Eslovenia",
+        "Polonia"
+      ],
+      "hints": [
+        "El país está en Europa central y no tiene salida al mar.",
+        "Se separó pacíficamente de su vecino el 1 de enero de 1993.",
+        "Su título dice que relampaguea sobre los montes Tatras."
+      ],
+      "description": "Una canción que pone de pie a todo un estadio, incluso a los que solo se saben la primera línea.",
+      "fun_fact": "Cuando existía Checoslovaquia, su himno eran dos canciones seguidas: primero el himno checo y después este eslovaco.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "52b10a5ff497"
+    },
+    {
+      "id": "q-20815",
+      "question": "Mira: ¿qué felino salvaje pasó de noche frente a esta cámara trampa?",
+      "answer": "Ocelote",
+      "wrong_answers": [
+        "Serval",
+        "Pantera nebulosa",
+        "Lince euroasiático"
+      ],
+      "hints": [
+        "Fíjate bien en el pelaje: las manchas oscuras se unen en cadenas y rayas, en vez de ser simples puntos redondos.",
+        "Este felino es como el doble de grande que un gato doméstico, caza sobre todo de noche en el suelo y trepa y nada muy bien.",
+        "El pintor Salvador Dalí paseaba por la ciudad con uno de estos felinos, llamado Babou."
+      ],
+      "description": "Alguien activó el sensor de movimiento antes del amanecer, y no fue el gato del vecino.",
+      "fun_fact": "El dibujo del pelaje de cada ocelote es único, así que los científicos pueden distinguir a cada animal en las fotos de cámaras trampa, como si fueran huellas digitales.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "66818211fd34"
+    },
+    {
+      "id": "q-20816",
+      "question": "Mira: estos bailarines con chales rosa intenso están en una famosa fiesta de carnaval en los Andes. ¿En qué país se celebra?",
+      "answer": "Bolivia",
+      "wrong_answers": [
+        "Perú",
+        "Ecuador",
+        "Guatemala"
+      ],
+      "hints": [
+        "La fiesta se llama Pujllay, una palabra del idioma quechua que significa «juego».",
+        "Fíjate en los escudos bordados de algunos chales: muestran un escudo nacional con un cóndor, una llama y una montaña de plata.",
+        "El pueblo, Tarabuco, queda a poca distancia de Sucre, una de las dos capitales de este país."
+      ],
+      "description": "Chales rosados, banderas blancas y tanto bordado que una abuela tendría trabajo para diez años.",
+      "fun_fact": "El Pujllay de Tarabuco recuerda una batalla ganada en 1816, y en 2014 la UNESCO incluyó su música y sus danzas en su lista del patrimonio cultural inmaterial de la humanidad.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "70cea063e8dc"
+    },
+    {
+      "id": "q-20817",
+      "question": "Escucha: esta famosa canción popular la cantaban los trabajadores que arrastraban pesadas barcazas por un río. ¿De qué país viene?",
+      "answer": "Rusia",
+      "wrong_answers": [
+        "Hungría",
+        "Irlanda",
+        "Grecia"
+      ],
+      "hints": [
+        "La canción lleva el nombre del río donde los trabajadores jalaban los barcos.",
+        "Ese río es el más largo de Europa.",
+        "El río es el Volga, que desemboca en el mar Caspio."
+      ],
+      "description": "Una melodía tan pesada que parece que alguien la va arrastrando cuesta arriba.",
+      "fun_fact": "El pintor Iliá Repin hizo famosos a los sirgadores del Volga en un enorme cuadro de la década de 1870, donde un grupo de hombres tira de un barco con cuerdas sobre los hombros.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d6da03c558e2"
+    },
+    {
+      "id": "q-20819",
+      "question": "Escucha: estos gruñidos graves vienen de una gran ave acuática que come en bandada. ¿Qué ave es?",
+      "answer": "Pelícano común",
+      "wrong_answers": [
+        "Grulla común",
+        "Cisne vulgar",
+        "Colimbo grande"
+      ],
+      "hints": [
+        "Es una de las aves más pesadas que todavía pueden volar.",
+        "Nadan en grupo para empujar a los peces hacia aguas poco profundas.",
+        "Su enorme pico tiene una bolsa elástica en la garganta para atrapar peces."
+      ],
+      "description": "Charla de sobremesa en el lago, de invitados que nunca aprendieron a comer con la boca cerrada.",
+      "fun_fact": "Los pelícanos comunes suelen pescar en equipo: nadan en forma de herradura para juntar a los peces y luego meten el pico todos a la vez.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5898448a465f"
+    },
+    {
+      "id": "q-20820",
+      "question": "Escucha: ¿de qué período de la música occidental es esta pieza para piano solo?",
+      "answer": "Período clásico",
+      "wrong_answers": [
+        "Período barroco",
+        "Período romántico",
+        "Período impresionista"
+      ],
+      "hints": [
+        "Escucha cómo la mano derecha lleva la melodía mientras la izquierda mantiene un patrón suave.",
+        "Fue la época de las pelucas empolvadas y de las primeras grandes sinfonías y cuartetos de cuerda.",
+        "Es la época de Haydn y del joven Beethoven, más o menos de 1750 a 1820."
+      ],
+      "description": "Ochenta y ocho teclas, y ninguna sirve para mandar un mensaje.",
+      "fun_fact": "Es el primer movimiento de la Sonata para piano n.º 13 de Mozart (K. 333), que probablemente escribió hacia 1783, quizá en Linz.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5a40caf794c8"
+    },
+    {
+      "id": "q-20821",
+      "question": "Mira: mientras el hielo marino se reduce de primavera a verano, ¿qué isla es la gran mancha blanca de la derecha que sigue congelada?",
+      "answer": "Groenlandia",
+      "wrong_answers": [
+        "Islandia",
+        "Isla de Baffin",
+        "Svalbard"
+      ],
+      "hints": [
+        "Incluso a finales de julio casi no cambia. Su hielo está sobre tierra firme, no sobre el mar.",
+        "Es la isla más grande del mundo.",
+        "Pertenece al Reino de Dinamarca, aunque su nombre significa «tierra verde»."
+      ],
+      "description": "Una cámara espacial gira el planeta para ver quién no se quitó el abrigo de invierno en todo el verano.",
+      "fun_fact": "El hielo de Groenlandia llega a tener unos 3 km de grosor, y si se derritiera por completo, el nivel de los océanos subiría unos 7 m.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4f239c5c8b5b"
+    },
+    {
+      "id": "q-20823",
+      "question": "Escucha: ¿qué ave nocturna de los trópicos americanos canta esto?",
+      "answer": "Nictibio común",
+      "wrong_answers": [
+        "Guácharo",
+        "Chotacabras pauraque",
+        "Autillo tropical"
+      ],
+      "hints": [
+        "Su canto inspiró leyendas populares en toda Sudamérica sobre un espíritu que llora en el bosque.",
+        "De día se queda totalmente inmóvil sobre una rama rota, y sus plumas parecen parte del árbol.",
+        "Con sus enormes ojos amarillos y su boca ancha, parece un búho sorprendido con cara de rana, sentado erguido sobre un tronco."
+      ],
+      "description": "Este trabajador del turno nocturno de la selva entra al atardecer y sale mucho después de que todos estamos roncando.",
+      "fun_fact": "Los nictibios tienen pequeñas ranuras en los párpados, así que pueden ver el peligro incluso con los ojos cerrados.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "987f0233abdc"
+    },
+    {
+      "id": "q-20824",
+      "question": "Mira: ¿cómo se llama este tipo de nube, que suele formarse sobre las montañas?",
+      "answer": "Nube lenticular",
+      "wrong_answers": [
+        "Nube cumulonimbo",
+        "Nube mammatus",
+        "Nube noctilucente"
+      ],
+      "hints": [
+        "Observa lo lisa y en capas que es su forma, nada que ver con un montón esponjoso.",
+        "Se forma donde el viento pasa sobre las montañas en ondas, y puede quedarse sobre el mismo punto durante horas.",
+        "Su nombre viene de la palabra latina para “lenteja”, la misma raíz que “lente”, y a menudo la confunden con un ovni."
+      ],
+      "description": "El proyecto artístico del cielo: alguien dejó la crema batida al viento.",
+      "fun_fact": "Las nubes lenticulares pueden quedarse en el mismo lugar durante horas, incluso con viento fuerte, porque el aire sigue pasando a través de ellas: se forman por un lado y se deshacen por el otro.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2b89cfabc0e9"
+    },
+    {
+      "id": "q-20825",
+      "question": "Escucha: este tema lento y solemne le dio su apodo a todo el cuarteto de cuerda. ¿Cómo se llama el cuarteto?",
+      "answer": "«La muerte y la doncella»",
+      "wrong_answers": [
+        "«Emperador»",
+        "«Rosamunda»",
+        "«La alondra»"
+      ],
+      "hints": [
+        "Fíjate en el ambiente: lento, oscuro, en tonalidad menor, con un paso firme como de marcha.",
+        "El tema viene de una canción del mismo compositor, un diálogo entre dos personajes.",
+        "En la canción, una muchacha asustada le ruega a un visitante sombrío que pase de largo."
+      ],
+      "description": "Cuatro músicos, dieciséis cuerdas y una regla de oro: nadie empieza hasta que el primer violín asiente.",
+      "fun_fact": "Schubert escribió este cuarteto en 1824 estando gravemente enfermo, y solo se publicó en 1831, tres años después de su muerte.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b3b68e6c3b5e"
+    },
+    {
+      "id": "q-20826",
+      "question": "Escucha este final de piano rápido y furioso. ¿Qué apodo tiene la sonata de la que viene?",
+      "answer": "Sonata «Claro de luna»",
+      "wrong_answers": [
+        "Sonata «Patética»",
+        "Sonata «Appassionata»",
+        "Sonata «La tempestad»"
+      ],
+      "hints": [
+        "El compositor también escribió la pieza corta para piano «Para Elisa».",
+        "La misma sonata empieza con un movimiento lento y soñador mucho más famoso que este.",
+        "Un crítico dijo que ese comienzo soñador le recordaba un bote en el lago de Lucerna de noche."
+      ],
+      "description": "Una pieza para piano que suena como si la persiguiera su propia tarea escaleras abajo.",
+      "fun_fact": "Beethoven nunca la llamó «Claro de luna»: el crítico musical Ludwig Rellstab inventó el nombre años después de la muerte de Beethoven.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bed917bf30d3"
+    },
+    {
+      "id": "q-20827",
+      "question": "Mira: unos astronautas con trajes espaciales entrenan en el fondo de un enorme tanque de agua. ¿De qué nave son las copias a tamaño real que hay allí abajo?",
+      "answer": "La Estación Espacial Internacional",
+      "wrong_answers": [
+        "El transbordador espacial",
+        "El telescopio espacial Hubble",
+        "El módulo lunar del Apolo"
+      ],
+      "hints": [
+        "Fíjate en los grandes tubos blancos con pasamanos: son copias de los espacios donde vive gente.",
+        "En la nave real vive gente sin interrupción desde el año 2000, a unos 400 km sobre la Tierra.",
+        "La construyeron entre varios países, entre ellos Estados Unidos, Rusia, Japón, Canadá y naciones europeas."
+      ],
+      "description": "El único lugar para nadar donde el salvavidas necesita un título de ingeniero espacial.",
+      "fun_fact": "El Laboratorio de Flotabilidad Neutra de la NASA, en Houston, tiene unos 23 millones de litros de agua, y los astronautas pueden pasar seis horas seguidas dentro practicando una sola caminata espacial.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ebef3ccbb273"
+    },
+    {
+      "id": "q-20828",
+      "question": "Mira: una cámara trampa en Wyoming, Estados Unidos, filmó a estas curiosas visitantes. ¿Qué animal son?",
+      "answer": "Wapití (ciervo canadiense)",
+      "wrong_answers": [
+        "Reno",
+        "Ciervo mulo",
+        "Gamo"
+      ],
+      "hints": [
+        "Son hembras, así que ahora no tienen astas. A los machos les vuelven a crecer astas enormes cada año.",
+        "En otoño, los machos lanzan un llamado fuerte y agudo que en inglés se conoce como «bugling».",
+        "Es uno de los miembros más grandes de la familia de los ciervos. Su nombre indígena, usado por los shawnee y los cree, significa «grupa blanca»."
+      ],
+      "description": "Hay visitas que no saben qué es el espacio personal, y estas encima tienen pezuñas.",
+      "fun_fact": "En inglés se le llama «elk», pero en Europa esa palabra suele significar alce, así que en Norteamérica muchos prefieren su nombre indígena, wapití, para evitar confusiones.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bd56bc1728b8"
+    },
+    {
+      "id": "q-20829",
+      "question": "Escucha: esta melodía abría el antiguo himno del Reino de Yugoslavia. Hoy es el himno nacional de ¿qué país?",
+      "answer": "Serbia",
+      "wrong_answers": [
+        "Croacia",
+        "Eslovenia",
+        "Montenegro"
+      ],
+      "hints": [
+        "La melodía se escribió en la década de 1870 como música para una obra de teatro.",
+        "Su título significa “Dios de la justicia”.",
+        "La capital de este país está donde el río Sava desemboca en el Danubio."
+      ],
+      "description": "Un reino, un himno y una melodía que duró más que el reino para el que sonaba.",
+      "fun_fact": "La música de “Bože pravde” la compuso Davorin Jenko, un compositor de Eslovenia, no de Serbia.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d8a0d67f3f87"
+    },
+    {
+      "id": "q-20830",
+      "question": "Mira: ¿qué tipo de pato es el adulto que nada con estos patitos?",
+      "answer": "Ánade real",
+      "wrong_answers": [
+        "Pato mandarín",
+        "Pato de la Carolina",
+        "Eider común"
+      ],
+      "hints": [
+        "Es uno de los patos silvestres más comunes del mundo; vive en parques y estanques de todo el hemisferio norte.",
+        "Fíjate en el color de la cabeza del adulto y en el fino anillo blanco alrededor de su cuello.",
+        "Los machos tienen la cabeza verde brillante, y las hembras marrones hacen el clásico «cuac» fuerte que todos conocen."
+      ],
+      "description": "Hoy hay clases de natación en el estanque: sin entrenador, sin silbato, solo mucho chapoteo.",
+      "fun_fact": "Casi todos los patos de granja del mundo, excepto el pato criollo, descienden del ánade real silvestre.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9e0379b44122"
+    },
+    {
+      "id": "q-20831",
+      "question": "Escucha: ¿qué compositor escribió esta famosa pieza para orquesta que parece ir al galope?",
+      "answer": "Richard Wagner",
+      "wrong_answers": [
+        "Giuseppe Verdi",
+        "Piotr Ilich Chaikovski",
+        "Johann Strauss (hijo)"
+      ],
+      "hints": [
+        "El compositor vivió en el siglo XIX y también escribió música para el teatro.",
+        "Viene de un enorme ciclo de cuatro óperas basado en antiguas leyendas nórdicas y germánicas.",
+        "En la pieza, guerreras de la mitología nórdica cabalgan por el cielo en caballos voladores."
+      ],
+      "description": "La banda sonora oficial de toda escena con helicópteros y de toda familia que sale corriendo de casa un lunes por la mañana.",
+      "fun_fact": "El ciclo completo de «El anillo», del que viene esta pieza, dura unas 15 horas, así que suele representarse en cuatro noches.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "df2acdd74a40"
+    },
+    {
+      "id": "q-20832",
+      "question": "Escucha: ¿qué instrumento tradicional de arco está tocando esta melodía?",
+      "answer": "Lira cretense",
+      "wrong_answers": [
+        "Erhu",
+        "Violín de Hardanger",
+        "Sarangi"
+      ],
+      "hints": [
+        "Su hogar está en el Mediterráneo.",
+        "El músico lo sostiene en vertical sobre la rodilla, y a veces el arco lleva cascabeles diminutos.",
+        "Comparte nombre con el antiguo instrumento de Orfeo y viene de la isla más grande de Grecia."
+      ],
+      "description": "Un arco, unas cuantas cuerdas y energía suficiente para tener a todo un pueblo bailando hasta el amanecer.",
+      "fun_fact": "Los arcos tradicionales de la lira cretense solían llevar atados pequeños «cascabeles de halcón», así que el instrumento tintineaba al ritmo del arco.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d7556bcfdfa6"
+    },
+    {
+      "id": "q-20833",
+      "question": "Mira: ¿qué modelo de avión de pasajeros está despegando en este video?",
+      "answer": "McDonnell Douglas MD-11",
+      "wrong_answers": [
+        "Lockheed L-1011 TriStar",
+        "Boeing 727",
+        "Boeing 747"
+      ],
+      "hints": [
+        "Cuenta los motores y luego fíjate bien dónde está el de la cola.",
+        "El motor de cola atraviesa en línea recta la base de la aleta. No está escondido en la parte trasera del fuselaje con una toma de aire encima.",
+        "Es un sucesor alargado del DC-10, con pequeñas aletas (winglets) en las puntas de las alas."
+      ],
+      "description": "En algún lugar de su panza, el paquete que alguien esperaba desde hace siglos por fin va en camino.",
+      "fun_fact": "El MD-11 fue el último avión de pasajeros de fuselaje ancho con tres motores que se fabricó; la producción terminó en 2001, tras unos 200 ejemplares.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "56bd10811ced"
+    },
+    {
+      "id": "q-20834",
+      "question": "Mira: ¿cómo se llama el gran tambor que toca el músico sentado para los bailarines?",
+      "answer": "Tapan",
+      "wrong_answers": [
+        "Djembé",
+        "Bodhrán",
+        "Darbuka"
+      ],
+      "hints": [
+        "El tambor cuelga de lado, así que el músico golpea sus dos parches.",
+        "Suena en bodas y fiestas de pueblo desde los Balcanes hasta Turquía.",
+        "En Turquía, ese mismo tambor se llama davul y suele tocar junto a la chillona zurna."
+      ],
+      "description": "El invitado más escandaloso del restaurante, y nadie se atreve a pedirle que baje la voz.",
+      "fun_fact": "Muchos tocadores de tapan usan un mazo grueso en un parche para los golpes graves y una varilla fina en el otro para los chasquidos agudos, así que un solo músico suena como dos.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0fe39231956b"
+    },
+    {
+      "id": "q-20835",
+      "question": "Escucha: este es el final de una de las sonatas para piano de Beethoven. ¿Qué sonata es?",
+      "answer": "Sonata “Waldstein”",
+      "wrong_answers": [
+        "Sonata “Appassionata”",
+        "Sonata “Patética”",
+        "Sonata “Hammerklavier”"
+      ],
+      "hints": [
+        "Fíjate en la melodía suave, como de campanas, que flota sobre una nota grave sostenida. Pronto regresa fuerte y con todo su volumen.",
+        "Este final es un rondó en una tonalidad mayor y luminosa, y termina con pasajes rapidísimos y brillantes.",
+        "El apodo de la sonata homenajea a un conde de Bonn que apoyó al joven Beethoven y lo envió a estudiar a Viena."
+      ],
+      "description": "Diez dedos, ochenta y ocho teclas y un compositor que nunca se quedaba callado por mucho tiempo.",
+      "fun_fact": "Cuando Beethoven dejó Bonn en 1792, el conde Ferdinand von Waldstein le escribió en su álbum que recibiría “el espíritu de Mozart de manos de Haydn”.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d501b120f723"
+    },
+    {
+      "id": "q-20836",
+      "question": "Escucha: en muchas celebraciones, esta melodía suena cuando entra una persona especial. ¿Quién es esa persona?",
+      "answer": "La novia",
+      "wrong_answers": [
+        "La nueva reina",
+        "El graduado",
+        "El capitán del equipo"
+      ],
+      "hints": [
+        "Los invitados suelen ponerse de pie y voltearse cuando empieza esta música.",
+        "Esta persona muchas veces lleva meses planeando este preciso momento.",
+        "Esta persona suele llevar un largo vestido blanco y un velo."
+      ],
+      "description": "Una melodía tan famosa que hasta quienes nunca van a conciertos pueden tararearla.",
+      "fun_fact": "En la ópera «Lohengrin» de Wagner, este coro se canta después de la boda, cuando llevan a la pareja a su habitación, no cuando la novia entra a la ceremonia.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3a18bc0cbd19"
+    },
+    {
+      "id": "q-20837",
+      "question": "Mira: ¿cómo se llama en el ferrocarril el tipo de vagón de carga que arrastra este tren?",
+      "answer": "Tolva",
+      "wrong_answers": [
+        "Cisterna",
+        "Furgón",
+        "Góndola"
+      ],
+      "hints": [
+        "Fíjate bien en los extremos inclinados y en la parte de abajo de los vagones.",
+        "Estos vagones llevan carga suelta, como trigo, que debe mantenerse seca; por eso tienen techo.",
+        "La carga cae por unas bocas en forma de embudo que tienen debajo, como el embudo que echa el grano en un molino."
+      ],
+      "description": "Largo, lento y lleno de grafitis: quizá la galería de arte ambulante más paciente del mundo.",
+      "fun_fact": "Las tolvas se vacían por compuertas en el piso, así que la gravedad las descarga y nadie tiene que levantar nada.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "37a2cb740ae0"
+    },
+    {
+      "id": "q-20838",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Países Bajos",
+      "wrong_answers": [
+        "Bélgica",
+        "Dinamarca",
+        "Suecia"
+      ],
+      "hints": [
+        "Su letra se escribió durante una larga lucha por liberarse del dominio español.",
+        "Las primeras letras de sus estrofas forman el nombre de un príncipe.",
+        "Ese príncipe era Guillermo de Orange, y el naranja sigue siendo el color de este país en los deportes."
+      ],
+      "description": "Una banda de la marina con zapatos muy lustrados toca una melodía de una patria ajena.",
+      "fun_fact": "Las primeras letras de las 15 estrofas del himno forman “Willem van Nassov”, un acróstico gigante, y su letra es del siglo XVI.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3dee95810e6d"
+    },
+    {
+      "id": "q-20839",
+      "question": "Mira: la sonda Juno de la NASA tomó estas imágenes de cerca de una de las lunas de Júpiter. ¿Qué luna es?",
+      "answer": "Europa",
+      "wrong_answers": [
+        "Ío",
+        "Ganímedes",
+        "Calisto"
+      ],
+      "hints": [
+        "Es una de las cuatro grandes lunas que Galileo descubrió en 1610.",
+        "Su superficie pálida casi no tiene cráteres, pero está cubierta de largas líneas marrón rojizo, que son grietas en una capa de hielo.",
+        "Los científicos creen que bajo su corteza helada hay un enorme océano salado, y la NASA envió allí su misión Clipper para saber más."
+      ],
+      "description": "Júpiter tiene decenas de lunas, pero solo unas pocas son tan fotogénicas como para merecer un primer plano.",
+      "fun_fact": "El océano bajo el hielo de Europa podría tener unas dos veces más agua que todos los océanos de la Tierra juntos.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "15c4413b48d9"
+    },
+    {
+      "id": "q-20840",
+      "question": "Mira: ¿qué tipo de ciervo está pastando en esta manada?",
+      "answer": "Gamo",
+      "wrong_answers": [
+        "Ciervo rojo",
+        "Corzo",
+        "Venado de cola blanca"
+      ],
+      "hints": [
+        "Esta especie vive en estado salvaje en Europa, pero desde hace siglos también se ha llevado a parques de todo el mundo.",
+        "La mayoría de los ciervos pierden sus manchas blancas al crecer, pero los adultos de esta especie las conservan todo el verano.",
+        "Mira la parte trasera: una mancha blanca bordeada de negro. Y los machos tienen astas anchas y planas, en forma de pala."
+      ],
+      "description": "Un almuerzo donde todos trajeron la misma ensalada y a nadie le molesta.",
+      "fun_fact": "Los gamos machos tienen astas anchas y planas, llamadas «palmeadas», y los romanos ayudaron a extender la especie por toda Europa.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6881c51f133b"
+    },
+    {
+      "id": "q-20841",
+      "question": "Mira este mapa de lluvias de la NASA: ¿cómo se llama la larga banda de lluvias intensas que ves?",
+      "answer": "Zona de Convergencia Intertropical",
+      "wrong_answers": [
+        "Frente polar",
+        "Corriente en chorro",
+        "Latitudes de los caballos"
+      ],
+      "hints": [
+        "Fíjate bien en qué parte del globo está la banda.",
+        "Se mantiene cerca del ecuador, donde el Sol calienta más el océano.",
+        "Los antiguos marineros llamaban a sus partes tranquilas y sin viento “las calmas ecuatoriales”."
+      ],
+      "description": "El accesorio favorito del planeta: un cinturón que nunca, jamás, se seca.",
+      "fun_fact": "La banda sigue al Sol: se mueve al norte en julio y al sur en enero, y trae las temporadas de lluvia a gran parte de los trópicos.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3e737de405e4"
+    },
+    {
+      "id": "q-20842",
+      "question": "Escucha: el ritmo inquieto y galopante del final de este cuarteto de cuerda imita ¿qué baile rápido?",
+      "answer": "Tarantela",
+      "wrong_answers": [
+        "Vals",
+        "Polonesa",
+        "Zarabanda"
+      ],
+      "hints": [
+        "Fíjate en cómo los tiempos llegan en grupos rápidos de tres, una y otra vez, casi sin respirar.",
+        "El baile viene del sur de Italia y suele acompañarse con panderetas.",
+        "Su nombre se relaciona con la ciudad de Tarento y con la leyenda de una picadura de araña."
+      ],
+      "description": "Cuatro músicos de cuerda con un caso muy grave de piernas inquietas.",
+      "fun_fact": "Schubert escribió este cuarteto en 1824, pero solo se publicó en 1831, tres años después de su muerte.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "1f09733dace1"
+    },
+    {
+      "id": "q-20845",
+      "question": "Mira: ¿en qué ciudad japonesa se filmaron estas escenas de calles llenas de gente?",
+      "answer": "Osaka",
+      "wrong_answers": [
+        "Tokio",
+        "Kioto",
+        "Yokohama"
+      ],
+      "hints": [
+        "En todo Japón, la gente de aquí tiene fama de graciosa y de que le encanta comer fuera.",
+        "El takoyaki, esas bolitas rellenas de pulpo, se inventó en esta ciudad.",
+        "Dotonbori, el barrio del canal con el enorme letrero del hombre que corre, está en la ciudad sede de la Expo 2025."
+      ],
+      "description": "Horas de vida urbana metidas en segundos, como ir al trabajo en cámara rápida.",
+      "fun_fact": "El letrero del «Running Man» de Glico ilumina Dotonbori desde 1935, y desde entonces lo han cambiado por versiones nuevas varias veces.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "167b14f7cca1"
+    },
+    {
+      "id": "q-20846",
+      "question": "Mira: esta animación de la NASA muestra la mitad norte de nuestro planeta. ¿Qué indica la banda roja ondulante que rodea el globo?",
+      "answer": "La corriente en chorro",
+      "wrong_answers": [
+        "La corriente del Golfo",
+        "Los vientos alisios",
+        "La aurora boreal"
+      ],
+      "hints": [
+        "Fíjate bien: la banda cruza tierra y océano por igual y cambia de forma en pocos días.",
+        "Sopla a unos 9 a 12 km de altura, más o menos donde vuelan los aviones de pasajeros.",
+        "Los vuelos de América a Europa suelen aprovecharla para llegar antes y ahorrar combustible."
+      ],
+      "description": "El planeta Tierra se prueba su bufanda roja más ondulada y no se queda quieto para la foto.",
+      "fun_fact": "La corriente en chorro polar puede soplar a más de 160 km/h, y sus grandes curvas pueden llevar calor o frío intenso muy lejos de donde suelen estar.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b2ab29a14bd3"
+    },
+    {
+      "id": "q-20847",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Argelia",
+      "wrong_answers": [
+        "Marruecos",
+        "Túnez",
+        "Egipto"
+      ],
+      "hints": [
+        "La letra de este himno se escribió durante una guerra de independencia.",
+        "El poeta escribió la letra mientras estaba preso en una cárcel francesa en 1955.",
+        "Es el país más grande de África por superficie, y el Sahara cubre la mayor parte de su territorio."
+      ],
+      "description": "Una banda de la marina con uniformes blancos impecables está a punto de poner firme a toda una nación.",
+      "fun_fact": "El himno se llama “Kassaman”, que significa “Juramos”, y su poeta, Moufdi Zakaria, escribió la letra en una celda de una cárcel francesa en 1955.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3752e55bda12"
+    },
+    {
+      "id": "q-20848",
+      "question": "Mira: esta animación atraviesa una nube brillante de dos lóbulos hasta llegar al par de estrellas enormes que la expulsaron. ¿Qué sistema estelar es?",
+      "answer": "Eta Carinae",
+      "wrong_answers": [
+        "Sirio",
+        "Alfa Centauri",
+        "Rigel"
+      ],
+      "hints": [
+        "Se ve mejor desde el hemisferio sur.",
+        "En la década de 1840 se encendió tanto que, por un tiempo, fue la segunda estrella más brillante del cielo nocturno.",
+        "Su nombre la ubica en la constelación de Carina, la Quilla de un barco."
+      ],
+      "description": "El zoom espacial definitivo: no se detiene hasta que algo se pone muy, muy brillante.",
+      "fun_fact": "La nube brillante, llamada nebulosa del Homúnculo, fue expulsada en la década de 1840 y contiene al menos 10 veces la masa de nuestro Sol.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "701cc8937e6d"
+    },
+    {
+      "id": "q-20850",
+      "question": "Mira: esta cámara filmó algo oscuro que pasaba frente al Sol. ¿Qué está cruzando el Sol?",
+      "answer": "Fobos, la luna de Marte",
+      "wrong_answers": [
+        "La Luna de la Tierra",
+        "El planeta Venus",
+        "El planeta Mercurio"
+      ],
+      "hints": [
+        "Fíjate bien en el contorno de la mancha oscura: ¿es un círculo perfecto?",
+        "Los planetas y nuestra Luna se ven redondos. Las lunas pequeñas pueden ser irregulares, como una papa.",
+        "La cámara iba en un robot explorador, lejos de la Tierra, en el planeta rojo."
+      ],
+      "description": "Alguien se coló en la foto del Sol, y esta vez no fue una paloma.",
+      "fun_fact": "Fobos da unas tres vueltas a Marte por día, así que, visto desde Marte, sale por el oeste y se pone por el este.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "644e3d79926a"
+    },
+    {
+      "id": "q-20851",
+      "question": "Mira: este animal puede pasar todo el invierno bajo el hielo de un estanque sin salir a respirar. ¿Cómo obtiene algo de oxígeno?",
+      "answer": "Por la piel cerca de la cola",
+      "wrong_answers": [
+        "Por branquias ocultas detrás de la cabeza",
+        "Del aire guardado dentro de su caparazón",
+        "Por pequeños agujeros que derrite en el hielo"
+      ],
+      "hints": [
+        "Tiene pulmones, pero durante meses no puede llegar a la superficie para usarlos.",
+        "El oxígeno lo toma directamente del agua fría que lo rodea.",
+        "Los científicos llaman en broma a este truco «respirar por el trasero»."
+      ],
+      "description": "No todos los visitantes del estanque congelado se acordaron de traer sus patines.",
+      "fun_fact": "Las tortugas pintadas pueden sobrevivir meses bajo el hielo casi sin oxígeno, y su caparazón libera minerales que ayudan a neutralizar el ácido que se acumula en su cuerpo.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5b28cfe4310e"
+    },
+    {
+      "id": "q-20852",
+      "question": "Mira el techo de la locomotora roja: ¿cómo se llama el brazo plegable que toca los cables de arriba?",
+      "answer": "Pantógrafo",
+      "wrong_answers": [
+        "Catenaria",
+        "Bogie",
+        "Enganche"
+      ],
+      "hints": [
+        "Su nombre se usó primero para un instrumento de dibujo.",
+        "Ese antiguo instrumento copiaba dibujos más grandes o más chicos con un armazón plegable de barras unidas.",
+        "La palabra empieza como «panda» y termina como «fotógrafo»."
+      ],
+      "description": "Toneladas de acero brillante pasan traqueteando por una tranquila estación francesa, y nadie compra boleto.",
+      "fun_fact": "El pantógrafo tomó su nombre de un instrumento de dibujo con un armazón plegable, que se usa desde el siglo XVII para copiar dibujos a otro tamaño.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7575c4b112d2"
+    },
+    {
+      "id": "q-20854",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Noruega",
+      "wrong_answers": [
+        "Suecia",
+        "Dinamarca",
+        "Finlandia"
+      ],
+      "hints": [
+        "La letra la escribió un poeta que después ganó el Premio Nobel de Literatura.",
+        "Este país celebra su día nacional el 17 de mayo con grandes desfiles infantiles.",
+        "Este país es famoso por sus profundos fiordos y su larga costa en el Atlántico."
+      ],
+      "description": "La única melodía que levanta a toda la sala del sillón, con la mano en el pecho.",
+      "fun_fact": "El compositor, Rikard Nordraak, murió en 1866 con apenas 23 años, pero su país lleva más de 150 años cantando su melodía.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6f473d7021ab"
+    },
+    {
+      "id": "q-20855",
+      "question": "Escucha: esta pieza para piano lleva el nombre de un baile folclórico. ¿De qué país viene ese baile?",
+      "answer": "Polonia",
+      "wrong_answers": [
+        "España",
+        "Argentina",
+        "Hungría"
+      ],
+      "hints": [
+        "El baile tiene tres tiempos por compás, a menudo con un acento fuerte en el segundo o el tercero.",
+        "El compositor fue una estrella romántica del piano que dejó su tierra a los 20 años y pasó el resto de su vida en París.",
+        "El baile se llama mazurca, por una región cercana a Varsovia."
+      ],
+      "description": "Una melodía que te quiere en la pista de baile, aunque solo la toque una persona.",
+      "fun_fact": "Chopin escribió unas 60 mazurcas, y el himno nacional de Polonia, «Polonia aún no está perdida», también es una mazurca.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9cc87c249b19"
+    },
+    {
+      "id": "q-20856",
+      "question": "Escucha: tras la entrada de los cornos, dos solistas tocan juntos la melodía principal, uno una octava por encima del otro. ¿Qué dos instrumentos son?",
+      "answer": "Violín y violonchelo",
+      "wrong_answers": [
+        "Violín y viola",
+        "Dos violines",
+        "Violonchelo y contrabajo"
+      ],
+      "hints": [
+        "Los dos solistas tocan instrumentos de cuerda con arco.",
+        "Escucha la voz de abajo: suena mucho más grave que la de arriba.",
+        "Un solista sostiene su instrumento bajo la barbilla; el otro toca sentado, con el instrumento entre las rodillas."
+      ],
+      "description": "Dos solistas que comparten escenario y melodía, y de algún modo ninguno de los dos está enfurruñado.",
+      "fun_fact": "Brahms escribió este Doble concierto en 1887 en parte para hacer las paces con su amigo, el violinista Joseph Joachim, y fue la última obra para orquesta que compuso.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d3a58bb32f4b"
+    },
+    {
+      "id": "q-20857",
+      "question": "Escucha: ¿en qué tipo de evento se toca tradicionalmente esta famosa melodía?",
+      "answer": "Una boda",
+      "wrong_answers": [
+        "Un funeral",
+        "Una fiesta de cumpleaños",
+        "Una graduación"
+      ],
+      "hints": [
+        "La gente suele ponerse su mejor ropa para este evento.",
+        "Después, los invitados suelen lanzar pétalos de flores, arroz o confeti.",
+        "Suena mientras alguien con un largo vestido blanco camina despacio hacia el altar."
+      ],
+      "description": "Que alguien traiga los pañuelos, que la tía Rosa ya está llorando desde la primera nota.",
+      "fun_fact": "Es el Coro nupcial de la ópera «Lohengrin» de Richard Wagner, de 1850, y en la ópera la boda que celebra se arruina esa misma noche.",
+      "difficulty": 2,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "afa4877b89af"
+    },
+    {
+      "id": "q-20859",
+      "question": "Escucha: estos chillidos fuertes se grabaron en una ciudad alemana. ¿Qué ave los hace?",
+      "answer": "Cotorra de Kramer",
+      "wrong_answers": [
+        "Arrendajo euroasiático",
+        "Vencejo común",
+        "Estornino pinto"
+      ],
+      "hints": [
+        "Es fácil verla y oírla en parques y jardines de la ciudad.",
+        "Vive en bandadas ruidosas que se juntan de noche para dormir en los mismos árboles grandes.",
+        "Sus plumas son verde brillante, los machos tienen un fino collar rosa y negro, y sus antepasados eran mascotas que se escaparon."
+      ],
+      "description": "Algunos vecinos del parque claramente nunca se enteraron del horario de silencio.",
+      "fun_fact": "Bandadas silvestres de estas cotorras, descendientes de mascotas escapadas o liberadas, viven hoy en muchas ciudades europeas, como Londres, Bruselas, Ámsterdam y Roma.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7de7bf5e5a55"
+    },
+    {
+      "id": "q-20860",
+      "question": "Escucha este coro de una misa de Mozart. ¿Qué forma musical está cantando?",
+      "answer": "Fuga",
+      "wrong_answers": [
+        "Coral",
+        "Rondó",
+        "Pasacalle"
+      ],
+      "hints": [
+        "Fíjate en cómo empieza el canto: no todas las voces entran al mismo tiempo.",
+        "Una melodía corta, el tema, pasa de un grupo de cantantes al siguiente y se entrelaza.",
+        "Johann Sebastian Bach fue el gran maestro de esta forma, como en su “Tocata y ___ en re menor”."
+      ],
+      "description": "Palabras en latín, pelucas empolvadas y un coro que claramente ya se tomó su café de la mañana.",
+      "fun_fact": "Mozart nunca terminó su Gran Misa en do menor, pero estudió a fondo las fugas de Bach mientras la escribía en Viena, y eso se nota en este movimiento.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d971357e7188"
+    },
+    {
+      "id": "q-20862",
+      "question": "Escucha: ¿qué tema famoso toca esta banda de los primeros años del jazz en una grabación de 1922?",
+      "answer": "“St. Louis Blues”",
+      "wrong_answers": [
+        "“Maple Leaf Rag”",
+        "“Tiger Rag”",
+        "“When the Saints Go Marching In”"
+      ],
+      "hints": [
+        "Se publicó por primera vez en 1914 y fue una de las canciones más grabadas de su época.",
+        "Su compositor le dio a una parte de la melodía un ritmo parecido al tango, algo raro en una canción de su tipo.",
+        "Su título nombra una gran ciudad a orillas del río Misisipi, famosa por su Gateway Arch."
+      ],
+      "description": "Tus tatarabuelos también tenían su lista de canciones favoritas, y esta estaba en ella.",
+      "fun_fact": "En la grabación de “St. Louis Blues” que hizo la cantante Bessie Smith en 1925, la corneta la toca un joven Louis Armstrong.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "20e20189ad3d"
+    },
+    {
+      "id": "q-20863",
+      "question": "Escucha: ¿qué compositor escribió esta famosa pieza?",
+      "answer": "Johann Pachelbel",
+      "wrong_answers": [
+        "Johann Sebastian Bach",
+        "Antonio Vivaldi",
+        "Georg Friedrich Händel"
+      ],
+      "hints": [
+        "Fue un compositor y organista alemán del Barroco, hacia 1700.",
+        "Casi todo el mundo conoce esta pieza suya, pero casi nadie conoce el resto de su música.",
+        "La pieza se llama su «Canon en re», y muchas novias entran a la ceremonia con ella."
+      ],
+      "description": "Una melodía tan tranquila que podría hacer que un niño pequeño se quede quieto… casi.",
+      "fun_fact": "El Canon de Pachelbel estuvo casi olvidado durante unos 250 años, hasta que una grabación de 1968 lo convirtió en una de las piezas más tocadas del mundo.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "882b96678d89"
+    },
+    {
+      "id": "q-20865",
+      "question": "Mira: la Tierra de noche gira, empezando sobre Asia. Justo después de que pasan Europa y África, ¿qué océano ocupa el centro del globo?",
+      "answer": "Océano Atlántico",
+      "wrong_answers": [
+        "Océano Índico",
+        "Océano Pacífico",
+        "Océano Ártico"
+      ],
+      "hints": [
+        "Fíjate hacia dónde se van las luces de Europa y qué zona oscura viene después.",
+        "La Tierra gira hacia el este, así que lo que está más al oeste es lo siguiente que aparece.",
+        "Cristóbal Colón lo cruzó navegando en 1492."
+      ],
+      "description": "El planeta apagó la luz grande y dejó prendidas solo las lamparitas de noche.",
+      "fun_fact": "El océano Atlántico se ensancha unos centímetros cada año, porque América se aleja lentamente de Europa y África.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0e165aa16635"
+    },
+    {
+      "id": "q-20866",
+      "question": "Mira: ¿cómo se llama la sartén que usa este cocinero?",
+      "answer": "Wok",
+      "wrong_answers": [
+        "Tajín",
+        "Paellera",
+        "Crepera"
+      ],
+      "hints": [
+        "Este tipo de sartén es uno de los favoritos de los restaurantes asiáticos de todo el mundo.",
+        "Viene de China, donde los cocineros la usan para freír la comida muy rápido a fuego muy alto.",
+        "Los fideos fritos como el chow mein suelen saltearse en una de estas."
+      ],
+      "description": "La cena está servida, con espectáculo de fuego incluido.",
+      "fun_fact": "Los cocineros chinos llaman «wok hei», que significa «aliento del wok», al sabor ahumado que se consigue con un wok muy caliente.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "75e0c018c3f4"
+    },
+    {
+      "id": "q-20867",
+      "question": "Mira: ¿de qué país es típico este famoso pan con queso?",
+      "answer": "Georgia",
+      "wrong_answers": [
+        "Grecia",
+        "Hungría",
+        "Ucrania"
+      ],
+      "hints": [
+        "El país está en las montañas del Cáucaso, entre el mar Negro y el mar Caspio.",
+        "Su capital es Tiflis, y su alfabeto no se parece a ningún otro del mundo.",
+        "Este país tiene el mismo nombre que un estado de Estados Unidos."
+      ],
+      "description": "Un pan que zarpa con la bodega llena de queso derretido.",
+      "fun_fact": "El jachapuri adjariano viene de Adjaria, en la costa del mar Negro, y se dice que su forma de barco representa una nave, con la yema como el sol.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4d4a9ce41317"
+    },
+    {
+      "id": "q-20868",
+      "question": "Escucha: ¿con qué apodo es famosa esta sonata para piano de Beethoven?",
+      "answer": "Sonata «Appassionata»",
+      "wrong_answers": [
+        "Sonata «Patética»",
+        "Sonata «La tempestad»",
+        "Sonata «Hammerklavier»"
+      ],
+      "hints": [
+        "Empieza en voz baja, en los graves, y crece hasta estallidos repentinos y fuertes, todo en tonalidad menor.",
+        "Beethoven la escribió entre 1804 y 1806, más o menos cuando compuso su Sinfonía «Heroica».",
+        "Su apodo se parece mucho a la palabra «apasionada»."
+      ],
+      "description": "Ochenta y ocho teclas, un solo hombre y un humor que más vale no interrumpir.",
+      "fun_fact": "Beethoven nunca la llamó «Appassionata»: un editor de Hamburgo le puso ese nombre en 1838, once años después de su muerte.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "70f690510a3e"
+    },
+    {
+      "id": "q-20869",
+      "question": "Mira: ¿qué es la franja brillante que cruza el cielo nocturno en este video acelerado?",
+      "answer": "La Vía Láctea",
+      "wrong_answers": [
+        "La galaxia de Andrómeda",
+        "La aurora boreal",
+        "La nebulosa de Orión"
+      ],
+      "hints": [
+        "Se ve mejor desde lugares muy oscuros, lejos de las luces de la ciudad, como esta cima de montaña en un desierto.",
+        "Nuestro Sol es solo una entre los cientos de miles de millones de estrellas que tiene.",
+        "Es nuestra galaxia, y su nombre tiene que ver con algo que se toma en el desayuno."
+      ],
+      "description": "Una noche tan oscura que por fin ves lo que los faroles de la calle te estaban escondiendo.",
+      "fun_fact": "La palabra «galaxia» viene del griego «gala», que significa leche, así que «galaxia Vía Láctea» dice «leche» dos veces.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "900b46f1757d"
+    },
+    {
+      "id": "q-20870",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Bielorrusia",
+      "wrong_answers": [
+        "Ucrania",
+        "Lituania",
+        "Kazajistán"
+      ],
+      "hints": [
+        "Este país formó parte de la Unión Soviética.",
+        "Su bandera roja y verde tiene a un costado una franja con un diseño tradicional rojo y blanco.",
+        "Su capital es Minsk."
+      ],
+      "description": "Una melodía que hace que todo un estadio se pare derecho y se ponga serio al mismo tiempo.",
+      "fun_fact": "La melodía se compuso en 1955 para la Bielorrusia soviética, y el país la conservó tras su independencia; la letra nueva llegó recién en 2002.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a8fa55ea0e0d"
+    },
+    {
+      "id": "q-20871",
+      "question": "Mira: este brazo robótico está instalando una pieza nueva en una estación espacial. ¿Qué país construyó el brazo?",
+      "answer": "Canadá",
+      "wrong_answers": [
+        "Japón",
+        "China",
+        "Italia"
+      ],
+      "hints": [
+        "El mismo país construyó un brazo robótico anterior para el transbordador espacial de la NASA.",
+        "Chris Hadfield, astronauta de este país, fue comandante de la estación que ves aquí.",
+        "El nombre del brazo empieza con el nombre de su país."
+      ],
+      "description": "El apretón de manos más lejano del mundo, a 400 km de cualquiera que pueda aplaudir.",
+      "fun_fact": "El Canadarm2, de 17,6 m, puede «caminar» por la Estación Espacial Internacional: avanza dando vueltas sobre sí mismo, como una oruga medidora, entre puntos de anclaje especiales.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d97e4558c94f"
+    },
+    {
+      "id": "q-20873",
+      "question": "Mira: bailarines con cuentas de coral y telas a cuadros bailan al ritmo de tambores. ¿De qué país es esta danza tradicional?",
+      "answer": "Nigeria",
+      "wrong_answers": [
+        "Etiopía",
+        "Senegal",
+        "Kenia"
+      ],
+      "hints": [
+        "Las cuentas de coral rojo como estas son un símbolo clásico de riqueza y celebración en el sur de este país.",
+        "La danza viene de pueblos de un enorme delta de río famoso por su petróleo.",
+        "Es el país de África con más habitantes."
+      ],
+      "description": "Dos tambores, un patio y nadie tiene permiso de quedarse quieto.",
+      "fun_fact": "Los ijaw, que bailan esta danza, son uno de los grupos étnicos más grandes de Nigeria, y muchos viven en los arroyos del delta del Níger, donde la pesca ha sido por mucho tiempo su forma de vida.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f70155854bba"
+    },
+    {
+      "id": "q-20874",
+      "question": "Mira cómo despega este avión de carga. ¿Qué modelo de avión es?",
+      "answer": "Airbus A300",
+      "wrong_answers": [
+        "Boeing 747",
+        "McDonnell Douglas MD-11",
+        "Boeing 767"
+      ],
+      "hints": [
+        "Fíjate bien en la cola: ¿tiene algo montado?",
+        "Cuenta los motores: el MD-11 tiene tres y el 747 tiene cuatro.",
+        "Lo fabrica una empresa europea que construye sus aviones en Toulouse, Francia."
+      ],
+      "description": "Una camioneta de reparto que se cansó del tráfico y simplemente se salió de la calle.",
+      "fun_fact": "El Airbus A300, que voló por primera vez en 1972, fue el primer avión de pasajeros de fuselaje ancho del mundo con solo dos motores.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "cd49edb45b38"
+    },
+    {
+      "id": "q-20875",
+      "question": "Mira: ¿qué ave es esta, con unas carnosidades rojas colgando junto al pico?",
+      "answer": "Tieke",
+      "wrong_answers": [
+        "Kokako",
+        "Tui",
+        "Tordo sargento"
+      ],
+      "hints": [
+        "En libertad vive solo en islas sin depredadores y en reservas cercadas de un país del Pacífico.",
+        "Pertenece a una antigua familia de aves con carúnculas que no existe en ningún otro lugar de la Tierra.",
+        "Su nombre viene del maorí, y la banda castaña de su lomo parece una silla de montar."
+      ],
+      "description": "Este modelo emplumado desfila sobre la cerca como si estuviera en una pasarela.",
+      "fun_fact": "El tieke de la Isla Norte llegó a quedar en una sola isla pequeña, la isla Hen; desde los años sesenta se trasladaron aves a otras islas sin depredadores y hoy hay miles.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0da7b7c5291d"
+    },
+    {
+      "id": "q-20876",
+      "question": "Observa: ¿qué tipo de mosca está posada en esta hoja?",
+      "answer": "Mosca asesina",
+      "wrong_answers": [
+        "Mosca de las flores",
+        "Tábano",
+        "Mosca grulla"
+      ],
+      "hints": [
+        "Fíjate bien en sus patas largas y llenas de cerdas, y en sus enormes ojos.",
+        "Atrapa a otros insectos en pleno vuelo, incluso abejas y libélulas.",
+        "Su nombre la hace sonar como la villana de una película policiaca."
+      ],
+      "description": "Está tranquilamente sobre una hoja en un parque de Tokio, posando como una supermodelo en miniatura.",
+      "fun_fact": "Las moscas asesinas tienen en la cara un “bigote” tupido de cerdas que les protege los ojos mientras su presa forcejea.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "32c726271a6e"
+    },
+    {
+      "id": "q-20877",
+      "question": "Escucha: ¿qué ave sudamericana canta este trino fuerte y vibrante?",
+      "answer": "Hornero",
+      "wrong_answers": [
+        "Bienteveo",
+        "Tero",
+        "Chingolo"
+      ],
+      "hints": [
+        "Es el ave nacional de Argentina.",
+        "Es un pájaro sencillo, de color marrón rojizo, que suele caminar por el suelo en parques, campos y jardines.",
+        "Construye nidos redondos y duros de barro sobre los postes de las cercas, con forma de pequeños hornos de arcilla."
+      ],
+      "description": "Seis segundos de pura energía de ave sudamericana, sin calentamiento previo.",
+      "fun_fact": "Las parejas de horneros suelen cantar a dúo, y su nido de barro puede pesar hasta unos 5 kg.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "39ed29bb4eb9"
+    },
+    {
+      "id": "q-20878",
+      "question": "Mira: esta danza folclórica del pueblo bodo de Assam, India, tiene un apodo que viene del animal que imitan las bailarinas. ¿Cuál?",
+      "answer": "Mariposa",
+      "wrong_answers": [
+        "Pavo real",
+        "Cisne",
+        "Águila"
+      ],
+      "hints": [
+        "Fíjate en lo que hacen las bailarinas con los chales de colores que llevan en los hombros.",
+        "Observa lo pequeños, rápidos y ligeros que son los movimientos: nada majestuosos ni de alto vuelo.",
+        "Empieza su vida como oruga."
+      ],
+      "description": "En algún lugar del noreste de la India, un chal está viviendo el mejor día de su vida.",
+      "fun_fact": "La danza se llama bagurumba y suelen bailarla las mujeres en el Bwisagu, el Año Nuevo bodo, que se celebra en primavera.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6ae93b35c701"
+    },
+    {
+      "id": "q-20879",
+      "question": "Escucha: ¿en qué idioma canta este coro?",
+      "answer": "Latín",
+      "wrong_answers": [
+        "Italiano",
+        "Alemán",
+        "Eslavo eclesiástico"
+      ],
+      "hints": [
+        "El autor de esta música nació en Salzburgo, pero esta letra no está en su idioma.",
+        "Hoy nadie crece hablando este idioma en su casa.",
+        "Julio César lo hablaba todos los días."
+      ],
+      "description": "Decenas de cantantes, una orquesta completa y ni una sola palabra que puedas tararear.",
+      "fun_fact": "Mozart nunca terminó su Gran Misa en do menor, pero se interpretó en Salzburgo en 1783, y su esposa Constanze cantó una de las partes de soprano.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "341fc13182a7"
+    },
+    {
+      "id": "q-20880",
+      "question": "Mira: este mapa satelital muestra el dióxido de carbono durante un año; el rojo indica más. ¿Qué hace que el rojo se desvanezca en el norte hacia el final?",
+      "answer": "El crecimiento de las plantas",
+      "wrong_answers": [
+        "El deshielo de la nieve",
+        "Las tormentas en el océano",
+        "Los volcanes menos activos"
+      ],
+      "hints": [
+        "El rojo se desvanece durante los meses más cálidos del norte.",
+        "Las hojas absorben este gas y usan la luz del sol para fabricar alimento con él.",
+        "El proceso se llama fotosíntesis."
+      ],
+      "description": "Un planeta que se sonroja y se pone pálido cada pocos segundos, como si le hubieran dicho un piropo.",
+      "fun_fact": "Medida durante décadas, esta subida y bajada anual le da a la famosa curva de Keeling, del Mauna Loa en Hawái, forma de hoja de sierra, como si la Tierra inhalara y exhalara.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "319783d55128"
+    },
+    {
+      "id": "q-20881",
+      "question": "Escucha: en este pasaje lento de una misa en latín, el coro invoca un nombre una y otra vez. ¿De qué parte de la misa es?",
+      "answer": "Gloria",
+      "wrong_answers": [
+        "Kyrie",
+        "Credo",
+        "Agnus Dei"
+      ],
+      "hints": [
+        "Fíjate en qué nombre invoca el coro.",
+        "Este alegre himno de alabanza se omite en la mayoría de los domingos de Adviento y Cuaresma.",
+        "Comienza con las palabras que los ángeles les dijeron a los pastores en Belén la noche de Navidad."
+      ],
+      "description": "Tarea de latín, pero con orquesta completa y un coro que te grita las respuestas.",
+      "fun_fact": "Mozart nunca terminó su Gran Misa en do menor, y aun así solo su Gloria está dividido en muchos movimientos distintos.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a065f72d0388"
+    },
+    {
+      "id": "q-20882",
+      "question": "Escucha: ¿qué pieza para piano de Franz Liszt es esta?",
+      "answer": "Consolación n.º 3",
+      "wrong_answers": [
+        "Rapsodia húngara n.º 2",
+        "La Campanella",
+        "Vals Mefisto n.º 1"
+      ],
+      "hints": [
+        "Está en re bemol mayor, igual que “Clair de lune” de Debussy.",
+        "Forma parte de un grupo de seis piezas cortas y tranquilas.",
+        "Su título es una palabra para el consuelo que le das a alguien que está triste."
+      ],
+      "description": "Pelo largo, un piano de cola y fans gritando: Liszt era una estrella de rock antes de que existiera el rock.",
+      "fun_fact": "Los conciertos de Liszt causaban tanto alboroto que el poeta Heinrich Heine le puso nombre: “lisztomanía”.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "bfab7c304ebb"
+    },
+    {
+      "id": "q-20883",
+      "question": "Mira: esta nube alta y esponjosa nació del calor de un enorme incendio forestal. ¿Cómo se llama este tipo de nube?",
+      "answer": "Pirocúmulo",
+      "wrong_answers": [
+        "Altocúmulo",
+        "Estratocúmulo",
+        "Cirrocúmulo"
+      ],
+      "hints": [
+        "Su nombre tiene dos partes: una dice de dónde viene el calor y la otra nombra la forma de la nube.",
+        "Los bomberos la vigilan, porque indica que el incendio ya es tan fuerte que crea su propio clima.",
+        "La primera parte viene de la palabra griega para fuego, como en “pirotecnia”."
+      ],
+      "description": "Algunas nubes empiezan su carrera en el cielo; esta tuvo un comienzo muy caliente en el suelo.",
+      "fun_fact": "La nube de este video se elevó sobre el incendio de 2022 en la Suiza Bohemia, el mayor incendio forestal de la historia checa, y las nubes de fuego más grandes hasta pueden producir sus propios rayos.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0f2b9b43afa8"
+    },
+    {
+      "id": "q-20885",
+      "question": "Mira: ¿qué modelo de avión de pasajeros despega del aeropuerto en este video?",
+      "answer": "McDonnell Douglas DC-10",
+      "wrong_answers": [
+        "Lockheed L-1011 TriStar",
+        "Boeing 747",
+        "Airbus A300"
+      ],
+      "hints": [
+        "Cuenta los motores: sumando los de las alas y el de la cola, la respuesta es un «trirreactor».",
+        "Este modelo voló por primera vez en 1970, y muchos se convirtieron después en aviones de carga.",
+        "Se fabricó en California, en la empresa que después hizo el MD-11, una versión alargada de este mismo avión."
+      ],
+      "description": "Los aficionados a los aviones al atardecer: los únicos que celebran un despegue con más ganas que el piloto.",
+      "fun_fact": "El motor de cola del DC-10 va en un tubo recto que atraviesa la aleta, mientras que su rival, el Lockheed TriStar, escondía su tercer motor en la parte trasera del fuselaje y le llevaba el aire por un conducto en forma de S.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "499b9e03f8f0"
+    },
+    {
+      "id": "q-20886",
+      "question": "Escucha esta famosa pieza para piano. ¿Qué palabra italiana de tempo escribió su compositor al principio de la partitura?",
+      "answer": "Adagio",
+      "wrong_answers": [
+        "Presto",
+        "Allegro",
+        "Andante"
+      ],
+      "hints": [
+        "Fíjate en qué tan rápido o despacio avanza la música.",
+        "Dos de estas palabras les piden a los músicos tocar rápido o con alegría.",
+        "Viene de una expresión italiana que significa «con calma, a gusto» y se usa para música lenta y tranquila."
+      ],
+      "description": "Beethoven dejó una nota en la parte de arriba de la partitura, y no, no decía «no me derramen café encima».",
+      "fun_fact": "Beethoven nunca la llamó Sonata «Claro de luna»: un crítico musical le puso ese apodo unos cinco años después de la muerte del compositor.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "adcfd94d39af"
+    },
+    {
+      "id": "q-20887",
+      "question": "Escucha: ¿cómo se llama la técnica que usan los músicos de cuerda en esta pieza para orquesta?",
+      "answer": "Pizzicato",
+      "wrong_answers": [
+        "Trémolo",
+        "Col legno",
+        "Glissando"
+      ],
+      "hints": [
+        "Es una palabra italiana, como muchas palabras de la música.",
+        "Escucha el sonido corto y seco de cada nota, como un tictac: ninguna nota se sostiene mucho.",
+        "La palabra significa «pellizcado» en italiano."
+      ],
+      "description": "La sección de cuerdas decidió probar algo un poco distinto hoy, y al director le parece bien.",
+      "fun_fact": "Es el tercer movimiento de la Cuarta sinfonía de Chaikovski, donde los músicos de cuerda pulsan las cuerdas con los dedos de principio a fin y nunca toman el arco.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-20",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-16",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "809a583eff8b"
+    },
+    {
       "id": "q-2204",
       "question": "¿Qué marca deportiva tiene un cocodrilo en su logo?",
       "answer": "Lacoste",
@@ -105156,7 +107046,7 @@
     },
     {
       "id": "q-5869",
-      "question": "En 1986, ¿qué prueba de lanzamiento del atletismo estrenó un implemento rediseñado que vuela menos, porque los mejores tiros llegaban casi al final del campo?",
+      "question": "En 1986, ¿a qué prueba de lanzamiento del atletismo le rediseñaron el implemento para que volara menos, porque los mejores tiros ya casi llegaban al final del campo?",
       "answer": "Lanzamiento de jabalina",
       "wrong_answers": [
         "Lanzamiento de disco",
@@ -105165,33 +107055,41 @@
       ],
       "hints": [
         "Es una de las pruebas de lanzamiento de los Juegos Olímpicos.",
-        "Con el nuevo diseño apunta hacia abajo antes, así que la punta se clava en el pasto.",
-        "El implemento parece una lanza de la Antigüedad."
+        "Con el nuevo diseño apunta antes hacia abajo, así que la punta se clava en el pasto.",
+        "Se parece a una lanza de la Antigüedad."
       ],
-      "description": "El atletismo tiene más aparatos raros que un cuarto de herramientas, y cada uno tiene su propia prueba.",
-      "fun_fact": "En 1984, Uwe Hohn, de Alemania Oriental, lanzó la jabalina antigua a 104,80 m, más que el largo de una cancha de fútbol.",
+      "description": "El atletismo tiene más cachivaches raros que un cuarto de herramientas, y cada uno tiene su propia prueba.",
+      "fun_fact": "En 1984, el alemán oriental Uwe Hohn lanzó la jabalina antigua a 104,80 metros, más lejos que el largo de una cancha de fútbol.",
       "difficulty": 9,
-      "status": "needs_work",
-      "batch": "tr-es-19",
+      "status": "approved",
+      "batch": "tr-es-20",
       "review": {
-        "decision": "needs_work",
-        "feedback": "source: the fun fact says Hohn's 104.80 m was longer than a soccer field, but the standard international pitch is 105 m and pitches can be up to 120 m, so the claim is wrong (fact check: wrong). The source should say \"almost the length of a soccer field (105 m)\". The translation copies the source faithfully. Also worth fixing in the source: hint 2 (\"its tip sticks in the grass\") already points to the javelin, since it is the only implement with a tip. Fact check: wrong. The answer (javelin) is right. The new men's javelin was introduced in 1986 with its center of gravity moved forward, and Uwe Hohn threw 104.80 m on 20 July 1984. The fun fact is shaky. A standard international football pitch is 105 m long, so 104.80 m is slightly shorter. It is not 'more than' the pitch length.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-16",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: the fun fact says 104.80 m is longer than a soccer field. A standard pitch is 105 m, and Laws of the Game lengths run up to 110–120 m, so the claim isn't reliably true (the fact check marked it wrong). Fix the source, for example \"almost the length of a professional soccer pitch (105 m)\", then translate again. Also note: source hint 2 (\"its tip sticks in the grass\") points strongly to the only option with a tip. The translation copies it faithfully, but it is worth softening in the source. Fact check: wrong. The answer (javelin) and the hints are correct. The 1986 redesign moved the centre of gravity forward so the tip lands sooner, after Uwe Hohn threw 104.80 m in 1984. The fun fact is shaky: a standard FIFA pitch is 105 m long, so 104.80 m is not farther than a football pitch. Pitches range from about 100 to 110 m.",
+          "feedback": "source: the fun fact says Hohn's 104.80 m was longer than a soccer field, but the standard international pitch is 105 m and pitches can be up to 120 m, so the claim is wrong (fact check: wrong). The source should say \"almost the length of a soccer field (105 m)\". The translation copies the source faithfully. Also worth fixing in the source: hint 2 (\"its tip sticks in the grass\") already points to the javelin, since it is the only implement with a tip. Fact check: wrong. The answer (javelin) is right. The new men's javelin was introduced in 1986 with its center of gravity moved forward, and Uwe Hohn threw 104.80 m on 20 July 1984. The fun fact is shaky. A standard international football pitch is 105 m long, so 104.80 m is slightly shorter. It is not 'more than' the pitch length.",
           "problems": [
             "fact"
           ],
           "reviewed_on": "2026-11-16",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "source: the fun fact says 104.80 m is longer than a soccer field. A standard pitch is 105 m, and Laws of the Game lengths run up to 110–120 m, so the claim isn't reliably true (the fact check marked it wrong). Fix the source, for example \"almost the length of a professional soccer pitch (105 m)\", then translate again. Also note: source hint 2 (\"its tip sticks in the grass\") points strongly to the only option with a tip. The translation copies it faithfully, but it is worth softening in the source. Fact check: wrong. The answer (javelin) and the hints are correct. The 1986 redesign moved the centre of gravity forward so the tip lands sooner, after Uwe Hohn threw 104.80 m in 1984. The fun fact is shaky: a standard FIFA pitch is 105 m long, so 104.80 m is not farther than a football pitch. Pitches range from about 100 to 110 m.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-11-16",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "90bf88420cbc"
@@ -116688,7 +118586,7 @@
     },
     {
       "id": "q-6258",
-      "question": "¿Qué color NO está entre los colores de los anillos olímpicos?",
+      "question": "¿Qué color NO es uno de los colores de los anillos olímpicos?",
       "answer": "Morado",
       "wrong_answers": [
         "Azul",
@@ -116697,17 +118595,17 @@
       ],
       "hints": [
         "Los anillos están sobre una bandera blanca.",
-        "Los anillos tienen cinco colores, y dos de ellos son el negro y el amarillo.",
-        "El color que falta es una mezcla de rojo y azul."
+        "Los anillos son de cinco colores, y el negro y el amarillo son dos de ellos.",
+        "El color que falta sale de mezclar rojo con azul."
       ],
-      "description": "Cinco círculos tomados de la mano, y ninguno se quiere soltar.",
-      "fun_fact": "Pierre de Coubertin diseñó los anillos en 1913; junto con el fondo blanco, sus colores permitían formar la bandera de todos los países de la época.",
-      "difficulty": 3,
+      "description": "Cinco círculos tomados de la mano, y ninguno se suelta.",
+      "fun_fact": "Pierre de Coubertin diseñó los anillos en 1913; sus colores, junto con el fondo blanco, alcanzaban para formar la bandera de cualquier país de esa época.",
+      "difficulty": 4,
       "status": "needs_work",
-      "batch": "tr-es-19",
+      "batch": "tr-es-20",
       "review": {
         "decision": "needs_work",
-        "feedback": "The translation itself is faithful and natural, but the Spanish pool already has the same question: q-6930 asks which colour is missing from the Olympic rings, and its answer is also Morado. Players who get both the base and colombia bundles would meet the same fact twice. Drop one of the two, or replace q-6930 in the colombia bundle.",
+        "feedback": "This question asks the same fact as the approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That question is in the Colombian bundle, but base questions are also played there, so Spanish-speaking players in Colombia can get the same fact twice. Decide which one to keep. Since this is the base question played everywhere, dropping or reworking q-6930 may be the better choice. The translation itself is fine.",
         "problems": [
           "overlap"
         ],
@@ -116716,7 +118614,7 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "The translation itself is accurate and natural, but in Spanish it asks the same fact, with the same answer, as the approved question q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That question probably wasn't among the related questions when the English source was reviewed. One of the two should be dropped, or this one should ask about a different fact.",
+          "feedback": "The translation itself is faithful and natural, but the Spanish pool already has the same question: q-6930 asks which colour is missing from the Olympic rings, and its answer is also Morado. Players who get both the base and colombia bundles would meet the same fact twice. Drop one of the two, or replace q-6930 in the colombia bundle.",
           "problems": [
             "overlap"
           ],
@@ -116725,16 +118623,16 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Source: this asks the same fact with the same answer as approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado), so one of the two should be dropped. The translation itself is fine; the duplicate comes from the source question, not the wording.",
+            "feedback": "The translation itself is accurate and natural, but in Spanish it asks the same fact, with the same answer, as the approved question q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That question probably wasn't among the related questions when the English source was reviewed. One of the two should be dropped, or this one should ask about a different fact.",
             "problems": [
               "overlap"
             ],
-            "reviewed_on": "2026-10-31",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "Duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado): same fact, same answer, almost the same words. Keep only one of the two in the Spanish pool; rewording can't resolve this. The translation itself is faithful and natural.",
+              "feedback": "Source: this asks the same fact with the same answer as approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado), so one of the two should be dropped. The translation itself is fine; the duplicate comes from the source question, not the wording.",
               "problems": [
                 "overlap"
               ],
@@ -116743,7 +118641,7 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "Duplicate: approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado) asks the same fact with the same answer, as the rater noted. Source: this is a pool-level duplicate, not a translation fault, so one of the two should be dropped.",
+                "feedback": "Duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado): same fact, same answer, almost the same words. Keep only one of the two in the Spanish pool; rewording can't resolve this. The translation itself is faithful and natural.",
                 "problems": [
                   "overlap"
                 ],
@@ -116752,16 +118650,16 @@
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "Overlap: q-6930 (approved, colombia bundle) already asks the same fact in Spanish, which colour does NOT appear in the Olympic rings, with the same answer, Morado. A family that plays both bundles would get the same question twice. Keep only one of the two. The translation itself is faithful and reads naturally in es-419.",
+                  "feedback": "Duplicate: approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado) asks the same fact with the same answer, as the rater noted. Source: this is a pool-level duplicate, not a translation fault, so one of the two should be dropped.",
                   "problems": [
                     "overlap"
                   ],
-                  "reviewed_on": "2026-10-24",
+                  "reviewed_on": "2026-10-31",
                   "reviewer": "llm",
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "The translation itself is faithful and reads naturally, but it asks the same fact as the approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That is a duplicate in the Spanish pool, so you should drop one of the two, or decide that the two bundles are kept apart on purpose.",
+                    "feedback": "Overlap: q-6930 (approved, colombia bundle) already asks the same fact in Spanish, which colour does NOT appear in the Olympic rings, with the same answer, Morado. A family that plays both bundles would get the same question twice. Keep only one of the two. The translation itself is faithful and reads naturally in es-419.",
                     "problems": [
                       "overlap"
                     ],
@@ -116770,7 +118668,7 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "This duplicates q-6930, an approved question in the colombia bundle. It asks the same thing: which colour is not on the Olympic rings, answer 'Morado'. Spanish-speaking players with both bundles would get the same question twice. Keep one of the two, or replace this one with a different fact about the Olympic rings.",
+                      "feedback": "The translation itself is faithful and reads naturally, but it asks the same fact as the approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That is a duplicate in the Spanish pool, so you should drop one of the two, or decide that the two bundles are kept apart on purpose.",
                       "problems": [
                         "overlap"
                       ],
@@ -116779,14 +118677,24 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "This asks the same fact as the approved q-6930 (colombia bundle: \"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer \"Morado\"). Colombian families who play both base and colombia would get the same question twice. The translation is fine. Keep one of the two questions, or replace q-6930 in the colombia bundle with a different Olympic question.",
+                        "feedback": "This duplicates q-6930, an approved question in the colombia bundle. It asks the same thing: which colour is not on the Olympic rings, answer 'Morado'. Spanish-speaking players with both bundles would get the same question twice. Keep one of the two, or replace this one with a different fact about the Olympic rings.",
                         "problems": [
                           "overlap"
                         ],
                         "reviewed_on": "2026-10-24",
                         "reviewer": "llm",
                         "model": "claude-opus-5-5",
-                        "previous": null
+                        "previous": {
+                          "decision": "needs_work",
+                          "feedback": "This asks the same fact as the approved q-6930 (colombia bundle: \"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer \"Morado\"). Colombian families who play both base and colombia would get the same question twice. The translation is fine. Keep one of the two questions, or replace q-6930 in the colombia bundle with a different Olympic question.",
+                          "problems": [
+                            "overlap"
+                          ],
+                          "reviewed_on": "2026-10-24",
+                          "reviewer": "llm",
+                          "model": "claude-opus-5-5",
+                          "previous": null
+                        }
                       }
                     }
                   }
@@ -127848,7 +129756,7 @@
     },
     {
       "id": "q-6635",
-      "question": "Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal produce el hilo para hacerla?",
+      "question": "Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal hila el hilo con el que se hace?",
       "answer": "Gusano de seda",
       "wrong_answers": [
         "Oveja",
@@ -127856,18 +129764,18 @@
         "Cabra"
       ],
       "hints": [
-        "La antigua China mantuvo en secreto el trabajo de este animal durante muchísimo tiempo.",
+        "La antigua China guardó en secreto el trabajo de este animal durante muchísimo tiempo.",
         "Este animal es tan pequeño que cabría en la punta de tu dedo.",
         "Se envuelve en un capullo hecho de un solo hilo larguísimo."
       ],
-      "description": "Túnicas de reyes, corbatas elegantes y pijamas dignas de una reina, todo gracias a un secreto que China guardó durante siglos.",
-      "fun_fact": "Un solo capullo de gusano de seda está hecho de un único hilo que puede medir hasta unos 900 metros.",
+      "description": "Túnicas reales, corbatas elegantes y pijamas dignos de una reina, todo gracias a un secreto que China guardó durante siglos.",
+      "fun_fact": "El capullo de un gusano de seda está hecho de un solo hilo que puede medir hasta unos 900 metros.",
       "difficulty": 4,
       "status": "needs_work",
-      "batch": "tr-es-19",
+      "batch": "tr-es-20",
       "review": {
         "decision": "needs_work",
-        "feedback": "Source: hint 2 (\"so small it could sit on your fingertip\") is wrong. A full-grown silkworm is about 7–8 cm long, and only a newly hatched larva is that small. The source needs a correct hint 2, for example \"It is a caterpillar that eats only mulberry leaves\", and then the translation should be redone to match. Minor point for the re-translation: \"pijamas dignas\" uses the feminine, but most of Latin America says \"el pijama\", so \"pijamas dignos\" reads more widely. Fact check: wrong. The answer (gusano de seda), the wrong answers (sheep, camel and goat give wool or hair) and the fun fact are fine. The fact is right because cocoon filaments run about 600–900 m, and some sources say up to 1,500 m. Hint 2 is misleading. A full-grown silkworm is about 7–8 cm long, so it doesn't fit on a fingertip. Only the newly hatched larva is that small. This is from general knowledge. I did not run a web search.",
+        "feedback": "Source: hint 2 says the silkworm is small enough to sit on a fingertip, but a full-grown silkworm is about 7–8 cm long, roughly the length of a finger (the fact check also marks it wrong). The source's hint 2 needs correcting, for example to \"a caterpillar that eats mulberry leaves and is only a few centimetres long\". The translation itself is faithful and natural. Fact check: wrong. The answer (silkworm), the wrong answers (sheep, camel and goat give wool or hair, not silk) and the fun fact are fine. The cocoon thread is commonly given as about 300 to 900 m, sometimes more. Hint 2 is misleading. A full-grown silkworm is about 7–8 cm long, roughly a finger's length, so it would not fit on a fingertip. This is from memory; I did not run searches.",
         "problems": [
           "fact"
         ],
@@ -127876,15 +129784,25 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: hint 2 says the animal is so small it could sit on your fingertip, but a full-grown silkworm is about 7 cm long; only a newly hatched larva is that small (the fact check marks it wrong). Fix the source's hint 2, e.g. \"It's a caterpillar that eats only mulberry leaves\", then re-translate. Also, in the translated description \"pijamas dignas\" should be \"pijamas dignos\", since \"pijama\" is masculine in most of Latin America. Fact check: wrong. The answer (silkworm) and the wrong answers are correct. The 900 m cocoon thread is a commonly cited figure (sources give about 600–900 m, sometimes more). Hint 2 is misleading: a full-grown silkworm is about 7 cm long, so it doesn't fit on a fingertip. Only a newly hatched larva is that small. I did not run any searches, so this comes from my own knowledge.",
+          "feedback": "Source: hint 2 (\"so small it could sit on your fingertip\") is wrong. A full-grown silkworm is about 7–8 cm long, and only a newly hatched larva is that small. The source needs a correct hint 2, for example \"It is a caterpillar that eats only mulberry leaves\", and then the translation should be redone to match. Minor point for the re-translation: \"pijamas dignas\" uses the feminine, but most of Latin America says \"el pijama\", so \"pijamas dignos\" reads more widely. Fact check: wrong. The answer (gusano de seda), the wrong answers (sheep, camel and goat give wool or hair) and the fun fact are fine. The fact is right because cocoon filaments run about 600–900 m, and some sources say up to 1,500 m. Hint 2 is misleading. A full-grown silkworm is about 7–8 cm long, so it doesn't fit on a fingertip. Only the newly hatched larva is that small. This is from general knowledge. I did not run a web search.",
           "problems": [
-            "fact",
-            "style"
+            "fact"
           ],
           "reviewed_on": "2026-11-16",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "source: hint 2 says the animal is so small it could sit on your fingertip, but a full-grown silkworm is about 7 cm long; only a newly hatched larva is that small (the fact check marks it wrong). Fix the source's hint 2, e.g. \"It's a caterpillar that eats only mulberry leaves\", then re-translate. Also, in the translated description \"pijamas dignas\" should be \"pijamas dignos\", since \"pijama\" is masculine in most of Latin America. Fact check: wrong. The answer (silkworm) and the wrong answers are correct. The 900 m cocoon thread is a commonly cited figure (sources give about 600–900 m, sometimes more). Hint 2 is misleading: a full-grown silkworm is about 7 cm long, so it doesn't fit on a fingertip. Only a newly hatched larva is that small. I did not run any searches, so this comes from my own knowledge.",
+            "problems": [
+              "fact",
+              "style"
+            ],
+            "reviewed_on": "2026-11-16",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "70584797025e"

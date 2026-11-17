@@ -63,6 +63,7 @@ Part of the Steam plan ([11](11-steam.md)). The release target is set per questi
 
 - Media-first sources in es (plan 205): 2026-11-16, task 2111: `tr-es-18`, 168 translated, 161 approved, 7 need work, 0 not travelling, $0.11 per approved translation (audit $3.31), audit agreement 75 %; 77 of 79 approved media-first sources (batch-78, batch-79) now in es.
 - Media-first sources in es (plan 205): 2026-11-16, task 2121: `tr-es-19`, 74 translated, 71 approved, 3 need work, 0 not travelling, $0.12 per approved translation (audit $3.35), audit agreement 55 %, health ✗; 145 of 146 approved media-first sources (batch-78, batch-79, batch-80) now in es.
+- Media-first sources in es (plan 205): 2026-11-16, task 2129: `tr-es-20`, 66 translated, 64 approved, 2 need work, 0 not travelling, $0.12 per approved translation (audit $3.36), audit agreement 38.3 %, health ✗; all approved media-first sources (batch-78 to batch-81) now in es.
 - Media-first sources in es-ES (plan 205): 2026-11-16, task 2122: `tr-es-ES-26`, 74 translated, 69 approved, 5 need work, 0 not travelling, $0.11 per approved translation (audit $3.35), audit agreement 37 %, health ✗; about 146 of 146 approved media-first sources (batch-78, batch-79, batch-80) now in es-ES.
 - Media-first sources in es-ES (plan 205): 2026-11-16, task 2112: `tr-es-ES-25`, 184 translated, 177 approved, 7 need work, 0 not travelling, $0.11 per approved translation (audit $3.33), audit agreement 63.3 %, health ✗; 78 of 79 approved media-first sources (batch-78, batch-79) now in es-ES.
 
