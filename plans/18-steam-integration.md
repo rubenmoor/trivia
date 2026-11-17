@@ -160,7 +160,7 @@ Not entered now: Steam shows every defined achievement, unreachable ones look br
   - images: WebP lossy, fit inside 3840×2160, never upscaled (D-48), q 82 → down to q 60 while > 1 MB; GIF, SVG as is
   - audio: Opus in Ogg, 96 kb/s; video: WebM VP9 CRF 33 + Opus 96k, ≤ 1920×1080
   - measured 2026-10-14: 2549 → 679 MB (1079 WebP, 17 Opus, 3 WebM, 1 GIF); `content` 630 MB, `colombia` DLC 50 MB; 58 files > 1 MB: 3 videos (60.7, 27.4, 10.0 MB; Apollo ships its whole 29 min), 55 WebP 1.0–2.3 MB
-  - budgets `app/desktop/media-budget.json` (MB): `content` 950, `dlc.colombia` 75, `default_dlc` 75, `file` 5, `video` 100
+  - budgets `app/desktop/media-budget.json` (MB): `content` 950, `dlc.colombia` 75, `default_dlc` 75, `file` 5, `video` 32
 
 ## Builds and depots
 Local builds since S3 (SW-5, D-73); the release check (SW-6) and Steam uploads (SW-10) since S5. No GitHub Actions: CI is local (pm decision 14). One command on the developer's Linux machine builds both platforms; the artefacts are plain folders, so Steam (S5) can install them as they are.

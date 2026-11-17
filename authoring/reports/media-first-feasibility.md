@@ -83,7 +83,7 @@ Measured 2026-11-15 (`task 2059: Media budget for 500 to 1000 more sound and vid
 - Per file, shipped: audio mean 0.56 MB (median 0.60, max 0.94; 46 s mean); video mean 9.68 MB (median 9.14, p90 21.3, max 22.9; 42 s mean, ≈ 14 MB per minute)
 - Same videos at 720p, crf 36: mean 5.66 MB (median 4.77, max 17.7): −42 %
 - Video share: 35 % in the pilot (21 of 60), 52 % of the survey's files (`work/media-survey/tally.json`, 4612 of 8912)
-- Per-file lines (`file` 5 MB, `video` 100 MB): no new file comes close
+- Per-file lines (`file` 5 MB, `video` 32 MB since the 30 s cut and 8 Mbit/s ceiling, task 2162; was 100 MB): no new file comes close
 - `audio` 7 MB is the music loops only: new question audio doesn't count there
 
 | Encode, video share | per 100 | 500 | 1000 |
