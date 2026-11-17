@@ -7,7 +7,7 @@ The game as the family sees it on the TV: screen states, transitions, sound and 
 ## Requirements
 - Full-screen, 16:9, readable from the couch with a **compact** type scale and high contrast. The look (colours, type, glass panels, components) is owned by `10-visual-design.md` (D-29).
 - A background image for each question, shown at its own size and centred on the night stage: scaled down only when it is bigger than the screen, never up, never stretched; its edges fade softly into the stage (D-51). Everything over it is a separate, semi-transparent glass panel (no full-width scrims), so the picture stays visible (D-29).
-- Decorative images are blurred and slightly darkened, with a big question mark in the centre (D-15), so they read as mood, not as a clue. Illustrative and essential media are shown sharp (D-24).
+- Decorative images are blurred and slightly darkened, with a big question mark in the centre (D-15), so they read as mood, not as a clue. Illustrative and essential media are shown sharp (D-24). From the submitted answer on (Timed: held; Answers off: the reveal) a decorative image turns sharp and stays so until the screen leaves, the «?» fades out (plan 214).
 - Progress is shown as a **tower of blocks** that grows by one block per correct answer and gets narrower towards the top (see Level screen).
 - Players choose each question by its humorous `description` (D-8). The category is never shown.
 - A subtle media credit line in a corner whenever media is shown (IMG-4, `06-images.md`).
@@ -212,7 +212,7 @@ Four cards, each showing only a question's `description` (D-8). The players pick
   1. A heavy **lock "clunk"** sound plays, and the chosen answer gets a bright frame with a small padlock icon. The other answers dim.
   2. Below the answers sits a **big padlock** (or a vault door / chain) that has been covering the final-answer button. After a short suspense beat (~0.8 s), it unlocks with a click, swings or slides away (~0.6 s) with a metallic sound, and reveals the **«Respuesta final»** button.
 - **Going back (D-22):** while an answer is locked in, tapping any answer (or `Backspace`) **unlocks** it. This is the lock-in animation in reverse: the big padlock swings back in front of «Respuesta final» and closes with a clunk, the answer's frame and padlock icon go away, and the other answers brighten again. **No answer is locked in afterwards**; the players tap again to lock in an answer, the same one or another. This leaves room for family debate.
-- **Final answer:** «Respuesta final» (click or `Enter`) submits. The answers can't be changed any more, the screen darkens around the question, and the music switches to the **most intense track** (see Music). The players then wait under a drumroll (amber halos beating outwards, the trembling, shimmering «And the answer is…» growing until the reveal; task 1105); the higher the level, the longer the wait:
+- **Final answer:** «Respuesta final» (click or `Enter`) submits. The answers can't be changed any more, the screen darkens around the question (a blurred decorative picture instead turns sharp, one level lighter, plan 214), and the music switches to the **most intense track** (see Music). The players then wait under a drumroll (amber halos beating outwards, the trembling, shimmering «And the answer is…» growing until the reveal; task 1105); the higher the level, the longer the wait:
 
   | Level | 1–2 | 3–4 | 5–6 | 7–8 | 9–10 | 11 | 12 |
   |---|---|---|---|---|---|---|---|

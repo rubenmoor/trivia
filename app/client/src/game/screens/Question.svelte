@@ -484,7 +484,7 @@
     <FinalAnswer locked={locked !== null} ready={finalReady} {submitted} {revealed} {error} {answersOff} onsubmit={submit} onreveal={reveal} />
   </footer>
 
-  <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} {shown} {paused} dark={submitted && !revealed} onended={mediaEnded} />
+  <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} {shown} {paused} dark={submitted && !revealed} sharp={submitted || revealed} onended={mediaEnded} />
 
   {#key question.id}
     {@const topic = topicOf(question.id)}

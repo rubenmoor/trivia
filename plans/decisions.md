@@ -111,8 +111,8 @@ Template:
 ## D-15: Decorative images shown blurred with a question mark
 - Date: 2026-10-06
 - Context: In the pilot review, a decorative image (paper lanterns for a question about the uchuva) looked like a hint and confused the developer. Decorative images only set the mood and need not relate closely to the question.
-- Decision: While a question is shown, decorative images (media with role `decorative`, and the background of audio questions) are covered by an overlay over the whole image: blurred, slightly darkened, with a big question mark in the centre. Essential media is shown sharp. The review tool previews decorative images the same way (hover shows them sharp; the alternatives grid stays sharp for judging).
-- Consequences: The question screen (04) and the review tool share this look. Decorative images no longer need to avoid being misread as clues.
+- Decision: While a question is shown, decorative images (media with role `decorative`, and the background of audio questions) are covered by an overlay over the whole image: blurred, slightly darkened, with a big question mark in the centre, while the question is open; from the submitted answer on (with Answers off, D-105: the reveal) the picture turns sharp, a little darker, and the question mark fades with the blur, until the screen leaves (plan 214). Essential media is shown sharp. The review tool previews decorative images the same way (hover shows them sharp; the alternatives grid stays sharp for judging).
+- Consequences: The question screen (04) and the review tool share this look. Decorative images no longer need to avoid being misread as clues. Once the answer is in, the picture is no longer a mystery: `Media.svelte` prop `sharp` (Question: submitted or revealed; Timed: held) unblurs it in 0.8 s (brightness 0.5, colours kept); reduced motion: at once.
 - Supersedes / related: D-7, D-14; UI-2
 
 ## D-16: Lessons from the pilot
@@ -413,7 +413,7 @@ Template:
 ## D-51: Sharp images keep their size and fade into the stage
 - Date: 2026-10-11
 - Context: Question images filled the screen with `object-fit: cover`, which crops wide and tall images and upscales small ones.
-- Decision: A sharp image (illustrative, essential) is shown at its native size in device pixels, scaled down only when bigger than the screen, never upscaled, aspect ratio kept, centred. Behind it the night stage (VD-6). Its edges fade into the stage with a rounded feather. Decorative images stay blurred and full-bleed (D-15); video stays full-bleed.
+- Decision: A sharp image (illustrative, essential) is shown at its native size in device pixels, scaled down only when bigger than the screen, never upscaled, aspect ratio kept, centred. Behind it the night stage (VD-6). Its edges fade into the stage with a rounded feather. Decorative images stay full-bleed (blurred until the answer, D-15); video stays full-bleed.
 - Consequences: Small images show small; D-48 (4K target) keeps them big on the TV.
 - Supersedes / related: D-15, D-29 (full-bleed picture), D-48; VD-6, VD-10
 

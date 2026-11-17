@@ -717,6 +717,31 @@ def splash(r):
         r.shot(name)
 
 
+def blurred(r):
+    """Plan 214: the picture behind the question, blurred before the answer and sharp after (taken after the 0.8 s fade)."""
+    for kind in ("decorative", "audio"):
+        save = f"blurred-{kind}"
+        if r.only and not {f"question-{kind}", f"question-{kind}-submitted"} & set(r.only):
+            continue
+        if save not in r.saves:
+            continue
+        on_question(r, save)
+        r.shot(f"question-{kind}")
+        r.answer(r.meta[save]["right"])
+        r.wait(".final .waiting")
+        r.settle(1.2)
+        r.shot(f"question-{kind}-submitted")
+    if "timed-blurred" in r.saves and (not r.only or {"timed-decorative", "timed-decorative-held"} & set(r.only)):
+        timed_on(r, "timed-blurred", 10)
+        r.shot("timed-decorative")
+        r.pad(5, 1)  # Sofía's RB: the claim
+        r.wait(".timed-screen .banner .ring")
+        r.pad((3, 1, 2, 0)[r.meta["timed-blurred"]["right"]], 1)
+        r.wait(".timed-screen .banner.result", 15000)
+        r.settle(1.2)
+        r.shot("timed-decorative-held")
+
+
 def results(r):
     on_question(r, "solo")
     r.answer(r.meta["solo"]["right"])
@@ -1129,6 +1154,8 @@ STEPS = [
     (["question", "question-locked", "joker-hint-armed", "joker-hint", "joker-skip", "joker-category", "joker-snipe",
       "joker-easier"], question),
     (["question-splash", "question-splash-long", "question-splash-fading", "timed-splash", *[f"question-splash-in-{e}" for e in ENTRANCES]], splash),
+    (["question-decorative", "question-decorative-submitted", "question-audio", "question-audio-submitted",
+      "timed-decorative", "timed-decorative-held"], blurred),
     (["question-waiting", "correct", "wrong", "victory"], results),
     (["correct-score", "wrong-score", "session-correct-score", "timed-score"], scores),
     (["victory-rank", "wrong-rank", "session-victory-rank", "rank-first"], ranks),

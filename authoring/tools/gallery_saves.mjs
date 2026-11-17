@@ -256,6 +256,30 @@ scene("timed-12", timedScene(timedSession(2, toTwelve)));
 const last = claim(shown(saves["timed-12"]), data, tio(3000), 0).save;
 scene("timed-12-claim", timedScene(last, { right: timedRight(last) }));
 
+// Plan 214: a picture behind the question, blurred until the answer: a decorative image, an audio question's background.
+const blurredQ = {
+  decorative: data.pool.find((q) => q.media.type === "image" && q.media.role === "decorative" && q.media.file_url),
+  audio: data.pool.find((q) => q.media.type === "audio" && q.media.file_url && q.background?.file_url),
+};
+/** `qid` forced onto the question on screen (the answers in pool order). */
+const force = (state, qid) => {
+  const q = data.byId.get(qid);
+  Object.assign(state, { current: qid, answers: [q.answer, ...q.wrong_answers], hints_shown: 0 });
+};
+for (const [kind, q] of Object.entries(blurredQ)) {
+  if (!q) continue;
+  const at = playTo(data, structuredClone(done), PLAYERS[0], 4, { mode: "gamemaster" });
+  latestState(at).options[0] = q.id;
+  saves[`blurred-${kind}`] = pick(at, data, io(), 0).save;
+  meta[`blurred-${kind}`] = { right: rightOf(data, saves[`blurred-${kind}`]) };
+}
+if (blurredQ.decorative) {
+  // Timed: Sofía claims and answers; the picture is the decorative one.
+  let save = timedSession(4, round(by(3, false), by(0), by(1), shown));
+  force(gameRow(save).state, blurredQ.decorative.id);
+  scene("timed-blurred", timedScene(save, { right: timedRight(save) }));
+}
+
 // The score after an answer (task 1993): careers with a few thousand points on the solo question, the co-op question
 // and the timed question (Sofía's claim, right pick known).
 const scored = (save) => withCareer(save, (c) => ({ ...c, score: 1840, badges: earned(SOME) }));
