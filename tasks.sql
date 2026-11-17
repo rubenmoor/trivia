@@ -11615,6 +11615,36 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (212, 21, 'Media-first tool fixes found in content runs, part 5', NULL, 'Follow-up fixes to the `qgen` tools found by the run tasks of `plan 205: Media-first content runs` (`plan 211: Media-first tool fixes found in content runs, part 4` is closed). Each task: the fix, a test, the standard checks.', 'Batches of new sound and video questions sometimes break on problems of the computer they run on, such as a full disk, rather than on the media files themselves. This collects the small tool fixes that let such a batch pick up where it stopped without losing or wrongly discarding files.', '2026-11-17T13:46:52Z', 2132, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (213, 21, 'Media cache GC', NULL, '- 2026-11-17: `media/` reached 151 GB, disk full, ENOSPC killed task 2132''s batch-82 run; one-off hand cleanup freed 75 GB (≈2100 files no pool picked, mostly triage downloads of merged batches 78–81)
 - Goal: the cache holds pool picks and unmerged batches'' files only, without hand cleanup', 'Media-first triage downloads whole Commons videos and sound files into the media cache; nothing deletes them once a batch is merged, so the cache filled the disk. This plan makes the tools clean up after themselves.', '2026-11-17T16:22:42Z', NULL, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (214, 6, 'Blurred picture revealed after submit', 300, 'Part 10 of `plan 6: masterplan` (developer, 2026-11-17): a picture shown blurred behind the question (D-15: role `decorative`, and the background picture of audio questions, D-14) gets sharp once the answer is submitted, not only darker. Small: one implementation task plus the check.
+
+## Today
+- `app/client/src/game/question/Media.svelte`: `decorative` media render `img.blurred` (`blur(1.4u) brightness(0.6)`, `scale(1.06)`) plus the `.mark` «?» (Baloo 2, `--paper`, 12 %).
+- `dark` prop: Question `submitted && !revealed` (`screens/Question.svelte`), Timed `!!held && !revealed` (`screens/Timed.svelte`); on `img.blurred` it only darkens (`brightness(0.3) saturate(0.3)`); after the reveal it goes back to blurred.
+- Sharp pictures (illustrative/essential, D-51 fit) and video: `dark` darkens them until the reveal; unchanged by this plan.
+
+## Design (decided here)
+- New prop on `Media.svelte`, e.g. `sharp`: the answer is decided, true until the screen leaves, never back to blurred
+  - Question: `submitted || revealed` (`revealed` covers Answers off, D-105: «Mostrar respuesta» reveals without a submit)
+  - Timed: `!!held` (claimed and answered, or expired; the same `held` that sends the splash into its exit)
+- Unblur: `img.blurred` with `sharp` → `filter: blur(0)`, `transform: scale(1)` (the 1.06 only hid the blur''s soft edge), one transition ≈ 0.8 s on `filter` and `transform` (today''s 0.6 s `filter` transition goes up to 0.8 s for this class only)
+- Darkening: lighter, one level from submit on: `brightness(0.5)`, no `saturate` cut (the colours are the point of showing it); no second change at the reveal; answer tiles, «Respuesta final», the drum-roll text and the timed banner sit on glass (VD-9) and stay legible over a sharp, bright picture; if a gallery shot shows them hard to read, go darker (≥ 0.4), never back to the blur
+- «?» mark: fades out with the blur (same 0.8 s, `opacity` → 0); once the answer is in, the picture is no longer a mystery
+- Full-bleed `object-fit: cover` kept (decorative stays full-bleed, D-51 fit only for illustrative/essential); a small or soft source shows upscaled: accepted, the review judges it
+- `reducedMotion()` (`game/motion` helper used by `swap.ts`, `Splash.svelte`): no animated filter or scale; the sharp state applies at once, the «?» disappears at once
+- Unchanged: Peek (plan 113, decision 126) still not on decorative or audio questions; video and sharp pictures; the review tool''s D-15 preview; the credit line
+
+## Docs (same commit as the code)
+- `plans/decisions.md` D-15: amend the Decision line (blurred while the question is open; sharp from the submitted answer, or the reveal with Answers off, until the screen leaves; «?» fades with the blur) and Consequences
+- `plans/04-ui-tv-display.md`: line 10 (decorative images) and the «Final answer» paragraph (Question), the Timed screen''s held/reveal text
+- `plans/10-visual-design.md` "Decorative images" lines (79, 84): sharp after submit, the lighter darkening
+- `rg -n -i "blurred|decorative"` over `plans/` and comments for stale "stays blurred" claims (decision 200)
+
+## Tasks
+1. Implementation (work tree `app`): the design above in `Media.svelte`, `Question.svelte`, `Timed.svelte`; the docs; screen-gallery shots for the check in `authoring/tools/gallery.py` (+ `gallery_saves.mjs` scenes if needed): a decorative-image question and an audio question (its background picture), each before and after submit, on Question and Timed (Timed after the claim and pick, `held`); shot names e.g. `question-decorative`, `question-decorative-submitted`, `question-audio`, `question-audio-submitted`, `timed-decorative`, `timed-decorative-held`; the after-submit shots taken after the 0.8 s transition. Done when: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; the shots render with `trivia-gallery --only <shots>`.
+2. Check (work tree `app`, requires 1, iterative feedback): `trivia-gallery --set task-<id> --only <the shots above>` at 1920 × 1080 (and 1280 × 800 for legibility), then `pm decision add` «Blurred picture sharp after submit, review set task-<id>: approve or changes?», options «approve» / «changes: …»; the task waits on it; a «changes» answer becomes a follow-up task in this plan and a new review set.
+
+## Constraints
+- No new dependencies; no new assets; CSS + props only.', 'Some questions show a mood picture behind them. It is blurred and marked with a big question mark so nobody mistakes it for a clue. Today it stays blurred even after the family has locked in its answer, and only gets darker. From then on it can''t give anything away, so this change brings it into focus at that moment: the family gets to see the picture properly while they wait for the result.', '2026-11-17T16:52:53Z', 2153, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -48703,7 +48733,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', '2026-11-17T16:52:36Z', 2142, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2152, 191, 'revise plan 191: Category splash entrances and longer hold', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 191: Category splash entrances and longer hold`, changed; it is quoted below. Bring `plan 191: Category splash entrances and longer hold` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2152, 191, 'revise plan 191: Category splash entrances and longer hold', 'revise', 'done', 1000, '2026-11-17, no change: the masterplan''s revision added Part 10 (blurred picture after submit); Part 8 unchanged, plan 191 still fits', '`plan 6: masterplan`, the plan above `plan 191: Category splash entrances and longer hold`, changed; it is quoted below. Bring `plan 191: Category splash entrances and longer hold` in line with it
 (`pm plan edit 191 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -48789,7 +48819,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
-- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', NULL, 2142, 0, NULL, NULL);
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', '2026-11-17T16:52:56Z', 2142, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2153, 6, 'write plan: Blurred picture revealed after submit', 'plan', 'open', 1000, NULL, 'Write Part 10 of `plan 6: masterplan` as a new plan: `pm plan add 6 "Blurred picture revealed after submit" --priority 300 --intro …`, body from the masterplan''s Part 10 (developer, 2026-11-17).
 
 - What: a picture shown blurred behind the question (D-15: role `decorative`, and the background picture of audio questions) gets sharp once the answer is submitted, not only darker.
@@ -48799,6 +48829,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Tasks: one implementation task (worktree `app`) plus the check: a screen-gallery review set (`trivia-gallery --set task-<id> --only <shots>`: a decorative and an audio question, before and after submit, Question and Timed), then a developer decision, options «approve» / «changes: …».
 
 Done when: the plan exists with priority 300 and its intro, and its split task is queued.', '2026-11-17T16:51:53Z', NULL, 2149, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2154, 214, 'create tasks for plan 214: Blurred picture revealed after submit', 'split', 'open', 1000, NULL, 'Split plan 214 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T16:52:53Z', NULL, 2153, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -58570,6 +58602,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2347, 2153, '2026-11-17T16:51:54Z', NULL, 'running', NULL, NULL, '6190b55ea390f6778f1c198144e3b7fa0a964b17', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2348, 2150, '2026-11-17T16:52:05Z', '2026-11-17T16:52:21Z', 'done', NULL, 0, '637b8732a43212bc79bbeb69140a3024b089485c', NULL, 'claude-opus-5-5', '61af2d0b-e1d7-49d1-9ce7-9459f3b29a41', NULL, 2, 4, 875, 56836, 28658, 0.2581472, 43383, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2349, 2151, '2026-11-17T16:52:21Z', '2026-11-17T16:52:41Z', 'done', NULL, 0, '32bd70050fec862fcc893feb610446c08e7b404d', NULL, 'claude-opus-5-5', 'ab661102-b155-43c6-bdc7-378ddaf4d967', NULL, 4, 8, 894, 141252, 29693, 0.28370639999999997, 44302, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2350, 2152, '2026-11-17T16:52:41Z', '2026-11-17T16:53:02Z', 'done', NULL, 0, '6fda8b43e85fd995c21a14ae8f72a4e57bad0b7f', NULL, 'claude-opus-5-5', '8ddf20f9-466a-44cf-b6d6-0711b32f0bb4', NULL, 3, 6, 660, 97735, 28587, 0.261467, 43206, 60, 978519);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
