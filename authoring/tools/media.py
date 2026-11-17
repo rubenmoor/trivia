@@ -23,7 +23,8 @@ import argparse, contextlib, hashlib, itertools, json, re, subprocess, sys, urll
 
 from layout import CANDIDATES, SOURCE_POOL as POOL
 from download import RateLimited, cached, file_problem, http_get
-from media_cache import MEDIA, cache_path, pool_urls
+from media_cache import cache_path
+from media_keep import prune
 import atomic  # authoring/tools/atomic.py
 import categories  # authoring/tools/categories.py (D-19, D-43)
 import progress  # authoring/tools/progress.py: a log line per download (task 1131)
@@ -315,12 +316,9 @@ def cmd_sync(args):
         except Exception:  # noqa: BLE001 — keep going (waiting() logged it); rerun retries the rest
             failed.append(label)
     mark_broken(broken)
-    if args.prune and MEDIA.exists():
-        keep = {cache_path(url).name for url in pool_urls(POOL)}  # every pick, not only playable ones
-        stale = [f for f in MEDIA.iterdir() if f.is_file() and f.name not in keep]
-        for f in stale:
-            f.unlink()
-        print(f"pruned {len(stale)} unreferenced file(s)")
+    if args.prune:
+        n, size = prune()
+        print(f"pruned {n} unreferenced file(s), freed {size / 1e6:.0f} MB")
     if failed:
         print(f"failed: {', '.join(failed)} (rerun to retry)")
         sys.exit(1)
@@ -459,7 +457,7 @@ def main():
     f.add_argument("--force", action="store_true", help="fetch again even if candidates exist")
     s = sub.add_parser("sync", help="download every picked file that isn't in media/ yet")
     s.add_argument("--status", help="only questions with this status, e.g. approved")
-    s.add_argument("--prune", action="store_true", help="delete cached files no question references")
+    s.add_argument("--prune", action="store_true", help="delete cached files no pool pick and no unfinished batch references")
     lc = sub.add_parser("licenses", help="files to replace before a public release, restriction flags, tally")
     lc.add_argument("--status", help="only questions with this status, e.g. approved")
     lc.add_argument("--json", action="store_true", help="rows as JSON")

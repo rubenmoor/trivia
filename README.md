@@ -54,7 +54,7 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name,
 
 ```sh
 trivia-media sync --status approved     # downloads every picked file that isn't cached yet
-trivia-media sync --status approved --prune   # also deletes cached files no question uses any more
+trivia-media sync --status approved --prune   # also deletes cached files no pool pick (base, bundles, translations) and no unfinished batch uses; prints count and MB freed
 trivia-media licenses                   # files to replace before a public release (licence audit)
 ```
 
