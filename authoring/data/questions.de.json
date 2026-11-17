@@ -8330,17 +8330,17 @@
       ],
       "hints": [
         "Es ist ein Land in Europa.",
-        "Sein Erfinder Ernő Rubik war in diesem Land Professor für Architektur.",
-        "Die Hauptstadt ist Budapest."
+        "Sein Erfinder Ernő Rubik war dort Professor für Architektur.",
+        "Die Hauptstadt dieses Landes ist Budapest."
       ],
       "description": "Ein Rätsel, das schon mehr Menschen zum Weinen gebracht hat als jede Zwiebel.",
-      "fun_fact": "Ernő Rubik erfand den Würfel 1974 und wusste anfangs selbst nicht, wie man ihn löst: Er brauchte ungefähr einen Monat dafür!",
+      "fun_fact": "Ernő Rubik erfand den Würfel 1974 und wusste anfangs selbst nicht, wie man ihn löst: Er brauchte etwa einen Monat dafür!",
       "difficulty": 8,
       "status": "needs_work",
-      "batch": "tr-de-26",
+      "batch": "tr-de-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "This asks the same fact as the approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\" → Ungarn), so it duplicates a question already in the pool. Drop one of the two, or rework one so it asks a different fact about the cube.",
+        "feedback": "This asks the same fact as the approved q-0369 („Aus welchem Land stammt der Zauberwürfel…?“ → Ungarn), so it's a duplicate in the German pool. Rewording can't fix that. Drop one of the two, or turn this one into a different Rubik's Cube fact.",
         "problems": [
           "overlap"
         ],
@@ -8349,25 +8349,25 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "This duplicates approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\" → Ungarn): it asks the same fact with the same answer. Keep only one of the two in the German pool.",
+          "feedback": "This asks the same fact as the approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\" → Ungarn), so it duplicates a question already in the pool. Drop one of the two, or rework one so it asks a different fact about the cube.",
           "problems": [
             "overlap"
           ],
-          "reviewed_on": "2026-11-16",
+          "reviewed_on": "2026-11-17",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Direct duplicate of the approved q-0369 („Aus welchem Land stammt der Zauberwürfel…?“, answer Ungarn): both ask the same fact with the same answer, so only one should stay in the German pool. The translation itself is faithful and has no other defects; rewording it can't fix this without making it a different question.",
+            "feedback": "This duplicates approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\" → Ungarn): it asks the same fact with the same answer. Keep only one of the two in the German pool.",
             "problems": [
               "overlap"
             ],
-            "reviewed_on": "2026-10-31",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "Duplicate of approved q-0369, which asks the same fact in nearly the same way: the Rubik's Cube's country of origin, answer Ungarn. One of the two should be dropped; the translation itself is otherwise fine.",
+              "feedback": "Direct duplicate of the approved q-0369 („Aus welchem Land stammt der Zauberwürfel…?“, answer Ungarn): both ask the same fact with the same answer, so only one should stay in the German pool. The translation itself is faithful and has no other defects; rewording it can't fix this without making it a different question.",
               "problems": [
                 "overlap"
               ],
@@ -8376,16 +8376,16 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "Duplicate: this asks the same fact as approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn), as the rater also noted. The translation itself is faithful, but only one of the two should be played; the overlap comes from the source pool, so it can't be fixed by rewording.",
+                "feedback": "Duplicate of approved q-0369, which asks the same fact in nearly the same way: the Rubik's Cube's country of origin, answer Ungarn. One of the two should be dropped; the translation itself is otherwise fine.",
                 "problems": [
                   "overlap"
                 ],
-                "reviewed_on": "2026-10-30",
+                "reviewed_on": "2026-10-31",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "Duplicate: q-0369 (approved) already asks which country the Zauberwürfel comes from, with the same answer, Ungarn. Only one of the two should stay in the German pool; the same overlap probably exists in the source (source: check q-0341 against q-0369).",
+                  "feedback": "Duplicate: this asks the same fact as approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn), as the rater also noted. The translation itself is faithful, but only one of the two should be played; the overlap comes from the source pool, so it can't be fixed by rewording.",
                   "problems": [
                     "overlap"
                   ],
@@ -8394,7 +8394,7 @@
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "Duplicate: approved q-0369 asks the same fact (country of origin of the Zauberwürfel, answer Ungarn). This also holds for the source, so one of the two should be dropped from the pool; rewording the translation can't resolve it.",
+                    "feedback": "Duplicate: q-0369 (approved) already asks which country the Zauberwürfel comes from, with the same answer, Ungarn. Only one of the two should stay in the German pool; the same overlap probably exists in the source (source: check q-0341 against q-0369).",
                     "problems": [
                       "overlap"
                     ],
@@ -8403,7 +8403,7 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "Duplicate: q-0369 (approved) already asks for the Rubik's cube's country of origin, with the same answer, Ungarn. Only one of the two should stay in the German pool; the rater's no_overlap note flags the same thing.",
+                      "feedback": "Duplicate: approved q-0369 asks the same fact (country of origin of the Zauberwürfel, answer Ungarn). This also holds for the source, so one of the two should be dropped from the pool; rewording the translation can't resolve it.",
                       "problems": [
                         "overlap"
                       ],
@@ -8412,7 +8412,7 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "Duplicate of approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): both ask the same fact with the same answer. Keep only one in the German pool. The translation itself is faithful and natural.",
+                        "feedback": "Duplicate: q-0369 (approved) already asks for the Rubik's cube's country of origin, with the same answer, Ungarn. Only one of the two should stay in the German pool; the rater's no_overlap note flags the same thing.",
                         "problems": [
                           "overlap"
                         ],
@@ -8421,7 +8421,7 @@
                         "model": "claude-opus-5-5",
                         "previous": {
                           "decision": "needs_work",
-                          "feedback": "Duplicate of the approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): it asks the same fact with the same answer, so one of the two should be dropped from the German pool. The translation itself is faithful and natural.",
+                          "feedback": "Duplicate of approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): both ask the same fact with the same answer. Keep only one in the German pool. The translation itself is faithful and natural.",
                           "problems": [
                             "overlap"
                           ],
@@ -8430,7 +8430,7 @@
                           "model": "claude-opus-5-5",
                           "previous": {
                             "decision": "needs_work",
-                            "feedback": "Duplicate: approved q-0369 asks the same fact (country of origin of the Zauberwürfel, answer Ungarn) with only a different wording. One of the two should be dropped. The overlap exists in the source pool too, so the translation itself is not at fault.",
+                            "feedback": "Duplicate of the approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): it asks the same fact with the same answer, so one of the two should be dropped from the German pool. The translation itself is faithful and natural.",
                             "problems": [
                               "overlap"
                             ],
@@ -8439,7 +8439,7 @@
                             "model": "claude-opus-5-5",
                             "previous": {
                               "decision": "needs_work",
-                              "feedback": "Duplicates approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): it is the same fact with the same answer, in other words. One of the two should be dropped from the German pool; a rewrite would make it a different question.",
+                              "feedback": "Duplicate: approved q-0369 asks the same fact (country of origin of the Zauberwürfel, answer Ungarn) with only a different wording. One of the two should be dropped. The overlap exists in the source pool too, so the translation itself is not at fault.",
                               "problems": [
                                 "overlap"
                               ],
@@ -8448,7 +8448,7 @@
                               "model": "claude-opus-5-5",
                               "previous": {
                                 "decision": "needs_work",
-                                "feedback": "This asks the same fact as approved q-0369 (the country the Rubik's Cube comes from, answer Ungarn) in slightly different words, so one of the two should be dropped. If the Spanish pool holds the same pair, the duplicate is in source: too. The translation itself is otherwise fine.",
+                                "feedback": "Duplicates approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): it is the same fact with the same answer, in other words. One of the two should be dropped from the German pool; a rewrite would make it a different question.",
                                 "problems": [
                                   "overlap"
                                 ],
@@ -8457,14 +8457,24 @@
                                 "model": "claude-opus-5-5",
                                 "previous": {
                                   "decision": "needs_work",
-                                  "feedback": "Same fact as approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): both ask for the Rubik's Cube's country of origin. One of the two should be dropped; rewording can't solve this without making it a different question.",
+                                  "feedback": "This asks the same fact as approved q-0369 (the country the Rubik's Cube comes from, answer Ungarn) in slightly different words, so one of the two should be dropped. If the Spanish pool holds the same pair, the duplicate is in source: too. The translation itself is otherwise fine.",
                                   "problems": [
                                     "overlap"
                                   ],
                                   "reviewed_on": "2026-10-30",
                                   "reviewer": "llm",
                                   "model": "claude-opus-5-5",
-                                  "previous": null
+                                  "previous": {
+                                    "decision": "needs_work",
+                                    "feedback": "Same fact as approved q-0369 (\"Aus welchem Land stammt der Zauberwürfel…?\", answer Ungarn): both ask for the Rubik's Cube's country of origin. One of the two should be dropped; rewording can't solve this without making it a different question.",
+                                    "problems": [
+                                      "overlap"
+                                    ],
+                                    "reviewed_on": "2026-10-30",
+                                    "reviewer": "llm",
+                                    "model": "claude-opus-5-5",
+                                    "previous": null
+                                  }
                                 }
                               }
                             }
@@ -41697,22 +41707,23 @@
       "wrong_answers": [
         "Tiroler",
         "Kosaken",
-        "Niederländer"
+        "Holländer"
       ],
       "hints": [
         "Dieses Volk lebt in der Nähe der Pyrenäen.",
-        "Es hat eine sehr alte Sprache, die mit keiner anderen verwandt ist.",
+        "Es spricht eine uralte Sprache, die keiner anderen ähnelt.",
         "Es lebt im Norden Spaniens und im Süden Frankreichs, rund um Bilbao."
       ],
-      "description": "Eine Mütze, so flach, als hätte sich schon mal jemand draufgesetzt.",
-      "fun_fact": "Auch im Französischen verrät der Name die Herkunft: Dort heißt die Mütze „béret basque“.",
+      "description": "Eine Mütze so flach, als hätte sich jemand draufgesetzt.",
+      "fun_fact": "Auf Französisch heißt sie „béret basque“, und auch auf Deutsch steckt das Volk im Namen: Baskenmütze.",
       "difficulty": 6,
       "status": "needs_work",
-      "batch": "tr-de-26",
+      "batch": "tr-de-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "In German this question overlaps with approved q-6565 („Wie heißt diese Kopfbedeckung?“ → „Baskenmütze“), which shows the same beret. Either question gives the other away, because the German name of the hat contains the answer „Basken“. This can't be fixed without turning it into a different question, so either q-1544 or q-6565 should not be played in German.",
+        "feedback": "In German, the cap's everyday name is „Baskenmütze“, so anyone who recognises the pictured object already has the answer. That doesn't depend on the source's wording, so it can't be fixed in the translation. The question also asks the same fact as approved q-6565 („Wie heißt diese Kopfbedeckung?“ → Baskenmütze), just from the other side, and each one gives the other away. My recommendation is not to play this item in German.",
         "problems": [
+          "giveaway",
           "overlap"
         ],
         "reviewed_on": "2026-11-17",
@@ -41720,27 +41731,26 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "This question doesn't work in German. The everyday German word for a beret is „Baskenmütze“, so the hat's own name gives the answer away. It also overlaps directly with q-6565 („Wie heißt diese Kopfbedeckung?“ → Baskenmütze): whoever sees one question has the answer to the other. Better not to play it in German (treat it as not travelling, reason: about_language) than to patch it.",
+          "feedback": "In German this question overlaps with approved q-6565 („Wie heißt diese Kopfbedeckung?“ → „Baskenmütze“), which shows the same beret. Either question gives the other away, because the German name of the hat contains the answer „Basken“. This can't be fixed without turning it into a different question, so either q-1544 or q-6565 should not be played in German.",
           "problems": [
-            "giveaway",
             "overlap"
           ],
-          "reviewed_on": "2026-11-16",
+          "reviewed_on": "2026-11-17",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "The German word for this cap is „Baskenmütze“, so anyone who recognises the beret in the photo has the answer: the language gives it away, even though the text avoids the word. It also overlaps approved q-6565 („Wie heißt diese Kopfbedeckung?“ → „Baskenmütze“), where seeing one question solves the other. This cannot be fixed in German without changing the question; it should be treated as not travelling and left out of the German pool.",
+            "feedback": "This question doesn't work in German. The everyday German word for a beret is „Baskenmütze“, so the hat's own name gives the answer away. It also overlaps directly with q-6565 („Wie heißt diese Kopfbedeckung?“ → Baskenmütze): whoever sees one question has the answer to the other. Better not to play it in German (treat it as not travelling, reason: about_language) than to patch it.",
             "problems": [
               "giveaway",
               "overlap"
             ],
-            "reviewed_on": "2026-10-31",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "In German this overlaps q-6565 (\"Wie heißt diese Kopfbedeckung?\" → „Baskenmütze“): that answer contains this question's answer, so seeing one gives the other away. The everyday German word also solves q-1544 outright, which doesn't happen with Spanish „boina“. Best treated as not travelling to German; rewording can't remove the link.",
+              "feedback": "The German word for this cap is „Baskenmütze“, so anyone who recognises the beret in the photo has the answer: the language gives it away, even though the text avoids the word. It also overlaps approved q-6565 („Wie heißt diese Kopfbedeckung?“ → „Baskenmütze“), where seeing one question solves the other. This cannot be fixed in German without changing the question; it should be treated as not travelling and left out of the German pool.",
               "problems": [
                 "giveaway",
                 "overlap"
@@ -41750,18 +41760,19 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "In German this question collapses: the object's everyday name, \"Baskenmütze\", contains the answer, and q-6565 (\"Wie heißt diese Kopfbedeckung?\") has exactly that as its answer, so seeing q-6565 gives this one away. Rewording can't avoid this, so the question should not be played in German.",
+                "feedback": "In German this overlaps q-6565 (\"Wie heißt diese Kopfbedeckung?\" → „Baskenmütze“): that answer contains this question's answer, so seeing one gives the other away. The everyday German word also solves q-1544 outright, which doesn't happen with Spanish „boina“. Best treated as not travelling to German; rewording can't remove the link.",
                 "problems": [
                   "giveaway",
                   "overlap"
                 ],
-                "reviewed_on": "2026-10-30",
+                "reviewed_on": "2026-10-31",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "In German this overlaps with approved q-6565 (\"Wie heißt diese Kopfbedeckung?\" → \"Baskenmütze\"): both show a beret, and that answer literally contains \"Basken\", so seeing one gives the other away. The German name of the object also makes the answer almost self-evident, so this question may not travel to German; consider dropping it from the German pool.",
+                  "feedback": "In German this question collapses: the object's everyday name, \"Baskenmütze\", contains the answer, and q-6565 (\"Wie heißt diese Kopfbedeckung?\") has exactly that as its answer, so seeing q-6565 gives this one away. Rewording can't avoid this, so the question should not be played in German.",
                   "problems": [
+                    "giveaway",
                     "overlap"
                   ],
                   "reviewed_on": "2026-10-30",
@@ -41769,7 +41780,7 @@
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "Overlaps q-6565 (\"Wie heißt diese Kopfbedeckung?\" → \"Baskenmütze\"): in German that answer contains this one, so seeing either question gives the other away. It is a side effect of the German word, which does not occur in Spanish (\"boina\"), and anyone who can name the hat already says the answer here. Consider not playing q-1544 in German.",
+                    "feedback": "In German this overlaps with approved q-6565 (\"Wie heißt diese Kopfbedeckung?\" → \"Baskenmütze\"): both show a beret, and that answer literally contains \"Basken\", so seeing one gives the other away. The German name of the object also makes the answer almost self-evident, so this question may not travel to German; consider dropping it from the German pool.",
                     "problems": [
                       "overlap"
                     ],
@@ -41778,9 +41789,8 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "In German the pictured object is called \"Baskenmütze\", so its everyday name contains the answer. This also overlaps approved q-6565 (\"Wie heißt diese Kopfbedeckung?\" → Baskenmütze): seeing either one gives away the other. The question doesn't travel to German and should be dropped for this locale.",
+                      "feedback": "Overlaps q-6565 (\"Wie heißt diese Kopfbedeckung?\" → \"Baskenmütze\"): in German that answer contains this one, so seeing either question gives the other away. It is a side effect of the German word, which does not occur in Spanish (\"boina\"), and anyone who can name the hat already says the answer here. Consider not playing q-1544 in German.",
                       "problems": [
-                        "giveaway",
                         "overlap"
                       ],
                       "reviewed_on": "2026-10-30",
@@ -41788,7 +41798,7 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "In German this hat is called 'Baskenmütze', so the essential photo gives away the answer 'Basken' to anyone who can name it; only the Spanish source word 'boina' hides it. It also overlaps approved q-6565 ('Wie heißt diese Kopfbedeckung?' → 'Baskenmütze'): seeing that question gives this one away. This doesn't travel to German and should not be played here.",
+                        "feedback": "In German the pictured object is called \"Baskenmütze\", so its everyday name contains the answer. This also overlaps approved q-6565 (\"Wie heißt diese Kopfbedeckung?\" → Baskenmütze): seeing either one gives away the other. The question doesn't travel to German and should be dropped for this locale.",
                         "problems": [
                           "giveaway",
                           "overlap"
@@ -41798,14 +41808,25 @@
                         "model": "claude-opus-5-5",
                         "previous": {
                           "decision": "needs_work",
-                          "feedback": "Overlap in German: approved q-6565 (\"Wie heißt diese Kopfbedeckung?\") has the answer \"Baskenmütze\", which contains this question's answer \"Basken\". Seeing one gives the other away, and the same headgear would be shown in both. The Spanish \"boina\" has no such link, so the problem arises only in German. Consider not playing this question in German.",
+                          "feedback": "In German this hat is called 'Baskenmütze', so the essential photo gives away the answer 'Basken' to anyone who can name it; only the Spanish source word 'boina' hides it. It also overlaps approved q-6565 ('Wie heißt diese Kopfbedeckung?' → 'Baskenmütze'): seeing that question gives this one away. This doesn't travel to German and should not be played here.",
                           "problems": [
+                            "giveaway",
                             "overlap"
                           ],
                           "reviewed_on": "2026-10-30",
                           "reviewer": "llm",
                           "model": "claude-opus-5-5",
-                          "previous": null
+                          "previous": {
+                            "decision": "needs_work",
+                            "feedback": "Overlap in German: approved q-6565 (\"Wie heißt diese Kopfbedeckung?\") has the answer \"Baskenmütze\", which contains this question's answer \"Basken\". Seeing one gives the other away, and the same headgear would be shown in both. The Spanish \"boina\" has no such link, so the problem arises only in German. Consider not playing this question in German.",
+                            "problems": [
+                              "overlap"
+                            ],
+                            "reviewed_on": "2026-10-30",
+                            "reviewer": "llm",
+                            "model": "claude-opus-5-5",
+                            "previous": null
+                          }
                         }
                       }
                     }
@@ -61128,18 +61149,18 @@
         "Pfingstrose"
       ],
       "hints": [
-        "Ihre großen Blüten sitzen gemeinsam oben auf einem hohen, hohlen Stängel ohne Blätter.",
-        "Jede Blüte ist ein weiter Trichter mit sechs Blütenblättern und langen, herausragenden Staubblättern.",
-        "Ihr Name stammt von einer Hirtin aus antiken griechischen und römischen Gedichten, und sie wird gern zu Weihnachten verschenkt."
+        "Ihre großen Blüten sitzen zusammen oben auf einem hohen, hohlen Stängel ohne Blätter.",
+        "Jede Blüte ist ein weiter Trichter mit sechs Blütenblättern, aus dem lange Staubblätter herausragen.",
+        "Ihr Name stammt von einer Hirtin aus antiken griechischen und römischen Gedichten, und sie ist eine beliebte Geschenkpflanze zu Weihnachten."
       ],
-      "description": "Tagelanges, geduldiges Aufblühen, zusammengequetscht auf weniger Zeit, als ein Niesen dauert.",
-      "fun_fact": "Die meisten zu Weihnachten verkauften „Amaryllis“ gehören eigentlich zur südamerikanischen Gattung Hippeastrum (Ritterstern); die echte Amaryllis wächst wild in Südafrika.",
+      "description": "Tagelanges, geduldiges Aufblühen, gequetscht in weniger Zeit, als ein Nieser dauert.",
+      "fun_fact": "Die meisten „Amaryllis“, die zu Weihnachten verkauft werden, gehören eigentlich zur südamerikanischen Gattung Ritterstern (Hippeastrum); die echte Amaryllis wächst wild in Südafrika.",
       "difficulty": 10,
       "status": "needs_work",
-      "batch": "tr-de-26",
+      "batch": "tr-de-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "Fact check: wrong. The answer (Amaryllis/Hippeastrum), the hints and the fun fact are correct from my own knowledge. I did not run any searches. The description is wrong, though. It says the bloom is squeezed into less time than a sneeze lasts, but the media note describes a 13-second time-lapse, which is much longer than a sneeze.",
+        "feedback": "Fact check: wrong. The answer, the wrong answers, the hints and the fun fact are all fine. Hippeastrum is the South American genus sold as 'Amaryllis'. The true Amaryllis belladonna is from South Africa. The name comes from a shepherdess in Theocritus and Virgil. The scape is hollow and leafless. The flowers are trumpet-shaped with six tepals. The description is the problem: it says the time-lapse is shorter than a sneeze, but the media note describes a 13-second clip. A sneeze lasts about a second or two. I did not check the media file itself or the sneeze duration with a search; this rests on general knowledge.",
         "problems": [
           "fact"
         ],
@@ -61148,14 +61169,24 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Fact check: wrong. The answer, wrong answers, hints and fun fact check out from general knowledge, and I ran no searches. Hippeastrum is sold as 'Amaryllis'. The scape is hollow and leafless. The flowers are trumpet-shaped with 6 tepals. The name comes from the shepherdess in Theocritus and Virgil. The true Amaryllis (A. belladonna) is South African. The description is wrong, though. It says the bloom is squeezed into less time than a sneeze lasts, but the media note describes a 13-second video, which is far longer than a sneeze.",
+          "feedback": "Fact check: wrong. The answer (Amaryllis/Hippeastrum), the hints and the fun fact are correct from my own knowledge. I did not run any searches. The description is wrong, though. It says the bloom is squeezed into less time than a sneeze lasts, but the media note describes a 13-second time-lapse, which is much longer than a sneeze.",
           "problems": [
             "fact"
           ],
-          "reviewed_on": "2026-11-16",
+          "reviewed_on": "2026-11-17",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "Fact check: wrong. The answer, wrong answers, hints and fun fact check out from general knowledge, and I ran no searches. Hippeastrum is sold as 'Amaryllis'. The scape is hollow and leafless. The flowers are trumpet-shaped with 6 tepals. The name comes from the shepherdess in Theocritus and Virgil. The true Amaryllis (A. belladonna) is South African. The description is wrong, though. It says the bloom is squeezed into less time than a sneeze lasts, but the media note describes a 13-second video, which is far longer than a sneeze.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-11-16",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "bd81a3197cb7"
@@ -64131,6 +64162,66 @@
       "source_hash": "809a583eff8b"
     },
     {
+      "id": "q-20888",
+      "question": "Schau hin: Dieser weiße Hochgeschwindigkeitszug mit rotem Streifen ist ein nationales Symbol. In welchem Land fährt er hauptsächlich?",
+      "answer": "Deutschland",
+      "wrong_answers": [
+        "Japan",
+        "Italien",
+        "China"
+      ],
+      "hints": [
+        "Die nationale Bahngesellschaft dieses Landes nennt den Zug ihren ganzen Stolz.",
+        "Sein Name besteht aus drei Buchstaben und steht für „InterCity Express“.",
+        "Er fährt auf schnellen Strecken zwischen Berlin, München, Hamburg und Frankfurt."
+      ],
+      "description": "Einmal blinzeln, und der Zug ist weg – samt Kaffee, Zeitung und Hut.",
+      "fun_fact": "Der ICE beförderte 1991 erstmals Fahrgäste, und heute rasen manche ICE-Züge mit bis zu 320 km/h dahin.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "61f3911afa89"
+    },
+    {
+      "id": "q-20889",
+      "question": "Hör zu: Welches Streichinstrument spielt in diesem Stück zusammen mit dem Klavier?",
+      "answer": "Cello",
+      "wrong_answers": [
+        "Geige",
+        "Bratsche",
+        "Kontrabass"
+      ],
+      "hints": [
+        "Hör darauf, wie tief und warm die Melodie neben dem Klavier klingt.",
+        "Seine Töne liegen ungefähr dort, wo eine Männerstimme singt, also tiefer als bei der Geige.",
+        "Es ist größer als eine Bratsche, aber viel kleiner als ein Kontrabass."
+      ],
+      "description": "Ein Duett, bei dem das Klavier endlich mal das Rampenlicht mit jemandem teilen muss, der einen Bogen in der Hand hält.",
+      "fun_fact": "Das ist aus Frédéric Chopins Cellosonate, einem seiner letzten veröffentlichten Werke – und einem der wenigen, in denen das Klavier sich die Bühne mit einem anderen Instrument teilt.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "e22559720c24"
+    },
+    {
       "id": "q-2089",
       "question": "Trapezkünstler, Turner und Kletterer reiben sich mit diesem weißen Pulver die Hände ein. Welche Verbindung ist das?",
       "answer": "Magnesiumcarbonat",
@@ -64159,6 +64250,246 @@
         "previous": null
       },
       "source_hash": "d96772f83963"
+    },
+    {
+      "id": "q-20890",
+      "question": "Schau hin: Mit welcher Filmtechnik wurde dieses Video einer Banane gemacht?",
+      "answer": "Zeitraffer",
+      "wrong_answers": [
+        "Zeitlupe",
+        "Stop-Motion",
+        "Panorama"
+      ],
+      "hints": [
+        "Denk daran, wie lange es in der Küche wirklich dauert, bis eine Banane braun wird.",
+        "Die Kamera stand still und machte alle paar Minuten ein Foto, dann wurden alle Fotos schnell hintereinander abgespielt.",
+        "Naturfilme zeigen so oft, wie Blumen aufgehen oder Wolken über den Himmel rasen."
+      ],
+      "description": "Die komplette Karriere einer Banane: vom Pausenbrot-Helden zum Smoothie-Kandidaten.",
+      "fun_fact": "Reife Bananen geben ein Gas namens Ethylen ab: Steckt man eine mit einer harten Avocado oder Birne in eine Tüte, reift das andere Obst schneller.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f603e29034b9"
+    },
+    {
+      "id": "q-20891",
+      "question": "Sieh hin: Lebensmittel in Plastikbeuteln liegen in Wasser, das genau auf einer festen Temperatur gehalten wird. Wie heißt diese Garmethode?",
+      "answer": "Sous-vide",
+      "wrong_answers": [
+        "En papillote",
+        "Confit",
+        "Bain-Marie"
+      ],
+      "hints": [
+        "Wie viele Küchenbegriffe stammt der Name aus dem Französischen.",
+        "Das Gerät am Rand des Behälters hält das Wasser auf einer genauen, eher niedrigen Temperatur, oft stundenlang.",
+        "Der Name bedeutet „unter Vakuum“, weil die Luft aus den Beuteln gesaugt wird."
+      ],
+      "description": "Dieses Steak hat sich einen Tag im Whirlpool gegönnt, und sein Wellnessprogramm dauert Stunden.",
+      "fun_fact": "Der französische Koch Georges Pralus machte die Methode in den 1970er-Jahren bekannt: So schrumpfte seine Foie gras beim Garen weniger und es gab weniger Abfall.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f8e004afb121"
+    },
+    {
+      "id": "q-20892",
+      "question": "Schau hin: Welche Rakete hebt in diesem Video ab?",
+      "answer": "Falcon Heavy",
+      "wrong_answers": [
+        "Saturn V",
+        "Space Shuttle",
+        "Sojus"
+      ],
+      "hints": [
+        "Es ist eine moderne Rakete, keine aus der Zeit der Mondlandungen.",
+        "Bei ihrem ersten Testflug 2018 schickte sie einen roten Sportwagen ins All.",
+        "Sie besteht praktisch aus drei Arbeitspferd-Raketen von SpaceX, die nebeneinander gebündelt sind."
+      ],
+      "description": "Die lauteste Methode, die je erfunden wurde, um ein sehr teures Paket zu verschicken.",
+      "fun_fact": "Die beiden seitlichen Booster einer Falcon Heavy können zurückfliegen und fast gleichzeitig nebeneinander aufrecht landen.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c493a0db5bbe"
+    },
+    {
+      "id": "q-20893",
+      "question": "Hör zu: Welche Art von Gruppe spielt diese Weihnachtsmelodie?",
+      "answer": "Blasorchester",
+      "wrong_answers": [
+        "Streichorchester",
+        "Kinderchor",
+        "Rockband"
+      ],
+      "hints": [
+        "Achte darauf, wie der Klang entsteht.",
+        "Niemand singt, und keine Saite wird mit einem Bogen gestrichen.",
+        "Jedes Melodie-Instrument hier wird gespielt, indem man hineinpustet."
+      ],
+      "description": "Der Soundtrack in jedem Geschäft ab November, ob man ihn hören will oder nicht.",
+      "fun_fact": "Die Aufnahme stammt von Musikern eines Orchesters der US-Luftwaffe, das in Europa stationiert ist.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "deb0160612d2"
+    },
+    {
+      "id": "q-20894",
+      "question": "Sieh dir die graue Drohne an, die von der Startbahn abhebt. Welchem berühmten US-Flugzeug ähnelt ihre Form am meisten?",
+      "answer": "B-2 Spirit",
+      "wrong_answers": [
+        "F-117 Nighthawk",
+        "B-52 Stratofortress",
+        "SR-71 Blackbird"
+      ],
+      "hints": [
+        "Schau dir das Heck der Drohne genau an: Etwas, das die meisten Flugzeuge haben, fehlt.",
+        "Dieses Flugzeug hat gar kein Leitwerk; Rumpf und Flügel verschmelzen zu einer einzigen großen Form.",
+        "Sein Name bedeutet auf Deutsch so viel wie „Geist“."
+      ],
+      "description": "Der erste Arbeitstag eines Roboterpiloten, mit einem nervösen Aufpasser direkt daneben.",
+      "fun_fact": "Die Drohne im Clip ist die russische Suchoi S-70 „Ochotnik“, was „Jäger“ bedeutet; sie flog zum ersten Mal im August 2019.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a480fce9825b"
+    },
+    {
+      "id": "q-20895",
+      "question": "Hör zu: Die Nationalhymne welches Landes spielt diese Militärkapelle?",
+      "answer": "Mexiko",
+      "wrong_answers": [
+        "Argentinien",
+        "Peru",
+        "Kuba"
+      ],
+      "hints": [
+        "Die Musik schrieb Jaime Nunó, ein in Spanien geborener Komponist.",
+        "Die Hymne wurde 1854 erstmals öffentlich aufgeführt, nach einem Wettbewerb um ihre Musik.",
+        "Die Hauptstadt wurde auf den Ruinen der Aztekenstadt Tenochtitlan erbaut."
+      ],
+      "description": "Bevor ein ganzes Stadion mit der Hand auf dem Herzen aufsteht, muss sich erst mal die Blaskapelle warmspielen.",
+      "fun_fact": "Der Legende nach schrieb der Dichter Francisco González Bocanegra den Hymnentext erst, als seine Verlobte ihn in ein Zimmer sperrte, bis er fertig war.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4d431fd73a8e"
+    },
+    {
+      "id": "q-20897",
+      "question": "Hör zu: Welche Eule macht diesen langen, schnellen Triller?",
+      "answer": "Sperbereule",
+      "wrong_answers": [
+        "Schleiereule",
+        "Waldkauz",
+        "Schnee-Eule"
+      ],
+      "hints": [
+        "Diese Eule lebt in den kalten Wäldern im Norden Europas, Asiens und Nordamerikas.",
+        "Anders als die meisten Eulen jagt sie oft am helllichten Tag, von einer Baumspitze aus.",
+        "Mit ihrem langen Schwanz und ihrem schnellen Flug sieht sie einem kleinen Greifvogel sehr ähnlich, der tagsüber jagt."
+      ],
+      "description": "Nicht jede Eule hat mitbekommen, dass sie eigentlich „Huhu“ rufen soll.",
+      "fun_fact": "Die Sperbereule kann eine Wühlmaus aus bis zu 800 m Entfernung erkennen und hört Beute, die sich unter dem Schnee bewegt.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "cf31849d039f"
+    },
+    {
+      "id": "q-20899",
+      "question": "Schau hin: Wie heißt diese Art von Hochgeschwindigkeitszug?",
+      "answer": "TGV",
+      "wrong_answers": [
+        "Shinkansen",
+        "ICE",
+        "AVE"
+      ],
+      "hints": [
+        "Achte auf das rote Logo vorn am Zug, wenn er abfährt.",
+        "Seine silber-blauen Farben gehören zur Staatsbahn eines europäischen Landes.",
+        "Sein Name ist eine Abkürzung für „Zug mit großer Geschwindigkeit“ in seiner Heimatsprache."
+      ],
+      "description": "Dieser Kleinstadtbahnhof bekommt etwa drei Sekunden Ruhm – und ist nicht mal der Star der Show.",
+      "fun_fact": "Die erste TGV-Strecke ging 1981 zwischen Paris und Lyon in Betrieb, und 2007 stellte ein umgebauter TGV mit 574,8 km/h den Geschwindigkeitsweltrekord für Züge auf Schienen auf.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "874c07b4035a"
     },
     {
       "id": "q-2090",
@@ -64191,6 +64522,456 @@
       "source_hash": "ac5fee702a64"
     },
     {
+      "id": "q-20900",
+      "question": "Hör zu: Welcher Vogel macht diesen tiefen, krächzenden Ruf?",
+      "answer": "Riesentukan",
+      "wrong_answers": [
+        "Kolkrabe",
+        "Hellroter Ara",
+        "Lachender Hans"
+      ],
+      "hints": [
+        "Dieser Vogel ist viel berühmter für sein Aussehen als für seine Stimme.",
+        "Er lebt in Südamerika und frisst vor allem Früchte, die er in die Luft wirft und wieder auffängt.",
+        "Sein riesiger orangefarbener Schnabel ist etwa ein Drittel so lang wie sein Körper."
+      ],
+      "description": "Der morgendliche Appell im Wald, bei dem jeder auf seine eigene Art „Hier!“ ruft.",
+      "fun_fact": "Der riesige Schnabel des Riesentukans ist innen leicht und hohl und hilft ihm an heißen Tagen, Wärme abzugeben, wie ein eingebauter Heizkörper.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "e0d2c1a70e34"
+    },
+    {
+      "id": "q-20901",
+      "question": "Hör zu: Welches Instrument spielt diesen Ton?",
+      "answer": "Kazoo",
+      "wrong_answers": [
+        "Mundharmonika",
+        "Oboe",
+        "Dudelsack"
+      ],
+      "hints": [
+        "Es ist so klein, dass es in die Hosentasche passt.",
+        "In seinem Inneren schwingt eine dünne Membran und erzeugt den Klang.",
+        "Man bläst nicht hinein, man summt hinein."
+      ],
+      "description": "Ein Instrument, das man in fünf Minuten lernt und das einem die Nachbarn in fünf Jahren noch nicht verziehen haben.",
+      "fun_fact": "Ein Kazoo hat weder Rohrblatt noch Saiten: Es lässt einfach deine eigene Summstimme über eine dünne Membran schnarren.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "fbb7b5f8bef9"
+    },
+    {
+      "id": "q-20903",
+      "question": "Hör zu: Welcher Vogel des Amazonas gibt diesen keuchenden, grunzenden Ruf von sich?",
+      "answer": "Hoatzin",
+      "wrong_answers": [
+        "Hellroter Ara",
+        "Riesentukan",
+        "Harpyie"
+      ],
+      "hints": [
+        "Er lebt in Gruppen in den Bäumen an langsamen Flüssen und Seen und frisst fast nur Blätter.",
+        "Er hat eine stachelige Punkfrisur als Haube und nackte blaue Haut um die roten Augen.",
+        "Seine Küken haben an jedem Flügel zwei kleine Krallen, mit denen sie zurück ins Geäst klettern."
+      ],
+      "description": "Irgendwo an einem Flussufer in Ecuador diskutiert ein Pärchen sehr lautstark übers Frühstück.",
+      "fun_fact": "Der Hoatzin verdaut Blätter, indem er sie wie eine Kuh in seinem Kropf vergären lässt – deshalb riecht er nach Mist und heißt auch „Stinkvogel“.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "587f52ea0b5f"
+    },
+    {
+      "id": "q-20905",
+      "question": "Schau hin: Warum fahren die Leute ihre Autos auf diesen Zug?",
+      "answer": "Um durch einen Bergtunnel zu kommen",
+      "wrong_answers": [
+        "Um ein Stück offenes Meer zu überqueren",
+        "Um neue Autos aus der Fabrik zu bringen",
+        "Um alte Autos zum Schrottplatz zu bringen"
+      ],
+      "hints": [
+        "Schau dir die Autos an: viele verschiedene Modelle und Farben, alle gut in Schuss.",
+        "Schau dir die Landschaft rund um den Bahnhof an: Sie verrät etwas über die Strecke.",
+        "In der Schweiz bringen solche Autozüge die Fahrer durch den Lötschbergtunnel."
+      ],
+      "description": "Der einzige Stau, der vorankommt, während alle stillsitzen.",
+      "fun_fact": "Dieser Autozug in Slowenien fährt durch den Wocheiner Tunnel (Bohinj-Tunnel), der etwa 6,3 km lang ist und vor über 100 Jahren durch die Julischen Alpen gegraben wurde.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c75ea0ccd609"
+    },
+    {
+      "id": "q-20906",
+      "question": "Hör zu: In welcher Sprache singt dieser Chor die Nationalhymne seines Landes?",
+      "answer": "Portugiesisch",
+      "wrong_answers": [
+        "Spanisch",
+        "Italienisch",
+        "Latein"
+      ],
+      "hints": [
+        "Es ist eine romanische Sprache, sie stammt also vom Latein des Römischen Reiches ab.",
+        "Achte auf Nasallaute wie „ão“ und weiche „sch“-Laute, die es im Spanischen nicht gibt.",
+        "Sie ist die meistgesprochene Sprache Südamerikas, obwohl die meisten Länder dort eine andere sprechen."
+      ],
+      "description": "Eine ganze Armee, die beschlossen hat, die Waffen niederzulegen und lieber zu singen.",
+      "fun_fact": "Die Musik der brasilianischen Hymne entstand 1831, ihr Text wurde aber erst 1922 offiziell – mehr als 90 Jahre später.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7f746bcc90e8"
+    },
+    {
+      "id": "q-20908",
+      "question": "Schau hin: Astronauten auf der Raumstation spielen mit einem Ball. Warum schweben Ball und Spieler so?",
+      "answer": "Alles an Bord fällt gemeinsam um die Erde herum",
+      "wrong_answers": [
+        "So hoch über der Erde gibt es keine Schwerkraft",
+        "Ventilatoren an Bord blasen die Luft nach oben",
+        "Weltraumbälle sind mit Gas leichter als Luft gefüllt"
+      ],
+      "hints": [
+        "Isaac Newton erkannte, dass der Mond genau dasselbe tut.",
+        "Dort oben ist die Erdanziehung immer noch etwa 90 Prozent so stark wie am Boden.",
+        "Die Station fällt ständig Richtung Erde, fliegt aber so schnell seitwärts, dass sie sie immer verfehlt."
+      ],
+      "description": "Ein Freundschaftsspiel mit der besten Aussicht aller Stadien – und ohne Rasen, der gemäht werden muss.",
+      "fun_fact": "Die Internationale Raumstation umrundet die Erde etwa alle 90 Minuten mit rund 28 000 km/h, deshalb sieht die Crew etwa 16 Sonnenaufgänge am Tag.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b1a158138ae0"
+    },
+    {
+      "id": "q-20909",
+      "question": "Schau hin: Welcher Kampfjet startet hier?",
+      "answer": "MiG-29",
+      "wrong_answers": [
+        "F-16 Fighting Falcon",
+        "Dassault Rafale",
+        "Eurofighter Typhoon"
+      ],
+      "hints": [
+        "Achte beim Abheben genau auf das Heck des Flugzeugs.",
+        "Es hat zwei Seitenleitwerke, je eines über seinen beiden weit auseinanderliegenden Triebwerken.",
+        "Sein Name setzt sich aus den Anfangsbuchstaben seiner beiden Konstrukteure zusammen, Mikojan und Gurewitsch."
+      ],
+      "description": "Hier hat es jemand sehr eilig, den Flughafen zu verlassen – und hat nicht mal Gepäck aufgegeben.",
+      "fun_fact": "„MiG“ steht für Mikojan und Gurewitsch, die beiden Ingenieure, deren Konstruktionsbüro den Jet entwarf; er flog erstmals 1977.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "727e96985127"
+    },
+    {
+      "id": "q-20910",
+      "question": "Hör zu: Welche italienische Tempoangabe schrieb der Komponist über diesen Klaviersatz?",
+      "answer": "Allegro vivace",
+      "wrong_answers": [
+        "Adagio sostenuto",
+        "Andante cantabile",
+        "Lento assai"
+      ],
+      "hints": [
+        "Diese Worte sind für den Pianisten gedacht, nicht für das Publikum.",
+        "Vergiss die Melodie und achte darauf, wie schnell oder langsam die Töne kommen.",
+        "Ihr zweites Wort bedeutet auf Italienisch „lebhaft“."
+      ],
+      "description": "Musiker rufen sich Anweisungen auf Italienisch zu, und dabei bestellt nicht mal jemand Pizza.",
+      "fun_fact": "Schubert schrieb diese a-Moll-Sonate 1823, veröffentlicht wurde sie aber erst 1839 – mehr als zehn Jahre nach seinem Tod.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c7c4c962990f"
+    },
+    {
+      "id": "q-20911",
+      "question": "Hör zu: Welcher Sumpfvogel ruft hier?",
+      "answer": "Zwergsultanshuhn",
+      "wrong_answers": [
+        "Eistaucher",
+        "Stockente",
+        "Kanadareiher"
+      ],
+      "hints": [
+        "Dieser Vogel lebt in warmen Sümpfen Amerikas, zwischen Schilf und Schwimmpflanzen.",
+        "Er gehört zur Familie der Rallen und ist ein Verwandter von Blässhuhn und Teichhuhn.",
+        "Mit seinen sehr langen Zehen läuft er über Seerosenblätter, und sein Gefieder schimmert blau, grün und violett."
+      ],
+      "description": "Irgendwo im Sumpf schimpft ein Vogel über irgendwas, und außer dir hört niemand zu.",
+      "fun_fact": "Zwergsultanshühner sind berühmte Irrgäste: Verirrte Vögel aus Amerika tauchten schon in Island, Europa und Südafrika auf.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ead37a07ef68"
+    },
+    {
+      "id": "q-20912",
+      "question": "Hör zu: Musiker geben das Tempo eines Stücks mit einem italienischen Wort an. Welches Tempowort passt zu diesem Satz?",
+      "answer": "Largo",
+      "wrong_answers": [
+        "Presto",
+        "Allegro",
+        "Vivace"
+      ],
+      "hints": [
+        "Achte darauf, wie schnell oder langsam sich der Takt bewegt, nicht auf die Instrumente.",
+        "Die anderen drei Wörter verlangen alle ein schnelles oder lebhaftes Spiel.",
+        "Auf Italienisch bedeutet dieses Wort „breit“ oder „weit“."
+      ],
+      "description": "Irgendwo tickt ein Metronom und möchte wirklich gern bemerkt werden.",
+      "fun_fact": "Dieser Satz stammt aus Chopins Cellosonate, einem der ganz wenigen Werke, die er nicht für Klavier solo oder Klavier mit Orchester schrieb – und dem letzten, das zu seinen Lebzeiten erschien.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "562b1c0fcfa9"
+    },
+    {
+      "id": "q-20913",
+      "question": "Schau genau hin: Welchen japanischen Straßensnack bereitet dieser Koch zu?",
+      "answer": "Takoyaki",
+      "wrong_answers": [
+        "Taiyaki",
+        "Okonomiyaki",
+        "Dorayaki"
+      ],
+      "hints": [
+        "Obendrauf kommen meist eine süße braune Soße, Mayonnaise und hauchdünne Fischflocken, die in der Hitze zu tanzen scheinen.",
+        "Es ist eines der berühmtesten Straßengerichte aus Osaka.",
+        "Der Name beginnt mit dem japanischen Wort für Krake: „tako“."
+      ],
+      "description": "Ein Koch, eine glühend heiße Platte und eine Schlange hungriger Bahnreisender, die keine Sekunde länger warten wollen.",
+      "fun_fact": "Takoyaki soll 1935 in Osaka von einem Straßenhändler namens Tomekichi Endo erfunden worden sein.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "258151bcfaff"
+    },
+    {
+      "id": "q-20914",
+      "question": "Schau zu: Aus welcher Weltregion stammt dieser traditionelle Paartanz mit diesen Kostümen?",
+      "answer": "Südostasien",
+      "wrong_answers": [
+        "Südasien",
+        "Polynesien",
+        "Zentralasien"
+      ],
+      "hints": [
+        "Achte auf die flache schwarze Mütze des Mannes und das gemusterte Tuch um seine Hüfte.",
+        "Die Region liegt am Äquator und hat Zehntausende tropische Inseln.",
+        "Denk an die Länder zwischen Thailand und Australien."
+      ],
+      "description": "Zwei Tänzer sorgen dafür, dass hier niemand mehr in den Ärmel niesen muss.",
+      "fun_fact": "Das ist der malaiische „Tari Sapu Tangan“, was einfach „Taschentuchtanz“ heißt, und er wird meist zum Volkslied „Cek Minah Sayang“ getanzt.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "76e7f05288fc"
+    },
+    {
+      "id": "q-20915",
+      "question": "Schau hin: Um diese Startrampe stehen dünne Masten, die sogar höher sind als die Rakete. Wozu dienen sie vor allem?",
+      "answer": "Blitze abfangen, bevor sie die Rakete treffen",
+      "wrong_answers": [
+        "Flutlichter für Starts bei Nacht halten",
+        "Den Wind vor dem Start messen",
+        "Funksignale an die Rakete senden"
+      ],
+      "hints": [
+        "Ihre Höhe ist der ganze Trick: Sie müssen das Höchste auf der Startrampe sein.",
+        "Eine vollgetankte Rakete auf freiem Feld während eines Gewitters bereitet große Sorgen.",
+        "Benjamin Franklin erfand eine viel kleinere Version für Hausdächer."
+      ],
+      "description": "Bevor eine Rakete groß rauskommt, muss sie erst mal aufstehen – wie alle anderen auch.",
+      "fun_fact": "Am NASA-Startkomplex 39B in Florida bilden Drähte zwischen hohen Türmen ein riesiges Netz, das Raketen vor Blitzen schützt.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "81f33444df43"
+    },
+    {
+      "id": "q-20917",
+      "question": "Hör zu: Dieses Klavierstück beginnt mit schweren, langsamen Akkorden, dann wird es schnell. Welche berühmte Beethoven-Sonate ist das?",
+      "answer": "Pathétique",
+      "wrong_answers": [
+        "Mondscheinsonate",
+        "Appassionata",
+        "Waldsteinsonate"
+      ],
+      "hints": [
+        "Es ist eine frühe Sonate, geschrieben, bevor Beethoven 30 wurde.",
+        "Anders als „Mondschein“ stand dieser Beiname schon bei der Erstveröffentlichung, und Beethoven war damit einverstanden.",
+        "Ihr französischer Beiname kommt vom griechischen Wort „Pathos“, das tiefes Gefühl oder Leiden bedeutet."
+      ],
+      "description": "Irgendwo prüft gerade ein Klavierstimmer nervös die tiefen Töne.",
+      "fun_fact": "Billy Joel übernahm die Melodie des langsamen zweiten Satzes dieser Sonate für seinen Song „This Night“ von 1983.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "29c200e17b0b"
+    },
+    {
+      "id": "q-20919",
+      "question": "Schau hin: Diese Prozession in einem Bergdorf in Kolumbien gehört zu welchem Fest?",
+      "answer": "Fronleichnam",
+      "wrong_answers": [
+        "Karneval",
+        "Dreikönigstag",
+        "Tag der Toten"
+      ],
+      "hints": [
+        "Es ist ein katholisches Fest, hier hat also die Kirche das Sagen, nicht die Partyveranstalter.",
+        "Es fällt in den späten Frühling oder Frühsommer, etwa zwei Monate nach Ostern.",
+        "Sein lateinischer Name bedeutet „Leib Christi“."
+      ],
+      "description": "Das ganze Dorf macht sich schick, und die Berge haben Logenplätze.",
+      "fun_fact": "In Atánquez spielen mit Palmblättern bedeckte Tänzer Vögel, die vor bösen Geistern warnen; dann kommen die Teufel und schließlich Tänzer mit Holzschwertern, die sie vertreiben.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c5c053591e2c"
+    },
+    {
       "id": "q-2092",
       "question": "Über hundert Jahre lang brachte ich die großen Zirkusse der USA von Stadt zu Stadt, mit Elefanten an Bord. Was bin ich?",
       "answer": "Ein Zug",
@@ -64219,6 +65000,216 @@
         "previous": null
       },
       "source_hash": "ae11f830a622"
+    },
+    {
+      "id": "q-20922",
+      "question": "Schau dir diese Nacktschnecke an: Was sitzt an den Spitzen der zwei langen Fühler oben auf ihrem Kopf?",
+      "answer": "Ihre Augen",
+      "wrong_answers": [
+        "Ihre Ohren",
+        "Ihre Zähne",
+        "Ihre Stacheln"
+      ],
+      "hints": [
+        "Wird sie berührt, kann die Schnecke diese Fühler in den Kopf zurückziehen.",
+        "Schnecken mit Haus haben die gleichen hohen Fühler, und sie helfen ihnen, sich zurechtzufinden.",
+        "An jeder Spitze sitzt ein winziger dunkler Punkt, der Hell und Dunkel unterscheiden kann."
+      ],
+      "description": "Ein Gartenbesucher, so gemütlich, dass neben ihm sogar ein Faultier wie ein Rennwagen wirkt.",
+      "fun_fact": "Eine Nacktschnecke hat keine Kauzähne wie wir, aber ihre raue, zungenartige Raspel ist mit Tausenden winziger Zähnchen besetzt.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6014ffe4d3d2"
+    },
+    {
+      "id": "q-20924",
+      "question": "Schau hin: Welches Flugzeug fliegt in diesem Clip?",
+      "answer": "Boeing B-52 Stratofortress",
+      "wrong_answers": [
+        "Boeing 747 Jumbo-Jet",
+        "Tupolew Tu-160 Blackjack",
+        "Avro Vulcan"
+      ],
+      "hints": [
+        "Zähl die Triebwerke unter den Flügeln: Es sind mehr als bei fast jedem anderen Flugzeug.",
+        "Achte auf das sehr hohe Seitenleitwerk und die langen, dünnen Flügel, die am Boden nach unten hängen.",
+        "Sein offizieller Name verbindet die hohe Luftschicht über den Wolken mit einer burgartigen Festung."
+      ],
+      "description": "Ein Flugzeug, so lang, dass es Anlauf braucht, nur um mit dem Abheben fertig zu werden.",
+      "fun_fact": "Die B-52 ist seit 1955 im Dienst, und die US-Luftwaffe will sie bis in die 2050er-Jahre fliegen lassen – fast 100 Jahre insgesamt.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f1b15a7cbb58"
+    },
+    {
+      "id": "q-20925",
+      "question": "Schau dir diesen Zeitraffer einer Pflanze an: Wie heißt diese Art von Blattbewegung?",
+      "answer": "Nyktinastie",
+      "wrong_answers": [
+        "Phototropismus",
+        "Gravitropismus",
+        "Thigmonastie"
+      ],
+      "hints": [
+        "Genau hinschauen: Die Blätter wachsen nicht auf etwas zu. Sie klappen zusammen und öffnen sich wieder.",
+        "Die Pflanze macht das in einem täglichen Rhythmus, ein bisschen wie Schlafengehen und Aufwachen.",
+        "Der Name kommt vom griechischen Wort für „Nacht“ und dem griechischen Wort für „zusammengedrückt“."
+      ],
+      "description": "Diese Zimmerpflanze bewegt sich mehr als der Mensch, der sie gießt.",
+      "fun_fact": "1729 stellte der französische Forscher Jean-Jacques d'Ortous de Mairan eine Mimose in einen dunklen Schrank und sah, dass sie ihre Blätter weiter pünktlich öffnete und schloss – einer der ersten Hinweise auf eine innere Uhr bei Lebewesen.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "053edf72b81d"
+    },
+    {
+      "id": "q-20926",
+      "question": "Schau zu: Die Männer tragen knielange Gewänder mit breiten weißen Aufschlägen. In welchem Land wird dieser Volkstanz aufgeführt?",
+      "answer": "Bhutan",
+      "wrong_answers": [
+        "Nepal",
+        "Mongolei",
+        "Myanmar"
+      ],
+      "hints": [
+        "Das Gewand der Männer heißt Gho, das knöchellange Wickelkleid der Frauen heißt Kira.",
+        "Dieses kleine Königreich in den Bergen liegt zwischen China und Indien.",
+        "Dieses Land misst seinen Erfolg berühmterweise am „Bruttonationalglück“."
+      ],
+      "description": "Eine Tanzfläche, auf der jedes Outfit eingebaute Aufschläge hat und niemand Turnschuhe trägt … na ja, fast niemand.",
+      "fun_fact": "In Bhutan sind Gho und Kira die Nationaltracht, und man soll sie in der Schule, in Behörden und auf Festen tragen.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "77d08b3b040c"
+    },
+    {
+      "id": "q-20927",
+      "question": "Hör zu: Welches Weihnachtslied singt dieser Chor?",
+      "answer": "Stille Nacht, heilige Nacht",
+      "wrong_answers": [
+        "Jingle Bells",
+        "O du fröhliche",
+        "We Wish You a Merry Christmas"
+      ],
+      "hints": [
+        "Es ist eines der am häufigsten aufgenommenen Lieder der Welt.",
+        "Es wurde 1818 zum ersten Mal in einer kleinen Kirche in Österreich gesungen, begleitet von einer Gitarre.",
+        "Sein Titel beschreibt einen ruhigen, friedlichen Abend."
+      ],
+      "description": "Das Dezemberlied, das jede Familie mindestens einmal summt – meist nur die erste Strophe.",
+      "fun_fact": "„Stille Nacht“ von Joseph Mohr und Franz Xaver Gruber wurde in mehr als 300 Sprachen übersetzt.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "209b57b3f605"
+    },
+    {
+      "id": "q-20928",
+      "question": "Hör zu: Dieser laute, ratternde Ruf ist überall in Süd- und Südostasien zu hören, von Städten bis Reisfeldern. Welcher Vogel ist das?",
+      "answer": "Braunliest",
+      "wrong_answers": [
+        "Halsbandsittich",
+        "Hirtenmaina",
+        "Indischer Koel"
+      ],
+      "hints": [
+        "Dieser Vogel hat einen riesigen roten Schnabel, viel zu groß für seinen Kopf.",
+        "Rücken und Flügel leuchten in kräftigem, glänzendem Türkisblau.",
+        "Seine Familie ist berühmt dafür, kopfüber ins Wasser zu tauchen, aber er fängt oft Eidechsen und Insekten an Land."
+      ],
+      "description": "Der Wecker der Natur, und keiner weiß mehr, wer ihn gestellt hat.",
+      "fun_fact": "Obwohl er zur Familie der Eisvögel gehört, lebt der Braunliest oft weit weg vom Wasser und frisst gern Heuschrecken, Eidechsen und sogar kleine Schlangen.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ac86f03c8d17"
+    },
+    {
+      "id": "q-20929",
+      "question": "Schau hin: Zu welchem Volk gehört dieser traditionelle Tanz mit weißen Röcken, schwarzen Streifen und gemeinsamem Gesang?",
+      "answer": "Xhosa",
+      "wrong_answers": [
+        "Zulu",
+        "Massai",
+        "Ndebele"
+      ],
+      "hints": [
+        "Die Heimat dieser Tänzer liegt ganz im Süden des afrikanischen Kontinents.",
+        "Ihre Sprache ist berühmt für ihre vielen Klicklaute.",
+        "Nelson Mandela wurde in der Provinz Ostkap in dieses Volk hineingeboren."
+      ],
+      "description": "Eine Bühne, ein Publikum und genug Klatschen, um eine Kleinstadt die ganze Nacht mit Strom zu versorgen.",
+      "fun_fact": "Miriam Makebas weltberühmter „Click Song“ wird in der Sprache dieses Volkes gesungen, mitsamt Klicklauten.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "61340d7848f9"
     },
     {
       "id": "q-2093",
@@ -64251,6 +65242,276 @@
       "source_hash": "3e6325809798"
     },
     {
+      "id": "q-20930",
+      "question": "Hör zu: Diese berühmte Bach-Melodie, hier auf einem Hackbrett gespielt, eröffnet welches Werk?",
+      "answer": "Cellosuite Nr. 1",
+      "wrong_answers": [
+        "Toccata und Fuge d-Moll",
+        "Air auf der G-Saite",
+        "Brandenburgisches Konzert Nr. 3"
+      ],
+      "hints": [
+        "Die Originalfassung wurde für einen einzigen Musiker geschrieben, der ganz allein ohne Begleitung spielt.",
+        "Das Originalinstrument wird mit einem Bogen gespielt und steht beim Spielen zwischen den Knien auf dem Boden.",
+        "Es eröffnet eine Reihe von sechs Stücken für den großen, tief klingenden Verwandten der Geige."
+      ],
+      "description": "Gleiche Melodie, neues Outfit: Dieses Stück hat sein übliches Instrument zu Hause gelassen und ist mit winzigen Hämmerchen aufgetaucht.",
+      "fun_fact": "Bachs Cellosuiten waren fast vergessen, bis der junge Pablo Casals 1890 in einem Antiquariat in Barcelona eine alte Ausgabe fand und sie weltberühmt machte.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8f87342a51bf"
+    },
+    {
+      "id": "q-20932",
+      "question": "Hör zu: Das ist eine Nationalhymne, ohne Gesang gespielt. Zu welchem Land gehört sie?",
+      "answer": "Slowenien",
+      "wrong_answers": [
+        "Slowakei",
+        "Kroatien",
+        "Tschechien"
+      ],
+      "hints": [
+        "Dieses Land ist 2004 der Europäischen Union beigetreten.",
+        "Es gehörte früher zu Jugoslawien.",
+        "Seine Hauptstadt ist Ljubljana."
+      ],
+      "description": "Jeder Sportler auf dem Siegertreppchen träumt von dieser Melodie, aber kaum jemand im Stadion kann sie mitsummen.",
+      "fun_fact": "Der Text der Hymne stammt aus dem Gedicht „Trinkspruch“ von France Prešeren, das auf den Tag anstößt, an dem alle Völker ohne Krieg in Frieden leben.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "368eb1ee76c3"
+    },
+    {
+      "id": "q-20933",
+      "question": "Schau hin: Welcher Kampfjet ist hier zu sehen?",
+      "answer": "F-35 Lightning II",
+      "wrong_answers": [
+        "F-22 Raptor",
+        "Eurofighter Typhoon",
+        "Dassault Rafale"
+      ],
+      "hints": [
+        "Es ist ein US-Tarnkappenjet, den heute Luftwaffen vieler Länder fliegen, von Japan bis Norwegen.",
+        "Genau hinsehen: Diese Version kann in der Luft schweben und fast senkrecht landen – das kann keiner der anderen drei.",
+        "Sein Beiname bedeutet auf Deutsch dasselbe wie das, was bei einem Gewitter am Himmel zuckt."
+      ],
+      "description": "Die Nachbarn dieses Fliegerhorsts haben den Mittagsschlaf schon vor langer Zeit aufgegeben.",
+      "fun_fact": "Zum Schweben nutzt die F-35B einen großen Ventilator hinter dem Cockpit, den das Haupttriebwerk antreibt, während sich die hintere Düse nach unten dreht.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "f1bf4ea2c7c1"
+    },
+    {
+      "id": "q-20934",
+      "question": "Hör zu: Welches Land hat diese Nationalhymne?",
+      "answer": "Frankreich",
+      "wrong_answers": [
+        "Italien",
+        "Belgien",
+        "Mexiko"
+      ],
+      "hints": [
+        "Die Flagge dieses Landes hat drei senkrechte Streifen.",
+        "Das Lied entstand 1792, während einer berühmten Revolution, die die Herrschaft der Könige beendete.",
+        "Die Hymne ist nach einer großen Hafenstadt am Mittelmeer benannt."
+      ],
+      "description": "Aufstehen, Hand aufs Herz und bloß nicht mitsummen!",
+      "fun_fact": "„La Marseillaise“ wurde 1792 eigentlich in Straßburg geschrieben – ihren Namen bekam sie von Freiwilligen aus Marseille, die sie beim Einmarsch in Paris sangen.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "061a867431a4"
+    },
+    {
+      "id": "q-20935",
+      "question": "Hör zu: Welche Ente macht auf dem Wasser diese kurzen, klopfenden „tuck-tuck“-Rufe?",
+      "answer": "Löffelente",
+      "wrong_answers": [
+        "Stockente",
+        "Eiderente",
+        "Mandarinente"
+      ],
+      "hints": [
+        "Es ist nicht das klassische „Quak“ vom Bauernhof, das die meisten kennen.",
+        "Sie frisst, indem sie den Kopf hin und her schwenkt und winzige Nahrung aus dem Wasser siebt.",
+        "Ihr riesiger, breiter Schnabel sieht aus wie ein Gartenwerkzeug zum Graben."
+      ],
+      "description": "Irgendwo auf einem stillen Teich klopft eine Ente an eine Tür, die es gar nicht gibt.",
+      "fun_fact": "Gruppen von Löffelenten schwimmen manchmal eng im Kreis, um Futter vom Teichboden aufzuwirbeln.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d38cd8085b9d"
+    },
+    {
+      "id": "q-20936",
+      "question": "Sieh hin: Welcher Pfannkuchen vom Straßenstand wird hier zubereitet?",
+      "answer": "Jianbing",
+      "wrong_answers": [
+        "Okonomiyaki",
+        "Dosa",
+        "Bánh xèo"
+      ],
+      "hints": [
+        "Dieser Pfannkuchen ist ein beliebtes Frühstück für unterwegs, früh morgens an Wagen und Ständen gekauft.",
+        "Achte auf das Ei, das über den dünnen Teig gestrichen wird, die Frühlingszwiebeln und die aufgepinselte Soße, bevor alles gefaltet wird.",
+        "Er stammt aus dem Norden Chinas, wo Städte wie Tianjin und die Provinz Shandong für ihn berühmt sind."
+      ],
+      "description": "Frühstück im Bett ist schön, aber Frühstück als handliches Päckchen, das man auf dem Weg zum Bus essen kann, ist schöner.",
+      "fun_fact": "Einer Legende nach entstand Jianbing, als die Soldaten eines chinesischen Generals ihre Woks verloren hatten und den Teig auf flachen Metallschilden über dem Feuer backten.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5c469ef3adc9"
+    },
+    {
+      "id": "q-20937",
+      "question": "Schau hin: Die Männer tragen weite Hosen und breite Stoffschärpen, alle tanzen in einer Reihe verbunden. Welches Volk tanzt hier?",
+      "answer": "Die Kurden",
+      "wrong_answers": [
+        "Die Griechen",
+        "Die Georgier",
+        "Die Serben"
+      ],
+      "hints": [
+        "Schau dir die Männer an: Ihre weiten Hosen sind am Knöchel gerafft, und die Schärpe ist viele Male um die Hüfte gewickelt.",
+        "Solche Tänzer feiern ein Neujahr, das auf den ersten Frühlingstag fällt.",
+        "Dieses Volk lebt dort, wo die Türkei, Iran, Irak und Syrien aufeinandertreffen, und tanzt so an seinem Neujahrsfest Newroz um Feuer, etwa in Erbil."
+      ],
+      "description": "Hand in Hand: Schritt, Kick, wieder von vorn, und bloß nie den kleinen Finger des Nachbarn loslassen.",
+      "fun_fact": "Kurdische Reihentänze heißen oft „Govend“ oder „Halay“, und wer vorne in der Reihe tanzt, gibt mit einem geschwenkten Taschentuch die Schritte vor.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c7a4c2b9bea3"
+    },
+    {
+      "id": "q-20938",
+      "question": "Schau mal: Die Raumkapsel glüht hell orange, während sie zur Erde zurückstürzt. Warum wird sie so heiß?",
+      "answer": "Luft wird vor ihr stark zusammengepresst",
+      "wrong_answers": [
+        "Ihre Triebwerke feuern nach hinten",
+        "Sonnenlicht wird von ihrem Schild zurückgeworfen",
+        "Restlicher Treibstoff verbrennt in den Tanks"
+      ],
+      "hints": [
+        "Der Weltraum ist fast leer, und die Kapsel beginnt erst nahe der Erde zu glühen.",
+        "Sie ist mehr als 25-mal so schnell wie der Schall.",
+        "Die Luft vor ihr kann nicht schnell genug ausweichen und wird zerquetscht, bis sie glüht."
+      ],
+      "description": "Die Heimkehr aus dem All ist weniger „sanfte Landung“ als „großer Auftritt“.",
+      "fun_fact": "Beim Wiedereintritt kann die Luft vor einer Kapsel heißer werden als die Oberfläche der Sonne, deshalb schützt ein Hitzeschild an der Unterseite die Astronauten.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6bf36264743c"
+    },
+    {
+      "id": "q-20939",
+      "question": "Hör zu: Über diesem Klavierstück steht eine italienische Tempoangabe. Welche passt zu dem, was du hörst?",
+      "answer": "Presto",
+      "wrong_answers": [
+        "Adagio",
+        "Andante",
+        "Allegretto"
+      ],
+      "hints": [
+        "In der Musik sagen italienische Wörter dem Spieler, wie schnell er spielen soll.",
+        "Achte darauf, wie schnell die Töne vorbeiziehen: Schlendert der Pianist oder hetzt er?",
+        "Es ist eine der schnellsten Angaben überhaupt; nur ihre Form auf „-issimo“ ist noch schneller."
+      ],
+      "description": "Italienisch ist die Amtssprache der Notenblätter, und dieser Pianist spricht sie fließend.",
+      "fun_fact": "Presto bedeutet auf Italienisch „schnell“ und ist schneller als Allegro; nur Prestissimo ist noch schneller.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "59cd3b36fb96"
+    },
+    {
       "id": "q-2094",
       "question": "Welche Besonderheit der Augen entdeckte ein englischer Chemiker im 18. Jahrhundert an sich selbst? Sie betrifft viel mehr Männer als Frauen.",
       "answer": "Farbenblindheit",
@@ -64281,6 +65542,280 @@
       "source_hash": "82cb92130ef7"
     },
     {
+      "id": "q-20941",
+      "question": "Hör zu: Dieses sanfte Thema eröffnet eine berühmte Klaviersonate. Unter welchem Beinamen ist die ganze Sonate bekannt?",
+      "answer": "„Alla turca“-Sonate",
+      "wrong_answers": [
+        "„Mondschein“-Sonate",
+        "„Appassionata“-Sonate",
+        "„Waldstein“-Sonate"
+      ],
+      "hints": [
+        "Der Komponist lebte und arbeitete in Wien.",
+        "Der letzte Satz der Sonate ist viel berühmter als dieses Anfangsthema.",
+        "Dieser letzte Satz ahmt die Militärkapellen des osmanischen Heeres nach."
+      ],
+      "description": "Ein Stück, das so höflich beginnt, dass man dazu Tee und kleine Törtchen servieren könnte.",
+      "fun_fact": "Ungewöhnlich: Keiner der drei Sätze dieser Sonate steht in Sonatenhauptsatzform – sie beginnt stattdessen mit einem Thema und sechs Variationen.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2348874bb1d3"
+    },
+    {
+      "id": "q-20942",
+      "question": "Schau hin: Dieser Maskentanz ist eine Tradition von der Südküste welches Inselstaats?",
+      "answer": "Sri Lanka",
+      "wrong_answers": [
+        "Indonesien",
+        "Philippinen",
+        "Japan"
+      ],
+      "hints": [
+        "Das Land liegt im tropischen Asien, nicht weit vom Äquator.",
+        "Die Stadt Ambalangoda dort ist berühmt für geschnitzte, bemalte Holzmasken wie diese.",
+        "Es ist die tropfenförmige Insel direkt südlich von Indien, berühmt für ihren Tee."
+      ],
+      "description": "Das grimmigste Gesicht der Feier ist eigentlich da, um das Pech zu verjagen.",
+      "fun_fact": "In Sri Lanka wird der Gara-Yaka-Tanz traditionell am Ende eines Rituals aufgeführt, um Pech und den „bösen Blick“ aus einem Dorf zu vertreiben.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "46c6dc37d32a"
+    },
+    {
+      "id": "q-20943",
+      "question": "Schau hin: Welche Art von Güterwagen sind die geschmückten roten Wagen direkt hinter der Lok?",
+      "answer": "Gedeckte Güterwagen",
+      "wrong_answers": [
+        "Kesselwagen",
+        "Schüttgutwagen",
+        "Flachwagen"
+      ],
+      "hints": [
+        "Überleg, wovor diese Wagenart ihre Ladung schützt: Regen, Schnee und Wind.",
+        "Diese Wagen sind ganz geschlossen und haben große Schiebetüren an der Seite.",
+        "Sie sehen aus wie riesige Pappkartons auf Rädern – mit festem Dach obendrauf."
+      ],
+      "description": "Sonst schleppt er langweilige Fracht, aber einmal im Jahr darf er sich schick machen und auf die Party gehen.",
+      "fun_fact": "Der Holiday Train von Canadian Pacific (heute CPKC) rollte 1999 zum ersten Mal los, und bei seinen Halten in Kanada und den USA wurden Geld und Essen für örtliche Tafeln gesammelt.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6b399fa4e96d"
+    },
+    {
+      "id": "q-20944",
+      "question": "Schau hin: Die Kamera eines Rovers auf dem Mars filmte, wie dieses rosa markierte Etwas auf ihn zukam. Was ist es?",
+      "answer": "Staubteufel",
+      "wrong_answers": [
+        "Vorbeifahrender Rover",
+        "Erdrutsch",
+        "Hubschrauber Ingenuity"
+      ],
+      "hints": [
+        "Achte darauf, wie nah es kommt: erst 50 bis 60 Meter entfernt, dann 30 Meter.",
+        "Die weiße Linie zeigt, wie der Luftdruck sinkt, während es näher kommt.",
+        "Auf der Erde sieht man an sonnigen Tagen manchmal einen kleinen über einem heißen, trockenen Feld kreiseln."
+      ],
+      "description": "Der Mars bekommt überraschend Besuch, und der Rover hat nicht mal einen Besen dabei.",
+      "fun_fact": "Weil die Marsluft so dünn ist, klingt der Staubteufel, den das SuperCam-Mikrofon von Perseverance 2021 aufnahm, viel leiser und dumpfer als derselbe Wirbel auf der Erde.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "68a15bf5ee03"
+    },
+    {
+      "id": "q-20945",
+      "question": "Hör dir den Anfang dieses Bach-Stücks für Tasteninstrument an. Um welche Art von Stück handelt es sich?",
+      "answer": "Fantasie",
+      "wrong_answers": [
+        "Fuge",
+        "Menuett",
+        "Gigue"
+      ],
+      "hints": [
+        "Achte auf einen gleichmäßigen Tanzrhythmus oder auf eine Melodie, die in verschiedenen Stimmen immer wiederkehrt. Hörst du eins davon?",
+        "Diese Art von Stück folgt keinem festen Plan. Es klingt, als würde der Spieler es sich gerade ausdenken.",
+        "Der Name sagt es schon: Hier lässt der Komponist seiner Vorstellungskraft freien Lauf."
+      ],
+      "description": "Bach schrieb so viel Musik, dass wohl sogar seine Einkaufszettel eine Basslinie hatten.",
+      "fun_fact": "Bachs Chromatische Fantasie gehörte zu den wenigen Werken für Tasteninstrumente von ihm, die Musiker auch in den Jahrzehnten nach seinem Tod weiterspielten – lange vor der großen Bach-Renaissance im 19. Jahrhundert.",
+      "difficulty": 12,
+      "status": "needs_work",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "Fact check: uncertain. Answer 'Fantasie' fits the opening of the Chromatic Fantasia (BWV 903), and Fuge/Menuett/Gigue are wrong. However, the fun fact is not verified: sources only say the piece circulated widely and stayed in use after its composition, not that it was 'one of the few' Bach keyboard works still played before the Bach revival. The media query file name says BWV 930, but the piece is BWV 903 (the file title is a mislabel; Commons has the BWV 903 file).",
+        "problems": [
+          "fact"
+        ],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "876209dd5072"
+    },
+    {
+      "id": "q-20946",
+      "question": "Schau hin: Welche Arbeit stellen diese Tänzer aus Assam in Indien mit Körben und Handwerkzeugen auf der Bühne dar?",
+      "answer": "Felder bestellen",
+      "wrong_answers": [
+        "Stoff weben",
+        "Tiere jagen",
+        "Boote bauen"
+      ],
+      "hints": [
+        "Achte darauf, was die Tänzer auf dem Rücken und an den Armen tragen.",
+        "Schau, wie die Männer sich tief bücken und ihre Werkzeuge zum Boden schwingen.",
+        "Der Tanz zeigt Landwirtschaft: Land roden, pflanzen und dann ernten."
+      ],
+      "description": "Ein Training, bei dem die Geräte aus Bambus geflochten sind und die Musik nie Pause macht.",
+      "fun_fact": "Der Hamzar-Tanz der Rabha in Assam zeigt den Kreislauf der Landwirtschaft, vom Roden des Waldes über den Reisanbau bis zur Ernte, begleitet von Trommeln und traditionellen Instrumenten.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8e4d5b113244"
+    },
+    {
+      "id": "q-20947",
+      "question": "Hör zu: Welcher Vogel aus den Nebelwäldern Mittelamerikas singt hier?",
+      "answer": "Quetzal",
+      "wrong_answers": [
+        "Hellroter Ara",
+        "Fischertukan",
+        "Hämmerling"
+      ],
+      "hints": [
+        "Kein schrilles Kreischen, kein froschartiges Krächzen und kein lautes, metallisches „Bonk“: nur ein sanfter, fallender Pfiff.",
+        "Maya und Azteken schätzten die langen, glänzend grünen Schwanzfedern dieses Vogels.",
+        "Er ist Guatemalas Nationalvogel, und die Währung des Landes trägt seinen Namen."
+      ],
+      "description": "Für diesen Vogel packt man Fernglas, Regenjacke und eine riesige Portion Geduld ein.",
+      "fun_fact": "Guatemalas Währung heißt nach diesem Vogel, und die grünen Schwanzfedern des Männchens können etwa 65 cm lang werden.",
+      "difficulty": 11,
+      "status": "needs_work",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "Fact check: wrong. The wrong answer \"Hämmerling\" does not match hint 1, which describes a loud metallic \"Bonk\". That call belongs to the Dreilappen-Glockenvogel (three-wattled bellbird) of Central American cloud forests. \"Hämmerling\" is not an established name for a Central American bird; my search found nothing, and I did not check further. The macaw (screech) and Fischertukan (croak) distractors fit their hints. I did not verify the quetzal facts: the answer, Guatemala's national bird, the currency name and the ~65 cm tail. They match what I recall, and the question is wrong only because of this distractor.",
+        "problems": [
+          "fact"
+        ],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d9bf01984b8c"
+    },
+    {
+      "id": "q-20948",
+      "question": "Schau hin: Familien fangen diese Tiere für ein berühmtes Fest im Spätsommer. In welchem Land begann diese Tradition?",
+      "answer": "Schweden",
+      "wrong_answers": [
+        "Dänemark",
+        "Niederlande",
+        "Island"
+      ],
+      "hints": [
+        "Beim Kochen werden die Tiere leuchtend rot; man isst sie kalt mit Dill.",
+        "Auf dem Fest tragen die Gäste Papierhüte, hängen Laternen in Form eines lachenden Mondes auf und singen kurze Trinklieder.",
+        "Aus diesem Land kommen auch IKEA und ABBA."
+      ],
+      "description": "Manche fischen nach Komplimenten, diese Leute fischen lieber mit einem Eimer im Graben.",
+      "fun_fact": "Schwedens heimische Flusskrebse wurden von der Krebspest schwer getroffen, deshalb holte man in den 1960er-Jahren Signalkrebse aus Nordamerika, die heute viele Seen und Bäche füllen.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3802d42271cc"
+    },
+    {
+      "id": "q-20949",
+      "question": "Schau hin: Welche Fototechnik gibt diesem echten Flughafen neben dem schnellen Zeitraffer seinen besonderen Look?",
+      "answer": "Tilt-Shift",
+      "wrong_answers": [
+        "Fischaugenobjektiv",
+        "Langzeitbelichtung",
+        "Infrarotfotografie"
+      ],
+      "hints": [
+        "Achte darauf, welche Teile jedes Bildes scharf und welche unscharf sind.",
+        "Nur ein schmaler Streifen in der Mitte ist scharf, so wie bei einer Nahaufnahme von etwas sehr Kleinem.",
+        "Die Flugzeuge und Tankwagen sehen am Ende aus wie Spielzeug auf einer Modelleisenbahn-Anlage."
+      ],
+      "description": "Irgendwo in Japan wird ein Flughafen auf eine sehr ungewöhnliche Art fotografiert.",
+      "fun_fact": "Tilt-Shift-Objektive wurden ursprünglich für Architekturfotos gebaut, damit hohe Gebäude nicht nach hinten zu kippen scheinen, lange bevor man damit winzige Modellwelten vortäuschte.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c5ce833d9191"
+    },
+    {
       "id": "q-2095",
       "question": "Der Niederländer Wim Hof badet gern in Eiswasser. Womit verbindet seine berühmte Methode die Kälte?",
       "answer": "Atemübungen",
@@ -64309,6 +65844,36 @@
         "previous": null
       },
       "source_hash": "d99e67cc858e"
+    },
+    {
+      "id": "q-20950",
+      "question": "Schau hin: Dieser Festtanz, bei dem die Tänzer Trommeln tragen, ist eine berühmte Tradition welches Ortes?",
+      "answer": "Okinawa",
+      "wrong_answers": [
+        "Tahiti",
+        "Bali",
+        "Hawaii"
+      ],
+      "hints": [
+        "Der Ort ist eine Inselgruppe.",
+        "Er war einst ein unabhängiges Königreich mit eigenem König.",
+        "Heute gehört er zu Japan, weit südlich von Tokio, und ist bekannt für Menschen, die sehr alt werden."
+      ],
+      "description": "Ein Training, bei dem jeder sein eigenes Schlagzeug mitbringt und keiner aus dem Takt kommt.",
+      "fun_fact": "Dieser Tanz heißt Eisa und wird traditionell beim sommerlichen Obon-Fest aufgeführt, um die Geister der Ahnen zu begrüßen und wieder nach Hause zu schicken.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-de-27",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b43737333666"
     },
     {
       "id": "q-2096",
@@ -137027,26 +138592,26 @@
     },
     {
       "id": "q-4546",
-      "question": "In Fantasyfilmen und -spielen erhitzt dieser Handwerker Eisen im Feuer, hämmert es auf dem Amboss und macht Schwerter und Hufeisen. Wie heißt er?",
+      "question": "In Fantasy-Filmen und -Spielen erhitzt er Eisen im Feuer und hämmert auf dem Amboss Schwerter und Hufeisen. Welcher Handwerker ist das?",
       "answer": "Schmied",
       "wrong_answers": [
-        "Zimmermann",
+        "Tischler",
         "Töpfer",
         "Goldschmied"
       ],
       "hints": [
         "Die Arbeit ist heiß, laut und voller Funken.",
-        "In seiner Werkstatt gibt es eine offene Feuerstelle und einen Blasebalg.",
-        "Ritter ließen bei ihm ihre Rüstungen und Schwerter reparieren."
+        "In der Werkstatt lodert das Feuer in einer Esse, angefacht von einem Blasebalg.",
+        "Ritter ließen bei diesem Handwerker ihre Rüstungen und Schwerter reparieren."
       ],
-      "description": "Der Held jedes Fantasyspiels, wenn dein Schwert mal wieder eine Reparatur braucht.",
+      "description": "Der wahre Held jedes Fantasy-Spiels, sobald dein Schwert eine Macke hat.",
       "fun_fact": "Ein Schmied erkennt allein an der Glühfarbe, wie heiß das Eisen ist: von Dunkelrot bis Gelbweiß.",
-      "difficulty": 3,
+      "difficulty": 4,
       "status": "needs_work",
-      "batch": "tr-de-26",
+      "batch": "tr-de-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "This asks the same fact as the approved q-9199 (\"craftsman hammering horseshoes on an anvil → Schmied\"). If both are in the German pool, one gives the other away. The translation itself is faithful and natural, and the rewritten hint 2 (fire pit and bellows instead of \"Schmiede\") is a good change. Keep only one of the two questions.",
+        "feedback": "This asks the same fact as the approved q-9199: someone hammers horseshoes on an anvil, and the answer is \"Schmied\". The German pool would then have two copies of one question. Rewording can't fix this, so one of the two should be dropped.",
         "problems": [
           "overlap"
         ],
@@ -137055,25 +138620,25 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Overlap (source-level): q-9199 is already approved and asks the same fact the same way: a craftsman hammers horseshoes on an anvil, answer \"Schmied\". Whichever one players see first gives the other away. The translation itself is faithful and reads naturally. Source: drop one of the two questions from the pool, or rebuild this one around a different fact.",
+          "feedback": "This asks the same fact as the approved q-9199 (\"craftsman hammering horseshoes on an anvil → Schmied\"). If both are in the German pool, one gives the other away. The translation itself is faithful and natural, and the rewritten hint 2 (fire pit and bellows instead of \"Schmiede\") is a good change. Keep only one of the two questions.",
           "problems": [
             "overlap"
           ],
-          "reviewed_on": "2026-11-16",
+          "reviewed_on": "2026-11-17",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Duplicates approved q-9199: both ask for the profession that hammers glowing horseshoes on an anvil, with the same answer, Schmied. Rewording cannot fix this, so one of the two should be dropped.",
+            "feedback": "Overlap (source-level): q-9199 is already approved and asks the same fact the same way: a craftsman hammers horseshoes on an anvil, answer \"Schmied\". Whichever one players see first gives the other away. The translation itself is faithful and reads naturally. Source: drop one of the two questions from the pool, or rebuild this one around a different fact.",
             "problems": [
               "overlap"
             ],
-            "reviewed_on": "2026-10-31",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "Duplicates approved q-9199: both describe hammering horseshoes on an anvil and have the answer \"Schmied\". The same fact is asked again in other words, so one question gives the other away; the translation itself is otherwise sound.",
+              "feedback": "Duplicates approved q-9199: both ask for the profession that hammers glowing horseshoes on an anvil, with the same answer, Schmied. Rewording cannot fix this, so one of the two should be dropped.",
               "problems": [
                 "overlap"
               ],
@@ -137082,16 +138647,16 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "Duplicate of approved q-9199: both describe a craftsman hammering horseshoes on an anvil and have the answer \"Schmied\", so seeing one gives away the other. The rater's note says \"No overlap\" but then describes the same fact. Either q-4546 or q-9199 should be dropped. This cannot be fixed by rewording.",
+                "feedback": "Duplicates approved q-9199: both describe hammering horseshoes on an anvil and have the answer \"Schmied\". The same fact is asked again in other words, so one question gives the other away; the translation itself is otherwise sound.",
                 "problems": [
                   "overlap"
                 ],
-                "reviewed_on": "2026-10-30",
+                "reviewed_on": "2026-10-31",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "Duplicate of approved q-9199: both ask for the craftsman who hammers horseshoes on an anvil, with the same answer, Schmied. Rewording can't fix this, so one of the two should be dropped. Also, the option 'Goldschmied' contains the answer word and is itself a kind of Schmied, so it would need replacing if this question were kept.",
+                  "feedback": "Duplicate of approved q-9199: both describe a craftsman hammering horseshoes on an anvil and have the answer \"Schmied\", so seeing one gives away the other. The rater's note says \"No overlap\" but then describes the same fact. Either q-4546 or q-9199 should be dropped. This cannot be fixed by rewording.",
                   "problems": [
                     "overlap"
                   ],
@@ -137100,7 +138665,7 @@
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "Duplicates approved q-9199: both describe hammering (glowing) horseshoes on an anvil and ask for the job, answer \"Schmied\". Only one of the two should be played in German; the translation itself is otherwise faithful.",
+                    "feedback": "Duplicate of approved q-9199: both ask for the craftsman who hammers horseshoes on an anvil, with the same answer, Schmied. Rewording can't fix this, so one of the two should be dropped. Also, the option 'Goldschmied' contains the answer word and is itself a kind of Schmied, so it would need replacing if this question were kept.",
                     "problems": [
                       "overlap"
                     ],
@@ -137109,7 +138674,7 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "Duplicates approved q-9199, which also describes hammering horseshoes on an anvil and asks for the trade, with the same answer, Schmied. Keep only one of the two in the German pool. This comes from the pool itself, so the source may carry the same overlap.",
+                      "feedback": "Duplicates approved q-9199: both describe hammering (glowing) horseshoes on an anvil and ask for the job, answer \"Schmied\". Only one of the two should be played in German; the translation itself is otherwise faithful.",
                       "problems": [
                         "overlap"
                       ],
@@ -137118,7 +138683,7 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "Duplicate of approved q-9199: both describe a craftsman hammering horseshoes on an anvil and ask for the job, with the answer \"Schmied\". Keep only one of them in the German pool. The difference in setting (fantasy vs. medieval workshop) doesn't make this a different fact.",
+                        "feedback": "Duplicates approved q-9199, which also describes hammering horseshoes on an anvil and asks for the trade, with the same answer, Schmied. Keep only one of the two in the German pool. This comes from the pool itself, so the source may carry the same overlap.",
                         "problems": [
                           "overlap"
                         ],
@@ -137127,14 +138692,24 @@
                         "model": "claude-opus-5-5",
                         "previous": {
                           "decision": "needs_work",
-                          "feedback": "This duplicates q-9199, which is already approved in the German pool. Both ask for the craft that hammers horseshoes on an anvil, and the answer to both is „Schmied“. Seeing one gives the other away. Retranslating can't fix this: either drop this question in German, or retire one of the pair (check whether the English source pool has the same overlap).",
+                          "feedback": "Duplicate of approved q-9199: both describe a craftsman hammering horseshoes on an anvil and ask for the job, with the answer \"Schmied\". Keep only one of them in the German pool. The difference in setting (fantasy vs. medieval workshop) doesn't make this a different fact.",
                           "problems": [
                             "overlap"
                           ],
                           "reviewed_on": "2026-10-30",
                           "reviewer": "llm",
                           "model": "claude-opus-5-5",
-                          "previous": null
+                          "previous": {
+                            "decision": "needs_work",
+                            "feedback": "This duplicates q-9199, which is already approved in the German pool. Both ask for the craft that hammers horseshoes on an anvil, and the answer to both is „Schmied“. Seeing one gives the other away. Retranslating can't fix this: either drop this question in German, or retire one of the pair (check whether the English source pool has the same overlap).",
+                            "problems": [
+                              "overlap"
+                            ],
+                            "reviewed_on": "2026-10-30",
+                            "reviewer": "llm",
+                            "model": "claude-opus-5-5",
+                            "previous": null
+                          }
                         }
                       }
                     }
@@ -156539,26 +158114,26 @@
     },
     {
       "id": "q-5458",
-      "question": "Dieser bärtige deutsche Denker sah die Geschichte als Kampf zwischen Klassen, und eine ganze Bewegung trägt seinen Namen. Wer ist er?",
+      "question": "Dieser bärtige deutsche Denker sah die Geschichte als Kampf zwischen Gesellschaftsklassen. Eine ganze Bewegung trägt seinen Namen. Wer ist es?",
       "answer": "Karl Marx",
       "wrong_answers": [
         "Charles Darwin",
-        "Leo Tolstoi",
+        "Lew Tolstoi",
         "Sigmund Freud"
       ],
       "hints": [
-        "Er lebte im 19. Jahrhundert und verbrachte den Großteil seiner späteren Jahre in London.",
+        "Er lebte im 19. Jahrhundert und verbrachte den Großteil seines späteren Lebens in London.",
         "Er schrieb über Arbeiter, Fabrikbesitzer und Geld.",
-        "Seine Bewegung heißt nach seinem Nachnamen „…ismus“, und der hat vier Buchstaben."
+        "Seine Bewegung heißt „…ismus“, nach seinem Nachnamen mit vier Buchstaben."
       ],
-      "description": "Ein Bart, so berühmt, dass er auf der ganzen Welt einen eigenen Fanclub hat.",
-      "fun_fact": "Marx liegt auf dem Highgate-Friedhof in London begraben, wo sein riesiger Steinkopf bis heute Besucher aus aller Welt anlockt.",
-      "difficulty": 9,
+      "description": "Ein Bart, so berühmt, dass er weltweit seinen eigenen Fanclub hat.",
+      "fun_fact": "Marx liegt auf dem Highgate-Friedhof in London begraben, wo sein riesiger Steinkopf noch heute Besucher aus aller Welt anzieht.",
+      "difficulty": 8,
       "status": "needs_work",
-      "batch": "tr-de-26",
+      "batch": "tr-de-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "Source: the fun fact calls the head on Marx's Highgate grave a stone head (\"stone head\" / „Steinkopf“). It is a bronze bust by Laurence Bradshaw (1956) on a granite plinth. The English source needs correcting first, e.g. \"where his huge bronze bust still draws visitors from all over the world\". The translation can then follow it („…wo seine riesige Bronzebüste bis heute Besucher aus aller Welt anlockt“). Fact check: wrong. The fun fact says Marx's \"riesiger Steinkopf\" (giant stone head) is at Highgate. The monument's head is a bronze bust by Laurence Bradshaw (1956) on a granite plinth, not stone. The rest checks out: Marx, class struggle, Marxism, London, Highgate burial. The wrong answers are fine.",
+        "feedback": "Source: the fun fact calls the head on Marx's Highgate tomb a stone head (\"Steinkopf\" in the translation). It is a bronze bust by Laurence Bradshaw (1956) on a stone plinth. The source's fun fact needs correcting, e.g. \"his huge bronze head on the tomb…\", and the German should then follow it (\"riesiger Bronzekopf\"). The rest of the translation is faithful and reads naturally. Fact check: wrong. The answer (Karl Marx) and the wrong answers are fine, and the hints are true. The fun fact is inaccurate: the giant head on Marx's grave at Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. This is from memory, not a fresh search.",
         "problems": [
           "fact"
         ],
@@ -156567,25 +158142,25 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "Source: the fun fact is wrong. The head on Marx's tomb in Highgate Cemetery is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The translation copies the error (\"steinerner Kopf\"). Correct the source, for example to \"huge bronze head\", then translate again as \"riesige Bronzebüste\". Fact check: wrong. The fun fact is inaccurate. The head on Marx's Highgate Cemetery tomb is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The answer, the wrong answers and the hints are fine. I did not run a web search. This is from memory.",
+          "feedback": "Source: the fun fact calls the head on Marx's Highgate grave a stone head (\"stone head\" / „Steinkopf“). It is a bronze bust by Laurence Bradshaw (1956) on a granite plinth. The English source needs correcting first, e.g. \"where his huge bronze bust still draws visitors from all over the world\". The translation can then follow it („…wo seine riesige Bronzebüste bis heute Besucher aus aller Welt anlockt“). Fact check: wrong. The fun fact says Marx's \"riesiger Steinkopf\" (giant stone head) is at Highgate. The monument's head is a bronze bust by Laurence Bradshaw (1956) on a granite plinth, not stone. The rest checks out: Marx, class struggle, Marxism, London, Highgate burial. The wrong answers are fine.",
           "problems": [
             "fact"
           ],
-          "reviewed_on": "2026-11-16",
+          "reviewed_on": "2026-11-17",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the fun fact is wrong. The head on Marx's Highgate tomb is a bronze bust by Laurence Bradshaw (1956) on a granite plinth, not stone. The source's fun fact needs correcting (\"huge bronze head\"), and the German should then read „riesiger Bronzekopf“ („…wo sein riesiger Bronzekopf noch immer Besucher aus aller Welt anzieht“). Fact check: wrong. Fun fact: the huge head on Marx's Highgate Cemetery tomb is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head.",
+            "feedback": "Source: the fun fact is wrong. The head on Marx's tomb in Highgate Cemetery is a bronze bust (Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The translation copies the error (\"steinerner Kopf\"). Correct the source, for example to \"huge bronze head\", then translate again as \"riesige Bronzebüste\". Fact check: wrong. The fun fact is inaccurate. The head on Marx's Highgate Cemetery tomb is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The answer, the wrong answers and the hints are fine. I did not run a web search. This is from memory.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-10-31",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "source: the fun fact is wrong in the English source too. The huge head on Marx's Highgate tomb is bronze (Laurence Bradshaw, 1956, on a granite plinth), not stone. Correct the source to \"huge bronze head\"; the German should then read: „Marx liegt auf dem Londoner Highgate Cemetery begraben, wo sein riesiger Bronzekopf noch immer Besucher aus aller Welt anzieht.“ Fact check: wrong. The fun fact calls the Marx monument at Highgate Cemetery a 'Steinkopf' (stone head). The giant head is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth. The answer, wrong answers and hints are fine. Marx was German, lived in London from 1849, and 'Marx' has four letters. Darwin, Tolstoy and Freud are not German thinkers and have no 'class struggle' movement named after them. The description's claim of a worldwide fan club is a joke and not a fact.",
+              "feedback": "source: the fun fact is wrong. The head on Marx's Highgate tomb is a bronze bust by Laurence Bradshaw (1956) on a granite plinth, not stone. The source's fun fact needs correcting (\"huge bronze head\"), and the German should then read „riesiger Bronzekopf“ („…wo sein riesiger Bronzekopf noch immer Besucher aus aller Welt anzieht“). Fact check: wrong. Fun fact: the huge head on Marx's Highgate Cemetery tomb is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head.",
               "problems": [
                 "fact"
               ],
@@ -156594,16 +158169,16 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "source: the fun fact is wrong. The huge head on Marx's Highgate tomb is bronze, not stone, and the German 'Steinkopf' faithfully repeats this error. The source fun fact should say 'huge bronze head'; the translation can then follow. Fact check: wrong. The answer, wrong answers and hints are correct. Darwin was English, Tolstoy Russian and Freud Austrian, and Marx did spend his later life in London. The fun fact is slightly wrong: the huge head on Marx's tomb at Highgate Cemetery is a bronze bust (1956, by Laurence Bradshaw) on a granite plinth, not a 'Steinkopf'. This is from memory; I did not run any searches.",
+                "feedback": "source: the fun fact is wrong in the English source too. The huge head on Marx's Highgate tomb is bronze (Laurence Bradshaw, 1956, on a granite plinth), not stone. Correct the source to \"huge bronze head\"; the German should then read: „Marx liegt auf dem Londoner Highgate Cemetery begraben, wo sein riesiger Bronzekopf noch immer Besucher aus aller Welt anzieht.“ Fact check: wrong. The fun fact calls the Marx monument at Highgate Cemetery a 'Steinkopf' (stone head). The giant head is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth. The answer, wrong answers and hints are fine. Marx was German, lived in London from 1849, and 'Marx' has four letters. Darwin, Tolstoy and Freud are not German thinkers and have no 'class struggle' movement named after them. The description's claim of a worldwide fan club is a joke and not a fact.",
                 "problems": [
                   "fact"
                 ],
-                "reviewed_on": "2026-10-30",
+                "reviewed_on": "2026-10-31",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "source: the fun fact is wrong in the English source as well as in the translation. The head on Marx's Highgate monument is bronze (Laurence Bradshaw, 1956, on a granite plinth), not stone. Correct the source to \"huge bronze head\"; the German should then read „riesiger Bronzekopf“. Fact check: wrong. Fun fact is inaccurate: the Marx monument at Highgate Cemetery has a huge bronze head (bust by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The rest checks out.",
+                  "feedback": "source: the fun fact is wrong. The huge head on Marx's Highgate tomb is bronze, not stone, and the German 'Steinkopf' faithfully repeats this error. The source fun fact should say 'huge bronze head'; the translation can then follow. Fact check: wrong. The answer, wrong answers and hints are correct. Darwin was English, Tolstoy Russian and Freud Austrian, and Marx did spend his later life in London. The fun fact is slightly wrong: the huge head on Marx's tomb at Highgate Cemetery is a bronze bust (1956, by Laurence Bradshaw) on a granite plinth, not a 'Steinkopf'. This is from memory; I did not run any searches.",
                   "problems": [
                     "fact"
                   ],
@@ -156612,7 +158187,7 @@
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "source: the fun fact is wrong in the English source as well as the translation. Marx's Highgate monument is a large bronze bust on a stone plinth (Laurence Bradshaw, 1956), not a stone head. Correct the source to \"huge bronze head\", then carry that into the German as \"Bronzekopf\". Fact check: wrong. The answer (Karl Marx) and the wrong answers are fine. The hints hold up too: he lived in London from 1849, and \"Marx\" has four letters. The fun fact is wrong: the Highgate monument is a large bronze bust on a granite plinth (Laurence Bradshaw, 1956), not a stone head.",
+                    "feedback": "source: the fun fact is wrong in the English source as well as in the translation. The head on Marx's Highgate monument is bronze (Laurence Bradshaw, 1956, on a granite plinth), not stone. Correct the source to \"huge bronze head\"; the German should then read „riesiger Bronzekopf“. Fact check: wrong. Fun fact is inaccurate: the Marx monument at Highgate Cemetery has a huge bronze head (bust by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. The rest checks out.",
                     "problems": [
                       "fact"
                     ],
@@ -156621,7 +158196,7 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "source: the fun fact is wrong in the English source, and the translation repeats it. The head on Marx's Highgate tomb is a bronze bust on a stone plinth, not a stone head. Correct the source (e.g. \"huge bronze head\"), then carry the change into the German (\"riesiger Bronzekopf\"). Fact check: wrong. Fun fact is inaccurate: the Highgate monument is a large bronze bust on a granite plinth, not a stone head. The rest checks out (Marx, 4 letters, London, Darwin/Tolstoy/Freud didn't say this).",
+                      "feedback": "source: the fun fact is wrong in the English source as well as the translation. Marx's Highgate monument is a large bronze bust on a stone plinth (Laurence Bradshaw, 1956), not a stone head. Correct the source to \"huge bronze head\", then carry that into the German as \"Bronzekopf\". Fact check: wrong. The answer (Karl Marx) and the wrong answers are fine. The hints hold up too: he lived in London from 1849, and \"Marx\" has four letters. The fun fact is wrong: the Highgate monument is a large bronze bust on a granite plinth (Laurence Bradshaw, 1956), not a stone head.",
                       "problems": [
                         "fact"
                       ],
@@ -156630,14 +158205,24 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "source: the fun fact is wrong in the English source too, and the translation keeps the error. The head on Marx's Highgate tomb is bronze (Laurence Bradshaw, 1956) on a granite plinth, so neither \"stone head\" nor \"Steinkopf\" is correct. The translator's notes and the fact check both flag this. The source needs correcting first, e.g. \"huge bronze head\"; the German can then read \"riesiger Bronzekopf\". Fact check: wrong. The answer, wrong answers and hints are fine. The fun fact is wrong: the large head on Marx's tomb at Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. This is from memory; I ran no searches.",
+                        "feedback": "source: the fun fact is wrong in the English source, and the translation repeats it. The head on Marx's Highgate tomb is a bronze bust on a stone plinth, not a stone head. Correct the source (e.g. \"huge bronze head\"), then carry the change into the German (\"riesiger Bronzekopf\"). Fact check: wrong. Fun fact is inaccurate: the Highgate monument is a large bronze bust on a granite plinth, not a stone head. The rest checks out (Marx, 4 letters, London, Darwin/Tolstoy/Freud didn't say this).",
                         "problems": [
                           "fact"
                         ],
                         "reviewed_on": "2026-10-30",
                         "reviewer": "llm",
                         "model": "claude-opus-5-5",
-                        "previous": null
+                        "previous": {
+                          "decision": "needs_work",
+                          "feedback": "source: the fun fact is wrong in the English source too, and the translation keeps the error. The head on Marx's Highgate tomb is bronze (Laurence Bradshaw, 1956) on a granite plinth, so neither \"stone head\" nor \"Steinkopf\" is correct. The translator's notes and the fact check both flag this. The source needs correcting first, e.g. \"huge bronze head\"; the German can then read \"riesiger Bronzekopf\". Fact check: wrong. The answer, wrong answers and hints are fine. The fun fact is wrong: the large head on Marx's tomb at Highgate Cemetery is a bronze bust (by Laurence Bradshaw, 1956) on a granite plinth, not a stone head. This is from memory; I ran no searches.",
+                          "problems": [
+                            "fact"
+                          ],
+                          "reviewed_on": "2026-10-30",
+                          "reviewer": "llm",
+                          "model": "claude-opus-5-5",
+                          "previous": null
+                        }
                       }
                     }
                   }
@@ -159721,7 +161306,7 @@
     },
     {
       "id": "q-5561",
-      "question": "Sean Connery gehört zu „James Bond jagt Dr. No“ wie Barry Nelson zu …",
+      "question": "Sean Connery verhält sich zu „James Bond 007 jagt Dr. No“ wie Barry Nelson zu …",
       "answer": "Casino Royale",
       "wrong_answers": [
         "Moonraker",
@@ -159729,18 +161314,18 @@
         "Leben und sterben lassen"
       ],
       "hints": [
-        "Barry Nelson spielte Bond 1954 live im Fernsehen, noch bevor es irgendeinen Bond-Film gab.",
+        "Barry Nelson spielte Bond 1954 live im Fernsehen, noch bevor es überhaupt einen Bond-Film gab.",
         "Die Vorlage war Ian Flemings allererster Bond-Roman.",
         "Daniel Craigs erster Bond-Film trägt denselben Titel."
       ],
-      "description": "Vor Connery gab es einen Bond, an den sich niemand erinnert, nicht einmal Bond selbst.",
-      "fun_fact": "In dieser Fernsehfassung von 1954 war Bond ein Amerikaner namens „Jimmy Bond“, und sein Freund Felix Leiter war Brite.",
-      "difficulty": 15,
+      "description": "Vor Connery gab es einen Bond, an den sich niemand erinnert – nicht einmal Bond selbst.",
+      "fun_fact": "In der Fernsehfassung von 1954 war Bond ein Amerikaner namens „Jimmy Bond“, und sein Freund Felix Leiter war Brite.",
+      "difficulty": 14,
       "status": "needs_work",
-      "batch": "tr-de-26",
+      "batch": "tr-de-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "Source: the fun fact is wrong. In the 1954 Climax! \"Casino Royale\" the British ally was Clarence Leiter, not Felix Leiter. The source's fun fact needs correcting, for example to \"…and his ally Leiter, here called Clarence, was British\", and then it needs translating again. The German translation itself is faithful and natural.",
+        "feedback": "Source: the fun fact is wrong. In the 1954 \"Climax!\" TV version of Casino Royale, Bond's British ally was called Clarence Leiter, not Felix Leiter. The source needs correcting, and then the German fun fact should follow it (\"sein Verbündeter, ein Brite namens Clarence Leiter\"). Apart from that, the translation is faithful and natural, and it uses the correct German release titles.",
         "problems": [
           "fact"
         ],
@@ -159749,25 +161334,25 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: the fun fact is wrong. In the 1954 Climax! \"Casino Royale\", the British agent was called Clarence Leiter, not Felix Leiter. Correct the English source (e.g. \"the British agent was called Clarence Leiter\") and then re-translate. The translation copies the error faithfully.",
+          "feedback": "Source: the fun fact is wrong. In the 1954 Climax! \"Casino Royale\" the British ally was Clarence Leiter, not Felix Leiter. The source's fun fact needs correcting, for example to \"…and his ally Leiter, here called Clarence, was British\", and then it needs translating again. The German translation itself is faithful and natural.",
           "problems": [
             "fact"
           ],
-          "reviewed_on": "2026-11-16",
+          "reviewed_on": "2026-11-17",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "source: the fun fact says Bond's friend \"Felix Leiter\" was British, but in the 1954 Climax! episode the British character was named Clarence Leiter, not Felix. The translator and rater both flagged this, and the fact check itself notes the name. The source needs correcting (e.g. \"...and his friend, renamed Clarence Leiter, was British\"), then the German can follow it.",
+            "feedback": "source: the fun fact is wrong. In the 1954 Climax! \"Casino Royale\", the British agent was called Clarence Leiter, not Felix Leiter. Correct the English source (e.g. \"the British agent was called Clarence Leiter\") and then re-translate. The translation copies the error faithfully.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-10-31",
+            "reviewed_on": "2026-11-16",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "source: the fun fact is wrong, and the translation copies it. In the 1954 'Climax!' version the British ally was called Clarence Leiter (played by Michael Pate), not Felix Leiter. The source should be corrected first, e.g. \"...and the American Felix Leiter became the British agent Clarence Leiter\"; the German text can then follow it. Fact check: wrong. The answer, wrong answers and hints are correct. Barry Nelson played Bond in CBS's 'Climax!' episode 'Casino Royale' (1954), and Daniel Craig's first Bond film (2006) has the same title. The fun fact is inaccurate. In the TV version Bond was the American 'Jimmy Bond', but Felix Leiter was renamed Clarence Leiter (played by Michael Pate), a British agent. He was not called Felix Leiter. This is from memory; I did not run a search.",
+              "feedback": "source: the fun fact says Bond's friend \"Felix Leiter\" was British, but in the 1954 Climax! episode the British character was named Clarence Leiter, not Felix. The translator and rater both flagged this, and the fact check itself notes the name. The source needs correcting (e.g. \"...and his friend, renamed Clarence Leiter, was British\"), then the German can follow it.",
               "problems": [
                 "fact"
               ],
@@ -159776,16 +161361,16 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "source: the fun fact is wrong. In the 1954 \"Climax!\" version of Casino Royale, the British ally was called Clarence Leiter, not Felix Leiter. The source's fun fact needs correcting, e.g. \"...und sein Verbündeter hieß Clarence Leiter und war Brite\"; the translator and the rater both flagged this.",
+                "feedback": "source: the fun fact is wrong, and the translation copies it. In the 1954 'Climax!' version the British ally was called Clarence Leiter (played by Michael Pate), not Felix Leiter. The source should be corrected first, e.g. \"...and the American Felix Leiter became the British agent Clarence Leiter\"; the German text can then follow it. Fact check: wrong. The answer, wrong answers and hints are correct. Barry Nelson played Bond in CBS's 'Climax!' episode 'Casino Royale' (1954), and Daniel Craig's first Bond film (2006) has the same title. The fun fact is inaccurate. In the TV version Bond was the American 'Jimmy Bond', but Felix Leiter was renamed Clarence Leiter (played by Michael Pate), a British agent. He was not called Felix Leiter. This is from memory; I did not run a search.",
                 "problems": [
                   "fact"
                 ],
-                "reviewed_on": "2026-10-30",
+                "reviewed_on": "2026-10-31",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "source: the fun fact is wrong, and the translation faithfully repeats it. In the 1954 Climax! version, Bond's British ally was called Clarence Leiter, not Felix Leiter. Correct the source fun fact, e.g. \"Bond was an American called 'Jimmy Bond', and his ally Felix Leiter became the Briton Clarence Leiter\", then carry the correction into the German text. Fact check: wrong. Fun fact is inaccurate: in the 1954 Climax! adaptation Bond was American 'Jimmy Bond', but his British ally was renamed 'Clarence Leiter', not Felix Leiter. The answer and hints are correct.",
+                  "feedback": "source: the fun fact is wrong. In the 1954 \"Climax!\" version of Casino Royale, the British ally was called Clarence Leiter, not Felix Leiter. The source's fun fact needs correcting, e.g. \"...und sein Verbündeter hieß Clarence Leiter und war Brite\"; the translator and the rater both flagged this.",
                   "problems": [
                     "fact"
                   ],
@@ -159794,7 +161379,7 @@
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "source: the fun fact is wrong in both languages. In the 1954 TV version the British ally was called Clarence Leiter, not Felix Leiter (the rater and translator both flagged this). The source needs correcting, e.g. \"his friend, renamed Clarence Leiter, was British\", and the German should then follow.",
+                    "feedback": "source: the fun fact is wrong, and the translation faithfully repeats it. In the 1954 Climax! version, Bond's British ally was called Clarence Leiter, not Felix Leiter. Correct the source fun fact, e.g. \"Bond was an American called 'Jimmy Bond', and his ally Felix Leiter became the Briton Clarence Leiter\", then carry the correction into the German text. Fact check: wrong. Fun fact is inaccurate: in the 1954 Climax! adaptation Bond was American 'Jimmy Bond', but his British ally was renamed 'Clarence Leiter', not Felix Leiter. The answer and hints are correct.",
                     "problems": [
                       "fact"
                     ],
@@ -159803,7 +161388,7 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "source: the fun fact is wrong. In the 1954 TV \"Casino Royale\" the British ally was called Clarence Leiter, not Felix Leiter. The English source needs correcting (e.g. \"and his ally Leiter, renamed Clarence, was British\"); the German should then follow it. The translation itself is faithful.",
+                      "feedback": "source: the fun fact is wrong in both languages. In the 1954 TV version the British ally was called Clarence Leiter, not Felix Leiter (the rater and translator both flagged this). The source needs correcting, e.g. \"his friend, renamed Clarence Leiter, was British\", and the German should then follow.",
                       "problems": [
                         "fact"
                       ],
@@ -159812,7 +161397,7 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "source: the fun fact is wrong, and the translation carries the error over. In the 1954 TV version, the British ally was called Clarence Leiter, not Felix Leiter. The source needs correcting, for example: \"…and his friend, renamed Clarence Leiter, was British.\" Fact check: wrong. Fun fact: in the 1954 TV version Felix Leiter was renamed Clarence Leiter, so calling him 'Felix Leiter' is inaccurate. Bond as the American 'Jimmy Bond' and Leiter as British is correct. The answer Casino Royale is right.",
+                        "feedback": "source: the fun fact is wrong. In the 1954 TV \"Casino Royale\" the British ally was called Clarence Leiter, not Felix Leiter. The English source needs correcting (e.g. \"and his ally Leiter, renamed Clarence, was British\"); the German should then follow it. The translation itself is faithful.",
                         "problems": [
                           "fact"
                         ],
@@ -159821,14 +161406,24 @@
                         "model": "claude-opus-5-5",
                         "previous": {
                           "decision": "needs_work",
-                          "feedback": "source: the fun fact is inaccurate. In the 1954 TV version the British friend was named Clarence Leiter, not Felix Leiter, so \"sein Freund Felix Leiter war Brite\" is wrong in both the source and the translation. Correct the source, e.g. \"…and his friend Leiter was a Briton named Clarence\", then carry the correction over to the German. The translation is otherwise fine.",
+                          "feedback": "source: the fun fact is wrong, and the translation carries the error over. In the 1954 TV version, the British ally was called Clarence Leiter, not Felix Leiter. The source needs correcting, for example: \"…and his friend, renamed Clarence Leiter, was British.\" Fact check: wrong. Fun fact: in the 1954 TV version Felix Leiter was renamed Clarence Leiter, so calling him 'Felix Leiter' is inaccurate. Bond as the American 'Jimmy Bond' and Leiter as British is correct. The answer Casino Royale is right.",
                           "problems": [
                             "fact"
                           ],
                           "reviewed_on": "2026-10-30",
                           "reviewer": "llm",
                           "model": "claude-opus-5-5",
-                          "previous": null
+                          "previous": {
+                            "decision": "needs_work",
+                            "feedback": "source: the fun fact is inaccurate. In the 1954 TV version the British friend was named Clarence Leiter, not Felix Leiter, so \"sein Freund Felix Leiter war Brite\" is wrong in both the source and the translation. Correct the source, e.g. \"…and his friend Leiter was a Briton named Clarence\", then carry the correction over to the German. The translation is otherwise fine.",
+                            "problems": [
+                              "fact"
+                            ],
+                            "reviewed_on": "2026-10-30",
+                            "reviewer": "llm",
+                            "model": "claude-opus-5-5",
+                            "previous": null
+                          }
                         }
                       }
                     }
@@ -168914,26 +170509,26 @@
     },
     {
       "id": "q-5869",
-      "question": "Bei welcher Wurfdisziplin bekam das Sportgerät 1986 eine neue Form, die weniger weit fliegt, weil Spitzenwürfe fast das Feldende erreichten?",
-      "answer": "Speerwurf",
+      "question": "Welches Wurfgerät der Leichtathletik bekam 1986 eine neue Form, die weniger weit fliegt, weil Spitzenwürfe fast das Ende des Rasens erreichten?",
+      "answer": "Speer",
       "wrong_answers": [
-        "Diskuswurf",
-        "Hammerwurf",
-        "Kugelstoßen"
+        "Diskus",
+        "Hammer",
+        "Kugel"
       ],
       "hints": [
-        "Es ist eine der Wurfdisziplinen bei Olympischen Spielen.",
+        "Damit wird bei Olympischen Spielen geworfen.",
         "Durch die neue Form senkt sich die Spitze früher, sodass sie im Rasen stecken bleibt.",
-        "Das Gerät erinnert an eine Jagdwaffe aus der Steinzeit."
+        "Schon Jäger der Steinzeit warfen etwas Ähnliches, um Tiere zu erlegen."
       ],
-      "description": "Die Leichtathletik hat mehr seltsames Gerät als ein Gartenschuppen – und jedes Teil bekommt seine eigene Disziplin.",
-      "fun_fact": "1984 warf Uwe Hohn aus der DDR den alten Speer 104,80 Meter weit – weiter, als ein Fußballfeld lang ist.",
+      "description": "Die Leichtathletik hat mehr seltsames Werkzeug als ein Gartenschuppen, und jedes Teil bekommt seinen eigenen Wettkampf.",
+      "fun_fact": "1984 warf Uwe Hohn aus der DDR den alten Speer 104,80 Meter weit, also weiter, als ein Fußballfeld lang ist.",
       "difficulty": 9,
       "status": "needs_work",
-      "batch": "tr-de-26",
+      "batch": "tr-de-27",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: the fun fact says Hohn's 104.80 m throw was longer than a football pitch, but a standard international pitch is about 105 m (FIFA allows 90–120 m), so the claim is not reliably true. The English source should change it, e.g. to \"nearly as long as a football pitch\" or \"the first throw over 100 m\", and the German should then follow. Otherwise the translation is faithful and reads naturally. Fact check: wrong. Answer (Speerwurf) and 1986 redesign are right. Uwe Hohn's 104.80 m on 20 July 1984 is also right. The fun fact is shaky: a standard international football pitch is about 105 m long (FIFA allows 90–120 m). 104.80 m is therefore not farther than a typical pitch is long. I did not run searches. This is from memory.",
+        "feedback": "source: the fun fact says 104.80 m is longer than a football pitch. The standard pitch is 105 m, and the rules allow 90 to 120 m, so the claim is wrong for a standard pitch and the translation repeats it. The source's fun fact should be corrected, for example to \"almost as long as a standard football pitch (105 m)\", and the translation re-done from it. Otherwise the German translation is faithful and natural. Fact check: wrong. The answer (Speer) is right. Uwe Hohn threw 104.80 m on 20 July 1984, and the men's javelin was redesigned in 1986 with its centre of gravity moved forward, so it lands tip-first and flies shorter. The fun fact is shaky: a standard pitch is 105 m long (UEFA/FIFA standard 105×68), so 104.80 m is slightly shorter. Pitch length can range from 90 to 120 m. I did not run web searches; this is from memory.",
         "problems": [
           "fact"
         ],
@@ -168942,14 +170537,24 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: The fun fact says 104,80 m is farther than a football pitch is long. A standard pitch is about 105 m, and international pitches run 100–110 m, so the claim doesn't hold. The source should say something like \"fast so weit, wie ein Fußballfeld lang ist\". Apart from that, the translation is faithful and natural. Fact check: wrong. Answer (Speer) is right. In 1986 the men's javelin's centre of gravity was moved forward, and Uwe Hohn threw 104.80 m in 1984. The fun fact is shaky: a standard football pitch is about 105 m long, so 104.80 m is not farther than a pitch. Only the 100 m minimum for international matches fits the claim.",
+          "feedback": "source: the fun fact says Hohn's 104.80 m throw was longer than a football pitch, but a standard international pitch is about 105 m (FIFA allows 90–120 m), so the claim is not reliably true. The English source should change it, e.g. to \"nearly as long as a football pitch\" or \"the first throw over 100 m\", and the German should then follow. Otherwise the translation is faithful and reads naturally. Fact check: wrong. Answer (Speerwurf) and 1986 redesign are right. Uwe Hohn's 104.80 m on 20 July 1984 is also right. The fun fact is shaky: a standard international football pitch is about 105 m long (FIFA allows 90–120 m). 104.80 m is therefore not farther than a typical pitch is long. I did not run searches. This is from memory.",
           "problems": [
             "fact"
           ],
-          "reviewed_on": "2026-11-16",
+          "reviewed_on": "2026-11-17",
           "reviewer": "llm",
           "model": "claude-opus-5-5",
-          "previous": null
+          "previous": {
+            "decision": "needs_work",
+            "feedback": "source: The fun fact says 104,80 m is farther than a football pitch is long. A standard pitch is about 105 m, and international pitches run 100–110 m, so the claim doesn't hold. The source should say something like \"fast so weit, wie ein Fußballfeld lang ist\". Apart from that, the translation is faithful and natural. Fact check: wrong. Answer (Speer) is right. In 1986 the men's javelin's centre of gravity was moved forward, and Uwe Hohn threw 104.80 m in 1984. The fun fact is shaky: a standard football pitch is about 105 m long, so 104.80 m is not farther than a pitch. Only the 100 m minimum for international matches fits the claim.",
+            "problems": [
+              "fact"
+            ],
+            "reviewed_on": "2026-11-16",
+            "reviewer": "llm",
+            "model": "claude-opus-5-5",
+            "previous": null
+          }
         }
       },
       "source_hash": "90bf88420cbc"

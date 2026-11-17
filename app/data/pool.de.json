@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "5d3b674f",
+  "hash": "958b7091",
   "questions": [
     {
       "id": "q-0001",
@@ -226661,6 +226661,2012 @@
         "author": "Cbusram",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cbusram&action=edit&redlink=1"
       }
+    },
+    {
+      "id": "q-20888",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Einmal blinzeln, und der Zug ist weg – samt Kaffee, Zeitung und Hut.",
+      "question": "Schau hin: Dieser weiße Hochgeschwindigkeitszug mit rotem Streifen ist ein nationales Symbol. In welchem Land fährt er hauptsächlich?",
+      "answer": "Deutschland",
+      "wrong_answers": [
+        "Japan",
+        "Italien",
+        "China"
+      ],
+      "hints": [
+        "Die nationale Bahngesellschaft dieses Landes nennt den Zug ihren ganzen Stolz.",
+        "Sein Name besteht aus drei Buchstaben und steht für „InterCity Express“.",
+        "Er fährt auf schnellen Strecken zwischen Berlin, München, Hamburg und Frankfurt."
+      ],
+      "fun_fact": "Der ICE beförderte 1991 erstmals Fahrgäste, und heute rasen manche ICE-Züge mit bis zu 320 km/h dahin.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/%2820260502_173648155%29_ICE_train_passing_by_Bitterfeld.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%2820260502_173648155%29_ICE_train_passing_by_Bitterfeld.webm",
+        "credit": "Roy Zuo · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Roy Zuo",
+        "author_url": null,
+        "excerpt": {
+          "start": 1,
+          "end": 7.4
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20889",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "Ein Duett, bei dem das Klavier endlich mal das Rampenlicht mit jemandem teilen muss, der einen Bogen in der Hand hält.",
+      "question": "Hör zu: Welches Streichinstrument spielt in diesem Stück zusammen mit dem Klavier?",
+      "answer": "Cello",
+      "wrong_answers": [
+        "Geige",
+        "Bratsche",
+        "Kontrabass"
+      ],
+      "hints": [
+        "Hör darauf, wie tief und warm die Melodie neben dem Klavier klingt.",
+        "Seine Töne liegen ungefähr dort, wo eine Männerstimme singt, also tiefer als bei der Geige.",
+        "Es ist größer als eine Bratsche, aber viel kleiner als ein Kontrabass."
+      ],
+      "fun_fact": "Das ist aus Frédéric Chopins Cellosonate, einem seiner letzten veröffentlichten Werke – und einem der wenigen, in denen das Klavier sich die Bühne mit einem anderen Instrument teilt.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Chopin_-_Cello_Sonata_in_G_minor%2C_Op._65_-_II._Scherzo._Allegro_con_brio_%28Christopher_Harding%2C_Yeonjin_Kim%29.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChopin_-_Cello_Sonata_in_G_minor%2C_Op._65_-_II._Scherzo._Allegro_con_brio_%28Christopher_Harding%2C_Yeonjin_Kim%29.flac",
+        "credit": "Frédéric Chopin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Frédéric Chopin",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Metropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg",
+        "credit": "Unknown or not provided · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown or not provided\n\nRetouched by Mmxx",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mmxx"
+      }
+    },
+    {
+      "id": "q-20890",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "photography",
+      "bundle": "base",
+      "description": "Die komplette Karriere einer Banane: vom Pausenbrot-Helden zum Smoothie-Kandidaten.",
+      "question": "Schau hin: Mit welcher Filmtechnik wurde dieses Video einer Banane gemacht?",
+      "answer": "Zeitraffer",
+      "wrong_answers": [
+        "Zeitlupe",
+        "Stop-Motion",
+        "Panorama"
+      ],
+      "hints": [
+        "Denk daran, wie lange es in der Küche wirklich dauert, bis eine Banane braun wird.",
+        "Die Kamera stand still und machte alle paar Minuten ein Foto, dann wurden alle Fotos schnell hintereinander abgespielt.",
+        "Naturfilme zeigen so oft, wie Blumen aufgehen oder Wolken über den Himmel rasen."
+      ],
+      "fun_fact": "Reife Bananen geben ein Gas namens Ethylen ab: Steckt man eine mit einer harten Avocado oder Birne in eine Tüte, reift das andere Obst schneller.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Time_Lapse_Banana_Ripening.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_Lapse_Banana_Ripening.webm",
+        "credit": "mauiwowialoha · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "mauiwowialoha",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20891",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Dieses Steak hat sich einen Tag im Whirlpool gegönnt, und sein Wellnessprogramm dauert Stunden.",
+      "question": "Sieh hin: Lebensmittel in Plastikbeuteln liegen in Wasser, das genau auf einer festen Temperatur gehalten wird. Wie heißt diese Garmethode?",
+      "answer": "Sous-vide",
+      "wrong_answers": [
+        "En papillote",
+        "Confit",
+        "Bain-Marie"
+      ],
+      "hints": [
+        "Wie viele Küchenbegriffe stammt der Name aus dem Französischen.",
+        "Das Gerät am Rand des Behälters hält das Wasser auf einer genauen, eher niedrigen Temperatur, oft stundenlang.",
+        "Der Name bedeutet „unter Vakuum“, weil die Luft aus den Beuteln gesaugt wird."
+      ],
+      "fun_fact": "Der französische Koch Georges Pralus machte die Methode in den 1970er-Jahren bekannt: So schrumpfte seine Foie gras beim Garen weniger und es gab weniger Abfall.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Sous_vide_overview_by_Nomiku.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASous_vide_overview_by_Nomiku.webm",
+        "credit": "Pkwong89 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Pkwong89",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20892",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Die lauteste Methode, die je erfunden wurde, um ein sehr teures Paket zu verschicken.",
+      "question": "Schau hin: Welche Rakete hebt in diesem Video ab?",
+      "answer": "Falcon Heavy",
+      "wrong_answers": [
+        "Saturn V",
+        "Space Shuttle",
+        "Sojus"
+      ],
+      "hints": [
+        "Es ist eine moderne Rakete, keine aus der Zeit der Mondlandungen.",
+        "Bei ihrem ersten Testflug 2018 schickte sie einen roten Sportwagen ins All.",
+        "Sie besteht praktisch aus drei Arbeitspferd-Raketen von SpaceX, die nebeneinander gebündelt sind."
+      ],
+      "fun_fact": "Die beiden seitlichen Booster einer Falcon Heavy können zurückfliegen und fast gleichzeitig nebeneinander aufrecht landen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Flash_Talk-_Roman_Spacecraft_Overview_%28SVS15090_-_2-Launch%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlash_Talk-_Roman_Spacecraft_Overview_%28SVS15090_-_2-Launch%29.webm",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA's Scientific Visualization Studio - eMITS/Scott Wiessinger, NASA/GSFC/Joshua E. Schlieder, eMITS/Sophia Roberts, Sydney Rhode, eMITS/Jonathan North",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 17
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20893",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "christmas",
+      "bundle": "base",
+      "description": "Der Soundtrack in jedem Geschäft ab November, ob man ihn hören will oder nicht.",
+      "question": "Hör zu: Welche Art von Gruppe spielt diese Weihnachtsmelodie?",
+      "answer": "Blasorchester",
+      "wrong_answers": [
+        "Streichorchester",
+        "Kinderchor",
+        "Rockband"
+      ],
+      "hints": [
+        "Achte darauf, wie der Klang entsteht.",
+        "Niemand singt, und keine Saite wird mit einem Bogen gestrichen.",
+        "Jedes Melodie-Instrument hier wird gespielt, indem man hineinpustet."
+      ],
+      "fun_fact": "Die Aufnahme stammt von Musikern eines Orchesters der US-Luftwaffe, das in Europa stationiert ist.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Kling%2C_Gl%C3%B6ckchen%2C_Kling%21_-_Chamber_Winds_-_United_States_Air_Forces_in_Europe_Band.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKling%2C_Gl%C3%B6ckchen%2C_Kling%21_-_Chamber_Winds_-_United_States_Air_Forces_in_Europe_Band.mp3",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Composition: Traditional German Carol, Lawrence Price; Performance: United States Air Forces in Europe Band, Chamber Winds; Recording: United States Air Force",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sohlberg-Storgaten_R%C3%B8ros_1904.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASohlberg-Storgaten_R%C3%B8ros_1904.jpg",
+        "credit": "Harald Sohlberg · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Harald Sohlberg",
+        "author_url": "https://en.wikipedia.org/wiki/en:Harald_Sohlberg"
+      }
+    },
+    {
+      "id": "q-20894",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Der erste Arbeitstag eines Roboterpiloten, mit einem nervösen Aufpasser direkt daneben.",
+      "question": "Sieh dir die graue Drohne an, die von der Startbahn abhebt. Welchem berühmten US-Flugzeug ähnelt ihre Form am meisten?",
+      "answer": "B-2 Spirit",
+      "wrong_answers": [
+        "F-117 Nighthawk",
+        "B-52 Stratofortress",
+        "SR-71 Blackbird"
+      ],
+      "hints": [
+        "Schau dir das Heck der Drohne genau an: Etwas, das die meisten Flugzeuge haben, fehlt.",
+        "Dieses Flugzeug hat gar kein Leitwerk; Rumpf und Flügel verschmelzen zu einer einzigen großen Form.",
+        "Sein Name bedeutet auf Deutsch so viel wie „Geist“."
+      ],
+      "fun_fact": "Die Drohne im Clip ist die russische Suchoi S-70 „Ochotnik“, was „Jäger“ bedeutet; sie flog zum ersten Mal im August 2019.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/%D0%A0%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D0%BE_%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D1%85_%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%D1%85_%D0%B1%D0%BE%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B1%D0%B5%D1%81%D0%BF%D0%B8%D0%BB%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B0%D0%B2%D0%B8%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%B0_%C2%AB%D0%9E%D1%85%D0%BE%D1%82%D0%BD%D0%B8%D0%BA%C2%BB.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%A0%D0%B0%D1%81%D1%88%D0%B8%D1%80%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B2%D0%B8%D0%B4%D0%B5%D0%BE_%D0%BE_%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D1%85_%D0%B8%D1%81%D0%BF%D1%8B%D1%82%D0%B0%D0%BD%D0%B8%D1%8F%D1%85_%D0%B1%D0%BE%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B1%D0%B5%D1%81%D0%BF%D0%B8%D0%BB%D0%BE%D1%82%D0%BD%D0%BE%D0%B3%D0%BE_%D0%B0%D0%B2%D0%B8%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%81%D0%B0_%C2%AB%D0%9E%D1%85%D0%BE%D1%82%D0%BD%D0%B8%D0%BA%C2%BB.webm",
+        "credit": "CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Ministerstwo Obrony Rossijskoj Federazii (Министерство обороны Российской Федерации / Ministry of Defence of the Russian Federation)",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20895",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Bevor ein ganzes Stadion mit der Hand auf dem Herzen aufsteht, muss sich erst mal die Blaskapelle warmspielen.",
+      "question": "Hör zu: Die Nationalhymne welches Landes spielt diese Militärkapelle?",
+      "answer": "Mexiko",
+      "wrong_answers": [
+        "Argentinien",
+        "Peru",
+        "Kuba"
+      ],
+      "hints": [
+        "Die Musik schrieb Jaime Nunó, ein in Spanien geborener Komponist.",
+        "Die Hymne wurde 1854 erstmals öffentlich aufgeführt, nach einem Wettbewerb um ihre Musik.",
+        "Die Hauptstadt wurde auf den Ruinen der Aztekenstadt Tenochtitlan erbaut."
+      ],
+      "fun_fact": "Der Legende nach schrieb der Dichter Francisco González Bocanegra den Hymnentext erst, als seine Verlobte ihn in ein Zimmer sperrte, bis er fertig war.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Himno_Nacional_Mexicano_-_Banda_de_Artiller%C3%ADa_de_la_SEDENA.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHimno_Nacional_Mexicano_-_Banda_de_Artiller%C3%ADa_de_la_SEDENA.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Sura_Compet-Close_up.jpg/3840px-Sura_Compet-Close_up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASura_Compet-Close_up.jpg",
+        "credit": "Abhishek Kumar Dash · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Abhishek Kumar Dash",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Abhishek_Kumar_Dash&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20897",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Nicht jede Eule hat mitbekommen, dass sie eigentlich „Huhu“ rufen soll.",
+      "question": "Hör zu: Welche Eule macht diesen langen, schnellen Triller?",
+      "answer": "Sperbereule",
+      "wrong_answers": [
+        "Schleiereule",
+        "Waldkauz",
+        "Schnee-Eule"
+      ],
+      "hints": [
+        "Diese Eule lebt in den kalten Wäldern im Norden Europas, Asiens und Nordamerikas.",
+        "Anders als die meisten Eulen jagt sie oft am helllichten Tag, von einer Baumspitze aus.",
+        "Mit ihrem langen Schwanz und ihrem schnellen Flug sieht sie einem kleinen Greifvogel sehr ähnlich, der tagsüber jagt."
+      ],
+      "fun_fact": "Die Sperbereule kann eine Wühlmaus aus bis zu 800 m Entfernung erkennen und hört Beute, die sich unter dem Schnee bewegt.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/19/Northern_hawk_owl.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorthern_hawk_owl.ogg",
+        "credit": "Jamescandless · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Jamescandless",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Snowy_boreal_forest_%2851267438559%29.jpg/3840px-Snowy_boreal_forest_%2851267438559%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_boreal_forest_%2851267438559%29.jpg",
+        "credit": "BLM Alaska · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "BLM Alaska",
+        "author_url": "https://www.flickr.com/people/blmalaska/"
+      }
+    },
+    {
+      "id": "q-20899",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Dieser Kleinstadtbahnhof bekommt etwa drei Sekunden Ruhm – und ist nicht mal der Star der Show.",
+      "question": "Schau hin: Wie heißt diese Art von Hochgeschwindigkeitszug?",
+      "answer": "TGV",
+      "wrong_answers": [
+        "Shinkansen",
+        "ICE",
+        "AVE"
+      ],
+      "hints": [
+        "Achte auf das rote Logo vorn am Zug, wenn er abfährt.",
+        "Seine silber-blauen Farben gehören zur Staatsbahn eines europäischen Landes.",
+        "Sein Name ist eine Abkürzung für „Zug mit großer Geschwindigkeit“ in seiner Heimatsprache."
+      ],
+      "fun_fact": "Die erste TGV-Strecke ging 1981 zwischen Paris und Lyon in Betrieb, und 2007 stellte ein umgebauter TGV mit 574,8 km/h den Geschwindigkeitsweltrekord für Züge auf Schienen auf.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Montigny-en-Ostrevant_-_Train_traversant_la_gare_%28C%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMontigny-en-Ostrevant_-_Train_traversant_la_gare_%28C%29.ogv",
+        "credit": "Jérémy-Günther-Heinz Jähnick · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jérémy-Günther-Heinz Jähnick",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20900",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Der morgendliche Appell im Wald, bei dem jeder auf seine eigene Art „Hier!“ ruft.",
+      "question": "Hör zu: Welcher Vogel macht diesen tiefen, krächzenden Ruf?",
+      "answer": "Riesentukan",
+      "wrong_answers": [
+        "Kolkrabe",
+        "Hellroter Ara",
+        "Lachender Hans"
+      ],
+      "hints": [
+        "Dieser Vogel ist viel berühmter für sein Aussehen als für seine Stimme.",
+        "Er lebt in Südamerika und frisst vor allem Früchte, die er in die Luft wirft und wieder auffängt.",
+        "Sein riesiger orangefarbener Schnabel ist etwa ein Drittel so lang wie sein Körper."
+      ],
+      "fun_fact": "Der riesige Schnabel des Riesentukans ist innen leicht und hohl und hilft ihm an heißen Tagen, Wärme abzugeben, wie ein eingebauter Heizkörper.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Toco_Toucan_call_%28Ramphastos_toco%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AToco_Toucan_call_%28Ramphastos_toco%29.ogg",
+        "credit": "Fabrício Grigolin · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Fabrício Grigolin",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Misty_mountain_range%2C_dense_forest_canopy%2C_and_a_distant_river_valley.jpg/3840px-Misty_mountain_range%2C_dense_forest_canopy%2C_and_a_distant_river_valley.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMisty_mountain_range%2C_dense_forest_canopy%2C_and_a_distant_river_valley.jpg",
+        "credit": "NLBRT · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "NLBRT",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:NLBRT&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20901",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "Ein Instrument, das man in fünf Minuten lernt und das einem die Nachbarn in fünf Jahren noch nicht verziehen haben.",
+      "question": "Hör zu: Welches Instrument spielt diesen Ton?",
+      "answer": "Kazoo",
+      "wrong_answers": [
+        "Mundharmonika",
+        "Oboe",
+        "Dudelsack"
+      ],
+      "hints": [
+        "Es ist so klein, dass es in die Hosentasche passt.",
+        "In seinem Inneren schwingt eine dünne Membran und erzeugt den Klang.",
+        "Man bläst nicht hinein, man summt hinein."
+      ],
+      "fun_fact": "Ein Kazoo hat weder Rohrblatt noch Saiten: Es lässt einfach deine eigene Summstimme über eine dünne Membran schnarren.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/NoiseCollector_KazooA.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANoiseCollector_KazooA.wav",
+        "credit": "NoiseCollector · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "NoiseCollector",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/XS_Nightclub_Las_Vegas_Confetti_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AXS_Nightclub_Las_Vegas_Confetti_2.jpg",
+        "credit": "jencu · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "jencu",
+        "author_url": null
+      }
+    },
+    {
+      "id": "q-20903",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "amazon-animals",
+      "bundle": "base",
+      "description": "Irgendwo an einem Flussufer in Ecuador diskutiert ein Pärchen sehr lautstark übers Frühstück.",
+      "question": "Hör zu: Welcher Vogel des Amazonas gibt diesen keuchenden, grunzenden Ruf von sich?",
+      "answer": "Hoatzin",
+      "wrong_answers": [
+        "Hellroter Ara",
+        "Riesentukan",
+        "Harpyie"
+      ],
+      "hints": [
+        "Er lebt in Gruppen in den Bäumen an langsamen Flüssen und Seen und frisst fast nur Blätter.",
+        "Er hat eine stachelige Punkfrisur als Haube und nackte blaue Haut um die roten Augen.",
+        "Seine Küken haben an jedem Flügel zwei kleine Krallen, mit denen sie zurück ins Geäst klettern."
+      ],
+      "fun_fact": "Der Hoatzin verdaut Blätter, indem er sie wie eine Kuh in seinem Kropf vergären lässt – deshalb riecht er nach Mist und heißt auch „Stinkvogel“.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Opisthocomus_hoazin_-_Hoatzin_XC251282.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOpisthocomus_hoazin_-_Hoatzin_XC251282.mp3",
+        "credit": "Niels Krabbe · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Niels Krabbe",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Rio-napo-by-boat-snd.JPG/3840px-Rio-napo-by-boat-snd.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARio-napo-by-boat-snd.JPG",
+        "credit": "SabineDeviche · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "SabineDeviche",
+        "author_url": "https://commons.wikimedia.org/wiki/User:SabineDeviche"
+      }
+    },
+    {
+      "id": "q-20905",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Der einzige Stau, der vorankommt, während alle stillsitzen.",
+      "question": "Schau hin: Warum fahren die Leute ihre Autos auf diesen Zug?",
+      "answer": "Um durch einen Bergtunnel zu kommen",
+      "wrong_answers": [
+        "Um ein Stück offenes Meer zu überqueren",
+        "Um neue Autos aus der Fabrik zu bringen",
+        "Um alte Autos zum Schrottplatz zu bringen"
+      ],
+      "hints": [
+        "Schau dir die Autos an: viele verschiedene Modelle und Farben, alle gut in Schuss.",
+        "Schau dir die Landschaft rund um den Bahnhof an: Sie verrät etwas über die Strecke.",
+        "In der Schweiz bringen solche Autozüge die Fahrer durch den Lötschbergtunnel."
+      ],
+      "fun_fact": "Dieser Autozug in Slowenien fährt durch den Wocheiner Tunnel (Bohinj-Tunnel), der etwa 6,3 km lang ist und vor über 100 Jahren durch die Julischen Alpen gegraben wurde.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/SZ_644-004_pulling_a_car_shuttle_train_Podbrdo.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASZ_644-004_pulling_a_car_shuttle_train_Podbrdo.ogv",
+        "credit": "Ajznponar · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Ajznponar",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20906",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "languages-of-the-world",
+      "bundle": "base",
+      "description": "Eine ganze Armee, die beschlossen hat, die Waffen niederzulegen und lieber zu singen.",
+      "question": "Hör zu: In welcher Sprache singt dieser Chor die Nationalhymne seines Landes?",
+      "answer": "Portugiesisch",
+      "wrong_answers": [
+        "Spanisch",
+        "Italienisch",
+        "Latein"
+      ],
+      "hints": [
+        "Es ist eine romanische Sprache, sie stammt also vom Latein des Römischen Reiches ab.",
+        "Achte auf Nasallaute wie „ão“ und weiche „sch“-Laute, die es im Spanischen nicht gibt.",
+        "Sie ist die meistgesprochene Sprache Südamerikas, obwohl die meisten Länder dort eine andere sprechen."
+      ],
+      "fun_fact": "Die Musik der brasilianischen Hymne entstand 1831, ihr Text wurde aber erst 1922 offiziell – mehr als 90 Jahre später.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Hino_Nacional_Brasileiro_%28abreviado_coral%29_-_Coral_do_Ex%C3%A9rcito_brasileiro.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHino_Nacional_Brasileiro_%28abreviado_coral%29_-_Coral_do_Ex%C3%A9rcito_brasileiro.ogg",
+        "credit": "Federal government of Brazil · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Federal government of Brazil",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/09.10_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C109%E5%B9%B4%E4%B8%89%E8%BB%8D%E5%A3%AB%E5%AE%98%E6%96%B0%E7%94%9F%E8%81%AF%E5%90%88%E9%96%8B%E5%AD%B8%E5%85%B8%E7%A6%AE%E3%80%8D_%2850325518551%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A09.10_%E7%B8%BD%E7%B5%B1%E5%87%BA%E5%B8%AD%E3%80%8C109%E5%B9%B4%E4%B8%89%E8%BB%8D%E5%A3%AB%E5%AE%98%E6%96%B0%E7%94%9F%E8%81%AF%E5%90%88%E9%96%8B%E5%AD%B8%E5%85%B8%E7%A6%AE%E3%80%8D_%2850325518551%29.jpg",
+        "credit": "總統府 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "總統府",
+        "author_url": "https://www.flickr.com/people/40092099@N04"
+      }
+    },
+    {
+      "id": "q-20908",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Ein Freundschaftsspiel mit der besten Aussicht aller Stadien – und ohne Rasen, der gemäht werden muss.",
+      "question": "Schau hin: Astronauten auf der Raumstation spielen mit einem Ball. Warum schweben Ball und Spieler so?",
+      "answer": "Alles an Bord fällt gemeinsam um die Erde herum",
+      "wrong_answers": [
+        "So hoch über der Erde gibt es keine Schwerkraft",
+        "Ventilatoren an Bord blasen die Luft nach oben",
+        "Weltraumbälle sind mit Gas leichter als Luft gefüllt"
+      ],
+      "hints": [
+        "Isaac Newton erkannte, dass der Mond genau dasselbe tut.",
+        "Dort oben ist die Erdanziehung immer noch etwa 90 Prozent so stark wie am Boden.",
+        "Die Station fällt ständig Richtung Erde, fliegt aber so schnell seitwärts, dass sie sie immer verfehlt."
+      ],
+      "fun_fact": "Die Internationale Raumstation umrundet die Erde etwa alle 90 Minuten mit rund 28 000 km/h, deshalb sieht die Crew etwa 16 Sonnenaufgänge am Tag.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Astronauts_to_Watch_World_Cup_Aboard_Space_Station.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAstronauts_to_Watch_World_Cup_Aboard_Space_Station.webm",
+        "credit": "NASA Johnson · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Johnson",
+        "author_url": null,
+        "excerpt": {
+          "start": 36,
+          "end": 66
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20909",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Hier hat es jemand sehr eilig, den Flughafen zu verlassen – und hat nicht mal Gepäck aufgegeben.",
+      "question": "Schau hin: Welcher Kampfjet startet hier?",
+      "answer": "MiG-29",
+      "wrong_answers": [
+        "F-16 Fighting Falcon",
+        "Dassault Rafale",
+        "Eurofighter Typhoon"
+      ],
+      "hints": [
+        "Achte beim Abheben genau auf das Heck des Flugzeugs.",
+        "Es hat zwei Seitenleitwerke, je eines über seinen beiden weit auseinanderliegenden Triebwerken.",
+        "Sein Name setzt sich aus den Anfangsbuchstaben seiner beiden Konstrukteure zusammen, Mikojan und Gurewitsch."
+      ],
+      "fun_fact": "„MiG“ steht für Mikojan und Gurewitsch, die beiden Ingenieure, deren Konstruktionsbüro den Jet entwarf; er flog erstmals 1977.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/MiG-29_UB_%28Take_Off%2C_Lviv%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMiG-29_UB_%28Take_Off%2C_Lviv%29.ogv",
+        "credit": "pilotlviv · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "pilotlviv",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20910",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Musiker rufen sich Anweisungen auf Italienisch zu, und dabei bestellt nicht mal jemand Pizza.",
+      "question": "Hör zu: Welche italienische Tempoangabe schrieb der Komponist über diesen Klaviersatz?",
+      "answer": "Allegro vivace",
+      "wrong_answers": [
+        "Adagio sostenuto",
+        "Andante cantabile",
+        "Lento assai"
+      ],
+      "hints": [
+        "Diese Worte sind für den Pianisten gedacht, nicht für das Publikum.",
+        "Vergiss die Melodie und achte darauf, wie schnell oder langsam die Töne kommen.",
+        "Ihr zweites Wort bedeutet auf Italienisch „lebhaft“."
+      ],
+      "fun_fact": "Schubert schrieb diese a-Moll-Sonate 1823, veröffentlicht wurde sie aber erst 1839 – mehr als zehn Jahre nach seinem Tod.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Schubert_-_Piano_Sonata_No._14_in_A_minor%2C_D784_-_III._Allegro_vivace_%28Paul_Pitman%29.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchubert_-_Piano_Sonata_No._14_in_A_minor%2C_D784_-_III._Allegro_vivace_%28Paul_Pitman%29.flac",
+        "credit": "Franz Schubert · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Franz Schubert",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Piano_keys_close_up.jpg/3840px-Piano_keys_close_up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiano_keys_close_up.jpg",
+        "credit": "Puikstekend · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Puikstekend",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Puikstekend&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20911",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Irgendwo im Sumpf schimpft ein Vogel über irgendwas, und außer dir hört niemand zu.",
+      "question": "Hör zu: Welcher Sumpfvogel ruft hier?",
+      "answer": "Zwergsultanshuhn",
+      "wrong_answers": [
+        "Eistaucher",
+        "Stockente",
+        "Kanadareiher"
+      ],
+      "hints": [
+        "Dieser Vogel lebt in warmen Sümpfen Amerikas, zwischen Schilf und Schwimmpflanzen.",
+        "Er gehört zur Familie der Rallen und ist ein Verwandter von Blässhuhn und Teichhuhn.",
+        "Mit seinen sehr langen Zehen läuft er über Seerosenblätter, und sein Gefieder schimmert blau, grün und violett."
+      ],
+      "fun_fact": "Zwergsultanshühner sind berühmte Irrgäste: Verirrte Vögel aus Amerika tauchten schon in Island, Europa und Südafrika auf.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Purple_gallinule.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APurple_gallinule.ogg",
+        "credit": "Jamescandless · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Jamescandless",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Marshland_Ecosystem.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMarshland_Ecosystem.png",
+        "credit": "Andevskaines · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Andevskaines",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Andevskaines&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20912",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Irgendwo tickt ein Metronom und möchte wirklich gern bemerkt werden.",
+      "question": "Hör zu: Musiker geben das Tempo eines Stücks mit einem italienischen Wort an. Welches Tempowort passt zu diesem Satz?",
+      "answer": "Largo",
+      "wrong_answers": [
+        "Presto",
+        "Allegro",
+        "Vivace"
+      ],
+      "hints": [
+        "Achte darauf, wie schnell oder langsam sich der Takt bewegt, nicht auf die Instrumente.",
+        "Die anderen drei Wörter verlangen alle ein schnelles oder lebhaftes Spiel.",
+        "Auf Italienisch bedeutet dieses Wort „breit“ oder „weit“."
+      ],
+      "fun_fact": "Dieser Satz stammt aus Chopins Cellosonate, einem der ganz wenigen Werke, die er nicht für Klavier solo oder Klavier mit Orchester schrieb – und dem letzten, das zu seinen Lebzeiten erschien.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Chopin_-_Cello_Sonata_in_G_minor%2C_Op._65_-_III._Largo_%28Christopher_Harding%2C_Yeonjin_Kim%29.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChopin_-_Cello_Sonata_in_G_minor%2C_Op._65_-_III._Largo_%28Christopher_Harding%2C_Yeonjin_Kim%29.flac",
+        "credit": "Frédéric Chopin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Frédéric Chopin",
+        "author_url": null,
+        "excerpt": {
+          "start": 20,
+          "end": 80
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam"
+      }
+    },
+    {
+      "id": "q-20913",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "japanese-food",
+      "bundle": "base",
+      "description": "Ein Koch, eine glühend heiße Platte und eine Schlange hungriger Bahnreisender, die keine Sekunde länger warten wollen.",
+      "question": "Schau genau hin: Welchen japanischen Straßensnack bereitet dieser Koch zu?",
+      "answer": "Takoyaki",
+      "wrong_answers": [
+        "Taiyaki",
+        "Okonomiyaki",
+        "Dorayaki"
+      ],
+      "hints": [
+        "Obendrauf kommen meist eine süße braune Soße, Mayonnaise und hauchdünne Fischflocken, die in der Hitze zu tanzen scheinen.",
+        "Es ist eines der berühmtesten Straßengerichte aus Osaka.",
+        "Der Name beginnt mit dem japanischen Wort für Krake: „tako“."
+      ],
+      "fun_fact": "Takoyaki soll 1935 in Osaka von einem Straßenhändler namens Tomekichi Endo erfunden worden sein.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Man_bakt_takoyaki%27s_in_het_restaurantje_Takomasa_in_station_Shin-Osaka%2C_-februari_2020.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMan_bakt_takoyaki%27s_in_het_restaurantje_Takomasa_in_station_Shin-Osaka%2C_-februari_2020.webm",
+        "credit": "エミコ グラヴェル · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "エミコ グラヴェル",
+        "author_url": null,
+        "excerpt": {
+          "start": 24,
+          "end": 54
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20914",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "traditional-dress",
+      "bundle": "base",
+      "description": "Zwei Tänzer sorgen dafür, dass hier niemand mehr in den Ärmel niesen muss.",
+      "question": "Schau zu: Aus welcher Weltregion stammt dieser traditionelle Paartanz mit diesen Kostümen?",
+      "answer": "Südostasien",
+      "wrong_answers": [
+        "Südasien",
+        "Polynesien",
+        "Zentralasien"
+      ],
+      "hints": [
+        "Achte auf die flache schwarze Mütze des Mannes und das gemusterte Tuch um seine Hüfte.",
+        "Die Region liegt am Äquator und hat Zehntausende tropische Inseln.",
+        "Denk an die Länder zwischen Thailand und Australien."
+      ],
+      "fun_fact": "Das ist der malaiische „Tari Sapu Tangan“, was einfach „Taschentuchtanz“ heißt, und er wird meist zum Volkslied „Cek Minah Sayang“ getanzt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Tari_Sapu_Tangan_2.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATari_Sapu_Tangan_2.webm",
+        "credit": "Mhd Tri Dewantara · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Mhd Tri Dewantara",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20915",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Bevor eine Rakete groß rauskommt, muss sie erst mal aufstehen – wie alle anderen auch.",
+      "question": "Schau hin: Um diese Startrampe stehen dünne Masten, die sogar höher sind als die Rakete. Wozu dienen sie vor allem?",
+      "answer": "Blitze abfangen, bevor sie die Rakete treffen",
+      "wrong_answers": [
+        "Flutlichter für Starts bei Nacht halten",
+        "Den Wind vor dem Start messen",
+        "Funksignale an die Rakete senden"
+      ],
+      "hints": [
+        "Ihre Höhe ist der ganze Trick: Sie müssen das Höchste auf der Startrampe sein.",
+        "Eine vollgetankte Rakete auf freiem Feld während eines Gewitters bereitet große Sorgen.",
+        "Benjamin Franklin erfand eine viel kleinere Version für Hausdächer."
+      ],
+      "fun_fact": "Am NASA-Startkomplex 39B in Florida bilden Drähte zwischen hohen Türmen ein riesiges Netz, das Raketen vor Blitzen schützt.",
+      "media": {
+        "type": "video",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Antares_Raising_-_20161014.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAntares_Raising_-_20161014.webm",
+        "credit": "Bill Ingalls · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Bill Ingalls",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20917",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Irgendwo prüft gerade ein Klavierstimmer nervös die tiefen Töne.",
+      "question": "Hör zu: Dieses Klavierstück beginnt mit schweren, langsamen Akkorden, dann wird es schnell. Welche berühmte Beethoven-Sonate ist das?",
+      "answer": "Pathétique",
+      "wrong_answers": [
+        "Mondscheinsonate",
+        "Appassionata",
+        "Waldsteinsonate"
+      ],
+      "hints": [
+        "Es ist eine frühe Sonate, geschrieben, bevor Beethoven 30 wurde.",
+        "Anders als „Mondschein“ stand dieser Beiname schon bei der Erstveröffentlichung, und Beethoven war damit einverstanden.",
+        "Ihr französischer Beiname kommt vom griechischen Wort „Pathos“, das tiefes Gefühl oder Leiden bedeutet."
+      ],
+      "fun_fact": "Billy Joel übernahm die Melodie des langsamen zweiten Satzes dieser Sonate für seinen Song „This Night“ von 1983.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/Beethoven%2C_Sonata_No._8_in_C_Minor_Pathetique%2C_Op._13_-_I._Grave_-_Allegro_di_molto_e_con_brio.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABeethoven%2C_Sonata_No._8_in_C_Minor_Pathetique%2C_Op._13_-_I._Grave_-_Allegro_di_molto_e_con_brio.ogg",
+        "credit": "Ludwig van Beethoven · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Part_of_a_modern_piano_%2842603499014%29.jpg/3840px-Part_of_a_modern_piano_%2842603499014%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APart_of_a_modern_piano_%2842603499014%29.jpg",
+        "credit": "Dejan Krsmanovic · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Dejan Krsmanovic",
+        "author_url": "https://www.flickr.com/people/155403590@N07"
+      }
+    },
+    {
+      "id": "q-20919",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Das ganze Dorf macht sich schick, und die Berge haben Logenplätze.",
+      "question": "Schau hin: Diese Prozession in einem Bergdorf in Kolumbien gehört zu welchem Fest?",
+      "answer": "Fronleichnam",
+      "wrong_answers": [
+        "Karneval",
+        "Dreikönigstag",
+        "Tag der Toten"
+      ],
+      "hints": [
+        "Es ist ein katholisches Fest, hier hat also die Kirche das Sagen, nicht die Partyveranstalter.",
+        "Es fällt in den späten Frühling oder Frühsommer, etwa zwei Monate nach Ostern.",
+        "Sein lateinischer Name bedeutet „Leib Christi“."
+      ],
+      "fun_fact": "In Atánquez spielen mit Palmblättern bedeckte Tänzer Vögel, die vor bösen Geistern warnen; dann kommen die Teufel und schließlich Tänzer mit Holzschwertern, die sie vertreiben.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Corpus_Christi_in_Atanquez.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACorpus_Christi_in_Atanquez.webm",
+        "credit": "Kankuama · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Kankuama",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20922",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "strange-creatures",
+      "bundle": "base",
+      "description": "Ein Gartenbesucher, so gemütlich, dass neben ihm sogar ein Faultier wie ein Rennwagen wirkt.",
+      "question": "Schau dir diese Nacktschnecke an: Was sitzt an den Spitzen der zwei langen Fühler oben auf ihrem Kopf?",
+      "answer": "Ihre Augen",
+      "wrong_answers": [
+        "Ihre Ohren",
+        "Ihre Zähne",
+        "Ihre Stacheln"
+      ],
+      "hints": [
+        "Wird sie berührt, kann die Schnecke diese Fühler in den Kopf zurückziehen.",
+        "Schnecken mit Haus haben die gleichen hohen Fühler, und sie helfen ihnen, sich zurechtzufinden.",
+        "An jeder Spitze sitzt ein winziger dunkler Punkt, der Hell und Dunkel unterscheiden kann."
+      ],
+      "fun_fact": "Eine Nacktschnecke hat keine Kauzähne wie wir, aber ihre raue, zungenartige Raspel ist mit Tausenden winziger Zähnchen besetzt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Haltern_-_Naturwildpark_Granat_-_Arion_rufus_03_%281%29_ies.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHaltern_-_Naturwildpark_Granat_-_Arion_rufus_03_%281%29_ies.webm",
+        "credit": "Frank Vincentz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Frank Vincentz",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 40
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20924",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Ein Flugzeug, so lang, dass es Anlauf braucht, nur um mit dem Abheben fertig zu werden.",
+      "question": "Schau hin: Welches Flugzeug fliegt in diesem Clip?",
+      "answer": "Boeing B-52 Stratofortress",
+      "wrong_answers": [
+        "Boeing 747 Jumbo-Jet",
+        "Tupolew Tu-160 Blackjack",
+        "Avro Vulcan"
+      ],
+      "hints": [
+        "Zähl die Triebwerke unter den Flügeln: Es sind mehr als bei fast jedem anderen Flugzeug.",
+        "Achte auf das sehr hohe Seitenleitwerk und die langen, dünnen Flügel, die am Boden nach unten hängen.",
+        "Sein offizieller Name verbindet die hohe Luftschicht über den Wolken mit einer burgartigen Festung."
+      ],
+      "fun_fact": "Die B-52 ist seit 1955 im Dienst, und die US-Luftwaffe will sie bis in die 2050er-Jahre fliegen lassen – fast 100 Jahre insgesamt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/B-52H_Flying_over_the_Mojave_Desert_in_California.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AB-52H_Flying_over_the_Mojave_Desert_in_California.webm",
+        "credit": "NASA Armstrong Flight Research Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Armstrong Flight Research Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20925",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Diese Zimmerpflanze bewegt sich mehr als der Mensch, der sie gießt.",
+      "question": "Schau dir diesen Zeitraffer einer Pflanze an: Wie heißt diese Art von Blattbewegung?",
+      "answer": "Nyktinastie",
+      "wrong_answers": [
+        "Phototropismus",
+        "Gravitropismus",
+        "Thigmonastie"
+      ],
+      "hints": [
+        "Genau hinschauen: Die Blätter wachsen nicht auf etwas zu. Sie klappen zusammen und öffnen sich wieder.",
+        "Die Pflanze macht das in einem täglichen Rhythmus, ein bisschen wie Schlafengehen und Aufwachen.",
+        "Der Name kommt vom griechischen Wort für „Nacht“ und dem griechischen Wort für „zusammengedrückt“."
+      ],
+      "fun_fact": "1729 stellte der französische Forscher Jean-Jacques d'Ortous de Mairan eine Mimose in einen dunklen Schrank und sah, dass sie ihre Blätter weiter pünktlich öffnete und schloss – einer der ersten Hinweise auf eine innere Uhr bei Lebewesen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Time_lapse_clover.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_lapse_clover.webm",
+        "credit": "Philip Matarese · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "Philip Matarese",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20926",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "traditional-dress",
+      "bundle": "base",
+      "description": "Eine Tanzfläche, auf der jedes Outfit eingebaute Aufschläge hat und niemand Turnschuhe trägt … na ja, fast niemand.",
+      "question": "Schau zu: Die Männer tragen knielange Gewänder mit breiten weißen Aufschlägen. In welchem Land wird dieser Volkstanz aufgeführt?",
+      "answer": "Bhutan",
+      "wrong_answers": [
+        "Nepal",
+        "Mongolei",
+        "Myanmar"
+      ],
+      "hints": [
+        "Das Gewand der Männer heißt Gho, das knöchellange Wickelkleid der Frauen heißt Kira.",
+        "Dieses kleine Königreich in den Bergen liegt zwischen China und Indien.",
+        "Dieses Land misst seinen Erfolg berühmterweise am „Bruttonationalglück“."
+      ],
+      "fun_fact": "In Bhutan sind Gho und Kira die Nationaltracht, und man soll sie in der Schule, in Behörden und auf Festen tragen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/A_Bhutanese_Folk_dance_that_says%2C_%22See_you_next_year_with_same_good_health_and_happiness%2C%22.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_Bhutanese_Folk_dance_that_says%2C_%22See_you_next_year_with_same_good_health_and_happiness%2C%22.webm",
+        "credit": "Bhutan Swallowtail · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Bhutan Swallowtail",
+        "author_url": null,
+        "excerpt": {
+          "start": 31,
+          "end": 58
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20927",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "christmas",
+      "bundle": "base",
+      "description": "Das Dezemberlied, das jede Familie mindestens einmal summt – meist nur die erste Strophe.",
+      "question": "Hör zu: Welches Weihnachtslied singt dieser Chor?",
+      "answer": "Stille Nacht, heilige Nacht",
+      "wrong_answers": [
+        "Jingle Bells",
+        "O du fröhliche",
+        "We Wish You a Merry Christmas"
+      ],
+      "hints": [
+        "Es ist eines der am häufigsten aufgenommenen Lieder der Welt.",
+        "Es wurde 1818 zum ersten Mal in einer kleinen Kirche in Österreich gesungen, begleitet von einer Gitarre.",
+        "Sein Titel beschreibt einen ruhigen, friedlichen Abend."
+      ],
+      "fun_fact": "„Stille Nacht“ von Joseph Mohr und Franz Xaver Gruber wurde in mehr als 300 Sprachen übersetzt.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Silent_Night_-_Singing_Sergeants_-_United_States_Air_Force_Band.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASilent_Night_-_Singing_Sergeants_-_United_States_Air_Force_Band.mp3",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Composition: Franz Xaver Gruber; Lyrics: John F. Young; Performance: United States Air Force Band; Recording: United States Air Force",
+        "author_url": null,
+        "excerpt": {
+          "start": 36,
+          "end": 62
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Sohlberg-Storgaten_R%C3%B8ros_1904.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASohlberg-Storgaten_R%C3%B8ros_1904.jpg",
+        "credit": "Harald Sohlberg · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Harald Sohlberg",
+        "author_url": "https://en.wikipedia.org/wiki/en:Harald_Sohlberg"
+      }
+    },
+    {
+      "id": "q-20928",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Der Wecker der Natur, und keiner weiß mehr, wer ihn gestellt hat.",
+      "question": "Hör zu: Dieser laute, ratternde Ruf ist überall in Süd- und Südostasien zu hören, von Städten bis Reisfeldern. Welcher Vogel ist das?",
+      "answer": "Braunliest",
+      "wrong_answers": [
+        "Halsbandsittich",
+        "Hirtenmaina",
+        "Indischer Koel"
+      ],
+      "hints": [
+        "Dieser Vogel hat einen riesigen roten Schnabel, viel zu groß für seinen Kopf.",
+        "Rücken und Flügel leuchten in kräftigem, glänzendem Türkisblau.",
+        "Seine Familie ist berühmt dafür, kopfüber ins Wasser zu tauchen, aber er fängt oft Eidechsen und Insekten an Land."
+      ],
+      "fun_fact": "Obwohl er zur Familie der Eisvögel gehört, lebt der Braunliest oft weit weg vom Wasser und frisst gern Heuschrecken, Eidechsen und sogar kleine Schlangen.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/W.B.Kingfisher.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AW.B.Kingfisher.ogg",
+        "credit": "Shajiarikkad · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Shajiarikkad",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 27.4
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Rice_18_lo_%285038157502%29.jpg/3840px-Rice_18_lo_%285038157502%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARice_18_lo_%285038157502%29.jpg",
+        "credit": "CIAT · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "CIAT",
+        "author_url": "https://www.flickr.com/people/38476503@N08"
+      }
+    },
+    {
+      "id": "q-20929",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Eine Bühne, ein Publikum und genug Klatschen, um eine Kleinstadt die ganze Nacht mit Strom zu versorgen.",
+      "question": "Schau hin: Zu welchem Volk gehört dieser traditionelle Tanz mit weißen Röcken, schwarzen Streifen und gemeinsamem Gesang?",
+      "answer": "Xhosa",
+      "wrong_answers": [
+        "Zulu",
+        "Massai",
+        "Ndebele"
+      ],
+      "hints": [
+        "Die Heimat dieser Tänzer liegt ganz im Süden des afrikanischen Kontinents.",
+        "Ihre Sprache ist berühmt für ihre vielen Klicklaute.",
+        "Nelson Mandela wurde in der Provinz Ostkap in dieses Volk hineingeboren."
+      ],
+      "fun_fact": "Miriam Makebas weltberühmter „Click Song“ wird in der Sprache dieses Volkes gesungen, mitsamt Klicklauten.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/AmaXhosa_traditional_dance.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmaXhosa_traditional_dance.webm",
+        "credit": "Sanda Nozizwe Madikane · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Sanda Nozizwe Madikane",
+        "author_url": null,
+        "excerpt": {
+          "start": 40,
+          "end": 70
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20930",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Gleiche Melodie, neues Outfit: Dieses Stück hat sein übliches Instrument zu Hause gelassen und ist mit winzigen Hämmerchen aufgetaucht.",
+      "question": "Hör zu: Diese berühmte Bach-Melodie, hier auf einem Hackbrett gespielt, eröffnet welches Werk?",
+      "answer": "Cellosuite Nr. 1",
+      "wrong_answers": [
+        "Toccata und Fuge d-Moll",
+        "Air auf der G-Saite",
+        "Brandenburgisches Konzert Nr. 3"
+      ],
+      "hints": [
+        "Die Originalfassung wurde für einen einzigen Musiker geschrieben, der ganz allein ohne Begleitung spielt.",
+        "Das Originalinstrument wird mit einem Bogen gespielt und steht beim Spielen zwischen den Knien auf dem Boden.",
+        "Es eröffnet eine Reihe von sechs Stücken für den großen, tief klingenden Verwandten der Geige."
+      ],
+      "fun_fact": "Bachs Cellosuiten waren fast vergessen, bis der junge Pablo Casals 1890 in einem Antiquariat in Barcelona eine alte Ausgabe fand und sie weltberühmt machte.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Kevin_MacLeod_-_J_S_Bach_Cello_Suite_1_in_G_on_Dulcimer_-_Prelude.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKevin_MacLeod_-_J_S_Bach_Cello_Suite_1_in_G_on_Dulcimer_-_Prelude.ogg",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Guy_Van_Looy_presenting_his_multimedia_blues_presentation_entitled_%27Portraits_in_Blues_57%3B_Het_SPIVEY_PLATENLABEL%27_%28meaning_The_SPIVEY_RECORD_LABEL%29_at_the_Antwerp_Jazz_Club_%28AJC%29_%2813_September_2016%29.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGuy_Van_Looy_presenting_his_multimedia_blues_presentation_entitled_%27Portraits_in_Blues_57%3B_Het_SPIVEY_PLATENLABEL%27_%28meaning_The_SPIVEY_RECORD_LABEL%29_at_the_Antwerp_Jazz_Club_%28AJC%29_%2813_September_2016%29.jpg",
+        "credit": "Vincent Mia Edie Verheyen · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Vincent Mia Edie Verheyen",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Vincent_Mia_Edie_Verheyen"
+      }
+    },
+    {
+      "id": "q-20932",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Jeder Sportler auf dem Siegertreppchen träumt von dieser Melodie, aber kaum jemand im Stadion kann sie mitsummen.",
+      "question": "Hör zu: Das ist eine Nationalhymne, ohne Gesang gespielt. Zu welchem Land gehört sie?",
+      "answer": "Slowenien",
+      "wrong_answers": [
+        "Slowakei",
+        "Kroatien",
+        "Tschechien"
+      ],
+      "hints": [
+        "Dieses Land ist 2004 der Europäischen Union beigetreten.",
+        "Es gehörte früher zu Jugoslawien.",
+        "Seine Hauptstadt ist Ljubljana."
+      ],
+      "fun_fact": "Der Text der Hymne stammt aus dem Gedicht „Trinkspruch“ von France Prešeren, das auf den Tag anstößt, an dem alle Völker ohne Krieg in Frieden leben.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Slovenia%27s_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASlovenia%27s_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20933",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Die Nachbarn dieses Fliegerhorsts haben den Mittagsschlaf schon vor langer Zeit aufgegeben.",
+      "question": "Schau hin: Welcher Kampfjet ist hier zu sehen?",
+      "answer": "F-35 Lightning II",
+      "wrong_answers": [
+        "F-22 Raptor",
+        "Eurofighter Typhoon",
+        "Dassault Rafale"
+      ],
+      "hints": [
+        "Es ist ein US-Tarnkappenjet, den heute Luftwaffen vieler Länder fliegen, von Japan bis Norwegen.",
+        "Genau hinsehen: Diese Version kann in der Luft schweben und fast senkrecht landen – das kann keiner der anderen drei.",
+        "Sein Beiname bedeutet auf Deutsch dasselbe wie das, was bei einem Gewitter am Himmel zuckt."
+      ],
+      "fun_fact": "Zum Schweben nutzt die F-35B einen großen Ventilator hinter dem Cockpit, den das Haupttriebwerk antreibt, während sich die hintere Düse nach unten dreht.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/da/F-35B_Lighting_II_training_flights.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AF-35B_Lighting_II_training_flights.ogv",
+        "credit": "Donato Maffin and Waiyan Tin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Donato Maffin and Waiyan Tin",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20934",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Aufstehen, Hand aufs Herz und bloß nicht mitsummen!",
+      "question": "Hör zu: Welches Land hat diese Nationalhymne?",
+      "answer": "Frankreich",
+      "wrong_answers": [
+        "Italien",
+        "Belgien",
+        "Mexiko"
+      ],
+      "hints": [
+        "Die Flagge dieses Landes hat drei senkrechte Streifen.",
+        "Das Lied entstand 1792, während einer berühmten Revolution, die die Herrschaft der Könige beendete.",
+        "Die Hymne ist nach einer großen Hafenstadt am Mittelmeer benannt."
+      ],
+      "fun_fact": "„La Marseillaise“ wurde 1792 eigentlich in Straßburg geschrieben – ihren Namen bekam sie von Freiwilligen aus Marseille, die sie beim Einmarsch in Paris sangen.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/La_Marseillaise_Rouget_de_Lisle_Musique_de_la_Garde_R%C3%A9publicaine.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Marseillaise_Rouget_de_Lisle_Musique_de_la_Garde_R%C3%A9publicaine.ogg",
+        "credit": "Rouget de l'Isle · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Rouget de l'Isle",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 55
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-20935",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Irgendwo auf einem stillen Teich klopft eine Ente an eine Tür, die es gar nicht gibt.",
+      "question": "Hör zu: Welche Ente macht auf dem Wasser diese kurzen, klopfenden „tuck-tuck“-Rufe?",
+      "answer": "Löffelente",
+      "wrong_answers": [
+        "Stockente",
+        "Eiderente",
+        "Mandarinente"
+      ],
+      "hints": [
+        "Es ist nicht das klassische „Quak“ vom Bauernhof, das die meisten kennen.",
+        "Sie frisst, indem sie den Kopf hin und her schwenkt und winzige Nahrung aus dem Wasser siebt.",
+        "Ihr riesiger, breiter Schnabel sieht aus wie ein Gartenwerkzeug zum Graben."
+      ],
+      "fun_fact": "Gruppen von Löffelenten schwimmen manchmal eng im Kreis, um Futter vom Teichboden aufzuwirbeln.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Northern_shoveler.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANorthern_shoveler.ogg",
+        "credit": "Bubulcus · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Bubulcus",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Pond_Stawiki%2C_pier_and_beach%2C_Sosnowiec.jpg/3840px-Pond_Stawiki%2C_pier_and_beach%2C_Sosnowiec.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APond_Stawiki%2C_pier_and_beach%2C_Sosnowiec.jpg",
+        "credit": "Krzysztof Popławski · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Krzysztof Popławski",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Stimoroll"
+      }
+    },
+    {
+      "id": "q-20936",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Frühstück im Bett ist schön, aber Frühstück als handliches Päckchen, das man auf dem Weg zum Bus essen kann, ist schöner.",
+      "question": "Sieh hin: Welcher Pfannkuchen vom Straßenstand wird hier zubereitet?",
+      "answer": "Jianbing",
+      "wrong_answers": [
+        "Okonomiyaki",
+        "Dosa",
+        "Bánh xèo"
+      ],
+      "hints": [
+        "Dieser Pfannkuchen ist ein beliebtes Frühstück für unterwegs, früh morgens an Wagen und Ständen gekauft.",
+        "Achte auf das Ei, das über den dünnen Teig gestrichen wird, die Frühlingszwiebeln und die aufgepinselte Soße, bevor alles gefaltet wird.",
+        "Er stammt aus dem Norden Chinas, wo Städte wie Tianjin und die Provinz Shandong für ihn berühmt sind."
+      ],
+      "fun_fact": "Einer Legende nach entstand Jianbing, als die Soldaten eines chinesischen Generals ihre Woks verloren hatten und den Teig auf flachen Metallschilden über dem Feuer backten.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/The_making_process_of_Shandong_multigrain_pancakes.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_making_process_of_Shandong_multigrain_pancakes.webm",
+        "credit": "Franklin Rainier · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "Franklin Rainier",
+        "author_url": null,
+        "excerpt": {
+          "start": 65,
+          "end": 95
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20937",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Hand in Hand: Schritt, Kick, wieder von vorn, und bloß nie den kleinen Finger des Nachbarn loslassen.",
+      "question": "Schau hin: Die Männer tragen weite Hosen und breite Stoffschärpen, alle tanzen in einer Reihe verbunden. Welches Volk tanzt hier?",
+      "answer": "Die Kurden",
+      "wrong_answers": [
+        "Die Griechen",
+        "Die Georgier",
+        "Die Serben"
+      ],
+      "hints": [
+        "Schau dir die Männer an: Ihre weiten Hosen sind am Knöchel gerafft, und die Schärpe ist viele Male um die Hüfte gewickelt.",
+        "Solche Tänzer feiern ein Neujahr, das auf den ersten Frühlingstag fällt.",
+        "Dieses Volk lebt dort, wo die Türkei, Iran, Irak und Syrien aufeinandertreffen, und tanzt so an seinem Neujahrsfest Newroz um Feuer, etwa in Erbil."
+      ],
+      "fun_fact": "Kurdische Reihentänze heißen oft „Govend“ oder „Halay“, und wer vorne in der Reihe tanzt, gibt mit einem geschwenkten Taschentuch die Schritte vor.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/World_Culture_Festival_2011_-_Kurdish_Folk_Dance_from_Iraq.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWorld_Culture_Festival_2011_-_Kurdish_Folk_Dance_from_Iraq.webm",
+        "credit": "Silke Blumbach · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Silke Blumbach",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20938",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "space-race-and-astronauts",
+      "bundle": "base",
+      "description": "Die Heimkehr aus dem All ist weniger „sanfte Landung“ als „großer Auftritt“.",
+      "question": "Schau mal: Die Raumkapsel glüht hell orange, während sie zur Erde zurückstürzt. Warum wird sie so heiß?",
+      "answer": "Luft wird vor ihr stark zusammengepresst",
+      "wrong_answers": [
+        "Ihre Triebwerke feuern nach hinten",
+        "Sonnenlicht wird von ihrem Schild zurückgeworfen",
+        "Restlicher Treibstoff verbrennt in den Tanks"
+      ],
+      "hints": [
+        "Der Weltraum ist fast leer, und die Kapsel beginnt erst nahe der Erde zu glühen.",
+        "Sie ist mehr als 25-mal so schnell wie der Schall.",
+        "Die Luft vor ihr kann nicht schnell genug ausweichen und wird zerquetscht, bis sie glüht."
+      ],
+      "fun_fact": "Beim Wiedereintritt kann die Luft vor einer Kapsel heißer werden als die Oberfläche der Sonne, deshalb schützt ein Hitzeschild an der Unterseite die Astronauten.",
+      "media": {
+        "type": "video",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Boeing_CST-100_to_Transport_U.S._Astronauts_to_the_International_Space_Station_fuwPdH6UChc.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoeing_CST-100_to_Transport_U.S._Astronauts_to_the_International_Space_Station_fuwPdH6UChc.webm",
+        "credit": "NASAKennedy · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASAKennedy",
+        "author_url": null,
+        "excerpt": {
+          "start": 22,
+          "end": 52
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20939",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Italienisch ist die Amtssprache der Notenblätter, und dieser Pianist spricht sie fließend.",
+      "question": "Hör zu: Über diesem Klavierstück steht eine italienische Tempoangabe. Welche passt zu dem, was du hörst?",
+      "answer": "Presto",
+      "wrong_answers": [
+        "Adagio",
+        "Andante",
+        "Allegretto"
+      ],
+      "hints": [
+        "In der Musik sagen italienische Wörter dem Spieler, wie schnell er spielen soll.",
+        "Achte darauf, wie schnell die Töne vorbeiziehen: Schlendert der Pianist oder hetzt er?",
+        "Es ist eine der schnellsten Angaben überhaupt; nur ihre Form auf „-issimo“ ist noch schneller."
+      ],
+      "fun_fact": "Presto bedeutet auf Italienisch „schnell“ und ist schneller als Allegro; nur Prestissimo ist noch schneller.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Piano_Sonata_No._7_%28Beethoven%29%2C_First_Movement.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiano_Sonata_No._7_%28Beethoven%29%2C_First_Movement.ogg",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 5,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Boesendorfer-5075415.jpg/3840px-Boesendorfer-5075415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+        "credit": "ermell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell"
+      }
+    },
+    {
+      "id": "q-20941",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Ein Stück, das so höflich beginnt, dass man dazu Tee und kleine Törtchen servieren könnte.",
+      "question": "Hör zu: Dieses sanfte Thema eröffnet eine berühmte Klaviersonate. Unter welchem Beinamen ist die ganze Sonate bekannt?",
+      "answer": "„Alla turca“-Sonate",
+      "wrong_answers": [
+        "„Mondschein“-Sonate",
+        "„Appassionata“-Sonate",
+        "„Waldstein“-Sonate"
+      ],
+      "hints": [
+        "Der Komponist lebte und arbeitete in Wien.",
+        "Der letzte Satz der Sonate ist viel berühmter als dieses Anfangsthema.",
+        "Dieser letzte Satz ahmt die Militärkapellen des osmanischen Heeres nach."
+      ],
+      "fun_fact": "Ungewöhnlich: Keiner der drei Sätze dieser Sonate steht in Sonatenhauptsatzform – sie beginnt stattdessen mit einem Thema und sechs Variationen.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/Piano_Sonata_No._11%2C_Tema.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiano_Sonata_No._11%2C_Tema.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 40
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Closeup_of_the_old_broken_piano_keys.jpg/3840px-Closeup_of_the_old_broken_piano_keys.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACloseup_of_the_old_broken_piano_keys.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      }
+    },
+    {
+      "id": "q-20942",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Das grimmigste Gesicht der Feier ist eigentlich da, um das Pech zu verjagen.",
+      "question": "Schau hin: Dieser Maskentanz ist eine Tradition von der Südküste welches Inselstaats?",
+      "answer": "Sri Lanka",
+      "wrong_answers": [
+        "Indonesien",
+        "Philippinen",
+        "Japan"
+      ],
+      "hints": [
+        "Das Land liegt im tropischen Asien, nicht weit vom Äquator.",
+        "Die Stadt Ambalangoda dort ist berühmt für geschnitzte, bemalte Holzmasken wie diese.",
+        "Es ist die tropfenförmige Insel direkt südlich von Indien, berühmt für ihren Tee."
+      ],
+      "fun_fact": "In Sri Lanka wird der Gara-Yaka-Tanz traditionell am Ende eines Rituals aufgeführt, um Pech und den „bösen Blick“ aus einem Dorf zu vertreiben.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/The_Low_Country_%22Garayak%22_dance.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Low_Country_%22Garayak%22_dance.webm",
+        "credit": "Iamironviper · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Iamironviper",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20943",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Sonst schleppt er langweilige Fracht, aber einmal im Jahr darf er sich schick machen und auf die Party gehen.",
+      "question": "Schau hin: Welche Art von Güterwagen sind die geschmückten roten Wagen direkt hinter der Lok?",
+      "answer": "Gedeckte Güterwagen",
+      "wrong_answers": [
+        "Kesselwagen",
+        "Schüttgutwagen",
+        "Flachwagen"
+      ],
+      "hints": [
+        "Überleg, wovor diese Wagenart ihre Ladung schützt: Regen, Schnee und Wind.",
+        "Diese Wagen sind ganz geschlossen und haben große Schiebetüren an der Seite.",
+        "Sie sehen aus wie riesige Pappkartons auf Rädern – mit festem Dach obendrauf."
+      ],
+      "fun_fact": "Der Holiday Train von Canadian Pacific (heute CPKC) rollte 1999 zum ersten Mal los, und bei seinen Halten in Kanada und den USA wurden Geld und Essen für örtliche Tafeln gesammelt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/2024_CPKC_Holiday_Train%2C_Courtice%2C_Ontario.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A2024_CPKC_Holiday_Train%2C_Courtice%2C_Ontario.webm",
+        "credit": "Drozwik Drones · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Drozwik Drones",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 27
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20944",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Der Mars bekommt überraschend Besuch, und der Rover hat nicht mal einen Besen dabei.",
+      "question": "Schau hin: Die Kamera eines Rovers auf dem Mars filmte, wie dieses rosa markierte Etwas auf ihn zukam. Was ist es?",
+      "answer": "Staubteufel",
+      "wrong_answers": [
+        "Vorbeifahrender Rover",
+        "Erdrutsch",
+        "Hubschrauber Ingenuity"
+      ],
+      "hints": [
+        "Achte darauf, wie nah es kommt: erst 50 bis 60 Meter entfernt, dann 30 Meter.",
+        "Die weiße Linie zeigt, wie der Luftdruck sinkt, während es näher kommt.",
+        "Auf der Erde sieht man an sonnigen Tagen manchmal einen kleinen über einem heißen, trockenen Feld kreiseln."
+      ],
+      "fun_fact": "Weil die Marsluft so dünn ist, klingt der Staubteufel, den das SuperCam-Mikrofon von Perseverance 2021 aufnahm, viel leiser und dumpfer als derselbe Wirbel auf der Erde.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/SuperCams_Microphone_Records_a_Martian_Dust_Devil.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASuperCams_Microphone_Records_a_Martian_Dust_Devil.webm",
+        "credit": "NASA/JPL-Caltech/LANL/CNES/CNRS/INTA-CSIC/Space Science Institute/ISAE-Supaero · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/JPL-Caltech/LANL/CNES/CNRS/INTA-CSIC/Space Science Institute/ISAE-Supaero",
+        "author_url": null,
+        "excerpt": {
+          "start": 3.5,
+          "end": 9.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20946",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Ein Training, bei dem die Geräte aus Bambus geflochten sind und die Musik nie Pause macht.",
+      "question": "Schau hin: Welche Arbeit stellen diese Tänzer aus Assam in Indien mit Körben und Handwerkzeugen auf der Bühne dar?",
+      "answer": "Felder bestellen",
+      "wrong_answers": [
+        "Stoff weben",
+        "Tiere jagen",
+        "Boote bauen"
+      ],
+      "hints": [
+        "Achte darauf, was die Tänzer auf dem Rücken und an den Armen tragen.",
+        "Schau, wie die Männer sich tief bücken und ihre Werkzeuge zum Boden schwingen.",
+        "Der Tanz zeigt Landwirtschaft: Land roden, pflanzen und dann ernten."
+      ],
+      "fun_fact": "Der Hamzar-Tanz der Rabha in Assam zeigt den Kreislauf der Landwirtschaft, vom Roden des Waldes über den Reisanbau bis zur Ernte, begleitet von Trommeln und traditionellen Instrumenten.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/01/Rabha_Hamzar_dance_of_Assam%2C_where_culture%2C_energy_and_heritage_come_alive_in_every_step.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARabha_Hamzar_dance_of_Assam%2C_where_culture%2C_energy_and_heritage_come_alive_in_every_step.webm",
+        "credit": "JyotiPN · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "JyotiPN",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-20948",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Manche fischen nach Komplimenten, diese Leute fischen lieber mit einem Eimer im Graben.",
+      "question": "Schau hin: Familien fangen diese Tiere für ein berühmtes Fest im Spätsommer. In welchem Land begann diese Tradition?",
+      "answer": "Schweden",
+      "wrong_answers": [
+        "Dänemark",
+        "Niederlande",
+        "Island"
+      ],
+      "hints": [
+        "Beim Kochen werden die Tiere leuchtend rot; man isst sie kalt mit Dill.",
+        "Auf dem Fest tragen die Gäste Papierhüte, hängen Laternen in Form eines lachenden Mondes auf und singen kurze Trinklieder.",
+        "Aus diesem Land kommen auch IKEA und ABBA."
+      ],
+      "fun_fact": "Schwedens heimische Flusskrebse wurden von der Krebspest schwer getroffen, deshalb holte man in den 1960er-Jahren Signalkrebse aus Nordamerika, die heute viele Seen und Bäche füllen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Kr%C3%A4ftfiske_i_Sm%C3%A5land%2C_augusti_2019.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKr%C3%A4ftfiske_i_Sm%C3%A5land%2C_augusti_2019.webm",
+        "credit": "Holger.Ellgaard · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Holger.Ellgaard",
+        "author_url": null,
+        "excerpt": {
+          "start": 40,
+          "end": 70
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20949",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "photography",
+      "bundle": "base",
+      "description": "Irgendwo in Japan wird ein Flughafen auf eine sehr ungewöhnliche Art fotografiert.",
+      "question": "Schau hin: Welche Fototechnik gibt diesem echten Flughafen neben dem schnellen Zeitraffer seinen besonderen Look?",
+      "answer": "Tilt-Shift",
+      "wrong_answers": [
+        "Fischaugenobjektiv",
+        "Langzeitbelichtung",
+        "Infrarotfotografie"
+      ],
+      "hints": [
+        "Achte darauf, welche Teile jedes Bildes scharf und welche unscharf sind.",
+        "Nur ein schmaler Streifen in der Mitte ist scharf, so wie bei einer Nahaufnahme von etwas sehr Kleinem.",
+        "Die Flugzeuge und Tankwagen sehen am Ende aus wie Spielzeug auf einer Modelleisenbahn-Anlage."
+      ],
+      "fun_fact": "Tilt-Shift-Objektive wurden ursprünglich für Architekturfotos gebaut, damit hohe Gebäude nicht nach hinten zu kippen scheinen, lange bevor man damit winzige Modellwelten vortäuschte.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Time-lapse_and_tilt-shift_views_of_Osaka_International_Airport%2C_Osaka%2C_Japan.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_and_tilt-shift_views_of_Osaka_International_Airport%2C_Osaka%2C_Japan.webm",
+        "credit": "darwinfish105 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "darwinfish105",
+        "author_url": null,
+        "excerpt": {
+          "start": 7,
+          "end": 37
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20950",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Ein Training, bei dem jeder sein eigenes Schlagzeug mitbringt und keiner aus dem Takt kommt.",
+      "question": "Schau hin: Dieser Festtanz, bei dem die Tänzer Trommeln tragen, ist eine berühmte Tradition welches Ortes?",
+      "answer": "Okinawa",
+      "wrong_answers": [
+        "Tahiti",
+        "Bali",
+        "Hawaii"
+      ],
+      "hints": [
+        "Der Ort ist eine Inselgruppe.",
+        "Er war einst ein unabhängiges Königreich mit eigenem König.",
+        "Heute gehört er zu Japan, weit südlich von Tokio, und ist bekannt für Menschen, die sehr alt werden."
+      ],
+      "fun_fact": "Dieser Tanz heißt Eisa und wird traditionell beim sommerlichen Obon-Fest aufgeführt, um die Geister der Ahnen zu begrüßen und wieder nach Hause zu schicken.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Mother%E2%80%99s_Day_Eisa_Dance_2025_%28963551%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMother%E2%80%99s_Day_Eisa_Dance_2025_%28963551%29.webm",
+        "credit": "U.S. Marine Corps video by Sgt. Frank Webb · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Marine Corps video by Sgt. Frank Webb",
+        "author_url": null,
+        "excerpt": {
+          "start": 21,
+          "end": 46
+        }
+      },
+      "background": null
     }
   ]
 }
