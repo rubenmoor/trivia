@@ -81,6 +81,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Questions with `media.excerpt` go into the playable pools with it (`pool_export.MEDIA_PLAY_FIELDS`).
 - Never touch the ledger `work/media-first/files.jsonl` or the survey `work/media-survey/`; the batch maintains them.
 - After the merge the run deletes the cached files it downloaded that no pool pick (any checkout's pools, `app/data/`, `mods/`) or other unfinished run uses (task 2140; prints count and GB freed); `trivia-media sync --prune` does the same for the whole cache (picks of every git worktree incl. `../trivia-review`, `app/data/` and `mods/` are kept).
+- After a batch's spot check and QC (`authoring/QC.md`), `qgen gc` (`--dry-run` first) deletes that batch's `work/<batch>/sheets/` and the frames, thumbs and pictures of probes only finished, checked batches use (`probe.json`, `speech.txt`, `ocr.txt` stay); the review page then shows no picture for them.
 
 ## What the batch does (for reference)
 

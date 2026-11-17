@@ -25,6 +25,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen flag [--dry-run] < reports.txt   # pasted player reports become needs_work reviews (plan 93)
     qgen flag --pull [--url URL] [--dry-run]   # the report server's reports, then acked (token: TRIVIA_REPORT_TOKEN or state/report-token)
     qgen telemetry --pull [--url URL] [--from FILE] [--dry-run]   # opt-in telemetry sessions → state/played/stats.json, then acked (plan 109)
+    qgen gc [--dry-run] [--unchecked]  # delete finished, checked batches' sheets and probe pictures from work/ (task 2182)
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen video-window [--dry-run] [--model opus]   # every video question cut to its 30 s window and re-checked (plan 216)
@@ -1970,6 +1971,11 @@ def media_first_steps(run, jobs, files, ns):
 
 # --- health ack, rework, scans: tighten, neutralize ---------------------------
 
+def cmd_gc(args):
+    import work_gc  # authoring/tools/work_gc.py
+    work_gc.cmd_gc(args)
+
+
 def cmd_health_ack(args):
     """The developer has looked at a failing batch: records the look, a warning of `qgen batch` goes (decision 414)."""
     import health  # authoring/tools/health.py (imports qgen)
@@ -2144,6 +2150,10 @@ def main():
     au.add_argument("--dry-run", action="store_true", help="with --backlog: list the slice's ids, change nothing")
     add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
+    gp = sub.add_parser("gc", help="delete finished, checked batches' sheets and probe pictures from work/ (task 2182)")
+    gp.set_defaults(fn=cmd_gc, run=None)
+    gp.add_argument("--dry-run", action="store_true", help="count, delete nothing")
+    gp.add_argument("--unchecked", action="store_true", help="also batches without a complete spot check (from before spot checks)")
     hp = sub.add_parser("health", help="batch health (plan 15)").add_subparsers(dest="action", required=True)
     ha = hp.add_parser("ack", help="the developer has looked at a failing batch: records the look, `qgen batch` warns no more (decision 414)")
     ha.set_defaults(fn=cmd_health_ack)
