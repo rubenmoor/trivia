@@ -55,6 +55,7 @@ Open the page on the TV's browser and go fullscreen. Pick or type a player name,
 ```sh
 trivia-media sync --status approved     # downloads every picked file that isn't cached yet
 trivia-media sync --status approved --prune   # also deletes cached files no pool pick (base, bundles, translations; also in `../trivia-review`, the pm work trees and every other git worktree, `app/data/` and `mods/`) and no unfinished batch uses; prints count and MB freed; `qgen batch --media-first` also deletes its own unused downloads once merged
+qgen gc [--dry-run] [--unchecked]   # work/: deletes finished (run.json done) batches' `sheets/` and their probes' frames, thumbs and pictures once the spot check is complete (`--unchecked`: batches from before spot checks); keeps probe.json, speech.txt, ocr.txt; run after a batch's QC; prints count and GB freed
 trivia-media licenses                   # files to replace before a public release (licence audit)
 ```
 
