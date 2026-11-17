@@ -56429,6 +56429,41 @@ Last 30 lines:
 json.decoder.JSONDecodeError: Expecting '':'' delimiter: line 1 column 269 (char 268)
 claude: 268 calls (0 failed, 0 retried), opus 170 / sonnet 98, 775 turns, 6.9M tokens (6.1M cache), $23.62, 1h12m in calls
 ```', 'A batch of new sound and video questions was interrupted earlier and then resumed. The resumed batch made, checked and recorded all its questions, but stopped at the very last bookkeeping step because the interruption had left a half-written line in its log of AI calls. The choice is whether to wait for a small tool fix and then resume the batch, which only has the report step left, or to handle it some other way.', 'Wait for task 2165''s fix, then rerun the same command; it resumes batch-82 at the batch report', NULL, '2026-11-17T17:15:56Z', '2026-11-17T18:06:25Z', 2132, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (691, 'Continue batch-82 (media-first) after qgen validate rejected 21 video questions that play longer than 30 s?', 'answered', '["Run qgen video-window (all pools; it only touches the 21), then qgen export and trivia-media sync --status approved, then rerun qgen batch --media-first to finish batch-82: a worker task in plan 205 does it", "The developer runs qgen video-window by hand, then the same task reruns qgen batch --media-first", "Other: say what"]', 'Rerun after `task 2165: Media-first: a cut-off line in calls.jsonl breaks batch-report` (`decision 690: Continue batch-82 (media-first) after a cut-off line in its calls log broke the batch report?`): every step through export, sync and batch-report now passes (report `authoring/reports/batch-82.md`); the last step, `qgen validate`, exits 1 on 21 video questions of batch-82 (q-20890…q-20949) that play longer than 30 s (milestone 21''s 30 s video rule, `plan 216: Media-first pipeline: video at most 30 s`). Batch-82 designed its windows before `task 2167: Video windows at most 30 s in media-first design` and its questions were not yet in the pools when `task 2169: Run qgen video-window on all pools` ran. AGENTS.md: `qgen video-window` only when the developer asks; rerunning the batch alone can''t fix it (deterministic).
+
+Last 30 lines:
+```
+
+== [27/28] batch-report
+  report: authoring/reports/batch-82.md
+  report: authoring/reports/batches.md
+   batch-report took 10s (batch: 37s)
+
+== [28/28] validate
+q-20890: video without media.excerpt needs a media.duration of at most 30 s
+q-20891: media.excerpt longer than 30 s
+q-20894: media.excerpt longer than 30 s
+q-20902: media.excerpt longer than 30 s
+q-20904: media.excerpt longer than 30 s
+q-20905: media.excerpt longer than 30 s
+q-20908: media.excerpt longer than 30 s
+q-20909: video without media.excerpt needs a media.duration of at most 30 s
+q-20913: media.excerpt longer than 30 s
+q-20914: media.excerpt longer than 30 s
+q-20916: video without media.excerpt needs a media.duration of at most 30 s
+q-20919: video without media.excerpt needs a media.duration of at most 30 s
+q-20922: media.excerpt longer than 30 s
+q-20924: video without media.excerpt needs a media.duration of at most 30 s
+q-20929: media.excerpt longer than 30 s
+q-20933: media.excerpt longer than 30 s
+q-20936: media.excerpt longer than 30 s
+q-20937: video without media.excerpt needs a media.duration of at most 30 s
+q-20938: media.excerpt longer than 30 s
+q-20948: media.excerpt longer than 30 s
+q-20949: media.excerpt longer than 30 s
+
+`qgen validate` failed. Stop and report the output.
+```', 'The latest batch of sound and video questions was made just before the rule that a video question plays at most 30 seconds, so 21 of its video clips are too long and the final check refuses the batch. A separate command cuts each clip to 30 seconds and re-checks that the clue is still in it, moving failures back for rework, but it is only run on the developer''s request. The choice is whether to run that command on this batch now and then finish it, or to handle these questions another way.', 'Run qgen video-window inside task 2132''s next run, after pm restores its stash (9805134e: batch-82''s questions are only there): video-window on all pools (only batch-82''s 21 change), then qgen export and trivia-media sync --status approved, then rerun qgen batch --media-first, which resumes at validate. Allowed for this run despite D-36. The batch''s report and funnel count the windows cut to needs_work.', NULL, '2026-11-17T18:58:49Z', '2026-11-17T19:04:17Z', 2132, NULL, 'once', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -58910,6 +58945,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2383, 2165, '2026-11-17T18:49:37Z', '2026-11-17T18:53:01Z', 'done', NULL, 0, '66423b2709ec9447d5af81f08b34e36ba530c702', 'questions', 'claude-sonnet-5-5', 'cbe73f88-81ba-4706-8d33-ac7fb2a7dcfe', NULL, 13, 26, 4208, 508001, 32015, 0.2209921, 46873, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2384, 2178, '2026-11-17T18:50:44Z', '2026-11-17T18:51:45Z', 'done', NULL, 0, '14e1f9dd5f3ee1ea58d8ac785b9123a5041418a3', NULL, 'claude-sonnet-5-5', '68910786-a2f7-458e-9149-797b505f93bc', NULL, 12, 24, 3869, 484824, 34986, 0.2271644, 49442, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2385, 2179, '2026-11-17T18:53:02Z', '2026-11-17T18:55:37Z', 'done', NULL, 0, '40ea034c99dee69189b520063a0b4a5f0607b04e', 'questions', 'claude-sonnet-5-5', 'cbe73f88-81ba-4706-8d33-ac7fb2a7dcfe', 2383, 5, 12, 1217, 248537, 5860, 0.2814798, 52428, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2386, 2132, '2026-11-17T18:55:37Z', '2026-11-17T18:58:59Z', 'blocked', 'left 4 files unstaged, stashed as 9805134e for the task''s next run', 0, '09b8aa6fce603e8f19aa3d2f0663e24e72bff0cf', 'questions', 'claude-opus-5-5', '7fccdf94-9701-472e-97b6-1355fe016567', NULL, 11, 22, 4210, 437943, 32897, 0.43505260000000007, 47252, 60, 978519);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -59649,6 +59685,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2119, 680);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2132, 687);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2132, 688);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2132, 690);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2132, 691);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2156, 689);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
