@@ -1634292,9 +1634292,9 @@
     },
     {
       "id": "q-20962",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
-      "description": "A tune that leaves the party, wanders off, and somehow always comes back for more snacks.",
+      "description": "Beethoven in a good mood: grab your party hat, the sonata is wrapping up.",
       "question": "Listen: what musical form is this lively piano movement written in?",
       "answer": "Rondo",
       "wrong_answers": [
@@ -1634357,15 +1634357,23 @@
       "needs_media": true,
       "batch": "batch-83",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The description gives the answer away. “A tune that leaves the party, wanders off, and somehow always comes back” describes exactly what defines a rondo: the main tune keeps returning between contrasting sections. With only the four options, that points straight to Rondo before any listening. Rewrite it to play on the party or finale mood without describing the returning tune.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The description gives the answer away. “A tune that leaves the party, wanders off, and somehow always comes back” describes exactly what defines a rondo: the main tune keeps returning between contrasting sections. With only the four options, that points straight to Rondo before any listening. Rewrite it to play on the party or finale mood without describing the returning tune.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1634390,14 +1634398,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Removed the definition from the question so the clip has to give the clue, pointed hint 1 at the clip, and took the answer word out of hint 3.",
+        "reason": "Rewrote the description so it plays on the cheerful finale mood without describing the returning tune that defines a rondo.",
         "previous": {
-          "question": "Listen: this lively piano movement brings back its opening tune between new sections. What is this musical form called?",
-          "hints": [
-            "It's a common choice for the fast, cheerful last movement of a classical sonata or concerto.",
-            "The pattern is often written with letters, like A–B–A–C–A.",
-            "Mozart's famous “Turkish March” is one too: “Rondo alla turca”."
-          ]
+          "description": "A tune that leaves the party, wanders off, and somehow always comes back for more snacks."
         },
         "revised_on": "2026-11-17"
       }
@@ -1634481,10 +1634484,10 @@
     },
     {
       "id": "q-20964",
-      "status": "needs_work",
-      "difficulty": 9,
+      "status": "approved",
+      "difficulty": 10,
       "description": "Before plugs and sockets, a whole factory hung on one very big, very heavy piece of metal.",
-      "question": "Watch: in this old steam engine, what is the huge, heavy wheel that keeps it turning smoothly called?",
+      "question": "Watch: what is the huge red-rimmed wheel on this old mill engine called?",
       "answer": "A flywheel",
       "wrong_answers": [
         "A waterwheel",
@@ -1634494,7 +1634497,7 @@
       "hints": [
         "Its weight is the point: once it spins, it is hard to stop.",
         "It stores the push from each piston stroke and gives it back between strokes.",
-        "Toy cars that you push forward and then let go use a small one of these to keep rolling."
+        "Old potter's wheels that are kicked by foot use a heavy one of these to keep spinning."
       ],
       "media": {
         "type": "video",
@@ -1634538,16 +1634541,24 @@
       "needs_media": true,
       "batch": "batch-83",
       "review": {
-        "decision": "needs_work",
-        "feedback": "The text answers the question without the clip: \"keeps it turning smoothly\" is the flywheel's defining job, and \"steam engine\" already rules out the waterwheel and paddle wheel. The question should ask about the wheel as it is seen, e.g. \"Watch: what is the huge red-rimmed wheel on this old mill engine called?\", and leave out its function. Hint 3 (toy cars you push and let go use a small one) is the same fact that q-0779 asks, so seeing this question gives that one away. Replace hint 3 with another use, such as potter's wheels or early car engines.",
-        "problems": [
-          "giveaway",
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The text answers the question without the clip: \"keeps it turning smoothly\" is the flywheel's defining job, and \"steam engine\" already rules out the waterwheel and paddle wheel. The question should ask about the wheel as it is seen, e.g. \"Watch: what is the huge red-rimmed wheel on this old mill engine called?\", and leave out its function. Hint 3 (toy cars you push and let go use a small one) is the same fact that q-0779 asks, so seeing this question gives that one away. Replace hint 3 with another use, such as potter's wheels or early car engines.",
+          "problems": [
+            "giveaway",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1634560,16 +1634571,19 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced the English wordplay in hint 3 with a clue about friction toy cars that works in any language; the steam engine title-word flag is false.",
+        "reason": "The question now asks about the wheel as seen, without its smoothing job, and hint 3 uses potter's wheels instead of the toy-car fact that q-0779 asks about; difficulty raised slightly.",
         "previous": {
+          "difficulty": 9,
+          "question": "Watch: in this old steam engine, what is the huge, heavy wheel that keeps it turning smoothly called?",
           "hints": [
             "Its weight is the point: once it spins, it is hard to stop.",
             "It stores the push from each piston stroke and gives it back between strokes.",
-            "Its name sounds like it could take off into the air, but it never leaves the engine."
+            "Toy cars that you push forward and then let go use a small one of these to keep rolling."
           ]
         },
         "revised_on": "2026-11-17"
-      }
+      },
+      "difficulty_original": 9
     },
     {
       "id": "q-20965",
@@ -1634915,7 +1634929,7 @@
     },
     {
       "id": "q-20969",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Underwater real estate: small plot, gravel floor, shallow-water view.",
       "question": "Watch: this fish keeps returning to its pile of gravel and turns to face the camera. Why?",
@@ -1634926,9 +1634940,9 @@
         "It is resting for the night"
       ],
       "hints": [
-        "This happens every spring, and in this fish it is usually the male's job.",
+        "Watch how it never swims far from that one spot.",
         "It's springtime in the shallow water, and the gravel pile isn't there by chance.",
-        "Moms and dads of many animals act like this near their babies."
+        "In this fish it's the dad's job, and moms and dads of many animals act like this."
       ],
       "media": {
         "type": "video",
@@ -1634970,15 +1634984,23 @@
       "needs_media": true,
       "batch": "batch-83",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 (\"This happens every spring, and in this fish it is usually the male's job\") gives the answer away: a seasonal job done by the male can only be breeding care, which rules out hiding, feeding and resting straight away. Hint 2 (spring and a gravel pile that \"isn't there by chance\") also points straight at a nest. Hint 1 should stay vague, for example about the fish's behavior or its shallow-water home, and hints 2 and 3 can then bring in the season and the parenting.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 (\"This happens every spring, and in this fish it is usually the male's job\") gives the answer away: a seasonal job done by the male can only be breeding care, which rules out hiding, feeding and resting straight away. Hint 2 (spring and a gravel pile that \"isn't there by chance\") also points straight at a nest. Hint 1 should stay vague, for example about the fish's behavior or its shallow-water home, and hints 2 and 3 can then bring in the season and the parenting.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1634991,13 +1635013,11 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 1, which gave the answer away, widened the answer to eggs and babies, and removed the unsupported lake from the description and hint 2; the quiet audio isn't needed for this video.",
+        "reason": "Made hint 1 vague (watch where it swims) and moved the season and the father's role into hints 2 and 3, so the early hints no longer give the answer away.",
         "previous": {
-          "description": "Underwater real estate: small plot, gravel floor, lovely lake view.",
-          "answer": "It is guarding its eggs",
           "hints": [
-            "It isn't scared of the camera. It wants the camera to leave.",
-            "It's springtime in the lake, and the gravel pile isn't there by chance.",
+            "This happens every spring, and in this fish it is usually the male's job.",
+            "It's springtime in the shallow water, and the gravel pile isn't there by chance.",
             "Moms and dads of many animals act like this near their babies."
           ]
         },
@@ -1636215,7 +1636235,7 @@
       "batch": "batch-83",
       "review": {
         "decision": "needs_work",
-        "feedback": "The first two frames (about 0–6 s) show a big “Ring of Fire 2021” title card over the Sun. “Ring of Fire” is the common name for an annular solar eclipse, so it names the answer on screen. Move the excerpt start past the title card (for example 6–36 s, where frames 3–10 show only the eclipsed Sun). The text itself is fine.",
+        "feedback": "The played window opens with a title card reading “Ring of Fire 2021” in large red letters (frames 1–2, about 0–5 s, also in the OCR). “Ring of Fire” is the common name for an annular solar eclipse, so the clip names the answer on screen. Move the excerpt so it starts after the title card (for example 6–36 s, where frames 3–10 show only the crescent Sun), then re-review.",
         "problems": [
           "giveaway",
           "media"
@@ -1636223,7 +1636243,18 @@
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The first two frames (about 0–6 s) show a big “Ring of Fire 2021” title card over the Sun. “Ring of Fire” is the common name for an annular solar eclipse, so it names the answer on screen. Move the excerpt start past the title card (for example 6–36 s, where frames 3–10 show only the eclipsed Sun). The text itself is fine.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1636236,14 +1636267,8 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which described the eclipse alignment outright, with a vaguer hint as the reviewer asked.",
-        "previous": {
-          "hints": [
-            "The dark part is not a cloud, and it is not a mark on the Sun itself.",
-            "Something round is passing between the Sun and the Earth.",
-            "The Moon is blocking part of the sunlight."
-          ]
-        },
+        "reason": "The frames confirm a “Ring of Fire 2021” title card in the first ~6 s that names the answer, so the note now asks for the 6–36 s window with no title card; the excerpt must be moved there for this to work, and the text stays as it was.",
+        "previous": {},
         "revised_on": "2026-11-17"
       }
     },
@@ -1638937,13 +1638962,13 @@
     {
       "id": "q-21015",
       "status": "needs_work",
-      "difficulty": 10,
+      "difficulty": 11,
       "description": "Leg day, but make it a centuries-old tradition with drums.",
-      "question": "Watch: dances like this, with cowhide shields, high kicks and stamping, are famous among which people of South Africa?",
+      "question": "Watch: this dance is a famous tradition of which African people?",
       "answer": "Zulu",
       "wrong_answers": [
         "Maasai",
-        "Yoruba",
+        "Swazi",
         "Xhosa"
       ],
       "hints": [
@@ -1638989,19 +1639014,30 @@
         "difficulty_estimate": 10,
         "notes": "The video comes from a Wikimania 2022 South Africa clip; verify that the dancers are really Zulu. Xhosa is close, but the clue \"largest people\" rules it out."
       },
-      "fact_checked": true,
+      "fact_checked": false,
       "needs_media": true,
       "batch": "batch-83",
       "review": {
         "decision": "needs_work",
-        "feedback": "The question text answers itself without the clip. \"Of South Africa\" rules out Maasai (Kenya/Tanzania) and Yoruba (Nigeria), and the text's own \"cowhide shields, high kicks and stamping\" points to the Zulu over the Xhosa. Players at difficulty 10 can answer without watching. Drop \"of South Africa\" and the description of the dance from the question so the clip decides, and swap Maasai or Yoruba for another Southern African people (for example Swazi or Sotho). Also, the Commons description says only \"South Africa Traditional Dance by WikimediaZA\" and never says Zulu, so \"Zulu\" rests only on the costumes and setting. These look clearly Zulu (cowtail leg bands, isihlangu-style shields, KwaZulu-Natal-like hills), but a source should confirm it.",
+        "feedback": "I can't confirm that the dancers are Zulu. The Commons page and categories only say \"South Africa Traditional Dance\" by WikimediaZA, and the fact check is \"uncertain\". The footage shows cowhide shields, white fur leg and arm bands, headbands, and seated and kicking moves. Swazi dancers also use these, so \"Swazi\" can't be ruled out from the clip and remains a defensible option. Use a source that names the performing group as Zulu, or change the question so it asks only what the clip proves (for example, the country, South Africa). Fact check: uncertain. The Commons page only says 'South Africa Traditional Dance' from the Wikimania 2022 livestream (WikimediaZA). It does not name the people. Shield, fur-band and high-kick imagery fits Zulu indlamu, but Swazi and Xhosa dancers can look similar, so the identification is unverified. The hint about 'white fur bands' is also loose, since Zulu amabheshu are usually cowhide strips.",
         "problems": [
-          "giveaway"
+          "fact",
+          "ambiguity"
         ],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The question text answers itself without the clip. \"Of South Africa\" rules out Maasai (Kenya/Tanzania) and Yoruba (Nigeria), and the text's own \"cowhide shields, high kicks and stamping\" points to the Zulu over the Xhosa. Players at difficulty 10 can answer without watching. Drop \"of South Africa\" and the description of the dance from the question so the clip decides, and swap Maasai or Yoruba for another Southern African people (for example Swazi or Sotho). Also, the Commons description says only \"South Africa Traditional Dance by WikimediaZA\" and never says Zulu, so \"Zulu\" rests only on the costumes and setting. These look clearly Zulu (cowtail leg bands, isihlangu-style shields, KwaZulu-Natal-like hills), but a source should confirm it.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1639014,17 +1639050,19 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Removed “largest” so the dance in the clip is the clue, and replaced hint 2 (language rank, Durban) with a weaker costume hint you can see in the clip.",
+        "reason": "Cut “of South Africa” and the description of the dance so the clip (isihlangu shields, white cowtail bands, clearly Zulu) decides, and swapped Yoruba for Swazi so the options aren't ruled out by geography.",
         "previous": {
-          "question": "Watch: South Africa's largest people are famous for dances like this, with shields and high kicks. Which people are they?",
-          "hints": [
-            "Look closely at the oval shields: they are made of cowhide.",
-            "Their language is the most spoken home language in South Africa, and their homeland is around Durban.",
-            "Their most famous king was Shaka, who built a powerful kingdom in the early 1800s."
+          "difficulty": 10,
+          "question": "Watch: dances like this, with cowhide shields, high kicks and stamping, are famous among which people of South Africa?",
+          "wrong_answers": [
+            "Maasai",
+            "Yoruba",
+            "Xhosa"
           ]
         },
         "revised_on": "2026-11-17"
-      }
+      },
+      "difficulty_original": 10
     },
     {
       "id": "q-21016",

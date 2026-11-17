@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "5cc19024",
+  "hash": "de95681f",
   "questions": [
     {
       "id": "q-0001",
@@ -211983,6 +211983,53 @@
       "background": null
     },
     {
+      "id": "q-20962",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Beethoven in a good mood: grab your party hat, the sonata is wrapping up.",
+      "question": "Listen: what musical form is this lively piano movement written in?",
+      "answer": "Rondo",
+      "wrong_answers": [
+        "Fugue",
+        "Canon",
+        "Passacaglia"
+      ],
+      "hints": [
+        "Listen for a tune you heard at the very start: this form is a common choice for the fast, cheerful last movement of a classical sonata.",
+        "The pattern is often written with letters, like A–B–A–C–A.",
+        "Mozart's famous “Turkish March”, the last movement of his Piano Sonata No. 11, is written in this form too."
+      ],
+      "fun_fact": "This is the finale of Beethoven's Piano Sonata No. 25, which is so short and light that it is often called the “Sonatina”.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Klaviersonate_Nr._25_G-Dur_op_79_-_III._Vivace.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKlaviersonate_Nr._25_G-Dur_op_79_-_III._Vivace.ogg",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Boesendorfer-5075415.jpg/3840px-Boesendorfer-5075415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+        "credit": "ermell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell"
+      }
+    },
+    {
       "id": "q-20963",
       "status": "approved",
       "difficulty": 8,
@@ -212016,6 +212063,44 @@
         "excerpt": {
           "start": 8,
           "end": 38
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20964",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "inventions",
+      "bundle": "base",
+      "description": "Before plugs and sockets, a whole factory hung on one very big, very heavy piece of metal.",
+      "question": "Watch: what is the huge red-rimmed wheel on this old mill engine called?",
+      "answer": "A flywheel",
+      "wrong_answers": [
+        "A waterwheel",
+        "A paddle wheel",
+        "A cogwheel"
+      ],
+      "hints": [
+        "Its weight is the point: once it spins, it is hard to stop.",
+        "It stores the push from each piston stroke and gives it back between strokes.",
+        "Old potter's wheels that are kicked by foot use a heavy one of these to keep spinning."
+      ],
+      "fun_fact": "Flywheels are still used today, for example to store energy in some race cars and to help steady power grids.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Steam_engine_1903_%E2%80%93_Mueller_Woollen_Cloth_Mill.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASteam_engine_1903_%E2%80%93_Mueller_Woollen_Cloth_Mill.ogv",
+        "credit": "Tfme · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Tfme",
+        "author_url": null,
+        "excerpt": {
+          "start": 20,
+          "end": 50
         }
       },
       "background": null
@@ -212131,6 +212216,41 @@
           "start": 40,
           "end": 70
         }
+      },
+      "background": null
+    },
+    {
+      "id": "q-20969",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "fish",
+      "bundle": "base",
+      "description": "Underwater real estate: small plot, gravel floor, shallow-water view.",
+      "question": "Watch: this fish keeps returning to its pile of gravel and turns to face the camera. Why?",
+      "answer": "It is guarding its eggs and babies",
+      "wrong_answers": [
+        "It is hiding from a bigger fish",
+        "It is digging for worms to eat",
+        "It is resting for the night"
+      ],
+      "hints": [
+        "Watch how it never swims far from that one spot.",
+        "It's springtime in the shallow water, and the gravel pile isn't there by chance.",
+        "In this fish it's the dad's job, and moms and dads of many animals act like this."
+      ],
+      "fun_fact": "In pumpkinseed sunfish, the male builds the nest and then guards it, fanning the eggs with his fins to keep them clean and supplied with oxygen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Pumpkinseed_sunfish_guarding_his_nest_%2834467468511%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APumpkinseed_sunfish_guarding_his_nest_%2834467468511%29.webm",
+        "credit": "U.S. Fish and Wildlife Service - Midwest Region · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Fish and Wildlife Service - Midwest Region",
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     },
