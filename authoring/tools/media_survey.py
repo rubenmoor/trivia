@@ -10,7 +10,7 @@ import json, re, time, urllib.parse
 from collections import Counter, defaultdict
 
 import atomic, layout, progress, providers
-from media import MAX_AUDIO_SECONDS  # authoring/tools/media.py
+from media import max_seconds  # authoring/tools/media.py
 from providers import commons
 
 OUT = layout.WORK / "media-survey"
@@ -213,13 +213,13 @@ def apply_filters(by_seed, in_pool):
                 continue
             t = TYPE_OF[rec["mediatype"]]
             kept.append({**rec, "licence_kind": providers.licence_kind(rec["license"]), "type": t,
-                         "needs_excerpt": (rec["duration"] or 0) > MAX_AUDIO_SECONDS,
+                         "needs_excerpt": (rec["duration"] or 0) > max_seconds(t),
                          "seed": seed["id"], "kind": seed["kind"], "class": seed["class"], "base_categories": seed["cats"]})
     return kept, counts
 
 
 def tally(kept):
-    """Rows per (category, kind, class, type): files, short (<= MAX_AUDIO_SECONDS) and needing an excerpt.
+    """Rows per (category, kind, class, type): files, short (<= max_seconds(type)) and needing an excerpt.
     A file counts under each of its seed's categories."""
     rows = defaultdict(lambda: {"files": 0, "short": 0, "excerpt": 0})
     for f in kept:
@@ -238,7 +238,7 @@ def tally_md(kept, rows, counts, calls, seconds):
             sub = [r for r in rows if r["type"] == t and r["class"] == cls]
             if not sub:
                 continue
-            lines += [f"## {t}, class {cls}", "", "| category | kind | files | ≤ 60 s | needs excerpt |", "|---|---|---|---|---|"]
+            lines += [f"## {t}, class {cls}", "", "| category | kind | files | ≤ limit | needs excerpt |", "|---|---|---|---|---|"]
             lines += [f"| {r['category']} | {r['kind']} | {r['files']} | {r['short']} | {r['excerpt']} |" for r in sub]
             lines.append("")
     by_class = Counter((f["type"], f["class"]) for f in kept)

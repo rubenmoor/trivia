@@ -17,7 +17,7 @@ from types import SimpleNamespace
 
 import atomic, categories, layout, progress
 import media_probe, media_survey, providers
-from media import MAX_AUDIO_SECONDS, excerpt_schema, pick_fields  # authoring/tools/media.py
+from media import MAX_AUDIO_SECONDS, MAX_VIDEO_SECONDS, excerpt_schema, max_seconds, pick_fields  # authoring/tools/media.py
 
 MF_DESIGNED = 120        # designed questions per run (≈ 100 approved at the pilot's look share)
 PROBE_JOBS = 4          # probes are local (ffmpeg, whisper), more than the claude calls' 3
@@ -333,8 +333,12 @@ def problems(q, p, model_check=None):
     from validate import media_first_problems
     m = q["media"]
     out = check_question_shape(q) + media_first_problems(q)
-    if m["duration"] > MAX_AUDIO_SECONDS and not m.get("excerpt"):
-        out.append(f"the file is {round(m['duration'])} s: needs an excerpt of at most {MAX_AUDIO_SECONDS} s")
+    limit = max_seconds(m["type"])
+    x = m.get("excerpt")
+    if m["duration"] > limit and not x:
+        out.append(f"the file is {round(m['duration'])} s: needs an excerpt of at most {limit} s")
+    elif m["type"] == "video" and x and x["end"] - x["start"] > limit:
+        out.append(f"the video excerpt is {round(x['end'] - x['start'])} s: at most {limit} s")
     hit = giveaway(q, p)
     if hit:
         out.append(f"giveaway: answer words heard or seen in the window (transcript/OCR): {', '.join(hit)}")
@@ -446,7 +450,7 @@ def subcategories():
 
 def prompt_file(name, *before):
     from qgen import prompt
-    return (prompt(*before, name, locale="en").replace("{max_s}", str(MAX_AUDIO_SECONDS))
+    return (prompt(*before, name, locale="en").replace("{max_video_s}", str(MAX_VIDEO_SECONDS)).replace("{max_audio_s}", str(MAX_AUDIO_SECONDS))
             .replace("{taxonomy}", taxonomy_text()))
 
 

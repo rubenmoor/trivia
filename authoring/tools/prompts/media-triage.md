@@ -29,7 +29,8 @@ Then:
 - `difficulty`: 1 very easy (a child knows it) … 5 expert; where the file allows a choice, lean toward the
   bands with the larger share in `difficulty_gaps`.
 - `kind`: the question kind.
-- `excerpt`: for a file longer than {max_s} s, the best window of {max_s} s or less (start, end in seconds,
+- `excerpt`: for a file longer than its limit ({max_video_s} s for video, {max_audio_s} s for audio), the best window
+  of at most that limit (start, end in seconds,
   from the frame times, the spectrogram, the speech); also when a shorter window is clearer or hides a
   giveaway; null when the whole file is fine.
 - `why_not`: unless `worth`, the reason in one line; else null.
