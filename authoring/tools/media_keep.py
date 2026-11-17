@@ -1,9 +1,9 @@
 """Which cached media files to keep, and `trivia-media sync --prune` (task 2139; the cache itself: media_cache.py)."""
-import json, re
+import json, re, subprocess
 from pathlib import Path
 
 from batches import unfinished_runs
-from layout import CANDIDATES, SOURCE_POOL, WORK
+from layout import CANDIDATES, REPO, SOURCE_POOL, WORK
 from media_cache import MEDIA, cache_path, pool_urls
 
 
@@ -23,13 +23,40 @@ def run_urls(run):
     return urls
 
 
+def checkout_roots():
+    """This checkout plus every other git worktree of the repo (trunk, trivia-review, pm work trees); missing dirs skipped."""
+    roots = [REPO]
+    try:
+        out = subprocess.run(["git", "-C", str(REPO), "worktree", "list", "--porcelain"],
+                             capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        out = ""
+    roots += [Path(l[9:]) for l in out.splitlines() if l.startswith("worktree ")]
+    return [r for i, r in enumerate(roots) if r.is_dir() and r.resolve() not in {x.resolve() for x in roots[:i] if x.is_dir()}]
+
+
+def other_urls(roots):
+    """Picks of every checkout's authoring pools, plus app/data (exported pools, demo lists) and mods/."""
+    urls = set()
+    for root in roots:
+        for base, pat in ((root / "authoring" / "data", "questions*.json"), (root / "app" / "data", "**/*.json"),
+                          (root / "mods", "**/*.json")):
+            if base.is_dir():
+                for f in base.glob(pat):
+                    if f.is_file():
+                        urls |= _urls_in(f)
+    return urls
+
+
 def keep_urls():
     """Every file_url the cache must keep (task 2139): picks of every authoring pool (base and bundles
     in questions.json, translations questions.<locale>.json) and every file an unfinished `qgen batch` run
-    still references (its files, plus the candidates of its questions in work/media/)."""
+    still references (its files, plus the candidates of its questions in work/media/); task 2181: also the
+    picks of every other checkout (git worktrees), their app/data and mods/."""
     urls = set()
     for pool in SOURCE_POOL.parent.glob("questions*.json"):
         urls |= pool_urls(pool)
+    urls |= other_urls(checkout_roots())
     for name in unfinished_runs():
         run = WORK / name
         urls |= run_urls(run)

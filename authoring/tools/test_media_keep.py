@@ -52,5 +52,29 @@ class Prune(unittest.TestCase):
         self.assertEqual(left, {mc.cache_path(url(n)).name for n in ["base", "de", "flight", "cand"]})
 
 
+class OtherSources(unittest.TestCase):
+    def test_other_checkouts_app_data_and_mods_kept(self):
+        d = Path(tempfile.mkdtemp())
+        self.addCleanup(shutil.rmtree, d)
+        media, work, data = d / "media", d / "work", d / "main" / "authoring" / "data"
+        for p in (media, work / "media", data, d / "wt" / "authoring" / "data", d / "main" / "app" / "data" / "demo",
+                  d / "main" / "mods" / "ex"):
+            p.mkdir(parents=True)
+        pool(data / "questions.json", [url("base")])
+        pool(d / "wt" / "authoring" / "data" / "questions.json", [url("other")])
+        pool(d / "main" / "app" / "data" / "demo" / "pool.json", [url("appdata")])
+        pool(d / "main" / "mods" / "ex" / "questions.json", [url("mod")])
+        roots = [d / "main", d / "wt", d / "missing"]
+        with mock.patch.object(mk, "MEDIA", media), mock.patch.object(mc, "MEDIA", media), \
+                mock.patch.object(mk, "SOURCE_POOL", data / "questions.json"), mock.patch.object(mk, "WORK", work), \
+                mock.patch.object(mk, "CANDIDATES", work / "media"), mock.patch("batches.WORK", work), \
+                mock.patch.object(mk, "checkout_roots", return_value=roots):
+            for n in ["base", "other", "appdata", "mod", "none"]:
+                mc.cache_path(url(n)).write_bytes(b"xx")
+            self.assertEqual(mk.prune(), (1, 2))
+            left = {f.name for f in media.iterdir()}
+        self.assertEqual(left, {mc.cache_path(url(n)).name for n in ["base", "other", "appdata", "mod"]})
+
+
 if __name__ == "__main__":
     unittest.main()
