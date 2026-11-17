@@ -80,6 +80,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Steps: inventory → probe → triage → design → giveaway → english-keys → rate → factcheck → revise → apply → rate → factcheck → merge → media (background image only) → sheets → review → fix → giveaway → research (background only) → media → sheets → review → record → audit → export → sync → batch-report → validate.
 - Questions with `media.excerpt` go into the playable pools with it (`pool_export.MEDIA_PLAY_FIELDS`).
 - Never touch the ledger `work/media-first/files.jsonl` or the survey `work/media-survey/`; the batch maintains them.
+- After the merge the run deletes the cached files it downloaded that no pool pick or other unfinished run uses (task 2140; prints count and GB freed); `trivia-media sync --prune` does the same for the whole cache.
 
 ## What the batch does (for reference)
 
