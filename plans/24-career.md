@@ -83,10 +83,10 @@ The career gives each player a long-term sense of progress: school-style subject
 - es, es-ES «Universidad» / «Acertar 15 preguntas de nivel universitario.»; en «College» / «Answer 15 college-level questions right.»; de «Universität» / «15 Fragen auf Universitätsniveau richtig beantworten.»
 - Trigger: 15 right at difficulty 13+, any subject (no diploma needed).
 
-### School years (4): `CAREER_YEAR_<AGEGROUP>`
-- `KIDS`, `YOUNG_TEENS`, `YOUNG_ADULTS`, `ADULTS`; trigger: 20 qualifying games played to the end (won or lost) in that age group, per player. The lowest difficulty (Kids) earns one, as the milestone asks; played, not won: it rewards coming back (`WIN_ALL_AGES` rewards winning).
-- Age group names from `app/data/names.<locale>.json` (es Niños/Adolescentes/Jóvenes/Adultos; en Kids/Teens/Young adults/Adults; de Kinder/Jugendliche/Junge Erwachsene/Erwachsene).
-- Kids: es «Año escolar: Niños» (es-ES «Curso escolar: Niños») / «Jugar 20 partidas completas en el grupo de edad Niños.»; en «School Year: Kids» / «Finish 20 games in the Kids age group.»; de «Schuljahr: Kinder» / «20 Spiele in der Altersgruppe Kinder zu Ende spielen.»; the others the same pattern.
+### Difficulty levels (4): `CAREER_YEAR_<AGEGROUP>`
+- `KIDS`, `YOUNG_TEENS`, `YOUNG_ADULTS`, `ADULTS`; trigger: 20 qualifying games played to the end (won or lost) on that difficulty, per player. The lowest difficulty (Easy) earns one, as the milestone asks; played, not won: it rewards coming back (`WIN_ALL_AGES` rewards winning).
+- Difficulty names from `app/data/names.<locale>.json` (es Fácil/Normal/Difícil/Experto; en Easy/Normal/Hard/Expert; de Leicht/Normal/Schwer/Experte); ids keep the old `KIDS`, `YOUNG_TEENS`, `YOUNG_ADULTS`, `ADULTS` (save and Steam API names).
+- Easy: es «Dificultad: Fácil» / «Jugar 20 partidas completas en dificultad Fácil.»; en «Difficulty: Easy» / «Finish 20 games on Easy difficulty.»; de «Schwierigkeit: Leicht» / «20 Spiele auf Schwierigkeit Leicht zu Ende spielen.»; the others the same pattern.
 
 ### Score (10): `CAREER_SCORE_<N>`
 - Milestones: **100, 250, 500, 1000, 2500, 5000, 10000, 25000, 50000, 100000** (the developer's first list 10…10000 was replaced by this one: a typical adult takes the first in an evening and the last in about two years of weekly play).

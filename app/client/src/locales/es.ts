@@ -706,7 +706,7 @@ const es = {
       ],
     },
   },
-  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject}, {group} age group. */
+  /** Career badge texts per family (plan 197, plans/24-career.md); built by `lib/badge-text.ts`. {n} thresholds, {subject}, {group} difficulty name. */
   career: {
     grade: { elementary: "Primaria", middle: "Secundaria", high: "Bachillerato", college: "Universidad" },
     subject: {
@@ -719,7 +719,7 @@ const es = {
       high: { name: "Título de bachiller", desc: "Aprobar bachillerato en las 7 asignaturas." },
     },
     college: { name: "Universidad", desc: "Acertar {n} preguntas de nivel universitario." },
-    year: { name: "Año escolar: {group}", desc: "Jugar {n} partidas completas en el grupo de edad {group}." },
+    year: { name: "Dificultad: {group}", desc: "Jugar {n} partidas completas en dificultad {group}." },
     score: { name: "{n} puntos", desc: "Llegar a {n} puntos." },
     /** The celebration on the badge page (plan 197). */
     new: { one: "¡Nueva insignia!", other: "¡{n} nuevas insignias!" },
