@@ -173,14 +173,25 @@ export function excerptOf(url) {
   const m = FRAGMENT.exec(url);
   return m ? { start: Number(m[1]), end: Number(m[2]) } : null;
 }
-const cut = (m) => {
-  const e = m?.excerpt;
-  if (!m?.file_url || !e || !["audio", "video"].includes(m.type) || !(e.start >= 0 && e.end > e.start)) return m;
-  const { excerpt, ...rest } = m;
-  return { ...rest, file_url: `${m.file_url}#t=${e.start},${e.end}` };
+// Longest video window, seconds; source: MAX_VIDEO_SECONDS in app/client/src/engine/pool.ts (client TS, can't import).
+const MAX_VIDEO_SECONDS = 30;
+// The window the game plays (pool.ts playWindow, without the file length): a video is capped at start + 30 s, no excerpt → 0–30.
+const windowOf = (m) => {
+  const e = m.excerpt;
+  if (m.type === "video") {
+    const start = e && e.start >= 0 && e.end > e.start ? e.start : 0;
+    return { start, end: Math.min(e && e.end > start ? e.end : Infinity, start + MAX_VIDEO_SECONDS) };
+  }
+  return e && e.start >= 0 && e.end > e.start ? e : null;
 };
-// The pool as the build ships it: excerpt questions point at their cut, no excerpt left (the player plays the whole file).
-export const shipPool = (pool) => ({ ...pool, questions: pool.questions.map((q) => (q.media?.excerpt ? { ...q, media: cut(q.media) } : q)) });
+const cut = (m) => {
+  const w = m?.file_url && ["audio", "video"].includes(m.type) ? windowOf(m) : null;
+  if (!w) return m;
+  const { excerpt, ...rest } = m;
+  return { ...rest, file_url: `${m.file_url}#t=${w.start},${w.end}` };
+};
+// The pool as the build ships it: excerpt questions point at their cut, no excerpt left (the player plays the whole file); every video cut to its ≤ 30 s window.
+export const shipPool = (pool) => ({ ...pool, questions: pool.questions.map((q) => (q.media?.excerpt || q.media?.type === "video" ? { ...q, media: cut(q.media) } : q)) });
 
 // Every picked file_url in the pool, like authoring/tools/media_cache.py pool_urls; stage-media.mjs ships the same set.
 export const poolUrls = ({ questions }) =>
