@@ -76,12 +76,12 @@ One unit, `--u = 100vw / 120` (16 px at 1920 px wide; it scales with the screen,
 
 The picture should stay visible; the interface floats over it.
 
-- **Sharp images (D-51):** native size in device pixels, scaled down to fit only when bigger than the screen, aspect ratio kept, centred over the night stage (`Stage.svelte`). Edges fade into the stage with a rounded feather (4.5 u, at most 20 % of a side). Decorative images stay blurred and full-bleed.
+- **Sharp images (D-51):** native size in device pixels, scaled down to fit only when bigger than the screen, aspect ratio kept, centred over the night stage (`Stage.svelte`). Edges fade into the stage with a rounded feather (4.5 u, at most 20 % of a side). Decorative images are blurred and full-bleed until the answer, then sharp (D-15).
 
 - **No full-width bands or gradients.** Every element over the image is a separate glass panel with rounded corners (1.2 u) and a `--glass-line` border, inside a **safe area** of 4 % per side (TV overscan, UI-6).
 - On the Question screen, at least **half of the picture** stays uncovered: the question card sits top-centre (max 70 % wide), the answer grid bottom-centre (70 % wide), and the sides stay free.
 - While the players wait for the reveal, the **picture** darkens and loses colour (brightness 40 %, saturation 30 %); the panels stay as they are, so the question and answers remain sharp.
-- Decorative images stay blurred with the big «?» (D-15); the «?» becomes Baloo 2 in `--paper` at 12 % opacity.
+- Decorative images stay blurred with the big «?» (D-15) while the question is open; from the submitted answer on they turn sharp over 0.8 s (`brightness(0.5)`, no desaturation) and the «?» fades out; the «?» becomes Baloo 2 in `--paper` at 12 % opacity.
 - `backdrop-filter` may stutter on a weak TV machine (OQ-11). Fallback: a setting that drops the blur and raises the alpha to 0.85 (VD-9).
 
 ## Layout of the Question screen

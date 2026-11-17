@@ -7,12 +7,14 @@
   import { mediaVolume, music } from "../sound.svelte.ts";
   import Stage from "../Stage.svelte";
   import { crossfade } from "../swap.ts";
+  import { reducedMotion } from "../timing.ts";
 
   let {
     question,
     shown,
     paused,
     dark,
+    sharp = false,
     failed = $bindable(false),
     onended,
   }: {
@@ -22,6 +24,8 @@
     paused: boolean;
     /** The final answer is out: the backdrop darkens until the reveal. */
     dark: boolean;
+    /** The answer is decided: a blurred picture turns sharp and stays so (D-15). */
+    sharp?: boolean;
     /** The media is missing or broken. */
     failed?: boolean;
     /** The audio/video ended, or failed to play. */
@@ -36,6 +40,8 @@
   }
   let player = $state<HTMLMediaElement>();
   let started = false;
+
+  const instant = reducedMotion();
 
   const media = $derived(question.media);
   /** Ours from the media cache; a mod's under /data/ (decision 128). */
@@ -124,7 +130,7 @@
   }
 </script>
 
-<div class="backdrop" class:dark in:crossfade|global out:crossfade|global>
+<div class="backdrop" class:dark class:sharp class:instant in:crossfade|global out:crossfade|global>
   {#if media.type === "video" && media.file_url}
     <!-- svelte-ignore a11y_media_has_caption -->
     <video
@@ -212,8 +218,22 @@
   .dark video {
     filter: brightness(0.4) saturate(0.3);
   }
-  .dark img.blurred {
-    filter: blur(calc(1.4 * var(--u))) brightness(0.3) saturate(0.3);
+  .backdrop img.blurred {
+    transition:
+      filter 0.8s,
+      transform 0.8s;
+  }
+  /* D-15: sharp from the answer on; one level, colours kept. */
+  .backdrop.sharp img.blurred {
+    filter: blur(0) brightness(0.5);
+    transform: scale(1);
+  }
+  .backdrop.sharp .mark {
+    opacity: 0;
+  }
+  .backdrop.instant img.blurred,
+  .backdrop.instant .mark {
+    transition: none;
   }
   .mark {
     position: absolute;
@@ -225,6 +245,7 @@
     font-weight: 800;
     color: var(--paper);
     opacity: 0.12;
+    transition: opacity 0.8s;
   }
   .credit {
     position: absolute;

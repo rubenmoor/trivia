@@ -357,7 +357,7 @@
         />
         {#if error}<p class="error-box">{error}</p>{/if}
       </footer>
-      <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} shown={shown && !flipping} {paused} dark={!!held && !revealed} onended={() => !held && music("timed")} />
+      <Media bind:this={mediaEl} bind:failed={mediaFailed} {question} shown={shown && !flipping} {paused} dark={!!held && !revealed} sharp={!!held} onended={() => !held && music("timed")} />
       {@const topic = topicOf(question.id)}
       {#if topic}<Splash {...topic} start={shown && !flipping} leave={!!held} />{/if}
     {/key}
