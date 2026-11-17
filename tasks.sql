@@ -48616,7 +48616,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
 - D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', '2026-11-17T16:52:16Z', 2142, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2151, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2151, 33, 'revise plan 33: Recorded music loops (UI-10)', 'revise', 'done', 1000, '2026-11-17, no change: plan 33 still fits plan 6 (the masterplan''s change is Part 10, blurred picture; Part 3 and task 150''s requirements 146, 1865 unchanged)', '`plan 6: masterplan`, the plan above `plan 33: Recorded music loops (UI-10)`, changed; it is quoted below. Bring `plan 33: Recorded music loops (UI-10)` in line with it
 (`pm plan edit 33 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -48702,7 +48702,7 @@ Milestone 6 closes the leftovers of M3/M4, preloading before a screen fades in (
 
 ## Order and constraints
 - Parts are independent, except: 2 → 3 shared conventions (done); 3 → 6 (plan 33''s set and pipeline); 6, 7 and 9 before `task 150: Close UI-10 in the plans`.
-- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', NULL, 2142, 0, NULL, NULL);
+- D-45 licences only; everything offline; no new npm or Python dependencies.', '2026-11-17T16:51:19Z', '2026-11-17T16:52:36Z', 2142, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2152, 191, 'revise plan 191: Category splash entrances and longer hold', 'revise', 'open', 1000, NULL, '`plan 6: masterplan`, the plan above `plan 191: Category splash entrances and longer hold`, changed; it is quoted below. Bring `plan 191: Category splash entrances and longer hold` in line with it
 (`pm plan edit 191 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -58569,6 +58569,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2346, 2149, '2026-11-17T16:51:27Z', '2026-11-17T16:52:04Z', 'done', NULL, 0, '6190b55ea390f6778f1c198144e3b7fa0a964b17', NULL, 'claude-opus-5-5', 'e1885357-fcfa-48b9-b2c1-ed488a4e0a43', NULL, 8, 16, 2674, 320510, 31558, 0.37011, 45907, 60, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2347, 2153, '2026-11-17T16:51:54Z', NULL, 'running', NULL, NULL, '6190b55ea390f6778f1c198144e3b7fa0a964b17', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 978519);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2348, 2150, '2026-11-17T16:52:05Z', '2026-11-17T16:52:21Z', 'done', NULL, 0, '637b8732a43212bc79bbeb69140a3024b089485c', NULL, 'claude-opus-5-5', '61af2d0b-e1d7-49d1-9ce7-9459f3b29a41', NULL, 2, 4, 875, 56836, 28658, 0.2581472, 43383, 60, 978519);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2349, 2151, '2026-11-17T16:52:21Z', '2026-11-17T16:52:41Z', 'done', NULL, 0, '32bd70050fec862fcc893feb610446c08e7b404d', NULL, 'claude-opus-5-5', 'ab661102-b155-43c6-bdc7-378ddaf4d967', NULL, 4, 8, 894, 141252, 29693, 0.28370639999999997, 44302, 60, 978519);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
