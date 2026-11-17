@@ -16,7 +16,7 @@ import patch_notes  # authoring/tools/patch_notes.py: `qgen patch-notes` (plan 9
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import demo  # authoring/tools/demo.py: `qgen demo` (plan 174)
 
-from media import MAX_AUDIO_SECONDS  # authoring/tools/media.py
+from media import max_seconds  # authoring/tools/media.py
 from qgen import PROBLEMS, check_question_shape, load_age_groups, load_bundles, load_json, natural_key  # authoring/tools/qgen.py
 
 
@@ -203,10 +203,12 @@ def media_first_problems(q):
             out.append("media.excerpt must be {start, end} numbers")
         elif not 0 <= x["start"] < x["end"]:
             out.append("media.excerpt needs 0 <= start < end")
-        elif x["end"] - x["start"] > MAX_AUDIO_SECONDS:
-            out.append(f"media.excerpt longer than {MAX_AUDIO_SECONDS} s")
+        elif x["end"] - x["start"] > max_seconds(m["type"]):
+            out.append(f"media.excerpt longer than {max_seconds(m['type'])} s")
         elif _num(d) and x["end"] > d:
             out.append("media.excerpt ends after media.duration")
+    if m.get("type") == "video" and m.get("excerpt") is None and not (_num(d) and 0 < d <= max_seconds("video")):
+        out.append(f"video without media.excerpt needs a media.duration of at most {max_seconds('video')} s")
     cls = mf.get("class") if isinstance(mf, dict) else None
     if mf is not None:
         if not (isinstance(mf, dict) and set(mf) == {"seed", "class", "kind", "probe"}):
