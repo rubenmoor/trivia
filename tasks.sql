@@ -11574,6 +11574,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 ## Done when
 - Every task here done.', 'After each batch of new sound and video questions, a quality pass reruns the fixer over all questions still marked as needing work. Running it for real turns up small faults in the tools, such as printing a wrong file name in the instructions for saving the result. This collects those fixes so the regular batches can keep going.', '2026-11-16T02:17:45Z', 2096, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (210, 21, 'Media-first tool fixes found in content runs, part 3', NULL, 'Follow-up fixes to the `qgen` tools found by the run tasks of `plan 205: Media-first content runs` (`plan 208: Media-first pipeline fixes found in content runs` and `plan 209: Tool fixes found in media-first QC runs` are closed). Each task: the fix, a test, the standard checks.', 'Batches of new sound and video questions sometimes stop at their first step because a few odd files from the public media library cannot be read. This collects the small fixes to the tools that let such batches skip those files and keep going.', '2026-11-16T21:13:53Z', 2109, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (211, 21, 'Media-first tool fixes found in content runs, part 4', NULL, 'Follow-up fixes to the `qgen` tools found by the run tasks of `plan 205: Media-first content runs` (`plan 210: Media-first tool fixes found in content runs, part 3` is closed). Each task: the fix, a test, the standard checks.', 'Batches of new sound and video questions sometimes break on problems of the computer they run on, such as a full disk, rather than on the media files themselves. This collects the small tool fixes that let such a batch pick up where it stopped without losing or wrongly discarding files.', '2026-11-17T07:56:33Z', 2132, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -48065,6 +48066,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Health ✗ → `pm decision list --grep "<run>: health"`, else `pm decision add "<run>: health ✗, look at it?"`, no task linked, go on.
 - Exit 75, any other non-zero code, or exit 1 three times at one step → `pm decision add "Continue <run> (media-first)…?"` with the last 30 lines, `pm task-pending-decision <this task> <id>`, stop with nothing staged.
 - The step decision is the only review answer a run waits for (`decision 643: Media-first questions: go, go with a smaller goal, or stop?`).', '2026-11-17T04:33:20Z', NULL, 2124, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2134, 211, 'create tasks for plan 211: Media-first tool fixes found in content runs, part 4', 'split', 'open', 1000, NULL, 'Split plan 211 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-17T07:56:33Z', NULL, 2132, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -55320,6 +55323,41 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (684, 'tr-es-20: health ✗, look at it?', 'pending', '["Looked at it", "Ignore"]', 'tr-es-20: 66 translated, 64 approved, 2 need work, audit agreement 38.3 % (threshold 90 %), 48 of 60 audit findings are ''media title null''. Report: authoring/reports/tr-es-20.md. Same pattern in tr-es-19, tr-de-25 etc.', 'A batch of Spanish translations was checked automatically and failed one test: a second reviewer disagreed with the first on many questions. The disagreement is mostly the second reviewer saying the questions with sound or video have no file picked, which may be a flaw in the check rather than in the questions. The developer can look at the report, or ignore it.', NULL, NULL, '2026-11-17T04:55:12Z', NULL, 2129, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (685, 'tr-es-ES-27: health ✗, look at it?', 'pending', '["Looked at it", "Ignore"]', 'tr-es-ES-27: 68 translated, 66 approved, 2 need work, audit agreement 40.0 % (threshold 90 %). Report: authoring/reports/tr-es-ES-27.md. Same pattern as decision 684.', 'A batch of Spanish (Spain) translations was checked automatically and failed one test: a second reviewer disagreed with the first on many questions. As in earlier batches, the disagreement is mostly about sound and video questions reported as having no file picked, which may be a flaw in the check. The developer can look at the report, or ignore it.', NULL, NULL, '2026-11-17T05:11:41Z', NULL, 2130, NULL, 'rule', NULL, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (686, 'tr-de-26: health ✗, look at it?', 'pending', '["Looked at it", "Ignore"]', 'tr-de-26: 71 translated, 64 approved, 7 need work, audit agreement 26.7 % (threshold 90 %). Report: authoring/reports/tr-de-26.md. Same pattern as decisions 684 and 685.', 'A batch of German translations was checked automatically and failed one test: a second reviewer disagreed with the first on many questions. As in earlier batches, the disagreement is mostly about sound and video questions reported as having no file picked, which may be a flaw in the check. The developer can look at the report, or ignore it.', NULL, NULL, '2026-11-17T05:29:22Z', NULL, 2131, NULL, 'rule', NULL, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (687, 'Continue batch-82 (media-first) after the disk filled and left a cut-off triage file?', 'pending', '["Wait for the tool fix (cut-off last line ignored, disk-full probe failures retried instead of marked not_worth), then rerun the same command; it resumes batch-82", "Developer removes the cut-off last line and the 19 ''No space left'' rows from work/batch-82/media-first/triage.jsonl by hand, then the task reruns", "Drop batch-82 and start a new media-first run"]', 'Run 2333 of `task 2132: run batch-<n> (media-first)` was interrupted after 2h22m; the disk had filled (now 40G free, 96%% used). The probe step had written 19 rows "probe failed: [Errno 28] No space left on device" into `work/batch-82/media-first/triage.jsonl` as `not_worth`, and its last line was cut off mid-write. Rerunning `qgen batch --media-first` now fails at once in `probe_step` reading that file (JSONDecodeError). Not ledgered yet (`work/media-first/files.jsonl` has no ENOSPC rows). Fix filed as a follow-up task in `plan 210: Media-first tool fixes found in content runs, part 3`.
+
+Last 30 lines:
+```
+    main()
+    ~~~~^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 2199, in main
+    errors = args.fn(args)
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 1909, in cmd_batch
+    t0 = run_steps(steps, again, run)
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 1790, in run_steps
+    errors = fn(a) or []
+             ~~^^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/qgen.py", line 1959, in <lambda>
+    ("probe", lambda a: media_first.probe_step(d, run, jobs, target), None),
+                        ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/media_first.py", line 206, in probe_step
+    worth = sum(t["verdict"] == "worth" for t in triaged(d))
+                                                 ~~~~~~~^^^
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/media_first.py", line 470, in triaged
+    return read_jsonl(steps_dir(d) / "triage.jsonl")
+  File "/home/ruben/code/trivia-worktrees/questions/authoring/tools/media_first.py", line 47, in read_jsonl
+    return [json.loads(l) for l in path.read_text(encoding="utf-8").split("\n") if l] if path.exists() else []
+            ~~~~~~~~~~^^^
+  File "/nix/store/xahxrjs30p3mw0a42bqg9ikgkikskw8m-python3-3.14.8/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/nix/store/xahxrjs30p3mw0a42bqg9ikgkikskw8m-python3-3.14.8/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/nix/store/xahxrjs30p3mw0a42bqg9ikgkikskw8m-python3-3.14.8/lib/python3.14/json/decoder.py", line 361, in raw_decode
+    obj, end = self.scan_once(s, idx)
+               ~~~~~~~~~~~~~~^^^^^^^^
+json.decoder.JSONDecodeError: Expecting '':'' delimiter: line 1 column 185 (char 184)
+```', 'A batch that makes new sound and video questions stopped when the computer''s disk ran full. It left a half-written line in one of its working files, so it can no longer resume, and it wrongly marked about twenty media files as not worth using because they could not be measured. Someone has to choose whether to repair the run by hand, wait for a tool fix, or start a fresh batch.', NULL, NULL, '2026-11-17T07:56:17Z', NULL, 2132, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -57749,6 +57787,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2331, 2130, '2026-11-17T04:55:23Z', '2026-11-17T05:11:47Z', 'done', NULL, 0, 'a6bd46dcc86a75589a6205e55077b0b58ed4cd27', 'questions', 'claude-sonnet-5-5', 'c76ef6b7-9bba-4561-88ec-2a8b841972e8', 2330, 4, 10, 1683, 231703, 8587, 0.31680230000000004, 61595, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2332, 2131, '2026-11-17T05:11:47Z', '2026-11-17T05:29:27Z', 'done', NULL, 0, 'ac0c516ca57f26d768672af2aa23621289064592', 'questions', 'claude-sonnet-5-5', 'c76ef6b7-9bba-4561-88ec-2a8b841972e8', 2331, 4, 10, 1622, 265532, 8326, 0.3928995, 69895, 60, 1136664);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2333, 2132, '2026-11-17T05:29:27Z', '2026-11-17T07:51:27Z', 'failed', 'interrupted', NULL, '0afca52cbdc45f99df48d8d68d382bf921559bb1', 'questions', NULL, NULL, 2332, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1136664);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2334, 2132, '2026-11-17T07:51:31Z', NULL, 'running', NULL, NULL, '6c190d1d2b105ebfaa37f0e241d39449a2209409', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 2465554);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -58485,6 +58524,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2109, 667);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2115, 669);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2119, 671);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2119, 680);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2132, 687);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
