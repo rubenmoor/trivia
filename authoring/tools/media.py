@@ -33,6 +33,7 @@ MAX_CANDIDATES = 6
 MIN_DECORATIVE_WIDTH = 1920
 MIN_ESSENTIAL_WIDTH = 800
 MAX_AUDIO_SECONDS = 60
+# Video: 30 s, MAX_VIDEO_SECONDS in app/client/src/engine/pool.ts; the qgen rule is plan 203's.
 
 
 def excerpt_schema():

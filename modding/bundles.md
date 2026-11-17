@@ -105,7 +105,7 @@ Difficulty means who can answer it, not how obscure the fact is.
   - `file_url`: path inside the bundle folder, e.g. `img/planet.png`; web addresses and paths outside the folder are dropped (an `essential` question with them too)
   - `credit`: required for every file you didn't make yourself: author · licence · source, e.g. `Jane Doe · CC BY 4.0 · Wikimedia Commons`; your own: e.g. `Jane Doe · CC0`
   - `source_url`: optional, the page you got it from
-  - `excerpt`: optional, `audio` and `video` only: `{ "start": 12.5, "end": 40 }` in seconds; the game plays only that window (and replays it); numbers, `0 ≤ start < end`, at most 60 s long; an `end` past the file's length is cut to it; without it the whole file plays
+  - `excerpt`: optional, `audio` and `video` only: `{ "start": 12.5, "end": 40 }` in seconds; the game plays only that window (and replays it); numbers, `0 ≤ start < end`, at most 60 s long for `audio`, 30 s for `video`; an `end` past the file's length is cut to it; without it the whole audio file plays, a video plays its first 30 s
 - Credits appear on the game's Credits screen; use only files you may share (your own, CC0, CC BY, public domain).
 - Images: at most 1920 px wide, at most 500 KB each (PNG, JPG, WebP).
 - No picture? Leave `media` out: the question shows as text only.

@@ -20,7 +20,7 @@
   function play() {
     if (!player) return;
     stop();
-    const w = playWindow(excerpt, player.duration) ?? { start: 0, end: player.duration };
+    const w = playWindow(type, excerpt, player.duration) ?? { start: 0, end: player.duration };
     player.volume = mediaVolume();
     player.currentTime = w.start;
     watch = setInterval(() => {

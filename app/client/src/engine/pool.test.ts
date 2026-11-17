@@ -167,10 +167,17 @@ test("mod categories: subject optional, unknown dropped and reported", () => {
 });
 
 test("playWindow / modPool: excerpt shape, clamp, bad_media", () => {
-  assert.deepEqual(playWindow({ start: 2, end: 30 }, 10), { start: 2, end: 10 });
-  assert.deepEqual(playWindow({ start: 2, end: 30 }, NaN), { start: 2, end: 30 });
-  assert.equal(playWindow({ start: 12, end: 30 }, 10), null);
-  assert.equal(playWindow(undefined, 10), null);
+  assert.deepEqual(playWindow("audio", { start: 2, end: 30 }, 10), { start: 2, end: 10 });
+  assert.deepEqual(playWindow("audio", { start: 2, end: 30 }, NaN), { start: 2, end: 30 });
+  assert.equal(playWindow("audio", { start: 12, end: 30 }, 10), null);
+  assert.equal(playWindow("audio", undefined, 10), null);
+  assert.deepEqual(playWindow("audio", { start: 0, end: 60 }, 100), { start: 0, end: 60 });
+  assert.deepEqual(playWindow("video", undefined, 100), { start: 0, end: 30 });
+  assert.deepEqual(playWindow("video", undefined, 12), { start: 0, end: 12 });
+  assert.deepEqual(playWindow("video", undefined, NaN), { start: 0, end: 30 });
+  assert.deepEqual(playWindow("video", { start: 20, end: 70 }, 100), { start: 20, end: 50 });
+  assert.deepEqual(playWindow("video", { start: 20, end: 40 }, 30), { start: 20, end: 30 });
+  assert.equal(playWindow("video", { start: 40, end: 50 }, 30), null);
   const q = (media: object) => ({
     id: "a", difficulty: 3, subcategory: "S", question: "¿?", answer: "a", wrong_answers: ["b", "c", "d"], hints: ["x", "y", "z"], media,
   });
@@ -179,6 +186,12 @@ test("playWindow / modPool: excerpt shape, clamp, bad_media", () => {
   assert.deepEqual(run({ ...au, excerpt: { start: 1, end: 9 } }).questions[0].media.excerpt, { start: 1, end: 9 });
   assert.equal(run(au).questions[0].media.excerpt, undefined);
   assert.deepEqual(run({ ...au, excerpt: { start: 1, end: 61 } }).questions[0].media.excerpt, { start: 1, end: 61 });
+  const vi = { type: "video", role: "essential", file_url: "a.webm", credit: "x" };
+  assert.deepEqual(run({ ...vi, excerpt: { start: 5, end: 35 } }).questions[0].media.excerpt, { start: 5, end: 35 });
+  const v40 = run({ ...vi, excerpt: { start: 0, end: 40 } });
+  assert.equal(v40.questions.length, 0);
+  assert.equal(v40.reasons[0].reason, "bad_media");
+  assert.equal(run({ ...vi, role: "illustrative", excerpt: { start: 0, end: 40 } }).questions[0].media.file_url, null);
   const badEx = [null, {}, { start: "1", end: 5 }, { start: 5, end: 5 }, { start: -1, end: 5 }, { start: 0, end: 61.5 }, { start: 0, end: NaN }];
   for (const excerpt of badEx) assert.equal(run({ ...au, excerpt }).questions.length, excerpt === null ? 1 : 0);
   for (const m of [{ ...au, excerpt: { start: 9, end: 1 } }, { ...au, type: "image", excerpt: { start: 1, end: 2 } }]) {
