@@ -52,6 +52,8 @@ electronDownload:
     electron-v43.7.7-linux-x64.zip: 4d0a48398c444258dbcf2f5f83b49ca5bc53583130f354e0c299dad5b22b5271
     electron-v43.7.7-win32-x64.zip: 97dcb75065444ef031b9b6ea814ccd2109b97934fffb0c503a555d4737ca79cc
 publish: null
+# Media is already WebP/Opus/WebM: deflate/gzip -9 over 5.4 GB gains ~5% and costs ~30 min (tar.gz); store = copy only (task 2177).
+compression: store
 afterPack: ./after-pack.mjs
 win:
   executableName: LivingRoomTrivia
