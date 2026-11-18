@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "71d83857",
+  "hash": "ded84c98",
   "questions": [
     {
       "id": "q-0001",
@@ -172662,6 +172662,41 @@
       "background": null
     },
     {
+      "id": "q-5458",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "famous-philosophers",
+      "bundle": "base",
+      "description": "Una barba tan famosa que tiene su propio club de fans por todo el mundo.",
+      "question": "Este pensador alemán con barba dijo que la historia es una lucha entre clases sociales, y todo un movimiento lleva su nombre. ¿Quién es?",
+      "answer": "Karl Marx",
+      "wrong_answers": [
+        "Charles Darwin",
+        "León Tolstói",
+        "Sigmund Freud"
+      ],
+      "hints": [
+        "Vivió en el siglo XIX y pasó la mayor parte de sus últimos años en Londres.",
+        "Escribió sobre los obreros, los dueños de las fábricas y el dinero.",
+        "Su movimiento se llama «…ismo» por su apellido, que tiene cuatro letras."
+      ],
+      "fun_fact": "Marx está enterrado en el cementerio de Highgate, en Londres, donde su enorme cabeza de piedra sigue atrayendo a visitantes de todo el mundo.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Karl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKarl_Marx_by_John_Jabez_Edwin_Mayall_1875_-_Restored.png",
+        "credit": "John Jabez Edwin Mayall · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "John Jabez Edwin Mayall",
+        "author_url": "https://en.wikipedia.org/wiki/en:John_Jabez_Edwin_Mayall",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-5459",
       "status": "approved",
       "difficulty": 15,
@@ -231093,6 +231128,2055 @@
         }
       },
       "background": null
+    },
+    {
+      "id": "q-21021",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "technology",
+      "bundle": "base",
+      "description": "Un paseo lento por el campo, desde el mejor asiento de toda la granja.",
+      "question": "Mira: ¿desde qué máquina agrícola se ha grabado este vídeo?",
+      "answer": "Cosechadora",
+      "wrong_answers": [
+        "Sembradora",
+        "Empacadora",
+        "Pulverizadora"
+      ],
+      "hints": [
+        "Suele trabajar hacia el final de la temporada de cultivo.",
+        "Hace varios trabajos distintos en una sola máquina.",
+        "Corta los tallos, separa el grano y lo almacena, todo de una pasada."
+      ],
+      "fun_fact": "En el siglo XIX, las primeras cosechadoras pesaban tanto que hacían falta 20 caballos o mulas, o más, para arrastrarlas.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Western_Australia_Agriculture.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWestern_Australia_Agriculture.webm",
+        "credit": "Paebi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Paebi",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21022",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "A medio camino entre una tortita, una manta y un burrito, y aun así se come en el desayuno.",
+      "question": "Mira: ¿qué plato de dim sum está preparando este cocinero?",
+      "answer": "Rollitos de fideo de arroz",
+      "wrong_answers": [
+        "Rollitos de primavera",
+        "Bollitos al vapor",
+        "Empanadillas de gamba"
+      ],
+      "hints": [
+        "Es un clásico del dim sum y suele servirse con salsa de soja dulce por encima.",
+        "Una fina capa de masa líquida y blanca se cuece al vapor hasta formar una lámina suave y translúcida.",
+        "En cantonés se llama cheung fun, y la lámina se hace con harina de arroz."
+      ],
+      "fun_fact": "Su nombre cantonés, cheung fun, significa «fideo intestino»: viene de la forma larga y curvada de los rollitos, no de lo que llevan dentro.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Wentworth_Seafood_House%27s_Cantonese_Pork_Coeng_Fan.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWentworth_Seafood_House%27s_Cantonese_Pork_Coeng_Fan.webm",
+        "credit": "Chowbus · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Chowbus",
+        "author_url": null,
+        "excerpt": {
+          "start": 12,
+          "end": 42
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21023",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un carpintero sin caja de herramientas, sin licencia de obras y con un sombrero muy chillón.",
+      "question": "Mira: esta ave está excavando un nido en un árbol como un pájaro carpintero, pero no lo es. ¿Qué tipo de ave es?",
+      "answer": "Barbudo",
+      "wrong_answers": [
+        "Cotorra",
+        "Abejaruco",
+        "Martín pescador"
+      ],
+      "hints": [
+        "Vive en bosques y parques cálidos de Asia, África y América, y le encanta comer fruta.",
+        "Entre sus parientes más cercanos están los tucanes de Sudamérica.",
+        "Su nombre viene de las cerdas rígidas que tiene alrededor del grueso pico y que parecen una barba."
+      ],
+      "fun_fact": "Los barbudos deben su nombre a las cerdas en forma de barba que rodean su pico, y son primos cercanos de los tucanes.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Blue-throated_Barbet_in_Rabindra_Sarobar_March_2025_by_Tisha_Mukherjee.mpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlue-throated_Barbet_in_Rabindra_Sarobar_March_2025_by_Tisha_Mukherjee.mpg",
+        "credit": "Tisha Mukherjee · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Tisha Mukherjee",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21024",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "environment",
+      "bundle": "base",
+      "description": "No todos los caminos llevan a Roma: estos van derechos al aserradero.",
+      "question": "Mira: en estas imágenes de satélite se tala una selva a lo largo de carreteras nuevas con los años. ¿Cómo se llama este patrón típico de deforestación?",
+      "answer": "Patrón en espina de pescado",
+      "wrong_answers": [
+        "Patrón en tablero de ajedrez",
+        "Patrón en tela de araña",
+        "Patrón en estallido de estrella"
+      ],
+      "hints": [
+        "Fíjate en cómo las franjas taladas más finas salen de las carreteras grandes.",
+        "El nombre compara la forma con algo que existe en la naturaleza.",
+        "Imagina una columna larga con muchas costillas finas a ambos lados."
+      ],
+      "fun_fact": "Gran parte de la tala en Rondônia (Brasil) siguió la carretera BR-364, asfaltada en los años ochenta, que atrajo una oleada de colonos a la selva.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Deforestation_in_Rondonia%2C_Brazil.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADeforestation_in_Rondonia%2C_Brazil.ogv",
+        "credit": "NASA/Goddard Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 4,
+          "end": 34
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21025",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "unusual-pets",
+      "bundle": "base",
+      "description": "Una mascota tan pequeña que todo su armario cabe en un bañador a rayas de caramelo.",
+      "question": "Mira: esta diminuta gamba de acuario es una variedad de color que crio por primera vez un aficionado a principios de los años noventa. ¿En qué país?",
+      "answer": "Japón",
+      "wrong_answers": [
+        "China",
+        "Tailandia",
+        "Alemania"
+      ],
+      "hints": [
+        "Sus parientes salvajes son oscuros y con rayas. Esta variedad de color surgió por una mutación afortunada en los acuarios de un criador.",
+        "Ese mismo país es famoso por criar vistosas carpas koi para los estanques de jardín.",
+        "El criador, Hisayasu Suzuki, vivía en la tierra del sushi y los bonsáis."
+      ],
+      "fun_fact": "Las mejores gambas cristal rojas se clasifican según lo puras y brillantes que sean sus bandas blancas, y un solo ejemplar de concurso se ha llegado a vender por cientos de dólares.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Crystal_red_shrimp_%28Caridina_cantonensis%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrystal_red_shrimp_%28Caridina_cantonensis%29.webm",
+        "credit": "The Nature Box · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 75,
+          "end": 105
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21026",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Ponte de pie, mano en el corazón, y ahora averigua de quién es ese corazón.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Albania",
+      "wrong_answers": [
+        "Grecia",
+        "Serbia",
+        "Bulgaria"
+      ],
+      "hints": [
+        "El título del himno significa «Himno a la bandera».",
+        "Su melodía se tomó de una canción del compositor rumano Ciprian Porumbescu.",
+        "La bandera roja de este país muestra un águila negra de dos cabezas."
+      ],
+      "fun_fact": "La melodía se compuso para una canción rumana, así que los albaneses cantan su himno con música de un compositor que nunca visitó Albania.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Hymni_i_Flamurit_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHymni_i_Flamurit_instrumental.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21027",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "inventions",
+      "bundle": "base",
+      "description": "El tatarabuelo de tu aplicación de música se aclara la garganta.",
+      "question": "Escucha esta grabación de cornetín y piano. ¿En qué se grabó originalmente?",
+      "answer": "Cilindro de cera",
+      "wrong_answers": [
+        "Cinta magnética",
+        "Disco LP de vinilo",
+        "Disco compacto"
+      ],
+      "hints": [
+        "Fíjate en el siseo y los chasquidos: este sonido es más antiguo que cualquiera de tus abuelos.",
+        "Se reproducía en una máquina inventada por Thomas Edison.",
+        "El sonido se grababa en un surco sobre un tubo que giraba, no sobre un disco plano."
+      ],
+      "fun_fact": "Esta grabación de cornetín y piano de «The Lost Chord», de Arthur Sullivan, se hizo sonar ante la prensa de Londres en 1888 para presumir del fonógrafo mejorado de Edison.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Edison_cylinder_Lost_Chord.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEdison_cylinder_Lost_Chord.ogg",
+        "credit": "Recorded by George Gouraud, performers unknown. · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Recorded by George Gouraud, performers unknown.",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Museum_of_Making_Music_-_Zorko_Ampeg_Upright_Bass%2C_Edison_phonograph%2C_Mandolin%2C_Mandolin_banjo%2C_Ukulele%2C_Lap_steel_guitar%2C_Cornet%2C_Trumpet%2C_French_horn%2C_Baritone_sax%2C_Sousaphone_-_2017_NAMM_Show_%282017-01-22_09.34.52_by_Jim_J%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuseum_of_Making_Music_-_Zorko_Ampeg_Upright_Bass%2C_Edison_phonograph%2C_Mandolin%2C_Mandolin_banjo%2C_Ukulele%2C_Lap_steel_guitar%2C_Cornet%2C_Trumpet%2C_French_horn%2C_Baritone_sax%2C_Sousaphone_-_2017_NAMM_Show_%282017-01-22_09.34.52_by_Jim_J%29.jpg",
+        "credit": "Jim J · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jim J",
+        "author_url": "https://www.flickr.com/people/147764340@N02"
+      }
+    },
+    {
+      "id": "q-21029",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Crujiente por fuera, tierno por dentro, y las manos del cocinero no paran ni un segundo.",
+      "question": "Mira: ¿qué comida callejera se está friendo en esta tienda?",
+      "answer": "Falafel",
+      "wrong_answers": [
+        "Arancini",
+        "Takoyaki",
+        "Gulab jamun"
+      ],
+      "hints": [
+        "Este aperitivo encanta en todo Oriente Próximo.",
+        "Suele meterse en pan plano con ensalada y una salsa de sésamo llamada tahini.",
+        "Se hace con garbanzos o habas machacados y mezclados con hierbas."
+      ],
+      "fun_fact": "En Egipto, el falafel suele hacerse con habas en lugar de garbanzos y se llama «ta'ameya».",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/Amazing_Falafel_Shop_in_Tehran_-_IRAN_Street_Food_-_%D9%81%D9%84%D8%A7%D9%81%D9%84.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmazing_Falafel_Shop_in_Tehran_-_IRAN_Street_Food_-_%D9%81%D9%84%D8%A7%D9%81%D9%84.webm",
+        "credit": "Street Food Tourists · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Street Food Tourists",
+        "author_url": null,
+        "excerpt": {
+          "start": 160,
+          "end": 190
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21030",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "Un micrófono de la marina salió a pescar submarinos y acabó pillando una conversación.",
+      "question": "Escucha: una boya de la marina captó estos chasquidos submarinos regulares de una pareja de animales. ¿Qué animal los hace?",
+      "answer": "Cachalote",
+      "wrong_answers": [
+        "Ballena jorobada",
+        "Beluga",
+        "Morsa"
+      ],
+      "hints": [
+        "Este animal se sumerge a más de 1000 metros y encuentra su comida a oscuras gracias a la ecolocalización.",
+        "Caza calamares, a veces incluso calamares gigantes, y tiene el cerebro más grande de todos los animales.",
+        "La ballena blanca de Herman Melville, Moby Dick, era uno de ellos."
+      ],
+      "fun_fact": "Los chasquidos del cachalote pueden alcanzar unos 230 decibelios, de los sonidos más fuertes del reino animal, y cada grupo familiar tiene sus propios patrones de chasquidos, llamados codas.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Sperm_Whale_Buoy_Recording.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASperm_Whale_Buoy_Recording.ogg",
+        "credit": "US Navy · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "US Navy",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Tibur%C3%B3n_azul_%28Prionace_glauca%29%2C_canal_Fayal-Pico%2C_islas_Azores%2C_Portugal%2C_2020-07-27%2C_DD_14.jpg/3840px-Tibur%C3%B3n_azul_%28Prionace_glauca%29%2C_canal_Fayal-Pico%2C_islas_Azores%2C_Portugal%2C_2020-07-27%2C_DD_14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATibur%C3%B3n_azul_%28Prionace_glauca%29%2C_canal_Fayal-Pico%2C_islas_Azores%2C_Portugal%2C_2020-07-27%2C_DD_14.jpg",
+        "credit": "Diego Delso · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Diego Delso",
+        "author_url": "https://www.wikidata.org/wiki/Q28147777"
+      }
+    },
+    {
+      "id": "q-21031",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Zuecos, sombreros de ala ancha y un acordeón: la etiqueta es estricta, y los pasos, todavía más.",
+      "question": "Mira: ¿qué danza tradicional francesa bailan estas parejas?",
+      "answer": "Bourrée",
+      "wrong_answers": [
+        "Farandola",
+        "Gavota",
+        "Branle"
+      ],
+      "hints": [
+        "No se baila en una larga cadena de manos cogidas: las parejas se colocan frente a frente y avanzan y retroceden.",
+        "Su tierra es Auvernia, la región de los volcanes y del queso cantal.",
+        "Bach y Händel compusieron versiones estilizadas para sus suites, y en Auvernia se baila en compás de 3/8 al son de la cabrette, una gaita, o del acordeón."
+      ],
+      "fun_fact": "La bourrée se puso de moda en la corte real francesa, y Bach, Händel y Telemann escribieron bourrées para sus suites: un baile de pueblo acabó en las salas de conciertos.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Semur-en-Auxois%2C_bourr%C3%A9e_auvergnate_en_C%C3%B4te-d%27Or_%282%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASemur-en-Auxois%2C_bourr%C3%A9e_auvergnate_en_C%C3%B4te-d%27Or_%282%29.ogv",
+        "credit": "Pierre André Leclercq · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Pierre André Leclercq",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21032",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Una melodía que ha ido a más ceremonias oficiales que la mayoría de los presidentes.",
+      "question": "Escucha: esta famosa melodía es el himno oficial de ¿qué organización internacional?",
+      "answer": "Unión Europea",
+      "wrong_answers": [
+        "Naciones Unidas",
+        "Comité Olímpico Internacional",
+        "Unión Africana"
+      ],
+      "hints": [
+        "La melodía viene de la última parte de una famosa sinfonía y suele llamarse «Himno de la alegría».",
+        "El himno no tiene letra oficial, porque sus miembros hablan más de 20 idiomas distintos.",
+        "Suena junto a una bandera azul con un círculo de 12 estrellas doradas."
+      ],
+      "fun_fact": "La melodía viene de la Novena Sinfonía de Beethoven, que terminó en 1824, cuando ya estaba casi completamente sordo.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/European_continental_anthem%2C_performed_by_the_United_States_Navy_Band.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEuropean_continental_anthem%2C_performed_by_the_United_States_Navy_Band.wav",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 9,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Iwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_towards_the_Stage..jpg",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam"
+      }
+    },
+    {
+      "id": "q-21033",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "En algún lugar dentro de esta música, una aguja diminuta está viviendo el viaje de su vida.",
+      "question": "Escucha el sonido de esta grabación de piano y orquesta. ¿En qué década se grabó, probablemente?",
+      "answer": "La década de 1930",
+      "wrong_answers": [
+        "La década de 1900",
+        "La década de 1960",
+        "La década de 1990"
+      ],
+      "hints": [
+        "Escucha más allá de la música: el siseo, el chisporroteo y la falta de graves y agudos lo dicen todo.",
+        "Suena demasiado plena y clara para las primeras grabaciones, pero no es estéreo y está lejos de la calidad moderna.",
+        "Se grabó en un disco de goma laca giratorio unos años antes de la Segunda Guerra Mundial."
+      ],
+      "fun_fact": "Es el pianista Edwin Fischer tocando el Concierto para piano n.º 20 de Mozart con la Orquesta Filarmónica de Londres en 1933, así que un solo movimiento tuvo que repartirse en varias caras de discos de 78 revoluciones.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/38/PDP-CH_-_Edwin_Fischer%2C_Piano_with_the_London_Philharmonic_Orchestra_-_Piano_Concerto_No._20_in_D_minor%2C_K_466_-_1st_Movement%2C_Part_3%2C_Allegro_-_Hmv-db7631-32-4256.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_Edwin_Fischer%2C_Piano_with_the_London_Philharmonic_Orchestra_-_Piano_Concerto_No._20_in_D_minor%2C_K_466_-_1st_Movement%2C_Part_3%2C_Allegro_-_Hmv-db7631-32-4256.flac",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 20,
+          "end": 80
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Groove_and_needle_in_close_embrace_from_beginning_to_end.jpg/3840px-Groove_and_needle_in_close_embrace_from_beginning_to_end.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGroove_and_needle_in_close_embrace_from_beginning_to_end.jpg",
+        "credit": "Franz van Duns · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Franz van Duns",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Franz_van_Duns"
+      }
+    },
+    {
+      "id": "q-21034",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "oceans",
+      "bundle": "base",
+      "description": "Quítale el tapón al planeta y descubre lo que la bañera llevaba escondiendo todo este tiempo.",
+      "question": "Mira: los océanos se vacían poco a poco. ¿Qué dos continentes son los primeros en unirse por un nuevo puente de tierra?",
+      "answer": "Asia y América del Norte",
+      "wrong_answers": [
+        "África y Europa",
+        "Asia y Australia",
+        "América del Sur y la Antártida"
+      ],
+      "hints": [
+        "No le quites ojo a la parte de arriba del mapa, cerca del Ártico.",
+        "Ahí el hueco es un estrecho de solo unos 50 metros de profundidad.",
+        "Hace miles de años, los primeros humanos que llegaron a América quizá cruzaron a pie justo por ese sitio."
+      ],
+      "fun_fact": "En la última glaciación, el nivel del mar estaba unos 120 metros más bajo, y un ancho puente de tierra llamado Beringia unía Siberia con Alaska.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Draining_Earth%27s_oceans.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADraining_Earth%27s_oceans.ogv",
+        "credit": "NASA/Goddard Space Flight Center Scientific Visualization Studio · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center Scientific Visualization Studio\nU.S. Department of Commerce, National Oceanic and Atmospheric Administration, National Geophysical Data Center, 2006, 2-minute Gridded Global Relief Data (ETOPO2v2)\n\nThe Blue Marble Next Generation data is courtesy of Reto Stockli (NASA/GSFC) and NASA's Earth Observatory.",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 15
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21035",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Algunos cohetes sueñan con las estrellas; este todavía está haciendo los deberes.",
+      "question": "Mira: la NASA está haciendo volar este pequeño cohete de pruebas en el desierto. ¿Para qué se está entrenando?",
+      "answer": "Aterrizar en la Luna o en Marte",
+      "wrong_answers": [
+        "Poner satélites en órbita",
+        "Llevar astronautas al espacio",
+        "Medir el tiempo en las alturas"
+      ],
+      "hints": [
+        "Fíjate en lo que tiene el cohete en la parte de abajo, y en que no sube muy alto.",
+        "Lleva cámaras y láseres que escanean el suelo que tiene debajo.",
+        "Una futura nave usará este tipo de guiado por ordenador para posarse sin peligro en otro mundo."
+      ],
+      "fun_fact": "El cohete de esta prueba, llamado Xodiac, llevaba el sistema COBALT de la NASA, que usa láseres y cámaras para ayudar a los futuros módulos de aterrizaje a encontrar un sitio seguro donde posarse.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/NASA_Precision_Landing_Technologies_Completes_Initial_Flight_Tests_on_Vertical_Testbed_Rocket_%28AFRC-2017-11349-1_Masten-COBALT-UnTetheredFLT1%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA_Precision_Landing_Technologies_Completes_Initial_Flight_Tests_on_Vertical_Testbed_Rocket_%28AFRC-2017-11349-1_Masten-COBALT-UnTetheredFLT1%29.webm",
+        "credit": "NASA Armstrong Flight Research Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Armstrong Flight Research Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 66,
+          "end": 96
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21037",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un concurso de baile al amanecer en el que nadie ha traído pareja, solo un montón de confianza inflada.",
+      "question": "Mira: ¿qué ave hace este cortejo, con el pecho blanco hinchado y la cola abierta en abanico de puntas?",
+      "answer": "Gallo de las artemisas",
+      "wrong_answers": [
+        "Pavo salvaje",
+        "Urogallo",
+        "Gallo lira"
+      ],
+      "hints": [
+        "Es un ave de caza que vive en el suelo, y los machos se reúnen al amanecer para lucirse ante las hembras.",
+        "Solo vive en las llanuras abiertas y secas del oeste de Norteamérica.",
+        "Su nombre viene de un arbusto gris verdoso y muy aromático cuyas hojas come durante todo el invierno."
+      ],
+      "fun_fact": "Cuando el macho se hincha, le asoman en el pecho blanco dos sacos de aire amarillos y sin plumas que hacen un sonoro «plop» burbujeante.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Sage_Grouse_in_Lek_%2816711544364%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASage_Grouse_in_Lek_%2816711544364%29.webm",
+        "credit": "BLM Oregon & Washington · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "BLM Oregon & Washington",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21038",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "dogs",
+      "bundle": "base",
+      "description": "El único trabajo en el que todo tu equipo corre por delante de ti, y así tiene que ser.",
+      "question": "Mira: ¿cómo se llama la persona que conduce un equipo como este?",
+      "answer": "Un musher",
+      "wrong_answers": [
+        "Un jinete",
+        "Un cochero",
+        "Un vaquero"
+      ],
+      "hints": [
+        "Esta persona suele ir de pie en la parte de atrás, sobre los patines.",
+        "El nombre podría venir de una palabra francesa que se grita a los animales para que arranquen.",
+        "La famosa carrera Iditarod de Alaska está llena de ellos."
+      ],
+      "fun_fact": "Se cree que la palabra «musher» viene del francés «marche!» («¡adelante!»), pero hoy la mayoría de los conductores gritan «hike!» para que arranquen sus perros.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Alaskan_Huskies_-_Sled_Dogs_-_Ivalo_2013.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlaskan_Huskies_-_Sled_Dogs_-_Ivalo_2013.ogv",
+        "credit": "Manfred Werner — Tsui · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Manfred Werner — Tsui",
+        "author_url": null,
+        "excerpt": {
+          "start": 120,
+          "end": 150
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21039",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Un piano que se ha tomado tres cafés y no hay quien lo siente.",
+      "question": "Escucha: ¿qué estilo de música es esta animada pieza para piano?",
+      "answer": "Ragtime",
+      "wrong_answers": [
+        "Tango",
+        "Vals",
+        "Boogie-woogie"
+      ],
+      "hints": [
+        "Este estilo fue muy popular en Estados Unidos hacia el año 1900.",
+        "La mano derecha toca melodías a contratiempo mientras la izquierda rebota con regularidad, como en una marcha de banda.",
+        "Su nombre viene de la palabra inglesa «ragged», «desigual», por el ritmo entrecortado de sus melodías."
+      ],
+      "fun_fact": "Es el «Maple Leaf Rag» de Scott Joplin, de 1899; se convirtió en un gran éxito de partituras, y Joplin ganaba un centavo por cada copia vendida.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Maple_Leaf_RagQ.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMaple_Leaf_RagQ.ogg",
+        "credit": "Joplin, Scott, created by William J. Leslie · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Joplin, Scott, created by William J. Leslie",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Old_upright_brown_piano_IMG1471.jpg/3840px-Old_upright_brown_piano_IMG1471.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOld_upright_brown_piano_IMG1471.jpg",
+        "credit": "Heylenny · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Heylenny",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Heylenny"
+      }
+    },
+    {
+      "id": "q-21040",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "food-history",
+      "bundle": "base",
+      "description": "La olla de cocción lenta más antigua del mundo, a cargo de un señor que nunca necesita manoplas.",
+      "question": "Mira: ¿cómo se llama la herramienta que usa el hombre para mover los panes?",
+      "answer": "Pala",
+      "wrong_answers": [
+        "Cucharón",
+        "Llana",
+        "Rastrillo"
+      ],
+      "hints": [
+        "Con ella, un panadero llega al fondo de un horno muy caliente sin quemarse los brazos.",
+        "Tiene un mango largo y una hoja ancha y plana, a menudo de madera.",
+        "La misma herramienta mete y saca las pizzas de los hornos de leña."
+      ],
+      "fun_fact": "Los panaderos suelen espolvorear la pala con harina o sémola para que la masa cruda resbale sin pegarse.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Puerto_del_Rosario_-_Tefia_-_La_Alcogida_-_bread_baking_%28oT%29_03.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuerto_del_Rosario_-_Tefia_-_La_Alcogida_-_bread_baking_%28oT%29_03.ogv",
+        "credit": "Frank Vincentz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Frank Vincentz",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21041",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Los observadores de aves dejan caer el bocadillo cuando esta se posa en un poste de la valla.",
+      "question": "Mira: ¿qué ave es esta, con su cresta anaranjada y sus alas a rayas blancas y negras?",
+      "answer": "Abubilla",
+      "wrong_answers": [
+        "Pájaro carpintero",
+        "Martín pescador",
+        "Arrendajo"
+      ],
+      "hints": [
+        "Usa su pico largo, fino y curvado para sacar insectos y larvas del suelo.",
+        "Vive en Europa, África y Asia, e Israel la eligió como ave nacional.",
+        "Su nombre viene del latín y, como su nombre científico, imita su suave canto, un «up-up-up»."
+      ],
+      "fun_fact": "La abubilla puede abrir su cresta como una corona, e Israel la eligió como ave nacional en 2008.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Birds_of_Pakistan_-_Part_3.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABirds_of_Pakistan_-_Part_3.webm",
+        "credit": "Mujtaba H. Shah · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Mujtaba H. Shah",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 10
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21042",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "Dos compañeros de piso muy paliduchos echando una lucha perezosa sobre el césped.",
+      "question": "Mira: estos dos grandes felinos de color muy claro son una rara forma blanca de ¿qué animal?",
+      "answer": "León",
+      "wrong_answers": [
+        "Tigre",
+        "Leopardo de las nieves",
+        "Puma"
+      ],
+      "hints": [
+        "Fíjate bien en la cabeza del más grande.",
+        "Sus parientes de color normal viven en grupos familiares llamados manadas.",
+        "Lo suelen llamar «el rey de la selva»."
+      ],
+      "fun_fact": "Los leones blancos no son albinos: un gen poco común aclara su pelaje y, en libertad, proceden de la zona de Timbavati, en Sudáfrica.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Affectionate_lions.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAffectionate_lions.webm",
+        "credit": "Omar & Cintya García · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Omar & Cintya García",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21043",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Estos vecinos se pasan la noche en vela mirando al cielo y no pestañean ni una sola vez.",
+      "question": "Mira: ¿qué son estas enormes antenas blancas que giran todas a la vez bajo el cielo nocturno?",
+      "answer": "Radiotelescopios",
+      "wrong_answers": [
+        "Radares meteorológicos",
+        "Antenas parabólicas de televisión",
+        "Espejos de energía solar"
+      ],
+      "hints": [
+        "Fíjate en hacia dónde apuntan y en la hora del día.",
+        "No funcionan con la luz del sol: captan señales débiles que llegan desde muy lejos.",
+        "Los astrónomos las usan para «ver» galaxias y estrellas recién nacidas con ondas de radio en lugar de luz."
+      ],
+      "fun_fact": "Estas antenas pertenecen a ALMA, 66 antenas en el desierto de Atacama (Chile) a unos 5000 m de altura, donde el aire es tan seco y fino que la vista del espacio es de las mejores de la Tierra.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/ALMA_time-lapse_2011_%28part_1%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AALMA_time-lapse_2011_%28part_1%29.webm",
+        "credit": "European Southern Observatory (ESO) · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "European Southern Observatory (ESO)",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21044",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "Alguien entre los arbustos está muy molesto porque estás aquí, y quiere que se entere todo el bosque.",
+      "question": "Escucha: ¿qué animal de los bosques de Asia lanza esta llamada de alarma?",
+      "answer": "Muntíaco",
+      "wrong_answers": [
+        "Gibón",
+        "Panda rojo",
+        "Pangolín"
+      ],
+      "hints": [
+        "Come hojas, frutos y brotes, y tiene pezuñas.",
+        "Los machos tienen cuernos cortos y pequeños colmillos.",
+        "Lo apodan «el ciervo ladrador»."
+      ],
+      "fun_fact": "El muntíaco de la India tiene el menor número de cromosomas de todos los mamíferos conocidos: las hembras solo tienen 6 y los machos, 7.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Muntjac_HQ_1.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMuntjac_HQ_1.ogg",
+        "credit": "Jidanni · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Jidanni",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Early_morning_on_Cheow_Lan_Lake%2C_Surat_Thani%2C_Thailand.jpg/3840px-Early_morning_on_Cheow_Lan_Lake%2C_Surat_Thani%2C_Thailand.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEarly_morning_on_Cheow_Lan_Lake%2C_Surat_Thani%2C_Thailand.jpg",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg"
+      }
+    },
+    {
+      "id": "q-21045",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía que hace que los atletas se pongan firmes, aunque no sean ellos los que están en el podio.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Grecia",
+      "wrong_answers": [
+        "Italia",
+        "Turquía",
+        "Portugal"
+      ],
+      "hints": [
+        "La letra procede de un largo poema escrito en 1823, durante la lucha del país por su independencia.",
+        "Chipre usa el mismo himno que este país.",
+        "Suena en todas las ceremonias de clausura de los Juegos Olímpicos, en honor a la cuna de los Juegos."
+      ],
+      "fun_fact": "El poema «Himno a la Libertad» de Dionisios Solomós tiene 158 estrofas, uno de los textos de himno más largos del mundo, pero normalmente solo se cantan las dos primeras.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Hymn_to_liberty_instrumental.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHymn_to_liberty_instrumental.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg/3840px-U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02"
+      }
+    },
+    {
+      "id": "q-21046",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una canción que pone de pie a todo un estadio, incluso a los que no saben cantar ni una nota.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "India",
+      "wrong_answers": [
+        "Bangladés",
+        "Pakistán",
+        "Nepal"
+      ],
+      "hints": [
+        "La letra la escribió un poeta que ganó el Premio Nobel de Literatura.",
+        "Interpretado entero, este himno debe durar unos 52 segundos.",
+        "En este país está el Taj Mahal."
+      ],
+      "fun_fact": "Rabindranath Tagore escribió la letra de «Jana Gana Mana» y también la del himno de Bangladés, así que es autor de los himnos de dos países.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Jana_Gana_Mana_%28instrumental%29_-_Indian_Armed_Forces_Orchestra.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJana_Gana_Mana_%28instrumental%29_-_Indian_Armed_Forces_Orchestra.ogg",
+        "credit": "Rabindranath Tagore · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Rabindranath Tagore",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/NBSW_Harborside_Brass_Quintet_with_Santa_Fe_Youth_Orchestra_%289610581%29.jpg/3840px-NBSW_Harborside_Brass_Quintet_with_Santa_Fe_Youth_Orchestra_%289610581%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANBSW_Harborside_Brass_Quintet_with_Santa_Fe_Youth_Orchestra_%289610581%29.jpg",
+        "credit": "U.S. Navy NBSW by Petty Officer 3rd Class Isabela Stefanyshyn · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy NBSW by Petty Officer 3rd Class Isabela Stefanyshyn",
+        "author_url": "https://www.dvidshub.net/portfolio/1865176"
+      }
+    },
+    {
+      "id": "q-21047",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Una casa de dos plantas que nunca se queda en la misma dirección más de unos segundos.",
+      "question": "Mira: por el logotipo de sus vagones, ¿en qué país circula este tren de dos pisos?",
+      "answer": "Rusia",
+      "wrong_answers": [
+        "Ucrania",
+        "Kazajistán",
+        "Finlandia"
+      ],
+      "hints": [
+        "Las letras rojas del lateral de los vagones no son del alfabeto latino.",
+        "Las letras rojas son la abreviatura del nombre de la compañía ferroviaria nacional, como las siglas de una aerolínea.",
+        "El logotipo es el de los ferrocarriles nacionales del país más grande del mundo por superficie."
+      ],
+      "fun_fact": "En Rusia los raíles están a 1520 mm de distancia, más que los 1435 mm de la mayor parte de Europa, así que los trenes que cruzan la frontera a menudo tienen que cambiar de ruedas.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/EP2K_with_double-decker_train%2C_Tosno.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEP2K_with_double-decker_train%2C_Tosno.webm",
+        "credit": "vit8204 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "vit8204",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21050",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "vegetables",
+      "bundle": "base",
+      "description": "La guarnición que la abuela te obliga a terminar antes de que nadie mencione el postre.",
+      "question": "Mira: ¿qué verdura se está haciendo a fuego lento en esta sartén?",
+      "answer": "Judías verdes",
+      "wrong_answers": [
+        "Espárragos",
+        "Okra",
+        "Brócoli"
+      ],
+      "hints": [
+        "Es la vaina de una planta y se come entera cuando aún está tierna.",
+        "La misma planta nos da las alubias rojas y las negras si se dejan madurar y secar sus semillas.",
+        "Largas, finas y crujientes, en España se toman mucho rehogadas con jamón o con patata."
+      ],
+      "fun_fact": "Antes, las judías verdes tenían un «hilo» duro a lo largo de la costura que había que quitar a mano, hasta que a finales del siglo XIX se crearon variedades sin hilo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Mediterranean_Braised_Green_Beans_with_Mint_and_Feta%2C_by_America%27s_Test_Kitchen.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMediterranean_Braised_Green_Beans_with_Mint_and_Feta%2C_by_America%27s_Test_Kitchen.webm",
+        "credit": "Le Creuset · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Le Creuset",
+        "author_url": null,
+        "excerpt": {
+          "start": 9,
+          "end": 10.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21052",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Se pasea por el césped como un pequeño inspector, comprobando que cada brizna de hierba está en su sitio.",
+      "question": "Mira: esta ave pertenece a la misma familia que otra ave acuática común. ¿Cuál?",
+      "answer": "Focha",
+      "wrong_answers": [
+        "Ánade real",
+        "Cormorán",
+        "Somormujo"
+      ],
+      "hints": [
+        "Fíjate en la placa roja sin plumas que le sube desde el pico hasta la frente.",
+        "Su pariente tiene el mismo tipo de placa en la frente, solo que de otro color.",
+        "Ese pariente es casi todo negro, con el pico blanco y una mancha blanca en la frente."
+      ],
+      "fun_fact": "La gallineta nada bien aunque sus largos dedos no tienen membranas, y las crías de una nidada anterior suelen ayudar a sus padres a alimentar a los siguientes polluelos.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Common_Moorhen_%28Gallinula_chloropus%29_by_a_canal.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Moorhen_%28Gallinula_chloropus%29_by_a_canal.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 2,
+          "end": 32
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21053",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía que pone de pie a todo un estadio, incluso antes del partido.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Polonia",
+      "wrong_answers": [
+        "Hungría",
+        "República Checa",
+        "Ucrania"
+      ],
+      "hints": [
+        "El país está en Europa Central y su bandera solo tiene dos colores.",
+        "La letra se escribió en 1797, cuando este país había sido repartido entre sus vecinos y había desaparecido del mapa.",
+        "El famoso compositor Chopin nació en este país, y su capital es Varsovia."
+      ],
+      "fun_fact": "El himno de Polonia nombra a Napoleón Bonaparte, lo que lo convierte en uno de los poquísimos himnos nacionales que mencionan a un líder extranjero.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Mazurek_D%C4%85browskiego_%28official_instrumental%29.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMazurek_D%C4%85browskiego_%28official_instrumental%29.oga",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Humphreys_community_experiences_Korean-style_professional_baseball_1.jpg/3840px-Humphreys_community_experiences_Korean-style_professional_baseball_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHumphreys_community_experiences_Korean-style_professional_baseball_1.jpg",
+        "credit": "USAG-Humphreys · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "USAG-Humphreys",
+        "author_url": null
+      }
+    },
+    {
+      "id": "q-21054",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "world-music",
+      "bundle": "base",
+      "description": "Levántate del sofá, por favor: ha empezado a tocar la banda y alguien te está mirando.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Bélgica",
+      "wrong_answers": [
+        "Países Bajos",
+        "Luxemburgo",
+        "Suiza"
+      ],
+      "hints": [
+        "El himno lleva el nombre de una región del país.",
+        "El país se independizó en 1830, cuando se separó de los Países Bajos.",
+        "Su capital, Bruselas, alberga la sede de la Unión Europea."
+      ],
+      "fun_fact": "El himno tiene letra oficial en francés, neerlandés y alemán, las tres lenguas oficiales del país.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/La_Braban%C3%A7onne.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALa_Braban%C3%A7onne.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/American_Flag_Waving_in_the_Wind.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmerican_Flag_Waving_in_the_Wind.jpg",
+        "credit": "IceuImgflip · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "IceuImgflip",
+        "author_url": "https://commons.wikimedia.org/wiki/User:IceuImgflip"
+      }
+    },
+    {
+      "id": "q-21055",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "El único trayecto al trabajo en el que los atascos son problema de otros, muy, muy abajo.",
+      "question": "Mira: este avión de investigación de la NASA vuela tan alto que su piloto lleva un traje presurizado. ¿A qué altura vuela?",
+      "answer": "A unos 20 km",
+      "wrong_answers": [
+        "A unos 10 km",
+        "A unos 100 km",
+        "A unos 400 km"
+      ],
+      "hints": [
+        "Fíjate en el color del cielo por encima del horizonte: es casi negro, incluso de día.",
+        "Los aviones de pasajeros vuelan a unos 10 km, y este vuela muy por encima de ellos.",
+        "Vuela a más del doble de altura que el Everest, pero aún muy por debajo de donde empieza el espacio."
+      ],
+      "fun_fact": "El ER-2 de la NASA es una versión civil del avión espía U-2 y vuela a unos 21 km de altura, por encima de aproximadamente el 95 % de la atmósfera terrestre.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Geological_Earth_Mapping_Experiment_%28GEMx%29_BROLL_%28SVS14728_-_ER-2_Pilot_Cockpit_Compilation_1_VX-331275%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGeological_Earth_Mapping_Experiment_%28GEMx%29_BROLL_%28SVS14728_-_ER-2_Pilot_Cockpit_Compilation_1_VX-331275%29.webm",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA's Scientific Visualization Studio - eMITS/Grace Weikert, NASA/GSFC/AMA/Kathleen Gaeta Greer, eMITS/Katie Jepson, NASA/JPL CalTech/James Round, ADNET Systems, Inc./Aaron E. Lepsch, NASA/JPL/Sally Younger",
+        "author_url": null,
+        "excerpt": {
+          "start": 40,
+          "end": 70
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21057",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Las palomitas se han acabado, salen los créditos y, por algún motivo, nadie quiere irse del cine.",
+      "question": "Escucha: esta pieza lenta para piano suena en los créditos finales de ¿qué película sobre un compositor?",
+      "answer": "Amadeus",
+      "wrong_answers": [
+        "Amor inmortal",
+        "Shine",
+        "El pianista"
+      ],
+      "hints": [
+        "Fíjate en el estilo: elegante y equilibrado, del Clasicismo más que del Romanticismo.",
+        "Gran parte de la película se rodó en Praga, que hizo las veces de otra capital europea.",
+        "El título de la película es el segundo nombre del propio compositor."
+      ],
+      "fun_fact": "Esta grabación es de 1933, más de 50 años antes de que la película de Miloš Forman llevara en 1984 este mismo movimiento lento, del Concierto para piano n.º 20 de Mozart, a millones de espectadores.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/PDP-CH_-_Edwin_Fischer%2C_Piano_with_the_London_Philharmonic_Orchestra_-_Piano_Concerto_No._20_in_D_minor%2C_K_466_-_2nd_Movement%2C_Conclusion_and_Romance_-_Hmv-db7631-32-4259.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_Edwin_Fischer%2C_Piano_with_the_London_Philharmonic_Orchestra_-_Piano_Concerto_No._20_in_D_minor%2C_K_466_-_2nd_Movement%2C_Conclusion_and_Romance_-_Hmv-db7631-32-4259.flac",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Metropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg",
+        "credit": "Unknown or not provided · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown or not provided\n\nRetouched by Mmxx",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mmxx"
+      }
+    },
+    {
+      "id": "q-21058",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "El cielo decidió repintar toda la calle sin preguntar a nadie, y la furgoneta no tuvo ni voz ni voto.",
+      "question": "Mira: si derritieras una capa recién caída de 10 cm de lo que cae aquí, ¿qué altura de agua quedaría, más o menos?",
+      "answer": "Alrededor de 1 cm",
+      "wrong_answers": [
+        "Alrededor de 4 cm",
+        "Alrededor de 7 cm",
+        "Alrededor de 10 cm"
+      ],
+      "hints": [
+        "Los copos recién caídos atrapan mucho aire entre sus delicados brazos.",
+        "Una capa fresca y esponjosa es sobre todo aire, no hielo.",
+        "Los meteorólogos usan una regla práctica de más o menos «diez a uno»."
+      ],
+      "fun_fact": "La regla del diez a uno es solo una media: la nieve en polvo muy seca puede llegar a 20 a 1 o más, y la nieve húmeda y pesada se acerca más a 5 a 1.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Snowfall_Time-Lapse_2-27-2015_Fort_Worth_Texas.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowfall_Time-Lapse_2-27-2015_Fort_Worth_Texas.webm",
+        "credit": "Dave Stevens · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Dave Stevens",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21059",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Ponte recto y quítate el sombrero: esta melodía suele sonar justo antes de que alguien chute un balón.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "República Checa",
+      "wrong_answers": [
+        "Eslovaquia",
+        "Hungría",
+        "Croacia"
+      ],
+      "hints": [
+        "El hombre canta en una lengua eslava.",
+        "En 1993 este país se separó pacíficamente de su vecino.",
+        "Su capital es Praga."
+      ],
+      "fun_fact": "El himno empezó siendo una canción de una comedia teatral llamada «Fidlovačka», estrenada en Praga en 1834.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/09/03_Adam-Plachetka_orchestr-Narodniho-divadla_dirigent-Jiri-Belohlavek_2008.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A03_Adam-Plachetka_orchestr-Narodniho-divadla_dirigent-Jiri-Belohlavek_2008.ogg",
+        "credit": "Adam Plachetka, dirigent - Jiří Bělohlávek · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Adam Plachetka, dirigent - Jiří Bělohlávek",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Concert_stage_of_Severance_Hall.jpg/3840px-Concert_stage_of_Severance_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConcert_stage_of_Severance_Hall.jpg",
+        "credit": "Cbusram · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Cbusram",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Cbusram&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21061",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Una furgoneta de reparto sin conductor, sin carretera y sin sitio para aparcar.",
+      "question": "Mira: esta nave de carga sin tripulación, con cuatro alas solares en forma de X, lleva suministros a la estación espacial. ¿Qué agencia espacial la construyó?",
+      "answer": "Agencia Espacial Europea (ESA)",
+      "wrong_answers": [
+        "Roscosmos (Rusia)",
+        "JAXA (Japón)",
+        "Agencia Espacial Canadiense (CSA)"
+      ],
+      "hints": [
+        "Solo volaron cinco de estas grandes naves de carga, entre 2008 y 2014.",
+        "Su diseño sirvió después de base para el módulo de servicio que da energía, agua y aire a la cápsula Orión de la NASA.",
+        "Las cinco naves llevaron los nombres de Julio Verne, Johannes Kepler, Edoardo Amaldi, Albert Einstein y Georges Lemaître."
+      ],
+      "fun_fact": "Con unas 20 toneladas, el ATV fue de las naves más pesadas que han visitado la estación espacial, y sus motores también empujaban toda la estación a una órbita más alta.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Docking_to_ISS_of_the_ATV_4_Albert_Einstein.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADocking_to_ISS_of_the_ATV_4_Albert_Einstein.webm",
+        "credit": "NASA TV · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA TV",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 40
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21062",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Pies descalzos, piel pintada y una pista de baile de acero: la fiesta de esta noche es en la cubierta de un barco.",
+      "question": "Mira y escucha: este baile, con pintura blanca en el cuerpo y ritmo de palos de madera, es una tradición indígena de ¿qué país?",
+      "answer": "Australia",
+      "wrong_answers": [
+        "Nueva Zelanda",
+        "Papúa Nueva Guinea",
+        "Fiyi"
+      ],
+      "hints": [
+        "El ritmo seco que oyes sale de dos palos que se golpean entre sí, un instrumento típico de este pueblo.",
+        "Los antepasados de los bailarines viven en esta tierra desde hace más de 50 000 años: es una de las culturas vivas más antiguas del planeta.",
+        "De aquí viene el didgeridoo, y también los canguros."
+      ],
+      "fun_fact": "Todos los bailarines de este grupo, los Bungaree Dancers, son marineros en activo de la Armada australiana, y esta actuación tuvo lugar en la cubierta del buque de guerra HMAS Adelaide.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/51/Royal_Australian_Navy%E2%80%99s_Bungaree_Dancers_at_launch_of_Sea_Power_Conference_2019_onboard_HMAS_Adelaide.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARoyal_Australian_Navy%E2%80%99s_Bungaree_Dancers_at_launch_of_Sea_Power_Conference_2019_onboard_HMAS_Adelaide.webm",
+        "credit": "Royal Australian Navy · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Royal Australian Navy",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21063",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "Un dúo en el que el piano hace todo el trabajo duro y su compañero se lleva todos los aplausos.",
+      "question": "Escucha: ¿qué instrumento toca la melodía sobre el piano?",
+      "answer": "Flauta",
+      "wrong_answers": [
+        "Clarinete",
+        "Oboe",
+        "Violín"
+      ],
+      "hints": [
+        "En una orquesta, suele tocar las notas más agudas de su sección.",
+        "No tiene lengüeta: el sonido nace al soplar aire sobre un agujero.",
+        "Se toca en posición horizontal, hacia la derecha del músico."
+      ],
+      "fun_fact": "Las flautas más antiguas que se han encontrado se tallaron en huesos de ave y marfil de mamut hace más de 40 000 años.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Chopin_-_Variations_for_Flute_and_Piano_in_E_major%2C_B._9_%28Diana_Hughes%29.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChopin_-_Variations_for_Flute_and_Piano_in_E_major%2C_B._9_%28Diana_Hughes%29.flac",
+        "credit": "Frédéric Chopin · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Frédéric Chopin",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Metropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg",
+        "credit": "Unknown or not provided · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown or not provided\n\nRetouched by Mmxx",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mmxx"
+      }
+    },
+    {
+      "id": "q-21064",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "Va de azul cielo con piloto trasero a juego, y sin ninguna prisa por ir a ninguna parte.",
+      "question": "Mira: ¿qué tipo de insecto está posado en este tallo?",
+      "answer": "Caballito del diablo",
+      "wrong_answers": [
+        "Libélula",
+        "Efímera",
+        "Crisopa"
+      ],
+      "hints": [
+        "Caza otros insectos pequeños y pasó su juventud bajo el agua.",
+        "Fíjate en las alas: en reposo las pliega juntas a lo largo de su cuerpo fino en vez de extenderlas planas.",
+        "Es el primo más esbelto y delicado de la libélula, y sus dos grandes ojos están muy separados a cada lado de la cabeza, como los extremos de un martillo."
+      ],
+      "fun_fact": "Las larvas del caballito del diablo viven bajo el agua y respiran por tres branquias en forma de hoja que tienen en la punta de la cola.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Blue-tailed_Damselfly_%28Ischnura_elegans%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlue-tailed_Damselfly_%28Ischnura_elegans%29.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 36,
+          "end": 66
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21065",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Hay compositores que dedican su música a un amor; estos eligieron algo con bastante más agua.",
+      "question": "Mira: este famoso concierto para piano lleva el nombre de un gran río del país de los intérpretes. ¿Qué río?",
+      "answer": "Río Amarillo",
+      "wrong_answers": [
+        "Río Yangtsé",
+        "Río Mekong",
+        "Río de las Perlas"
+      ],
+      "hints": [
+        "Fíjate en los intérpretes y sus chaquetas de cuello alto: este concierto se celebró en Asia oriental.",
+        "A este río se le suele llamar «río madre», la cuna de la antigua civilización del país.",
+        "Su nombre viene del color del limo fino y fangoso que arrastra hasta el mar."
+      ],
+      "fun_fact": "El concierto es una adaptación de la Cantata del río Amarillo, que Xian Xinghai escribió en 1939 en solo unos seis días.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Yellow_River_Piano_Concerto%EF%BC%881970%EF%BC%89.mpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AYellow_River_Piano_Concerto%EF%BC%881970%EF%BC%89.mpg",
+        "credit": "中央新闻纪录电影制片厂 · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "中央新闻纪录电影制片厂",
+        "author_url": null,
+        "excerpt": {
+          "start": 60,
+          "end": 90
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21067",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "Una diminuta arquitecta que reconstruye la casa entera sin pedir nunca licencia de obra.",
+      "question": "Mira: ¿qué tipo de telaraña construye esta araña?",
+      "answer": "Una tela redonda con radios y una espiral",
+      "wrong_answers": [
+        "Un embudo que lleva a un agujero escondido",
+        "Una manta plana extendida sobre la hierba",
+        "Una maraña desordenada en un rincón oscuro"
+      ],
+      "hints": [
+        "Es una de las arañas más comunes en los jardines y parques de Europa.",
+        "Espera al aire libre entre las plantas a que pasen insectos voladores.",
+        "Piensa en la telaraña clásica de los adornos de Halloween."
+      ],
+      "fun_fact": "La araña de jardín europea suele comerse su vieja tela antes de tejer una nueva, y así recicla la proteína de la seda.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/European_garden_spider_%28Araneus_diadematus%29_in_the_UK.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEuropean_garden_spider_%28Araneus_diadematus%29_in_the_UK.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 19
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21068",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "La vida entre juncos: buenas vistas, alfombras húmedas y unos vecinos que no paran de chapotear.",
+      "question": "Mira: ¿qué ave está nadando entre los juncos en este vídeo?",
+      "answer": "Gallineta común",
+      "wrong_answers": [
+        "Focha común",
+        "Ánade real",
+        "Zampullín común"
+      ],
+      "hints": [
+        "No es un pato: pertenece a la familia de los rálidos, que sobre todo caminan por las marismas.",
+        "Mientras nada, levanta la cola una y otra vez y enseña las plumas blancas de debajo.",
+        "Su prima la focha tiene la frente blanca, pero la de esta ave es de un rojo intenso, con el pico de punta amarilla."
+      ],
+      "fun_fact": "La gallineta no tiene membranas entre los dedos, solo dedos largos y finos, pero nada muy bien y mueve la cabeza adelante y atrás con cada brazada.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Common_Moorhen_%28Gallinula_chloropus%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Moorhen_%28Gallinula_chloropus%29.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 22,
+          "end": 52
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21069",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "amphibians",
+      "bundle": "base",
+      "description": "Una charca de noche donde todos cantan y nadie ha aprendido a hablar bajito.",
+      "question": "Escucha: el «tonk… tonk» fuerte y regular de este coro de ranas americanas es de una rana arborícola. ¿A qué animal se refiere su nombre?",
+      "answer": "Perro",
+      "wrong_answers": [
+        "Vaca",
+        "Oveja",
+        "Cerdo"
+      ],
+      "hints": [
+        "Su nombre viene del sonido que hace este animal: es la «rana arborícola ___dora».",
+        "Fíjate en lo corta y seca que es cada llamada, más un grito suelto que un sonido largo.",
+        "¡Guau!"
+      ],
+      "fun_fact": "La rana arborícola ladradora es una de las ranas arborícolas autóctonas más grandes de Estados Unidos, y en una noche cálida su llamada se oye desde la otra punta de un pantano.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Hyla_gratiosa_call.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHyla_gratiosa_call.ogg",
+        "credit": "Fredlyfish4 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Fredlyfish4",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Ratargul_swamp_forest_at_night.jpg/3840px-Ratargul_swamp_forest_at_night.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARatargul_swamp_forest_at_night.jpg",
+        "credit": "Asikul Islam Himel · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Asikul Islam Himel",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Asikul_Islam_Himel&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21070",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "farm-animals",
+      "bundle": "base",
+      "description": "Una gallina que se vistió de luto para un funeral y decidió que ese look le quedaba de maravilla para siempre.",
+      "question": "Mira: fíjate en la cresta y la cara de este gallo negro. ¿Cómo se llama su raza?",
+      "answer": "Ayam Cemani",
+      "wrong_answers": [
+        "Australorp",
+        "La Flèche",
+        "Menorquina"
+      ],
+      "hints": [
+        "Su color negro va mucho más allá de las plumas.",
+        "Procede de la isla de Java, en Indonesia.",
+        "En su idioma de origen, la primera palabra de su nombre significa simplemente «gallina»."
+      ],
+      "fun_fact": "Por la fibromelanosis, el Ayam Cemani es oscuro incluso por dentro, hasta los huesos, pero sus gallinas ponen huevos normales de color crema.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Ayam_Cemani_%28Zoo_Dresden%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAyam_Cemani_%28Zoo_Dresden%29.webm",
+        "credit": "Fiver, der Hellseher · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Fiver, der Hellseher",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21071",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía que ha pasado más tiempo en el podio olímpico que la mayoría de los atletas.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "China",
+      "wrong_answers": [
+        "Japón",
+        "Corea del Sur",
+        "Vietnam"
+      ],
+      "hints": [
+        "Este himno se escribió primero como canción principal de una película de 1935.",
+        "Su nombre en español es «Marcha de los Voluntarios».",
+        "Es el país que tuvo la mayor población del mundo durante casi toda la historia moderna, y su capital organizó los Juegos Olímpicos de verano de 2008."
+      ],
+      "fun_fact": "Su compositor, Nie Er, escribió la melodía en 1935, cuando solo tenía 23 años.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%AD%8C.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%E4%B8%AD%E5%8D%8E%E4%BA%BA%E6%B0%91%E5%85%B1%E5%92%8C%E5%9B%BD%E5%9B%BD%E6%AD%8C.ogg",
+        "credit": "Zscout370 · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Zscout370",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21074",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "La mano derecha de un pianista que, por lo visto, no ha oído hablar nunca de la hora de comer.",
+      "question": "Escucha: este es el último movimiento de una famosa sonata para piano de Beethoven. ¿Con qué apodo se conoce la sonata entera?",
+      "answer": "Tempestad",
+      "wrong_answers": [
+        "Claro de luna",
+        "Patética",
+        "Appassionata"
+      ],
+      "hints": [
+        "Como casi todos los apodos de obras de Beethoven, este no lo escribió él en la partitura.",
+        "El nombre viene de una anécdota: lo que respondió Beethoven cuando le preguntaron qué significaba la música.",
+        "Al parecer, dijo que leyeran una obra de Shakespeare que empieza con un naufragio."
+      ],
+      "fun_fact": "El apodo viene de Anton Schindler, secretario de Beethoven, que contó que el compositor le dijo: «Lee La tempestad de Shakespeare». Muchos historiadores dudan de la anécdota, pero el nombre se quedó.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Klaviersonate_Nr._17_d-moll_op._31.2_Der_Sturm_-_III._Allegretto.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKlaviersonate_Nr._17_d-moll_op._31.2_Der_Sturm_-_III._Allegretto.ogg",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Boesendorfer-5075415.jpg/3840px-Boesendorfer-5075415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+        "credit": "ermell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell"
+      }
+    },
+    {
+      "id": "q-21075",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "technology",
+      "bundle": "base",
+      "description": "Antes de que el móvil lo hiciera todo, los jefes ocupados dictaban sus cartas a uno de estos aparatos.",
+      "question": "Mira: ¿en qué guarda el sonido esta grabadora de bolsillo?",
+      "answer": "Una cinta de casete diminuta",
+      "wrong_answers": [
+        "Un MiniDisc pequeño",
+        "Una tarjeta de memoria",
+        "Un disquete"
+      ],
+      "hints": [
+        "Fíjate en lo que mete la mano detrás de la tapita.",
+        "Dentro, el sonido se guarda en una larga tira magnética.",
+        "Funciona como aquellas cintas de música de los años 80, pero en miniatura."
+      ],
+      "fun_fact": "El microcasete lo presentó la empresa japonesa Olympus en 1969 y se usó durante décadas en dictáfonos y contestadores automáticos.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/AIWA_Micro_Cassette_Recorder.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAIWA_Micro_Cassette_Recorder.webm",
+        "credit": "Maximilian Schönherr · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Maximilian Schönherr",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 13
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21076",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "volcanoes",
+      "bundle": "base",
+      "description": "Desde el espacio, el océano Pacífico parece tranquilo y azul… hasta que deja de parecerlo.",
+      "question": "Mira: un satélite meteorológico grabó cómo esta enorme nube gris brotaba en pleno océano Pacífico en pocas horas. ¿Qué la causó?",
+      "answer": "Un volcán submarino en erupción",
+      "wrong_answers": [
+        "Un meteorito que cayó al mar",
+        "Una plataforma petrolífera en llamas",
+        "Un incendio forestal en una isla"
+      ],
+      "hints": [
+        "Fíjate en el color de la nube: no es blanca como el vapor de agua.",
+        "La nube crece desde un solo punto en mar abierto, lejos de cualquier gran extensión de tierra.",
+        "Salió de las profundidades de la Tierra, a través del fondo marino, cerca de las islas Tonga."
+      ],
+      "fun_fact": "La erupción del Hunga Tonga-Hunga Ha'apai en 2022 lanzó su columna a unos 57 km de altura, la más alta jamás medida, y su onda de presión dio varias vueltas a la Tierra.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Tonga_Volcano_Eruption_2022-01-15_0320Z_to_0610Z_Himawari-8_visible.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATonga_Volcano_Eruption_2022-01-15_0320Z_to_0610Z_Himawari-8_visible.webm",
+        "credit": "Japan Meteorological Agency (satellite), Digital Typhoon (website) · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Japan Meteorological Agency (satellite), Digital Typhoon (website)",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21078",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Un rascacielos muy brillante que se cansó de estar quieto y despegó del suelo.",
+      "question": "Mira: este cohete gigante de acero, grabado desde un avión de investigación de la NASA, ¿qué empresa lo construyó?",
+      "answer": "SpaceX",
+      "wrong_answers": [
+        "Blue Origin",
+        "Boeing",
+        "Rocket Lab"
+      ],
+      "hints": [
+        "La empresa es de Estados Unidos y se fundó a principios de los años 2000.",
+        "Sus cohetes propulsores son famosos por volver volando y aterrizar de pie después del lanzamiento.",
+        "La fundó en 2002 el hombre que más tarde dirigiría Tesla."
+      ],
+      "fun_fact": "Con su etapa superior encima, Starship mide unos 121 m de altura y su propulsor tiene 33 motores: es el cohete más grande y potente que ha volado jamás.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/SpaceX_Starship_IFT-1_NASA_WB-57_Cam_0.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASpaceX_Starship_IFT-1_NASA_WB-57_Cam_0.webm",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "excerpt": {
+          "start": 130,
+          "end": 160
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21079",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "traditional-dress",
+      "bundle": "base",
+      "description": "Cae la noche, empieza el tambor y un modelito se lleva todos los aplausos.",
+      "question": "Mira: ¿qué prenda lleva la bailarina vestida de rojo?",
+      "answer": "Sari",
+      "wrong_answers": [
+        "Kimono",
+        "Hanbok",
+        "Dirndl"
+      ],
+      "hints": [
+        "Se lleva en las bodas y también para ir a trabajar a diario.",
+        "Es una sola tela larga sin coser, a menudo de 5 a 8 metros, que se enrolla alrededor del cuerpo.",
+        "Es el vestido clásico de las mujeres de la India, Nepal y Bangladés."
+      ],
+      "fun_fact": "Un sari se puede colocar de más de 80 maneras distintas, y el estilo suele cambiar de una región de la India a otra.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Kanyapu_Nalike.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKanyapu_Nalike.webm",
+        "credit": "Bharathesha Alasandemajalu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Bharathesha Alasandemajalu",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 40
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21080",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "physics",
+      "bundle": "base",
+      "description": "Una pieza que no se aclara sobre cuál es el lado de arriba, en un sitio donde no hay arriba.",
+      "question": "Mira esta manivela en forma de T que gira flotando en la Estación Espacial Internacional. ¿Cómo se llama el efecto que ves?",
+      "answer": "El efecto Dzhanibékov",
+      "wrong_answers": [
+        "El efecto Coriolis",
+        "El efecto Magnus",
+        "El efecto Leidenfrost"
+      ],
+      "hints": [
+        "Fíjate en lo que le pasa a la manivela cada pocos segundos, aunque nada la toca.",
+        "Puedes ver lo mismo si lanzas al aire una raqueta de tenis o un móvil y gira sobre su eje intermedio.",
+        "Lleva el nombre de un cosmonauta soviético que lo descubrió en 1985 con una tuerca de mariposa que giraba."
+      ],
+      "fun_fact": "Vladímir Dzhanibékov descubrió el efecto en 1985 a bordo de la estación espacial Saliut 7, y los matemáticos lo explican con el «teorema de la raqueta de tenis».",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/Dzhanibekov_effect.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADzhanibekov_effect.ogv",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21082",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "La celebridad más lenta del centro espacial, y aun así todos se quedan mirándola.",
+      "question": "Mira: este vehículo gigante de la NASA lleva las naves espaciales a la plataforma de lanzamiento. ¿Sobre qué se mueve?",
+      "answer": "Orugas de tanque",
+      "wrong_answers": [
+        "Raíles de acero",
+        "Colchones de aire",
+        "Ruedas de goma"
+      ],
+      "hints": [
+        "Fíjate bien en las cuatro esquinas del vehículo.",
+        "Las excavadoras y otras máquinas de obra suelen usar lo mismo para moverse sobre terreno blando.",
+        "Cada esquina tiene bandas de pesadas placas de metal que giran y giran sin parar."
+      ],
+      "fun_fact": "Los transportadores de la NASA se construyeron en los años sesenta para los cohetes lunares Apollo, y cada una de sus 456 placas de oruga pesa alrededor de 1 tonelada.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/NASA%27s_Crawler-Transporters_Video_Infographic_iyudA4h1fo4.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA%27s_Crawler-Transporters_Video_Infographic_iyudA4h1fo4.webm",
+        "credit": "NASAKennedy · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASAKennedy",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 8
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21083",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Cada pieza de música clásica lleva su propia señal de límite de velocidad, escrita en italiano.",
+      "question": "Escucha: ¿qué indicación de tempo en italiano le corresponde a este movimiento de Mozart?",
+      "answer": "Andante",
+      "wrong_answers": [
+        "Presto",
+        "Allegro",
+        "Vivace"
+      ],
+      "hints": [
+        "Los músicos indican la velocidad de una pieza con una palabra italiana en lo alto de la partitura.",
+        "Fíjate en el ritmo: ¿la orquesta va con prisas o se lo toma con calma?",
+        "La palabra viene del verbo italiano que significa «ir» o «andar»: piensa en un paseo tranquilo."
+      ],
+      "fun_fact": "Mozart terminó este concierto para piano, el n.º 16 en re mayor, en 1784, el mismo año en que empezó a llevar una lista escrita y cuidadosa de todas las obras que componía.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Mozart_Concerto_No.16_in_D_for_piano_II._Andante_%28Mozart%29_European_Archive.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMozart_Concerto_No.16_in_D_for_piano_II._Andante_%28Mozart%29_European_Archive.ogg",
+        "credit": "European Archives · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "European Archives",
+        "author_url": null,
+        "excerpt": {
+          "start": 40,
+          "end": 100
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Concert_Hall%2C_Severance_Hall%2C_University_Circle%2C_Cleveland%2C_OH.jpg/3840px-Concert_Hall%2C_Severance_Hall%2C_University_Circle%2C_Cleveland%2C_OH.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConcert_Hall%2C_Severance_Hall%2C_University_Circle%2C_Cleveland%2C_OH.jpg",
+        "credit": "w_lemay · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "w_lemay",
+        "author_url": null
+      }
     }
   ]
 }
