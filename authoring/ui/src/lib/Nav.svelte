@@ -1,6 +1,6 @@
 <script lang="ts">
   // The authoring pages' nav bar (RV-16): start page, review tool, stats, screen gallery, joker cards.
-  let { current }: { current: "start" | "review" | "stats" | "gallery" } = $props();
+  let { current }: { current: "start" | "review" | "stats" | "gallery" | "sounds" } = $props();
 </script>
 
 <nav>
@@ -8,6 +8,7 @@
   <a href="/review" class:current={current === "review"}>Review</a>
   <a href="/stats/categories" class:current={current === "stats"}>Stats</a>
   <a href="/gallery" class:current={current === "gallery"}>Gallery</a>
+  <a href="/sounds" class:current={current === "sounds"}>Sounds</a>
   <a href="/comodines">Joker cards</a>
 </nav>
 

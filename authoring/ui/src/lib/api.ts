@@ -1,6 +1,6 @@
 // The authoring server's question API (authoring/server/main.py, port 8001).
 import { call, json, post } from "$app/lib/http.ts";
-import type { AgeGroups, Bundle, Category, GalleryManifest, MediaStats, Names, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets, UiFlag } from "./types.ts";
+import type { AgeGroups, Bundle, Category, GalleryManifest, MediaStats, Names, SoundCandidate, Overview, Question, Review, Slot, SpotCheckItem, SpotChecks, Status, Targets, UiFlag } from "./types.ts";
 
 const SERVER = "the authoring server (`trivia-authoring`)";
 
@@ -143,4 +143,9 @@ export async function changeUiFlag(
   body: { flag: Pick<UiFlag, "locale" | "key" | "text" | "shot" | "note" | "demo"> } | { id: number; note: string } | { id: number; remove: true },
 ): Promise<UiFlag[]> {
   return send("/api/gallery/flags", body);
+}
+
+/** The audition candidates of work/sound-brief/manifest.json, null before there is one (plan 220). */
+export async function fetchSounds(): Promise<SoundCandidate[] | null> {
+  return get("/api/sounds");
 }

@@ -135,6 +135,19 @@ Music file numbers:
 - Largest: `victoria` 1.20 MB (98 s), then `musica-caja-normal` 301 kB, `musica-caja-enviada` 301 kB, `musica-caja-pregunta` 301 kB, `musica-reflejos-enviada` 279 kB.
 - Cue count 62, not ~66 as the plan guessed; 4 are synth only: `silence`, `boom`, `claim`, `countdown`.
 
+## Manifest
+
+`work/sound-brief/manifest.json` (gitignored, in the main checkout; work trees symlink `work/`) lists the audition candidates that `/sounds` on `trivia-authoring` plays (`GET /api/sounds`, files at `/sounds/<file>`; `authoring/server/sounds.py`). Without a manifest the page shows «no candidates yet».
+
+- A JSON list of entries; per entry:
+  - `file`: relative to `work/sound-brief/`, e.g. `effects/<direction>/<name>.m4a`, `music/<mood>/<name>.m4a`
+  - `group`: `effects` or `music`
+  - `direction` (effects) or `mood` (music)
+  - `round`: feedback round, integer from 1
+  - `stands_for`: the cue or track it stands in for
+  - `source`: page URL; `author`; `licence` (as read on the page)
+  - numbers: `length_s`, `lufs`, `true_peak_db`, `centroid_hz`; `bpm` (music)
+
 ## Brief
 
 Filled by the sound brief task.

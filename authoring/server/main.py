@@ -70,6 +70,9 @@ API:
     POST /api/gallery/flags                        body {"flag": {locale, key, text, shot, note}} adds,
                                                    {"id", "note"} edits, {"id", "remove": true} removes; returns all flags
     GET  /gallery/[sets/<name>/]<locale>/<shot>.png  a shot from work/gallery/
+    GET  /api/sounds                               work/sound-brief/manifest.json: the audition candidates for /sounds
+                                                   (plan 220, authoring/server/sounds.py); null before there is one
+    GET  /sounds/<path>                            a file from work/sound-brief/ (404 for a missing file or a path escape)
     GET  /reports/<batch>.md                       a batch report (authoring/reports/), as plain text
     GET  /probe/<sha>/<sheet|spectrogram>.png      a media-first probe's picture (work/media-probe/, plan 204)
     GET  /media?url=<file_url>                     a picked media file from the cache (any question in the
@@ -96,6 +99,7 @@ import media  # noqa: E402  (authoring/tools/media.py)
 import media_first  # noqa: E402  (authoring/tools/media_first.py)
 import media_cache  # noqa: E402  (authoring/tools/media_cache.py)
 import media_stats  # noqa: E402  (authoring/server/media_stats.py)
+import sounds  # noqa: E402  (authoring/server/sounds.py)
 import ui_flags  # noqa: E402  (authoring/server/ui_flags.py)
 import overview  # noqa: E402  (authoring/server/overview.py)
 import played  # noqa: E402  (authoring/tools/played.py)
@@ -406,6 +410,7 @@ GET_API = {
     "/api/names": names_of,
     "/api/targets": lambda query: targets.load_all(),
     "/api/gallery": ui_flags.build,
+    "/api/sounds": lambda query: sounds.load(),
 }
 
 
@@ -441,6 +446,9 @@ class Handler(BaseHandler):
         if url.path.startswith("/gallery/") and url.path.endswith(".png"):
             path = ui_flags.shot_path(url.path.removeprefix("/gallery/"))
             return self.send_file(path) if path else self.send_json(404, {"error": "no such shot: run trivia-gallery"})
+        if url.path.startswith("/sounds/"):  # an audition file (plan 220)
+            path = sounds.file_path(url.path.removeprefix("/sounds/"))
+            return self.send_file(path) if path else self.send_json(404, {"error": "no such sound file"})
         if url.path.startswith("/probe/"):  # a media-first probe's picture (plan 204)
             return self.send_probe(url.path.removeprefix("/probe/"))
         if url.path == "/media":
