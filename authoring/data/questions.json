@@ -1655770,6 +1655770,91 @@
         },
         "revised_on": "2026-11-18"
       }
+    },
+    {
+      "id": "q-21208",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "A tiny silent movie starring one drop of water and a piece of very fancy plastic.",
+      "question": "Watch the water drop on this treated plastic. Which word describes a surface that behaves like this?",
+      "answer": "Superhydrophobic",
+      "wrong_answers": [
+        "Superhydrophilic",
+        "Superabsorbent",
+        "Superconductive"
+      ],
+      "hints": [
+        "The word comes from two Greek words: “water” and a feeling.",
+        "Look closely: the drop would rather hang on the needle than touch the surface.",
+        "Lotus leaves do the same thing: rain beads up and rolls right off."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShrink-Induced-Superhydrophobic-and-Antibacterial-Surfaces-in-Consumer-Plastics-pone.0040987.s002.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Shrink-Induced-Superhydrophobic-and-Antibacterial-Surfaces-in-Consumer-Plastics-pone.0040987.s002.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Freschauf L, McLane J, Sharma H, Khine M · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": null,
+        "author": "Freschauf L, McLane J, Sharma H, Khine M",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Shrink-Induced-Superhydrophobic-and-Antibacterial-Surfaces-in-Consumer-Plastics-pone.0040987.s002.ogv",
+        "note": "Black-and-white silhouette: a needle puts a round water drop on a sloped surface. The drop stays a near-perfect ball, clings to the needle instead of the surface, and then rolls off the slope easily.",
+        "duration": 16.95
+      },
+      "fun_fact": "Lotus leaves are naturally superhydrophobic: tiny waxy bumps make rain roll off and carry dirt away, which scientists call the “lotus effect”.",
+      "subcategory": "physics",
+      "style": null,
+      "concept": "Water droplet rolling off a superhydrophobic (water-repellent) surface",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "The facts are right, and the essential video exists and shows the drop beading up and rolling off. Distractors: superhydrophilic is the strong foil. Superabsorbent and superconductive are easy to rule out once you see a water-repelling drop. Hint 2 (arachnophobia → phobia) almost gives the answer away, which is acceptable for hint 2 but on the strong side. Fun: this is a fairly dry vocabulary question from a science term, although watching the video helps. A black-and-white lab clip may also not read clearly on a TV. Difficulty: most adults can work it out from 'water-repellent' and 'hydrophobic', so it fits the 11–12 range."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-90",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/156be2ab17ae74ab"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which pointed straight to “-phobia”, with a vaguer hint about how the drop acts, as the final reviewer asked; the frames match the clip.",
+        "previous": {
+          "hints": [
+            "The word comes from two Greek words: “water” and a feeling.",
+            "The feeling is the one in words like arachnophobia.",
+            "Lotus leaves do the same thing: rain beads up and rolls right off."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
     }
   ]
 }

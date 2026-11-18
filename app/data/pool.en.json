@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9fde7125",
+  "hash": "65a3a129",
   "questions": [
     {
       "id": "q-0001",
@@ -220581,6 +220581,41 @@
           "start": 145,
           "end": 170
         }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21208",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "physics",
+      "bundle": "base",
+      "description": "A tiny silent movie starring one drop of water and a piece of very fancy plastic.",
+      "question": "Watch the water drop on this treated plastic. Which word describes a surface that behaves like this?",
+      "answer": "Superhydrophobic",
+      "wrong_answers": [
+        "Superhydrophilic",
+        "Superabsorbent",
+        "Superconductive"
+      ],
+      "hints": [
+        "The word comes from two Greek words: “water” and a feeling.",
+        "Look closely: the drop would rather hang on the needle than touch the surface.",
+        "Lotus leaves do the same thing: rain beads up and rolls right off."
+      ],
+      "fun_fact": "Lotus leaves are naturally superhydrophobic: tiny waxy bumps make rain roll off and carry dirt away, which scientists call the “lotus effect”.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Shrink-Induced-Superhydrophobic-and-Antibacterial-Surfaces-in-Consumer-Plastics-pone.0040987.s002.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShrink-Induced-Superhydrophobic-and-Antibacterial-Surfaces-in-Consumer-Plastics-pone.0040987.s002.ogv",
+        "credit": "Freschauf L, McLane J, Sharma H, Khine M · CC BY 2.5 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.5",
+        "license_url": null,
+        "author": "Freschauf L, McLane J, Sharma H, Khine M",
+        "author_url": null,
+        "excerpt": null
       },
       "background": null
     }
