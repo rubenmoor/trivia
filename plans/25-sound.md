@@ -148,6 +148,23 @@ Music file numbers:
   - `source`: page URL; `author`; `licence` (as read on the page)
   - numbers: `length_s`, `lufs`, `true_peak_db`, `centroid_hz`; `bpm` (music)
 
+## Candidates
+
+Audition candidates per round, staged by `authoring/tools/sound_brief.py <spec.json>` into `work/sound-brief/` (gitignored; packs and the spec stay in `work/sound-brief-src/`) and listed on `/sounds`. The numbers in the manifest: `lufs` is measured with 1 s of silence after the file (the loudness gate works on 400 ms blocks), so very short sounds read low; every file is peak-limited to about -1.5 dBTP, so a click can sit far under -16 LUFS. Workers can't hear: files were picked from the source's names and measured; the developer's ears decide.
+
+### Round 1, effects
+
+Four directions, each from one designer. Kenney's own download page refuses scripts (403), so the packs come from their OpenGameArt mirrors (same CC0 packs); licence read on each page: CC0. No cartoon direction: the OpenGameArt CC0 search found no coherent cartoon pack (only single sounds); a later round can look wider. "Coverage" counts the 62 `Cue` members (inventory above) the source could play with a fitting sound, estimated from the pack contents; no direction has applause, a cork pop or the microwave bing except where noted.
+
+| Direction | Source | Licence | Files staged | Coverage |
+|---|---|---|---|---|
+| `wooden-tactile` | Kenney, [RPG Audio](https://opengameart.org/content/50-rpg-sound-effects) (51 files: book, cloth, leather, door, coins, metal, knife, creak, chop, footsteps) | CC0 | 10 | ~25: menu, paper, tear, pop, padlock, stamp, tick, swoosh, token-back, broom (cloth sweep), shredder; no jingles, fireworks, applause, boom, bing, wand |
+| `casino-table` | Kenney, [Casino Audio](https://opengameart.org/content/54-casino-sound-effects-cards-dice-chips) (55 files: cards, dice, chips) | CC0 | 10 | ~14: menu, pop, paper, swoosh, tick, padlock, token-back, stamp; no jingles, fireworks, jokers with meaning |
+| `retro-8bit` | Juhani Junkala (SubspaceAudio), [512 retro sound effects](https://opengameart.org/content/512-sound-effects-8-bit-style) | CC0 | 10 | ~55: UI, fanfares, power-ups (joker shimmer, wand), errors, explosions (burst), portals (whoosh, splash), bleeps (claim, countdown), bling (bing); no applause, no real broom or cork |
+| `clean-digital` | Kenney, [UI Audio](https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks) (clicks, switches, rollovers) and [Digital Audio](https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc) (tones, power-ups, phasers, zaps) | CC0 | 12 | ~40: UI, tones (fanfare, sting), phasers (wand, whoosh), zaps (splash); no applause, fireworks, broom |
+
+Applause (`applause`, `applause-big`) and the crowd sounds are in none of the four: any theme keeps today's files or needs another source.
+
 ## Brief
 
 Filled by the sound brief task.

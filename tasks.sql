@@ -49825,7 +49825,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - `/sounds` shows a hand-written test manifest''s entries and plays them; empty state without one (delete any test files from `work/sound-brief/` afterwards)
 - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:31Z', '2026-11-18T20:56:08Z', 2227, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2230, 220, 'Effect theme directions, round 1', 'work', 'open', NULL, NULL, 'Task 3 of `plan 220: Sound inventory and sound brief`. Iterative feedback: this is round 1; the sound brief task brings later rounds back with the developer''s words ("more like this, less like that").
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2230, 220, 'Effect theme directions, round 1', 'work', 'done', NULL, '2026-11-18, authoring/tools/sound_brief.py, plans/25-sound.md Candidates; 42 round-1 effect files staged in work/sound-brief/ (4 directions)', 'Task 3 of `plan 220: Sound inventory and sound brief`. Iterative feedback: this is round 1; the sound brief task brings later rounds back with the developer''s words ("more like this, less like that").
 
 ## What
 - 3–4 effect theme directions (e.g. soft wooden/acoustic, playful cartoon, glossy game-show, retro synth), each from one pack or one sound designer, so the theme is consistent
@@ -49838,7 +49838,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 ## Done when
 - `/sounds` on `trivia-authoring` lists every direction with its files
-- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:44Z', NULL, 2227, 1, NULL, 'app');
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:44Z', '2026-11-18T21:02:36Z', 2227, 1, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2231, 220, 'Music moods, round 1', 'work', 'open', NULL, NULL, 'Task 4 of `plan 220: Sound inventory and sound brief`. Iterative feedback: this is round 1; the sound brief task brings later rounds back with the developer''s words ("more like this, less like that").
 
 ## What
@@ -60260,6 +60260,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2460, 2259, '2026-11-18T20:49:09Z', '2026-11-18T20:50:26Z', 'done', NULL, 0, '2e5ad5f2cb3d0c5a93524729ed89d6d5da05fee1', NULL, 'claude-opus-5-5', '11ff9342-e661-454a-b04f-5bff3b13702c', NULL, 10, 20, 6168, 527247, 52169, 0.64624140000000008, 66525, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2461, 2228, '2026-11-18T20:49:32Z', '2026-11-18T20:52:12Z', 'done', NULL, 0, '2e5ad5f2cb3d0c5a93524729ed89d6d5da05fee1', 'app', 'claude-sonnet-5-5', 'fa9dfe24-dc9e-4945-abee-550c5ca20f4f', NULL, 25, 46, 14357, 1732988, 86246, 0.66194479999999989, 101198, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2462, 2229, '2026-11-18T20:52:13Z', '2026-11-18T20:56:15Z', 'done', NULL, 0, '05f31fe8e101f34f3a4b316a6e086f730f359264', 'app', 'claude-sonnet-5-5', '3a013eb0-6f28-46f8-a724-79139b0b093c', NULL, 15, 30, 9466, 838074, 55752, 0.40153539999999993, 70763, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2463, 2230, '2026-11-18T20:56:15Z', '2026-11-18T21:02:43Z', 'done', NULL, 0, 'f76fdf293b65716290c99d5fb3e63d22c0ced48c', 'app', 'claude-sonnet-5-5', '3a013eb0-6f28-46f8-a724-79139b0b093c', 2462, 41, 82, 22949, 4341402, 68687, 1.3400775999999999, 139461, 60, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
