@@ -115,9 +115,16 @@ def cut(x: np.ndarray, s0: int, L: int, tail: int) -> np.ndarray:
 
 
 def seam_jump(x: np.ndarray) -> float:
-    """Jump from the last to the first sample (mono) against the mean step."""
+    """Step from the last to the first sample (mono) against the mean step within 10 ms either side of the seam.
+
+    Local, not whole-loop: a downbeat kick makes natural steps several times the loop's mean.
+    """
     m = x.mean(1)
-    return float(abs(m[0] - m[-1]) / (np.abs(np.diff(m)).mean() + 1e-12))
+    w = min(SR // 100, len(m) // 2)
+    ring = np.concatenate([m[-w:], m[:w]])
+    steps = np.abs(np.diff(ring))
+    local = np.delete(steps, w - 1).mean()
+    return float(steps[w - 1] / (local + 1e-12))
 
 
 def find(layers: dict, hint: float, bars: int = 8, listed: float | None = None) -> tuple[dict, dict]:
