@@ -19,11 +19,11 @@
   /** A non-region bundle's symbol (decision 367): its `icon`, else `puzzle` (mods), `book` (base), `pin`. */
   export const bundleIcon = (b: Pick<Bundle, "base" | "icon" | "source">) => b.icon ?? (b.source === "mod" ? "puzzle" : b.base ? "book" : "pin");
 
-  /** The count a tile shows (decision 267): shipped bundles fixed 5000+ (base) / 2000+, a mod's own count rounded
+  /** The count a tile shows (decision 267): shipped bundles fixed 6000+ (base) / 2000+, a mod's own count rounded
    * down (hundreds from 100, tens from 10), capped at the fixed string of its kind; the demo's base tile is counted
    * like a mod's, uncapped (decision 341). */
   export function countShown(b: Bundle): { n: number; plus: boolean } {
-    const cap = b.base ? 5000 : 2000;
+    const cap = b.base ? 6000 : 2000;
     const n = b.count;
     if (n === undefined || (n >= cap && !buildInfo().demo)) return { n: cap, plus: true };
     const n10 = n >= 100 ? Math.floor(n / 100) * 100 : n >= 10 ? Math.floor(n / 10) * 10 : n;

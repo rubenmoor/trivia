@@ -259,7 +259,7 @@ export const de = {
     print: "Drucken",
   },
   bundles: {
-    /** A tile's question count (decision 267): shipped bundles 5000+ / 2000+, a mod bundle's rounded-down count. */
+    /** A tile's question count (decision 730, 267): shipped bundles 6000+ / 2000+, a mod bundle's rounded-down count. */
     count: { one: "1 Frage", other: "{n} Fragen" },
     countPlus: "{n}+ Fragen",
     /** The base tile's name in a demo build (decision 341). */
