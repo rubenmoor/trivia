@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam`, `trivia-release-check`, `trivia-report-server`, `trivia-gallery` and `trivia-trailer` running from this checkout
+  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam`, `trivia-release-check`, `trivia-report-server`, `trivia-gallery`, `trivia-trailer` and `trivia-music` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -29,9 +29,10 @@
       }));
 
       # A command that runs a script from the repo checkout it is called in.
-      fromCheckout = pkgs: name: script: runtimeInputs: pkgs.writeShellApplication {
+      fromCheckout = pkgs: fromCheckoutWith pkgs pkgs.python3;
+      fromCheckoutWith = pkgs: python: name: script: runtimeInputs: pkgs.writeShellApplication {
         inherit name;
-        runtimeInputs = [ pkgs.git pkgs.python3 ] ++ runtimeInputs;
+        runtimeInputs = [ pkgs.git python ] ++ runtimeInputs;
         text = ''
           root=$(git rev-parse --show-toplevel 2>/dev/null) || {
             echo "${name}: run this inside the trivia repository" >&2; exit 2; }
@@ -51,6 +52,9 @@
 
       authoringTools = pkgs: rec {
         qgen = fromCheckout pkgs "qgen" "authoring/tools/qgen.py" [ pkgs.claude-code pkgs.imagemagick pkgs.nodejs_22 ];
+        # Library music into loops (plan 221): numpy, librosa, soundfile for the loop finder; uv makes the Demucs venv.
+        trivia-music = fromCheckoutWith pkgs (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile ]))
+          "trivia-music" "authoring/tools/music/music.py" [ pkgs.ffmpeg-headless pkgs.uv ];
         trivia-media = fromCheckout pkgs "trivia-media" "authoring/tools/media.py" [ pkgs.imagemagick ];
         trivia-authoring = fromCheckout pkgs "trivia-authoring" "authoring/server/main.py" [ pkgs.nodejs_22 ];
         trivia-dev = fromCheckout pkgs "trivia" "app/server/main.py" [ ];
@@ -208,11 +212,11 @@
         let tools = authoringTools pkgs; in {
           default = pkgs.mkShell {
             packages = [
-              pkgs.nodejs_22 pkgs.python3 pkgs.ruff pkgs.imagemagick pkgs.claude-code pkgs.electron
+              pkgs.nodejs_22 (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile ])) pkgs.ruff pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
-              tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
+              tools.trivia-music tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
-              pkgs.ffmpeg-headless pkgs.tesseract pkgs.whisper-cpp  # qgen media-probe (plan 201): authoring only, nothing ships
+              pkgs.ffmpeg-headless pkgs.uv pkgs.tesseract pkgs.whisper-cpp  # qgen media-probe (plan 201): authoring only, nothing ships
             ] ++ nixpkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
               tools.trivia-steam tools.trivia-release-check tools.steamcmd  # SteamCMD: x86_64-linux only
               # smoke.mjs: an FHS runtime like Steam's, plus what Electron links

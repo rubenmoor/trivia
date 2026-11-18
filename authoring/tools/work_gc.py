@@ -9,7 +9,7 @@ after the batch's QC (authoring/QC.md); nothing can tell it that the QC is finis
   `probe.json`, `speech.txt`, `ocr.txt` stay (they save re-probing); a probe nobody mentions stays whole.
 A deleted picture: the review page lists none; `rm <probe>/probe.json`, then `qgen media-probe` makes it again."""
 import json, re, shutil
-from pathlib import Path
+
 
 import audit  # authoring/tools/audit.py
 from layout import SOURCE_POOL, SPOT_CHECKS, WORK
