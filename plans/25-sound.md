@@ -198,6 +198,20 @@ Source: Kenney Digital Audio (tones, phasers, power-ups, space trash), Kenney RP
 | `rustle` | `susurro-nota` | RPG `cloth3` | `cloth2` |
 | `token-back` (rate varies) | `ficha-vuelve` | Casino `chip-lay-1` | UI `rollover5` |
 
+### Fireworks group, round 1
+
+Source: Kenney Digital Audio (lasers, space trash, pep sounds, tones), CC0, the `clean-digital` theme; no digital pack has real fireworks, so the sounds are synthetic-sounding stand-ins. `burst` has three variants (random, never twice in a row). `cohete` and `estallido` stay for `splash-rocket` and `splash-explode` (splash task). `trivia-sfx convert` trims silence: the rocket climb is 0.6 s, the sparklers 0.7 s (the old ones 1.5 s and 2.4 s). Approval pending (fireworks decision); alternates staged on `/sounds` ("Effects: fireworks", round 1).
+
+| Cue | Installed file(s) | Source file | Alternate |
+|---|---|---|---|
+| `rocket` (rate varies) | `cohete-sube` | `laser8` | `laser4` |
+| `burst` (rate varies) | `explosion-1`, `explosion-2`, `explosion-3` | `spaceTrash3`, `spaceTrash1`, `spaceTrash5` | `laser2` |
+| `confetti-cannon` (rate varies) | `confeti-pum` | `pepSound3` | `pepSound4` |
+| `sparklers` | `chispas` | `laser5` | `laser3` |
+| `stars` (rate varies) | `brillo-estrellas` | `twoTone1` | `powerUp9` |
+
+- Old `canon-confeti`, `bengalas`, `estrellas` files and rows gone
+
 ## Manifest
 
 `work/sound-brief/manifest.json` (gitignored, in the main checkout; work trees symlink `work/`) lists the audition candidates that `/sounds` on `trivia-authoring` plays (`GET /api/sounds`, files at `/sounds/<file>`; `authoring/server/sounds.py`). Without a manifest the page shows «no candidates yet».
