@@ -3,7 +3,7 @@
 
 Ported from the sibling project's tools/audio/music.py and spikes/music-library/setup.sh
 (~/code/three-days-until-release, decision 199: no import across repos). `loop` imports music_loop.py (numpy,
-librosa, soundfile). Later steps (check, credits) are added by their own tasks.
+librosa, soundfile). The end-to-end `run` is added by its own task.
 
   search [--feel F] [--bpm LO-HI] [--instrument I] [--min-length S]   incompetech catalogue
   fetch <title> <id>                       incompetech download to work/music/<id>/original.mp3 + record
@@ -20,6 +20,11 @@ librosa, soundfile). Later steps (check, credits) are added by their own tasks.
                                            a dB cut after a layer (bass+other-3), a leading + = the previous variant
                                            plus (+drums), full = all layers; --whole record: full = the loop, @<bar> =
                                            another stretch of the track from that bar (same length, checked like the loop)
+  check <id> [--dir D]                     hard checks of the exported files after AAC decode: fullest variant -18 +-0.5 LUFS,
+                                           every file <= -1.5 dBTP, seam jump <= 3 (cut at loop_s), equal length, 10-300 s,
+                                           licence allowed and read on the page; exit 0/1
+  credits [--check]                        music rows of app/client/public/audio/CREDITS.md from the records, between
+                                           marker comments (hand rows untouched); --check: rows and records match, else exit 1
 
 <id> is <set>-<piece>, lower case, e.g. carefree-try. Records: authoring/data/music/<id>.json (committed).
 Work files: work/music/<id>/ (gitignored). Licences: CC0, PD, CC BY 3.0/4.0 only (decision 733); no Freesound API
@@ -453,6 +458,127 @@ def cmd_export(a) -> int:
         die(f"variants differ in length: {sorted(lens)}")
     rec["exports"] = exports
     save(rec)
+    (work_dir(a.id) / "export_dir").write_text(str(out.resolve()))
+    return 0
+
+
+MIN_FULL_LUFS, MAX_FULL_LUFS = -18.5, -17.5  # app/desktop/loudness.mjs TARGET_LUFS ± 0.5
+MAX_SEAM = 3.0  # music_loop.MAX_SEAM (that module needs numpy; this one does not)
+
+
+def check_problems(i: str, rec: dict, d: Path) -> list:
+    """Hard checks of one record's exported files; a list of problems, empty = pass."""
+    import music_loop as ml
+    bad = []
+    spdx = rec.get("licence", {}).get("spdx", "")
+    if lic := licence_problem(spdx):
+        bad.append(lic)
+    elif not rec["licence"].get("read_on_page"):
+        bad.append("licence not confirmed on the track page")
+    ex = rec.get("exports") or {}
+    if not ex:
+        return bad + ["no exports in the record"]
+    n_loop = round(rec["loop"]["loop_s"] * ml.SR) if rec.get("loop") else None
+    lens, lufs = {}, {}
+    for name, e in ex.items():
+        f = d / e["file"]
+        if not f.is_file():
+            bad.append(f"{name}: no file {f}")
+            continue
+        x = ml.decode(f)
+        lens[name] = len(x)
+        if n_loop:
+            x = x[:n_loop]  # the encoder's padding is cut at loop_s
+        lu, tp = ml.loudness(x)
+        lufs[name] = lu
+        if tp > ml.TRUE_PEAK:
+            bad.append(f"{name}: true peak {tp:.2f} dBTP > {ml.TRUE_PEAK}")
+        if (sj := ml.seam_jump(x)) > MAX_SEAM:
+            bad.append(f"{name}: seam jump {sj:.2f} > {MAX_SEAM}")
+        if not ml.MIN_S <= len(x) / ml.SR <= ml.MAX_S:
+            bad.append(f"{name}: length {len(x) / ml.SR:.1f} s outside {ml.MIN_S:.0f}-{ml.MAX_S:.0f} s")
+        print(f"{e['file']}: {len(x) / ml.SR:.3f} s, {lu:.2f} LUFS, {tp:.2f} dBTP, seam {sj:.2f}")
+    if len(set(lens.values())) > 1:
+        bad.append(f"variants differ in length: {lens}")
+    if lufs:
+        full = max(lufs, key=lufs.get)
+        if not MIN_FULL_LUFS <= lufs[full] <= MAX_FULL_LUFS:
+            bad.append(f"fullest variant {full}: {lufs[full]:.2f} LUFS outside {MIN_FULL_LUFS}..{MAX_FULL_LUFS}")
+    return bad
+
+
+def cmd_check(a) -> int:
+    check_id(a.id)
+    rec = load(a.id)
+    if a.dir:
+        d = Path(a.dir)
+    elif (work_dir(a.id) / "export_dir").is_file():
+        d = Path((work_dir(a.id) / "export_dir").read_text())
+    else:
+        die(f"{a.id}: no export directory known: run export, or pass --dir", 2)
+    bad = check_problems(a.id, rec, d)
+    for b in bad:
+        print(f"FAIL {a.id}: {b}", file=sys.stderr)
+    print(f"check {a.id}: " + ("FAILED" if bad else "ok"))
+    return 1 if bad else 0
+
+
+BEGIN, END = "<!-- trivia-music credits: begin (generated, do not edit) -->", "<!-- trivia-music credits: end -->"
+HEADER = ["| File | Used for | Source | Author | Licence |", "|---|---|---|---|---|"]
+
+
+def credit_rows() -> list:
+    """(file, row) for every exported file of every record."""
+    rows = []
+    for f in sorted(layout.MUSIC_RECORDS.glob("*.json")):
+        rec = json.loads(f.read_text())
+        lp = rec.get("loop") or {}
+        spdx = rec.get("licence", {}).get("spdx", "")
+        if lic := licence_problem(spdx):
+            die(f"{rec['id']}: {lic}")
+        name, url = LICENCES[spdx]
+        lic_cell = name if spdx == "PD" else f"[{name}]({url})"
+        src = f"[{rec['title']}]({rec['page']}) ({rec['library']})"
+        shape = f"{lp['bars']} bars, {lp['bpm']:g} bpm, " if lp else ""
+        for var, e in (rec.get("exports") or {}).items():
+            used = f"Music loop `{var}` ({shape}adapted: cut to a loop, layers remixed, loudness changed)"
+            rows.append((e["file"], f"| `{e['file']}` | {used} | {src} | {rec['author']} | {lic_cell} |"))
+    return rows
+
+
+def credits_block(rows: list) -> str:
+    return "\n".join([BEGIN, *HEADER, *(r for _, r in rows), END]) + "\n" if rows else ""
+
+
+def split_credits(text: str) -> tuple[str, str, str]:
+    """(before, block, after); block is empty when there are no markers."""
+    m = re.search(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\n?", text, re.S)
+    return (text[:m.start()], m[0], text[m.end():]) if m else (text, "", "")
+
+
+def cmd_credits(a) -> int:
+    f = layout.AUDIO_CREDITS
+    text = f.read_text()
+    before, block, after = split_credits(text)
+    want = credits_block(credit_rows())
+    if a.check:
+        have = set(re.findall(r"^\| `([^`]+)`", block, re.M))
+        need = {file for file, _ in credit_rows()}
+        for x in sorted(have - need):
+            print(f"FAIL: row without a record: {x}", file=sys.stderr)
+        for x in sorted(need - have):
+            print(f"FAIL: record without a row: {x} (run `trivia-music credits`)", file=sys.stderr)
+        stale = have == need and block != want
+        if stale:
+            print("FAIL: generated rows out of date (run `trivia-music credits`)", file=sys.stderr)
+        return 1 if have != need or stale else 0
+    if not block and not want:
+        print("no music records: CREDITS.md unchanged")
+        return 0
+    if not block:  # first time: after the hand rows
+        before = text.rstrip("\n") + "\n" + ("\n" if want else "")
+    f.write_text(before + want + after)
+    print(f"{f}: {len(credit_rows())} music rows")
     return 0
 
 
@@ -476,8 +602,10 @@ def main(argv=None) -> int:
     p = sub.add_parser("export", help="one .m4a per tension variant"); p.add_argument("id"); p.add_argument("out_dir")
     p.add_argument("--variant", action="append", required=True, metavar="NAME=RECIPE")
     p.add_argument("--set", help="file name set (default: the id without its last part)")
+    p = sub.add_parser("check", help="hard checks of the exported files"); p.add_argument("id"); p.add_argument("--dir")
+    p = sub.add_parser("credits", help="music rows of CREDITS.md from the records"); p.add_argument("--check", action="store_true")
     a = ap.parse_args(argv)
-    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split, "loop": cmd_loop, "export": cmd_export}[a.cmd](a)
+    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split, "loop": cmd_loop, "export": cmd_export, "check": cmd_check, "credits": cmd_credits}[a.cmd](a)
 
 
 if __name__ == "__main__":
