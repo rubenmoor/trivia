@@ -13,6 +13,7 @@ import paths as app_paths  # noqa: E402  (authoring/tools/paths.py)
 SOURCE_POOL = AUTHORING / "data" / "questions.json"  # every question, with reviews and pipeline fields
 TARGETS = AUTHORING / "data" / "targets.json"  # pool targets per bundle (D-53)
 HEALTH_ACKS = AUTHORING / "data" / "health-acks.json"  # the developer's acks of failing batches (plan 15, D-55)
+MUSIC_RECORDS = AUTHORING / "data" / "music"  # one provenance record per library track (plan 221)
 SPOT_CHECKS = AUTHORING / "data" / "spot-checks.json"  # human spot checks per batch (plan 16)
 ENGLISH_KEYS = AUTHORING / "data" / "english-keys.json"  # English answer + concept per non-en source (decision 232)
 DEMO_LIST = AUTHORING / "data" / "demo.json"  # the demo's question ids (decision 339)
@@ -28,6 +29,7 @@ WORK = Path(os.environ.get("TRIVIA_WORK") or REPO / "work")  # gitignored pipeli
 DEMO_WORK = WORK / "demo"  # qgen demo --propose's proposal (plan 174)
 GALLERY = WORK / "gallery"  # trivia-gallery's shots and manifest (plan 100)
 GALLERY_DEMO = WORK / "gallery-demo"  # the same for trivia-gallery --demo (plan 176)
+MUSIC_WORK = WORK / "music"  # trivia-music: catalogue, originals, stems, loops (plan 221)
 SOUND_BRIEF = WORK / "sound-brief"  # audition candidates for /sounds (plan 220)
 CANDIDATES = WORK / "media"  # Commons candidates per question
 EXPORT = app_paths.POOL  # what the game reads: app/data/pool.json
