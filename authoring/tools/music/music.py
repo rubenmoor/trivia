@@ -3,7 +3,7 @@
 
 Ported from the sibling project's tools/audio/music.py and spikes/music-library/setup.sh
 (~/code/three-days-until-release, decision 199: no import across repos). `loop` imports music_loop.py (numpy,
-librosa, soundfile). The end-to-end `run` is added by its own task.
+librosa, soundfile). 
 
   search [--feel F] [--bpm LO-HI] [--instrument I] [--min-length S]   incompetech catalogue
   fetch <title> <id>                       incompetech download to work/music/<id>/original.mp3 + record
@@ -23,6 +23,8 @@ librosa, soundfile). The end-to-end `run` is added by its own task.
   check <id> [--dir D]                     hard checks of the exported files after AAC decode: fullest variant -18 +-0.5 LUFS,
                                            every file <= -1.5 dBTP, seam jump <= 3 (cut at loop_s), equal length, 10-300 s,
                                            licence allowed and read on the page; exit 0/1
+  run <title-or-id> <out-dir> --variant ...  fetch (a title), split (if no stems), loop, export, check; a fresh fetch stops
+                                           at the licence gate: confirm, then run again with the id (--id, default <title>-try)
   credits [--check]                        music rows of app/client/public/audio/CREDITS.md from the records, between
                                            marker comments (hand rows untouched); --check: rows and records match, else exit 1
 
@@ -582,6 +584,36 @@ def cmd_credits(a) -> int:
     return 0
 
 
+def cmd_run(a) -> int:
+    """fetch (if needed), split, loop, export, check; each step timed; stops at the licence gate."""
+    ids = record_path(a.title_or_id)
+    if re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)+", a.title_or_id) and ids.is_file():
+        i = a.title_or_id
+    else:
+        i = a.id or re.sub(r"[^a-z0-9]+", "-", a.title_or_id.lower()).strip("-") + "-try"
+        if not record_path(i).is_file():
+            cmd_fetch(argparse.Namespace(title=a.title_or_id, id=i))
+    require_confirmed(load(i))
+    steps = []
+
+    def step(name, fn, ns):
+        t0 = time.time()
+        if fn(ns):
+            die(f"run {i}: {name} failed")
+        steps.append((name, time.time() - t0))
+
+    if not a.whole:
+        if all((stems_dir(i) / f"{s}.wav").is_file() for s in STEMS):
+            print(f"split: stems exist in {stems_dir(i)}, kept")
+        else:
+            step("split", cmd_split, argparse.Namespace(id=i))
+    step("loop", cmd_loop, argparse.Namespace(id=i, bars=a.bars, bpm=a.bpm, whole=a.whole))
+    step("export", cmd_export, argparse.Namespace(id=i, out_dir=a.out_dir, variant=a.variant, set=a.set))
+    step("check", cmd_check, argparse.Namespace(id=i, dir=None))
+    print(f"run {i}: ok; " + ", ".join(f"{n} {t:.1f} s" for n, t in steps))
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="trivia-music", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -604,8 +636,12 @@ def main(argv=None) -> int:
     p.add_argument("--set", help="file name set (default: the id without its last part)")
     p = sub.add_parser("check", help="hard checks of the exported files"); p.add_argument("id"); p.add_argument("--dir")
     p = sub.add_parser("credits", help="music rows of CREDITS.md from the records"); p.add_argument("--check", action="store_true")
+    p = sub.add_parser("run", help="fetch, split, loop, export, check"); p.add_argument("title_or_id"); p.add_argument("out_dir")
+    p.add_argument("--variant", action="append", required=True, metavar="NAME=RECIPE")
+    p.add_argument("--id", help="record id for a title (default: <title>-try)"); p.add_argument("--set")
+    p.add_argument("--bars", type=int, default=8); p.add_argument("--bpm", type=float); p.add_argument("--whole", action="store_true")
     a = ap.parse_args(argv)
-    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split, "loop": cmd_loop, "export": cmd_export, "check": cmd_check, "credits": cmd_credits}[a.cmd](a)
+    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split, "loop": cmd_loop, "export": cmd_export, "check": cmd_check, "credits": cmd_credits, "run": cmd_run}[a.cmd](a)
 
 
 if __name__ == "__main__":

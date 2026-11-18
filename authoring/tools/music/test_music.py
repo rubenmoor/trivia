@@ -75,6 +75,19 @@ class Music(unittest.TestCase):
         self.assertIn("3.0", r["credit"])
         self.assertEqual(self.run_cli("record", "mine-song", "--licence", "CC-BY-NC-4.0", "--read-on-page")[0], 1)
 
+    def test_run_stops_at_gate(self):
+        self.rec()
+        code, _, err = self.run_cli("run", "mine-song", str(self.d / "out"), "--variant", "full=full")
+        self.assertEqual(code, 1)
+        self.assertIn("not confirmed", err)
+
+    def test_run_fetch_stops_at_gate(self):
+        with mock.patch.object(music, "get", return_value=b"mp3 bytes"):
+            code, out, err = self.run_cli("run", "Carefree", str(self.d / "out"), "--variant", "full=full")
+        self.assertEqual(code, 1)
+        self.assertTrue(music.record_path("carefree-try").exists())
+        self.assertIn("not confirmed", err)
+
     def test_fetch(self):
         with mock.patch.object(music, "get", return_value=b"mp3 bytes"):
             code, out, _ = self.run_cli("fetch", "carefree", "carefree-try")
