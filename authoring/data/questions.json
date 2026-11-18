@@ -1645077,6 +1645077,4151 @@
         "kind": "piece-film",
         "probe": "media-probe/bb2220520e5d7690"
       }
+    },
+    {
+      "id": "q-21084",
+      "status": "approved",
+      "difficulty": 3,
+      "description": "A local who walks right down the middle of the road and expects the traffic to wait.",
+      "question": "Watch: which animal is strolling toward the camera on this snowy forest road?",
+      "answer": "Reindeer",
+      "wrong_answers": [
+        "Moose",
+        "Red deer",
+        "Musk ox"
+      ],
+      "hints": [
+        "It lives in the cold far north of Europe, Asia and North America.",
+        "In Lapland, Sámi herders have kept big herds of them for centuries.",
+        "Rudolph, the one with the red nose, is the most famous of them."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARangifer_tarandus_-_Inari_2013.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rangifer_tarandus_-_Inari_2013.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Manfred Werner - Tsui · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Manfred Werner - Tsui",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Rangifer tarandus - Inari 2013.ogv",
+        "note": "A reindeer with antlers walking toward the camera on a snowy road through a pine forest, seen up close; the opening caption naming the species (first seconds) is skipped.",
+        "duration": 123.26,
+        "excerpt": {
+          "start": 14,
+          "end": 44
+        }
+      },
+      "fun_fact": "Reindeer eyes change color with the seasons, from gold in summer to deep blue in the dark Arctic winter, which helps them see in very little light.",
+      "subcategory": "mammals",
+      "style": null,
+      "concept": "Reindeer walking toward the camera on a snowy road (Finnish Lapland)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 3,
+        "notes": "Solid. The fun fact about eye color is true (the tapetum turns from gold to blue)."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/4dd3d683ac31740e"
+      }
+    },
+    {
+      "id": "q-21085",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "A cosmic dance where the partner in the middle is very dark and very, very heavy.",
+      "question": "Watch the star's path around the black hole over several turns. What is this effect, predicted by Einstein, called?",
+      "answer": "Orbital precession",
+      "wrong_answers": [
+        "Gravitational lensing",
+        "Tidal locking",
+        "Spaghettification"
+      ],
+      "hints": [
+        "The same effect shows up, much more weakly, in Mercury's orbit around the Sun.",
+        "Look at where each new loop sits compared with the one before.",
+        "The slow wobble of a spinning top's axis has the same name."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnother_artist%E2%80%99s_impression_of_S2%27s_precession_effect.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Another_artist%E2%80%99s_impression_of_S2%27s_precession_effect.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "MPE / TWENTYTWO Film · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "MPE / TWENTYTWO Film",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Another artist’s impression of S2's precession effect.webm",
+        "note": "Silent ESO animation: a blue star sweeps close past a dark, glowing black hole on a long elliptical orbit; at the end the camera pulls back and the orbit is drawn several times, each loop turned a little, building a rosette pattern. No text or speech.",
+        "duration": 34.05,
+        "excerpt": {
+          "start": 4,
+          "end": 34
+        }
+      },
+      "fun_fact": "The star S2 needs about 16 years for one lap around the giant black hole at the center of our galaxy, and in 2020 astronomers showed that its orbit shifts exactly as Einstein's general relativity predicts.",
+      "subcategory": "stars-and-galaxies",
+      "style": null,
+      "concept": "A star's orbit around a black hole precessing (S2 and Sagittarius A*)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "The S2 facts check out (GRAVITY, 2020). The media note says 'ESO animation', but the credit says MPE, a small mismatch. Hint 3 about the spinning top nearly names the answer, which is allowed."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/40dc86aa137d42e9"
+      }
+    },
+    {
+      "id": "q-21086",
+      "status": "approved",
+      "difficulty": 9,
+      "description": "A dinner so serious about its sauce that the sauce gets its own little boat.",
+      "question": "Watch: this plate of pie, fried potatoes, green mash and gravy is a classic meal of which country?",
+      "answer": "The United Kingdom",
+      "wrong_answers": [
+        "Belgium",
+        "The United States",
+        "Argentina"
+      ],
+      "hints": [
+        "Look closely at the bright green mash: it is made from dried peas, mashed until soft.",
+        "In this country, those thick fried potatoes are called “chips”, not “fries”.",
+        "Think of double-decker buses, rainy afternoons and fish-and-chip shops."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASteak_and_kidney_pie_The_Ledger_Building_West_India_Quay_Canary_Wharf_01_Zoom_Video.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Steak_and_kidney_pie_The_Ledger_Building_West_India_Quay_Canary_Wharf_01_Zoom_Video.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Acabashi",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Steak and kidney pie The Ledger Building West India Quay Canary Wharf 01 Zoom Video.webm",
+        "note": "Top-down zoom-in on one plate: a round golden pie, thick chips, a heap of bright green mushy peas and a white gravy boat; no text, no audio.",
+        "duration": 4.04
+      },
+      "fun_fact": "British mushy peas are usually made from dried marrowfat peas, soaked overnight and then simmered until they turn into a thick green mash.",
+      "subcategory": "world-cuisines",
+      "style": null,
+      "concept": "Steak and kidney pie with chips, mushy peas and gravy",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 8,
+        "notes": "Pie with mushy peas also exists in Australia (the 'pie floater'), but Australia is not an option. The clip is very short (4 s)."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:cooking video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/807f645b1fed2e7e"
+      }
+    },
+    {
+      "id": "q-21087",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "A worried parent yelling “Get off my meadow!” at full volume.",
+      "question": "Listen: which bird is giving this alarm call, with its chick crying out too?",
+      "answer": "A curlew",
+      "wrong_answers": [
+        "A lapwing",
+        "An oystercatcher",
+        "A redshank"
+      ],
+      "hints": [
+        "It nests on the ground in wet meadows and moors, and spends winter on muddy coasts.",
+        "It is the largest wading bird in Europe and has a very long bill.",
+        "Its bill curves down like a sickle, and its name sounds like its bubbling “cur-lee” song."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlarmroep_van_een_wulp_en_kreten_van_een_jong_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Alarmroep_van_een_wulp_en_kreten_van_een_jong_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Alarmroep van een wulp en kreten van een jong - SoundCloud - Beeld en Geluid.ogg",
+        "note": "Repeated loud alarm calls of a Eurasian curlew coming from far to near, with occasional cries of a young bird; no speech.",
+        "duration": 75.0,
+        "excerpt": {
+          "start": 15,
+          "end": 75
+        }
+      },
+      "fun_fact": "Female curlews have longer bills than males, long enough to pull worms out of deep mud.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Eurasian curlew (alarm call)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 4,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 15,
+        "notes": "'Largest wading bird in Europe' holds only in the British sense of 'wader' (shorebird); herons and storks are bigger. An alarm call is harder to recognise than the famous bubbling song. q-20516 is also about the curlew but asks a different fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "wet moorland meadow",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWet_meadows_near_Fersit_-_geograph.org.uk_-_628641.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Wet_meadows_near_Fersit_-_geograph.org.uk_-_628641.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Nigel Brown · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Nigel Brown",
+        "author_url": "https://www.geograph.org.uk/profile/15376",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of Aves",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/d27304264db08261"
+      }
+    },
+    {
+      "id": "q-21088",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "A song people stand up for, hand on heart and a lump in the throat, even when it has no words.",
+      "question": "Listen: this is the national anthem of which country?",
+      "answer": "New Zealand",
+      "wrong_answers": [
+        "Australia",
+        "South Africa",
+        "Fiji"
+      ],
+      "hints": [
+        "The first verse of this anthem is often sung in an Indigenous language, then the same verse in English.",
+        "The country is an island nation in the South Pacific.",
+        "Its rugby team, the All Blacks, sings it before the haka."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGod_Defend_New_Zealand_instrumental.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/God_Defend_New_Zealand_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military-Navy",
+          "PD-old-auto-expired"
+        ],
+        "role": "essential",
+        "query": "File:God Defend New Zealand instrumental.ogg",
+        "note": "Instrumental band recording of “God Defend New Zealand”, played from the start; no singing or spoken words.",
+        "duration": 62.88,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        },
+        "work": {
+          "title": "God Defend New Zealand",
+          "creator": "John Joseph Woods",
+          "year": 1876,
+          "basis": "composer died 1934; lyrics by Thomas Bracken, died 1898"
+        }
+      },
+      "fun_fact": "New Zealand has two national anthems with equal status: “God Defend New Zealand” and “God Save the King”.",
+      "subcategory": "countries",
+      "style": null,
+      "concept": "National anthem of New Zealand (God Defend New Zealand), instrumental",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 4,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "Telling an anthem by ear is pure recognition, which makes it dry. Hint 3 (All Blacks) nearly gives it away, which is allowed. It shares a topic with the haka question q-20367, but asks a different fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "flags waving stadium",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Fans_waving_Stiegl_flags_850_0002.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Fans_waving_Stiegl_flags_850_0002.jpg/3840px-20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Fans_waving_Stiegl_flags_850_0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Granada · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Granada",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Granada",
+        "restrictions": [
+          "personality"
+        ],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:national anthem instrumental",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/de32a044636c308a"
+      }
+    },
+    {
+      "id": "q-21089",
+      "status": "approved",
+      "difficulty": 7,
+      "description": "A bird that skipped flying lessons and went straight to lunch.",
+      "question": "Watch: which big bird is this?",
+      "answer": "An emu",
+      "wrong_answers": [
+        "An ostrich",
+        "A cassowary",
+        "A rhea"
+      ],
+      "hints": [
+        "Look at its shaggy, hair-like brown feathers and its bluish face.",
+        "It is the second-tallest bird alive, after the ostrich.",
+        "It lives wild only in Australia, where it shares the coat of arms with a kangaroo."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmu_Hilde_%28Zoo_Hoyerswerda%29_%284%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Emu_Hilde_%28Zoo_Hoyerswerda%29_%284%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Fiver, der Hellseher · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Fiver, der Hellseher",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Emu Hilde (Zoo Hoyerswerda) (4).webm",
+        "note": "The whole 5-second silent clip: an emu with shaggy dark-brown feathers and a bluish bare face pecks at the grass in a zoo enclosure, seen side-on.",
+        "duration": 5.32
+      },
+      "fun_fact": "The father emu sits on the eggs for about eight weeks and hardly eats or drinks the whole time.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Emu",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 7,
+        "notes": "Solid identification question. The emu really is the second-tallest bird, and the fact about the father sitting on the eggs is true. Telling an emu from a cassowary or rhea in a short clip is fair at this level."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of animals",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/ce81df3a59238699"
+      }
+    },
+    {
+      "id": "q-21090",
+      "status": "needs_work",
+      "difficulty": 4,
+      "description": "The kitchen's version of a pool party: everyone jumps in, and then things start spinning.",
+      "question": "Watch: which fruit is in the glass bowl next to the blender?",
+      "answer": "Peaches",
+      "wrong_answers": [
+        "Strawberries",
+        "Bananas",
+        "Kiwis"
+      ],
+      "hints": [
+        "Before it was sliced, this fruit was round and about the size of a tennis ball.",
+        "Its skin feels soft and a little fuzzy, and it has a big hard stone inside.",
+        "In a famous Roald Dahl story, a boy named James travels inside a giant one."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeach_Yogurt_Smoothie_Ages_6-18_English_Rd3_%2852197024312%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Peach_Yogurt_Smoothie_Ages_6-18_English_Rd3_%2852197024312%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "USDAgov · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDAgov",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-USDA"
+        ],
+        "role": "essential",
+        "query": "File:Peach Yogurt Smoothie Ages 6-18 English Rd3 (52197024312).webm",
+        "note": "Top-down shot of an empty blender on a wooden board, with a bowl of white yogurt and a glass bowl of orange peach slices beside it. The window ends before the \"1¼ cups peaches\" caption appears (around 24.5 s), and it starts after the \"Wash your hands\" card. Only soft background music plays.",
+        "duration": 67.97,
+        "excerpt": {
+          "start": 21,
+          "end": 24.2
+        }
+      },
+      "fun_fact": "Peaches first come from China, where people were growing them thousands of years ago.",
+      "subcategory": "drinks",
+      "style": null,
+      "concept": "Peach and yogurt smoothie being blended",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 3,
+        "notes": "Distractors: strawberries, bananas and kiwis look nothing like orange slices, so you can rule them out on sight. Fun: spotting a fruit in a bowl is a bit flat. Mango or apricot would be closer but could make it ambiguous. The question is easier than its stated 4."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "At 24.04 s (frame 10), a faint caption is already fading in over the blender (you can make out a word ending in “…ened” on the sheet). That is the “1¼ cups peaches” ingredient card starting earlier than the note says. If the player holds the last frame while the family thinks, the text could name the answer. Trim the excerpt end to about 23.8 s, where frames 1–9 are clean, and the question can be approved as written.",
+        "problems": [
+          "giveaway",
+          "media"
+        ],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:cooking video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/542334e19baa3867"
+      }
+    },
+    {
+      "id": "q-21091",
+      "status": "needs_work",
+      "difficulty": 15,
+      "description": "A tune that makes a whole country stand up, while the rest of the world just nods politely.",
+      "question": "Listen: this is the national anthem of which country?",
+      "answer": "Vanuatu",
+      "wrong_answers": [
+        "Fiji",
+        "Samoa",
+        "Tonga"
+      ],
+      "hints": [
+        "This country is made up of islands in the South Pacific Ocean.",
+        "In the country's main language, Bislama, the anthem's title means “We, We, We”.",
+        "Once called the New Hebrides, it was ruled jointly by Britain and France until independence in 1980."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_Navy_Band_-_Yumi%2C_Yumi%2C_Yumi.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/United_States_Navy_Band_-_Yumi%2C_Yumi%2C_Yumi.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Performed by the United States Navy Band · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Performed by the United States Navy Band",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-1996",
+          "PD-US-1978-89",
+          "PD-USGov-Military-Navy"
+        ],
+        "role": "essential",
+        "query": "File:United States Navy Band - Yumi, Yumi, Yumi.ogg",
+        "note": "Whole file (about 59 s): the US Navy Band's instrumental performance of Vanuatu's national anthem, with no speech or singing.",
+        "duration": 59.12,
+        "work": {
+          "title": "Yumi, Yumi, Yumi",
+          "creator": "François Vincent Ayssav",
+          "year": 1980,
+          "basis": "recording by the United States Navy Band, a US government work; national anthem"
+        }
+      },
+      "fun_fact": "The anthem is called “Yumi, Yumi, Yumi”, and Vanuatu's flag shows a curled pig's tusk, a symbol of wealth on the islands.",
+      "subcategory": "countries",
+      "style": null,
+      "concept": "National anthem of Vanuatu (Yumi, Yumi, Yumi)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 3,
+        "fun": 2,
+        "description": 4,
+        "difficulty_estimate": 15,
+        "notes": "Age fit: almost nobody can recognise Vanuatu's anthem by ear, so the audio is just a guess. It comes down to recall through the hints, which edges towards the kind of fact nobody could know or reason towards. Fun: guessing a tune you have never heard is unsatisfying. The facts check out (title, composer, the boar's tusk on the flag)."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "Media-first check 1 fails. Almost no player, not even a trivia specialist, can tell Vanuatu's anthem apart from those of Fiji, Samoa or Tonga by ear. The clip decides nothing, and the answer comes only from hints 2 and 3. There is no other fair question about this instrumental window (for example \"which kind of band\" would be trivial and off-topic), so the file doesn't fit a question for these players.",
+        "problems": [
+          "media"
+        ],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "tropical ocean waves",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHavelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg/3840px-Havelock_Island%2C_Mangrove_tree_on_the_beach%2C_Andaman_Islands.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Vyacheslav Argenberg · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Vyacheslav Argenberg",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Argenberg",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:national anthem instrumental",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/fcfcedbdc398c404"
+      }
+    },
+    {
+      "id": "q-21092",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "Nature's own mud spa, now open: no booking needed, no cucumber slices included.",
+      "question": "Watch: in this cone in Romania, bubbles of gas push mud up from deep underground. Which gas makes up most of them?",
+      "answer": "Methane",
+      "wrong_answers": [
+        "Carbon dioxide",
+        "Hydrogen sulfide",
+        "Water vapor"
+      ],
+      "hints": [
+        "The cone is a cold mud volcano: no magma or lava is involved.",
+        "The gas leaks up from oil and gas deposits trapped deep in the rocks.",
+        "It is the main part of the natural gas used in many kitchen stoves, and cows burp it too."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMud_volcano_Paclele_mici.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Mud_volcano_Paclele_mici.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Toniher · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Toniher",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Mud volcano Paclele mici.webm",
+        "note": "The whole 9-second clip: a grey mud cone with a pool of liquid mud in its crater, seen up close on cracked dry ground. The soundtrack is just music, with no speech.",
+        "duration": 9.07
+      },
+      "fun_fact": "The Berca mud volcanoes in Romania are among the largest in Europe, and their cones grow and shrink as fresh mud bubbles out and dries in the sun.",
+      "subcategory": "volcanoes",
+      "style": null,
+      "concept": "Mud volcano (Paclele Mici, Romania)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "Correct: I'm fairly but not fully sure that the Berca mud volcanoes are among the largest in Europe. Difficulty: many adults would reason from the oil and gas hint, so it's closer to 11 than 13. q-0911 also has methane as the answer, but it asks about landfill gas, a different fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:volcano eruption video",
+        "class": "general",
+        "kind": "place",
+        "probe": "media-probe/ad03f2f6b026aff8"
+      }
+    },
+    {
+      "id": "q-21093",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "A dirty snowball from deep space drops in without knocking.",
+      "question": "Watch this comet. What is the name of the glowing cloud of gas and dust around its icy core?",
+      "answer": "The coma",
+      "wrong_answers": [
+        "The corona",
+        "The nebula",
+        "The accretion disk"
+      ],
+      "hints": [
+        "The sun heats the comet's ice, and this cloud forms as the ice turns into gas.",
+        "It comes from an ancient Greek word for “hair,” because early stargazers thought comets looked hairy.",
+        "Doctors use the same word for a long, deep state of unconsciousness."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A3I-ATLAS_video_noirlab2525b.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/3I-ATLAS_video_noirlab2525b.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "International Gemini Observatory/NOIRLab/NSF/AURA/Shadow the Scientist · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "International Gemini Observatory/NOIRLab/NSF/AURA/Shadow the Scientist\n\nImage Processing: J. Miller & M. Rodriguez (International Gemini Observatory/NSF NOIRLab), T.A. Rector (University of Alaska Anchorage/NSF NOIRLab), M. Zamani (NSF NOIRLab)",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:3I-ATLAS video noirlab2525b.webm",
+        "note": "A black-and-white telescope time-lapse of comet 3I/ATLAS against a star field. The bright, fuzzy head (the coma) and a faint tail pointing upward are visible the whole time. There is no sound and no text.",
+        "duration": 12.81
+      },
+      "fun_fact": "This comet, 3I/ATLAS, was found in July 2025. It is only the third object ever seen that came from outside our solar system.",
+      "subcategory": "space",
+      "style": null,
+      "concept": "Interstellar comet 3I/ATLAS with its coma and tail (time-lapse)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Hint 3 links to the medical coma and nearly gives the answer away, which hint 3 is allowed to do. q-4905 asks about the medical coma, a different fact. The 3I/ATLAS fun fact is true and timely."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/7b14f4c9221ef077"
+      }
+    },
+    {
+      "id": "q-21094",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "A belt that refuses to be just a belt and insists on wearing a bow.",
+      "question": "Watch: the dancers wear a wide sash around the waist, tied in a big bow at the back. What is this sash called?",
+      "answer": "Obi",
+      "wrong_answers": [
+        "Cummerbund",
+        "Dupatta",
+        "Hakama"
+      ],
+      "hints": [
+        "Look at the robes and the folding fans: this outfit comes from an island country in East Asia.",
+        "The sash belongs to the kimono, and it can be several meters long.",
+        "Its name has only three letters and sounds like a famous Star Wars first name, minus “-Wan Kenobi”."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHinamatsuri_Celebration_at_School_Age_Care%2C_Marine_Corps_Air_Station_Iwakuni%2C_Japan%2C_2026_%28997134%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Hinamatsuri_Celebration_at_School_Age_Care%2C_Marine_Corps_Air_Station_Iwakuni%2C_Japan%2C_2026_%28997134%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "U.S. Marine Corps video by Cpl. Madison Sharpe · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Marine Corps video by Cpl. Madison Sharpe",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military-Marines"
+        ],
+        "role": "essential",
+        "query": "File:Hinamatsuri Celebration at School Age Care, Marine Corps Air Station Iwakuni, Japan, 2026 (997134).webm",
+        "note": "Children in colorful kimonos dancing with folding fans in front of a gold screen; the wide waist sashes with large bows at the back are visible (around 13–14 s, 21–22 s and 37 s).",
+        "duration": 39.14,
+        "excerpt": {
+          "start": 9,
+          "end": 39
+        }
+      },
+      "fun_fact": "A formal obi can be more than 4 meters (13 ft) long, so people often need help to tie one.",
+      "subcategory": "traditional-dress",
+      "style": null,
+      "concept": "Children in kimonos dancing with folding fans (Hinamatsuri, Girls' Day, Japan)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "Solid question. Hint 3's Star Wars sound joke works across languages and is fine for a last hint. Children at a school event may wear simpler obi, but it is still an obi. The German hardware chain Obi (q-12057) is an unrelated fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "event-person",
+        "probe": "media-probe/aab5671fc1e94542"
+      }
+    },
+    {
+      "id": "q-21095",
+      "status": "approved",
+      "difficulty": 15,
+      "description": "The tune that plays while the flag goes up and the football players try to remember the words.",
+      "question": "Listen: this is the national anthem of which African country?",
+      "answer": "The Gambia",
+      "wrong_answers": [
+        "Sierra Leone",
+        "Liberia",
+        "Ghana"
+      ],
+      "hints": [
+        "The country is in West Africa, on the Atlantic coast.",
+        "Its official language is English, and the anthem's tune is based on a traditional Mandinka song.",
+        "It is the smallest country on mainland Africa: a thin strip along a river, almost surrounded by Senegal."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFor_The_Gambia_Our_Homeland_%28instrumental%29.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/For_The_Gambia_Our_Homeland_%28instrumental%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-US-no notice",
+          "PD-USGov-Military-Navy"
+        ],
+        "role": "essential",
+        "query": "File:For The Gambia Our Homeland (instrumental).ogg",
+        "note": "Instrumental band performance of the Gambian national anthem, “For The Gambia Our Homeland”; the first 60 seconds, including the louder, fuller passage from about 47 s.",
+        "duration": 79.88,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        },
+        "work": {
+          "title": "For The Gambia Our Homeland",
+          "creator": "Jeremy Frederick Howe (arrangement of a traditional Mandinka melody)",
+          "year": 1965,
+          "basis": "Recording by the US Navy Band (US government work); tune based on a traditional melody"
+        }
+      },
+      "fun_fact": "The Gambia is so narrow that Senegal surrounds it on every side except for its short Atlantic coastline.",
+      "subcategory": "countries",
+      "style": null,
+      "concept": "National anthem of The Gambia (For The Gambia Our Homeland), instrumental",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "The options are fair: all are English-speaking West African countries. Recognising the anthem is specialist knowledge, but the hints let players reason their way there. Naming an anthem from audio is a fairly dry task."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "flagpole against blue sky",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_central_flagpole_grounds_and_open_assembly_plaza_of_Toledo_City_Hall.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/The_central_flagpole_grounds_and_open_assembly_plaza_of_Toledo_City_Hall.jpg/3840px-The_central_flagpole_grounds_and_open_assembly_plaza_of_Toledo_City_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "QueenCityCebu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "QueenCityCebu",
+        "author_url": "https://commons.wikimedia.org/wiki/User:QueenCityCebu",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of national anthems",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/4f2059b5939613f1"
+      }
+    },
+    {
+      "id": "q-21096",
+      "status": "approved",
+      "difficulty": 4,
+      "description": "A snack delivery service where the customer has to do all the work.",
+      "question": "Watch: how does this bird get the treat from the tube up to its perch?",
+      "answer": "It pulls the string up, bit by bit",
+      "wrong_answers": [
+        "It drops pebbles into the tube",
+        "It fishes it out with a twig",
+        "It knocks the whole tube over"
+      ],
+      "hints": [
+        "Keep your eyes on the bird's beak and feet.",
+        "It repeats the same move again and again, a little at a time.",
+        "Think of raising a bucket from a well, hand over hand."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABajan-Birds-Pull-Strings-Two-Wild-Antillean-Species-Enter-the-Select-Club-of-String-Pullers-pone.0156112.s005.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Bajan-Birds-Pull-Strings-Two-Wild-Antillean-Species-Enter-the-Select-Club-of-String-Pullers-pone.0156112.s005.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Audet J, Ducatez S, Lefebvre L · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Audet J, Ducatez S, Lefebvre L",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Bajan-Birds-Pull-Strings-Two-Wild-Antillean-Species-Enter-the-Select-Club-of-String-Pullers-pone.0156112.s005.ogv",
+        "note": "The whole silent clip: a dark bird lands on a perch above a clear tube and pulls a hanging string up again and again, pulling with its beak and holding the string with its foot, until the food bundle reaches the perch (about 10 s onward).",
+        "duration": 15.92
+      },
+      "fun_fact": "This is a Carib grackle from Barbados: a 2016 study found that wild grackles and Barbados bullfinches there can solve this puzzle, a classic test of bird intelligence.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "A Carib grackle pulling up a string hung from a perch (string-pulling test)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 2,
+        "notes": "Players can answer just by watching the clip, so it is easier than 4. It is not certain that this particular supplementary clip shows a Carib grackle rather than a Barbados bullfinch, as the fun fact claims."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:experiment science video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/7bb7d88656b3dfa9"
+      }
+    },
+    {
+      "id": "q-21097",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "A crowd of robot photographers that never stop taking pictures of the same planet.",
+      "question": "Watch: what kind of orbit do most of the satellites in this animation fly?",
+      "answer": "Polar orbit",
+      "wrong_answers": [
+        "Geostationary orbit",
+        "Equatorial orbit",
+        "Lunar orbit"
+      ],
+      "hints": [
+        "Follow the blue lines and see where they cross the globe.",
+        "These satellites fly only a few hundred kilometers up and go around Earth in about an hour and a half.",
+        "On every lap, these satellites pass over the top and bottom of the Earth."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA_Earth-observing_Fleet_June_2012.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/NASA_Earth-observing_Fleet_June_2012.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NASA/Goddard Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:NASA Earth-observing Fleet June 2012.ogv",
+        "note": "Animated Earth with many blue satellite tracks circling close to the planet, several of them running north–south over the poles; tiny mission labels (Terra, Aqua, Landsat-7…) and soft music, no speech.",
+        "duration": 60.09,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "fun_fact": "As Earth spins underneath them, satellites in polar orbit can see every part of the planet, often within a day or two.",
+      "subcategory": "space",
+      "style": null,
+      "concept": "NASA's fleet of Earth-observing satellites orbiting Earth (orbit animation)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "\"Lunar orbit\" is a weak distractor: the animation clearly shows paths close around Earth. Most of these satellites are in sun-synchronous orbits, which are a type of polar orbit, so the answer holds. The question feels a bit like a school exercise."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:experiment science video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/a85b4807e213baf1"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which described the north–south paths and gave away the answer, with the reviewer's altitude and lap-time hint.",
+        "previous": {
+          "hints": [
+            "Follow the blue lines and see where they cross the globe.",
+            "Their paths run north–south, not along the equator.",
+            "On every lap, these satellites pass over the top and bottom of the Earth."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21098",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "Two lovebirds in white tuxedos, showing off their best dance moves in the middle of nowhere.",
+      "question": "Watch: which bird is doing its courtship dance on this windswept island?",
+      "answer": "An albatross",
+      "wrong_answers": [
+        "A stork",
+        "A pelican",
+        "A swan"
+      ],
+      "hints": [
+        "This bird spends most of its life gliding over the open ocean and only comes to land to breed.",
+        "It has a thick, hooked beak with tube-shaped nostrils, and its long, narrow wings are made for gliding.",
+        "In a famous poem, a sailor is punished for shooting one, and it ends up hung around his neck."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEnderby_Island%2C_New_Zealand.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Enderby_Island%2C_New_Zealand.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Blagoj Klincharski · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Blagoj Klincharski",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Enderby Island, New Zealand.webm",
+        "note": "Silent footage of a pair of large white albatrosses with dark wings on a grassy island slope, facing each other and spreading their wings in a courtship display.",
+        "duration": 241.24,
+        "excerpt": {
+          "start": 135,
+          "end": 165
+        }
+      },
+      "fun_fact": "Royal albatrosses usually pair for life, and a couple can stay together for decades after their dance.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Southern royal albatross courting on Enderby Island, New Zealand",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 5,
+        "description": 4,
+        "difficulty_estimate": 8,
+        "notes": "Lovely clip. q-5550 also has the answer albatross, but it asks for a different fact (Falklands colonies). Hint 3 touches on the Coleridge poem from q-18134, which has a different answer."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of animals",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/e04b3451cbabe894"
+      }
+    },
+    {
+      "id": "q-21099",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "Hubble's longest-running slideshow, and nobody in the audience has walked out yet.",
+      "question": "Watch these Hubble images of a star. The glowing dust around it isn't really moving outward. What is this effect called?",
+      "answer": "A light echo",
+      "wrong_answers": [
+        "A planetary nebula",
+        "A supernova remnant",
+        "An Einstein ring"
+      ],
+      "hints": [
+        "The star in the middle didn't explode. It only flared up for a short time.",
+        "What looks like spreading gas is the light of that flare reaching dust that is farther and farther away.",
+        "It's named after what a canyon does when you shout into it."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEvolution_of_the_light_echo_around_V838_Monocerotis_%28Heic0617a%29.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Evolution_of_the_light_echo_around_V838_Monocerotis_%28Heic0617a%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "ESA/Hubble · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "ESA/Hubble",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Hubble"
+        ],
+        "role": "essential",
+        "query": "File:Evolution of the light echo around V838 Monocerotis (Heic0617a).ogv",
+        "note": "Hubble animation of glowing dust shells around the bright red star V838 Monocerotis, seeming to grow outward. The window starts after the black ESA logo intro, so no text shows.",
+        "duration": 55.4,
+        "excerpt": {
+          "start": 4,
+          "end": 34
+        }
+      },
+      "fun_fact": "During its 2002 outburst, the star V838 Monocerotis briefly shone about 600,000 times brighter than our Sun.",
+      "subcategory": "stars-and-galaxies",
+      "style": null,
+      "concept": "Light echo expanding around the star V838 Monocerotis (Hubble images)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 13,
+        "notes": "Strong video and a fair question. Telling a light echo from a planetary nebula by sight takes expert knowledge. The question text's \"isn't really moving outward\" helps players reason toward the answer."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos by NASA",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/74f4e04d58364844"
+      }
+    },
+    {
+      "id": "q-21100",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "Five days of very patient photography, squeezed into the time it takes to boil an egg.",
+      "question": "Watch this time-lapse: which biological process does it show?",
+      "answer": "Germination",
+      "wrong_answers": [
+        "Pollination",
+        "Transpiration",
+        "Fermentation"
+      ],
+      "hints": [
+        "Every bean, pea and sunflower starts life this way.",
+        "It needs water, warmth and air, but not yet any soil or sunlight.",
+        "It is the moment a seed wakes up and sends out its first root and shoot."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALentil_sprouting_time_lapse-XorAOcaaIk4.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Lentil_sprouting_time_lapse-XorAOcaaIk4.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Always Shooting · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "Always Shooting",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Lentil sprouting time lapse-XorAOcaaIk4.webm",
+        "note": "Time-lapse on a black background: a tray of lentil seeds whose small pale shoots rise and turn into a dense layer of green stems over the window; the seeds stay visible at the base.",
+        "duration": 112.03,
+        "excerpt": {
+          "start": 20,
+          "end": 50
+        }
+      },
+      "fun_fact": "These are lentil sprouts: in Iran and other countries that celebrate Nowruz, the Persian New Year, people grow a plate of sprouts like this, called sabzeh, as a sign of spring and new life.",
+      "subcategory": "plants",
+      "style": null,
+      "concept": "Lentil seeds sprouting (time-lapse)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 7,
+        "notes": "Shares the germination topic with q-8799, but that question asks a different fact. The Nowruz sabzeh fun fact is a nice touch."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:time-lapse video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/516ac91f6e523b9d"
+      }
+    },
+    {
+      "id": "q-21101",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "A science experiment so slow that someone had to fast-forward it just to make it look busy.",
+      "question": "Watch this sped-up video of a chemistry experiment in a vial: what is the name of the pattern that forms here?",
+      "answer": "Liesegang rings",
+      "wrong_answers": [
+        "Newton's rings",
+        "Chladni figures",
+        "Widmanstätten patterns"
+      ],
+      "hints": [
+        "Similar stripes appear in nature, for example in some agate stones and rocks.",
+        "A German chemist described them in 1896, after dropping silver nitrate onto a gelatin layer.",
+        "The name begins with “Lies…”."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALiesegang_band_experiment.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Liesegang_band_experiment.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "kemodadog's channel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "kemodadog's channel",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Liesegang band experiment.webm",
+        "note": "A time-lapse of a vial of red gel with clear liquid on top. Thin white horizontal bands of solid appear one by one below the top of the gel; near 20 s the thick top band sags down onto the others. The video is silent and shows no text.",
+        "duration": 31.42,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "fun_fact": "As a chemical seeps into the gel, solid forms in separate bands rather than evenly, and the gaps between bands usually get wider the farther they are from the top.",
+      "subcategory": "chemistry",
+      "style": null,
+      "concept": "Liesegang bands forming in red gelatin (magnesium hydroxide precipitating as ammonia diffuses in, time-lapse)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 15,
+        "notes": "Hint 3 spells out the first letters, which is allowed, but it is almost the answer. The distractors are well chosen look-alike science patterns. Very much a specialist question."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:experiment science video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/557d3dbe55bd4e47"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the question so it no longer describes bands forming in a gel, which leaves the video to carry the clue.",
+        "previous": {
+          "question": "Watch this sped-up video: what are the thin bands that appear one by one inside the red gel called?"
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21102",
+      "status": "approved",
+      "difficulty": 4,
+      "description": "The view from the window seat is amazing, but the weather down there looks terrible.",
+      "question": "Watch: astronauts filmed this from space. What is happening on the island below?",
+      "answer": "A volcano is erupting",
+      "wrong_answers": [
+        "A forest fire is burning",
+        "A hurricane is forming",
+        "A sandstorm is blowing"
+      ],
+      "hints": [
+        "Look at where the brown cloud starts: one single spot on the island.",
+        "The gray streaks running down the island's slopes are fresh ash.",
+        "It's a mountain with fire and melted rock deep inside."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASarychev_Peak_eruption_on_12_June_2009%2C_oblique_satellite_view.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Sarychev_Peak_eruption_on_12_June_2009%2C_oblique_satellite_view.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "ISS Crew Earth Observations experiment and Image Science & Analysis Laboratory, Johnson Space Center, NASA.",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:Sarychev Peak eruption on 12 June 2009, oblique satellite view.ogv",
+        "note": "The whole 8-second clip, seen from straight above: a thick brown-gray ash column rising from one point on an island, topped by a smooth white cloud cap, with a ring of clear sky around it and gray ash on the slopes. No sound, no text on screen.",
+        "duration": 8.0
+      },
+      "fun_fact": "This is Sarychev Peak in Russia's Kuril Islands, filmed from the International Space Station in June 2009, and the smooth white cap on top is a cloud made when the rising ash pushed damp air upward.",
+      "subcategory": "volcanoes",
+      "style": null,
+      "concept": "Volcanic eruption seen from the International Space Station (Sarychev Peak, Kuril Islands)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 3,
+        "notes": "Clear footage with a good fun fact about the cap cloud. It is easy, since the ash rises from one single spot."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:space station astronaut video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/b6f41ff1ff79af62"
+      }
+    },
+    {
+      "id": "q-21103",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "A bird that sounds like it got out of bed on the wrong side of the cliff.",
+      "question": "Listen: which seabird makes these short, growling calls?",
+      "answer": "A common guillemot",
+      "wrong_answers": [
+        "A herring gull",
+        "A northern gannet",
+        "A black-legged kittiwake"
+      ],
+      "hints": [
+        "It is a member of the auk family, a cousin of the puffin.",
+        "It looks a little like a penguin but can fly, and it dives deep for fish.",
+        "In North America this black-and-white bird is called a “murre”."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtis%2C_roepen_van_een_zeekoet_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Artis%2C_roepen_van_een_zeekoet_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Artis, roepen van een zeekoet - SoundCloud - Beeld en Geluid.ogg",
+        "note": "The repeated short, low, growling calls of a common guillemot (murre), from the start to about 54 s, before the silence at the end.",
+        "duration": 62.81,
+        "excerpt": {
+          "start": 0,
+          "end": 54
+        }
+      },
+      "fun_fact": "Guillemot eggs are very pointed at one end, and scientists think the shape helps them stay on narrow, sloping cliff ledges.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Common guillemot (murre) calling",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "Telling seabirds apart by their calls is a specialist skill. The 'bare ledge' clue also fits razorbills and Brünnich's guillemots, but neither is an option. The question is somewhat dry."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "seabird cliff ocean",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACliffs_at_Cape_Pine_Newfoundland.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Cliffs_at_Cape_Pine_Newfoundland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Nilfanion · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Nilfanion",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nilfanion",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of Aves",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/2cc8800dc89febe1"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Cut the clause about laying eggs on a bare ledge, because it picked out the answer from the text alone.",
+        "previous": {
+          "question": "Listen: which seabird, a cliff-nester that lays its egg on a bare ledge, makes these short, growling calls?"
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21104",
+      "status": "approved",
+      "difficulty": 9,
+      "description": "A tune so solemn that even the players' socks stand up straight.",
+      "question": "Listen: this is the national anthem of which country?",
+      "answer": "Germany",
+      "wrong_answers": [
+        "The Netherlands",
+        "Denmark",
+        "Poland"
+      ],
+      "hints": [
+        "The tune was first written for an emperor of a neighboring country.",
+        "You often hear this anthem before big matches of a national team that has won the men's World Cup four times.",
+        "The country's flag has three horizontal stripes: black, red and gold."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADas_Deutschlandlied.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Das_Deutschlandlied.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-70"
+        ],
+        "role": "essential",
+        "query": "File:Das Deutschlandlied.ogg",
+        "note": "Play the first 60 seconds of the German national anthem (Haydn's melody); the slow, dignified opening phrases must be heard.",
+        "duration": 81.01,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        },
+        "work": {
+          "title": "Das Deutschlandlied (melody: “Gott erhalte Franz den Kaiser”)",
+          "creator": "Joseph Haydn",
+          "year": 1797,
+          "basis": "composer died 1809"
+        }
+      },
+      "fun_fact": "The melody was written by Joseph Haydn in 1797 as a birthday hymn for the Austrian emperor, and he later reused it in his “Emperor” String Quartet.",
+      "subcategory": "countries",
+      "style": null,
+      "concept": "National anthem of Germany (Das Deutschlandlied)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 9,
+        "notes": "Hint 1 uses 'football', where house style asks for 'soccer' or a rewording. Italy has also won four World Cups, so the hint isn't unique, but hints 2 and 3 settle it."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "stadium crowd flags",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMichigan_Stadium_%28September_27%2C_1947%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Michigan_Stadium_%28September_27%2C_1947%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unidentified (Michiganensian is the University of Michigan yearbook published by University of Michigan)",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Pre1978",
+          "PD-US-no notice"
+        ]
+      },
+      "media_first": {
+        "seed": "cat:Audio files of national anthems",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/8e16ae66d2f0c52c"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Removed “football”, dropped the Berlin hint, and reordered the hints from vague to strong (emperor tune, then World Cup, then the flag), so the flag no longer gives the answer away in hint 2.",
+        "previous": {
+          "hints": [
+            "You often hear this anthem before big football matches of a team that has won the World Cup four times.",
+            "The country's flag has three horizontal stripes: black, red and gold.",
+            "Its capital is Berlin."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21105",
+      "status": "needs_work",
+      "difficulty": 13,
+      "description": "Planet Earth's mood ring, checked every few years for 130 years straight.",
+      "question": "Watch: the colors on this NASA world map are not actual temperatures. What do they show?",
+      "answer": "Temperature anomaly",
+      "wrong_answers": [
+        "Heat index",
+        "Dew point",
+        "Albedo"
+      ],
+      "hints": [
+        "Here, blue doesn't mean freezing and red doesn't mean scorching.",
+        "Look at Antarctica and the Arctic: near-polar spots turn red even though they're never warm.",
+        "It measures how far a place strays from its usual temperature, warmer or cooler than normal."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFive-year_average_global_temperature_anomalies_from_1880_to_2010.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Five-year_average_global_temperature_anomalies_from_1880_to_2010.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NASA/Goddard Space Flight Center Scientific Visualization Studio · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center Scientific Visualization Studio",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:Five-year average global temperature anomalies from 1880 to 2010.ogv",
+        "note": "The whole 26-second NASA animation: a world map whose colors shift from mostly blue (around 1880–1920) to mostly yellow and red by 2010, with only the year shown on screen.",
+        "duration": 26.0
+      },
+      "fun_fact": "NASA compares each place with its own 1951–1980 average, so a freezing Siberian winter can still show up red if it was milder than usual.",
+      "subcategory": "weather-and-climate",
+      "style": null,
+      "concept": "Global warming: world temperature anomaly map from 1880 to 2010 turning from blue to red",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "“Not actual temperatures” is a strong pointer to the answer, though it's needed to make the question fair. Albedo is the weakest of the wrong answers."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "This question uses the same NASA video as q-20673 (“Which part of the world turns the deepest red?” → The Arctic). Hint 2 here says the Arctic turns red, which gives away that question's answer. Either drop one of the two questions, or reword hint 2 so it no longer points to the Arctic, for example: “Places that are always cold can still show up red.”",
+        "problems": [
+          "overlap"
+        ],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos by NASA",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/6ef5ccad7a5ff213"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which defined the answer, with a clue to look at the polar regions on the map.",
+        "previous": {
+          "hints": [
+            "Here, blue doesn't mean freezing and red doesn't mean scorching.",
+            "Each spot is compared with its own normal temperature over a set baseline period.",
+            "It measures how far a place strays from its usual temperature, warmer or cooler than normal."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21106",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "When the party lights aren't bright enough, some people just bring their own fire.",
+      "question": "Watch: men dance with flaming torches at a night temple festival. In which Indian state was this filmed?",
+      "answer": "Tamil Nadu",
+      "wrong_answers": [
+        "Punjab",
+        "Rajasthan",
+        "Nagaland"
+      ],
+      "hints": [
+        "Look at what the men wear: plain cloths wrapped around the waist like a long skirt, typical of one end of India.",
+        "Look at the posts: banana plants are tied to them, a classic festival decoration in this part of the country.",
+        "This state's capital is Chennai."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APandham_Eduthu_Aadudhal.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Pandham_Eduthu_Aadudhal.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Tharagini · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Tharagini",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Pandham Eduthu Aadudhal.webm",
+        "note": "Night temple festival under a decorated roof: men in wrapped waist cloths (veshti/lungi) dance to drums carrying arched frames of burning torches; banana plants tied to the posts. Torch arcs visible at the start, the waist cloths clearly in the later part of the window.",
+        "duration": 42.96,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "fun_fact": "Tamil, the main language of this state, is one of the oldest living languages in the world, with poems more than 2,000 years old.",
+      "subcategory": "celebrations-around-the-world",
+      "style": null,
+      "concept": "Pandham (fire torch) dance, Tamil Nadu, India",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 3,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "All three wrong answers are northern states, so “a southern state” is enough to get it, and there's no southern rival like Kerala. Without the hints you can't really tell from the video, so it's close to a guess. You have to notice the clothing and the banana plants in the footage to reason it out."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "event-person",
+        "probe": "media-probe/6b1c6dfec64eaa07"
+      }
+    },
+    {
+      "id": "q-21107",
+      "status": "approved",
+      "difficulty": 5,
+      "description": "A robot rehearsing for a job interview very, very far from home.",
+      "question": "Watch: the set around this robot was built to look like the surface of which planet?",
+      "answer": "Mars",
+      "wrong_answers": [
+        "Venus",
+        "Mercury",
+        "Jupiter"
+      ],
+      "hints": [
+        "Look closely at the color of the ground and the walls.",
+        "Several robot rovers have already driven around on this planet.",
+        "It is the fourth planet from the Sun, and its dust is full of rust."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARollin%E2%80%99_Justin_commanded_by_Paolo_Nespoli_from_space_ESA383233.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Rollin%E2%80%99_Justin_commanded_by_Paolo_Nespoli_from_space_ESA383233.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "European Space Agency · CC BY-SA 3.0 igo · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 igo",
+        "license_url": null,
+        "author": "European Space Agency",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Rollin’ Justin commanded by Paolo Nespoli from space ESA383233.webm",
+        "note": "The blue humanoid robot handles cables at boxes with solar panels, standing on rust-red ground in front of red, rocky-looking walls; the opening control-room shot is cut.",
+        "duration": 22.48,
+        "excerpt": {
+          "start": 2.5,
+          "end": 22.48
+        }
+      },
+      "fun_fact": "In 2017, astronaut Paolo Nespoli steered this robot, called Rollin’ Justin, from the International Space Station while it stood in a lab in Germany, about 400 km (250 miles) below him.",
+      "subcategory": "robots",
+      "style": null,
+      "concept": "Humanoid robot Rollin' Justin inspecting solar panels in a Mars-like test site (controlled remotely from the ISS)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 3,
+        "notes": "The red ground is meant to be the clue, and with it the question is easy (about a 3). It's in the same family as other Mars identification questions but asks a different fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:space station astronaut video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/45e6641f3b82c4f6"
+      }
+    },
+    {
+      "id": "q-21108",
+      "status": "approved",
+      "difficulty": 15,
+      "description": "A tune so grand that everyone has to stand up, even if they were comfortable on the sofa.",
+      "question": "Listen: this short brass fanfare is the national anthem of which country?",
+      "answer": "Saudi Arabia",
+      "wrong_answers": [
+        "Egypt",
+        "Morocco",
+        "Turkey"
+      ],
+      "hints": [
+        "The tune was composed in the 1940s.",
+        "The words, added much later, praise the country's flag and its king.",
+        "This kingdom covers most of the Arabian Peninsula, and its capital is Riyadh."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAash_Al_Maleek_instrumental.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Aash_Al_Maleek_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-US-1978-89",
+          "PD-US-not renewed",
+          "PD-USGov-Military-Navy"
+        ],
+        "role": "essential",
+        "query": "File:Aash Al Maleek instrumental.ogg",
+        "note": "Full 35-second instrumental recording of the Saudi Arabian national anthem by the US Navy Band (brass and winds); no singing or speech.",
+        "duration": 35.19,
+        "work": {
+          "title": "Aash Al Maleek (national anthem of Saudi Arabia)",
+          "creator": "Abdul Rahman Al-Khateeb (music); United States Navy Band (performance)",
+          "year": "1947",
+          "basis": "US government work (US Navy Band recording); anthem in public use"
+        }
+      },
+      "fun_fact": "The anthem was played without any words for decades: lyrics were only added in 1984.",
+      "subcategory": "countries",
+      "style": null,
+      "concept": "National anthem of Saudi Arabia (Aash Al Malik), instrumental",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 3,
+        "description": 3,
+        "difficulty_estimate": 15,
+        "notes": "Hardly anyone recognises the Saudi anthem by ear, so without hints it's a guess. Hint 1 (Middle East plus a king) already rules out all three wrong answers. The description is generic and fits any anthem."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "military band brass instruments",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg/3840px-U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:national anthem instrumental",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/505a1cec87d0d4ce"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hints 1 and 2, which gave the answer away too early, with a vague era hint and a lyrics hint that still fits Morocco; hint 3 is unchanged.",
+        "previous": {
+          "hints": [
+            "The country lies in the Middle East and its anthem praises its king.",
+            "Its flag is green and carries writing and a sword.",
+            "This kingdom covers most of the Arabian Peninsula, and its capital is Riyadh."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21109",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "The only grocery shopping where you need a hoe instead of a cart.",
+      "question": "Watch: a farmer digs up a root crop with a hoe. Which crop is it?",
+      "answer": "Cassava",
+      "wrong_answers": [
+        "Yam",
+        "Sweet potato",
+        "Taro"
+      ],
+      "hints": [
+        "Look at the shape: long, narrow roots that taper to a point, with thin brown skin.",
+        "Inside the skin the flesh is bright white, and it must be peeled and cooked before anyone eats it.",
+        "Its starch is used to make tapioca, including the chewy pearls in bubble tea."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACassava_from_farm_to_plate..webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Cassava_from_farm_to_plate..webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Denis kasozi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Denis kasozi",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Cassava from farm to plate..webm",
+        "note": "A woman in a field digs into the soil with a hoe. The long, tapering brown cassava root comes up next to the plant's pale woody stem. There is no speech and no text.",
+        "duration": 238.51,
+        "excerpt": {
+          "start": 15,
+          "end": 45
+        }
+      },
+      "fun_fact": "Nigeria grows more cassava than any other country, and the chewy pearls in bubble tea are made from cassava starch.",
+      "subcategory": "vegetables",
+      "style": null,
+      "concept": "Cassava (harvested by hoe, then steamed in a pot with leaves)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 4,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "The wrong answers are good. The fun fact repeats the tapioca point from hint 3."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:cooking video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/7130eec16f121a0b"
+      }
+    },
+    {
+      "id": "q-21110",
+      "status": "approved",
+      "difficulty": 12,
+      "description": "Two minutes of the loudest campfire ever lit, and nobody brought marshmallows.",
+      "question": "Watch: a giant rocket booster is test-fired while bolted to the ground in Utah. What kind of fuel does it burn?",
+      "answer": "Solid propellant",
+      "wrong_answers": [
+        "Liquid hydrogen",
+        "Liquid methane",
+        "Kerosene"
+      ],
+      "hints": [
+        "Look at how much thick smoke pours out, and how it never stops or changes once it starts.",
+        "Engines that burn hydrogen give an almost invisible flame and mostly water vapor.",
+        "Its fuel is packed inside the booster like a giant rubbery candle, not pumped from a tank."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA%2C_Northrop_Grumman_Test_Fire_SLS_BOLE_Booster_%282_minutes_of_dm-1_test_feed%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/NASA%2C_Northrop_Grumman_Test_Fire_SLS_BOLE_Booster_%282_minutes_of_dm-1_test_feed%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NASA Marshall Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Marshall Space Flight Center",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:NASA, Northrop Grumman Test Fire SLS BOLE Booster (2 minutes of dm-1 test feed).webm",
+        "note": "The end of the countdown, then the horizontal booster igniting with a blinding flame and huge clouds of thick grey-white smoke, seen from several camera angles.",
+        "duration": 179.49,
+        "excerpt": {
+          "start": 4,
+          "end": 34
+        }
+      },
+      "fun_fact": "Once a solid rocket motor is lit, it can't be switched off: this one burned for just over two minutes with about 17,000 kN (3.9 million pounds) of thrust.",
+      "subcategory": "space",
+      "style": null,
+      "concept": "Ground test firing of a rocket booster (SLS solid rocket booster, Utah)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "The fun fact puts imperial first (3.9 million lbf), but house style wants metric first. The thrust figure is roughly right. The answer \"Solid propellant\" reads as a type of fuel, while the wrong answers are named fuels, so it stands out slightly. The hints explain the reasoning well."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:NASA video launch",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/6980d6300e0789b6"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Put the metric thrust first and the imperial figure in brackets in the fun fact.",
+        "previous": {
+          "fun_fact": "Once a solid rocket motor is lit, it can't be switched off: this one burned for just over two minutes with about 3.9 million pounds (17,000 kN) of thrust."
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21111",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "The dancer has the best outfit, but the drummers are the ones really running this party.",
+      "question": "Watch the drummers in this village dance in northern Ghana. What kind of drum are they playing?",
+      "answer": "Talking drum",
+      "wrong_answers": [
+        "Djembe",
+        "Bongo drum",
+        "Tabla"
+      ],
+      "hints": [
+        "Watch how the drummers carry their drums as they move around the dancer.",
+        "Players hold it under one arm and squeeze its side cords to change the pitch.",
+        "Its rising and falling notes can copy the tones of speech and send messages between villages."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADagomba_man_dancing.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Dagomba_man_dancing.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Kum1989 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Kum1989",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Dagomba man dancing.webm",
+        "note": "Drummers clearly visible with hourglass-shaped drums held under the arm and struck with curved sticks (as at about 16 s and 27 s), next to the dancer in a blue striped smock; drumming audible.",
+        "duration": 108.4,
+        "excerpt": {
+          "start": 12,
+          "end": 42
+        }
+      },
+      "fun_fact": "Among the Dagomba people of Ghana, talking-drum players are also hereditary historians, who drum and chant the history of their kings from memory.",
+      "subcategory": "musical-instruments",
+      "style": null,
+      "concept": "Dagomba traditional dance with drummers (northern Ghana)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "The Dagomba lunga is a talking drum, so the answer is right. Dagomba groups also play the gungon bass drum, so the excerpt needs to show the hourglass drums clearly. Hint 1 already narrows it down a lot."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/ef711be33ad4715f"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Removed the sticks from the description and replaced the hourglass-shape hint 1 with a vaguer one that asks players to watch how the drums are carried.",
+        "previous": {
+          "description": "The dancer's smock is spinning, but the real stars of the party are the ones holding the sticks.",
+          "hints": [
+            "Look at the drum's shape: it's narrow in the middle, like an hourglass.",
+            "Players hold it under one arm and squeeze its side cords to change the pitch.",
+            "Its rising and falling notes can copy the tones of speech and send messages between villages."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21112",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "Two hands, one piano, and absolutely no agreement about who gets to lead.",
+      "question": "Listen to how the two hands play together in this Beethoven finale. What is this way of writing music called?",
+      "answer": "Counterpoint",
+      "wrong_answers": [
+        "Glissando",
+        "Ground bass",
+        "Drone"
+      ],
+      "hints": [
+        "Listen to the left hand and the right hand separately: neither one is just playing chords along with the other.",
+        "Instead of a tune with a backing, you hear separate melodies chasing each other.",
+        "The name comes from Latin and means “note against note”."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKlaviersonate_Nr._6_f-moll_op._10.2_-_III._Presto.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Klaviersonate_Nr._6_f-moll_op._10.2_-_III._Presto.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-EU-audio"
+        ],
+        "role": "essential",
+        "query": "File:Klaviersonate Nr. 6 f-moll op. 10.2 - III. Presto.ogg",
+        "note": "Solo piano, opening of the Presto finale: the short repeated-note theme in one voice, then imitated by a lower voice, so the voices overlap clearly.",
+        "duration": 128.84,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        },
+        "work": {
+          "title": "Piano Sonata No. 6 in F major, Op. 10 No. 2 – III. Presto",
+          "creator": "Ludwig van Beethoven",
+          "year": "c. 1797",
+          "basis": "composer died 1827"
+        }
+      },
+      "fun_fact": "This is the fast finale of Beethoven's Piano Sonata No. 6 in F major, which opens almost like a little fugue before turning into a playful chase.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Beethoven's Piano Sonata No. 6 in F major, Op. 10 No. 2, finale (Presto), solo piano",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "The question is long (about 150 characters) and reads like a textbook. Glissando and drone don't fit the description, so they're easy to rule out, which leaves only ground bass as a real rival. The source file name says \"f-moll\" (F minor), but the work data and fun fact say F major; Op. 10 No. 2 is in F major, so they're right. Imitation or canon would arguably be more precise, but neither is among the options."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "grand piano keys",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Boesendorfer-5075415.jpg/3840px-Boesendorfer-5075415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "ermell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:piano sonata public domain",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/e472c7196d9c9fd6"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the question so it no longer defines the technique, and replaced the fugue hint with a listening hint.",
+        "previous": {
+          "question": "Listen: a short tune starts in one voice, and then a lower voice comes in copying it while the first keeps going. What is this way of writing music called?",
+          "hints": [
+            "Listen to the left hand and the right hand separately: neither one is just playing chords along with the other.",
+            "Bach was the great master of this technique, and the fugue is its strictest form.",
+            "The name comes from Latin and means “note against note”."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21113",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "Jupiter has nearly a hundred moons, and this one finally agreed to a photo shoot.",
+      "question": "Watch: a spacecraft took these close-up pictures of one of Jupiter’s moons. Which moon is it?",
+      "answer": "Ganymede",
+      "wrong_answers": [
+        "Callisto",
+        "Europa",
+        "Io"
+      ],
+      "hints": [
+        "Look at the surface: dark, ancient patches are crossed by lighter, grooved bands.",
+        "It isn’t dotted with yellow volcanoes, and it isn’t a smooth white ball of cracked ice.",
+        "This moon is bigger than the planet Mercury."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVIDEO_-_Ganymede_Flyby_Sequence_-_Nasa-s_Juno_PJ_34_%2851794308684%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/VIDEO_-_Ganymede_Flyby_Sequence_-_Nasa-s_Juno_PJ_34_%2851794308684%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Andrea Luck · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "Andrea Luck",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:VIDEO - Ganymede Flyby Sequence - Nasa-s Juno PJ 34 (51794308684).webm",
+        "note": "Silent Juno flyby sequence of a grey moon whose patchwork of dark regions and bright grooved terrain, plus a bright ray crater near the top left, is clearly visible as the disc moves in and out of frame.",
+        "duration": 17.61
+      },
+      "fun_fact": "Ganymede is the only moon known to have its own magnetic field, and it probably hides a salty ocean under its icy crust.",
+      "subcategory": "solar-system",
+      "style": null,
+      "concept": "Ganymede, Jupiter's largest moon (Juno flyby images)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 13,
+        "notes": "Telling Ganymede from Callisto by the grooved terrain is genuinely expert-level. It's worth checking that the video has no title card or caption that names the moon."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:NASA video launch",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/5b01edf9af02a8c6"
+      }
+    },
+    {
+      "id": "q-21114",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "Getting dressed for work takes a lot longer when your office is above the sky.",
+      "question": "Watch: astronauts put on their launch suits before flying to space. Why are these suits such a bright color?",
+      "answer": "So rescuers can spot them at sea",
+      "wrong_answers": [
+        "To reflect the Sun's heat in space",
+        "To shield the crew from radiation",
+        "To show each astronaut's rank"
+      ],
+      "hints": [
+        "Think about what could happen at the very end of the trip, or if something went wrong early.",
+        "Their spacecraft comes home by splashing down instead of landing on a runway.",
+        "Helicopter and ship crews need to find them quickly among the waves."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtemis_II_Live_Launch_Coverage_-_Suit-Up_%28KSC-20260401-MH-SEA01-0001%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Artemis_II_Live_Launch_Coverage_-_Suit-Up_%28KSC-20260401-MH-SEA01-0001%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NASA Kennedy Space Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Kennedy Space Center",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:Artemis II Live Launch Coverage - Suit-Up (KSC-20260401-MH-SEA01-0001).webm",
+        "note": "Silent NASA footage of the Artemis II crew suiting up: close-ups of astronauts in bright orange Orion suits putting on hoods and helmets, helped by technicians in white. The bright orange color must be clearly visible.",
+        "duration": 97.03,
+        "excerpt": {
+          "start": 10,
+          "end": 40
+        }
+      },
+      "fun_fact": "The orange launch suits that Space Shuttle astronauts wore were nicknamed “pumpkin suits.”",
+      "subcategory": "space-race-and-astronauts",
+      "style": null,
+      "concept": "Artemis II astronauts putting on orange Orion spacesuits before launch (suit-up)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 8,
+        "notes": "Solid question that players can reason their way to. The \"pumpkin suits\" fun fact is true."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:NASA video launch",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/cb5ca38864c02b78"
+      }
+    },
+    {
+      "id": "q-21115",
+      "status": "approved",
+      "difficulty": 10,
+      "description": "Somewhere a dentist just felt a sudden surge of job security.",
+      "question": "Watch: which sweet is this street cook making?",
+      "answer": "Jalebi",
+      "wrong_answers": [
+        "Gulab jamun",
+        "Baklava",
+        "Churros"
+      ],
+      "hints": [
+        "It's a favorite at weddings and festivals, and some people eat it with warm milk.",
+        "After frying, the pieces are dropped into sugar syrup until they're sticky and sweet.",
+        "It's South Asia's crunchy, syrupy spiral, a cousin of the Middle Eastern zalabiya."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJalebi_being_prepared%2C_Bangalore.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Jalebi_being_prepared%2C_Bangalore.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Subhashish Panigrahi · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Subhashish Panigrahi",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Jalebi being prepared, Bangalore.webm",
+        "note": "Street stall: batter is poured in spirals into a pan of hot oil, and finished bright orange jalebis are lifted out with a slotted ladle. The sound is only quiet background noise and isn't needed.",
+        "duration": 45.85,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "fun_fact": "A similar fried sweet called zalabiya shows up in an Arabic cookbook written more than 1,000 years ago.",
+      "subcategory": "world-cuisines",
+      "style": null,
+      "concept": "Jalebi (Indian spiral sweet) being deep-fried at a street stall",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "Jalebi is well known in South Asia and the Middle East but much less so for families in the Americas or Europe, so the International angle is weaker. Hint 3 ('cousin of zalabiya') nearly spells the answer. The fun fact about a cookbook over 1,000 years old (10th-century al-Warraq) is plausible."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:cooking video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/241b277f205462c8"
+      }
+    },
+    {
+      "id": "q-21116",
+      "status": "approved",
+      "difficulty": 10,
+      "description": "Some plants wait for sunlight and rain, and this one would rather order takeout.",
+      "question": "Watch this sped-up clip: which carnivorous plant is this?",
+      "answer": "A sundew",
+      "wrong_answers": [
+        "A Venus flytrap",
+        "A pitcher plant",
+        "A bladderwort"
+      ],
+      "hints": [
+        "Wild species of this plant grow on every continent except Antarctica.",
+        "It has no snapping jaws and no deep cup. Each leaf is covered in hairs with sticky tips that bend toward the prey.",
+        "Its name comes from the shiny drops on its hairs, which look like early-morning dew."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarnivorous_Plant_Time_Lapse_%28Drosera_Capensis%29_%22eating%22_a_Fruit_Fly.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Carnivorous_Plant_Time_Lapse_%28Drosera_Capensis%29_%22eating%22_a_Fruit_Fly.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Scott Schiller · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": null,
+        "author": "Scott Schiller",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Carnivorous Plant Time Lapse (Drosera Capensis) \"eating\" a Fruit Fly.ogv",
+        "note": "The whole 16.6-second time-lapse: a long, narrow green leaf covered in red hairs with glistening drops slowly curls and bends around a small insect caught on it.",
+        "duration": 16.58
+      },
+      "fun_fact": "Charles Darwin spent years experimenting on sundews and wrote a whole book about carnivorous plants, published in 1875.",
+      "subcategory": "plants",
+      "style": null,
+      "concept": "Sundew (Drosera capensis) carnivorous plant curling its leaf around prey (time-lapse)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "Good essential time-lapse. The video clearly rules out the flytrap and the pitcher plant for anyone who knows them, which is fair."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:time-lapse video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/c2015e7537e16ae1"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Removed the description of the leaf wrapping around its prey from the question, so the clip decides the answer.",
+        "previous": {
+          "question": "Watch: this sped-up clip shows a carnivorous plant slowly wrapping a leaf around its prey. Which plant is it?"
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21117",
+      "status": "approved",
+      "difficulty": 10,
+      "description": "Even the Sun has neighbors, and it has never once borrowed sugar from them.",
+      "question": "Watch: this animation flies away from our Sun into the stars around it. What is the name of the star closest to the Sun?",
+      "answer": "Proxima Centauri",
+      "wrong_answers": [
+        "Sirius",
+        "Polaris",
+        "Betelgeuse"
+      ],
+      "hints": [
+        "You can't see it from Europe or most of North America: it is in the southern sky.",
+        "It is a small, dim red dwarf, much too faint to see without a telescope.",
+        "Its name comes from the Latin word for “nearest”, and it belongs to the Alpha Centauri system."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlying_among_the_closest_stars_to_the_Solar_System.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flying_among_the_closest_stars_to_the_Solar_System.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "ESO/I. Crossfield/N. Risinger · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "ESO/I. Crossfield/N. Risinger",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "illustrative",
+        "query": "File:Flying among the closest stars to the Solar System.ogv",
+        "note": "Silent ESO animation: the camera pulls back from the glowing Sun (labeled “Sun”) into a field of nearby stars. The window ends before the “Proxima Cen” and “Luhman 16AB” labels appear (around 11–12 s) and cuts the ESO logo cards.",
+        "duration": 36.17,
+        "excerpt": {
+          "start": 2.5,
+          "end": 9.5
+        }
+      },
+      "fun_fact": "Proxima Centauri is about 4.2 light-years away, so the light you would see from it tonight left the star more than four years ago.",
+      "subcategory": "stars-and-galaxies",
+      "style": null,
+      "concept": "Fly-through of the nearest stars to the Sun (Proxima Centauri, Luhman 16AB)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "The illustrative video carries labels; the window must reliably end before the 'Proxima Cen' label appears. That is risky but planned for."
+      },
+      "fact_checked": true,
+      "needs_media": false,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/e5b36446f98f4a00"
+      }
+    },
+    {
+      "id": "q-21118",
+      "status": "approved",
+      "difficulty": 4,
+      "description": "The most expensive parcel delivery ever, and the courier only goes one way: up.",
+      "question": "Watch: after the rocket climbs out of the sky and into space, what does it set free?",
+      "answer": "A satellite",
+      "wrong_answers": [
+        "A crew capsule",
+        "A lunar lander",
+        "A space station module"
+      ],
+      "hints": [
+        "Nobody is on board: this spacecraft works on its own.",
+        "It unfolds a big flat panel to catch sunlight for power.",
+        "It will circle the Earth for years, taking pictures of the land below."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALDCM_Launch_Animation.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LDCM_Launch_Animation.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:LDCM Launch Animation.webm",
+        "note": "Animated launch: rocket lifts off from the pad, climbs through blue sky into black space, then the satellite with its solar panel appears in orbit. The window skips the Landsat title cards at about 3 s and 45 s and the NASA Goddard end card.",
+        "duration": 59.7,
+        "excerpt": {
+          "start": 8,
+          "end": 38
+        }
+      },
+      "fun_fact": "The Landsat satellites have photographed Earth's land from space since 1972, the longest unbroken record of our planet's surface from orbit.",
+      "subcategory": "space",
+      "style": null,
+      "concept": "Landsat Data Continuity Mission (Landsat 8) Earth-observing satellite launching on an Atlas V rocket (CGI animation)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 4,
+        "notes": "Fairly plain 'what does it release' question; the animation shows the satellite, so it is mostly observation."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:NASA video launch",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/9ccc5f289482a813"
+      }
+    },
+    {
+      "id": "q-21119",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "A kitchen gadget that saves your fingers from smelling like dinner for three days.",
+      "question": "Watch: the food being peeled here belongs to which plant genus?",
+      "answer": "Allium",
+      "wrong_answers": [
+        "Brassica",
+        "Solanum",
+        "Capsicum"
+      ],
+      "hints": [
+        "The genus name is Latin, like all plant genus names.",
+        "Onions belong to the same genus.",
+        "Leeks, chives and shallots are in it too."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGarlic_peeler.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Garlic_peeler.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Raimond Spekking · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Raimond Spekking",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Garlic peeler.webm",
+        "note": "A garlic clove is placed inside a blue silicone tube that is rolled under a hand on a wooden table. Then the peeled clove and its loose skin come out. The window ends before the title card that starts at about 16.5 s.",
+        "duration": 20.29,
+        "excerpt": {
+          "start": 0,
+          "end": 16
+        }
+      },
+      "fun_fact": "“Allium” is simply the Latin word for garlic, and onions, leeks, chives and shallots all share this genus.",
+      "subcategory": "plants",
+      "style": null,
+      "concept": "Silicone garlic peeler (rolling a garlic clove under a tube to remove the skin)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Dry, taxonomy-test feel. The fun fact repeats hints 2 and 3. Hint 2 (onions) is a strong hint for a 13."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:cooking video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/d7dfd3e60075e782"
+      }
+    },
+    {
+      "id": "q-21120",
+      "status": "approved",
+      "difficulty": 3,
+      "description": "Two fighter jets holding hands at 10,000 meters, and it's not even romantic.",
+      "question": "Watch: what is the jet in front passing to the jet behind it through the long hose?",
+      "answer": "Fuel",
+      "wrong_answers": [
+        "Water",
+        "Oxygen",
+        "Electricity"
+      ],
+      "hints": [
+        "The jet behind would have to land much sooner without it.",
+        "Big planes carry tons of it inside their wings.",
+        "Engines burn it to keep the plane flying."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFA-18_Automated_Aerial_Refueling.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/FA-18_Automated_Aerial_Refueling.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:FA-18 Automated Aerial Refueling.ogv",
+        "note": "Cockpit view from the rear jet closing in on the front jet, a wide shot of both jets linked by a hose, then the cockpit view with the cone-shaped basket at the end of the hose right next to the rear jet's probe. The window skips the close-ups where the agency's lettering on the tail can be read.",
+        "duration": 52.67,
+        "excerpt": {
+          "start": 20,
+          "end": 37
+        }
+      },
+      "fun_fact": "With aerial refueling, a jet can stay in the air for many hours, and some pilots have crossed whole oceans without ever landing.",
+      "subcategory": "planes",
+      "style": null,
+      "concept": "Aerial refueling between two NASA F/A-18 jets (hose and drogue)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 2,
+        "notes": "Small doubt: NASA's F/A-18 automated refueling tests used a 707 tanker in front, so \"two fighter jets\" in the description may be wrong. Hint 2 (gas station) gives it away, but that is fine for a level 3."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos by NASA",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/f2df2a409ce23b43"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which gave the answer away and used the US-only “gas station”, with the reviewer's vaguer hint.",
+        "previous": {
+          "hints": [
+            "The jet behind would have to land much sooner without it.",
+            "Cars get the same thing at a gas station.",
+            "Engines burn it to keep the plane flying."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21121",
+      "status": "approved",
+      "difficulty": 5,
+      "description": "Part dance, part battle, and the band keeps playing no matter who is winning.",
+      "question": "Watch this Himalayan archery dance from India, played with blunt wooden arrows. Where on the opponent's body must the arrow hit to score?",
+      "answer": "The legs",
+      "wrong_answers": [
+        "The back",
+        "The shoulders",
+        "The chest"
+      ],
+      "hints": [
+        "Watch where the archers point their bows.",
+        "Several of the archers bend low or kneel to take aim.",
+        "Hitting above the knee costs points."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThoda_or_%E0%A4%A0%E0%A5%8B%E0%A4%A1%E0%A4%BE_02.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Thoda_or_%E0%A4%A0%E0%A5%8B%E0%A4%A1%E0%A4%BE_02.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Poojilsharma07 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Poojilsharma07",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Thoda or ठोडा 02.webm",
+        "note": "Costumed archers on a stage dancing with bows and aiming low at each other's legs, with live folk musicians seated at the side.",
+        "duration": 22.92
+      },
+      "fun_fact": "This folk game is called Thoda, from Himachal Pradesh, and its two teams are said to come from the Pandavas and the Kauravas of the epic Mahabharata.",
+      "subcategory": "celebrations-around-the-world",
+      "style": null,
+      "concept": "Thoda, archery martial-art dance of Himachal Pradesh, India",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 5,
+        "notes": "Hits must land on the leg below the knee, and the answer \"The legs\" covers that. The video of archers aiming low makes it easy to reason out. It looks a little like French cricket (q-18000, aiming at the legs), but it is a different game and a different fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "event-person",
+        "probe": "media-probe/8cfd444ccf528ef7"
+      }
+    },
+    {
+      "id": "q-21122",
+      "status": "approved",
+      "difficulty": 2,
+      "description": "Somebody is spinning a tiny spiky wheel very patiently, and dinner depends on it.",
+      "question": "Watch: what is being shredded into white flakes with this hand-cranked scraper?",
+      "answer": "A coconut",
+      "wrong_answers": [
+        "A radish",
+        "A potato",
+        "A turnip"
+      ],
+      "hints": [
+        "Look closely at the hairy brown outside of what the hand is holding.",
+        "It grows high up on a tall palm tree.",
+        "Its “milk” goes into many curries, and its water is a drink in itself."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_action_of_coconut_grating.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/A_action_of_coconut_grating.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Thamizhpparithi Maari · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Thamizhpparithi Maari",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:A action of coconut grating.ogv",
+        "note": "Top-down close-up of a hand holding a half coconut, with its hairy brown shell and white flesh, against the spiky wheel of a hand-cranked scraper. The grated white flakes fall onto a steel plate. The later part (from about 12 s) clearly shows the white flesh inside the shell.",
+        "duration": 22.02
+      },
+      "fun_fact": "Despite its name, a coconut is not a true nut: botanists call it a drupe, like a peach or a cherry.",
+      "subcategory": "world-cuisines",
+      "style": null,
+      "concept": "Coconut being grated with a traditional hand-cranked scraper",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 1,
+        "notes": "Once the hairy brown shell is on screen, the three root vegetables are ruled out at a glance. The video alone gives it away, which is acceptable at this level."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:cooking video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/cb826eec137aee73"
+      }
+    },
+    {
+      "id": "q-21123",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "Somewhere under all those clouds, half a continent is wondering whether to cancel the picnic.",
+      "question": "Watch: this satellite view shows a huge swirl of clouds crossing North America. What kind of weather system is it?",
+      "answer": "An extratropical cyclone",
+      "wrong_answers": [
+        "A tropical cyclone",
+        "An anticyclone",
+        "A supercell"
+      ],
+      "hints": [
+        "Watch the shape the clouds make as the storm grows, and notice how much land it covers.",
+        "It forms where cold polar air meets warm air, not over warm tropical seas, and it has no clear eye.",
+        "Weather maps show it as a big “L” in the middle latitudes, with a cold front and a warm front."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFeb_2011_Storm_Moves_Across_the_U.S.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Feb_2011_Storm_Moves_Across_the_U.S.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Jesse Allen · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jesse Allen",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-NASA"
+        ],
+        "role": "essential",
+        "query": "File:Feb 2011 Storm Moves Across the U.S.ogv",
+        "note": "The whole 18 s satellite animation: clouds build over the southern US, then grow into a giant comma-shaped swirl stretching from the Midwest to the Northeast. The small date bar at the bottom (Jan 31 to Feb 2) does not name the answer.",
+        "duration": 18.2
+      },
+      "fun_fact": "This storm became the 2011 “Groundhog Day Blizzard”, which dropped about 54 cm (21 in) of snow on Chicago.",
+      "subcategory": "weather-and-climate",
+      "style": null,
+      "concept": "A giant winter storm moving across the U.S. (satellite animation, Feb 2011)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "A rather dry weather term. Hint 2 (no eye, not over warm seas, polar meets warm air) rules out the strongest distractor and nearly settles it. The facts check out: the 2011 Groundhog Day Blizzard brought about 54 cm (21 in) of snow to Chicago."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos by NASA",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/3d7bbbd6440c7bbd"
+      }
+    },
+    {
+      "id": "q-21124",
+      "status": "approved",
+      "difficulty": 5,
+      "description": "No oven, no pan, no kitchen, and absolutely no delivery service.",
+      "question": "Watch: in Morocco, this stuffed dough is baked without a pan or an oven. What is it laid on?",
+      "answer": "Stones heated in a fire",
+      "wrong_answers": [
+        "A woven grass mat",
+        "Fresh palm leaves",
+        "A flat clay tile"
+      ],
+      "hints": [
+        "Look closely at what sticks out around the edges of the dough.",
+        "They weren't bought anywhere: they were picked up from the ground nearby.",
+        "Before the dough arrived, a fire burned right on top of them."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAbadir_nomadic_pizza.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Abadir_nomadic_pizza.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "مصطفى ملو · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "مصطفى ملو",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Abadir nomadic pizza.webm",
+        "note": "The window must show the round, pale dough being placed or pressed onto a bed of blackened, fire-heated stones among ashes (as at about 182 s), with the separate stones clearly visible around its edge.",
+        "duration": 405.04,
+        "excerpt": {
+          "start": 165,
+          "end": 195
+        }
+      },
+      "fun_fact": "In the Sahara, Tuareg nomads bake a bread called taguella straight in hot sand under the fire, then simply brush the sand off before eating.",
+      "subcategory": "world-cuisines",
+      "style": null,
+      "concept": "Flatbread baked in the desert by burying the dough in hot stones, embers and sand",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 4,
+        "notes": "The question only works if the excerpt clearly shows the stones; the note says it does at about 182 s. Hint 3 is weak as a strong hint. The taguella fun fact is correct."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:cooking video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/b311582de669608f"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Reworded the question to what the file supports (Morocco, stuffed dough, no desert) and swapped hints 2 and 3 so they go from vague to strong.",
+        "previous": {
+          "question": "Watch: nomads in the desert bake this dough without a pan or an oven. What is the dough laid on?",
+          "hints": [
+            "Look closely at what sticks out around the edges of the dough.",
+            "Before the dough arrived, a fire burned right on top of them.",
+            "They weren't bought anywhere: they were picked up from the ground nearby."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21125",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "The only dance troupe that can be heard coming three streets away, rain or shine.",
+      "question": "Watch: these costumed dancers with heavy bells on their belts are part of an old European winter tradition. What are they called?",
+      "answer": "Kukeri",
+      "wrong_answers": [
+        "Mamuthones",
+        "Busós",
+        "Perchten"
+      ],
+      "hints": [
+        "The bells' loud clanging is meant to scare off evil spirits and wake up the spring.",
+        "The tradition is strongest in the country whose capital is Sofia.",
+        "The biggest festival of these dancers, the Surva, takes place every January in the Bulgarian town of Pernik."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABulgarian_folklore.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Bulgarian_folklore.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Annboeva · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Annboeva",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Bulgarian folklore.ogv",
+        "note": "Silent clip of Bulgarian kukeri in a rainy town square: tall pointed hats with colorful ribbons and tassels, white-and-red costumes, rows of big bells on their belts, and a performer in a bear costume.",
+        "duration": 87.0,
+        "excerpt": {
+          "start": 30,
+          "end": 60
+        }
+      },
+      "fun_fact": "The Surva masquerade festival in Pernik, Bulgaria, brings together thousands of costumed performers and is one of the biggest masked festivals in Europe.",
+      "subcategory": "celebrations-around-the-world",
+      "style": null,
+      "concept": "Kukeri, Bulgarian masked folk performers with bells (and a bear costume)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 13,
+        "notes": "The distractors are excellent: other real European bell-and-mask traditions. Telling them apart from the video alone takes expertise, and hint 2 (Sofia) gives the answer away."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "event-person",
+        "probe": "media-probe/fcd5137e23575762"
+      }
+    },
+    {
+      "id": "q-21126",
+      "status": "approved",
+      "difficulty": 11,
+      "description": "A tiny insect in a royal purple-and-gold outfit, with very strong opinions about the herb garden.",
+      "question": "Watch: this small purple-and-gold moth is named after which garden herb, a favorite food of its caterpillars?",
+      "answer": "Mint",
+      "wrong_answers": [
+        "Basil",
+        "Lavender",
+        "Rosemary"
+      ],
+      "hints": [
+        "Like the other three options, this herb belongs to the same plant family as sage and thyme.",
+        "The moth's caterpillars also eat marjoram, a close relative of this herb.",
+        "The same herb flavors Moroccan tea, mojitos and most toothpaste."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMint_moth_%28Pyrausta_aurata%29_on_shrubby_cinquefoil_%28Dasiphora_fruticosa%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Mint_moth_%28Pyrausta_aurata%29_on_shrubby_cinquefoil_%28Dasiphora_fruticosa%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Mint moth (Pyrausta aurata) on shrubby cinquefoil (Dasiphora fruticosa).webm",
+        "note": "Silent close-up of a mint moth (Pyrausta aurata), purple-brown wings with gold spots, sitting on a yellow cinquefoil flower; wings clearly spread in the first 30 s.",
+        "duration": 57.73,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "fun_fact": "The mint moth flies by day as well as at night, so people in sunny gardens often mistake it for a tiny butterfly.",
+      "subcategory": "insects",
+      "style": null,
+      "concept": "Mint moth (Pyrausta aurata) feeding on a yellow flower",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 8,
+        "notes": "Rated too hard. Players can guess mint fairly often, and hint 1 points strongly to it, so 8–9 fits better than 11. It is different from q-6017 (the mint plant in candies)."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/a510ca03a86bcbaa"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hints 1 and 2, which each pointed to mint alone, with vaguer hints as the reviewer asked; the silent-audio flags don't matter for this visual question.",
+        "previous": {
+          "hints": [
+            "The herb's name is also a common flavor of sweets and ice cream.",
+            "Gardeners often grow this herb in pots, because it spreads so fast it can take over a whole bed.",
+            "The same herb flavors Moroccan tea, mojitos and most toothpaste."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21127",
+      "status": "approved",
+      "difficulty": 8,
+      "description": "Music theory class, but nobody has to sit an exam today.",
+      "question": "Listen: what kind of key or scale is this piano music built on?",
+      "answer": "Major key",
+      "wrong_answers": [
+        "Minor key",
+        "Twelve-tone row",
+        "Whole-tone scale"
+      ],
+      "hints": [
+        "This piece was written by Beethoven in 1798.",
+        "Two of the options are typical of 20th-century music that sounds strange or floating.",
+        "“Happy Birthday” and “Twinkle, Twinkle, Little Star” are built on the same kind of key."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKlaviersonate_Nr._9_E-Dur%2C_op._14.1_-_I._Allegro.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Klaviersonate_Nr._9_E-Dur%2C_op._14.1_-_I._Allegro.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-EU-audio"
+        ],
+        "role": "essential",
+        "query": "File:Klaviersonate Nr. 9 E-Dur, op. 14.1 - I. Allegro.ogg",
+        "note": "The opening of the movement, solo piano: the bright E major first theme and the start of the second theme in B major. No minor-key development passages in the window.",
+        "duration": 409.84,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        },
+        "work": {
+          "title": "Piano Sonata No. 9 in E major, Op. 14 No. 1 – I. Allegro",
+          "creator": "Ludwig van Beethoven",
+          "year": 1798,
+          "basis": "composer died 1827"
+        }
+      },
+      "fun_fact": "Beethoven arranged this sonata himself for string quartet, moving it from E major to F major, partly to show how a good arrangement should be done.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Beethoven's Piano Sonata No. 9 in E major, Op. 14 No. 1, first movement (Allegro), solo piano",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 2,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 7,
+        "notes": "Twelve-tone row and whole-tone scale are weak distractors for most players, so this is really a 50/50 between major and minor. Hint 2 openly rules out both of them. The E major sonata's exposition has some passing minor-key colour, so the excerpt should be checked to make sure it sounds clearly major. Reads like a music-theory test; the fun is only moderate."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "grand piano keys",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Boesendorfer-5075415.jpg/3840px-Boesendorfer-5075415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "ermell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:piano sonata public domain",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/c5f0445ec14fdf08"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Removed the leading article from all four options so “A major key” no longer reads as the key of A major.",
+        "previous": {
+          "answer": "A major key",
+          "wrong_answers": [
+            "A minor key",
+            "A twelve-tone row",
+            "A whole-tone scale"
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21128",
+      "status": "approved",
+      "difficulty": 6,
+      "description": "A helicopter tour where the view comes with its own special effects, no ticket upgrade needed.",
+      "question": "Watch: what is making the huge white cloud on this coast?",
+      "answer": "Lava flowing into the sea",
+      "wrong_answers": [
+        "A waterfall pouring into the sea",
+        "A geyser erupting by the shore",
+        "A wildfire burning near the beach"
+      ],
+      "hints": [
+        "Look closely at the color of the rocky ground along the shore.",
+        "The white cloud is steam: something extremely hot is meeting cold water.",
+        "This was filmed in Hawaii in 2018, where the island was growing new land."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThis_video_from_the_May_21_helicopter_overflight_of_K%C4%ABlauea_Volcano%E2%80%99s_Lower_E....webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/This_video_from_the_May_21_helicopter_overflight_of_K%C4%ABlauea_Volcano%E2%80%99s_Lower_E....webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "USGS Volcanoes · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USGS Volcanoes",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-USGS"
+        ],
+        "role": "essential",
+        "query": "File:This video from the May 21 helicopter overflight of Kīlauea Volcano’s Lower E....webm",
+        "note": "Aerial helicopter footage of a dark, fresh lava field meeting the sea, with a big white steam plume billowing up where the lava enters the water and waves washing against the black rock. The window skips the opening and closing title cards; only the small USGS watermark stays.",
+        "duration": 53.34,
+        "excerpt": {
+          "start": 8,
+          "end": 38
+        }
+      },
+      "fun_fact": "This steam cloud is called “laze”, short for lava haze, and it carries acid and tiny specks of volcanic glass, so people were warned to stay away from it.",
+      "subcategory": "volcanoes",
+      "style": null,
+      "concept": "Lava flowing into the ocean and making a steam (laze) plume, Kīlauea, Hawaii 2018",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 5,
+        "notes": "Hint 2 (steam from something extremely hot) and hint 3 (Hawaii 2018) both almost give it away. The footage itself shows black lava rock, which makes the answer fairly easy. Shares the lava/Hawaii topic with q-12909, but asks a different fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:volcano eruption video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/160d1df50dc1e0fa"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description, which hinted at hot land meeting the sea, as a neutral joke about the helicopter ride.",
+        "previous": {
+          "description": "The land and the ocean are having a very heated argument, and you're watching from a helicopter."
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21129",
+      "status": "approved",
+      "difficulty": 9,
+      "description": "Chamber music: like a dinner party where everyone talks at once and nobody gets to eat.",
+      "question": "Listen: what is the name for the kind of chamber group playing this piece?",
+      "answer": "A piano trio",
+      "wrong_answers": [
+        "A string quartet",
+        "A string trio",
+        "A wind quintet"
+      ],
+      "hints": [
+        "Count the instruments: there are fewer than four.",
+        "The group's name tells you how many people play and one kind of instrument they play.",
+        "A violin and a cello play together with a big keyboard instrument that has hammers inside."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20091104_Joshua_Bell%2C_Awadagin_Pratt%2C_and_Alisa_Weilerstein_-_Mendelssohn%27s_Piano_Trio_No._1_in_D_minor%2C_Op._49_-_4._Finale%2C_Allegro_assai_appassionato.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/20091104_Joshua_Bell%2C_Awadagin_Pratt%2C_and_Alisa_Weilerstein_-_Mendelssohn%27s_Piano_Trio_No._1_in_D_minor%2C_Op._49_-_4._Finale%2C_Allegro_assai_appassionato.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Felix Mendelssohn · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Felix Mendelssohn",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov",
+          "PD-old-100",
+          "PD-release",
+          "PD-self"
+        ],
+        "role": "essential",
+        "query": "File:20091104 Joshua Bell, Awadagin Pratt, and Alisa Weilerstein - Mendelssohn's Piano Trio No. 1 in D minor, Op. 49 - 4. Finale, Allegro assai appassionato.ogg",
+        "note": "Live chamber music: piano, violin and cello playing together. The piano must be clearly heard next to the two string instruments. No applause or speech in the window.",
+        "duration": 483.19,
+        "excerpt": {
+          "start": 10,
+          "end": 70
+        }
+      },
+      "fun_fact": "This is the stormy finale of Felix Mendelssohn's Piano Trio No. 1, and here it was played at the White House in 2009 by violinist Joshua Bell, pianist Awadagin Pratt and cellist Alisa Weilerstein.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Mendelssohn's Piano Trio No. 1 in D minor, Op. 49, finale (Allegro assai appassionato), piano, violin and cello",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 9,
+        "notes": "Hints 1 and 2 together already point to a piano trio. The question is a fairly dry ensemble-naming task. The fun fact (White House 2009, Bell/Pratt/Weilerstein) is correct."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "empty concert hall stage",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_from_the_Stage..jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Iwelam%2C_Perth_Concert_Hall._Auditorium_from_the_Stage..jpg/3840px-Iwelam%2C_Perth_Concert_Hall._Auditorium_from_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:piano recording",
+        "class": "general",
+        "kind": "piece-film",
+        "probe": "media-probe/4f2f01764872c176"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which already pointed to the piano, with a vaguer clue that leaves both trios possible.",
+        "previous": {
+          "hints": [
+            "Count the instruments: there are fewer than four.",
+            "One of the players sits at a keyboard instrument.",
+            "A violin and a cello play together with a big keyboard instrument that has hammers inside."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21130",
+      "status": "approved",
+      "difficulty": 7,
+      "description": "Two stars share a meal, and one of them really should have stopped at seconds.",
+      "question": "Watch: a small star pulls gas from its huge neighbor. What happens at the end of this animation?",
+      "answer": "A supernova",
+      "wrong_answers": [
+        "A solar eclipse",
+        "A comet crash",
+        "A planet forming"
+      ],
+      "hints": [
+        "Watch the small star closely: it can only take so much gas.",
+        "The flash at the end can outshine a whole galaxy for a few weeks.",
+        "It is the giant explosion that ends a star's life."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtist%27s_impression_of_vampire_star.ogv",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Artist%27s_impression_of_vampire_star.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "ESO/M. Kornmesser · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "ESO/M. Kornmesser",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Artist's impression of vampire star.ogv",
+        "note": "The whole 28 s animation: a white dwarf with a glowing disk pulls a stream of gas from a big yellow star (0–19 s), then a blinding white flash (about 20 s) and a glowing gas cloud left behind (to the end). Music only, no speech or captions.",
+        "duration": 28.08
+      },
+      "fun_fact": "This kind of supernova, from a white dwarf, always peaks at about the same brightness, so astronomers use it like a cosmic measuring tape, and that's how they found that the universe's expansion is speeding up (Nobel Prize, 2011).",
+      "subcategory": "stars-and-galaxies",
+      "style": null,
+      "concept": "A white dwarf pulling gas from a companion star until it explodes as a Type Ia supernova",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 6,
+        "notes": "A solar eclipse and a planet forming don't fit a flash at the end of a star-to-star animation, so the distractors are weak. The fun fact simplifies things a little: Type Ia supernovae have only roughly the same peak brightness and are standardised by astronomers, but this is fine for the game."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/16eb1e5321a49600"
+      }
+    },
+    {
+      "id": "q-21131",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "A tune that makes millions of people stand up straight at exactly the same moment.",
+      "question": "Listen: this is the national anthem of which country?",
+      "answer": "Indonesia",
+      "wrong_answers": [
+        "Malaysia",
+        "The Philippines",
+        "Thailand"
+      ],
+      "hints": [
+        "The country is in Southeast Asia, and its anthem is a stirring Western-style march, not a traditional piece.",
+        "The country is made up of more than 17,000 islands and has the fourth-largest population in the world.",
+        "Its capital is Jakarta, and the islands of Bali and Java belong to it."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIndonesia_Raya_instrumental.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Indonesia_Raya_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military-Navy",
+          "PD-old-auto-expired"
+        ],
+        "role": "essential",
+        "query": "File:Indonesia Raya instrumental.ogg",
+        "note": "Instrumental band recording of “Indonesia Raya”, the national anthem of Indonesia, played from the start; no singing or speech.",
+        "duration": 109.06,
+        "excerpt": {
+          "start": 0,
+          "end": 55
+        },
+        "work": {
+          "title": "Indonesia Raya",
+          "creator": "Wage Rudolf Supratman",
+          "year": 1928,
+          "basis": "composer died 1938"
+        }
+      },
+      "fun_fact": "The anthem “Indonesia Raya” was first played in public on a violin by its composer, Wage Rudolf Supratman, at a youth congress in 1928, 17 years before the country declared independence.",
+      "subcategory": "countries",
+      "style": null,
+      "concept": "National anthem of Indonesia (Indonesia Raya), instrumental",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "Almost nobody outside the region can recognise this anthem by ear, and there is no way to reason towards it, so without hints it's a pure guess (pure memory). Hint 2 then makes it easy. The fun fact (violin, 1928 youth congress) is correct."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "tropical islands sea aerial",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADry_Tortugas_National_Park_-_49625300948.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dry_Tortugas_National_Park_-_49625300948.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "RuggyBearLA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "RuggyBearLA",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:national anthem instrumental",
+        "class": "pd-music",
+        "kind": "piece-film",
+        "probe": "media-probe/331397ffed621be8"
+      }
+    },
+    {
+      "id": "q-21132",
+      "status": "approved",
+      "difficulty": 9,
+      "description": "A zoo resident with strong opinions that it shares loudly and often.",
+      "question": "Listen: which bird is making these calls?",
+      "answer": "An Egyptian goose",
+      "wrong_answers": [
+        "A common crane",
+        "A Eurasian coot",
+        "A gray heron"
+      ],
+      "hints": [
+        "It is a waterbird that often grazes on grass near lakes and parks.",
+        "It comes from Africa, but wild flocks now live in parks across Western Europe.",
+        "Ancient artists along the Nile painted it on tomb walls."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtis%2C_Nijlgans_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Artis%2C_Nijlgans_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Artis, Nijlgans - SoundCloud - Beeld en Geluid.ogg",
+        "note": "Zoo recording of an Egyptian goose's rapid, regular honking calls, from about 1 s to 30 s; the silent tail after 31 s is cut.",
+        "duration": 43.18,
+        "excerpt": {
+          "start": 0.5,
+          "end": 30.5
+        }
+      },
+      "fun_fact": "Despite its name, the Egyptian goose is not a true goose: it is more closely related to shelducks.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Egyptian goose (Nijlgans) calling",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "Telling these four waterbirds apart by their calls is birder-level knowledge, and players can't reason towards it, so difficulty 9 is too low. In practice the hints decide it, and hint 3 (Nile tomb paintings) nearly names the bird. A zoo recording may also contain other background calls."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-85",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "lake shore reeds",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReeds_on_shore_Kanozero.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Reeds_on_shore_Kanozero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Clemens Ratschan · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Clemens Ratschan",
+        "author_url": "https://web.archive.org/web/20170108073938/http://www.panoramio.com:80/user/175938",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of Aves",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/2944c8d8bd96ff7b"
+      }
     }
   ]
 }
