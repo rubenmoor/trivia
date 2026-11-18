@@ -1641174,7 +1641174,7 @@
     },
     {
       "id": "q-21040",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "The world's oldest slow cooker, run by a man who never needs oven gloves.",
       "question": "Watch: what is the tool called that the man uses to move the loaves?",
@@ -1641185,9 +1641185,9 @@
         "A rake"
       ],
       "hints": [
-        "The same tool slides pizzas into wood-fired pizza ovens.",
-        "Its name comes through Old French from the Latin “pala”, meaning spade.",
-        "The word is also what you take off a banana or an orange."
+        "With it, a baker can reach deep into a very hot oven without burning his arms.",
+        "It has a long handle and a wide, flat blade, often made of wood.",
+        "The same tool slides pizzas in and out of wood-fired pizza ovens."
       ],
       "media": {
         "type": "video",
@@ -1641227,16 +1641227,24 @@
       "needs_media": true,
       "batch": "batch-84",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This is a base question, so it must work in every language, but hints 2 and 3 only work in English. Hint 3 is a pun on the English word \"peel\" (banana or orange peel), which falls apart in Spanish (\"cáscara\") and German (\"Schale\"). Hint 2's Latin \"pala\" spells out the Spanish name of the tool (\"pala\"), so it gives the answer away there. Replace both with hints about the tool itself (flat wooden blade, long handle, also used for pizza or bagels) that work in any language.",
-        "problems": [
-          "giveaway",
-          "style"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This is a base question, so it must work in every language, but hints 2 and 3 only work in English. Hint 3 is a pun on the English word \"peel\" (banana or orange peel), which falls apart in Spanish (\"cáscara\") and German (\"Schale\"). Hint 2's Latin \"pala\" spells out the Spanish name of the tool (\"pala\"), so it gives the answer away there. Replace both with hints about the tool itself (flat wooden blade, long handle, also used for pizza or bagels) that work in any language.",
+          "problems": [
+            "giveaway",
+            "style"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1641249,9 +1641257,13 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Cut the tool's description from the question so the clip shows what the tool looks like.",
+        "reason": "Replaced the English-only pun hint and the Latin “pala” hint (which spells out the Spanish name) with hints about the tool itself that work in every language.",
         "previous": {
-          "question": "Watch: what is the long-handled, flat wooden tool called that the man uses to slide the loaves in and out of the oven?"
+          "hints": [
+            "The same tool slides pizzas into wood-fired pizza ovens.",
+            "Its name comes through Old French from the Latin “pala”, meaning spade.",
+            "The word is also what you take off a banana or an orange."
+          ]
         },
         "revised_on": "2026-11-17"
       }
@@ -1644072,14 +1644084,25 @@
       "batch": "batch-84",
       "review": {
         "decision": "needs_work",
-        "feedback": "Media.work basis “Universal newsreels donated to the US National Archives and released into the public domain” is none of: died-70-years, pre-1930-film, government-work, traditional.",
+        "feedback": "The narration inside the 44–56 s window says “One circuit in the control system breaks down…”. English speakers hear that the launch failed before the picture shows it, which leaves only one failure option that fits a rocket seen flying. The fix is to play the window muted or move it so no narration describing the failure is heard. Separately, the hard work-basis flag is real for the code: the basis given (Universal Newsreel donated to the US National Archives, released into the public domain by the copyright holder) is a genuine PD dedication but none of the accepted basis types. The developer needs to accept that basis or replace the file. Media.work basis “Universal newsreels donated to the US National Archives and released into the public domain” is none of: died-70-years, pre-1930-film, government-work, traditional.",
         "problems": [
+          "giveaway",
           "media"
         ],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Media.work basis “Universal newsreels donated to the US National Archives and released into the public domain” is none of: died-70-years, pre-1930-film, government-work, traditional.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1644475,7 +1644498,7 @@
           "end": 70
         }
       },
-      "fun_fact": "Russia's double-decker trains between Moscow and Saint Petersburg carry nearly twice as many passengers per train as ordinary trains.",
+      "fun_fact": "Russia's double-decker trains carry roughly 30–40% more passengers than ordinary trains of similar length.",
       "subcategory": "trains",
       "style": null,
       "concept": "Russian double-decker passenger train (RZD) departing Saint Petersburg station",
@@ -1644492,20 +1644515,30 @@
         "difficulty_estimate": 3,
         "notes": "It's an easy watch-and-see question with little surprise. 'About twice as many' is a bit generous: 64 berths against about 36, roughly 1.8 times. Hint 3 mentions London buses, which leans toward one country."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-84",
       "review": {
         "decision": "needs_work",
-        "feedback": "The fun fact is wrong: the fact check found that Russia's double-decker trains carry about 30–40% more passengers, not \"nearly twice as many\". Replace it with the corrected version, for example \"Russia's double-decker trains carry roughly 30–40% more passengers than ordinary trains of similar length.\" Separately, related question q-20678 says \"double-decker express\" in its question text, so a player who has seen it is handed this answer. Consider whether both should stay in the pool. Fact check: wrong. The fun fact says double-deckers carry 'nearly twice as many passengers per train'. That overstates it: RZD reports capacity gains of about 30–40% on routes where they were introduced. The 'twice' figure comes only from a 2011 official's general claim about the Moscow–Samara line. The answer (double-decker cars) is correct.",
+        "feedback": "The fun fact's figure \"roughly 30–40% more passengers\" doesn't hold up. A Russian double-decker compartment car has 64 berths against 36 in an ordinary one, about 78% more, and the fact check only checked it from memory. Replace it with the berth comparison (64 vs 36 berths per car) or another fact you can verify. The clip, question, options and hints are fine.",
         "problems": [
-          "fact",
-          "overlap"
+          "fact"
         ],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The fun fact is wrong: the fact check found that Russia's double-decker trains carry about 30–40% more passengers, not \"nearly twice as many\". Replace it with the corrected version, for example \"Russia's double-decker trains carry roughly 30–40% more passengers than ordinary trains of similar length.\" Separately, related question q-20678 says \"double-decker express\" in its question text, so a player who has seen it is handed this answer. Consider whether both should stay in the pool. Fact check: wrong. The fun fact says double-deckers carry 'nearly twice as many passengers per train'. That overstates it: RZD reports capacity gains of about 30–40% on routes where they were introduced. The 'twice' figure comes only from a 2011 official's general claim about the Moscow–Samara line. The answer (double-decker cars) is correct.",
+          "problems": [
+            "fact",
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1644518,10 +1644551,9 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "The question no longer mentions a locomotive the clip doesn't show, and the fun fact now uses the confirmed per-train claim; the 'train' title-word flag is false.",
+        "reason": "Replaced the overstated fun fact (\"nearly twice as many\") with the fact-checked figure of about 30–40% more passengers; the frames clearly show two-level cars, and the overlap with q-20678 has to be fixed in that question, not this one.",
         "previous": {
-          "question": "Watch the passenger cars this locomotive pulls out of the station. What kind of cars are they?",
-          "fun_fact": "Russia's double-decker sleeper trains between Moscow and Saint Petersburg fit about twice as many passengers in each car as normal sleeping cars."
+          "fun_fact": "Russia's double-decker trains between Moscow and Saint Petersburg carry nearly twice as many passengers per train as ordinary trains."
         },
         "revised_on": "2026-11-17"
       }
@@ -1644607,7 +1644639,7 @@
     },
     {
       "id": "q-21079",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 6,
       "description": "Night falls, the drum starts, and one outfit steals the whole show.",
       "question": "Watch: what garment is the dancer in red wearing?",
@@ -1644660,19 +1644692,27 @@
         "difficulty_estimate": 5,
         "notes": "The distractors are easy to rule out. A kimono, a hanbok and a dirndl are not draped over one shoulder, so the wording in the question nearly settles it. The footage is filmed at night, so check that the sari is clearly visible. As a question it is fairly plain recognition."
       },
-      "fact_checked": false,
+      "fact_checked": true,
       "needs_media": true,
       "batch": "batch-84",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Fact check: uncertain. I could not watch the video, so I could not confirm the dancer in red wears a sari. The Commons page only says it shows the Kanyapu dance by Nalke artists in Tulunadu, Karnataka, at night. Karnataka and the red sari with gold border are plausible, and the wrong answers (kimono, hanbok, dirndl) are surely wrong. Text claims check out: a sari is unstitched, worn in India, Nepal and Bangladesh, and sources give 80+ draping styles (some say 108). The length range varies by source (about 4.1-8.2 m on Wikipedia, 4-9 m elsewhere), so '5 to 8 m' is roughly right. 'Also to everyday work' is plausible.",
-        "problems": [
-          "fact"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Fact check: uncertain. I could not watch the video, so I could not confirm the dancer in red wears a sari. The Commons page only says it shows the Kanyapu dance by Nalke artists in Tulunadu, Karnataka, at night. Karnataka and the red sari with gold border are plausible, and the wrong answers (kimono, hanbok, dirndl) are surely wrong. Text claims check out: a sari is unstitched, worn in India, Nepal and Bangladesh, and sources give 80+ draping styles (some say 108). The length range varies by source (about 4.1-8.2 m on Wikipedia, 4-9 m elsewhere), so '5 to 8 m' is roughly right. 'Also to everyday work' is plausible.",
+          "problems": [
+            "fact"
+          ],
+          "reviewed_on": "2026-11-17",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
