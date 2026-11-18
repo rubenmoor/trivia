@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { DEFAULT_SOUNDTRACK, REQUIRED_TRACKS, SOUNDTRACKS, resolveSoundtrack, soundtrackFile, soundtrackIds, soundtrackOf } from "./soundtracks.ts";
 
@@ -34,4 +34,17 @@ test("Soundtracks: a recorded set lists every required variant and its files exi
 
 test("Soundtracks: no entry named like an old set", () => {
   for (const id of ["variaciones", "caja", "sin-prisa", "reflejos"]) assert.ok(!Object.hasOwn(SOUNDTRACKS, id));
+});
+
+test("Soundtracks: the brief's sets, default among them", () => {
+  assert.deepEqual([...soundtrackIds], ["lofi-tranquilo", "acustica-calida", "jazz-de-concurso"]);
+  assert.equal(DEFAULT_SOUNDTRACK, "lofi-tranquilo");
+});
+
+test("Soundtracks: every set has a name in every locale", () => {
+  for (const l of ["es", "en", "de", "es-ES"]) {
+    const src = readFileSync(fileURLToPath(new URL(`../locales/${l}.ts`, import.meta.url)), "utf8");
+    if (l === "es-ES") continue; // overrides only where Spain differs: falls back to es
+    for (const id of soundtrackIds) assert.ok(new RegExp(`soundtrack: \\{[^}]*"${id}": "[^"]+"`).test(src), `${l}: ${id}`);
+  }
 });

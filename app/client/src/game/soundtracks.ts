@@ -19,12 +19,14 @@ export type Soundtrack = {
 
 // Loop points and levels come from `authoring/data/music/<set>-<piece>.json` (`app/` can't read it).
 export const SOUNDTRACKS = {
-  // The generated loops; the brief's sets replace it in the picker (plan 222, task 2243)
-  sintetizada: { tracks: [], loopStart: 0, loopEnd: 0, level: 1 },
+  // The brief's sets (plans/25-sound.md "Brief"); not installed yet: the generated loops play (plan 224)
+  "lofi-tranquilo": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // chill-lofi, Late Night Radio
+  "acustica-calida": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // warm-acoustic, Bossa Antigua
+  "jazz-de-concurso": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // jazz-quiz-show, Backbay Lounge
 } as const satisfies Record<string, Soundtrack>;
 
 export type SoundtrackId = keyof typeof SOUNDTRACKS;
-export const DEFAULT_SOUNDTRACK: SoundtrackId = "sintetizada";
+export const DEFAULT_SOUNDTRACK: SoundtrackId = "lofi-tranquilo";
 export const soundtrackIds = Object.keys(SOUNDTRACKS) as SoundtrackId[];
 
 export const soundtrackOf = (id: SoundtrackId): Soundtrack => SOUNDTRACKS[id];
