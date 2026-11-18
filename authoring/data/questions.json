@@ -1655672,6 +1655672,104 @@
         "kind": "animal",
         "probe": "media-probe/945293800934f25b"
       }
+    },
+    {
+      "id": "q-21207",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "The eruption was over in days, but the volcano's messy cleanup kept rolling downhill for years.",
+      "question": "Watch: after Mount Pinatubo erupted in 1991, rain sent wet volcanic ash and rock down valleys like these. What are these flows called?",
+      "answer": "Lahars",
+      "wrong_answers": [
+        "Lava flows",
+        "Pyroclastic surges",
+        "Glaciers"
+      ],
+      "hints": [
+        "Look closely at the grey channels: this was cold, wet material, not molten rock.",
+        "Heavy monsoon and typhoon rains picked up the loose ash on the slopes and sent it downhill like wet concrete.",
+        "The word comes from Javanese, a language of Indonesia, another country full of volcanoes."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Mount_Pinatubo_today%21_Drone_footage.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/The_Mount_Pinatubo_today%21_Drone_footage.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "AeroMark · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "AeroMark",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:The Mount Pinatubo today! Drone footage.webm",
+        "note": "Aerial drone view of the blue-green crater lake ringed by steep grey cliffs and green jungle ridges; no captions in this window.",
+        "duration": 234.12,
+        "excerpt": {
+          "start": 145,
+          "end": 170
+        }
+      },
+      "fun_fact": "In 1995, Pinatubo's lahars buried much of the town of Bacolor, and its old church is still half-sunk in the hardened deposits.",
+      "subcategory": "volcanoes",
+      "style": null,
+      "concept": "Mount Pinatubo crater lake (Philippines), aerial view",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "The facts hold up: the June 1991 eruption was one of the biggest of the 20th century, it left a crater lake, the volcano had been quiet for about 500 years, and it cooled the planet by about 0.5 °C. The distractors are well-known volcanoes, but the eruption years of St. Helens (1980), Krakatoa (1883) and Tambora (1815) rule them out quickly for anyone who knows dates. Hint 1 (Southeast Asia) rules out only St. Helens, which is fair. Hint 3 is close to giving the answer away, which hint 3 may do. The 'essential' video is really more illustrative: a crater lake on its own can't identify the volcano. Even so, the clip is safe because it has no captions. The 'Pina…' sound clue in hint 3 depends a little on how the name sounds, but it's only a hint."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-89",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "place",
+        "probe": "media-probe/77b24ea13e9a3a3e"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Following the final reviewer, I moved the question onto the grey channels in frames 7–10 so the clip shows the thing being asked about (lahars), and rewrote the hints, description and fun fact to match.",
+        "previous": {
+          "description": "A mountain that blew its top and then filled the hole with a giant swimming pool.",
+          "question": "Watch: this lake fills the crater left by one of the 20th century’s biggest eruptions, in June 1991. Which volcano is it?",
+          "answer": "Mount Pinatubo",
+          "wrong_answers": [
+            "Mount St. Helens",
+            "Krakatoa",
+            "Mount Tambora"
+          ],
+          "hints": [
+            "Look at the thick green jungle on the slopes: you are in Southeast Asia, near the equator.",
+            "The volcano had been asleep for about 500 years before it woke up, and it lies on Luzon island.",
+            "Its name begins like a sweet fruit, “Pina…”, and it stands in the Philippines."
+          ],
+          "fun_fact": "The 1991 eruption put so much ash and gas into the sky that it cooled the whole planet by about 0.5 °C (0.9 °F) for more than a year."
+        },
+        "revised_on": "2026-11-18"
+      }
     }
   ]
 }

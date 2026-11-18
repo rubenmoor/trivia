@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "9ecaf8a6",
+  "hash": "9fde7125",
   "questions": [
     {
       "id": "q-0001",
@@ -220545,6 +220545,44 @@
         "author": "Maoileann",
         "author_url": "https://commons.wikimedia.org/wiki/User:Maoileann"
       }
+    },
+    {
+      "id": "q-21207",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "volcanoes",
+      "bundle": "base",
+      "description": "The eruption was over in days, but the volcano's messy cleanup kept rolling downhill for years.",
+      "question": "Watch: after Mount Pinatubo erupted in 1991, rain sent wet volcanic ash and rock down valleys like these. What are these flows called?",
+      "answer": "Lahars",
+      "wrong_answers": [
+        "Lava flows",
+        "Pyroclastic surges",
+        "Glaciers"
+      ],
+      "hints": [
+        "Look closely at the grey channels: this was cold, wet material, not molten rock.",
+        "Heavy monsoon and typhoon rains picked up the loose ash on the slopes and sent it downhill like wet concrete.",
+        "The word comes from Javanese, a language of Indonesia, another country full of volcanoes."
+      ],
+      "fun_fact": "In 1995, Pinatubo's lahars buried much of the town of Bacolor, and its old church is still half-sunk in the hardened deposits.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/The_Mount_Pinatubo_today%21_Drone_footage.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Mount_Pinatubo_today%21_Drone_footage.webm",
+        "credit": "AeroMark · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "AeroMark",
+        "author_url": null,
+        "excerpt": {
+          "start": 145,
+          "end": 170
+        }
+      },
+      "background": null
     }
   ]
 }
