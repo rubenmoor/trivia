@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "fc37bed0",
+  "hash": "ceb410e5",
   "questions": [
     {
       "id": "q-0001",
@@ -232026,6 +232026,44 @@
       "background": null
     },
     {
+      "id": "q-21051",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "1937 war die angesagteste Show der Stadt eine mit Federn, Käfigen und einem Preisrichter im weißen Kittel.",
+      "question": "Schau dir die Nahaufnahme der Ente mit den auffälligen weißen Streifen am dunklen Kopf an. Welche Ente ist das?",
+      "answer": "Brautente",
+      "wrong_answers": [
+        "Stockente",
+        "Eiderente",
+        "Brandgans"
+      ],
+      "hints": [
+        "Diese Ente stammt aus Nordamerika, wird aber weltweit wegen ihres Aussehens gehalten.",
+        "In Farbe sieht man beim Männchen einen grün glänzenden Schopf, ein rotes Auge und einen rot-weiß gestreiften Schnabel.",
+        "Anders als die meisten Enten brütet sie in Baumhöhlen hoch über dem Boden."
+      ],
+      "fun_fact": "Brautenten-Küken verlassen ihre Baumhöhle schon am Tag nach dem Schlüpfen und springen dabei manchmal bis zu 15 Meter tief, ohne sich zu verletzen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Avicorni%2C_de_internationale_pluimveetentoonstelling.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAvicorni%2C_de_internationale_pluimveetentoonstelling.webm",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Polygoon Hollands Nieuws (producent) / Nederlands Instituut voor Beeld en Geluid (beheerder)",
+        "author_url": null,
+        "excerpt": {
+          "start": 38,
+          "end": 58
+        }
+      },
+      "background": null
+    },
+    {
       "id": "q-21052",
       "status": "approved",
       "difficulty": 12,
@@ -234880,6 +234918,2105 @@
         "author": "Clemens Ratschan",
         "author_url": "https://web.archive.org/web/20170108073938/http://www.panoramio.com:80/user/175938"
       }
+    },
+    {
+      "id": "q-21133",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Diese Nachbarn sind ungefragt eingezogen und haben gleich einen ganzen Wohnblock aufs Eingangstor gebaut.",
+      "question": "Schau hin: Die kleinen grünen Vögel, die hier ein- und ausfliegen, haben dieses riesige Nest aus Zweigen gebaut. Welche Vögel sind das?",
+      "answer": "Mönchssittiche",
+      "wrong_answers": [
+        "Halsbandsittiche",
+        "Wellensittiche",
+        "Grünspechte"
+      ],
+      "hints": [
+        "Die meisten Papageien brüten in Baumhöhlen; dieser ist die große Ausnahme.",
+        "Wild lebt er in Südamerika, von Bolivien bis Argentinien, doch entflogene Haustiere leben heute in Städten wie Barcelona, Madrid und New York.",
+        "Sein Name erinnert an Männer, die in einem Kloster leben."
+      ],
+      "fun_fact": "Der Mönchssittich ist der einzige Papagei, der eigene Nester aus Zweigen baut – ein Gemeinschaftsnest kann Hunderte Kilogramm wiegen, mit einer eigenen Kammer für jedes Paar.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green-Wood_Cemetery_parrots_%2854862%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreen-Wood_Cemetery_parrots_%2854862%29.webm",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Rhododendrites",
+        "author_url": null,
+        "excerpt": {
+          "start": 2,
+          "end": 32
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21134",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Eine Melodie so feierlich, dass sogar das Sofa strammstehen möchte.",
+      "question": "Hör zu: Die Nationalhymne welches Landes ist das?",
+      "answer": "Österreich",
+      "wrong_answers": [
+        "Deutschland",
+        "Schweiz",
+        "Liechtenstein"
+      ],
+      "hints": [
+        "Es ist ein deutschsprachiges Land mitten in Europa.",
+        "Die Melodie ist über 200 Jahre alt, aus der Zeit der großen Klassik-Komponisten.",
+        "Die Musik wurde lange Mozart zugeschrieben, und die Hauptstadt ist Wien."
+      ],
+      "fun_fact": "Lange galt Mozart als Komponist der Melodie, doch viele Fachleute glauben heute, dass sie von seinem Freimaurerbruder Johann Holzer stammt.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Land_der_Berge_Land_am_Strome_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALand_der_Berge_Land_am_Strome_instrumental.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/U_S_Naval_Forces_Europe_and_Africa_Band_%28Topside_Brass_Band%29_perform_for_students_and_staff_of_the_Mahatma_Gandhi_Institute_Secondary_School_%28MGISS%29_%289512148%29.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU_S_Naval_Forces_Europe_and_Africa_Band_%28Topside_Brass_Band%29_perform_for_students_and_staff_of_the_Mahatma_Gandhi_Institute_Secondary_School_%28MGISS%29_%289512148%29.jpg",
+        "credit": "U.S. Navy USNFE-6FPA by Petty Officer 1st Class Paul Cox · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy USNFE-6FPA by Petty Officer 1st Class Paul Cox",
+        "author_url": "https://www.dvidshub.net/portfolio/1509022"
+      }
+    },
+    {
+      "id": "q-21135",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Andere schreiben Liebesbriefe, diese Person schreibt lieber mit Rauch und Funken.",
+      "question": "Schau zu: Ein Glutfunke kriecht eine unsichtbare, mit Salpeter gemalte Linie entlang. Welches Musikzeichen brennt er aus?",
+      "answer": "Zwei verbundene Achtelnoten",
+      "wrong_answers": [
+        "Ein Violinschlüssel",
+        "Zwei ganze Noten",
+        "Ein Kreuz-Vorzeichen"
+      ],
+      "hints": [
+        "Zähl die runden Notenköpfe in der verbrannten Form.",
+        "Die beiden Hälse sind oben durch einen dicken Balken verbunden.",
+        "Jede dieser verbundenen Noten dauert halb so lang wie eine Viertelnote."
+      ],
+      "fun_fact": "Salpeter (Kaliumnitrat) gibt beim Erhitzen Sauerstoff ab, deshalb glimmt das Papier nur dort, wo bemalt wurde. Feuerschrift war früher ein beliebter Trick in Chemieshows.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Fire_Writing.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFire_Writing.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 72,
+          "end": 102
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21136",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Eine Ente, die weniger nach „Quak“ klingt und mehr nach jemandem, der gerade freudig überrascht Tratsch hört.",
+      "question": "Hör zu: Welche Meeresente nördlicher Küsten ruft so sanft und gurrend „ah-UUU“?",
+      "answer": "Eiderente",
+      "wrong_answers": [
+        "Eisente",
+        "Schellente",
+        "Mittelsäger"
+      ],
+      "hints": [
+        "Das Männchen ist kräftig schwarz-weiß gefärbt und hat einen blassgrünen Fleck am Hinterkopf.",
+        "Sie gehört zu den größten Enten der Nordhalbkugel und taucht nach Muscheln.",
+        "Ihre berühmt warmen Daunen werden aus Nestern gesammelt und in Luxus-Bettdecken gefüllt."
+      ],
+      "fun_fact": "In Island sammeln Menschen behutsam die weichen Daunen, die sich die Weibchen für ihr Nest aus der Brust zupfen – für eine einzige Bettdecke braucht man die Daunen von etwa 60 Nestern.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Common_Eider_%28Somateria_mollissima%29_%28W1CDR0001491_BD11%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Eider_%28Somateria_mollissima%29_%28W1CDR0001491_BD11%29.ogg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Loch_Ryan_sea_shore_-_geograph.org.uk_-_6882190.jpg/3840px-Loch_Ryan_sea_shore_-_geograph.org.uk_-_6882190.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALoch_Ryan_sea_shore_-_geograph.org.uk_-_6882190.jpg",
+        "credit": "Chris Morgan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Chris Morgan",
+        "author_url": "https://www.geograph.org.uk/profile/69729"
+      }
+    },
+    {
+      "id": "q-21137",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Boote, Sonne und alte Steinmauern: Diese Postkarte schreibt sich praktisch von selbst.",
+      "question": "Im Video zu sehen: Auf welcher griechischen Insel liegt dieser alte venezianische Hafen?",
+      "answer": "Kreta",
+      "wrong_answers": [
+        "Rhodos",
+        "Korfu",
+        "Santorini"
+      ],
+      "hints": [
+        "Diese Insel liegt weit im Süden, näher an Afrika als der größte Teil Griechenlands.",
+        "Achte auf die Reihe gewölbter Steinhallen am Kai: Darin bauten die Venezianer einst Schiffe.",
+        "Auf der Insel liegt Knossos, der Palast, der mit der Sage vom Minotaurus verbunden ist."
+      ],
+      "fun_fact": "Den Leuchtturm im alten Hafen von Chania bauten zuerst die Venezianer; im 19. Jahrhundert wurde er neu errichtet, mit einem Sockel, der angeblich an ein Minarett erinnert.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Chania%2C_Greece.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChania%2C_Greece.webm",
+        "credit": "Le Monde en Vidéo · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Le Monde en Vidéo",
+        "author_url": null,
+        "excerpt": {
+          "start": 120,
+          "end": 150
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21139",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "world-music",
+      "bundle": "base",
+      "description": "Zwei Musiker, ein Mikrofon und genug Metallgeklapper, um einen ganzen Basar aufzuwecken.",
+      "question": "Schau und hör zu: eine dreisaitige Basslaute und große Metallkastagnetten. Welche nordafrikanische Musiktradition ist das?",
+      "answer": "Gnawa",
+      "wrong_answers": [
+        "Raï",
+        "Chaabi",
+        "Malhun"
+      ],
+      "hints": [
+        "Diese Tradition geht auf Nachfahren von Menschen aus Afrika südlich der Sahara zurück, die sich in Nordafrika niederließen.",
+        "Ihre Lieder sind spirituell, und ihre nächtelangen Zeremonien mit Musik und Trance heißen Lila.",
+        "Die marokkanische Küstenstadt Essaouira veranstaltet jedes Jahr ein großes Festival, das nach dieser Musik benannt ist."
+      ],
+      "fun_fact": "Gnawa steht seit 2019 auf der UNESCO-Liste des immateriellen Kulturerbes der Menschheit, und Stars wie Robert Plant haben schon mit Gnawa-Meistern gespielt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Gnawa_Marrakesh_London_-_Street_Performers_-_Moroccan_Music.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGnawa_Marrakesh_London_-_Street_Performers_-_Moroccan_Music.webm",
+        "credit": "Street Performers · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Street Performers",
+        "author_url": null,
+        "excerpt": {
+          "start": 85,
+          "end": 115
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21140",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Sonne, Meer und eine Blaskapelle in voller Uniform: Auf den Inseln nimmt man Hymnen ernst.",
+      "question": "Hör zu: Welches Land oder Gebiet der Karibik hat diese langsame, feierliche Melodie als offizielle Hymne?",
+      "answer": "Puerto Rico",
+      "wrong_answers": [
+        "Kuba",
+        "Jamaika",
+        "Dominikanische Republik"
+      ],
+      "hints": [
+        "Die Melodie entstand im 19. Jahrhundert als Danza, ein romantischer Tanz für Klavier.",
+        "Der Text dieser Hymne wird auf Spanisch gesungen.",
+        "Ihr Name kommt von Borinquen, dem alten Taíno-Namen der Insel."
+      ],
+      "fun_fact": "„La Borinqueña“ war in den 1860er-Jahren zunächst ein Liebeslied zum Tanzen und wurde erst 1952 zur offiziellen Hymne.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/United_States_Navy_Band_-_La_Borinque%C3%B1a.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_Navy_Band_-_La_Borinque%C3%B1a.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Coast_of_the_Caribbean_Sea_in_Pointe-Noire_%281%29.jpg/3840px-Coast_of_the_Caribbean_Sea_in_Pointe-Noire_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoast_of_the_Caribbean_Sea_in_Pointe-Noire_%281%29.jpg",
+        "credit": "Tournasol7 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Tournasol7",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tournasol7"
+      }
+    },
+    {
+      "id": "q-21141",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Dieser Zug steht kurz vor dem überraschendsten Halt seiner ganzen Laufbahn.",
+      "question": "Schau hin: Worin fährt dieser Zug gerade hinein?",
+      "answer": "Eisenbahnfähre",
+      "wrong_answers": [
+        "Bergtunnel",
+        "Werkstatthalle",
+        "Zugwaschanlage"
+      ],
+      "hints": [
+        "Schau, was hinter der großen gewölbten Öffnung ist.",
+        "Über der Öffnung ist eine große weiße Wand mit Fensterreihen und einem hohen Mast.",
+        "Bald schwimmt der Zug übers Wasser."
+      ],
+      "fun_fact": "Fernzüge von Rom nach Sizilien überqueren die Straße von Messina noch heute per Fähre: Sie werden zerlegt, aufs Schiff rangiert und drüben wieder zusammengekuppelt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Train_ferry_-_Villa_San_Giovanni_%28Battipaglia%E2%80%93Reggio_di_Calabria_railway%2C_Italy%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrain_ferry_-_Villa_San_Giovanni_%28Battipaglia%E2%80%93Reggio_di_Calabria_railway%2C_Italy%29.webm",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "© Karel Furiš, author (Ostrava Poruba, Czech Republic). When reusing, please credit me as: Karel Furiš / Wikimedia Commons. I would appreciate being notified if you use my work outside Wikimedia. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain.",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21142",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Eine Dinnerparty, bei der nie jemand fragt, was auf der Speisekarte steht.",
+      "question": "Schau hin: Welche großen braunen Vögel mit langen, hellen Hälsen versammeln sich hier?",
+      "answer": "Gänsegeier",
+      "wrong_answers": [
+        "Andenkondore",
+        "Steinadler",
+        "Marabus"
+      ],
+      "hints": [
+        "Sie leben von Spanien bis Indien, und große Kolonien brüten an Felswänden.",
+        "Sie jagen fast nie. Sie warten auf ein Tier, das schon gestorben ist.",
+        "Man nennt sie die „Putzkolonne der Natur“, und ihre Flügel können etwa 2,6 Meter breit sein."
+      ],
+      "fun_fact": "Gänsegeier können stundenlang fast ohne Flügelschlag segeln, getragen von warmer aufsteigender Luft, und erspähen so Futter aus großer Entfernung.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Griffon_Vultures_feeding_and_fighting.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGriffon_Vultures_feeding_and_fighting.webm",
+        "credit": "Lennart Hessel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Lennart Hessel",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21143",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "rocks-and-minerals",
+      "bundle": "base",
+      "description": "Die Natur baut eine Treppe und legt auf jedem Absatz ein Schwimmbecken an.",
+      "question": "Schau hin: Das türkise Wasser und die Stufen dieser Dschungel-Wasserfälle kommen von Mineralien aus einer Gesteinsart. Welches Gestein ist es?",
+      "answer": "Kalkstein",
+      "wrong_answers": [
+        "Granit",
+        "Basalt",
+        "Schiefer"
+      ],
+      "hints": [
+        "In diesem Gestein gibt es viele Höhlen, von deren Decken Tropfsteine hängen.",
+        "Es entsteht oft aus den Schalen uralter Muscheln und Korallen.",
+        "Es besteht vor allem aus Calciumcarbonat, und Kreide und Marmor sind nahe Verwandte dieses hellen Sedimentgesteins."
+      ],
+      "fun_fact": "Das sind die Agua-Azul-Fälle in Chiapas, Mexiko: Das Wasser enthält so viel gelösten Kalk, dass es neue Felsstufen aufbaut, und in der Regenzeit färbt Schlamm das blaue Wasser braun.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cascadas_de_Agua_Azul.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACascadas_de_Agua_Azul.webm",
+        "credit": "Own work · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Own work",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21144",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Der Beweis, dass man den Chemielehrer nie allein mit dem Frühstückstisch lassen sollte.",
+      "question": "Schau zu, was über diesem Laborbrenner passiert. Wie heißt diese Art plötzlicher Feuerstoß?",
+      "answer": "Staubexplosion",
+      "wrong_answers": [
+        "Rauchgasexplosion",
+        "Rauchgasdurchzündung",
+        "Gasexplosion"
+      ],
+      "hints": [
+        "Achte darauf, was auf die Flamme fällt, nicht auf den Brenner selbst.",
+        "Mühlen, Zuckerfabriken und Getreidesilos tun viel, um sie zu verhindern.",
+        "Winzige Körnchen, die in der Luft schweben, fangen fast im selben Moment Feuer."
+      ],
+      "fun_fact": "Das Pulver im Video ist ganz normaler Kaffeeweißer, und Mehl, Zucker und sogar Puddingpulver können genauso aufflammen, wenn sie als feine Wolke in der Luft schweben.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Coffee_whitening_flames.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoffee_whitening_flames.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 19,
+          "end": 49
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21145",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "natural-phenomena",
+      "bundle": "base",
+      "description": "Dieser Fluss hat zwei Wochen Urlaub in der Stadt gemacht und dann endlich wieder heimgefunden.",
+      "question": "Schau dir diesen Zeitraffer eines Flusses an. Wie heißt das Land, das das Wasser überflutet und dann wieder freigibt?",
+      "answer": "Flussaue",
+      "wrong_answers": [
+        "Flussdelta",
+        "Trichtermündung",
+        "Einzugsgebiet"
+      ],
+      "hints": [
+        "Es ist ein Erdkunde-Begriff für Land neben einem Fluss, nicht an seiner Mündung.",
+        "Bauern mögen dieses Land, denn jedes Hochwasser hinterlässt fruchtbaren Schlamm.",
+        "Die Wälder, die dort wachsen und oft nasse Füße bekommen, heißen Auwälder."
+      ],
+      "fun_fact": "Der Zeitraffer zeigt die Elbe im sächsischen Pirna im Juni 2013; jedes Hochwasser lässt eine Schlammschicht zurück, darum zählen Flussauen zu den fruchtbarsten Böden der Welt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Time_lapse_floodwaters_Germany_June_2013.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_lapse_floodwaters_Germany_June_2013.webm",
+        "credit": "User:Cm.albrecht · CC BY-SA 1.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 1.0",
+        "license_url": null,
+        "author": "User:Cm.albrecht",
+        "author_url": null,
+        "excerpt": {
+          "start": 5,
+          "end": 34
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21146",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "So kalt, dass sich sogar die Drohne beim Filmen einen Schal gewünscht hätte.",
+      "question": "Schau hin: Der Bach fließt zwischen verschneiten Bergen ins Wasser. Wie heißt diese Küstenform?",
+      "answer": "Fjord",
+      "wrong_answers": [
+        "Lagune",
+        "Atoll",
+        "Salzwiese"
+      ],
+      "hints": [
+        "Vor langer Zeit haben hier riesige Gletscher die Arbeit gemacht.",
+        "An der Küste Norwegens gibt es mehr als tausend davon.",
+        "Es ist ein langer, schmaler Meeresarm mit steilen Felswänden oder Bergen auf beiden Seiten."
+      ],
+      "fun_fact": "Der Sognefjord in Norwegen reicht rund 205 km ins Landesinnere und ist stellenweise über 1300 m tief.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Aerial_imagery_of_fjords_and_rivers_in_Arctic_Norway.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_imagery_of_fjords_and_rivers_in_Arctic_Norway.webm",
+        "credit": "anotherview · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "anotherview",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21147",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Zehn Finger, 88 Tasten und ein Name, den du nach Gehör herausfinden musst.",
+      "question": "Hör zu: Dieser lebhafte Satz stammt aus der letzten Klaviersonate eines Wiener Komponisten. Wer hat sie geschrieben?",
+      "answer": "Franz Schubert",
+      "wrong_answers": [
+        "Ludwig van Beethoven",
+        "Franz Liszt",
+        "Joseph Haydn"
+      ],
+      "hints": [
+        "Die Melodien singen fast wie Lieder. Dieser Komponist schrieb mehr als 600 davon.",
+        "Er starb 1828 in Wien mit nur 31 Jahren, wenige Wochen nach Vollendung dieser Sonate.",
+        "Zu seinen Werken gehören die „Unvollendete“ und das „Forellenquintett“."
+      ],
+      "fun_fact": "Schubert vollendete seine letzten drei Klaviersonaten im September 1828 und starb im November, bevor auch nur eine davon veröffentlicht wurde.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Schubert_-_Piano_Sonatas_-_7_Scherzo.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchubert_-_Piano_Sonatas_-_7_Scherzo.ogg",
+        "credit": "Franz Schubert · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": null,
+        "author": "Franz Schubert",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 50
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Piano_keys_close_up.jpg/3840px-Piano_keys_close_up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiano_keys_close_up.jpg",
+        "credit": "Puikstekend · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Puikstekend",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Puikstekend&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21148",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Ein Waldschönling, der jeden Frühlingsmorgen für eine Modenschau hält und den ganzen Wald für seinen Laufsteg.",
+      "question": "Schau hin: Welcher Vogel führt hier in einem norwegischen Wald seine Balz vor?",
+      "answer": "Auerhuhn",
+      "wrong_answers": [
+        "Birkhuhn",
+        "Wildtruthuhn",
+        "Fasan"
+      ],
+      "hints": [
+        "Er lebt in alten Kiefernwäldern von Schottland und Skandinavien bis nach Sibirien.",
+        "Er ist das größte Raufußhuhn; die Männchen können doppelt so groß sein wie die Weibchen.",
+        "Sein englischer Name „capercaillie“ kommt aus dem Schottisch-Gälischen und bedeutet „Pferd des Waldes“."
+      ],
+      "fun_fact": "Im Frühling geraten manche balzenden Hähne so in Rage, dass sie Wanderer, Hunde und sogar Autos aus ihrem Waldstück jagen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Western_capercaillie_%28Tetrao_urogallus%29%2C_Norway.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWestern_capercaillie_%28Tetrao_urogallus%29%2C_Norway.webm",
+        "credit": "Gonzalo Mucientes · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Gonzalo Mucientes",
+        "author_url": null,
+        "excerpt": {
+          "start": 82,
+          "end": 112
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21149",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Eine sehr lange Schlange aus Kesselwagen nimmt die Panoramastrecke durch die Kiefern.",
+      "question": "Schau hin: Über welche Art von Brücke fährt der lange Güterzug im Hintergrund?",
+      "answer": "Gerüstpfeilerbrücke",
+      "wrong_answers": [
+        "Hängebrücke",
+        "Schrägseilbrücke",
+        "Bogenbrücke"
+      ],
+      "hints": [
+        "Eisenbahnbauer im 19. Jahrhundert liebten diese Brückenart und bauten sie oft aus Holz.",
+        "Schau genau hin, was die Gleise von unten trägt.",
+        "Sie hat keine Seile und keinen Bogen: Eine lange Reihe verstrebter Stütztürme steht im Tal, die Gleise liegen flach obendrauf."
+      ],
+      "fun_fact": "Dieser Zug erklimmt den Mullan Pass in Montana, wo die Bahn die Kontinentale Wasserscheide der Rocky Mountains überquert.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/BNSF_westbound_oil_train_crosses_Greenhorn_Trestle%2C_Mullan_Pass_MT.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABNSF_westbound_oil_train_crosses_Greenhorn_Trestle%2C_Mullan_Pass_MT.webm",
+        "credit": "Scott Hiddelston · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Scott Hiddelston",
+        "author_url": null,
+        "excerpt": {
+          "start": 175,
+          "end": 205
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21150",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Ein Lied so mitreißend, dass erwachsene Fußballer in kurzen Hosen es vor dem Anpfiff mit geschlossenen Augen schmettern.",
+      "question": "Hör zu: Die Nationalhymne welches Landes ist das?",
+      "answer": "Italien",
+      "wrong_answers": [
+        "Frankreich",
+        "Portugal",
+        "Griechenland"
+      ],
+      "hints": [
+        "Hör auf die Sänger: Sie singen in der Landessprache.",
+        "Das Land wurde erst im 19. Jahrhundert ein geeinter Staat, und das Lied entstand während dieses Kampfes.",
+        "Die Flagge ist grün, weiß und rot, und die Hauptstadt liegt gleich neben Rom … na gut, sie ist Rom."
+      ],
+      "fun_fact": "Den Text der Hymne schrieb 1847 der erst 20-jährige Goffredo Mameli, deshalb nennen die Italiener sie oft „Mamelis Hymne“.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/11_ILCANTODEGLI_ITALIANI_INNO_NAZIONALE_ITALIANOCANTATO_01.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A11_ILCANTODEGLI_ITALIANI_INNO_NAZIONALE_ITALIANOCANTATO_01.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg/3840px-U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02"
+      }
+    },
+    {
+      "id": "q-21152",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "Jemand hat beim Himmel auf Vorspulen gedrückt, und der Himmel gibt jetzt mächtig an.",
+      "question": "Schau hin: Welche Wolkenart wächst in diesem Zeitraffer?",
+      "answer": "Cumulonimbus",
+      "wrong_answers": [
+        "Cirrus",
+        "Stratus",
+        "Nimbostratus"
+      ],
+      "hints": [
+        "Diese Wolke bringt im Sommer oft Donner und Blitz.",
+        "Wird sie groß genug, breitet sich ihre Spitze flach aus wie der Amboss eines Schmieds.",
+        "Ihr Name setzt sich aus den lateinischen Wörtern für „Haufen“ und „Regenwolke“ zusammen."
+      ],
+      "fun_fact": "Die größten Cumulonimbus-Wolken türmen sich über 15 km hoch auf, viel höher als der Mount Everest.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Time-Lapse_Nubes_01.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-Lapse_Nubes_01.ogv",
+        "credit": "Xosema · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Xosema",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21153",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Eine Melodie, bei der ein ganzes Stadion aufsteht, sogar die, die sich gerade erst mit Snacks hingesetzt haben.",
+      "question": "Hör zu: Welches Land hat diese Melodie als Nationalhymne?",
+      "answer": "Australien",
+      "wrong_answers": [
+        "Neuseeland",
+        "Kanada",
+        "Südafrika"
+      ],
+      "hints": [
+        "Im Titel der Hymne wird das Land aufgefordert, voranzuschreiten.",
+        "Das Land wählte das Lied 1977 per Volksabstimmung; 1984 ersetzte es „God Save the Queen“ als Hymne.",
+        "Der Text nennt das Land „vom Meer umgürtet“, und es ist ein ganzer Kontinent für sich."
+      ],
+      "fun_fact": "2021 wurde ein Wort der Hymne geändert: Aus „For we are young and free“ („jung und frei“) wurde „For we are one and free“ („eins und frei“).",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/U.S._Navy_Band%2C_Advance_Australia_Fair_%28abridged%29.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Navy_Band%2C_Advance_Australia_Fair_%28abridged%29.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/The_U.S._Army_Brass_Quintet_%283247154491%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_U.S._Army_Brass_Quintet_%283247154491%29.jpg",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02"
+      }
+    },
+    {
+      "id": "q-21154",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Dieses Gummibärchen hatte einen sehr schlechten Tag im Labor, und das hört man auch.",
+      "question": "Schau zu, wie ein Gummibärchen in dieses Röhrchen mit heißem, geschmolzenem Salz fällt. Welche Art chemischer Reaktion ist das?",
+      "answer": "Verbrennung",
+      "wrong_answers": [
+        "Neutralisation",
+        "Gärung",
+        "Elektrolyse"
+      ],
+      "hints": [
+        "Achte auf das helle Leuchten und das Fauchen aus dem Röhrchen.",
+        "Der Zucker im Gummibärchen ist der Brennstoff, und das geschmolzene Salz gibt viel Sauerstoff ab.",
+        "Es ist dieselbe Art Reaktion wie bei einem Lagerfeuer oder einer Kerzenflamme, nur viel schneller."
+      ],
+      "fun_fact": "Das geschmolzene Salz ist Kaliumchlorat. Es setzt so viel Sauerstoff frei, dass der Zucker eines kleinen Gummibärchens in Sekunden mit lautem Kreischen verbrennt, daher heißt der Versuch „schreiendes Gummibärchen“.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Screaming_Jelly_Baby.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScreaming_Jelly_Baby.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 25,
+          "end": 48.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21155",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "natural-phenomena",
+      "bundle": "base",
+      "description": "Hat diesem Berg eigentlich niemand gesagt, dass er gefälligst an seinem Platz bleiben soll?",
+      "question": "Schau hin: Welches Naturereignis begräbt dieses Bergdorf unter Geröll und Staub?",
+      "answer": "Erdrutsch",
+      "wrong_answers": [
+        "Schneelawine",
+        "Lavastrom",
+        "Sandsturm"
+      ],
+      "hints": [
+        "Achte auf die Farbe der Masse, die sich bewegt: Sie ist nicht weiß und sie glüht nicht.",
+        "Es ist Sommer, die Bäume sind grün, und die Masse besteht aus Schlamm und Geröll.",
+        "Das passiert, wenn ein durchnässter oder bröckelnder Berghang nachgibt und abrutscht."
+      ],
+      "fun_fact": "Diese Schlamm- und Gerölllawine traf im August 2017 das Schweizer Dorf Bondo, nachdem über 3 Millionen Kubikmeter Fels vom nahen Piz Cengalo abgebrochen waren.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Bondo_Aug_2017.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABondo_Aug_2017.webm",
+        "credit": "Swiss Force One · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Swiss Force One",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21156",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Auch ein mächtiges Konzert verdient zum Schluss noch ein fröhliches Dessert.",
+      "question": "Hör zu: Welcher Komponist hat dieses Klavierkonzert geschrieben?",
+      "answer": "Johannes Brahms",
+      "wrong_answers": [
+        "Wolfgang Amadeus Mozart",
+        "Sergei Rachmaninow",
+        "George Gershwin"
+      ],
+      "hints": [
+        "Hör, wie Klavier und Orchester sich eine leichte, anmutige, tänzerische Melodie zuspielen.",
+        "Er wurde in Hamburg geboren und lebte als Erwachsener die meiste Zeit in Wien.",
+        "Von ihm stammen auch die Ungarischen Tänze und eines der berühmtesten Wiegenlieder der Welt."
+      ],
+      "fun_fact": "Das Konzert hat vier statt der üblichen drei Sätze, trotzdem nannte Brahms es scherzhaft „ein ganz kleines Klavierkonzert mit einem ganz kleinen zarten Scherzo“.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/NBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_4th_movement_%28Conclusion%29_-_Allegretto_grazioso_-_Hmv-db5866-2a048848.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_4th_movement_%28Conclusion%29_-_Allegretto_grazioso_-_Hmv-db5866-2a048848.flac",
+        "credit": "Johannes Brahms · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Johannes Brahms",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/CC_Japanese_pianist_playing_grand_piano_in_a_concert_hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACC_Japanese_pianist_playing_grand_piano_in_a_concert_hall.jpg",
+        "credit": "Musicipedia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Musicipedia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Musicipedia&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21157",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "Ein ganzer Arbeitstag, zusammengequetscht auf die Zeit, die man zum Schuhebinden braucht.",
+      "question": "Schau hin: Dieser Zeitraffer zeigt einen einzigen Tag von Sonnenaufgang bis Sonnenuntergang. Wo auf der Erde wurde er gefilmt?",
+      "answer": "Nahe dem nördlichen Polarkreis",
+      "wrong_answers": [
+        "Nahe dem Südpol",
+        "Direkt am Äquator",
+        "Mitten in der Sahara"
+      ],
+      "hints": [
+        "Achte darauf, wie hoch die Sonne an ihrem höchsten Punkt steht.",
+        "Schnee und Nadelwälder deuten auf einen Ort mit langen, kalten Wintern hin.",
+        "Hier kommt die Sonne im Winter kaum über die Baumwipfel, und im Sommer geht sie fast gar nicht unter."
+      ],
+      "fun_fact": "Gefilmt wurde dieser Tag im Januar in Nordschweden – etwas weiter nördlich, jenseits des Polarkreises, gibt es Wintertage, an denen die Sonne gar nicht aufgeht.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Short_Winter_Day_Time_Lapse.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShort_Winter_Day_Time_Lapse.webm",
+        "credit": "Jojoo64 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Jojoo64",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21158",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Winziges Land, große Blaskapelle: Bitte summt doch mal jemand mit.",
+      "question": "Hör zu: Diese Melodie ist die Nationalhymne eines kleinen europäischen Landes. Welches?",
+      "answer": "Liechtenstein",
+      "wrong_answers": [
+        "Monaco",
+        "San Marino",
+        "Andorra"
+      ],
+      "hints": [
+        "Der Text der Hymne beginnt mit einem Lob auf einen Fluss, der am Land vorbeifließt.",
+        "Kommt dir die Melodie bekannt vor? Wahrscheinlich hast du sie schon bei britischen Königsfeiern gehört.",
+        "Das Land liegt zwischen der Schweiz und Österreich, am jungen Rhein."
+      ],
+      "fun_fact": "Liechtensteins Hymne „Oben am jungen Rhein“ hat dieselbe Melodie wie Großbritanniens „God Save the King“ – als England 2003 gegen Liechtenstein spielte, erklang vor dem Anpfiff zweimal dieselbe Melodie.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oben_am_jungen_Rhein%2C_by_the_U.S._Navy_Band.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOben_am_jungen_Rhein%2C_by_the_U.S._Navy_Band.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg/3840px-Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGoetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg",
+        "credit": "Asurnipal · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Asurnipal",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Asurnipal"
+      }
+    },
+    {
+      "id": "q-21159",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Zieh die dicksten Wollsocken an und steh gerade: Diese Melodie meint es ernst.",
+      "question": "Hör zu: Die Nationalhymne welches Landes ist das?",
+      "answer": "Schweden",
+      "wrong_answers": [
+        "Norwegen",
+        "Dänemark",
+        "Finnland"
+      ],
+      "hints": [
+        "Auf der Flagge ist ein Kreuz.",
+        "Die Hauptstadt ist auf 14 Inseln gebaut, dort, wo ein See auf das Meer trifft.",
+        "Hier liegt die Heimat von ABBA, IKEA und den Nobelpreisen."
+      ],
+      "fun_fact": "Schwedens Hymne „Du gamla, Du fria“ beruht auf einer alten Volksmelodie und wurde nie per Gesetz offiziell – sie wurde allein durch Tradition zur Hymne.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/United_States_Navy_Band_-_Sweden.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_Navy_Band_-_Sweden.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Russia._Moscow_Region._Winter_pine_wood%2C_lake_Kratovskoe_area.JPG/3840px-Russia._Moscow_Region._Winter_pine_wood%2C_lake_Kratovskoe_area.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARussia._Moscow_Region._Winter_pine_wood%2C_lake_Kratovskoe_area.JPG",
+        "credit": "Aleks G · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Aleks G",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aleks_G"
+      }
+    },
+    {
+      "id": "q-21161",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-music",
+      "bundle": "base",
+      "description": "Auch die ernsteste Melodie will manchmal die Krawatte lockern und ein bisschen swingen.",
+      "question": "Hör zu: Diese Jazzversion mit locker gespielter Melodie beruht auf der Nationalhymne welches Landes?",
+      "answer": "Japan",
+      "wrong_answers": [
+        "China",
+        "Südkorea",
+        "Thailand"
+      ],
+      "hints": [
+        "Das Original ist langsam, feierlich und eine der kürzesten Nationalhymnen der Welt.",
+        "Der Text stammt aus einem über 1000 Jahre alten Gedicht: Die Herrschaft möge dauern, bis Kiesel zu moosbedeckten Felsen werden.",
+        "Die Flagge des Landes ist ein schlichter roter Kreis auf weißem Grund."
+      ],
+      "fun_fact": "Der Text von „Kimigayo“ stammt aus einer Gedichtsammlung von etwa 905 und gehört damit zu den ältesten Hymnentexten überhaupt, die Melodie dagegen ist von 1880.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Jazzkimigayo.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJazzkimigayo.ogg",
+        "credit": "Afrobossa · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Afrobossa",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 58
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Elegance-cafe-jazz-club-roma-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElegance-cafe-jazz-club-roma-2025.jpg",
+        "credit": "Daria.ven · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daria.ven",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Daria.ven&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21162",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Ein Pausenbrot-Dieb mit Federn und null Tischmanieren.",
+      "question": "Schau hin: Welcher Vogel kommt und schnappt den Tauben das Brot weg?",
+      "answer": "Möwe",
+      "wrong_answers": [
+        "Schwan",
+        "Ente",
+        "Storch"
+      ],
+      "hints": [
+        "Sie ist viel größer als die Tauben und hat rosa Beine.",
+        "Man sieht sie oft am Strand, wie sie über die Wellen fliegt.",
+        "Sie ist berüchtigt dafür, am Meer Pommes und Brötchen zu klauen."
+      ],
+      "fun_fact": "Möwen können salziges Meerwasser trinken, weil spezielle Drüsen über ihren Augen das überschüssige Salz ausscheiden.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Seagull_and_pigeons_eating_bread.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeagull_and_pigeons_eating_bread.webm",
+        "credit": "Atomicdragon136 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Atomicdragon136",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21163",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Eine Drohne hat einen Rundflug gemacht und musste zum Glück kein Ticket kaufen.",
+      "question": "Im Video: Diese berühmten Klippen mit einem kleinen runden Steinturm ragen über 200 Meter über dem Atlantik auf. In welchem Land liegen sie?",
+      "answer": "Irland",
+      "wrong_answers": [
+        "Norwegen",
+        "Portugal",
+        "Island"
+      ],
+      "hints": [
+        "Das Land ist für seine so grünen Wiesen bekannt, dass es einen Spitznamen nach der Farbe eines Edelsteins trägt.",
+        "Sein Nationalsymbol ist eine Pflanze mit drei Blättern, sein Nationalfeiertag ist der 17. März.",
+        "Das sind die Cliffs of Moher an der Westküste der „Smaragdinsel“."
+      ],
+      "fun_fact": "Die Cliffs of Moher spielten die „Klippen des Wahnsinns“ in „Die Braut des Prinzen“ und sind in „Harry Potter und der Halbblutprinz“ zu sehen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cliffs_of_Moher_drone-video.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACliffs_of_Moher_drone-video.webm",
+        "credit": "Wiebe de Jager · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Wiebe de Jager",
+        "author_url": null,
+        "excerpt": {
+          "start": 30,
+          "end": 60
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21164",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Irgendwo über dem Dschungel versucht jemand mit aller Kraft, die Aufmerksamkeit des ganzen Waldes zu bekommen.",
+      "question": "Hör zu: Welcher Vogel aus den Wäldern Süd- und Südostasiens stößt diesen lauten, hellen Pfiff aus?",
+      "answer": "Schlangenweihe",
+      "wrong_answers": [
+        "Blauer Pfau",
+        "Heckenkuckuck",
+        "Wechselkuckuck"
+      ],
+      "hints": [
+        "Sein Ruf trägt weit über bewaldete Täler, und der Vogel wiederholt ihn oft mehrmals.",
+        "Er hat leuchtend gelbe nackte Haut um die Augen und am Schnabelansatz.",
+        "Es ist ein Greifvogel, der sich hauptsächlich von Reptilien ohne Beine ernährt."
+      ],
+      "fun_fact": "Die Schlangenweihe frisst vor allem Schlangen, und wenn sie aufgeregt ist, stellt sie einen kurzen schwarz-weißen Federschopf am Hinterkopf auf.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Crested_serpent_eagle.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrested_serpent_eagle.ogg",
+        "credit": "Shajiarikkad · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Shajiarikkad",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 22
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Canopy_of_tropical_rain_forest_in_Anaimalai_hills_IMG_8537.jpg/3840px-Canopy_of_tropical_rain_forest_in_Anaimalai_hills_IMG_8537.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanopy_of_tropical_rain_forest_in_Anaimalai_hills_IMG_8537.jpg",
+        "credit": "PJeganathan · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PJeganathan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PJeganathan"
+      }
+    },
+    {
+      "id": "q-21165",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Manche nennen sie Weltraumqualle, aber kein Aquarium will sie haben.",
+      "question": "Im Video leuchtet die Abgaswolke einer Rakete nach Sonnenuntergang hell über einer Stadt, in der es schon dunkel ist. Warum leuchtet sie?",
+      "answer": "Hoch oben trifft sie noch Sonnenlicht",
+      "wrong_answers": [
+        "Ihr restlicher Treibstoff leuchtet im Dunkeln",
+        "Die Lichter der Stadt strahlen sie an",
+        "Der Mond beleuchtet sie von oben"
+      ],
+      "hints": [
+        "Achte in den ersten Sekunden auf den Rand des Himmels: Was ist dort gerade erst passiert?",
+        "Am Boden ist schon Abend, aber die Wolke schwebt viele Kilometer über der Stadt.",
+        "Von einem hoch genug gelegenen Ort aus sieht man die Sonne noch, wenn sie für die Leute am Boden schon untergegangen ist."
+      ],
+      "fun_fact": "Diese leuchtende Wolke stammt vom Start der Sojus MS-22 im Jahr 2022 und wurde in Karaganda in Kasachstan gefilmt, Hunderte Kilometer vom Startplatz Baikonur entfernt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Timelapse_of_the_Soyuz_MS-22_launch_from_Baikonur.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATimelapse_of_the_Soyuz_MS-22_launch_from_Baikonur.webm",
+        "credit": "Astrobond · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Astrobond",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21166",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "technology",
+      "bundle": "base",
+      "description": "Ein Flugzeug, das jedes einzelne Blatt im Dschungel zählen will und sich dabei nie langweilt.",
+      "question": "Schau zu: Dieses Flugzeug tastet den Regenwald mit einem Strahl ab und erstellt eine 3D-Karte der Baumkronen. Wie heißt diese Technik?",
+      "answer": "Lidar",
+      "wrong_answers": [
+        "Radar",
+        "Sonar",
+        "Wärmebildtechnik"
+      ],
+      "hints": [
+        "Manche selbstfahrenden Autos und neuere Smartphones haben eine kleine Version davon eingebaut.",
+        "Archäologen haben damit alte Maya-Städte entdeckt, die im Dschungel von Guatemala verborgen lagen.",
+        "Der Name ist genauso gebaut wie bei Radar, nur mit Licht statt Funkwellen."
+      ],
+      "fun_fact": "2018 enthüllten Lidar-Scans aus Flugzeugen mehr als 60 000 versteckte Maya-Bauwerke unter dem Regenwald Guatemalas.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flying_Through_LIDAR_Canopy_Data.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlying_Through_LIDAR_Canopy_Data.webm",
+        "credit": "NASA's Scientific Visualization Studio · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA's Scientific Visualization Studio",
+        "author_url": null,
+        "excerpt": {
+          "start": 2,
+          "end": 32
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21167",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Ein Strand mit strenger Kleiderordnung: Frack und Fliege, sogar beim Frühstück.",
+      "question": "Schau hin: Welche Pinguinart watschelt hier über den Strand?",
+      "answer": "Königspinguin",
+      "wrong_answers": [
+        "Kaiserpinguin",
+        "Eselspinguin",
+        "Adeliepinguin"
+      ],
+      "hints": [
+        "Diese Art zieht ihre Küken auf grasigen, felsigen Inseln nahe der Antarktis auf, nicht auf dem Meereis.",
+        "Achte auf die leuchtend orangen Flecken an den Kopfseiten und auf der Brust.",
+        "Er ist der zweitgrößte Pinguin der Welt, nur übertroffen von seinem noch prächtigeren „kaiserlichen“ Verwandten."
+      ],
+      "fun_fact": "Königspinguine bauen kein Nest: Ein Elternteil hält das Ei auf den Füßen, geschützt unter einer warmen Bauchfalte.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Time-lapse_of_Gold_Harbour%2C_South_Georgia_Island.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_of_Gold_Harbour%2C_South_Georgia_Island.webm",
+        "credit": "Blagoj Klincharski · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Blagoj Klincharski",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21169",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "ships-and-boats",
+      "bundle": "base",
+      "description": "Hier flitzen so viele Fähren herum, dass das Wasser nie in Ruhe ein Nickerchen machen kann.",
+      "question": "Sieh genau hin: An welchem Ozean liegt der belebte Hafen in diesem Video?",
+      "answer": "Pazifischer Ozean",
+      "wrong_answers": [
+        "Indischer Ozean",
+        "Atlantischer Ozean",
+        "Südlicher Ozean"
+      ],
+      "hints": [
+        "Finde zuerst heraus, welche Stadt das ist: Ein Gebäude am Ufer verrät viel.",
+        "Diese Stadt liegt an der Ostküste ihres Landes.",
+        "Er ist der größte und tiefste Ozean der Erde."
+      ],
+      "fun_fact": "Die weißen Segel der Oper von Sydney sind mit über einer Million Fliesen bedeckt: Von Weitem wirken sie einfach weiß, aus der Nähe sind manche glänzend und manche matt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Time-lapse_of_boat_and_ferry_traffic_at_Circular_Quay_on_Sydney_Harbour.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_of_boat_and_ferry_traffic_at_Circular_Quay_on_Sydney_Harbour.webm",
+        "credit": "John Heller · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "John Heller",
+        "author_url": null,
+        "excerpt": {
+          "start": 60,
+          "end": 90
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21170",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Die Ebbe ist da, der Schlick auch, und irgendwer hier hört nicht auf, darüber zu reden.",
+      "question": "Hör zu: Dieser Schwarm wurde an einer schlammigen Flussmündung in England aufgenommen. Welcher Vogel ruft?",
+      "answer": "Brandgans",
+      "wrong_answers": [
+        "Großer Brachvogel",
+        "Ringelgans",
+        "Austernfischer"
+      ],
+      "hints": [
+        "Es ist ein Wasservogel, der genauso gut schwimmt, wie er durch den Schlick watet.",
+        "Männchen und Weibchen sehen fast gleich aus, und im Spätsommer fliegen riesige Scharen zur Mauser ins Wattenmeer.",
+        "Sie ist überwiegend weiß, mit dunkelgrünem Kopf, einem kastanienbraunen Brustband und leuchtend rotem Schnabel."
+      ],
+      "fun_fact": "Brandgänse ziehen ihre Küken oft in alten Kaninchenbauten groß, und die Jungen mehrerer Familien schließen sich zu großen „Kindergärten“ zusammen, die nur von wenigen Altvögeln bewacht werden.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Common_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 14,
+          "end": 62
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Thames_Estuary_at_low_tide_from_Victoria_Wharf%2C_Old_Leigh.jpg/3840px-Thames_Estuary_at_low_tide_from_Victoria_Wharf%2C_Old_Leigh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThames_Estuary_at_low_tide_from_Victoria_Wharf%2C_Old_Leigh.jpg",
+        "credit": "Rwendland · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rwendland",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rwendland"
+      }
+    },
+    {
+      "id": "q-21171",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Bevor der Star der Show auch nur einen Ton spielt, räuspert sich schon jemand anderes.",
+      "question": "Hör dir den Anfang dieses Klavierkonzerts an: Welches Instrument spielt die allerersten Töne, bevor das Klavier antwortet?",
+      "answer": "Horn",
+      "wrong_answers": [
+        "Trompete",
+        "Posaune",
+        "Fagott"
+      ],
+      "hints": [
+        "Es ist ein Blechblasinstrument, klingt aber weich und warm statt strahlend.",
+        "Sein Rohr ist zu einem Kreis gewunden und endet in einem weiten Schalltrichter.",
+        "Beim Spielen steckt oft eine Hand im Trichter, der nach hinten zeigt."
+      ],
+      "fun_fact": "Der Hornist hat in diesem Konzert ein Solo, bevor irgendjemand sonst einen Ton spielt – einer der nervenaufreibendsten Anfänge im ganzen Orchester.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/NBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_1st_movement_%28Part_1%29_-_Allegro_non_troppo_-_Hmv-db5861-2a048837.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_1st_movement_%28Part_1%29_-_Allegro_non_troppo_-_Hmv-db5861-2a048837.ogg",
+        "credit": "Johannes Brahms (1833-1897) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Johannes Brahms (1833-1897)",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Metropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg",
+        "credit": "Unknown or not provided · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown or not provided\n\nRetouched by Mmxx",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mmxx"
+      }
+    },
+    {
+      "id": "q-21172",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "Da hat wohl jemand im Universum vergessen, mit dem Umrühren aufzuhören, und jetzt wirbelt es seit Milliarden Jahren.",
+      "question": "Schau hin: Die Simulation zeigt das Gas in einem Galaxienhaufen. Es ist Millionen Grad heiß. In welchem Licht leuchtet es vor allem?",
+      "answer": "Röntgenstrahlen",
+      "wrong_answers": [
+        "Infrarotstrahlen",
+        "Radiowellen",
+        "UV-Strahlen"
+      ],
+      "hints": [
+        "Je heißer etwas ist, desto energiereicher ist das Licht, das es abgibt.",
+        "Dieses Licht kommt nicht durch die Erdatmosphäre, deshalb muss das Teleskop dafür im Weltall sein.",
+        "Ärzte machen damit Bilder von deinen Knochen."
+      ],
+      "fun_fact": "Das Röntgenteleskop Chandra der NASA entdeckte im Perseus-Haufen eine riesige Welle in diesem Gas, etwa 200 000 Lichtjahre breit und damit rund doppelt so breit wie unsere Milchstraße.",
+      "media": {
+        "type": "video",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gigantic_Wave_Discovered_in_Perseus_Galaxy_Cluster.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGigantic_Wave_Discovered_in_Perseus_Galaxy_Cluster.webm",
+        "credit": "NASA's Goddard Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA's Goddard Space Flight Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 21
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21173",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Selbst die prächtigste Decke braucht ein Sicherheitsnetz, wenn die Handwerker anrücken.",
+      "question": "Im Video bauen Arbeiter unter einer berühmten Kuppel ein Gerüst und ein riesiges Schutznetz auf. In welchem Gebäude liegt diese runde Halle?",
+      "answer": "US-Kapitol",
+      "wrong_answers": [
+        "Petersdom",
+        "St Paul's Cathedral",
+        "Panthéon in Paris"
+      ],
+      "hints": [
+        "Die Kuppel über dieser Halle besteht aus Gusseisen, nicht aus Stein.",
+        "Das Gemälde hoch oben in der Kuppel zeigt den ersten Präsidenten eines Landes, wie er in den Himmel aufsteigt.",
+        "Das Gebäude steht am Ende der National Mall in Washington, D.C."
+      ],
+      "fun_fact": "Das Fresko ganz oben in der Kuppel, „Die Apotheose Washingtons“, malte Constantino Brumidi 1865, und es ist rund 433 m² groß.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Time_Lapse_of_Capitol_Rotunda_Preparations_for_Capitol_Dome_Project.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_Lapse_of_Capitol_Rotunda_Preparations_for_Capitol_Dome_Project.webm",
+        "credit": "U.S. Capitol · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Capitol",
+        "author_url": null,
+        "excerpt": {
+          "start": 2.5,
+          "end": 23.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21174",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "mountains",
+      "bundle": "base",
+      "description": "Ein ganzes Jahr Wintermantel an, Wintermantel aus – in gerade mal drei Sekunden.",
+      "question": "Dieser Satelliten-Zeitraffer zeigt, wie der Schnee ein Jahr lang kommt und geht. Welches Gebirge ist das?",
+      "answer": "Alpen",
+      "wrong_answers": [
+        "Pyrenäen",
+        "Karpaten",
+        "Kaukasus"
+      ],
+      "hints": [
+        "Achte auf das dunkle Meer unten rechts: Es ist ein langer, schmaler Arm des Mittelmeers.",
+        "Das flache, schneefreie Land im Inneren des Bogens ist ein breites Flusstal voller Felder und Städte.",
+        "Der höchste Gipfel ist der Mont Blanc an der Grenze zwischen Frankreich und Italien."
+      ],
+      "fun_fact": "Die Alpen erstrecken sich über acht Länder, von Frankreich und Monaco im Westen bis Slowenien im Osten.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/The_Alps_Mosaic_Time-lapse_2019_%2850897563317%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Alps_Mosaic_Time-lapse_2019_%2850897563317%29.webm",
+        "credit": "SentinelHub · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "SentinelHub",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21176",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Eine Melodie, bei der ein ganzes Stadion strammsteht, noch bevor jemand den Ball berührt.",
+      "question": "Hör zu: Die Nationalhymne welches Landes ist das?",
+      "answer": "Litauen",
+      "wrong_answers": [
+        "Lettland",
+        "Estland",
+        "Polen"
+      ],
+      "hints": [
+        "Ein einziger Mann, ein Arzt, schrieb Ende des 19. Jahrhunderts Text und Musik.",
+        "In diesem Land ist Basketball fast so etwas wie eine Nationalreligion.",
+        "Die Hauptstadt ist Vilnius."
+      ],
+      "fun_fact": "Jedes Jahr am 6. Juli um 21 Uhr singen Litauer auf der ganzen Welt gleichzeitig ihre Nationalhymne.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Tauti%C5%A1ka_giesme_instrumental.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATauti%C5%A1ka_giesme_instrumental.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21178",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-music",
+      "bundle": "base",
+      "description": "Eine Melodie so königlich, dass sie wohl erwartet, dass du vom Sofa aufstehst.",
+      "question": "Hör zu: Das ist die Königshymne welches europäischen Königreichs?",
+      "answer": "Dänemark",
+      "wrong_answers": [
+        "Norwegen",
+        "Niederlande",
+        "Belgien"
+      ],
+      "hints": [
+        "Dieses Land hat zwei offizielle Hymnen: eine Nationalhymne und diese Königshymne.",
+        "Das Lied preist einen König, der im 17. Jahrhundert in einer Seeschlacht gegen Schweden kämpfte.",
+        "Die Königsfamilie gehört zu den ältesten der Welt, und in der Hauptstadt sitzt die Statue der Kleinen Meerjungfrau."
+      ],
+      "fun_fact": "Das Lied ehrt König Christian IV., der 1644 in der Seeschlacht auf der Kolberger Heide weiter an Deck Befehle gab, obwohl er am Auge getroffen worden war.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/United_States_Navy_Band_-_Kong_Kristian_stod_ved_h%C3%B8jen_mast.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_Navy_Band_-_Kong_Kristian_stod_ved_h%C3%B8jen_mast.ogg",
+        "credit": "United States Navy Band · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "United States Navy Band",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Tall_ships.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATall_ships.jpg",
+        "credit": "Mikkel Houmøller · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mikkel Houmøller",
+        "author_url": "https://commons.wikimedia.org/wiki/User:MikkelH"
+      }
+    },
+    {
+      "id": "q-21179",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Der Chemieunterricht wird gleich deutlich heller, und diese Schale Sand ist nicht zum Burgenbauen da.",
+      "question": "Schau zu: Welches berühmte Chemie-Experiment ist das?",
+      "answer": "Thermitreaktion",
+      "wrong_answers": [
+        "Elefantenzahnpasta",
+        "Pharaoschlange",
+        "Bellender Hund"
+      ],
+      "hints": [
+        "Der Brennstoff ist ein Leichtmetall als Pulver, dasselbe Metall wie in Getränkedosen.",
+        "Mit dieser Reaktion werden Eisenbahnschienen zusammengeschweißt.",
+        "Ihr Name kommt vom griechischen Wort für Wärme, wie in „Thermometer“."
+      ],
+      "fun_fact": "Die Thermitreaktion wird über 2000 °C heiß, heiß genug, um das entstehende Eisen zu schmelzen, sodass ein glühender Klumpen flüssiges Metall übrig bleibt.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Thermit_Reaction.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThermit_Reaction.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 86,
+          "end": 116
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21180",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "physics",
+      "bundle": "base",
+      "description": "Ein Labortisch, ein Brenner und eine Dose, der gleich ein richtig mieser Tag bevorsteht.",
+      "question": "Schau zu: Eine heiße Dose mit etwas Dampf darin wird kopfüber in kaltes Wasser getaucht. Was zerdrückt sie?",
+      "answer": "Luft, die von außen auf sie drückt",
+      "wrong_answers": [
+        "Dampf, der von innen herausplatzt",
+        "Kälte, die das Metall schrumpfen lässt",
+        "Flamme, die das Metall weich macht"
+      ],
+      "hints": [
+        "Die Dose wird von nichts getroffen, was man sehen kann.",
+        "Wenn der Dampf in der Dose abkühlt, wird er wieder zu winzigen Tröpfchen und lässt fast nichts zurück.",
+        "Derselbe unsichtbare Druck lässt dich durch einen Strohhalm trinken, und auf einem Berggipfel ist er schwächer."
+      ],
+      "fun_fact": "Auf Meereshöhe drückt die Luft auf jeden Quadratzentimeter mit etwa 1 Kilogramm, als läge auf jedem Fingernagel eine Packung Zucker.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Crushing_can.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrushing_can.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 30.5,
+          "end": 45.6
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21181",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "ships-and-boats",
+      "bundle": "base",
+      "description": "Monatelanges Schweißen, zusammengequetscht in weniger Zeit, als man zum Schuhezubinden braucht.",
+      "question": "Sieh dir dieses Zeitraffervideo an: Was bauen die Arbeiter hier?",
+      "answer": "Ein Schiff",
+      "wrong_answers": [
+        "Eine Brücke",
+        "Ein Hochhaus",
+        "Einen Zug"
+      ],
+      "hints": [
+        "Wenn es fertig ist, bleibt es nicht dort, wo es gebaut wurde.",
+        "Achte auf das spitze vordere Ende, das gegen Ende des Videos auftaucht.",
+        "Sobald sich das Becken mit Wasser füllt, schwimmt es davon."
+      ],
+      "fun_fact": "Große Schiffe werden oft in einem Trockendock gebaut: einem riesigen Becken, das für die Arbeit leer gepumpt und danach geflutet wird, damit das fertige Schiff hinausschwimmen kann.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Time_Lapse_Video-_Construction_of_the_LNG-Ready_Tanker_MT_Ohio_at_Philly_Shipyard.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_Lapse_Video-_Construction_of_the_LNG-Ready_Tanker_MT_Ohio_at_Philly_Shipyard.webm",
+        "credit": "Crowley Maritime · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Crowley Maritime",
+        "author_url": null,
+        "excerpt": {
+          "start": 60,
+          "end": 90
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21182",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Das Kuchenrezept, das fürchterlich und zugleich wunderbar schiefging.",
+      "question": "Schau zu: Konzentrierte Säure wurde auf weißen Haushaltszucker gegossen. Woraus besteht die schwarze Säule, die aus dem Glas wächst, hauptsächlich?",
+      "answer": "Kohlenstoff",
+      "wrong_answers": [
+        "Eisen",
+        "Silizium",
+        "Kalzium"
+      ],
+      "hints": [
+        "Zucker besteht aus nur drei Elementen, und die Säure entzieht ihm die anderen zwei als Wasser.",
+        "Dasselbe Element bleibt auf verbranntem Toast zurück.",
+        "Bleistiftminen und Diamanten bestehen ebenfalls aus diesem Element."
+      ],
+      "fun_fact": "Die Säure zieht das Wasser so stark aus dem Zucker, dass das Glas heiß wird, und der Dampf bläht den Kohlenstoff zu einem schwammigen schwarzen Turm auf.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Dehydration_of_Sugar.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADehydration_of_Sugar.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 46,
+          "end": 76
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21183",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Laborkittel an, Schutzbrille auf: Das ist eine Zaubershow, nur hat der Zauberer Chemie studiert.",
+      "question": "Schau auf Becherglas A: Eine klare Flüssigkeit wird in einen farblosen Indikator gegossen. Was für eine Flüssigkeit zeigt der Farbumschlag an?",
+      "answer": "Base",
+      "wrong_answers": [
+        "Säure",
+        "Reines Wasser",
+        "Zuckerlösung"
+      ],
+      "hints": [
+        "Indikatoren zeigen, auf welcher Seite der pH-Skala eine Flüssigkeit liegt.",
+        "Dieser Indikator heißt Phenolphthalein, und seine pinke Farbe ist ein berühmtes Signal.",
+        "Seifenlauge, Bleichmittel und Natronlösung würden hier dasselbe bewirken."
+      ],
+      "fun_fact": "Phenolphthalein wird ab etwa pH 8,2 pink, in einer sehr starken Base aber wieder farblos.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Red%2C_White%2C_Blue_%28Set_up%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed%2C_White%2C_Blue_%28Set_up%29.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 40,
+          "end": 53
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21184",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Ein Vogel, der die Kunst, regungslos dazustehen und aufs Wasser zu starren, äußerst ernst nimmt.",
+      "question": "Schau hin: Welcher Vogel jagt hier am Rand eines Teichs in New York?",
+      "answer": "Amerikanische Zwergdommel",
+      "wrong_answers": [
+        "Grünreiher",
+        "Nordamerikanische Rohrdommel",
+        "Nachtreiher"
+      ],
+      "hints": [
+        "Er gehört zur Familie der Reiher und versteckt sich in Schilf und Rohrkolben.",
+        "Achte auf die hellen, beigen Flecken auf den Flügeln und den sehr schlanken Körper.",
+        "Ihre Verwandte, die Nordamerikanische Rohrdommel, ist viel größer und überall braun gestreift. Der Name dieser hier verrät, dass sie winzig ist."
+      ],
+      "fun_fact": "Bei Gefahr erstarrt die Amerikanische Zwergdommel mit dem Schnabel zum Himmel und wiegt sich sogar mit dem Schilf im Wind, um nicht aufzufallen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Least_bittern_in_Prospect_Park.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeast_bittern_in_Prospect_Park.webm",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Rhododendrites",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21185",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "environment",
+      "bundle": "base",
+      "description": "Ein Satellit im Brandmelder-Dienst, seit Jahren in der Nachtschicht und nie eine Kaffeepause.",
+      "question": "Schau hin: Jeder rote Punkt auf diesem Globus ist ein Feuer, das ein Satellit entdeckt hat. In welchem Land brennen die meisten davon?",
+      "answer": "Brasilien",
+      "wrong_answers": [
+        "Argentinien",
+        "Kolumbien",
+        "Venezuela"
+      ],
+      "hints": [
+        "Schau genau hin, welchen Kontinent der Globus zeigt.",
+        "Das Land mit den meisten Punkten nimmt fast die Hälfte seines Kontinents ein.",
+        "Dort liegen der größte Teil des Amazonas-Regenwalds und die Stadt Rio de Janeiro."
+      ],
+      "fun_fact": "Die meisten Feuer im und am Amazonas entstehen nicht von selbst: Menschen legen sie, um Platz für Felder und Rinderweiden zu schaffen.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Forecasting_South_American_Fires.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AForecasting_South_American_Fires.ogv",
+        "credit": "NASA/Goddard Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 8,
+          "end": 38
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21186",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Eine silberne Schlange, die durch ein halbes Land gleitet, ohne je ein Nickerchen zu machen.",
+      "question": "Schau dir diesen Fernzug an. Was treibt seine Lokomotive an?",
+      "answer": "Dieselmotor",
+      "wrong_answers": [
+        "Dampfmaschine",
+        "Oberleitung",
+        "Stromschiene"
+      ],
+      "hints": [
+        "Schau über den Zug: Nichts verbindet ihn mit einer Stromleitung.",
+        "Hör auf das tiefe, gleichmäßige Dröhnen, wenn die Lok vorbeifährt: Es kommt aus der Lok selbst.",
+        "Sie verbrennt denselben Kraftstoff wie die meisten großen Lkw."
+      ],
+      "fun_fact": "Die meisten „Dieselloks“ sind eigentlich dieselelektrisch: Der Dieselmotor treibt einen Generator an, und Elektromotoren drehen die Räder.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Amtrak_Lake_Shore_Limited_train_49_in_Albany_July_2026_video.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmtrak_Lake_Shore_Limited_train_49_in_Albany_July_2026_video.webm",
+        "credit": "4300streetcar · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "4300streetcar",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21187",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Ein Herrscher der Lüfte, dessen Stimme davon offenbar nichts mitbekommen hat.",
+      "question": "Hör zu: Welcher Greifvogel stößt diese dünnen, kläffenden Pfiffe aus?",
+      "answer": "Steinadler",
+      "wrong_answers": [
+        "Andenkondor",
+        "Rotschwanzbussard",
+        "Wanderfalke"
+      ],
+      "hints": [
+        "Er jagt Hasen, Murmeltiere und Raufußhühner in Gebirgen und offenem Land der Nordhalbkugel.",
+        "Er lebt wild in Nordamerika, Europa, Asien und Nordafrika.",
+        "Dieser Vogel ist auf der Flagge Mexikos zu sehen, wie er eine Schlange frisst."
+      ],
+      "fun_fact": "Echte Adler klingen so schwach, dass Filme ihnen oft den rauen Schrei eines Rotschwanzbussards unterlegen.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Golden_eagle.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGolden_eagle.ogg",
+        "credit": "Bubulcus · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Bubulcus",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Lava_Cliffs_Rocky_Mountain_National_Park_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALava_Cliffs_Rocky_Mountain_National_Park_2024.jpg",
+        "credit": "Larry D. Moore · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Larry D. Moore",
+        "author_url": "https://en.wikipedia.org/wiki/User:Nv8200pa"
+      }
+    },
+    {
+      "id": "q-21188",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "Gespielt auf einem Klavier, das selbst in einer Puppenstube kaum Platz wegnimmt.",
+      "question": "Hör zu: Welches Aufziehspielzeug ist berühmt dafür, diese Melodie zu spielen?",
+      "answer": "Schachtelteufel",
+      "wrong_answers": [
+        "Ballerina-Spieluhr",
+        "Spielzeugkarussell",
+        "Becken schlagender Affe"
+      ],
+      "hints": [
+        "Es ist ein altes Spielzeug, das Kinder gern überrascht.",
+        "Während man weiterkurbelt, läuft die Musik, bis plötzlich etwas passiert.",
+        "Am Ende der Melodie springt eine Figur, oft ein Clown, aus einer Kiste."
+      ],
+      "fun_fact": "Die Melodie ist das alte englische Lied „Pop Goes the Weasel“, und niemand weiß so genau, was mit dem „Wiesel“ darin gemeint ist.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Pop_Goes_the_Weasel_on_Toy_Piano.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APop_Goes_the_Weasel_on_Toy_Piano.mp3",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Playing_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg/3840px-Playing_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaying_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      }
+    },
+    {
+      "id": "q-21189",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Eine Flasche, die sich heute einfach nicht entscheiden kann, was sie anziehen soll.",
+      "question": "Schau genau auf den Kolben. Welches Gas aus der Luft bringt die blaue Farbe zurück?",
+      "answer": "Sauerstoff",
+      "wrong_answers": [
+        "Stickstoff",
+        "Kohlenstoffdioxid",
+        "Wasserstoff"
+      ],
+      "hints": [
+        "Achte darauf, was die Person mit dem Kolben macht, kurz bevor die Farbe zurückkommt.",
+        "Beim Schütteln mischt sich die Luft über der Flüssigkeit hinein.",
+        "Fische holen sich dieses Gas mit ihren Kiemen aus dem Wasser."
+      ],
+      "fun_fact": "Bei diesem „Blue-Bottle“-Versuch verbraucht Zucker in der Flüssigkeit langsam den Sauerstoff, sodass das Blau verblasst. Man kann es viele Male wiederholen, bis der Zucker aufgebraucht ist.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Blue-bottle_reaction_%28Oscillating_reaction%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlue-bottle_reaction_%28Oscillating_reaction%29.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 68,
+          "end": 98
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21190",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "capital-cities",
+      "bundle": "base",
+      "description": "Da hat jemand den kosmischen Zoom-Knopf gedrückt gehalten, und keiner brachte es übers Herz, ihn aufzuhalten.",
+      "question": "Schau hin: Die Kamera zoomt aus dem All auf eine große asiatische Stadt und zeigt, wie sie von 1972 bis 2001 wuchs. Welche Stadt ist es?",
+      "answer": "Dhaka",
+      "wrong_answers": [
+        "Yangon",
+        "Kathmandu",
+        "Colombo"
+      ],
+      "hints": [
+        "Achte darauf, wo der Zoom endet: knapp nördlich einer großen Bucht des Indischen Ozeans.",
+        "Die Stadt liegt in flachem Tiefland, das von riesigen Flüssen durchzogen wird, und ihr Land wird im Monsun oft überflutet.",
+        "Sie ist die Hauptstadt des Landes, das sich 1971 von Pakistan abspaltete."
+      ],
+      "fun_fact": "Dhaka gilt oft als Rikscha-Hauptstadt der Welt: Hunderttausende Fahrradrikschas sind dort unterwegs.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Time-lapse_of_the_urban_growth_of_Dhaka%2C_Bangladesh_as_seen_from_space_%281972_to_2001%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_of_the_urban_growth_of_Dhaka%2C_Bangladesh_as_seen_from_space_%281972_to_2001%29.webm",
+        "credit": "Creators · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Creators \nAlex Kekesi (GST) [Lead]\nStuart A. Snodgrass (KBRwyle)\nScientist\nDarrel Williams (NASA/GSFC)\n\nWork by Nasa",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
     }
   ]
 }
