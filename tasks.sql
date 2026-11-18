@@ -857,6 +857,15 @@ video length and size (developer, 2026-11-17):
 - the shipped video is cut to that window, 1080p as today, with a bitrate ceiling of 8 Mbit/s on top of the quality setting (e.g. -maxrate 8M -bufsize 16M): a ceiling against single huge files, not a squeeze; decision 651 otherwise stands
 - media-budget.json per-file video line from 100 MB down to fit 30 s at the ceiling
 - qgen validate rejects a video question that would play more than 30 s; media-first picks video windows of at most 30 s', '2026-11-15T04:55:04Z', NULL, 1);
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (22, 'rework all sound + music', 'open', 'check the new file @audio-music-production.md
+
+evaluate it to see if it can be used to improve the background music and sound effects of the whole game by a complete rework.
+
+you can throw away all existing sounds and the background music tracks
+
+the result should be: a couple of new background tracks (left for the user to select in the options), each with the requested variants to increase tension; and a replacement of all sound effects towards a more consistent theme.
+
+this milestone is done, when the rework is approved by the human', '2026-11-18T20:33:29Z', NULL, 0);
 
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (1, 1, 'masterplan', 1000, 'Milestone 1 grows the `base` bundle from about 1000 to **5000 approved questions** (D-52), with clearly fewer questions at the top of the difficulty scale (1–15, D-38) but still enough of them. It also sets up quality control after every batch, and on the generation process itself, so we can tell whether quality holds as the pool grows. From batch-9 on, `base` is drafted in English with an international angle and translated to es, es-ES and de (milestone 9, "English-first drafting for `base`"). Human reviews still happen, but no run waits for them (`decision 414: Human reviews don''t gate question generation or translation`). 5000 was reached with batch-14; batch-15 is the last batch, then the exit check.
 
@@ -11708,6 +11717,7 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Per AGENTS.md: `npm run check`, `npm test`, `npm run build`, `qgen validate` pass at every step.', 'Video clips in the trivia game now stop after thirty seconds, while sound clips keep their one minute. The language model that checks each question, and the developer who plays a blind sample of them, must therefore judge only the part of a video that players will actually see. This work makes every check look at that short window, and gives the re-check of older video questions a way to decide whether the thing players must spot is still inside the shortened clip.', '2026-11-17T17:19:03Z', 2158, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (218, 21, 'Media cache GC, part 2', NULL, '- 2026-11-17 survey: `media/` 77.5 GB (46 GB picked by live questions, ~30 GB batch-82 triage downloads, ~1.3 GB referenced nowhere); `work/` 39 GB (`batch-*/sheets` 15 GB, `media-probe` 16 GB, `ship-media` 5.3 GB)
 - Goal: `prune` never deletes a file any checkout picks; finished batches leave no large review images nobody reads', 'The media cache GC from plan 213 still misses picks made outside the main checkout, and the work directory keeps large review images of finished batches. This plan widens what the cache keeps and cleans the work directory.', '2026-11-17T19:08:44Z', NULL, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (219, 22, 'masterplan', 1000, 'tbd.', '', '2026-11-18T20:33:29Z', NULL, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -49416,6 +49426,9 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - workers min(cpu//2, 8) as report_career
 - engine.node(): timeout per cell; stderr line per finished cell
 - simulate.ts run(): seen set kept incrementally, no per-game rebuild; measure one es cell before/after', '2026-11-18T19:50:34Z', '2026-11-18T19:57:13Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2219, 219, 'write the masterplan of milestone 22: rework all sound + music', 'masterplan', 'open', NULL, NULL, 'Write plan 219, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
+divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
+plan for one part.', '2026-11-18T20:33:29Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
