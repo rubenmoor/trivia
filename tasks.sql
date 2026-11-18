@@ -11809,6 +11809,54 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - `plans/25-sound.md` has the inventory and the final brief; `/sounds` lists every round''s candidates
 - The brief decision is answered final and its consequences written
 - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', 'Before any of the game''s music and sound effects are replaced, someone has to write down every sound the game makes today, when it plays and what it is meant to say, and then agree with the developer on what the new sound should be like. Since the people doing the work cannot hear, they pick a few candidate styles for the effects and a few moods for the music by measuring recordings, and put them on a page where the developer can listen. The developer''s answer, refined over as many listening rounds as needed, becomes the brief that all later sound work follows.', '2026-11-18T20:39:59Z', 2221, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (221, 22, 'Music pipeline', 280, 'Part 2 of `plan 219: masterplan` (milestone 22: rework all sound + music). Ports the sibling project''s library-music tools (`~/code/three-days-until-release`: `tools/audio/music.py`, `tools/audio/music_loop.py`, spike `spikes/music-library/`) into `authoring/`, so part 4 (`plan 219`''s "The new soundtracks") can turn a CC0 or CC BY library track into one loop file per tension variant, levelled, checked and credited. Runs in parallel with `plan 220: Sound inventory and sound brief`; needs nothing from its brief: the variant list is an argument.
+
+## Binding
+- `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`: `htdemucs`, dev-time only, not shipped, not named in credits
+- `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`: the record''s licence must be one of CC0, PD, CC BY 3.0/4.0; anything else fails the record step; one `CREDITS.md` row per shipped file, "adapted" where cut, split or remixed
+- `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`: no Freesound API
+- Decision 199 (import, don''t copy): no import across repos; each ported file''s header names its sibling source
+- Decision 200: the recipe''s move fixes every hit of its old path
+- `app/` never reads `authoring/`; nothing of the pipeline ships, only its `.m4a` output (part 4 installs it)
+- Loudness: the layer sum at -18 LUFS, true peak ≤ -1.5 dBTP, as today''s loops and question media (`app/desktop/loudness.mjs` `TARGET_LUFS`; comment names it, Python can''t import it); part 6 may retune
+- Workers can''t hear: the pipeline prints numbers, the developer''s ears decide (part 4)
+
+## Layout
+- `authoring/tools/music/`: `music.py` (CLI, standard library only), `music_loop.py` (loop finder, needs numpy, librosa, soundfile), `README.md` (the recipe), `test_music.py`
+- Command `trivia-music` (flake `fromCheckout`, Python with numpy, librosa, soundfile, plus ffmpeg and uv; also in the dev shell); subcommands below
+- Records (committed): `authoring/data/music/<set>-<piece>.json`: library, title, author, track page, download URL, SHA-256 of the download, date, licence as read on the page (SPDX + "read on page" date), listed bpm/feel, `adapted` text, then loop data (bpm, bars, start, loop_s, gain, numbers) and exports (variant → file, layer recipe)
+- Work files (gitignored, main checkout''s `work/` via the symlink): `work/music/<id>/` original, stems, loop WAVs; `work/music/pieces.json` catalogue; Demucs venv `work/music/venv/` (uv, torch, demucs 4.1, CUDA when `/run/opengl-driver/lib` exists, else CPU)
+- Not ported: `just`, Godot import step, `REUSE.toml`, LFS, `sources/audio/` sidecars, `~/.cache/tdur/`, the -22 LUFS class, the sibling''s decision ids (77, 158, 159, 71, 85, 37 mean other things here)
+
+## Subcommands
+- `search [--feel F] [--bpm LO-HI] [--instrument I] [--min-length S]`: incompetech `pieces.json` (fetched once to `work/music/`)
+- `fetch <title> <id>`: incompetech download + record with the credit line; prints the track page: the worker reads the licence line there (page needs JavaScript) and confirms it with `record <id> --licence <spdx> --read-on-page`; until then later steps refuse
+- `record <id> --file <path> --page <url> --title … --author … --licence …`: other libraries (Free Music Archive, Scott Buckley, Kenney, OpenGameArt CC0), downloaded by hand; same record, same SHA-256
+- `setup`: makes the Demucs venv; `split <id>`: Demucs drums, bass, other, vocals (vocals folded into melody, as the sibling)
+- `loop <id> [--bars 8] [--bpm B] [--whole]`: the sibling''s finder (tempo from drums to 0.001 bpm, downbeat, most self-similar stretch, tail rung into head); `--whole`: an unsplit track (no stems, one cut over the mix); one gain for all layers, the sum at -18 LUFS / -1.5 dBTP; writes `info.json` and the loop data into the record; rejects (exit 1, reason printed) when `repeat_similarity` < 0.8, seam jump > 3, `comb_score` < 1.5, fitted bpm > 3 % off the listed one, loop < 10 s or > 300 s
+- `export <id> <out-dir> --variant <name>=<recipe> …`: one `.m4a` per tension variant, all the same sample length; recipe = layer sum (`bass+other`, `+drums`, `full`, per-layer gain in dB allowed) or, with `--whole`, a section (`@<bar>`: same bar length, another stretch of the track, checked like the loop); file names `musica-<set>-<variant>.m4a` (today''s pattern; part 3 may rename, then this default follows); AAC as plan 33''s loops; exports written into the record
+- `check <id>`: hard checks per exported file: integrated loudness of the fullest variant -18 ±0.5 LUFS, every file true peak ≤ -1.5 dBTP, seam click (last vs first sample against the mean step, ≤ 3, measured after AAC decode with the encoder padding cut at `loop_s`), all variants the same length, length 10–300 s, licence allowed; exit 0/1
+- `credits [--check]`: writes the music rows of `app/client/public/audio/CREDITS.md` from the records (one row per exported file, between marker comments, existing hand rows untouched until part 4/5 drop them); `--check` fails on a row without a record or a record without a row
+- `run <title-or-id> <out-dir> --variant …`: fetch (if incompetech), split, loop, export, check
+
+## Tasks
+1. **Catalogue, fetch and records**: `authoring/tools/music/music.py` `search`, `fetch`, `record`, record format, licence allowlist (decision 733), confirmation gate; `trivia-music` in the flake and dev shell; tests with a fake catalogue and a local file (no network); added to `npm test`
+2. **Demucs venv and split** (requires 1): `setup`, `split`, GPU/CPU pick, `LD_LIBRARY_PATH` as the sibling; work files under `work/music/`; test of the argument and path handling only (no model run in `npm test`); one real split timed in the task note
+3. **Loop finder** (requires 1): `music_loop.py` ported, `loop` with `--whole`, the -18 LUFS gain, the reject thresholds; test on a synthetic fixture made in the test (ffmpeg or numpy: 100 bpm kick + bass + tone, ~40 s, as fake stems): fitted bpm 100 ±0.01, similarity ≥ 0.8, sum -18 ±0.2 LUFS; a drifting-tempo fixture is rejected
+4. **Variant export** (requires 3): `export` with layer recipes and `--whole` sections, equal length, AAC, the record''s exports; test on the fixture: three variants, equal sample length, rising loudness base → full
+5. **Hard checks and generated credits** (requires 4): `check`, `credits [--check]`; tests: a clicking seam, a too-loud file, unequal lengths and an NC licence fail; a row is generated from a record; `credits --check` passes on today''s `CREDITS.md` (no records yet: no music rows required) and the release-check credits step and `app/client/credits.ts` still read the table
+6. **End-to-end run on one track** (requires 2 and 5): `trivia-music run` on one incompetech CC BY track with drums, bass and tune (e.g. "Carefree", the sibling''s test track), variants `normal=bass+other`, `question=+drums`, `submitted=full` into `work/music/try/`, not installed; numbers (bpm, similarity, seam, LUFS, times) in the task note; record not committed (part 4 makes real ones); fix what breaks
+7. **The recipe next to the tools** (requires 6): `audio-music-production.md` rewritten as `authoring/tools/music/README.md` for this repo: intro, steps brief → search → fetch/record + licence read on page → split or whole → loop → variants → check → credits → developer listens (part 4''s decisions, iterative feedback); commands, files and this project''s decisions only (732, 733, 82, 199; none of the sibling''s ids); the end-to-end numbers; the root `audio-music-production.md` deleted; `rg audio-music-production` over `.md` files and comments, every hit fixed (decision 200); AGENTS.md "Commands" gets a `trivia-music` line; `plans/25-sound.md` (plan 220''s owner doc) a pointer if it exists
+
+## Out of scope
+- Picking tracks, the brief, listening rounds (parts 1 and 4)
+- Engine, soundtrack format, picker (part 3); installing files and deleting old ones (part 4)
+- Effects (part 5); the final mix (part 6)
+
+## Done when
+- `trivia-music run` takes one library track to checked, equal-length variant `.m4a` files with a record and a generated `CREDITS.md` row
+- Tests on fixtures in `npm test`; the recipe lives in `authoring/tools/music/README.md`, the root file is gone, no stale hits
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', 'The game''s new background music will come from free music libraries, but a library song is not ready to loop under a quiz: it has to be cut into a seamless repeating stretch, split into layers such as drums, bass and tune, and remixed into calmer and tenser versions that can switch on the beat. A sister project by the same developer already built tools for this; this work brings them over, adapts them to this game''s loudness and credit rules, and tests them. Every track keeps a record of where it came from and under which free licence, so the game''s credits are written from those records instead of by hand.', '2026-11-18T20:41:38Z', 2222, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -49665,6 +49713,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The brief decision is answered final, written into `plans/25-sound.md` "Brief", consequences recorded
 - `/sounds` lists every round''s candidates
 - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:54Z', NULL, 2227, 1, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2233, 221, 'create tasks for plan 221: Music pipeline', 'split', 'open', 1000, NULL, 'Split plan 221 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:41:38Z', NULL, 2222, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
