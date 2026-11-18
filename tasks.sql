@@ -50068,8 +50068,83 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Pass: `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` (the `audio` budget of `app/desktop/media-budget.json`, not raised), the release-check credits step, the Credits screen shows the new rows
 - `plans/25-sound.md` "Effects": per cue its file(s), source, approved round
 - Done when all of the above pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:47:10Z', NULL, 2244, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2253, 224, 'create tasks for plan 224: New soundtracks', 'split', 'open', 1000, NULL, 'Split plan 224 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:47:15Z', NULL, 2225, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2253, 224, 'create tasks for plan 224: New soundtracks', 'split', 'done', 1000, '2026-11-18, tasks 2254 first set, 2255 second set, 2256 third set (dropped if the brief names two), 2257 shared roll and victory, 2258 old music files gone and the tally; no decision raised now: the brief is task 2232''s, each round''s listening decision is raised by its set task', 'Split plan 224 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:47:15Z', '2026-11-18T20:48:48Z', 2225, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2254, 224, 'New soundtracks: first set', 'work', 'open', NULL, NULL, 'Task 1 of `plan 224: New soundtracks`: the brief''s first set, usually the default (iterative feedback).
+
+- Done when this set''s round decision is answered approve
+
+## Steps (same for every set; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": this set''s id, mood words, its tension variants (`normal`, `question`, `submitted`, `timed` at least), `roll`/`victory` from this set''s own track or shared, the default set) and the set''s `SOUNDTRACKS` entry left by `task 2243: The brief''s soundtracks: ids, names, default, picker`
+- Recipe: the music recipe next to the `trivia-music` tools (`plan 221: Music pipeline`); its reject thresholds bind
+- Search (`--web`) by the brief''s mood words: incompetech (`trivia-music search --feel … --bpm …`), Kenney and OpenGameArt CC0, Free Music Archive, Scott Buckley; prefer fixed tempo, instrumental, drums + bass + tune all present, a long steady section; reject live, drifting tempo; no Freesound API (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), no generators
+- Candidates: 2–3 tracks per round. Each: `fetch` or `record`, licence read on the track page (`record --read-on-page`; only CC0, PD, CC BY 3.0/4.0, `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`), `split` (or `--whole` when the split leaks, `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`), `loop`, `export --variant <track>=<recipe>` for every variant the brief gives the set (e.g. `normal=bass+other`, `question=+drums`, `submitted=full`, `timed=full` +gain or another section; one file per variant, all the same length, `decision 734: Soundtrack tension variants: one mixdown file per variant, not live layer mixing`), then `check`
+- Workers can''t hear: rank by the numbers (bpm vs listed, `comb_score`, `repeat_similarity`, seam, LUFS); rise in tension measured and noted per variant (`normal` < `question` < `submitted`: LUFS, onset density)
+- Budget: all variants of the set ≤ 1.4 MB together; loop ≥ 20 s
+- Install the top pick: `musica-<set>-<track>.m4a` in `app/client/public/audio/`, `loopStart`/`loopEnd` and `level` in the set''s `SOUNDTRACKS` entry (comment names the record), `CREDITS.md` rows from `trivia-music credits` (never hand-typed); a per-set `roll`/`victory` from this track, if the brief says so, is cut here as a one-shot (`export --whole`, -18 LUFS)
+- Alternates on `/sounds` (manifest group `music-<set>`, round N); their records are not committed
+- Pass: `trivia-music check` on the record, `trivia-music credits --check`, `stage-media.mjs --check`, `sound.test.ts` (this set no longer "not installed"); per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the round''s decision (`pm decision add`): where to listen (`/?efectos`: the set''s variants and the cuts; `/sounds` round N; a real game with `TRIVIA_SOUND=1`: question, lock-in, submit, a timed round, how to reach each), the pick''s numbers and the alternates; options: approve, swap in an alternate (by name), or changes ("more like this, less like that", a section, a variant''s recipe); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search with the new words, next round, decision raised again; until approved
+- Approved: the round and pick into `plans/25-sound.md` "Soundtracks" (track, author, licence, bpm, loop, variants and recipes, round), the record committed, the decision''s consequences', '2026-11-18T20:48:30Z', NULL, 2253, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2255, 224, 'New soundtracks: second set', 'work', 'open', NULL, NULL, 'Task 2 of `plan 224: New soundtracks`: the brief''s second set (iterative feedback).
+
+- Done when this set''s round decision is answered approve
+
+## Steps (same for every set; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": this set''s id, mood words, its tension variants (`normal`, `question`, `submitted`, `timed` at least), `roll`/`victory` from this set''s own track or shared, the default set) and the set''s `SOUNDTRACKS` entry left by `task 2243: The brief''s soundtracks: ids, names, default, picker`
+- Recipe: the music recipe next to the `trivia-music` tools (`plan 221: Music pipeline`); its reject thresholds bind
+- Search (`--web`) by the brief''s mood words: incompetech (`trivia-music search --feel … --bpm …`), Kenney and OpenGameArt CC0, Free Music Archive, Scott Buckley; prefer fixed tempo, instrumental, drums + bass + tune all present, a long steady section; reject live, drifting tempo; no Freesound API (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), no generators
+- Candidates: 2–3 tracks per round. Each: `fetch` or `record`, licence read on the track page (`record --read-on-page`; only CC0, PD, CC BY 3.0/4.0, `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`), `split` (or `--whole` when the split leaks, `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`), `loop`, `export --variant <track>=<recipe>` for every variant the brief gives the set (e.g. `normal=bass+other`, `question=+drums`, `submitted=full`, `timed=full` +gain or another section; one file per variant, all the same length, `decision 734: Soundtrack tension variants: one mixdown file per variant, not live layer mixing`), then `check`
+- Workers can''t hear: rank by the numbers (bpm vs listed, `comb_score`, `repeat_similarity`, seam, LUFS); rise in tension measured and noted per variant (`normal` < `question` < `submitted`: LUFS, onset density)
+- Budget: all variants of the set ≤ 1.4 MB together; loop ≥ 20 s
+- Install the top pick: `musica-<set>-<track>.m4a` in `app/client/public/audio/`, `loopStart`/`loopEnd` and `level` in the set''s `SOUNDTRACKS` entry (comment names the record), `CREDITS.md` rows from `trivia-music credits` (never hand-typed); a per-set `roll`/`victory` from this track, if the brief says so, is cut here as a one-shot (`export --whole`, -18 LUFS)
+- Alternates on `/sounds` (manifest group `music-<set>`, round N); their records are not committed
+- Pass: `trivia-music check` on the record, `trivia-music credits --check`, `stage-media.mjs --check`, `sound.test.ts` (this set no longer "not installed"); per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the round''s decision (`pm decision add`): where to listen (`/?efectos`: the set''s variants and the cuts; `/sounds` round N; a real game with `TRIVIA_SOUND=1`: question, lock-in, submit, a timed round, how to reach each), the pick''s numbers and the alternates; options: approve, swap in an alternate (by name), or changes ("more like this, less like that", a section, a variant''s recipe); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search with the new words, next round, decision raised again; until approved
+- Approved: the round and pick into `plans/25-sound.md` "Soundtracks" (track, author, licence, bpm, loop, variants and recipes, round), the record committed, the decision''s consequences', '2026-11-18T20:48:31Z', NULL, 2253, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2256, 224, 'New soundtracks: third set', 'work', 'open', NULL, NULL, 'Task 3 of `plan 224: New soundtracks`: the brief''s third set (iterative feedback).
+
+- First read `plans/25-sound.md` "Brief": when it names only two sets, `pm task drop` this task ("brief names two sets") and stop
+- Done when this set''s round decision is answered approve
+
+## Steps (same for every set; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": this set''s id, mood words, its tension variants (`normal`, `question`, `submitted`, `timed` at least), `roll`/`victory` from this set''s own track or shared, the default set) and the set''s `SOUNDTRACKS` entry left by `task 2243: The brief''s soundtracks: ids, names, default, picker`
+- Recipe: the music recipe next to the `trivia-music` tools (`plan 221: Music pipeline`); its reject thresholds bind
+- Search (`--web`) by the brief''s mood words: incompetech (`trivia-music search --feel … --bpm …`), Kenney and OpenGameArt CC0, Free Music Archive, Scott Buckley; prefer fixed tempo, instrumental, drums + bass + tune all present, a long steady section; reject live, drifting tempo; no Freesound API (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), no generators
+- Candidates: 2–3 tracks per round. Each: `fetch` or `record`, licence read on the track page (`record --read-on-page`; only CC0, PD, CC BY 3.0/4.0, `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`), `split` (or `--whole` when the split leaks, `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`), `loop`, `export --variant <track>=<recipe>` for every variant the brief gives the set (e.g. `normal=bass+other`, `question=+drums`, `submitted=full`, `timed=full` +gain or another section; one file per variant, all the same length, `decision 734: Soundtrack tension variants: one mixdown file per variant, not live layer mixing`), then `check`
+- Workers can''t hear: rank by the numbers (bpm vs listed, `comb_score`, `repeat_similarity`, seam, LUFS); rise in tension measured and noted per variant (`normal` < `question` < `submitted`: LUFS, onset density)
+- Budget: all variants of the set ≤ 1.4 MB together; loop ≥ 20 s
+- Install the top pick: `musica-<set>-<track>.m4a` in `app/client/public/audio/`, `loopStart`/`loopEnd` and `level` in the set''s `SOUNDTRACKS` entry (comment names the record), `CREDITS.md` rows from `trivia-music credits` (never hand-typed); a per-set `roll`/`victory` from this track, if the brief says so, is cut here as a one-shot (`export --whole`, -18 LUFS)
+- Alternates on `/sounds` (manifest group `music-<set>`, round N); their records are not committed
+- Pass: `trivia-music check` on the record, `trivia-music credits --check`, `stage-media.mjs --check`, `sound.test.ts` (this set no longer "not installed"); per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the round''s decision (`pm decision add`): where to listen (`/?efectos`: the set''s variants and the cuts; `/sounds` round N; a real game with `TRIVIA_SOUND=1`: question, lock-in, submit, a timed round, how to reach each), the pick''s numbers and the alternates; options: approve, swap in an alternate (by name), or changes ("more like this, less like that", a section, a variant''s recipe); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search with the new words, next round, decision raised again; until approved
+- Approved: the round and pick into `plans/25-sound.md` "Soundtracks" (track, author, licence, bpm, loop, variants and recipes, round), the record committed, the decision''s consequences', '2026-11-18T20:48:31Z', NULL, 2253, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2257, 224, 'New soundtracks: shared roll and victory', 'work', 'open', NULL, NULL, 'Task 4 of `plan 224: New soundtracks`: the shared `roll` and `victory` tracks (iterative feedback).
+
+- Read `plans/25-sound.md` "Brief": shared or per-set `roll`/`victory`, and whether the old drum roll `redoble.m4a` and Elgar `victoria.m4a` stay
+- Old files kept: nothing to do but note it in `plans/25-sound.md` "Soundtracks"; `pm task done` with that note
+- Per-set `roll`/`victory` cut from a set''s own track: that set''s task, not this one; note it and finish
+- New shared (or per-set from other tracks) files:
+  - Search (`--web`), same libraries and licence rules as the set tasks (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`; no Freesound API, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`): a drum roll that can turn into the result (plans/04 "Music": the roll turns into the result); a short victory piece ≤ 30 s, ≤ 400 kB (in place of Elgar''s 1.2 MB)
+  - `trivia-music record` (licence read on the page, `--read-on-page`), cut as a one-shot, not a loop (`export --whole`), -18 LUFS, `check`
+  - Install into `app/client/public/audio/` and the `roll`/`victory` slots of the soundtrack format (`task 2242: Soundtrack format and the old sets removed`); `CREDITS.md` rows from `trivia-music credits`, never hand-typed
+  - Alternates on `/sounds` (manifest group `music-roll-victory`, round N), their records not committed
+  - Raise the round''s decision (`pm decision add`): where to listen (`/?efectos`, `/sounds` round N, a real game with `TRIVIA_SOUND=1`: a submit''s roll into the result, a win), the pick''s numbers, the alternates; options: approve, an alternate, or changes; stage the work, make the task pending on it
+  - An answer with changes brings the task back: next round, decision raised again, until approved; approved: round and pick into `plans/25-sound.md` "Soundtracks", record committed, the decision''s consequences
+- Old files replaced: their deletion is `New soundtracks: old music files gone and the tally`''s, not this task''s
+- Pass: `trivia-music check`, `trivia-music credits --check`, `stage-media.mjs --check`; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:48:40Z', NULL, 2253, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2258, 224, 'New soundtracks: old music files gone and the tally', 'work', 'open', NULL, NULL, 'Task 5 of `plan 224: New soundtracks`: cleanup once every set and the roll/victory are approved.
+
+- `redoble.m4a` and `victoria.m4a` deleted with their `CREDITS.md` rows, unless `plans/25-sound.md` "Brief" keeps them
+- No `musica-*.m4a` in `app/client/public/audio/` without a record in `authoring/data/music/`; every set of the brief installed with every variant (`sound.test.ts` of `plan 222: Soundtracks in the engine and the picker` passes with no "not installed" set)
+- Pass: `trivia-music check` on every record, `trivia-music credits --check`, `stage-media.mjs --check` (the `audio` line of `app/desktop/media-budget.json` kept; a raise is the mix and close-out part''s to decide), the release-check credits step, the Credits screen shows the new rows
+- `plans/25-sound.md` "Soundtracks" complete: per set and for roll/victory: track, author, licence, bpm, loop, variants and recipes, approved round
+- `rg` every removed file name over code, comments and `.md` files; every hit fixed in the same commit (decision 200)
+- Effects are not this task''s (`plan 223: New sound effects`)
+- Done when all of the above pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:48:44Z', NULL, 2253, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -60075,6 +60150,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2456, 2244, '2026-11-18T20:45:58Z', '2026-11-18T20:47:36Z', 'done', NULL, 0, 'aac3913e4b6667384a3e195742e4565cfa79c05b', NULL, 'claude-opus-5-5', '005e1795-3e7f-4459-ad00-c0dd16b6e6b3', NULL, 13, 26, 7822, 727797, 53942, 0.73363939999999994, 68879, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2457, 2225, '2026-11-18T20:46:09Z', '2026-11-18T20:47:29Z', 'done', NULL, 0, 'aac3913e4b6667384a3e195742e4565cfa79c05b', 'app', 'claude-opus-5-5', 'f74f09a0-e365-41f0-841d-653ae92b89e4', NULL, 9, 18, 6386, 529097, 59837, 0.71230740000000015, 74892, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2458, 2226, '2026-11-18T20:47:30Z', NULL, 'running', NULL, NULL, 'aac3913e4b6667384a3e195742e4565cfa79c05b', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2459, 2253, '2026-11-18T20:47:37Z', '2026-11-18T20:48:56Z', 'done', NULL, 0, '63275d8fe8cc985f836654d0d2c8ec1ba89b619a', NULL, 'claude-opus-5-5', 'a810c509-c611-49a5-9330-9e169066cd49', NULL, 12, 22, 6524, 615500, 53851, 0.68447600000000008, 68894, 60, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -61308,6 +61384,24 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 224
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2249);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2250);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2251);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2254, 2229);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2254, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2254, 2239);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2254, 2243);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2255, 2229);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2255, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2255, 2239);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2255, 2243);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2256, 2229);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2256, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2256, 2239);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2256, 2243);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2257, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2257, 2242);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2258, 2254);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2258, 2255);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2258, 2256);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2258, 2257);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
