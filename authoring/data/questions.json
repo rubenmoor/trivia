@@ -1655387,6 +1655387,289 @@
         "kind": "video-scene",
         "probe": "media-probe/ed8c7221f9863364"
       }
+    },
+    {
+      "id": "q-21204",
+      "status": "needs_work",
+      "difficulty": 13,
+      "description": "Tonight's headliner has no band, no stage and no ticket booth, just a very big voice.",
+      "question": "Listen: which bird is singing in this recording?",
+      "answer": "Nightingale",
+      "wrong_answers": [
+        "Song thrush",
+        "Skylark",
+        "Blackbird"
+      ],
+      "hints": [
+        "It is a small, plain brown bird that hides in thick bushes, so you hear it far more often than you see it.",
+        "Poets love it: John Keats wrote a famous ode to it.",
+        "Its name comes from the time of day when it famously keeps singing while most other birds are asleep."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANachtegaal_in_de_duinen_-_SoundCloud_-_luc_de_bruijn.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Nachtegaal_in_de_duinen_-_SoundCloud_-_luc_de_bruijn.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "luc de bruijn · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "luc de bruijn",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Nachtegaal in de duinen - SoundCloud - luc de bruijn.ogg",
+        "note": "The first 60 seconds of a nightingale singing in coastal dunes: rich, varied phrases with fast trills, deep \"chook\" notes and pauses, with some faint background birds. No speech.",
+        "duration": 162.48,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "fun_fact": "A single male nightingale can know around 200 different song phrases and mixes them into a new order every time he sings.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Common nightingale singing",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 11,
+        "notes": "Hint 2 (Andersen's fairy tale “The Nightingale”) nearly gives the answer away, though it is still fair as a second hint. The nightingale is by far the most famous songbird of the four, so many adults would guess it even without recognising the song. Shares only the word with the Florence Nightingale question (q-1289). The audio source is suitable."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-88",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "The description's opening, “Tonight's headliner”, points at night singing, which is the nightingale's defining trait and the root of its name (the same clue hint 3 uses). Read with only the four options, it picks the nightingale over the song thrush, skylark and blackbird. Rewrite it to play on the concert theme without mentioning night or evening, for example “The headliner has no band, no stage and no ticket booth, just a very big voice.”",
+        "problems": [
+          "giveaway"
+        ],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "coastal sand dunes shrubs",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMorro_Strand_State_Beach_%281%29.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Morro_Strand_State_Beach_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Mike Baird from Morro Bay, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Mike Baird from Morro Bay, USA",
+        "author_url": "https://www.flickr.com/people/72825507@N00",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of Aves",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/846829bb92c93cb7"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Followed the final reviewer: rewrote the description so it no longer says the bird hides in bushes, removed Andersen's fairy tale from hint 2 because its title names the bird, and changed the fun fact to \"around 200\"; the recording itself looks clean.",
+        "previous": {
+          "description": "The bushes are giving a free concert, and the singer refuses to come out for applause.",
+          "hints": [
+            "It is a small, plain brown bird that hides in thick bushes, so you hear it far more often than you see it.",
+            "Poets love it: John Keats wrote an ode to it, and Hans Christian Andersen wrote a fairy tale about one that sang for a Chinese emperor.",
+            "Its name comes from the time of day when it famously keeps singing while most other birds are asleep."
+          ],
+          "fun_fact": "A single male nightingale can know more than 200 different song phrases and mixes them into a new order every time he sings."
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21205",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "Somewhere in the heather, a tiny motor runs for hours and nobody can find the switch.",
+      "question": "Listen: which bird makes this long, mechanical churring trill, heard on summer heathland?",
+      "answer": "Nightjar",
+      "wrong_answers": [
+        "Corncrake",
+        "Tawny owl",
+        "Cuckoo"
+      ],
+      "hints": [
+        "It catches moths in flight with a very wide mouth.",
+        "By day it sits on the ground or on a branch, its bark-patterned feathers making it almost invisible.",
+        "Old folk tales called it the “goatsucker”."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANachtzwaluw_in_Drenthe_-_SoundCloud_-_luc_de_bruijn.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Nachtzwaluw_in_Drenthe_-_SoundCloud_-_luc_de_bruijn.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "luc de bruijn · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "luc de bruijn",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Nachtzwaluw in Drenthe - SoundCloud - luc de bruijn.ogg",
+        "note": "The European nightjar's steady, loud churring trill (about 1.5–2 kHz), which fills the first 22 s; the quieter chirps and whistle after that are left out.",
+        "duration": 78.65,
+        "excerpt": {
+          "start": 0,
+          "end": 22
+        }
+      },
+      "fun_fact": "Old legends wrongly claimed this bird drank milk from goats, so its scientific family name, Caprimulgidae, means “goat-milkers”.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "European nightjar churring",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "The corncrake is a good distractor. The tawny owl and the cuckoo are weaker, because their calls are well known and unlike a trill. The question text already gives the “mechanical churring” clue, and the description repeats it. “Summer heathland” has a European feel, but that is acceptable. The facts are correct: Caprimulgus means “goat-milker” in Latin."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-88",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "heather heathland landscape",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHaltern_am_See%2C_Westruper_Heide_--_2025_--_8721.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Haltern_am_See%2C_Westruper_Heide_--_2025_--_8721.jpg/3840px-Haltern_am_See%2C_Westruper_Heide_--_2025_--_8721.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of Aves",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/efa29e48b6c81579"
+      }
+    },
+    {
+      "id": "q-21206",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "Somewhere in Europe, a very small bird is having a very big morning.",
+      "question": "Listen: which bird is singing this song?",
+      "answer": "Sedge warbler",
+      "wrong_answers": [
+        "Eurasian skylark",
+        "Common nightingale",
+        "European robin"
+      ],
+      "hints": [
+        "This singer is a small brown bird that spends the winter in Africa south of the Sahara.",
+        "It hides in reeds and tall plants by the water and never seems to sing the same phrase twice.",
+        "Its name comes from a grassy wetland plant, and it belongs to the same family as the reed warbler."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARietzanger_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Rietzanger_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Rietzanger - SoundCloud - Beeld en Geluid.ogg",
+        "note": "Play the first 60 seconds: one sedge warbler's continuous, rapid, scratchy and varied song with chattering notes, loud and clean, with little silence.",
+        "duration": 130.39,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "fun_fact": "A male sedge warbler with a more varied song tends to find a mate sooner, and once he has paired up, he mostly stops singing.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Sedge warbler singing (Rietzanger)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 3,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 15,
+        "notes": "The facts check out. 'Rietzanger' is Dutch for sedge warbler. It is in the reed warbler family (Acrocephalidae) and winters south of the Sahara. The fun fact about song variety and stopping after pairing matches Catchpole's research. Telling birds apart by song is expert knowledge, so this is closer to 15 than 14. Most families can only guess, and the answer is the one option they won't recognise. The distractors are famous songbirds that a birder could rule out, but for everyone else the unfamiliar 'Sedge warbler' stands out, and they will tend to pick the nightingale. The fun is limited: few players can get there by reasoning, though hints 2 and 3 help. Hint 1 (small brown bird, winters in Africa) also fits the nightingale, which is fine for a vague hint. The record has no background_query; an audio question needs one, e.g. 'reed bed wetland'. Make sure that image shows no bird. The audio is likely clear, since it comes from a recording collection, and 60 seconds is long but workable. The description is pleasant but only mildly funny."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-88",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "spring morning countryside",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMountains-9795%2C_Dingle_Peninsula%2C_Co._Kerry%2C_Ireland.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mountains-9795%2C_Dingle_Peninsula%2C_Co._Kerry%2C_Ireland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Maoileann · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Maoileann",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Maoileann",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of Aves",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/945293800934f25b"
+      }
     }
   ]
 }

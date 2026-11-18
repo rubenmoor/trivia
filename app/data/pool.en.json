@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "389d440c",
+  "hash": "ee5c86b8",
   "questions": [
     {
       "id": "q-0001",
@@ -220404,6 +220404,100 @@
         }
       },
       "background": null
+    },
+    {
+      "id": "q-21205",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Somewhere in the heather, a tiny motor runs for hours and nobody can find the switch.",
+      "question": "Listen: which bird makes this long, mechanical churring trill, heard on summer heathland?",
+      "answer": "Nightjar",
+      "wrong_answers": [
+        "Corncrake",
+        "Tawny owl",
+        "Cuckoo"
+      ],
+      "hints": [
+        "It catches moths in flight with a very wide mouth.",
+        "By day it sits on the ground or on a branch, its bark-patterned feathers making it almost invisible.",
+        "Old folk tales called it the “goatsucker”."
+      ],
+      "fun_fact": "Old legends wrongly claimed this bird drank milk from goats, so its scientific family name, Caprimulgidae, means “goat-milkers”.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Nachtzwaluw_in_Drenthe_-_SoundCloud_-_luc_de_bruijn.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANachtzwaluw_in_Drenthe_-_SoundCloud_-_luc_de_bruijn.ogg",
+        "credit": "luc de bruijn · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "luc de bruijn",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 22
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Haltern_am_See%2C_Westruper_Heide_--_2025_--_8721.jpg/3840px-Haltern_am_See%2C_Westruper_Heide_--_2025_--_8721.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHaltern_am_See%2C_Westruper_Heide_--_2025_--_8721.jpg",
+        "credit": "Dietmar Rabich · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Dietmar Rabich",
+        "author_url": "https://www.wikidata.org/wiki/Q34788025"
+      }
+    },
+    {
+      "id": "q-21206",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Somewhere in Europe, a very small bird is having a very big morning.",
+      "question": "Listen: which bird is singing this song?",
+      "answer": "Sedge warbler",
+      "wrong_answers": [
+        "Eurasian skylark",
+        "Common nightingale",
+        "European robin"
+      ],
+      "hints": [
+        "This singer is a small brown bird that spends the winter in Africa south of the Sahara.",
+        "It hides in reeds and tall plants by the water and never seems to sing the same phrase twice.",
+        "Its name comes from a grassy wetland plant, and it belongs to the same family as the reed warbler."
+      ],
+      "fun_fact": "A male sedge warbler with a more varied song tends to find a mate sooner, and once he has paired up, he mostly stops singing.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Rietzanger_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARietzanger_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Mountains-9795%2C_Dingle_Peninsula%2C_Co._Kerry%2C_Ireland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMountains-9795%2C_Dingle_Peninsula%2C_Co._Kerry%2C_Ireland.jpg",
+        "credit": "Maoileann · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Maoileann",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Maoileann"
+      }
     }
   ]
 }
