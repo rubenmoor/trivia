@@ -198,4 +198,16 @@ Four moods around decision 83's reference ("chill and relaxing, with a clear ris
 
 ## Brief
 
-Filled by the sound brief task.
+The developer's picks after listening on `/sounds` (`decision 735: Sound brief, round 1: effect theme, soundtracks and their moods, tension variants, default, old sounds to keep`, answered 2026-11-18, final after round 1). Parts 3–5 follow it; the developer wants to try the new sounds in a real game next.
+
+| Question | Round | Choice |
+|---|---|---|
+| Effect theme | 1 | one theme for every group: `clean-digital` (Kenney UI Audio + Digital Audio, CC0); applause and crowd sounds: today's files |
+| Soundtrack count, moods | 1 | 3: `chill-lofi` (Late Night Radio), `warm-acoustic` (Bossa Antigua), `jazz-quiz-show` (Backbay Lounge); all Kevin MacLeod, CC BY 4.0 |
+| Tension variants | 1 | per set `normal`, `question`, `submitted`, `timed`; `roll` and `victory` shared by all sets |
+| `sintetizada`, default | 1 | `sintetizada` leaves the picker; default `chill-lofi` (replaces `decision 361: Soundtracks: take the sets found, or look further?`'s default) |
+| Old sounds kept | 1 | Elgar victory (`victoria`), drum roll (`redoble`), applause; fanfares and all other old effects replaced |
+| Another round | 1 | no: final |
+
+- Lapse with the brief (applied by part 6): `decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`, `task 146: Developer check of the three new joker sounds on the TV`, `task 1865: Developer check of the fanfare variants on the TV`, `task 150: Close UI-10 in the plans`
+- Joker meanings (`decision 81: Recorded sound effects: approve on the TV?`: broom, microwave bing, fairy wand) stay; `clean-digital` has no broom: part 5's joker round finds a fitting sound within the theme or a CC0/PD/CC BY broom
