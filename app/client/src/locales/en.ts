@@ -111,10 +111,6 @@ export const en = {
   /** Soundtrack names in the overlay, by mood (plan 182). */
   soundtrack: {
     sintetizada: "Synthesized",
-    variaciones: "Variations",
-    caja: "Music box",
-    "sin-prisa": "Unhurried",
-    reflejos: "Reflections",
   },
   language: {
     choose: "Choose your language",

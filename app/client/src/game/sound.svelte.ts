@@ -1,12 +1,14 @@
 // The audio engine (plans/04-ui-tv-display.md, "Audio", UI-8, D-21/D-22): one AudioContext,
 // three channels (music, effects, question media) under a master gain, fades and crossfades.
 // Recorded sounds live in app/client/public/audio/ (free licences, CREDITS.md, UI-10) and replace the
-// synthesized ones they cover. Music is a choice of soundtracks (plan 182): recorded sets of three
-// loops (SOUNDTRACKS) and the generated one, `sintetizada`, which is also the fallback for a missing
-// file. Still synthesized: the effect cues without a recording (recipes below) and the generated loops.
+// synthesized ones they cover. Music is a choice of soundtracks (plan 182, soundtracks.ts): recorded sets
+// of loops, one file per variant; the generated loops are the fallback for a missing file. Still synthesized: the effect cues without a recording (recipes below) and the generated loops.
 
 import { pickVariant } from "../engine/variant.ts";
 import { desktop } from "../lib/desktop.ts";
+import { DEFAULT_SOUNDTRACK, resolveSoundtrack, sameBeat, soundtrackIds, soundtrackFile, soundtrackFiles, soundtrackOf, type SoundtrackId } from "./soundtracks.ts";
+
+export { soundtrackIds, type SoundtrackId } from "./soundtracks.ts";
 
 /** normal: Start/Level/Select; question: a question on screen; submitted: an answer locked in;
  * roll: the drum roll from «Respuesta final» until the reveal; victory: «Pomp and Circumstance»
@@ -38,69 +40,13 @@ function loadVolumes(): Volumes {
   };
 }
 
-/** A soundtrack: one matched set of the loops `normal`, `question`, `submitted` (04, "Music").
- * `files` are names in `public/audio/` without `.m4a` (none: the generated loops); the loop plays
- * `loopStart`..`loopEnd` seconds (AAC pads the end: loop on the bars, not the file length); `level`
- * lifts it to the music bus, set for the soft generated loops; `sameBeat`: the three loops share
- * tempo and length, so a cut between `question` and `submitted` keeps the beat. */
-type Soundtrack = {
-  files?: Record<"normal" | "question" | "submitted", string>;
-  loopStart: number;
-  loopEnd: number;
-  level: number;
-  sameBeat: boolean;
-};
-
-export const SOUNDTRACKS = {
-  sintetizada: { loopStart: 0, loopEnd: 0, level: 1, sameBeat: false },
-  // OpenGameArt «Music loop variations», CC0: 8 bars at 100 bpm
-  variaciones: {
-    files: { normal: "musica-variaciones-normal", question: "musica-variaciones-pregunta", submitted: "musica-variaciones-enviada" },
-    loopStart: 0,
-    loopEnd: 19.2,
-    level: 1.6,
-    sameBeat: true,
-  },
-  // OpenGameArt «Adaptive layers pack» by 3xBlast, CC BY 3.0: 16 bars at ~157 bpm, music box → + bass drum and synth → full synth
-  caja: {
-    files: { normal: "musica-caja-normal", question: "musica-caja-pregunta", submitted: "musica-caja-enviada" },
-    loopStart: 0,
-    loopEnd: 24.4586,
-    level: 1.6,
-    sameBeat: true,
-  },
-  // OpenGameArt «Thoughtful Music Loops Library» by Little Robot Sound Factory, CC BY 3.0: «No Need To Worry», loops 00 / 08 / 05, 20 s each
-  "sin-prisa": {
-    files: { normal: "musica-sin-prisa-normal", question: "musica-sin-prisa-pregunta", submitted: "musica-sin-prisa-enviada" },
-    loopStart: 0,
-    loopEnd: 20,
-    level: 1.6,
-    sameBeat: true,
-  },
-  // Same library, «Reflections», loops 00 / 04 / 05 doubled (the three lengths differ by ≤ 50 ms)
-  reflejos: {
-    files: { normal: "musica-reflejos-normal", question: "musica-reflejos-pregunta", submitted: "musica-reflejos-enviada" },
-    loopStart: 0,
-    loopEnd: 22.597,
-    level: 1.6,
-    sameBeat: true,
-  },
-} as const satisfies Record<string, Soundtrack>;
-
-export type SoundtrackId = keyof typeof SOUNDTRACKS;
-const DEFAULT_SOUNDTRACK: SoundtrackId = "sintetizada";
-export const soundtrackIds = Object.keys(SOUNDTRACKS) as SoundtrackId[];
-const soundtrackOf = (id: SoundtrackId): Soundtrack => SOUNDTRACKS[id];
-
-/** A stored id that isn't a known soundtrack falls back to the default. */
+/** A stored id that isn't a known soundtrack (old ids included) falls back to the default. */
 function loadSoundtrack(): SoundtrackId {
   try {
-    const id = localStorage.getItem(STORE_SOUNDTRACK);
-    if (id && Object.hasOwn(SOUNDTRACKS, id)) return id as SoundtrackId;
+    return resolveSoundtrack(localStorage.getItem(STORE_SOUNDTRACK));
   } catch {
-    /* private window */
+    return DEFAULT_SOUNDTRACK; // private window
   }
-  return DEFAULT_SOUNDTRACK;
 }
 
 /** Reactive settings (the admin overlay edits them) and what is playing. */
@@ -128,7 +74,7 @@ const EFFECT_NAMES = [
 type Sample = (typeof EFFECT_NAMES)[number];
 const SAMPLE_NAMES: string[] = [
   ...EFFECT_NAMES,
-  ...Object.values(SOUNDTRACKS).flatMap((t) => ("files" in t ? Object.values(t.files) : [])),
+  ...soundtrackFiles(),
 ];
 const samples: Partial<Record<string, AudioBuffer>> = {};
 let samplesLoaded: Promise<void> = Promise.resolve();
@@ -242,7 +188,7 @@ export function setVolumes(v: Partial<Volumes>) {
 
 /** Pick the soundtrack; a loop that is playing crossfades to the same track of the new one, from 0. */
 export function setSoundtrack(id: SoundtrackId) {
-  if (!Object.hasOwn(SOUNDTRACKS, id)) return;
+  if (!soundtrackIds.includes(id)) return;
   sound.soundtrack = id;
   try {
     localStorage.setItem(STORE_SOUNDTRACK, id);
@@ -287,16 +233,17 @@ const LOOPS: Track[] = ["normal", "question", "submitted", "timed"];
  * on the Question screen the changes are sharp cuts: locking in, unlocking, the drum roll, the
  * reveal (developer feedback: the music has to jump when an answer is clicked). */
 export function music(track: Track | null, opts: { soundtrack?: SoundtrackId } = {}) {
-  if (track === sound.music && opts.soundtrack === override) return;
+  const pick = opts.soundtrack === undefined ? undefined : resolveSoundtrack(opts.soundtrack); // unknown id: the default
+  if (track === sound.music && pick === override) return;
   const from = sound.music;
   sound.music = track;
-  override = opts.soundtrack;
+  override = pick;
   if (!ctx) return;
   const inQuestion = (t: Track | null) => t === "question" || t === "submitted" || t === "roll";
   const sharp = inQuestion(from) && (inQuestion(track) || track === null);
   // question ↔ submitted share tempo and length: the new loop picks up the old one's beat.
   const beatGoesOn =
-    soundtrackOf(override ?? sound.soundtrack).sameBeat &&
+    sameBeat(override ?? sound.soundtrack) &&
     (from === "question" || from === "submitted") && (track === "question" || track === "submitted");
   const offset = beatGoesOn ? current?.position?.() : undefined;
   fadeOut(sharp ? (from === "roll" ? 0.15 : 0.08) : 0.6);
@@ -327,7 +274,7 @@ const ROLL_HZ = 22;
 const ROLL_BUILD_S = 6;
 const hz = (midi: number) => 440 * 2 ** ((midi - 69) / 12);
 
-/** The loops; `timed` plays a recorded soundtrack's `question` loop, `sintetizada` its own generated one. */
+/** The loops; a set without the file plays the generated one. */
 type LoopTrack = "normal" | "question" | "submitted" | "timed";
 
 function startTrack(track: Track, fadeIn: number, opts: { soundtrack?: SoundtrackId; offset?: number } = {}) {
@@ -406,8 +353,9 @@ function startTrack(track: Track, fadeIn: number, opts: { soundtrack?: Soundtrac
       stopLoop = () => clearInterval(timer);
       return;
     }
-    const st = soundtrackOf(opts.soundtrack ?? sound.soundtrack);
-    const file = st.files?.[track === "timed" ? "question" : track];
+    const id = resolveSoundtrack(opts.soundtrack ?? sound.soundtrack);
+    const st = soundtrackOf(id);
+    const file = soundtrackFile(id, track);
     const buffer = file && samples[file];
     if (!buffer) return void (stopLoop = generate(c, gain, track, keep));
     const len = st.loopEnd - st.loopStart;

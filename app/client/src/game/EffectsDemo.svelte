@@ -2,7 +2,8 @@
   // /?efectos: every effect, recorded and synthesized, to compare on the TV (dev aid, UI-10).
   import Splash from "./question/Splash.svelte";
   import { SPLASH_ENTRANCES, SPLASH_EXITS, type SplashEntrance, type SplashExit } from "./question/splash.ts";
-  import { effects, music, sfx, setSoundtrack, sound, SOUNDTRACKS, soundtrackIds, unlock, type Cue, type EffectGroup, type SoundtrackId, type Track } from "./sound.svelte.ts";
+  import { effects, music, sfx, setSoundtrack, sound, soundtrackIds, unlock, type Cue, type EffectGroup, type SoundtrackId, type Track } from "./sound.svelte.ts";
+  import { REQUIRED_TRACKS, sameBeat, soundtrackFile } from "./soundtracks.ts";
 
   const list = effects();
   const GROUP_LABEL: Record<EffectGroup, string> = { ui: "UI", reveal: "reveal", jokers: "jokers", fireworks: "fireworks", splash: "category splash", timed: "timed", other: "other" };
@@ -12,8 +13,8 @@
     unlock();
     splash = { exit, entrance, n: (splash?.n ?? 0) + 1 };
   }
-  const FILE_NAME: Record<Track, string> = { normal: "normal", question: "pregunta", submitted: "enviada", timed: "timed", roll: "roll", victory: "victory" };
-  const loops: Track[] = ["normal", "question", "submitted", "timed"];
+  /** Pairs that cut on the beat (the engine keeps the position between question and submitted). */
+  const CUTS: [Track, Track][] = [["question", "submitted"]];
   let shown = $state<SoundtrackId>(soundtrackIds[0]);
 
   function play(cue: Cue, synthesized: boolean, file?: string) {
@@ -35,16 +36,20 @@
       {#each soundtrackIds as id (id)}
         <tr>
           <td class:on={sound.soundtrack === id}><button onclick={() => setSoundtrack(id)} title="elegir (se guarda)">{id}</button></td>
-          {#each loops as track (track)}
+          {#each REQUIRED_TRACKS as track (track)}
             <td class:on={sound.music === track && shown === id}>
-              <button onclick={() => loop(track, id)}>{"files" in SOUNDTRACKS[id] ? FILE_NAME[track] : track}</button>
+              <button onclick={() => loop(track, id)}>{soundtrackFile(id, track) ? track : `${track} (generated)`}</button>
             </td>
           {/each}
-          <td><button onclick={() => loop(sound.music === "question" ? "submitted" : "question", id)}>corte</button></td>
+          {#if sameBeat(id)}
+            {#each CUTS as [a, b] (a)}
+              <td><button onclick={() => loop(sound.music === a ? b : a, id)}>corte {a} ↔ {b}</button></td>
+            {/each}
+          {/if}
         </tr>
       {/each}
       <tr>
-        <td colspan="6"><button onclick={() => loop(null)}>parar</button></td>
+        <td colspan="7"><button onclick={() => loop(null)}>parar</button></td>
       </tr>
       {#each SPLASH_ENTRANCES as entrance (entrance.id)}
         <tr>
