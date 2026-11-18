@@ -1,0 +1,140 @@
+# Sound
+
+This file is the owner document for everything the game plays: sound effects, music and the engine that plays them. It starts with an inventory of today's sounds, written as the base for the sound rework (milestone 22), and ends with the brief that the rework follows. Later parts of the rework write their outcomes here. Cue names are mod API and stay; new cues are additive.
+
+## Inventory
+
+State on 2026-11-18, before the rework. Sources: `app/client/src/game/sound.svelte.ts` (`Cue`, `SAMPLE_FOR`, `SOUNDTRACKS`), `app/client/public/audio/` (files, `CREDITS.md`), `rg` over `app/client/src` for call sites (file:line, relative to `app/client/src/game/`). Loudness: ffmpeg `ebur128`, integrated LUFS and peak (dBTP) of the shipped `.m4a`; for a cue with variants, the first file. Binding: `decision 81: Recorded sound effects: approve on the TV?` (joker sounds say what the joker does: broom, microwave bing, fairy wand); `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators` for new sounds.
+
+### Effect cues
+
+62 cues (`Cue` members). Every cue has a call site. "Synth only": no recording, a recipe in `RECIPES` plays. A cue with a recording falls back to its recipe when the file does not decode. Variants: `SAMPLE_FOR` rate (pitch) functions and random file lists.
+
+| Cue | Group | Game moment | Meaning | Call sites | File(s) | Length / loudness | Author, licence | Variants |
+|---|---|---|---|---|---|---|---|---|
+| `silence` | other | Francotirador: the beat of silence before the cork shot | nothing: a deliberate gap (no sound) | Question.svelte:291 | synth only | - | synth | - |
+| `rocket` | fireworks | Victory fireworks: a rocket climbs | launch, anticipation | Fireworks.svelte:71 | cohete | 1.45 s, -15.9 LUFS, -4.5 dBTP | ReadeOnly CC0 | rate 0.9 + Math.random() * 0.2 |
+| `burst` | fireworks | Fireworks: the rocket bursts | celebration | Fireworks.svelte:77 | estallido | 2.56 s, -15.5 LUFS, -1.0 dBTP | mary905 Public domain | rate 0.85 + Math.random() * 0.3 |
+| `confetti-cannon` | fireworks | Fireworks: confetti cannon | party pop | Fireworks.svelte:91 | canon-confeti | 0.35 s, -70.0 LUFS, -1.3 dBTP | Breviceps CC0 | rate 0.85 + Math.random() * 0.3 |
+| `sparklers` | fireworks | Fireworks: sparklers | crackling glitter | Fireworks.svelte:141 | bengalas | 2.38 s, -18.2 LUFS, -1.2 dBTP | Alex_hears_things CC0 | - |
+| `stars` | fireworks | Fireworks: falling stars | twinkle | Fireworks.svelte:151 | estrellas | 2.30 s, -16.1 LUFS, -4.7 dBTP | LilMati CC0 | rate 0.9 + Math.random() * 0.2 |
+| `applause` | reveal | Transition into ¡Correcto! | crowd approval | Game.svelte:459,465 | aplausos | 6.40 s, -16.8 LUFS, -0.5 dBTP | Sandermotions CC0 | - |
+| `applause-big` | reveal | Transition into Victory | crowd goes wild | Game.svelte:460,461,475,482 | aplausos-gran | 11.70 s, -16.8 LUFS, 4.9 dBTP | starlite Public domain | - |
+| `whoosh` | UI | Screen change (start, language, level, timed…) | moving on | Game.svelte:232,241,245,357,370,372 | whoosh | 0.43 s, -18.0 LUFS, -1.7 dBTP | qubodup CC0 | - |
+| `swoosh-up` | jokers | Cambiazo: the card flip | card turns over | Game.svelte:342 | swoosh-sube | 0.53 s, -20.7 LUFS, -1.6 dBTP | SlavicMagic CC0 | - |
+| `swoosh` | UI | Transition into a question | question arrives | Game.svelte:371,445 | escoba | 0.28 s, -70.0 LUFS, -3.3 dBTP | semccab CC0 | - |
+| `tear` | UI | The chosen card's envelope tears open | opening the question | Game.svelte:443 | rasgado | 0.68 s, -18.4 LUFS, -0.9 dBTP | ludde44 CC0 | - |
+| `paper` | UI | Transition to Select / Question after a joker or a pick | page turn | Game.svelte:347,567,580,603,621 | papel | 1.31 s, -15.6 LUFS, -1.1 dBTP | planish Public domain | - |
+| `ready` | UI | «¡Hola, …!» and «listo» into level 1 | welcome, ready | Game.svelte:372 (as transition),432 | hola | 0.29 s, -70.0 LUFS, 2.3 dBTP | Kenney CC0 | - |
+| `boom` | reveal | Transition into wrong; «Respuesta final» lock; sudden death | impact, bad news | Game.svelte:458,462,476; Question.svelte:197; Level.svelte:60 | synth only | - | synth | - |
+| `block` | reveal | The new block lands on the tower (pitch rises with the level) | progress, weight | Game.svelte:356 | golpe | 0.39 s, -70.0 LUFS, -1.1 dBTP | gregoryweir Public domain | rate 0.75 + level * 0.06 |
+| `cork-pop` | jokers | Francotirador: the shot | the shot is fired | Question.svelte:293 | corcho | 0.52 s, -16.0 LUFS, 2.3 dBTP | KenRT CC0 | - |
+| `pop` | UI | Picking a card | card selected | Game.svelte:440 | pop | 0.10 s, -70.0 LUFS, -1.5 dBTP | unfa CC0 | rate 0.9 + Math.random() * 0.25 |
+| `padlock-close` | UI | Locking in an answer; Timed: claim locked | answer is locked | Question.svelte:165,179; Timed.svelte:231 | candado-cierra | 0.66 s, -19.0 LUFS, 4.1 dBTP | SpaceJoe CC0 | - |
+| `padlock-open` | UI | Unlocking an answer; the lock opens before «Respuesta final» | answer unlocked | Question.svelte:170,221 | candado-abre | 0.27 s, -70.0 LUFS, -3.0 dBTP | SpaceJoe CC0 | - |
+| `fanfare` | reveal | Right answer (one of 5 fanfares at random); Timed right; Career | triumph | Question.svelte:203; Timed.svelte:246; Career.svelte:94 | fanfarria + 4 variants (fanfarria-2, fanfarria-3, fanfarria-4, fanfarria-5) | 4.50 s, -12.1 LUFS, -1.5 dBTP (first of 5) | Concert Band of the United States Air Force Heritage of America Band Public domain (US government work); United States Air Force Band of Mid-America Public domain (US government work); United States Air Force Band of the Rockies Public domain (US government work); United States Coast Guard Band Public domain (US government work); United States Navy Band Public domain (US government work) | random of 5 |
+| `sad-trombone` | reveal | Wrong answer; Francotirador hit | failure (comic) | Question.svelte:203,297 | trombon-triste | 4.21 s, -10.6 LUFS, -0.9 dBTP | Joe Lamb CC BY 3.0 | - |
+| `rewind` | jokers | «Rebobinar» transition (undo, Francotirador hit) | going back in time | Game.svelte:349 (transition effect) | rebobinar | 0.78 s, -16.9 LUFS, -4.2 dBTP | simplewave CC0 | - |
+| `menu-open` | UI | Menu or dialog opens | opening | Game.svelte:530,647,664 | menu-abre | 0.23 s, -70.0 LUFS, -3.0 dBTP | Kenney CC0 | - |
+| `menu-close` | UI | Menu or dialog closes | closing | Game.svelte:551,664,911 | menu-cierra | 0.23 s, -70.0 LUFS, -1.3 dBTP | Kenney CC0 | - |
+| `unlocked` | UI | First click: audio unlocked | the game is awake | Game.svelte:744 | desbloqueado | 0.28 s, -70.0 LUFS, -1.5 dBTP | Kenney CC0 | - |
+| `joker-armed` | jokers | Arming Soplo or Bájale («¿Usar …?») | question asked: confirm? | Question.svelte:260 | comodin-preparado | 0.49 s, -16.3 LUFS, -7.2 dBTP | Kenney CC0 | - |
+| `joker-open` | jokers | Opening Paso's or Cambiazo's dialog | options fan out | Question.svelte:254 | comodin-abre | 0.72 s, -22.6 LUFS, -1.6 dBTP | Kenney CC0 | - |
+| `joker-activate` | jokers | A joker is played | magic shimmer | Question.svelte:276 | comodin | 1.42 s, -15.5 LUFS, -9.2 dBTP | LaurenPonder CC0 | - |
+| `whistle-down` | timed | Timed: wrong answer | falling, failed | Timed.svelte:246 | silbato | 1.17 s, -16.0 LUFS, -9.6 dBTP | v0idation CC0 | - |
+| `stamp` | jokers | Paso: the «ELIMINADO» stamp; Career stamp | official mark | Shredder.svelte:19; Career.svelte:81 | sello | 0.70 s, -16.7 LUFS, -0.9 dBTP | Subhashish Panigrahi CC BY 3.0 | - |
+| `shredder` | jokers | Paso with purge: the shredder | question destroyed | Shredder.svelte:23 | trituradora | 1.20 s, -19.3 LUFS, -1.9 dBTP | Soundscape_Leuphana CC0 | - |
+| `heartbeat` | jokers | Francotirador scope opens; Timed claim wait (every 1.2 s) | tension | Question.svelte:254; Timed.svelte:277,278 | latido | 0.95 s, -17.6 LUFS, -1.5 dBTP | Lunardrive CC0 | - |
+| `tick` | UI | Stepper, switch, Esc row, bundle tile, level count | small change of a value | GameSettings.svelte:56; Customize.svelte:23; BundleSelector.svelte:88; Overlay.svelte:68,74,209,214,219; screens/Choice.svelte:109; screens/Level.svelte:66; screens/Question.svelte:328 | mira-tic | 0.02 s, -70.0 LUFS, -6.5 dBTP | Kenney CC0 | rate 0.95 + Math.random() * 0.1 |
+| `glass-break` | jokers | Francotirador miss: the answer shatters; a heart cracks (Level) | something breaks | Question.svelte:302; Level.svelte:61 | vidrio | 1.49 s, -27.0 LUFS, 6.2 dBTP | Gravity Sound CC BY 4.0 | - |
+| `rustle` | jokers | Soplo: the note slides in; Timed: a new hint | a note / hint arrives | Question.svelte:319; Timed.svelte:194 | susurro-papel | 0.66 s, -24.4 LUFS, -1.3 dBTP | Tomoyo Ichijouji CC0 | - |
+| `broom` | jokers | Paso y fuera: the broom sweeps the question away | sweeping away (decision 81) | Question.svelte:311 | barrido | 1.60 s, -19.1 LUFS, -0.8 dBTP | esperri CC0 | - |
+| `bing` | jokers | Soplo: the microwave bell; RankBar rank up | «ready» / a hint is served (decision 81) | Question.svelte:318; RankBar.svelte:32,43 | microondas | 0.75 s, -23.3 LUFS, -0.4 dBTP | CAT-FOX_ALEX CC0 | - |
+| `wand` | jokers | Hada madrina: the wand | magic that makes it easier (decision 81) | Game.svelte:342 | varita | 1.80 s, -18.1 LUFS, -6.7 dBTP | zazz.sound.design CC0 | - |
+| `token-back` | jokers | A fresh joker token pops back | a joker is replenished | Question.svelte:281 | ficha | 0.12 s, -70.0 LUFS, -1.6 dBTP | Kenney CC0 | rate 0.95 + Math.random() * 0.15 |
+| `claim` | timed | Timed: a player claims the question | buzzer | Timed.svelte:223 | synth only | - | synth | - |
+| `countdown` | timed | Timed: last 3 s of the claim (level 1–3) | time running out | Timed.svelte:286 | synth only | - | synth | - |
+| `splash-left` | category splash | Splash: flies left (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | whoosh | 0.43 s, -18.0 LUFS, -1.7 dBTP | qubodup CC0 | - |
+| `splash-right` | category splash | Splash: flies right (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | escoba | 0.28 s, -70.0 LUFS, -3.3 dBTP | semccab CC0 | - |
+| `splash-fade` | category splash | Splash: fades (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | susurro-papel | 0.66 s, -24.4 LUFS, -1.3 dBTP | Tomoyo Ichijouji CC0 | - |
+| `splash-spin` | category splash | Splash: spins (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | swoosh-sube | 0.53 s, -20.7 LUFS, -1.6 dBTP | SlavicMagic CC0 | rate 1.2 |
+| `splash-dissolve` | category splash | Splash: dissolves into particles (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | disolver | 0.95 s, -18.0 LUFS, -7.7 dBTP | Kenney CC0 | - |
+| `splash-explode` | category splash | Splash: explodes (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | estallido | 2.56 s, -15.5 LUFS, -1.0 dBTP | mary905 Public domain | rate 1.1 |
+| `splash-rocket` | category splash | Splash: rocket (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | cohete | 1.45 s, -15.9 LUFS, -4.5 dBTP | ReadeOnly CC0 | - |
+| `splash-drop` | category splash | Splash: drops (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | golpe | 0.39 s, -70.0 LUFS, -1.1 dBTP | gregoryweir Public domain | rate 0.8 |
+| `splash-wind` | category splash | Splash: blown by wind (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | escoba | 0.28 s, -70.0 LUFS, -3.3 dBTP | semccab CC0 | rate 0.8 |
+| `splash-blind` | category splash | Splash: blinds close (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | rebobinar | 0.78 s, -16.9 LUFS, -4.2 dBTP | simplewave CC0 | - |
+| `splash-drain` | category splash | Splash: drains away (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | silbato | 1.17 s, -16.0 LUFS, -9.6 dBTP | v0idation CC0 | - |
+| `splash-pop` | category splash | Splash: pops (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | pop | 0.10 s, -70.0 LUFS, -1.5 dBTP | unfa CC0 | rate 1.1 |
+| `splash-zoom` | category splash | Splash: zooms (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | whoosh | 0.43 s, -18.0 LUFS, -1.7 dBTP | qubodup CC0 | rate 1.3 |
+| `splash-shatter` | category splash | Splash: shatters (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | vidrio | 1.49 s, -27.0 LUFS, 6.2 dBTP | Gravity Sound CC BY 4.0 | - |
+| `splash-melt` | category splash | Splash: melts (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | derretir | 0.50 s, -24.5 LUFS, -2.0 dBTP | Kenney CC0 | - |
+| `splash-blackhole` | category splash | Splash: black hole (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | agujero-negro | 0.85 s, -17.9 LUFS, -2.9 dBTP | Kenney CC0 | - |
+| `splash-birds` | category splash | Splash: letters scatter like birds (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | pajaros | 0.52 s, -18.0 LUFS, -6.8 dBTP | Kenney CC0 | - |
+| `splash-typewriter` | category splash | Splash: typewriter backspace (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | maquina-escribir | 0.57 s, -22.5 LUFS, -1.9 dBTP | Kenney CC0 | - |
+| `splash-plane` | category splash | Splash: paper plane (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | papel | 1.31 s, -15.6 LUFS, -1.1 dBTP | planish Public domain | - |
+| `splash-jelly` | category splash | Splash: jelly wobble (category title leaving, question.svelte) | the title exits in that style | question/Splash.svelte:100 via question/splash.ts | gelatina | 0.42 s, -18.5 LUFS, -3.0 dBTP | Kenney CC0 | - |
+
+Notes:
+- `splash-*` cues reuse files of other cues (whoosh, escoba, vidrio, …) or have their own (`disolver`, `derretir`, `agujero-negro`, `pajaros`, `gelatina`, `maquina-escribir`); the 20 splash styles are in `question/splash.ts`.
+- Every file in the folder is referenced by `EFFECT_NAMES` or a soundtrack; every recording is the file of at least one cue.
+- `-70.0 LUFS`: the clip is under 0.4 s, too short for an integrated reading; use the peak.
+- Cues played by the engine with no `sfx()` call in `app/client/src`: none besides `/?efectos` (`EffectsDemo.svelte:20`, plays any cue).
+
+### Music tracks
+
+| Track | Plays | Meaning | Call sites |
+|---|---|---|---|
+| `normal` | Start, language, bundles, mode, join, level, select screens | calm background; the TV is waiting | Game.svelte MUSIC map:66-75, 184, 266 |
+| `question` | Question screen (before an answer is locked) | thinking; slightly more tension | Question.svelte:149,155,208,230; MUSIC map |
+| `submitted` | An answer is locked in | tension rises: decision made | Question.svelte:149,155,208 |
+| `roll` | «Respuesta final» until the reveal | drum roll, crescendo (6 s build), then steady | Question.svelte:196 |
+| `victory` | Victory screen, once | Elgar finale; the big moment | Game.svelte MUSIC map (victory) |
+| `timed` | Competitive (timed) question after its media | faster than `question` (the soundtrack's `question` file plays; synth has its own variant) | Timed.svelte:360 |
+
+- `normal`, `question`, `submitted`, `timed` are loops from the chosen soundtrack (`timed` plays the soundtrack's `question` file; only the generated set has a faster own variant). `roll` and `victory` are shared by every soundtrack:
+- `redoble`: 14.00 s, -17.9 LUFS, -4.6 dBTP
+- `victoria`: 98.00 s, -13.3 LUFS, -0.8 dBTP
+- `victory` plays `victoria` (Elgar, US Marine Band, public domain) at gain 3; `roll` plays `redoble` looped with a 6 s crescendo (US Air Force Band, public domain).
+- Switching on the Question screen is a sharp cut (fades 0.08 s, 0.15 s from `roll`); other changes fade 0.6 s. Question media silences the music.
+
+### Soundtracks (`SOUNDTRACKS`)
+
+Picker default: `sintetizada` (`decision 361: Soundtracks: take the sets found, or look further?`). Each recorded set has the loops `normal`, `question`, `submitted`; `sameBeat` is true for all recorded sets.
+
+| Id | Files | Level | Loop | Author, licence |
+|---|---|---|---|---|
+| `sintetizada` | none (generated in the engine: A minor i–VI–III–V pad, 76/96/120 bpm; `timed` own variant) | 1 | default | n/a |
+| `variaciones` | musica-variaciones-{normal,pregunta,enviada} | 1.6 | 8 bars, 100 bpm, 0–19.2 s | obscure music, CC0 |
+| `caja` | musica-caja-{normal,pregunta,enviada} | 1.6 | 16 bars, ~157 bpm, 0–24.4586 s | 3xBlast, CC BY 3.0 |
+| `sin-prisa` | musica-sin-prisa-{normal,pregunta,enviada} | 1.6 | 20 s | Little Robot Sound Factory, CC BY 3.0 |
+| `reflejos` | musica-reflejos-{normal,pregunta,enviada} | 1.6 | 22.597 s | Little Robot Sound Factory, CC BY 3.0 |
+
+Music file numbers:
+
+| File | Length | LUFS | dBTP | Bytes |
+|---|---|---|---|---|
+| `musica-caja-enviada` | 24.46 s | -18.1 | -6.4 | 301149 |
+| `musica-caja-normal` | 24.46 s | -18.1 | -5.7 | 301468 |
+| `musica-caja-pregunta` | 24.46 s | -18.1 | -7.1 | 300822 |
+| `musica-reflejos-enviada` | 22.65 s | -18.1 | -8.1 | 278510 |
+| `musica-reflejos-normal` | 22.60 s | -18.0 | -6.2 | 275910 |
+| `musica-reflejos-pregunta` | 22.65 s | -18.1 | -8.0 | 276568 |
+| `musica-sin-prisa-enviada` | 20.01 s | -18.0 | -3.0 | 245692 |
+| `musica-sin-prisa-normal` | 20.01 s | -18.1 | -1.7 | 246395 |
+| `musica-sin-prisa-pregunta` | 20.01 s | -18.0 | -3.7 | 249252 |
+| `musica-variaciones-enviada` | 19.20 s | -18.0 | -4.4 | 236058 |
+| `musica-variaciones-normal` | 19.20 s | -18.0 | -3.7 | 235124 |
+| `musica-variaciones-pregunta` | 19.20 s | -17.9 | -1.3 | 236098 |
+
+### Totals
+
+- 62 `.m4a` files in `app/client/public/audio/` (50 effects and shared tracks, 12 music loops), plus `CREDITS.md`.
+- Sum of the `.m4a` sizes: 5551200 bytes (5.55 MB); folder with `CREDITS.md`: 5565153 bytes (5.57 MB, `du -sb`).
+- Budget: `app/desktop/media-budget.json` key `audio` is 7 (MB, as the other keys): about 79 % used (1.4 MB left).
+- Largest: `victoria` 1.20 MB (98 s), then `musica-caja-normal` 301 kB, `musica-caja-enviada` 301 kB, `musica-caja-pregunta` 301 kB, `musica-reflejos-enviada` 279 kB.
+- Cue count 62, not ~66 as the plan guessed; 4 are synth only: `silence`, `boom`, `claim`, `countdown`.
+
+## Brief
+
+Filled by the sound brief task.

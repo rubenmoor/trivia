@@ -270,6 +270,8 @@ Input is ignored while a transition runs, so a double tap can't skip a state. Al
 
 ## Audio
 
+Inventory of every cue, track and file, and the sound brief: [`25-sound.md`](25-sound.md).
+
 ### Channels
 | Channel | Content | Default level | Notes |
 |---|---|---|---|
