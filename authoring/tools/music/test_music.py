@@ -86,6 +86,34 @@ class Music(unittest.TestCase):
             music.require_confirmed(r)
         self.assertEqual(self.run_cli("fetch", "nope", "nope-x")[0], 1)
 
+    def test_device_pick(self):
+        with mock.patch.object(music, "GPU_LIB", self.d / "nolib"):
+            self.assertEqual(music.device(), "cpu")
+            self.assertIn("/cpu", music.setup_commands()[1][-1])
+            self.assertNotIn("LD_LIBRARY_PATH", music.split_env())
+        with mock.patch.object(music, "GPU_LIB", self.d):
+            self.assertEqual(music.device(), "cuda")
+            self.assertTrue(music.setup_commands()[1][-1].endswith("cu128"))
+
+    def test_split_refusals(self):
+        self.assertEqual(self.run_cli("split", "mine-song")[0], 2)  # no record
+        self.rec()  # unconfirmed
+        with mock.patch.object(music.subprocess, "run") as run:
+            self.assertEqual(self.run_cli("split", "mine-song")[0], 1)
+            self.run_cli("record", "mine-song", "--licence", "CC-BY-4.0", "--read-on-page")
+            self.assertEqual(self.run_cli("split", "mine-song")[0], 3)  # no venv
+            run.assert_not_called()
+
+    def test_split_command(self):
+        self.rec("--read-on-page")
+        py = music.venv_dir() / "bin" / "python"
+        py.parent.mkdir(parents=True)
+        py.touch()
+        c = music.split_command("mine-song")
+        self.assertEqual(c[:5], [str(py), "-m", "demucs", "-n", "htdemucs"])
+        self.assertEqual(c[-1], str(music.work_dir("mine-song") / "original.mp3"))
+        self.assertEqual(c[c.index("-o") + 1], str(music.work_dir("mine-song") / "stems"))
+
     def test_bad_id(self):
         self.assertEqual(self.run_cli("fetch", "Carefree", "Bad_Id")[0], 2)
 

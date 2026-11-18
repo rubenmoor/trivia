@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Library music into loop files (plan 221); `trivia-music` runs this. Standard library only.
 
-Ported from the sibling project's tools/audio/music.py (~/code/three-days-until-release, decision 199: no import
-across repos). Later steps (split, loop, export, check, credits) are added by their own tasks.
+Ported from the sibling project's tools/audio/music.py and spikes/music-library/setup.sh
+(~/code/three-days-until-release, decision 199: no import across repos). Later steps (loop, export, check,
+credits) are added by their own tasks.
 
   search [--feel F] [--bpm LO-HI] [--instrument I] [--min-length S]   incompetech catalogue
   fetch <title> <id>                       incompetech download to work/music/<id>/original.mp3 + record
   record <id> --file P --page U --title T --author A --licence SPDX   another library, file downloaded by hand
   record <id> --licence SPDX --read-on-page                            confirm the licence read on the track page
+  setup                                    Demucs venv work/music/venv (uv, torch, demucs 4.1; CUDA if the driver is there)
+  split <id>                               Demucs htdemucs: drums, bass, other, vocals -> work/music/<id>/stems/htdemucs/
 
 <id> is <set>-<piece>, lower case, e.g. carefree-try. Records: authoring/data/music/<id>.json (committed).
 Work files: work/music/<id>/ (gitignored). Licences: CC0, PD, CC BY 3.0/4.0 only (decision 733); no Freesound API
@@ -16,9 +19,12 @@ Work files: work/music/<id>/ (gitignored). Licences: CC0, PD, CC BY 3.0/4.0 only
 import argparse
 import hashlib
 import json
+import os
 import re
 import shutil
+import subprocess
 import sys
+import time
 import urllib.parse
 import urllib.request
 from datetime import date
@@ -34,6 +40,10 @@ LICENCES = {  # decision 733: SPDX -> (name, url)
     "CC-BY-3.0": ("Creative Commons: By Attribution 3.0", "https://creativecommons.org/licenses/by/3.0/"),
     "CC-BY-4.0": ("Creative Commons: By Attribution 4.0", "https://creativecommons.org/licenses/by/4.0/"),
 }
+GPU_LIB = Path("/run/opengl-driver/lib")  # NixOS driver libs; present = CUDA torch
+VENV_PY = "3.12"  # demucs 4.1 / torch wheels
+TORCH_INDEX = "https://download.pytorch.org/whl/"
+STEMS = ("drums", "bass", "other", "vocals")
 ADAPTED = "Adapted: cut to a loop, split into layers and remixed per variant, loudness changed."
 
 
@@ -205,6 +215,86 @@ def cmd_record(a) -> int:
     return 0
 
 
+def venv_dir() -> Path:
+    return layout.MUSIC_WORK / "venv"
+
+
+def venv_py() -> Path:
+    py = venv_dir() / "bin" / "python"
+    if not py.exists():
+        die(f"no Demucs venv at {venv_dir()}: run `trivia-music setup`", 3)
+    return py
+
+
+def device() -> str:
+    return "cuda" if GPU_LIB.exists() else "cpu"
+
+
+def clean_env() -> dict:
+    return {k: v for k, v in os.environ.items() if k not in ("LD_LIBRARY_PATH", "PYTHONPATH")}
+
+
+def split_env() -> dict:
+    """LD_LIBRARY_PATH as the sibling: driver libs plus the C++ runtime torch needs on NixOS."""
+    env = clean_env()
+    if device() == "cuda":
+        libs = [str(GPU_LIB)]
+        cc = subprocess.run(["nix", "eval", "--raw", "nixpkgs#stdenv.cc.cc.lib.outPath"], capture_output=True, text=True).stdout
+        if cc:
+            libs.append(f"{cc}/lib")
+        env["LD_LIBRARY_PATH"] = ":".join(libs)
+    return env
+
+
+def setup_commands() -> list:
+    v = str(venv_dir())
+    idx = TORCH_INDEX + ("cu128" if device() == "cuda" else "cpu")
+    return [["uv", "venv", "--python", VENV_PY, v],
+            ["uv", "pip", "install", "-p", f"{v}/bin/python", "torch", "torchaudio", "--index-url", idx],
+            ["uv", "pip", "install", "-p", f"{v}/bin/python", "demucs", "numpy", "soundfile"]]  # demucs 4.1 imports numpy but does not list it
+
+
+def cmd_setup(a) -> int:
+    if venv_dir().exists() and not a.force:
+        print(f"{venv_dir()} exists (--force to rebuild)")
+        return 0
+    if a.force:
+        shutil.rmtree(venv_dir(), ignore_errors=True)
+    layout.MUSIC_WORK.mkdir(parents=True, exist_ok=True)
+    for c in setup_commands():
+        if subprocess.run(c, env=clean_env()).returncode:
+            die(f"failed: {' '.join(c)}")
+    print(f"Demucs venv ready ({device()}): {venv_dir()}")
+    return 0
+
+
+def original(i: str) -> Path:
+    found = sorted(work_dir(i).glob("original.*"))
+    if not found:
+        die(f"no original in {work_dir(i)}: run fetch or record --file first", 2)
+    return found[0]
+
+
+def split_command(i: str) -> list:
+    return [str(venv_py()), "-m", "demucs", "-n", "htdemucs", "-d", device(), "--int24",
+            "-o", str(work_dir(i) / "stems"), "--filename", "{stem}.{ext}", str(original(i))]
+
+
+def cmd_split(a) -> int:
+    check_id(a.id)
+    require_confirmed(load(a.id))
+    cmd = split_command(a.id)
+    t0 = time.time()
+    if subprocess.run(cmd, env=split_env()).returncode:
+        die("demucs failed")
+    out = work_dir(a.id) / "stems" / "htdemucs"
+    missing = [s for s in STEMS if not (out / f"{s}.wav").is_file()]
+    if missing:
+        die(f"demucs wrote no {', '.join(missing)} in {out}")
+    print(f"split {a.id} on {device()} in {time.time() - t0:.1f} s -> {out}")
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="trivia-music", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -217,8 +307,10 @@ def main(argv=None) -> int:
     p.add_argument("--author"); p.add_argument("--licence", required=True, help="CC0-1.0, PD, CC-BY-3.0, CC-BY-4.0")
     p.add_argument("--read-on-page", action="store_true", help="the licence was read on the track page")
     p.add_argument("--library"); p.add_argument("--download"); p.add_argument("--bpm"); p.add_argument("--feel")
+    p = sub.add_parser("setup", help="make the Demucs venv"); p.add_argument("--force", action="store_true")
+    p = sub.add_parser("split", help="Demucs layer split"); p.add_argument("id")
     a = ap.parse_args(argv)
-    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record}[a.cmd](a)
+    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split}[a.cmd](a)
 
 
 if __name__ == "__main__":

@@ -49885,7 +49885,7 @@ What:
 - `npm test` runs `python3` from the dev shell: make sure the Python it uses for `test_music.py` has what the test imports (here standard library only; later tasks add numpy/librosa tests, so pick now how `npm test` gets that Python, e.g. the dev shell''s python3 with those packages)
 
 Done when: tests pass in `npm test`; `trivia-music search --feel Calming` works from the dev shell after one network fetch; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-18T20:42:11Z', '2026-11-18T21:16:39Z', 2233, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2235, 221, 'Music pipeline: Demucs venv and split', 'work', 'open', NULL, NULL, 'Part 2 of `plan 221: Music pipeline`, on top of `trivia-music` from task 2234.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2235, 221, 'Music pipeline: Demucs venv and split', 'work', 'done', NULL, '2026-11-18, authoring/tools/music/music.py (setup, split), test_music.py, AGENTS.md. Real run: setup (uv cache warm, 2.5 s) + split of incompetech ''Carefree'' (210.6 s track, CC BY 4.0) on CUDA (RTX 4060 laptop) in 12.2 s; 4 stems written. venv also needs numpy+soundfile (demucs 4.1 imports numpy, doesn''t list it).', 'Part 2 of `plan 221: Music pipeline`, on top of `trivia-music` from task 2234.
 
 What:
 - `trivia-music setup`: Demucs venv at `work/music/venv/` with uv (torch, demucs 4.1); CUDA torch when `/run/opengl-driver/lib` exists, else CPU; `LD_LIBRARY_PATH` as the sibling (`~/code/three-days-until-release/spikes/music-library/setup.sh`, `tools/audio/music.py`; header names the source)
@@ -49894,7 +49894,7 @@ What:
 - Work files only under the main checkout''s `work/` (symlinked into the work tree, AGENTS.md "Work trees")
 - Test in `test_music.py`: argument and path handling, GPU/CPU pick, refusal without venv or licence; no model run in `npm test`
 
-Done when: tests pass; one real `setup` + `split` on a local CC BY or CC0 file done and its time (GPU or CPU) written in the `pm task done` note; per-commit checks pass.', '2026-11-18T20:42:22Z', NULL, 2233, 0, NULL, 'app');
+Done when: tests pass; one real `setup` + `split` on a local CC BY or CC0 file done and its time (GPU or CPU) written in the `pm task done` note; per-commit checks pass.', '2026-11-18T20:42:22Z', '2026-11-18T21:19:57Z', 2233, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2236, 221, 'Music pipeline: loop finder', 'work', 'open', NULL, NULL, 'Part 3 of `plan 221: Music pipeline`.
 
 What:
@@ -60298,6 +60298,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2464, 2231, '2026-11-18T21:02:43Z', '2026-11-18T21:08:09Z', 'done', NULL, 0, 'da966a288b35022024cb45329faba18e2b1b506d', 'app', 'claude-sonnet-5-5', 'ccfc20c3-ec7d-4fcc-8166-a59501dba7ac', NULL, 30, 58, 11021, 1788238, 60464, 0.53100580000000019, 75561, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2465, 2232, '2026-11-18T21:08:10Z', '2026-11-18T21:09:25Z', 'blocked', NULL, 0, 'dc1cf2d54bae142d1c79444509b4bf20fff3ab54', 'app', 'claude-opus-5-5', '77795d3b-d408-46a2-a71e-61d13f39d5b7', NULL, 9, 18, 4767, 447702, 47180, 0.5623924, 61529, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2466, 2234, '2026-11-18T21:09:25Z', '2026-11-18T21:16:45Z', 'done', NULL, 0, 'dc1cf2d54bae142d1c79444509b4bf20fff3ab54', 'app', 'claude-sonnet-5-5', '2162d840-90c6-44b5-8f82-16bb9483546d', NULL, 15, 28, 11732, 841514, 60762, 0.44457539999999995, 75667, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2467, 2235, '2026-11-18T21:16:45Z', '2026-11-18T21:20:03Z', 'done', NULL, 0, 'b63e702f0d8502a9d3ac075a9aa90e576f44c85f', 'app', 'claude-sonnet-5-5', '2162d840-90c6-44b5-8f82-16bb9483546d', 2466, 8, 16, 5790, 747431, 25258, 0.67828250000000012, 100992, 60, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
