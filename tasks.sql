@@ -49482,8 +49482,73 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2219, 219, 'write the masterplan of milestone 22: rework all sound + music', 'masterplan', 'done', NULL, '2026-11-18, tasks.sql only: plan 219 body and intro (six parts, recipe evaluation), decisions 732 and 733 recorded; split queued as task 2220', 'Write plan 219, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-11-18T20:33:29Z', '2026-11-18T20:37:08Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2220, 219, 'create tasks for plan 219: masterplan', 'split', 'open', 1000, NULL, 'Split plan 219 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:36:46Z', NULL, 2219, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2220, 219, 'create tasks for plan 219: masterplan', 'split', 'done', 1000, '2026-11-18, tasks 2221 (part 1 brief), 2222 (part 2 pipeline), 2223 (part 3 engine and picker), 2224 (part 5 effects), 2225 (part 4 soundtracks), 2226 (part 6 close-out); no new decisions: the brief is raised by part 1''s plan', 'Split plan 219 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:36:46Z', '2026-11-18T20:38:22Z', 2219, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2221, 219, 'Write the plan: sound inventory and sound brief', 'plan', 'open', 1000, NULL, 'Write part 1 of `plan 219: masterplan` (read its "Parts" item 1, "Binding", "Today"): `pm plan add 22 "Sound inventory and sound brief" --intro … --priority 290`, body as below, then it gets split.
+
+The plan''s work:
+- Inventory: every cue (`Cue` in `app/client/src/game/sound.svelte.ts`, ~66) and every music track (`normal`, `question`, `submitted`, `roll`, `victory`, `timed`) with call sites, game moment, meaning, length, file, licence; output doc where the plan says (plans/04 "Audio" or a new owner plan file)
+- Audition candidates by measurement (workers can''t hear): 3–4 theme directions for effects (one pack or source per direction, CC0/PD/CC BY per `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`), music moods with sample tracks; staged so the developer can listen (`/?efectos` or a review page), `TRIVIA_SOUND=1`; work tasks that search the web need `--web`
+- The brief as a developer decision, iterative feedback (rounds until the developer says final): effect theme; soundtrack count (2–3) and moods; tension variants per set (`normal`, `question`, `submitted`, `timed` at least; `roll`/`victory` per set or shared); whether `sintetizada` stays in the picker, which set is default (`decision 361: Soundtracks: take the sets found, or look further?`); whether anything old is kept (Elgar, drum roll, fanfares); that `decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`, `task 146: Developer check of the three new joker sounds on the TV`, `task 1865: Developer check of the fanfare variants on the TV`, `task 150: Close UI-10 in the plans` lapse
+- Reference mood: `decision 83: Recorded music loops: approve on the TV?` ("chill and relaxing, clear rise in tension on submit"); joker meaning: `decision 81: Recorded sound effects: approve on the TV?`
+
+Done when: the plan exists with its tasks; the brief decision is raised by one of its tasks (not by this one).', '2026-11-18T20:38:17Z', NULL, 2220, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2222, 219, 'Write the plan: music pipeline ported from the sibling project', 'plan', 'open', 1000, NULL, 'Write part 2 of `plan 219: masterplan` (its "Parts" item 2 and "Evaluation of `audio-music-production.md`"): `pm plan add 22 "Music pipeline" --intro … --priority 280`, body as below, then it gets split. Runs in parallel with part 1.
+
+The plan''s work (into `authoring/`, `app/` never reads it):
+- Port `~/code/three-days-until-release/tools/audio/music.py` and `music_loop.py` (and the spike `spikes/music-library/`): comment names the source (decision 199 can''t import across repos)
+- fetch with licence record (SHA-256, track page, licence read on the page), incompetech `pieces.json` catalogue search; other libraries by hand record
+- Demucs (`htdemucs`) split in a cache venv under the gitignored `work/` (`decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`)
+- loop finder with the reject thresholds (`repeat_similarity` < 0.8, seam jump > 3, `comb_score` < ~1.5, loop < 10 s or > 300 s); one gain for all layers, the sum at -18 LUFS (this project''s loop target)
+- export one `.m4a` per tension variant, all the same length (layer mixdowns, e.g. base → + rhythm → full; or sections of an unsplit track)
+- hard checks (loudness, true peak, seam click); `CREDITS.md` row generated from the record (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`), no hand-typed rows
+- nix dev shell entries; tests on a short fixture
+- the recipe `audio-music-production.md` moves next to the tools, rewritten for this repo (commands, files, this project''s decision ids only; the sibling''s ids 77, 158, 159, 71, 85, 37 mean other things here); the root file goes; `rg` its name over `.md` and comments (decision 200)
+
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:17Z', NULL, 2220, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2223, 219, 'Write the plan: soundtracks in the engine and the options picker', 'plan', 'open', 1000, NULL, 'Write part 3 of `plan 219: masterplan` (its "Parts" item 3): `pm plan add 22 "Soundtracks in the engine and the picker" --intro … --priority 500`, body as below, then it gets split. Needs part 1''s plan (the brief decision''s id): its tasks that depend on the brief wait for that decision (`pm task-pending-decision`).
+
+The plan''s work (`app/client/src/game/sound.svelte.ts`, `SOUNDTRACKS`, options screen):
+- soundtrack format for the variants the brief decides (today''s `normal`/`question`/`submitted` plus `timed`; per-set `roll`/`victory` if decided)
+- mixdown files vs live layer gains: the plan decides (mixdowns keep today''s `sameBeat` cut and need no engine change); record it with `pm decision record` if not obvious
+- old sets and ids (`variaciones`, `caja`, `sin-prisa`, `reflejos`, and `sintetizada` per the brief) removed; a stored old id falls back to the default
+- picker «Banda sonora» in the options, names in es, es-ES, en, de (read `locales/style/<locale>.md`); key chips per decision 671
+- `/?efectos` lists every variant and the cut; synth fallback per the brief; tests; a gallery set for the picker (`trivia-gallery --set task-<id>`)
+- cue names stay (mod API, `modding/README.md`)
+
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:17Z', NULL, 2220, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2224, 219, 'Write the plan: the new sound effects in one theme', 'plan', 'open', 1000, NULL, 'Write part 5 of `plan 219: masterplan` (its "Parts" item 5): `pm plan add 22 "New sound effects" --intro … --priority 190`, body as below, then it gets split. Needs part 1''s plan (the brief decision''s id): its tasks wait for that decision (`pm task-pending-decision`).
+
+The plan''s work:
+- one theme (the brief''s), few sources: one pack or sound designer per group where possible: UI, reveal, jokers, fireworks, category splash, timed; CC0/PD/CC BY only (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`); no Freesound API, hand-picked files fine (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`); search tasks need `--web`
+- plan 32''s pipeline (`plan 32: Recorded sound effects (UI-10)`: trim, fade, -16 LUFS, mono AAC, budget per file); variants where a cue repeats often (fanfare-style random without repeat, `SAMPLE_FOR`)
+- jokers keep their meaning (`decision 81: Recorded sound effects: approve on the TV?`: broom, microwave bing, fairy wand)
+- timed `claim`/`countdown` recorded instead of synthesized
+- cue names kept (mod API), file names may change; old files and their `CREDITS.md` rows deleted
+- one task per group; listening rounds per group as developer decisions (`/?efectos`, a real game, `TRIVIA_SOUND=1`), iterative feedback until picked
+
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', NULL, 2220, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2225, 219, 'Write the plan: the new soundtracks', 'plan', 'open', 1000, NULL, 'Write part 4 of `plan 219: masterplan` (its "Parts" item 4): `pm plan add 22 "New soundtracks" --intro … --priority 200`, body as below, then it gets split. Uses part 1''s brief decision, part 2''s pipeline and part 3''s soundtrack format: its tasks require their tasks and wait for the brief decision.
+
+The plan''s work, one task per soundtrack set (count from the brief):
+- search by the brief (incompetech `pieces.json`, Kenney/OpenGameArt CC0, Free Music Archive, Scott Buckley; `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`); search tasks need `--web`
+- fetch, split or whole (`decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`), loop, variants, level, export with part 2''s tools; install in part 3''s format; `CREDITS.md` rows from records
+- staged candidates for listening; iterative feedback rounds as developer decisions (`/?efectos` + a real game, `TRIVIA_SOUND=1`) until each set is picked
+- old music files (12 loops, and `redoble`/`victoria` unless the brief keeps them) and their `CREDITS.md` rows deleted
+- `audio` budget in `app/desktop/media-budget.json` kept (`stage-media.mjs --check`)
+
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', NULL, 2220, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2226, 219, 'Write the plan: mix, budget and close-out of the sound rework', 'plan', 'open', 1000, NULL, 'Write part 6 of `plan 219: masterplan` (its "Parts" item 6): `pm plan add 22 "Sound rework: mix, budget and close-out" --intro … --priority 150`, body as below, then it gets split. After parts 4 and 5''s plans: its tasks require their last tasks.
+
+The plan''s work:
+- whole-game balance music vs effects vs question media (`MUSIC_LEVEL`, soundtrack `level`, `duck`, `DEFAULTS` in `app/client/src/game/sound.svelte.ts`); developer feedback in plans/04 "Music" (sharp cuts on lock-in, unlock, submit; music off during question media; jokers duck)
+- `audio` line in `app/desktop/media-budget.json`; demo build (`TRIVIA_DEMO=1`)
+- Credits screen and the release-check credits step both ways
+- docs: plans/04 "Audio" and "Sound assets", plans/09-jokers "Sound assets", `CREDITS.md` header
+- milestone 6''s lapsed items per the brief''s answer: `decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`, `task 146: Developer check of the three new joker sounds on the TV`, `task 1865: Developer check of the fanfare variants on the TV`, `task 150: Close UI-10 in the plans` (drop or close)
+- last: the final TV approval decision of the whole rework (iterative feedback; its answer ends `milestone 22: rework all sound + music`)
+
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', NULL, 2220, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -59477,6 +59542,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2445, 2083, '2026-11-18T18:12:59Z', '2026-11-18T18:13:41Z', 'done', NULL, 0, '1013c51bcbd57d776eaef21926eff858975f0742', 'app', 'claude-sonnet-5-5', '96782d46-6bec-4561-98ad-35fc6afd253d', NULL, 3, 6, 451, 91902, 26960, 0.1215522, 41378, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2446, 2218, '2026-11-18T19:50:37Z', '2026-11-18T19:57:18Z', 'done', NULL, 0, '30cbd960773ca61e265dba13668d2afb0c4ae634', NULL, 'claude-sonnet-5-5', 'b363adbb-b4a7-44d3-bb0b-5963cb8df05d', NULL, 16, 32, 7006, 642387, 37116, 0.28282670000000004, 50173, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2447, 2219, '2026-11-18T20:33:32Z', '2026-11-18T20:37:20Z', 'done', NULL, 0, '8be6d2125a8ec226d160bdfe8884e210ad59cd96', NULL, 'claude-opus-5-5', '2c8c3b2b-5f52-4b88-a167-f661ffe6f575', NULL, 25, 44, 18654, 1911492, 103186, 1.5810424, 115725, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2448, 2220, '2026-11-18T20:37:23Z', '2026-11-18T20:38:29Z', 'done', NULL, 0, 'f757b124a2282266d6d1a5889153af7d3ef2f690', NULL, 'claude-opus-5-5', '0fccc38b-8ce7-4ec3-a190-c404f7a4d591', NULL, 6, 12, 5973, 260063, 41084, 0.5001926, 55438, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2449, 2221, '2026-11-18T20:38:23Z', NULL, 'running', NULL, NULL, 'f757b124a2282266d6d1a5889153af7d3ef2f690', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -60667,6 +60734,13 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2213, 221
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2214, 2213);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2215, 2214);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2217, 2216);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2223, 2221);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2224, 2221);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2225, 2221);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2225, 2222);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2225, 2223);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2226, 2224);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2226, 2225);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
