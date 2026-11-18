@@ -69,7 +69,7 @@
               {#each items as it (it.file)}
                 <tr>
                   <td><audio controls preload="none" src={url(it.file)} onplay={onPlay}></audio></td>
-                  <td><b>{it.stands_for}</b><br /><span class="muted small">{it.file}</span></td>
+                  <td><b>{it.stands_for}</b><br /><span class="muted small">{it.file}</span>{#if it.full_length_s}<br /><span class="muted small">full track {it.full_length_s} s, excerpt from {it.excerpt_start_s} s</span>{/if}{#if it.tension_note}<br /><span class="small">Tension: {it.tension_note}</span>{/if}</td>
                   <td>{num(it.length_s, "s")}</td>
                   <td>{num(it.lufs, "")}</td>
                   <td>{num(it.true_peak_db, "dB")}</td>

@@ -375,4 +375,7 @@ export interface SoundCandidate {
   true_peak_db: number;
   centroid_hz: number;
   bpm?: number;
+  full_length_s?: number;
+  excerpt_start_s?: number;
+  tension_note?: string;
 }
