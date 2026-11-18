@@ -49579,7 +49579,7 @@ The plan''s work:
 - Reference mood: `decision 83: Recorded music loops: approve on the TV?` ("chill and relaxing, clear rise in tension on submit"); joker meaning: `decision 81: Recorded sound effects: approve on the TV?`
 
 Done when: the plan exists with its tasks; the brief decision is raised by one of its tasks (not by this one).', '2026-11-18T20:38:17Z', '2026-11-18T20:40:02Z', 2220, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2222, 219, 'Write the plan: music pipeline ported from the sibling project', 'plan', 'open', 1000, NULL, 'Write part 2 of `plan 219: masterplan` (its "Parts" item 2 and "Evaluation of `audio-music-production.md`"): `pm plan add 22 "Music pipeline" --intro … --priority 280`, body as below, then it gets split. Runs in parallel with part 1.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2222, 219, 'Write the plan: music pipeline ported from the sibling project', 'plan', 'done', 1000, '2026-11-18, plan 221: Music pipeline (tasks.sql only; split queued)', 'Write part 2 of `plan 219: masterplan` (its "Parts" item 2 and "Evaluation of `audio-music-production.md`"): `pm plan add 22 "Music pipeline" --intro … --priority 280`, body as below, then it gets split. Runs in parallel with part 1.
 
 The plan''s work (into `authoring/`, `app/` never reads it):
 - Port `~/code/three-days-until-release/tools/audio/music.py` and `music_loop.py` (and the spike `spikes/music-library/`): comment names the source (decision 199 can''t import across repos)
@@ -49591,7 +49591,7 @@ The plan''s work (into `authoring/`, `app/` never reads it):
 - nix dev shell entries; tests on a short fixture
 - the recipe `audio-music-production.md` moves next to the tools, rewritten for this repo (commands, files, this project''s decision ids only; the sibling''s ids 77, 158, 159, 71, 85, 37 mean other things here); the root file goes; `rg` its name over `.md` and comments (decision 200)
 
-Done when: the plan exists with its tasks.', '2026-11-18T20:38:17Z', NULL, 2220, 0, NULL, 'app');
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:17Z', '2026-11-18T20:41:42Z', 2220, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2223, 219, 'Write the plan: soundtracks in the engine and the options picker', 'plan', 'open', 1000, NULL, 'Write part 3 of `plan 219: masterplan` (its "Parts" item 3): `pm plan add 22 "Soundtracks in the engine and the picker" --intro … --priority 500`, body as below, then it gets split. Needs part 1''s plan (the brief decision''s id): its tasks that depend on the brief wait for that decision (`pm task-pending-decision`).
 
 The plan''s work (`app/client/src/game/sound.svelte.ts`, `SOUNDTRACKS`, options screen):
@@ -49713,8 +49713,86 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - The brief decision is answered final, written into `plans/25-sound.md` "Brief", consequences recorded
 - `/sounds` lists every round''s candidates
 - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:54Z', NULL, 2227, 1, 'opus', 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2233, 221, 'create tasks for plan 221: Music pipeline', 'split', 'open', 1000, NULL, 'Split plan 221 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:41:38Z', NULL, 2222, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2233, 221, 'create tasks for plan 221: Music pipeline', 'split', 'done', 1000, '2026-11-18, tasks 2234–2240; no new decisions (plan bound by decisions 732, 733, 82)', 'Split plan 221 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:41:38Z', '2026-11-18T20:42:56Z', 2222, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2234, 221, 'Music pipeline: catalogue, fetch and records', 'work', 'open', NULL, NULL, 'Part 1 of `plan 221: Music pipeline`. Read the plan''s "Binding", "Layout" and "Subcommands" first.
+
+What:
+- `authoring/tools/music/music.py` (CLI, standard library only): `search [--feel F] [--bpm LO-HI] [--instrument I] [--min-length S]` over incompetech `pieces.json` (fetched once to `work/music/pieces.json`), `fetch <title> <id>` (incompetech download to `work/music/<id>/original.mp3` + record), `record <id> --file <path> --page <url> --title … --author … --licence …` (other libraries, file downloaded by hand) and `record <id> --licence <spdx> --read-on-page` (confirms the licence read on the track page)
+- Port from the sibling `~/code/three-days-until-release/tools/audio/music.py`; the file header names the sibling source (decision 199: no import across repos)
+- Record format `authoring/data/music/<set>-<piece>.json`: library, title, author, track page, download URL, SHA-256 of the download, date, licence (SPDX + "read on page" date), listed bpm/feel, `adapted` text, the credit line; empty `loop` and `exports` slots for later steps
+- Licence allowlist per `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`: CC0-1.0, PD, CC-BY-3.0, CC-BY-4.0; anything else fails `record` (exit 1)
+- Confirmation gate: until the licence is confirmed read on page, a helper later steps call (`require_confirmed(record)`) refuses
+- No Freesound API (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`)
+- `trivia-music` in `flake.nix` via `fromCheckout` (Python with numpy, librosa, soundfile; ffmpeg; uv) and in the dev shell
+- `authoring/tools/music/test_music.py`: fake catalogue (search filters), a local file for `record` (SHA-256, allowlist, NC rejected, gate), no network; added to `npm test`
+- `npm test` runs `python3` from the dev shell: make sure the Python it uses for `test_music.py` has what the test imports (here standard library only; later tasks add numpy/librosa tests, so pick now how `npm test` gets that Python, e.g. the dev shell''s python3 with those packages)
+
+Done when: tests pass in `npm test`; `trivia-music search --feel Calming` works from the dev shell after one network fetch; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass.', '2026-11-18T20:42:11Z', NULL, 2233, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2235, 221, 'Music pipeline: Demucs venv and split', 'work', 'open', NULL, NULL, 'Part 2 of `plan 221: Music pipeline`, on top of `trivia-music` from task 2234.
+
+What:
+- `trivia-music setup`: Demucs venv at `work/music/venv/` with uv (torch, demucs 4.1); CUDA torch when `/run/opengl-driver/lib` exists, else CPU; `LD_LIBRARY_PATH` as the sibling (`~/code/three-days-until-release/spikes/music-library/setup.sh`, `tools/audio/music.py`; header names the source)
+- `trivia-music split <id>`: `htdemucs` drums, bass, other, vocals into `work/music/<id>/stems/`; refuses without a confirmed licence (task 2234''s gate); vocals later folded into melody (task for the loop finder)
+- Binding: `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship` (dev-time only, nothing of it ships)
+- Work files only under the main checkout''s `work/` (symlinked into the work tree, AGENTS.md "Work trees")
+- Test in `test_music.py`: argument and path handling, GPU/CPU pick, refusal without venv or licence; no model run in `npm test`
+
+Done when: tests pass; one real `setup` + `split` on a local CC BY or CC0 file done and its time (GPU or CPU) written in the `pm task done` note; per-commit checks pass.', '2026-11-18T20:42:22Z', NULL, 2233, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2236, 221, 'Music pipeline: loop finder', 'work', 'open', NULL, NULL, 'Part 3 of `plan 221: Music pipeline`.
+
+What:
+- Port `~/code/three-days-until-release/tools/audio/music_loop.py` (and the parts of `spikes/music-library/loopify.py` it uses) to `authoring/tools/music/music_loop.py` (numpy, librosa, soundfile); header names the source
+- `trivia-music loop <id> [--bars 8] [--bpm B] [--whole]`: tempo from the drums stem to 0.001 bpm, downbeat, most self-similar stretch of `--bars` bars, all layers cut at the same place, tail rung into head; vocals folded into the melody (other) layer; `--whole`: no stems, one cut over the mix
+- Level: one gain for all layers, the layer sum at -18 LUFS, true peak ≤ -1.5 dBTP (comment names `app/desktop/loudness.mjs` `TARGET_LUFS`; Python can''t import it); not the sibling''s -22
+- Writes `work/music/<id>/info.json` and the record''s `loop` slot (bpm, bars, start, loop_s, gain, comb_score, repeat_similarity, seam_jump_vs_mean_step)
+- Rejects (exit 1, reason printed): `repeat_similarity` < 0.8, seam jump > 3, `comb_score` < 1.5, fitted bpm > 3 % off the listed one, loop < 10 s or > 300 s
+- Test on a synthetic fixture made in the test (numpy or ffmpeg: 100 bpm kick + bass + tone, ~40 s, as fake stems): fitted bpm 100 ±0.01, similarity ≥ 0.8, sum -18 ±0.2 LUFS; a drifting-tempo fixture is rejected; `--whole` on the mixed fixture; in `npm test` with a Python that has numpy/librosa/soundfile (as set up in task 2234)
+
+Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:22Z', NULL, 2233, 0, 'opus', 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2237, 221, 'Music pipeline: variant export', 'work', 'open', NULL, NULL, 'Part 4 of `plan 221: Music pipeline`, on the loop data of task 2236.
+
+What:
+- `trivia-music export <id> <out-dir> --variant <name>=<recipe> …`: one `.m4a` per tension variant
+- Recipe: layer sum (`bass+other`, `+drums` = previous variant plus drums, `full`, per-layer gain in dB allowed, e.g. `bass+other-3`); with a `--whole` record, a section `@<bar>`: same bar length, another stretch of the track, checked like the loop (task 2236''s thresholds)
+- All variants exactly the same sample length; the loop''s gain applied, never a per-layer normalisation
+- AAC as plan 33''s loops (`plan 33: Recorded music loops (UI-10)`): look up their encoder settings in the repo and reuse them
+- File names `musica-<set>-<variant>.m4a` (today''s pattern in `app/client/public/audio/`)
+- Writes the record''s `exports` (variant → file, recipe)
+- Test on task 2236''s fixture: three variants, equal sample length after decode, loudness rising base → full
+
+Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:31Z', NULL, 2233, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2238, 221, 'Music pipeline: hard checks and generated credits', 'work', 'open', NULL, NULL, 'Part 5 of `plan 221: Music pipeline`.
+
+What:
+- `trivia-music check <id>`, exit 0/1, per exported file: integrated loudness of the fullest variant -18 ±0.5 LUFS; every file true peak ≤ -1.5 dBTP; seam click (last vs first sample against the mean step, ≤ 3, measured after AAC decode with the encoder padding cut at `loop_s`); all variants the same length; length 10–300 s; licence allowed (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- `trivia-music credits [--check]`: writes the music rows of `app/client/public/audio/CREDITS.md` from the records in `authoring/data/music/`, one row per exported file (title, author, link, licence, "adapted"), between marker comments; hand rows outside the markers untouched; `--check` fails on a row without a record or a record without a row
+- Keep the table format that `app/client/credits.ts` and the release-check credits step (`authoring/steam/release_check.py`) read; no artist-endorsement wording
+- Tests: a clicking seam, a too-loud file, unequal lengths and an NC licence fail; a row is generated from a record; `credits --check` passes on today''s `CREDITS.md` (no records yet); `credits.ts` and the release-check credits step still parse the table with markers
+
+Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:32Z', NULL, 2233, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2239, 221, 'Music pipeline: end-to-end run on one track', 'work', 'open', NULL, NULL, 'Part 6 of `plan 221: Music pipeline`: prove the whole chain on one real track.
+
+What:
+- `trivia-music run <title-or-id> work/music/try/ --variant normal=bass+other --variant question=+drums --variant submitted=full` on one incompetech CC BY track with drums, bass and a tune (e.g. "Carefree" by Kevin MacLeod, the sibling project''s test track)
+- Read the licence line on the track page (WebFetch; the page needs JavaScript, so if the line isn''t in the fetched text, try the page''s other forms or the incompetech licence notes) and confirm it with `trivia-music record <id> --licence <spdx> --read-on-page`; never confirm a licence not read
+- `run` = fetch (incompetech), split, loop, export, check; add `run` if earlier tasks left it out
+- Output stays in `work/music/try/`: not installed in `app/`, record not committed (part 4 of `plan 219: masterplan` makes the real ones); `credits` run against a scratch copy to show the generated row, then reverted
+- Fix what breaks in the tools, with a test where it fits
+- Workers can''t hear: report numbers only
+
+Done when: `run` exits 0; the `pm task done` note has bpm, bars, loop_s, repeat_similarity, seam jump, comb_score, LUFS and true peak per variant, the generated credit row, and times per step (split on GPU or CPU); per-commit checks pass.', '2026-11-18T20:42:39Z', NULL, 2233, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2240, 221, 'Music pipeline: the recipe next to the tools', 'work', 'open', NULL, NULL, 'Part 7 of `plan 221: Music pipeline`: the how-to for music, moved from the sibling''s draft into this repo.
+
+What:
+- Rewrite the root `audio-music-production.md` as `authoring/tools/music/README.md` for this repo (AGENTS.md `.md` style: intro paragraph, then bullets): steps brief → search → fetch/record + licence read on page → split or whole → loop → variants → check → credits → the developer listens (part 4 of `plan 219: masterplan` decides; iterative feedback: "more like this, less like that", next search round)
+- Only this repo''s commands, files and decisions: `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`, `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`, decision 199; none of the sibling''s ids (77, 158, 159, 71, 85, 37), no `just`, Godot, `REUSE.toml`, LFS, sidecars, -22 LUFS
+- The end-to-end numbers from task 2239''s done note; the pitfalls that still apply (licence per track page, drifting tempo, Demucs melody leak into vocals/drums, layers cut and gained together, big files stay in `work/`)
+- Delete the root `audio-music-production.md`; `rg audio-music-production` over `.md` files and comments, fix every hit in the same commit (decision 200); `directory.md` if it lists the root file
+- AGENTS.md "Commands": one `trivia-music` line (subcommands, `work/music/`, records in `authoring/data/music/`)
+- `plans/25-sound.md` (owner doc of `plan 220: Sound inventory and sound brief`): a pointer to the README if the file exists
+
+Done when: the README exists, the root file is gone, `rg audio-music-production` has no stale hits; per-commit checks pass.', '2026-11-18T20:42:47Z', NULL, 2233, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -59711,7 +59789,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2448, 2220, '2026-11-18T20:37:23Z', '2026-11-18T20:38:29Z', 'done', NULL, 0, 'f757b124a2282266d6d1a5889153af7d3ef2f690', NULL, 'claude-opus-5-5', '0fccc38b-8ce7-4ec3-a190-c404f7a4d591', NULL, 6, 12, 5973, 260063, 41084, 0.5001926, 55438, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2449, 2221, '2026-11-18T20:38:23Z', '2026-11-18T20:40:11Z', 'done', NULL, 0, 'f757b124a2282266d6d1a5889153af7d3ef2f690', 'app', 'claude-opus-5-5', 'e5126112-4960-423c-8e03-e7ed57dacb3d', NULL, 11, 22, 8943, 627855, 60998, 0.79250300000000007, 76049, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2450, 2227, '2026-11-18T20:40:00Z', '2026-11-18T20:41:00Z', 'done', NULL, 0, '58213cb0bdca043fa1e9a4a5a1830e21d2babec1', NULL, 'claude-opus-5-5', 'c012d1ba-efe5-41ec-844b-9b27c789706c', NULL, 7, 14, 5287, 315759, 42048, 0.5053318, 56403, 60, 3487406);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2451, 2222, '2026-11-18T20:40:11Z', NULL, 'running', NULL, NULL, '58213cb0bdca043fa1e9a4a5a1830e21d2babec1', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2451, 2222, '2026-11-18T20:40:11Z', '2026-11-18T20:41:52Z', 'done', NULL, 0, '58213cb0bdca043fa1e9a4a5a1830e21d2babec1', 'app', 'claude-opus-5-5', '0cf2e769-def0-4cc9-9172-2563afb02251', NULL, 10, 20, 8397, 583368, 63464, 0.7924056, 78557, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2452, 2233, '2026-11-18T20:41:40Z', '2026-11-18T20:43:03Z', 'done', NULL, 0, '9d9b98ac96999330b2ef82b342b30518dcbbaa30', NULL, 'claude-opus-5-5', '0b701a27-8652-4995-8218-e9d864dc9ffb', NULL, 13, 26, 6930, 664337, 46629, 0.64460340000000016, 61530, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2453, 2223, '2026-11-18T20:41:53Z', NULL, 'running', NULL, NULL, '9d9b98ac96999330b2ef82b342b30518dcbbaa30', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -60914,6 +60994,13 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2230, 222
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2231, 2229);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2232, 2230);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2232, 2231);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2235, 2234);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2236, 2234);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2237, 2236);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2238, 2237);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2239, 2235);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2239, 2238);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2240, 2239);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
