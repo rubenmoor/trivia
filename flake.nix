@@ -4,7 +4,7 @@
   #   nix build .#app              the game as it ships: built client + Python server, run with `trivia`
   #   nix run .#qgen -- batch      the LLM question batch (authoring/RUNBOOK.md, D-36)
   #   nix develop / direnv allow   everything for development, incl. `trivia`, `trivia-authoring`,
-  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam`, `trivia-release-check`, `trivia-report-server`, `trivia-gallery`, `trivia-trailer` and `trivia-music` running from this checkout
+  #                                `qgen`, `trivia-media`, `trivia-desktop`, `trivia-desktop-build`, `trivia-steam`, `trivia-release-check`, `trivia-report-server`, `trivia-gallery`, `trivia-trailer`, `trivia-music` and `trivia-sfx` running from this checkout
   #
   # The authoring tools edit files in the checkout (authoring/data, app/data/pool.json, work/), so
   # they are wrappers that run the checkout's scripts with pinned Python, ImageMagick and Claude Code.
@@ -55,6 +55,8 @@
         # Library music into loops (plan 221): numpy, librosa, soundfile for the loop finder; uv makes the Demucs venv.
         trivia-music = fromCheckoutWith pkgs (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile ]))
           "trivia-music" "authoring/tools/music/music.py" [ pkgs.ffmpeg-headless pkgs.uv ];
+        # Sound effect files from recordings (plan 223): ffmpeg only, the records and credits code of trivia-music.
+        trivia-sfx = fromCheckout pkgs "trivia-sfx" "authoring/tools/sfx/sfx.py" [ pkgs.ffmpeg-headless ];
         trivia-media = fromCheckout pkgs "trivia-media" "authoring/tools/media.py" [ pkgs.imagemagick ];
         trivia-authoring = fromCheckout pkgs "trivia-authoring" "authoring/server/main.py" [ pkgs.nodejs_22 ];
         trivia-dev = fromCheckout pkgs "trivia" "app/server/main.py" [ ];
@@ -214,7 +216,7 @@
             packages = [
               pkgs.nodejs_22 (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile ])) pkgs.ruff pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
-              tools.trivia-music tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
+              tools.trivia-music tools.trivia-sfx tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
               pkgs.ffmpeg-headless pkgs.uv pkgs.tesseract pkgs.whisper-cpp  # qgen media-probe (plan 201): authoring only, nothing ships
             ] ++ nixpkgs.lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [

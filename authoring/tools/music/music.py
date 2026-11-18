@@ -548,40 +548,45 @@ def credit_rows() -> list:
     return rows
 
 
-def credits_block(rows: list) -> str:
-    return "\n".join([BEGIN, *HEADER, *(r for _, r in rows), END]) + "\n" if rows else ""
+def credits_block(rows: list, begin: str = BEGIN, end: str = END) -> str:
+    return "\n".join([begin, *HEADER, *(r for _, r in rows), end]) + "\n" if rows else ""
 
 
-def split_credits(text: str) -> tuple[str, str, str]:
+def split_credits(text: str, begin: str = BEGIN, end: str = END) -> tuple[str, str, str]:
     """(before, block, after); block is empty when there are no markers."""
-    m = re.search(re.escape(BEGIN) + r".*?" + re.escape(END) + r"\n?", text, re.S)
+    m = re.search(re.escape(begin) + r".*?" + re.escape(end) + r"\n?", text, re.S)
     return (text[:m.start()], m[0], text[m.end():]) if m else (text, "", "")
 
 
-def cmd_credits(a) -> int:
+def sync_credits(rows: list, check: bool, tool: str, begin: str = BEGIN, end: str = END) -> int:
+    """Write (or --check) the generated block between `begin` and `end`; rows are (file, row); trivia-sfx reuses it."""
     f = layout.AUDIO_CREDITS
     text = f.read_text()
-    before, block, after = split_credits(text)
-    want = credits_block(credit_rows())
-    if a.check:
+    before, block, after = split_credits(text, begin, end)
+    want = credits_block(rows, begin, end)
+    if check:
         have = set(re.findall(r"^\| `([^`]+)`", block, re.M))
-        need = {file for file, _ in credit_rows()}
+        need = {file for file, _ in rows}
         for x in sorted(have - need):
             print(f"FAIL: row without a record: {x}", file=sys.stderr)
         for x in sorted(need - have):
-            print(f"FAIL: record without a row: {x} (run `trivia-music credits`)", file=sys.stderr)
+            print(f"FAIL: record without a row: {x} (run `{tool} credits`)", file=sys.stderr)
         stale = have == need and block != want
         if stale:
-            print("FAIL: generated rows out of date (run `trivia-music credits`)", file=sys.stderr)
+            print(f"FAIL: generated rows out of date (run `{tool} credits`)", file=sys.stderr)
         return 1 if have != need or stale else 0
     if not block and not want:
-        print("no music records: CREDITS.md unchanged")
+        print("no records: CREDITS.md unchanged")
         return 0
     if not block:  # first time: after the hand rows
         before = text.rstrip("\n") + "\n" + ("\n" if want else "")
     f.write_text(before + want + after)
-    print(f"{f}: {len(credit_rows())} music rows")
+    print(f"{f}: {len(rows)} rows")
     return 0
+
+
+def cmd_credits(a) -> int:
+    return sync_credits(credit_rows(), a.check, "trivia-music")
 
 
 def cmd_run(a) -> int:

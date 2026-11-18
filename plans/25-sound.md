@@ -137,6 +137,23 @@ Music file numbers:
 - Largest: `victoria` 1.20 MB (98 s), then `musica-caja-normal` 301 kB, `musica-caja-enviada` 301 kB, `musica-caja-pregunta` 301 kB, `musica-reflejos-enviada` 279 kB.
 - Cue count 62, not ~66 as the plan guessed; 4 are synth only: `silence`, `boom`, `claim`, `countdown`.
 
+## Effects
+
+The new sound effects (plan 223) are made with `trivia-sfx` from CC0, public domain or CC BY recordings, one listening round per group. Workers can't hear: the tool prints numbers (length, size, loudness, true peak), the developer's ears decide.
+
+- Tool: `trivia-sfx` (`authoring/tools/sfx/sfx.py`, dev shell; tests `test_sfx.py` in `npm test`); `-h` lists the commands
+  - `record <name> --file P --page U --title T --author A --licence SPDX --cue C [--cue …] [--class effect|jingle|long] [--start S] [--end S] [--gain DB] [--stereo]`, then `--read-on-page` once the licence is read on the source page
+  - `convert <name>`: cut, trim silence, 50 ms fade-out, loudnorm -16 LUFS / -1.5 dBTP (two passes), mono AAC 80k → `app/client/public/audio/<name>.m4a`; `--stereo` in the record keeps two channels
+  - `check [<name> …]`: -16 ±1 LUFS (clips over 0.3 s), true peak ≤ -1.5 dBTP, size budget of the class, licence allowed and read
+  - `credits [--check]`: effect rows of `CREDITS.md` between `trivia-sfx` marker comments; hand rows and music rows untouched
+- Licences and credits code are `music.py`'s (decision 199); allowed: CC0, PD, CC BY 3.0/4.0 (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`); no Freesound API (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`)
+- Record: `authoring/data/sfx/<name>.json` (committed): `name` (file name without `.m4a`, lower case ASCII Spanish words with `-`), source `page`, `title`, `author`, `library`, `sha256`, `downloaded`, `licence` (`spdx`, `read_on_page` date), `cues`, `class`, `stereo`, `cut` (`start`, `end`, `gain_db`), `credit`
+- Work files (gitignored): downloads by hand into `work/sfx/<group>/`; the tool copies the original to `work/sfx/originals/<name>.<ext>`
+- Budget per file: effect 40 kB, jingle 80 kB, long 100 kB (applause-big, timed countdown); the folder stays within `audio` in `app/desktop/media-budget.json`
+- Cue names are mod API and stay; file names may change; variants of frequent cues are a file list in `SAMPLE_FOR` (never the same twice in a row); synth `RECIPES` stay as the fallback
+- Groups: `GROUP` in `sound.svelte.ts` maps every cue to a group of the inventory (UI, reveal, jokers, fireworks, splash, timed, other); `/?efectos` lists the cues by group, one block per round
+- A group round: the worker installs its pick per cue (by measurement and fit to the brief's theme), stages 1–2 alternates per cue on `/sounds` (manifest group `effects-<group>`, round N); the developer listens on `/?efectos` and in a real game (`TRIVIA_SOUND=1`) and approves or asks for changes per cue; changes start the next round
+
 ## Manifest
 
 `work/sound-brief/manifest.json` (gitignored, in the main checkout; work trees symlink `work/`) lists the audition candidates that `/sounds` on `trivia-authoring` plays (`GET /api/sounds`, files at `/sounds/<file>`; `authoring/server/sounds.py`). Without a manifest the page shows «no candidates yet».

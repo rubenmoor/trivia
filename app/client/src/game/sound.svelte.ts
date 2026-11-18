@@ -598,13 +598,81 @@ export function sfx(cue: Cue, level = 1, opts: { synth?: boolean; file?: string 
   RECIPES[cue](ctx, fxBus, ctx.currentTime + 0.01, level);
 }
 
-/** Every effect with its recording's file name, if any, and a row per variant (the `/?efectos` audition list, UI-10). */
-export function effects(): { cue: Cue; file?: string; variant?: boolean }[] {
-  return (Object.keys(RECIPES) as Cue[]).flatMap((cue) => {
+/** Effect groups of the sound inventory (plans/25-sound.md): the `/?efectos` page lists the cues by group, one block per listening round. */
+export const EFFECT_GROUPS = ["ui", "reveal", "jokers", "fireworks", "splash", "timed", "other"] as const;
+export type EffectGroup = (typeof EFFECT_GROUPS)[number];
+const GROUP: Record<Cue, EffectGroup> = {
+  "silence": "other",
+  "rocket": "fireworks",
+  "burst": "fireworks",
+  "confetti-cannon": "fireworks",
+  "sparklers": "fireworks",
+  "stars": "fireworks",
+  "applause": "reveal",
+  "applause-big": "reveal",
+  "whoosh": "ui",
+  "swoosh-up": "jokers",
+  "swoosh": "ui",
+  "tear": "ui",
+  "paper": "ui",
+  "ready": "ui",
+  "boom": "reveal",
+  "block": "reveal",
+  "cork-pop": "jokers",
+  "pop": "ui",
+  "padlock-close": "ui",
+  "padlock-open": "ui",
+  "fanfare": "reveal",
+  "sad-trombone": "reveal",
+  "rewind": "jokers",
+  "menu-open": "ui",
+  "menu-close": "ui",
+  "unlocked": "ui",
+  "joker-armed": "jokers",
+  "joker-open": "jokers",
+  "joker-activate": "jokers",
+  "whistle-down": "timed",
+  "stamp": "jokers",
+  "shredder": "jokers",
+  "heartbeat": "jokers",
+  "tick": "ui",
+  "glass-break": "jokers",
+  "rustle": "jokers",
+  "broom": "jokers",
+  "bing": "jokers",
+  "wand": "jokers",
+  "token-back": "jokers",
+  "claim": "timed",
+  "countdown": "timed",
+  "splash-left": "splash",
+  "splash-right": "splash",
+  "splash-fade": "splash",
+  "splash-spin": "splash",
+  "splash-dissolve": "splash",
+  "splash-explode": "splash",
+  "splash-rocket": "splash",
+  "splash-drop": "splash",
+  "splash-wind": "splash",
+  "splash-blind": "splash",
+  "splash-drain": "splash",
+  "splash-pop": "splash",
+  "splash-zoom": "splash",
+  "splash-shatter": "splash",
+  "splash-melt": "splash",
+  "splash-blackhole": "splash",
+  "splash-birds": "splash",
+  "splash-typewriter": "splash",
+  "splash-plane": "splash",
+  "splash-jelly": "splash",
+};
+
+/** Every effect with its group and recording's file name, if any, and a row per variant, by group (the `/?efectos` audition list, UI-10). */
+export function effects(): { cue: Cue; group: EffectGroup; file?: string; variant?: boolean }[] {
+  return EFFECT_GROUPS.flatMap((group) => (Object.keys(RECIPES) as Cue[]).filter((cue) => GROUP[cue] === group).flatMap((cue) => {
     const files = SAMPLE_FOR[cue]?.[0];
-    if (typeof files === "string" || !files) return [{ cue, file: files }];
-    return [{ cue, file: files[0] }, ...files.map((file) => ({ cue, file, variant: true }))];
-  });
+    if (typeof files === "string" || !files) return [{ cue, group, file: files }];
+    return [{ cue, group, file: files[0] }, ...files.map((file) => ({ cue, group, file, variant: true }))];
+  }));
 }
 
 type Recipe = (c: AudioContext, out: AudioNode, t: number, level: number) => void;
