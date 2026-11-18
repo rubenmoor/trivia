@@ -147,6 +147,7 @@ Music file numbers:
   - `stands_for`: the cue or track it stands in for
   - `source`: page URL; `author`; `licence` (as read on the page)
   - numbers: `length_s`, `lufs`, `true_peak_db`, `centroid_hz`; `bpm` (music)
+  - music, optional: `title`, `full_length_s` (whole track), `excerpt_start_s`, `tension_note` (what could make the tension variants); `/sounds` shows them under the name
 
 ## Candidates
 
@@ -164,6 +165,17 @@ Four directions, each from one designer. Kenney's own download page refuses scri
 | `clean-digital` | Kenney, [UI Audio](https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks) (clicks, switches, rollovers) and [Digital Audio](https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc) (tones, power-ups, phasers, zaps) | CC0 | 12 | ~40: UI, tones (fanfare, sting), phasers (wand, whoosh), zaps (splash); no applause, fireworks, broom |
 
 Applause (`applause`, `applause-big`) and the crowd sounds are in none of the four: any theme keeps today's files or needs another source.
+
+### Round 1, music
+
+Four moods around decision 83's reference ("chill and relaxing, with a clear rise in tension on submit"), three tracks each, all Kevin MacLeod ([incompetech](https://incompetech.com/music/royalty-free/music.html)), instrumental, fixed-tempo studio productions with drums + bass + tune, all uploaded 2015 or later. Licence read on the site: CC BY 4.0 (`llms.txt` and the track page markup: `creativecommons.org/licenses/by/4.0/`); credit title, author, link, licence, "adapted". Other sources (Kenney, OpenGameArt, Free Music Archive, Scott Buckley) not used in round 1: Kenney's music is jingles only, and incompetech's catalogue (`pieces.json`: bpm, feel, instruments) has the longest steady, band-style tracks. Workers can't hear: picked from catalogue feel, instruments and bpm; each excerpt is the steadiest 60 s (lowest loudness variation, after the first 10 s) of the track, staged at -18 LUFS where the peak limit (-1.5 dBTP) allows, else quieter (`lufs` in the manifest). Tension variants (part 4): Demucs layer split (decision 732), one mixdown per variant (decision 734); the `tension_note` per track says which layers.
+
+| Mood | Tracks (bpm, full length) | Note |
+|---|---|---|
+| `chill-lofi` | Late Night Radio (72, 4:24), Smooth Lovin (75, 4:19), Universal (80, 4:30) | slow, relaxed, electric piano/synth; closest to decision 83 |
+| `warm-acoustic` | Fretless (100, 5:36), Bossa Antigua (70, 4:43), Shaving Mirror (78, 3:26) | guitar/ukulele/bossa; Fretless has countermelodies that come and go |
+| `jazz-quiz-show` | Backbay Lounge (120, 4:27), Lobby Time (128, 3:13), Jazz Brunch (100, 5:23) | piano/vibes/organ trio feel, brighter, game-show friendly |
+| `soft-electronic` | Eternity (100, 3:18), ZigZag (80, 3:45), Andreas Theme (90, 3:37) | synth/EP; ZigZag is a little aggressive already, Eternity very even (little dynamics) |
 
 ## Brief
 
