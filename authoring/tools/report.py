@@ -528,7 +528,8 @@ def report_simulate(args):
              for l in locales for m in modes for g in groups for p in models]
     t0 = time.monotonic()
     have = [c for c in cells if locale_pool(c["locale"]).exists()]
-    with concurrent.futures.ThreadPoolExecutor(os.cpu_count() or 4) as ex:
+    _lock = engine.lock()
+    with concurrent.futures.ThreadPoolExecutor(min((os.cpu_count() or 4) // 2 or 1, 8)) as ex:
         done = dict(zip(map(id, have), ex.map(engine.simulate, have)))
     results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
     pool = load_json(POOL)["questions"]
@@ -597,7 +598,8 @@ def report_career(args):
              for l in locales for g in groups for p in models for n in counts]
     t0 = time.monotonic()
     have = [c for c in cells if locale_pool(c["locale"]).exists()]
-    with concurrent.futures.ThreadPoolExecutor(min(os.cpu_count() or 4, 8)) as ex:
+    _lock = engine.lock()
+    with concurrent.futures.ThreadPoolExecutor(min((os.cpu_count() or 4) // 2 or 1, 8)) as ex:
         done = dict(zip(map(id, have), ex.map(engine.career, have)))
     results = [done.get(id(c)) or {**c, "result": "no_pool"} for c in cells]
     if args.json:

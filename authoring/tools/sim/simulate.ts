@@ -94,8 +94,9 @@ function run(data: EngineData, cell: Cell, seed: number): Run {
   const names = cell.mode === "solo" ? [NAME] : Array.from({ length: cell.players! }, (_, i) => `${NAME} ${i + 1}`);
   let save: SaveData = { ...emptySave(), language: data.locale };
   let first: { games: number; cambiazo: boolean } | null = null;
+  const before = new Set<string>();
+  let counted = 0; // seen rows already in `before` (rows only append)
   for (let games = 0; games < MAX_GAMES; games++) {
-    const before = seenIds(save);
     let got: Repeats;
     try {
       ({ save, ...got } = playSession(save, data, io, r, names, args, cell, before));
@@ -111,6 +112,7 @@ function run(data: EngineData, cell: Cell, seed: number): Run {
     }
     // Finished sessions only slow every clone down; seen rows carry the counts.
     save.games = [];
+    for (; counted < save.seen.length; counted++) before.add(save.seen[counted].question_id);
   }
   return { ...(first ?? { games: MAX_GAMES, cambiazo: false }), draw: MAX_GAMES, capped: true, bottleneck: NONE };
 }
