@@ -1,0 +1,26 @@
+{
+ "name": "corcho-sale",
+ "library": "Kenney Digital Audio",
+ "title": "pepSound5",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "download": "",
+ "sha256": "7c02a8b8ba8b6d7dae76429980294f48fd58453c669ce8269f02f77a7bf648ea",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "cork-pop"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"pepSound5\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

@@ -1,0 +1,26 @@
+{
+ "name": "carta-gira",
+ "library": "Kenney Casino Audio",
+ "title": "card-fan-1",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/54-casino-sound-effects-cards-dice-chips",
+ "download": "",
+ "sha256": "7a9758ccad8899baef1b9f60b4064e4baa724a548293832fdaea07e6e07e638d",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "swoosh-up"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"card-fan-1\" by Kenney (https://opengameart.org/content/54-casino-sound-effects-cards-dice-chips), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

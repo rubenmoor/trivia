@@ -133,7 +133,7 @@ The new sound effects (plan 223) are made with `trivia-sfx` from CC0, public dom
 
 - Tool: `trivia-sfx` (`authoring/tools/sfx/sfx.py`, dev shell; tests `test_sfx.py` in `npm test`); `-h` lists the commands
   - `record <name> --file P --page U --title T --author A --licence SPDX --cue C [--cue …] [--class effect|jingle|long] [--start S] [--end S] [--gain DB] [--stereo]`, then `--read-on-page` once the licence is read on the source page
-  - `convert <name>`: cut, trim silence, 50 ms fade-out, loudnorm -16 LUFS / -1.5 dBTP (two passes), mono AAC 80k → `app/client/public/audio/<name>.m4a`; `--stereo` in the record keeps two channels
+  - `convert <name>`: cut, trim silence, 50 ms fade-out, loudnorm -16 LUFS / -1.5 dBTP (two passes; a peaky clip gets gain + limiter and re-encodes until it fits), mono AAC 80k → `app/client/public/audio/<name>.m4a`; `--stereo` in the record keeps two channels
   - `check [<name> …]`: -16 ±1 LUFS (clips over 0.4 s; shorter clips, too short for a loudness reading, are peak-normalised to about -2.5 dBTP), true peak ≤ -1.5 dBTP, size budget of the class, licence allowed and read
   - `credits [--check]`: effect rows of `CREDITS.md` between `trivia-sfx` marker comments; hand rows and music rows untouched
 - Licences and credits code are `music.py`'s (decision 199); allowed: CC0, PD, CC BY 3.0/4.0 (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`); no Freesound API (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`)
@@ -175,6 +175,28 @@ Source: Kenney Digital Audio (power-ups, tones, low tones), CC0, the `clean-digi
 | `block` | `golpe-torre` (rate rises with the level) | `lowRandom` | `pepSound3` |
 
 - Old `fanfarria*` and `trombon-triste` files and rows gone; `golpe` stays for `splash-drop` (splash task)
+
+### Joker group, round 1
+
+Source: Kenney Digital Audio (tones, phasers, power-ups, space trash), Kenney RPG Audio (cloth, book, leather) and Kenney Casino Audio (cards, chips), all CC0, the `clean-digital` theme; no digital pack has a broom, so the sweep is a Kenney cloth swish (decision 735's brief: the joker round finds one). Peaky clips (`triturado`, `cristal-roto`, `escoba-suave`, `susurro-nota`, `carta-gira`) pass through a limiter in `trivia-sfx convert`, else -16 LUFS is out of reach under -1.5 dBTP. `tick` is in the UI group; `swoosh-up` stays with the jokers (inventory). Old `rebobinar`, `vidrio`, `susurro-papel`, `swoosh-sube` stay for the splash cues (splash task). Approval pending (joker decision); alternates staged on `/sounds` ("Effects: jokers", round 1).
+
+| Cue | Installed file | Source file | Alternate |
+|---|---|---|---|
+| `joker-armed` | `comodin-listo` | `twoTone2` | `twoTone1` |
+| `joker-open` | `comodin-despliega` | `phaserUp3` | `phaserUp1` |
+| `joker-activate` | `comodin-activa` | `powerUp11` | `powerUp10` |
+| `broom` (Paso y fuera) | `escoba-suave` | RPG `cloth1` | `clothBelt` |
+| `bing` (Soplo) | `campanilla` | `tone1` | `highUp` |
+| `wand` (Hada madrina) | `varita-magica` | `zapThreeToneUp` | `powerUp9` |
+| `swoosh-up` (Cambiazo flip) | `carta-gira` | Casino `card-fan-1` | `card-slide-1` |
+| `cork-pop` | `corcho-sale` | `pepSound5` | `pepSound1` |
+| `rewind` | `cinta-atras` | `phaserDown3` | `laser9` |
+| `stamp` | `sello-seco` | RPG `bookPlace1` | `chop` |
+| `shredder` | `triturado` | `spaceTrash2` (first 1.4 s) | `spaceTrash3` |
+| `heartbeat` | `latido-grave` | RPG `dropLeather` | `doorClose_1` |
+| `glass-break` | `cristal-roto` | `spaceTrash1` (first 1.2 s) | `spaceTrash3` |
+| `rustle` | `susurro-nota` | RPG `cloth3` | `cloth2` |
+| `token-back` (rate varies) | `ficha-vuelve` | Casino `chip-lay-1` | UI `rollover5` |
 
 ## Manifest
 
