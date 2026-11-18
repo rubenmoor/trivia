@@ -196,6 +196,12 @@ class Checks(Loop):
         self.replace("normal", x + np.linspace(0, 0.3, len(x), dtype="float32")[:, None])
         self.fails(i, "normal: seam jump")
 
+    def test_seam_local_step(self):
+        t = np.arange(48000 * 2)
+        kick = (np.sin(t * 0.01) * np.exp(-(t % 24000) / 500.0) * 0.8).astype("float32")[:, None].repeat(2, 1)
+        self.assertLess(ml.seam_jump(kick), 3)  # attack at the seam is natural
+        self.assertGreater(ml.seam_jump(kick + np.linspace(0, 0.3, len(kick), dtype="float32")[:, None]), 3)
+
     def test_check_unequal_length(self):
         i = self.exported()
         self.replace("quiet", ml.decode(self.out / "musica-fix-quiet.m4a")[:-SR])

@@ -36,7 +36,7 @@ This is the how-to for turning one free library track into loop files for the ga
    - Keep a track whole (`loop --whole`) when it splits badly (melody leaks into drums, one layer audible); variants are then sections: `@<bar>`
 5. **Loop**: `trivia-music loop <id> [--bars 8] [--bpm B] [--whole]`
    - Finds the tempo from the drums (0.001 bpm), the downbeat, the most self-similar stretch, cuts all layers at one place, tail rings into head; one gain for all layers, sum at -18 LUFS
-   - Rejects (exit 1, reason printed): `repeat_similarity` < 0.8, seam jump > 3, `comb_score` < 1.5, fitted bpm > 3 % off the listed one, loop < 10 s or > 300 s
+   - Rejects (exit 1, reason printed): `repeat_similarity` < 0.8, seam step > 3× the mean step within 10 ms of it, `comb_score` < 1.5, fitted bpm > 3 % off the listed one, loop < 10 s or > 300 s
    - On a reject: another `--bars` (the stretch changes), another section, or another track; don't force a bpm
 6. **Variants**: `trivia-music export <id> <out-dir> --variant NAME=RECIPE …`
    - Recipe: layers joined by `+` (`bass+other`), per-layer dB cut after a layer (`bass+other-3`), leading `+` = previous variant plus (`+drums`), `full`; with `--whole`: `full` or `@<bar>`
