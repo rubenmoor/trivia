@@ -123,7 +123,9 @@ const es = {
   },
   /** Soundtrack names in the overlay, by mood (plan 182). */
   soundtrack: {
-    sintetizada: "Sintetizada",
+    "lofi-tranquilo": "Lofi tranquilo",
+    "acustica-calida": "Acústica cálida",
+    "jazz-de-concurso": "Jazz de concurso",
   },
   /** First-start language picker and the Start screen's language button (plan 126); language names are endonyms in lib/i18n.ts. */
   language: {

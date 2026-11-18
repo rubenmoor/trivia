@@ -110,7 +110,9 @@ export const de = {
   },
   /** Soundtrack names in the overlay, by mood (plan 182). */
   soundtrack: {
-    sintetizada: "Synthetisch",
+    "lofi-tranquilo": "Entspanntes Lo-Fi",
+    "acustica-calida": "Warm und akustisch",
+    "jazz-de-concurso": "Quizshow-Jazz",
   },
   language: {
     choose: "Sprache wählen",

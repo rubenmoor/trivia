@@ -102,7 +102,7 @@ Notes:
 
 ### Soundtracks (`SOUNDTRACKS`, `soundtracks.ts`)
 
-The old recorded sets (`variaciones`, `caja`, `sin-prisa`, `reflejos`) and their files are gone (decision 733, the brief). Until `plan 222: Soundtracks in the engine and the picker` task 2 adds the brief's three sets, `sintetizada` (generated: A minor i–VI–III–V pad, 76/96/120/132 bpm) is the only entry.
+The old recorded sets (`variaciones`, `caja`, `sin-prisa`, `reflejos`) and their files are gone (decision 733, the brief). The brief's three sets are entries (`lofi-tranquilo` default, `acustica-calida`, `jazz-de-concurso`; `chill-lofi`, `warm-acoustic`, `jazz-quiz-show` in the brief), not installed yet: the generated loops (A minor i–VI–III–V pad, 76/96/120/132 bpm) play until `plan 224: New soundtracks` adds files. `sintetizada` left the picker.
 
 - Music file numbers: none yet; the new sets get their rows from part 4.
 - Default and picker: per the brief (`chill-lofi`), set by task 2243.
