@@ -1645569,7 +1645569,7 @@
     },
     {
       "id": "q-21090",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 4,
       "description": "The kitchen's version of a pool party: everyone jumps in, and then things start spinning.",
       "question": "Watch: which fruit is in the glass bowl next to the blender?",
@@ -1645628,16 +1645628,24 @@
       "needs_media": true,
       "batch": "batch-85",
       "review": {
-        "decision": "needs_work",
-        "feedback": "At 24.04 s (frame 10), a faint caption is already fading in over the blender (you can make out a word ending in “…ened” on the sheet). That is the “1¼ cups peaches” ingredient card starting earlier than the note says. If the player holds the last frame while the family thinks, the text could name the answer. Trim the excerpt end to about 23.8 s, where frames 1–9 are clean, and the question can be approved as written.",
-        "problems": [
-          "giveaway",
-          "media"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-18",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "At 24.04 s (frame 10), a faint caption is already fading in over the blender (you can make out a word ending in “…ened” on the sheet). That is the “1¼ cups peaches” ingredient card starting earlier than the note says. If the player holds the last frame while the family thinks, the text could name the answer. Trim the excerpt end to about 23.8 s, where frames 1–9 are clean, and the question can be approved as written.",
+          "problems": [
+            "giveaway",
+            "media"
+          ],
+          "reviewed_on": "2026-11-18",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1645647,6 +1645655,12 @@
         "class": "general",
         "kind": "video-scene",
         "probe": "media-probe/542334e19baa3867"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Frame 10 (24.04 s) shows the ingredient caption fading in, so I trimmed the excerpt end to 23.8 s, where every frame is clean, and updated the note to match; the text is unchanged.",
+        "previous": {},
+        "revised_on": "2026-11-18"
       }
     },
     {
@@ -1646837,7 +1646851,7 @@
     },
     {
       "id": "q-21105",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Planet Earth's mood ring, checked every few years for 130 years straight.",
       "question": "Watch: the colors on this NASA world map are not actual temperatures. What do they show?",
@@ -1646849,7 +1646863,7 @@
       ],
       "hints": [
         "Here, blue doesn't mean freezing and red doesn't mean scorching.",
-        "Look at Antarctica and the Arctic: near-polar spots turn red even though they're never warm.",
+        "Places that are always cold can still show up red.",
         "It measures how far a place strays from its usual temperature, warmer or cooler than normal."
       ],
       "media": {
@@ -1646892,15 +1646906,23 @@
       "needs_media": true,
       "batch": "batch-85",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This question uses the same NASA video as q-20673 (“Which part of the world turns the deepest red?” → The Arctic). Hint 2 here says the Arctic turns red, which gives away that question's answer. Either drop one of the two questions, or reword hint 2 so it no longer points to the Arctic, for example: “Places that are always cold can still show up red.”",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-18",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "This question uses the same NASA video as q-20673 (“Which part of the world turns the deepest red?” → The Arctic). Hint 2 here says the Arctic turns red, which gives away that question's answer. Either drop one of the two questions, or reword hint 2 so it no longer points to the Arctic, for example: “Places that are always cold can still show up red.”",
+          "problems": [
+            "overlap"
+          ],
+          "reviewed_on": "2026-11-18",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1646913,11 +1646935,11 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which defined the answer, with a clue to look at the polar regions on the map.",
+        "reason": "Reworded hint 2 so it no longer names the Arctic, which is the answer to q-20673 (same video).",
         "previous": {
           "hints": [
             "Here, blue doesn't mean freezing and red doesn't mean scorching.",
-            "Each spot is compared with its own normal temperature over a set baseline period.",
+            "Look at Antarctica and the Arctic: near-polar spots turn red even though they're never warm.",
             "It measures how far a place strays from its usual temperature, warmer or cooler than normal."
           ]
         },

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "3b5b8a29",
+  "hash": "67b5804a",
   "questions": [
     {
       "id": "q-0001",
@@ -216166,6 +216166,44 @@
       "background": null
     },
     {
+      "id": "q-21090",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "drinks",
+      "bundle": "base",
+      "description": "The kitchen's version of a pool party: everyone jumps in, and then things start spinning.",
+      "question": "Watch: which fruit is in the glass bowl next to the blender?",
+      "answer": "Peaches",
+      "wrong_answers": [
+        "Strawberries",
+        "Bananas",
+        "Kiwis"
+      ],
+      "hints": [
+        "Before it was sliced, this fruit was round and about the size of a tennis ball.",
+        "Its skin feels soft and a little fuzzy, and it has a big hard stone inside.",
+        "In a famous Roald Dahl story, a boy named James travels inside a giant one."
+      ],
+      "fun_fact": "Peaches first come from China, where people were growing them thousands of years ago.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Peach_Yogurt_Smoothie_Ages_6-18_English_Rd3_%2852197024312%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeach_Yogurt_Smoothie_Ages_6-18_English_Rd3_%2852197024312%29.webm",
+        "credit": "USDAgov · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDAgov",
+        "author_url": null,
+        "excerpt": {
+          "start": 21,
+          "end": 24.2
+        }
+      },
+      "background": null
+    },
+    {
       "id": "q-21092",
       "status": "approved",
       "difficulty": 13,
@@ -216673,6 +216711,41 @@
         "author": "Unidentified (Michiganensian is the University of Michigan yearbook published by University of Michigan)",
         "author_url": null
       }
+    },
+    {
+      "id": "q-21105",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "Planet Earth's mood ring, checked every few years for 130 years straight.",
+      "question": "Watch: the colors on this NASA world map are not actual temperatures. What do they show?",
+      "answer": "Temperature anomaly",
+      "wrong_answers": [
+        "Heat index",
+        "Dew point",
+        "Albedo"
+      ],
+      "hints": [
+        "Here, blue doesn't mean freezing and red doesn't mean scorching.",
+        "Places that are always cold can still show up red.",
+        "It measures how far a place strays from its usual temperature, warmer or cooler than normal."
+      ],
+      "fun_fact": "NASA compares each place with its own 1951–1980 average, so a freezing Siberian winter can still show up red if it was milder than usual.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Five-year_average_global_temperature_anomalies_from_1880_to_2010.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFive-year_average_global_temperature_anomalies_from_1880_to_2010.ogv",
+        "credit": "NASA/Goddard Space Flight Center Scientific Visualization Studio · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center Scientific Visualization Studio",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
     },
     {
       "id": "q-21106",
