@@ -11940,6 +11940,44 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - Every cue plays a new recording from the brief''s theme (or is listed as intentionally synth-only), approved by the developer per group
 - Old effect files and rows gone; records and generated credits for every effect file; budget kept
 - Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', 'Every little sound the game plays, from opening a menu to a joker being used or fireworks after a win, is being replaced so they all sound like they belong together, in a style the developer picks beforehand. The new sounds come only from free libraries whose licences allow a paid game, and each is turned to the same loudness and kept small. Because the people doing the work cannot hear, they choose by measurement and put each group of sounds into the game, and the developer listens on the TV and approves or asks for changes, group by group, until every group fits.', '2026-11-18T20:45:55Z', 2224, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (224, 22, 'New soundtracks', 200, 'Part 4 of `plan 219: masterplan` (milestone 22: rework all sound + music). This part finds, cuts and installs the new soundtracks. Each set comes from a CC0 or CC BY library track and is turned into one loop file per tension variant with `plan 221: Music pipeline`''s `trivia-music`. Each set is then dropped into the format of `plan 222: Soundtracks in the engine and the picker`. The developer picks every set by ear, over iterative feedback rounds.
+
+## Binding
+- The brief: `plans/25-sound.md` "Brief", raised by `task 2232: The sound brief: developer picks theme, moods, variants` (its decision id doesn''t exist yet; it is done only when the brief is final). It covers set count (2–3), each set''s mood, its tension variants (`normal`, `question`, `submitted`, `timed` at least), `roll`/`victory` per set or shared, which old files stay (Elgar `victoria.m4a`, drum roll `redoble.m4a`) and the default set
+- `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`: the licence is read on each track page and recorded; no BY-SA, NC, ND, extra clauses or generators; one `CREDITS.md` row per shipped file
+- `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`: split or whole; "adapted" in the credit line; Demucs not named
+- `decision 734: Soundtrack tension variants: one mixdown file per variant, not live layer mixing`: one `.m4a` per variant, all of a set the same length
+- `decision 83: Recorded music loops: approve on the TV?`: the reference mood: "chill and relaxing, with a clear rise in tension on submit"
+- `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`: no Freesound API
+- Developer feedback in plans/04 "Music": sharp cuts on lock-in, unlock and submit; the roll turns into the result; music is off during question media
+- Workers can''t hear: candidates are picked by measurement (`trivia-music` numbers: bpm, `comb_score`, `repeat_similarity`, seam, LUFS); the developer''s ears decide
+- Credits are never hand-typed: rows come from `trivia-music credits`, from the records in `authoring/data/music/`
+- Decision 200: every removed file name is `rg`-ed over code, comments and `.md` files, and every hit is fixed in the same commit
+
+## Per set (one task each, iterative feedback)
+- **Search** by the brief''s mood words (`--web`): incompetech (`trivia-music search --feel … --bpm …`), Kenney and OpenGameArt CC0, Free Music Archive, Scott Buckley. Prefer fixed tempo, instrumental, drums + bass + tune all present, and a long steady section; reject live, drifting tempo
+- **Candidates**: 2–3 tracks per round. For each: `fetch` or `record`, licence read on the page (`record --read-on-page`), `split` (or `--whole` when the split leaks), `loop` (the reject thresholds of plan 221), `export --variant <track>=<recipe>` for every variant the brief gives the set (e.g. `normal=bass+other`, `question=+drums`, `submitted=full`, `timed=full` +gain or another section), then `check`
+- **Rise in tension**: each variant louder or busier than the one before (`normal` < `question` < `submitted`), measured (LUFS, onset density) and noted
+- **Install the top pick** into the game, so the developer hears it in context: `musica-<set>-<track>.m4a` in `app/client/public/audio/`, plus `loopStart`/`loopEnd` and `level` in the set''s `SOUNDTRACKS` entry (comment names the record), then `trivia-music credits`. Alternates go on `/sounds` (plan 220''s page, manifest group `music-<set>`, round N); records of alternates are not committed
+- **Developer decision** per round: listen on `/?efectos` (the set''s variants and the cuts) and in a real game (`TRIVIA_SOUND=1`: question, lock-in, submit, a timed round). Options: approve, swap in an alternate, or changes ("more like this, less like that", a section, a variant''s recipe). An answer with changes brings the task back: new search with the new words, next round, decision raised again, until approved
+- **Budget per set**: all its variants ≤ 1.4 MB (≈ today''s 240–300 kB per loop at today''s AAC settings); loop length ≥ 20 s, so the seam doesn''t come round too often
+- **Approved**: the round and pick go into `plans/25-sound.md` "Soundtracks" (track, author, licence, bpm, loop, variants and recipes, round); the record is committed
+
+## Tasks
+1. **First soundtrack set** (the brief''s first set, usually the default; `--web`; requires `task 2232: The sound brief: developer picks theme, moods, variants`, `task 2239: Music pipeline: end-to-end run on one track`, `task 2243: The brief''s soundtracks: ids, names, default, picker` and `task 2229: Listening page /sounds on trivia-authoring`; iterative feedback): the steps above, the decision raised, the task pending on it
+2. **Second soundtrack set** (same requires and steps; iterative feedback)
+3. **Third soundtrack set** (same requires and steps; iterative feedback): dropped by its worker (`pm task drop`) when the brief names only two sets
+4. **Shared roll and victory** (`--web`; requires task 2232 and task 2242: Soundtrack format and the old sets removed; iterative feedback): what the brief says about `roll` and `victory`. Old files kept: nothing to do but note it. New shared or per-set files: search (a drum roll that can turn into the result; a short victory piece ≤ 30 s, ≤ 400 kB in place of Elgar''s 1.2 MB), record, cut (plan 221''s `record`/`export --whole`, a one-shot, not a loop), -18 LUFS, install, credits, decision per round as above. Per-set `roll`/`victory` from a set''s own track: part of that set''s task, not this one
+5. **Old music files gone and the tally** (requires 1–4): `redoble.m4a` and `victoria.m4a` deleted with their `CREDITS.md` rows unless the brief keeps them; no `musica-*.m4a` without a record; every set of the brief installed with every variant (`sound.test.ts` of plan 222 passes without "not installed" sets); `trivia-music check` on every record, `trivia-music credits --check`, `stage-media.mjs --check` (`audio` line in `app/desktop/media-budget.json` kept; a raise is part 6''s to decide), the release-check credits step and the Credits screen pass; `plans/25-sound.md` "Soundtracks" complete; `rg` of every removed file name (decision 200)
+
+## Out of scope
+- Pipeline code (plan 221); soundtrack format, ids, names and picker (plan 222); effects (plan 223)
+- The whole-game mix (`MUSIC_LEVEL`, `duck`, `DEFAULTS`), the `audio` budget line, plans/04 "Audio"/"Sound assets" rewrites and the final TV approval (part 6)
+
+## Done when
+- Every set of the brief is installed with all its variants, approved by the developer; `roll`/`victory` per the brief
+- Old music files and rows are gone; every music file has a record and a generated `CREDITS.md` row; the budget is kept
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', 'The game will get two or three new background soundtracks, each in a calm version and in tenser versions of the same piece that switch on the beat as a question starts and an answer is locked in. This part finds suitable pieces in free music libraries whose licences allow a paid game, cuts each into seamless loops and tense versions, and puts them into the game. Because the people doing the work cannot hear, they pick candidates by measurement, and the developer listens on the TV and keeps asking for changes until every soundtrack fits.', '2026-11-18T20:47:15Z', 2225, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -49686,7 +49724,7 @@ The plan''s work (`app/client/src/game/sound.svelte.ts`, `SOUNDTRACKS`, options 
 - cue names stay (mod API, `modding/README.md`)
 
 Done when: the plan exists with its tasks.', '2026-11-18T20:38:17Z', '2026-11-18T20:44:27Z', 2220, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2224, 219, 'Write the plan: the new sound effects in one theme', 'plan', 'open', 1000, NULL, 'Write part 5 of `plan 219: masterplan` (its "Parts" item 5): `pm plan add 22 "New sound effects" --intro … --priority 190`, body as below, then it gets split. Needs part 1''s plan (the brief decision''s id): its tasks wait for that decision (`pm task-pending-decision`).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2224, 219, 'Write the plan: the new sound effects in one theme', 'plan', 'done', 1000, '2026-11-18, plan 223: New sound effects (pm only, no files); split queued', 'Write part 5 of `plan 219: masterplan` (its "Parts" item 5): `pm plan add 22 "New sound effects" --intro … --priority 190`, body as below, then it gets split. Needs part 1''s plan (the brief decision''s id): its tasks wait for that decision (`pm task-pending-decision`).
 
 The plan''s work:
 - one theme (the brief''s), few sources: one pack or sound designer per group where possible: UI, reveal, jokers, fireworks, category splash, timed; CC0/PD/CC BY only (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`); no Freesound API, hand-picked files fine (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`); search tasks need `--web`
@@ -49696,8 +49734,8 @@ The plan''s work:
 - cue names kept (mod API), file names may change; old files and their `CREDITS.md` rows deleted
 - one task per group; listening rounds per group as developer decisions (`/?efectos`, a real game, `TRIVIA_SOUND=1`), iterative feedback until picked
 
-Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', NULL, 2220, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2225, 219, 'Write the plan: the new soundtracks', 'plan', 'open', 1000, NULL, 'Write part 4 of `plan 219: masterplan` (its "Parts" item 4): `pm plan add 22 "New soundtracks" --intro … --priority 200`, body as below, then it gets split. Uses part 1''s brief decision, part 2''s pipeline and part 3''s soundtrack format: its tasks require their tasks and wait for the brief decision.
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', '2026-11-18T20:46:00Z', 2220, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2225, 219, 'Write the plan: the new soundtracks', 'plan', 'done', 1000, '2026-11-18, plan 224: New soundtracks (priority 200), split task queued; no files changed', 'Write part 4 of `plan 219: masterplan` (its "Parts" item 4): `pm plan add 22 "New soundtracks" --intro … --priority 200`, body as below, then it gets split. Uses part 1''s brief decision, part 2''s pipeline and part 3''s soundtrack format: its tasks require their tasks and wait for the brief decision.
 
 The plan''s work, one task per soundtrack set (count from the brief):
 - search by the brief (incompetech `pieces.json`, Kenney/OpenGameArt CC0, Free Music Archive, Scott Buckley; `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`); search tasks need `--web`
@@ -49706,7 +49744,7 @@ The plan''s work, one task per soundtrack set (count from the brief):
 - old music files (12 loops, and `redoble`/`victoria` unless the brief keeps them) and their `CREDITS.md` rows deleted
 - `audio` budget in `app/desktop/media-budget.json` kept (`stage-media.mjs --check`)
 
-Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', NULL, 2220, 0, NULL, 'app');
+Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', '2026-11-18T20:47:18Z', 2220, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2226, 219, 'Write the plan: mix, budget and close-out of the sound rework', 'plan', 'open', 1000, NULL, 'Write part 6 of `plan 219: masterplan` (its "Parts" item 6): `pm plan add 22 "Sound rework: mix, budget and close-out" --intro … --priority 150`, body as below, then it gets split. After parts 4 and 5''s plans: its tasks require their last tasks.
 
 The plan''s work:
@@ -49910,8 +49948,128 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Done when
 - The brief''s sets in the picker with approved names in four languages; default per the brief; review decision answered approved, consequences recorded
 - `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:44:56Z', NULL, 2241, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2244, 223, 'create tasks for plan 223: New sound effects', 'split', 'open', 1000, NULL, 'Split plan 223 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:45:55Z', NULL, 2224, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2244, 223, 'create tasks for plan 223: New sound effects', 'split', 'done', 1000, '2026-11-18, tasks 2245 (trivia-sfx tool and /?efectos groups), 2246–2251 (UI, reveal, jokers, fireworks, category splash, timed; each --web, requires 2245 and 2232, raises its own group decision, iterative feedback; splash also requires 1870), 2252 (old effects gone and the tally, requires 2246–2251); groups not chained so one group''s open decision doesn''t block the others; no up-front decisions: the brief is task 2232''s, each group raises its own', 'Split plan 223 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:45:55Z', '2026-11-18T20:47:30Z', 2224, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2245, 223, 'New effects: trivia-sfx tool and /?efectos groups', 'work', 'open', NULL, NULL, 'Task 1 of `plan 223: New sound effects`. No sound changes; the tool and the page the group tasks use.
+
+- `authoring/tools/sfx/sfx.py`, command `trivia-sfx` (flake `fromCheckout` and dev shell, like `trivia-music`); imports the record, licence allowlist and credits code of `authoring/tools/music/music.py` (decision 199), no second copy
+- `record <name> --file <path> --page <url> --title … --author … --licence …`: writes `authoring/data/sfx/<name>.json` (source page, SHA-256, licence as read on the page and the date, cue(s), cut: start, end, gain); licence outside `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators` refused
+- `convert <name>`: the cut + plan 32''s chain (trim silence, short fade-out, `loudnorm` -16 LUFS, -1.5 dBTP, mono AAC 80k `.m4a` unless the record says stereo) → `app/client/public/audio/<name>.m4a`; ASCII Spanish names
+- `check`: per file loudness -16 ±1 LUFS (effects > 0.3 s), true peak ≤ -1.5 dBTP, budget (≤ 40 kB effect, ≤ 80 kB jingle, ≤ 100 kB longest: applause-big, timed countdown; class in the record), licence allowed
+- Credits: effect rows of `app/client/public/audio/CREDITS.md` generated from the records through part 2''s `credits`, between their own markers; hand rows untouched until the plan''s last task
+- Tests (in `npm test`) on a fixture made in the test (tone + silence): trim, fade, -16 LUFS, mono; a too-large file and an NC licence fail; a credits row generated
+- `/?efectos`: `effects()` and `EffectsDemo.svelte` list cues by group (a `GROUP` map next to `SAMPLE_FOR` in `app/client/src/game/sound.svelte.ts`; groups from `plans/25-sound.md` "Inventory": UI, reveal, jokers, fireworks, category splash, timed, other)
+- `plans/25-sound.md` "Effects" section: tool, record format, budget, how a group round works
+- Done when: tests pass, `/?efectos` shows the groups; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:46:42Z', NULL, 2244, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2246, 223, 'New effects: UI sounds', 'work', 'open', NULL, NULL, 'Task 2 of `plan 223: New sound effects`: the UI group (iterative feedback).
+
+- Cues: every `Cue` the inventory (`plans/25-sound.md` "Inventory") puts in the UI group: menus, card pick, lock/unlock, ready, token back, tower block, whooshes, pops, …
+- Variants for the frequent ones (`pop`, `block` and what the inventory marks frequent)
+- Done when the UI group decision is answered approve
+
+## Steps (same for every group; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": theme for this group, old sounds kept) and the inventory rows of this group (cue, moment, meaning, frequency)
+- Search (`--web`): one pack or one sound designer for the group where possible, a second source only for cues the first lacks (noted per cue); allowed: Kenney.nl, OpenGameArt CC0, freesound.org by hand (CC0, CC BY; no API, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), Wikimedia Commons PD/CC0/CC BY, Sonniss GDC bundles only if the licence read fits; licence read on each source page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- Downloads by hand into `work/sfx/<group>/` (gitignored, main checkout''s `work/` via the symlink); zips never committed
+- Workers can''t hear: pick per cue by measurement (length, loudness, true peak, spectral centroid, onset) and fit to the theme and meaning; `trivia-sfx record` + `convert` the pick, installed into the game (`SAMPLE_FOR`; variants for frequent cues, random never twice in a row via `pickLoaded`; `rate` where it helps); synth `RECIPES` stay as fallback; cue names unchanged (mod API)
+- 1–2 alternates per cue staged on `/sounds` (manifest group `effects-<group>`, round N)
+- Old files of these cues and their `CREDITS.md` rows deleted where no other cue uses them; `rg` every removed file name over code, comments and `.md` files, fix every hit (decision 200)
+- `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the group decision (`pm decision add`): where to listen (`/?efectos` block of this group, `/sounds` round N, a real game with `TRIVIA_SOUND=1` and how to reach each moment), per cue the installed pick and its alternates; options: approve, or changes per cue ("more like this, less like that", an alternate''s name); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search, next round, the decision raised again; until approved. Approved: the round per cue in `plans/25-sound.md` "Effects", the decision''s consequences', '2026-11-18T20:47:01Z', NULL, 2244, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2247, 223, 'New effects: reveal sounds', 'work', 'open', NULL, NULL, 'Task 3 of `plan 223: New sound effects`: the reveal group (iterative feedback). Same files as the other groups (`SAMPLE_FOR`, `CREDITS.md`): merge with what they installed, don''t overwrite.
+
+- Cues: right-answer jingle `fanfare` (4–6 variants unless the brief keeps today''s), wrong (`sad-trombone`, `whistle-down` where used for wrong), applause (small and big), the inventory''s other reveal cues
+- Answers off stays silent (D-105)
+- Done when the reveal group decision is answered approve
+
+## Steps (same for every group; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": theme for this group, old sounds kept) and the inventory rows of this group (cue, moment, meaning, frequency)
+- Search (`--web`): one pack or one sound designer for the group where possible, a second source only for cues the first lacks (noted per cue); allowed: Kenney.nl, OpenGameArt CC0, freesound.org by hand (CC0, CC BY; no API, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), Wikimedia Commons PD/CC0/CC BY, Sonniss GDC bundles only if the licence read fits; licence read on each source page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- Downloads by hand into `work/sfx/<group>/` (gitignored, main checkout''s `work/` via the symlink); zips never committed
+- Workers can''t hear: pick per cue by measurement (length, loudness, true peak, spectral centroid, onset) and fit to the theme and meaning; `trivia-sfx record` + `convert` the pick, installed into the game (`SAMPLE_FOR`; variants for frequent cues, random never twice in a row via `pickLoaded`; `rate` where it helps); synth `RECIPES` stay as fallback; cue names unchanged (mod API)
+- 1–2 alternates per cue staged on `/sounds` (manifest group `effects-<group>`, round N)
+- Old files of these cues and their `CREDITS.md` rows deleted where no other cue uses them; `rg` every removed file name over code, comments and `.md` files, fix every hit (decision 200)
+- `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the group decision (`pm decision add`): where to listen (`/?efectos` block of this group, `/sounds` round N, a real game with `TRIVIA_SOUND=1` and how to reach each moment), per cue the installed pick and its alternates; options: approve, or changes per cue ("more like this, less like that", an alternate''s name); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search, next round, the decision raised again; until approved. Approved: the round per cue in `plans/25-sound.md` "Effects", the decision''s consequences', '2026-11-18T20:47:02Z', NULL, 2244, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2248, 223, 'New effects: joker sounds', 'work', 'open', NULL, NULL, 'Task 4 of `plan 223: New sound effects`: the joker group (iterative feedback).
+
+- Cues: `joker-armed`, `joker-open`, `joker-activate`, `broom`, `bing`, `wand` and the per-joker ones of the inventory (shredder, heartbeat, rewind, tick, cork-pop, tear, rustle, glass-break, …); `tick` with variants
+- Each says what its joker does (`decision 81: Recorded sound effects: approve on the TV?`): Paso y fuera a broom sweeping, Soplo a microwave bell «bing», Hada madrina a fairy wand with fairy dust; the others per the inventory''s meaning, in the new theme
+- The decision''s text names each joker, what its sound should say and how to play it in a game
+- Done when the joker group decision is answered approve
+
+## Steps (same for every group; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": theme for this group, old sounds kept) and the inventory rows of this group (cue, moment, meaning, frequency)
+- Search (`--web`): one pack or one sound designer for the group where possible, a second source only for cues the first lacks (noted per cue); allowed: Kenney.nl, OpenGameArt CC0, freesound.org by hand (CC0, CC BY; no API, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), Wikimedia Commons PD/CC0/CC BY, Sonniss GDC bundles only if the licence read fits; licence read on each source page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- Downloads by hand into `work/sfx/<group>/` (gitignored, main checkout''s `work/` via the symlink); zips never committed
+- Workers can''t hear: pick per cue by measurement (length, loudness, true peak, spectral centroid, onset) and fit to the theme and meaning; `trivia-sfx record` + `convert` the pick, installed into the game (`SAMPLE_FOR`; variants for frequent cues, random never twice in a row via `pickLoaded`; `rate` where it helps); synth `RECIPES` stay as fallback; cue names unchanged (mod API)
+- 1–2 alternates per cue staged on `/sounds` (manifest group `effects-<group>`, round N)
+- Old files of these cues and their `CREDITS.md` rows deleted where no other cue uses them; `rg` every removed file name over code, comments and `.md` files, fix every hit (decision 200)
+- `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the group decision (`pm decision add`): where to listen (`/?efectos` block of this group, `/sounds` round N, a real game with `TRIVIA_SOUND=1` and how to reach each moment), per cue the installed pick and its alternates; options: approve, or changes per cue ("more like this, less like that", an alternate''s name); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search, next round, the decision raised again; until approved. Approved: the round per cue in `plans/25-sound.md` "Effects", the decision''s consequences', '2026-11-18T20:47:02Z', NULL, 2244, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2249, 223, 'New effects: fireworks', 'work', 'open', NULL, NULL, 'Task 5 of `plan 223: New sound effects`: the fireworks group (iterative feedback).
+
+- Cues: `rocket`, `burst`, `confetti-cannon`, `sparklers`, `stars` and the inventory''s other firework cues, at their victory moments
+- `burst` (and others that repeat within a show) with variants
+- The decision says how to reach a victory quickly
+- Done when the fireworks group decision is answered approve
+
+## Steps (same for every group; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": theme for this group, old sounds kept) and the inventory rows of this group (cue, moment, meaning, frequency)
+- Search (`--web`): one pack or one sound designer for the group where possible, a second source only for cues the first lacks (noted per cue); allowed: Kenney.nl, OpenGameArt CC0, freesound.org by hand (CC0, CC BY; no API, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), Wikimedia Commons PD/CC0/CC BY, Sonniss GDC bundles only if the licence read fits; licence read on each source page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- Downloads by hand into `work/sfx/<group>/` (gitignored, main checkout''s `work/` via the symlink); zips never committed
+- Workers can''t hear: pick per cue by measurement (length, loudness, true peak, spectral centroid, onset) and fit to the theme and meaning; `trivia-sfx record` + `convert` the pick, installed into the game (`SAMPLE_FOR`; variants for frequent cues, random never twice in a row via `pickLoaded`; `rate` where it helps); synth `RECIPES` stay as fallback; cue names unchanged (mod API)
+- 1–2 alternates per cue staged on `/sounds` (manifest group `effects-<group>`, round N)
+- Old files of these cues and their `CREDITS.md` rows deleted where no other cue uses them; `rg` every removed file name over code, comments and `.md` files, fix every hit (decision 200)
+- `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the group decision (`pm decision add`): where to listen (`/?efectos` block of this group, `/sounds` round N, a real game with `TRIVIA_SOUND=1` and how to reach each moment), per cue the installed pick and its alternates; options: approve, or changes per cue ("more like this, less like that", an alternate''s name); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search, next round, the decision raised again; until approved. Approved: the round per cue in `plans/25-sound.md` "Effects", the decision''s consequences', '2026-11-18T20:47:03Z', NULL, 2244, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2250, 223, 'New effects: category splash', 'work', 'open', NULL, NULL, 'Task 6 of `plan 223: New sound effects`: the category splash group (iterative feedback).
+
+- Cues: the 20 `splash-*` cues, each matching its entrance animation (`plan 191: Category splash entrances and longer hold`: wind, drain, shatter, birds, typewriter, plane, jelly, …; read `Splash.svelte` and `splash.ts` for what each entrance does)
+- One source for all where possible
+- The decision says how to see each entrance (gallery shots, `/?efectos`, a game)
+- Done when the category splash group decision is answered approve
+
+## Steps (same for every group; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": theme for this group, old sounds kept) and the inventory rows of this group (cue, moment, meaning, frequency)
+- Search (`--web`): one pack or one sound designer for the group where possible, a second source only for cues the first lacks (noted per cue); allowed: Kenney.nl, OpenGameArt CC0, freesound.org by hand (CC0, CC BY; no API, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), Wikimedia Commons PD/CC0/CC BY, Sonniss GDC bundles only if the licence read fits; licence read on each source page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- Downloads by hand into `work/sfx/<group>/` (gitignored, main checkout''s `work/` via the symlink); zips never committed
+- Workers can''t hear: pick per cue by measurement (length, loudness, true peak, spectral centroid, onset) and fit to the theme and meaning; `trivia-sfx record` + `convert` the pick, installed into the game (`SAMPLE_FOR`; variants for frequent cues, random never twice in a row via `pickLoaded`; `rate` where it helps); synth `RECIPES` stay as fallback; cue names unchanged (mod API)
+- 1–2 alternates per cue staged on `/sounds` (manifest group `effects-<group>`, round N)
+- Old files of these cues and their `CREDITS.md` rows deleted where no other cue uses them; `rg` every removed file name over code, comments and `.md` files, fix every hit (decision 200)
+- `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the group decision (`pm decision add`): where to listen (`/?efectos` block of this group, `/sounds` round N, a real game with `TRIVIA_SOUND=1` and how to reach each moment), per cue the installed pick and its alternates; options: approve, or changes per cue ("more like this, less like that", an alternate''s name); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search, next round, the decision raised again; until approved. Approved: the round per cue in `plans/25-sound.md` "Effects", the decision''s consequences', '2026-11-18T20:47:03Z', NULL, 2244, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2251, 223, 'New effects: timed mode', 'work', 'open', NULL, NULL, 'Task 7 of `plan 223: New sound effects`: the timed group (iterative feedback).
+
+- Cues: `claim` and `countdown` recorded instead of synthesized (`Timed.svelte`; `claim` with variants, it repeats per answer; `countdown` ≤ 100 kB), plus the timed-only cues the inventory lists (heartbeat, last-3-s ticks, …)
+- The decision''s text says how to reach a timed round (mode, players, pads or keyboard)
+- Done when the timed group decision is answered approve
+
+## Steps (same for every group; iterative feedback)
+- Read the brief (`plans/25-sound.md` "Brief": theme for this group, old sounds kept) and the inventory rows of this group (cue, moment, meaning, frequency)
+- Search (`--web`): one pack or one sound designer for the group where possible, a second source only for cues the first lacks (noted per cue); allowed: Kenney.nl, OpenGameArt CC0, freesound.org by hand (CC0, CC BY; no API, `decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`), Wikimedia Commons PD/CC0/CC BY, Sonniss GDC bundles only if the licence read fits; licence read on each source page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- Downloads by hand into `work/sfx/<group>/` (gitignored, main checkout''s `work/` via the symlink); zips never committed
+- Workers can''t hear: pick per cue by measurement (length, loudness, true peak, spectral centroid, onset) and fit to the theme and meaning; `trivia-sfx record` + `convert` the pick, installed into the game (`SAMPLE_FOR`; variants for frequent cues, random never twice in a row via `pickLoaded`; `rate` where it helps); synth `RECIPES` stay as fallback; cue names unchanged (mod API)
+- 1–2 alternates per cue staged on `/sounds` (manifest group `effects-<group>`, round N)
+- Old files of these cues and their `CREDITS.md` rows deleted where no other cue uses them; `rg` every removed file name over code, comments and `.md` files, fix every hit (decision 200)
+- `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`
+- Raise the group decision (`pm decision add`): where to listen (`/?efectos` block of this group, `/sounds` round N, a real game with `TRIVIA_SOUND=1` and how to reach each moment), per cue the installed pick and its alternates; options: approve, or changes per cue ("more like this, less like that", an alternate''s name); stage the work, make the task pending on the decision
+- An answer with changes brings the task back: new search, next round, the decision raised again; until approved. Approved: the round per cue in `plans/25-sound.md` "Effects", the decision''s consequences', '2026-11-18T20:47:04Z', NULL, 2244, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2252, 223, 'New effects: old effects gone and the tally', 'work', 'open', NULL, NULL, 'Task 8 of `plan 223: New sound effects`: cleanup once every group is approved.
+
+- Every effect file in `app/client/public/audio/` without a `authoring/data/sfx/` record and not kept by the brief (`plans/25-sound.md` "Brief") deleted with its `CREDITS.md` row; music files are not this task''s (`plan 222: Soundtracks in the engine and the picker`)
+- Every `Cue` member in `app/client/src/game/sound.svelte.ts` has a recorded file or is listed in `plans/25-sound.md` as intentionally synth-only (`silence`)
+- `rg` every removed file name over code, comments and `.md` files; every hit fixed in the same commit (decision 200)
+- Pass: `trivia-sfx check`, `credits --check`, `stage-media.mjs --check` (the `audio` budget of `app/desktop/media-budget.json`, not raised), the release-check credits step, the Credits screen shows the new rows
+- `plans/25-sound.md` "Effects": per cue its file(s), source, approved round
+- Done when all of the above pass; per commit `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:47:10Z', NULL, 2244, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2253, 224, 'create tasks for plan 224: New soundtracks', 'split', 'open', 1000, NULL, 'Split plan 224 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:47:15Z', NULL, 2225, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -59913,7 +60071,10 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2452, 2233, '2026-11-18T20:41:40Z', '2026-11-18T20:43:03Z', 'done', NULL, 0, '9d9b98ac96999330b2ef82b342b30518dcbbaa30', NULL, 'claude-opus-5-5', '0b701a27-8652-4995-8218-e9d864dc9ffb', NULL, 13, 26, 6930, 664337, 46629, 0.64460340000000016, 61530, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2453, 2223, '2026-11-18T20:41:53Z', '2026-11-18T20:44:37Z', 'done', NULL, 0, '9d9b98ac96999330b2ef82b342b30518dcbbaa30', 'app', 'claude-opus-5-5', '6dcd37f5-0106-43bf-9888-267b85f967fb', NULL, 15, 30, 13282, 956099, 71707, 1.0306358, 86754, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2454, 2241, '2026-11-18T20:44:24Z', '2026-11-18T20:45:06Z', 'done', NULL, 0, '125f591e0dd971f0fb0402cbf02663d8f8e8187d', NULL, 'claude-opus-5-5', '45d61c2d-feef-493a-b6e2-e0dd31dbd76d', NULL, 6, 12, 3315, 282350, 45860, 0.48969799999999997, 60738, 60, 3487406);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2455, 2224, '2026-11-18T20:44:37Z', NULL, 'running', NULL, NULL, '125f591e0dd971f0fb0402cbf02663d8f8e8187d', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2455, 2224, '2026-11-18T20:44:37Z', '2026-11-18T20:46:09Z', 'done', NULL, 0, '125f591e0dd971f0fb0402cbf02663d8f8e8187d', 'app', 'claude-opus-5-5', 'caaf9ea0-aa76-442b-8df4-022f8a2f6bd7', NULL, 10, 20, 7180, 570402, 60776, 0.7439684, 75840, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2456, 2244, '2026-11-18T20:45:58Z', '2026-11-18T20:47:36Z', 'done', NULL, 0, 'aac3913e4b6667384a3e195742e4565cfa79c05b', NULL, 'claude-opus-5-5', '005e1795-3e7f-4459-ad00-c0dd16b6e6b3', NULL, 13, 26, 7822, 727797, 53942, 0.73363939999999994, 68879, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2457, 2225, '2026-11-18T20:46:09Z', '2026-11-18T20:47:29Z', 'done', NULL, 0, 'aac3913e4b6667384a3e195742e4565cfa79c05b', 'app', 'claude-opus-5-5', 'f74f09a0-e365-41f0-841d-653ae92b89e4', NULL, 9, 18, 6386, 529097, 59837, 0.71230740000000015, 74892, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2458, 2226, '2026-11-18T20:47:30Z', NULL, 'running', NULL, NULL, 'aac3913e4b6667384a3e195742e4565cfa79c05b', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -61125,6 +61286,28 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2239, 223
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2240, 2239);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2242, 2232);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2243, 2242);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2245, 2228);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2245, 2234);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2245, 2238);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2246, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2246, 2245);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2247, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2247, 2245);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2248, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2248, 2245);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2249, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2249, 2245);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2250, 1870);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2250, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2250, 2245);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2251, 2232);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2251, 2245);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2246);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2247);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2248);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2249);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2250);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2252, 2251);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
