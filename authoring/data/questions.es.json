@@ -9413,6 +9413,1566 @@
       "source_hash": "b507874e3df0"
     },
     {
+      "id": "q-21021",
+      "question": "Mira: ¿desde qué máquina agrícola se filmó este video?",
+      "answer": "Cosechadora",
+      "wrong_answers": [
+        "Sembradora",
+        "Empacadora",
+        "Fumigadora"
+      ],
+      "hints": [
+        "Suele trabajar hacia el final de la temporada de cultivo.",
+        "Es una sola máquina que hace el trabajo de varias.",
+        "Corta los tallos, separa el grano y lo guarda, todo en una sola pasada."
+      ],
+      "description": "Un paseo lento por el campo, desde el mejor asiento de toda la granja.",
+      "fun_fact": "En el siglo XIX, las primeras cosechadoras eran tan pesadas que hacían falta 20 caballos o mulas, o más, para arrastrarlas.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5de3ea1912db"
+    },
+    {
+      "id": "q-21022",
+      "question": "Mira: ¿qué plato de dim sum está preparando este cocinero?",
+      "answer": "Rollos de fideo de arroz",
+      "wrong_answers": [
+        "Rollitos primavera",
+        "Panecillos al vapor",
+        "Dumplings de camarón"
+      ],
+      "hints": [
+        "Es un clásico del dim sum y suele servirse bañado en salsa de soya dulce.",
+        "Una capa fina de masa líquida blanca se cocina al vapor hasta volverse una lámina suave y translúcida.",
+        "En cantonés se llama cheung fun, y la lámina se hace con harina de arroz."
+      ],
+      "description": "Algo entre un panqueque, una manta y un burrito, y de alguna forma sigue siendo desayuno.",
+      "fun_fact": "Su nombre cantonés, cheung fun, significa “fideo intestino”, por la forma larga y curvada de los rollos, no por lo que llevan dentro.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "23dd48254a53"
+    },
+    {
+      "id": "q-21023",
+      "question": "Mira: esta ave excava un hueco para su nido en un árbol como un pájaro carpintero, pero no lo es. ¿Qué tipo de ave es?",
+      "answer": "Barbudo",
+      "wrong_answers": [
+        "Periquito",
+        "Abejaruco",
+        "Martín pescador"
+      ],
+      "hints": [
+        "Vive en bosques y parques cálidos de Asia, África y América, y le encanta comer fruta.",
+        "Entre sus parientes más cercanos están los tucanes de Sudamérica.",
+        "Su nombre viene de las cerdas rígidas, como pelos de barba, que rodean su grueso pico."
+      ],
+      "description": "Un carpintero sin caja de herramientas, sin permiso y con un sombrero muy llamativo.",
+      "fun_fact": "Los barbudos deben su nombre a las cerdas como de barba que rodean su pico, y son primos cercanos de los tucanes.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "6fb9db925a7d"
+    },
+    {
+      "id": "q-21024",
+      "question": "Mira: imágenes satelitales muestran cómo una selva se tala a lo largo de nuevas carreteras con los años. ¿Cómo se llama este patrón típico de tala?",
+      "answer": "Patrón en espina de pescado",
+      "wrong_answers": [
+        "Patrón en tablero de ajedrez",
+        "Patrón en telaraña",
+        "Patrón en estrella"
+      ],
+      "hints": [
+        "Fíjate en cómo las franjas taladas delgadas salen de las carreteras más grandes.",
+        "El nombre compara la forma con algo de la naturaleza.",
+        "Imagina una columna larga con muchas costillas delgadas a ambos lados."
+      ],
+      "description": "Dicen que todos los caminos llevan a Roma; estos llevan directo al aserradero.",
+      "fun_fact": "Gran parte de la tala en Rondônia, Brasil, siguió la carretera BR-364, pavimentada en los años ochenta, que llevó una ola de colonos a la selva.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a9332eb6adbc"
+    },
+    {
+      "id": "q-21025",
+      "question": "Mira: este diminuto camarón de acuario es una variedad de color que un aficionado crió por primera vez a principios de los años noventa. ¿En qué país?",
+      "answer": "Japón",
+      "wrong_answers": [
+        "China",
+        "Tailandia",
+        "Alemania"
+      ],
+      "hints": [
+        "Sus parientes salvajes son oscuros y con rayas. Esta variedad de color apareció como una mutación afortunada en los acuarios de un criador.",
+        "Ese mismo país es famoso por criar elegantes carpas koi para los estanques de jardín.",
+        "El criador, Hisayasu Suzuki, vivía en la tierra del sushi y el bonsái."
+      ],
+      "description": "Una mascota tan pequeña que todo su guardarropa es un solo traje de baño a rayas de caramelo.",
+      "fun_fact": "Los mejores camarones cristal rojo se clasifican según lo puras y brillantes que son sus franjas blancas, y un solo ejemplar de concurso se ha vendido por cientos de dólares.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "c4a3339c65f4"
+    },
+    {
+      "id": "q-21026",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Albania",
+      "wrong_answers": [
+        "Grecia",
+        "Serbia",
+        "Bulgaria"
+      ],
+      "hints": [
+        "El título del himno significa “Himno a la Bandera”.",
+        "Su melodía se tomó de una canción del compositor rumano Ciprian Porumbescu.",
+        "La bandera roja de este país muestra un águila negra de dos cabezas."
+      ],
+      "description": "Ponte de pie, mano en el corazón… y ahora averigua de quién es ese corazón.",
+      "fun_fact": "La melodía se escribió primero para una canción rumana, así que los albaneses cantan su himno con música de un compositor que nunca visitó Albania.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3229d5f490be"
+    },
+    {
+      "id": "q-21027",
+      "question": "Escucha esta grabación de cornetín y piano. ¿En qué se grabó originalmente?",
+      "answer": "Cilindro de cera",
+      "wrong_answers": [
+        "Cinta magnética",
+        "Disco de vinilo LP",
+        "Disco compacto"
+      ],
+      "hints": [
+        "Escucha el siseo y los chasquidos: este sonido es más antiguo que cualquiera de tus abuelos.",
+        "Se reproducía en una máquina inventada por Thomas Edison.",
+        "El sonido quedó grabado en un surco sobre un tubo que giraba, no sobre un disco plano."
+      ],
+      "description": "El tatarabuelo de tu app de música se aclara la garganta.",
+      "fun_fact": "Esta grabación de cornetín y piano de «The Lost Chord», de Arthur Sullivan, se presentó a la prensa de Londres en 1888 para presumir el fonógrafo mejorado de Edison.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b6c5a53f5dc8"
+    },
+    {
+      "id": "q-21029",
+      "question": "Mira: ¿qué comida callejera se está friendo en este local?",
+      "answer": "Falafel",
+      "wrong_answers": [
+        "Arancini",
+        "Takoyaki",
+        "Gulab jamun"
+      ],
+      "hints": [
+        "Esta comida es muy querida en todo Medio Oriente.",
+        "Suele servirse dentro de un pan plano con ensalada y una salsa de sésamo llamada tahini.",
+        "Se hace con garbanzos o habas machacados y mezclados con hierbas."
+      ],
+      "description": "Crujiente por fuera, suave por dentro, y las manos del cocinero no paran ni un segundo.",
+      "fun_fact": "En Egipto, el falafel suele hacerse con habas en lugar de garbanzos y se llama “ta'ameya”.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "7775e12a9353"
+    },
+    {
+      "id": "q-21030",
+      "question": "Escucha: una boya de la marina captó estos chasquidos submarinos de una pareja de animales. ¿Qué animal los produce?",
+      "answer": "Cachalote",
+      "wrong_answers": [
+        "Ballena jorobada",
+        "Beluga",
+        "Morsa"
+      ],
+      "hints": [
+        "Este animal se sumerge a más de 1000 metros y encuentra su comida en total oscuridad mediante ecolocalización.",
+        "Caza calamares, a veces incluso calamares gigantes, y tiene el cerebro más grande de todos los animales.",
+        "Moby Dick, la ballena blanca de Herman Melville, era uno de ellos."
+      ],
+      "description": "Un micrófono de la marina salió a pescar submarinos y atrapó una conversación.",
+      "fun_fact": "Los chasquidos del cachalote pueden alcanzar unos 230 decibeles, de los sonidos más fuertes del reino animal, y cada grupo familiar tiene sus propios patrones de chasquidos, llamados codas.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "dfcd35cc7d21"
+    },
+    {
+      "id": "q-21031",
+      "question": "Mira: ¿qué danza tradicional francesa están bailando estas parejas?",
+      "answer": "Bourrée",
+      "wrong_answers": [
+        "Farandola",
+        "Gavota",
+        "Branle"
+      ],
+      "hints": [
+        "A diferencia de una larga cadena tomados de la mano, en esta danza las parejas se miran de frente y avanzan y retroceden.",
+        "Su tierra es Auvernia, la región de los volcanes y del queso Cantal.",
+        "Bach y Händel escribieron versiones estilizadas para sus suites, y en Auvernia se baila en compás de 3/8 al son de la gaita cabrette o del acordeón."
+      ],
+      "description": "Zuecos, sombreros de ala ancha y un acordeón: el código de vestimenta es estricto, y los pasos, todavía más.",
+      "fun_fact": "La bourrée se puso de moda en la corte real francesa, y Bach, Händel y Telemann escribieron bourrées para sus suites: así, un baile campesino terminó en las salas de concierto.",
+      "difficulty": 15,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "703985f66324"
+    },
+    {
+      "id": "q-21032",
+      "question": "Escucha: esta famosa melodía es el himno oficial de ¿qué organización internacional?",
+      "answer": "Unión Europea",
+      "wrong_answers": [
+        "Naciones Unidas",
+        "Comité Olímpico Internacional",
+        "Unión Africana"
+      ],
+      "hints": [
+        "La melodía viene de la última parte de una famosa sinfonía y suele llamarse «Oda a la alegría».",
+        "El himno no tiene letra oficial, porque sus miembros hablan más de 20 idiomas distintos.",
+        "Suena junto a una bandera azul con un círculo de 12 estrellas doradas."
+      ],
+      "description": "Una melodía que ha ido a más ceremonias oficiales que la mayoría de los presidentes.",
+      "fun_fact": "La melodía viene de la Novena Sinfonía de Beethoven, que terminó en 1824, cuando ya estaba casi completamente sordo.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "df116bf48259"
+    },
+    {
+      "id": "q-21033",
+      "question": "Escucha el sonido de esta grabación para piano y orquesta. ¿En qué década se grabó, lo más probable?",
+      "answer": "La década de 1930",
+      "wrong_answers": [
+        "La década de 1900",
+        "La década de 1960",
+        "La década de 1990"
+      ],
+      "hints": [
+        "Escucha más allá de la música: el siseo, los chasquidos y la falta de graves y agudos cuentan la historia.",
+        "Suena demasiado llena y clara para las primeras grabaciones, pero no es estéreo y está lejos de la calidad moderna.",
+        "Se grabó en un disco de goma laca giratorio, unos años antes de la Segunda Guerra Mundial."
+      ],
+      "description": "En algún lugar de esta música, una diminuta aguja está viviendo el viaje de su vida.",
+      "fun_fact": "Es el pianista Edwin Fischer tocando el Concierto para piano n.º 20 de Mozart con la Orquesta Filarmónica de Londres en 1933; por eso un solo movimiento tuvo que repartirse en varias caras de discos de 78 rpm.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "20eb5aa74b8f"
+    },
+    {
+      "id": "q-21034",
+      "question": "Mira: los océanos se vacían poco a poco. ¿Cuáles son los dos primeros continentes que une un nuevo puente de tierra?",
+      "answer": "Asia y América del Norte",
+      "wrong_answers": [
+        "África y Europa",
+        "Asia y Australia",
+        "América del Sur y Antártida"
+      ],
+      "hints": [
+        "Fíjate en la parte más alta del mapa, cerca del Ártico.",
+        "Ahí el paso es un estrecho de apenas unos 50 metros de profundidad.",
+        "Hace miles de años, los primeros humanos que llegaron a América quizás cruzaron caminando justo por ese lugar."
+      ],
+      "description": "Quítale el tapón al planeta y descubre lo que la bañera tenía escondido.",
+      "fun_fact": "Durante la última glaciación, el nivel del mar estaba unos 120 metros más bajo, y un ancho puente de tierra llamado Beringia unía Siberia con Alaska.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "29253b1704f1"
+    },
+    {
+      "id": "q-21035",
+      "question": "Mira: la NASA está haciendo volar este pequeño cohete de prueba en el desierto. ¿Para qué está practicando?",
+      "answer": "Aterrizar en la Luna o en Marte",
+      "wrong_answers": [
+        "Poner satélites en órbita",
+        "Llevar astronautas al espacio",
+        "Medir el clima en las alturas"
+      ],
+      "hints": [
+        "Mira lo que tiene el cohete en la parte de abajo y fíjate en que no vuela muy alto.",
+        "Lleva cámaras y láseres que escanean el suelo debajo de él.",
+        "Una futura nave usará este tipo de guía por computadora para posarse sin peligro en otro mundo."
+      ],
+      "description": "Algunos cohetes sueñan con las estrellas; este todavía está haciendo la tarea.",
+      "fun_fact": "El cohete de esta prueba, llamado Xodiac, llevaba el sistema COBALT de la NASA, que usa láseres y cámaras para ayudar a futuras naves a encontrar un lugar seguro donde posarse.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8703c91171c2"
+    },
+    {
+      "id": "q-21037",
+      "question": "Mira: ¿qué ave hace este cortejo, con el pecho blanco inflado y la cola en abanico de puntas afiladas?",
+      "answer": "Gallo de las artemisas",
+      "wrong_answers": [
+        "Pavo salvaje",
+        "Urogallo",
+        "Gallo lira"
+      ],
+      "hints": [
+        "Es un ave de caza que vive en el suelo, y los machos se reúnen al amanecer para lucirse ante las hembras.",
+        "Solo vive en las llanuras secas y abiertas del oeste de Norteamérica.",
+        "Su nombre viene del arbusto gris verdoso y muy aromático cuyas hojas come todo el invierno."
+      ],
+      "description": "Una competencia de baile al amanecer donde nadie trajo pareja, solo mucha confianza inflada.",
+      "fun_fact": "Cuando el macho se infla, de su pecho blanco salen dos sacos de aire amarillos sin plumas que hacen un fuerte “plop” burbujeante.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b7ba73a88640"
+    },
+    {
+      "id": "q-21038",
+      "question": "Mira: ¿cómo se llama la persona que conduce un equipo como este?",
+      "answer": "Un musher",
+      "wrong_answers": [
+        "Un jinete",
+        "Un cochero",
+        "Un arriero"
+      ],
+      "hints": [
+        "Esta persona suele ir de pie en la parte de atrás, sobre los patines.",
+        "El nombre vendría de una palabra francesa que se gritaba para que los animales arrancaran.",
+        "La famosa carrera Iditarod, en Alaska, está llena de ellos."
+      ],
+      "description": "El único trabajo en el que todo tu equipo corre delante de ti, y así tiene que ser.",
+      "fun_fact": "Se cree que la palabra «musher» viene del francés «marche!» («¡anda!»), pero hoy la mayoría de los conductores gritan «hike!» para que sus perros arranquen.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "672368065ec1"
+    },
+    {
+      "id": "q-21039",
+      "question": "Escucha: ¿qué estilo de música es esta animada pieza para piano?",
+      "answer": "Ragtime",
+      "wrong_answers": [
+        "Tango",
+        "Vals",
+        "Boogie-woogie"
+      ],
+      "hints": [
+        "Este estilo fue muy popular en Estados Unidos alrededor del año 1900.",
+        "La mano derecha toca melodías a contratiempo mientras la izquierda rebota con un paso firme, como una marcha de banda.",
+        "Su nombre viene del ritmo «ragged» (en inglés, «desigual» o «deshilachado») de sus melodías."
+      ],
+      "description": "Un piano que se tomó tres tazas de café y se niega a quedarse quieto.",
+      "fun_fact": "Es el «Maple Leaf Rag» de Scott Joplin, de 1899; fue un enorme éxito en partituras, y Joplin ganaba un centavo por cada copia vendida.",
+      "difficulty": 8,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "fed5558d538a"
+    },
+    {
+      "id": "q-21040",
+      "question": "Mira: ¿cómo se llama la herramienta que usa el hombre para mover los panes?",
+      "answer": "Pala",
+      "wrong_answers": [
+        "Cucharón",
+        "Llana",
+        "Rastrillo"
+      ],
+      "hints": [
+        "Con ella, un panadero puede llegar hasta el fondo de un horno muy caliente sin quemarse los brazos.",
+        "Tiene un mango largo y una hoja ancha y plana, a menudo de madera.",
+        "La misma herramienta sirve para meter y sacar pizzas de los hornos de leña."
+      ],
+      "description": "La olla de cocción lenta más antigua del mundo, a cargo de un señor que jamás necesita guantes de cocina.",
+      "fun_fact": "Los panaderos suelen espolvorear la pala con harina o sémola para que la masa cruda se deslice sin pegarse.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a2fa85d72c89"
+    },
+    {
+      "id": "q-21041",
+      "question": "Mira: ¿qué ave es esta, con su cresta naranja y alas a rayas blancas y negras?",
+      "answer": "Abubilla",
+      "wrong_answers": [
+        "Pájaro carpintero",
+        "Martín pescador",
+        "Arrendajo"
+      ],
+      "hints": [
+        "Usa su pico largo, fino y curvo para sacar insectos y larvas del suelo.",
+        "Vive en Europa, África y Asia, e Israel la eligió como su ave nacional.",
+        "Su nombre científico, Upupa, imita su suave canto: “up-up-up”."
+      ],
+      "description": "Los observadores de aves sueltan su sándwich cuando esta se posa en un poste.",
+      "fun_fact": "La abubilla puede abrir su cresta como una corona, e Israel la eligió como su ave nacional en 2008.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "71868fc527b7"
+    },
+    {
+      "id": "q-21042",
+      "question": "Mira: estos dos grandes felinos tan claros son una rara forma blanca de ¿qué animal?",
+      "answer": "León",
+      "wrong_answers": [
+        "Tigre",
+        "Leopardo de las nieves",
+        "Puma"
+      ],
+      "hints": [
+        "Fíjate bien en la cabeza del más grande.",
+        "Sus parientes de color normal viven en grupos familiares llamados manadas.",
+        "Muchos lo llaman el «rey de la selva»."
+      ],
+      "description": "Dos compañeros de casa muy pálidos disfrutan de una lucha perezosa sobre el pasto.",
+      "fun_fact": "Los leones blancos no son albinos: un gen poco común aclara su pelaje, y en libertad provienen de la zona de Timbavati, en Sudáfrica.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "34571206b027"
+    },
+    {
+      "id": "q-21043",
+      "question": "Mira: ¿qué son estas enormes antenas blancas que giran todas juntas bajo el cielo nocturno?",
+      "answer": "Radiotelescopios",
+      "wrong_answers": [
+        "Radares meteorológicos",
+        "Antenas de TV satelital",
+        "Espejos de energía solar"
+      ],
+      "hints": [
+        "Fíjate hacia dónde apuntan y en qué momento del día es.",
+        "No funcionan con la luz del sol: captan señales débiles que llegan desde muy lejos.",
+        "Los astrónomos los usan para “ver” galaxias y estrellas recién nacidas con ondas de radio en lugar de luz."
+      ],
+      "description": "Estos vecinos se quedan despiertos toda la noche mirando el cielo sin parpadear ni una vez.",
+      "fun_fact": "Estas antenas son de ALMA: 66 antenas en el desierto de Atacama, en Chile, a unos 5000 m de altura, donde el aire es tan seco y delgado que la vista del espacio está entre las mejores de la Tierra.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "67b7e43221b7"
+    },
+    {
+      "id": "q-21044",
+      "question": "Escucha: ¿qué animal de los bosques de Asia emite este grito de alarma?",
+      "answer": "Muntíaco",
+      "wrong_answers": [
+        "Gibón",
+        "Panda rojo",
+        "Pangolín"
+      ],
+      "hints": [
+        "Come hojas, frutas y brotes, y tiene pezuñas.",
+        "Los machos tienen cuernos cortos y pequeños colmillos.",
+        "Lo apodan el «ciervo ladrador»."
+      ],
+      "description": "Alguien entre los arbustos está muy molesto porque llegaste, y quiere que todo el bosque se entere.",
+      "fun_fact": "El muntíaco de la India tiene el menor número de cromosomas de todos los mamíferos conocidos: las hembras tienen solo 6 y los machos, 7.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "678deba81c49"
+    },
+    {
+      "id": "q-21045",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Grecia",
+      "wrong_answers": [
+        "Italia",
+        "Turquía",
+        "Portugal"
+      ],
+      "hints": [
+        "La letra viene de un largo poema escrito en 1823, durante la lucha del país por su independencia.",
+        "Chipre usa el mismo himno que este país.",
+        "Suena en cada ceremonia de clausura de los Juegos Olímpicos, en honor a la cuna de los Juegos."
+      ],
+      "description": "Una melodía que hace que los atletas se pongan derechitos, aunque no sean ellos los que están en el podio.",
+      "fun_fact": "El poema “Himno a la Libertad” de Dionisios Solomós tiene 158 estrofas, uno de los textos de himno más largos del mundo, pero normalmente solo se cantan las dos primeras.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ca4dd2f946f5"
+    },
+    {
+      "id": "q-21046",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "India",
+      "wrong_answers": [
+        "Bangladés",
+        "Pakistán",
+        "Nepal"
+      ],
+      "hints": [
+        "La letra la escribió un poeta que ganó el Premio Nobel de Literatura.",
+        "Completo, este himno debe durar unos 52 segundos.",
+        "En este país está el Taj Mahal."
+      ],
+      "description": "Una canción que pone de pie a todo un estadio, incluso a los que no pueden cantar ni una nota.",
+      "fun_fact": "Rabindranath Tagore escribió la letra de “Jana Gana Mana” y también el himno nacional de Bangladés, así que es autor de los himnos de dos países.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3df21e1f97ef"
+    },
+    {
+      "id": "q-21047",
+      "question": "Mira: por el logotipo de sus vagones, ¿en qué país circula este tren de dos pisos?",
+      "answer": "Rusia",
+      "wrong_answers": [
+        "Ucrania",
+        "Kazajistán",
+        "Finlandia"
+      ],
+      "hints": [
+        "Las letras rojas en el costado de los vagones no son del alfabeto latino.",
+        "Las letras rojas son una abreviatura del nombre de la compañía nacional de ferrocarriles, como las siglas de una aerolínea.",
+        "El logotipo corresponde a los ferrocarriles nacionales del país más grande del mundo por superficie."
+      ],
+      "description": "Una casa de dos pisos que nunca se queda en la misma dirección más de unos segundos.",
+      "fun_fact": "En Rusia los rieles están separados 1520 mm, más que los 1435 mm de casi toda Europa, así que los trenes que cruzan la frontera a menudo deben cambiar sus ruedas.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "61d500fce0da"
+    },
+    {
+      "id": "q-21050",
+      "question": "Mira: ¿qué verdura se está cocinando a fuego lento en esta sartén?",
+      "answer": "Ejotes",
+      "wrong_answers": [
+        "Espárragos",
+        "Okra",
+        "Brócoli"
+      ],
+      "hints": [
+        "Es la vaina de una planta y se come entera cuando todavía está tierna.",
+        "Si dejas que sus semillas maduren y se sequen, la misma planta da frijoles rojos y frijoles negros.",
+        "Son largos, delgados y crujientes; según el país también se les dice vainitas, chauchas o habichuelas."
+      ],
+      "description": "La guarnición que la abuela te obliga a terminar antes de que alguien se atreva a mencionar el postre.",
+      "fun_fact": "Antes, los ejotes tenían un “hilo” duro a lo largo de la vaina que había que quitar a mano, hasta que a finales del siglo XIX se crearon variedades sin hilo.",
+      "difficulty": 4,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "077a28d27b12"
+    },
+    {
+      "id": "q-21051",
+      "question": "Mira el primer plano del pato con llamativas rayas blancas en su cabeza oscura. ¿Qué tipo de pato es?",
+      "answer": "Pato joyuyo",
+      "wrong_answers": [
+        "Ánade real",
+        "Eider común",
+        "Tarro blanco"
+      ],
+      "hints": [
+        "Este pato viene de Norteamérica, aunque en todo el mundo lo crían por su belleza.",
+        "En color, el macho tiene una cresta verde brillante, ojo rojo y pico con rayas rojas y blancas.",
+        "A diferencia de la mayoría de los patos, anida en huecos altos de los árboles."
+      ],
+      "description": "En 1937, el espectáculo de moda tenía plumas, jaulas y un juez de bata blanca.",
+      "fun_fact": "Los patitos de pato joyuyo dejan su nido en el árbol un día después de nacer, y a veces saltan hasta 15 metros al suelo sin lastimarse.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9efb475d9c4f"
+    },
+    {
+      "id": "q-21052",
+      "question": "Mira: ¿qué ave acuática común es de la misma familia que esta?",
+      "answer": "Focha",
+      "wrong_answers": [
+        "Ánade real",
+        "Cormorán",
+        "Zambullidor"
+      ],
+      "hints": [
+        "Fíjate en la mancha roja sin plumas que va del pico hasta la frente.",
+        "Su pariente tiene la misma clase de mancha en la frente, pero de otro color.",
+        "Este pariente es casi todo negro, con el pico blanco y una mancha blanca en la frente."
+      ],
+      "description": "Recorre el pasto como un pequeño inspector, revisando que cada hoja esté en su lugar.",
+      "fun_fact": "Las gallinetas nadan bien aunque sus dedos largos no tienen membranas, y los jóvenes de una nidada anterior suelen ayudar a sus padres a alimentar a los nuevos pollitos.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "b71e95d87391"
+    },
+    {
+      "id": "q-21053",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Polonia",
+      "wrong_answers": [
+        "Hungría",
+        "República Checa",
+        "Ucrania"
+      ],
+      "hints": [
+        "El país está en Europa Central y su bandera tiene solo dos colores.",
+        "La letra se escribió en 1797, cuando este país había sido repartido entre sus vecinos y había desaparecido del mapa.",
+        "Aquí nació el famoso compositor Chopin, y su capital es Varsovia."
+      ],
+      "description": "Una melodía que pone de pie a todo un estadio, incluso antes de que empiece el partido.",
+      "fun_fact": "El himno de Polonia menciona a Napoleón Bonaparte, así que es uno de los poquísimos himnos nacionales que nombran a un líder extranjero.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "1cd0791287f6"
+    },
+    {
+      "id": "q-21054",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Bélgica",
+      "wrong_answers": [
+        "Países Bajos",
+        "Luxemburgo",
+        "Suiza"
+      ],
+      "hints": [
+        "El himno lleva el nombre de una región del país.",
+        "El país se independizó en 1830 al separarse de los Países Bajos.",
+        "Su capital, Bruselas, alberga la sede de la Unión Europea."
+      ],
+      "description": "Levántate del sillón, por favor: ya empezó la banda de música y alguien te está mirando.",
+      "fun_fact": "El himno tiene letra oficial en francés, neerlandés y alemán, los tres idiomas oficiales del país.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9bffe75a6ece"
+    },
+    {
+      "id": "q-21055",
+      "question": "Mira: este avión de investigación de la NASA vuela tan alto que su piloto usa un traje presurizado. ¿A qué altura sobre el suelo vuela?",
+      "answer": "Unos 20 km",
+      "wrong_answers": [
+        "Unos 10 km",
+        "Unos 100 km",
+        "Unos 400 km"
+      ],
+      "hints": [
+        "Fíjate en el color del cielo sobre el horizonte: es casi negro, incluso de día.",
+        "Los aviones de pasajeros vuelan a unos 10 km, y este vuela muy por encima de ellos.",
+        "Está a más del doble de la altura del monte Everest, pero todavía muy por debajo de donde empieza el espacio."
+      ],
+      "description": "El único viaje al trabajo en el que el tráfico es problema de otros, muy, muy abajo.",
+      "fun_fact": "El ER-2 de la NASA es una versión civil del avión espía U-2 y vuela a unos 21 km, por encima de alrededor del 95 % de la atmósfera terrestre.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4469dbc189ff"
+    },
+    {
+      "id": "q-21057",
+      "question": "Escucha: esta pieza lenta para piano suena en los créditos finales de ¿qué película sobre un compositor?",
+      "answer": "Amadeus",
+      "wrong_answers": [
+        "Amada inmortal",
+        "Shine",
+        "El pianista"
+      ],
+      "hints": [
+        "Escucha el estilo: elegante y equilibrado, del Clasicismo más que del Romanticismo.",
+        "Gran parte de la película se filmó en Praga, que hizo las veces de otra capital europea.",
+        "El título de la película es el segundo nombre del propio compositor."
+      ],
+      "description": "Ya no quedan palomitas, pasan los créditos y, por alguna razón, nadie quiere salir del cine.",
+      "fun_fact": "Esta grabación es de 1933, más de 50 años antes de que la película de Miloš Forman llevara en 1984 este mismo movimiento lento, del Concierto para piano n.º 20 de Mozart, a millones de espectadores.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "a48abfbaecac"
+    },
+    {
+      "id": "q-21058",
+      "question": "Mira: si derritieras una capa recién caída de 10 cm de lo que cae aquí, ¿qué profundidad tendría el agua más o menos?",
+      "answer": "Más o menos 1 cm",
+      "wrong_answers": [
+        "Más o menos 4 cm",
+        "Más o menos 7 cm",
+        "Más o menos 10 cm"
+      ],
+      "hints": [
+        "Los copos recién caídos atrapan mucho aire entre sus delicados brazos.",
+        "Una capa fresca y esponjosa es sobre todo aire, no hielo.",
+        "Los meteorólogos usan una regla práctica de más o menos “diez a uno”."
+      ],
+      "description": "El cielo decidió repintar toda la calle sin pedirle permiso a nadie, y a la camioneta nadie le preguntó su opinión.",
+      "fun_fact": "La regla del diez a uno es solo un promedio: la nieve en polvo muy seca puede llegar a 20 a 1 o más, mientras que la nieve húmeda y pesada puede acercarse a 5 a 1.",
+      "difficulty": 12,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "12faba574661"
+    },
+    {
+      "id": "q-21059",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "República Checa",
+      "wrong_answers": [
+        "Eslovaquia",
+        "Hungría",
+        "Croacia"
+      ],
+      "hints": [
+        "El hombre canta en una lengua eslava.",
+        "En 1993 este país se separó pacíficamente de su vecino.",
+        "Su capital es Praga."
+      ],
+      "description": "Párate derecho y quítate el sombrero: esta melodía suele sonar justo antes de que alguien patee un balón.",
+      "fun_fact": "El himno nació como una canción de una obra de teatro cómica llamada “Fidlovačka”, estrenada en Praga en 1834.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "62effa3041e0"
+    },
+    {
+      "id": "q-21061",
+      "question": "Mira: esta nave de carga sin tripulación, con cuatro alas solares en forma de X, lleva provisiones a la estación espacial. ¿Qué agencia espacial la construyó?",
+      "answer": "Agencia Espacial Europea (ESA)",
+      "wrong_answers": [
+        "Roscosmos (Rusia)",
+        "JAXA (Japón)",
+        "Agencia Espacial Canadiense (CSA)"
+      ],
+      "hints": [
+        "Solo volaron cinco de estas grandes naves de carga, entre 2008 y 2014.",
+        "Su diseño sirvió después de base para el módulo de servicio que da energía, agua y aire a la cápsula Orión de la NASA.",
+        "Las cinco naves llevaron los nombres de Julio Verne, Johannes Kepler, Edoardo Amaldi, Albert Einstein y Georges Lemaître."
+      ],
+      "description": "Una camioneta de reparto sin conductor, sin carretera y sin dónde estacionar.",
+      "fun_fact": "Con unas 20 toneladas, el ATV fue una de las naves más pesadas que visitaron la estación espacial, y sus motores también empujaban toda la estación a una órbita más alta.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5e76337b1a7a"
+    },
+    {
+      "id": "q-21062",
+      "question": "Mira y escucha: esta danza, con pintura blanca en el cuerpo y un ritmo de palos de madera, es una tradición indígena de ¿qué país?",
+      "answer": "Australia",
+      "wrong_answers": [
+        "Nueva Zelanda",
+        "Papúa Nueva Guinea",
+        "Fiyi"
+      ],
+      "hints": [
+        "El ritmo de chasquidos que oyes viene de dos palos golpeados entre sí, un instrumento típico de este pueblo.",
+        "Los antepasados de los bailarines viven en esta tierra desde hace más de 50 000 años: es una de las culturas vivas más antiguas del planeta.",
+        "De aquí viene el didgeridoo, y también los canguros."
+      ],
+      "description": "Pies descalzos, piel pintada y una pista de baile de acero: la fiesta de esta noche es en la cubierta de un barco.",
+      "fun_fact": "Todos los bailarines de este grupo, los Bungaree Dancers, son marineros en servicio de la Armada Real Australiana, y este espectáculo fue en la cubierta del buque de guerra HMAS Adelaide.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "d1a6d15f3294"
+    },
+    {
+      "id": "q-21063",
+      "question": "Escucha: ¿qué instrumento toca la melodía sobre el piano?",
+      "answer": "Flauta",
+      "wrong_answers": [
+        "Clarinete",
+        "Oboe",
+        "Violín"
+      ],
+      "hints": [
+        "En la orquesta, suele tocar las notas más agudas de su sección.",
+        "No tiene lengüeta: el sonido nace al soplar sobre un orificio.",
+        "Se sostiene de lado, apuntando hacia la derecha de quien toca."
+      ],
+      "description": "Un dúo donde el piano hace todo el trabajo pesado y su compañero se lleva todos los aplausos.",
+      "fun_fact": "Las flautas más antiguas que se han encontrado se tallaron en huesos de ave y marfil de mamut hace más de 40 000 años.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "74d6b1ac592a"
+    },
+    {
+      "id": "q-21064",
+      "question": "Mira: ¿qué tipo de insecto descansa sobre este tallo?",
+      "answer": "Caballito del diablo",
+      "wrong_answers": [
+        "Libélula",
+        "Efímera",
+        "Crisopa"
+      ],
+      "hints": [
+        "Caza otros insectos pequeños y pasó su juventud bajo el agua.",
+        "Fíjate en las alas: en reposo las junta a lo largo de su cuerpo delgado en vez de extenderlas planas.",
+        "Es el pariente más delgado y delicado de la libélula, y sus dos grandes ojos están muy separados a cada lado de la cabeza, como los extremos de un martillo."
+      ],
+      "description": "Viste de azul cielo con faro trasero a juego, y no tiene ninguna prisa por ir a ningún lado.",
+      "fun_fact": "Las crías del caballito del diablo viven bajo el agua y respiran por tres branquias en forma de hoja en la punta de la cola.",
+      "difficulty": 10,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8b1a3bc7058a"
+    },
+    {
+      "id": "q-21065",
+      "question": "Mira: este famoso concierto para piano lleva el nombre de un gran río del país de los intérpretes. ¿Qué río?",
+      "answer": "Río Amarillo",
+      "wrong_answers": [
+        "Río Yangtsé",
+        "Río Mekong",
+        "Río de las Perlas"
+      ],
+      "hints": [
+        "Fíjate en los intérpretes y sus chaquetas de cuello alto: este concierto fue en Asia oriental.",
+        "A este río suelen llamarlo el «Río Madre», la cuna de la antigua civilización del país.",
+        "Su nombre viene del color del limo fino y fangoso que arrastra hasta el mar."
+      ],
+      "description": "Algunos compositores le dedican su música a un gran amor; estos eligieron algo con muchísima más agua.",
+      "fun_fact": "El concierto es una adaptación de la Cantata del Río Amarillo, que Xian Xinghai escribió en 1939 en solo unos seis días.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "4e3565593abd"
+    },
+    {
+      "id": "q-21067",
+      "question": "Mira: ¿qué tipo de telaraña construye esta araña?",
+      "answer": "Una red redonda con radios y una espiral",
+      "wrong_answers": [
+        "Un embudo que lleva a un agujero escondido",
+        "Una manta plana extendida sobre la hierba",
+        "Una maraña desordenada en un rincón oscuro"
+      ],
+      "hints": [
+        "Es una de las arañas más comunes en los jardines y parques de Europa.",
+        "Se queda al aire libre entre las plantas, esperando insectos voladores.",
+        "Piensa en la telaraña clásica de los adornos de Halloween."
+      ],
+      "description": "Una pequeña arquitecta que reconstruye toda la casa sin pedir nunca permiso de construcción.",
+      "fun_fact": "La araña de jardín europea suele comerse su telaraña vieja antes de tejer una nueva, y así recicla la proteína de la seda.",
+      "difficulty": 5,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "5cdf029bab41"
+    },
+    {
+      "id": "q-21068",
+      "question": "Mira: ¿qué ave nada entre los juncos en este video?",
+      "answer": "Gallineta común",
+      "wrong_answers": [
+        "Focha común",
+        "Ánade real",
+        "Zampullín común"
+      ],
+      "hints": [
+        "No es un pato: pertenece a la familia de los rálidos, que suelen caminar por los pantanos.",
+        "Mientras nada, levanta la cola una y otra vez y deja ver plumas blancas por debajo.",
+        "Su prima la focha tiene la frente blanca, pero esta ave la tiene roja intensa, con el pico de punta amarilla."
+      ],
+      "description": "La vida entre juncos: buenas vistas, alfombras húmedas y vecinos que no dejan de remar.",
+      "fun_fact": "La gallineta común no tiene patas palmeadas, solo dedos largos y finos, pero nada bien y mueve la cabeza con cada brazada.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9b78fa772bdf"
+    },
+    {
+      "id": "q-21069",
+      "question": "Escucha: el “tonk… tonk” fuerte y constante de este coro de ranas de Estados Unidos es de una rana arborícola. ¿La voz de qué animal le da su nombre?",
+      "answer": "Un perro",
+      "wrong_answers": [
+        "Una vaca",
+        "Una oveja",
+        "Un cerdo"
+      ],
+      "hints": [
+        "Su nombre viene del verbo para el ruido que hace este animal, como en “la rana arborícola ___dora”.",
+        "Fíjate en lo corto y seco que es cada canto: más parecido a un grito suelto que a un sonido largo y estirado.",
+        "¡Guau, guau!"
+      ],
+      "description": "Un estanque de noche donde todos cantan y nadie aprendió a hablar bajito.",
+      "fun_fact": "La rana arborícola ladradora es una de las ranas arborícolas nativas más grandes de Estados Unidos, y en una noche cálida su canto se oye desde muy lejos al otro lado del pantano.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9759afcec921"
+    },
+    {
+      "id": "q-21070",
+      "question": "Mira la cresta y la cara de este gallo negro. ¿De qué raza es?",
+      "answer": "Ayam Cemani",
+      "wrong_answers": [
+        "Australorp",
+        "La Flèche",
+        "Menorca"
+      ],
+      "hints": [
+        "Su color negro va mucho más allá de sus plumas.",
+        "Viene de la isla de Java, en Indonesia.",
+        "En su idioma de origen, la primera palabra de su nombre significa simplemente “gallina”."
+      ],
+      "description": "Un gallo que se vistió de luto para una ocasión y decidió que ese look le quedaba de maravilla para siempre.",
+      "fun_fact": "Gracias a un gen llamado fibromelanosis, el Ayam Cemani es oscuro incluso por dentro, hasta los huesos, pero sus gallinas ponen huevos normales de color crema.",
+      "difficulty": 13,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "ff94a9f8ef15"
+    },
+    {
+      "id": "q-21071",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "China",
+      "wrong_answers": [
+        "Japón",
+        "Corea del Sur",
+        "Vietnam"
+      ],
+      "hints": [
+        "Este himno se escribió primero como canción principal de una película de 1935.",
+        "Su nombre en español es “Marcha de los Voluntarios”.",
+        "Es el país que tuvo la mayor población del mundo durante casi toda la historia moderna, y su capital fue sede de los Juegos Olímpicos de 2008."
+      ],
+      "description": "Una melodía que ha pasado más tiempo en el podio olímpico que la mayoría de los atletas.",
+      "fun_fact": "Su compositor, Nie Er, escribió la melodía en 1935, cuando tenía apenas 23 años.",
+      "difficulty": 11,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0605db18604f"
+    },
+    {
+      "id": "q-21074",
+      "question": "Escucha: este es el último movimiento de una famosa sonata para piano de Beethoven. ¿Con qué apodo se conoce la sonata completa?",
+      "answer": "Tempestad",
+      "wrong_answers": [
+        "Claro de luna",
+        "Patética",
+        "Appassionata"
+      ],
+      "hints": [
+        "Como la mayoría de los apodos de las obras de Beethoven, este no lo escribió él mismo en la partitura.",
+        "El nombre viene de una anécdota: lo que Beethoven respondió cuando alguien le preguntó qué significaba la música.",
+        "Según la historia, dijo que leyeran una obra de Shakespeare que empieza con un naufragio."
+      ],
+      "description": "La mano derecha de un pianista que claramente nunca ha oído hablar de la hora del almuerzo.",
+      "fun_fact": "El apodo viene de Anton Schindler, secretario de Beethoven, quien contó que Beethoven le dijo: «Lee La tempestad de Shakespeare». Muchos historiadores dudan de la historia, pero el nombre se quedó.",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3e489252b3d9"
+    },
+    {
+      "id": "q-21075",
+      "question": "Mira: ¿en qué guarda el sonido esta grabadora de voz de bolsillo?",
+      "answer": "En un casete diminuto",
+      "wrong_answers": [
+        "En un MiniDisc pequeño",
+        "En una tarjeta de memoria",
+        "En un disquete"
+      ],
+      "hints": [
+        "Fíjate en lo que la mano mete detrás de la pequeña tapa.",
+        "Por dentro, el sonido queda grabado en una larga cinta magnética.",
+        "Funciona como las cintas de música de los años 80, solo que en miniatura."
+      ],
+      "description": "Antes de que el celular lo hiciera todo, los jefes ocupados le murmuraban sus cartas a uno de estos.",
+      "fun_fact": "El microcasete lo presentó la empresa japonesa Olympus en 1969 y se usó durante décadas en dictáfonos y contestadoras automáticas.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0e6dcfa06054"
+    },
+    {
+      "id": "q-21076",
+      "question": "Mira: un satélite meteorológico filmó esta enorme nube gris saliendo del océano Pacífico, en mar abierto, en pocas horas. ¿Qué la causó?",
+      "answer": "La erupción de un volcán submarino",
+      "wrong_answers": [
+        "El choque de un meteorito en el mar",
+        "El incendio de una plataforma petrolera",
+        "El incendio forestal de una isla"
+      ],
+      "hints": [
+        "Fíjate en el color de la nube: no es blanca como el vapor de agua.",
+        "La nube crece desde un solo punto en mar abierto, lejos de cualquier tierra grande.",
+        "Vino de las profundidades de la Tierra, a través del fondo marino cerca de las islas de Tonga."
+      ],
+      "description": "Desde el espacio, el océano Pacífico se ve tranquilo y azul… hasta que de pronto deja de verse así.",
+      "fun_fact": "La erupción del Hunga Tonga-Hunga Haʻapai en 2022 lanzó su columna a unos 57 km de altura, la más alta jamás medida, y su onda de presión le dio varias vueltas a la Tierra.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "0f6c632ac0cb"
+    },
+    {
+      "id": "q-21078",
+      "question": "Mira: este cohete gigante de acero, filmado desde un avión de investigación de la NASA, ¿qué empresa lo construyó?",
+      "answer": "SpaceX",
+      "wrong_answers": [
+        "Blue Origin",
+        "Boeing",
+        "Rocket Lab"
+      ],
+      "hints": [
+        "La empresa es de Estados Unidos y se fundó a comienzos de los años 2000.",
+        "Sus cohetes propulsores son famosos por volver y aterrizar de pie después del lanzamiento.",
+        "La fundó en 2002 el hombre que después dirigió Tesla."
+      ],
+      "description": "Un rascacielos muy brillante que se cansó de estar quieto y despegó del suelo.",
+      "fun_fact": "Con su etapa superior encima, Starship mide unos 121 m de alto y su propulsor tiene 33 motores: es el cohete más grande y potente que haya volado jamás.",
+      "difficulty": 7,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "3f1204768ed3"
+    },
+    {
+      "id": "q-21079",
+      "question": "Mira: ¿qué prenda lleva la persona que baila de rojo?",
+      "answer": "Sari",
+      "wrong_answers": [
+        "Kimono",
+        "Hanbok",
+        "Dirndl"
+      ],
+      "hints": [
+        "Se usa en bodas y también para ir a trabajar todos los días.",
+        "Es una sola tela larga sin costuras, a menudo de 5 a 8 metros, que se envuelve alrededor del cuerpo.",
+        "Es la prenda clásica de las mujeres en la India, Nepal y Bangladés."
+      ],
+      "description": "Cae la noche, empieza el tambor y un atuendo se roba todo el espectáculo.",
+      "fun_fact": "Un sari se puede envolver de más de 80 maneras distintas, y el estilo suele cambiar de una región de la India a otra.",
+      "difficulty": 6,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "2d3d1402a1a7"
+    },
+    {
+      "id": "q-21080",
+      "question": "Mira esta manija en forma de T que gira flotando en la Estación Espacial Internacional. ¿Cómo se llama el efecto que ves?",
+      "answer": "El efecto Dzhanibekov",
+      "wrong_answers": [
+        "El efecto Coriolis",
+        "El efecto Magnus",
+        "El efecto Leidenfrost"
+      ],
+      "hints": [
+        "Fíjate en lo que le pasa a la manija cada pocos segundos, aunque nada la toca.",
+        "Lo mismo se ve al lanzar al aire una raqueta de tenis o un celular que gira sobre su eje intermedio.",
+        "Lleva el nombre de un cosmonauta soviético que lo notó en 1985 con una tuerca de mariposa girando."
+      ],
+      "description": "Una pieza de metal que no logra decidir dónde es arriba, en un lugar donde no hay arriba.",
+      "fun_fact": "Vladímir Dzhanibekov descubrió el efecto en 1985 a bordo de la estación espacial Salyut 7, y los matemáticos lo explican con el «teorema de la raqueta de tenis».",
+      "difficulty": 14,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "9570c499a435"
+    },
+    {
+      "id": "q-21082",
+      "question": "Mira: este vehículo gigante de la NASA lleva naves espaciales a la plataforma de lanzamiento. ¿Sobre qué se mueve?",
+      "answer": "Orugas de tanque",
+      "wrong_answers": [
+        "Rieles de acero",
+        "Colchones de aire",
+        "Neumáticos de goma"
+      ],
+      "hints": [
+        "Fíjate bien en las cuatro esquinas del vehículo.",
+        "Los tractores y las excavadoras suelen usar lo mismo para avanzar sobre terreno blando.",
+        "En cada esquina hay cintas de pesadas placas de metal que giran y giran."
+      ],
+      "description": "La celebridad más lenta del centro espacial, y aun así todos se quedan mirándola.",
+      "fun_fact": "Los transportadores de la NASA se construyeron en los años 60 para los cohetes lunares Apolo, y cada una de sus 456 placas de oruga pesa cerca de 1 tonelada.",
+      "difficulty": 3,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "8b840b8b273c"
+    },
+    {
+      "id": "q-21083",
+      "question": "Escucha: ¿qué indicación de tempo en italiano le corresponde a este movimiento de Mozart?",
+      "answer": "Andante",
+      "wrong_answers": [
+        "Presto",
+        "Allegro",
+        "Vivace"
+      ],
+      "hints": [
+        "Los músicos escriben la velocidad de una pieza con una palabra en italiano al principio de la partitura.",
+        "Escucha el ritmo: ¿la orquesta va con prisa o se toma su tiempo?",
+        "La palabra viene del verbo italiano «andare», que significa «ir» o «caminar»: piensa en un paso tranquilo."
+      ],
+      "description": "Cada pieza de música clásica trae su propio letrero de límite de velocidad, escrito en italiano.",
+      "fun_fact": "Mozart terminó este concierto para piano, el n.º 16 en re mayor, en 1784, el año en que empezó a llevar una lista escrita y cuidadosa de cada obra que componía.",
+      "difficulty": 9,
+      "status": "approved",
+      "batch": "tr-es-23",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-17",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "source_hash": "96d511b1486c"
+    },
+    {
       "id": "q-2204",
       "question": "¿Qué marca deportiva tiene un cocodrilo en su logo?",
       "answer": "Lacoste",
@@ -121715,26 +123275,24 @@
       ],
       "hints": [
         "Los anillos están sobre una bandera blanca.",
-        "Los anillos son de cinco colores, y el negro y el amarillo son dos de ellos.",
+        "Los anillos tienen cinco colores, y el negro y el amarillo son dos de ellos.",
         "El color que falta es una mezcla de rojo y azul."
       ],
       "description": "Cinco círculos tomados de la mano, y ninguno se suelta.",
-      "fun_fact": "Pierre de Coubertin diseñó los anillos en 1913; con el fondo blanco, sus colores podían formar la bandera de cualquier país de esa época.",
+      "fun_fact": "Pierre de Coubertin diseñó los anillos en 1913; junto con el fondo blanco, sus colores podían formar la bandera de cualquier país de esa época.",
       "difficulty": 4,
-      "status": "needs_work",
-      "batch": "tr-es-22",
+      "status": "approved",
+      "batch": "tr-es-23",
       "review": {
-        "decision": "needs_work",
-        "feedback": "This duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado). It asks the same fact with the same answer, and families who play both the colombia and base bundles would get it twice. Keep only one of the two.",
-        "problems": [
-          "overlap"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-17",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "This duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado): same fact, same answer, same distractor logic. The overlap comes from the source item, not from the translation, so one of the two should be dropped at the pool level. The Spanish translation itself is faithful and natural.",
+          "feedback": "This duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado). It asks the same fact with the same answer, and families who play both the colombia and base bundles would get it twice. Keep only one of the two.",
           "problems": [
             "overlap"
           ],
@@ -121743,16 +123301,16 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "This question asks the same fact as the approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That question is in the Colombian bundle, but base questions are also played there, so Spanish-speaking players in Colombia can get the same fact twice. Decide which one to keep. Since this is the base question played everywhere, dropping or reworking q-6930 may be the better choice. The translation itself is fine.",
+            "feedback": "This duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado): same fact, same answer, same distractor logic. The overlap comes from the source item, not from the translation, so one of the two should be dropped at the pool level. The Spanish translation itself is faithful and natural.",
             "problems": [
               "overlap"
             ],
-            "reviewed_on": "2026-11-16",
+            "reviewed_on": "2026-11-17",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "The translation itself is faithful and natural, but the Spanish pool already has the same question: q-6930 asks which colour is missing from the Olympic rings, and its answer is also Morado. Players who get both the base and colombia bundles would meet the same fact twice. Drop one of the two, or replace q-6930 in the colombia bundle.",
+              "feedback": "This question asks the same fact as the approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That question is in the Colombian bundle, but base questions are also played there, so Spanish-speaking players in Colombia can get the same fact twice. Decide which one to keep. Since this is the base question played everywhere, dropping or reworking q-6930 may be the better choice. The translation itself is fine.",
               "problems": [
                 "overlap"
               ],
@@ -121761,7 +123319,7 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "The translation itself is accurate and natural, but in Spanish it asks the same fact, with the same answer, as the approved question q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That question probably wasn't among the related questions when the English source was reviewed. One of the two should be dropped, or this one should ask about a different fact.",
+                "feedback": "The translation itself is faithful and natural, but the Spanish pool already has the same question: q-6930 asks which colour is missing from the Olympic rings, and its answer is also Morado. Players who get both the base and colombia bundles would meet the same fact twice. Drop one of the two, or replace q-6930 in the colombia bundle.",
                 "problems": [
                   "overlap"
                 ],
@@ -121770,16 +123328,16 @@
                 "model": "claude-opus-5-5",
                 "previous": {
                   "decision": "needs_work",
-                  "feedback": "Source: this asks the same fact with the same answer as approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado), so one of the two should be dropped. The translation itself is fine; the duplicate comes from the source question, not the wording.",
+                  "feedback": "The translation itself is accurate and natural, but in Spanish it asks the same fact, with the same answer, as the approved question q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That question probably wasn't among the related questions when the English source was reviewed. One of the two should be dropped, or this one should ask about a different fact.",
                   "problems": [
                     "overlap"
                   ],
-                  "reviewed_on": "2026-10-31",
+                  "reviewed_on": "2026-11-16",
                   "reviewer": "llm",
                   "model": "claude-opus-5-5",
                   "previous": {
                     "decision": "needs_work",
-                    "feedback": "Duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado): same fact, same answer, almost the same words. Keep only one of the two in the Spanish pool; rewording can't resolve this. The translation itself is faithful and natural.",
+                    "feedback": "Source: this asks the same fact with the same answer as approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado), so one of the two should be dropped. The translation itself is fine; the duplicate comes from the source question, not the wording.",
                     "problems": [
                       "overlap"
                     ],
@@ -121788,7 +123346,7 @@
                     "model": "claude-opus-5-5",
                     "previous": {
                       "decision": "needs_work",
-                      "feedback": "Duplicate: approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado) asks the same fact with the same answer, as the rater noted. Source: this is a pool-level duplicate, not a translation fault, so one of the two should be dropped.",
+                      "feedback": "Duplicates approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado): same fact, same answer, almost the same words. Keep only one of the two in the Spanish pool; rewording can't resolve this. The translation itself is faithful and natural.",
                       "problems": [
                         "overlap"
                       ],
@@ -121797,16 +123355,16 @@
                       "model": "claude-opus-5-5",
                       "previous": {
                         "decision": "needs_work",
-                        "feedback": "Overlap: q-6930 (approved, colombia bundle) already asks the same fact in Spanish, which colour does NOT appear in the Olympic rings, with the same answer, Morado. A family that plays both bundles would get the same question twice. Keep only one of the two. The translation itself is faithful and reads naturally in es-419.",
+                        "feedback": "Duplicate: approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer Morado) asks the same fact with the same answer, as the rater noted. Source: this is a pool-level duplicate, not a translation fault, so one of the two should be dropped.",
                         "problems": [
                           "overlap"
                         ],
-                        "reviewed_on": "2026-10-24",
+                        "reviewed_on": "2026-10-31",
                         "reviewer": "llm",
                         "model": "claude-opus-5-5",
                         "previous": {
                           "decision": "needs_work",
-                          "feedback": "The translation itself is faithful and reads naturally, but it asks the same fact as the approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That is a duplicate in the Spanish pool, so you should drop one of the two, or decide that the two bundles are kept apart on purpose.",
+                          "feedback": "Overlap: q-6930 (approved, colombia bundle) already asks the same fact in Spanish, which colour does NOT appear in the Olympic rings, with the same answer, Morado. A family that plays both bundles would get the same question twice. Keep only one of the two. The translation itself is faithful and reads naturally in es-419.",
                           "problems": [
                             "overlap"
                           ],
@@ -121815,7 +123373,7 @@
                           "model": "claude-opus-5-5",
                           "previous": {
                             "decision": "needs_work",
-                            "feedback": "This duplicates q-6930, an approved question in the colombia bundle. It asks the same thing: which colour is not on the Olympic rings, answer 'Morado'. Spanish-speaking players with both bundles would get the same question twice. Keep one of the two, or replace this one with a different fact about the Olympic rings.",
+                            "feedback": "The translation itself is faithful and reads naturally, but it asks the same fact as the approved q-6930 (\"¿Cuál de estos colores NO aparece en los aros olímpicos?\" → Morado). That is a duplicate in the Spanish pool, so you should drop one of the two, or decide that the two bundles are kept apart on purpose.",
                             "problems": [
                               "overlap"
                             ],
@@ -121824,14 +123382,24 @@
                             "model": "claude-opus-5-5",
                             "previous": {
                               "decision": "needs_work",
-                              "feedback": "This asks the same fact as the approved q-6930 (colombia bundle: \"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer \"Morado\"). Colombian families who play both base and colombia would get the same question twice. The translation is fine. Keep one of the two questions, or replace q-6930 in the colombia bundle with a different Olympic question.",
+                              "feedback": "This duplicates q-6930, an approved question in the colombia bundle. It asks the same thing: which colour is not on the Olympic rings, answer 'Morado'. Spanish-speaking players with both bundles would get the same question twice. Keep one of the two, or replace this one with a different fact about the Olympic rings.",
                               "problems": [
                                 "overlap"
                               ],
                               "reviewed_on": "2026-10-24",
                               "reviewer": "llm",
                               "model": "claude-opus-5-5",
-                              "previous": null
+                              "previous": {
+                                "decision": "needs_work",
+                                "feedback": "This asks the same fact as the approved q-6930 (colombia bundle: \"¿Cuál de estos colores NO aparece en los aros olímpicos?\", answer \"Morado\"). Colombian families who play both base and colombia would get the same question twice. The translation is fine. Keep one of the two questions, or replace q-6930 in the colombia bundle with a different Olympic question.",
+                                "problems": [
+                                  "overlap"
+                                ],
+                                "reviewed_on": "2026-10-24",
+                                "reviewer": "llm",
+                                "model": "claude-opus-5-5",
+                                "previous": null
+                              }
                             }
                           }
                         }
@@ -132896,26 +134464,26 @@
     },
     {
       "id": "q-6635",
-      "question": "Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal produce el hilo para hacerla?",
-      "answer": "Gusano de seda",
+      "question": "Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal hila el hilo para hacerla?",
+      "answer": "El gusano de seda",
       "wrong_answers": [
-        "Oveja",
-        "Camello",
-        "Cabra"
+        "La oveja",
+        "El camello",
+        "La cabra"
       ],
       "hints": [
-        "La antigua China mantuvo en secreto el trabajo de este animal durante muchísimo tiempo.",
-        "Este animal es tan pequeño que cabría en la punta de tu dedo.",
-        "Se envuelve en un capullo hecho de un solo hilo muy largo."
+        "La antigua China guardó en secreto el trabajo de este animal durante muchísimo tiempo.",
+        "Este animal es tan pequeño que cabe en la punta de tu dedo.",
+        "Se envuelve en un capullo hecho de un solo hilo larguísimo."
       ],
-      "description": "Túnicas de reyes, corbatas elegantes y vestidos dignos de una reina: todo gracias a un secreto que China guardó durante siglos.",
+      "description": "Túnicas de reyes, corbatas elegantes y pijamas dignas de una reina, todo gracias a un secreto que China guardó durante siglos.",
       "fun_fact": "Un solo capullo de gusano de seda está hecho de un único hilo que puede medir hasta unos 900 metros.",
-      "difficulty": 4,
+      "difficulty": 3,
       "status": "needs_work",
-      "batch": "tr-es-22",
+      "batch": "tr-es-23",
       "review": {
         "decision": "needs_work",
-        "feedback": "source: Hint 2 (\"so small it could sit on your fingertip\") is inaccurate. A full-grown silkworm is about 7–8 cm long, roughly the length of a finger. Only a newly hatched larva is that small. The Spanish translation copies this faithfully, so the source hint needs correcting, e.g. \"This animal is a caterpillar that eats only mulberry leaves.\" Otherwise the translation is faithful and natural es-419. Fact check: wrong. The answer (silkworm) and the wrong answers are correct, and the cocoon-thread fun fact (about 900 m, commonly cited as 300–900 m) is fine. Hint 2 is misleading: a full-grown silkworm is about 7–8 cm long, as long as a finger. It would not fit on a fingertip. Only a newly hatched larva is that small. I checked this from general knowledge, not with a search.",
+        "feedback": "source: hint 2 (\"so small it could sit on your fingertip\") is inaccurate. The full-grown silkworm, the stage that spins the cocoon, is about 7–8 cm long; only newly hatched larvae are fingertip-sized. The source hint needs replacing, for example with \"it is actually a caterpillar that eats mulberry leaves\". The Spanish then follows the corrected source. Minor: in the description, \"pijamas dignas\" should be \"pijamas dignos\", since \"pijama\" is masculine in most of Latin America. Fact check: wrong. The answer (silkworm) and the wrong answers are correct. The fun fact is fine: a cocoon is a single thread of roughly 600–900 m or more. Hint 2 is misleading. A full-grown silkworm, the stage that spins the cocoon, is about 7–8 cm long and doesn't fit on a fingertip. Only newly hatched larvae are that small. I did not run searches, so this rests on general knowledge.",
         "problems": [
           "fact"
         ],
@@ -132924,7 +134492,7 @@
         "model": "claude-opus-5-5",
         "previous": {
           "decision": "needs_work",
-          "feedback": "source: hint 2 (\"so small it could sit on your fingertip\") is inaccurate. A full-grown silkworm is about 7–8 cm long, and only a newly hatched larva is that small. The fact check marked this as wrong. Fix the source hint, for example to \"It is a caterpillar that eats almost only mulberry leaves\", then re-translate. The rest of the Spanish translation is faithful and natural. Fact check: wrong. The answer (silkworm) is right, the wrong answers (sheep, camel, goat give wool or hair) are wrong, and the 900 m cocoon thread is in the commonly cited 300–900 m range. Hint 2 is misleading: a full-grown silkworm is about 7–8 cm long, so it does not fit on a fingertip. Only a newly hatched larva is that small. I did not run searches; this is from general knowledge.",
+          "feedback": "source: Hint 2 (\"so small it could sit on your fingertip\") is inaccurate. A full-grown silkworm is about 7–8 cm long, roughly the length of a finger. Only a newly hatched larva is that small. The Spanish translation copies this faithfully, so the source hint needs correcting, e.g. \"This animal is a caterpillar that eats only mulberry leaves.\" Otherwise the translation is faithful and natural es-419. Fact check: wrong. The answer (silkworm) and the wrong answers are correct, and the cocoon-thread fun fact (about 900 m, commonly cited as 300–900 m) is fine. Hint 2 is misleading: a full-grown silkworm is about 7–8 cm long, as long as a finger. It would not fit on a fingertip. Only a newly hatched larva is that small. I checked this from general knowledge, not with a search.",
           "problems": [
             "fact"
           ],
@@ -132933,16 +134501,16 @@
           "model": "claude-opus-5-5",
           "previous": {
             "decision": "needs_work",
-            "feedback": "Source: hint 2 says the silkworm is small enough to sit on a fingertip, but a full-grown silkworm is about 7–8 cm long, roughly the length of a finger (the fact check also marks it wrong). The source's hint 2 needs correcting, for example to \"a caterpillar that eats mulberry leaves and is only a few centimetres long\". The translation itself is faithful and natural. Fact check: wrong. The answer (silkworm), the wrong answers (sheep, camel and goat give wool or hair, not silk) and the fun fact are fine. The cocoon thread is commonly given as about 300 to 900 m, sometimes more. Hint 2 is misleading. A full-grown silkworm is about 7–8 cm long, roughly a finger's length, so it would not fit on a fingertip. This is from memory; I did not run searches.",
+            "feedback": "source: hint 2 (\"so small it could sit on your fingertip\") is inaccurate. A full-grown silkworm is about 7–8 cm long, and only a newly hatched larva is that small. The fact check marked this as wrong. Fix the source hint, for example to \"It is a caterpillar that eats almost only mulberry leaves\", then re-translate. The rest of the Spanish translation is faithful and natural. Fact check: wrong. The answer (silkworm) is right, the wrong answers (sheep, camel, goat give wool or hair) are wrong, and the 900 m cocoon thread is in the commonly cited 300–900 m range. Hint 2 is misleading: a full-grown silkworm is about 7–8 cm long, so it does not fit on a fingertip. Only a newly hatched larva is that small. I did not run searches; this is from general knowledge.",
             "problems": [
               "fact"
             ],
-            "reviewed_on": "2026-11-16",
+            "reviewed_on": "2026-11-17",
             "reviewer": "llm",
             "model": "claude-opus-5-5",
             "previous": {
               "decision": "needs_work",
-              "feedback": "Source: hint 2 (\"so small it could sit on your fingertip\") is wrong. A full-grown silkworm is about 7–8 cm long, and only a newly hatched larva is that small. The source needs a correct hint 2, for example \"It is a caterpillar that eats only mulberry leaves\", and then the translation should be redone to match. Minor point for the re-translation: \"pijamas dignas\" uses the feminine, but most of Latin America says \"el pijama\", so \"pijamas dignos\" reads more widely. Fact check: wrong. The answer (gusano de seda), the wrong answers (sheep, camel and goat give wool or hair) and the fun fact are fine. The fact is right because cocoon filaments run about 600–900 m, and some sources say up to 1,500 m. Hint 2 is misleading. A full-grown silkworm is about 7–8 cm long, so it doesn't fit on a fingertip. Only the newly hatched larva is that small. This is from general knowledge. I did not run a web search.",
+              "feedback": "Source: hint 2 says the silkworm is small enough to sit on a fingertip, but a full-grown silkworm is about 7–8 cm long, roughly the length of a finger (the fact check also marks it wrong). The source's hint 2 needs correcting, for example to \"a caterpillar that eats mulberry leaves and is only a few centimetres long\". The translation itself is faithful and natural. Fact check: wrong. The answer (silkworm), the wrong answers (sheep, camel and goat give wool or hair, not silk) and the fun fact are fine. The cocoon thread is commonly given as about 300 to 900 m, sometimes more. Hint 2 is misleading. A full-grown silkworm is about 7–8 cm long, roughly a finger's length, so it would not fit on a fingertip. This is from memory; I did not run searches.",
               "problems": [
                 "fact"
               ],
@@ -132951,15 +134519,25 @@
               "model": "claude-opus-5-5",
               "previous": {
                 "decision": "needs_work",
-                "feedback": "source: hint 2 says the animal is so small it could sit on your fingertip, but a full-grown silkworm is about 7 cm long; only a newly hatched larva is that small (the fact check marks it wrong). Fix the source's hint 2, e.g. \"It's a caterpillar that eats only mulberry leaves\", then re-translate. Also, in the translated description \"pijamas dignas\" should be \"pijamas dignos\", since \"pijama\" is masculine in most of Latin America. Fact check: wrong. The answer (silkworm) and the wrong answers are correct. The 900 m cocoon thread is a commonly cited figure (sources give about 600–900 m, sometimes more). Hint 2 is misleading: a full-grown silkworm is about 7 cm long, so it doesn't fit on a fingertip. Only a newly hatched larva is that small. I did not run any searches, so this comes from my own knowledge.",
+                "feedback": "Source: hint 2 (\"so small it could sit on your fingertip\") is wrong. A full-grown silkworm is about 7–8 cm long, and only a newly hatched larva is that small. The source needs a correct hint 2, for example \"It is a caterpillar that eats only mulberry leaves\", and then the translation should be redone to match. Minor point for the re-translation: \"pijamas dignas\" uses the feminine, but most of Latin America says \"el pijama\", so \"pijamas dignos\" reads more widely. Fact check: wrong. The answer (gusano de seda), the wrong answers (sheep, camel and goat give wool or hair) and the fun fact are fine. The fact is right because cocoon filaments run about 600–900 m, and some sources say up to 1,500 m. Hint 2 is misleading. A full-grown silkworm is about 7–8 cm long, so it doesn't fit on a fingertip. Only the newly hatched larva is that small. This is from general knowledge. I did not run a web search.",
                 "problems": [
-                  "fact",
-                  "style"
+                  "fact"
                 ],
                 "reviewed_on": "2026-11-16",
                 "reviewer": "llm",
                 "model": "claude-opus-5-5",
-                "previous": null
+                "previous": {
+                  "decision": "needs_work",
+                  "feedback": "source: hint 2 says the animal is so small it could sit on your fingertip, but a full-grown silkworm is about 7 cm long; only a newly hatched larva is that small (the fact check marks it wrong). Fix the source's hint 2, e.g. \"It's a caterpillar that eats only mulberry leaves\", then re-translate. Also, in the translated description \"pijamas dignas\" should be \"pijamas dignos\", since \"pijama\" is masculine in most of Latin America. Fact check: wrong. The answer (silkworm) and the wrong answers are correct. The 900 m cocoon thread is a commonly cited figure (sources give about 600–900 m, sometimes more). Hint 2 is misleading: a full-grown silkworm is about 7 cm long, so it doesn't fit on a fingertip. Only a newly hatched larva is that small. I did not run any searches, so this comes from my own knowledge.",
+                  "problems": [
+                    "fact",
+                    "style"
+                  ],
+                  "reviewed_on": "2026-11-16",
+                  "reviewer": "llm",
+                  "model": "claude-opus-5-5",
+                  "previous": null
+                }
               }
             }
           }
