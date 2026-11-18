@@ -1655855,6 +1655855,83 @@
         },
         "revised_on": "2026-11-18"
       }
+    },
+    {
+      "id": "q-21209",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "It flew hundreds of millions of kilometers, and the first thing it wanted to do was dig a little hole.",
+      "question": "Watch: which NASA mission put this lander, with its two round solar panels, on Mars?",
+      "answer": "InSight",
+      "wrong_answers": [
+        "Curiosity",
+        "Perseverance",
+        "Viking 1"
+      ],
+      "hints": [
+        "Look at what it stands on: legs, not wheels, so it never drove a single meter.",
+        "The white dome next to it covered an instrument that listened for “marsquakes”.",
+        "It landed in November 2018 and studied the deep inside of Mars until 2022."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHP3_overview_animation_%28no_text%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/HP3_overview_animation_%28no_text%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "DLR - German Aerospace Center · CC BY 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0 de",
+        "license_url": null,
+        "author": "DLR - German Aerospace Center",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:HP3 overview animation (no text).webm",
+        "note": "Silent CGI: the InSight lander on the red Martian surface, seen from above with its two round solar panels and the white seismometer dome, then a side view of its legs and deck.",
+        "duration": 200.09,
+        "excerpt": {
+          "start": 25,
+          "end": 55
+        }
+      },
+      "fun_fact": "InSight's “mole” heat probe was meant to hammer itself 5 m (16 ft) deep, but the clumpy Martian soil stopped it at about 40 cm (16 in).",
+      "subcategory": "space",
+      "style": null,
+      "concept": "NASA InSight lander on Mars drilling its HP3 heat probe into the ground",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Facts check out: InSight landed in November 2018, ran until December 2022, had two round solar panels, and its SEIS seismometer sat under a white dome. The fun fact is roughly right. The mole was meant to go 3–5 m deep and ended up only just under the surface, so \"about 40 cm\" refers to the probe's own length rather than how deep it got. The clip is a DLR animation of the HP3 heat probe, so the 25–55 s excerpt may focus on the mole more than on the whole lander. Check that the excerpt clearly shows the lander's legs and solar panels. In the video the lander has legs and no wheels, which rules out Curiosity and Perseverance right away. That leaves Viking 1, the only strong distractor. That is fair reasoning, but it makes the question a bit easier than 13."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-91",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "machine",
+        "probe": "media-probe/f6cf57f924dbf871"
+      }
     }
   ]
 }

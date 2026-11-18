@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "65a3a129",
+  "hash": "62697d02",
   "questions": [
     {
       "id": "q-0001",
@@ -220616,6 +220616,44 @@
         "author": "Freschauf L, McLane J, Sharma H, Khine M",
         "author_url": null,
         "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21209",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "It flew hundreds of millions of kilometers, and the first thing it wanted to do was dig a little hole.",
+      "question": "Watch: which NASA mission put this lander, with its two round solar panels, on Mars?",
+      "answer": "InSight",
+      "wrong_answers": [
+        "Curiosity",
+        "Perseverance",
+        "Viking 1"
+      ],
+      "hints": [
+        "Look at what it stands on: legs, not wheels, so it never drove a single meter.",
+        "The white dome next to it covered an instrument that listened for “marsquakes”.",
+        "It landed in November 2018 and studied the deep inside of Mars until 2022."
+      ],
+      "fun_fact": "InSight's “mole” heat probe was meant to hammer itself 5 m (16 ft) deep, but the clumpy Martian soil stopped it at about 40 cm (16 in).",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/HP3_overview_animation_%28no_text%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHP3_overview_animation_%28no_text%29.webm",
+        "credit": "DLR - German Aerospace Center · CC BY 3.0 de · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0 de",
+        "license_url": null,
+        "author": "DLR - German Aerospace Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 25,
+          "end": 55
+        }
       },
       "background": null
     }
