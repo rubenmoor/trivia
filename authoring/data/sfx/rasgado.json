@@ -1,0 +1,26 @@
+{
+ "name": "rasgado",
+ "library": "Kenney Digital Audio",
+ "title": "zap1",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "download": "",
+ "sha256": "a494bb099461791fa19484daebe28a8b8a803c7b051106032f5bdb67de48734f",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "tear"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"zap1\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

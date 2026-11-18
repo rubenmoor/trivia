@@ -1,0 +1,26 @@
+{
+ "name": "pop-2",
+ "library": "Kenney UI Audio",
+ "title": "click3",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+ "download": "",
+ "sha256": "9649d0ed86f2129e39568922eda43da25c287ca0d2905328ecddbd70d11fbb34",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "pop"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"click3\" by Kenney (https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

@@ -1,0 +1,26 @@
+{
+ "name": "whoosh-pantalla",
+ "library": "Kenney Digital Audio",
+ "title": "phaseJump2",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "download": "",
+ "sha256": "7226718d4df51e169de9e8ef6367fd2800cdf844a688c1fa56ee3112c0d47a45",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "whoosh"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"phaseJump2\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

@@ -58,6 +58,12 @@ class Sfx(unittest.TestCase):
             return float(e.split("mean_volume:")[1].split()[0])
         self.assertLess(mean(sfx.duration(f) - 0.02), mean(0.2) - 6)
 
+    def test_short_clip_peak_normalised(self):
+        self.rec("corto", "CC0-1.0", "--start", "0.5", "--end", "0.7")  # 0.2 s: no integrated loudness
+        code, _, err = self.run_cli("convert", "corto")
+        self.assertEqual(code, 0, err)
+        self.assertLessEqual(sfx.measure(sfx.out_path("corto"))[1], -1.5)
+
     def test_stereo_record_keeps_two_channels(self):
         self.rec("estereo", "CC0-1.0", "--stereo")
         self.assertEqual(self.run_cli("convert", "estereo")[0], 0)
