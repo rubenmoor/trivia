@@ -134,7 +134,7 @@ The new sound effects (plan 223) are made with `trivia-sfx` from CC0, public dom
 - Tool: `trivia-sfx` (`authoring/tools/sfx/sfx.py`, dev shell; tests `test_sfx.py` in `npm test`); `-h` lists the commands
   - `record <name> --file P --page U --title T --author A --licence SPDX --cue C [--cue …] [--class effect|jingle|long] [--start S] [--end S] [--gain DB] [--stereo]`, then `--read-on-page` once the licence is read on the source page
   - `convert <name>`: cut, trim silence, 50 ms fade-out, loudnorm -16 LUFS / -1.5 dBTP (two passes), mono AAC 80k → `app/client/public/audio/<name>.m4a`; `--stereo` in the record keeps two channels
-  - `check [<name> …]`: -16 ±1 LUFS (clips over 0.3 s), true peak ≤ -1.5 dBTP, size budget of the class, licence allowed and read
+  - `check [<name> …]`: -16 ±1 LUFS (clips over 0.4 s; shorter clips, too short for a loudness reading, are peak-normalised to about -2.5 dBTP), true peak ≤ -1.5 dBTP, size budget of the class, licence allowed and read
   - `credits [--check]`: effect rows of `CREDITS.md` between `trivia-sfx` marker comments; hand rows and music rows untouched
 - Licences and credits code are `music.py`'s (decision 199); allowed: CC0, PD, CC BY 3.0/4.0 (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`); no Freesound API (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`)
 - Record: `authoring/data/sfx/<name>.json` (committed): `name` (file name without `.m4a`, lower case ASCII Spanish words with `-`), source `page`, `title`, `author`, `library`, `sha256`, `downloaded`, `licence` (`spdx`, `read_on_page` date), `cues`, `class`, `stereo`, `cut` (`start`, `end`, `gain_db`), `credit`
@@ -143,6 +143,25 @@ The new sound effects (plan 223) are made with `trivia-sfx` from CC0, public dom
 - Cue names are mod API and stay; file names may change; variants of frequent cues are a file list in `SAMPLE_FOR` (never the same twice in a row); synth `RECIPES` stay as the fallback
 - Groups: `GROUP` in `sound.svelte.ts` maps every cue to a group of the inventory (UI, reveal, jokers, fireworks, splash, timed, other); `/?efectos` lists the cues by group, one block per round
 - A group round: the worker installs its pick per cue (by measurement and fit to the brief's theme), stages 1–2 alternates per cue on `/sounds` (manifest group `effects-<group>`, round N); the developer listens on `/?efectos` and in a real game (`TRIVIA_SOUND=1`) and approves or asks for changes per cue; changes start the next round
+
+### UI group, round 1
+
+Source: Kenney UI Audio (clicks, rollovers, switches) and Kenney Digital Audio (phasers, zaps), CC0, the `clean-digital` theme of the brief; originals from the round-1 packs in `work/sound-brief-src/`. The block cue is in the reveal group (its inventory row), not here. Approval pending (UI decision); alternates staged on `/sounds` ("Effects: ui", round 1).
+
+| Cue | Installed file(s) | Source file | Alternate |
+|---|---|---|---|
+| `menu-open` | `menu-abre` | `rollover1` | `rollover6` |
+| `menu-close` | `menu-cierra` | `rollover3` | `rollover2` |
+| `pop` | `pop-1`, `pop-2`, `pop-3` (variants, rate varies) | `click2`, `click3`, `click4` | `click5` |
+| `tick` | `tic` (rate varies) | `click1` | `mouseclick1` |
+| `padlock-close` | `candado-cierra` | `switch7` | `switch20` |
+| `padlock-open` | `candado-abre` | `switch10` | `switch8` |
+| `unlocked` | `desbloqueado` | `rollover6` | `rollover4` |
+| `ready` | `hola` | `phaserUp2` | `twoTone1` |
+| `whoosh` | `whoosh-pantalla` | `phaseJump2` | `phaseJump1` |
+| `swoosh` | `swoosh-pregunta` | `phaseJump4` | `phaserDown2` |
+| `tear` | `rasgado` | `zap1` | `spaceTrash1` |
+| `paper` | `pagina` | `phaserDown1` | `phaseJump3` |
 
 ## Manifest
 

@@ -8,7 +8,7 @@
   record <name> --licence SPDX --read-on-page   confirm the licence read on the source page
   convert <name>                  the cut + plan 32's chain -> app/client/public/audio/<name>.m4a: trim silence, short
                                   fade-out, loudnorm -16 LUFS / -1.5 dBTP (two passes), mono AAC 80k (--stereo in the record)
-  check [<name> ...]              per file: -16 +-1 LUFS (longer than 0.3 s), true peak <= -1.5 dBTP, size budget of its
+  check [<name> ...]              per file: -16 +-1 LUFS (longer than 0.4 s; shorter clips: true peak only), true peak <= -1.5 dBTP, size budget of its
                                   class (effect 40 kB, jingle 80 kB, long 100 kB), licence allowed and read; exit 0/1
   credits [--check]               effect rows of app/client/public/audio/CREDITS.md from the records, between their own
                                   marker comments (hand rows and music rows untouched); --check: rows and records match
@@ -35,8 +35,9 @@ import music  # noqa: E402  (records' licence allowlist, credits writer: decisio
 
 CLASSES = {"effect": 40_000, "jingle": 80_000, "long": 100_000}  # bytes per file (plan 223)
 TARGET_LUFS, TOLERANCE, TRUE_PEAK = -16.0, 1.0, -1.5
-MIN_LOUD_S = 0.3  # shorter clips have no reliable integrated loudness
+MIN_LOUD_S = 0.4  # shorter clips have no integrated loudness (one 400 ms gating block): peak-normalised
 FADE_S = 0.05
+PEAK_SHORT = -2.5  # dBTP target of clips under MIN_LOUD_S
 BEGIN = "<!-- trivia-sfx credits: begin (generated, do not edit) -->"
 END = "<!-- trivia-sfx credits: end -->"
 ADAPTED = "Adapted: cut, silence trimmed, faded, loudness changed."
@@ -149,13 +150,24 @@ def convert(rec: dict, src: Path, dst: Path):
     if d <= 0:
         die(f"{rec['name']}: nothing left after trimming silence")
     fade = f"afade=t=out:st={max(d - min(FADE_S, d / 4), 0):.4f}:d={min(FADE_S, d / 4):.4f}"
-    norm = f"loudnorm=I={TARGET_LUFS}:TP={TRUE_PEAK}:LRA=11"
-    err = ffmpeg("-i", str(trimmed), "-af", f"{fade},{norm}:print_format=json", "-f", "null", "-")
-    m = json.loads(err[err.rindex("{"):err.rindex("}") + 1])
-    lin = (f"{norm}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
-           f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
     dst.parent.mkdir(parents=True, exist_ok=True)
-    ffmpeg("-i", str(trimmed), "-af", f"{fade},{lin}", "-c:a", "aac", "-b:a", "80k", "-ar", "44100", "-ac", ch, str(dst))
+    if d <= MIN_LOUD_S:  # too short to measure loudness: true peak to -2.5 dBTP
+        faded = work / f"{rec['name']}-fade.wav"
+        ffmpeg("-i", str(trimmed), "-af", fade, str(faded))
+        db = PEAK_SHORT - measure(faded)[1]
+        faded.unlink()
+        for _ in range(3):  # AAC can overshoot the peak: encode again, lower
+            ffmpeg("-i", str(trimmed), "-af", f"{fade},volume={db:.2f}dB", "-c:a", "aac", "-b:a", "80k", "-ar", "44100", "-ac", ch, str(dst))
+            if (tp := measure(dst)[1]) <= TRUE_PEAK - 0.1:
+                break
+            db -= tp - TRUE_PEAK + 0.5
+    else:
+        norm = f"loudnorm=I={TARGET_LUFS}:TP={TRUE_PEAK}:LRA=11"
+        err = ffmpeg("-i", str(trimmed), "-af", f"{fade},{norm}:print_format=json", "-f", "null", "-")
+        m = json.loads(err[err.rindex("{"):err.rindex("}") + 1])
+        lin = (f"{norm}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
+               f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
+        ffmpeg("-i", str(trimmed), "-af", f"{fade},{lin}", "-c:a", "aac", "-b:a", "80k", "-ar", "44100", "-ac", ch, str(dst))
     trimmed.unlink()
 
 

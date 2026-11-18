@@ -1,0 +1,26 @@
+{
+ "name": "candado-abre",
+ "library": "Kenney UI Audio",
+ "title": "switch10",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+ "download": "",
+ "sha256": "1207d7bb246f5da46d81a8897f950f73bd122320c9c5a5ab6fef76e2516c1963",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "padlock-open"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"switch10\" by Kenney (https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

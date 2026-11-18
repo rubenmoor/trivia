@@ -1,0 +1,26 @@
+{
+ "name": "desbloqueado",
+ "library": "Kenney UI Audio",
+ "title": "rollover6",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks",
+ "download": "",
+ "sha256": "acea59ec6dfdfdf04701c646298b1d80e593f4e2ebb6702ba6dc9bb24db1b62d",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "unlocked"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"rollover6\" by Kenney (https://opengameart.org/content/51-ui-sound-effects-buttons-switches-and-clicks), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}
