@@ -2,6 +2,8 @@
 
 This file is the owner document for everything the game plays: sound effects, music and the engine that plays them. It starts with an inventory of today's sounds, written as the base for the sound rework (milestone 22), and ends with the brief that the rework follows. Later parts of the rework write their outcomes here. Cue names are mod API and stay; new cues are additive.
 
+Music from free library tracks (search, fetch, split, loop, variants, check, credits): `authoring/tools/music/README.md`.
+
 ## Inventory
 
 State on 2026-11-18, before the rework. Sources: `app/client/src/game/sound.svelte.ts` (`Cue`, `SAMPLE_FOR`, `SOUNDTRACKS`), `app/client/public/audio/` (files, `CREDITS.md`), `rg` over `app/client/src` for call sites (file:line, relative to `app/client/src/game/`). Loudness: ffmpeg `ebur128`, integrated LUFS and peak (dBTP) of the shipped `.m4a`; for a cue with variants, the first file. Binding: `decision 81: Recorded sound effects: approve on the TV?` (joker sounds say what the joker does: broom, microwave bing, fairy wand); `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators` for new sounds.
