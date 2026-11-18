@@ -100,41 +100,31 @@ Notes:
 - `victory` plays `victoria` (Elgar, US Marine Band, public domain) at gain 3; `roll` plays `redoble` looped with a 6 s crescendo (US Air Force Band, public domain).
 - Switching on the Question screen is a sharp cut (fades 0.08 s, 0.15 s from `roll`); other changes fade 0.6 s. Question media silences the music.
 
-### Soundtracks (`SOUNDTRACKS`)
+### Soundtracks (`SOUNDTRACKS`, `soundtracks.ts`)
 
-Picker default: `sintetizada` (`decision 361: Soundtracks: take the sets found, or look further?`). Each recorded set has the loops `normal`, `question`, `submitted`; `sameBeat` is true for all recorded sets.
+The old recorded sets (`variaciones`, `caja`, `sin-prisa`, `reflejos`) and their files are gone (decision 733, the brief). Until `plan 222: Soundtracks in the engine and the picker` task 2 adds the brief's three sets, `sintetizada` (generated: A minor i–VI–III–V pad, 76/96/120/132 bpm) is the only entry.
 
-| Id | Files | Level | Loop | Author, licence |
-|---|---|---|---|---|
-| `sintetizada` | none (generated in the engine: A minor i–VI–III–V pad, 76/96/120 bpm; `timed` own variant) | 1 | default | n/a |
-| `variaciones` | musica-variaciones-{normal,pregunta,enviada} | 1.6 | 8 bars, 100 bpm, 0–19.2 s | obscure music, CC0 |
-| `caja` | musica-caja-{normal,pregunta,enviada} | 1.6 | 16 bars, ~157 bpm, 0–24.4586 s | 3xBlast, CC BY 3.0 |
-| `sin-prisa` | musica-sin-prisa-{normal,pregunta,enviada} | 1.6 | 20 s | Little Robot Sound Factory, CC BY 3.0 |
-| `reflejos` | musica-reflejos-{normal,pregunta,enviada} | 1.6 | 22.597 s | Little Robot Sound Factory, CC BY 3.0 |
+- Music file numbers: none yet; the new sets get their rows from part 4.
+- Default and picker: per the brief (`chill-lofi`), set by task 2243.
 
-Music file numbers:
+## Engine
 
-| File | Length | LUFS | dBTP | Bytes |
-|---|---|---|---|---|
-| `musica-caja-enviada` | 24.46 s | -18.1 | -6.4 | 301149 |
-| `musica-caja-normal` | 24.46 s | -18.1 | -5.7 | 301468 |
-| `musica-caja-pregunta` | 24.46 s | -18.1 | -7.1 | 300822 |
-| `musica-reflejos-enviada` | 22.65 s | -18.1 | -8.1 | 278510 |
-| `musica-reflejos-normal` | 22.60 s | -18.0 | -6.2 | 275910 |
-| `musica-reflejos-pregunta` | 22.65 s | -18.1 | -8.0 | 276568 |
-| `musica-sin-prisa-enviada` | 20.01 s | -18.0 | -3.0 | 245692 |
-| `musica-sin-prisa-normal` | 20.01 s | -18.1 | -1.7 | 246395 |
-| `musica-sin-prisa-pregunta` | 20.01 s | -18.0 | -3.7 | 249252 |
-| `musica-variaciones-enviada` | 19.20 s | -18.0 | -4.4 | 236058 |
-| `musica-variaciones-normal` | 19.20 s | -18.0 | -3.7 | 235124 |
-| `musica-variaciones-pregunta` | 19.20 s | -17.9 | -1.3 | 236098 |
+Pure data and lookups in `app/client/src/game/soundtracks.ts` (testable without audio); playback in `sound.svelte.ts`.
+
+- `SOUNDTRACKS[id]`: `tracks` (variants it has: `normal`, `question`, `submitted`, `timed`), `loopStart`/`loopEnd`, `level`; loop points come from `authoring/data/music/<set>-<piece>.json`
+- File per variant: `musica-<set>-<track>.m4a`, derived (`soundtrackFile`), no name table; `roll` and `victory` are shared files (`redoble`, `victoria`), not per set
+- Recorded sets: every variant equal length (decision 734), so `question` ↔ `submitted` keeps the beat (`sameBeat`: set has files)
+- `timed`: its own file per set, no `question` stand-in
+- Fallback: set without that file, or undecodable → generated loop of the same track; a set with no files ("not installed") is valid
+- Unknown stored id (old ids too) or unknown `music(track, { soundtrack })` override → default, no throw (`resolveSoundtrack`)
+- `/?efectos`: per set a button per variant (marked `generated` when no file) and the cut `question ↔ submitted` where the set keeps the beat
+- Test: `app/client/src/game/sound.test.ts`
 
 ### Totals
 
-- 62 `.m4a` files in `app/client/public/audio/` (50 effects and shared tracks, 12 music loops), plus `CREDITS.md`.
-- Sum of the `.m4a` sizes: 5551200 bytes (5.55 MB); folder with `CREDITS.md`: 5565153 bytes (5.57 MB, `du -sb`).
-- Budget: `app/desktop/media-budget.json` key `audio` is 7 (MB, as the other keys): about 79 % used (1.4 MB left).
-- Largest: `victoria` 1.20 MB (98 s), then `musica-caja-normal` 301 kB, `musica-caja-enviada` 301 kB, `musica-caja-pregunta` 301 kB, `musica-reflejos-enviada` 279 kB.
+- 50 `.m4a` files in `app/client/public/audio/` (effects and shared tracks; music loops removed), plus `CREDITS.md`.
+- Before the music removal: 5.55 MB; the music loops were 3.1 MB of it. Budget: `app/desktop/media-budget.json` key `audio` is 7 (MB).
+- Largest: `victoria` 1.20 MB (98 s), then `redoble` 0.20 MB.
 - Cue count 62, not ~66 as the plan guessed; 4 are synth only: `silence`, `boom`, `claim`, `countdown`.
 
 ## Effects
