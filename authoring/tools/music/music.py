@@ -3,7 +3,7 @@
 
 Ported from the sibling project's tools/audio/music.py and spikes/music-library/setup.sh
 (~/code/three-days-until-release, decision 199: no import across repos). `loop` imports music_loop.py (numpy,
-librosa, soundfile). Later steps (export, check, credits) are added by their own tasks.
+librosa, soundfile). Later steps (check, credits) are added by their own tasks.
 
   search [--feel F] [--bpm LO-HI] [--instrument I] [--min-length S]   incompetech catalogue
   fetch <title> <id>                       incompetech download to work/music/<id>/original.mp3 + record
@@ -13,6 +13,13 @@ librosa, soundfile). Later steps (export, check, credits) are added by their own
   split <id>                               Demucs htdemucs: drums, bass, other, vocals -> work/music/<id>/stems/htdemucs/
   loop <id> [--bars 8] [--bpm B] [--whole] N-bar loop of the stems (--whole: of the unsplit mix), sum at -18 LUFS
                                            -> work/music/<id>/loop/*.wav, info.json, the record's loop slot; exit 1 = rejected
+  export <id> <out-dir> --variant NAME=RECIPE ... [--set S]
+                                           one musica-<set>-<name>.m4a per variant (AAC LC 96 kbit/s 44.1 kHz stereo, as
+                                           plan 33's loops), all the same length, the loop's gain, never per-layer
+                                           normalised; written into the record's exports. Recipe: layers joined by +,
+                                           a dB cut after a layer (bass+other-3), a leading + = the previous variant
+                                           plus (+drums), full = all layers; --whole record: full = the loop, @<bar> =
+                                           another stretch of the track from that bar (same length, checked like the loop)
 
 <id> is <set>-<piece>, lower case, e.g. carefree-try. Records: authoring/data/music/<id>.json (committed).
 Work files: work/music/<id>/ (gitignored). Licences: CC0, PD, CC BY 3.0/4.0 only (decision 733); no Freesound API
@@ -343,6 +350,112 @@ def cmd_loop(a) -> int:
     return 0
 
 
+LAYERS = ("bass", "drums", "other")
+TERM = re.compile(r"(bass|drums|other|full|@\d+)(-\d+(?:\.\d+)?)?$")
+AAC = ["-c:a", "aac", "-b:a", "96k", "-ar", "44100", "-ac", "2"]  # the loops of plan 33 (musica-*.m4a)
+
+
+def parse_recipe(text: str, prev: dict | None, whole: bool) -> dict:
+    """'bass+other-3' -> {'bass': 0, 'other': -3}; '+drums' extends prev; 'full'; whole: 'full' or '@24' only."""
+    if text.startswith("+") and prev is None:
+        raise ValueError(f"recipe {text!r} starts with + but there is no previous variant")
+    out = dict(prev) if text.startswith("+") else {}
+    for term in text.lstrip("+").split("+"):
+        m = TERM.match(term)
+        if not m:
+            raise ValueError(f"bad recipe term {term!r} in {text!r}")
+        name, db = m[1], -float(m[2][1:]) if m[2] else 0.0
+        if whole and name in LAYERS:
+            raise ValueError(f"{term!r}: a whole record has no layers: use full or @<bar>")
+        if name.startswith("@") and not whole:
+            raise ValueError(f"{term!r}: sections need a --whole record")
+        for k in (LAYERS if name == "full" and not whole else (name,)):
+            out[k] = db
+    if whole and len(out) != 1:
+        raise ValueError(f"recipe {text!r}: a whole record takes one of full or @<bar>")
+    return out
+
+
+def recipe_text(r: dict) -> str:
+    return "+".join(f"{k}{format(v, 'g') if v else ''}" for k, v in r.items())
+
+
+def read_wav(p):
+    import soundfile as sf
+    return sf.read(p, dtype="float32")[0]
+
+
+def section(i: str, lp: dict, g, bar: int):
+    """Whole record: the loop length from bar `bar` of the track at the loop's gain, rejected like the loop."""
+    import music_loop as ml
+    x = ml.decode(original(i))
+    s0 = g.start(bar)
+    if s0 + g.L > len(x):
+        die(f"@{bar}: the stretch ends after the track")
+    tail = int(min(g.bar / 2, len(x) - s0 - g.L))
+    seg = ml.cut(x, s0, g.L, tail) * 10 ** (lp["gain_db"] / 20)
+    info = {"repeat_similarity": round(ml.similarity(ml.log_mel(x.mean(1)), g, s0), 3),
+            "seam_jump_vs_mean_step": round(ml.seam_jump(seg), 2),
+            "comb_score": lp["comb_score"], "bpm": lp["bpm"], "loop_s": lp["loop_s"]}
+    if bad := ml.reasons(info, None):
+        die(f"@{bar}: section rejected: " + "; ".join(bad))
+    return seg
+
+
+def encode(x, f: Path):
+    import numpy as np
+    import music_loop as ml
+    r = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-f", "f32le", "-ac", "2", "-ar", str(ml.SR), "-i", "-",
+                        *AAC, "-y", str(f)], input=np.ascontiguousarray(x, dtype="<f4").tobytes(), capture_output=True)
+    if r.returncode:
+        die(f"ffmpeg: {r.stderr.decode()}")
+
+
+def cmd_export(a) -> int:
+    check_id(a.id)
+    rec = load(a.id)
+    require_confirmed(rec)
+    lp = rec.get("loop")
+    if not lp:
+        die(f"{a.id}: no loop in the record: run `trivia-music loop {a.id}` first", 2)
+    recipes, prev = {}, None
+    for v in a.variant:
+        name, sep, text = v.partition("=")
+        if not sep or not re.fullmatch(r"[a-z0-9]+", name) or name in recipes:
+            die(f"--variant NAME=RECIPE, name lower case and unique: {v!r}", 2)
+        try:
+            recipes[name] = prev = parse_recipe(text, prev, lp["whole"])
+        except ValueError as e:
+            die(str(e), 2)
+    import music_loop as ml
+    loop_dir = work_dir(a.id) / "loop"
+    if not loop_dir.is_dir():
+        die(f"no loop files in {loop_dir}: run `trivia-music loop {a.id}`", 2)
+    g = ml.Grid(lp["bpm"], lp["downbeat_s"], lp["bars"])
+    parts = {}  # layer or @bar -> samples
+    for r in recipes.values():
+        for k in r:
+            if k not in parts:
+                parts[k] = section(a.id, lp, g, int(k[1:])) if k.startswith("@") else read_wav(loop_dir / f"{k}.wav")
+    out = Path(a.out_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    set_name = a.set or a.id.rsplit("-", 1)[0]
+    exports, lens = {}, set()
+    for name, r in recipes.items():
+        f = out / f"musica-{set_name}-{name}.m4a"
+        encode(sum(parts[k] * 10 ** (db / 20) for k, db in r.items()), f)
+        dec = ml.decode(f)
+        lu, tp = ml.loudness(dec)
+        lens.add(len(dec))
+        exports[name] = {"file": f.name, "recipe": recipe_text(r), "samples": len(dec), "lufs": lu, "true_peak": tp}
+        print(f"{f.name}: {len(dec) / ml.SR:.3f} s, {lu:.1f} LUFS, {tp:.1f} dBTP  ({recipe_text(r)})")
+    if len(lens) != 1:
+        die(f"variants differ in length: {sorted(lens)}")
+    rec["exports"] = exports
+    save(rec)
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="trivia-music", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -360,8 +473,11 @@ def main(argv=None) -> int:
     p = sub.add_parser("loop", help="find the loop, level it"); p.add_argument("id")
     p.add_argument("--bars", type=int, default=8); p.add_argument("--bpm", type=float, help="tempo hint (default: listed)")
     p.add_argument("--whole", action="store_true", help="no stems: one cut over the original mix")
+    p = sub.add_parser("export", help="one .m4a per tension variant"); p.add_argument("id"); p.add_argument("out_dir")
+    p.add_argument("--variant", action="append", required=True, metavar="NAME=RECIPE")
+    p.add_argument("--set", help="file name set (default: the id without its last part)")
     a = ap.parse_args(argv)
-    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split, "loop": cmd_loop}[a.cmd](a)
+    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split, "loop": cmd_loop, "export": cmd_export}[a.cmd](a)
 
 
 if __name__ == "__main__":

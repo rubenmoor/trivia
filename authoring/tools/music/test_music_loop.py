@@ -101,6 +101,54 @@ class Loop(unittest.TestCase):
         self.make("fix-nostems", stems(seconds=12), whole=True)
         self.assertEqual(self.cli("loop", "fix-nostems")[0], 2)  # no stems, no --whole
 
+    def test_recipes(self):
+        pr = music.parse_recipe
+        self.assertEqual(pr("bass+other-3", None, False), {"bass": 0.0, "other": -3.0})
+        base = pr("bass+other", None, False)
+        self.assertEqual(pr("+drums", base, False), {"bass": 0.0, "other": 0.0, "drums": 0.0})
+        self.assertEqual(set(pr("full", None, False)), {"bass", "drums", "other"})
+        self.assertEqual(pr("@24-2.5", None, True), {"@24": -2.5})
+        for text, prev, whole in (("+drums", None, False), ("kick", None, False), ("@3", None, False),
+                                  ("bass", None, True), ("full+@3", None, True)):
+            with self.assertRaises(ValueError, msg=text):
+                pr(text, prev, whole)
+
+    def test_export_variants(self):
+        self.make("fix-exp", stems())
+        self.assertEqual(self.cli("loop", "fix-exp")[0], 0)
+        out = self.d / "out"
+        code, o, err = self.cli("export", "fix-exp", str(out), "--variant", "normal=bass+other", "--variant", "question=+drums",
+                                "--variant", "submitted=full")
+        self.assertEqual(code, 0, o + err)
+        names = ["normal", "question", "submitted"]
+        self.assertEqual(sorted(p.name for p in out.iterdir()), [f"musica-fix-{n}.m4a" for n in sorted(names)])
+        dec = [ml.decode(out / f"musica-fix-{n}.m4a") for n in names]
+        self.assertEqual(len({len(x) for x in dec}), 1)
+        self.assertAlmostEqual(len(dec[0]) / SR, 19.2, delta=0.01)
+        lufs = [ml.loudness(x)[0] for x in dec]
+        self.assertLess(lufs[0], lufs[1])
+        self.assertLess(lufs[1], lufs[2] + 0.3)
+        self.assertAlmostEqual(lufs[2], -18.0, delta=0.5)  # the loop's gain, full sum
+        ex = music.load("fix-exp")["exports"]
+        self.assertEqual(ex["question"]["recipe"], "bass+other+drums")
+        self.assertEqual(ex["normal"]["file"], "musica-fix-normal.m4a")
+
+    def test_export_whole_section(self):
+        self.make("fix-ws", stems(), whole=True)
+        self.assertEqual(self.cli("loop", "fix-ws", "--whole")[0], 0)
+        out = self.d / "out"
+        code, o, err = self.cli("export", "fix-ws", str(out), "--variant", "normal=full", "--variant", "question=@4-2")
+        self.assertEqual(code, 0, o + err)
+        a, b = (ml.decode(out / f"musica-fix-{n}.m4a") for n in ("normal", "question"))
+        self.assertEqual(len(a), len(b))
+        code, o, err = self.cli("export", "fix-ws", str(out), "--variant", "x=@900")
+        self.assertEqual(code, 1)
+        self.assertIn("ends after", err)
+
+    def test_export_refusals(self):
+        self.make("fix-ref", stems(seconds=12), whole=True)
+        self.assertEqual(self.cli("export", "fix-ref", str(self.d / "o"), "--variant", "a=full")[0], 2)  # no loop yet
+
     def test_reasons(self):
         ok = {"repeat_similarity": 0.9, "seam_jump_vs_mean_step": 1.0, "comb_score": 2.0, "bpm": 100.0, "loop_s": 20.0}
         self.assertEqual(ml.reasons(ok, 100.0), [])

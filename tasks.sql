@@ -49906,7 +49906,7 @@ What:
 - Test on a synthetic fixture made in the test (numpy or ffmpeg: 100 bpm kick + bass + tone, ~40 s, as fake stems): fitted bpm 100 ±0.01, similarity ≥ 0.8, sum -18 ±0.2 LUFS; a drifting-tempo fixture is rejected; `--whole` on the mixed fixture; in `npm test` with a Python that has numpy/librosa/soundfile (as set up in task 2234)
 
 Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:22Z', '2026-11-18T21:25:59Z', 2233, 0, 'opus', 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2237, 221, 'Music pipeline: variant export', 'work', 'open', NULL, NULL, 'Part 4 of `plan 221: Music pipeline`, on the loop data of task 2236.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2237, 221, 'Music pipeline: variant export', 'work', 'done', NULL, '2026-11-18, authoring/tools/music/music.py, authoring/tools/music/test_music_loop.py', 'Part 4 of `plan 221: Music pipeline`, on the loop data of task 2236.
 
 What:
 - `trivia-music export <id> <out-dir> --variant <name>=<recipe> …`: one `.m4a` per tension variant
@@ -49917,7 +49917,7 @@ What:
 - Writes the record''s `exports` (variant → file, recipe)
 - Test on task 2236''s fixture: three variants, equal sample length after decode, loudness rising base → full
 
-Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:31Z', NULL, 2233, 0, NULL, 'app');
+Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:31Z', '2026-11-18T21:30:19Z', 2233, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2238, 221, 'Music pipeline: hard checks and generated credits', 'work', 'open', NULL, NULL, 'Part 5 of `plan 221: Music pipeline`.
 
 What:
@@ -60309,6 +60309,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2466, 2234, '2026-11-18T21:09:25Z', '2026-11-18T21:16:45Z', 'done', NULL, 0, 'dc1cf2d54bae142d1c79444509b4bf20fff3ab54', 'app', 'claude-sonnet-5-5', '2162d840-90c6-44b5-8f82-16bb9483546d', NULL, 15, 28, 11732, 841514, 60762, 0.44457539999999995, 75667, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2467, 2235, '2026-11-18T21:16:45Z', '2026-11-18T21:20:03Z', 'done', NULL, 0, 'b63e702f0d8502a9d3ac075a9aa90e576f44c85f', 'app', 'claude-sonnet-5-5', '2162d840-90c6-44b5-8f82-16bb9483546d', 2466, 8, 16, 5790, 747431, 25258, 0.67828250000000012, 100992, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2468, 2236, '2026-11-18T21:20:04Z', '2026-11-18T21:26:28Z', 'done', NULL, 0, '302450e2d0b1ebfcce4b6037644ac12e22b68655', 'app', 'claude-opus-5-5', '91bb0f47-76d6-44c3-bc12-8fea5c6c337a', NULL, 20, 34, 20370, 1094815, 68395, 1.1736589999999998, 83554, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2469, 2237, '2026-11-18T21:26:28Z', '2026-11-18T21:30:25Z', 'done', NULL, 0, 'acf2203fca7e0e00932785ec39f348c8a2b44424', 'app', 'claude-sonnet-5-5', 'a2a8e69d-ac66-4bc8-9355-88ead0b052e8', NULL, 16, 28, 12236, 843446, 63169, 0.45943660000000003, 78111, 60, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
