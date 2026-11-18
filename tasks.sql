@@ -49522,7 +49522,7 @@ divided into parts. State in the masterplan that its own tasks are not implement
 plan for one part.', '2026-11-18T20:33:29Z', '2026-11-18T20:37:08Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2220, 219, 'create tasks for plan 219: masterplan', 'split', 'done', 1000, '2026-11-18, tasks 2221 (part 1 brief), 2222 (part 2 pipeline), 2223 (part 3 engine and picker), 2224 (part 5 effects), 2225 (part 4 soundtracks), 2226 (part 6 close-out); no new decisions: the brief is raised by part 1''s plan', 'Split plan 219 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:36:46Z', '2026-11-18T20:38:22Z', 2219, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2221, 219, 'Write the plan: sound inventory and sound brief', 'plan', 'open', 1000, NULL, 'Write part 1 of `plan 219: masterplan` (read its "Parts" item 1, "Binding", "Today"): `pm plan add 22 "Sound inventory and sound brief" --intro … --priority 290`, body as below, then it gets split.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2221, 219, 'Write the plan: sound inventory and sound brief', 'plan', 'done', 1000, '2026-11-18, plan 220: Sound inventory and sound brief (owner doc plans/25-sound.md, listening page /sounds, 5 tasks; split queued)', 'Write part 1 of `plan 219: masterplan` (read its "Parts" item 1, "Binding", "Today"): `pm plan add 22 "Sound inventory and sound brief" --intro … --priority 290`, body as below, then it gets split.
 
 The plan''s work:
 - Inventory: every cue (`Cue` in `app/client/src/game/sound.svelte.ts`, ~66) and every music track (`normal`, `question`, `submitted`, `roll`, `victory`, `timed`) with call sites, game moment, meaning, length, file, licence; output doc where the plan says (plans/04 "Audio" or a new owner plan file)
@@ -49530,7 +49530,7 @@ The plan''s work:
 - The brief as a developer decision, iterative feedback (rounds until the developer says final): effect theme; soundtrack count (2–3) and moods; tension variants per set (`normal`, `question`, `submitted`, `timed` at least; `roll`/`victory` per set or shared); whether `sintetizada` stays in the picker, which set is default (`decision 361: Soundtracks: take the sets found, or look further?`); whether anything old is kept (Elgar, drum roll, fanfares); that `decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`, `task 146: Developer check of the three new joker sounds on the TV`, `task 1865: Developer check of the fanfare variants on the TV`, `task 150: Close UI-10 in the plans` lapse
 - Reference mood: `decision 83: Recorded music loops: approve on the TV?` ("chill and relaxing, clear rise in tension on submit"); joker meaning: `decision 81: Recorded sound effects: approve on the TV?`
 
-Done when: the plan exists with its tasks; the brief decision is raised by one of its tasks (not by this one).', '2026-11-18T20:38:17Z', NULL, 2220, 0, NULL, 'app');
+Done when: the plan exists with its tasks; the brief decision is raised by one of its tasks (not by this one).', '2026-11-18T20:38:17Z', '2026-11-18T20:40:02Z', 2220, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2222, 219, 'Write the plan: music pipeline ported from the sibling project', 'plan', 'open', 1000, NULL, 'Write part 2 of `plan 219: masterplan` (its "Parts" item 2 and "Evaluation of `audio-music-production.md`"): `pm plan add 22 "Music pipeline" --intro … --priority 280`, body as below, then it gets split. Runs in parallel with part 1.
 
 The plan''s work (into `authoring/`, `app/` never reads it):
@@ -49587,8 +49587,84 @@ The plan''s work:
 - last: the final TV approval decision of the whole rework (iterative feedback; its answer ends `milestone 22: rework all sound + music`)
 
 Done when: the plan exists with its tasks.', '2026-11-18T20:38:18Z', NULL, 2220, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2227, 220, 'create tasks for plan 220: Sound inventory and sound brief', 'split', 'open', 1000, NULL, 'Split plan 220 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:39:59Z', NULL, 2221, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2227, 220, 'create tasks for plan 220: Sound inventory and sound brief', 'split', 'done', 1000, '2026-11-18, tasks 2228, 2229, 2230, 2231, 2232; the brief decision is raised by task 2232 once round-1 candidates exist', 'Split plan 220 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-18T20:39:59Z', '2026-11-18T20:40:54Z', 2221, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2228, 220, 'Sound inventory in plans/25-sound.md', 'work', 'open', NULL, NULL, 'Task 1 of `plan 220: Sound inventory and sound brief`. Writes down every sound the game makes today, as the base for the rework (milestone 22).
+
+## What
+- New owner plan file `plans/25-sound.md`: intro paragraph (full sentences), sections "Inventory", "Brief" (empty: "filled by the sound brief task"); later parts write their outcomes there
+- "Inventory": one row per `Cue` member in `app/client/src/game/sound.svelte.ts` (~66) and per music `Track` (`normal`, `question`, `submitted`, `roll`, `victory`, `timed`):
+  - call sites (file:function, from `rg`); cues with no call site listed as such
+  - game moment; meaning (what the sound says); group (UI, reveal, jokers, fireworks, category splash, timed, other)
+  - file(s) in `app/client/public/audio/` or «synth only»; length and loudness (ffprobe / ffmpeg `ebur128`)
+  - source and licence (`CREDITS.md`); pitch/random variants (`SAMPLE_FOR`)
+- Per soundtrack (`SOUNDTRACKS`): its files and level
+- Totals: file count, folder size vs the `audio` budget in `app/desktop/media-budget.json`
+- plans/04 "Audio": one-line pointer to `plans/25-sound.md`; `plans/README.md` lists it if it lists the plan files
+- Binding: cue names are mod API (kept); joker sounds carry meaning (`decision 81: Recorded sound effects: approve on the TV?`)
+
+## Done when
+- Every `Cue` member and track has a row; a one-off `rg` cross-check (Cue members vs table rows) in the `pm task done` note
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:30Z', NULL, 2227, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2229, 220, 'Listening page /sounds on trivia-authoring', 'work', 'open', NULL, NULL, 'Task 2 of `plan 220: Sound inventory and sound brief`. A page where the developer hears the audition candidates (effects directions, music moods) staged by later tasks. Runs parallel to the inventory task.
+
+## What
+- Server (`authoring/server/main.py`), following `/api/gallery` and `/gallery/...` (`ui_flags`):
+  - `GET /api/sounds`: `work/sound-brief/manifest.json` of the main checkout (`work/` is symlinked in work trees), `null` when missing
+  - `GET /sounds/<path>`: a file from `work/sound-brief/` (no path escape; 404 otherwise)
+- Page `/sounds` (`authoring/ui/src/sounds/`, pattern of `authoring/ui/src/gallery/`): one section per effects direction and per music mood, grouped by round; per file a play button, its numbers (length, LUFS, true peak, spectral centroid, bpm where music), what cue/track it stands in for, author, licence, source link; empty state («no candidates yet») without a manifest
+- `/?efectos` stays the page for what is installed in the game; don''t change it
+- Manifest format documented in `plans/25-sound.md` (create the file with an intro paragraph and a "Manifest" section if the inventory task hasn''t yet; else add the section):
+  - `work/sound-brief/manifest.json`: list of entries: `file` (relative to `work/sound-brief/`, e.g. `effects/<direction>/<name>.m4a`, `music/<mood>/<name>.m4a`), `group` (`effects`|`music`), `direction` or `mood`, `round`, `stands_for` (cue or track), `source` (page URL), `author`, `licence` (as read on the page), `length_s`, `lufs`, `true_peak_db`, `centroid_hz`, `bpm` (music)
+- A test for the manifest loader and the route (Python tests next to the gallery''s)
+
+## Done when
+- `/sounds` shows a hand-written test manifest''s entries and plays them; empty state without one (delete any test files from `work/sound-brief/` afterwards)
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:31Z', NULL, 2227, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2230, 220, 'Effect theme directions, round 1', 'work', 'open', NULL, NULL, 'Task 3 of `plan 220: Sound inventory and sound brief`. Iterative feedback: this is round 1; the sound brief task brings later rounds back with the developer''s words ("more like this, less like that").
+
+## What
+- 3–4 effect theme directions (e.g. soft wooden/acoustic, playful cartoon, glossy game-show, retro synth), each from one pack or one sound designer, so the theme is consistent
+- Sources: Kenney, OpenGameArt CC0, Wikimedia Commons PD, Sonniss GDC bundle only if its licence fits; licence read on each source page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`: no BY-SA, NC, ND, no generators); no Freesound API, hand-picked files fine (`decision 82: Freesound API for a paid Steam release (OQ-45): replace, ask, or family only?`)
+- Per direction 8–10 samples standing in for representative cues of the inventory in `plans/25-sound.md`: menu open, card pick, lock-in, right-answer jingle, wrong sting, joker shimmer, the three meaning-bearing jokers (broom, microwave bing, fairy wand; `decision 81: Recorded sound effects: approve on the TV?`) where the source has them, firework burst, category splash whoosh, timed claim
+- Workers can''t hear: pick by measurement (length, loudness, true peak, spectral centroid) and the source''s own descriptions
+- Stage in `work/sound-brief/effects/<direction>/` of the main checkout (work trees symlink `work/`; pack zips and originals stay in `work/`, nothing committed); convert like `plan 32: Recorded sound effects (UI-10)`: trim, short fade, `loudnorm` -16 LUFS / -1.5 dBTP, `.m4a`
+- Entries in `work/sound-brief/manifest.json` (format in `plans/25-sound.md`), `round: 1`
+- Per direction a note on how many of the ~66 cues the source could cover: in `plans/25-sound.md` under a "Candidates" section (round 1, per direction: source, licence, coverage)
+
+## Done when
+- `/sounds` on `trivia-authoring` lists every direction with its files
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:44Z', NULL, 2227, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2231, 220, 'Music moods, round 1', 'work', 'open', NULL, NULL, 'Task 4 of `plan 220: Sound inventory and sound brief`. Iterative feedback: this is round 1; the sound brief task brings later rounds back with the developer''s words ("more like this, less like that").
+
+## What
+- 3–4 moods around the reference of `decision 83: Recorded music loops: approve on the TV?` ("chill and relaxing, with a clear rise in tension on submit"), e.g. chill lo-fi, warm acoustic, light jazz quiz-show, soft electronic
+- 2–3 tracks per mood from incompetech (catalogue `pieces.json`: bpm, feel, instruments; search as in `audio-music-production.md` step 2), Kenney / OpenGameArt CC0, Free Music Archive and Scott Buckley CC BY; licence read on each track page (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
+- Prefer: fixed tempo, instrumental, drums + bass + tune present, a long steady section (tension variants come from layer splits, `decision 732: Reworked game music: Demucs layer splits of free library tracks may ship`)
+- Workers can''t hear: pick by catalogue data and measurement (bpm, length, loudness)
+- Per track a 60 s excerpt staged in `work/sound-brief/music/<mood>/` of the main checkout (originals stay in `work/`, nothing committed): short fade, `loudnorm` -18 LUFS / -1.5 dBTP, `.m4a`
+- Entries in `work/sound-brief/manifest.json` (format in `plans/25-sound.md`), `round: 1`, with bpm, full length and a note on what could make its tension variants (layer split, or louder sections)
+- Per mood a short note in `plans/25-sound.md` "Candidates" (round 1: tracks, source, licence)
+- Not here: loop cutting, Demucs splits, export (the music pipeline part of `plan 219: masterplan`)
+
+## Done when
+- `/sounds` on `trivia-authoring` lists every mood with its excerpts
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:45Z', NULL, 2227, 1, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2232, 220, 'The sound brief: developer picks theme, moods, variants', 'work', 'open', NULL, NULL, 'Task 5 of `plan 220: Sound inventory and sound brief`. Iterative feedback: each answer that asks for more brings this task back for another round, until the developer says final.
+
+## What
+- Raise the brief as a developer decision (`pm decision add`, then `pm task-pending-decision` on this task):
+  - what to listen to: `/sounds` on `trivia-authoring` (`TRIVIA_SOUND=1`, on the TV); `/?efectos` for today''s sounds
+  - questions: effect theme (one direction, or a mix by group); soundtrack count (2–3) and the mood of each; tension variants per set (`normal`, `question`, `submitted`, `timed` at least; `roll`/`victory` per set or shared); whether `sintetizada` stays in the picker and which set is the default (`decision 361: Soundtracks: take the sets found, or look further?`); which old sounds stay (Elgar victory, drum roll, fanfares, anything else)
+  - states that `decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`, `task 146: Developer check of the three new joker sounds on the TV`, `task 1865: Developer check of the fanfare variants on the TV` and `task 150: Close UI-10 in the plans` lapse
+- Answer asks for more ("more like this, less like that"): new search with the new words, next round staged in `work/sound-brief/` and the manifest (`round: N+1`, same conversion as rounds 1: effects -16 LUFS, music -18 LUFS, -1.5 dBTP, `.m4a`; licences per `decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`), notes in `plans/25-sound.md` "Candidates", the decision raised again
+- Final answer: the brief into `plans/25-sound.md` "Brief" (per answer: round, choice); `pm decision consequences`
+- Not here: applying the lapse (decision 360, tasks 146, 1865, 150, UI-10 closure): part 6 of `plan 219: masterplan`
+
+## Done when
+- The brief decision is answered final, written into `plans/25-sound.md` "Brief", consequences recorded
+- `/sounds` lists every round''s candidates
+- Per commit: `npm run check`, `npm test`, `npm run build`, `qgen validate`', '2026-11-18T20:40:54Z', NULL, 2227, 1, 'opus', 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -59583,7 +59659,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2446, 2218, '2026-11-18T19:50:37Z', '2026-11-18T19:57:18Z', 'done', NULL, 0, '30cbd960773ca61e265dba13668d2afb0c4ae634', NULL, 'claude-sonnet-5-5', 'b363adbb-b4a7-44d3-bb0b-5963cb8df05d', NULL, 16, 32, 7006, 642387, 37116, 0.28282670000000004, 50173, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2447, 2219, '2026-11-18T20:33:32Z', '2026-11-18T20:37:20Z', 'done', NULL, 0, '8be6d2125a8ec226d160bdfe8884e210ad59cd96', NULL, 'claude-opus-5-5', '2c8c3b2b-5f52-4b88-a167-f661ffe6f575', NULL, 25, 44, 18654, 1911492, 103186, 1.5810424, 115725, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2448, 2220, '2026-11-18T20:37:23Z', '2026-11-18T20:38:29Z', 'done', NULL, 0, 'f757b124a2282266d6d1a5889153af7d3ef2f690', NULL, 'claude-opus-5-5', '0fccc38b-8ce7-4ec3-a190-c404f7a4d591', NULL, 6, 12, 5973, 260063, 41084, 0.5001926, 55438, 60, 3487406);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2449, 2221, '2026-11-18T20:38:23Z', NULL, 'running', NULL, NULL, 'f757b124a2282266d6d1a5889153af7d3ef2f690', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2449, 2221, '2026-11-18T20:38:23Z', '2026-11-18T20:40:11Z', 'done', NULL, 0, 'f757b124a2282266d6d1a5889153af7d3ef2f690', 'app', 'claude-opus-5-5', 'e5126112-4960-423c-8e03-e7ed57dacb3d', NULL, 11, 22, 8943, 627855, 60998, 0.79250300000000007, 76049, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2450, 2227, '2026-11-18T20:40:00Z', '2026-11-18T20:41:00Z', 'done', NULL, 0, '58213cb0bdca043fa1e9a4a5a1830e21d2babec1', NULL, 'claude-opus-5-5', 'c012d1ba-efe5-41ec-844b-9b27c789706c', NULL, 7, 14, 5287, 315759, 42048, 0.5053318, 56403, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2451, 2222, '2026-11-18T20:40:11Z', NULL, 'running', NULL, NULL, '58213cb0bdca043fa1e9a4a5a1830e21d2babec1', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -60781,6 +60859,11 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2225, 222
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2225, 2223);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2226, 2224);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2226, 2225);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2230, 2228);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2230, 2229);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2231, 2229);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2232, 2230);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2232, 2231);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
