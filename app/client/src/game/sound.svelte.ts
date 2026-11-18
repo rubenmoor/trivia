@@ -63,13 +63,13 @@ let noiseBuffer: AudioBuffer;
 
 /** Recorded sounds (UI-10), decoded once after the unlock; a missing one falls back to synthesis. */
 const EFFECT_NAMES = [
-  "aplausos", "aplausos-gran", "redoble", "fanfarria", "trombon-triste", "candado-cierra", "candado-abre",
+  "aplausos", "aplausos-gran", "redoble", "candado-cierra", "candado-abre",
   "papel", "vidrio", "sello", "golpe", "estallido", "victoria", "whoosh", "swoosh-sube", "escoba", "pop",
   "menu-abre", "menu-cierra", "desbloqueado", "hola", "comodin", "comodin-preparado", "comodin-abre", "silbato",
   "trituradora", "latido", "rebobinar", "corcho", "rasgado", "susurro-papel", "ficha", "cohete",
   "canon-confeti", "bengalas", "estrellas", "disolver", "derretir", "agujero-negro", "pajaros", "gelatina",
   "maquina-escribir", "barrido", "microondas", "varita",
-  "fanfarria-2", "fanfarria-3", "fanfarria-4", "fanfarria-5",
+  "acierto-1", "acierto-2", "acierto-3", "acierto-4", "acierto-5", "error", "golpe-torre", "impacto",
   "pop-1", "pop-2", "pop-3", "tic", "whoosh-pantalla", "swoosh-pregunta", "pagina",
 ] as const;
 type Sample = (typeof EFFECT_NAMES)[number];
@@ -84,15 +84,16 @@ let samplesReady = false;
 const SAMPLE_FOR: Partial<Record<Cue, [Sample | readonly Sample[], ((level: number) => number)?]>> = {
   "applause-big": ["aplausos-gran"],
   applause: ["aplausos"],
-  fanfare: [["fanfarria", "fanfarria-2", "fanfarria-3", "fanfarria-4", "fanfarria-5"]],
-  "sad-trombone": ["trombon-triste"],
+  fanfare: [["acierto-1", "acierto-2", "acierto-3", "acierto-4", "acierto-5"]],
+  "sad-trombone": ["error"],
+  boom: ["impacto"],
   "padlock-close": ["candado-cierra"],
   "padlock-open": ["candado-abre"],
   paper: ["pagina"],
   "glass-break": ["vidrio"],
   stamp: ["sello"],
   // The block landing: the higher the tower, the higher the thud (04, "Block arrival").
-  block: ["golpe", (level) => 0.75 + level * 0.06],
+  block: ["golpe-torre", (level) => 0.75 + level * 0.06],
   burst: ["estallido", () => 0.85 + Math.random() * 0.3],
   rocket: ["cohete", () => 0.9 + Math.random() * 0.2],
   "confetti-cannon": ["canon-confeti", () => 0.85 + Math.random() * 0.3],
