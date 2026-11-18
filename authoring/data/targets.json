@@ -1,23 +1,23 @@
 {
   "about": "Pool targets per bundle (plans/12, D-53): approved questions in total and per difficulty (scale of app/data/age-groups.json); every regional bundle 2000, base's mix scaled (D-99, D-101). base's numbers count per question locale (es, es-ES, en, de: its sources in that locale + playing translations into it; decision 37, decision 235); English drafting aims at the largest locale gap (decision 236). Per-category shares are derived, not stored.",
   "base": {
-    "total": 5000,
+    "total": 6000,
     "difficulty": {
-      "1": 250,
-      "2": 350,
-      "3": 450,
-      "4": 450,
-      "5": 450,
-      "6": 450,
-      "7": 450,
-      "8": 450,
-      "9": 330,
-      "10": 330,
-      "11": 330,
-      "12": 230,
-      "13": 230,
-      "14": 125,
-      "15": 125
+      "1": 300,
+      "2": 420,
+      "3": 540,
+      "4": 540,
+      "5": 540,
+      "6": 540,
+      "7": 540,
+      "8": 540,
+      "9": 396,
+      "10": 396,
+      "11": 396,
+      "12": 276,
+      "13": 276,
+      "14": 150,
+      "15": 150
     }
   },
   "colombia": {
