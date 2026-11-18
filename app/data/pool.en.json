@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "ee5c86b8",
+  "hash": "9ecaf8a6",
   "questions": [
     {
       "id": "q-0001",
@@ -220404,6 +220404,53 @@
         }
       },
       "background": null
+    },
+    {
+      "id": "q-21204",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "The headliner has no band, no stage and no ticket booth, just a very big voice.",
+      "question": "Listen: which bird is singing in this recording?",
+      "answer": "Nightingale",
+      "wrong_answers": [
+        "Song thrush",
+        "Skylark",
+        "Blackbird"
+      ],
+      "hints": [
+        "It is a small, plain brown bird that hides in thick bushes, so you hear it far more often than you see it.",
+        "Poets love it: John Keats wrote a famous ode to it.",
+        "Its name comes from the time of day when it famously keeps singing while most other birds are asleep."
+      ],
+      "fun_fact": "A single male nightingale can know around 200 different song phrases and mixes them into a new order every time he sings.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Nachtegaal_in_de_duinen_-_SoundCloud_-_luc_de_bruijn.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANachtegaal_in_de_duinen_-_SoundCloud_-_luc_de_bruijn.ogg",
+        "credit": "luc de bruijn · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "luc de bruijn",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Morro_Strand_State_Beach_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMorro_Strand_State_Beach_%281%29.jpg",
+        "credit": "Mike Baird from Morro Bay, USA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Mike Baird from Morro Bay, USA",
+        "author_url": "https://www.flickr.com/people/72825507@N00"
+      }
     },
     {
       "id": "q-21205",
