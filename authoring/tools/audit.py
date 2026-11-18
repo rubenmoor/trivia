@@ -182,6 +182,9 @@ def cmd_audit(args):
     if run is None or not (WORK / run).is_dir():
         sys.exit(f"no work/{run}/")
     ids = audit_sample(run, audit_size(run))
+    if not ids and load_json(WORK / run / "recorded.json") == {}:
+        print(f"{run}: no merged questions, nothing to audit")
+        return []
     if not ids:
         return failed(f"{run}: no recorded LLM review to audit")
     return audit_ids(run, ids, args)
