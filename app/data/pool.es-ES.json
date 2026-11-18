@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "ded84c98",
+  "hash": "ce310647",
   "questions": [
     {
       "id": "q-0001",
@@ -233177,6 +233177,4024 @@
         "author": "w_lemay",
         "author_url": null
       }
+    },
+    {
+      "id": "q-21084",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "mammals",
+      "bundle": "base",
+      "description": "Un vecino de la zona que va por el medio de la carretera y espera que el tráfico le ceda el paso.",
+      "question": "Mira: ¿qué animal camina hacia la cámara por esta carretera nevada del bosque?",
+      "answer": "Reno",
+      "wrong_answers": [
+        "Alce",
+        "Ciervo",
+        "Buey almizclero"
+      ],
+      "hints": [
+        "Vive en el frío extremo norte de Europa, Asia y América del Norte.",
+        "En Laponia, los pastores sami crían grandes manadas desde hace siglos.",
+        "Rodolfo, el de la nariz roja, es el más famoso de todos."
+      ],
+      "fun_fact": "Los ojos del reno cambian de color con las estaciones: dorados en verano y azul intenso en el oscuro invierno ártico, lo que le ayuda a ver con muy poca luz.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Rangifer_tarandus_-_Inari_2013.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARangifer_tarandus_-_Inari_2013.ogv",
+        "credit": "Manfred Werner - Tsui · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Manfred Werner - Tsui",
+        "author_url": null,
+        "excerpt": {
+          "start": 14,
+          "end": 44
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21085",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "Un baile cósmico en el que la pareja del centro es muy oscura y muy, muy pesada.",
+      "question": "Mira la trayectoria de la estrella alrededor del agujero negro durante varias vueltas. ¿Cómo se llama este efecto, predicho por Einstein?",
+      "answer": "Precesión orbital",
+      "wrong_answers": [
+        "Lente gravitacional",
+        "Acoplamiento de marea",
+        "Espaguetización"
+      ],
+      "hints": [
+        "El mismo efecto aparece, mucho más débil, en la órbita de Mercurio alrededor del Sol.",
+        "Fíjate en dónde queda cada nueva vuelta respecto a la anterior.",
+        "El lento bamboleo del eje de una peonza que gira tiene el mismo nombre."
+      ],
+      "fun_fact": "La estrella S2 tarda unos 16 años en dar una vuelta al agujero negro gigante del centro de nuestra galaxia, y en 2020 los astrónomos demostraron que su órbita se desplaza justo como predice la relatividad general de Einstein.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Another_artist%E2%80%99s_impression_of_S2%27s_precession_effect.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAnother_artist%E2%80%99s_impression_of_S2%27s_precession_effect.webm",
+        "credit": "MPE / TWENTYTWO Film · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "MPE / TWENTYTWO Film",
+        "author_url": null,
+        "excerpt": {
+          "start": 4,
+          "end": 34
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21086",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Una cena que se toma tan en serio su salsa que hasta le da su propio barquito.",
+      "question": "Mira: este plato de pastel de carne, patatas fritas, puré verde y salsa es una comida clásica de ¿qué país?",
+      "answer": "Reino Unido",
+      "wrong_answers": [
+        "Bélgica",
+        "Estados Unidos",
+        "Argentina"
+      ],
+      "hints": [
+        "Fíjate en el puré verde chillón: se hace con guisantes secos, machacados hasta quedar blandos.",
+        "En este país, a esas patatas fritas gruesas las llaman «chips», no «fries».",
+        "Piensa en autobuses de dos pisos, tardes de lluvia y tiendas de pescado con patatas fritas."
+      ],
+      "fun_fact": "El puré de guisantes británico suele hacerse con guisantes secos de la variedad marrowfat, que se ponen en remojo toda la noche y luego se cuecen a fuego lento hasta convertirse en una pasta verde y espesa.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Steak_and_kidney_pie_The_Ledger_Building_West_India_Quay_Canary_Wharf_01_Zoom_Video.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASteak_and_kidney_pie_The_Ledger_Building_West_India_Quay_Canary_Wharf_01_Zoom_Video.webm",
+        "credit": "Acabashi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Acabashi",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21087",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un padre preocupado gritando a todo volumen «¡Fuera de mi prado!».",
+      "question": "Escucha: ¿qué ave da esta llamada de alarma, mientras su polluelo también chilla?",
+      "answer": "Zarapito real",
+      "wrong_answers": [
+        "Avefría",
+        "Ostrero",
+        "Archibebe común"
+      ],
+      "hints": [
+        "Anida en el suelo de prados húmedos y páramos, y pasa el invierno en costas fangosas.",
+        "Es el ave limícola más grande de Europa y tiene un pico larguísimo.",
+        "Su pico se curva hacia abajo como una hoz, y su canto suena a un «curlí» burbujeante."
+      ],
+      "fun_fact": "Las hembras de zarapito real tienen el pico más largo que los machos, tanto que pueden sacar gusanos del barro profundo.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Alarmroep_van_een_wulp_en_kreten_van_een_jong_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlarmroep_van_een_wulp_en_kreten_van_een_jong_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "excerpt": {
+          "start": 15,
+          "end": 75
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Wet_meadows_near_Fersit_-_geograph.org.uk_-_628641.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWet_meadows_near_Fersit_-_geograph.org.uk_-_628641.jpg",
+        "credit": "Nigel Brown · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Nigel Brown",
+        "author_url": "https://www.geograph.org.uk/profile/15376"
+      }
+    },
+    {
+      "id": "q-21088",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una canción para la que la gente se pone en pie, con la mano en el pecho y un nudo en la garganta, aunque no tenga letra.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Nueva Zelanda",
+      "wrong_answers": [
+        "Australia",
+        "Sudáfrica",
+        "Fiyi"
+      ],
+      "hints": [
+        "La primera estrofa de este himno suele cantarse en una lengua indígena y luego la misma estrofa en inglés.",
+        "El país es una nación insular del Pacífico Sur.",
+        "Su selección de rugby, los All Blacks, lo canta antes de la haka."
+      ],
+      "fun_fact": "Nueva Zelanda tiene dos himnos nacionales con el mismo rango: «God Defend New Zealand» y «God Save the King».",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/God_Defend_New_Zealand_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGod_Defend_New_Zealand_instrumental.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Fans_waving_Stiegl_flags_850_0002.jpg/3840px-20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Fans_waving_Stiegl_flags_850_0002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Fans_waving_Stiegl_flags_850_0002.jpg",
+        "credit": "Granada · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Granada",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Granada"
+      }
+    },
+    {
+      "id": "q-21089",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un ave que se saltó las clases de vuelo y se fue directa al comedor.",
+      "question": "Mira: ¿qué ave grande es esta?",
+      "answer": "Un emú",
+      "wrong_answers": [
+        "Un avestruz",
+        "Un casuario",
+        "Un ñandú"
+      ],
+      "hints": [
+        "Fíjate en sus plumas marrones desgreñadas, que parecen pelo, y en su cara azulada.",
+        "Es la segunda ave viva más alta, después del avestruz.",
+        "Solo vive en libertad en Australia, donde comparte el escudo nacional con un canguro."
+      ],
+      "fun_fact": "El emú padre incuba los huevos durante unas ocho semanas y en todo ese tiempo apenas come ni bebe.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Emu_Hilde_%28Zoo_Hoyerswerda%29_%284%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmu_Hilde_%28Zoo_Hoyerswerda%29_%284%29.webm",
+        "credit": "Fiver, der Hellseher · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Fiver, der Hellseher",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21090",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "drinks",
+      "bundle": "base",
+      "description": "La versión de cocina de una fiesta en la piscina: todos se tiran dentro y luego todo empieza a dar vueltas.",
+      "question": "Mira: ¿qué fruta hay en el bol de cristal junto a la batidora?",
+      "answer": "Melocotones",
+      "wrong_answers": [
+        "Fresas",
+        "Plátanos",
+        "Kiwis"
+      ],
+      "hints": [
+        "Antes de cortarla, esta fruta era redonda y del tamaño de una pelota de tenis.",
+        "Su piel es suave y tiene una pelusilla, y por dentro esconde un hueso grande y duro.",
+        "En un famoso cuento de Roald Dahl, un niño llamado James viaja dentro de uno gigante."
+      ],
+      "fun_fact": "El melocotón es originario de China, donde ya se cultivaba hace miles de años.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Peach_Yogurt_Smoothie_Ages_6-18_English_Rd3_%2852197024312%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APeach_Yogurt_Smoothie_Ages_6-18_English_Rd3_%2852197024312%29.webm",
+        "credit": "USDAgov · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USDAgov",
+        "author_url": null,
+        "excerpt": {
+          "start": 21,
+          "end": 24.2
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21092",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "volcanoes",
+      "bundle": "base",
+      "description": "El spa de barro de la naturaleza ya ha abierto: sin reserva previa y sin rodajas de pepino.",
+      "question": "Mira: en este cono de Rumanía, burbujas de gas empujan barro desde las profundidades. ¿Qué gas forma la mayor parte de ellas?",
+      "answer": "Metano",
+      "wrong_answers": [
+        "Dióxido de carbono",
+        "Sulfuro de hidrógeno",
+        "Vapor de agua"
+      ],
+      "hints": [
+        "El cono es un volcán de lodo frío: no hay magma ni lava.",
+        "El gas sube desde yacimientos de petróleo y gas atrapados en lo hondo de las rocas.",
+        "Es el componente principal del gas natural de muchas cocinas, y las vacas también lo eructan."
+      ],
+      "fun_fact": "Los volcanes de lodo de Berca, en Rumanía, están entre los más grandes de Europa, y sus conos crecen y menguan a medida que el barro fresco brota y se seca al sol.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Mud_volcano_Paclele_mici.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMud_volcano_Paclele_mici.webm",
+        "credit": "Toniher · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Toniher",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21093",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Una bola de nieve sucia llegada del espacio profundo se presenta sin llamar a la puerta.",
+      "question": "Mira este cometa. ¿Cómo se llama la nube brillante de gas y polvo que rodea su núcleo helado?",
+      "answer": "La coma",
+      "wrong_answers": [
+        "La corona",
+        "La nebulosa",
+        "El disco de acreción"
+      ],
+      "hints": [
+        "El sol calienta el hielo del cometa, y esta nube se forma cuando el hielo se convierte en gas.",
+        "Viene de una palabra griega antigua que significa «cabellera», porque los primeros astrónomos veían los cometas como peludos.",
+        "Los médicos usan la misma palabra, en masculino, para un estado de inconsciencia largo y profundo."
+      ],
+      "fun_fact": "Este cometa, 3I/ATLAS, se descubrió en julio de 2025. Es solo el tercer objeto conocido que ha llegado desde fuera de nuestro sistema solar.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/3I-ATLAS_video_noirlab2525b.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A3I-ATLAS_video_noirlab2525b.webm",
+        "credit": "International Gemini Observatory/NOIRLab/NSF/AURA/Shadow the Scientist · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "International Gemini Observatory/NOIRLab/NSF/AURA/Shadow the Scientist\n\nImage Processing: J. Miller & M. Rodriguez (International Gemini Observatory/NSF NOIRLab), T.A. Rector (University of Alaska Anchorage/NSF NOIRLab), M. Zamani (NSF NOIRLab)",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21094",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "traditional-dress",
+      "bundle": "base",
+      "description": "Un cinturón que se niega a ser un simple cinturón y se empeña en llevar lazo.",
+      "question": "Mira: los bailarines llevan una faja ancha en la cintura, atada atrás con un gran lazo. ¿Cómo se llama esta faja?",
+      "answer": "Obi",
+      "wrong_answers": [
+        "Haori",
+        "Dupatta",
+        "Hakama"
+      ],
+      "hints": [
+        "Fíjate en las túnicas y los abanicos: este traje viene de un país insular de Asia oriental.",
+        "La faja forma parte del kimono y puede medir varios metros.",
+        "Su nombre tiene solo tres letras y suena como el nombre de un famoso personaje de La guerra de las galaxias, sin el «-Wan Kenobi»."
+      ],
+      "fun_fact": "Un obi formal puede medir más de 4 metros, así que muchas veces hace falta ayuda para atarlo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Hinamatsuri_Celebration_at_School_Age_Care%2C_Marine_Corps_Air_Station_Iwakuni%2C_Japan%2C_2026_%28997134%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHinamatsuri_Celebration_at_School_Age_Care%2C_Marine_Corps_Air_Station_Iwakuni%2C_Japan%2C_2026_%28997134%29.webm",
+        "credit": "U.S. Marine Corps video by Cpl. Madison Sharpe · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Marine Corps video by Cpl. Madison Sharpe",
+        "author_url": null,
+        "excerpt": {
+          "start": 9,
+          "end": 39
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21095",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "La melodía que suena mientras sube la bandera y los futbolistas intentan acordarse de la letra.",
+      "question": "Escucha: ¿de qué país africano es este himno nacional?",
+      "answer": "Gambia",
+      "wrong_answers": [
+        "Sierra Leona",
+        "Liberia",
+        "Ghana"
+      ],
+      "hints": [
+        "El país está en África occidental, en la costa del Atlántico.",
+        "Su lengua oficial es el inglés, y la melodía del himno se basa en una canción tradicional mandinga.",
+        "Es el país más pequeño del África continental: una franja estrecha a lo largo de un río, casi rodeada por Senegal."
+      ],
+      "fun_fact": "Gambia es tan estrecha que Senegal la rodea por todos lados, salvo por su corta costa atlántica.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/For_The_Gambia_Our_Homeland_%28instrumental%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFor_The_Gambia_Our_Homeland_%28instrumental%29.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/The_central_flagpole_grounds_and_open_assembly_plaza_of_Toledo_City_Hall.jpg/3840px-The_central_flagpole_grounds_and_open_assembly_plaza_of_Toledo_City_Hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_central_flagpole_grounds_and_open_assembly_plaza_of_Toledo_City_Hall.jpg",
+        "credit": "QueenCityCebu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "QueenCityCebu",
+        "author_url": "https://commons.wikimedia.org/wiki/User:QueenCityCebu"
+      }
+    },
+    {
+      "id": "q-21096",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un servicio de reparto de aperitivos en el que el cliente tiene que hacer todo el trabajo.",
+      "question": "Mira: ¿cómo consigue esta ave subir el premio desde el tubo hasta su percha?",
+      "answer": "Tira del cordel poco a poco",
+      "wrong_answers": [
+        "Echa piedrecitas en el tubo",
+        "Lo pesca con una ramita",
+        "Vuelca el tubo entero"
+      ],
+      "hints": [
+        "No le quites ojo al pico y a las patas del ave.",
+        "Repite el mismo movimiento una y otra vez, un poquito cada vez.",
+        "Piensa en cómo se sube un cubo de un pozo, tirando de la cuerda mano a mano."
+      ],
+      "fun_fact": "Es un zanate caribeño de Barbados: un estudio de 2016 descubrió que los zanates salvajes y los camachuelos de Barbados de la isla saben resolver este reto, una prueba clásica de inteligencia en aves.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Bajan-Birds-Pull-Strings-Two-Wild-Antillean-Species-Enter-the-Select-Club-of-String-Pullers-pone.0156112.s005.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABajan-Birds-Pull-Strings-Two-Wild-Antillean-Species-Enter-the-Select-Club-of-String-Pullers-pone.0156112.s005.ogv",
+        "credit": "Audet J, Ducatez S, Lefebvre L · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Audet J, Ducatez S, Lefebvre L",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21097",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Una multitud de fotógrafos robot que no paran de hacerle fotos al mismo planeta.",
+      "question": "Mira: ¿qué tipo de órbita siguen la mayoría de los satélites de esta animación?",
+      "answer": "Órbita polar",
+      "wrong_answers": [
+        "Órbita geoestacionaria",
+        "Órbita ecuatorial",
+        "Órbita lunar"
+      ],
+      "hints": [
+        "Sigue las líneas azules y fíjate en por dónde cruzan el globo.",
+        "Estos satélites vuelan a solo unos cientos de kilómetros de altura y dan la vuelta a la Tierra en una hora y media, más o menos.",
+        "En cada vuelta, estos satélites pasan por encima de la parte de arriba y de abajo de la Tierra."
+      ],
+      "fun_fact": "Como la Tierra gira debajo de ellos, los satélites en órbita polar pueden ver todo el planeta, a menudo en uno o dos días.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/NASA_Earth-observing_Fleet_June_2012.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA_Earth-observing_Fleet_June_2012.ogv",
+        "credit": "NASA/Goddard Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21098",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Dos tortolitos de esmoquin blanco luciendo sus mejores pasos de baile en mitad de la nada.",
+      "question": "Mira: ¿qué ave está haciendo su baile de cortejo en esta isla azotada por el viento?",
+      "answer": "Albatros",
+      "wrong_answers": [
+        "Cigüeña",
+        "Pelícano",
+        "Cisne"
+      ],
+      "hints": [
+        "Esta ave pasa casi toda su vida planeando sobre el mar abierto y solo pisa tierra para criar.",
+        "Tiene un pico grueso y ganchudo con orificios nasales en forma de tubo, y sus alas largas y estrechas están hechas para planear.",
+        "En un famoso poema, un marinero es castigado por abatir una de estas aves y acaba llevándola colgada del cuello."
+      ],
+      "fun_fact": "Los albatros reales suelen emparejarse de por vida, y una pareja puede seguir junta durante décadas después de su baile.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Enderby_Island%2C_New_Zealand.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEnderby_Island%2C_New_Zealand.webm",
+        "credit": "Blagoj Klincharski · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Blagoj Klincharski",
+        "author_url": null,
+        "excerpt": {
+          "start": 135,
+          "end": 165
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21099",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "La presentación de diapositivas más larga del Hubble, y nadie del público se ha ido todavía.",
+      "question": "Mira estas imágenes del Hubble de una estrella. El polvo brillante que la rodea en realidad no se aleja. ¿Cómo se llama este efecto?",
+      "answer": "Un eco de luz",
+      "wrong_answers": [
+        "Una nebulosa planetaria",
+        "Un remanente de supernova",
+        "Un anillo de Einstein"
+      ],
+      "hints": [
+        "La estrella del centro no explotó. Solo se iluminó con fuerza durante poco tiempo.",
+        "Lo que parece gas que se expande es la luz de ese destello llegando a polvo cada vez más lejano.",
+        "Se llama como lo que te devuelve un cañón cuando gritas dentro."
+      ],
+      "fun_fact": "Durante su estallido de 2002, la estrella V838 Monocerotis llegó a brillar unas 600 000 veces más que nuestro Sol.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Evolution_of_the_light_echo_around_V838_Monocerotis_%28Heic0617a%29.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEvolution_of_the_light_echo_around_V838_Monocerotis_%28Heic0617a%29.ogv",
+        "credit": "ESA/Hubble · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "ESA/Hubble",
+        "author_url": null,
+        "excerpt": {
+          "start": 4,
+          "end": 34
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21100",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Cinco días de fotografía muy paciente, resumidos en lo que tarda en cocerse un huevo.",
+      "question": "Mira este vídeo a cámara rápida: ¿qué proceso biológico muestra?",
+      "answer": "Germinación",
+      "wrong_answers": [
+        "Polinización",
+        "Transpiración",
+        "Fermentación"
+      ],
+      "hints": [
+        "Todas las judías, los guisantes y los girasoles empiezan su vida así.",
+        "Necesita agua, calor y aire, pero todavía no tierra ni luz del sol.",
+        "Es el momento en que una semilla despierta y saca su primera raíz y su primer tallo."
+      ],
+      "fun_fact": "Son brotes de lenteja: en Irán y otros países que celebran el Nouruz, el Año Nuevo persa, se cultiva un plato de brotes así, llamado sabzeh, como símbolo de la primavera y la vida nueva.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/97/Lentil_sprouting_time_lapse-XorAOcaaIk4.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALentil_sprouting_time_lapse-XorAOcaaIk4.webm",
+        "credit": "Always Shooting · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "Always Shooting",
+        "author_url": null,
+        "excerpt": {
+          "start": 20,
+          "end": 50
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21101",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Un experimento tan lento que alguien tuvo que acelerarlo para que pareciera que pasaba algo.",
+      "question": "Mira este vídeo acelerado de un experimento químico en un tubito: ¿cómo se llama el patrón que se forma?",
+      "answer": "Anillos de Liesegang",
+      "wrong_answers": [
+        "Anillos de Newton",
+        "Figuras de Chladni",
+        "Patrones de Widmanstätten"
+      ],
+      "hints": [
+        "En la naturaleza aparecen rayas parecidas, por ejemplo en algunas ágatas y rocas.",
+        "Un químico alemán los describió en 1896, tras dejar caer nitrato de plata sobre una capa de gelatina.",
+        "El nombre empieza por «Lies…»."
+      ],
+      "fun_fact": "Cuando una sustancia química se filtra en el gel, el sólido se forma en bandas separadas y no de manera uniforme, y los huecos entre bandas suelen ensancharse cuanto más lejos están de arriba.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Liesegang_band_experiment.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALiesegang_band_experiment.webm",
+        "credit": "kemodadog's channel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "kemodadog's channel",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21102",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "volcanoes",
+      "bundle": "base",
+      "description": "Las vistas desde la ventanilla son increíbles, pero el tiempo ahí abajo pinta fatal.",
+      "question": "Mira: unos astronautas grabaron esto desde el espacio. ¿Qué está pasando en la isla de abajo?",
+      "answer": "Un volcán está en erupción",
+      "wrong_answers": [
+        "Un incendio forestal está ardiendo",
+        "Un huracán se está formando",
+        "Una tormenta de arena está soplando"
+      ],
+      "hints": [
+        "Fíjate en dónde empieza la nube marrón: en un único punto de la isla.",
+        "Las franjas grises que bajan por las laderas de la isla son ceniza reciente.",
+        "Es una montaña con fuego y roca fundida en su interior."
+      ],
+      "fun_fact": "Es el pico Sarychev, en las islas Kuriles de Rusia, grabado desde la Estación Espacial Internacional en junio de 2009; el gorro blanco y liso de la cima es una nube que se formó cuando la ceniza al subir empujó hacia arriba el aire húmedo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Sarychev_Peak_eruption_on_12_June_2009%2C_oblique_satellite_view.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASarychev_Peak_eruption_on_12_June_2009%2C_oblique_satellite_view.ogv",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "ISS Crew Earth Observations experiment and Image Science & Analysis Laboratory, Johnson Space Center, NASA.",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21103",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un ave que suena como si se hubiera levantado del acantilado con el pie izquierdo.",
+      "question": "Escucha: ¿qué ave marina hace estos gruñidos cortos?",
+      "answer": "Arao común",
+      "wrong_answers": [
+        "Gaviota argéntea",
+        "Alcatraz atlántico",
+        "Gaviota tridáctila"
+      ],
+      "hints": [
+        "Pertenece a la familia de los álcidos y es primo del frailecillo.",
+        "Se parece un poco a un pingüino, pero vuela, y se sumerge a mucha profundidad para pescar.",
+        "Es un ave blanca y negra cuyo nombre en español tiene solo cuatro letras, más el apellido «común»."
+      ],
+      "fun_fact": "Los huevos del arao son muy puntiagudos por un extremo, y los científicos creen que esa forma les ayuda a no caerse de las repisas estrechas e inclinadas de los acantilados.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Artis%2C_roepen_van_een_zeekoet_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtis%2C_roepen_van_een_zeekoet_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 54
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Cliffs_at_Cape_Pine_Newfoundland.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACliffs_at_Cape_Pine_Newfoundland.jpg",
+        "credit": "Nilfanion · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Nilfanion",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Nilfanion"
+      }
+    },
+    {
+      "id": "q-21104",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía tan solemne que hasta los calcetines de los jugadores se ponen firmes.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Alemania",
+      "wrong_answers": [
+        "Países Bajos",
+        "Dinamarca",
+        "Polonia"
+      ],
+      "hints": [
+        "La melodía se escribió primero para un emperador de un país vecino.",
+        "Este himno suena a menudo antes de los grandes partidos de una selección que ha ganado cuatro Mundiales masculinos.",
+        "La bandera del país tiene tres franjas horizontales: negra, roja y dorada."
+      ],
+      "fun_fact": "Joseph Haydn compuso la melodía en 1797 como himno de cumpleaños para el emperador de Austria, y más tarde la reutilizó en su Cuarteto de cuerda «Emperador».",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Das_Deutschlandlied.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADas_Deutschlandlied.ogg",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown authorUnknown author",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Michigan_Stadium_%28September_27%2C_1947%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMichigan_Stadium_%28September_27%2C_1947%29.jpg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unidentified (Michiganensian is the University of Michigan yearbook published by University of Michigan)",
+        "author_url": null
+      }
+    },
+    {
+      "id": "q-21105",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "El anillo del estado de ánimo del planeta Tierra, revisado cada pocos años durante 130 años seguidos.",
+      "question": "Mira: los colores de este mapa mundial de la NASA no son temperaturas reales. ¿Qué muestran?",
+      "answer": "Anomalía de temperatura",
+      "wrong_answers": [
+        "Índice de calor",
+        "Punto de rocío",
+        "Albedo"
+      ],
+      "hints": [
+        "Aquí el azul no significa helada ni el rojo, calor abrasador.",
+        "Los lugares que siempre son fríos también pueden salir en rojo.",
+        "Mide cuánto se aparta un lugar de su temperatura habitual, si hace más calor o más frío de lo normal."
+      ],
+      "fun_fact": "La NASA compara cada lugar con su propia media de 1951–1980, así que un gélido invierno siberiano puede salir en rojo si fue más suave de lo habitual.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/59/Five-year_average_global_temperature_anomalies_from_1880_to_2010.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFive-year_average_global_temperature_anomalies_from_1880_to_2010.ogv",
+        "credit": "NASA/Goddard Space Flight Center Scientific Visualization Studio · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center Scientific Visualization Studio",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21106",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Cuando las luces de la fiesta no alumbran lo suficiente, hay quien se trae su propio fuego.",
+      "question": "Mira: unos hombres bailan con antorchas encendidas en una fiesta nocturna de un templo. ¿En qué estado de la India se grabó?",
+      "answer": "Tamil Nadu",
+      "wrong_answers": [
+        "Punyab",
+        "Rajastán",
+        "Nagaland"
+      ],
+      "hints": [
+        "Fíjate en lo que llevan los hombres: telas lisas enrolladas a la cintura como una falda larga, típicas de un extremo de la India.",
+        "Fíjate en los postes: llevan atadas plantas de plátano, una decoración festiva clásica en esta parte del país.",
+        "La capital de este estado es Chennai."
+      ],
+      "fun_fact": "El tamil, la lengua principal de este estado, es una de las lenguas vivas más antiguas del mundo, con poemas de hace más de 2000 años.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/Pandham_Eduthu_Aadudhal.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APandham_Eduthu_Aadudhal.webm",
+        "credit": "Tharagini · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Tharagini",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21107",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "robots",
+      "bundle": "base",
+      "description": "Un robot que ensaya para una entrevista de trabajo muy, muy lejos de casa.",
+      "question": "Mira: el decorado que rodea a este robot se construyó para imitar la superficie de ¿qué planeta?",
+      "answer": "Marte",
+      "wrong_answers": [
+        "Venus",
+        "Mercurio",
+        "Júpiter"
+      ],
+      "hints": [
+        "Fíjate bien en el color del suelo y de las paredes.",
+        "Varios robots exploradores ya han recorrido este planeta sobre ruedas.",
+        "Es el cuarto planeta desde el Sol, y su polvo está lleno de óxido."
+      ],
+      "fun_fact": "En 2017, el astronauta Paolo Nespoli manejó este robot, llamado Rollin’ Justin, desde la Estación Espacial Internacional, mientras el robot seguía en un laboratorio de Alemania, unos 400 km más abajo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Rollin%E2%80%99_Justin_commanded_by_Paolo_Nespoli_from_space_ESA383233.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARollin%E2%80%99_Justin_commanded_by_Paolo_Nespoli_from_space_ESA383233.webm",
+        "credit": "European Space Agency · CC BY-SA 3.0 igo · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0 igo",
+        "license_url": null,
+        "author": "European Space Agency",
+        "author_url": null,
+        "excerpt": {
+          "start": 2.5,
+          "end": 22.48
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21108",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía tan solemne que todo el mundo tiene que levantarse, aunque estuviera a gusto en el sofá.",
+      "question": "Escucha: esta breve fanfarria de metales es el himno nacional de ¿qué país?",
+      "answer": "Arabia Saudí",
+      "wrong_answers": [
+        "Egipto",
+        "Marruecos",
+        "Turquía"
+      ],
+      "hints": [
+        "La melodía se compuso en los años cuarenta.",
+        "La letra, añadida mucho después, alaba la bandera del país y a su rey.",
+        "Este reino ocupa la mayor parte de la península arábiga, y su capital es Riad."
+      ],
+      "fun_fact": "El himno sonó sin letra durante décadas: no se le añadió hasta 1984.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Aash_Al_Maleek_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAash_Al_Maleek_instrumental.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg/3840px-U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02"
+      }
+    },
+    {
+      "id": "q-21109",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "vegetables",
+      "bundle": "base",
+      "description": "La única compra en la que necesitas una azada en vez del carro.",
+      "question": "Mira: un agricultor desentierra con una azada un cultivo de raíz. ¿Qué cultivo es?",
+      "answer": "Yuca",
+      "wrong_answers": [
+        "Ñame",
+        "Boniato",
+        "Taro"
+      ],
+      "hints": [
+        "Fíjate en la forma: raíces largas y estrechas que acaban en punta, con una piel marrón y fina.",
+        "Bajo la piel, la pulpa es de un blanco intenso, y hay que pelarla y cocinarla antes de comerla.",
+        "Con su almidón se hace la tapioca, también las bolitas gomosas del té de burbujas."
+      ],
+      "fun_fact": "Nigeria es el país que más yuca cultiva del mundo, y las bolitas gomosas del té de burbujas se hacen con almidón de yuca.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Cassava_from_farm_to_plate..webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACassava_from_farm_to_plate..webm",
+        "credit": "Denis kasozi · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Denis kasozi",
+        "author_url": null,
+        "excerpt": {
+          "start": 15,
+          "end": 45
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21110",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Dos minutos de la hoguera más ruidosa jamás encendida, y nadie ha traído nubes para tostar.",
+      "question": "Mira: un enorme propulsor de cohete se prueba atornillado al suelo en Utah. ¿Qué tipo de combustible quema?",
+      "answer": "Combustible sólido",
+      "wrong_answers": [
+        "Hidrógeno líquido",
+        "Metano líquido",
+        "Queroseno"
+      ],
+      "hints": [
+        "Fíjate en cuánto humo espeso sale, y en que nunca se detiene ni cambia una vez que empieza.",
+        "Los motores que queman hidrógeno dan una llama casi invisible y sobre todo vapor de agua.",
+        "Su combustible va metido dentro del propulsor como una vela gigante y gomosa, no se bombea desde un depósito."
+      ],
+      "fun_fact": "Un motor de combustible sólido no se puede apagar una vez encendido: este ardió poco más de dos minutos con un empuje de unos 17 000 kN.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/NASA%2C_Northrop_Grumman_Test_Fire_SLS_BOLE_Booster_%282_minutes_of_dm-1_test_feed%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANASA%2C_Northrop_Grumman_Test_Fire_SLS_BOLE_Booster_%282_minutes_of_dm-1_test_feed%29.webm",
+        "credit": "NASA Marshall Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Marshall Space Flight Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 4,
+          "end": 34
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21111",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "musical-instruments",
+      "bundle": "base",
+      "description": "El bailarín lleva el mejor traje, pero los que de verdad mandan en esta fiesta son los de los tambores.",
+      "question": "Mira a los tamborileros de este baile en una aldea del norte de Ghana. ¿Qué tipo de tambor tocan?",
+      "answer": "Tambor parlante",
+      "wrong_answers": [
+        "Djembé",
+        "Bongó",
+        "Tabla"
+      ],
+      "hints": [
+        "Fíjate en cómo llevan los tambores mientras se mueven alrededor del bailarín.",
+        "Se sujeta bajo un brazo y se aprietan las cuerdas de los lados para cambiar el tono.",
+        "Sus notas, que suben y bajan, imitan los tonos del habla y sirven para enviar mensajes entre aldeas."
+      ],
+      "fun_fact": "Entre los dagomba de Ghana, los que tocan el tambor parlante también son historiadores por herencia familiar: tocan y cantan de memoria la historia de sus reyes.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Dagomba_man_dancing.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADagomba_man_dancing.webm",
+        "credit": "Kum1989 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Kum1989",
+        "author_url": null,
+        "excerpt": {
+          "start": 12,
+          "end": 42
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21112",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Dos manos, un piano y ningún acuerdo sobre quién manda.",
+      "question": "Escucha cómo tocan juntas las dos manos en este final de Beethoven. ¿Cómo se llama esta forma de escribir música?",
+      "answer": "Contrapunto",
+      "wrong_answers": [
+        "Glissando",
+        "Bajo ostinato",
+        "Bordón"
+      ],
+      "hints": [
+        "Escucha por separado la mano izquierda y la derecha: ninguna se limita a acompañar a la otra con acordes.",
+        "En lugar de una melodía con acompañamiento, oyes melodías independientes que se persiguen.",
+        "El nombre viene del latín y significa «nota contra nota»."
+      ],
+      "fun_fact": "Es el rápido final de la Sonata para piano n.º 6 en fa mayor de Beethoven, que empieza casi como una pequeña fuga antes de convertirse en una persecución juguetona.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Klaviersonate_Nr._6_f-moll_op._10.2_-_III._Presto.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKlaviersonate_Nr._6_f-moll_op._10.2_-_III._Presto.ogg",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Boesendorfer-5075415.jpg/3840px-Boesendorfer-5075415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+        "credit": "ermell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell"
+      }
+    },
+    {
+      "id": "q-21113",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "solar-system",
+      "bundle": "base",
+      "description": "Júpiter tiene casi cien lunas, y por fin una ha aceptado posar para una sesión de fotos.",
+      "question": "Mira: una nave espacial tomó estas imágenes de cerca de una de las lunas de Júpiter. ¿Qué luna es?",
+      "answer": "Ganímedes",
+      "wrong_answers": [
+        "Calisto",
+        "Europa",
+        "Ío"
+      ],
+      "hints": [
+        "Fíjate en la superficie: zonas oscuras y antiguas cruzadas por franjas más claras y con surcos.",
+        "No está salpicada de volcanes amarillos ni es una bola blanca y lisa de hielo agrietado.",
+        "Esta luna es más grande que el planeta Mercurio."
+      ],
+      "fun_fact": "Ganímedes es la única luna conocida con campo magnético propio, y probablemente esconde un océano salado bajo su corteza helada.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/VIDEO_-_Ganymede_Flyby_Sequence_-_Nasa-s_Juno_PJ_34_%2851794308684%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AVIDEO_-_Ganymede_Flyby_Sequence_-_Nasa-s_Juno_PJ_34_%2851794308684%29.webm",
+        "credit": "Andrea Luck · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "Andrea Luck",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21114",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "space-race-and-astronauts",
+      "bundle": "base",
+      "description": "Vestirse para ir a trabajar lleva mucho más tiempo cuando tu oficina está por encima del cielo.",
+      "question": "Mira: unos astronautas se ponen el traje de lanzamiento antes de viajar al espacio. ¿Por qué estos trajes son de un color tan llamativo?",
+      "answer": "Para que los equipos de rescate los vean en el mar",
+      "wrong_answers": [
+        "Para reflejar el calor del Sol en el espacio",
+        "Para proteger a la tripulación de la radiación",
+        "Para mostrar el rango de cada astronauta"
+      ],
+      "hints": [
+        "Piensa en lo que puede pasar al final del viaje, o si algo sale mal al principio.",
+        "Su nave vuelve a casa cayendo al agua en lugar de aterrizar en una pista.",
+        "Las tripulaciones de helicópteros y barcos tienen que encontrarlos rápido entre las olas."
+      ],
+      "fun_fact": "A los trajes naranjas de lanzamiento que llevaban los astronautas del transbordador espacial los apodaban «trajes calabaza».",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Artemis_II_Live_Launch_Coverage_-_Suit-Up_%28KSC-20260401-MH-SEA01-0001%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtemis_II_Live_Launch_Coverage_-_Suit-Up_%28KSC-20260401-MH-SEA01-0001%29.webm",
+        "credit": "NASA Kennedy Space Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA Kennedy Space Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 40
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21115",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "En algún lugar, un dentista acaba de sentir que su trabajo está más asegurado que nunca.",
+      "question": "Mira: ¿qué dulce está preparando este cocinero callejero?",
+      "answer": "Jalebi",
+      "wrong_answers": [
+        "Gulab jamun",
+        "Baklava",
+        "Churros"
+      ],
+      "hints": [
+        "Es un favorito en bodas y fiestas, y hay quien lo toma con leche caliente.",
+        "Después de freírlos, los trozos se echan en almíbar hasta que quedan pegajosos y dulces.",
+        "Es la espiral crujiente y almibarada del sur de Asia, prima de la zalabiya de Oriente Próximo."
+      ],
+      "fun_fact": "Un dulce frito parecido llamado zalabiya aparece en un libro de cocina árabe escrito hace más de 1000 años.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Jalebi_being_prepared%2C_Bangalore.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJalebi_being_prepared%2C_Bangalore.webm",
+        "credit": "Subhashish Panigrahi · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Subhashish Panigrahi",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21116",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Hay plantas que esperan al sol y a la lluvia, y esta prefiere pedir comida a domicilio.",
+      "question": "Mira este vídeo acelerado: ¿qué planta carnívora es?",
+      "answer": "Drosera",
+      "wrong_answers": [
+        "Dionea",
+        "Nepente",
+        "Utricularia"
+      ],
+      "hints": [
+        "Hay especies silvestres de esta planta en todos los continentes menos la Antártida.",
+        "No tiene mandíbulas que se cierran ni un vaso profundo. Cada hoja está cubierta de pelos con puntas pegajosas que se doblan hacia la presa.",
+        "Su nombre viene del griego «cubierta de rocío», por las gotas brillantes de sus pelos."
+      ],
+      "fun_fact": "Charles Darwin pasó años experimentando con droseras y escribió un libro entero sobre plantas carnívoras, publicado en 1875.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/Carnivorous_Plant_Time_Lapse_%28Drosera_Capensis%29_%22eating%22_a_Fruit_Fly.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACarnivorous_Plant_Time_Lapse_%28Drosera_Capensis%29_%22eating%22_a_Fruit_Fly.ogv",
+        "credit": "Scott Schiller · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": null,
+        "author": "Scott Schiller",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21117",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "Hasta el Sol tiene vecinos, y nunca les ha pedido ni un poco de sal.",
+      "question": "Mira: esta animación se aleja de nuestro Sol hacia las estrellas que lo rodean. ¿Cómo se llama la estrella más cercana al Sol?",
+      "answer": "Próxima Centauri",
+      "wrong_answers": [
+        "Sirio",
+        "Estrella Polar",
+        "Betelgeuse"
+      ],
+      "hints": [
+        "No se ve desde Europa ni desde casi toda Norteamérica: está en el cielo del sur.",
+        "Es una enana roja pequeña y tenue, demasiado débil para verla sin telescopio.",
+        "Su nombre viene de la palabra latina para «la más cercana», y forma parte del sistema Alfa Centauri."
+      ],
+      "fun_fact": "Próxima Centauri está a unos 4,2 años luz, así que la luz que verías de ella esta noche salió de la estrella hace más de cuatro años.",
+      "media": {
+        "type": "video",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flying_among_the_closest_stars_to_the_Solar_System.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlying_among_the_closest_stars_to_the_Solar_System.ogv",
+        "credit": "ESO/I. Crossfield/N. Risinger · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "ESO/I. Crossfield/N. Risinger",
+        "author_url": null,
+        "excerpt": {
+          "start": 2.5,
+          "end": 9.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21118",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "El envío de paquetería más caro de la historia, y el repartidor solo va en una dirección: hacia arriba.",
+      "question": "Mira: después de atravesar el cielo y llegar al espacio, ¿qué suelta el cohete?",
+      "answer": "Un satélite",
+      "wrong_answers": [
+        "Una cápsula tripulada",
+        "Un módulo de aterrizaje lunar",
+        "Un módulo de estación espacial"
+      ],
+      "hints": [
+        "No va nadie a bordo: esta nave funciona sola.",
+        "Despliega un gran panel plano para captar la luz del sol y obtener energía.",
+        "Dará vueltas a la Tierra durante años, haciendo fotos de la superficie."
+      ],
+      "fun_fact": "Los satélites Landsat fotografían la superficie terrestre desde el espacio desde 1972: es el registro ininterrumpido más largo de nuestro planeta visto desde la órbita.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/LDCM_Launch_Animation.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALDCM_Launch_Animation.webm",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "excerpt": {
+          "start": 8,
+          "end": 38
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21119",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "plants",
+      "bundle": "base",
+      "description": "Un cacharro de cocina que evita que tus dedos huelan a cena durante tres días.",
+      "question": "Mira: el alimento que se pela aquí, ¿a qué género de plantas pertenece?",
+      "answer": "Allium",
+      "wrong_answers": [
+        "Brassica",
+        "Solanum",
+        "Capsicum"
+      ],
+      "hints": [
+        "El nombre del género está en latín, como todos los nombres de géneros de plantas.",
+        "La cebolla pertenece al mismo género.",
+        "El puerro, el cebollino y la chalota también están en él."
+      ],
+      "fun_fact": "«Allium» es simplemente la palabra latina para el ajo, y la cebolla, el puerro, el cebollino y la chalota comparten este género.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Garlic_peeler.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGarlic_peeler.webm",
+        "credit": "Raimond Spekking · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Raimond Spekking",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 16
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21120",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "planes",
+      "bundle": "base",
+      "description": "Dos cazas cogidos de la mano a 10 000 metros de altura, y ni siquiera es romántico.",
+      "question": "Mira: ¿qué le pasa el avión de delante al de detrás por esa larga manguera?",
+      "answer": "Combustible",
+      "wrong_answers": [
+        "Agua",
+        "Oxígeno",
+        "Electricidad"
+      ],
+      "hints": [
+        "Sin esto, el avión de detrás tendría que aterrizar mucho antes.",
+        "Los aviones grandes llevan toneladas dentro de las alas.",
+        "Los motores lo queman para que el avión siga volando."
+      ],
+      "fun_fact": "Gracias al repostaje en vuelo, un avión puede pasar muchas horas en el aire, y algunos pilotos han cruzado océanos enteros sin aterrizar ni una vez.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/FA-18_Automated_Aerial_Refueling.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFA-18_Automated_Aerial_Refueling.ogv",
+        "credit": "NASA · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA",
+        "author_url": null,
+        "excerpt": {
+          "start": 20,
+          "end": 37
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21121",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "Medio baile, medio batalla, y la banda sigue tocando gane quien gane.",
+      "question": "Mira esta danza de tiro con arco del Himalaya indio, con flechas de madera sin punta. ¿En qué parte del cuerpo del rival tiene que dar la flecha para puntuar?",
+      "answer": "En las piernas",
+      "wrong_answers": [
+        "En la espalda",
+        "En los hombros",
+        "En el pecho"
+      ],
+      "hints": [
+        "Fíjate hacia dónde apuntan los arqueros con sus arcos.",
+        "Varios arqueros se agachan mucho o se arrodillan para apuntar.",
+        "Dar por encima de la rodilla resta puntos."
+      ],
+      "fun_fact": "Este juego popular se llama thoda, es de Himachal Pradesh, y se dice que sus dos equipos descienden de los Pándavas y los Káuravas de la epopeya del Mahabharata.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Thoda_or_%E0%A4%A0%E0%A5%8B%E0%A4%A1%E0%A4%BE_02.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThoda_or_%E0%A4%A0%E0%A5%8B%E0%A4%A1%E0%A4%BE_02.webm",
+        "credit": "Poojilsharma07 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Poojilsharma07",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21122",
+      "status": "approved",
+      "difficulty": 2,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Alguien gira con muchísima paciencia una ruedecita con pinchos, y la cena depende de ello.",
+      "question": "Mira: ¿qué se está rallando en copos blancos con este rallador de manivela?",
+      "answer": "Un coco",
+      "wrong_answers": [
+        "Un rábano",
+        "Una patata",
+        "Un nabo"
+      ],
+      "hints": [
+        "Fíjate en la cáscara marrón y peluda de lo que sostiene la mano.",
+        "Crece muy arriba, en una palmera alta.",
+        "Su «leche» se usa en muchos curris, y su agua ya es una bebida por sí sola."
+      ],
+      "fun_fact": "Aunque se diga que es un fruto seco, el coco no lo es: los botánicos lo llaman drupa, como el melocotón o la cereza.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/A_action_of_coconut_grating.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AA_action_of_coconut_grating.ogv",
+        "credit": "Thamizhpparithi Maari · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Thamizhpparithi Maari",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21123",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "En algún lugar bajo todas esas nubes, medio continente se pregunta si cancelar el pícnic.",
+      "question": "Mira: esta vista por satélite muestra un enorme remolino de nubes cruzando Norteamérica. ¿Qué sistema meteorológico es?",
+      "answer": "Ciclón extratropical",
+      "wrong_answers": [
+        "Ciclón tropical",
+        "Anticiclón",
+        "Supercélula"
+      ],
+      "hints": [
+        "Fíjate en la forma que toman las nubes a medida que crece la tormenta y en cuánta tierra cubre.",
+        "Se forma donde el aire polar frío choca con el aire cálido, no sobre mares tropicales cálidos, y no tiene un ojo claro.",
+        "En los mapas del tiempo aparece como una gran «B» en latitudes medias, con un frente frío y un frente cálido."
+      ],
+      "fun_fact": "Esta tormenta se convirtió en la «ventisca del Día de la Marmota» de 2011, que dejó unos 54 cm de nieve en Chicago.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Feb_2011_Storm_Moves_Across_the_U.S.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFeb_2011_Storm_Moves_Across_the_U.S.ogv",
+        "credit": "Jesse Allen · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Jesse Allen",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21124",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Sin horno, sin sartén, sin cocina y, desde luego, sin comida a domicilio.",
+      "question": "Mira: en Marruecos, esta masa rellena se cuece sin sartén ni horno. ¿Sobre qué se coloca?",
+      "answer": "Piedras calentadas en el fuego",
+      "wrong_answers": [
+        "Una estera de hierba trenzada",
+        "Hojas de palmera frescas",
+        "Una teja plana de barro"
+      ],
+      "hints": [
+        "Fíjate bien en lo que asoma por los bordes de la masa.",
+        "No se compraron en ningún sitio: se recogieron del suelo, allí mismo.",
+        "Antes de que llegara la masa, ardió un fuego justo encima de ellas."
+      ],
+      "fun_fact": "En el Sáhara, los nómadas tuaregs cuecen un pan llamado taguella directamente en la arena caliente bajo el fuego, y luego le sacuden la arena antes de comérselo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Abadir_nomadic_pizza.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAbadir_nomadic_pizza.webm",
+        "credit": "مصطفى ملو · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "مصطفى ملو",
+        "author_url": null,
+        "excerpt": {
+          "start": 165,
+          "end": 195
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21125",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "celebrations-around-the-world",
+      "bundle": "base",
+      "description": "La única compañía de baile a la que se oye llegar desde tres calles más allá, llueva o haga sol.",
+      "question": "Mira: estos bailarines disfrazados, con pesados cencerros en el cinturón, son parte de una antigua tradición invernal europea. ¿Cómo se llaman?",
+      "answer": "Kukeri",
+      "wrong_answers": [
+        "Mamuthones",
+        "Busós",
+        "Perchten"
+      ],
+      "hints": [
+        "El estruendo de los cencerros sirve para ahuyentar a los malos espíritus y despertar a la primavera.",
+        "La tradición tiene más fuerza en el país cuya capital es Sofía.",
+        "El mayor festival de estos bailarines, el Surva, se celebra cada enero en la ciudad búlgara de Pernik."
+      ],
+      "fun_fact": "El festival de máscaras Surva, en Pernik (Bulgaria), reúne a miles de participantes disfrazados y es uno de los mayores festivales de máscaras de Europa.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Bulgarian_folklore.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABulgarian_folklore.ogv",
+        "credit": "Annboeva · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Annboeva",
+        "author_url": null,
+        "excerpt": {
+          "start": 30,
+          "end": 60
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21126",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "insects",
+      "bundle": "base",
+      "description": "Un insecto diminuto con traje real morado y dorado y opiniones muy firmes sobre el huerto de hierbas.",
+      "question": "Mira: esta pequeña polilla morada y dorada debe su nombre a una hierba aromática que encanta a sus orugas. ¿Cuál?",
+      "answer": "Menta",
+      "wrong_answers": [
+        "Albahaca",
+        "Lavanda",
+        "Romero"
+      ],
+      "hints": [
+        "Igual que las otras tres opciones, esta hierba es de la misma familia que la salvia y el tomillo.",
+        "Las orugas de esta polilla también comen mejorana, una pariente cercana de esta hierba.",
+        "Esta misma hierba da sabor al té moruno, al mojito y a casi todas las pastas de dientes."
+      ],
+      "fun_fact": "La polilla de la menta vuela tanto de día como de noche, así que en los jardines soleados mucha gente la confunde con una mariposa diminuta.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Mint_moth_%28Pyrausta_aurata%29_on_shrubby_cinquefoil_%28Dasiphora_fruticosa%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMint_moth_%28Pyrausta_aurata%29_on_shrubby_cinquefoil_%28Dasiphora_fruticosa%29.webm",
+        "credit": "The Nature Box · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "The Nature Box",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21127",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Clase de teoría musical, pero hoy nadie tiene que hacer examen.",
+      "question": "Escucha: ¿en qué tipo de tonalidad o escala se basa esta música para piano?",
+      "answer": "Tonalidad mayor",
+      "wrong_answers": [
+        "Tonalidad menor",
+        "Serie dodecafónica",
+        "Escala de tonos enteros"
+      ],
+      "hints": [
+        "Beethoven escribió esta pieza en 1798.",
+        "Dos de las opciones son típicas de la música del siglo XX que suena rara o como flotando.",
+        "«Cumpleaños feliz» y «Estrellita, ¿dónde estás?» se basan en el mismo tipo de tonalidad."
+      ],
+      "fun_fact": "Beethoven arregló él mismo esta sonata para cuarteto de cuerda y la pasó de mi mayor a fa mayor, en parte para enseñar cómo debía hacerse un buen arreglo.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Klaviersonate_Nr._9_E-Dur%2C_op._14.1_-_I._Allegro.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKlaviersonate_Nr._9_E-Dur%2C_op._14.1_-_I._Allegro.ogg",
+        "credit": "Ludwig van Beethoven · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Ludwig van Beethoven",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 45
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Boesendorfer-5075415.jpg/3840px-Boesendorfer-5075415.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoesendorfer-5075415.jpg",
+        "credit": "ermell · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "ermell",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Ermell"
+      }
+    },
+    {
+      "id": "q-21128",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "volcanoes",
+      "bundle": "base",
+      "description": "Un paseo en helicóptero cuyas vistas traen efectos especiales incluidos, sin pagar suplemento.",
+      "question": "Mira: ¿qué está formando la enorme nube blanca en esta costa?",
+      "answer": "Lava que llega al mar",
+      "wrong_answers": [
+        "Una cascada que cae al mar",
+        "Un géiser que brota en la orilla",
+        "Un incendio junto a la playa"
+      ],
+      "hints": [
+        "Fíjate bien en el color del suelo rocoso junto a la orilla.",
+        "La nube blanca es vapor: algo muy caliente se está encontrando con agua fría.",
+        "Se grabó en Hawái en 2018, cuando la isla estaba ganando terreno nuevo."
+      ],
+      "fun_fact": "Esta nube de vapor se llama «laze», de «lava haze» (bruma de lava), y lleva ácido y diminutas partículas de vidrio volcánico, así que se avisó a la gente de que se mantuviera alejada.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/This_video_from_the_May_21_helicopter_overflight_of_K%C4%ABlauea_Volcano%E2%80%99s_Lower_E....webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThis_video_from_the_May_21_helicopter_overflight_of_K%C4%ABlauea_Volcano%E2%80%99s_Lower_E....webm",
+        "credit": "USGS Volcanoes · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "USGS Volcanoes",
+        "author_url": null,
+        "excerpt": {
+          "start": 8,
+          "end": 38
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21129",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Música de cámara: como una cena en la que todos hablan a la vez y nadie llega a comer.",
+      "question": "Escucha: ¿cómo se llama el tipo de grupo de cámara que toca esta pieza?",
+      "answer": "Un trío con piano",
+      "wrong_answers": [
+        "Un cuarteto de cuerda",
+        "Un trío de cuerda",
+        "Un quinteto de viento"
+      ],
+      "hints": [
+        "Cuenta los instrumentos: son menos de cuatro.",
+        "El nombre del grupo te dice cuántos músicos tocan y uno de los instrumentos.",
+        "Un violín y un violonchelo tocan junto a un gran instrumento de teclado con martillos dentro."
+      ],
+      "fun_fact": "Es el tempestuoso final del Trío con piano n.º 1 de Felix Mendelssohn, aquí interpretado en la Casa Blanca en 2009 por el violinista Joshua Bell, el pianista Awadagin Pratt y la violonchelista Alisa Weilerstein.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/20091104_Joshua_Bell%2C_Awadagin_Pratt%2C_and_Alisa_Weilerstein_-_Mendelssohn%27s_Piano_Trio_No._1_in_D_minor%2C_Op._49_-_4._Finale%2C_Allegro_assai_appassionato.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A20091104_Joshua_Bell%2C_Awadagin_Pratt%2C_and_Alisa_Weilerstein_-_Mendelssohn%27s_Piano_Trio_No._1_in_D_minor%2C_Op._49_-_4._Finale%2C_Allegro_assai_appassionato.ogg",
+        "credit": "Felix Mendelssohn · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Felix Mendelssohn",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 70
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Iwelam%2C_Perth_Concert_Hall._Auditorium_from_the_Stage..jpg/3840px-Iwelam%2C_Perth_Concert_Hall._Auditorium_from_the_Stage..jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIwelam%2C_Perth_Concert_Hall._Auditorium_from_the_Stage..jpg",
+        "credit": "Iwelam · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Iwelam",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Iwelam"
+      }
+    },
+    {
+      "id": "q-21130",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "Dos estrellas comparten comida, y una de ellas no debería haber repetido.",
+      "question": "Mira: una estrella pequeña le roba gas a su enorme vecina. ¿Qué pasa al final de esta animación?",
+      "answer": "Una supernova",
+      "wrong_answers": [
+        "Un eclipse solar",
+        "Un choque de cometa",
+        "Un planeta que se forma"
+      ],
+      "hints": [
+        "Fíjate bien en la estrella pequeña: no puede tragar gas sin límite.",
+        "El destello final puede brillar más que una galaxia entera durante unas semanas.",
+        "Es la explosión gigante con la que termina la vida de una estrella."
+      ],
+      "fun_fact": "Este tipo de supernova, que nace de una enana blanca, siempre alcanza más o menos el mismo brillo máximo, así que los astrónomos la usan como una cinta métrica cósmica; así descubrieron que la expansión del universo se acelera (Premio Nobel, 2011).",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Artist%27s_impression_of_vampire_star.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtist%27s_impression_of_vampire_star.ogv",
+        "credit": "ESO/M. Kornmesser · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "ESO/M. Kornmesser",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21131",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía que pone firmes a millones de personas exactamente en el mismo momento.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Indonesia",
+      "wrong_answers": [
+        "Malasia",
+        "Filipinas",
+        "Tailandia"
+      ],
+      "hints": [
+        "El país está en el Sudeste Asiático, y su himno es una marcha vibrante de estilo occidental, no una pieza tradicional.",
+        "El país está formado por más de 17 000 islas y tiene la cuarta población más grande del mundo.",
+        "Su capital es Yakarta, y las islas de Bali y Java forman parte de él."
+      ],
+      "fun_fact": "Su compositor, Wage Rudolf Supratman, tocó por primera vez en público el himno «Indonesia Raya» con un violín en un congreso juvenil en 1928, 17 años antes de que el país declarara su independencia.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Indonesia_Raya_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AIndonesia_Raya_instrumental.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 55
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Dry_Tortugas_National_Park_-_49625300948.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADry_Tortugas_National_Park_-_49625300948.jpg",
+        "credit": "RuggyBearLA · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "RuggyBearLA",
+        "author_url": null
+      }
+    },
+    {
+      "id": "q-21132",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un vecino del zoo con opiniones muy firmes que comparte a voces y a menudo.",
+      "question": "Escucha: ¿qué ave está haciendo estos reclamos?",
+      "answer": "Ganso del Nilo",
+      "wrong_answers": [
+        "Grulla común",
+        "Focha común",
+        "Garza real"
+      ],
+      "hints": [
+        "Es un ave acuática que suele pastar hierba cerca de lagos y parques.",
+        "Es de África, pero hoy hay bandadas salvajes en parques de toda Europa occidental.",
+        "Los artistas del antiguo Egipto la pintaban en las paredes de las tumbas."
+      ],
+      "fun_fact": "Pese a su nombre, el ganso del Nilo no es un ganso de verdad: está más emparentado con los tarros.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Artis%2C_Nijlgans_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AArtis%2C_Nijlgans_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "excerpt": {
+          "start": 0.5,
+          "end": 30.5
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Reeds_on_shore_Kanozero.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AReeds_on_shore_Kanozero.jpg",
+        "credit": "Clemens Ratschan · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Clemens Ratschan",
+        "author_url": "https://web.archive.org/web/20170108073938/http://www.panoramio.com:80/user/175938"
+      }
+    },
+    {
+      "id": "q-21133",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Unos vecinos que se mudaron sin pedir permiso y montaron un bloque de pisos entero en la verja de entrada.",
+      "question": "Mira: los pajaritos verdes que entran y salen han construido este enorme nido de palos. ¿Qué ave son?",
+      "answer": "Cotorra argentina",
+      "wrong_answers": [
+        "Cotorra de Kramer",
+        "Periquito común",
+        "Pito real"
+      ],
+      "hints": [
+        "La mayoría de los loros anidan en huecos de árboles; este es la gran excepción.",
+        "En libertad vive en Sudamérica, pero las mascotas escapadas viven ya en ciudades como Barcelona, Madrid y Nueva York.",
+        "Su nombre científico, Myiopsitta monachus, alude a un monje, y en su nombre común aparece un país."
+      ],
+      "fun_fact": "La cotorra argentina es el único loro que construye nidos de palos, y el nido compartido de una colonia puede pesar cientos de kilos, con una habitación para cada pareja.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/85/Green-Wood_Cemetery_parrots_%2854862%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGreen-Wood_Cemetery_parrots_%2854862%29.webm",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Rhododendrites",
+        "author_url": null,
+        "excerpt": {
+          "start": 2,
+          "end": 32
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21134",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía tan majestuosa que hasta el sofá quiere ponerse firme.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Austria",
+      "wrong_answers": [
+        "Alemania",
+        "Suiza",
+        "Liechtenstein"
+      ],
+      "hints": [
+        "Es un país de habla alemana en el centro de Europa.",
+        "La melodía tiene más de 200 años, de la época de los grandes compositores clásicos.",
+        "La música se atribuyó durante mucho tiempo a Mozart, y la capital del país es Viena."
+      ],
+      "fun_fact": "Durante mucho tiempo se atribuyó esta melodía a Mozart, pero muchos expertos creen hoy que la escribió Johann Holzer, masón como él.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Land_der_Berge_Land_am_Strome_instrumental.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALand_der_Berge_Land_am_Strome_instrumental.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/U_S_Naval_Forces_Europe_and_Africa_Band_%28Topside_Brass_Band%29_perform_for_students_and_staff_of_the_Mahatma_Gandhi_Institute_Secondary_School_%28MGISS%29_%289512148%29.jpg/3840px-thumbnail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU_S_Naval_Forces_Europe_and_Africa_Band_%28Topside_Brass_Band%29_perform_for_students_and_staff_of_the_Mahatma_Gandhi_Institute_Secondary_School_%28MGISS%29_%289512148%29.jpg",
+        "credit": "U.S. Navy USNFE-6FPA by Petty Officer 1st Class Paul Cox · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Navy USNFE-6FPA by Petty Officer 1st Class Paul Cox",
+        "author_url": "https://www.dvidshub.net/portfolio/1509022"
+      }
+    },
+    {
+      "id": "q-21135",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Hay quien escribe cartas de amor; esta persona prefiere escribir con humo y chispas.",
+      "question": "Mira: una chispa incandescente avanza por una línea invisible pintada con salitre. ¿Qué símbolo musical dibuja al quemar?",
+      "answer": "Dos corcheas unidas",
+      "wrong_answers": [
+        "Una clave de sol",
+        "Dos redondas",
+        "Un signo de sostenido"
+      ],
+      "hints": [
+        "Cuenta las cabezas redondas de la figura quemada.",
+        "Las dos plicas están unidas por una barra gruesa en la parte de arriba.",
+        "Cada una de estas notas unidas dura la mitad que una negra."
+      ],
+      "fun_fact": "El salitre (nitrato de potasio) desprende oxígeno al calentarse, así que el papel solo arde donde se pintó. La escritura con fuego fue un truco favorito en los espectáculos de química.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Fire_Writing.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFire_Writing.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 72,
+          "end": 102
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21136",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un pato que suena menos a «cuac» y más a alguien gratamente sorprendido por un cotilleo.",
+      "question": "Escucha: ¿qué pato marino de las costas del norte hace este reclamo suave y arrullado, «ah-UUU»?",
+      "answer": "Eider común",
+      "wrong_answers": [
+        "Havelda",
+        "Porrón osculado",
+        "Serreta mediana"
+      ],
+      "hints": [
+        "El macho es de un blanco y negro llamativo, con una mancha verde pálido en la nuca.",
+        "Es uno de los patos más grandes del hemisferio norte y se sumerge para comer mejillones.",
+        "Su plumón, famoso por lo calentito, se recoge de los nidos para rellenar edredones de lujo."
+      ],
+      "fun_fact": "En Islandia se recoge con cuidado el plumón que las hembras de eider se arrancan del pecho para forrar el nido, y hacen falta unos 60 nidos para rellenar un solo edredón.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Common_Eider_%28Somateria_mollissima%29_%28W1CDR0001491_BD11%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Eider_%28Somateria_mollissima%29_%28W1CDR0001491_BD11%29.ogg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Loch_Ryan_sea_shore_-_geograph.org.uk_-_6882190.jpg/3840px-Loch_Ryan_sea_shore_-_geograph.org.uk_-_6882190.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALoch_Ryan_sea_shore_-_geograph.org.uk_-_6882190.jpg",
+        "credit": "Chris Morgan · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Chris Morgan",
+        "author_url": "https://www.geograph.org.uk/profile/69729"
+      }
+    },
+    {
+      "id": "q-21137",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Barcos, sol y viejas murallas de piedra: esta postal se escribe sola.",
+      "question": "Mira: ¿en qué isla griega está este antiguo puerto veneciano?",
+      "answer": "Creta",
+      "wrong_answers": [
+        "Rodas",
+        "Corfú",
+        "Santorini"
+      ],
+      "hints": [
+        "Esta isla está muy al sur, más cerca de África que casi toda Grecia.",
+        "Fíjate en la hilera de naves de piedra con arcos junto al muelle: allí los venecianos construían barcos.",
+        "En la isla está Cnosos, el palacio ligado a la leyenda del Minotauro."
+      ],
+      "fun_fact": "El faro del puerto viejo de La Canea lo construyeron primero los venecianos, y en el siglo XIX se reconstruyó con una base que, según dicen, parece un minarete.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Chania%2C_Greece.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChania%2C_Greece.webm",
+        "credit": "Le Monde en Vidéo · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Le Monde en Vidéo",
+        "author_url": null,
+        "excerpt": {
+          "start": 120,
+          "end": 150
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21139",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-music",
+      "bundle": "base",
+      "description": "Dos músicos, un micrófono y suficiente repiqueteo metálico para despertar a todo un zoco.",
+      "question": "Mira y escucha: un laúd bajo de tres cuerdas y grandes castañuelas de metal. ¿Qué tradición musical del norte de África es esta?",
+      "answer": "Gnawa",
+      "wrong_answers": [
+        "Raï",
+        "Chaabi",
+        "Malhun"
+      ],
+      "hints": [
+        "Esta tradición nació entre descendientes de personas del África subsahariana que se asentaron en el norte de África.",
+        "Sus canciones son espirituales, y sus ceremonias de música y trance, que duran toda la noche, se llaman lila.",
+        "Cada año, la ciudad costera marroquí de Esauira celebra un gran festival que lleva el nombre de esta música."
+      ],
+      "fun_fact": "El gnawa entró en la lista del Patrimonio Cultural Inmaterial de la Humanidad de la UNESCO en 2019, y estrellas del jazz y del rock como Robert Plant han tocado con maestros gnawa.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Gnawa_Marrakesh_London_-_Street_Performers_-_Moroccan_Music.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGnawa_Marrakesh_London_-_Street_Performers_-_Moroccan_Music.webm",
+        "credit": "Street Performers · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Street Performers",
+        "author_url": null,
+        "excerpt": {
+          "start": 85,
+          "end": 115
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21140",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Sol, mar y una banda de música de gala: las islas se toman muy en serio sus himnos.",
+      "question": "Escucha: esta melodía lenta y solemne es el himno oficial de ¿qué lugar del Caribe?",
+      "answer": "Puerto Rico",
+      "wrong_answers": [
+        "Cuba",
+        "Jamaica",
+        "República Dominicana"
+      ],
+      "hints": [
+        "La melodía nació en el siglo XIX como una danza, un baile romántico para piano.",
+        "La letra de este himno se canta en español.",
+        "Su nombre viene de Borinquen, el antiguo nombre taíno de la isla."
+      ],
+      "fun_fact": "«La Borinqueña» nació en la década de 1860 como una canción de amor para bailar, y no fue el himno oficial hasta 1952.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/United_States_Navy_Band_-_La_Borinque%C3%B1a.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_Navy_Band_-_La_Borinque%C3%B1a.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Coast_of_the_Caribbean_Sea_in_Pointe-Noire_%281%29.jpg/3840px-Coast_of_the_Caribbean_Sea_in_Pointe-Noire_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoast_of_the_Caribbean_Sea_in_Pointe-Noire_%281%29.jpg",
+        "credit": "Tournasol7 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Tournasol7",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Tournasol7"
+      }
+    },
+    {
+      "id": "q-21141",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Este tren está a punto de hacer la parada más sorprendente de toda su carrera.",
+      "question": "Mira: ¿dónde están metiendo este tren?",
+      "answer": "En un ferri para trenes",
+      "wrong_answers": [
+        "En un túnel de montaña",
+        "En un taller de reparación",
+        "En un túnel de lavado"
+      ],
+      "hints": [
+        "Fíjate en lo que hay detrás de la gran abertura en forma de arco.",
+        "Encima de la abertura hay una gran pared blanca con filas de ventanas y un mástil alto.",
+        "Dentro de poco, el tren irá flotando sobre el agua."
+      ],
+      "fun_fact": "Los trenes de largo recorrido de Roma a Sicilia todavía cruzan el estrecho de Mesina en ferri: los cortan en trozos, los meten rodando en el barco y los vuelven a unir al otro lado.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Train_ferry_-_Villa_San_Giovanni_%28Battipaglia%E2%80%93Reggio_di_Calabria_railway%2C_Italy%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATrain_ferry_-_Villa_San_Giovanni_%28Battipaglia%E2%80%93Reggio_di_Calabria_railway%2C_Italy%29.webm",
+        "credit": "CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "© Karel Furiš, author (Ostrava Poruba, Czech Republic). When reusing, please credit me as: Karel Furiš / Wikimedia Commons. I would appreciate being notified if you use my work outside Wikimedia. Do not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain.",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21142",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Una cena en la que nadie pregunta nunca qué hay de menú.",
+      "question": "Mira: ¿qué son estas grandes aves pardas de cuello largo y pálido reunidas en grupo?",
+      "answer": "Buitres leonados",
+      "wrong_answers": [
+        "Cóndores andinos",
+        "Águilas reales",
+        "Marabúes africanos"
+      ],
+      "hints": [
+        "Viven desde España hasta la India, y forman grandes colonias que anidan en acantilados.",
+        "Casi nunca cazan: esperan a encontrar un animal que ya ha muerto.",
+        "Los llaman «los basureros de la naturaleza», y sus alas pueden medir unos 2,6 m de punta a punta."
+      ],
+      "fun_fact": "Los buitres leonados pueden planear durante horas casi sin batir las alas, aprovechando el aire caliente que sube para divisar comida desde muy lejos.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Griffon_Vultures_feeding_and_fighting.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGriffon_Vultures_feeding_and_fighting.webm",
+        "credit": "Lennart Hessel · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Lennart Hessel",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21143",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "rocks-and-minerals",
+      "bundle": "base",
+      "description": "La escalera de la naturaleza, con piscina en cada rellano.",
+      "question": "Mira: el agua turquesa y los escalones de estas cascadas de la selva se deben a los minerales de un tipo de roca. ¿Cuál?",
+      "answer": "Caliza",
+      "wrong_answers": [
+        "Granito",
+        "Basalto",
+        "Pizarra"
+      ],
+      "hints": [
+        "Esta misma roca está llena de cuevas con estalactitas colgando del techo.",
+        "Está formada sobre todo por carbonato cálcico, a menudo de conchas y corales antiguos.",
+        "La creta y el mármol son parientes cercanos de esta roca sedimentaria clara."
+      ],
+      "fun_fact": "Son las cascadas de Agua Azul, en Chiapas (México): el agua lleva tanto carbonato cálcico disuelto que construye nuevos escalones de roca, y en la época de lluvias el barro vuelve marrón el agua azul.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cascadas_de_Agua_Azul.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACascadas_de_Agua_Azul.webm",
+        "credit": "Own work · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Own work",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21144",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "La prueba de que a tu profe de química nunca hay que dejarle solo con la mesa del desayuno.",
+      "question": "Mira lo que pasa encima de este mechero de laboratorio. ¿Cómo se llama este tipo de fuego repentino?",
+      "answer": "Una explosión de polvo",
+      "wrong_answers": [
+        "Una explosión de humo",
+        "Una combustión súbita generalizada",
+        "Una explosión por fuga de gas"
+      ],
+      "hints": [
+        "Fíjate en lo que cae sobre la llama, no en el mechero.",
+        "Los molinos de harina, las fábricas de azúcar y los silos de grano ponen mucho cuidado en evitarla.",
+        "Granitos diminutos que flotan en el aire prenden casi a la vez."
+      ],
+      "fun_fact": "El polvo del vídeo es sustituto de leche en polvo para el café, y la harina, el azúcar e incluso los polvos para natillas pueden arder igual cuando flotan en el aire como una nube fina.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Coffee_whitening_flames.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACoffee_whitening_flames.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 19,
+          "end": 49
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21145",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "natural-phenomena",
+      "bundle": "base",
+      "description": "Este río se fue dos semanas de excursión al pueblo y por fin se acordó de dónde vive.",
+      "question": "Mira este vídeo acelerado de un río. ¿Cómo se llama el terreno que el agua cubre y luego vuelve a dejar al descubierto?",
+      "answer": "Una llanura de inundación",
+      "wrong_answers": [
+        "Un delta",
+        "Un estuario",
+        "Una cuenca hidrográfica"
+      ],
+      "hints": [
+        "Es una palabra de geografía para el terreno a lo largo de un río, no para el de su desembocadura.",
+        "A los agricultores les gusta este terreno porque cada vez que llega el agua deja barro fértil.",
+        "El nombre junta una palabra para un terreno llano y abierto con la del agua que se desborda."
+      ],
+      "fun_fact": "Este vídeo acelerado muestra el Elba en la ciudad alemana de Pirna en junio de 2013. Cada crecida deja una capa de limo, y por eso las llanuras de inundación están entre las tierras de cultivo más fértiles del mundo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Time_lapse_floodwaters_Germany_June_2013.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_lapse_floodwaters_Germany_June_2013.webm",
+        "credit": "User:Cm.albrecht · CC BY-SA 1.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 1.0",
+        "license_url": null,
+        "author": "User:Cm.albrecht",
+        "author_url": null,
+        "excerpt": {
+          "start": 5,
+          "end": 34
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21146",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "Hace tanto frío que hasta el dron que lo grababa echaba de menos una bufanda.",
+      "question": "Mira: el río desemboca en el agua entre estas montañas nevadas. ¿Cómo se llama este tipo de relieve costero?",
+      "answer": "Fiordo",
+      "wrong_answers": [
+        "Laguna",
+        "Atolón",
+        "Marisma"
+      ],
+      "hints": [
+        "Hace mucho tiempo, enormes glaciares excavaron este lugar.",
+        "La costa de Noruega tiene más de mil.",
+        "Es un brazo de mar largo y estrecho con acantilados o montañas a ambos lados."
+      ],
+      "fun_fact": "El Sognefjord, en Noruega, se adentra unos 205 km en tierra firme y en algunos puntos supera los 1300 m de profundidad.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/80/Aerial_imagery_of_fjords_and_rivers_in_Arctic_Norway.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAerial_imagery_of_fjords_and_rivers_in_Arctic_Norway.webm",
+        "credit": "anotherview · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "anotherview",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21147",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Diez dedos, 88 teclas y un nombre que tendrás que adivinar de oído.",
+      "question": "Escucha: este movimiento animado pertenece a la última sonata para piano de un compositor vienés. ¿Quién la escribió?",
+      "answer": "Franz Schubert",
+      "wrong_answers": [
+        "Ludwig van Beethoven",
+        "Franz Liszt",
+        "Joseph Haydn"
+      ],
+      "hints": [
+        "Las melodías casi se cantan como canciones. Este compositor escribió más de 600.",
+        "Murió en Viena en 1828, con solo 31 años, pocas semanas después de terminar esta sonata.",
+        "Entre sus obras están la Sinfonía «Inacabada» y el Quinteto «La trucha»."
+      ],
+      "fun_fact": "Schubert terminó sus tres últimas sonatas para piano en septiembre de 1828 y murió en noviembre, antes de que se publicara ninguna.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Schubert_-_Piano_Sonatas_-_7_Scherzo.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASchubert_-_Piano_Sonatas_-_7_Scherzo.ogg",
+        "credit": "Franz Schubert · CC BY-SA 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 2.0",
+        "license_url": null,
+        "author": "Franz Schubert",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 50
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Piano_keys_close_up.jpg/3840px-Piano_keys_close_up.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APiano_keys_close_up.jpg",
+        "credit": "Puikstekend · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Puikstekend",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Puikstekend&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21148",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un dandi del bosque que cree que cada mañana de primavera es un desfile de moda y el bosque entero, su pasarela.",
+      "question": "Mira: ¿qué ave está haciendo esta exhibición de cortejo en un bosque de Noruega?",
+      "answer": "Urogallo común",
+      "wrong_answers": [
+        "Gallo lira",
+        "Pavo salvaje",
+        "Faisán común"
+      ],
+      "hints": [
+        "Vive en bosques viejos de pinos desde Escocia y Escandinavia hasta Siberia.",
+        "Es el miembro más grande de la familia de los tetraónidos; los machos pueden doblar en tamaño a las hembras.",
+        "En España solo sobrevive en los Pirineos y la cordillera Cantábrica."
+      ],
+      "fun_fact": "En primavera, algunos urogallos macho se alteran tanto durante su exhibición que persiguen a excursionistas, perros y hasta coches para echarlos de su trozo de bosque.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Western_capercaillie_%28Tetrao_urogallus%29%2C_Norway.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AWestern_capercaillie_%28Tetrao_urogallus%29%2C_Norway.webm",
+        "credit": "Gonzalo Mucientes · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Gonzalo Mucientes",
+        "author_url": null,
+        "excerpt": {
+          "start": 82,
+          "end": 112
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21149",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Una serpiente larguísima de vagones cisterna se va por el camino panorámico entre los pinos.",
+      "question": "Mira: ¿qué tipo de puente está cruzando el largo tren de mercancías del fondo?",
+      "answer": "Un puente de caballetes",
+      "wrong_answers": [
+        "Un puente colgante",
+        "Un puente atirantado",
+        "Un puente en arco"
+      ],
+      "hints": [
+        "A los constructores de ferrocarriles del siglo XIX les encantaba este tipo de puente, y a menudo lo hacían de madera.",
+        "Fíjate bien en lo que sostiene la vía por debajo.",
+        "No tiene cables ni arco: una larga fila de torres arriostradas se apoya en el fondo del valle, y la vía va plana por encima."
+      ],
+      "fun_fact": "Este tren está subiendo el paso de Mullan, en Montana, donde el ferrocarril cruza la divisoria continental de las Montañas Rocosas.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/BNSF_westbound_oil_train_crosses_Greenhorn_Trestle%2C_Mullan_Pass_MT.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABNSF_westbound_oil_train_crosses_Greenhorn_Trestle%2C_Mullan_Pass_MT.webm",
+        "credit": "Scott Hiddelston · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Scott Hiddelston",
+        "author_url": null,
+        "excerpt": {
+          "start": 175,
+          "end": 205
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21150",
+      "status": "approved",
+      "difficulty": 5,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una canción tan emocionante que futbolistas hechos y derechos, en pantalón corto, la cantan a pleno pulmón con los ojos cerrados antes del saque inicial.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Italia",
+      "wrong_answers": [
+        "Francia",
+        "Portugal",
+        "Grecia"
+      ],
+      "hints": [
+        "Escucha a los cantantes: cantan en el idioma del propio país.",
+        "El país no se unificó hasta el siglo XIX, y esta canción se escribió durante esa lucha.",
+        "La bandera de este país es verde, blanca y roja, y su capital está al lado de Roma… bueno, es la propia Roma."
+      ],
+      "fun_fact": "La letra del himno italiano la escribió en 1847 Goffredo Mameli, con solo 20 años; por eso los italianos lo llaman a menudo «el Himno de Mameli».",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/11_ILCANTODEGLI_ITALIANI_INNO_NAZIONALE_ITALIANOCANTATO_01.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A11_ILCANTODEGLI_ITALIANI_INNO_NAZIONALE_ITALIANOCANTATO_01.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg/3840px-U.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Naval_Academy_Band_Brass_Quintet_%284311946466%29.jpg",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02"
+      }
+    },
+    {
+      "id": "q-21152",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "weather-and-climate",
+      "bundle": "base",
+      "description": "Alguien le ha dado al avance rápido del cielo, y está claro que el cielo se está luciendo.",
+      "question": "Mira: ¿qué tipo de nube está creciendo en este vídeo a cámara rápida?",
+      "answer": "Cumulonimbo",
+      "wrong_answers": [
+        "Cirro",
+        "Estrato",
+        "Nimboestrato"
+      ],
+      "hints": [
+        "Esta nube suele traer truenos y relámpagos en verano.",
+        "Cuando crece lo suficiente, su parte superior se extiende y se aplana, como el yunque de un herrero.",
+        "Su nombre une las palabras latinas para «montón» y «nube de lluvia»."
+      ],
+      "fun_fact": "Los cumulonimbos más grandes pueden superar los 15 km de altura, mucho más que el monte Everest.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Time-Lapse_Nubes_01.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-Lapse_Nubes_01.ogv",
+        "credit": "Xosema · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Xosema",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21153",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía que pone en pie a todo un estadio, incluidos los que se acababan de sentar con sus palomitas.",
+      "question": "Escucha: ¿qué país tiene esta melodía como himno nacional?",
+      "answer": "Australia",
+      "wrong_answers": [
+        "Nueva Zelanda",
+        "Canadá",
+        "Sudáfrica"
+      ],
+      "hints": [
+        "En el título del himno, los cantantes animan a su país a avanzar.",
+        "El país eligió esta canción como himno en una votación popular en 1977, y sustituyó a «God Save the Queen» como himno en 1984.",
+        "Su letra describe el país como una tierra «rodeada por el mar», y este país es todo un continente."
+      ],
+      "fun_fact": "En 2021 se cambió una palabra del himno: el verso «For we are young and free» («porque somos jóvenes y libres») pasó a ser «For we are one and free» («porque somos uno y libres»).",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/U.S._Navy_Band%2C_Advance_Australia_Fair_%28abridged%29.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AU.S._Navy_Band%2C_Advance_Australia_Fair_%28abridged%29.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/The_U.S._Army_Brass_Quintet_%283247154491%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_U.S._Army_Brass_Quintet_%283247154491%29.jpg",
+        "credit": "The United States Army Band · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "The United States Army Band",
+        "author_url": "https://www.flickr.com/people/23690396@N02"
+      }
+    },
+    {
+      "id": "q-21154",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Esta gominola ha tenido un día malísimo en el laboratorio, y quiere que todo el mundo se entere.",
+      "question": "Mira lo que pasa al echar una gominola en este tubo de sal fundida y caliente. ¿Qué tipo de reacción química es esta?",
+      "answer": "Combustión",
+      "wrong_answers": [
+        "Neutralización",
+        "Fermentación",
+        "Electrólisis"
+      ],
+      "hints": [
+        "Fíjate en el brillo intenso y escucha el rugido del tubo.",
+        "El azúcar de la gominola hace de combustible, y la sal fundida desprende muchísimo oxígeno.",
+        "Es el mismo tipo de reacción que una hoguera o la llama de una vela, solo que mucho más rápida."
+      ],
+      "fun_fact": "La sal fundida es clorato de potasio. Libera tanto oxígeno que el azúcar de una pequeña gominola arde en segundos con un chillido fuerte; por eso se llama el experimento del «osito de gominola que grita».",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Screaming_Jelly_Baby.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AScreaming_Jelly_Baby.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 25,
+          "end": 48.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21155",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "natural-phenomena",
+      "bundle": "base",
+      "description": "A esta montaña nadie le avisó de que tenía que quedarse quieta.",
+      "question": "Mira: ¿qué fenómeno natural está sepultando este pueblo de montaña bajo rocas y polvo?",
+      "answer": "Un corrimiento de tierras",
+      "wrong_answers": [
+        "Un alud de nieve",
+        "Una colada de lava",
+        "Una tormenta de arena"
+      ],
+      "hints": [
+        "Fíjate en el color de lo que se mueve: no es blanco y no brilla.",
+        "Es verano, los árboles están verdes y la masa que avanza es de barro y escombros.",
+        "Ocurre cuando la ladera empapada o agrietada de una montaña cede y se viene abajo."
+      ],
+      "fun_fact": "Esta riada de barro y rocas arrasó el pueblo suizo de Bondo en agosto de 2017, después de que se desprendieran más de 3 millones de metros cúbicos de roca de la montaña cercana, el Piz Cengalo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Bondo_Aug_2017.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABondo_Aug_2017.webm",
+        "credit": "Swiss Force One · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Swiss Force One",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21156",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Hasta un concierto imponente se merece un postre alegre al final de la comida.",
+      "question": "Escucha: ¿qué compositor escribió este concierto para piano?",
+      "answer": "Johannes Brahms",
+      "wrong_answers": [
+        "Wolfgang Amadeus Mozart",
+        "Serguéi Rajmáninov",
+        "George Gershwin"
+      ],
+      "hints": [
+        "Fíjate en cómo el piano y la orquesta se pasan una melodía ligera, elegante y casi bailable.",
+        "Nació en Hamburgo, Alemania, y vivió en Viena la mayor parte de su vida adulta.",
+        "También compuso las Danzas húngaras y una de las canciones de cuna más famosas del mundo."
+      ],
+      "fun_fact": "Este concierto tiene cuatro movimientos en lugar de los tres habituales, pero Brahms lo llamó en broma «un pequeñísimo concierto para piano con un pequeñísimo scherzo de nada».",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/NBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_4th_movement_%28Conclusion%29_-_Allegretto_grazioso_-_Hmv-db5866-2a048848.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_4th_movement_%28Conclusion%29_-_Allegretto_grazioso_-_Hmv-db5866-2a048848.flac",
+        "credit": "Johannes Brahms · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Johannes Brahms",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/CC_Japanese_pianist_playing_grand_piano_in_a_concert_hall.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACC_Japanese_pianist_playing_grand_piano_in_a_concert_hall.jpg",
+        "credit": "Musicipedia · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Musicipedia",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Musicipedia&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21157",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "planet-earth",
+      "bundle": "base",
+      "description": "Una jornada laboral entera metida en el tiempo que tardas en atarte los cordones.",
+      "question": "Mira: este vídeo a cámara rápida va del amanecer al atardecer de un solo día. ¿En qué lugar de la Tierra se grabó?",
+      "answer": "Cerca del círculo polar ártico",
+      "wrong_answers": [
+        "Cerca del polo sur",
+        "En el ecuador",
+        "En el desierto del Sahara"
+      ],
+      "hints": [
+        "Fíjate en lo alto que llega a subir el sol.",
+        "La nieve y los bosques de pinos indican un lugar con inviernos largos y fríos.",
+        "Aquí en invierno el sol apenas asoma por encima de los árboles, y en verano casi no se pone."
+      ],
+      "fun_fact": "Este día se grabó en el norte de Suecia en enero. Un poco más al norte, pasado el círculo polar ártico, hay días de invierno en los que el sol ni siquiera sale.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/66/Short_Winter_Day_Time_Lapse.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AShort_Winter_Day_Time_Lapse.webm",
+        "credit": "Jojoo64 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Jojoo64",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21158",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "País diminuto, banda enorme: que alguien tararee, por favor.",
+      "question": "Escucha: esta melodía es el himno nacional de un pequeño país europeo. ¿De cuál?",
+      "answer": "Liechtenstein",
+      "wrong_answers": [
+        "Mónaco",
+        "San Marino",
+        "Andorra"
+      ],
+      "hints": [
+        "La letra del himno empieza alabando un río que pasa junto al país.",
+        "Si la melodía te suena, seguramente la has oído en actos de la realeza británica.",
+        "El país está entre Suiza y Austria, a orillas del joven Rin."
+      ],
+      "fun_fact": "El himno de Liechtenstein, «Oben am jungen Rhein», tiene la misma melodía que el «God Save the King» británico, así que cuando Inglaterra jugó contra Liechtenstein en 2003 sonó la misma melodía dos veces antes del partido.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oben_am_jungen_Rhein%2C_by_the_U.S._Navy_Band.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOben_am_jungen_Rhein%2C_by_the_U.S._Navy_Band.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg/3840px-Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGoetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg",
+        "credit": "Asurnipal · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Asurnipal",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Asurnipal"
+      }
+    },
+    {
+      "id": "q-21159",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Ponte tus calcetines de lana más gordos y en pie: esta melodía va en serio.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Suecia",
+      "wrong_answers": [
+        "Noruega",
+        "Dinamarca",
+        "Finlandia"
+      ],
+      "hints": [
+        "Su bandera tiene una cruz.",
+        "Su capital está construida sobre 14 islas, donde un lago se junta con el mar.",
+        "Es la tierra de ABBA, IKEA y los Premios Nobel."
+      ],
+      "fun_fact": "El himno de Suecia, «Du gamla, Du fria», usa una antigua melodía popular y nunca se ha oficializado por ley: es el himno solo por tradición.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/United_States_Navy_Band_-_Sweden.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_Navy_Band_-_Sweden.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/Russia._Moscow_Region._Winter_pine_wood%2C_lake_Kratovskoe_area.JPG/3840px-Russia._Moscow_Region._Winter_pine_wood%2C_lake_Kratovskoe_area.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARussia._Moscow_Region._Winter_pine_wood%2C_lake_Kratovskoe_area.JPG",
+        "credit": "Aleks G · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "author": "Aleks G",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Aleks_G"
+      }
+    },
+    {
+      "id": "q-21161",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-music",
+      "bundle": "base",
+      "description": "Hasta la melodía más seria a veces quiere aflojarse la corbata y ponerse a bailar swing.",
+      "question": "Escucha: ¿esta versión de jazz, con la melodía tocada con soltura, se basa en el himno nacional de qué país?",
+      "answer": "Japón",
+      "wrong_answers": [
+        "China",
+        "Corea del Sur",
+        "Tailandia"
+      ],
+      "hints": [
+        "El original es lento, solemne y uno de los himnos nacionales más cortos del mundo.",
+        "Su letra procede de un poema de hace más de 1000 años que desea que el reinado de un soberano dure hasta que los guijarros se conviertan en rocas cubiertas de musgo.",
+        "La bandera del país es un simple círculo rojo sobre fondo blanco."
+      ],
+      "fun_fact": "La letra de «Kimigayo» procede de un poema de una antología de hacia el año 905, así que es de las más antiguas de cualquier himno nacional, mientras que la melodía es de 1880.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Jazzkimigayo.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AJazzkimigayo.ogg",
+        "credit": "Afrobossa · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Afrobossa",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 58
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Elegance-cafe-jazz-club-roma-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AElegance-cafe-jazz-club-roma-2025.jpg",
+        "credit": "Daria.ven · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Daria.ven",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Daria.ven&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21162",
+      "status": "approved",
+      "difficulty": 1,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Una ladrona de almuerzos con plumas y cero modales en la mesa.",
+      "question": "Mira: ¿qué ave llega y les quita el pan a las palomas?",
+      "answer": "Gaviota",
+      "wrong_answers": [
+        "Cisne",
+        "Pato",
+        "Cigüeña"
+      ],
+      "hints": [
+        "Es mucho más grande que las palomas y tiene las patas rosadas.",
+        "Se la ve mucho en la playa, volando sobre las olas.",
+        "Es famosa por robar patatas fritas y bocadillos cerca del mar."
+      ],
+      "fun_fact": "Las gaviotas pueden beber agua salada del mar, porque unas glándulas especiales encima de los ojos eliminan la sal que sobra.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Seagull_and_pigeons_eating_bread.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASeagull_and_pigeons_eating_bread.webm",
+        "credit": "Atomicdragon136 · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Atomicdragon136",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21163",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Un dron se dio un paseo turístico y, por suerte, no tuvo que pagar entrada.",
+      "question": "Mira: estos famosos acantilados, con una pequeña torre redonda de piedra en lo alto, se alzan más de 200 m sobre el Atlántico. ¿En qué país están?",
+      "answer": "Irlanda",
+      "wrong_answers": [
+        "Noruega",
+        "Portugal",
+        "Islandia"
+      ],
+      "hints": [
+        "El país es famoso por unos campos tan verdes que tiene un apodo con el color de una piedra preciosa.",
+        "Su símbolo nacional es una planta de tres hojas, y su fiesta nacional es el 17 de marzo.",
+        "Son los acantilados de Moher, en la costa oeste de la «Isla Esmeralda»."
+      ],
+      "fun_fact": "Los acantilados de Moher hicieron de «Acantilados de la Locura» en «La princesa prometida» y aparecen en «Harry Potter y el misterio del príncipe».",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cliffs_of_Moher_drone-video.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACliffs_of_Moher_drone-video.webm",
+        "credit": "Wiebe de Jager · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Wiebe de Jager",
+        "author_url": null,
+        "excerpt": {
+          "start": 30,
+          "end": 60
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21164",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "En algún lugar sobre la selva, alguien se esfuerza muchísimo por llamar la atención de todo el bosque.",
+      "question": "Escucha: ¿qué ave de los bosques del sur y el sudeste de Asia lanza este silbido fuerte y sonoro?",
+      "answer": "Culebrera chií",
+      "wrong_answers": [
+        "Pavo real común",
+        "Cucal chino",
+        "Cuco chikra"
+      ],
+      "hints": [
+        "Su grito se oye de lejos en los valles boscosos, y el ave suele repetirlo varias veces.",
+        "Tiene la piel desnuda de un amarillo intenso alrededor de los ojos y en la base del pico.",
+        "Es un ave rapaz que se alimenta sobre todo de reptiles sin patas."
+      ],
+      "fun_fact": "La culebrera chií come sobre todo serpientes, y cuando se excita levanta una cresta corta de plumas blancas y negras en la nuca.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Crested_serpent_eagle.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrested_serpent_eagle.ogg",
+        "credit": "Shajiarikkad · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Shajiarikkad",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 22
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Canopy_of_tropical_rain_forest_in_Anaimalai_hills_IMG_8537.jpg/3840px-Canopy_of_tropical_rain_forest_in_Anaimalai_hills_IMG_8537.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACanopy_of_tropical_rain_forest_in_Anaimalai_hills_IMG_8537.jpg",
+        "credit": "PJeganathan · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "PJeganathan",
+        "author_url": "https://commons.wikimedia.org/wiki/User:PJeganathan"
+      }
+    },
+    {
+      "id": "q-21165",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "space",
+      "bundle": "base",
+      "description": "Hay quien lo llama medusa espacial, pero ningún acuario lo quiere.",
+      "question": "Mira: tras la puesta de sol, la nube de gases de este cohete brilla sobre una ciudad ya a oscuras. ¿Por qué brilla?",
+      "answer": "Allí arriba aún le llega la luz del sol",
+      "wrong_answers": [
+        "Su combustible sobrante brilla en la oscuridad",
+        "Las luces de la ciudad la iluminan desde abajo",
+        "La Luna la ilumina desde arriba"
+      ],
+      "hints": [
+        "Mira el horizonte en los primeros segundos: ¿qué acaba de pasar allí?",
+        "En el suelo ya es de noche, pero la nube está a muchos kilómetros por encima de la ciudad.",
+        "Desde un lugar lo bastante alto, aún verías el Sol aunque para la gente del suelo ya se haya puesto."
+      ],
+      "fun_fact": "Esta nube brillante es del lanzamiento de la Soyuz MS-22 en 2022 y se grabó desde Karagandá, en Kazajistán, a cientos de kilómetros del cosmódromo de Baikonur.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Timelapse_of_the_Soyuz_MS-22_launch_from_Baikonur.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATimelapse_of_the_Soyuz_MS-22_launch_from_Baikonur.webm",
+        "credit": "Astrobond · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Astrobond",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21166",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "technology",
+      "bundle": "base",
+      "description": "Un avión que quiere contar todas las hojas de la selva y nunca se aburre.",
+      "question": "Mira: este avión barre la selva con un haz para crear un mapa en 3D de las copas de los árboles. ¿Cómo se llama esta técnica?",
+      "answer": "Lidar",
+      "wrong_answers": [
+        "Radar",
+        "Sonar",
+        "Termografía"
+      ],
+      "hints": [
+        "Algunos coches autónomos y móviles recientes llevan una versión pequeña.",
+        "Los arqueólogos la usaron para encontrar antiguas ciudades mayas ocultas bajo la selva de Guatemala.",
+        "Su nombre se forma igual que el del radar, pero con luz en lugar de ondas de radio."
+      ],
+      "fun_fact": "En 2018, los escaneos lidar desde aviones revelaron más de 60 000 estructuras mayas ocultas bajo la selva de Guatemala.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flying_Through_LIDAR_Canopy_Data.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AFlying_Through_LIDAR_Canopy_Data.webm",
+        "credit": "NASA's Scientific Visualization Studio · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA's Scientific Visualization Studio",
+        "author_url": null,
+        "excerpt": {
+          "start": 2,
+          "end": 32
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21167",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Una playa donde la etiqueta es de esmoquin obligatorio, hasta en el desayuno.",
+      "question": "Mira: ¿qué tipo de pingüino camina por esta playa?",
+      "answer": "Pingüino rey",
+      "wrong_answers": [
+        "Pingüino emperador",
+        "Pingüino papúa",
+        "Pingüino de Adelia"
+      ],
+      "hints": [
+        "Esta especie cría a sus polluelos en islas rocosas y con hierba cerca de la Antártida, no sobre el hielo marino.",
+        "Fíjate en las manchas de un naranja intenso a los lados de la cabeza y en el pecho.",
+        "Es el segundo pingüino más grande del mundo, justo por detrás de su primo «imperial», aún más imponente."
+      ],
+      "fun_fact": "Los pingüinos rey no hacen nido: el progenitor sostiene el huevo sobre las patas, tapado con un pliegue calentito de piel de la barriga.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/77/Time-lapse_of_Gold_Harbour%2C_South_Georgia_Island.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_of_Gold_Harbour%2C_South_Georgia_Island.webm",
+        "credit": "Blagoj Klincharski · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Blagoj Klincharski",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21169",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "ships-and-boats",
+      "bundle": "base",
+      "description": "Por aquí pasan tantos ferris que el agua nunca consigue echarse la siesta.",
+      "question": "Mira: ¿a qué océano se abre el concurrido puerto de este vídeo?",
+      "answer": "El océano Pacífico",
+      "wrong_answers": [
+        "El océano Índico",
+        "El océano Atlántico",
+        "El océano Austral"
+      ],
+      "hints": [
+        "Primero averigua qué ciudad es: un edificio de la orilla es una gran pista.",
+        "Esa ciudad está en la costa este de su país.",
+        "Es el océano más grande y profundo de la Tierra."
+      ],
+      "fun_fact": "Las velas blancas de la Ópera de Sídney están cubiertas por más de un millón de azulejos: de lejos parecen blancas sin más, pero de cerca unas son brillantes y otras mate.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Time-lapse_of_boat_and_ferry_traffic_at_Circular_Quay_on_Sydney_Harbour.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_of_boat_and_ferry_traffic_at_Circular_Quay_on_Sydney_Harbour.webm",
+        "credit": "John Heller · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "John Heller",
+        "author_url": null,
+        "excerpt": {
+          "start": 60,
+          "end": 90
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21170",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "La marea está baja, el barro está alto y aquí alguien no para de hablar del tema.",
+      "question": "Escucha: esta bandada se grabó en un estuario fangoso de Inglaterra. ¿Qué ave está llamando?",
+      "answer": "Tarro blanco",
+      "wrong_answers": [
+        "Zarapito real",
+        "Barnacla carinegra",
+        "Ostrero euroasiático"
+      ],
+      "hints": [
+        "Es un ave acuática que nada tan bien como camina por el fango.",
+        "Machos y hembras son casi iguales, y a finales del verano enormes cantidades vuelan al mar de Frisia para mudar las plumas.",
+        "Es casi todo blanco, con la cabeza verde oscuro, una banda castaña en el pecho y el pico rojo intenso."
+      ],
+      "fun_fact": "Los tarros blancos suelen criar a sus polluelos en viejas madrigueras de conejo, y las crías de varias familias pueden juntarse en grandes «guarderías» vigiladas por solo unos pocos adultos.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Common_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACommon_Shelduck_%28Tadorna_tadorna%29_%28W1CDR0001430_BD7%29.ogg",
+        "credit": "CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 14,
+          "end": 62
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Thames_Estuary_at_low_tide_from_Victoria_Wharf%2C_Old_Leigh.jpg/3840px-Thames_Estuary_at_low_tide_from_Victoria_Wharf%2C_Old_Leigh.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThames_Estuary_at_low_tide_from_Victoria_Wharf%2C_Old_Leigh.jpg",
+        "credit": "Rwendland · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Rwendland",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Rwendland"
+      }
+    },
+    {
+      "id": "q-21171",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "classical-music",
+      "bundle": "base",
+      "description": "Antes de que la estrella del espectáculo toque una sola nota, otro se aclara la garganta.",
+      "question": "Escucha el comienzo de este concierto para piano: ¿qué instrumento toca las primeras notas, antes de que responda el piano?",
+      "answer": "Trompa",
+      "wrong_answers": [
+        "Trompeta",
+        "Trombón",
+        "Fagot"
+      ],
+      "hints": [
+        "Es un instrumento de metal, pero este suena suave y cálido, no brillante.",
+        "Su tubo está enrollado en círculo y termina en una campana ancha.",
+        "Quien lo toca suele meter una mano dentro de la campana, que apunta hacia atrás."
+      ],
+      "fun_fact": "El solista de trompa de este concierto toca antes que nadie, así que es uno de los comienzos que más nervios dan en la orquesta.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/NBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_1st_movement_%28Part_1%29_-_Allegro_non_troppo_-_Hmv-db5861-2a048837.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ANBC_Symphony_Orchestra_-_Arturo_Toscanini_and_Vladimir_Horowitz_-_Piano_Concerto_No._2_in_B-flat_major%2C_Op._83_-_1st_movement_%28Part_1%29_-_Allegro_non_troppo_-_Hmv-db5861-2a048837.ogg",
+        "credit": "Johannes Brahms (1833-1897) · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Johannes Brahms (1833-1897)",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Metropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMetropolitan_Opera_House%2C_a_concert_by_pianist_Josef_Hofmann_-_NARA_541890_-_Edit.jpg",
+        "credit": "Unknown or not provided · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Unknown or not provided\n\nRetouched by Mmxx",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Mmxx"
+      }
+    },
+    {
+      "id": "q-21172",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "stars-and-galaxies",
+      "bundle": "base",
+      "description": "Alguien en el universo se olvidó de dejar de remover, y lleva así miles de millones de años.",
+      "question": "Mira: esta simulación muestra el gas de un cúmulo de galaxias. Está a millones de grados, así que brilla sobre todo en ¿qué tipo de luz?",
+      "answer": "Rayos X",
+      "wrong_answers": [
+        "Infrarrojos",
+        "Ondas de radio",
+        "Ultravioleta"
+      ],
+      "hints": [
+        "Cuanto más caliente está algo, más energética es la luz que emite.",
+        "Esta luz no atraviesa la atmósfera de la Tierra, así que el telescopio que la ve tiene que estar en el espacio.",
+        "Los médicos usan este tipo de luz para hacerte fotos de los huesos."
+      ],
+      "fun_fact": "El observatorio de rayos X Chandra de la NASA descubrió una ola gigante que recorre este tipo de gas en el cúmulo de Perseo, de unos 200 000 años luz de ancho, aproximadamente el doble que nuestra Vía Láctea.",
+      "media": {
+        "type": "video",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Gigantic_Wave_Discovered_in_Perseus_Galaxy_Cluster.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGigantic_Wave_Discovered_in_Perseus_Galaxy_Cluster.webm",
+        "credit": "NASA's Goddard Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA's Goddard Space Flight Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 21
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21173",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Hasta el techo más majestuoso necesita una red de seguridad cuando llegan los de las reparaciones.",
+      "question": "Mira: unos operarios montan andamios y una enorme red de seguridad bajo una cúpula famosa. ¿En qué edificio está esta sala circular?",
+      "answer": "El Capitolio de Estados Unidos",
+      "wrong_answers": [
+        "La basílica de San Pedro",
+        "La catedral de San Pablo",
+        "El Panteón de París"
+      ],
+      "hints": [
+        "La cúpula que cubre esta sala es de hierro fundido, no de piedra.",
+        "La pintura de lo alto de la cúpula muestra al primer presidente de un país subiendo al cielo.",
+        "El edificio está al final del National Mall, en Washington D. C."
+      ],
+      "fun_fact": "El fresco de lo más alto de la cúpula, «La apoteosis de Washington», lo pintó Constantino Brumidi en 1865 y ocupa unos 433 m².",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Time_Lapse_of_Capitol_Rotunda_Preparations_for_Capitol_Dome_Project.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_Lapse_of_Capitol_Rotunda_Preparations_for_Capitol_Dome_Project.webm",
+        "credit": "U.S. Capitol · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "U.S. Capitol",
+        "author_url": null,
+        "excerpt": {
+          "start": 2.5,
+          "end": 23.5
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21174",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "mountains",
+      "bundle": "base",
+      "description": "Un año entero de ponerse y quitarse el abrigo de invierno en tres segundos.",
+      "question": "Mira este vídeo de satélite en el que la nieve llega y se va a lo largo de un año. ¿Qué cordillera es?",
+      "answer": "Alpes",
+      "wrong_answers": [
+        "Pirineos",
+        "Cárpatos",
+        "Cáucaso"
+      ],
+      "hints": [
+        "Fíjate en el mar oscuro de abajo a la derecha: es un brazo largo y estrecho del Mediterráneo.",
+        "La tierra llana y sin nieve dentro de la curva es un ancho valle fluvial lleno de granjas y ciudades.",
+        "Su pico más alto es el Mont Blanc, en la frontera entre Francia e Italia."
+      ],
+      "fun_fact": "Los Alpes se extienden por ocho países, desde Francia y Mónaco al oeste hasta Eslovenia al este.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/92/The_Alps_Mosaic_Time-lapse_2019_%2850897563317%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Alps_Mosaic_Time-lapse_2019_%2850897563317%29.webm",
+        "credit": "SentinelHub · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": null,
+        "author": "SentinelHub",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21175",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "world-religions",
+      "bundle": "base",
+      "description": "Teatro en directo sin entradas ni palomitas, y con un público encantado de pasar toda la noche sentado en el suelo.",
+      "question": "Mira: esta escena es de un antiguo estilo de teatro de la India. ¿A qué dios hindú interpreta el hombre de la alta corona dorada?",
+      "answer": "Krishna",
+      "wrong_answers": [
+        "Rama",
+        "Shiva",
+        "Indra"
+      ],
+      "hints": [
+        "Fíjate en sus manos: sostiene algo pequeño que no es un arma.",
+        "Igual que Rama, se dice que es una forma del dios Visnú nacida en la Tierra.",
+        "Es el dios que toca la flauta, a menudo pintado con la piel azul, y que de niño robaba mantequilla."
+      ],
+      "fun_fact": "Este teatro se llama bhaona, es del estado indio de Assam y lo creó hace más de 500 años un monje y poeta llamado Srimanta Sankardev.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Bhaona-_Krishna_and_Rukmini.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABhaona-_Krishna_and_Rukmini.webm",
+        "credit": "Pranabnlp · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Pranabnlp",
+        "author_url": null,
+        "excerpt": {
+          "start": 29,
+          "end": 59
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21176",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Una melodía que pone firme a un estadio entero antes de que nadie toque el balón.",
+      "question": "Escucha: ¿de qué país es este himno nacional?",
+      "answer": "Lituania",
+      "wrong_answers": [
+        "Letonia",
+        "Estonia",
+        "Polonia"
+      ],
+      "hints": [
+        "Un solo hombre, un médico, escribió la letra y la música a finales del siglo XIX.",
+        "En este país, el baloncesto es casi una religión nacional.",
+        "Su capital es Vilna."
+      ],
+      "fun_fact": "Cada 6 de julio a las nueve de la noche, lituanos de todo el mundo cantan su himno nacional a la vez.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Tauti%C5%A1ka_giesme_instrumental.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATauti%C5%A1ka_giesme_instrumental.oga",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/26/101_Brass_Band.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A101_Brass_Band.jpg",
+        "credit": "Dailos García · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Dailos García",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Dailos_Garc%C3%ADa&action=edit&redlink=1"
+      }
+    },
+    {
+      "id": "q-21178",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "world-music",
+      "bundle": "base",
+      "description": "Una melodía tan real que seguramente espera que te levantes del sofá.",
+      "question": "Escucha: ¿de qué reino europeo es este himno real?",
+      "answer": "Dinamarca",
+      "wrong_answers": [
+        "Noruega",
+        "Países Bajos",
+        "Bélgica"
+      ],
+      "hints": [
+        "Este país tiene dos himnos oficiales: uno nacional y este, el real.",
+        "La canción ensalza a un rey que luchó en una batalla naval contra Suecia en el siglo XVII.",
+        "Su familia real es una de las más antiguas del mundo, y en su capital está la estatua de la Sirenita."
+      ],
+      "fun_fact": "La canción honra al rey Cristián IV, que siguió dando órdenes en cubierta en la batalla de Colberger Heide, en 1644, incluso después de que le hirieran en un ojo.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/United_States_Navy_Band_-_Kong_Kristian_stod_ved_h%C3%B8jen_mast.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUnited_States_Navy_Band_-_Kong_Kristian_stod_ved_h%C3%B8jen_mast.ogg",
+        "credit": "United States Navy Band · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "United States Navy Band",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Tall_ships.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATall_ships.jpg",
+        "credit": "Mikkel Houmøller · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Mikkel Houmøller",
+        "author_url": "https://commons.wikimedia.org/wiki/User:MikkelH"
+      }
+    },
+    {
+      "id": "q-21179",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "La clase de ciencias acaba de ponerse mucho más brillante, y ese cuenco de arena no es para hacer castillos.",
+      "question": "Mira: ¿qué famoso experimento de química es este?",
+      "answer": "La reacción de la termita",
+      "wrong_answers": [
+        "La pasta de dientes de elefante",
+        "La serpiente del faraón",
+        "La reacción del perro que ladra"
+      ],
+      "hints": [
+        "El combustible es un metal ligero en polvo, el mismo de las latas de refresco.",
+        "Los operarios usan esta reacción para soldar los raíles de las vías del tren.",
+        "Su nombre viene de la palabra griega para «calor», como en «termómetro»."
+      ],
+      "fun_fact": "La reacción de la termita supera los 2000 °C, tanto calor que funde el hierro que produce, y deja una bola incandescente de metal líquido.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Thermit_Reaction.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThermit_Reaction.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 86,
+          "end": 116
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21180",
+      "status": "approved",
+      "difficulty": 10,
+      "subcategory": "physics",
+      "bundle": "base",
+      "description": "Una mesa de laboratorio, un mechero y una lata que está a punto de tener un día horrible.",
+      "question": "Mira: una lata caliente con un poco de vapor dentro se vuelca boca abajo en agua fría. ¿Qué la aplasta?",
+      "answer": "El aire que la aprieta desde fuera",
+      "wrong_answers": [
+        "El vapor que escapa desde dentro",
+        "El frío que encoge el metal",
+        "La llama que ablanda el metal"
+      ],
+      "hints": [
+        "A la lata no la golpea nada que puedas ver.",
+        "Cuando el vapor de dentro se enfría, vuelve a convertirse en gotitas y casi no deja nada.",
+        "Ese mismo empujón invisible te permite beber con una pajita, y es más débil en lo alto de una montaña."
+      ],
+      "fun_fact": "Al nivel del mar, el aire empuja cada centímetro cuadrado con una fuerza de alrededor de 1 kg: como si cada uña sostuviera un paquete de azúcar de un kilo.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Crushing_can.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACrushing_can.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 30.5,
+          "end": 45.6
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21181",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "ships-and-boats",
+      "bundle": "base",
+      "description": "Meses de soldadura metidos en menos tiempo del que tardas en atarte los cordones.",
+      "question": "Mira este vídeo acelerado: ¿qué están construyendo los trabajadores?",
+      "answer": "Un barco",
+      "wrong_answers": [
+        "Un puente",
+        "Un rascacielos",
+        "Un tren"
+      ],
+      "hints": [
+        "Cuando esté terminado, no se quedará donde lo construyeron.",
+        "Fíjate en la parte delantera acabada en punta que aparece casi al final del vídeo.",
+        "Cuando el dique se llene de agua, saldrá flotando."
+      ],
+      "fun_fact": "Los grandes barcos se construyen a menudo en un dique seco, una enorme dársena que se vacía de agua para trabajar y luego se inunda para que el barco terminado salga flotando.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Time_Lapse_Video-_Construction_of_the_LNG-Ready_Tanker_MT_Ohio_at_Philly_Shipyard.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime_Lapse_Video-_Construction_of_the_LNG-Ready_Tanker_MT_Ohio_at_Philly_Shipyard.webm",
+        "credit": "Crowley Maritime · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Crowley Maritime",
+        "author_url": null,
+        "excerpt": {
+          "start": 60,
+          "end": 90
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21182",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "La receta de bizcocho que salió terrible y maravillosamente mal.",
+      "question": "Mira: se ha echado ácido concentrado sobre azúcar blanco de mesa. ¿De qué está hecha sobre todo la columna negra que sale del vaso?",
+      "answer": "Carbono",
+      "wrong_answers": [
+        "Hierro",
+        "Silicio",
+        "Calcio"
+      ],
+      "hints": [
+        "El azúcar está formado por solo tres elementos, y el ácido le roba los otros dos en forma de agua.",
+        "Ese mismo elemento es lo que queda en una tostada quemada.",
+        "La mina de los lápices y los diamantes también están hechos de este elemento."
+      ],
+      "fun_fact": "El ácido arranca el agua del azúcar con tanta fuerza que el vaso se calienta, y el vapor hincha el carbono hasta formar una torre negra y esponjosa.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Dehydration_of_Sugar.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADehydration_of_Sugar.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 46,
+          "end": 76
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21183",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Batas puestas y gafas de protección bajadas: es un espectáculo de magia, pero el mago es licenciado en Química.",
+      "question": "Mira el vaso de precipitados A: se vierte un líquido transparente sobre un indicador incoloro. ¿Qué tipo de líquido revela el cambio de color?",
+      "answer": "Una base",
+      "wrong_answers": [
+        "Un ácido",
+        "Agua pura",
+        "Una disolución de azúcar"
+      ],
+      "hints": [
+        "Los indicadores te dicen en qué lado de la escala de pH está un líquido.",
+        "Este indicador se llama fenolftaleína, y su color rosa es una señal famosa.",
+        "El jabón, la lejía o el bicarbonato disuelto en agua harían lo mismo aquí."
+      ],
+      "fun_fact": "La fenolftaleína se vuelve rosa a partir de un pH de 8,2 más o menos, pero en una base muy fuerte vuelve a quedarse incolora.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Red%2C_White%2C_Blue_%28Set_up%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed%2C_White%2C_Blue_%28Set_up%29.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 40,
+          "end": 53
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21184",
+      "status": "approved",
+      "difficulty": 15,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Un ave que se toma muy en serio el arte de quedarse quieta mirando el agua.",
+      "question": "Mira: ¿qué ave es esta, que caza en la orilla de un estanque de Nueva York?",
+      "answer": "Avetorillo panamericano",
+      "wrong_answers": [
+        "Garcita verde",
+        "Avetoro lentiginoso",
+        "Martinete común"
+      ],
+      "hints": [
+        "Es de la familia de las garzas y se esconde entre juncos y espadañas.",
+        "Fíjate en las manchas pálidas y amarillentas de sus alas y en lo delgadísimo que es.",
+        "Su primo, el avetoro lentiginoso, es mucho más grande y pardo listado. El nombre de este suena a diminutivo del suyo."
+      ],
+      "fun_fact": "Cuando se asusta, el avetorillo panamericano se queda inmóvil con el pico apuntando al cielo, y hasta se balancea con los juncos al viento para pasar desapercibido.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Least_bittern_in_Prospect_Park.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALeast_bittern_in_Prospect_Park.webm",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Rhododendrites",
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21185",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "environment",
+      "bundle": "base",
+      "description": "Un satélite de guardia contra el fuego, haciendo el turno de noche durante años sin pausa para el café.",
+      "question": "Mira: cada punto rojo de este globo es un incendio visto por un satélite. ¿En qué país arden la mayoría de estos incendios?",
+      "answer": "Brasil",
+      "wrong_answers": [
+        "Argentina",
+        "Colombia",
+        "Venezuela"
+      ],
+      "hints": [
+        "Fíjate bien en qué continente muestra el globo.",
+        "El país con más puntos ocupa casi la mitad de su continente.",
+        "Allí está la mayor parte de la selva amazónica y la ciudad de Río de Janeiro."
+      ],
+      "fun_fact": "La mayoría de los incendios en la Amazonia y sus alrededores no empiezan solos: la gente los provoca para despejar terreno para cultivos y ganado.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Forecasting_South_American_Fires.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AForecasting_South_American_Fires.ogv",
+        "credit": "NASA/Goddard Space Flight Center · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA/Goddard Space Flight Center",
+        "author_url": null,
+        "excerpt": {
+          "start": 8,
+          "end": 38
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21186",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "trains",
+      "bundle": "base",
+      "description": "Una serpiente plateada que se arrastra por medio país sin pararse nunca a echar la siesta.",
+      "question": "Mira cómo pasa este tren de pasajeros de largo recorrido. ¿Qué mueve su locomotora?",
+      "answer": "Un motor diésel",
+      "wrong_answers": [
+        "Una máquina de vapor",
+        "Una catenaria eléctrica",
+        "Un tercer carril electrificado"
+      ],
+      "hints": [
+        "Mira encima del tren: nada lo conecta a una línea eléctrica.",
+        "Escucha el rugido grave y constante cuando pasa la locomotora: ese sonido sale de la propia locomotora.",
+        "Quema el mismo tipo de combustible que la mayoría de los camiones grandes."
+      ],
+      "fun_fact": "La mayoría de las locomotoras «diésel» son en realidad diésel-eléctricas: el motor diésel mueve un generador, y unos motores eléctricos hacen girar las ruedas.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Amtrak_Lake_Shore_Limited_train_49_in_Albany_July_2026_video.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AAmtrak_Lake_Shore_Limited_train_49_in_Albany_July_2026_video.webm",
+        "credit": "4300streetcar · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "4300streetcar",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-21187",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "Una jefa de los cielos a la que nadie avisó de que su voz tenía que estar a la altura.",
+      "question": "Escucha: ¿qué ave rapaz lanza estos silbidos finos, como gañidos?",
+      "answer": "Águila real",
+      "wrong_answers": [
+        "Cóndor andino",
+        "Busardo colirrojo",
+        "Halcón peregrino"
+      ],
+      "hints": [
+        "Caza liebres, marmotas y urogallos en montañas y campo abierto de todo el hemisferio norte.",
+        "Vive en libertad en Norteamérica, Europa, Asia y el norte de África.",
+        "Es el ave que aparece comiéndose una serpiente en la bandera de México."
+      ],
+      "fun_fact": "Las águilas de verdad suenan tan flojito que en las películas suelen doblarlas con el grito áspero del busardo colirrojo.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Golden_eagle.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGolden_eagle.ogg",
+        "credit": "Bubulcus · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Bubulcus",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Lava_Cliffs_Rocky_Mountain_National_Park_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALava_Cliffs_Rocky_Mountain_National_Park_2024.jpg",
+        "credit": "Larry D. Moore · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Larry D. Moore",
+        "author_url": "https://en.wikipedia.org/wiki/User:Nv8200pa"
+      }
+    },
+    {
+      "id": "q-21188",
+      "status": "approved",
+      "difficulty": 9,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "Tocada en un piano tan diminuto que seguro que nunca ha pagado un alquiler.",
+      "question": "Escucha: ¿qué juguete de cuerda es famoso por tocar esta melodía?",
+      "answer": "Una caja sorpresa con muñeco",
+      "wrong_answers": [
+        "Una caja de música con bailarina",
+        "Un tiovivo de juguete",
+        "Un mono que toca los platillos"
+      ],
+      "hints": [
+        "Es un juguete antiguo al que le encanta sorprender a los niños.",
+        "Mientras sigues girando la manivela, la música continúa hasta que de pronto pasa algo.",
+        "Al final de la melodía, una figura, a menudo un payaso, sale disparada de dentro."
+      ],
+      "fun_fact": "La melodía es la vieja canción inglesa «Pop Goes the Weasel» («Pum, salta la comadreja»), y nadie sabe muy bien qué significa la «comadreja» de la letra.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Pop_Goes_the_Weasel_on_Toy_Piano.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APop_Goes_the_Weasel_on_Toy_Piano.mp3",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Playing_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg/3840px-Playing_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaying_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      }
+    },
+    {
+      "id": "q-21189",
+      "status": "approved",
+      "difficulty": 7,
+      "subcategory": "chemistry",
+      "bundle": "base",
+      "description": "Una botella que no se decide sobre qué ponerse hoy.",
+      "question": "Mira bien el matraz. ¿Qué gas del aire hace que vuelva el color azul?",
+      "answer": "Oxígeno",
+      "wrong_answers": [
+        "Nitrógeno",
+        "Dióxido de carbono",
+        "Hidrógeno"
+      ],
+      "hints": [
+        "Fíjate en lo que hace la persona con el matraz justo antes de que vuelva el color.",
+        "Al agitarlo, el aire atrapado encima del líquido se mezcla con él.",
+        "Los peces sacan este gas del agua con sus branquias."
+      ],
+      "fun_fact": "En este truco de la «botella azul», el azúcar del líquido va gastando el oxígeno poco a poco y el azul desaparece. Se puede repetir muchas veces, hasta que se acaba el azúcar.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Blue-bottle_reaction_%28Oscillating_reaction%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlue-bottle_reaction_%28Oscillating_reaction%29.webm",
+        "credit": "ScienceCOLA · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "ScienceCOLA",
+        "author_url": null,
+        "excerpt": {
+          "start": 68,
+          "end": 98
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21190",
+      "status": "approved",
+      "difficulty": 12,
+      "subcategory": "capital-cities",
+      "bundle": "base",
+      "description": "Alguien se apoyó en el botón del zoom cósmico y nadie tuvo valor para pararle.",
+      "question": "Mira: la cámara se acerca desde el espacio a una gran ciudad asiática y muestra cómo creció entre 1972 y 2001. ¿Qué ciudad es?",
+      "answer": "Daca",
+      "wrong_answers": [
+        "Rangún",
+        "Katmandú",
+        "Colombo"
+      ],
+      "hints": [
+        "Fíjate en dónde se detiene el zoom: justo al norte de una gran bahía del océano Índico.",
+        "La ciudad está en una tierra baja y llana cruzada por ríos enormes, y su país se inunda a menudo con el monzón.",
+        "Es la capital del país que se separó de Pakistán en 1971."
+      ],
+      "fun_fact": "A Daca se la suele llamar la capital mundial de los rickshaws: por sus calles circulan cientos de miles de rickshaws de bicicleta.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Time-lapse_of_the_urban_growth_of_Dhaka%2C_Bangladesh_as_seen_from_space_%281972_to_2001%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATime-lapse_of_the_urban_growth_of_Dhaka%2C_Bangladesh_as_seen_from_space_%281972_to_2001%29.webm",
+        "credit": "Creators · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "Creators \nAlex Kekesi (GST) [Lead]\nStuart A. Snodgrass (KBRwyle)\nScientist\nDarrel Williams (NASA/GSFC)\n\nWork by Nasa",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
     }
   ]
 }
