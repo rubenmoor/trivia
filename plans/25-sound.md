@@ -163,6 +163,19 @@ Source: Kenney UI Audio (clicks, rollovers, switches) and Kenney Digital Audio (
 | `tear` | `rasgado` | `zap1` | `spaceTrash1` |
 | `paper` | `pagina` | `phaserDown1` | `phaseJump3` |
 
+### Reveal group, round 1
+
+Source: Kenney Digital Audio (power-ups, tones, low tones), CC0, the `clean-digital` theme. Applause (`applause`, `applause-big`) keeps today's files (brief), no change. `whistle-down` is in the timed group (its task). `boom` was synth only, now recorded. Approval pending (reveal decision); alternates staged on `/sounds` ("Effects: reveal", round 1).
+
+| Cue | Installed file(s) | Source file | Alternate |
+|---|---|---|---|
+| `fanfare` | `acierto-1` … `acierto-5` (random, never twice in a row) | `threeTone1`, `threeTone2`, `powerUp1`, `powerUp3`, `powerUp12` | `pepSound2`, `powerUp8` |
+| `sad-trombone` | `error` | `lowDown` | `zapThreeToneDown`, `lowThreeTone` |
+| `boom` | `impacto` | `lowThreeTone` | `spaceTrash5` (too quiet at 1.5 s, not installed) |
+| `block` | `golpe-torre` (rate rises with the level) | `lowRandom` | `pepSound3` |
+
+- Old `fanfarria*` and `trombon-triste` files and rows gone; `golpe` stays for `splash-drop` (splash task)
+
 ## Manifest
 
 `work/sound-brief/manifest.json` (gitignored, in the main checkout; work trees symlink `work/`) lists the audition candidates that `/sounds` on `trivia-authoring` plays (`GET /api/sounds`, files at `/sounds/<file>`; `authoring/server/sounds.py`). Without a manifest the page shows «no candidates yet».
