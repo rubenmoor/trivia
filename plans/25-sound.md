@@ -201,3 +201,9 @@ The developer's picks after listening on `/sounds` (`decision 735: Sound brief, 
 
 - Lapse with the brief (applied by part 6): `decision 360: Joker sounds on the TV: approve Paso y fuera, Soplo and Hada madrina?`, `task 146: Developer check of the three new joker sounds on the TV`, `task 1865: Developer check of the fanfare variants on the TV`, `task 150: Close UI-10 in the plans`
 - Joker meanings (`decision 81: Recorded sound effects: approve on the TV?`: broom, microwave bing, fairy wand) stay; `clean-digital` has no broom: part 5's joker round finds a fitting sound within the theme or a CC0/PD/CC BY broom
+
+## Soundtracks
+
+- Shared `roll` and `victory`: kept, nothing new to find (`task 2257: New soundtracks: shared roll and victory`)
+- Files: `redoble.m4a` (drum roll, US Air Force Band) and `victoria.m4a` (Elgar, US Marine Band), both public domain, as in the brief
+- Not deleted by `task 2258: New soundtracks: old music files gone and the tally`
