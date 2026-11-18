@@ -212,6 +212,16 @@ Source: Kenney Digital Audio (lasers, space trash, pep sounds, tones), CC0, the 
 
 - Old `canon-confeti`, `bengalas`, `estrellas` files and rows gone
 
+### Timed group, round 1
+
+Source: Kenney Digital Audio (pep sounds, phase jump, high tones), CC0, the `clean-digital` theme. Heartbeat and rustle are jokers-group cues (their files `latido-grave`, `susurro-nota`) and play in timed rounds too; `padlock-close` and `fanfare` in the UI and reveal groups. `claim` has three variants (rate varies); `countdown` is one tick whose pitch rises with the level (1–3). `silbato` stays for `splash-drain` (splash task). Synth `claim` and `countdown` stay as fallback. Approval pending (timed decision); alternates staged on `/sounds` ("Effects: timed", round 1).
+
+| Cue | Installed file(s) | Source file | Alternate |
+|---|---|---|---|
+| `claim` (rate varies) | `reclamo-1`, `reclamo-2`, `reclamo-3` | `pepSound1`, `pepSound2`, `pepSound4` | `zapTwoTone`, `laser7` |
+| `countdown` (rate by level) | `cuenta-atras` | `phaseJump5` | `phaserUp5`, UI `click5` |
+| `whistle-down` | `fallo-cae` | `highDown` | `phaserDown2`, `zapTwoTone2` |
+
 ## Manifest
 
 `work/sound-brief/manifest.json` (gitignored, in the main checkout; work trees symlink `work/`) lists the audition candidates that `/sounds` on `trivia-authoring` plays (`GET /api/sounds`, files at `/sounds/<file>`; `authoring/server/sounds.py`). Without a manifest the page shows «no candidates yet».

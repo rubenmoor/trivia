@@ -1,0 +1,26 @@
+{
+ "name": "reclamo-3",
+ "library": "Kenney Digital Audio",
+ "title": "pepSound4",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "download": "",
+ "sha256": "51d4824b5a5c58aa0d7b33bd94743183e5efe40095394c6bcebf803779a22658",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "claim"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"pepSound4\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

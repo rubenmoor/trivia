@@ -1,0 +1,26 @@
+{
+ "name": "fallo-cae",
+ "library": "Kenney Digital Audio",
+ "title": "highDown",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "download": "",
+ "sha256": "b379d826591502fabc6f20d34924d9380e58ded873e15138bb7b8fe9e2003973",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "whistle-down"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"highDown\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

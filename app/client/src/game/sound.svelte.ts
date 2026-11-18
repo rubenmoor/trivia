@@ -74,6 +74,7 @@ const EFFECT_NAMES = [
   "pop-1", "pop-2", "pop-3", "tic", "whoosh-pantalla", "swoosh-pregunta", "pagina",
   "comodin-listo", "comodin-despliega", "comodin-activa", "varita-magica", "campanilla", "escoba-suave", "carta-gira",
   "corcho-sale", "cinta-atras", "sello-seco", "triturado", "latido-grave", "cristal-roto", "susurro-nota", "ficha-vuelve",
+  "reclamo-1", "reclamo-2", "reclamo-3", "cuenta-atras", "fallo-cae",
 ] as const;
 type Sample = (typeof EFFECT_NAMES)[number];
 const SAMPLE_NAMES: string[] = [
@@ -133,7 +134,9 @@ const SAMPLE_FOR: Partial<Record<Cue, [Sample | readonly Sample[], ((level: numb
   "joker-activate": ["comodin-activa"],
   "joker-armed": ["comodin-listo"],
   "joker-open": ["comodin-despliega"],
-  "whistle-down": ["silbato"],
+  "whistle-down": ["fallo-cae"],
+  claim: [["reclamo-1", "reclamo-2", "reclamo-3"], () => 0.95 + Math.random() * 0.1],
+  countdown: ["cuenta-atras", (level) => 0.9 + level * 0.15],
   shredder: ["triturado"],
   heartbeat: ["latido-grave"],
   rewind: ["cinta-atras"],
