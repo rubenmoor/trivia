@@ -143,3 +143,45 @@ async function menus(lang, saveDir, data, ui) {
   await sleep(1200);
   await shoot(lang, "bundles");
 }
+
+// Main ---------------------------------------------------------------------------------------
+
+async function main() {
+  if (!existsSync(path.join(REPO, "app", "client", "dist", "index.html"))) throw new Error("client not built: npm run build");
+  const es = loadData("es");
+  for (const id of Object.values(Q)) {
+    const url = es.byId.get(id)?.media?.file_url;
+    if (!url) throw new Error(`${id}: not in the pool or no media; pick another in Q`);
+    if (!existsSync(path.join(MEDIA, cacheName(url)))) throw new Error(`${id}: media not cached: trivia-media sync --status approved`);
+  }
+
+  // dev user: saves and flags on under the gate (plan 87), no notice
+  const shell = await launchShell({ name: "shots", width: W, height: H, visible, env: { TRIVIA_DEV_STEAM_USER: "1" } });
+  const tmp = shell.saveDir;
+  try {
+    page = shell.page;
+    ({ evaluate, waitFor, click } = pageHelpers(page));
+    await page.send("Emulation.setDeviceMetricsOverride", { width: W, height: H, deviceScaleFactor: 1, mobile: false });
+
+    const followUp = [];
+    for (const ui of LANGS) {
+      console.log(ui);
+      await rm(path.join(OUT, ui), { recursive: true, force: true });
+      await mkdir(path.join(OUT, ui), { recursive: true });
+      const own = loadData(ui.split("-")[0]);
+      const data = own ?? es; // menu shots on the es pool show no question text
+      if (own) await gameplay(ui, tmp, data, ui);
+      else followUp.push(ui);
+      await menus(ui, tmp, data, ui);
+    }
+    console.log(`${shots.length} screenshots in ${path.relative(REPO, OUT)}/`);
+    if (followUp.length) console.log(`no question pool for ${followUp.join(", ")}: the 2 question shots skipped (decision 80); re-run once it lands`);
+  } finally {
+    await shell.stop();
+  }
+}
+
+main().catch((e) => {
+  console.error(`screenshots: ${e.message}`);
+  process.exitCode = 1;
+});
