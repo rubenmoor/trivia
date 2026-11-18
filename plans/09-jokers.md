@@ -132,7 +132,7 @@ stateDiagram-v2
 (Locked → any joker unlocks first, then follows the arrows from Answering.)
 
 ## Sound assets (add to the starter list in 04)
-Joker activate shimmer; token pop-back; hint ding + paper; sweep whoosh; stamp thump; shredder; card flip; descending slide whistle; rising swoosh; category tile tick; heartbeat loop; scope tick; popgun/dart shot; glass shatter; «¡Ups!» sting; rewind whirr. Decision 81 (2026-10-17): Paso y fuera sweeps with a broom (`barrido`), Soplo bings like a microwave (`microondas`, then the rustle), Hada madrina sprinkles fairy dust with a wand (`varita`); the cues are `broom`, `bing`, `wand`. Same licensing rules as all UI audio (D-22).
+Joker activate shimmer; token pop-back; hint ding + paper; sweep whoosh; stamp thump; shredder; card flip; descending slide whistle; rising swoosh; category tile tick; heartbeat loop; scope tick; popgun/dart shot; glass shatter; «¡Ups!» sting; rewind whirr. Decision 81 (2026-10-17): Paso y fuera sweeps with a broom (`broom`), Soplo bings like a microwave (`bing`, then the rustle), Hada madrina sprinkles fairy dust with a wand (`wand`); the cues are `broom`, `bing`, `wand`. Same licensing rules as all UI audio (D-22).
 
 ## Tasks
 - [x] JK-1 Confirm the joker rules with the developer. *2026-10-06: unlimited uses, one hint per Soplo, no extra cost for a Snipe hit, "category" = subcategory, seen questions burned per player (D-27, D-28). Names and keys: D-30 (the developer left the names to us); animations as planned below.*

@@ -58,6 +58,16 @@ class Sfx(unittest.TestCase):
             return float(e.split("mean_volume:")[1].split()[0])
         self.assertLess(mean(sfx.duration(f) - 0.02), mean(0.2) - 6)
 
+    def test_peaky_clip_reaches_loudness(self):
+        # quiet noise with one loud click: the peak would stop the gain without the limiter
+        ff("-f", "lavfi", "-i", "anoisesrc=d=0.8:c=pink:r=44100:a=0.02", "-f", "lavfi", "-i", "sine=f=800:d=0.01:r=44100",
+           "-filter_complex", "[1]apad=whole_dur=0.8[c];[0][c]amix=inputs=2:duration=first:normalize=0", str(self.src))
+        self.assertEqual(self.rec()[0], 0)
+        self.assertEqual(self.run_cli("convert", "tono")[0], 0)
+        lufs, tp = sfx.measure(sfx.out_path("tono"))
+        self.assertAlmostEqual(lufs, -16, delta=1)
+        self.assertLessEqual(tp, -1.5)
+
     def test_short_clip_peak_normalised(self):
         self.rec("corto", "CC0-1.0", "--start", "0.5", "--end", "0.7")  # 0.2 s: no integrated loudness
         code, _, err = self.run_cli("convert", "corto")

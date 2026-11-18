@@ -1,0 +1,26 @@
+{
+ "name": "latido-grave",
+ "library": "Kenney RPG Audio",
+ "title": "dropLeather",
+ "author": "Kenney",
+ "page": "https://opengameart.org/content/50-rpg-sound-effects",
+ "download": "",
+ "sha256": "097e1d3b74949b0145fda0519d40b7e0773ab82ec4858727f95be830927e1a45",
+ "downloaded": "2026-11-18",
+ "licence": {
+  "spdx": "CC0-1.0",
+  "read_on_page": "2026-11-18"
+ },
+ "cues": [
+  "heartbeat"
+ ],
+ "class": "effect",
+ "stereo": false,
+ "cut": {
+  "start": null,
+  "end": null,
+  "gain_db": null
+ },
+ "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
+ "credit": "\"dropLeather\" by Kenney (https://opengameart.org/content/50-rpg-sound-effects), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+}

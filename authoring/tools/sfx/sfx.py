@@ -165,6 +165,21 @@ def convert(rec: dict, src: Path, dst: Path):
         norm = f"loudnorm=I={TARGET_LUFS}:TP={TRUE_PEAK}:LRA=11"
         err = ffmpeg("-i", str(trimmed), "-af", f"{fade},{norm}:print_format=json", "-f", "null", "-")
         m = json.loads(err[err.rindex("{"):err.rindex("}") + 1])
+        need = TARGET_LUFS - float(m["input_i"])
+        if float(m["input_tp"]) + need > TRUE_PEAK - 0.4:  # peaky clip: gain, then a limiter; re-encode until it fits
+            ceil = TRUE_PEAK - 1.5
+            for _ in range(10):
+                ffmpeg("-i", str(trimmed), "-af", f"{fade},volume={need:.2f}dB,alimiter=limit={10 ** (ceil / 20):.4f}:level=disabled",
+                       "-c:a", "aac", "-b:a", "80k", "-ar", "44100", "-ac", ch, str(dst))
+                lufs, tp = measure(dst)
+                if abs(lufs - TARGET_LUFS) <= 0.8 and tp <= TRUE_PEAK - 0.1:
+                    break
+                if tp > TRUE_PEAK - 0.1:
+                    ceil -= tp - TRUE_PEAK + 0.4
+                if abs(lufs - TARGET_LUFS) > 0.8:
+                    need += TARGET_LUFS - lufs
+            trimmed.unlink()
+            return
         lin = (f"{norm}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
                f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
         ffmpeg("-i", str(trimmed), "-af", f"{fade},{lin}", "-c:a", "aac", "-b:a", "80k", "-ar", "44100", "-ac", ch, str(dst))
