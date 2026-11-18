@@ -13,6 +13,7 @@ import paths as app_paths  # noqa: E402  (authoring/tools/paths.py)
 SOURCE_POOL = AUTHORING / "data" / "questions.json"  # every question, with reviews and pipeline fields
 TARGETS = AUTHORING / "data" / "targets.json"  # pool targets per bundle (D-53)
 HEALTH_ACKS = AUTHORING / "data" / "health-acks.json"  # the developer's acks of failing batches (plan 15, D-55)
+AUDIO_CREDITS = REPO / "app" / "client" / "public" / "audio" / "CREDITS.md"  # rows read by app/client/credits.ts
 MUSIC_RECORDS = AUTHORING / "data" / "music"  # one provenance record per library track (plan 221)
 SPOT_CHECKS = AUTHORING / "data" / "spot-checks.json"  # human spot checks per batch (plan 16)
 ENGLISH_KEYS = AUTHORING / "data" / "english-keys.json"  # English answer + concept per non-en source (decision 232)

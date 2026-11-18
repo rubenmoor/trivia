@@ -157,5 +157,89 @@ class Loop(unittest.TestCase):
             self.assertEqual(len(ml.reasons({**ok, k: v}, 100.0)), 1, k)
 
 
+class Checks(Loop):
+    """check and credits on exported fixture files."""
+
+    def exported(self, i="fix-chk"):
+        st = stems()
+        st["other"] = st["other"] + np.random.default_rng(1).normal(0, 0.03, st["other"].shape).astype("float32")  # real music has highs
+        self.make(i, st)
+        self.assertEqual(self.cli("loop", i)[0], 0)
+        self.out = self.d / "out"
+        code, o, err = self.cli("export", i, str(self.out), "--variant", "normal=bass+other", "--variant", "quiet=+drums-6",
+                                "--variant", "submitted=full")
+        self.assertEqual(code, 0, o + err)
+        return i
+
+    def replace(self, name, x):
+        music.encode(x, self.out / f"musica-fix-{name}.m4a")
+
+    def fails(self, i, text):
+        code, o, err = self.cli("check", i)
+        self.assertEqual(code, 1, o + err)
+        self.assertIn(text, err)
+
+    def test_check_passes(self):
+        i = self.exported()
+        code, o, err = self.cli("check", i)
+        self.assertEqual(code, 0, o + err)
+
+    def test_check_too_loud(self):
+        i = self.exported()
+        self.replace("normal", ml.decode(self.out / "musica-fix-normal.m4a") * 2.5)
+        self.fails(i, "true peak")
+        self.fails(i, "LUFS outside")
+
+    def test_check_clicking_seam(self):
+        i = self.exported()
+        x = ml.decode(self.out / "musica-fix-normal.m4a")
+        self.replace("normal", x + np.linspace(0, 0.3, len(x), dtype="float32")[:, None])
+        self.fails(i, "normal: seam jump")
+
+    def test_check_unequal_length(self):
+        i = self.exported()
+        self.replace("quiet", ml.decode(self.out / "musica-fix-quiet.m4a")[:-SR])
+        self.fails(i, "differ in length")
+
+    def test_check_nc_licence(self):
+        i = self.exported()
+        rec = music.load(i)
+        rec["licence"]["spdx"] = "CC-BY-NC-4.0"
+        music.save(rec)
+        self.fails(i, "not allowed")
+
+    def test_credits(self):
+        self.exported()
+        f = self.d / "CREDITS.md"
+        hand = "# Audio credits\n\n| File | Used for | Source | Author | Licence |\n|---|---|---|---|---|\n| `a.m4a` | x | y | z | CC0 |\n"
+        f.write_text(hand)
+        with mock.patch.object(music.layout, "AUDIO_CREDITS", f):
+            self.assertEqual(self.cli("credits", "--check")[0], 1)  # record without a row
+            self.assertEqual(self.cli("credits")[0], 0)
+            self.assertEqual(self.cli("credits", "--check")[0], 0)
+            text = f.read_text()
+            self.assertTrue(text.startswith(hand))
+            rows = [ln for ln in text.splitlines() if ln.startswith("| `musica-")]
+            self.assertEqual(len(rows), 3)
+            for ln in rows:  # the 5-cell shape app/client/credits.ts parses
+                self.assertEqual(len(ln.split("|")[1:-1]), 5)
+            self.assertIn("[Fix](https://x/p) (other)", rows[0])
+            self.assertIn("adapted", rows[0])
+            self.assertEqual(self.cli("credits")[0], 0)  # idempotent
+            self.assertEqual(f.read_text(), text)
+            f.write_text(text.replace("musica-fix-normal", "musica-fix-gone"))
+            code, o, err = self.cli("credits", "--check")
+            self.assertEqual(code, 1)
+            self.assertIn("row without a record", err)
+            self.assertIn("record without a row", err)
+
+    def test_credits_today_passes(self):
+        # no records: today's CREDITS.md passes unchanged
+        self.assertEqual(self.cli("credits", "--check")[0], 0)
+        before = music.layout.AUDIO_CREDITS.read_text()
+        self.assertEqual(self.cli("credits")[0], 0)
+        self.assertEqual(music.layout.AUDIO_CREDITS.read_text(), before)
+
+
 if __name__ == "__main__":
     unittest.main()

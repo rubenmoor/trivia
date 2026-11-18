@@ -49918,7 +49918,7 @@ What:
 - Test on task 2236''s fixture: three variants, equal sample length after decode, loudness rising base → full
 
 Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:31Z', '2026-11-18T21:30:19Z', 2233, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2238, 221, 'Music pipeline: hard checks and generated credits', 'work', 'open', NULL, NULL, 'Part 5 of `plan 221: Music pipeline`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2238, 221, 'Music pipeline: hard checks and generated credits', 'work', 'done', NULL, '2026-11-18, authoring/tools/music/music.py, authoring/tools/music/test_music_loop.py, authoring/tools/layout.py', 'Part 5 of `plan 221: Music pipeline`.
 
 What:
 - `trivia-music check <id>`, exit 0/1, per exported file: integrated loudness of the fullest variant -18 ±0.5 LUFS; every file true peak ≤ -1.5 dBTP; seam click (last vs first sample against the mean step, ≤ 3, measured after AAC decode with the encoder padding cut at `loop_s`); all variants the same length; length 10–300 s; licence allowed (`decision 733: Reworked game audio: CC0, public domain or CC BY only, no audio generators`)
@@ -49926,7 +49926,7 @@ What:
 - Keep the table format that `app/client/credits.ts` and the release-check credits step (`authoring/steam/release_check.py`) read; no artist-endorsement wording
 - Tests: a clicking seam, a too-loud file, unequal lengths and an NC licence fail; a row is generated from a record; `credits --check` passes on today''s `CREDITS.md` (no records yet); `credits.ts` and the release-check credits step still parse the table with markers
 
-Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:32Z', NULL, 2233, 0, NULL, 'app');
+Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:32Z', '2026-11-18T21:39:32Z', 2233, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2239, 221, 'Music pipeline: end-to-end run on one track', 'work', 'open', NULL, NULL, 'Part 6 of `plan 221: Music pipeline`: prove the whole chain on one real track.
 
 What:
@@ -60310,6 +60310,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2467, 2235, '2026-11-18T21:16:45Z', '2026-11-18T21:20:03Z', 'done', NULL, 0, 'b63e702f0d8502a9d3ac075a9aa90e576f44c85f', 'app', 'claude-sonnet-5-5', '2162d840-90c6-44b5-8f82-16bb9483546d', 2466, 8, 16, 5790, 747431, 25258, 0.67828250000000012, 100992, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2468, 2236, '2026-11-18T21:20:04Z', '2026-11-18T21:26:28Z', 'done', NULL, 0, '302450e2d0b1ebfcce4b6037644ac12e22b68655', 'app', 'claude-opus-5-5', '91bb0f47-76d6-44c3-bc12-8fea5c6c337a', NULL, 20, 34, 20370, 1094815, 68395, 1.1736589999999998, 83554, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2469, 2237, '2026-11-18T21:26:28Z', '2026-11-18T21:30:25Z', 'done', NULL, 0, 'acf2203fca7e0e00932785ec39f348c8a2b44424', 'app', 'claude-sonnet-5-5', 'a2a8e69d-ac66-4bc8-9355-88ead0b052e8', NULL, 16, 28, 12236, 843446, 63169, 0.45943660000000003, 78111, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2470, 2238, '2026-11-18T21:30:26Z', '2026-11-18T21:39:40Z', 'done', NULL, 0, 'c426f05fba4ae81fbc6b2742cafb733bb3e36530', 'app', 'claude-sonnet-5-5', 'a2a8e69d-ac66-4bc8-9355-88ead0b052e8', 2469, 17, 34, 16153, 1719716, 35234, 0.9339422, 113404, 60, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
