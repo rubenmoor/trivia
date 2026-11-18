@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "ef5ec95a",
+  "hash": "542e1b89",
   "questions": [
     {
       "id": "q-0001",
@@ -214527,6 +214527,41 @@
       }
     },
     {
+      "id": "q-21040",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "food-history",
+      "bundle": "base",
+      "description": "The world's oldest slow cooker, run by a man who never needs oven gloves.",
+      "question": "Watch: what is the tool called that the man uses to move the loaves?",
+      "answer": "A peel",
+      "wrong_answers": [
+        "A ladle",
+        "A trowel",
+        "A rake"
+      ],
+      "hints": [
+        "With it, a baker can reach deep into a very hot oven without burning his arms.",
+        "It has a long handle and a wide, flat blade, often made of wood.",
+        "The same tool slides pizzas in and out of wood-fired pizza ovens."
+      ],
+      "fun_fact": "Bakers often dust a peel with flour or semolina so the raw dough slides off without sticking.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Puerto_del_Rosario_-_Tefia_-_La_Alcogida_-_bread_baking_%28oT%29_03.ogv?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APuerto_del_Rosario_-_Tefia_-_La_Alcogida_-_bread_baking_%28oT%29_03.ogv",
+        "credit": "Frank Vincentz · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Frank Vincentz",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-21041",
       "status": "approved",
       "difficulty": 8,
@@ -215728,6 +215763,44 @@
         "excerpt": {
           "start": 130,
           "end": 160
+        }
+      },
+      "background": null
+    },
+    {
+      "id": "q-21079",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "traditional-dress",
+      "bundle": "base",
+      "description": "Night falls, the drum starts, and one outfit steals the whole show.",
+      "question": "Watch: what garment is the dancer in red wearing?",
+      "answer": "Sari",
+      "wrong_answers": [
+        "Kimono",
+        "Hanbok",
+        "Dirndl"
+      ],
+      "hints": [
+        "People wear it to weddings and also to everyday work.",
+        "It is one long piece of unstitched cloth, often 5 to 8 m (16 to 26 ft) long, wrapped around the body.",
+        "It is the classic dress of women in India, Nepal and Bangladesh."
+      ],
+      "fun_fact": "A sari can be draped in more than 80 different ways, and the style often changes from one region of India to the next.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Kanyapu_Nalike.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AKanyapu_Nalike.webm",
+        "credit": "Bharathesha Alasandemajalu · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Bharathesha Alasandemajalu",
+        "author_url": null,
+        "excerpt": {
+          "start": 10,
+          "end": 40
         }
       },
       "background": null
