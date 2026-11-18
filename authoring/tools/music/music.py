@@ -2,8 +2,8 @@
 """Library music into loop files (plan 221); `trivia-music` runs this. Standard library only.
 
 Ported from the sibling project's tools/audio/music.py and spikes/music-library/setup.sh
-(~/code/three-days-until-release, decision 199: no import across repos). Later steps (loop, export, check,
-credits) are added by their own tasks.
+(~/code/three-days-until-release, decision 199: no import across repos). `loop` imports music_loop.py (numpy,
+librosa, soundfile). Later steps (export, check, credits) are added by their own tasks.
 
   search [--feel F] [--bpm LO-HI] [--instrument I] [--min-length S]   incompetech catalogue
   fetch <title> <id>                       incompetech download to work/music/<id>/original.mp3 + record
@@ -11,6 +11,8 @@ credits) are added by their own tasks.
   record <id> --licence SPDX --read-on-page                            confirm the licence read on the track page
   setup                                    Demucs venv work/music/venv (uv, torch, demucs 4.1; CUDA if the driver is there)
   split <id>                               Demucs htdemucs: drums, bass, other, vocals -> work/music/<id>/stems/htdemucs/
+  loop <id> [--bars 8] [--bpm B] [--whole] N-bar loop of the stems (--whole: of the unsplit mix), sum at -18 LUFS
+                                           -> work/music/<id>/loop/*.wav, info.json, the record's loop slot; exit 1 = rejected
 
 <id> is <set>-<piece>, lower case, e.g. carefree-try. Records: authoring/data/music/<id>.json (committed).
 Work files: work/music/<id>/ (gitignored). Licences: CC0, PD, CC BY 3.0/4.0 only (decision 733); no Freesound API
@@ -295,6 +297,52 @@ def cmd_split(a) -> int:
     return 0
 
 
+def stems_dir(i: str) -> Path:
+    return work_dir(i) / "stems" / "htdemucs"
+
+
+def listed_bpm(rec: dict) -> float | None:
+    try:
+        return float(rec.get("listed", {}).get("bpm") or 0) or None
+    except ValueError:
+        return None
+
+
+LOOP_KEYS = ("bpm", "bars", "whole", "start_s", "start_bar", "downbeat_s", "loop_s", "gain_db", "lufs", "true_peak",
+             "comb_score", "repeat_similarity", "seam_jump_vs_mean_step")
+
+
+def cmd_loop(a) -> int:
+    check_id(a.id)
+    rec = load(a.id)
+    require_confirmed(rec)
+    listed = listed_bpm(rec)
+    hint = a.bpm or listed
+    if not hint:
+        die(f"{a.id}: no listed bpm in the record: pass --bpm", 2)
+    if not a.whole and not all((stems_dir(a.id) / f"{s}.wav").is_file() for s in STEMS):
+        die(f"no stems in {stems_dir(a.id)}: run `trivia-music split {a.id}` or pass --whole", 2)
+    import music_loop as ml  # numpy, librosa, soundfile: only this step needs them
+    t0 = time.time()
+    layers = {"full": ml.decode(original(a.id))} if a.whole else ml.load_stems(stems_dir(a.id))
+    loops, info = ml.find(layers, hint, a.bars, listed)
+    info["seconds"] = round(time.time() - t0, 1)
+    out = work_dir(a.id) / "loop"
+    shutil.rmtree(out, ignore_errors=True)
+    if not info["rejected"]:
+        ml.write(loops, info, out, work_dir(a.id) / "info.json")
+    else:
+        (work_dir(a.id) / "info.json").write_text(json.dumps(info, indent=1) + "\n")
+    rec["loop"] = {} if info["rejected"] else {k: info[k] for k in LOOP_KEYS}
+    rec["exports"] = {}  # a new cut invalidates old exports
+    save(rec)
+    print(json.dumps(info))
+    if info["rejected"]:
+        die(f"{a.id}: loop rejected: " + "; ".join(info["rejected"]))
+    print(f"loop {a.id}: {info['bars']} bars at {info['bpm']} bpm, {info['loop_s']} s -> {out}")
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="trivia-music", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -309,8 +357,11 @@ def main(argv=None) -> int:
     p.add_argument("--library"); p.add_argument("--download"); p.add_argument("--bpm"); p.add_argument("--feel")
     p = sub.add_parser("setup", help="make the Demucs venv"); p.add_argument("--force", action="store_true")
     p = sub.add_parser("split", help="Demucs layer split"); p.add_argument("id")
+    p = sub.add_parser("loop", help="find the loop, level it"); p.add_argument("id")
+    p.add_argument("--bars", type=int, default=8); p.add_argument("--bpm", type=float, help="tempo hint (default: listed)")
+    p.add_argument("--whole", action="store_true", help="no stems: one cut over the original mix")
     a = ap.parse_args(argv)
-    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split}[a.cmd](a)
+    return {"search": cmd_search, "fetch": cmd_fetch, "record": cmd_record, "setup": cmd_setup, "split": cmd_split, "loop": cmd_loop}[a.cmd](a)
 
 
 if __name__ == "__main__":

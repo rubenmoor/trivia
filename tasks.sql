@@ -49895,7 +49895,7 @@ What:
 - Test in `test_music.py`: argument and path handling, GPU/CPU pick, refusal without venv or licence; no model run in `npm test`
 
 Done when: tests pass; one real `setup` + `split` on a local CC BY or CC0 file done and its time (GPU or CPU) written in the `pm task done` note; per-commit checks pass.', '2026-11-18T20:42:22Z', '2026-11-18T21:19:57Z', 2233, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2236, 221, 'Music pipeline: loop finder', 'work', 'open', NULL, NULL, 'Part 3 of `plan 221: Music pipeline`.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2236, 221, 'Music pipeline: loop finder', 'work', 'done', NULL, '2026-11-18, authoring/tools/music/music_loop.py (port of the sibling''s tools/audio/music_loop.py), music.py loop [--bars] [--bpm] [--whole] (work/music/<id>/loop/*.wav + info.json, the record''s loop slot, cleared with exports on reject; also downbeat_s, start_bar, lufs, true_peak for the export step), test_music_loop.py in npm test (synthetic 100 bpm stems: 100.001 bpm, similarity 1.0, -18.0 LUFS; drift 88->112 rejected: comb 0.39, bpm 103.2; --whole). Real run on Carefree stems (task 2235): 8 bars at 96.000 bpm, 20.0 s from 165.7 s, similarity 0.991, seam 2.88, comb 2.2, gain +4.1 dB, -18.0 LUFS / -5.0 dBTP, 5 s. --whole on the mix: similarity 0.992 but seam 4.56 > 3, rejected; follow-up task added for a seam measure robust at downbeats. bpm search ±5 % of the hint (sibling ±3 %), so the 3 % reject can fire.', 'Part 3 of `plan 221: Music pipeline`.
 
 What:
 - Port `~/code/three-days-until-release/tools/audio/music_loop.py` (and the parts of `spikes/music-library/loopify.py` it uses) to `authoring/tools/music/music_loop.py` (numpy, librosa, soundfile); header names the source
@@ -49905,7 +49905,7 @@ What:
 - Rejects (exit 1, reason printed): `repeat_similarity` < 0.8, seam jump > 3, `comb_score` < 1.5, fitted bpm > 3 % off the listed one, loop < 10 s or > 300 s
 - Test on a synthetic fixture made in the test (numpy or ffmpeg: 100 bpm kick + bass + tone, ~40 s, as fake stems): fitted bpm 100 ±0.01, similarity ≥ 0.8, sum -18 ±0.2 LUFS; a drifting-tempo fixture is rejected; `--whole` on the mixed fixture; in `npm test` with a Python that has numpy/librosa/soundfile (as set up in task 2234)
 
-Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:22Z', NULL, 2233, 0, 'opus', 'app');
+Done when: tests pass in `npm test`; per-commit checks pass.', '2026-11-18T20:42:22Z', '2026-11-18T21:25:59Z', 2233, 0, 'opus', 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2237, 221, 'Music pipeline: variant export', 'work', 'open', NULL, NULL, 'Part 4 of `plan 221: Music pipeline`, on the loop data of task 2236.
 
 What:
@@ -50251,6 +50251,15 @@ What:
 - On approve: `pm decision consequences` (what shipped: sets, default, effect sources, mix, budget); plans/04 and `plans/25-sound.md` noted; the answer ends `milestone 22: rework all sound + music` (tell the developer in the done note: milestones are theirs)
 
 Done when: the developer approved; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass for any change.', '2026-11-18T20:50:15Z', NULL, 2259, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2266, 221, 'Music pipeline: seam metric robust at downbeats', 'work', 'open', NULL, NULL, 'Found by `task 2236: Music pipeline: loop finder`.
+
+What:
+- `seam_jump_vs_mean_step` (`authoring/tools/music/music_loop.py` `seam_jump`, ported from the sibling) compares the one sample step across the seam with the mean step over the whole loop. The loop is cut on a downbeat, where a kick attack makes natural steps 3-5x the mean, so a clean seam can fail the limit of 3
+- Seen 2026-11-18 on "Carefree" (`trivia-music loop carefree-try --whole`): similarity 0.992, seam 4.56 → rejected; the split run of the same track: 2.88, just under the limit
+- Fix: measure the seam step against the steps of the original track at the same place (e.g. the step at the seam ÷ the step from sample s0+L-1 to s0+L in the uncut layer sum, or against the local mean step in a few ms around the seam), so only a jump the music doesn''t have itself counts; use the same measure in `check` (`task 2238: Music pipeline: hard checks and generated credits`, decoded AAC)
+- Plan 221''s limit (seam ≤ 3) stays; update its wording in the plan if the measure changes
+
+Done when: the whole Carefree loop and the fixtures in `authoring/tools/music/test_music_loop.py` pass; a test with a real click (a step inserted at the seam) still fails; per-commit checks pass.', '2026-11-18T21:25:59Z', NULL, 2236, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -60299,6 +60308,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2465, 2232, '2026-11-18T21:08:10Z', '2026-11-18T21:09:25Z', 'blocked', NULL, 0, 'dc1cf2d54bae142d1c79444509b4bf20fff3ab54', 'app', 'claude-opus-5-5', '77795d3b-d408-46a2-a71e-61d13f39d5b7', NULL, 9, 18, 4767, 447702, 47180, 0.5623924, 61529, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2466, 2234, '2026-11-18T21:09:25Z', '2026-11-18T21:16:45Z', 'done', NULL, 0, 'dc1cf2d54bae142d1c79444509b4bf20fff3ab54', 'app', 'claude-sonnet-5-5', '2162d840-90c6-44b5-8f82-16bb9483546d', NULL, 15, 28, 11732, 841514, 60762, 0.44457539999999995, 75667, 60, 3487406);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2467, 2235, '2026-11-18T21:16:45Z', '2026-11-18T21:20:03Z', 'done', NULL, 0, 'b63e702f0d8502a9d3ac075a9aa90e576f44c85f', 'app', 'claude-sonnet-5-5', '2162d840-90c6-44b5-8f82-16bb9483546d', 2466, 8, 16, 5790, 747431, 25258, 0.67828250000000012, 100992, 60, 3487406);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2468, 2236, '2026-11-18T21:20:04Z', '2026-11-18T21:26:28Z', 'done', NULL, 0, '302450e2d0b1ebfcce4b6037644ac12e22b68655', 'app', 'claude-opus-5-5', '91bb0f47-76d6-44c3-bc12-8fea5c6c337a', NULL, 20, 34, 20370, 1094815, 68395, 1.1736589999999998, 83554, 60, 3487406);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
