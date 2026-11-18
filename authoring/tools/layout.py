@@ -28,6 +28,7 @@ WORK = Path(os.environ.get("TRIVIA_WORK") or REPO / "work")  # gitignored pipeli
 DEMO_WORK = WORK / "demo"  # qgen demo --propose's proposal (plan 174)
 GALLERY = WORK / "gallery"  # trivia-gallery's shots and manifest (plan 100)
 GALLERY_DEMO = WORK / "gallery-demo"  # the same for trivia-gallery --demo (plan 176)
+SOUND_BRIEF = WORK / "sound-brief"  # audition candidates for /sounds (plan 220)
 CANDIDATES = WORK / "media"  # Commons candidates per question
 EXPORT = app_paths.POOL  # what the game reads: app/data/pool.json
 AGE_GROUPS = app_paths.AGE_GROUPS  # age groups and the focus group (D-38)

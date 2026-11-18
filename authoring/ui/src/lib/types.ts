@@ -358,3 +358,21 @@ export interface UiFlag {
   /** Set by the fix pass. */
   fixed_on?: string;
 }
+
+/** One audition candidate of work/sound-brief/manifest.json (plans/25-sound.md "Manifest"); direction for effects, mood for music. */
+export interface SoundCandidate {
+  file: string;
+  group: "effects" | "music";
+  direction?: string;
+  mood?: string;
+  round: number;
+  stands_for: string;
+  source: string;
+  author: string;
+  licence: string;
+  length_s: number;
+  lufs: number;
+  true_peak_db: number;
+  centroid_hz: number;
+  bpm?: number;
+}
