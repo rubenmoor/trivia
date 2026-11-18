@@ -1,0 +1,96 @@
+# tr-es-24
+
+Made by `qgen batch --translate es` on 2026-11-18 (plan 66, D-81): `base` questions translated into Spanish (Latin America). Generated file: don't edit by hand.
+
+- Sources: 102 (0 stale re-translated)
+- Translated: 102
+- Approved: 101
+- Needs work: 1
+- Not travelling: 0 (0 confirmed → `translatable: false`, 0 translated again next run)
+- Claude calls: 247, about $15.27 at list price; $0.12 per approved translation (without the audit)
+- Review (optional): http://127.0.0.1:8001/review?batch=tr-es-24&locale=es
+
+## Health
+
+Translation run health (plan 66): this run and the two before it of the same locale, ✓/✗ against the thresholds that apply to translations (`health.py`); audit/review agreement only counts from the spot-check size on. A ✗ is reported, never a stop (decision 414); `qgen health ack` records the developer's look.
+
+| metric | threshold | tr-es-22 | tr-es-23 | tr-es-24 |
+|---|---|---:|---:|---:|
+| sources |  | 55 | 54 | 102 |
+| stale re-translated |  | 0 | 0 | 0 |
+| translated |  | 55 | 54 | 102 |
+| not travelling |  | 0 | 0 | 0 |
+| not travelling confirmed |  | 0 | 0 | 0 |
+| rejected rate | ≤ 20.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| approved |  | 53 | 53 | 101 |
+| needs_work |  | 2 | 1 | 1 |
+| needs_work rate | ≤ 20.0 % | 3.6 % ✓ | 1.9 % ✓ | 1.0 % ✓ |
+| needs_work: giveaway | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: fact | ≤ 10.0 % | 1.8 % ✓ | 1.9 % ✓ | 1.0 % ✓ |
+| needs_work: ambiguity | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: overlap | ≤ 1.0 % | 1.8 % ✗ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: media | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: difficulty | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: style | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| needs_work: other | ≤ 10.0 % | 0.0 % ✓ | 0.0 % ✓ | 0.0 % ✓ |
+| audited |  | 55 | 54 | 60 |
+| audit/review agreement | ≥ 90.0 % | 40.0 % ✗ | 37.0 % ✗ | 48.3 % ✗ |
+| cost $ |  | $6.52 | $6.52 | $11.94 |
+| $ per approved |  | $0.12 | $0.12 | $0.12 |
+| **health** | | ✗ fail | ✗ fail | ✗ fail |
+
+## Audit
+
+A second LLM reader of a seeded sample (plan 16, `prompts/audit.md`), blind to the review. It changes nothing in the pool; the developer decides its findings in the review tool.
+
+- Major among review approved: 30 of 59 (51 %)
+- Major among review needs work: 0 of 1 (0 %)
+- Problems by kind: fact 1 (0 major), media 46 (30 major), style 4 (3 major)
+- Mean |audit − final difficulty|: 0.4; ≥ 3 on 0 of 60 (0 %)
+- Audit/review agreement (both accept or both not): 29 of 60 (48 %)
+- Sample: 60 audited of 60; 60 Claude calls, about $3.33
+
+Major findings on approved questions:
+
+- **q-21092**: media — No file is attached to the essential video (title is null). The question opens with "Mira: en este cono de Rumania…", so it can't be played without the footage. Everything else checks out: the gas in the Berca mud volcanoes is mostly methane from hydrocarbon deposits, the hints and the fun fact are true, the Spanish is natural es-419 and faithful to the source, and the difficulty is close to the given 12. (http://127.0.0.1:8001/review/q-21092)
+- **q-21101**: media — The media is an essential video, but its title is null, so no file was picked. The question says "Mira este video…" and can't be played without the footage of Liesegang rings forming. If a file does exist and the title just wasn't passed through, there is no problem. The translation itself is faithful and natural es-419. All four option names are standard in Spanish. The facts are correct (Liesegang, 1896, silver nitrate dropped on gelatin; agate banding; the gaps between bands get wider), and the difficulty fits. (http://127.0.0.1:8001/review/q-21101)
+- **q-21104**: media, style — The question is an essential audio question ("Escucha: …"), but media.title is null. With no anthem recording attached, nobody can play it. Smaller issue: "derechitas" in the description is a diminutive, and house style says to avoid regional diminutives; "derechas" or "firmes" would work. The facts check out: Haydn wrote the melody in 1797 for Emperor Franz II's birthday and reused it in the "Emperor" Quartet, Germany has won four men's World Cups, and the flag is black, red and gold. The translation is faithful to the English. (http://127.0.0.1:8001/review/q-21104)
+- **q-21108**: media — The question needs its audio ("Escucha: …"), but the audio title is null, so no anthem recording is attached and the question can't be played. Only the decorative background (a brass quintet) is set. Everything else checks out: the Saudi anthem melody dates from 1947 (al-Khateeb), the lyrics by Khafaji were added in 1984 and praise the green flag and the king, and the translation is faithful, natural es-419. (http://127.0.0.1:8001/review/q-21108)
+- **q-21109**: media — The question needs its video: it starts with "Mira:" and asks players to identify the crop being dug up. But the essential media has no file (title is null), so the question can't be played as it is. The translation itself is faithful and reads naturally in es-419 ("azadón", "súper", "camote"). The facts check out: Nigeria is the largest cassava producer, and tapioca and bubble-tea pearls are made from cassava starch. (http://127.0.0.1:8001/review/q-21109)
+- **q-21113**: media — The question needs essential video footage ("Mira: … estas imágenes"), but no media file is attached (title null), so it can't be played as it is. The translation itself reads well and matches the source. The facts hold up: Ganymede is bigger than Mercury, it is the only moon known to have its own magnetic field, and it probably has a salty ocean under its ice. It doesn't overlap q-20839, which is the same format but asks about Europa. (http://127.0.0.1:8001/review/q-21113)
+- **q-21120**: media — The media is an essential video, but its title is null, so no file was picked. The question opens with "Mira:" and asks about "esa manguera", so it can't be played without the footage. Everything else holds up: the answer (fuel), the hints, the fun fact, the es-419 voice and the number format "10 000" are correct, and "¿qué le pasa el avión…?" is grammatical, though "¿qué le pasa…?" can also be heard as "what's wrong with…?". (http://127.0.0.1:8001/review/q-21120)
+- **q-21126**: media — The essential video has no file (title null). The question opens with "Mira: esta pequeña polilla…", so it can't be played without it. Everything else checks out: Pyrausta aurata (the mint moth) is purple and gold and its larvae feed on mint and marjoram, all four herbs belong to Lamiaceae, the fun fact is true, and the Spanish is a faithful, natural es-419 translation. (http://127.0.0.1:8001/review/q-21126)
+- **q-21128**: media — The question depends on an essential video ("Mira: … esta costa"), but media.title is null, so no file is attached and the question can't be played. If this is only a missing title in the pipeline, it's fine. The translation itself is faithful and natural es-419: the options agree in grammar, the hints don't give the answer away, and the laze fun fact is accurate (Kīlauea's 2018 ocean entry). (http://127.0.0.1:8001/review/q-21128)
+- **q-21130**: media, style — The media is an essential video, but its title is null, so no file was picked, and the question ("¿Qué pasa al final de esta animación?") needs the animation to play. The translation itself is faithful, the facts are right (Type Ia supernova from a white dwarf taking gas from its neighbour; standard candle; 2011 Nobel Prize for the accelerating expansion), and the difficulty of 6 fits. One small style point: in the description, "no debió servirse otra vez" is a literal rendering of "stopped at seconds"; "no debió repetir" sounds more natural in Spanish. (http://127.0.0.1:8001/review/q-21130)
+- **q-21133**: media — The question needs an essential video ("Mira: … este enorme nido"), but media.title is null, so no file was picked and the question can't be played as written. The translation itself is fine: the answer and all three wrong answers are correct Spanish names ("Cotorra de Kramer" matches q-20859), the hints and fun fact are true (it is the only parrot that builds stick nests, colony nests can weigh hundreds of kilos and each pair has its own chamber), the gender agreement works for all options, and the es-419 wording reads naturally. (http://127.0.0.1:8001/review/q-21133)
+- **q-21140**: media — The question needs an essential audio file of La Borinqueña, but `media.title` is null, so nothing plays and the "Escucha:" question can't be answered. The text itself is fine: it matches the source, and the facts check out (Félix Astol's danza from 1867, made the official anthem in 1952). The hints and description give nothing away, the Spanish reads naturally, and the difficulty is about right. (http://127.0.0.1:8001/review/q-21140)
+- **q-21144**: media — The essential video has title null, so no file is attached, and the question ("Mira lo que pasa sobre este mechero") can't be played without it. If the null is only an input artifact and the source's video is attached, the translation itself is fine. The rest checks out. The answer is correct, the hints and fun fact are true, and the Spanish is natural es-419. The wrong answers were adapted: "explosión de humo" is the usual Spanish firefighting term for backdraft, and "combustión espontánea" stands in for flashover. Both stay clearly wrong, because the powder is lit by the burner's flame. (http://127.0.0.1:8001/review/q-21144)
+- **q-21147**: media — The question needs essential audio ("Escucha: …"), but its media title is null, so no recording of the D. 960 movement was picked and the question can't be played as it is. This comes from the source's media slot, not from the translation. The translation itself is faithful and reads as natural es-419. The facts check out: the last sonata, D. 960, was finished in September 1828, Schubert died on 19 November 1828 at 31, he wrote over 600 songs, and the sonatas were published in 1839. (http://127.0.0.1:8001/review/q-21147)
+- **q-21150**: media — The media slot is essential audio, but its title is null, so no anthem recording was picked. The question can't be played without the sound; only the decorative background (brass quintet) is set. Everything else checks out: the translation matches the source, the es-419 voice is natural ("recién en el siglo XIX"), Mameli was 20 in 1847, Italy was unified in the 19th century, the hints and options are fine, and none of the other anthem questions overlaps. (http://127.0.0.1:8001/review/q-21150)
+- **q-21157**: media — The question depends on an essential time-lapse video ("Mira: este timelapse…"), but media.title is null, so no file seems to be attached and the question can't be played. If that null only means the title wasn't passed along, the question is fine. The translation itself checks out: it keeps the source's facts, sounds natural in es-419, the options agree in grammar, the hints don't give the answer away early, and the fun fact (northern Sweden in January, polar night farther north) is true. (http://127.0.0.1:8001/review/q-21157)
+- **q-21162**: media — The media is an essential video, but its title is null, so no file was picked. The question opens with "Mira:" and the pink-legs hint depends on the footage, so without the video players have nothing to watch. The translation itself reads well: natural es-419 ("papas fritas", "sándwiches"), the answer and options are unchanged, and the facts check out (gulls have salt glands above their eyes). (http://127.0.0.1:8001/review/q-21162)
+- **q-21170**: media — The question is an essential audio question ("Escucha: …"), but the media title is null, so no shelduck recording is attached and it can't be played as it stands. The translation itself is faithful and sounds natural in es-419. The Spanish names check out: tarro blanco, zarapito real, ganso de collar for the brent goose, and ostrero euroasiático. The hints and fun fact are also true: shelducks moult in the Wadden Sea, males and females look alike, and they raise their young in crèches inside rabbit burrows. (http://127.0.0.1:8001/review/q-21170)
+- **q-21171**: media — No file is picked for the essential audio (media title is null), so there is nothing to listen to and the question can't be played without the recording of the concerto opening. The Spanish itself is faithful and natural: "Corno francés", the options, the hints and the fun fact match the source. The fact also checks out if the recording is a concerto that opens with a horn solo answered by the piano, like Brahms's Second Piano Concerto. q-8822 has the same answer, but it asks you to identify the horn from a description, not by ear, so it doesn't overlap. (http://127.0.0.1:8001/review/q-21171)
+- **q-21174**: media — The essential video has no picked file (media title is null), so the satellite time-lapse that the whole question depends on would not be shown. The translation itself matches the source and reads naturally in es-419. The facts hold up: the hints describe the Adriatic and the Po valley, Mont Blanc is the highest peak, and the Alps cover eight countries. (http://127.0.0.1:8001/review/q-21174)
+- **q-21175**: media — The media is an essential video but no file was picked (title is null). The question ("Mira: esta escena…", "el hombre de la alta corona dorada") and hint 1 ("Fíjate en sus manos") can't be played without it. The translation is otherwise faithful and reads as natural es-419 ("boletos", "palomitas", "Visnú"). The facts hold: Krishna is an avatar of Vishnu, and Bhaona is an Assamese form of theatre created by Sankardev in about 1500. (http://127.0.0.1:8001/review/q-21175)
+- **q-21176**: media, style — The essential audio has title null, so no anthem recording is attached and "Escucha: ¿de qué país es este himno nacional?" can't be played. Only the decorative background (101 Brass Band) exists. Minor: the description's "derechito" is a regional diminutive that the house style avoids; "derecho" or "firme" would be safer. The facts check out: Vincas Kudirka, a doctor, wrote both the words and the music in 1898; the worldwide "Tautiška giesmė" singing happens on 6 July at 21:00; "Vilna" is the right Spanish form; all three wrong answers really are wrong. The anthem doesn't overlap with any related question, and the translation is faithful. (http://127.0.0.1:8001/review/q-21176)
+- **q-21179**: media — No video file has been picked (media title is null), but the question needs its essential video. "Mira: ¿qué famoso experimento de química es este?" can't be played without it. The translation itself is faithful and reads as natural es-419 ("refresco", "rieles del tren"). The facts check out: aluminium powder is the fuel, thermite is used to weld rails, it burns above 2000 °C, and iron melts at about 1538 °C. (http://127.0.0.1:8001/review/q-21179)
+- **q-21181**: media — The question can't be played as it stands. The media is an essential video, but its title is null, so no file seems to be attached, and without the sped-up shipbuilding clip the question doesn't work. If this is only a pipeline artifact and the source's video does carry over, the question is fine. The translation is faithful and the Spanish reads naturally ("dique seco", "dársena", "atarte los zapatos"). All four options share the masculine "Un", and the hints and fun fact are accurate. (http://127.0.0.1:8001/review/q-21181)
+- **q-21184**: media — The media is an essential video, but its title is null, so no file was picked. A "Mira: ¿qué ave es esta…?" question can't be played without the footage. The translation itself is faithful. The Spanish names are right: avetorillo panamericano (Ixobrychus exilis), garcita verde (Butorides virescens), avetoro norteamericano and martinete común for the black-crowned night heron. Hint 3's point about the diminutive in the name works in Spanish too ("-illo"). (http://127.0.0.1:8001/review/q-21184)
+- **q-21185**: media — The media is marked essential video, but its title is null, so no file is attached. The question ("Mira: cada punto rojo en este globo…") can't be played without the fire globe animation, which may be a data issue to check. The translation itself is faithful and reads naturally in es-419. The answer, options, hints and fun fact (most Amazon fires are set by people to clear land) are correct, and q-3164 asks a different fact. (http://127.0.0.1:8001/review/q-21185)
+- **q-21186**: media — The essential video has no file (media title is null). The question depends on watching the train ("Mira pasar este tren…"), so without the video there is no way to tell what powers this particular locomotive. The translation itself is faithful and reads naturally in es-419. The hints, the description and the fun fact about diesel-electric drive are correct. (http://127.0.0.1:8001/review/q-21186)
+- **q-21187**: media — The essential audio has no file (media.title is null). Only the background image was picked, so "Escucha: …" has nothing to play. The translation itself checks out: it keeps the source's facts, the Mexican-flag eagle is a golden eagle, Hollywood does dub eagles with red-tailed hawk screams, the es-419 wording is natural, and the option genders don't give anything away. (http://127.0.0.1:8001/review/q-21187)
+- **q-21188**: media — The essential audio has no file (title null), so the question "Escucha: …" can't be played without the "Pop Goes the Weasel" recording. Otherwise the translation is faithful and natural es-419: "caja sorpresa" works, the options agree in grammar, the hints don't name the answer and the fun fact is accurate. (http://127.0.0.1:8001/review/q-21188)
+- **q-21189**: media — The media slot is an essential video with no file picked (title null). The question depends on it ("Mira bien el matraz"), so it can't be played until the blue-bottle clip is attached. If this is only missing metadata, the question is fine. I checked the rest: the chemistry is right (oxygen re-oxidises the methylene blue, and glucose turns it colourless again), the es-419 wording reads naturally and matches the source, the options agree in gender, and q-20991 (oxygen in elephant toothpaste) asks a different fact. (http://127.0.0.1:8001/review/q-21189)
+
+## Needs work
+
+- **q-6635** (explorers-and-discoveries) Esta tela suave y brillante se fabricó por primera vez en la antigua China. ¿Qué animal produce el hilo para hacerla? → Gusano de seda: source: Hint 2 ("so small it could sit on your fingertip") is misleading. A full-grown silkworm, the stage that spins the silk, is about 7–8 cm long, and the fact check marked this hint wrong. The English source needs a new hint 2, for example "It is a caterpillar that eats only mulberry leaves." The translation then follows it. The Spanish text itself is faithful and natural. Fact check: wrong. The answer (silkworm) and the wrong answers are fine. The fun fact is fine too: a cocoon's single thread is commonly cited as about 600–900 m, or more. Hint 2 is misleading. A full-grown silkworm, the stage that spins silk, is about 7–8 cm long and doesn't fit on a fingertip. Only the newly hatched larva is a few millimetres long. I checked this from general knowledge and ran no searches.
+
+## Not travelling
+
+None.
+
+## Stale re-translated
+
+None.
