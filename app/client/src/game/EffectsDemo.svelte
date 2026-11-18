@@ -2,9 +2,10 @@
   // /?efectos: every effect, recorded and synthesized, to compare on the TV (dev aid, UI-10).
   import Splash from "./question/Splash.svelte";
   import { SPLASH_ENTRANCES, SPLASH_EXITS, type SplashEntrance, type SplashExit } from "./question/splash.ts";
-  import { effects, music, sfx, setSoundtrack, sound, SOUNDTRACKS, soundtrackIds, unlock, type Cue, type SoundtrackId, type Track } from "./sound.svelte.ts";
+  import { effects, music, sfx, setSoundtrack, sound, SOUNDTRACKS, soundtrackIds, unlock, type Cue, type EffectGroup, type SoundtrackId, type Track } from "./sound.svelte.ts";
 
   const list = effects();
+  const GROUP_LABEL: Record<EffectGroup, string> = { ui: "UI", reveal: "reveal", jokers: "jokers", fireworks: "fireworks", splash: "category splash", timed: "timed", other: "other" };
   /** The splash on show: a sample category over a sample subcategory (the names fall back to the keys). */
   let splash = $state<{ exit?: SplashExit; entrance?: SplashEntrance; n: number } | null>(null);
   function playSplash(exit?: SplashExit, entrance?: SplashEntrance) {
@@ -59,7 +60,10 @@
           <td>{exit.cue}</td>
         </tr>
       {/each}
-      {#each list as { cue, file, variant } (variant ? file : cue)}
+      {#each list as { cue, group, file, variant }, i (variant ? file : cue)}
+        {#if list[i - 1]?.group !== group}
+          <tr><th colspan="3">{GROUP_LABEL[group]}</th></tr>
+        {/if}
         <tr>
           <td>{variant ? `· ${file}` : cue}</td>
           <td><button onclick={() => play(cue, false, variant ? file : undefined)} disabled={!file} title={file}>grabado</button></td>
@@ -93,6 +97,11 @@
     position: fixed;
     inset: 0;
     pointer-events: none;
+  }
+  th {
+    padding-top: 0.6rem;
+    text-align: left;
+    color: gold;
   }
   td {
     padding: 0.1rem 0.4rem;
