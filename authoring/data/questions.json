@@ -1649602,7 +1649602,7 @@
     },
     {
       "id": "q-21137",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "Boats, sunshine and old stone walls: this postcard practically writes itself.",
       "question": "Watch: on which Greek island is this old Venetian harbor?",
@@ -1649614,7 +1649614,7 @@
       ],
       "hints": [
         "This island lies far to the south, closer to Africa than most of Greece.",
-        "It is the largest Greek island.",
+        "Look at the row of arched stone halls on the quay: the Venetians once built ships in them.",
         "The island is home to Knossos, the palace linked to the legend of the Minotaur."
       ],
       "media": {
@@ -1649659,15 +1649659,23 @@
       "needs_media": true,
       "batch": "batch-86",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 (“It is the largest Greek island”) gives the answer away: at difficulty 13, almost every player knows that is Crete, so the clip and hint 3 are no longer needed. Replace it with a mid-strength hint that still leaves the video to decide. For example, say that the harbor's long stone breakwater ends at a lighthouse, or that the arched buildings on the quay were once Venetian shipyards.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-18",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 (“It is the largest Greek island”) gives the answer away: at difficulty 13, almost every player knows that is Crete, so the clip and hint 3 are no longer needed. Replace it with a mid-strength hint that still leaves the video to decide. For example, say that the harbor's long stone breakwater ends at a lighthouse, or that the arched buildings on the quay were once Venetian shipyards.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-18",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1649680,13 +1649688,11 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "The lighthouse never appears in the window, so I removed it from the question and description, and I replaced hint 2 with a fact only Crete has.",
+        "reason": "Replaced hint 2 (“largest Greek island”, a giveaway) with a look-at-the-clip hint about the Venetian shipyard halls seen in frame 1.",
         "previous": {
-          "description": "Boats, sunshine and a lighthouse: this postcard practically writes itself.",
-          "question": "Watch: on which Greek island is this old harbor with its stone lighthouse?",
           "hints": [
             "This island lies far to the south, closer to Africa than most of Greece.",
-            "The Venetians built this lighthouse in the 1500s, when they ruled the island for over 400 years.",
+            "It is the largest Greek island.",
             "The island is home to Knossos, the palace linked to the legend of the Minotaur."
           ]
         },
@@ -1651413,7 +1651419,7 @@
     },
     {
       "id": "q-21158",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 14,
       "description": "Tiny country, big brass band: somebody hum along, please.",
       "question": "Listen: this tune is the national anthem of a small European country. Which one?",
@@ -1651424,7 +1651430,7 @@
         "Andorra"
       ],
       "hints": [
-        "The country is a tiny alpine principality ruled by a prince.",
+        "The anthem's words begin by praising a river that flows past the country.",
         "If the melody sounds familiar, you have probably heard it at British royal events.",
         "The country sits between Switzerland and Austria, on the young Rhine river."
       ],
@@ -1651480,28 +1651486,36 @@
       "needs_media": true,
       "batch": "batch-86",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 1 gives the answer away. “Tiny alpine principality ruled by a prince” fits only Liechtenstein among the options: San Marino is a republic, Andorra is in the Pyrenees, and Monaco is on the coast. So anyone who knows basic European geography can answer without the clip. Hint 1 should be vague, for example about the country being one of Europe's smallest or doubly landlocked without naming its region, or about the anthem's lyrics praising a river.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-18",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 1 gives the answer away. “Tiny alpine principality ruled by a prince” fits only Liechtenstein among the options: San Marino is a republic, Andorra is in the Pyrenees, and Monaco is on the coast. So anyone who knows basic European geography can answer without the clip. Hint 1 should be vague, for example about the country being one of Europe's smallest or doubly landlocked without naming its region, or about the anthem's lyrics praising a river.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-18",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
       "background": {
         "query": "alpine valley castle",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AAlpine_valley_%2825116071225%29.jpg",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Alpine_valley_%2825116071225%29.jpg/3840px-Alpine_valley_%2825116071225%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "credit": "Thomas Quine · CC BY 2.0 · Wikimedia Commons",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGoetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg/3840px-Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "credit": "Asurnipal · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "Thomas Quine",
-        "author_url": "https://www.flickr.com/people/91994044@N00",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Asurnipal",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Asurnipal",
         "restrictions": [],
         "pd_reasons": []
       },
@@ -1651513,10 +1651527,13 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Rewrote the description so it no longer gives away the shared tune, and made the fun fact the confirmed 2003 England–Liechtenstein story.",
+        "reason": "Replaced hint 1, which singled out Liechtenstein, with a vague clue about the anthem praising a river.",
         "previous": {
-          "description": "A tune so good that two countries decided to share it rather than fight over it.",
-          "fun_fact": "Liechtenstein’s anthem, “Oben am jungen Rhein”, uses the same melody as Britain’s “God Save the King”, which made for a confusing moment when the two countries played each other at football."
+          "hints": [
+            "The country is a tiny alpine principality ruled by a prince.",
+            "If the melody sounds familiar, you have probably heard it at British royal events.",
+            "The country sits between Switzerland and Austria, on the young Rhine river."
+          ]
         },
         "revised_on": "2026-11-18"
       }
@@ -1651683,14 +1651700,24 @@
       "batch": "batch-86",
       "review": {
         "decision": "needs_work",
-        "feedback": "The played window (31–59 s) ends on about 11 seconds of a dark, red-lit haunted house: frames 7–10 show a No-Face mask and a close-up oni demon mask. That clashes with \"nothing scary\" for a family TV game, and it doesn't show the \"night of drumming and dancing\" the question describes. Trim the excerpt to roughly 31–48 s (taiko drummers, children dancing with fans, the yukata crowd dance). That window carries the answer, and the text can stay as it is.",
+        "feedback": "The played window (31–59 s) is the problem. From about 47 s to the end (frames 7–10), it shows a dark, red-lit haunted-house scene: a No-Face mask and a fanged oni demon. That is scary for a family game, too dark to see on a TV, and it isn't the drumming and dancing the question describes. Also, the whole window has an English reporter talking over it instead of the festival's own sound. Choose an excerpt that ends before the haunted house (only taiko, stage dancing and the circle dance) or use another Obon file.",
         "problems": [
           "media"
         ],
         "reviewed_on": "2026-11-18",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "The played window (31–59 s) ends on about 11 seconds of a dark, red-lit haunted house: frames 7–10 show a No-Face mask and a close-up oni demon mask. That clashes with \"nothing scary\" for a family TV game, and it doesn't show the \"night of drumming and dancing\" the question describes. Trim the excerpt to roughly 31–48 s (taiko drummers, children dancing with fans, the yukata crowd dance). That window carries the answer, and the text can stay as it is.",
+          "problems": [
+            "media"
+          ],
+          "reviewed_on": "2026-11-18",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1651703,14 +1651730,8 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced the wrong answer Setsubun with Hinamatsuri, because the oni mask at the end of the clip pointed to Setsubun.",
-        "previous": {
-          "wrong_answers": [
-            "Tanabata",
-            "Hanami",
-            "Setsubun"
-          ]
-        },
+        "reason": "Frames 7–10 (from about 48 s) show a dark, red-lit haunted house with No-Face and oni demon masks, which is too scary for the game and off-topic, so the played excerpt must be trimmed to 31–47 s (taiko drummers, children with fans, the yukata circle dance); the note now records this, and the text stays as it is.",
+        "previous": {},
         "revised_on": "2026-11-18"
       }
     },
@@ -1653941,7 +1653962,7 @@
     },
     {
       "id": "q-21187",
-      "status": "needs_work",
+      "status": "approved",
       "difficulty": 13,
       "description": "A sky boss whose voice didn't get the memo.",
       "question": "Listen: which bird of prey is making these thin, yelping whistles?",
@@ -1653953,7 +1653974,7 @@
       ],
       "hints": [
         "It hunts hares, marmots and grouse in mountains and open country across the Northern Hemisphere.",
-        "It is a national bird of several countries, including Germany, Albania and Kazakhstan.",
+        "It lives wild in North America, Europe, Asia and North Africa.",
         "This is the bird shown eating a snake on the flag of Mexico."
       ],
       "media": {
@@ -1653994,15 +1654015,23 @@
       "needs_media": true,
       "batch": "batch-86",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Hint 2 gives the answer away. Most adults know Germany's national symbol is an eagle (the Bundesadler), and Golden eagle is the only eagle among the four options. Replace hint 2 with a vaguer clue that doesn't point to \"eagle\", for example about its size or its huge hunting range, and keep the Mexico flag as hint 3.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-18",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Hint 2 gives the answer away. Most adults know Germany's national symbol is an eagle (the Bundesadler), and Golden eagle is the only eagle among the four options. Replace hint 2 with a vaguer clue that doesn't point to \"eagle\", for example about its size or its huge hunting range, and keep the Mexico flag as hint 3.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-18",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1654027,12 +1654056,11 @@
       },
       "revision": {
         "action": "revise",
-        "reason": "Replaced hint 2, which hinted at “golden”, with a national-bird clue, and rewrote the description so it no longer rules out the lighter birds.",
+        "reason": "Replaced hint 2 (Germany's national bird points straight to “eagle”) with a vaguer clue about its range.",
         "previous": {
-          "description": "A feathered heavyweight with a surprisingly squeaky speaking voice.",
           "hints": [
             "It hunts hares, marmots and grouse in mountains and open country across the Northern Hemisphere.",
-            "Its name comes from the gold-brown feathers on the back of its head and neck.",
+            "It is a national bird of several countries, including Germany, Albania and Kazakhstan.",
             "This is the bird shown eating a snake on the flag of Mexico."
           ]
         },
@@ -1654041,15 +1654069,15 @@
     },
     {
       "id": "q-21188",
-      "status": "needs_work",
-      "difficulty": 5,
+      "status": "approved",
+      "difficulty": 6,
       "description": "Played on a piano so tiny it has probably never paid rent.",
-      "question": "Listen: which toy famously plays this tune when you turn its handle?",
+      "question": "Listen: which wind-up toy is famous for playing this tune?",
       "answer": "A jack-in-the-box",
       "wrong_answers": [
-        "A rocking horse",
-        "A yo-yo",
-        "A kaleidoscope"
+        "A ballerina music box",
+        "A toy carousel",
+        "A cymbal-playing monkey"
       ],
       "hints": [
         "It's an old toy that loves to surprise children.",
@@ -1654094,15 +1654122,23 @@
       "needs_media": true,
       "batch": "batch-86",
       "review": {
-        "decision": "needs_work",
-        "feedback": "Players can answer from the text alone, so the clip isn't needed: \"a toy that plays a tune when you turn its handle\" fits only the jack-in-the-box among the four options. A rocking horse, a yo-yo and a kaleidoscope have no crank and play no music. The question should make the tune decide the answer. For example, all four options could be wind-up or crank music toys (music box, toy carousel, jack-in-the-box, musical spinning top), with the clue being the tune's sudden \"pop\" ending rather than the handle. Or the text could ask about something else that the 12-second toy-piano recording carries.",
-        "problems": [
-          "giveaway"
-        ],
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
         "reviewed_on": "2026-11-18",
         "reviewer": "llm",
         "model": "claude-opus-5-5",
-        "previous": null
+        "previous": {
+          "decision": "needs_work",
+          "feedback": "Players can answer from the text alone, so the clip isn't needed: \"a toy that plays a tune when you turn its handle\" fits only the jack-in-the-box among the four options. A rocking horse, a yo-yo and a kaleidoscope have no crank and play no music. The question should make the tune decide the answer. For example, all four options could be wind-up or crank music toys (music box, toy carousel, jack-in-the-box, musical spinning top), with the clue being the tune's sudden \"pop\" ending rather than the handle. Or the text could ask about something else that the 12-second toy-piano recording carries.",
+          "problems": [
+            "giveaway"
+          ],
+          "reviewed_on": "2026-11-18",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "bundle": "base",
       "locale": "en",
@@ -1654128,22 +1654164,15 @@
       "difficulty_original": 8,
       "revision": {
         "action": "revise",
-        "reason": "Following the final reviewer, the question now asks which cranked toy plays this clip's tune (jack-in-the-box) instead of an English song title; the hints, difficulty and fun fact are updated to match, and the clean, loud 12-second clip stays.",
+        "reason": "Made all four options wind-up music toys so the tune, not the handle, decides the answer, and raised difficulty because the tune is less known outside English-speaking homes.",
         "previous": {
-          "difficulty": 8,
-          "question": "Listen: which children's song is this tune?",
-          "answer": "Pop Goes the Weasel",
+          "difficulty": 5,
+          "question": "Listen: which toy famously plays this tune when you turn its handle?",
           "wrong_answers": [
-            "Twinkle, Twinkle, Little Star",
-            "Old MacDonald Had a Farm",
-            "London Bridge Is Falling Down"
-          ],
-          "hints": [
-            "It's an old nursery tune that has been around since the mid-1800s.",
-            "Lots of jack-in-the-box toys play this tune when you turn the handle.",
-            "At the very end of the song, a small furry animal goes “pop!”."
-          ],
-          "fun_fact": "Nobody is quite sure what the “weasel” in the song really means. One old theory says it was a tailor's tool or a coat that people pawned for money."
+            "A rocking horse",
+            "A yo-yo",
+            "A kaleidoscope"
+          ]
         },
         "revised_on": "2026-11-18"
       }

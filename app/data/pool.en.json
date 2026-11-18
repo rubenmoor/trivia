@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "e4e3579c",
+  "hash": "384425ea",
   "questions": [
     {
       "id": "q-0001",
@@ -217977,6 +217977,44 @@
       }
     },
     {
+      "id": "q-21137",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "famous-landmarks",
+      "bundle": "base",
+      "description": "Boats, sunshine and old stone walls: this postcard practically writes itself.",
+      "question": "Watch: on which Greek island is this old Venetian harbor?",
+      "answer": "Crete",
+      "wrong_answers": [
+        "Rhodes",
+        "Corfu",
+        "Santorini"
+      ],
+      "hints": [
+        "This island lies far to the south, closer to Africa than most of Greece.",
+        "Look at the row of arched stone halls on the quay: the Venetians once built ships in them.",
+        "The island is home to Knossos, the palace linked to the legend of the Minotaur."
+      ],
+      "fun_fact": "The lighthouse in Chania's old harbor was first built by the Venetians and later rebuilt in the 1800s with a base that people say looks like a minaret.",
+      "media": {
+        "type": "video",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Chania%2C_Greece.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AChania%2C_Greece.webm",
+        "credit": "Le Monde en Vidéo · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Le Monde en Vidéo",
+        "author_url": null,
+        "excerpt": {
+          "start": 120,
+          "end": 150
+        }
+      },
+      "background": null
+    },
+    {
       "id": "q-21139",
       "status": "approved",
       "difficulty": 14,
@@ -218695,6 +218733,53 @@
         "excerpt": null
       },
       "background": null
+    },
+    {
+      "id": "q-21158",
+      "status": "approved",
+      "difficulty": 14,
+      "subcategory": "countries",
+      "bundle": "base",
+      "description": "Tiny country, big brass band: somebody hum along, please.",
+      "question": "Listen: this tune is the national anthem of a small European country. Which one?",
+      "answer": "Liechtenstein",
+      "wrong_answers": [
+        "Monaco",
+        "San Marino",
+        "Andorra"
+      ],
+      "hints": [
+        "The anthem's words begin by praising a river that flows past the country.",
+        "If the melody sounds familiar, you have probably heard it at British royal events.",
+        "The country sits between Switzerland and Austria, on the young Rhine river."
+      ],
+      "fun_fact": "Liechtenstein’s anthem, “Oben am jungen Rhein”, uses the same melody as Britain’s “God Save the King”, so when England played Liechtenstein in 2003, the same tune was played twice before kickoff.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Oben_am_jungen_Rhein%2C_by_the_U.S._Navy_Band.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AOben_am_jungen_Rhein%2C_by_the_U.S._Navy_Band.ogg",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg/3840px-Goetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGoetzis-Lower_Alpine_Rhine_Valley-Kapf-Berg-01ASD.jpg",
+        "credit": "Asurnipal · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Asurnipal",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Asurnipal"
+      }
     },
     {
       "id": "q-21159",
@@ -219696,6 +219781,94 @@
         "excerpt": null
       },
       "background": null
+    },
+    {
+      "id": "q-21187",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "birds",
+      "bundle": "base",
+      "description": "A sky boss whose voice didn't get the memo.",
+      "question": "Listen: which bird of prey is making these thin, yelping whistles?",
+      "answer": "Golden eagle",
+      "wrong_answers": [
+        "Andean condor",
+        "Red-tailed hawk",
+        "Peregrine falcon"
+      ],
+      "hints": [
+        "It hunts hares, marmots and grouse in mountains and open country across the Northern Hemisphere.",
+        "It lives wild in North America, Europe, Asia and North Africa.",
+        "This is the bird shown eating a snake on the flag of Mexico."
+      ],
+      "fun_fact": "Real eagles sound so weak that films often dub them with the harsh scream of a red-tailed hawk instead.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/Golden_eagle.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGolden_eagle.ogg",
+        "credit": "Bubulcus · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Bubulcus",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Lava_Cliffs_Rocky_Mountain_National_Park_2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ALava_Cliffs_Rocky_Mountain_National_Park_2024.jpg",
+        "credit": "Larry D. Moore · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Larry D. Moore",
+        "author_url": "https://en.wikipedia.org/wiki/User:Nv8200pa"
+      }
+    },
+    {
+      "id": "q-21188",
+      "status": "approved",
+      "difficulty": 6,
+      "subcategory": "childrens-songs",
+      "bundle": "base",
+      "description": "Played on a piano so tiny it has probably never paid rent.",
+      "question": "Listen: which wind-up toy is famous for playing this tune?",
+      "answer": "A jack-in-the-box",
+      "wrong_answers": [
+        "A ballerina music box",
+        "A toy carousel",
+        "A cymbal-playing monkey"
+      ],
+      "hints": [
+        "It's an old toy that loves to surprise children.",
+        "As you keep turning, the music goes on until suddenly something happens.",
+        "At the end of the tune, a figure, often a clown, springs out of a box."
+      ],
+      "fun_fact": "The tune is the old English song “Pop Goes the Weasel”, and nobody is quite sure what the “weasel” in it means.",
+      "media": {
+        "type": "audio",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Pop_Goes_the_Weasel_on_Toy_Piano.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APop_Goes_the_Weasel_on_Toy_Piano.mp3",
+        "credit": "Kevin MacLeod · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Kevin MacLeod",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": {
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Playing_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg/3840px-Playing_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APlaying_with_colorful_building_blocks_and_toys_on_the_floor_in_a_cozy_indoor_setting.jpg",
+        "credit": "Shixart1985 · CC BY 2.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0",
+        "author": "Shixart1985",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Shixart1985"
+      }
     },
     {
       "id": "q-21189",
