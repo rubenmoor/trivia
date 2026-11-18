@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "c9ac2310",
+  "hash": "589dabe8",
   "questions": [
     {
       "id": "q-0002",
@@ -16877,41 +16877,6 @@
         "license_url": null,
         "author": "U.S. Navy photo by Mass Communication Specialist 2nd Class Elliott Fabrizio",
         "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-6932",
-      "status": "approved",
-      "difficulty": 7,
-      "subcategory": "other-sports",
-      "bundle": "colombia",
-      "description": "In this sport, Colombia is like Brazil in soccer, just without the samba.",
-      "question": "Its champions race on tracks and streets, and Colombia has topped the country table at its World Championships again and again. What sport is it?",
-      "answer": "Inline speed skating",
-      "wrong_answers": [
-        "Road cycling",
-        "Track and field",
-        "BMX"
-      ],
-      "hints": [
-        "Many Colombian children join clubs for it at a very young age.",
-        "The athletes wear helmets and special boots.",
-        "Under each boot is a row of small wheels."
-      ],
-      "fun_fact": "Colombia has skating clubs in almost every city, and many champions started skating before the age of 6.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/M%C3%A1s_de_mi_Cali_Bella.jpg/3840px-M%C3%A1s_de_mi_Cali_Bella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AM%C3%A1s_de_mi_Cali_Bella.jpg",
-        "credit": "Jefferson Gutierrez Romero · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Jefferson Gutierrez Romero",
-        "author_url": "https://www.flickr.com/people/jeffergu506/",
         "excerpt": null
       },
       "background": null
@@ -35319,41 +35284,6 @@
       "background": null
     },
     {
-      "id": "q-7478",
-      "status": "approved",
-      "difficulty": 1,
-      "subcategory": "olympic-medallists",
-      "bundle": "colombia",
-      "description": "A question you can count on your fingers, even if they're well padded.",
-      "question": "Colombian boxer Ingrit Valencia and her opponent step into the ring, each wearing her gloves. How many gloves are in the ring?",
-      "answer": "4",
-      "wrong_answers": [
-        "2",
-        "6",
-        "8"
-      ],
-      "hints": [
-        "Each boxer has two hands.",
-        "There are two boxers.",
-        "Two gloves plus two gloves."
-      ],
-      "fun_fact": "In Olympic boxing, gloves are red or blue, depending on each boxer's corner.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Boxing_gloves_Bail_10-OZ_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoxing_gloves_Bail_10-OZ_%284%29.jpg",
-        "credit": "I would appreciate being notified if you use my work outside Wikimedia. · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "I would appreciate being notified if you use my work outside Wikimedia.\nDo not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me to negotiate terms.\n\nMore of my work can be found in my personal gallery.",
-        "author_url": "https://commons.wikimedia.org/wiki/Special:EmailUser/Sevela.p",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-7479",
       "status": "approved",
       "difficulty": 2,
@@ -41033,41 +40963,6 @@
       "background": null
     },
     {
-      "id": "q-7648",
-      "status": "approved",
-      "difficulty": 9,
-      "subcategory": "olympic-medallists",
-      "bundle": "colombia",
-      "description": "The place where Colombia finally got to fill its Olympic trophy cabinet.",
-      "question": "I hosted the 1972 Olympic Games, where Colombia won its first medals: a silver in shooting and two bronzes in boxing. Who am I?",
-      "answer": "Munich",
-      "wrong_answers": [
-        "Mexico City",
-        "Montreal",
-        "Rome"
-      ],
-      "hints": [
-        "Those Games had the first official Olympic mascot, a little dachshund.",
-        "I am a European city.",
-        "I am the capital of Bavaria, in Germany."
-      ],
-      "fun_fact": "The Munich silver was won by Helmut Bellingrodt from Barranquilla, in running target shooting.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Black_boxing_gloves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_boxing_gloves.jpg",
-        "credit": "Airman 1st Class Kerelin Molina · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Airman 1st Class Kerelin Molina",
-        "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-7649",
       "status": "approved",
       "difficulty": 1,
@@ -46060,14 +45955,14 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg",
-        "credit": "El Banco De Oriente. · Public domain · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Moneda_Colombiana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoneda_Colombiana.jpg",
+        "credit": "Don Gatico · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "El Banco De Oriente.",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Don Gatico",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Don_Gatico&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -47888,41 +47783,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "Nancy Pestana González",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Nancy_Pestana_Gonz%C3%A1lez&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-7852",
-      "status": "approved",
-      "difficulty": 8,
-      "subcategory": "natural-parks-and-ecosystems",
-      "bundle": "colombia",
-      "description": "Even paradise needs to take a vacation now and then.",
-      "question": "Tayrona Park closes several times a year so nature can rest. About how many days a year is it closed in total?",
-      "answer": "About 45 days",
-      "wrong_answers": [
-        "About 2 days",
-        "About 150 days",
-        "About 300 days"
-      ],
-      "hints": [
-        "For most of the year, the park does welcome tourists.",
-        "It usually closes three times: in February, in June, and between October and November.",
-        "Each closure lasts about two weeks."
-      ],
-      "fun_fact": "The closures are agreed with the Indigenous peoples of the Sierra Nevada, who use them for rituals to spiritually cleanse the land.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Cabo_San_Juan%2C_Colombia.jpg/3840px-Cabo_San_Juan%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACabo_San_Juan%2C_Colombia.jpg",
-        "credit": "OpenAperture · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "OpenAperture",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Openaperture&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -55055,14 +54915,14 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Manizales_desde_el_Corredor_Polaco_de_la_catedral_23.jpg/3840px-Manizales_desde_el_Corredor_Polaco_de_la_catedral_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AManizales_desde_el_Corredor_Polaco_de_la_catedral_23.jpg",
-        "credit": "XalD · CC BY-SA 4.0 · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cable_aereo_ciudad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACable_aereo_ciudad.jpg",
+        "credit": "XXXX0000 · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "XalD",
-        "author_url": "https://commons.wikimedia.org/wiki/User:XalD",
+        "author": "XXXX0000",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:XXXX0000&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -62720,12 +62580,12 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Malec%C3%B3n_avenida_del_R%C3%ADo_Barranquilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMalec%C3%B3n_avenida_del_R%C3%ADo_Barranquilla.jpg",
-        "credit": "Jdvillalobos · CC BY-SA 3.0 · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/EstatuaShakiraMalecon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEstatuaShakiraMalecon.jpg",
+        "credit": "Jdvillalobos · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Jdvillalobos",
         "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos",
         "excerpt": null
@@ -65883,41 +65743,6 @@
       "background": null
     },
     {
-      "id": "q-8385",
-      "status": "approved",
-      "difficulty": 9,
-      "subcategory": "cities-and-towns",
-      "bundle": "colombia",
-      "description": "A town where you soak in warm water and come out hungry for something really tasty.",
-      "question": "Santa Rosa de Cabal, in Risaralda, is famous for its hot springs, has its own festival for this product and sells it on every corner. What is it?",
-      "answer": "Chorizo",
-      "wrong_answers": [
-        "Morcilla",
-        "Butifarra",
-        "Longaniza"
-      ],
-      "hints": [
-        "It's a kind of sausage.",
-        "It's eaten with arepa and cooked on the grill.",
-        "People call it “santarrosano,” and it's reddish."
-      ],
-      "fun_fact": "Santa Rosa de Cabal calls itself the “world capital of chorizo” and throws a festival for it every year.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Imagen_de_los_Termales_de_Santa_Rosa_de_Cabal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AImagen_de_los_Termales_de_Santa_Rosa_de_Cabal.jpg",
-        "credit": "Colombia Turiscol · CC0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Colombia Turiscol",
-        "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-8386",
       "status": "approved",
       "difficulty": 10,
@@ -68223,41 +68048,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "05591",
         "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Moterocolombia&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-8453",
-      "status": "approved",
-      "difficulty": 2,
-      "subcategory": "mountains-and-landscapes",
-      "bundle": "colombia",
-      "description": "There's not much to see in the desert by day, but at night the show is free and has millions of lights.",
-      "question": "“I live in the Tatacoa Desert, in Huila. At night, people come to look at the stars with me.” What am I?",
-      "answer": "An observatory",
-      "wrong_answers": [
-        "A lighthouse",
-        "An aquarium",
-        "A control tower"
-      ],
-      "hints": [
-        "My work starts when the sun goes down.",
-        "From me you can see planets, the Moon and shooting stars.",
-        "Inside, I have telescopes."
-      ],
-      "fun_fact": "La Tatacoa is one of the best places in Colombia for stargazing because there are few clouds and almost no city lights reach it.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/V%C3%ADa_L%C3%A1ctea_sobre_el_horizonte_de_la_Tatacoa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AV%C3%ADa_L%C3%A1ctea_sobre_el_horizonte_de_la_Tatacoa.jpg",
-        "credit": "Johan Andrés Toro · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Johan Andrés Toro",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Johan_Andr%C3%A9s_Toro&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null

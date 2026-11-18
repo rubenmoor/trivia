@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "ce310647",
+  "hash": "10dd0c18",
   "questions": [
     {
       "id": "q-0001",
@@ -4864,6 +4864,41 @@
         "license_url": "https://creativecommons.org/licenses/by/4.0",
         "author": "Ferfive",
         "author_url": "https://commons.wikimedia.org/wiki/User:Ferfive",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-0186",
+      "status": "approved",
+      "difficulty": 3,
+      "subcategory": "world-cuisines",
+      "bundle": "base",
+      "description": "Un sobre que no trae cartas, sino algo mucho más sabroso dentro.",
+      "question": "Mira este primer plano: ¿qué comida colombiana es?",
+      "answer": "Empanada",
+      "wrong_answers": [
+        "Buñuelo",
+        "Arepa",
+        "Pandebono"
+      ],
+      "hints": [
+        "Se fríe en aceite hasta que queda dorada y crujiente.",
+        "Por dentro casi siempre lleva patata y carne.",
+        "Tiene forma de media luna y se come con ají, una salsa picante."
+      ],
+      "fun_fact": "La palabra «empanada» viene de «empanar», que significa envolver algo en masa o pan.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Empanada_barranquillera.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEmpanada_barranquillera.jpg",
+        "credit": "Jdvillalobos · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Jdvillalobos",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos",
         "excerpt": null
       },
       "background": null

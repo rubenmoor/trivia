@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "b7846e4e",
+  "hash": "bd7c43b0",
   "questions": [
     {
       "id": "q-9120",
@@ -6279,7 +6279,7 @@
     {
       "id": "q-9301",
       "status": "approved",
-      "difficulty": 6,
+      "difficulty": 3,
       "subcategory": "native-animals",
       "bundle": "germany",
       "description": "Ein Fuchs und ein Teufel in einem einzigen Wort: Die deutsche Sprache kennt keine Pause.",

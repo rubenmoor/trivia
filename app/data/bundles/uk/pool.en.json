@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "061005c9",
+  "hash": "1ebc5d9b",
   "questions": [
     {
       "id": "q-9487",
@@ -40,7 +40,7 @@
     {
       "id": "q-9488",
       "status": "approved",
-      "difficulty": 8,
+      "difficulty": 5,
       "subcategory": "birds",
       "bundle": "uk",
       "description": "A small crow with grey eyes and a big interest in your house.",
@@ -1143,7 +1143,7 @@
     {
       "id": "q-9519",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 7,
       "subcategory": "classic-dishes",
       "bundle": "uk",
       "description": "The vegetable that looks like a carrot that has seen a ghost.",
@@ -5588,7 +5588,7 @@
     {
       "id": "q-9646",
       "status": "approved",
-      "difficulty": 5,
+      "difficulty": 9,
       "subcategory": "middle-ages",
       "bundle": "uk",
       "description": "Every gang of outlaws needs someone who can do weddings, apparently.",

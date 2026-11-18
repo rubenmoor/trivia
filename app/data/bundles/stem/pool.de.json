@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "bd213406",
+  "hash": "37a74bde",
   "questions": [
     {
       "id": "q-8506",
@@ -8338,14 +8338,14 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/ETH-BIB-Kirchhoff%2C_Gustav_Robert_%281824-1887%29-Portrait-Portr_06176.tif?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AETH-BIB-Kirchhoff%2C_Gustav_Robert_%281824-1887%29-Portrait-Portr_06176.tif",
-        "credit": "Unbekannt · Public domain · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Das_Fotoalbum_f%C3%BCr_Weierstra%C3%9F_2_1_%28Gustav_Robert_Kirchhoff%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ADas_Fotoalbum_f%C3%BCr_Weierstra%C3%9F_2_1_%28Gustav_Robert_Kirchhoff%29.jpg",
+        "credit": "Unknown authorUnknown author · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Unbekannt",
-        "author_url": null,
+        "author": "Unknown authorUnknown author",
+        "author_url": "https://www.wikidata.org/wiki/Q107535292#P170",
         "excerpt": null
       },
       "background": null
@@ -9528,14 +9528,14 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Defense.gov_photo_essay_090711-D-1852B-612.jpg/3840px-Defense.gov_photo_essay_090711-D-1852B-612.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ADefense.gov_photo_essay_090711-D-1852B-612.jpg",
-        "credit": "Fred W. Baker III · Public domain · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Hearing_aid_20080620.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHearing_aid_20080620.jpg",
+        "credit": "Jonas Bergsten · Public domain · Wikimedia Commons",
         "provider": "commons",
         "license": "Public domain",
         "license_url": null,
-        "author": "Fred W. Baker III",
-        "author_url": null,
+        "author": "Jonas Bergsten",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Bergsten",
         "excerpt": null
       },
       "background": null
@@ -9956,41 +9956,6 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
         "author": "北京驱动文化传媒有限公司",
         "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-8818",
-      "status": "approved",
-      "difficulty": 12,
-      "subcategory": "sound-and-waves",
-      "bundle": "stem",
-      "description": "Der Tag, an dem ein Vulkan den Lautstärkeregler der Erde bis zum Anschlag aufdrehte.",
-      "question": "Der Ausbruch des Krakatau 1883 war das lauteste Geräusch der überlieferten Geschichte. Drei dieser Aussagen stimmen. Welche NICHT?",
-      "answer": "Man hörte den Knall in London",
-      "wrong_answers": [
-        "Man hörte den Knall noch 4800 km entfernt",
-        "Die Druckwelle umrundete die ganze Erde",
-        "Seeleuten 64 km entfernt platzten die Trommelfelle"
-      ],
-      "hints": [
-        "Krakatau ist eine Vulkaninsel in Indonesien.",
-        "Selbst wo niemand etwas hörte, spürten Wetterinstrumente die Welle trotzdem.",
-        "Barometer in Europa zeichneten die Druckwelle auf, aber kein Ohr dort hörte den Knall."
-      ],
-      "fun_fact": "Wetterstationen auf der ganzen Welt zeichneten in den folgenden Tagen mehrmals auf, wie die Druckwelle des Krakatau um den Planeten lief.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Krakatoa_volcano_-_Krakatau_Vulkan.jpg/3840px-Krakatoa_volcano_-_Krakatau_Vulkan.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AKrakatoa_volcano_-_Krakatau_Vulkan.jpg",
-        "credit": "Alexander Gerst · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Alexander Gerst",
-        "author_url": "https://en.wikipedia.org/wiki/en:Alexander_Gerst",
         "excerpt": null
       },
       "background": null

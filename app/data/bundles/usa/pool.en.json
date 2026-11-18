@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "f6592caf",
+  "hash": "0e47f418",
   "questions": [
     {
       "id": "q-8833",
@@ -1005,14 +1005,14 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Colonial_Williamsburg_-_street_scene%2C_2013.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AColonial_Williamsburg_-_street_scene%2C_2013.JPG",
-        "credit": "AlbertHerring · CC BY-SA 3.0 · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Marcos_Castrillo_Fajardo_y_Tamariz_II_Marques_de_Cuevas_del_Becerro_c._1720.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMarcos_Castrillo_Fajardo_y_Tamariz_II_Marques_de_Cuevas_del_Becerro_c._1720.jpg",
+        "credit": "Unidentified painter · CC0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "AlbertHerring",
-        "author_url": "https://commons.wikimedia.org/wiki/User:AlbertHerring",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Unidentified painter",
+        "author_url": "https://commons.wikimedia.org/wiki/Category:18th-century_portrait_paintings_of_men,_artist,_location_and_year_missing",
         "excerpt": null
       },
       "background": null
@@ -5905,14 +5905,14 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/50/Bowl_of_chili.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABowl_of_chili.jpg",
-        "credit": "Carstor · CC BY-SA 2.5 · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Egg%2C_sausage%2C_and_cheese_casserole_in_a_slow-cooker%2C_a_breakfast_offering_at_the_%22Quality_Inn_%26_Suites_Davenport_near_I-80%22_in_Davenport%2C_Iowa_%C2%B7_2023-05-20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEgg%2C_sausage%2C_and_cheese_casserole_in_a_slow-cooker%2C_a_breakfast_offering_at_the_%22Quality_Inn_%26_Suites_Davenport_near_I-80%22_in_Davenport%2C_Iowa_%C2%B7_2023-05-20.jpg",
+        "credit": "Tim Kiser · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 2.5",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.5",
-        "author": "Carstor",
-        "author_url": "https://de.wikipedia.org/wiki/Benutzer:Carstor",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Tim Kiser",
+        "author_url": null,
         "excerpt": null
       },
       "background": null
@@ -6158,41 +6158,6 @@
         "license_url": null,
         "author": "USFWS Mountain-Prairie",
         "author_url": "https://www.flickr.com/people/51986662@N05",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
-      "id": "q-9013",
-      "status": "approved",
-      "difficulty": 13,
-      "subcategory": "national-parks",
-      "bundle": "usa",
-      "description": "Wind Cave's interior designer clearly had one favorite pattern and stuck with it.",
-      "question": "I'm thin blades of calcite sticking out of cave walls and ceilings in a honeycomb pattern. Wind Cave in South Dakota holds most of the world's examples of me. What am I called?",
-      "answer": "Boxwork",
-      "wrong_answers": [
-        "Frostwork",
-        "Cave popcorn",
-        "Cave bacon"
-      ],
-      "hints": [
-        "Unlike stalactites, I didn't grow from dripping water.",
-        "I formed in cracks, and the rock around me later wore away.",
-        "My name sounds like a stack of cardboard cartons."
-      ],
-      "fun_fact": "Wind Cave gets its name from the air that rushes in or out of its entrance as the weather outside changes.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Stalactite_cave_Mallorca_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AStalactite_cave_Mallorca_3.jpg",
-        "credit": "Killarnee · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Killarnee",
-        "author_url": "https://commons.wikimedia.org/wiki/User:Killarnee",
         "excerpt": null
       },
       "background": null
@@ -8005,14 +7970,14 @@
       "media": {
         "type": "image",
         "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Arizona_-_North_America_-_Southwest_-_Roadside_America_%284893545258%29.jpg/3840px-Arizona_-_North_America_-_Southwest_-_Roadside_America_%284893545258%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AArizona_-_North_America_-_Southwest_-_Roadside_America_%284893545258%29.jpg",
-        "credit": "CGP Grey · CC BY 2.0 · Wikimedia Commons",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/The_House_of_Doors_Paul_Bunyan_Muffler_Man_in_Cheshire%2C_CT_%2853949727066%29.jpg/3840px-The_House_of_Doors_Paul_Bunyan_Muffler_Man_in_Cheshire%2C_CT_%2853949727066%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_House_of_Doors_Paul_Bunyan_Muffler_Man_in_Cheshire%2C_CT_%2853949727066%29.jpg",
+        "credit": "Ethan Long · CC BY-SA 2.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY 2.0",
-        "license_url": "https://creativecommons.org/licenses/by/2.0",
-        "author": "CGP Grey",
-        "author_url": "http://www.CGPGrey.com",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+        "author": "Ethan Long",
+        "author_url": "https://www.flickr.com/people/188360586@N03",
         "excerpt": null
       },
       "background": null

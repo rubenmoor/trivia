@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "hash": "0cacb936",
+  "hash": "2c5a8796",
   "questions": [
     {
       "id": "q-0002",
@@ -14224,7 +14224,7 @@
     {
       "id": "q-6843",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 2,
       "subcategory": "home-school-and-paperwork",
       "bundle": "colombia",
       "description": "Tiene pelo largo, vive en el patio y baila con quien le dé la mano.",
@@ -17232,41 +17232,6 @@
       "background": null
     },
     {
-      "id": "q-6932",
-      "status": "approved",
-      "difficulty": 5,
-      "subcategory": "other-sports",
-      "bundle": "colombia",
-      "description": "En este deporte Colombia es como Brasil en el fútbol, pero sin samba.",
-      "question": "Sus campeones compiten en pistas y en calles, y Colombia ha ganado su Mundial por países muchísimas veces. ¿Qué deporte es?",
-      "answer": "Patinaje de velocidad",
-      "wrong_answers": [
-        "Ciclismo de ruta",
-        "Atletismo",
-        "BMX"
-      ],
-      "hints": [
-        "Muchos niños colombianos lo practican en clubes desde muy pequeños.",
-        "Los deportistas llevan casco y botas especiales.",
-        "Debajo de cada bota hay una fila de rueditas."
-      ],
-      "fun_fact": "En Colombia hay clubes de patinaje en casi todas las ciudades, y muchos campeones empezaron a patinar antes de los 6 años.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/M%C3%A1s_de_mi_Cali_Bella.jpg/3840px-M%C3%A1s_de_mi_Cali_Bella.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AM%C3%A1s_de_mi_Cali_Bella.jpg",
-        "credit": "Jefferson Gutierrez Romero · CC BY-SA 2.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 2.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
-        "author": "Jefferson Gutierrez Romero",
-        "author_url": "https://www.flickr.com/people/jeffergu506/",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-6933",
       "status": "approved",
       "difficulty": 6,
@@ -17682,6 +17647,41 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Bernard Gagnon",
         "author_url": "https://commons.wikimedia.org/wiki/User:Bgag",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-6945",
+      "status": "approved",
+      "difficulty": 11,
+      "subcategory": "rhythms-dances-and-instruments",
+      "bundle": "colombia",
+      "description": "Cuatro huecos, una caña y un soplido: el Carnaval no necesita más.",
+      "question": "La flauta de millo se toca de lado y su lengüeta se corta en la misma caña. ¿Qué es el millo?",
+      "answer": "Una planta parecida al sorgo",
+      "wrong_answers": [
+        "Una palma costeña",
+        "Un bejuco trepador",
+        "Un junco de ciénaga"
+      ],
+      "hints": [
+        "La flauta se fabrica con la caña de lo que le da su nombre.",
+        "En la Costa Caribe también se siembra por sus semillas o para alimentar animales.",
+        "Su caña es delgada y hueca, como la de su pariente el mijo."
+      ],
+      "fun_fact": "La flauta de millo también se llama caña de millo o pito atravesao, y es la reina del Carnaval de Barranquilla.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Congo_grande_dancers.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACongo_grande_dancers.jpg",
+        "credit": "Camilo1982 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Camilo1982",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Camilo1982&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -36054,41 +36054,6 @@
       "background": null
     },
     {
-      "id": "q-7478",
-      "status": "approved",
-      "difficulty": 1,
-      "subcategory": "olympic-medallists",
-      "bundle": "colombia",
-      "description": "Una pregunta que se cuenta con los dedos, aunque estén bien acolchados.",
-      "question": "Suben al ring la boxeadora colombiana Ingrit Valencia y su rival, cada una con sus guantes puestos. ¿Cuántos guantes hay en el ring?",
-      "answer": "4",
-      "wrong_answers": [
-        "2",
-        "6",
-        "8"
-      ],
-      "hints": [
-        "Cada boxeadora tiene dos manos.",
-        "Son dos boxeadoras.",
-        "Dos guantes más dos guantes."
-      ],
-      "fun_fact": "En el boxeo olímpico los guantes son rojos o azules, según la esquina de cada boxeador.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Boxing_gloves_Bail_10-OZ_%284%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABoxing_gloves_Bail_10-OZ_%284%29.jpg",
-        "credit": "I would appreciate being notified if you use my work outside Wikimedia. · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "I would appreciate being notified if you use my work outside Wikimedia.\nDo not copy this image illegally by ignoring the terms of the license below, as it is not in the public domain. If you would like special permission to use, license, or purchase the image please contact me to negotiate terms.\n\nMore of my work can be found in my personal gallery.",
-        "author_url": "https://commons.wikimedia.org/wiki/Special:EmailUser/Sevela.p",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-7479",
       "status": "approved",
       "difficulty": 3,
@@ -36896,7 +36861,7 @@
     {
       "id": "q-7504",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 2,
       "subcategory": "banknotes-and-coins",
       "bundle": "colombia",
       "description": "Ese numerito al final de la cuenta que hace que todos se miren en la mesa.",
@@ -41838,41 +41803,6 @@
       "background": null
     },
     {
-      "id": "q-7648",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "olympic-medallists",
-      "bundle": "colombia",
-      "description": "El lugar donde Colombia por fin estrenó vitrina de trofeos olímpicos.",
-      "question": "Recibí los Juegos Olímpicos de 1972, y allí Colombia ganó sus primeras medallas: una plata en tiro y dos bronces en boxeo. ¿Quién soy?",
-      "answer": "Múnich",
-      "wrong_answers": [
-        "Ciudad de México",
-        "Montreal",
-        "Roma"
-      ],
-      "hints": [
-        "En esos Juegos apareció la primera mascota olímpica oficial, un perrito salchicha.",
-        "Soy una ciudad europea.",
-        "Soy la capital de Baviera, en Alemania."
-      ],
-      "fun_fact": "La plata de Múnich la ganó el barranquillero Helmut Bellingrodt en tiro al blanco móvil.",
-      "media": {
-        "type": "image",
-        "role": "decorative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Black_boxing_gloves.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ABlack_boxing_gloves.jpg",
-        "credit": "Airman 1st Class Kerelin Molina · Public domain · Wikimedia Commons",
-        "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "Airman 1st Class Kerelin Molina",
-        "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-7649",
       "status": "approved",
       "difficulty": 2,
@@ -46598,6 +46528,41 @@
       "background": null
     },
     {
+      "id": "q-7785",
+      "status": "approved",
+      "difficulty": 8,
+      "subcategory": "writers-and-books",
+      "bundle": "colombia",
+      "description": "Hay frases que uno se aprende antes de leer el libro, como el himno antes de entender la letra.",
+      "question": "«En un lugar de la Mancha» es a «Don Quijote» como «Muchos años después, frente al pelotón de fusilamiento» es a…",
+      "answer": "«Cien años de soledad»",
+      "wrong_answers": [
+        "«El amor en los tiempos del cólera»",
+        "«Crónica de una muerte anunciada»",
+        "«María»"
+      ],
+      "hints": [
+        "Las dos frases son la primera línea de una novela famosa.",
+        "La frase sigue con el coronel Aureliano Buendía y el día que conoció el hielo.",
+        "Es la novela de Macondo y la familia Buendía."
+      ],
+      "fun_fact": "García Márquez contó que esa primera frase le llegó de repente mientras manejaba su carro rumbo a Acapulco.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Brother_Activator_800T_Portable_Manual_Typewriter.JPG/3840px-Brother_Activator_800T_Portable_Manual_Typewriter.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABrother_Activator_800T_Portable_Manual_Typewriter.JPG",
+        "credit": "Dwight Burdette · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0",
+        "author": "Dwight Burdette",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Dwight_Burdette",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-7786",
       "status": "approved",
       "difficulty": 12,
@@ -46970,14 +46935,14 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3A100_Pesos_-_Banco_De_Oriente_%281900%29_Bisco5_01.jpg",
-        "credit": "El Banco De Oriente. · Public domain · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Moneda_Colombiana.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AMoneda_Colombiana.jpg",
+        "credit": "Don Gatico · CC BY 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "Public domain",
-        "license_url": null,
-        "author": "El Banco De Oriente.",
-        "author_url": null,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0",
+        "author": "Don Gatico",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Don_Gatico&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -47825,7 +47790,7 @@
     {
       "id": "q-7823",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 2,
       "subcategory": "home-school-and-paperwork",
       "bundle": "colombia",
       "description": "La oficina donde hasta los más valientes caminan despacito.",
@@ -48838,41 +48803,6 @@
       "background": null
     },
     {
-      "id": "q-7852",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "natural-parks-and-ecosystems",
-      "bundle": "colombia",
-      "description": "Hasta el paraíso necesita pedir vacaciones de vez en cuando.",
-      "question": "El Parque Tayrona cierra varias veces al año para que la naturaleza descanse. En total, ¿cuántos días al año, más o menos, está cerrado?",
-      "answer": "Unos 45 días",
-      "wrong_answers": [
-        "Unos 2 días",
-        "Unos 150 días",
-        "Unos 300 días"
-      ],
-      "hints": [
-        "La mayor parte del año el parque sí recibe turistas.",
-        "Suele cerrar tres veces: en febrero, en junio y entre octubre y noviembre.",
-        "Cada cierre dura unas dos semanas."
-      ],
-      "fun_fact": "Los cierres se acuerdan con los pueblos indígenas de la Sierra Nevada, que aprovechan para hacer rituales de limpieza espiritual del territorio.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Cabo_San_Juan%2C_Colombia.jpg/3840px-Cabo_San_Juan%2C_Colombia.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3ACabo_San_Juan%2C_Colombia.jpg",
-        "credit": "OpenAperture · CC BY-SA 3.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
-        "author": "OpenAperture",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Openaperture&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-7853",
       "status": "approved",
       "difficulty": 9,
@@ -49085,7 +49015,7 @@
     {
       "id": "q-7859",
       "status": "approved",
-      "difficulty": 5,
+      "difficulty": 7,
       "subcategory": "olympic-medallists",
       "bundle": "colombia",
       "description": "Japón, 2021: unos Juegos que llegaron un año tarde, como el bus en hora pico.",
@@ -49610,7 +49540,7 @@
     {
       "id": "q-7874",
       "status": "approved",
-      "difficulty": 6,
+      "difficulty": 10,
       "subcategory": "pre-columbian-cultures",
       "bundle": "colombia",
       "description": "Una ciudad tan perdida que se demoró siglos en volver a aparecer.",
@@ -52935,7 +52865,7 @@
     {
       "id": "q-7970",
       "status": "approved",
-      "difficulty": 14,
+      "difficulty": 12,
       "subcategory": "20th-century",
       "bundle": "colombia",
       "description": "Un apellido que volvió a la Casa de Nariño una generación después.",
@@ -56280,14 +56210,14 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Manizales_desde_el_Corredor_Polaco_de_la_catedral_23.jpg/3840px-Manizales_desde_el_Corredor_Polaco_de_la_catedral_23.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AManizales_desde_el_Corredor_Polaco_de_la_catedral_23.jpg",
-        "credit": "XalD · CC BY-SA 4.0 · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Cable_aereo_ciudad.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ACable_aereo_ciudad.jpg",
+        "credit": "XXXX0000 · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
         "license": "CC BY-SA 4.0",
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "XalD",
-        "author_url": "https://commons.wikimedia.org/wiki/User:XalD",
+        "author": "XXXX0000",
+        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:XXXX0000&action=edit&redlink=1",
         "excerpt": null
       },
       "background": null
@@ -59233,6 +59163,41 @@
       "background": null
     },
     {
+      "id": "q-8152",
+      "status": "approved",
+      "difficulty": 13,
+      "subcategory": "national-symbols",
+      "bundle": "colombia",
+      "description": "Tres colores que se repartieron entre varios países como herencia de familia.",
+      "question": "Mira esta bandera de la Gran Colombia. ¿Quién propuso sus tres colores, amarillo, azul y rojo?",
+      "answer": "Francisco de Miranda",
+      "wrong_answers": [
+        "Simón Bolívar",
+        "Antonio Nariño",
+        "Francisco de Paula Santander"
+      ],
+      "hints": [
+        "Fue un prócer nacido en Caracas.",
+        "Llevó esos colores a Venezuela en 1806, años antes de la Gran Colombia.",
+        "Lo llaman «el Precursor» de la independencia."
+      ],
+      "fun_fact": "Miranda también luchó en la Revolución francesa y su nombre está grabado en el Arco del Triunfo de París.",
+      "media": {
+        "type": "image",
+        "role": "essential",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Bandera_gran_colombia_tres_estrellas.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABandera_gran_colombia_tres_estrellas.png",
+        "credit": "Luismanuel1995 · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "author": "Luismanuel1995",
+        "author_url": null,
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
       "id": "q-8153",
       "status": "approved",
       "difficulty": 6,
@@ -59865,7 +59830,7 @@
     {
       "id": "q-8171",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 6,
       "subcategory": "pioneers-and-popular-figures",
       "bundle": "colombia",
       "description": "Una melena que merece su propio álbum de recuerdos.",
@@ -61300,7 +61265,7 @@
     {
       "id": "q-8212",
       "status": "approved",
-      "difficulty": 8,
+      "difficulty": 12,
       "subcategory": "olympic-medallists",
       "bundle": "colombia",
       "description": "Un viaje a Brasil con samba, playa y mucho que celebrar.",
@@ -62700,7 +62665,7 @@
     {
       "id": "q-8254",
       "status": "approved",
-      "difficulty": 10,
+      "difficulty": 8,
       "subcategory": "vallenato",
       "bundle": "colombia",
       "description": "Un libro tan largo que necesitaría acordeón con batería de repuesto.",
@@ -63540,7 +63505,7 @@
     {
       "id": "q-8279",
       "status": "approved",
-      "difficulty": 4,
+      "difficulty": 8,
       "subcategory": "mountains-and-landscapes",
       "bundle": "colombia",
       "description": "Aquí el viento sopla tan fuerte y el sol pega tan duro que hasta las nubes prefieren pasar de largo.",
@@ -64050,12 +64015,12 @@
       "media": {
         "type": "image",
         "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Malec%C3%B3n_avenida_del_R%C3%ADo_Barranquilla.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AMalec%C3%B3n_avenida_del_R%C3%ADo_Barranquilla.jpg",
-        "credit": "Jdvillalobos · CC BY-SA 3.0 · Wikimedia Commons",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/EstatuaShakiraMalecon.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AEstatuaShakiraMalecon.jpg",
+        "credit": "Jdvillalobos · CC BY-SA 4.0 · Wikimedia Commons",
         "provider": "commons",
-        "license": "CC BY-SA 3.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "author": "Jdvillalobos",
         "author_url": "https://commons.wikimedia.org/wiki/User:Jdvillalobos",
         "excerpt": null
@@ -64975,7 +64940,7 @@
     {
       "id": "q-8320",
       "status": "approved",
-      "difficulty": 3,
+      "difficulty": 6,
       "subcategory": "cycling",
       "bundle": "colombia",
       "description": "Una camiseta tan pinta que todos en el pelotón se la quieren quitar al dueño.",
@@ -67248,41 +67213,6 @@
       "background": null
     },
     {
-      "id": "q-8385",
-      "status": "approved",
-      "difficulty": 10,
-      "subcategory": "cities-and-towns",
-      "bundle": "colombia",
-      "description": "Un pueblo donde uno se mete al agua calientita y sale con hambre de algo bien sabroso.",
-      "question": "Santa Rosa de Cabal, en Risaralda, es famosa por sus termales, tiene un festival propio y se vende en cada esquina. ¿Qué producto es?",
-      "answer": "El chorizo",
-      "wrong_answers": [
-        "La morcilla",
-        "La butifarra",
-        "La longaniza"
-      ],
-      "hints": [
-        "Es un embutido.",
-        "Se come con arepa y se asa a la parrilla.",
-        "Lo llaman «santarrosano» y es rojizo."
-      ],
-      "fun_fact": "Santa Rosa de Cabal se hace llamar la «capital mundial del chorizo» y le dedica fiestas cada año.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/87/Imagen_de_los_Termales_de_Santa_Rosa_de_Cabal.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AImagen_de_los_Termales_de_Santa_Rosa_de_Cabal.jpg",
-        "credit": "Colombia Turiscol · CC0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC0",
-        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-        "author": "Colombia Turiscol",
-        "author_url": null,
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-8386",
       "status": "approved",
       "difficulty": 11,
@@ -68335,7 +68265,7 @@
     {
       "id": "q-8417",
       "status": "approved",
-      "difficulty": 5,
+      "difficulty": 8,
       "subcategory": "national-team",
       "bundle": "colombia",
       "description": "Un señor que dirigía desde la raya con cara de estar en misa.",
@@ -69593,41 +69523,6 @@
       "background": null
     },
     {
-      "id": "q-8453",
-      "status": "approved",
-      "difficulty": 2,
-      "subcategory": "mountains-and-landscapes",
-      "bundle": "colombia",
-      "description": "En el desierto de día no hay mucho que ver, pero de noche el show es gratis y con millones de luces.",
-      "question": "«Vivo en el desierto de la Tatacoa, en el Huila. De noche la gente viene a mirar las estrellas conmigo.» ¿Qué soy?",
-      "answer": "Un observatorio",
-      "wrong_answers": [
-        "Un faro",
-        "Un acuario",
-        "Una torre de control"
-      ],
-      "hints": [
-        "Mi trabajo empieza cuando se oculta el sol.",
-        "Desde mí se ven planetas, la Luna y estrellas fugaces.",
-        "Por dentro tengo telescopios."
-      ],
-      "fun_fact": "La Tatacoa es de los mejores lugares de Colombia para mirar estrellas porque hay pocas nubes y casi no llega luz de ciudades.",
-      "media": {
-        "type": "image",
-        "role": "illustrative",
-        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/V%C3%ADa_L%C3%A1ctea_sobre_el_horizonte_de_la_Tatacoa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-        "source_url": "https://commons.wikimedia.org/wiki/File%3AV%C3%ADa_L%C3%A1ctea_sobre_el_horizonte_de_la_Tatacoa.jpg",
-        "credit": "Johan Andrés Toro · CC BY-SA 4.0 · Wikimedia Commons",
-        "provider": "commons",
-        "license": "CC BY-SA 4.0",
-        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
-        "author": "Johan Andrés Toro",
-        "author_url": "https://commons.wikimedia.org/w/index.php?title=User:Johan_Andr%C3%A9s_Toro&action=edit&redlink=1",
-        "excerpt": null
-      },
-      "background": null
-    },
-    {
       "id": "q-8454",
       "status": "approved",
       "difficulty": 3,
@@ -69868,6 +69763,41 @@
         "license_url": "https://creativecommons.org/licenses/by/3.0",
         "author": "Michal Strzelecki, Wojtek Strzelecki & Jerzy Strzelecki",
         "author_url": "https://commons.wikimedia.org/wiki/User:Jerzystrzelecki",
+        "excerpt": null
+      },
+      "background": null
+    },
+    {
+      "id": "q-8461",
+      "status": "approved",
+      "difficulty": 4,
+      "subcategory": "plants-and-flowers",
+      "bundle": "colombia",
+      "description": "Un desfile donde el perfume llega antes que la banda.",
+      "question": "¿En qué ciudad colombiana desfilan cada agosto los silleteros, que cargan enormes arreglos de flores en la espalda?",
+      "answer": "Medellín",
+      "wrong_answers": [
+        "Cali",
+        "Barranquilla",
+        "Cartagena"
+      ],
+      "hints": [
+        "Es una ciudad de Antioquia.",
+        "Le dicen «la ciudad de la eterna primavera».",
+        "Tiene metro y queda en el Valle de Aburrá."
+      ],
+      "fun_fact": "El primer Desfile de Silleteros se hizo en 1957, con unos 40 campesinos del corregimiento de Santa Elena.",
+      "media": {
+        "type": "image",
+        "role": "illustrative",
+        "file_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Bloemencorso_Zundert_2002_-_Moeders_kroost.jpg/3840px-Bloemencorso_Zundert_2002_-_Moeders_kroost.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ABloemencorso_Zundert_2002_-_Moeders_kroost.jpg",
+        "credit": "Foto van Hassel BV · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Foto van Hassel BV",
+        "author_url": null,
         "excerpt": null
       },
       "background": null

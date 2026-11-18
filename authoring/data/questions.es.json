@@ -149332,16 +149332,23 @@
       "description": "Los motores son máquinas glotonas, pero no todos comen de la misma manera.",
       "fun_fact": "Los cohetes llevan su propio oxígeno, muchas veces como un líquido superfrío.",
       "difficulty": 6,
-      "status": "approved",
+      "status": "needs_work",
       "batch": "tr-es-13",
       "review": {
-        "decision": "approved",
-        "feedback": null,
-        "problems": [],
-        "reviewed_on": "2026-10-28",
-        "reviewer": "llm",
-        "model": "claude-opus-5-5",
-        "previous": null
+        "decision": "needs_work",
+        "feedback": "Marcada en el juego (palomita y mi esposito, 2026-10-31): existen cohetes que traen su propio aire · Vista: «Tres de estos motores necesitan el aire que los rodea para quemar su combustible. ¿Cuál no?» Respuesta: «Un motor de cohete»; otras: «Un motor a reacción» / «Un motor de automóvil» / «Un motor de avión de hélice».",
+        "reviewed_on": "2022-12-31",
+        "reviewer": "human",
+        "model": null,
+        "previous": {
+          "decision": "approved",
+          "feedback": null,
+          "problems": [],
+          "reviewed_on": "2026-10-28",
+          "reviewer": "llm",
+          "model": "claude-opus-5-5",
+          "previous": null
+        }
       },
       "source_hash": "0ded90d9f804"
     },
