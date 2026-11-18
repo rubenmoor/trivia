@@ -1654328,6 +1654328,1065 @@
         "kind": "place",
         "probe": "media-probe/f91405143214db5d"
       }
+    },
+    {
+      "id": "q-21191",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "Somebody up in that tree has strong opinions and wants the whole forest to hear every one of them.",
+      "question": "Watch and listen: which North American bird of prey is calling from this branch?",
+      "answer": "Red-shouldered hawk",
+      "wrong_answers": [
+        "Red-tailed hawk",
+        "Broad-winged hawk",
+        "Harris's hawk"
+      ],
+      "hints": [
+        "It likes wet woods, swamps and riversides more than open prairie.",
+        "Blue jays often copy its loud, repeated “kee-ah” call.",
+        "Its name points to a rusty patch near the top of its wings."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARed-shouldered_hawk_vocalizing.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Red-shouldered_hawk_vocalizing.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "User:Bnuuy · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "User:Bnuuy",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Red-shouldered hawk vocalizing.webm",
+        "note": "The whole 12.7 s clip: a perched hawk with a rufous, finely barred breast, black-and-white checkered wings and a banded tail against a blue sky, giving about ten evenly spaced, downward-slurred “kee-ah” calls.",
+        "duration": 12.68
+      },
+      "fun_fact": "In flight, this hawk shows pale, crescent-shaped “windows” near its wingtips, which birdwatchers use to spot it from far away.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Red-shouldered hawk",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 2,
+        "description": 4,
+        "difficulty_estimate": 15,
+        "notes": "Naming a North American hawk from its call is specialist birding knowledge and leans on one region, so families elsewhere have little to reason from. Two options start with 'Red-', which makes it a coin-flip for non-experts. The facts (blue jays copying its call, the wing crescents) are correct."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of animals",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/e4730db8a16d1957"
+      }
+    },
+    {
+      "id": "q-21192",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "A chicken-shaped bird who decided today was the day to dress up and strut.",
+      "question": "Watch: which bird is showing off for a mate in this video?",
+      "answer": "Ruffed grouse",
+      "wrong_answers": [
+        "Black grouse",
+        "Sage grouse",
+        "Hazel grouse"
+      ],
+      "hints": [
+        "It lives in the forests of Canada and the northern United States.",
+        "In spring, the male “drums” by beating his wings so fast that the air thumps like a distant engine.",
+        "Its name comes from the collar of dark feathers it puffs up around its neck."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARuffed_grouse_display.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Ruffed_grouse_display.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Rhododendrites",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Ruffed grouse display.webm",
+        "note": "A male ruffed grouse on a leaf-covered forest path, displaying with his black neck ruff raised and his banded tail fanned; seen from the side and from behind. The sound is very quiet and not needed.",
+        "duration": 49.2,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "fun_fact": "A male ruffed grouse’s wing-drumming is so low and deep that you can hear it from about 400 m (a quarter of a mile) away, but it is very hard to tell where the sound comes from.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Ruffed grouse male courtship display",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "Telling grouse species apart is specialist knowledge centred on North America. Hint 3 (the 'ruff') nearly names it, which is allowed for a third hint. The audible range in the fun fact (about 400 m) is a commonly quoted figure but approximate."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of animals",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/b63ca49186698743"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Rewrote the description so it no longer names a forest habitat, which ruled out the sage grouse; the frames clearly show a displaying ruffed grouse, and the quiet sound isn't needed.",
+        "previous": {
+          "description": "A forest chicken who decided today was the day to dress up and strut."
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21193",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "Even the toughest soldiers on Earth need something catchy to hum while they polish their boots.",
+      "question": "Watch and listen: the melody of this famous military hymn comes from an operetta. Who composed that operetta?",
+      "answer": "Jacques Offenbach",
+      "wrong_answers": [
+        "Johann Strauss II",
+        "Arthur Sullivan",
+        "Georges Bizet"
+      ],
+      "hints": [
+        "The tune is the official hymn of the United States Marine Corps.",
+        "The composer was born in Cologne, Germany, but became the king of operetta in Paris.",
+        "The same composer wrote the wild can-can from “Orpheus in the Underworld”."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AUSMC_BIRTHDAY_BALL_MUSIC_-_The_Marines%27_Hymn_%28slow_version%29_-_U.S._Marine_Band.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/USMC_BIRTHDAY_BALL_MUSIC_-_The_Marines%27_Hymn_%28slow_version%29_-_U.S._Marine_Band.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "United States Marine Band · Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "United States Marine Band",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-USGov-Military-Marines",
+          "PD-USMC"
+        ],
+        "role": "essential",
+        "query": "File:USMC BIRTHDAY BALL MUSIC - The Marines' Hymn (slow version) - U.S. Marine Band.webm",
+        "note": "The U.S. Marine Band brass ensemble in red dress uniforms plays the opening of the slow version of the Marines' Hymn; the melody must be clearly recognizable. No speech. A small “The President's Own” watermark sits in the corner; it names the band, not the composer.",
+        "duration": 159.33,
+        "excerpt": {
+          "start": 0,
+          "end": 30
+        }
+      },
+      "fun_fact": "The hymn’s first line, “From the Halls of Montezuma to the shores of Tripoli,” recalls battles fought in Mexico and North Africa.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "The Marines' Hymn (slow version) played by a brass ensemble of the U.S. Marine Band",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 4,
+        "distractors": 5,
+        "age_fit": 3,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "Age fit: it relies on recognising a US military hymn, which is US-centric; outside the US few will know the tune. Correct: the melody comes from Offenbach's 'Geneviève de Brabant'. The distractors are excellent operetta and opera composers. q-5613 is also about Offenbach but asks a different fact."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "piece-film",
+        "probe": "media-probe/0e44bafb117894aa"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Removed “French” and “19th-century” from the question, as the reviewer asked, so recognizing the tune in the clip decides the answer and the text alone doesn't point to Offenbach.",
+        "previous": {
+          "question": "Watch and listen: this famous military hymn borrows its melody from a 19th-century French operetta. Who composed that operetta?"
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21194",
+      "status": "approved",
+      "difficulty": 7,
+      "description": "The world's laziest snake charmer swapped his flute for a tea light and still gets a dance.",
+      "question": "Watch: once the candle is lit, the paper spiral starts to turn by itself. What makes it spin?",
+      "answer": "Warm air rising from the flame",
+      "wrong_answers": [
+        "Light pushing on the paper",
+        "Static electricity in the paper",
+        "Magnetism from the metal stick"
+      ],
+      "hints": [
+        "Think about what the flame does to everything around it, not just what it lights up.",
+        "Smoke from a campfire travels in the same direction as this invisible push.",
+        "Hot-air balloons go up for the very same reason."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3A%D0%92%D0%B5%D1%80%D1%82%D1%8F%D1%89%D0%B0%D1%8F%D1%81%D1%8F_%D0%B7%D0%BC%D0%B5%D0%B9%D0%BA%D0%B0.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/%D0%92%D0%B5%D1%80%D1%82%D1%8F%D1%89%D0%B0%D1%8F%D1%81%D1%8F_%D0%B7%D0%BC%D0%B5%D0%B9%D0%BA%D0%B0.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Татьяна Е-2019 · CC BY 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 4.0",
+        "license_url": null,
+        "author": "Татьяна Е-2019",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Вертящаяся змейка.webm",
+        "note": "The whole 20.7 s clip: a paper spiral hangs on a thin stick above a tea light; the candle gets lit near the start, then the spiral turns steadily. Silent clip.",
+        "duration": 20.69
+      },
+      "fun_fact": "German Christmas pyramids work the same way: warm air rising from candles turns a wooden propeller that spins the little figures below it.",
+      "subcategory": "physics",
+      "style": null,
+      "concept": "Paper spiral snake spinning over a candle in rising hot air (convection)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 5,
+        "description": 5,
+        "difficulty_estimate": 6,
+        "notes": "A clear, satisfying physics demo that players can reason through. The answer is a bit longer than the distractors, but not badly so."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:experiment science video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/a4a8a9552fc718d3"
+      }
+    },
+    {
+      "id": "q-21195",
+      "status": "approved",
+      "difficulty": 10,
+      "description": "This bird can stand still so long it would win any game of freeze tag.",
+      "question": "Watch: what kind of bird is the white one standing on the rock?",
+      "answer": "Egret",
+      "wrong_answers": [
+        "Stork",
+        "Ibis",
+        "Spoonbill"
+      ],
+      "hints": [
+        "It hunts fish, shrimp and frogs in shallow water.",
+        "Look at its bill: it is straight and pointed, not curved, and not flat at the tip.",
+        "It is a slim, all-white member of the heron family, famous for its lacy feathers."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ASnowy_egret_and_curlew_in_Crissy_Field_marsh_%2816892%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Snowy_egret_and_curlew_in_Crissy_Field_marsh_%2816892%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Rhododendrites · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Rhododendrites",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Snowy egret and curlew in Crissy Field marsh (16892).webm",
+        "note": "The whole clip: an all-white egret with a straight dark bill standing on a mossy rock in a shallow marsh, bending down to look into the water; a brown curlew stands in the background.",
+        "duration": 15.86
+      },
+      "fun_fact": "In the late 1800s, egret plumes were so popular on hats that the birds were nearly wiped out, and this helped start some of the first bird-protection groups.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Snowy egret standing on a rock (with a curlew behind)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "A fairly dry bird-ID question. Some players might call it a heron, but that isn't among the options. Hint 2 (bill shape) does most of the work, which is fine for a hint."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of animals",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/361ec0df15c42f35"
+      }
+    },
+    {
+      "id": "q-21196",
+      "status": "approved",
+      "difficulty": 14,
+      "description": "Two young dancers and one drummer, and the floor never gets a moment's peace.",
+      "question": "Watch: this classical dance, here performed by two boys to drums, comes from which state of India?",
+      "answer": "Assam",
+      "wrong_answers": [
+        "Kerala",
+        "Odisha",
+        "Tamil Nadu"
+      ],
+      "hints": [
+        "Look closely at the costumes: white cloth with red woven patterns, typical of one region's textiles.",
+        "The dance grew out of religious plays created by a saint and reformer about 500 years ago.",
+        "It comes from India's tea-growing northeast, where it was born in Hindu monasteries along the Brahmaputra River."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATypical_Satriya_dance.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Typical_Satriya_dance.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Research Institute of World’s Ancient Traditions Cultures and Heritage · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Research Institute of World’s Ancient Traditions Cultures and Heritage",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Typical Satriya dance.webm",
+        "note": "Two boys in white-and-red Assamese costumes and white turbans dancing Sattriya on a veranda, with a drummer seated behind them; drum music plays the whole time.",
+        "duration": 174.72,
+        "excerpt": {
+          "start": 50,
+          "end": 80
+        }
+      },
+      "fun_fact": "Sattriya was created by the saint Srimanta Sankardeva about 500 years ago, and for centuries it was danced only by male monks inside Assam's monasteries, called sattras.",
+      "subcategory": "celebrations-around-the-world",
+      "style": null,
+      "concept": "Sattriya, classical dance of Assam, India, performed by two boys with drum accompaniment",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 4,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "Good specialist question with strong distractors (states known for their classical dances). There are several other Assam dance questions in the pool, but they ask different facts. It is hard to enjoy unless you know Indian classical dance."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/d4e5b5ac055306bd"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 2, which gave the answer away by naming India's northeast, with a vaguer clue about its religious origins, and moved the northeast/tea clue into hint 3.",
+        "previous": {
+          "hints": [
+            "Look closely at the costumes: white cloth with red woven patterns, typical of one region's textiles.",
+            "The dance comes from India's northeast, a region famous for its tea.",
+            "It was born in the Hindu monasteries along the Brahmaputra River."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21197",
+      "status": "approved",
+      "difficulty": 10,
+      "description": "Twenty-two years of cosmic glow-up squeezed into the length of a sneeze.",
+      "question": "Watch: the Hubble Space Telescope took these pictures between 1994 and 2016. What lies at the center of this glowing ring?",
+      "answer": "An exploded star",
+      "wrong_answers": [
+        "A black hole",
+        "A ringed planet",
+        "A frozen comet"
+      ],
+      "hints": [
+        "The ring is about one light-year across, so it can't be anything in our solar system.",
+        "Its light reached Earth in 1987, when people in the Southern Hemisphere could briefly see it with the naked eye.",
+        "A shock wave from a giant blast is crashing into the ring and making it light up."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHubble_Chronicles_Brightening_of_Ring_around_Supernova_1987A_%281994-2016%29.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Hubble_Chronicles_Brightening_of_Ring_around_Supernova_1987A_%281994-2016%29.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": "NASA, ESA, and R. Kirshner (Harvard-Smithsonian Center for Astrophysics and Gordon and Betty Moore Foundation), and P. Challis (Harvard-Smithsonian Center for Astrophysics)",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-Hubble"
+        ],
+        "role": "essential",
+        "query": "File:Hubble Chronicles Brightening of Ring around Supernova 1987A (1994-2016).webm",
+        "note": "The whole 15-second Hubble time-lapse: an orange ring of gas around a fading central blob, with bright beads appearing and the ring lighting up white from 2000 onward. Small date captions (Feb 1994 to Jun 2016) appear under the image; they don't name the object.",
+        "duration": 14.95
+      },
+      "fun_fact": "Supernova 1987A was the closest supernova seen from Earth since 1604, when Johannes Kepler watched one in our own galaxy.",
+      "subcategory": "stars-and-galaxies",
+      "style": null,
+      "concept": "Supernova 1987A's ring brightening (Hubble time-lapse, 1994–2016)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 5,
+        "no_overlap": 4,
+        "distractors": 4,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "q-21130 asks about a supernova too, but a different fact. Solid question."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "event-person",
+        "probe": "media-probe/898fb244d12e623c"
+      }
+    },
+    {
+      "id": "q-21198",
+      "status": "needs_work",
+      "difficulty": 13,
+      "description": "Thousands of commuters catch it every morning, and it still never gets to stay home on a snow day.",
+      "question": "Watch: in which country does this green-and-white commuter train run?",
+      "answer": "Canada",
+      "wrong_answers": [
+        "United States",
+        "Australia",
+        "Germany"
+      ],
+      "hints": [
+        "Snowy winters like this one are normal where this train runs.",
+        "Its double-decker coaches carry commuters around a big city on one of the Great Lakes.",
+        "The network serves the area around the country's largest city, on the shores of Lake Ontario."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGo_Train_No._638_Pulling_in_Go_Station_St._Catharines.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Go_Train_No._638_Pulling_in_Go_Station_St._Catharines.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Gogerr · CC BY-SA 4.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 4.0",
+        "license_url": null,
+        "author": "Gogerr",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Go Train No. 638 Pulling in Go Station St. Catharines.webm",
+        "note": "A green-and-white GO Transit diesel locomotive comes toward the camera along snowy tracks and pulls into the platform; the small “GO” logo on its nose can be seen near the end. Cut before the side view, where “Ontario 638” is painted on the locomotive.",
+        "duration": 16.01,
+        "excerpt": {
+          "start": 0,
+          "end": 9.5
+        }
+      },
+      "fun_fact": "GO Transit began running in 1967, the same year the country celebrated its 100th birthday.",
+      "subcategory": "trains",
+      "style": null,
+      "concept": "GO Transit double-decker commuter train (locomotive 638) arriving at St. Catharines, Ontario, Canada",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 3,
+        "age_fit": 3,
+        "fun": 2,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Recognising a regional Ontario commuter train is local knowledge. Families outside North America can only guess, which goes against the International angle. The snow in the video mostly rules out Australia, so in practice it comes down to US or Canada. The GO logo near the end could give it away to North Americans, and the cut at 9.5 s needs to really hide the 'Ontario' livery. Low fun: it is spotting a train, with little to reason from. The fun fact (founded 1967, Canada's centennial) is correct."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "needs_work",
+        "feedback": "Only people who know Ontario's GO Transit can recognise this train, so a base question breaks the International angle. The clip itself doesn't settle the answer: a snowy platform and a green-and-white diesel with bi-level coaches could just as well be in the US (the same Bombardier BiLevel coaches run on several US lines), so everyone else has to guess between the United States and Canada. The country only becomes clear from the hints that point to Lake Ontario and Toronto, not from what plays on screen.",
+        "problems": [
+          "media",
+          "style"
+        ],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:train video",
+        "class": "general",
+        "kind": "machine",
+        "probe": "media-probe/d1a13529a75a3b4c"
+      }
+    },
+    {
+      "id": "q-21199",
+      "status": "approved",
+      "difficulty": 6,
+      "description": "Three singers trying very hard to sneak away quietly, at full opera volume.",
+      "question": "Listen: in which language are these opera singers singing?",
+      "answer": "Italian",
+      "wrong_answers": [
+        "Spanish",
+        "French",
+        "German"
+      ],
+      "hints": [
+        "Listen to the endings: nearly every word finishes on a vowel.",
+        "The country where this language is spoken is home to the famous opera house La Scala.",
+        "Music words like “piano”, “forte” and “allegro” come from this language."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APDP-CH_-_La_Scala_-_Lorenzo_Molajoli_-_Atto_3-Sc_09-11-Terzetto-_Che_si_fa%2C_Zitti%2C_zitti%2C_piano%2C_piano_-_Rossini_-_Columbia-d14579-bx627.flac",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cb/PDP-CH_-_La_Scala_-_Lorenzo_Molajoli_-_Atto_3-Sc_09-11-Terzetto-_Che_si_fa%2C_Zitti%2C_zitti%2C_piano%2C_piano_-_Rossini_-_Columbia-d14579-bx627.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Public domain · Wikimedia Commons",
+        "provider": "commons",
+        "license": "Public domain",
+        "license_url": null,
+        "author": null,
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [
+          "PD-old-70"
+        ],
+        "role": "essential",
+        "query": "File:PDP-CH - La Scala - Lorenzo Molajoli - Atto 3-Sc 09-11-Terzetto- Che si fa, Zitti, zitti, piano, piano - Rossini - Columbia-d14579-bx627.flac",
+        "note": "The opening 60 s of the 1929 La Scala recording of the terzetto: orchestra plus three voices (soprano, tenor, baritone) singing Italian words clearly enough to hear the vowel endings.",
+        "duration": 246.1,
+        "excerpt": {
+          "start": 0,
+          "end": 60
+        }
+      },
+      "fun_fact": "This trio from Rossini’s “The Barber of Seville” is called “Zitti, zitti, piano, piano”, which means “Quiet, quiet, softly, softly”, yet the singers belt it out while trying to escape unnoticed.",
+      "subcategory": "classical-music",
+      "style": null,
+      "concept": "Rossini's The Barber of Seville, terzetto \"Zitti, zitti, piano, piano\" (1929 La Scala recording)",
+      "axes": null,
+      "quality": {
+        "correct": 4,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 5,
+        "fun": 4,
+        "description": 5,
+        "difficulty_estimate": 5,
+        "notes": "Since 'opera = Italian' is a common belief, many players will guess right without listening. This is a 1929 recording, so check that the words come through clearly. In most editions the terzetto is in Act 2; the file's 'Atto 3' is just how the recording was labelled, and the fun fact doesn't mention an act, so it's fine."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "opera house stage curtain",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ATeatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Teatro_Mario_Tiberini_di_San_Lorenzo_in_Campo_-_13.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+        "credit": "Accurimbono · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "author": "Accurimbono",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Accurimbono",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "q:audio:piano recording",
+        "class": "general",
+        "kind": "piece-film",
+        "probe": "media-probe/2b95d55b54b08da3"
+      }
+    },
+    {
+      "id": "q-21200",
+      "status": "approved",
+      "difficulty": 7,
+      "description": "This bird spends all day poking through pebbles, like someone who dropped their keys on the beach.",
+      "question": "Watch: which wading bird is this, searching for food along the shore?",
+      "answer": "Redshank",
+      "wrong_answers": [
+        "Greenshank",
+        "Black-winged stilt",
+        "Dunlin"
+      ],
+      "hints": [
+        "It feeds on lake shores, estuaries and salt marshes across Europe and Asia.",
+        "Look closely at the color of its legs.",
+        "Its English name pairs a color with an old word for the lower leg."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3ARedshank.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Redshank.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "C-M · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "C-M",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Redshank.webm",
+        "note": "A speckled grey-brown wader with bright red legs and a long, straight bill probes the pebbles at the water's edge. The window ends before a second bird flies into the frame at about 43 s.",
+        "duration": 45.75,
+        "excerpt": {
+          "start": 11,
+          "end": 41
+        }
+      },
+      "fun_fact": "The redshank is nicknamed the “warden of the marshes” because its loud alarm call warns every other bird nearby of danger.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Common redshank",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 9,
+        "notes": "It's a nice reasoning puzzle (red legs → redshank, with greenshank as the decoy), but you have to notice the legs and link them to the name. A typical 13-year-old won't do that before the hints, so 7 is too low. The black-winged stilt also has pinkish-red legs, but its black-and-white plumage sets it apart."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of animals",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/38267585f93037b6"
+      }
+    },
+    {
+      "id": "q-21201",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "This singer never took a single lesson and still refuses to stop practicing.",
+      "question": "Listen: which European songbird is singing this song?",
+      "answer": "Great reed warbler",
+      "wrong_answers": [
+        "Common nightingale",
+        "Eurasian skylark",
+        "Song thrush"
+      ],
+      "hints": [
+        "This bird spends the summer in Europe and flies to Africa south of the Sahara for the winter.",
+        "It sings from a stem near water, and its harsh song sounds a bit like “karra-karra-kiet”.",
+        "It weaves its nest between the tall stems that grow at the edge of lakes and marshes."
+      ],
+      "media": {
+        "type": "audio",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AGrote_karekiet_-_SoundCloud_-_Beeld_en_Geluid.ogg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Grote_karekiet_-_SoundCloud_-_Beeld_en_Geluid.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Beeld en Geluid · CC BY-SA 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": null,
+        "author": "Beeld en Geluid",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Grote karekiet - SoundCloud - Beeld en Geluid.ogg",
+        "note": "Several repeats of the great reed warbler's harsh, croaking “karra-karra-kiet” song phrase; no voices.",
+        "duration": 60.4,
+        "excerpt": {
+          "start": 1,
+          "end": 21
+        }
+      },
+      "fun_fact": "The great reed warbler is a favorite target of the cuckoo, which lays its eggs in the warbler's nest so the warbler raises the cuckoo chick.",
+      "subcategory": "birds",
+      "style": null,
+      "concept": "Great reed warbler",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 4,
+        "age_fit": 3,
+        "fun": 2,
+        "description": 4,
+        "difficulty_estimate": 14,
+        "notes": "Naming a bird from its song is expert birder knowledge. Most adults can only guess, but they could notice the harsh, croaky song doesn't fit the famous melodious singers. It's a dry identification task. Hint 3 (nest between reeds) points strongly to the name. The fun fact about the cuckoo is correct."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": {
+        "query": "lake shore at dawn",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AHebgen_Lake_at_dawn_02.jpg",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Hebgen_Lake_at_dawn_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Z3lvs · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "author": "Z3lvs",
+        "author_url": "https://commons.wikimedia.org/wiki/User:Z3lvs",
+        "restrictions": [],
+        "pd_reasons": []
+      },
+      "media_first": {
+        "seed": "cat:Audio files of Aves",
+        "class": "general",
+        "kind": "animal",
+        "probe": "media-probe/a5e0c251575c0b5b"
+      }
+    },
+    {
+      "id": "q-21202",
+      "status": "approved",
+      "difficulty": 13,
+      "description": "A man, a carved wooden boat full of strings, and not a drop of water anywhere in sight.",
+      "question": "Watch and listen: this plucked zither, played here in its home region, comes from which country?",
+      "answer": "Indonesia",
+      "wrong_answers": [
+        "Japan",
+        "China",
+        "South Korea"
+      ],
+      "hints": [
+        "Its home region is also famous for orchestras of gongs and metal xylophones.",
+        "Look closely at the pattern on the player's shirt: it is a famous wax-and-dye fabric art from the same country.",
+        "It is the largest country in the world made up only of islands."
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3APicking_Kecapi_in_Bandung.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Picking_Kecapi_in_Bandung.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Willaadrian · CC0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC0",
+        "license_url": null,
+        "author": "Willaadrian",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Picking Kecapi in Bandung.webm",
+        "note": "After the title card and before the black gap: a man in a batik shirt plucking a boat-shaped wooden kecapi zither with carved ends, its plucked sound clearly audible.",
+        "duration": 70.6,
+        "excerpt": {
+          "start": 12,
+          "end": 37
+        }
+      },
+      "fun_fact": "This zither is the kecapi of the Sundanese people of West Java, and it is often played together with a bamboo flute in a style called “kecapi suling”.",
+      "subcategory": "musical-instruments",
+      "style": null,
+      "concept": "Kecapi (Sundanese zither from Indonesia)",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 5,
+        "no_giveaway": 4,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 4,
+        "fun": 4,
+        "description": 4,
+        "difficulty_estimate": 12,
+        "notes": "Strong distractors: Japan, China and South Korea all have well-known zithers (koto, guzheng, gayageum). The batik hint is a nice touch for reasoning. Make sure the excerpt skips the title card with 'Kecapi in Bandung' on it."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "q:video:traditional dance video",
+        "class": "general",
+        "kind": "instrument",
+        "probe": "media-probe/464c870bdf6a293e"
+      },
+      "revision": {
+        "action": "revise",
+        "reason": "Replaced hint 1 (the equator clue that ruled out every wrong option at once) with a vaguer clue about the region's gong-and-xylophone orchestras.",
+        "previous": {
+          "hints": [
+            "This instrument's home country lies right on the equator.",
+            "Look closely at the pattern on the player's shirt: it is a famous wax-and-dye fabric art from the same country.",
+            "It is the largest country in the world made up only of islands."
+          ]
+        },
+        "revised_on": "2026-11-18"
+      }
+    },
+    {
+      "id": "q-21203",
+      "status": "approved",
+      "difficulty": 10,
+      "description": "A drone flew over a forest in Slovenia and caught the river doing something special enough to get its own word.",
+      "question": "Watch: what is the name for the spot on the river shown from above in this drone video?",
+      "answer": "Confluence",
+      "wrong_answers": [
+        "Delta",
+        "Meander",
+        "Estuary"
+      ],
+      "hints": [
+        "Look at how many streams of water you can see and where they go.",
+        "Look closely: two streams of water with slightly different colors come together.",
+        "The word comes from Latin for “flowing together.”"
+      ],
+      "media": {
+        "type": "video",
+        "source_url": "https://commons.wikimedia.org/wiki/File%3AConfluence_the_meeting_of_the_Sava_Bohinjka_and_Dolinka_in_Slovenia_-_Drone_DJI_Mavic_Mini_2_4k.webm",
+        "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Confluence_the_meeting_of_the_Sava_Bohinjka_and_Dolinka_in_Slovenia_-_Drone_DJI_Mavic_Mini_2_4k.webm?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "credit": "Nature shots · CC BY 3.0 · Wikimedia Commons",
+        "provider": "commons",
+        "license": "CC BY 3.0",
+        "license_url": null,
+        "author": "Nature shots",
+        "author_url": null,
+        "restrictions": [],
+        "pd_reasons": [],
+        "role": "essential",
+        "query": "File:Confluence the meeting of the Sava Bohinjka and Dolinka in Slovenia - Drone DJI Mavic Mini 2 4k.webm",
+        "note": "Top-down drone view where two forested river branches meet in a Y shape, and water of slightly different turquoise shades joins into one river (around 458 s).",
+        "duration": 539.4,
+        "excerpt": {
+          "start": 445,
+          "end": 475
+        }
+      },
+      "fun_fact": "In Slovenia, the Sava Bohinjka and the Sava Dolinka join here to become the Sava, a river that later flows past three capitals, Ljubljana, Zagreb and Belgrade, where it joins the Danube on its way to the Black Sea.",
+      "subcategory": "rivers",
+      "style": null,
+      "concept": "A river confluence (two rivers meeting) seen from a drone, Sava Bohinjka and Dolinka, Slovenia",
+      "axes": null,
+      "quality": {
+        "correct": 5,
+        "unambiguous": 4,
+        "no_giveaway": 5,
+        "no_overlap": 5,
+        "distractors": 5,
+        "age_fit": 5,
+        "fun": 3,
+        "description": 4,
+        "difficulty_estimate": 10,
+        "notes": "A solid geography-word question, though fairly dry and school-like. The excerpt has to clearly show the two branches meeting, or 'meander' or 'delta' could seem possible. The fun fact is accurate."
+      },
+      "fact_checked": true,
+      "needs_media": true,
+      "batch": "batch-87",
+      "review": {
+        "decision": "approved",
+        "feedback": null,
+        "problems": [],
+        "reviewed_on": "2026-11-18",
+        "reviewer": "llm",
+        "model": "claude-opus-5-5",
+        "previous": null
+      },
+      "bundle": "base",
+      "locale": "en",
+      "background": null,
+      "media_first": {
+        "seed": "cat:Videos of nature",
+        "class": "general",
+        "kind": "video-scene",
+        "probe": "media-probe/ed8c7221f9863364"
+      }
     }
   ]
 }
