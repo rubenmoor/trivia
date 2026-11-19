@@ -105,18 +105,11 @@ def locale_rows(pool):
     return rows
 
 
-def build(pool, bundles):
+def build(pool):
     sup = supply(pool)
     approved = [q for q in pool if q["status"] == "approved"]
     not_cached = sorted({url for q in approved for _, url in media_cache.picked(q)
                          if not media_cache.cache_path(url).is_file()})
-    bundle_rows = []
-    for b in bundles:
-        if b["kind"] == "base":
-            continue  # base: nothing to check, every question starts there
-        qs = [q for q in pool if q.get("bundle") == b["id"] and q["status"] != "rejected"]
-        bundle_rows.append({"id": b["id"], "name": b["name"], "questions": len(qs),
-                            "unreviewed": sum((q.get("review") or {}).get("reviewer") != "human" for q in qs)})
     return {
         "queues": {
             "needs_work": sum(q["status"] == "needs_work" for q in pool),
@@ -124,7 +117,6 @@ def build(pool, bundles):
             "approved_without_media": sum(not q["media"].get("file_url") for q in approved),
             "not_cached": len(not_cached),
             "licence_replace": sum(r["verdict"] == "replace" for r in media.licence_rows([q for q in pool if q["status"] != "rejected"])),
-            "bundles": bundle_rows,
         },
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),
         "spot_checks": spot_check_rows(pool),

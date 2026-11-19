@@ -238,7 +238,6 @@ export interface Overview {
     not_cached: number;
     /** Questions on the licence replacement list (plan 53). */
     licence_replace: number;
-    bundles: { id: string; name: string; questions: number; unreviewed: number }[];
   };
   llm_approved: number;
   /** Runs whose blind spot check isn't complete (spot_checks.json decided against its size). */

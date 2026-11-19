@@ -82,11 +82,6 @@
         text: `${q.licence_replace === 1 ? "media file" : "media files"} with a licence to replace: pick new ones`,
         href: review({ licence: "replace" }),
       },
-      ...q.bundles.map((b) => ({
-        count: b.unreviewed,
-        text: `of ${b.questions} questions in the bundle ${b.name} without a human review: check they belong there`,
-        href: review({ bundle: b.id }),
-      })),
       {
         count: q.not_cached,
         text: `picked media ${q.not_cached === 1 ? "file" : "files"} not in the cache yet: run`,
