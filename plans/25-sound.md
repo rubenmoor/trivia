@@ -184,6 +184,23 @@ Kenney clean-digital picks (Digital, RPG, Casino) sounded like cheap sci-fi; dec
 
 Kenney clean-digital picks were synthetic bleeps; decision 740 rejected them: the old fireworks were good, natural sounds wanted. Reverted: `rocket` `cohete`, `burst` `estallido`, `confetti-cannon` `canon-confeti`, `sparklers` `bengalas`, `stars` `estrellas`; hand rows in `CREDITS.md`, no `trivia-sfx` records. No further round unless the developer asks.
 
+### Splash group, round 1 (old recordings kept)
+
+Given the rejections of synthetic picks (decisions 737, 739, 740: natural sounds wanted), round 1 changes no file: every `splash-*` cue keeps its old natural recording, hand rows in `CREDITS.md`, no `trivia-sfx` records. Workers can't hear; replacing 20 sounds blind would repeat the failed rounds. Approval pending (splash decision); the developer names the cues to change, the next round searches natural recordings for those only.
+
+| Cue | File (rate) | Cue | File (rate) |
+|---|---|---|---|
+| `splash-left` | `whoosh` | `splash-drain` | `silbato` |
+| `splash-right` | `escoba` | `splash-pop` | `pop` (1.1) |
+| `splash-fade` | `susurro-papel` | `splash-zoom` | `whoosh` (1.3) |
+| `splash-spin` | `swoosh-sube` (1.2) | `splash-shatter` | `vidrio` |
+| `splash-dissolve` | `disolver` | `splash-melt` | `derretir` |
+| `splash-explode` | `estallido` (1.1) | `splash-blackhole` | `agujero-negro` |
+| `splash-rocket` | `cohete` | `splash-birds` | `pajaros` |
+| `splash-drop` | `golpe` (0.8) | `splash-typewriter` | `maquina-escribir` |
+| `splash-wind` | `escoba` (0.8) | `splash-plane` | `papel` |
+| `splash-blind` | `rebobinar` | `splash-jelly` | `gelatina` |
+
 ### Timed group, round 1
 
 Source: Kenney Digital Audio (pep sounds, phase jump, high tones), CC0, the `clean-digital` theme. Heartbeat and rustle are jokers-group cues (their old files `latido`, `susurro-papel`, back after decision 739) and play in timed rounds too; `padlock-close` and `fanfare` in the UI and reveal groups. `claim` has three variants (rate varies); `countdown` is one tick whose pitch rises with the level (1–3). `silbato` stays for `splash-drain` (splash task). Synth `claim` and `countdown` stay as fallback. Approval pending (timed decision); alternates staged on `/sounds` ("Effects: timed", round 1).
