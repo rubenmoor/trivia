@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Media candidates and picks (plans/06-images.md, D-13); the providers are in providers/ (D-45).
 
-    trivia-media fetch [--batch batch-12 | --ids q-0001,q-0002] [--force]
     trivia-media sync [--status approved] [--prune]
     trivia-media licenses [--status approved] [--json]
 
-`fetch` stores up to 6 candidates per question and slot: work/media/<id>.json for the
+`fetch_for` (called by the review tool and the batch) stores up to 6 candidates per question and slot: work/media/<id>.json for the
 question's media, work/media/<id>-background.json for the background image of audio
 questions (D-14). The review tool and `qgen review` choose among them; `download()` and
 `pick_fields()` turn a chosen candidate into the fields stored in the pool.
@@ -325,38 +324,6 @@ def cmd_sync(args):
         sys.exit(1)
 
 
-def cmd_fetch(args):
-    qs = json.loads(POOL.read_text(encoding="utf-8"))["questions"]
-    if args.batch:
-        qs = [q for q in qs if q.get("batch") == (None if args.batch == "none" else args.batch)]
-    if args.ids:
-        wanted = set(args.ids.split(","))
-        qs = [q for q in qs if q["id"] in wanted]
-
-    def needed(q, slot):
-        target = q["media"] if slot == "media" else q.get("background")
-        return target is not None and not target["file_url"] and (args.force or not candidates_path(q["id"], slot).exists())
-
-    todo = [(q, slot) for q in qs for slot in SLOTS if needed(q, slot)]
-    print(f"fetching candidates for {len(todo)} slot(s)", flush=True)
-    empty = []
-    for q, slot in todo:
-        label = q["id"] if slot == "media" else f"{q['id']} background"
-        try:
-            with progress.item("fetch", label):
-                data = fetch_for(q, slot)
-        except Exception as e:  # noqa: BLE001 — keep going; rerun retries the rest
-            print(f"  {label}: FAILED {e}", file=sys.stderr)
-            continue
-        kinds = sorted({c["type"] for c in data["candidates"]})
-        print(f"  {label}: {len(data['candidates'])} ({', '.join(kinds) or '-'}) for “{data['query']}”", flush=True)
-        if not data["candidates"]:
-            empty.append(label)
-    if empty:
-        print(f"no candidates for: {', '.join(empty)} (try a new search term in the review tool, key m)")
-
-
-
 def licence_rows(qs):
     """One row per distinct picked file_url, with its verdict and every question/slot using it."""
     rows = {}
@@ -452,10 +419,6 @@ def cmd_licenses(args):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
-    f = sub.add_parser("fetch", help="store media candidates for questions without media")
-    f.add_argument("--batch", help='qgen run name, or "none" for questions without a batch')
-    f.add_argument("--ids", help="comma-separated question ids")
-    f.add_argument("--force", action="store_true", help="fetch again even if candidates exist")
     s = sub.add_parser("sync", help="download every picked file that isn't in media/ yet")
     s.add_argument("--status", help="only questions with this status, e.g. approved")
     s.add_argument("--prune", action="store_true", help="delete cached files no pool pick and no unfinished batch references")
@@ -463,7 +426,7 @@ def main():
     lc.add_argument("--status", help="only questions with this status, e.g. approved")
     lc.add_argument("--json", action="store_true", help="rows as JSON")
     args = ap.parse_args()
-    {"fetch": cmd_fetch, "sync": cmd_sync, "licenses": cmd_licenses}[args.cmd](args)
+    {"sync": cmd_sync, "licenses": cmd_licenses}[args.cmd](args)
 
 
 if __name__ == "__main__":
