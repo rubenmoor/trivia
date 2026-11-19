@@ -326,7 +326,7 @@ class FixedSlot(Base):
         (self.d / "ratings" / "mf-1.json").write_text(json.dumps(
             {"mf-1": {**{k: 5 for k in qgen.RUBRIC}, "difficulty_estimate": 3, "notes": ""}}))
         self.patch(qgen, "ROOT", self.work)
-        qgen.cmd_merge(argparse.Namespace(run="batch-1", min_score=0))
+        qgen.cmd_merge(argparse.Namespace(run="batch-1"))
         new = json.loads(self.pool.read_text())["questions"][-1]
         self.assertEqual((new["id"], new["media"], new["media_first"]), ("q-0101", self.q["media"], self.q["media_first"]))
         self.assertEqual(new["background"]["query"], "savanna")

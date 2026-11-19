@@ -14,8 +14,7 @@ It runs these steps in a fixed order; they stay available one by one for debuggi
     qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional or theme bundle's categories (plans 138, 184)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
-    qgen draft | rate | factcheck | dedupe | revise | apply | merge --run <run>
-    qgen english-keys               # English answer + concept per non-en source, for en runs' overlap checks (decision 232)
+    qgen draft | rate | factcheck | revise | apply | merge --run <run>
     qgen translate --run <run> [--locale en --ids q-0001,…]   # a translation run's first step (plan 66)
     qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
@@ -85,11 +84,9 @@ if __name__ == "__main__":
 # Without a focus, every level of the scale weighs the same (D-40).
 LEVEL_WEIGHTS = {1: 12, 2: 6, 3: 10, 4: 16, 5: 20, 6: 23, 7: 14, 8: 14, 9: 16, 10: 13}
 RUBRIC = ["correct", "unambiguous", "no_giveaway", "no_overlap", "distractors", "age_fit", "fun", "description"]
-# Below 4 on any of these drops a question (07). The soft scores didn't predict the
-# developer's decisions in the pilot, so they are recorded but don't filter by default.
+# Below 4 on any of these drops a question (07). The soft scores are recorded, not filtered on.
 # no_overlap (plan 15): asks a fact the pool or an earlier draft already asks; dropped, not revised.
 HARD_CRITERIA = ["correct", "unambiguous", "no_giveaway", "no_overlap"]
-SOFT_CRITERIA = ["distractors", "age_fit", "fun", "description"]
 FACT_FIELDS = ["question", "answer", "wrong_answers", "hints", "fun_fact"]
 QUESTION_FIELDS = ["difficulty", "description", *FACT_FIELDS]  # a question's text, in prompt order
 REVIEW_URL = "http://127.0.0.1:8001/review"  # trivia-authoring on its default port, in reports
@@ -995,7 +992,7 @@ def drafts(d):
         yield f.stem, load_json(f)["questions"]
 
 
-# --- steps: rate, fact check, dedupe, merge -----------------------------------
+# --- steps: rate, fact check, merge -----------------------------------
 
 GROUP_SIZE = 10  # questions per rate/revise/fix call and per imported or revised draft file (PE-1, PE-2)
 
@@ -1211,7 +1208,7 @@ def cmd_english_keys(args):
 
     def save():
         save_json(layout.ENGLISH_KEYS, {"version": 1, "about": "decision 232: English answer and concept per source "
-                                        "question in another language, for the overlap checks (qgen english-keys)",
+                                        "question in another language, for the overlap checks (the english-keys step of qgen batch)",
                                         "questions": dict(sorted(keys.items(), key=lambda kv: natural_key(kv[0])))})
 
     def work(qs):
@@ -1292,21 +1289,6 @@ def collect(d):
     return ratings, checks
 
 
-def cmd_dedupe(args):
-    d = run_dir(args)
-    locale = text_locale(d)
-    seen = as_locale(load_json(POOL)["questions"], locale)
-    for _, qs in drafts(d):
-        for q in qs:
-            why = duplicates(q, seen, locale)
-            if why: print(f"  {q['tmp_id']}: {q['question']} → {q['answer']}\n      {why}")
-            seen.append(q)
-
-
-def soft_score(r):
-    return sum(r[k] for k in SOFT_CRITERIA) / len(SOFT_CRITERIA)
-
-
 def cmd_merge(args):
     d = run_dir(args)
     if run_locale(d):
@@ -1337,7 +1319,6 @@ def cmd_merge(args):
                 elif any(r.get(k, 5) < 4 for k in HARD_CRITERIA):
                     reason = "hard fail: " + ", ".join(f"{k} {r.get(k, '-')}" for k in HARD_CRITERIA)
                 elif c and c["verdict"] == "wrong": reason = f"fact-check wrong: {c['problem']}"
-                elif soft_score(r) < args.min_score: reason = f"soft score {soft_score(r):.2f} < {args.min_score}"
                 else: reason = (dup := duplicates(q, seen, locale)) and "duplicate " + dup
                 if reason:
                     if not reason.startswith("not "):
@@ -1791,7 +1772,7 @@ def pipeline_steps(run, ns, after_fix=()):
         ("apply", cmd_apply, ns()),
         ("rate", cmd_rate, ns(model="opus")),
         ("factcheck", cmd_factcheck, ns(model="sonnet")),
-        ("merge", cmd_merge, ns(min_score=0)),
+        ("merge", cmd_merge, ns()),
         ("media", cmd_media, ns()),
         ("sheets", cmd_sheets, ns()),
         ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
@@ -1915,12 +1896,7 @@ def main():
     tp.add_argument("--ids", help="new run only: comma-separated source ids")
     add("rate", cmd_rate, "opus")
     add("factcheck", cmd_factcheck, "sonnet")
-    add("dedupe", cmd_dedupe)
-    add("english-keys", cmd_english_keys, "sonnet", run=False).add_argument(
-        "--run", default="english-keys", help="work/<run>/ for the calls log")
-    add("merge", cmd_merge).add_argument("--min-score", type=float, default=0,
-                                         help="minimum mean of distractors/age_fit/fun/description "
-                                              "(default 0: off; the pilot showed it doesn't predict the developer)")
+    add("merge", cmd_merge)
     add("revise", cmd_revise, "opus")
     add("apply", cmd_apply)
     rp = add("report", cmd_report, run=False)

@@ -381,7 +381,7 @@ def names_warnings(data):
 
 def english_keys_problems(questions):
     """Shape of authoring/data/english-keys.json (decision 232): version 1; per pool id a 12-hex hash, an answer
-    and a concept (string or null). Stale entries are fine: the next `qgen english-keys` drops them."""
+    and a concept (string or null). Stale entries are fine: the next english-keys step of qgen batch drops them."""
     doc = load_json(layout.ENGLISH_KEYS)
     if doc is None:
         return []

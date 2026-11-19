@@ -378,7 +378,7 @@ def cmd_translate_batch(args):
         ("translate", cmd_translate, ns(model="opus", locale=None, ids=None)),
         ("rate", cmd_rate, ns(model="opus")),
         ("factcheck", cmd_factcheck, ns(model="sonnet")),
-        ("merge", lambda a: cmd_merge(a) or [], ns(min_score=0)),
+        ("merge", lambda a: cmd_merge(a) or [], ns()),
         ("review 1", cmd_review, ns(model=REVIEW_MODEL, round=1)),
         ("fix", cmd_fix, ns(model="opus", check_model="sonnet")),
         ("review 2", cmd_review, ns(model=REVIEW_MODEL, round=2)),
