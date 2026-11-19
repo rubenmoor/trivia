@@ -51588,13 +51588,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - A decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`), then `qgen taxonomy --bundle chinese-base --apply`.
 - Waits for `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (drafting language shapes language subcategories) and part 1''s sensitivity rule.
 - Plan priority ~850 (before part 4''s taxonomy step and part 7).', '2026-11-19T17:56:57Z', '2026-11-19T20:08:30Z', 2286, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2298, 60, 'write plan: chinese-base step 2: new China-centric questions in English', 'plan', 'open', 1000, NULL, 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): new China-centric questions for `chinese-base`, drafted in English for the developer''s review (milestone 12).
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2298, 60, 'write plan: chinese-base step 2: new China-centric questions in English', 'plan', 'done', 1000, '2026-11-19, plan 232: chinese-base step 2: new China-centric questions in English (priority -120; readiness, pilot + budget decision, run chain, close-out)', 'Write the plan for part 7 of `plan 60: masterplan` (`pm plan add 12 …`): new China-centric questions for `chinese-base`, drafted in English for the developer''s review (milestone 12).
 
 - Scope: masterplan part 7: `qgen batch --bundle chinese-base` English sources for part 6''s subcategories; voice: English for a Chinese family, Chinese names and terms; developer reviews in English (iterative feedback).
 - Pilot 50 (`qgen health ack`), cost and reject rate → budget decision (like `plan 70: Cost, budget and generation plan by gap (CT-3, CT-4)`), then batch tasks until 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`. Runs follow `authoring/RUNBOOK.md` only.
 - Waits for `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` and parts 4, 5, 6; name them.
 - Replaces the drafting half of the dropped `task 1152: write plan: chinese-base content`.
-- Plan priority ~-120.', '2026-11-19T17:56:58Z', NULL, 2286, 0, NULL, 'questions');
+- Plan priority ~-120.', '2026-11-19T17:56:58Z', '2026-11-19T20:12:38Z', 2286, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2299, 139, 'create tasks for plan 139: Chinese locales in data and pipeline', 'split', 'done', 1000, '2026-11-19, tasks 1163, 1164, 1165 reworded to zh only (no ru/pt-BR, no DRIVES_DRAFTING, no bundles.json change); 1163 requires 2294, 2295 and goes pending on the variant decision once raised; 1164 → 1163, 1165 → 1163, 1164; no new decisions (variant decision comes from part 1)', 'Split plan 139 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:58:44Z', '2026-11-19T17:59:56Z', 2287, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2300, 227, 'create tasks for plan 227: chinese-base bundle: model and setup', 'split', 'done', 1000, '2026-11-19, tasks 2329-2336; 2334 pending on decision 751; 2321, 2316, 2323 linked to their plan 227 tasks', 'Split plan 227 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -52532,8 +52532,49 @@ What:
 - `pm decision consequences <decision> "<what was written, counts, hand fixes>"`.
 
 Done when: `qgen validate` passes (subjects, uniqueness); `npm run check`, `npm test`, `npm run build` pass; es, es-ES, en, de output unchanged (`qgen report`); `task 2341: Subcategory map base → chinese-base (from-base.json) and its validate rule` can start.', '2026-11-19T20:09:21Z', NULL, 2378, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2384, 232, 'create tasks for plan 232: chinese-base step 2: new China-centric questions in English', 'split', 'open', 1000, NULL, 'Split plan 232 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T20:12:32Z', NULL, 2298, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2384, 232, 'create tasks for plan 232: chinese-base step 2: new China-centric questions in English', 'split', 'done', 1000, '2026-11-19, tasks 2385 (readiness, opus), 2386 (pilot + pilot decision), 2387 (first full run, chains next runs), 2388 (close-out); 2304 requires 2386, 2325 requires 2388; no decision now: the pilot task raises the pilot decision', 'Split plan 232 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T20:12:32Z', '2026-11-19T20:13:36Z', 2298, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2385, 232, 'Drafting readiness for chinese-base: pick, gaps, concepts, overlap, first-run pilot size', 'work', 'open', NULL, NULL, 'Part of `plan 232: chinese-base step 2: new China-centric questions in English`, "Drafting readiness (code, before the pilot)". Make `qgen batch --bundle chinese-base` draft new English sources correctly; no run here.
+
+Check each, fix what''s missing (fixture `chinese-base` in tests):
+- Draft locale `en` for a `kind: base` bundle (`translations.draft_locale`); the bundle''s `rule` and `voice` (task 2335) in the draft, rate, review and fix prompts, as for `colombia`.
+- Subcategory pick and gap weights (D-54) from `chinese-base`''s own `targets.json` entry and pool, copies (`copied_from`, task 2330) counted as approved; `base`''s drafting aims unchanged.
+- Concept lists (D-43) under `authoring/data/bundles/chinese-base/concepts/`: new subcategories from scope + samples (`plan 231: chinese-base taxonomy from Chinese school curricula`); reused subcategories (same slug as a `base` one) seeded from their copies'' concepts, so drafts don''t repeat a copy.
+- Overlap: rate''s candidates, merge''s duplicates and `already_asked` see every `chinese-base` question incl. copies; `related.json` neighbours (plan 231) feed the related-questions view as `base-related.json` does for `base`.
+- Media search and review on China topics: confirm no change needed (say so in the done note).
+- First-run pilot: when the bundle has no drafted (non-copy) source yet, `qgen batch --bundle <id>` drafts a small run aimed at ≈ 50 approved (e.g. 25 subcategories by deficit × 3 slots; set the numbers from measured yield in `qgen report --cost`), not D-46''s half of all subcategories × 18. No new argument; one RUNBOOK line.
+- Language subcategories (成语, 汉字, 唐诗/宋词, 歇后语 …): the scope rules (ask origin, author, place; never what the Chinese words state; options with characters + pinyin + English gloss) render in one fixture draft prompt. If a generic prompt bullet is needed: prompts are the developer''s (D-36), `pm decision add` with the exact wording, pend on it.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+Done when: unit tests (fixture with `base`, `chinese-base`, a copy, a new and a reused subcategory) for pick, gaps, concept seeding, overlap and the pilot size pass; `qgen batch --bundle chinese-base` dry up to the draft prompt (no claude calls); `qgen report` and `qgen validate` output for today''s bundles unchanged; RUNBOOK line added.', '2026-11-19T20:13:10Z', NULL, 2384, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2386, 232, 'Pilot draft run for chinese-base: run, developer review, pilot decision', 'work', 'open', NULL, NULL, 'Part of `plan 232: chinese-base step 2: new China-centric questions in English`, "Pilot". Iterative feedback. Follow `authoring/RUNBOOK.md` exactly: one command, `qgen batch --bundle chinese-base` (its first drafted run is the pilot, ≈ 50 approved, task 2385); run `batch-<n>`, report `authoring/reports/batch-<n>.md`. Health ✗ and stops as RUNBOOK "Under `pm run`".
+
+- The developer reviews every pilot question in English at `/review?batch=<batch>` (in `../trivia-review`, AGENTS.md) and records it with `qgen health ack <batch> "<note>"`.
+- Raise `pm decision add "chinese-base drafting pilot: prompt changes and budget?"` with `--intro`, body:
+  - Numbers: drafted / merged / approved / `needs_work`, reject reasons, $ per approved (`qgen report --cost`), against `base`''s English batches.
+  - Room for the developer''s review notes, grouped: voice, Chinese names and terms, difficulty for a Chinese family, sensitivity per `decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?`, language subcategories, media.
+  - Projection: copies = fit-1''s keep + adapt rate (`task 2345: Pilot fit-1: fit pass over about 600 base sources`) × approved `base` sources with English text; gap = 6000 − copies (`decision 730: Base tile count: «6000+»`), per level in base''s mix (`qgen report --bundle chinese-base --locale en`); runs and $ to close it at the pilot''s rate (full run: D-46 half of subcategories × 18); review time per 100 if measured.
+  - Options: "go: full runs as is, budget = projection + 20 %" (recommended) / "change prompts or voice first (name it; a new prompt decision, then a second pilot)" / "go with a cap (which levels or subcategories give way)" / "stop".
+- `pm task-pending-decision <this task> <decision>`, stage, stop. On the answer: `"budget"` entry for `chinese-base` in `targets.json` if the cost report reads per-bundle budgets (else in the decision only); `pm decision consequences`. "change prompts": the prompt decision and a second pilot task in this plan (this body adapted), and the full-run task requires it. "stop": drop the full-run task with the reason.
+
+Done when: the pilot run is reported, acked by the developer, the pilot decision answered and its consequences recorded; `qgen validate` passes.', '2026-11-19T20:13:23Z', NULL, 2384, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2387, 232, 'First full drafting run for chinese-base', 'work', 'open', NULL, NULL, 'Part of `plan 232: chinese-base step 2: new China-centric questions in English`, "Full runs". Iterative feedback. Starts only after the pilot decision ("chinese-base drafting pilot: prompt changes and budget?", raised by the pilot task) is answered "go…"; follow its answer (budget, cap). Not answered yet → `pm task-pending-decision <this task> <decision>`, stop.
+
+- Follow `authoring/RUNBOOK.md` exactly: `qgen batch --bundle chinese-base`, then `qgen report --bundle chinese-base --locale en`. Health ✗ and stops as RUNBOOK "Under `pm run`".
+- The developer reviews the run in English at their pace (QC.md spot check of a draft batch); the run never waits on a review (decision 414). A finding the developer raises (prompt or voice change) → a decision (D-36), and the next run task waits for it (`pm task-pending-decision`).
+- Gap not closed (6000 approved, copies + new, base''s difficulty mix, `decision 730: Base tile count: «6000+»`): before `pm task done`, add the next run task to this plan (`--worktree questions`, this body, subject "Next full drafting run for chinese-base"), and make the close-out task ("Close-out of chinese-base drafting: report, simulate, docs") require it (`pm task requires <close-out> <new>`). Gap closed: say "6000 reached" in the done note.
+- Budget from the pilot decision spent before the gap is closed → `pm decision add` (more budget, cap, stop), pend on it.
+
+Done when: the run is reported and its next step (next run task or "6000 reached") is in place; `qgen validate` passes.', '2026-11-19T20:13:24Z', NULL, 2384, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2388, 232, 'Close-out of chinese-base drafting: report, simulate, docs', 'work', 'open', NULL, NULL, 'Part of `plan 232: chinese-base step 2: new China-centric questions in English`, "Close-out". Runs after the last full drafting run (each run task makes this one require the next).
+
+- `qgen report --bundle chinese-base --locale en`: 6000 approved (copies + new) in base''s difficulty mix, every subcategory within its target. Short → `pm task add` the next run task (body of "First full drafting run for chinese-base"), `pm task requires <this> <it>`, stop.
+- `qgen report --simulate --locale en --bundles chinese-base` ✓ (one simulate at a time: `pgrep` first, foreground).
+- Docs: `plans/16-content-target.md` (`chinese-base` row), `plans/22-bundles.md` (`chinese-base` content), `authoring/RUNBOOK.md` (the pilot rule line still right); `rg` for stale mentions (decision 200).
+- `base`''s pools and reports unchanged by this plan''s runs.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+Done when: the above holds; `task 2325: Career check against chinese-base` can start.', '2026-11-19T20:13:30Z', NULL, 2384, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -62764,7 +62805,9 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2555, 2361, '2026-11-19T19:29:14Z', '2026-11-19T19:30:00Z', 'done', NULL, 0, 'f349251afd4fed8b733b99dbcac580b57255e2fc', 'questions', 'claude-sonnet-5-5', '8ebcc7c5-7430-4dc6-b937-2c0a7e38d31d', 2554, 6, 14, 3365, 357898, 16965, 0.35087840000000004, 67244, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2556, 2297, '2026-11-19T20:04:49Z', '2026-11-19T20:08:47Z', 'done', NULL, 0, 'cd62fd896d2c0038667a0881a86037776f0118ac', 'questions', 'claude-opus-5-5', '5f8da10b-3e9b-4798-8a18-0404729ff4c6', NULL, 19, 36, 15749, 1353966, 104922, 1.4252932, 105597, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2557, 2378, '2026-11-19T20:08:15Z', '2026-11-19T20:09:38Z', 'done', NULL, 0, '031ec01cb725d8e7caea81c17592ad6e0a039317', NULL, 'claude-opus-5-5', '71a72dd3-fa12-4745-8367-c90029de793b', NULL, 9, 18, 5441, 414567, 42013, 0.5279094, 57028, 60, 473050);
-INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2558, 2298, '2026-11-19T20:08:47Z', NULL, 'running', NULL, NULL, '031ec01cb725d8e7caea81c17592ad6e0a039317', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2558, 2298, '2026-11-19T20:08:47Z', '2026-11-19T20:12:49Z', 'done', NULL, 0, '031ec01cb725d8e7caea81c17592ad6e0a039317', 'questions', 'claude-opus-5-5', '05ccadaf-cb66-45a2-aeec-eafc06947bc4', NULL, 21, 38, 12655, 1364769, 89399, 1.2413978, 104440, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2559, 2384, '2026-11-19T20:12:33Z', '2026-11-19T20:13:44Z', 'done', NULL, 0, 'a7c886dc0cb1e282516fcf5d1a017f290c3f1fa2', NULL, 'claude-opus-5-5', '40b62bbe-a2a6-4855-a8a6-5d937224aa47', NULL, 10, 20, 5969, 457568, 40551, 0.5353816, 55506, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2560, 2338, '2026-11-19T20:12:49Z', NULL, 'running', NULL, NULL, 'a7c886dc0cb1e282516fcf5d1a017f290c3f1fa2', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -64104,6 +64147,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2303, 117
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2303, 2296);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2303, 2345);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2304, 2303);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2304, 2386);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2308, 1177);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2309, 1176);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2309, 2308);
@@ -64150,6 +64194,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 232
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2336);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2324, 2303);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2325, 2298);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2325, 2388);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2311);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2316);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2317);
@@ -64230,6 +64275,16 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2382, 233
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2382, 2380);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2382, 2381);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2383, 2382);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2385, 2329);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2385, 2330);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2385, 2335);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2385, 2340);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2385, 2383);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2386, 2345);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2386, 2385);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2387, 2346);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2387, 2386);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2388, 2387);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
