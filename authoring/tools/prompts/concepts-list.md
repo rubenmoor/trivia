@@ -5,7 +5,7 @@ You write the concept list of one subcategory of the trivia game described above
 ## 1. Concepts
 For every facet, list 15–25 **concepts**:
 - A concept is a bare name in the language of the content (house style, "Language"): a thing, animal, plant, person, character, place, event, object, custom or term (in English: "Saturn", "Solar eclipse", "Neil Armstrong", "Telescope"). **No facts, descriptions or question ideas.**
-- Concrete and specific: "Saturno", not "Planetas grandes".
+- Concrete and specific: "Saturn", not "Large planets".
 - Something players of some age group, from kids to adults, could be asked about in a family-friendly game. Cover the whole range: what every child knows, what teens and students know, and what well-read adults know. Nothing only a specialist knows.
 - Follows the bundle (under "Bundle"). For `base`, the house style's "International angle": spread the concepts of every facet across the world's regions (Africa, Asia, Europe, the Americas, Oceania) as far as the facet allows; no Spanish-speaking-world focus, no Anglo/US default; a concept known only to one country's players belongs to that country's regional bundle, not here.
 - Fame comes first: a concept families know beats a balanced map; never add an obscure concept only to cover a region.
