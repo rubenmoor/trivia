@@ -31506,8 +31506,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:13:25Z', '2026-10-15T20:26:48Z', 1149, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1158, 141, 'create tasks for plan 141: Native reviewers', 'split', 'done', 1000, '2026-10-15, tasks 1171-1174 (1173 pending on decision 217, 1174 on decision 220); no files', 'Split plan 141 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:15:43Z', '2026-10-15T20:27:53Z', 1150, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1159, 142, 'create tasks for plan 142: UI in Chinese', 'split', 'open', 1000, NULL, 'Split plan 142 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:18:52Z', NULL, 1151, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1159, 142, 'create tasks for plan 142: UI in Chinese', 'split', 'done', 1000, '2026-11-19, tasks 1175, 1176, 1177 rewritten for zh only; added 2308, 2309, 2310, 2311, 2312', 'Split plan 142 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:18:52Z', '2026-11-19T18:14:46Z', 1151, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1160, 143, 'create tasks for plan 143: Russian and Portuguese pools', 'split', 'open', 1000, NULL, 'Split plan 143 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:20:22Z', NULL, 1153, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1161, 144, 'create tasks for plan 144: Store page and Steam for the new languages', 'split', 'open', 1000, NULL, 'Split plan 144 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -31690,55 +31690,48 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - `pm decision consequences 220 "<date>, task 1174: …"`: zh only, by volunteers; ru/pt-BR out of milestone 12 (no request, no decision); per-run checks replaced by decision 754; the request file(s) and engaged decision id(s).
 
 Done when: one request file and one engaged decision per zh locale; task 2303 no longer waits on reviewers; decision 220''s consequences recorded.', '2026-10-15T20:27:49Z', NULL, 1158, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1175, 142, 'Decisions: fonts per script, keys on non-Latin layouts, picker letters', 'work', 'open', 410, NULL, 'Task 1 of `plan 142: UI in Chinese`: raise the three developer decisions the plan''s "Decisions" section lists; no game code changes.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1175, 142, 'CJK font decision for the zh locale(s): renders, sizes', 'work', 'open', 410, NULL, 'Task 1 of `plan 142: UI in Chinese`: raise the developer''s CJK font decision (plan "Decisions"); no game code changes. Key letters and picker letters are no longer decisions: the plan''s "Design" fixes them (Latin keys with an `e.code` fallback, pinyin letters on the pad picker).
 
-## Fonts per script
-- Throw-away renders in `work/fonts/` (not committed): Start, Question (4 answers, joker row), Victory per candidate, at 1920 × 1080, in the game''s colours.
-  - ru: Nunito text with its Cyrillic subset; display candidates Nunito 800–900 (recommended), Rubik, M PLUS Rounded 1c.
-  - zh-Hans: one CJK family for text and display, e.g. Noto Sans SC / Source Han Sans SC variable (recommended); alternative ZCOOL KuaiLe headings + Noto Sans SC text.
-  - Sample text: `en.ts` strings translated ad hoc (throw-away), plus a few `names` / question lines.
-- Sizes per option: woff2 of the Cyrillic subset; CJK subset = GB2312 level 1 (3755) ∪ catalog-like sample ∪ pool estimate; fonttools from the flake (`pyftsubset`; add to `flake.nix` if missing, then it''s part of task 2).
-- All OFL, rounded, heavy weights to match Baloo 2 (`app/client/public/fonts/`, `theme.css`).
-- `pm decision add "Fonts for ru and zh-Hans (display, text)?"`: body with render paths, sizes, licences; options recommended first.
+## Step 0
+- The zh locale(s) and the font findings come from the research task of `plan 228: Chinese variants and the Chinese audience (evaluation)` (split by `task 2301: create tasks for plan 228: Chinese variants and the Chinese audience (evaluation)`; doc `plans/26-china.md` "Fonts"). Not done yet: `pm task requires 1175 <that research task>`, stop. Its variant decision still open: `pm task-pending-decision 1175 <it>`, stop.
 
-## Keys on non-Latin layouts (extends `decision 53: Joker and action keys per UI language (LUI-4)?`)
-- Problem: `lib/input.svelte.ts` `toIntent` matches `e.key`; on ЙЦУКЕН the A–D keys give `ф и с в`.
-- Options: (recommended) key letters stay Latin in `ru` and `zh-Hans`, `toIntent` falls back to `e.code` (`KeyA` → `a`) when `e.key` is a non-Latin letter, answers A–D; alternative ru Cyrillic letters (А Б В Г, Cyrillic joker keys; breaks on a Latin layout).
+## Work
+- Throw-away renders in `work/fonts/` (not committed): Start, Question (4 answers, joker row), Victory, Career at 1920 × 1080 in the game''s colours (`app/client/src/game/theme.css`), Latin text staying in Baloo 2 / Nunito.
+  - Options (all OFL): (recommended) one CJK family for text and display, Noto Sans SC / Source Han Sans SC variable, heavy weights for headings; a rounded or playful CJK display face for headings + the text family (from `plans/26-china.md` candidates); system fonts only (Microsoft YaHei, Noto CJK on Linux/Deck; zero bytes, uneven look, no guarantee on a Deck).
+  - `zh-Hant` chosen too: the TC face of the same option.
+  - Sample text: `en.ts` strings translated ad hoc (throw-away), plus a few names and question lines.
+- Sizes per option: woff2 of the subset = GB 2312 level 1 (3755; Traditional: 常用字 4808) ∪ a catalog-like sample ∪ a pool estimate; `pyftsubset` (fonttools from the flake; missing: add it to `flake.nix`, staged with this task); compare with `app/desktop/media-budget.json`.
+- `pm decision add "CJK font for the Chinese UI?"` with `--intro`, body: render paths (local, `work/fonts/`), sizes, licences, options recommended first.
+- `pm task-pending-decision 1176 <it>` and `pm task-pending-decision 1177 <it>` (its font-coverage check).
 
-## Picker letters and name length
-- `LetterPicker.svelte`, `picker.letters` per catalog, `MAX_NAME`.
-- Options per plan: ru Cyrillic А–Я, Ё + Latin; pt-BR Latin + `Á Â Ã À Ç É Ê Í Ó Ô Õ Ú`; zh-Hans (recommended) Latin letters (pinyin) on the pad picker, Chinese names via keyboard IME / Steam on-screen keyboard; `MAX_NAME` per script (check the Player screen width with the render fonts).
-- One decision with the three locales, or one per locale if the options differ in kind.
+Done when: the decision is raised with renders and sizes; tasks 1176 and 1177 wait for it; nothing of `work/fonts/` staged.', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1176, 142, 'Font for the zh locale(s) in the client and build', 'work', 'open', NULL, NULL, 'Task 2 of `plan 142: UI in Chinese` (plan "Design: Fonts"), per the CJK font decision raised by `task 1175: CJK font decision for the zh locale(s): renders, sizes` (`pm show 1176` lists it). Only CJK: no Cyrillic font, Russian and Portuguese are out of milestone 12.
 
-## Links
-- Every other open task of plan 142 (2–10) gets pending on all three decisions: `pm task-pending-decision <task> <decision>`, so they run in id order once answered.
+- Font file(s) in `app/client/public/fonts/` + OFL text; `@font-face` with `unicode-range` (CJK blocks, full-width punctuation `U+3000-303F`, `U+FF00-FFEF`), so a Latin page never loads them.
+- `app/client/src/game/theme.css`: `--font-display` / `--font-text` per `:lang(zh-Hans)` (and `:lang(zh-Hant)` if chosen; UI via `<html lang>`, question content via its own `lang`, task 629), fallback chain ending in system CJK fonts.
+- Subset script in `app/desktop/` next to `stage-media.mjs` (fonttools from the flake): zh catalog(s) ∪ `app/data/names.<zh>.json` ∪ every bundle''s `pool.<zh>.json` ∪ the common set (GB 2312 level 1; Traditional: 常用字 4808); missing inputs are skipped; run by `trivia-desktop-build`; the dev client: a committed subset or the same script via an npm script (pick the simpler, say which in the done note).
+- `trivia-release-check`: a step that fails on a zh character in a shipped catalog, names file or pool missing from the font.
+- `app/desktop/media-budget.json`: a `fonts` entry, checked by `stage-media.mjs --check`.
+- Credits: `CREDITS.md` and the credits screen list the font with its licence.
+- `/comodines` (`authoring/ui/src/print/JokerCards.svelte`) loads the same font.
+- Demo (`plan 177: Demo packaging, release check and upload`): the font ships only if a zh demo pool exists.
 
-Done when: three pending decisions with renders and sizes in their bodies; tasks 2–10 of plan 142 pending on them; `work/fonts/` left uncommitted (delete or note it in the decision body that it''s local).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1176, 142, 'Fonts for ru and zh-Hans in the client and build', 'work', 'open', NULL, NULL, 'Task 2 of `plan 142: UI in Chinese` (plan "Design: Fonts"); per the font decision raised by task 1 (`pm show` lists it).
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; an es page and `?lang=en`: network tab loads no CJK font file; a throw-away page with `names.<zh>.json` text renders in the new font.', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1177, 142, 'Wiring of the zh locale(s) in client, shell and tools', 'work', 'open', NULL, NULL, 'Task 3 of `plan 142: UI in Chinese` (plan "Design": Keys, Names on the picker, Language picker, Shell and tools), gated by `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`. Only the zh locale(s) (expected `zh-Hans`; `zh-Hant` too if `plan 228: Chinese variants and the Chinese audience (evaluation)` chose it, read `task 1163: Chinese locale(s) in the locale lists and rules`''s result); no `ru` / `pt-BR` anywhere.
 
-- Font files in `app/client/public/fonts/` + their OFL texts; `@font-face` per family with `unicode-range` (Cyrillic, CJK), so a Latin page never loads them.
-- `app/client/src/game/theme.css`: `--font-display` / `--font-text` per `:lang(ru)`, `:lang(zh-Hans)` (UI via `<html lang>`, question content via its own `lang`, task 629), fallback chain ending in system Cyrillic/CJK fonts.
-- CJK subset script in `app/desktop/` next to `stage-media.mjs` (fonttools from the flake): catalog `zh-Hans.ts` ∪ `app/data/names.zh-Hans.json` ∪ `pool.zh-Hans.json` (if present) ∪ GB2312 level 1; run by `trivia-desktop-build`; the dev client gets a committed subset or the same script via an npm script (pick the simpler, say which in the note).
-- `trivia-release-check`: a step that fails on a zh-Hans / Cyrillic character in a shipped catalog, names file or pool missing from the font.
-- `app/desktop/media-budget.json`: a `fonts` entry (MB), checked by `stage-media.mjs --check`.
-- Credits: `CREDITS.md` source / credits screen (`credits.ts`) list the new fonts with licence.
-- `/comodines` (`authoring/ui/src/print/JokerCards.svelte`) loads the same fonts.
+- Catalog `app/client/src/locales/<zh>.ts`: an `en.ts` copy (`satisfies Catalog`), statically imported; task 4 of the plan translates it. From here on new catalog keys need a zh leaf too: say so in `plans/15a-ui-translation.md`.
+- `lib/i18n.ts`: `CATALOGS`, `ENDONYMS` («简体中文»; «繁體中文»); `UI_LANGS` / Start''s picker and the first-start guess gated per decision 222 (only once the zh pool ships and its default bundles'' supply passes; else only `?lang=` in dev and under `TRIVIA_DEV_STEAM_USER`); es/es-ES/en/de unchanged.
+- `lib/engine.ts` `STEAM_LANGS`: drop the stale `russian`, `brazilian` rows; `tchinese` only if `zh-Hant` is chosen.
+- Flag per `decision 186: Language flags instead of the globe`: China in `Flags.svelte` for `zh-Hans`; `zh-Hant` per plan 228''s sensitivity rule (globe as fallback).
+- `lib/intent.ts` `toIntent`: falls back to `e.code` (`KeyA` → `a`, `Digit1` → `1`) when `e.key` is `Process` / `isComposing` or not a Latin letter, outside text fields; letters and chips unchanged (`decision 679: Key chips are fixed shortcut labels: Enter/A only on a scope''s primary, a letter or pad button elsewhere, nothing focus-bound`); unit test.
+- `picker.letters` in the zh catalog: Latin A–Z (pinyin); `MAX_NAME` unchanged; Player screen checked with 2–4 CJK characters typed by keyboard.
+- `check:literals`: the zh catalog like `de` (keys, `{param}` sets, untranslated leaves reported, not failing while it''s an `en` copy if the gate hides it); font coverage of every catalog character once `task 1176: Font for the zh locale(s) in the client and build` is in (not yet: `pm task add` a follow-up to plan 142).
+- `app/desktop/mods.mjs` `LANGS` (`check-mod.mjs` `LOCALES` is task 1163''s); `publish.mjs` Workshop language tags: Steam''s tag names (`schinese` style), not `split("-")[0]`; `modding/` docs list the languages.
+- `authoring/tools/reviews.py` `LABELS` (`decision 142: Report text format (copy fallback, qgen flag)`): Question/Answer/Note labels from the catalog leaves if simple, else placeholders task 4 updates.
+- `authoring/tools/gallery.py` `LOCALES` += the zh locale(s).
+- `/comodines?lang=<zh>`: A4 (`@page size`).
 
-Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=xx` / es page: network tab loads no Cyrillic/CJK font file; a throw-away page with ru/zh text renders in the new fonts (zh catalog may not exist yet: `names.zh-Hans.json` text suffices).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1177, 142, 'Wiring of zh-Hans, ru, pt-BR in client, shell and tools', 'work', 'open', NULL, NULL, 'Task 3 of `plan 142: UI in Chinese`; per the key and picker decisions raised by task 1 (`pm show` lists them) and `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`.
-
-- Catalogs `app/client/src/locales/{zh-Hans,ru,pt-BR}.ts`: start as copies of `en.ts` (`satisfies Catalog`), statically imported; tasks 4–6 translate them.
-- `lib/i18n.ts`: `CATALOGS`, `ENDONYMS` («简体中文», «Русский», «Português (Brasil)»); `UI_LANGS` / Start''s picker and the first-start guess gated per decision 222 (pool present and its default bundles'' supply passes; else only `?lang=` in dev and under `TRIVIA_DEV_STEAM_USER`); es/es-ES/en/de unchanged. `STEAM_LANGS` in `lib/engine.ts` already maps the three.
-- Flags per `decision 186: Language flags instead of the globe`: China, Russia, Brazil drawn in `Flags.svelte`.
-- `lib/input.svelte.ts` `toIntent`: per the key decision (recommended: `e.code` fallback when `e.key` is a non-Latin letter).
-- `picker.letters` per catalog and `MAX_NAME` per the picker decision (`LetterPicker.svelte`, Player screen).
-- `check:literals`: ru plural maps need `one`/`few`/`many` (+`other`); every catalog character covered by the locale''s font (after task 2; if task 2''s font files aren''t in yet, add a follow-up task instead).
-- `app/desktop/mods.mjs` `LANGS` (`check-mod.mjs` `LOCALES` is `task 1163: Chinese locale(s) in the locale lists and rules`''s); `publish.mjs` Workshop language tags: Steam''s tag names (`schinese`/`russian`/`brazilian` style per Steam''s Workshop tag list), not `split("-")[0]`; modding kit docs (`modding/`) list the languages.
-- `authoring/tools/reviews.py` `LABELS` (`decision 142: Report text format (copy fallback, qgen flag)`): Question/Answer/Note labels as the catalogs will say them (take them from the catalog leaves at runtime if simple, else placeholders updated by tasks 4–6).
-- `authoring/tools/gallery.py` `LOCALES` += the three.
-- `/comodines?lang=`: zh-Hans, ru, pt-BR, all A4 (`@page size`).
-
-Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=ru` in the dev client plays with Latin keys on a Russian layout (simulate `e.key` `ф` with `e.code` `KeyA` in a throw-away test); es/es-ES/en/de gallery shots unchanged (`trivia-gallery --only` a few).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; `?lang=zh-Hans` in the dev client plays with Latin keys while `e.key` is `Process` (test); es/es-ES/en/de gallery shots unchanged (`trivia-gallery --set task-1177 --only` a few).', '2026-10-15T20:28:58Z', NULL, 1159, 0, NULL, 'app');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1178, NULL, 'answer: what was the result of the code review?', 'exec', 'done', 10000, '2026-10-15, report answer', 'The owner of this project asks:
 
 what was the result of the code review?
@@ -51499,6 +51492,51 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:06:46Z', '2026-11-19T18:08:37Z', 2289, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2307, 230, 'create tasks for plan 230: chinese-base step 1: euro-centric filter and copies', 'split', 'open', 1000, NULL, 'Split plan 230 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:08:34Z', NULL, 2296, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2308, 142, 'Style guide, catalog and joker-name decision for the zh locale(s)', 'work', 'open', NULL, NULL, 'Task 4 of `plan 142: UI in Chinese` (plan "Design": Catalogs, Style guide; "Decisions": joker names). Per zh locale (expected `zh-Hans`; `zh-Hant` too if chosen in `plan 228: Chinese variants and the Chinese audience (evaluation)`).
+
+- Read `plans/26-china.md` "Language and format" and its sensitivity rule (binding for flags, map wording, place names) and `plan 140: Translation into Chinese`''s locale prompt (`authoring/prompts/locale-<zh>.md` if in) for shared terms.
+- Style guide `app/client/src/locales/style/<zh>.md`, written before the catalog (AGENTS.md rule): address 你们 (playful, not 您们), Steam''s own Simplified Chinese terms, glossary (jokers, modes, bundles incl. `chinese-base`''s Chinese name, career), full-width punctuation `，。？！：`, quotes “” (mainland) / 「」 (Taiwan), spacing between Chinese and digits, bad patterns; same structure as the other guides.
+- Catalog `app/client/src/locales/<zh>.ts`: every leaf translated from `en.ts` (`es.ts` for meaning); career: grades 小学 / 初中 / 高中 / 大学, ranks, badge names in Chinese word order (`lib/badge-text.ts` patterns per catalog if `{grade}: {subject}` reads wrong); numbers via `Intl`; `picker.letters` stay Latin; `reviews.LABELS` placeholders from task 3 updated.
+- Joker names: `pm decision add` "Joker names for <zh>?" with `--intro`, like `plan 136: Joker names and symbols, defined again` task 2 and `decision 188: Joker names English first, one symbol per joker (milestone 9)`: all five jokers in one decision, 2–3 candidates each translated from the English name (`decision 190`–`decision 194`), each with a back-translation (the developer reads no Chinese), recommended first, length bound as plan 136, the plural/negation form for «ya no les quedan …», the hint-note form. The catalog uses the recommended names meanwhile.
+- `pm task-pending-decision` on the joker decision for `task 2310: Final joker names and Steam texts for the zh locale(s)`.
+- `check:literals` passes for the zh catalog (no untranslated leaves).
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; a few zh screens in the dev client (`?lang=zh-Hans`) show no English leaf.', '2026-11-19T18:13:58Z', NULL, 1159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2309, 142, 'Layout walk and CJK fixes for the zh locale(s)', 'work', 'open', NULL, NULL, 'Task 5 of `plan 142: UI in Chinese` (plan "Design: Layout").
+
+## Step 0
+- The Choice screen with two base bundles comes from `plan 227: chinese-base bundle: model and setup` (split by `task 2300: create tasks for plan 227: chinese-base bundle: model and setup`). Its Choice / engine task not done yet: `pm task requires <this task> <it>`, stop.
+
+## Work
+- Every screen in the zh locale(s) at 1920 × 1080 and 1280 × 800, dev client with the font of `task 1176: Font for the zh locale(s) in the client and build`: fresh save, full game to victory, jokers, overlay, customize, report, letter picker, name entry by IME (fcitx or ibus) and by Steam''s on-screen keyboard where reachable, career, first-start screen, Choice offering only `chinese-base` in zh (`decision 752: One base bundle per session: at most one, not exactly one`).
+- Fixes: no `hyphens`, `line-break: strict`, `word-break: normal`, no letter-spacing on CJK, line-height checked with CJK glyphs; inside the `--u` system (D-29), per-language CSS only where unavoidable.
+- `/comodines?lang=<zh>` print preview (A4).
+- Bigger finds → `pm task add 142 …`.
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; es/es-ES/en/de gallery shots pixel-identical (`trivia-gallery --set <task> --only` the screens touched); no overflow at both sizes in zh.', '2026-11-19T18:14:09Z', NULL, 1159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2310, 142, 'Final joker names and Steam texts for the zh locale(s)', 'work', 'open', NULL, NULL, 'Task 6 of `plan 142: UI in Chinese` (plan "Design: Steam texts"); pending on the joker-name decision raised by `task 2308: Style guide, catalog and joker-name decision for the zh locale(s)` (`pm show` lists it).
+
+- Joker names: the answered names into the zh catalog(s) and style guide glossary, if they differ from the draft; `pm decision consequences` on the joker decision.
+- `app/desktop/steam-achievements.vdf` (badges included, `plan 196: Badges as Steam achievements`) and `app/desktop/steam-presence.vdf`: `schinese` block (and `tchinese` if `zh-Hant` is chosen), wording from the catalog; whatever checks the VDFs against the catalogs covers the new blocks.
+- Uploading to Steamworks: not here (`plan 144: Store page and Steam for the new languages`).
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`.', '2026-11-19T18:14:09Z', NULL, 1159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2311, 142, 'Gallery and playtest decisions for the zh locale(s)', 'work', 'open', NULL, NULL, 'Task 7 of `plan 142: UI in Chinese` (plan "Design: Gallery", "Decisions": gallery checked / playtest passed). Raises decisions only; no fixes here.
+
+- `trivia-gallery --locale <zh>` per zh locale (full set, ~15 min per locale); a gallery zip for the volunteer (`plan 141: Native reviewers for Chinese`, `authoring/NATIVE-REVIEW.md`).
+- Per zh locale, `pm decision add --once` with `--intro`:
+  - "Gallery checked? (<zh>)": the developer at `/gallery` (looks, overflow, missing glyphs: judgeable without reading Chinese); options approve / changes: ….
+  - "Playtest passed? (<zh>)", like decisions 62–65: body names the volunteer (engaged decision of `task 1174: Native reviewer requests and the engaged decisions per zh locale`), a `beta` build with the zh pool (pilot of `task 2303: Pilot translation run zh-Hans of chinese-base: run, native spot check, budget decision`; shown per `decision 222: New UI languages (zh-Hans, ru, pt-BR): offered only once their pool ships`), the `plans/15a-ui-translation.md` playtest checklist + CJK rows: glyphs everywhere, Latin keys with a Chinese IME installed, name entry by IME and on-screen keyboard, `chinese-base` the only base offered; options passed / findings: …; the volunteer''s read may revise the joker names.
+- `pm task-pending-decision` on every decision for `task 2312: Fixes and close-out of the Chinese UI`.
+
+Done when: the decisions are raised and the close-out task waits for them.', '2026-11-19T18:14:27Z', NULL, 1159, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2312, 142, 'Fixes and close-out of the Chinese UI', 'work', 'open', NULL, NULL, 'Task 8 of `plan 142: UI in Chinese`; pending on the gallery and playtest decisions raised by `task 2311: Gallery and playtest decisions for the zh locale(s)` (`pm show` lists them).
+
+- Fixes from the answers per the style guide(s); new bad patterns into `app/client/src/locales/style/<zh>.md`; joker names revised by the volunteer: catalog, glossary, Steam VDF blocks.
+- Docs: `plans/15a-ui-translation.md` (fonts section, LUI rows for zh, playtest), `plans/15-i18n.md`, D-entries in `plans/decisions.md` (CJK font, non-Latin key fallback, decision 222 for zh), `plans/10-visual-design.md` VD-3 fonts, README if a command changed; `rg` old wording (Cyrillic, ru, pt-BR in UI docs) and fix the hits.
+- `pm decision consequences` on each decision of plan 142 this task is the last to wait for (font, gallery, playtest).
+
+Check: `npm run check`, `npm test`, `npm run build`, `qgen validate`; es/es-ES/en/de gallery shots unchanged except decided changes.', '2026-11-19T18:14:28Z', NULL, 1159, 0, NULL, 'app');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -61652,6 +61690,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2524, 2290, '2026-11-19T18:08:46Z', '2026-11-19T18:12:27Z', 'done', NULL, 0, 'e6603bba5f92ae5b6fe55cc8217a8c15123eadc5', NULL, 'claude-opus-5-5', '0d49e2c6-0269-4196-904d-1efb9db20bb7', NULL, 14, 28, 10981, 816756, 65979, 0.91091519999999993, 81121, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2525, 1163, '2026-11-19T18:09:00Z', '2026-11-19T18:09:29Z', 'blocked', NULL, 0, 'e6603bba5f92ae5b6fe55cc8217a8c15123eadc5', 'questions', 'claude-sonnet-5-5', '82479bd5-6239-40bc-a2bd-18fcd0ad0746', NULL, 8, 18, 1590, 343196, 38075, 0.20255559999999998, 52351, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2526, 1171, '2026-11-19T18:09:29Z', '2026-11-19T18:10:13Z', 'done', NULL, 0, 'e6603bba5f92ae5b6fe55cc8217a8c15123eadc5', 'questions', 'claude-sonnet-5-5', 'edc1d453-1b23-4984-9262-accb961988c8', NULL, 7, 12, 2636, 238807, 34369, 0.1877407, 49021, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2527, 1159, '2026-11-19T18:12:27Z', '2026-11-19T18:14:56Z', 'done', NULL, 0, 'd0d8171fc78c99077571b37d0f5a7e78172171d0', NULL, 'claude-opus-5-5', '8e9e03df-3880-4a17-90f6-c238a3384bc3', NULL, 17, 34, 12228, 908638, 52608, 0.84728759999999992, 67665, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2528, 1175, '2026-11-19T18:14:46Z', NULL, 'running', NULL, NULL, 'd0d8171fc78c99077571b37d0f5a7e78172171d0', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62433,6 +62473,9 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1172, 117
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1172, 2305);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 1171);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1174, 2301);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1176, 1175);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1177, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1177, 1175);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1649, 1648);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1666, 1889);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (1667, 1666);
@@ -62960,6 +63003,15 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2303, 117
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2303, 1174);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2303, 2296);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2304, 2303);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2308, 1177);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2309, 1176);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2309, 2308);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2310, 2308);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 1174);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 2303);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 2309);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2311, 2310);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2312, 2311);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
