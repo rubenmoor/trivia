@@ -146,25 +146,9 @@ def download_url(candidate):
 
 
 def pd_reasons(candidate):
-    """The file's PD-* licence templates (PD-old-70, PD-US-expired, …)."""
-    return lookup(candidate, templates=True, meta=False)["pd_reasons"]
-
-
-def lookup(candidate, templates, meta=True):
-    """One titles query at pick time: the PD templates and/or author_url and restrictions
-    (missing on candidates stored before plan 26)."""
-    params = {"titles": candidate["title"], "prop": "|".join(
-        p for p, on in [("templates", templates), ("imageinfo", meta)] if on)}
-    if templates:
-        params |= {"tlnamespace": 10, "tllimit": "max"}
-    if meta:
-        params |= {"iiprop": "extmetadata", "iiextmetadatafilter": "Artist|Restrictions"}
-    page = next(iter(api(**params)["query"]["pages"].values()))
-    out = {"pd_reasons": pd_templates(page) if templates else []}
-    if meta:
-        m = (page.get("imageinfo") or [{}])[0].get("extmetadata") or {}
-        out |= {"author_url": author_url(m.get("Artist", {}).get("value")), "restrictions": restrictions(m)}
-    return out
+    """The file's PD-* licence templates (PD-old-70, PD-US-expired, …): one titles query."""
+    params = {"titles": candidate["title"], "prop": "templates", "tlnamespace": 10, "tllimit": "max"}
+    return pd_templates(next(iter(api(**params)["query"]["pages"].values())))
 
 
 def pd_templates(page):
