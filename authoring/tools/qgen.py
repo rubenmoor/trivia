@@ -15,7 +15,6 @@ It runs its steps in a fixed order (concepts, draft, rate, factcheck, revise, me
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
     qgen batch-report --run <run>   # a run's report
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
-    qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
     qgen flag [--dry-run] < reports.txt   # pasted player reports become needs_work reviews (plan 93)
     qgen flag --pull [--url URL] [--dry-run]   # the report server's reports, then acked (token: TRIVIA_REPORT_TOKEN or state/report-token)
     qgen telemetry --pull [--url URL] [--from FILE] [--dry-run]   # opt-in telemetry sessions → state/played/stats.json, then acked (plan 109)
@@ -1922,10 +1921,6 @@ def main():
     video_window.add_parser(sub)
     au = add("audit", cmd_audit, "opus", run=False)
     au.add_argument("--batch", help="default: the newest merged batch")
-    au.add_argument("--backlog", action="store_true",
-                    help="audit the next slice of approved questions from before D-56 (plan 57); only when the developer asks")
-    au.add_argument("--slice", type=int, help=f"with --backlog: questions per slice (default {BACKAUDIT_SLICE})")
-    au.add_argument("--dry-run", action="store_true", help="with --backlog: list the slice's ids, change nothing")
     add("batch-report", cmd_batch_report)
     gp = sub.add_parser("gc", help="delete finished, checked batches' sheets and probe pictures from work/ (task 2182)")
     gp.set_defaults(fn=cmd_gc, run=None)
@@ -1989,7 +1984,7 @@ def main():
 
 
 # the command groups, after every name they import from here
-from audit import BACKAUDIT_SLICE, audit_section, cmd_audit
+from audit import audit_section, cmd_audit
 from player_reports import cmd_flag, cmd_telemetry
 from report import REVIEW_GAP_MIN, cmd_report, count, qc_section
 from review_steps import BATCH_SLOTS, REVIEW_MODEL, batch_questions, cmd_fix, cmd_media, cmd_record, cmd_research, cmd_review, cmd_sheets, slots_of

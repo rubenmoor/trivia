@@ -3,14 +3,14 @@ import datetime, json, random, sys
 from collections import Counter
 
 import layout  # paths (D-35)
-from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
+from layout import SOURCE_POOL as POOL, WORK
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import media_first  # authoring/tools/media_first.py: review_input, the aids the review sees (decision 199)
 import media as media_tool  # authoring/tools/media.py: candidates, sheets, picks (`media` is the cache)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
-from qgen import PROBLEMS, INT, QUESTION_FIELDS, REVIEW_URL, STR, UsageLimit, as_locale, claude, costs, failed, load_age_groups, load_json, named, natural_key, parallel, prompt, save_json, write_report  # authoring/tools/qgen.py
+from qgen import PROBLEMS, INT, QUESTION_FIELDS, REVIEW_URL, STR, as_locale, claude, costs, failed, load_age_groups, load_json, named, natural_key, parallel, prompt, save_json  # authoring/tools/qgen.py
 
 
 # --- audit and back-audit (plan 16, D-56) -------------------------------------
@@ -173,10 +173,6 @@ def audit_input(q, pool, pool_en=None):
 def cmd_audit(args):
     """An independent LLM reader of the run's audit sample (plan 16, prompts/audit.md): one call per
     question into work/<run>/audit/<id>.json. Never changes the pool."""
-    if getattr(args, "backlog", False):
-        return cmd_backaudit(args)
-    if getattr(args, "dry_run", False) or getattr(args, "slice", None) is not None:
-        sys.exit("--slice and --dry-run need --backlog")
     import health  # authoring/tools/health.py (imports qgen)
     run = args.batch or (health.batch_runs() or [None])[-1]
     if run is None or not (WORK / run).is_dir():
@@ -219,68 +215,6 @@ def audit_ids(run, ids, args):
     return parallel(work, todo, args.jobs, "audit", "questions")
 
 
-BACKAUDIT_BATCHES = ("pilot", "first-120", "batch-3", "batch-4", "batch-5", "batch-6", "batch-7")  # before D-56, oldest first
-BACKAUDIT_SLICE = 200
-
-
-def backlog(n):
-    """The next n approved questions from before D-56 without any audit and in no back-audit run, oldest batch first."""
-    taken = {i for p in WORK.glob("backaudit-*/run.json") for i in load_json(p)["ids"]}
-    order = {b: k for k, b in enumerate(BACKAUDIT_BATCHES)}
-    qs = [q for q in load_json(POOL)["questions"] if q["status"] == "approved" and q.get("batch") in order
-          and q["id"] not in taken and audit_path(q) is None]
-    return [q["id"] for q in sorted(qs, key=lambda q: order[q["batch"]])][:n]
-
-
-def cmd_backaudit(args):
-    """`qgen audit --backlog` (plan 57): the audit of the next slice of approved questions from before D-56
-    into work/backaudit-<k>/, then authoring/reports/backaudit-<k>.md. Resumes an unfinished run first.
-    Never changes the pool."""
-    run, resuming = mode_run("backaudit")
-    if resuming:
-        ids = load_json(WORK / run / "run.json")["ids"]
-        print(f"Resuming {run}: {len(ids)} question(s)" + (" (--slice ignored)" if args.slice else "") + ".", flush=True)
-    else:
-        ids = backlog(args.slice or BACKAUDIT_SLICE)
-        if not ids:
-            sys.exit("No approved question from before D-56 without an audit.")
-        if not args.dry_run:
-            save_json(WORK / run / "run.json", {"mode": "backaudit", "ids": ids,
-                                                "started": datetime.date.today().isoformat()})
-            print(f"Starting {run}: {len(ids)} approved question(s).", flush=True)
-    if args.dry_run:
-        print(f"{run}: {len(ids)} question(s)\n" + " ".join(ids))
-        return []
-    progress.verbose = False
-    errors = audit_ids(run, ids, args)
-    if errors:
-        if not any(isinstance(e, UsageLimit) for e in errors):
-            print(f"\n{len(errors)} error(s). Run `qgen audit --backlog` again.", file=sys.stderr)
-        return errors
-    cfg = load_json(WORK / run / "run.json")
-    save_json(WORK / run / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
-    out = write_backaudit_report(run)
-    major = sum(is_major(a) for a in audits(run).values())
-    print(f"\nDone: {run}: {len(ids)} audited, {major} with a major finding.\n  report: {out.relative_to(ROOT)}\n"
-          f"Commit exactly this:\n  git add {out.relative_to(ROOT)}\n"
-          f"  git commit -m \"{run}: {len(ids)} approved questions audited, {major} major (qgen audit --backlog)\"")
-    return []
-
-
-def write_backaudit_report(run):
-    """authoring/reports/<run>.md of a back-audit run (plan 57); `qgen report --qc <run>` adds its QC section."""
-    cfg = load_json(WORK / run / "run.json")
-    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
-    ids = cfg["ids"]
-    lines = [f"# {run}", "",
-             f"Made by `qgen audit --backlog` on {datetime.date.today().isoformat()} (plan 57): the audit of approved "
-             "questions from before D-56. Generated file: don't edit by hand.", "",
-             f"- Questions: {len(ids)} ({ids[0]}…{ids[-1]})",
-             "- Batches: " + ", ".join(f"{b} {n}" for b, n in Counter(by_id[i].get("batch") for i in ids if i in by_id).items()),
-             "", *audit_section(run), *qc_section(run)]
-    return write_report(run, lines)
-
-
 def audit_section(run):
     """The batch report's "## Audit" (plan 16); [] before the audit ran."""
     found = audits(run)
@@ -316,6 +250,5 @@ def audit_section(run):
 
 
 # the other command groups, after everything here is defined (they import each other)
-from report import qc_section  # authoring/tools/report.py
 from review_steps import related_questions, run_mode  # authoring/tools/review_steps.py
 from translate import in_locale, run_bundle, run_locale  # authoring/tools/translate.py
