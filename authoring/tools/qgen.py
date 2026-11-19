@@ -7,16 +7,13 @@ An LLM makes a batch with exactly one command (authoring/RUNBOOK.md):
     qgen batch --bundle colombia    # only when the user names a bundle
     qgen batch --translate en [--bundle colombia]   # only when the user names a language (plan 66)
 
-It runs these steps in a fixed order; they stay available one by one for debugging:
+It runs its steps in a fixed order (concepts, draft, rate, factcheck, revise, merge, media, review, record, sync, …); the rest:
 
-    qgen concepts [--subcategories "Volcanes,Piratas"] [--top-up] [--fill]   # concept lists (D-37)
+    qgen concepts [--subcategories "slug,slug"] [--top-up] [--fill]   # concept lists (D-37)
     qgen bundle new <id> --name … --description … --kind region|theme --language <L> --country <CC> --icon <name> --rule … --voice …   # an empty bundle (D-41)
     qgen taxonomy --bundle <id> [--apply work/taxonomy/<id>/proposal.json]   # a regional or theme bundle's categories (plans 138, 184)
     qgen remap --bundle <id> [--apply work/remap/<id>/proposal.json]   # its questions onto a new taxonomy (plan 138)
-    qgen draft --run <run> --subcategories "Volcanes,Piratas" [--bundle <id>]
-    qgen draft | rate | factcheck | revise | apply | merge --run <run>
-    qgen translate --run <run> [--locale en --ids q-0001,…]   # a translation run's first step (plan 66)
-    qgen media | sheets | review [--round 2] | fix | research | record | sync | batch-report --run <run>
+    qgen batch-report --run <run>   # a run's report
     qgen audit [--batch <batch>]    # a second LLM reader of a seeded sample (plan 16); changes nothing
     qgen audit --backlog [--slice N] [--dry-run]   # the next slice of unaudited approved questions from before D-56 (plan 57)
     qgen flag [--dry-run] < reports.txt   # pasted player reports become needs_work reviews (plan 93)
@@ -881,16 +878,6 @@ def cmd_draft(args):
     subcategory into drafts/; malformed questions dropped, skips may retire concepts."""
     d = run_dir(args)
     cfg = load_json(d / "run.json")
-    if cfg is None:
-        if not args.subcategories:
-            sys.exit("First call for a run needs --subcategories.")
-        check_bundle(args.bundle)
-        cfg = {"bundle": args.bundle, "subcategories": sub_keys(args.subcategories, args.bundle),
-               "draft_locale": translations.draft_locale(bundle_row(args.bundle))}
-        unknown = not_in_bundle(cfg["subcategories"], args.bundle)
-        if unknown:
-            sys.exit(f"Not in {categories.path(args.bundle).relative_to(ROOT)} (add them there first): {', '.join(unknown)}")
-        save_json(d / "run.json", cfg)
     subs, bundle = cfg["subcategories"], cfg.get("bundle", "base")  # runs before D-41 have no bundle
     missing = [s for s in subs if concepts.load(bundle, s) is None]
     if missing:
@@ -900,7 +887,7 @@ def cmd_draft(args):
     locale = text_locale(d)
     plan = load_json(d / "slots.json")
     if plan is None:  # drawn once, so a rerun drafts the same slots
-        plan = draw_slots(subs, pool["questions"], axes_def, args.slots, args.seed, bundle, locale)
+        plan = draw_slots(subs, pool["questions"], axes_def, BATCH_SLOTS, 1, bundle, locale)
         save_json(d / "slots.json", plan)
     drawn = Counter(sl["target_difficulty"] for slots in plan.values() for sl in slots)
     print("target difficulty: " + "  ".join(f"{lvl}×{c}" for lvl, c in sorted(drawn.items())), flush=True)
@@ -1722,7 +1709,7 @@ def cmd_batch(args):
     else:
         steps = [
             ("concepts", cmd_concepts, ns(model="opus", subcategories=None, top_up=True)),
-            ("draft", cmd_draft, ns(model="opus", seed=1, slots=BATCH_SLOTS, subcategories=None, bundle=args.bundle)),
+            ("draft", cmd_draft, ns(model="opus")),
             *([("english-keys", cmd_english_keys, ns(model="sonnet"))] if locale == "en" else []),
             *pipeline_steps(run, ns),
         ]
@@ -1876,19 +1863,6 @@ def main():
     rm.add_argument("--bundle", required=True, help="a regional bundle")
     rm.add_argument("--apply", metavar="PROPOSAL", help="move the questions as this proposal.json says "
                     "(edited if needed); no LLM call but names of new subcategories")
-    dp = add("draft", cmd_draft, "opus")
-    dp.add_argument("--subcategories", help="comma-separated, first call only")
-    dp.add_argument("--seed", type=int, default=1)
-    dp.add_argument("--slots", type=int, default=4, help="slots per subcategory")
-    dp.add_argument("--bundle", default="base", help="bundle of the run's questions, first call only (D-41)")
-    tp = add("translate", cmd_translate, "opus")
-    tp.add_argument("--locale", help="new run only: one of " + ", ".join(translations.LOCALES))
-    tp.add_argument("--ids", help="new run only: comma-separated source ids")
-    add("rate", cmd_rate, "opus")
-    add("factcheck", cmd_factcheck, "sonnet")
-    add("merge", cmd_merge)
-    add("revise", cmd_revise, "opus")
-    add("apply", cmd_apply)
     rp = add("report", cmd_report, run=False)
     rp.add_argument("--run")
     rp.add_argument("--player", help="with --simulate: strong|typical|both (default both)")
@@ -1948,20 +1922,12 @@ def main():
     media_survey.add_parser(sub)
     media_probe.add_parser(sub)
     video_window.add_parser(sub)
-    # the LLM batch (D-36): `batch` runs all of these in order; the others are for debugging
-    add("media", cmd_media)
-    add("sheets", cmd_sheets)
-    add("review", cmd_review, REVIEW_MODEL).add_argument("--round", type=int, choices=[1, 2], default=1)
-    add("fix", cmd_fix, "opus").add_argument("--check-model", default="sonnet")
-    add("research", cmd_research)
-    add("record", cmd_record).add_argument("--jobs", type=int, default=3, help="parallel downloads")
     au = add("audit", cmd_audit, "opus", run=False)
     au.add_argument("--batch", help="default: the newest merged batch")
     au.add_argument("--backlog", action="store_true",
                     help="audit the next slice of approved questions from before D-56 (plan 57); only when the developer asks")
     au.add_argument("--slice", type=int, help=f"with --backlog: questions per slice (default {BACKAUDIT_SLICE})")
     au.add_argument("--dry-run", action="store_true", help="with --backlog: list the slice's ids, change nothing")
-    add("sync", cmd_sync_run)
     add("batch-report", cmd_batch_report)
     gp = sub.add_parser("gc", help="delete finished, checked batches' sheets and probe pictures from work/ (task 2182)")
     gp.set_defaults(fn=cmd_gc, run=None)
