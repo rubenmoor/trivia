@@ -53,6 +53,9 @@ export const TIMED_RESULT_MS = 2200;
 export const ROUND_HOLD_MS = 1800;
 export const COUNTDOWN_STEP_MS = 900;
 
+/** Round-robin turn handover: the new player stays this long after the fade-in, then Level follows by itself (decision 747). */
+export const TURN_HOLD_MS = 1000;
+
 /** Category splash (plans 181, 191): it comes in within SPLASH_IN_MS once the question is on screen, holds this long after that, then leaves in at most SPLASH_EXIT_MS. */
 export const SPLASH_IN_MS = 450;
 export const SPLASH_HOLD_MS = 2000;
