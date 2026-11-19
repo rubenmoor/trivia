@@ -10,7 +10,7 @@
   import { DEFAULT_AGE_GROUP, fetchChoice, fetchPlayers } from "../../lib/api.ts";
   import { errorText } from "../../lib/errors.ts";
   import { padStyle, padStyleOf } from "../../lib/gamepad.svelte.ts";
-  import { t } from "../../lib/i18n.ts";
+  import { t, variants } from "../../lib/i18n.ts";
   import { focusControl, pushScope } from "../../lib/input.svelte.ts";
   import { joinKeyboard, joinPad, unboundPad, type Binding } from "../../lib/seats.ts";
   import type { GameMode, Player } from "../../lib/types.ts";
@@ -105,10 +105,16 @@
     onseats($state.snapshot(list) as SeatDraft[]);
   }
 
+  /** A random funny name nobody at the table has, else null. */
+  function suggestName(taken: string[]): string | null {
+    const free = variants("screen.player.teamNames").filter((n) => !taken.some((o) => sameName(o, n)));
+    return free.length ? free[Math.floor(Math.random() * free.length)] : null;
+  }
+
   /** `next` bindings over the seats so far, a new seat last. */
   async function seated(next: Binding[]) {
     notice = null;
-    update(next.map((binding, i) => (i < list.length ? { ...list[i], binding } : { binding, name: null, group: DEFAULT_AGE_GROUP })));
+    update(next.map((binding, i) => (i < list.length ? { ...list[i], binding } : { binding, name: suggestName(list.flatMap((s) => (s.name ? [s.name] : []))), group: DEFAULT_AGE_GROUP })));
     const at = list.length - 1;
     await tick();
     focusControl(section?.querySelector<HTMLElement>(`[data-focus-id="seat-name-${at}"]`));
