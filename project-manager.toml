@@ -90,6 +90,13 @@ multiple of 10, e.g. `--priority 710` or `--priority 690` in a plan with priorit
 later.
 '''
 
+# Worker model per task kind; keys left out keep pm's defaults (sonnet for work, opus otherwise).
+[models]
+masterplan = "fable"
+plan = "fable"
+split = "fable"
+revise = "fable"
+
 [worktrees]
 questions = "question authoring: code and script execution around questions, their translations, and review"
 app = "the game (everything else)"
