@@ -19,8 +19,9 @@ export type Soundtrack = {
 
 // Loop points and levels come from `authoring/data/music/<set>-<piece>.json` (`app/` can't read it).
 export const SOUNDTRACKS = {
-  // The brief's sets (plans/25-sound.md "Brief"); not installed yet: the generated loops play (plan 224)
-  "lofi-tranquilo": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // chill-lofi, Late Night Radio
+  // The brief's sets (plans/25-sound.md "Brief"); a set not installed yet plays the generated loops (plan 224)
+  // chill-lofi, Late Night Radio: record lofi-tranquilo-late-night-radio.json, 72 bpm, 8 bars
+  "lofi-tranquilo": { tracks: REQUIRED_TRACKS, loopStart: 0, loopEnd: 26.667, level: 1 },
   "acustica-calida": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // warm-acoustic, Bossa Antigua
   "jazz-de-concurso": { tracks: [], loopStart: 0, loopEnd: 0, level: 1 }, // jazz-quiz-show, Backbay Lounge
 } as const satisfies Record<string, Soundtrack>;

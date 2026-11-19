@@ -82,3 +82,12 @@ Everything not listed here is synthesized in `app/client/src/game/sound.svelte.t
 | `varita-magica.m4a` | Sound effect `wand` (adapted: cut, faded, loudness changed) | [zapThreeToneUp](https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc) (Kenney Digital Audio) | Kenney | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
 | `whoosh-pantalla.m4a` | Sound effect `whoosh` (adapted: cut, faded, loudness changed) | [phaseJump2](https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc) (Kenney Digital Audio) | Kenney | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
 <!-- trivia-sfx credits: end -->
+
+<!-- trivia-music credits: begin (generated, do not edit) -->
+| File | Used for | Source | Author | Licence |
+|---|---|---|---|---|
+| `musica-lofi-tranquilo-normal.m4a` | Music loop `normal` (8 bars, 72 bpm, adapted: cut to a loop, layers remixed, loudness changed) | [Late Night Radio](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2100003) (incompetech) | Kevin MacLeod | [Creative Commons: By Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `musica-lofi-tranquilo-question.m4a` | Music loop `question` (8 bars, 72 bpm, adapted: cut to a loop, layers remixed, loudness changed) | [Late Night Radio](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2100003) (incompetech) | Kevin MacLeod | [Creative Commons: By Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `musica-lofi-tranquilo-submitted.m4a` | Music loop `submitted` (8 bars, 72 bpm, adapted: cut to a loop, layers remixed, loudness changed) | [Late Night Radio](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2100003) (incompetech) | Kevin MacLeod | [Creative Commons: By Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) |
+| `musica-lofi-tranquilo-timed.m4a` | Music loop `timed` (8 bars, 72 bpm, adapted: cut to a loop, layers remixed, loudness changed) | [Late Night Radio](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2100003) (incompetech) | Kevin MacLeod | [Creative Commons: By Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) |
+<!-- trivia-music credits: end -->
