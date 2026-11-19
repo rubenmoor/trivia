@@ -51473,8 +51473,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Plan priority ~-120.', '2026-11-19T17:56:58Z', NULL, 2286, 0, NULL, 'questions');
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2299, 139, 'create tasks for plan 139: Chinese locales in data and pipeline', 'split', 'done', 1000, '2026-11-19, tasks 1163, 1164, 1165 reworded to zh only (no ru/pt-BR, no DRIVES_DRAFTING, no bundles.json change); 1163 requires 2294, 2295 and goes pending on the variant decision once raised; 1164 → 1163, 1165 → 1163, 1164; no new decisions (variant decision comes from part 1)', 'Split plan 139 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:58:44Z', '2026-11-19T17:59:56Z', 2287, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2300, 227, 'create tasks for plan 227: chinese-base bundle: model and setup', 'split', 'open', 1000, NULL, 'Split plan 227 into tasks and identify all decisions that need to be made. If the plan already has tasks,
-bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:00:00Z', NULL, 1148, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2300, 227, 'create tasks for plan 227: chinese-base bundle: model and setup', 'split', 'done', 1000, '2026-11-19, tasks 2329-2336; 2334 pending on decision 751; 2321, 2316, 2323 linked to their plan 227 tasks', 'Split plan 227 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:00:00Z', '2026-11-19T18:24:03Z', 1148, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2301, 228, 'create tasks for plan 228: Chinese variants and the Chinese audience (evaluation)', 'split', 'open', 1000, NULL, 'Split plan 228 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T18:01:31Z', NULL, 2294, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2302, 140, 'create tasks for plan 140: Translation into Chinese', 'split', 'done', 1000, '2026-11-19, tasks 1166 (rewritten: zh-Hans prompt, waits for plan 228''s answers, task 1163, decision 750), 2303 (pilot run), 2304 (runs to 6000); dropped 1167, 1168, 1169', 'Split plan 140 into tasks and identify all decisions that need to be made. If the plan already has tasks,
@@ -51698,6 +51698,116 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 Check: `qgen validate`.
 Done when: the checks above pass and are recorded.', '2026-11-19T18:21:39Z', NULL, 1162, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2329, 227, 'A base bundle other than base in the pipeline', 'work', 'open', NULL, NULL, 'Task 1 of `plan 227: chinese-base bundle: model and setup` (section "A base bundle that isn''t `base`", authoring side). Makes the pipeline handle a second `kind: base` bundle that lives in a D-94 pack directory and has no `es`; no real `chinese-base` yet (task 7 of the plan creates it).
+
+## Before starting
+- Part 2''s cleanup (`plan 229: Pipeline review and cleanup for milestone 12`) lands first: if its tasks in the `questions` worktree (its close-out above all) are still open, `pm task requires <this task> <them>` and stop. Re-read the code after them; names below are the 2026-11-19 starting point.
+
+## Baseline first
+- Unchanged tree: `qgen validate`, `qgen report`, `qgen report --locale <l>` (es, es-ES, en, de), `qgen report --cost` → temp files (deleted at the end).
+
+## Changes
+- Audit: `rg ''"base"''` and `rg ''kind.*base''` over `authoring/`; each hit is "the bundle `base`" (keep) or "any base bundle" (fix). Known hits: paths, `targets.bundle_kind` default, validate''s `kind == "base"` English-first rule, `report --simulate` default, `qgen bundle new --kind base`. List keep/fix per hit in the done note; app-side hits go to task 5 of the plan (name them there with `pm task set` if new).
+- Pack without `es`: export, validate and report accept a base bundle in `app/data/bundles/<id>/` (`categories.json`, `names.<locale>.json`, `pool.en.json`, `pool.<zh>.json`, no `pool.json`).
+- `qgen bundle new --kind base`: writes `targets.json` `<id>` = base''s mix (6000, `targets.scaled` of base''s total; `decision 730: Base tile count: «6000+»`); accepts `--icon` (one of `BUNDLE_ICONS`); `country` stays forbidden for kind base; entry in `bundles.json` after existing base bundles.
+- Drafting aims (`targets.py`, D-84, `decision 236: English-first drafting for base: what drives drafting and which locales steer it`): a base bundle counts per its own `languages` only; it never drives `base`''s drafting nor `base` its.
+- `validate`: a pack base bundle''s categories need a `subject` (plan 194) like `base`''s.
+
+## Check
+- Fixture test (pytest, temp data dir): two base bundles, the second a pack with `languages: ["zh-Hans", "en"]`-style list and one approved en question → validate, export, `report --bundle <id> --locale en` pass; targets separate.
+- Rerun the baseline: identical. `npm run check`, `npm test`, `npm run build`, `qgen validate`, Python tests pass.
+
+Done when: the fixture passes and today''s output is unchanged.', '2026-11-19T18:23:01Z', NULL, 2300, 0, 'opus', 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2330, 227, 'Copy model: copied_from, copy helper, validate rules', 'work', 'open', NULL, NULL, 'Task 2 of `plan 227: chinese-base bundle: model and setup` (section "Copy model"), per `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (copies). Lets a question of one bundle be copied into another with its own text and status, sharing the media record but never the file.
+
+## Changes
+- Source field `copied_from: <id>` on questions in `authoring/data/questions.json` (sources only; translations take it from the source, D-81).
+- Helper `authoring/tools/copies.py` `copy_question(src_id, bundle, subcategory)` → new source: new id, `bundle`, `locale: en`, `copied_from`, given `subcategory`, difficulty, answers and `media` record (same `file_url`, excerpt, credit) from the source; `status` as the caller passes it (part 5, `plan 230: chinese-base step 1: euro-centric filter and copies`, decides). English text: an `en` source''s own; an `es` source''s approved `en` translation (`questions.en.json`); none approved → refused. No command of its own.
+- `qgen validate`: `copied_from` names an existing question of another bundle that is not itself a copy; at most one copy per source per bundle; not on translations.
+- Overlap and duplicate checks (`already_asked`, D-111, near-duplicate checks in validate/review): a copy and its source are not duplicates; a copy and another question of its own bundle are (normal rule).
+- D-entry in `plans/decisions.md` (next free D number): the copy model, no link after copying, provenance only.
+
+## Check
+- Tests: copy of an en source, of an es source with approved en, refusal without; validate errors (missing source, copy of a copy, two copies in one bundle, on a translation); duplicate exemption source↔copy but not copy↔same-bundle.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`, Python tests pass; `qgen report` unchanged for today''s data.
+
+Done when: the helper and rules exist, tested, D-entry written.', '2026-11-19T18:23:14Z', NULL, 2300, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2331, 227, 'Shared media and content depot for a base pack', 'work', 'open', NULL, NULL, 'Task 3 of `plan 227: chinese-base bundle: model and setup` (sections "Media not duplicated" and the depot line). A copied question must use the same media file as its source everywhere, and a base bundle in a pack ships in the game''s content depot (`decision 753: chinese-base ships in the game''s content depot, not as DLC`).
+
+## Changes
+- With a fixture copy (temp data: a `base` media question and a copy in a pack base bundle, same `file_url`): check one cache file (`media_cache.py` `cache_path`, `resolve.mjs` `cacheName`), one encode in `work/ship-media/`, one file in `build/media/` (`shippedName`, decision 644; `stage-media.mjs` URL `Set`), Credits/attribution list shows the file once, the review tool and `/review?licence=replace` list both questions on that file. Fix what doesn''t hold; a test for each fix.
+- `app/desktop/stage-media.mjs`: a `kind: base` pack''s pool files and media go into the content depot, no `pack-media.json` entry, no DLC depot; media shared with `base` stays once.
+- Follow-ons: `trivia-desktop-build`, `trivia-steam` depot VDFs, release check pool hashes list `<locale>/<base pack id>` (e.g. `en/chinese-base`); `stage-media.mjs --check` prints the pack in the content line.
+
+## Check
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`; `stage-media.mjs --check` and a `trivia-desktop-build --dir` with the fixture pack (temp, not committed) and without: today''s depots unchanged.
+
+Done when: the fixture copy''s media is one file everywhere and the pack lands in the content depot.', '2026-11-19T18:23:15Z', NULL, 2300, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2332, 227, 'One base bundle per session in the game', 'work', 'open', NULL, NULL, 'Task 4 of `plan 227: chinese-base bundle: model and setup` (section "Game: base bundles per locale, at most one per session"), per `decision 752: One base bundle per session: at most one, not exactly one`. Independent of the plan''s authoring tasks.
+
+## Changes
+- `BundleSelector.svelte` `toggled`: picking a base bundle deselects the other base bundles; picking the selected one turns it off; add-ons toggle as today. Same in `Bundles.svelte` and every other `toggled` user (`rg toggled app/client`).
+- Engine (`choice.ts`, `state.ts`): a choice with 2+ base bundles is normalized to the first in the locale''s order (stored choices, `playerChoice` preset, decision 158), never written back (D-85''s rule for stored choices); `newGame`/`new` refuse 2+ base bundles with a new refusal key; strings in es, es-ES, en, de (read `locales/style/<locale>.md` first; UI never sends it).
+- Default per locale unchanged: the locale''s first base bundle. `bundlesFor` unchanged.
+- Mods'' base bundles (plan 151): same one-of rule; a mod''s base bundle stays off by default.
+- Docs: D-85 amended again in `plans/decisions.md`; `plans/22-bundles.md`; `app/data/bundles.json` `about` ("exactly one per session" → at most one).
+
+## Check
+- Tests: toggle (base→other base, base off, add-ons), normalize of a stored choice and preset, refusal; a mod base bundle.
+- Gallery review set with a fixture second base bundle (temp, not committed): `trivia-gallery --set task-<id> --only bundles --locale en`.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+
+Done when: at most one base bundle can be on, in UI and engine, tested.', '2026-11-19T18:23:28Z', NULL, 2300, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2333, 227, 'ALL_CATEGORIES and app-side base checks per base bundle', 'work', 'open', NULL, NULL, 'Task 5 of `plan 227: chinese-base bundle: model and setup` (section "Career and achievements" and the app-side hits of the base audit). A family that plays only a second base bundle must be able to earn every achievement and badge.
+
+## Changes
+- ALL_CATEGORIES (`achievements.ts`): today `c.bundle === "base"` only. New rule: every category with approved questions of any one base bundle offered in the game''s locale has a right answer.
+- App-side literal `"base"` that means "any base bundle": `rg ''"base"''` and `rg ''kind.*base''` over `app/`; known: start page supply, `sim/`; plus any app hit named in the done note of `task 2329: A base bundle other than base in the pipeline`. Keep hits that mean the bundle `base`; list keep/fix in the done note.
+- `BUNDLE_*` stays for add-on DLC only (decision 73, decision 146): no achievement for a base pack (`decision 753: chinese-base ships in the game''s content depot, not as DLC`); career badges count a base pack''s categories by their `subject`.
+
+## Check
+- Tests: ALL_CATEGORIES reachable with `base` alone and with a fixture second base bundle alone.
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`.
+
+Done when: ALL_CATEGORIES and the audited app code work for any base bundle, tested.', '2026-11-19T18:23:28Z', NULL, 2300, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2334, 227, 'Seen key for copies (decision 751)', 'work', 'open', NULL, NULL, 'Task 6 of `plan 227: chinese-base bundle: model and setup` (section "Seen counts"), per the answer of `decision 751: chinese-base copies: does a copy share its source''s seen counter?`. Touches both the export (authoring) and the engine (app) in one change.
+
+## If option 1 (share)
+- `qgen export` writes `copied_from` into the pool entries of copies (`pool_export.py`; `app/` loader types).
+- Engine seen key = `copied_from ?? id` for `count`, `blocked` (Bloquear pregunta), exhausted subcategories, low-supply warning, QUESTIONS_1000''s distinct ids, and `qgen report --simulate`''s sessions (`sim/`); save rows keep the real id, save version unchanged.
+- D-82 note in `plans/decisions.md`.
+- Tests: a copy seen after its source counts as seen; blocking one blocks the other; QUESTIONS_1000 counts them once.
+
+## If option 2 (separate)
+- Only a D-82 note in `plans/decisions.md`: a copy counts as its own question.
+
+## Check
+- `npm run check`, `npm test`, `npm run build`, `qgen validate`; `qgen report --simulate` unchanged for today''s data (one simulate at a time: `pgrep -f "report --simulate"` first).
+
+Done when: the decision''s answer is implemented and documented.', '2026-11-19T18:23:35Z', NULL, 2300, 0, NULL, 'app');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2335, 227, 'Create the chinese-base bundle: entry, names, rule and voice', 'work', 'open', NULL, NULL, 'Task 7 of `plan 227: chinese-base bundle: model and setup` (section "The bundle"). Creates the real, still empty `chinese-base`; the fit pass, taxonomy and drafting (parts 5, 6, 7 of `plan 60: masterplan`) wait for it.
+
+## Before starting
+- "the zh locale(s)" = the answer of part 1''s variant decision (`plan 228: Chinese variants and the Chinese audience (evaluation)`), already in the locale lists by `task 1163: Chinese locale(s) in the locale lists and rules`. Also read part 1''s sensitivity rule (`plans/26-china.md` or wherever plan 228 put it); missing yet → `pm task requires <this task> <the task that writes it>`, stop.
+
+## Changes
+- `qgen bundle new chinese-base --kind base --icon <one of BUNDLE_ICONS> --language en …`: `app/data/bundles.json` entry after `base`, `languages: [<zh locale(s)>, "en"]`, empty `categories.json` in `app/data/bundles/chinese-base/`, `targets.json` 6000 in base''s mix (`decision 730: Base tile count: «6000+»`).
+- Game names: Spanish `name`/`description` per bundles.json''s rule, plus `names.en.json` and `names.<zh>.json` of the pack (drafted by the worker; zh listed in the done note for the native reviewers of `plan 141: Native reviewers for Chinese`).
+- Draft `rule` (English, membership for the pipeline: China-centred, what a Chinese family knows or learns in school, within part 1''s sensitivity rule) and `voice` (English for a Chinese family: Chinese names in pinyin, Chinese name order, terms with characters where they help; each zh locale''s variety). Prompt text is the developer''s (D-36): `pm decision add "chinese-base rule and voice: approve?"` with both drafts in the body, options approve / approve with my edits; `pm task-pending-decision <this task> <id>`, stage the rest, stop. Next run: write the approved text into `bundles.json`.
+
+## Check
+- `qgen validate` (empty taxonomy accepted for the new bundle, or only the expected warning), `qgen export`, `qgen report --bundle chinese-base --locale en`; es, es-ES, en, de output unchanged; `npm run check`, `npm test`, `npm run build`.
+
+Done when: `chinese-base` exists with approved `rule` and `voice`.', '2026-11-19T18:23:45Z', NULL, 2300, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2336, 227, 'Close-out of plan 227: fixture check end to end', 'work', 'open', NULL, NULL, 'Close-out of `plan 227: chinese-base bundle: model and setup` ("Done when").
+
+- With a fixture `chinese-base` (temp data: one copy of a `base` media question, one new question; not committed): `qgen validate`, `qgen export`, `qgen report --bundle chinese-base --locale en` pass; the copy''s media is one file in cache, `work/ship-media/`, `build/media/` and credits.
+- Game (dev server, `TRIVIA_MUTE=1`): English shows two base tiles, at most one on; a zh locale shows only `chinese-base`; ALL_CATEGORIES reachable in a `chinese-base`-only game (test or `sim/`).
+- Real `chinese-base` exists, `rule`/`voice` approved (task 7''s decision answered).
+- es, es-ES, en, de unchanged: `npm run check`, `npm test`, `npm run build`, `qgen validate`, `qgen report`.
+- Anything that fails: a follow-up task in this plan, not fixed here unless it''s one line.
+
+Done when: all of the above hold, noted per line in the done note.', '2026-11-19T18:23:55Z', NULL, 2300, 0, NULL, 'questions');
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -61865,6 +61975,8 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2531, 1161, '2026-11-19T18:17:01Z', '2026-11-19T18:18:20Z', 'done', NULL, 0, '4446bc9c4b2b2f20338d76bba732cbd1eb742488', NULL, 'claude-opus-5-5', 'd34721b3-1700-45e6-a490-09df26008a98', NULL, 9, 18, 6897, 428429, 44339, 0.57840980000000009, 59501, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2532, 2293, '2026-11-19T18:18:21Z', '2026-11-19T18:19:59Z', 'done', NULL, 0, '53e8dcc8e60d37ef3d2f42c908d81478e3d36abf', NULL, 'claude-opus-5-5', 'fab92289-1a4d-49b7-90fc-34e0999f51a5', NULL, 11, 18, 9044, 597694, 79152, 0.9337068, 94156, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2533, 1162, '2026-11-19T18:19:59Z', '2026-11-19T18:22:05Z', 'done', NULL, 0, '7445756bb28c2c98174377b6c89344abd9956d70', NULL, 'claude-opus-5-5', '884b1e12-1b9e-4dfe-8865-7496e78f2bea', NULL, 12, 24, 9834, 659375, 53594, 0.75740300000000016, 67950, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2534, 2300, '2026-11-19T18:22:05Z', '2026-11-19T18:24:11Z', 'done', NULL, 0, '9803c64d2784b3a054647c11a0908d49a41dd288', NULL, 'claude-opus-5-5', '1c72d83f-f6dc-4079-a08e-35c71152a368', NULL, 16, 30, 10299, 903022, 62201, 0.88431240000000022, 77306, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2535, 2332, '2026-11-19T18:24:04Z', NULL, 'running', NULL, NULL, '9803c64d2784b3a054647c11a0908d49a41dd288', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -62627,6 +62739,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (2298, 750);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2303, 750);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2304, 750);
 INSERT INTO task_decision (task_id, decision_id) VALUES (2326, 755);
+INSERT INTO task_decision (task_id, decision_id) VALUES (2334, 751);
 
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 146);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (150, 1865);
@@ -63195,6 +63308,7 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 672
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 2300);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 2308);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 2314);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2316, 2335);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2317, 2314);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2317, 2315);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2318, 845);
@@ -63210,12 +63324,16 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2319, 232
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2320, 2319);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2321, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2321, 2300);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2321, 2331);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2321, 2332);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2321, 2335);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2322, 1163);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 716);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2300);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2312);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2321);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2322);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2323, 2336);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2324, 2303);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2325, 2298);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2326, 2311);
@@ -63229,6 +63347,20 @@ INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2327, 232
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2304);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2320);
 INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2328, 2327);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2329, 2305);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2330, 2329);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2331, 2329);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2333, 2329);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2334, 2330);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2335, 1163);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2335, 1164);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2335, 2329);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2330);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2331);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2332);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2333);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2334);
+INSERT INTO task_prerequisite_tasks (task_id, prerequisite_id) VALUES (2336, 2335);
 
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (33, 38, 'default bundles only: non-base bundles off by default');
 INSERT INTO decision_supersedes (decision_id, superseded_id, note) VALUES (99, 33, 'jokers field only: presets Estándar / Sin límite / Personalizado are back on the configure screen; Como las cartas dropped');
