@@ -52616,6 +52616,23 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 
 
 this pace toggle is way too small and practically hidden. Make two big buttons (like with the diffulty), but them above or below the difficulty selection, add icons, a caption and a short description and the shortcut for each. "Pace" as caption for both buttons is fine.', '2026-11-19T21:01:52Z', '2026-11-19T21:05:36Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2397, NULL, 'multiplayer timed competitive still has bugs that i have reported earlier', 'exec', 'open', NULL, NULL, '![](pm-images/39c29f455d21.png)
+
+you cannot put player names nex to each other, they need a new line each
+
+when starting a new game session in this mode, there is a greeting screen that shows both names in line. that layout doesn''t work
+
+the category/subcategory animation: it still loops mindlessly while the question screen is shown. The animation also re-plays when a player hits the button in order to answer
+
+when the players time out: you cannot just highlight the correct answer. you fixed this for the case where a player choses to answer and then times out. fix this for the case where neither player choses to answer, too. don''t highlight the correct answer, show the information that there was a time-out and animate how players loose a heart as a consequence
+
+![](pm-images/79a8270c7098.png)
+
+the caption of each button is now "pace". no. i need "pace" like "difficulty" as caption above both buttons. the captions are "hectic" and "chill"
+
+before the animation with category and subcategory is shown, i see the question screen for short moment. that''s a bug. the question screen needs to start with the animation on the dark blue background of category and subcategory.
+
+make sure that you create individual tasks for every issue here and do not call anything done before you have actualy proof that the bug is fixed. if you can''t come up with a reliable verification, you need to raise a decision. consider escalating to opus. seems like sonnet isn''t capable enough.', '2026-11-19T21:11:04Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -62923,6 +62940,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2587, 2258, '2026-11-19T20:59:17Z', '2026-11-19T21:02:48Z', 'done', NULL, 0, '87584af40d971080001d9ce238bac482fb471f99', 'app', 'claude-sonnet-5-5', '708c5555-2180-448c-9fcf-a99c5b781724', 2586, 8, 18, 2241, 502473, 9217, 0.36742690000000006, 66804, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2588, 2396, '2026-11-19T21:01:55Z', '2026-11-19T21:05:42Z', 'done', NULL, 0, 'ca2071fe02cfb73ed6bf9a3703405c8b305fd3e4', NULL, 'claude-sonnet-5-5', 'beece807-73ae-4df0-9bde-c5633d9ce104', NULL, 17, 28, 5491, 675250, 47814, 0.31374700000000005, 62694, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2589, 2395, '2026-11-19T21:05:37Z', '2026-11-19T21:08:37Z', 'done', NULL, 0, '85b3243982177d57ba1c0128481ed41bc90f183f', 'questions', 'claude-sonnet-5-5', '725af9aa-eb48-4f2c-b6a0-7a972a2cd33e', NULL, 14, 28, 4634, 620909, 37707, 0.25931490000000007, 52531, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2590, 1163, '2026-11-19T21:08:38Z', NULL, 'running', NULL, NULL, 'f0e0d72f7c0ded18cedf2f3c02c9af4952fa0541', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
