@@ -789,6 +789,7 @@ const es = {
     age_group_unknown: "grupo de edad desconocido: '{group}'",
     bundle_unknown: "paquete desconocido: '{bundle}'",
     bundles_not_list: "los paquetes deben ser una lista",
+    bundles_many_base: "como máximo un paquete base por partida",
     bundle_not_offered: "el paquete '{bundle}' no está disponible en este idioma",
     no_questions: "no hay preguntas para esta elección: elige algún paquete con preguntas",
     difficulty_invalid: "dificultad a medida: de 1 a 15, el final no menor que el inicio",

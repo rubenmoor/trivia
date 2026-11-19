@@ -3,12 +3,6 @@
 
   export type Bundle = ChoiceOptions["bundles"][number];
 
-  /** `selected` after picking `b`: every bundle toggles, base ones too (any combination, plan 151). */
-  export function toggled(bundles: Bundle[], selected: string[], b: Bundle): string[] {
-    const on = (x: Bundle) => (x.id === b.id ? !selected.includes(x.id) : selected.includes(x.id));
-    return bundles.filter(on).map((x) => x.id);
-  }
-
   /** Display order (plan 151): base bundles, then the optional ones: regional of the player's `region`, non-regional,
    * regional of other countries; file order (ours, then mods) within each group. */
   export function orderBundles(bundles: Bundle[], region: string): Bundle[] {
@@ -45,9 +39,10 @@
 </script>
 
 <script lang="ts">
-  // Shared bundle selector (D-88): every bundle a toggle, base ones apart from the others; any combination
-  // (plan 151). Bundles screen in every mode (plan 151): narrow base column, ruler, flowing optional
+  // Shared bundle selector (D-88): every bundle a toggle, base ones apart from the others; at most one base
+  // bundle (decision 752). Bundles screen in every mode (plan 151): narrow base column, ruler, flowing optional
   // tiles (names, counts) that scroll with focus; «Ajustes de la partida» (MD-12): compact, with descriptions.
+  import { toggled } from "./toggled.ts";
   import { buildInfo } from "../lib/build.ts";
   import { playerRegion } from "../lib/desktop.ts";
   import { t } from "../lib/i18n.ts";
