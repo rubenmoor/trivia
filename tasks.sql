@@ -12343,6 +12343,67 @@ Waits for:
 
 ## Done when
 - `app/data/bundles/chinese-base/categories.json` holds the approved taxonomy, every category with a subject; names for en and the zh locale(s); `related.json` and the map proposal exist; `qgen validate` passes; es, es-ES, en, de output unchanged (`qgen report`).', 'The Chinese edition''s main question set needs its own list of topics, the way a quiz show sorts questions into categories such as history or food. This part studies what children in China learn at school and what Chinese families share at home, from festivals and poems to food and sport, and turns that into categories and subcategories. It also decides which of the existing topics carry over for questions copied from the current set, so new questions don''t repeat them, and it keeps every topic tied to the school subjects the game''s badges count.', '2026-11-19T20:08:13Z', 2297, NULL);
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (232, 12, 'chinese-base step 2: new China-centric questions in English', -120, 'Part 7 of `plan 60: masterplan`: step 2 of `chinese-base` (milestone 12: "the authoring of new questions genuinely and specifically centered around everything china", "draft the new questions of the second step in english first (for me to review)"). `qgen batch --bundle chinese-base` drafts English sources for the subcategories of `plan 231: chinese-base taxonomy from Chinese school curricula`, the developer reviews them in English (iterative feedback), and runs go on until `chinese-base` has 6000 approved, copies (`plan 230: chinese-base step 1: euro-centric filter and copies`) + new. Replaces the drafting half of the dropped `task 1152: write plan: chinese-base content`. Translation into Chinese is `plan 140: Translation into Chinese`''s.
+
+## Waits for
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` → answered, option 1: English sources, `locale: en` (D-107), translated by `--translate`; supersedes `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?`.
+- Part 4, `plan 227: chinese-base bundle: model and setup`: `task 2329: A base bundle other than base in the pipeline`, `task 2330: Copy model: copied_from, copy helper, validate rules` (overlap rules copy ↔ new question), `task 2335: Create the chinese-base bundle: entry, names, rule and voice` (the approved `rule`/`voice` the drafting prompts are filled with).
+- Part 6, `plan 231: chinese-base taxonomy from Chinese school curricula`: `task 2383: Apply the answered chinese-base taxonomy` (`categories.json`, names, `related.json`, the language subcategories'' list and scopes).
+- Part 5, `plan 230: chinese-base step 1: euro-centric filter and copies`: `task 2345: Pilot fit-1: fit pass over about 600 base sources` before the pilot (its keep rate feeds the budget''s projection of copies); `task 2346: Full fit runs over the rest of base` before the full runs (drafting picks subcategories by fewest approved and checks overlap against the pool: without the copies, reused subcategories look empty and drafts would repeat what copies bring).
+- `plan 229: Pipeline review and cleanup for milestone 12`: code read after its close-out (its open remove-or-keep tasks change `qgen`).
+
+## Binding inputs
+- `decision 730: Base tile count: «6000+»`: 6000 approved in `chinese-base`, base''s difficulty mix (`targets.json` `chinese-base`, plan 227).
+- `decision 757: Sensitivity rule for Chinese content: how do drafting, the fit pass and zh translation treat contested political topics?` → "Neutral facts only": contested topics allowed when the question states an undisputed fact (a date, a name) without judgement or status wording; maps and flags checked case by case. Its text reaches draft, rate and review through the bundle''s `rule` (task 2335).
+- `decision 756: Chinese variant(s): which written Chinese does the game ship in milestone 12?` → `zh-Hans` and `zh-Hant`: the English sources serve both; nothing here per variant.
+- `decision 754: Native checks of Chinese translation runs: pilot and release sample, not every run`: the language subcategories'' questions get a full native sheet (plan 141); this plan keeps them findable by subcategory.
+- `decision 755: Chinese: when do the zh pool and chinese-base in English go live on default?` → only at 6000 approved per locale: drafting has no early go-live to serve.
+- `decision 414` (reviews never gate generation), D-55 (`$ per approved` stop per batch), D-36 (prompts are the developer''s: any prompt change is a pm decision first), D-43 (concept lists), D-54 (gap weights), `decision 208: What must a script that calls claude report to its caller?`.
+- `authoring/RUNBOOK.md` only: one command, `qgen batch --bundle chinese-base`; workers never pass other arguments, edit pools or pick media.
+
+## Drafting readiness (code, before the pilot)
+- What `qgen batch --bundle chinese-base` must do that it may not yet (check each, fix what''s missing, test with a fixture `chinese-base`):
+  - Draft locale `en` (`translations.draft_locale`: a `kind: base` bundle drafts English; holds today), the bundle''s `rule` and `voice` in the draft, rate, review and fix prompts as for `colombia`.
+  - Subcategory pick and gap weights from `chinese-base`''s own `targets.json` entry and pool (copies count as approved), never from `base`''s; `base`''s drafting aims unchanged.
+  - Concept lists (D-43) under `authoring/data/bundles/chinese-base/concepts/`: new subcategories from scope + samples (plan 231); reused subcategories (same slug as a `base` one) start from their copies'' concepts, so drafts don''t repeat a copy (plan 231 "Concept lists": "part 7 wires it").
+  - Overlap: rate''s candidates, merge''s duplicates and `already_asked` see every `chinese-base` question incl. copies; `related.json` neighbours (plan 231) feed the related-questions view as `base-related.json` does for `base`.
+  - Media search and review on China topics: no change expected; the check says so.
+- First draft run of a bundle = a pilot (new, like `TRANSLATE_PILOT`): when the bundle has no drafted (non-copy) source yet, `qgen batch --bundle <id>` drafts a small run aimed at ≈ 50 approved (e.g. 25 subcategories by deficit × 3 slots; the task sets the numbers from measured yield), not D-46''s half of all subcategories × 18. No new argument (RUNBOOK unchanged but one line). Pick by fewest approved → after fit-1 the new subcategories (no copies) come first, as they should.
+- Language subcategories (plan 231 "Language subcategories": 成语, 汉字, 唐诗/宋词, 歇后语 …): no flag; the subcategory is the marker (native sheet, review filter). Their scope rules (ask origin, author, place; never what the Chinese words state; options with characters + pinyin + English gloss) come from the scope, which the draft prompt already shows. The readiness task checks one fixture draft prompt renders them; if a generic prompt bullet is needed, a prompt decision (D-36).
+- Done when: unit tests (fixture with `base`, `chinese-base`, a copy, a new and a reused subcategory) for pick, gaps, concepts seeding, overlap and the pilot size; `qgen batch --bundle chinese-base` dry of calls up to the draft prompt; `qgen report` and `qgen validate` for today''s bundles unchanged.
+
+## Pilot (iterative feedback)
+- `qgen batch --bundle chinese-base` (RUNBOOK), the pilot size above; run `batch-<n>`, report `authoring/reports/batch-<n>.md`.
+- The developer reviews every pilot question in English at `/review?batch=<batch>` (in `../trivia-review`, AGENTS.md); `qgen health ack <batch> "<note>"` records their look.
+- Pilot decision "chinese-base drafting pilot: prompt changes and budget?" (`--intro` per house rules), body:
+  - Numbers: drafted / merged / approved / `needs_work`, reject reasons, $ per approved (`qgen report --cost`), against `base`''s English batches.
+  - The developer''s review notes, grouped (voice, Chinese names and terms, difficulty for a Chinese family, sensitivity per decision 757, language subcategories, media).
+  - Projection: copies = fit-1''s keep + adapt rate × approved `base` sources with English text; gap = 6000 − copies, per level in base''s mix (`qgen report --bundle chinese-base --locale en`); runs and $ to close it at the pilot''s rate (the full run''s size: D-46 half of subcategories × 18 → a few hundred approved per run); review time per 100 if measured.
+  - Options: "go: full runs as is, budget = projection + 20 %" (recommended) / "change prompts or voice first (name it; a new prompt decision, then a second pilot)" / "go with a cap (which levels or subcategories give way)" / "stop".
+- On the answer: `"budget"` entry for `chinese-base` in `targets.json` if the cost report reads per-bundle budgets (else in the decision only); consequences.
+
+## Full runs (iterative feedback)
+- One task per run: `qgen batch --bundle chinese-base` (RUNBOOK), then `qgen report --bundle chinese-base --locale en`; while the gap isn''t closed, the task adds the next run task (same body) to this plan before `pm task done`; the last one says "6000 reached".
+- The developer reviews each run in English at their pace (QC.md spot check of a draft batch); a run never waits on a review (decision 414), but a finding the developer raises (a prompt or voice change) goes through a decision, and the next run waits for it (`pm task-pending-decision`).
+- Health ✗ and stops as RUNBOOK "Under `pm run`".
+- `task 2304: Translation runs zh-Hans of chinese-base to 6000 approved` needs these sources: it already runs alongside; the split links it to the pilot task (`pm task requires 2304 <pilot>`), so translation of new questions starts once some are approved.
+- `task 2325: Career check against chinese-base` waits for the last run: the split links it to the close-out task.
+
+## Close-out
+- `qgen report --bundle chinese-base --locale en`: 6000 approved in base''s mix, every subcategory within its target; `qgen report --simulate --locale en --bundles chinese-base` ✓ (one simulate at a time).
+- Docs: `plans/16-content-target.md` (`chinese-base` row), `plans/22-bundles.md` (`chinese-base` content), `authoring/RUNBOOK.md` (the pilot rule line), rg for stale mentions (decision 200).
+
+## Tasks (suggested split, in order)
+1. (questions, `--model opus`) Drafting readiness for `chinese-base`: the checks and fixes above, first-run pilot size, concept seeding of reused subcategories, tests, RUNBOOK line. Requires `task 2329`, `task 2330`, `task 2335`, `task 2383`, plan 229''s close-out.
+2. (questions) Pilot draft run for `chinese-base` (iterative feedback): run, developer review, `health ack`, pilot decision; requires 1 and `task 2345`; pending on its own decision only for "change prompts" (then a second pilot by a new task).
+3. (questions) First full drafting run for `chinese-base` (iterative feedback): requires 2''s decision answered "go…" and `task 2346`; adds the next run task while the gap isn''t closed.
+4. (questions) Close-out: report, simulate, docs; requires the last run (the run chain links it: each new run task makes 4 require it); `task 2325` requires 4.
+
+## Out of scope
+- Copies and the fit pass (plan 230); taxonomy (plan 231); bundle setup, game side (plan 227); zh translation (plan 140); native checks (plan 141); career thresholds (plan 145); drafting `chinese-base` in another language; media-first runs for `chinese-base`.
+
+## Done when
+- `chinese-base` has 6000 approved in English (copies + new) in base''s difficulty mix; the developer reviewed the pilot and every run''s sample in English; budget decided; `npm run check`, `npm test`, `npm run build`, `qgen validate` pass; `base`''s pools and reports unchanged.', 'The Chinese edition''s main question set needs thousands of new questions about China itself: its history, places, food, festivals, poems, science and pop culture, the things a Chinese family learns at school and shares at home. They are written in English first, so the developer can read and judge every early question before anything is translated into Chinese. A small trial comes first, to see how good and how expensive the questions are and to agree a budget; then the work continues in rounds until the new set is as large as the existing one.', '2026-11-19T20:12:32Z', 2298, NULL);
 
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1, 1, 'write the masterplan', 'masterplan', 'done', NULL, '2026-10-11, plan 1 body; plans/decisions.md (D-52), plans/open-questions.md, plans/project.md (OQ-17 resolved)', 'Write plan 1, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
@@ -52471,6 +52532,8 @@ What:
 - `pm decision consequences <decision> "<what was written, counts, hand fixes>"`.
 
 Done when: `qgen validate` passes (subjects, uniqueness); `npm run check`, `npm test`, `npm run build` pass; es, es-ES, en, de output unchanged (`qgen report`); `task 2341: Subcategory map base → chinese-base (from-base.json) and its validate rule` can start.', '2026-11-19T20:09:21Z', NULL, 2378, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2384, 232, 'create tasks for plan 232: chinese-base step 2: new China-centric questions in English', 'split', 'open', 1000, NULL, 'Split plan 232 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T20:12:32Z', NULL, 2298, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
