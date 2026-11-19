@@ -71,14 +71,9 @@ def slots_of(q):
 
 
 def kept_slots(run, q):
-    """A scan run's (SCANS) slots that keep the pool's pick: still picked (revise_in_pool unpicks a slot only
-    when its type or query changed) and usable. No search, research, sheet or new pick for them (tasks 1194, 1244).
-    A media-first question, in any run (batch, rework, scans): `media`, the file it was built around (plan 203)."""
-    if q.get("media_first"):
-        return {"media"}
-    if run_mode(run) not in SCANS:
-        return set()
-    return {s for s in slots_of(q) if q[s].get("file_url") and providers.licence_verdict(q[s])[0] == "ok"}
+    """A media-first question, in any run (batch, rework): `media`, the file it was built around (plan 203);
+    no search, research, sheet or new pick for it."""
+    return {"media"} if q.get("media_first") else set()
 
 
 def sheet_path(d, qid, slot):
@@ -86,7 +81,7 @@ def sheet_path(d, qid, slot):
 
 
 def cmd_media(args):
-    """Fetch media candidates for every slot of the run's merged questions, except a scan run's kept slots."""
+    """Fetch media candidates for every slot of the run's merged questions, except a media-first question's kept file."""
     errors, unserved = [], 0
     slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q) if slot not in kept_slots(args.run, q)]
     todo = [(q, slot) for q, slot in slots if media_tool.load_candidates(q["id"], slot) is None]
@@ -109,7 +104,7 @@ def cmd_media(args):
 
 
 def cmd_sheets(args):
-    """One contact sheet per slot (ImageMagick), for the review step to look at; none for a scan run's kept slots."""
+    """One contact sheet per slot (ImageMagick), for the review step to look at; none for a kept slot."""
     d = run_dir(args)
     errors = []
     slots = [(q, slot) for q in batch_questions(args.run) for slot in slots_of(q) if slot not in kept_slots(args.run, q)]
@@ -189,7 +184,7 @@ def cmd_review(args):
     names = ["house-style", "review", *(["translate-review"] if locale else [])]
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
-    rework = mode in ("rework", *SCANS)
+    rework = mode == "rework"
     todo, done = [], 0
     for q in batch_questions(args.run):
         r = load_json(reviews / f"{q['id']}.json", {})
@@ -222,7 +217,6 @@ def cmd_review(args):
             "background": {"title": media_title(q, "background")} if q.get("background") else None,
             "can_search_again": False,
             "can_fix": args.round == 1,
-            "only_shortened": False,
             "existing": True,
         }
 
@@ -241,7 +235,6 @@ def cmd_review(args):
             "background": slot_input(d, q, "background", "background" in kept) if q.get("background") else None,
             "can_search_again": args.round == 1 and ("media" not in kept or bool(q.get("media_first") and q.get("background"))),
             "can_fix": args.round == 1 and not rework,
-            "only_shortened": mode in SCANS,  # already in the game, only reworded
             "existing": rework,
         }
         if q.get("media_first") and not locale:
@@ -281,7 +274,6 @@ def cmd_fix(args):
     mode = run_mode(args.run)
     rework = mode == "rework"
     locale = run_locale(d)
-    scanned = load_json(d / "run.json", {}).get("issues") if mode in SCANS else None
     tmp_of = tmp_ids(d)
     _, checks = collect(d)
     lo, hi = load_age_groups()["scale"]
@@ -292,7 +284,7 @@ def cmd_fix(args):
         r = load_json(path, {})
         fix = r.get("fix")
         done += bool(fix) and ("factcheck" in fix or not needs_recheck(fix, rework))
-        if fix is None and (issue := f"{SCANS[mode]['issue']}: {scanned[q['id']]}" if scanned else fix_issue(q, r, rework)):
+        if fix is None and (issue := fix_issue(q, r, rework)):
             revise.append((q, path, r, issue))
         elif fix and "factcheck" not in fix and needs_recheck(fix, rework):
             recheck.append((q, path, r))
@@ -341,7 +333,7 @@ def cmd_fix(args):
                 def change(x, rev=rev, fix=fix):
                     if fix["action"] == "revise":
                         changed[x["id"]] = revise_in_pool(x, rev["question"], rev["reason"], today)
-                    if rework or scanned:
+                    if rework:
                         if x.get("review"):
                             x["previous"] = x["review"]  # record chains it (task 1241)
                         x["status"], x["review"] = "draft", None
@@ -481,7 +473,7 @@ def cmd_record(args):
     """Write the reviews (D-33: reviewer llm + model) and the picks into the pool. Fixed rules on
     top of the model's decision: no adequate media, a pick whose licence verdict is replace or whose file is broken
     (each pick is downloaded to check it, task 1181), or a fact check that isn't confirmed, means needs_work.
-    A scan run's kept slots (kept_slots) stay as they are: no pick, no download. A media-first question's fixed
+    Kept slots (kept_slots) stay as they are: no pick, no download. A media-first question's fixed
     `media` is checked like a pick (download, licence); a giveaway found after `fix` means needs_work (plan 203)."""
     d = run_dir(args)
     if run_locale(d):
@@ -679,5 +671,4 @@ def record_translations(args, d):
 
 
 # the other command groups, after everything here is defined (they import each other)
-from rework import SCANS  # authoring/tools/rework.py
 from translate import LANGUAGES, in_locale, locale_questions, media_title, run_bundle, run_locale, tmp_ids, translator_notes, update_translations  # authoring/tools/translate.py
