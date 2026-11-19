@@ -57,7 +57,7 @@ class WriteOrder(unittest.TestCase):
         REAL_SAVE(self.d / "run.json", {"mode": "batch"})
         REAL_SAVE(self.d / "drafts" / "01.json", {"questions": [draft("ta")], "skipped": []})
         REAL_SAVE(self.d / "ratings" / "01.json", {"ta": {k: 5 for k in qgen.RUBRIC}})
-        args = argparse.Namespace(run="run", min_score=0)
+        args = argparse.Namespace(run="run")
         with mock.patch.object(qgen, "POOL", pool), mock.patch.object(qgen, "WORK", self.d.parent), \
                 mock.patch.object(qgen, "save_json", failing("pool.json")):
             with self.assertRaises(KeyboardInterrupt):

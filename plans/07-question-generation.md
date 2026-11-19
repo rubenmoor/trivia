@@ -84,12 +84,11 @@ Before generating hundreds of questions:
 | `draft` | Claude | One call per subcategory: one question per chosen style, at target difficulties assigned by code from the distribution above. May skip forced combinations. Gets the pool's existing answers to avoid repeats. |
 | `rate` | Claude | Fresh calls, batches of questions, scored with the rubric; also gives its own difficulty estimate. |
 | `factcheck` | Claude + web search | Only for questions flagged as having numbers, dates, records or superlatives. Verdict: confirmed, wrong, uncertain. |
-| `dedupe` | code | Flags near-duplicates against the pool by answer and question text. |
-| `merge` | code | Drops hard fails (correct/unambiguous < 4, fact-check "wrong", duplicates), applies `--min-score`, appends the rest to the pool as `draft` with new IDs. |
+| `merge` | code | Drops hard fails (correct/unambiguous < 4, fact-check "wrong", duplicates), appends the rest to the pool as `draft` with new IDs. |
 | `report` | code | Counts by difficulty, broad category, style, status; keep rate. |
 | `validate` | code | Checks the whole pool (QP-7). |
 
-For the pilot, `merge --min-score 0` keeps everything except hard fails, so the developer sees the whole range.
+Merge keeps everything except hard fails, so the developer sees the whole range.
 
 ### Schema additions (agreed, QG-7)
 - `style`: the question style used.
@@ -149,7 +148,7 @@ New drafts can be repaired the same way before `merge` (QG-16): `revise` then `a
 - [x] QG-1 Decide the question sources and the review workflow. *2026-10-06, AI drafts, developer reviews (D-7).*
 - [x] QG-2 Define the draft format and where drafts are stored. *2026-10-06, drafts live in the pool with `status: "draft"` (D-7).*
 - [x] QG-3 Define the quality checklist. *2026-10-06, quality rubric in this file.*
-- [x] QG-4 Define duplicate detection against the pool. *2026-10-06, `qgen.py dedupe`: same non-numeric answer and (question similarity > 0.6, or both need the same kind of essential media). Changed after the pilot: wording alone flagged shared templates like "Escucha: ¿qué … suena?".*
+- [x] QG-4 Define duplicate detection against the pool. *2026-10-06, `qgen.py`, since folded into `merge`: same non-numeric answer and (question similarity > 0.6, or both need the same kind of essential media). Changed after the pilot: wording alone flagged shared templates like "Escucha: ¿qué … suena?".*
 - [x] QG-5 Build the drafting tool (depends on QG-1). *2026-10-06, `authoring/tools/qgen.py` + `authoring/tools/prompts/` (D-10); smoke-tested end to end on one subcategory.*
 - [x] QG-6 Build the review and accept step that writes to the question JSON. *2026-10-06: the review tool (RV-1..RV-9, `08-review-tool.md`).*
 - [x] QG-7 Agree the schema additions (`style`, `subcategory`, `quality`, `fact_checked`, `needs_media`) and the subcategory → category mapping. *2026-10-06; mapping is produced by `fit`.*
