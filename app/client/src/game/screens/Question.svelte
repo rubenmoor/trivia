@@ -126,9 +126,13 @@
   let screenEl = $state<HTMLDivElement>();
   /** The peek is held (plan 113): only the picture shows. */
   let peeking = $state(false);
-  const canPeek = $derived(
+  const hasPeek = $derived(
     question.media.type === "image" && question.media.role !== "decorative" && !!question.media.file_url && !mediaFailed && mode === null,
   );
+  /** The category splash has ended: the entrance animations are done. */
+  let splashOver = $state(false);
+  const splashDone = $derived(splashOver || !topicOf(question.id));
+  const canPeek = $derived(hasPeek && shown && splashDone);
 
   /** Resolves once the media is ready to show (or failed); Game.svelte waits for it before the fade-in. */
   export function ready() {
@@ -372,7 +376,7 @@
         else if (a.type === "submit") (answersOff ? reveal : submit)();
         else if (a.type === "joker-focus") focusToken(a.step);
         else if (a.type === "replay") replay();
-        else if (a.type === "peek") peeking = a.down;
+        else if (a.type === "peek") peeking = a.down && canPeek;
         else return false;
         return true;
       },
@@ -423,14 +427,21 @@
   class:sweeping
   class:peeking={peeking && canPeek}
   style:--sweep="{SWEEP_MS}ms"
-  onpointerdown={(e) => e.target === screenEl && e.button === 0 && (peeking = true)}
-  onpointerup={() => (peeking = false)}
-  onpointercancel={() => (peeking = false)}
-  onpointerleave={() => (peeking = false)}
 >
   <div class="top" class:multi={!!session}>
     <Hud {level} {levels} player={playerName} {session} />
-    {#if canPeek}<span class="peek glass"><Prompt action={{ type: "peek", down: true }} /> {t("screen.question.peek")}</span>{/if}
+    {#if hasPeek}
+      <button
+        class="peek glass"
+        disabled={!canPeek}
+        onpointerdown={(e) => e.button === 0 && canPeek && (peeking = true)}
+        onpointerup={() => (peeking = false)}
+        onpointercancel={() => (peeking = false)}
+        onpointerleave={() => (peeking = false)}
+      >
+        <Prompt action={{ type: "peek", down: true }} /> {t("screen.question.peek")}
+      </button>
+    {/if}
   </div>
 
   {#if swappedBy?.joker === "easier"}
@@ -488,7 +499,7 @@
 
   {#key question.id}
     {@const topic = topicOf(question.id)}
-    {#if topic}<Splash {...topic} start={shown} delay={swappedBy ? FLIP_MS * 2 : 0} />{/if}
+    {#if topic}<Splash {...topic} start={shown} delay={swappedBy ? FLIP_MS * 2 : 0} ondone={() => (splashOver = true)} />{/if}
   {/key}
 </div>
 
@@ -519,6 +530,12 @@
     border-radius: calc(0.9 * var(--u));
     font-size: calc(1 * var(--u));
     color: var(--slate-200);
+    border: 0;
+    font-family: inherit;
+    touch-action: none;
+  }
+  .peek:disabled {
+    opacity: 0.45;
   }
   /* Peek (plan 113): every panel fades out, the picture stays, unfiltered; release restores at once. */
   .peeking > :global(:not(.backdrop)) {
