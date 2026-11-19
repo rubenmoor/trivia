@@ -829,7 +829,7 @@
       <Stage />
       {#if !session?.timed}
         <div class="corner-hud" class:multi={!!session}><Hud level={null} player={game.player} {session} /></div>
-        {@render tray(game)}
+        {#if session?.mode !== "rr-competitive"}{@render tray(game)}{/if}
       {/if}
       <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} before={roundBefore} paused={overlayOpen} onnext={() => go(table(game), "paper")} />
     {:else if screen === "tower" && session}
