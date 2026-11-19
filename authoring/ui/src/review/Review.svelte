@@ -13,7 +13,6 @@
     removeSpotCheck,
     saveReview,
     searchMedia,
-    setBundle,
     setDifficulty,
     setTranslatable,
   } from "../lib/api.ts";
@@ -370,21 +369,6 @@
     }
   }
 
-  /** "n": move the question to the next bundle in app/data/bundles.json (D-39). */
-  async function nextBundle() {
-    if (!current || !bundles.length) return;
-    const i = index;
-    const at = bundles.findIndex((b) => b.id === questions[i].bundle);
-    const next = bundles[(at + 1) % bundles.length];
-    try {
-      const updated = await setBundle(questions[i].id, next.id);
-      questions[i] = { ...questions[i], bundle: updated.bundle };
-      flash(`bundle: ${next.name}`);
-    } catch (e) {
-      reportError(`moving ${questions[i]?.id} to bundle ${next.id}`, e);
-    }
-  }
-
   function move(delta: number) {
     if (!questions.length) return;
     finished = false;
@@ -437,7 +421,6 @@
       f: openFeedback,
       m: onSource(openSearch),
       d: startDifficulty,
-      n: onSource(nextBundle),
       c: onSource(() => toggle("media")),
       b: onSource(() => toggle("background")),
       s: () => (showScores = !showScores),
@@ -621,7 +604,6 @@
       {#if locale}
         {#if current.translatable !== false}<button class="reject" onclick={() => setTravels(false)}>doesn't travel</button>{/if}
       {:else}
-        <button onclick={nextBundle}><kbd>n</kbd> bundle</button>
         <button onclick={openSearch}><kbd>m</kbd> media search</button>
         <button onclick={() => toggle("media")}><kbd>c</kbd> {openSlot === "media" ? "hide" : "show"} alternatives</button>
         {#if current.background}

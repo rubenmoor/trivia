@@ -48,7 +48,6 @@ API:
     POST /api/questions/<id>/translatable          body {"translatable": bool}: the source's flag (false = doesn't travel);
                                                    false rejects its non-rejected translations ("no viaja"); "locale" in
                                                    the body only picks the item returned (plan 67)
-    POST /api/questions/<id>/bundle                body {"bundle": "<id>"}: move it to another bundle
     POST /api/questions/<id>/media                 body {"index": n, "slot": "media"|"background"}:
                                                    download candidate n (06-images.md)
     POST /api/questions/<id>/media/search          body {"query": "...", "slot": ..., "all": bool}: new search term,
@@ -316,12 +315,6 @@ def search_media(qid, query, slot, every=False):
     return q
 
 
-def set_bundle(qid, bundle):
-    if bundle not in {b["id"] for b in load_bundles()}:
-        raise ValueError(f"unknown bundle {bundle!r} (app/data/bundles.json)")
-    return update_question(qid, lambda q: q.update(bundle=bundle))
-
-
 def set_difficulty(qid, difficulty, update=update_question):
     lo, hi = load_age_groups()["scale"]
     if type(difficulty) is not int or not lo <= difficulty <= hi:  # bool is an int subclass
@@ -384,7 +377,7 @@ GET_API = {
     "/api/questions": questions_of,
     "/api/categories": lambda query: categories.load(),
     "/api/spot-checks": lambda query: {"size": spot_checks.size(), "problems": PROBLEMS, "checks": spot_checks.load()},
-    "/api/overview": lambda query: overview.build(load_pool()["questions"], load_bundles()),
+    "/api/overview": lambda query: overview.build(load_pool()["questions"]),
     "/api/stats/media": media_stats_of,
     "/api/age-groups": lambda query: load_age_groups(),
     "/api/bundles": lambda query: load_bundles(),
@@ -493,9 +486,7 @@ class Handler(BaseHandler):
             if action == "translatable":
                 set_translatable(qid, body.get("translatable"))
                 return self.send_json(200, item_of(qid, locale))
-            if action == "bundle":
-                q = set_bundle(qid, body.get("bundle"))
-            elif action == "media":
+            if action == "media":
                 q = pick_media(qid, int(body.get("index", -1)), slot_of(body))
             elif action == "media/search":
                 q = search_media(qid, body.get("query"), slot_of(body), body.get("all") is True)

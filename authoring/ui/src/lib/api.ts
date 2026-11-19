@@ -74,11 +74,6 @@ export async function fetchBundles(): Promise<Bundle[]> {
   return get("/api/bundles");
 }
 
-/** Move a question to another bundle. */
-export async function setBundle(id: string, bundle: string): Promise<Question> {
-  return send(`/api/questions/${encodeURIComponent(id)}/bundle`, { bundle });
-}
-
 /** Set the difficulty (1–15, D-38); the server keeps the first original value. */
 export async function setDifficulty(id: string, difficulty: number, locale: string | null = null): Promise<Question> {
   return send(`/api/questions/${encodeURIComponent(id)}/difficulty`, { difficulty, locale });

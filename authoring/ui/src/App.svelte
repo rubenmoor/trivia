@@ -10,14 +10,9 @@
   import Stats from "./stats/Stats.svelte";
 
   const path = location.pathname;
-  // Old links to the review tool were plain "/?batch=…" (before the start page): keep them working.
-  const oldReviewLink = path === "/" && ["batch", "bundle", "id"].some((k) => new URLSearchParams(location.search).has(k));
-  if (oldReviewLink) location.replace(`/review${location.search}`);
 </script>
 
-{#if oldReviewLink}
-  <!-- redirecting -->
-{:else if path === "/"}
+{#if path === "/"}
   <Home />
 {:else if path.startsWith("/stats")}
   <Stats />
