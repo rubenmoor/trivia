@@ -137,9 +137,9 @@ saves.crowd = withExtraPlayers(structuredClone(done));
 saves.session = newSession(structuredClone(done), data, io(), PLAYERS.slice(0, 3), { mode: "rr-coop" }).save;
 meta.session = { id: saves.session.games.at(-1).id, bound: [{ pad: 0 }, { pad: 1 }, "kbm"] };
 
-// Start's resume chips (task 2271): 2 seats, 5 seats, and 8 seats (the Join screen's list) with one very long name.
+// Start's resume chips (task 2271): 2 timed seats (the names of task 2398's report), 5 seats, and 8 seats (the Join screen's list) with one very long name.
 const LONG = "Maximiliana Wolfeschlegelstein"; // 30 letters, the name cap
-saves["session-2"] = newSession(structuredClone(done), data, io(), PLAYERS.slice(0, 2), { mode: "rr-coop" }).save;
+saves["session-2"] = newSession(structuredClone(done), data, io(), ["Team Awesome Sauce", "Just Here for Snacks"], { mode: "timed" }).save;
 saves["session-5"] = newSession(structuredClone(done), data, io(), PLAYERS, { mode: "rr-competitive" }).save;
 {
   const crowd = structuredClone(saves.crowd);
