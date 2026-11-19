@@ -386,11 +386,11 @@ def cmd_translate_batch(args):
         ("audit", lambda a: cmd_audit(a) if load_json(d / "recorded.json") else [], ns(model="opus", batch=run)),
         ("export", lambda a: cmd_export(a) or [], ns()),
     ], again, run)
-    cfg = load_json(d / "run.json")
-    save_json(d / "run.json", {**cfg, "done": cfg.get("done") or datetime.date.today().isoformat()})
     if lost := unmerged(d):
         sys.exit(f"{run}: {len(lost)} translation(s) have no {locale} entry ({', '.join(lost[:5])}…); "
                  f"rerun `{again}`, if it stays so stop and report.")
+    cfg = load_json(d / "run.json")
+    save_json(d / "run.json", {**cfg, "done": cfg.get("done") or datetime.date.today().isoformat()})
     out = write_translate_report(run)
     print(f"  report: {out.relative_to(ROOT)}")
     h = health.translation_health(run)

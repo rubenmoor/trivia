@@ -1438,10 +1438,10 @@ def cmd_merge(args):
                 next_id += 1
                 pool.append(new); added.append(new["id"]); merged.add(tid); ids[tid] = new["id"]
                 if seen is not pool: seen.append(new)
+        save_json(d / "ids.json", ids)  # run state before the pool: a crash then never re-reads its own questions as duplicates
+        save_json(d / "merged.json", sorted(merged))
+        save_json(d / "dropped.json", dropped)
         save_json(POOL, data)
-    save_json(d / "ids.json", ids)
-    save_json(d / "merged.json", sorted(merged))
-    save_json(d / "dropped.json", dropped)
     print(f"merged {len(added)} question(s) into {POOL.relative_to(ROOT)}; {len(dropped)} dropped in total (see dropped.json)")
 
 
@@ -1640,6 +1640,7 @@ def apply_to_drafts(d, revisions, applied):
     A `confirmed` fact-check stays when the revision changed none of the facts (PE-3)."""
     _, checks = collect(d)
     moved, kept_checks, counts = [], set(), {"keep": 0, "revise": 0, "drop": 0, "malformed": 0}
+    rewrites = []
     for name, qs in list(drafts(d)):
         rest = []
         for q in qs:
@@ -1666,8 +1667,7 @@ def apply_to_drafts(d, revisions, applied):
             counts["revise"] += 1
             applied.add(q["tmp_id"])
         if len(rest) != len(qs):
-            f = d / "drafts" / f"{name}.json"
-            save_json(f, {**load_json(f), "questions": rest})
+            rewrites.append((name, rest))
     gone = {q["tmp_id"] for q in moved}
     for sub, drop in (("ratings", gone), ("factchecks", gone - kept_checks)):  # the rating is always redone
         for f in (d / sub).glob("*.json"):
@@ -1680,6 +1680,9 @@ def apply_to_drafts(d, revisions, applied):
         n = len(list((d / "drafts").glob("revised-*.json"))) + 1
         for i, qs in enumerate(chunks(moved), 1):
             save_json(d / "drafts" / f"revised-{n:02d}-{i}.json", {"questions": qs, "skipped": []})
+    for name, rest in rewrites:  # after revised-*: a crash in between duplicates, never loses
+        f = d / "drafts" / f"{name}.json"
+        save_json(f, {**load_json(f), "questions": rest})
     save_json(d / "applied.json", sorted(applied))
     print("applied: " + ", ".join(f"{k} {v}" for k, v in counts.items() if v)
           + ". Next: rate and factcheck (revised drafts only), then merge")
