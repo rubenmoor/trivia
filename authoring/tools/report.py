@@ -15,7 +15,7 @@ import targets  # authoring/tools/targets.py: pool targets (D-53)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 import played  # authoring/tools/played.py: opt-in telemetry → state/played/ (plan 109)
 
-from qgen import PROBLEMS, REVIEW_URL, RUBRIC, as_locale, collect, costs, drafts, load_age_groups, load_bundles, load_json, natural_key, overlap_candidates, run_dir, work_runs  # authoring/tools/qgen.py
+from qgen import PROBLEMS, REVIEW_URL, RUBRIC, collect, costs, drafts, load_age_groups, load_bundles, load_json, natural_key, run_dir  # authoring/tools/qgen.py
 
 
 # --- qgen report --------------------------------------------------------------
@@ -167,40 +167,6 @@ def calibration(run, pool=None):
     return {lvl: {"slots": r["slots"], "n": len(r["drafted"]),
                   **{k: mean(r[k]) for k in ("drafted", "rated", "final", "known_at")},
                   "merged": r["merged"], "approved": r["approved"]} for lvl, r in sorted(rows.items())}
-
-
-def last_batches(n=2):
-    return work_runs(r"batch-\d+", "slots.json")[-n:]
-
-
-def report_calibration(runs):
-    pool = load_json(POOL)["questions"]
-    fmt = lambda x: f"{x:5.1f}" if x is not None else "    –"
-    for run in runs:
-        if not (WORK / run / "slots.json").exists():
-            sys.exit(f"no work/{run}/slots.json")
-        print(f"calibration {run} (per target level; means; '–' = none yet):")
-        print("  target  slots  known_at  drafts  drafted  rated  final  merged  approved")
-        for lvl, r in calibration(run, pool).items():
-            print(f"  {lvl:6} {r['slots']:6}     {fmt(r['known_at'])}  {r['n']:6}    {fmt(r['drafted'])}  "
-                  f"{fmt(r['rated'])}  {fmt(r['final'])}  {r['merged']:6}  {r['approved']:8}")
-
-
-def report_overlaps():
-    """Overlap candidates among approved questions (plan 15), for cleanup in the review tool. No LLM."""
-    pool = [q for q in load_json(POOL)["questions"] if q["status"] == "approved"]
-    en = [q for q in pool if translations.source_locale(q) == "en"]
-    rest, cache, en_cache = [q for q in pool if translations.source_locale(q) != "en"], {}, {}
-    seen = as_locale(rest, "en")  # an en question against everything else, through English keys
-    pairs = [(p, q, why, rank) for i, q in enumerate(rest) for p, why, rank in overlap_candidates(q, rest[:i], cache)]
-    for q in en:
-        pairs += [(p.get("of", p), q, why, rank) for p, why, rank in overlap_candidates(q, seen, en_cache, "en")]
-        seen.append(q)
-    pairs = sorted(((rank, p["id"], q["id"], p, q, why) for p, q, why, rank in pairs), key=lambda x: x[:3])
-    print(f"{len(pairs)} overlap candidate pair(s) among {len(pool)} approved questions, strongest first:")
-    for *_, p, q, why in pairs:
-        print(f"  {p['id']} / {q['id']}  {why}: {p['answer']} | {q['answer']}\n"
-              f"      {p['question']}\n      {q['question']}")
 
 
 def report_progress(pool, bundle, locale="es"):
@@ -441,52 +407,6 @@ def report_qc(batch, changes=None):
         sys.exit("--changes needs a batch")
     lines = qc_trend()
     print("\n".join(lines) if lines else "no spot check or audit yet")
-
-
-def exit_check(pool, bundle):
-    """Milestone 1's "done when" (plan 12): [(ok, criterion, detail)]; missing data counts as a fail."""
-    import health  # authoring/tools/health.py (imports qgen)
-    t = targets.load_targets(bundle)
-    if t is None:
-        sys.exit(f"no targets for bundle {bundle!r} in authoring/data/targets.json")
-    approved = [q for q in pool if q["status"] == "approved" and q.get("bundle") == bundle]
-    out = [(len(approved) >= t["total"], f"approved {bundle} ≥ {t['total']}", f"{len(approved)}")]
-    have = Counter(q["difficulty"] for q in approved)
-    short = [f"{d}: {have[d]}/{goal}" for d, goal in sorted(t["difficulty"].items()) if have[d] < goal]
-    out.append((not short, "every difficulty ≥ its target", "short " + ", ".join(short) if short else "all met"))
-    runs = bundle_runs(bundle, done=True)
-    if len(runs) < 2:
-        out.append((False, "last two batches pass the health thresholds", f"not available (batches: {', '.join(runs) or 'none'})"))
-    else:
-        fails = {r: health.failures(r, pool) for r in runs}
-        if any(f is None for f in fails.values()):
-            out.append((False, "last two batches pass the health thresholds", "not available (no thresholds yet)"))
-        else:
-            bad = [f"{r}: {', '.join(f)}" for r, f in fails.items() if f]
-            out.append((not bad, f"{' and '.join(runs)} pass the health thresholds", "; ".join(bad) or "pass"))
-    quality, checks = targets.load_quality(), load_json(layout.SPOT_CHECKS)
-    if not quality or checks is None or len(runs) < 2:
-        why = "no quality keys in targets.json" if not quality else "no spot-checks.json" if checks is None else "fewer than two batches"
-        out.append((False, "last two spot checks agree with the LLM review", f"not available ({why})"))
-    else:
-        size, rate = quality["spot_check_size"], quality["min_agreement"]
-        parts, ok = [], True
-        for r in runs:
-            n, agreed = spot_agreement(r, checks)
-            ok &= spot_passes(n, agreed, run_quality(r))
-            parts.append(f"{r}: {agreed}/{n} ({100 * agreed / n:.0f} %)" if n else f"{r}: no spot check")
-        out.append((ok, f"last two spot checks: ≥ {size} questions, ≥ {100 * rate:.0f} % agreement", "; ".join(parts)))
-    errors, _ = validate_pool()
-    out.append((not errors, "qgen validate clean", f"{len(errors)} error(s)" if errors else "OK"))
-    return out
-
-
-def report_exit_check(pool, bundle):
-    results = exit_check(pool, bundle)
-    print(f"exit check, milestone 1 ({bundle}):")
-    for ok, criterion, detail in results:
-        print(f"  {'✓' if ok else '✗'} {criterion}: {detail}")
-    sys.exit(0 if all(ok for ok, *_ in results) else 1)
 
 
 SIM_MODES = ["solo", "rr-coop", "rr-competitive", "timed"]  # D-74, without gamemaster; = sim/simulate.ts (engine MODES)
@@ -1002,14 +922,8 @@ def cmd_report(args):
         return report_career(args)
     if args.simulate:
         return report_simulate(args)
-    if args.exit_check:
-        return report_exit_check(load_json(POOL)["questions"], args.bundle or "base")
     if args.qc is not None:
         return report_qc(args.qc, args.changes)
-    if args.calibration is not None:
-        return report_calibration(args.calibration or last_batches())
-    if args.overlaps:
-        return report_overlaps()
     if args.batches is not None:
         import health  # authoring/tools/health.py (imports qgen)
         runs = args.batches or health.batch_runs()
@@ -1074,4 +988,3 @@ def cmd_report(args):
 # the other command groups, after everything here is defined (they import each other)
 from audit import audits, is_major, is_media_first, llm_decisions, run_questions, spot_check_size  # authoring/tools/audit.py
 from translate import text_locale  # authoring/tools/translate.py
-from validate import validate_pool  # authoring/tools/validate.py

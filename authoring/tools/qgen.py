@@ -22,8 +22,8 @@ It runs its steps in a fixed order (concepts, draft, rate, factcheck, revise, me
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen export                     # app/data/pool.json (+ packs' bundles/<id>/pool.json) from authoring/data/questions.json
-    qgen report [--run <run>] [--bundle <id>] [--locale <locale>] [--subcategories] [--calibration [<batch>…]]
-                [--overlaps] [--batches [<batch>…]] [--exit-check]
+    qgen report [--run <run>] [--bundle <id>] [--locale <locale>] [--subcategories]
+                [--batches [<batch>…]]
     qgen report --flags             # open player flags with their age, causes of reworked flags, repeated causes
     qgen report --qc [<batch> [--changes "<task ids>"]]   # spot check vs. LLM review and audit (plan 16)
     qgen report --simulate [--locale …] [--mode …|all] [--json]   # games per new player; exit 1 below D-75's target (plan 62)
@@ -1893,16 +1893,10 @@ def main():
                     f"consecutive verdicts, a gap > {REVIEW_GAP_MIN} min starts a new session; --bundle, --run filter")
     rp.add_argument("--subcategories", action="store_true",
                     help="supply per subcategory × difficulty, for the jokers (JK-10); saturation flags (plan 14)")
-    rp.add_argument("--calibration", nargs="*", metavar="BATCH",
-                    help="drafted/rated/final difficulty per target level (plan 13); default: the last two batches")
     rp.add_argument("--batches", nargs="*", metavar="BATCH",
                     help="batch health side by side (plan 15); default: batch-4 onward")
     rp.add_argument("--flags", action="store_true",
                     help="open player flags with their age; causes of reworked flags and repeated ones (authoring/QC.md)")
-    rp.add_argument("--overlaps", action="store_true",
-                    help="approved questions that may ask the same fact (plan 15); listing only")
-    rp.add_argument("--exit-check", action="store_true",
-                    help="milestone 1's done-when per criterion, ✓/✗; exit 1 if any fails (plan 12)")
     rp.add_argument("--qc", nargs="?", const="", metavar="BATCH",
                     help="rewrite the batch report's Quality control section; without a batch: the trend table (plan 16)")
     rp.add_argument("--changes", help="with --qc <batch>: the report's \"Changes from this QC\" line (QC step 4)")
