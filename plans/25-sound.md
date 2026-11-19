@@ -180,6 +180,20 @@ Round 1 failed (`decision 738: Reveal sounds (right and wrong answer, impact, bl
 
 Kenney clean-digital picks (Digital, RPG, Casino) sounded like cheap sci-fi; decision 739 rejected them: the old recordings were better, and the aim is a coherent, natural scheme. Reverted: every joker cue plays its old recording again (`comodin`, `comodin-preparado`, `comodin-abre`, `trituradora`, `latido`, `corcho`, `ficha`, `barrido`, `microondas`, `varita`, `sello`, `rasgado`, plus `vidrio`, `swoosh-sube`, `rebobinar`, `susurro-papel`), hand rows in `CREDITS.md`, no `trivia-sfx` records. The joker group keeps its old sounds; no further round unless the developer asks. The theme for the other groups needs rethinking (decisions 737, 739, 740).
 
+### Fireworks group, round 1 (rejected)
+
+Kenney clean-digital picks were synthetic bleeps; decision 740 rejected them: the old fireworks were good, natural sounds wanted. Reverted: `rocket` `cohete`, `burst` `estallido`, `confetti-cannon` `canon-confeti`, `sparklers` `bengalas`, `stars` `estrellas`; hand rows in `CREDITS.md`, no `trivia-sfx` records. No further round unless the developer asks.
+
+### Timed group, round 1
+
+Source: Kenney Digital Audio (pep sounds, phase jump, high tones), CC0, the `clean-digital` theme. Heartbeat and rustle are jokers-group cues (their old files `latido`, `susurro-papel`, back after decision 739) and play in timed rounds too; `padlock-close` and `fanfare` in the UI and reveal groups. `claim` has three variants (rate varies); `countdown` is one tick whose pitch rises with the level (1–3). `silbato` stays for `splash-drain` (splash task). Synth `claim` and `countdown` stay as fallback. Approval pending (timed decision); alternates staged on `/sounds` ("Effects: timed", round 1).
+
+| Cue | Installed file(s) | Source file | Alternate |
+|---|---|---|---|
+| `claim` (rate varies) | `reclamo-1`, `reclamo-2`, `reclamo-3` | `pepSound1`, `pepSound2`, `pepSound4` | `zapTwoTone`, `laser7` |
+| `countdown` (rate by level) | `cuenta-atras` | `phaseJump5` | `phaserUp5`, UI `click5` |
+| `whistle-down` | `fallo-cae` | `highDown` | `phaserDown2`, `zapTwoTone2` |
+
 ## Manifest
 
 `work/sound-brief/manifest.json` (gitignored, in the main checkout; work trees symlink `work/`) lists the audition candidates that `/sounds` on `trivia-authoring` plays (`GET /api/sounds`, files at `/sounds/<file>`; `authoring/server/sounds.py`). Without a manifest the page shows «no candidates yet».
