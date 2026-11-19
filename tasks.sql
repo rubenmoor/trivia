@@ -8198,48 +8198,54 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 
 ## Out of scope
 - Concept lists for the new subcategories (the first `qgen batch --bundle colombia` makes them, plan 84); taxonomies of other regions and `qgen taxonomy` for non-Spanish regions (`plan 98: Regional packs (RG-3..RG-5)`, tasks 1275–1280); the remap (task 4) is `colombia`''s only, no other bundle has questions to move.', '', '2026-10-15T19:01:52Z', 827, NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (139, 12, 'New locales in data and pipeline', 900, '`zh-Hans`, `ru` and `pt-BR` become translation locales like `en` and `de` (D-78, D-81): the authoring pipeline, `qgen validate`/`export`/`report`, the review tool and the game''s data loader accept them, with empty pools. Part 1 of `plan 60: masterplan`; parts 2–9 build on it. Nothing changes for es/en/de: same files, same output, same drafting aims.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (139, 12, 'Chinese locales in data and pipeline', 900, 'The zh locale(s) become question translation locales (D-78, D-81) with empty pools: `translations.py`, the TS mirrors, `qgen validate` / `export` / `report` / `health` / `flag`, the review tool and the start page accept them. Part 3 of `plan 60: masterplan`; parts 4–12 build on it. Nothing changes for es, es-ES, en, de: same files, same output, same drafting aims. Russian and Portuguese are out of the milestone (`plan 60: masterplan` "Binding inputs"): no `ru` / `pt-BR` anywhere.
 
-## Starting point (2026-10-15)
-- Python''s one locale list: `authoring/tools/translations.py` `LANGUAGES` → `LOCALES`, `LAUNCH = ("es", *LOCALES)`; nearly everything iterates it (`qgen.py`, `targets.py`, `played.py`, `reviews.py`, `authoring/server/main.py`, `overview.py`, `patch_notes.py`).
-- TS mirrors: `app/client/src/lib/data.ts` `LOCALES` (review header, stats page, `availableLocales`, bundle `languages` filter), `app/desktop/check-mod.mjs` `LOCALES`.
-- Already generic, check only: tag parsing with a dash (`run_locale` `tr-<locale>-<n>`, `questions.<locale>.json`, `pool.<locale>.json`, `reviews.HEADER` `[\w-]+`); `trivia-release-check` pool hashes (`authoring/steam/release_check.py` `pools()` globs the pool files, decision 100); telemetry `locale` (`engine/telemetry.ts`) and the report server (`report-server/src/validate.ts` `LANG` regex).
-- `lib/i18n.ts` has no question-locale list (only `CATALOGS` / `UI_LANGS`, the UI languages): unchanged here, catalogs are part 5.
+## Waits for
+- Part 1''s variant decision (written by `task 2294: write plan: Chinese variants and the Chinese audience (evaluation)`): "the zh locale(s)" below = its answer. Expected `zh-Hans` (Steam `schinese`); a `zh-Hant` (or `zh-TW`) answer only adds a second entry to the same lists and files, no other change. The split task links the first work task to that decision once it exists (pending), or stops if it doesn''t yet.
+- Part 2, the pipeline review and cleanup (`task 2295: write plan: Pipeline review and cleanup for milestone 12`): its cleanups land first (same `questions` worktree), so this plan''s tasks read the code after them, not the starting point below.
+
+## Starting point (2026-11-19, check again after part 2)
+- Python''s one locale list: `authoring/tools/translations.py` `LANGUAGES` (es, es-ES, en, de) → `LOCALES`; `NAMED` (names files with bundle and age-group names: every locale not starting with `es`); comment "zh-Hans, ru, pt-BR when milestone 12 resumes".
+- TS mirrors: `app/client/src/lib/data.ts` `LOCALES`, `app/desktop/check-mod.mjs` `LOCALES`.
+- `authoring/tools/patch_notes.py`: `LAUNCH` is already derived (`LOCALES` with an `EVENT` entry); `qgen validate` requires `EVENT` for every locale a bundle lists.
+- `validate.bundle_problems`: a locale with neither a listing bundle nor a pool file is skipped silently.
+- `report.py` `report_simulate`: a locale''s default game is its first base bundle, else falls back to `"base"`.
+- `targets.source_supply` (decision 236: English-first drafting for base): iterates every `LOCALES` entry for any bundle, whether or not the bundle lists it.
+- Already generic, check only: tags with a dash (`tr-<locale>-<n>`, `questions.<locale>.json`, `pool.<locale>.json`, `reviews.HEADER` `[\w-]+`); `authoring/steam/release_check.py` `pools()` (globs pool files, decision 100); telemetry `locale`; `report-server/src/validate.ts` `LANG` (accepts `zh-Hans`).
 
 ## Changes
-- `translations.py`: `LANGUAGES` += `"zh-Hans": "Simplified Chinese"`, `"ru": "Russian"`, `"pt-BR": "Brazilian Portuguese"` (comment: D-78, milestone 12); `LAUNCH` renamed `ALL` (no longer only launch languages), callers follow.
-- `data.ts` `LOCALES` and `check-mod.mjs` `LOCALES`: the same three; fixture `engine/pool.test.ts` unchanged (base''s `languages` there is a fixture).
-- `app/data/bundles.json`: `base` `languages` = `["es", "en", "de", "ru", "pt-BR"]` (not `zh-Hans`: zh plays `chinese-base`, part 2).
-- `patch_notes.EVENT` (required per locale by `qgen validate`): entries for the three, drafted from `en`''s; native check in part 8 (Steam texts).
-- Names files `app/data/names.{ru,pt-BR}.json`: `base`''s categories and subcategories, bundles `base` (and `colombia` only if listed for the locale: it isn''t), age groups; `names.zh-Hans.json`: age groups only (`chinese-base`''s names come with its taxonomy, part 2). Drafted by the worker from `names.en.json` + the Spanish; marked for the native reviewers (part 4) in the task''s note, not in the file.
+- `translations.py` `LANGUAGES` += the zh locale(s), e.g. `"zh-Hans": "Simplified Chinese"`; comment: D-78, milestone 12; drop the ru/pt-BR wording.
+- `data.ts` `LOCALES`, `check-mod.mjs` `LOCALES`: the same; `engine/pool.test.ts` fixture unchanged.
+- `app/data/bundles.json`: unchanged. `base` doesn''t list zh (milestone: zh plays `chinese-base`, part 4 adds it with `languages: [<zh>, "en"]`).
+- `patch_notes.EVENT`: an entry per zh locale, drafted from `en`''s; native check in part 11 (store and Steam texts).
+- `app/data/names.<zh>.json`: age groups only (no bundle lists zh yet; `chinese-base`''s bundle, category and subcategory names come with parts 4 and 6). Drafted by the worker in the right characters; listed in the task''s done note for part 9''s native reviewers, no marker in the file.
+- `qgen validate` (`bundle_problems`): a locale no bundle lists → a warning `<zh>: no bundle lists it yet (chinese-base, plan 60 part 4)` instead of the silent skip (decision 219 as amended by decision 236: a locale no bundle lists only warns); listed without a base bundle stays an error.
+- `qgen report --simulate`: a locale with no base bundle is skipped with a line, no fallback to `"base"`.
+- Drafting aims (decision 236): `targets.source_supply` counts a locale for a bundle only if the bundle lists it. zh never steers `base`''s drafting; once part 4 lists zh for `chinese-base`, zh''s deficit drives `chinese-base`''s English drafting like any listed locale. No `DRIVES_DRAFTING` list (it served only ru/pt-BR''s budget). For es, es-ES, en, de the result must stay identical (every bundle today lists the locales it counts; verify, and if one doesn''t, say so in the task note rather than change its aims).
+- `qgen batch --translate <zh>`: accepted; stops before any claude call with a clear message while `authoring/tools/prompts/locale-<zh>.md` is missing (`qgen.prompt` today falls back to `locale-<language>.md`, i.e. `locale-zh.md`: neither exists; the prompt is part 8).
+- `qgen report --cost` projection and `--locale` progress: include the zh locale(s) (information only).
 
-## zh-Hans until part 2
-- `bundle_problems` ("no base bundle for <l>"): a locale that no bundle lists in `languages` is "not offered yet": a warning (`zh-Hans: no bundle lists it yet (chinese-base, part 2)`), not an error; a locale listed by some bundle but with no base bundle stays an error. es/en/de are listed, so their check is unchanged.
-- `qgen report --simulate`: a locale with no base bundle is skipped with a line, not defaulted to `base` (today''s fallback `"base"` in `report_simulate`''s `default`).
-- Part 2 adds `chinese-base` with `languages: ["zh-Hans"]`; the warning disappears by itself.
-
-## Drafting aims (D-84, decision 37)
-- `targets.source_supply` / `source_shortfall` count a locale for a bundle only if the bundle lists it (`zh-Hans` never drives `base`''s es drafting) and only if it is in a new `translations.DRIVES_DRAFTING = ("en", "de")`.
-- `ru`, `pt-BR` join `DRIVES_DRAFTING` by `plan 60: masterplan` part 7''s budget decision ("whether es drafting grows for it"), not here: otherwise the new locales'' empty pools would steer es drafting before anyone decided to pay for them.
-- `qgen report --cost` projection and `--locale` progress: every locale (information only).
-
-## Where the new locales show up (no code beyond the lists, check each)
-- `qgen validate` (translation files, names files, pool locale check D-78, bundle languages), `export` (no `questions.<locale>.json` → no pool file), `report` (`--locale`, `--simulate`, `--cost`, `--played`), `health`, `flag` (a `zh-Hans` / `ru` / `pt-BR` report goes to that translation, decision 102; labels: part 5).
-- Review tool: `/review?locale=` and stats locale links (from `data.ts` `LOCALES`), `authoring/server/main.py` `?locale=` check, start page rows (`overview.py`): empty rows for the three, no crash.
-- `qgen batch --translate zh-Hans|ru|pt-BR` accepts the locale and stops before any call while the locale prompt `authoring/tools/prompts/locale-<locale>.md` is missing (prompts: part 3; no runs before part 4''s reviewers).
+## Check pass (empty pools, plus a scratch sample)
+- With empty zh pools: `qgen validate` (only the zh warning), `qgen export` (no `pool.<zh>.json`), `qgen report` (`--locale <zh>`, `--simulate` with the skip line, `--cost`, `--played`), `qgen health`, `qgen flag` with a pasted report tagged with the zh locale (lands on that translation, decision 102; labels are part 10).
+- `trivia-authoring` (systemd unit, restart it, don''t launch by hand): start page (`overview.py`) shows an empty zh row; `/review?locale=<zh>` and the stats page''s locale links load.
+- Non-Latin script, in a scratch copy only (temp dir, never committed): three hand-written zh translations of approved `base` questions → `qgen validate` and `qgen export` accept them, the review page renders them. Anything that breaks or looks Latin-only (length limits in characters, word-based overlap or tokenizing, `slug`, sorting) → a follow-up task in the plan that owns it (part 2''s cleanup if pipeline-wide, part 8 if translation-only), not fixed here unless it''s a crash in a command above.
+- es, es-ES, en, de: `qgen validate`, `qgen report`, `--simulate`, `--cost` diffed against the output captured before the first change: identical apart from zh''s rows and the warning.
 
 ## Tasks (suggested split)
-1. Locale lists, `bundles.json`, `EVENT`, validate''s "not offered yet" rule, simulate skip, `DRIVES_DRAFTING`, `--translate` stop without a locale prompt.
-2. Names files for the three locales.
-3. Check pass: every command and page above with empty pools for the three; es/en/de output unchanged (`qgen validate`, `qgen report`, `qgen report --simulate`, `--cost` diffed against `main` before task 1); docs: D-78 / D-81 notes in `plans/decisions.md`, `plans/15-i18n.md` "later languages", `directory.md` only if a file kind is new.
+1. Locale lists, `EVENT`, validate''s warning, simulate skip, `source_supply` rule, `--translate` stop; baseline output captured first. Pending on part 1''s variant decision.
+2. Names files for the zh locale(s).
+3. Check pass above and docs: D-78 / D-81 notes in `plans/decisions.md` (the zh locale(s), decision 236''s "only listing bundles" rule), `plans/15-i18n.md` "later languages" (zh in the lists; ru/pt-BR no longer planned), `directory.md` only if a new file kind appears.
+- Existing tasks: reword `task 1163`, `task 1164`, `task 1165` to this (zh only, no ru/pt-BR, no `DRIVES_DRAFTING`, no `bundles.json` change).
 
 ## Left to other parts
-- `chinese-base` and zh''s base bundle (part 2, `decision 217: chinese-base membership: how does a translated base question count for chinese-base?`); locale prompts (part 3); UI catalogs, fonts, `UI_LANGS`, `app/desktop/mods.mjs` `LANGS`, `reviews.LABELS` for reports in the new UI languages, Workshop tags in `publish.mjs` (part 5); store and Steam texts (part 8).
-- Report server and telemetry: no change expected (generic `LANG`); its plan stays `plan 103: Report server (POST /reports)`.
+- `chinese-base` bundle, its `languages`, the default base per locale, one base per session: part 4. Its names: parts 4, 6.
+- Locale prompt `locale-<zh>.md`: part 8. Native reviewers: part 9.
+- UI catalogs, CJK fonts, `UI_LANGS`, `app/desktop/mods.mjs` `LANGS`, `reviews.LABELS` for reports in the zh UI, Workshop tags in `publish.mjs`: part 10. Store and Steam texts, `EVENT` native check: part 11.
+- Report server and telemetry: no change expected (generic `LANG`); reachability from mainland is part 1''s evaluation; the server stays `plan 103: Report server (POST /reports)`.
 
 ## Done when
-- `qgen validate` passes (the zh warning only), `qgen report`, `--simulate`, `--cost` run for all six locales with empty pools for the new three; the review tool and start page show the three empty.
-- es/en/de: validate, report, simulate and cost output as before; `npm run check`, `npm test`, `npm run build` pass.', '', '2026-10-15T20:11:24Z', 1147, NULL);
+- `qgen validate` passes with only the zh warning; `qgen report`, `--simulate`, `--cost`, `health` run with the zh locale(s) empty; the review tool and start page show them empty; the scratch sample validated, exported and rendered.
+- es, es-ES, en, de output as before; `npm run check`, `npm test`, `npm run build` pass.', 'Before any Chinese question can be written, translated or reviewed, the authoring tools and the game''s data files have to know that Chinese exists as a question language. This part adds the chosen Chinese variant (most likely Simplified Chinese for mainland China) to every list of languages, with no questions yet, and makes sure the tools handle an empty, not-yet-offered language without errors. It changes nothing for the Spanish, English and German questions the game already has.', '2026-10-15T20:11:24Z', 1147, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (140, 12, 'Translation prompts and markets per locale', 700, 'The translation prompts for the new locales `zh-Hans`, `ru`, `pt-BR`, and the prompt of the `chinese-base` fit pass. Part 3 of `plan 60: masterplan`. Each locale prompt is a short `authoring/tools/prompts/locale-<locale>.md` like `locale-en.md` / `locale-de.md`; `prompt()` fills it into `{locale}` of translate, rate, review, fix and audit (D-87), so no code changes. Prompts are the developer''s (D-36): every draft goes into a pm decision before the file is written.
 
 ## Builds on
@@ -31275,7 +31281,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:22:44Z', NULL, 1154, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1162, 145, 'create tasks for plan 145: Release and close-out of the new languages', 'split', 'open', 1000, NULL, 'Split plan 145 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-10-15T20:24:37Z', NULL, 1155, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1163, 139, 'New locales zh-Hans, ru, pt-BR in the locale lists and rules', 'work', 'open', NULL, NULL, 'Part 1 of `plan 139: New locales in data and pipeline`: the three locales become translation locales (D-78, D-81) with empty pools; es/en/de unchanged.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1163, 139, 'New locales zh-Hans, ru, pt-BR in the locale lists and rules', 'work', 'open', NULL, NULL, 'Part 1 of `plan 139: Chinese locales in data and pipeline`: the three locales become translation locales (D-78, D-81) with empty pools; es/en/de unchanged.
 
 ## Before any change
 - Capture baseline output on the unchanged tree: `qgen validate`, `qgen report`, `qgen report --simulate`, `qgen report --cost` → temp files (deleted at the end).
@@ -31293,13 +31299,13 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 ## Check
 - Rerun the four commands; es/en/de output identical to the baseline apart from the new locales'' rows/lines and the zh warning.
 - `npm run check`, `npm test`, `npm run build`, `qgen validate` pass. Missing `names.{zh-Hans,ru,pt-BR}.json` only warns (next task adds them).', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1164, 139, 'Names files for zh-Hans, ru, pt-BR', 'work', 'open', NULL, NULL, 'Part 2 of `plan 139: New locales in data and pipeline`; after the locale lists task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1164, 139, 'Names files for zh-Hans, ru, pt-BR', 'work', 'open', NULL, NULL, 'Part 2 of `plan 139: Chinese locales in data and pipeline`; after the locale lists task.
 
 - `app/data/names.ru.json`, `app/data/names.pt-BR.json`: same shape as `names.en.json`; `base`''s categories and subcategories, bundle `base`, age groups. Not `colombia` (no bundle lists ru/pt-BR besides `base`).
 - `app/data/names.zh-Hans.json`: age groups only; `chinese-base`''s names come with its taxonomy (part 2 of `plan 60: masterplan`).
 - Drafted by the worker from `names.en.json` + the Spanish (`names` in `bundles.json` / taxonomy); pt-BR spelling, Simplified characters. No marker in the files: list them in the task''s done note as "for the native reviewers (part 4)".
 - Check: `qgen validate` has no names warnings for the three; `npm run check`, `npm test`, `npm run build` pass.', '2026-10-15T20:25:33Z', NULL, 1156, 0, NULL, 'questions');
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1165, 139, 'Check pass and docs for the new locales', 'work', 'open', NULL, NULL, 'Part 3 of `plan 139: New locales in data and pipeline`; after the locale lists and names files tasks. Fixes only what breaks; anything larger is a follow-up task.
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1165, 139, 'Check pass and docs for the new locales', 'work', 'open', NULL, NULL, 'Part 3 of `plan 139: Chinese locales in data and pipeline`; after the locale lists and names files tasks. Fixes only what breaks; anything larger is a follow-up task.
 
 ## Check with empty pools for zh-Hans, ru, pt-BR
 - `qgen validate` (only the zh "no bundle lists it yet" warning), `qgen export` (no `pool.<locale>.json` for the three), `qgen report` with `--locale <each>`, `--simulate` (zh skipped with a line), `--cost` (projection for all six), `--played`; `qgen health`; `qgen flag` with a pasted report tagged `ru` lands on that translation (decision 102).
@@ -31322,7 +31328,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 3. `pm decision add "Translation prompt zh-Hans: approve the draft?"`, kind rule: full draft in the body, an English gloss for every Chinese example, open lines for the developer (length limit: «question» ideally under 50 characters, rarely over 70), options "approve as drafted" (recommended) / "changes". Then `pm task-pending-decision <this task> <decision>`, stage nothing beyond pm, stop.
 4. On the answer: write the file as approved; check `prompt("translate", locale="zh-Hans")` (and rate, review, fix, audit) renders with the block, no claude call; `qgen batch --translate zh-Hans` gets past the missing-prompt stop (plan 139) — stop it before any call (e.g. `--dry-run` if available, else check the code path); es/en/de renders unchanged. `pm decision consequences <decision> "…"`.
 
-Needs `plan 139: New locales in data and pipeline` (zh-Hans in `translations.LANGUAGES`) done before step 4.
+Needs `plan 139: Chinese locales in data and pipeline` (zh-Hans in `translations.LANGUAGES`) done before step 4.
 
 Docs (after the file is written): add `locale-zh-Hans.md` to the "Prompts" line of `plans/15b-question-translation.md` and its locale to D-87 in `plans/decisions.md`; `authoring/QC.md` only if the translation spot check reads differently for this locale.
 
@@ -31334,7 +31340,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 2. `pm decision add "Translation prompt ru: approve the draft?"`, kind rule: full draft in the body, an English gloss for every Russian example, open line for the developer: «ё» always where pronounced (proposed) vs. only where ambiguous; options "approve as drafted" (recommended) / "changes". Then `pm task-pending-decision <this task> <decision>`, stop.
 3. On the answer: write the file as approved; check `prompt("translate", locale="ru")` (and rate, review, fix, audit) renders, no claude call; `qgen batch --translate ru` gets past the missing-prompt stop (plan 139) without starting a call; es/en/de renders unchanged. `pm decision consequences <decision> "…"`.
 
-Needs `plan 139: New locales in data and pipeline` (ru in `translations.LANGUAGES`) done before step 3.
+Needs `plan 139: Chinese locales in data and pipeline` (ru in `translations.LANGUAGES`) done before step 3.
 
 Docs (after the file is written): add `locale-ru.md` to the "Prompts" line of `plans/15b-question-translation.md` and its locale to D-87 in `plans/decisions.md`; `authoring/QC.md` only if the translation spot check reads differently for this locale.
 
@@ -31346,7 +31352,7 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 2. `pm decision add "Translation prompt pt-BR: approve the draft?"`, kind rule: full draft in the body, an English gloss for every Portuguese example, open line for the developer: the Brazilian-vs-European word list («ônibus», «trem», «celular», «fato», «time»); options "approve as drafted" (recommended) / "changes". Then `pm task-pending-decision <this task> <decision>`, stop.
 3. On the answer: write the file as approved; check `prompt("translate", locale="pt-BR")` (and rate, review, fix, audit) renders, no claude call; `qgen batch --translate pt-BR` gets past the missing-prompt stop (plan 139) without starting a call; es/en/de renders unchanged. `pm decision consequences <decision> "…"`.
 
-Needs `plan 139: New locales in data and pipeline` (pt-BR in `translations.LANGUAGES`) done before step 3.
+Needs `plan 139: Chinese locales in data and pipeline` (pt-BR in `translations.LANGUAGES`) done before step 3.
 
 Docs (after the file is written): add `locale-pt-BR.md` to the "Prompts" line of `plans/15b-question-translation.md` and its locale to D-87 in `plans/decisions.md`; `authoring/QC.md` only if the translation spot check reads differently for this locale.
 
@@ -50406,7 +50412,7 @@ let''s introduce additional configuration: "hectic" with all the current timers,
 the choice between hectic and normal must appear on the "how to play" screen only for this specific mode.', '2026-11-19T17:35:01Z', '2026-11-19T17:41:44Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2286, 60, 'create tasks for plan 60: masterplan', 'split', 'done', 1000, '2026-11-19, tasks 2294 (part 1), 2295 (part 2), 1148 updated (part 4), 2296 (part 5), 2297 (part 6), 2298 (part 7); 1152 dropped (split into parts 5 and 7); parts 3, 8–12 and plan 143''s drop via the existing revise tasks 2287–2293; decision 750 now blocks 2297, 2298', 'Split plan 60 into tasks and identify all decisions that need to be made. If the plan already has tasks,
 bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:55:13Z', '2026-11-19T17:57:06Z', 1366, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2287, 139, 'revise plan 139: New locales in data and pipeline', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 139: New locales in data and pipeline`, changed; it is quoted below. Bring `plan 139: New locales in data and pipeline` in line with it
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2287, 139, 'revise plan 139: New locales in data and pipeline', 'revise', 'done', 1000, '2026-11-19, plan 139 rewritten as plan 60 part 3: Chinese locales only (no ru/pt-BR, no DRIVES_DRAFTING, bundles.json unchanged), waits for part 1''s variant decision and part 2''s cleanup; split queued as task 2299', '`plan 60: masterplan`, the plan above `plan 139: New locales in data and pipeline`, changed; it is quoted below. Bring `plan 139: New locales in data and pipeline` in line with it
 (`pm plan edit 139 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
 
@@ -50511,7 +50517,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
 
 ## Out of scope
-- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', '2026-11-19T17:58:48Z', 1366, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2288, 140, 'revise plan 140: Translation prompts and markets per locale', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 140: Translation prompts and markets per locale`, changed; it is quoted below. Bring `plan 140: Translation prompts and markets per locale` in line with it
 (`pm plan edit 140 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
 below it and of its own open tasks; its done and dropped tasks stay as they are.
@@ -50548,7 +50554,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
 - Worktree `questions`; priority ~940 (before parts 3–8''s code).
 
-## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: Chinese locales in data and pipeline`)
 - The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
 - A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
 - `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
@@ -50608,7 +50614,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Priority ~-200 (last).
 
 ## Existing plans of this milestone
-- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
@@ -50654,7 +50660,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
 - Worktree `questions`; priority ~940 (before parts 3–8''s code).
 
-## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: Chinese locales in data and pipeline`)
 - The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
 - A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
 - `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
@@ -50714,7 +50720,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Priority ~-200 (last).
 
 ## Existing plans of this milestone
-- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
@@ -50760,7 +50766,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
 - Worktree `questions`; priority ~940 (before parts 3–8''s code).
 
-## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: Chinese locales in data and pipeline`)
 - The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
 - A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
 - `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
@@ -50820,7 +50826,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Priority ~-200 (last).
 
 ## Existing plans of this milestone
-- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
@@ -50866,7 +50872,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
 - Worktree `questions`; priority ~940 (before parts 3–8''s code).
 
-## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: Chinese locales in data and pipeline`)
 - The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
 - A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
 - `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
@@ -50926,7 +50932,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Priority ~-200 (last).
 
 ## Existing plans of this milestone
-- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
@@ -50972,7 +50978,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
 - Worktree `questions`; priority ~940 (before parts 3–8''s code).
 
-## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: Chinese locales in data and pipeline`)
 - The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
 - A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
 - `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
@@ -51032,7 +51038,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Priority ~-200 (last).
 
 ## Existing plans of this milestone
-- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
@@ -51078,7 +51084,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
 - Worktree `questions`; priority ~940 (before parts 3–8''s code).
 
-## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: Chinese locales in data and pipeline`)
 - The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
 - A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
 - `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
@@ -51138,7 +51144,7 @@ This masterplan''s own tasks are not implementation work: each writes the plan f
 - Priority ~-200 (last).
 
 ## Existing plans of this milestone
-- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 139: Chinese locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
 - `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
 - `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
 - `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
@@ -51185,6 +51191,8 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 - Waits for `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` and parts 4, 5, 6; name them.
 - Replaces the drafting half of the dropped `task 1152: write plan: chinese-base content`.
 - Plan priority ~-120.', '2026-11-19T17:56:58Z', NULL, 2286, 0, NULL, 'questions');
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2299, 139, 'create tasks for plan 139: Chinese locales in data and pipeline', 'split', 'open', 1000, NULL, 'Split plan 139 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:58:44Z', NULL, 2287, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -61320,6 +61328,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2512, 1366, '2026-11-19T17:51:51Z', '2026-11-19T17:55:35Z', 'done', NULL, 0, 'c8ac4a89a3dfd8037b3ea209c3f20b185a28d1af', NULL, 'claude-opus-5-5', 'a356bddd-9880-4d2c-be34-b7e47e200264', NULL, 19, 38, 17146, 1186283, 85573, 1.2649125999999997, 85581, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2513, 2286, '2026-11-19T17:55:36Z', '2026-11-19T17:57:15Z', 'done', NULL, 0, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', NULL, 'claude-opus-5-5', '0139ba67-de1f-4496-8d7b-4dc1908298ca', NULL, 11, 22, 7342, 556148, 55194, 0.6997096, 69545, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2514, 1148, '2026-11-19T17:57:09Z', NULL, 'running', NULL, NULL, '09688a9b2704110fcdf76add1a93ffc2438d7bf6', 'questions', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2515, 2287, '2026-11-19T17:57:16Z', '2026-11-19T17:58:56Z', 'done', NULL, 0, '35418e2bed24d102902e4aedaa2fdab97f00d45e', NULL, 'claude-opus-5-5', '428b33d8-f606-4911-8bce-8a4cccd9f821', NULL, 10, 20, 7407, 533233, 54774, 0.6930586, 69793, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
