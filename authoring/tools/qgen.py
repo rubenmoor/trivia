@@ -21,7 +21,6 @@ It runs its steps in a fixed order (concepts, draft, rate, factcheck, revise, me
     qgen gc [--dry-run] [--unchecked]  # delete finished, checked batches' sheets and probe pictures from work/ (task 2182)
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
-    qgen video-window [--dry-run] [--model opus]   # every video question cut to its 30 s window and re-checked (plan 216)
     qgen export                     # app/data/pool.json (+ packs' bundles/<id>/pool.json) from authoring/data/questions.json
     qgen report [--run <run>] [--bundle <id>] [--locale <locale>] [--subcategories] [--calibration [<batch>…]]
                 [--overlaps] [--batches [<batch>…]] [--exit-check]
@@ -1918,7 +1917,6 @@ def main():
     pn.add_argument("--json", action="store_true", help="JSON on stdout")
     media_survey.add_parser(sub)
     media_probe.add_parser(sub)
-    video_window.add_parser(sub)
     au = add("audit", cmd_audit, "opus", run=False)
     au.add_argument("--batch", help="default: the newest merged batch")
     add("batch-report", cmd_batch_report)
@@ -1992,7 +1990,6 @@ from rework import cmd_rework
 from taxonomy import cmd_bundle_new, cmd_remap, cmd_taxonomy
 from translate import LANGUAGES, cmd_translate, cmd_translate_batch, in_locale, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
 from validate import cmd_validate, validate_pool
-import video_window  # authoring/tools/video_window.py: `qgen video-window` (plan 216)
 
 
 if __name__ == "__main__":
