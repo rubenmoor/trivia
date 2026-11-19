@@ -230,7 +230,7 @@ def media_first_problems(q):
 def source_locale_problems(q, bundle):
     """A source's locale (decision 235): known; base from batch-9 on en; a regional bundle's in its region's
     language, the first of its languages (decision 110)."""
-    loc, out = translations.source_locale(q), []
+    loc, out = q.get("locale"), []
     if loc not in translations.LOCALES:
         return [f"locale must be one of {', '.join(translations.LOCALES)}"]
     m = re.fullmatch(r"batch-(\d+)", q.get("batch") or "")

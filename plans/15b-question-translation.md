@@ -5,7 +5,7 @@
 Sub-plan of [15](15-i18n.md). Translates the question pool between the four question locales `en`, `es` (Latin American), `es-ES` (Spain), `de` (D-78, D-107); Simplified Chinese, Russian and Portuguese (Brazil) later (milestone 12, on hold). This is the big one: a question is more than its text. Its difficulty, distractors, hints and image all have to work in the new language and culture, so every translated question goes through rating, fact-checking and review again.
 
 ## Source locale (D-107, decision 235)
-- `locale` on every source in `questions.json`, absent = `es`: `base` ≤ batch-8 `es`, `base` from batch-9 `en`, a regional bundle its region's language (`colombia` `es`).
+- `locale` on every source in `questions.json`, always written (task 2372; was: absent = `es`): `base` ≤ batch-8 `es`, `base` from batch-9 `en`, a regional bundle its region's language (`colombia` `es`).
 - `questions.<L>.json`: translations into L of sources whose locale ≠ L (`questions.es.json`, `questions.es-ES.json`, `questions.en.json`, `questions.de.json`).
 - Pool for L: approved sources in L + playing translations into L; `pool.json` = `es`, `pool.<L>.json` for the others.
 - An en source gets three jobs (→ `es`, `es-ES`, `de`), an es source three (→ `en`, `de`, `es-ES`).

@@ -21,7 +21,7 @@ TEXT_FIELDS = ["question", "answer", "wrong_answers", "hints", "description", "f
 
 def source_locale(q):
     """The language a source question is written in (decision 235)."""
-    return q.get("locale", "es")
+    return q["locale"]
 
 
 def draft_locale(bundle):

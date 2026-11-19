@@ -1306,7 +1306,7 @@ def cmd_merge(args):
                     "quality": {k: r.get(k) for k in [*RUBRIC, "difficulty_estimate", "notes"]},
                     "fact_checked": bool(c and c["verdict"] == "confirmed"), "needs_media": q["needs_media"],
                     "batch": args.run, "review": None, "bundle": q.get("bundle", "base"),
-                    **({"locale": locale} if locale != "es" else {}),  # absent = es (decision 235)
+                    "locale": locale,
                     "background": ({"query": q.get("background_query") or q["media"]["query"], "source_url": None,
                                     "file_url": None, "credit": None} if q["media"]["type"] == "audio" else None),
                     **({"media_first": q["media_first"]} if q.get("media_first") else {}),
