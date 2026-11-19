@@ -1527,7 +1527,7 @@ def cmd_sync_run(args):
                 with media_tool.downloading("sync", qid, slot, url):
                     problem = download.file_problem(download.cached(url))
                 if problem:
-                    broken[qid, slot] = problem
+                    broken[url] = problem
                 bar.finished()
             except Exception as e:  # noqa: BLE001 — listed in the report; `trivia-media sync` retries
                 missing.append(label)
