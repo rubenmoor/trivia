@@ -19,6 +19,7 @@
     exit: forced,
     entrance: forcedIn,
     leave = false,
+    cover = false,
     ondone,
   }: {
     category: string;
@@ -35,6 +36,8 @@
     entrance?: SplashEntrance;
     /** The question was decided (Timed): leave at once, the exit's sound kept (decision 508). */
     leave?: boolean;
+    /** The backdrop covers from mount, before `start` (Timed, task 2401): no frame of the question before the splash. */
+    cover?: boolean;
     /** The splash is over (or never shown). */
     ondone?: () => void;
   } = $props();
@@ -93,7 +96,7 @@
   const EXIT_TOTAL_MS = SPLASH_EXIT_MS + SPLASH_SUB_MAX_MS;
 
   let timers: ReturnType<typeof setTimeout>[] = [];
-  let left = false;
+  let left = $state(false);
   function exitNow() {
     if (galleryHold()) return;
     timers.forEach(clearTimeout);
@@ -152,10 +155,10 @@
   });
 </script>
 
-{#if phase === "in" || phase === "hold" || phase === "exit"}
+{#if phase === "in" || phase === "hold" || phase === "exit" || (cover && phase === "wait" && !left)}
   <div class="splash" bind:this={box} aria-hidden="true" style:--exit="{SPLASH_EXIT_MS}ms" style:--in="{SPLASH_IN_MS}ms" style:--lag="{LAG_MS}ms" style:--fade="{REDUCED_FADE_MS}ms">
     <div class="shade" style:opacity={shade.opacity} style:--shade="{shade.ms}ms"></div>
-    <div class="box" class:long>
+    {#if phase !== "wait"}<div class="box" class:long>
       {#if bundle}<span class="mark {phase === "in" ? (reduced ? "in-fade" : "in-rise") : "fade"}" class:go={phase === "exit"} style:--delay="0ms"><BundleMark_ {bundle} /></span>{/if}
       <p
         class="category {phase === 'in' ? (reduced ? 'in-fade' : entering.category) : reduced ? 'fade' : picked.category}"
@@ -181,7 +184,7 @@
           {smallName}
         </p>
       {/if}
-    </div>
+    </div>{/if}
   </div>
 {/if}
 
