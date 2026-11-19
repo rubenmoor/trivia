@@ -635,7 +635,9 @@ badges and awards (all stuff related to career) should still work: but it might 
 
 draft the new questions of the second step in english first (for me to review)
 
-rigorously rewrite and remove existing masterplans, plans and tasks that do not fit with this milestone anymore (i edited it quite a bit)', '2026-10-12T16:46:08Z', NULL, 5);
+rigorously rewrite and remove existing masterplans, plans and tasks that do not fit with this milestone anymore (i edited it quite a bit)
+
+let me know if you find some unexpected implications in relation to making this game available to a chinese audience.', '2026-10-12T16:46:08Z', NULL, 5);
 INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (13, 'Code quality', 'implemented', 'The code grew fast through many pm workers (milestones 1–11, ~24k lines in `app/` and `authoring/`) and nobody has read it as a whole. This milestone reviews it file by file, fixes what is cheap to fix and writes everything down in one report for the gamemaster.
 
 ## Priority
