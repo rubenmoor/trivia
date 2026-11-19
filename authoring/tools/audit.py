@@ -195,7 +195,7 @@ def audit_ids(run, ids, args):
     d = WORK / run / "audit"
     d.mkdir(parents=True, exist_ok=True)
     pool = run_questions(run)
-    pool_en = None if run_locale(WORK / run) else as_locale(pool, "en")
+    pool_en = as_locale(pool, "en")
     by_id = {q["id"]: q for q in pool}
     todo = [by_id[i] for i in ids if i in by_id and not (d / f"{i}.json").exists()]
     progress.resumed("audit", sum(i in by_id for i in ids) - len(todo), len(todo), "questions")
