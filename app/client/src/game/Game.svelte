@@ -846,7 +846,7 @@
       <S.Choice mode={pickedMode} player={chosen ?? undefined} {busy} {draft} {seats} onseats={(s) => (seats = s)} onnext={choicePicked} onback={() => go(isSession(pickedMode!) ? "join" : "player", "whoosh")} />
     {:else if screen === "bundles" && draft}
       <Stage />
-      <S.Bundles player={chosen ?? undefined} {draft} {seats} {busy} {greeting} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go("choice", "whoosh")} />
+      <S.Bundles player={chosen ?? undefined} {draft} {seats} {busy} {greeting} names={greeting && session ? seats.map((x) => x.name ?? "") : undefined} {refused} picked={bundlePick} onpick={(ids) => (bundlePick = ids)} onstart={startGame} onback={() => go("choice", "whoosh")} />
     {:else if screen === "level" && game}
       <Stage />
       {#if !session?.timed}
