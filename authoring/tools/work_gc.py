@@ -1,5 +1,7 @@
 """`qgen gc`: delete the review images of finished, checked batches from work/ (task 2182; the media cache: media_keep.py).
 
+A rework, tighten or neutralize run qualifies when it is `done` and every question it touched (`ids`) has a human
+review or a review dated after the run (task 2360).
 A batch qualifies when its run.json is `done` and its spot check is complete (spot-checks.json holds its
 spot-check size of items; `--unchecked` waives that for batches from before spot checks). The developer runs it
 after the batch's QC (authoring/QC.md); nothing can tell it that the QC is finished.
@@ -26,8 +28,25 @@ def _read(p):
     return atomic.read_json(p) if p.is_file() else None
 
 
-def qualifies(name, unchecked=False):
+REWORKS = ("rework", "tighten", "neutralize")
+
+
+def _settled(run, questions):
+    """Every touched question: human-reviewed, or reviewed after the run finished (a later run)."""
+    done = str(run["done"])[:10]
+    for qid in run.get("ids") or []:
+        rv = (questions.get(qid) or {}).get("review") or {}
+        if rv and rv.get("reviewer") != "human" and str(rv.get("reviewed_on") or "")[:10] <= done:
+            return False
+    return True
+
+
+def qualifies(name, unchecked=False, questions=None):
     run = _read(WORK / name / "run.json") or {}
+    if run.get("mode") in REWORKS and run.get("done"):
+        if questions is None:
+            questions = {q["id"]: q for q in (_read(SOURCE_POOL) or {}).get("questions", [])}
+        return _settled(run, questions)
     if run.get("mode") not in ("batch", "media-first") or not run.get("done"):
         return False
     if unchecked:
@@ -70,7 +89,8 @@ def referrers():
 def gc(dry_run=False, unchecked=False):
     """Returns (files, bytes) deleted (or that would be)."""
     ok = {}
-    good = lambda n: ok.setdefault(n, qualifies(n, unchecked))
+    qs = {q["id"]: q for q in (_read(SOURCE_POOL) or {}).get("questions", [])}
+    good = lambda n: ok.setdefault(n, qualifies(n, unchecked, qs))
     total = [0, 0]
     def take(r):
         total[0] += r[0]; total[1] += r[1]
