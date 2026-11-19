@@ -20,7 +20,7 @@ async function get(file: string, optional = false): Promise<unknown> {
 const basePoolFile = (locale: string): string => (buildInfo().demo ? `demo/${poolFile(locale)}` : poolFile(locale));
 
 /** Question locales a pool may exist for (D-78); es always has one. */
-export const LOCALES = ["es", "es-ES", "en", "de"] as const;
+export const LOCALES = ["es", "es-ES", "en", "de", "zh-Hans", "zh-Hant"] as const;
 
 const cache = new Map<string, Promise<Loaded>>();
 const withUi = new Map<string, Promise<EngineData>>();

@@ -42,6 +42,14 @@ EVENT = {
            "list": "Neue Fragen:", "fixed": "{n} Fragen korrigiert (danke für eure Meldungen).",
            "fixed1": "1 Frage korrigiert (danke für eure Meldungen).",
            "removed": "{n} Fragen entfernt.", "removed1": "1 Frage entfernt.", "other": "Sonstige"},
+    "zh-Hans": {"lang": "Simplified Chinese", "title": "更新 v{v}", "new": "：新增 {n} 道题", "new1": "：新增 1 道题",
+                "list": "新题目：", "fixed": "修正了 {n} 道题（感谢你们的反馈）。",
+                "fixed1": "修正了 1 道题（感谢你们的反馈）。",
+                "removed": "移除了 {n} 道题。", "removed1": "移除了 1 道题。", "other": "其他"},
+    "zh-Hant": {"lang": "Traditional Chinese", "title": "更新 v{v}", "new": "：新增 {n} 道題", "new1": "：新增 1 道題",
+                "list": "新題目：", "fixed": "修正了 {n} 道題（感謝你們的回報）。",
+                "fixed1": "修正了 1 道題（感謝你們的回報）。",
+                "removed": "移除了 {n} 道題。", "removed1": "移除了 1 道題。", "other": "其他"},
 }
 LAUNCH = tuple(l for l in translations.LOCALES if l in EVENT)  # qgen validate: EVENT for every locale with a pool
 CHANGES = "<Changes: fill in>"

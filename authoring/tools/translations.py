@@ -11,8 +11,9 @@ import atomic
 import layout
 import pool_export
 
-# question locales (D-78, decision 235); zh-Hans, ru, pt-BR when milestone 12 resumes
-LANGUAGES = {"es": "Spanish (Latin America)", "es-ES": "Spanish (Spain)", "en": "English", "de": "German"}
+# question locales (D-78, decision 235; zh-Hans and zh-Hant: milestone 12, decision 756)
+LANGUAGES = {"es": "Spanish (Latin America)", "es-ES": "Spanish (Spain)", "en": "English", "de": "German",
+             "zh-Hans": "Simplified Chinese", "zh-Hant": "Traditional Chinese"}
 LOCALES = tuple(LANGUAGES)
 NAMED = tuple(l for l in LOCALES if not l.startswith("es"))  # names files with bundle and age-group names too; es: names.es.json (decision 259) or categories.json
 ENGLISH_FROM = 9  # base's batch-N drafts in English from N = 9 on (plan 148)

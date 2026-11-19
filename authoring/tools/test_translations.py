@@ -42,8 +42,8 @@ class StaleLines(unittest.TestCase):
              mock.patch.object(translations, "load", lambda l: {"questions": []}), \
              contextlib.redirect_stdout(io.StringIO()):
             files = rework.stale_lines(set(), {})
-        for f in files:
-            self.assertTrue((translate.ROOT / f).exists(), f)
+        for f in files:  # a locale without a pool yet (zh, empty) lists its future file
+            self.assertTrue((translate.ROOT / f).exists() or ".zh-" in f, f)
         self.assertNotIn("app/data/pool.es.json", files)
 
 

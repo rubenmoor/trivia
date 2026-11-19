@@ -428,8 +428,11 @@ def report_simulate(args):
     """Games per new player until the first repeat (plan 62, CT-2; plan 65), information only; exit code = D-75's target check."""
     locales = args.locale.split(",") if args.locale else translations.LOCALES
     bundles = load_json(layout.BUNDLES)["bundles"]
-    default = {l: [next((b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])), "base")]
+    default = {l: [b["id"] for b in bundles if b.get("kind") == "base" and l in b.get("languages", [])][:1]
                for l in locales}  # the locale's default game: its first base bundle, packs off (D-99)
+    for l in [l for l in locales if not default[l]]:
+        print(f"simulate: {l} skipped, no base bundle lists it")
+    locales = [l for l in locales if default[l]]
     modes = SIM_MODES if args.mode == "all" else (args.mode or "solo").split(",")
     groups = args.age_group.split(",") if args.age_group else [g["id"] for g in load_age_groups()["groups"]]
     player = args.player or "both"
