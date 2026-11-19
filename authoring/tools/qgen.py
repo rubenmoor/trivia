@@ -247,7 +247,8 @@ def prompt(*names, locale="es", bundle="base", source_locale=None):
     if source_locale:
         text = text.replace("{source_language}", LANGUAGES[source_locale])
     return (text.replace("{age_groups}", ", ".join(groups[:-1]) + " and " + groups[-1])
-            .replace("{players}", players).replace("{voices}", voices_text(locale)))
+            .replace("{players}", players).replace("{voices}", voices_text(locale))
+            .replace("{max_video_s}", str(media_tool.MAX_VIDEO_SECONDS)).replace("{max_audio_s}", str(media_tool.MAX_AUDIO_SECONDS)))
 
 def run_dir(args):
     d = WORK / args.run
