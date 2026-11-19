@@ -20,7 +20,7 @@
   import Prompt from "../Prompt.svelte";
   import SeatDevice from "../SeatDevice.svelte";
   import { claimKeyOk } from "../question/keys.ts";
-  import { seatColor, type SeatDraft } from "../seats.ts";
+  import { nameScale, seatColor, type SeatDraft } from "../seats.ts";
 
   let {
     mode,
@@ -251,7 +251,7 @@
             {#if pad !== null}<Glyph button={1} set={padStyleOf(pad)} />{:else}<Icon name="cross" />{/if}
           </button>
         </div>
-        <button class="name" class:empty={!s.name} onclick={() => (naming = i)} disabled={busy} data-focus-id="seat-name-{i}">
+        <button class="name" class:empty={!s.name} style:font-size="calc({1.9 * nameScale(s.name ?? "", 16)} * var(--u))" onclick={() => (naming = i)} disabled={busy} data-focus-id="seat-name-{i}">
           <Icon name={s.name ? "person" : "pencil"} /> {s.name ?? t("screen.join.pickName")}
         </button>
       </div>
