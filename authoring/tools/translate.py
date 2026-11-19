@@ -1,4 +1,4 @@
-"""Translation runs: `qgen translate` and `qgen batch --translate` (plan 66, decision 45). Never ships (D-35)."""
+"""Translation runs: `qgen batch --translate` (plan 66, decision 45). Never ships (D-35)."""
 import argparse, datetime, json, re, sys, time, urllib.parse
 from collections import Counter
 
@@ -92,17 +92,9 @@ def translate_chunks(ids, src):
 
 def cmd_translate(args):
     """Translate the run's sources into its locale (prompts/translate.md): work/<run>/translations/<chunk>.json.
-    A new run needs --locale and --ids (debugging; `qgen batch --translate` makes real runs)."""
+    `qgen batch --translate` writes the run.json first."""
     d = run_dir(args)
-    cfg = load_json(d / "run.json", {}) or {}
-    if not cfg:
-        if not (args.locale and args.ids):
-            sys.exit(f"{args.run} has no run.json: give --locale and --ids")
-        if args.locale not in translations.LOCALES:
-            sys.exit(f"--locale must be one of {', '.join(translations.LOCALES)}")
-        cfg = {"mode": "translate", "locale": args.locale, "ids": split_list(args.ids),
-               "started": datetime.date.today().isoformat()}
-        save_json(d / "run.json", cfg)
+    cfg = load_json(d / "run.json")
     locale, src = cfg["locale"], {q["id"]: q for q in load_json(POOL)["questions"]}
     if unknown := [i for i in cfg["ids"] if i not in src]:
         sys.exit(f"no such source id: {', '.join(unknown)}")
@@ -375,7 +367,7 @@ def cmd_translate_batch(args):
         return argparse.Namespace(run=run, jobs=args.jobs, **kw)
 
     t0 = run_steps([
-        ("translate", cmd_translate, ns(model="opus", locale=None, ids=None)),
+        ("translate", cmd_translate, ns(model="opus")),
         ("rate", cmd_rate, ns(model="opus")),
         ("factcheck", cmd_factcheck, ns(model="sonnet")),
         ("merge", lambda a: cmd_merge(a) or [], ns()),

@@ -66,7 +66,7 @@ Fixed rules, so there is nothing left to decide:
 - **Batch report (`batch-report`):** `authoring/reports/<run>.md`, written by code: counts, the needs_work list with feedback, dropped drafts, cost.
 - **Usage limits:** when Claude reports a usage limit, `qgen batch` waits until 5 minutes after the reset time in the message and continues (QG-21); exit code 75 only when it can't read a reset time.
 
-The individual steps stay available as subcommands for debugging, but the RUNBOOK uses only `qgen batch`.
+The steps run only inside `qgen batch` (task 2362); the RUNBOOK uses only that.
 
 ## Tasks
 - [x] LP-1 Plan and decisions D-35, D-36 (this file). *2026-10-07.*
