@@ -32,6 +32,7 @@
   import SeatLost from "./SeatLost.svelte";
   import SeatTag from "./SeatTag.svelte";
   import { music, sfx, sound, unlock, type Cue, type Track } from "./sound.svelte.ts";
+  import { wrongTransitionCue } from "./wrongCue.ts";
   import Stage from "./Stage.svelte";
   import { swap } from "./swap.ts";
   import CornerButtons from "./CornerButtons.svelte";
@@ -449,17 +450,17 @@
     }
   }
 
-  async function answered(next: Game | null) {
+  async function answered(next: Game | null, revealSounded = false) {
     if (!next) return;
     error = saveWarning();
     const apply = () => (game = next);
     if (next.session) {
       // on the answer and the session's end: rr-competitive's top level is already the next seat's game
-      if (!next.last?.correct) await go("wrong", "boom", apply);
+      if (!next.last?.correct) await go("wrong", wrongTransitionCue(revealSounded), apply);
       else if (next.result === null) await go("correct", "applause", apply);
       else await go("victory", "applause-big", apply);
     } else if (next.phase === "won") await go("victory", "applause-big", apply);
-    else if (next.phase === "lost") await go("wrong", "boom", apply);
+    else if (next.phase === "lost") await go("wrong", wrongTransitionCue(revealSounded), apply);
     else if (next.phase === "completed") await go("completed", "whoosh", apply);
     else if (next.last?.revealed) await go("next", "whoosh", apply);
     else await go("correct", "applause", apply);

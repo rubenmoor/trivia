@@ -88,7 +88,7 @@
     play: (body: JokerPlay) => Promise<{ game: Game; event: JokerEvent } | null>;
     /** The joker is done on screen: Game.svelte takes the new game (and changes screen if needed). */
     onplayed: (game: Game, event: JokerEvent) => void;
-    onanswered: (game: Game | null) => void;
+    onanswered: (game: Game | null, revealSounded?: boolean) => void;
   } = $props();
 
   /** The answer locked in, or null. */
@@ -202,7 +202,7 @@
       music(null);
       sfx(result?.correct ? "fanfare" : "sad-trombone");
       await wait(AFTER_REVEAL_MS);
-      onanswered(game);
+      onanswered(game, true);
     } catch (e) {
       submitted = false;
       music(locked !== null ? "submitted" : "question");
