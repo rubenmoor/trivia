@@ -41,6 +41,15 @@ class Gc(unittest.TestCase):
         self.assertFalse((probes / B / "sheet.png").exists() or (probes / B / "frames").exists())
         self.assertTrue((probes / B / "probe.json").exists())
 
+    def test_rework_settled(self):
+        run = {"mode": "rework", "done": "2026-10-10", "ids": ["q-1", "q-2"]}
+        rv = lambda who, on: {"review": {"reviewer": who, "reviewed_on": on}}
+        with mock.patch.object(g, "_read", return_value=run):
+            self.assertTrue(g.qualifies("r", questions={"q-1": rv("human", "2026-10-01"), "q-2": rv("llm", "2026-10-15")}))
+            self.assertFalse(g.qualifies("r", questions={"q-1": rv("llm", "2026-10-10"), "q-2": rv("llm", "2026-10-15")}))
+            run["done"] = False
+            self.assertFalse(g.qualifies("r", questions={}))
+
 
 if __name__ == "__main__":
     unittest.main()
