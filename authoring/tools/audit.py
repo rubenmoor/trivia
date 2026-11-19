@@ -1,5 +1,5 @@
 """`qgen audit` and the back-audit (plan 16, D-56). Never ships (D-35)."""
-import datetime, json, random, re, sys
+import datetime, json, random, sys
 from collections import Counter
 
 import layout  # paths (D-35)

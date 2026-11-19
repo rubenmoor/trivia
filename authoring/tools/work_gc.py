@@ -8,7 +8,7 @@ after the batch's QC (authoring/QC.md); nothing can tell it that the QC is finis
   only when every work dir and pool question that mentions the probe belongs to a qualifying batch.
   `probe.json`, `speech.txt`, `ocr.txt` stay (they save re-probing); a probe nobody mentions stays whole.
 A deleted picture: the review page lists none; `rm <probe>/probe.json`, then `qgen media-probe` makes it again."""
-import json, re, shutil
+import re, shutil
 
 import atomic  # authoring/tools/atomic.py
 

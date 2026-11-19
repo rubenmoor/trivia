@@ -2,7 +2,7 @@
 
 Never ships (D-35). A flag is open while its question is `needs_work` with player feedback (game flag, pasted or pulled report).
 """
-import datetime, json, re
+import datetime, re
 from collections import Counter
 
 import atomic  # authoring/tools/atomic.py

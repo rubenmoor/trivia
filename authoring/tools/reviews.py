@@ -133,16 +133,31 @@ def needs_work(qid, locale, feedback, known, dry_run=False):
     return new
 
 
+def _origin(parts, locale, note):
+    """«(a, b, locale)» and the note's tail, the locale shown unless it is es."""
+    where = ", ".join([*filter(None, parts), *([locale] if locale != "es" else [])])
+    return f"({where}){f': {note}' if note else '.'}"
+
+
+def flag_feedback(flag):
+    """A flag from the game as feedback; `flag`: flagged_on, player?, note?, locale?, shown? (GM-5)."""
+    head = _origin([flag.get("player"), flag["flagged_on"][:10]], flag.get("locale") or "es", flag.get("note"))
+    shown = flag.get("shown")
+    seen = (f" · Vista: «{shown['question']}» Respuesta: «{shown['answer']}»; otras: "
+            f"{' / '.join(f'«{w}»' for w in shown['wrong_answers'])}." if shown else "")
+    return f"Marcada en el juego {head}{seen}"
+
+
 def report_feedback(r):
     """A player report's feedback; `r`: question, lang, text, note?, version, pool?, date (plan 93)."""
-    where = ", ".join([f"v{r['version']}", *([f"preguntas {r['pool']}"] if r.get("pool") else []), r["date"],
-                       *([r["lang"]] if r["lang"] != "es" else [])])
-    note = f": {r['note']}" if r.get("note") else "."
+    head = _origin([f"v{r['version']}", f"preguntas {r['pool']}" if r.get("pool") else None, r["date"]],
+                   r["lang"], r.get("note"))
     seen = " / ".join(filter(None, (line.strip() for line in r["text"].splitlines())))
-    return f"Reporte de jugador ({where}){note} · Vista: «{seen}»"
+    return f"Reporte de jugador {head} · Vista: «{seen}»"
 
 
-# Report text (decision 142): header, then labelled lines in the UI language
+# Report text (decision 142): header, then labelled lines in the UI language.
+# Copies of app/client/src/game/report.ts (header) and the locales' flag.* labels; keep in step (decision 199).
 HEADER = re.compile(r"¡Trivia!\s*#(\S+)\s*·\s*([\w-]+)\s*·\s*v(\S+)\s*·\s*pool\s+(\S+)\s*·\s*(\d{4}-\d{2}-\d{2})")
 LABELS = {"question": ("Pregunta", "Question", "Frage"), "answer": ("Respuesta", "Answer", "Antwort"),
           "note": ("Nota", "Note", "Notiz")}
