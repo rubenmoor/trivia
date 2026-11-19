@@ -273,7 +273,7 @@ The developer's picks after listening on `/sounds` (`decision 735: Sound brief, 
 
 - Shared `roll` and `victory`: kept, nothing new to find (`task 2257: New soundtracks: shared roll and victory`)
 - Files: `redoble.m4a` (drum roll, US Air Force Band) and `victoria.m4a` (Elgar, US Marine Band), both public domain, as in the brief
-- Not deleted by `task 2258: New soundtracks: old music files gone and the tally`
+- Kept, not deleted (`task 2258: New soundtracks: old music files gone and the tally`): all 12 `musica-*.m4a` have a record; `trivia-music credits --check` and the `audio` budget line (6.1 of 7 MB) pass; `check` fails only on `acustica-calida` (see its section)
 
 ### `chill-lofi` (Tranquilo lofi): approved, round 1 (`task 2254: New soundtracks: first set`)
 - Track: "Late Night Radio", Kevin MacLeod, CC BY 4.0; 72 bpm; 8 bars, loop 26.667 s; record `authoring/data/music/lofi-tranquilo-late-night-radio.json`
