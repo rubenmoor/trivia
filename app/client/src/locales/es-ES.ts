@@ -67,7 +67,7 @@ export const esES = {
       title: "¿Quiénes jugáis?",
       padJoin: "Pulsad para uniros",
       keyboardMouse: "Teclado y ratón",
-      keyBody: "Pulsad una letra o un número: con esa tecla reclamáis la pregunta.",
+      keyBody: "Elegid una tecla libre, con clic o pulsándola: con esa tecla reclamáis la pregunta.",
     },
     level: {
       again: "¡Otra vez! Habéis dado a la correcta.",

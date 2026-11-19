@@ -916,7 +916,7 @@ def name_seat(r, i):
 
 
 def type_key(r, key):
-    r.wait(".key-field")
+    r.wait(".kcap")
     r.page.keyboard.type(key)
     r.settle(0.4)
 
@@ -961,17 +961,21 @@ def multiplayer(r):
     for i in range(8):
         name_seat(r, i)
     r.shot("join-8")
-    # Keyboard-only timed: three claim keys, a fourth refused.
+    # Keyboard-only timed: three claim keys (one by click), the picker shows them taken.
     to_join(r, "timed")
     for i, key in enumerate("jqx"):  # letters no catalog binds on the Question screen
         r.click('[data-focus-id="join-keyboard"]')
-        type_key(r, key)
+        if i == 1:
+            r.click(f'[data-focus-id="key-{key}"]')
+        else:
+            type_key(r, key)
         r.wait(f'[data-focus-id="seat-name-{i}"]')
     for i in (0, 1, 2):
         name_seat(r, i)
     r.click('[data-focus-id="join-keyboard"]')
-    type_key(r, "a")  # an answer letter: refused
-    r.shot("join-keyboard-timed")
+    r.wait(".kcap")
+    r.settle(0.4)
+    r.shot("join-keyboard-timed")  # the picker: j, q, x taken, the Question keys disabled
     r.key("Escape")
     r.settle(0.5)
     seguir(r, '[data-focus-id^="group-"]')
