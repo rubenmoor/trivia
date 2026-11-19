@@ -104,8 +104,14 @@
     timers = [setTimeout(() => (phase = "gone"), EXIT_TOTAL_MS)];
   }
 
+  // Latched: a later `start` flicker (Timed's busy, a claim) must not replay it
+  let began = $state(false);
   $effect(() => {
-    if (!start) return;
+    if (start) began = true;
+  });
+
+  $effect(() => {
+    if (!began) return;
     timers = [
       setTimeout(() => {
         if (left) return;
