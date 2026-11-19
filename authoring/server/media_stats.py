@@ -65,13 +65,15 @@ def band(url):
 def build(questions):
     roles = {}
     bands, sizes = Counter(), Counter()
+    seen = set()  # image bands and sizes count files, not the questions sharing them
     for q in questions:
         m = q["media"]
         row = roles.setdefault(m["role"], Counter())
         row["questions"] += 1
         row[m["type"]] += 1
         row["no_file"] += not m.get("file_url")
-        if m["type"] == "image" and m.get("file_url"):
+        if m["type"] == "image" and m.get("file_url") and m["file_url"] not in seen:
+            seen.add(m["file_url"])
             label, size = band(m["file_url"])
             bands[label] += 1
             if size:
@@ -79,7 +81,7 @@ def build(questions):
     return {
         "questions": len(questions),
         "roles": [{"role": r, **c} for r, c in sorted(roles.items(), key=lambda rc: -rc[1]["questions"])],
-        "bands": [{"band": label, "questions": bands[label]} for _, label in reversed(BANDS)]
-                 + [{"band": label, "questions": bands[label]} for label in OTHER if bands[label]],
-        "sizes": [{"size": s, "questions": n} for s, n in sizes.most_common(15)],
+        "bands": [{"band": label, "files": bands[label]} for _, label in reversed(BANDS)]
+                 + [{"band": label, "files": bands[label]} for label in OTHER if bands[label]],
+        "sizes": [{"size": s, "files": n} for s, n in sizes.most_common(15)],
     }

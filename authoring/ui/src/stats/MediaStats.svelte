@@ -7,8 +7,8 @@
 
   const TYPES = ["image", "audio", "video"] as const;
   const roleMax = $derived(Math.max(1, ...stats.roles.map((r) => r.questions)));
-  const bandMax = $derived(Math.max(1, ...stats.bands.map((b) => b.questions)));
-  const images = $derived(stats.bands.reduce((n, b) => n + b.questions, 0));
+  const bandMax = $derived(Math.max(1, ...stats.bands.map((b) => b.files)));
+  const images = $derived(stats.bands.reduce((n, b) => n + b.files, 0));
 </script>
 
 <section class="chart-panel">
@@ -33,17 +33,17 @@
 </section>
 
 <section class="chart-panel">
-  <h2>Questions per image resolution</h2>
-  <p class="sub">{images} picked images · long edge in px, read from the cached file · the TV shows 1920 × 1080</p>
+  <h2>Image files per resolution</h2>
+  <p class="sub">{images} distinct picked image files · long edge in px, read from the cached file · the TV shows 1920 × 1080</p>
   <table class="bars">
     <tbody>
       {#each stats.bands as b (b.band)}
         <tr>
           <td class="name">{b.band}</td>
           <td class="bar-cell">
-            {#if b.questions > 0}<span class="bar" style:width="{(b.questions / bandMax) * 100}%"></span>{/if}
+            {#if b.files > 0}<span class="bar" style:width="{(b.files / bandMax) * 100}%"></span>{/if}
           </td>
-          <td class="num strong">{b.questions}</td>
+          <td class="num strong">{b.files}</td>
         </tr>
       {/each}
     </tbody>
@@ -57,7 +57,7 @@
       <table>
         <tbody>
           {#each stats.sizes as s (s.size)}
-            <tr><td>{s.size}</td><td class="num">{s.questions}</td></tr>
+            <tr><td>{s.size}</td><td class="num">{s.files}</td></tr>
           {/each}
         </tbody>
       </table>

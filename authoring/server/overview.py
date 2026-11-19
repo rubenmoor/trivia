@@ -123,7 +123,7 @@ def build(pool, bundles):
             "drafts": sum(q["status"] == "draft" for q in pool),
             "approved_without_media": sum(not q["media"].get("file_url") for q in approved),
             "not_cached": len(not_cached),
-            "licence_replace": sum(media.to_replace(q) for q in pool),
+            "licence_replace": sum(r["verdict"] == "replace" for r in media.licence_rows([q for q in pool if q["status"] != "rejected"])),
             "bundles": bundle_rows,
         },
         "llm_approved": sum((q.get("review") or {}).get("reviewer") == "llm" for q in approved),

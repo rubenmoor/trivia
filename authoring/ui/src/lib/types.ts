@@ -299,9 +299,9 @@ export interface MediaStats {
   /** Most questions first; counts per media type and without a picked file. */
   roles: ({ role: Media["role"]; questions: number; no_file: number } & Partial<Record<Media["type"], number>>)[];
   /** Picked images by long edge in px, small to large, then SVG / not cached / unreadable. */
-  bands: { band: string; questions: number }[];
+  bands: { band: string; files: number }[];
   /** The most common exact sizes. */
-  sizes: { size: string; questions: number }[];
+  sizes: { size: string; files: number }[];
 }
 
 /** A visible text of a gallery shot (authoring/tools/gallery.py); box: x, y, width, height in px of the shot's viewport (1920 × 1080, or the `@<W>x<H>` of its locale entry). */
