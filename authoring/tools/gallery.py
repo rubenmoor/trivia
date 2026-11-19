@@ -1038,6 +1038,11 @@ def round_robin(r):
     r.wait("main .result", 30000)
     r.settle(2.5)
     r.shot("correct-rr-coop")
+    r.page.evaluate("window.__galleryTurn = {}")  # freezes the handover
+    r.pad(0, 0)  # the next seat holds pad 0: it presses «Siguiente»
+    r.wait(".turn-screen")
+    r.settle(1.5)
+    r.shot("turn-rr-coop")
     rr_question(r, "coop-q")
     r.answer((r.meta["coop-q"]["right"] + 1) % 4)
     r.wait("main .result.wrong", 30000)
@@ -1053,6 +1058,11 @@ def round_robin(r):
     r.wait("main .result.wrong", 30000)
     r.settle(2.5)
     r.shot("wrong-rr-competitive")
+    r.page.evaluate("window.__galleryTurn = {}")
+    r.pad(0, 0)  # the next seat holds pad 0: it presses «Siguiente»
+    r.wait(".turn-screen")
+    r.settle(1.5)
+    r.shot("turn-rr-competitive")
     rr_question(r, "comp-q12")
     r.answer(r.meta["comp-q12"]["right"])
     r.wait("main .result.victory", 40000)
@@ -1173,7 +1183,7 @@ STEPS = [
       "choice-rr-coop", "choice-timed", "choice-rr-competitive", "bundles-session"], multiplayer),
     (["start-resume-session", "start-resume-session-2", "start-resume-session-5", "start-resume-session-8", "menu-session", "seat-lost"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
-      "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
+      "turn-rr-coop", "turn-rr-competitive", "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
     (["timed-question", "timed-claimed", "timed-claim-last", "timed-paused", "timed-time-up", "timed-round",
       "timed-last-heart", "timed-all-at-risk", "timed-nobody-wins", "timed-sudden-death", "victory-timed"], timed),
 ]

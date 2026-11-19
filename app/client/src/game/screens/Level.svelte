@@ -1,6 +1,6 @@
 <script lang="ts">
   // Level (UI-14): the tower (rr-competitive: every seat's), «Nivel n de 12» and the milestone line; the new block drops after Correct.
-  // In a round-robin session also the turn handover: «Turno de» and the turn seat's tag (decision 279).
+  // In a round-robin session also the turn handover: «Turno de» and the turn seat's tag (decisions 279, 747: after the Turn screen).
   // Timed: the round screen (decision 296): «Ronda n de 12», every seat's hearts (the ones just lost crack), then 3-2-1.
   import { onMount } from "svelte";
   import { LIVES } from "../../engine/choice.ts";

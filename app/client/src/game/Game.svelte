@@ -55,13 +55,14 @@
   import Select from "./screens/Select.svelte";
   import Start from "./screens/Start.svelte";
   import Timed from "./screens/Timed.svelte";
+  import Turn from "./screens/Turn.svelte";
   import Victory from "./screens/Victory.svelte";
   import Wrong from "./screens/Wrong.svelte";
   import "./theme.css";
-  import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, sleep } from "./timing.ts";
+  import { BLOCK_DROP_MS, FADE_MS, FLIP_MS, GREETING_MS, PICK_MS, PRELOAD_MAX_MS, TEAR_MS, TURN_HOLD_MS, sleep } from "./timing.ts";
   import Veil from "./Veil.svelte";
 
-  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "correct" | "wrong" | "victory" | "next" | "completed" | "badges";
+  type Screen = "language" | "consent" | "start" | "player" | "bundles" | "mode" | "choice" | "join" | "level" | "select" | "question" | "timed" | "turn" | "correct" | "wrong" | "victory" | "next" | "completed" | "badges";
 
   const MUSIC: Record<Screen, Track | null> = {
     language: "normal",
@@ -73,6 +74,7 @@
     choice: "normal",
     join: "normal",
     level: "normal",
+    turn: "normal",
     select: "normal",
     question: "question",
     timed: "timed",
@@ -265,7 +267,7 @@
     await sleep(FADE_MS);
     apply?.();
     music(MUSIC[next]);
-    previous = screen;
+    if (screen !== "turn") previous = screen; // the drop on Level follows the answer, not the handover
     screen = next;
     picked = null;
     swappedBy = null;
@@ -274,7 +276,7 @@
       await tick();
       await Promise.race([(next === "question" ? questionRef : timedRef)?.ready?.() ?? Promise.resolve(), sleep(PRELOAD_MAX_MS)]);
     }
-    emit("screen", { name: nameOf(next) });
+    if (next !== "turn") emit("screen", { name: nameOf(next) });
     if (next === "question" && game?.question) emit("question:shown", { id: game.question.id, level: game.level });
     black = false;
     await sleep(FADE_MS);
@@ -351,8 +353,20 @@
     } else game = next;
   }
 
+  /** Round-robin: when the turn passes to another seat, the handover screen for a moment (decision 747). */
+  async function turnHandover() {
+    const from = game?.last?.seat;
+    const s = game?.session;
+    if (!s || s.timed || from === undefined || from === s.turn) return;
+    turnFrom = from;
+    await go("turn", "whoosh");
+    if ((window as { __galleryTurn?: unknown }).__galleryTurn) await new Promise(() => {}); // gallery: frozen
+    await sleep(TURN_HOLD_MS);
+  }
+
   /** After «¡Correcto!»: the Level screen, where the new block drops and lands with a thud. */
   async function toLevel() {
+    await turnHandover();
     const level = blocks;
     const landed = sleep(FADE_MS * 2 + BLOCK_DROP_MS).then(() => sfx("block", onTwelve(level, levels))); // the fall in Tower.svelte
     await go("level", "whoosh");
@@ -481,7 +495,10 @@
 
   /** rr-competitive's Wrong «Seguir» (one seat out, decision 279): the next turn, or the last one standing wins. */
   async function afterOut() {
-    if (game?.result === null) await go("level", "whoosh");
+    if (game?.result === null) {
+      await turnHandover();
+      await go("level", "whoosh");
+    }
     else await go("victory", "applause-big");
   }
   const outGoesOn = $derived(session?.mode === "rr-competitive");
@@ -704,7 +721,7 @@
 
   $effect(() => {
     const on = screen;
-    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "mode" || on === "choice" || on === "join" || on === "question" || on === "timed" || on === "badges") return; // they push their own
+    if (on === "language" || on === "consent" || on === "player" || on === "bundles" || on === "mode" || on === "choice" || on === "join" || on === "turn" || on === "question" || on === "timed" || on === "badges") return; // they push their own
     return pushScope({
       name: on,
       keys: on === "start" ? { [NEW_KEY]: { type: "new" }, [LANGUAGE_KEY]: { type: "language" }, [MODS_KEY]: { type: "letter", key: MODS_KEY } } : undefined,
@@ -726,6 +743,7 @@
   });
 
   // Steam rich presence «Nivel 7 de 12» while playing (plan 85); none in timed: no «Ronda» token.
+  let turnFrom = $state(0);
   let presence = "";
   $effect(() => {
     const level = ["level", "select", "question", "correct", "next"].includes(screen) && !game?.session?.timed ? game?.level : undefined;
@@ -797,6 +815,9 @@
         {@render tray(game)}
       {/if}
       <S.Level {game} {levels} {blocks} drop={previous === "correct" || previous === "next"} {busy} before={roundBefore} paused={overlayOpen} onnext={() => go(table(game), "paper")} />
+    {:else if screen === "turn" && session}
+      <Stage />
+      <Turn {session} from={turnFrom} />
     {:else if screen === "select" && game}
       <Stage />
       <div class="corner-hud" class:multi={!!session}><Hud level={game.level} {levels} player={game.player} {session} /></div>
