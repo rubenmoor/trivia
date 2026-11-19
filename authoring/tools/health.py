@@ -361,7 +361,7 @@ def deficit_line(bundle="base", pool=None):
 
 
 def run_bundle(run):
-    return (load(WORK / run / "run.json") or {}).get("bundle", "base")
+    return load(WORK / run / "run.json")["bundle"]
 
 
 def deficit_lines(runs, pool=None):

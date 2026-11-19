@@ -15,7 +15,7 @@ SAID = {"File:lion.ogg": "listen a lion roars", "File:long.ogg": ""}
 
 
 def survey_file(name, cls="general", duration=20):
-    return {"title": f"File:{name}.ogg", "seed": "s", "class": cls, "type": "audio", "description": name,
+    return {"title": f"File:{name}.ogg", "seed": "s", "class": cls, "type": "audio", "provider": "commons", "description": name,
             "duration": duration, "width": 0, "height": 0, "page_url": f"https://c/{name}", "file_url": f"https://u/{name}",
             "license": "CC0", "license_url": None, "author": "A", "restrictions": [], "base_categories": [CAT["slug"]]}
 
@@ -45,7 +45,7 @@ class Steps(unittest.TestCase):
              "answer": "Rooster", "concept": None, "question": "?", "difficulty": 3}]}))
         self.calls = []
         for p in [mock.patch.object(layout, "WORK", self.work), mock.patch.object(mf, "LEDGER", self.work / "ledger.jsonl"),
-                  mock.patch.object(mf, "pilot_rows", lambda: []), mock.patch.object(qgen, "POOL", pool),
+                  mock.patch.object(qgen, "POOL", pool),
                   mock.patch.object(mf, "gaps", lambda pool: {"difficulty_gaps": {}, "need": [SUB]}),
                   mock.patch.object(mf, "probe", self.probe), mock.patch.object(qgen, "claude", self.claude)]:
             p.start()

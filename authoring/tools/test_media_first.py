@@ -44,17 +44,17 @@ class Ledger(unittest.TestCase):
         self.run.mkdir()
         patches = [mock.patch.object(mf, "LEDGER", d / "ml" / "files.jsonl"),
                    mock.patch.object(mf, "SURVEY_FILES", d / "survey.jsonl"),
-                   mock.patch.object(mf, "pilot_rows", lambda: [row("a", 0, True)]),
                    mock.patch.object(mf.media_survey, "pool_media", lambda: set())]
         for p in patches:
             p.start()
             self.addCleanup(p.stop)
         mf.write_jsonl(mf.SURVEY_FILES, [f("a", i) for i in range(4)])
+        mf.write_jsonl(mf.LEDGER, [{**row("a", 0, True), "run": "pilot-1"}])
 
     def test_record_never_twice(self):
         self.assertEqual(mf.record("batch-1", [row("a", 1, True), row("a", 2, False)]), 2)
         self.assertEqual(mf.record("batch-2", [row("a", 2, True), row("a", 3, False)]), 1)
-        self.assertEqual([r["run"] for r in mf.ledger()], ["batch-1", "batch-1", "batch-2"])
+        self.assertEqual([r["run"] for r in mf.ledger()], ["pilot-1", "batch-1", "batch-1", "batch-2"])
 
     def test_select_is_fixed_and_remaining_shrinks(self):
         first = [x["title"] for x in mf.select(self.run, limit=2)]
@@ -67,7 +67,8 @@ class Ledger(unittest.TestCase):
         mf.select(self.run)
         mf.record("batch-1", [])
         self.assertEqual(len(mf.remaining(self.run, "batch-1")), 3)
-        with mock.patch.object(mf, "SKIP_AFTER", 1), mock.patch.object(mf, "pilot_rows", lambda: [row("a", 0, False)]):
+        mf.write_jsonl(mf.LEDGER, [{**row("a", 0, False), "run": "pilot-1"}])
+        with mock.patch.object(mf, "SKIP_AFTER", 1):
             self.assertEqual(mf.remaining(self.run, "batch-1"), [])
 
 

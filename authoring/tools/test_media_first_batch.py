@@ -136,7 +136,7 @@ class Orchestration(Base):
 
 
 def media_first_question(qid="q-0001"):
-    f = {"title": "File:lion.ogg", "type": "audio", "page_url": "https://c/lion", "file_url": "https://u/lion.ogg",
+    f = {"title": "File:lion.ogg", "type": "audio", "provider": "commons", "page_url": "https://c/lion", "file_url": "https://u/lion.ogg",
          "license": "CC0", "license_url": None, "author": "A", "restrictions": []}
     media = {**media_tool.pick_fields(f), "role": "essential", "query": "File:lion.ogg", "note": None, "duration": 20.0}
     return {"id": qid, "status": "draft", "batch": "batch-1", "bundle": "base", "locale": "en", "subcategory": SUB,

@@ -11,7 +11,7 @@
 
 ## Baseline (batch-5, 2026-10-07)
 
-From `work/batch-5/costs.log` (97 opus + 36 sonnet before merge) and the code in `authoring/tools/qgen.py`:
+From `work/batch-5/calls.jsonl` (97 opus + 36 sonnet before merge) and the code in `authoring/tools/qgen.py`:
 
 | Step | Calls | Grouped by |
 |---|---|---|
@@ -59,7 +59,7 @@ About 225 → 180–185 calls per batch (−18 %), about 300k fewer input tokens
 
 ## How to check
 Implement after batch-5 is done, so batch-5 is a clean baseline and no run mixes old and new grouping. On the next batch, compare against batch-4 and batch-5:
-- calls and cost (`batch-report`, `costs.log`);
+- calls and cost (`batch-report`, `calls.jsonl`);
 - share approved, share `needs_work` and its reasons, share dropped by `merge`, especially duplicates;
 - average rater scores and the number of revisions (to see whether grouped rating got more lenient).
 

@@ -20,7 +20,7 @@ class Qc(unittest.TestCase):
         layout.SPOT_CHECKS = self.work / "spot-checks.json"
         for run, mode in [("batch-4", "batch"), ("batch-5", "media-first"), ("batch-6", "media-first")]:
             (self.work / run).mkdir()
-            (self.work / run / "run.json").write_text(json.dumps({"mode": mode}))
+            (self.work / run / "run.json").write_text(json.dumps({"mode": mode, "bundle": "base", "draft_locale": "en"}))
             (self.work / run / "recorded.json").write_text("{}")
 
     def tearDown(self):

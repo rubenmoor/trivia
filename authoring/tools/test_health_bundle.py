@@ -13,6 +13,7 @@ class HealthBundle(unittest.TestCase):
         (work / "batch-1").mkdir()
         (work / "batch-1" / "run.json").write_text('{"bundle": "colombia"}', encoding="utf-8")
         (work / "batch-2").mkdir()
+        (work / "batch-2" / "run.json").write_text('{"bundle": "base"}', encoding="utf-8")
         with mock.patch.object(health, "WORK", work), \
              mock.patch.object(health.targets, "deficits", lambda pool, b: {"es": 1} if b else {}):
             self.assertEqual(health.run_bundle("batch-1"), "colombia")
