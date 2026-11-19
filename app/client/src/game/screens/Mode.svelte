@@ -38,13 +38,12 @@
     about: string;
     key: string;
     icon: IconName;
-    /** The task that ships an unbuilt mode, which dev mode shows marked (decision 293). */
+    /** The task that ships an unbuilt mode: only dev mode shows the tile (decision 293). */
     ships?: string;
   }
   /** A tile from catalog keys. */
   const tile = (id: GameMode, name: TextKey, about: TextKey, key: TextKey, icon: IconName, ships?: string): Tile =>
     ({ id, name: t(name), about: t(about), key: t(key).toLowerCase(), icon, ships });
-  const unbuilt = (m: Tile) => (m.ships && !BUILT_MODES.includes(m.id) ? m.ships : undefined);
   const shown = (m: Tile) => !m.ships || BUILT_MODES.includes(m.id) || devMode;
 
   const SINGLE = [
@@ -139,7 +138,7 @@
   {:else if stage === "single"}
     <div class="pick-row" role="radiogroup" data-line>
       {#each SINGLE as m, i (m.id)}
-        {@render card(`mode-${m.id}`, m.name, m.about, m.key, m.icon, m.id === chosen, i, () => (pick = m.id), unbuilt(m))}
+        {@render card(`mode-${m.id}`, m.name, m.about, m.key, m.icon, m.id === chosen, i, () => (pick = m.id))}
       {/each}
     </div>
   {:else}
@@ -149,7 +148,7 @@
           <p class="label pick-heading">{g.name}</p>
           <div class="pick-row" data-line>
             {#each g.tiles as m, i (m.id)}
-              {@render card(`mode-${m.id}`, m.name, m.about, m.key, m.icon, m.id === chosen, gi * 2 + i, () => (pick = m.id), unbuilt(m), true)}
+              {@render card(`mode-${m.id}`, m.name, m.about, m.key, m.icon, m.id === chosen, gi * 2 + i, () => (pick = m.id), true)}
             {/each}
           </div>
         </div>
@@ -163,7 +162,7 @@
   </div>
 </section>
 
-{#snippet card(id: string, name: string, about: string, key: string, glyph: IconName, on: boolean, i: number, pickIt: () => void, ships?: string, local = false)}
+{#snippet card(id: string, name: string, about: string, key: string, glyph: IconName, on: boolean, i: number, pickIt: () => void, local = false)}
   <OptionButton
     class="card"
     {on}
@@ -179,7 +178,6 @@
     {#snippet chip()}<Prompt action={{ type: "letter", key }} hold />{/snippet}
     {#if local}<span class="label local">{t("mode.local")}</span>{/if}
     <span class="label">{about}</span>
-    {#if ships}<span class="label warn">{`PLACEHOLDER(${ships})`}</span>{/if}
   </OptionButton>
 {/snippet}
 
@@ -224,9 +222,6 @@
   }
   .local {
     color: var(--sky);
-  }
-  .warn {
-    color: var(--amber);
   }
   .actions {
     margin-top: calc(1 * var(--u));
