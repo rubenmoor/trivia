@@ -9,7 +9,7 @@ then dropped. Results per file in <run>/media-first/{triage,design}.jsonl; passe
 `qgen batch --media-first` runs these as its first steps (`inventory_step`, `probe_step`, `triage`, `design`,
 `check_drafts`), then qgen's; `check_fixed` is the giveaway check after `fix`.
 """
-import errno, hashlib, json, re, threading, urllib.parse
+import errno, hashlib, json, re, threading
 from datetime import date
 from collections import defaultdict
 from pathlib import Path
@@ -17,7 +17,6 @@ from types import SimpleNamespace
 
 import atomic, categories, layout, progress
 import media_probe, media_survey, providers
-from providers import commons
 from media import excerpt_schema, max_seconds, pick_fields, play_window  # authoring/tools/media.py
 
 MF_DESIGNED = 120        # designed questions per run (≈ 100 approved at the pilot's look share)
@@ -438,73 +437,6 @@ def review_input(q):
         "file": m.get("query"), "license": m.get("license"), "work": m.get("work"),
         "excerpt": w, "duration": m.get("duration"), "commons": commons_file(m.get("query")),
         "aids": aids(p), "mechanical": media_findings(q, p)}
-
-
-# --- window judgement for the 30 s re-check (plan 217) --------------------------------
-
-JUDGE_MODEL = "opus"
-JUDGE_DIR = "video-window"  # under work/: the judgement's calls.jsonl
-
-
-def file_title(m):
-    """The Commons file a media slot holds, "File:…": a media-first `query`, else the `source_url` page's title."""
-    q = m.get("query") or ""
-    if q.startswith("File:"):
-        return q
-    page = urllib.parse.unquote((m.get("source_url") or "").split("?")[0]).rsplit("/wiki/", 1)[-1].replace("_", " ")
-    return page if page.startswith("File:") else None
-
-
-def commons_text(title):
-    """Commons description and categories: the ledger's, else fetched (a question-first file); None if unknown."""
-    known = commons_file(title)
-    if known:
-        return known
-    try:
-        recs = commons.file_records([title])
-    except Exception:  # noqa: BLE001 — description is an aid, not required
-        return None
-    return {k: recs[0][k] for k in ("description", "categories")} if recs else None
-
-
-def judge_schema():
-    from qgen import PROBLEMS
-    props = {"verdict": {"enum": ["keep", "needs_work"]},
-             "problem": {"anyOf": [{"type": "null"}, {"enum": PROBLEMS}]}, "note": {"type": "string"}}
-    return {"type": "object", "additionalProperties": False, "required": list(props), "properties": props}
-
-
-def window_input(q, window, p):
-    """The judgement's input: the question, the cut window's aids (`media_first` shape, prompts/media-first-checks.md)
-    and the window it was approved on. Works without `media_first` provenance (question-first)."""
-    m, mf = q["media"], q.get("media_first") or {}
-    title = file_title(m)
-    seen = {**q, "media": {**m, "query": title}, "media_first": {"class": mf.get("class") or "general"}}
-    return {"question": {k: q.get(k) for k in ("description", "question", "answer", "wrong_answers", "hints",
-                                                "fun_fact", "difficulty")} | {"media": {k: m.get(k) for k in ("type", "role")}},
-            "media_first": {"kind": mf.get("kind"), "class": mf.get("class"), "file": title, "license": m.get("license"),
-                            **({"work": m["work"]} if m.get("work") else {}), "excerpt": window,
-                            "duration": m.get("duration"), "commons": commons_text(title), "aids": aids(p),
-                            "mechanical": media_findings(seen, p)},
-            "cut_from": {"excerpt": m.get("excerpt"), "duration": m.get("duration")}}
-
-
-def judge_window(q, window, p=None, model=JUDGE_MODEL, cwd=None):
-    """Does a video question still work on its cut window (`{start, end}`, ≤ 30 s)? `p`: the window's probe, else probed.
-    → {verdict: keep|needs_work, problem, note}; mechanical findings (answer heard) are the model's to judge,
-    as in review. Calls go through qgen.claude: <cwd>/calls.jsonl and the closing `claude:` line (decision 208).
-    A malformed reply raises ValueError."""
-    from qgen import claude
-    p = p or probe(file_title(q["media"]), window)
-    user = window_input(q, window, p)
-    cwd = cwd or layout.WORK / JUDGE_DIR
-    Path(cwd).mkdir(parents=True, exist_ok=True)
-    out = claude(prompt_file("media-first-checks", "media-window"), json.dumps(user, ensure_ascii=False, indent=1),
-                 judge_schema(), model, cwd, read=True)
-    v = out.get("verdict") if isinstance(out, dict) else None
-    if v not in ("keep", "needs_work") or (v == "needs_work" and not out.get("problem")):
-        raise ValueError(f"window judgement: malformed reply {str(out)[:200]}")
-    return {"verdict": v, "problem": out["problem"] if v == "needs_work" else None, "note": out.get("note") or ""}
 
 
 # --- shared inputs ---------------------------------------------------------------

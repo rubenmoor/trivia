@@ -44,7 +44,7 @@ Every candidate is in the decision's table with its last use and what goes with 
 | 2 | `qgen neutralize` (if kept: fix its cost line, `rework.py` ~266) | delete | 2363 |
 | 3 | `qgen tighten` | delete | 2364 |
 | 4 | `audit --backlog` (11 questions left) | last slice, then delete | 2365 |
-| 5 | `qgen video-window` | delete | 2366 |
+| 5 | `qgen video-window` | deleted | 2366 |
 | 6, 7 | NASA, Freesound providers (0 picks) | delete | 2367 |
 | 8 | `trivia-media fetch` | delete | 2368 |
 | 9–12 | `report --exit-check`, `--calibration`, `--overlaps`, `--subcategories` | delete 9–11, keep 12 | 2369 |

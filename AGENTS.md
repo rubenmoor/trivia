@@ -44,7 +44,7 @@ Family trivia party game, shown on a TV: the family plays against the gamemaster
 ## Making questions
 - Asked to make, add, review or approve questions: follow [`authoring/RUNBOOK.md`](authoring/RUNBOOK.md) exactly, nothing else. One command, `qgen batch` (`--bundle <id>` for a bundle other than `base`; `--translate <locale>` when a language is named; `--media-first` for sound and video questions from Commons files, plan 203).
 - Don't run pipeline steps by hand, edit the pools or pick media.
-- `qgen rework`, `qgen video-window`: only when the developer asks (`video-window`: cuts every video question to its ≤ 30 s window and re-checks it, `--dry-run` lists; `qgen validate` rejects a video that plays longer).
+- `qgen rework`: only when the developer asks (`qgen validate` rejects a video that plays longer than 30 s).
 
 ## Layout
 - `app/` ships (game server, game UI, Electron shell, `app/data/`); `authoring/` doesn't (source pool, `qgen` pipeline, review/stats pages).
