@@ -81,7 +81,7 @@
   const timed = $derived(session.timed!);
   const claim = $derived(held ? null : timedOf(game).claim);
   const question = $derived(held?.question ?? game.question);
-  const view: AnswerView = $derived({ struck: [], locked, snipe: false, target: null, hit: null, revealed, result: held?.last ?? null });
+  const view: AnswerView = $derived({ struck: [], locked, snipe: false, target: null, hit: null, revealed, result: held && held.last.seat !== undefined && held.last.chosen === null ? null : (held?.last ?? null) });
 
   /** Resolves once the media is ready (Game.svelte waits before the fade-in). */
   export function ready() {
@@ -324,6 +324,7 @@
     if (!held || !revealed) return null;
     const { last } = held;
     if (last.seat === undefined) return { text: t("screen.timed.timeUp"), good: false };
+    if (last.chosen === null) return { text: t("screen.timed.ranOut", { name: name(last.seat) }), good: false };
     return last.correct
       ? { text: t("screen.timed.correct", { name: name(last.seat) }), good: true }
       : { text: t("screen.result.out", { name: name(last.seat) }), good: false };
@@ -398,10 +399,11 @@
     {#each session.seats as s, i (i)}
       {@const out = s.status !== "playing" || (answered?.seat === i && !answered.correct)}
       {@const ok = s.correct_this_round || (answered?.seat === i && answered.correct)}
+      {@const dropped = answered?.seat === i && !answered.correct}
       {@const label = claimLabel(i)}
       <div class="seat glass-light" class:out class:dim={claim !== null && claim.seat !== i}>
-        <SeatTag {session} seat={i} small />
-        <Hearts lives={s.lives ?? LIVES} {out} pulse={pulseOf(s)} small />
+        <SeatTag {session} seat={i} small struck={out} />
+        <Hearts lives={dropped ? 0 : (s.lives ?? LIVES)} cracked={dropped ? (s.lives ?? LIVES) : 0} {out} pulse={pulseOf(s)} small />
         {#if ok}
           <span class="ok"><Icon name="check" /></span>
         {:else if !out && label}

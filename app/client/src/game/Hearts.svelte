@@ -22,7 +22,7 @@
 
 <span class="hearts" class:out class:small class:chance={pulse === "chance"} class:last={pulse === "last"} aria-label={`${lives}/${LIVES}`}>
   {#each Array.from({ length: LIVES }, (_, i) => i) as i (i)}
-    <span class="heart" class:full={i < lives} class:crack={i >= lives && i < lives + cracked}><Icon name="heart" /></span>
+    <span class="heart" class:full={i < lives} class:crack={i >= lives && i < lives + cracked} style:--n={lives + cracked - 1 - i}><Icon name="heart" /></span>
   {/each}
 </span>
 
@@ -46,7 +46,7 @@
     --heart-fill: 0.9;
   }
   .heart.crack {
-    animation: crack 0.9s 0.9s ease-in backwards;
+    animation: crack 0.9s calc(0.4s + var(--n, 0) * 0.45s) ease-in backwards;
   }
   .chance .heart.full {
     animation: pulse 1.2s ease-in-out infinite;

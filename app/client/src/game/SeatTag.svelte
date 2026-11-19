@@ -7,13 +7,13 @@
   import SeatDevice from "./SeatDevice.svelte";
   import { nameScale, seatColor } from "./seats.ts";
 
-  let { session, seat, small = false }: { session: SessionView; seat: number; small?: boolean } = $props();
+  let { session, seat, small = false, struck = false }: { session: SessionView; seat: number; small?: boolean; struck?: boolean } = $props();
 
   const s = $derived(session.seats[seat]);
 </script>
 
 {#if s}
-  <span class="seat-tag glass" class:small class:out={s.status === "out" || (s.status === "lost" && session.mode !== "rr-coop")} style:--seat={seatColor(seat)}>
+  <span class="seat-tag glass" class:small class:out={struck || s.status === "out" || (s.status === "lost" && session.mode !== "rr-coop")} style:--seat={seatColor(seat)}>
     {#if s.status === "won"}<Icon name="crown" />{:else}<span class="dot" aria-hidden="true"></span>{/if}
     <span class="name" style:font-size="{nameScale(String(s.player ?? seat + 1))}em">{s.player ?? seat + 1}</span>
     <span class="device"><SeatDevice binding={seating.binding[seat] ?? null} /></span>
