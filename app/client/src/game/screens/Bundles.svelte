@@ -28,6 +28,7 @@
     seats,
     busy,
     greeting,
+    names,
     refused,
     picked,
     onpick,
@@ -42,6 +43,8 @@
     busy: boolean;
     /** The name while «¡Hola, …!» plays into the transition, else null. */
     greeting: string | null;
+    /** A session's seat names for the greeting, one per line. */
+    names?: string[];
     /** Why the last `new` was refused (supply, `no_questions`, `bundle_not_offered`), or null. */
     refused: GameError | null;
     /** The pick kept in Game.svelte; null: not made yet, the preset applies. */
@@ -165,7 +168,12 @@
 </script>
 
 <section class="bundles-screen" class:reporting={!!supply && !supply.ok} bind:this={section}>
-  {#if greeting}
+  {#if greeting && names?.length}
+    <h1 class="title hello many" style:--lines={names.length + 1}>
+      <span>{t("screen.player.helloOpen").trim()}</span>
+      {#each names as n, i (i)}<span><span class="name greeted">{n}</span>{i === names.length - 1 ? t("screen.player.helloClose") : ""}</span>{/each}
+    </h1>
+  {:else if greeting}
     <h1 class="title hello">{t("screen.player.helloOpen")}<span class="name greeted">{greeting}</span>{t("screen.player.helloClose")}</h1>
   {:else}
     <h1 class="title">
@@ -223,7 +231,7 @@
   .name {
     color: var(--amber);
   }
-  /* Many players: one line, cut at the screen's width */
+  /* A name cut at the screen's width */
   .greeted {
     display: inline-block;
     max-width: calc(100vw - 30 * var(--u));
@@ -243,6 +251,14 @@
   .hello {
     font-size: calc(7 * var(--u));
     animation: hello 0.8s var(--spring) backwards;
+  }
+  /* Session: one name per line, smaller as the list grows */
+  .hello.many {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: calc(min(7, 44 / var(--lines)) * var(--u));
+    line-height: 1.15;
   }
   @keyframes hello {
     from {

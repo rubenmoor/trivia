@@ -921,6 +921,24 @@ def type_key(r, key):
     r.settle(0.4)
 
 
+def greeting_timed(r):
+    """A new timed session's «¡Hola, …!»: one name per line (task 2399), 2 and 8 seats."""
+    for n in (2, 8):
+        to_join(r, "timed", "crowd" if n > 2 else "base", pads=n)
+        join_pads(r, n)
+        for i in range(n):
+            name_seat(r, i)
+        seguir(r, '[data-focus-id^="group-"]')
+        r.settle(0.6)
+        seguir(r, ".bundles-screen")
+        r.wait('[data-focus-id="start"]:enabled')
+        r.settle(1)
+        r.click('[data-focus-id="start"]')
+        r.wait(".bundles-screen .title.hello", 5000)
+        r.settle(0.9)
+        r.shot(f"greeting-timed-{n}")
+
+
 def multiplayer(r):
     # Five seats: four pads (Xbox and PlayStation ids alternate) and keyboard and mouse.
     to_mode(r, pads=4)
@@ -1195,6 +1213,7 @@ STEPS = [
     (["mods", "mods-notice", "mods-crashed", "mods-empty"], mods),
     (["mode-multi", "join-empty", "join-name-picker", "join-5", "greeting-session", "join-8", "join-keyboard-timed",
       "choice-rr-coop", "choice-timed", "choice-rr-competitive", "bundles-session"], multiplayer),
+    (["greeting-timed-2", "greeting-timed-8"], greeting_timed),
     (["start-resume-session", "start-resume-session-2", "start-resume-session-5", "start-resume-session-8", "menu-session", "seat-lost"], in_session),
     (["level-rr-coop", "select-rr-coop", "correct-rr-coop", "wrong-rr-coop", "victory-rr-coop", "level-rr-competitive",
       "turn-rr-coop", "tower-rr-competitive", "turn-rr-competitive", "wrong-rr-competitive", "victory-rr-competitive", "victory-last-standing"], round_robin),
