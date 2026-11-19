@@ -53,7 +53,7 @@
 <style>
   .tracks {
     display: grid;
-    grid-template-columns: repeat(var(--cols), auto);
+    grid-template-columns: repeat(var(--cols), calc(16 * var(--u)));
     align-items: end;
     justify-content: center;
     gap: calc(2.4 * var(--u)) calc(2 * var(--u));

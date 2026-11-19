@@ -192,6 +192,7 @@
     flex-direction: column;
     align-items: center;
     gap: calc(0.5 * var(--u));
+    width: calc(36 * var(--u));
     padding: calc(0.8 * var(--u)) calc(1.2 * var(--u));
   }
   .seat-card.out {

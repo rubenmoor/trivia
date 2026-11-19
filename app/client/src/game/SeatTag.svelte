@@ -5,7 +5,7 @@
   import { seating } from "../lib/seats.svelte.ts";
   import Icon from "./Icon.svelte";
   import SeatDevice from "./SeatDevice.svelte";
-  import { seatColor } from "./seats.ts";
+  import { nameScale, seatColor } from "./seats.ts";
 
   let { session, seat, small = false }: { session: SessionView; seat: number; small?: boolean } = $props();
 
@@ -15,7 +15,7 @@
 {#if s}
   <span class="seat-tag glass" class:small class:out={s.status === "out" || (s.status === "lost" && session.mode !== "rr-coop")} style:--seat={seatColor(seat)}>
     {#if s.status === "won"}<Icon name="crown" />{:else}<span class="dot" aria-hidden="true"></span>{/if}
-    <span class="name">{s.player ?? seat + 1}</span>
+    <span class="name" style:font-size="{nameScale(String(s.player ?? seat + 1))}em">{s.player ?? seat + 1}</span>
     <span class="device"><SeatDevice binding={seating.binding[seat] ?? null} /></span>
   </span>
 {/if}
@@ -49,8 +49,9 @@
     background: var(--seat);
   }
   .name {
-    max-width: 12em;
+    width: 8em;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
   .device {
