@@ -50361,6 +50361,30 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2283, NULL, 'placeholder text in multiplayer modes', 'exec', 'done', NULL, '2026-11-19, app/client/src/game/screens/Timed.svelte, Level.svelte, plans/04-ui-tv-display.md', 'replace the placeholder by something meaningful (or just put nothing there, it there isn''t anything to put there). i don''t see a good reason why we still would have a placeholder string anywhere. 
 
 if i am mistaken, tell me what pending decision would need an answer to remove the placeholders', '2026-11-19T03:16:02Z', '2026-11-19T03:16:51Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2284, NULL, 'stage-media: fewer parallel encodes, ffmpeg and cwebp under nice', 'exec', 'open', NULL, NULL, '## What
+
+`app/desktop/stage-media.mjs` makes the machine unusable during a build. On a 16-core machine, a run that re-encoded videos (2026-11-18) reached a load average of about 130 with 0 % idle and 85 % CPU pressure.
+
+Why:
+- `stage-media.mjs:248` starts `availableParallelism()` workers, so 16 encodes run at once.
+- Each ffmpeg also starts its own thread for every core (libvpx-vp9 with `-row-mt 1`; the `loudnorm` passes too). That makes about 16 × 16 threads for 16 cores.
+- Nothing is niced, so the desktop, browser and editor wait behind the encodes.
+
+## Change
+
+1. **Fewer workers:** about half the cores, `Math.max(1, Math.floor(availableParallelism() / 2))`. Allow an override with an env var, e.g. `TRIVIA_MEDIA_JOBS`, documented in the file''s header comment.
+2. **Fewer threads per process:** pass `-threads N` to every ffmpeg call. For the encodes that''s `ffmpeg()` in `stage-media.mjs`; for the measuring pass it''s `measure()` in `loudness.mjs:17`. Choose N so that workers × N stays close to the core count (e.g. 2–4).
+3. **nice:** run ffmpeg, ffprobe and cwebp as `nice -n 19 <tool> …`, through one shared helper used by `stage-media.mjs` and `loudness.mjs`. `nice` comes with coreutils, so check that it''s available from `trivia-desktop-build` (flake.nix).
+
+## Don''t invalidate the encode cache
+
+The cache key in `encode()` hashes `settings` (the `VIDEO`/`AUDIO`/`IMAGE` arg lists) and the tool version lines. Keep `-threads` and `nice` **out of** `VIDEO` in `media-formats.mjs` and out of everything hashed. Add them where the command is built, so the existing cache of about 8,800 encodes in `work/ship-media/` stays valid. Thread count doesn''t change the output in any way that matters here.
+
+## Done when
+
+- A full `stage-media` run with cold videos keeps the desktop responsive. Load average stays around the core count, and the ffmpeg processes show NI 19 in `top`.
+- A rerun with nothing changed encodes 0 files (`(0 encoded now)`), which shows the cache key is unchanged.
+- `npm run check`, `npm test`, `npm run build` pass.', '2026-11-19T04:10:47Z', NULL, NULL, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -60476,6 +60500,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2496, 2283, '2026-11-19T03:16:04Z', '2026-11-19T03:16:55Z', 'done', NULL, 0, 'ad12d33bd99a4242711946373083ab463caf9942', NULL, 'claude-sonnet-5-5', '855b8462-5031-4471-90c7-87288d14046c', NULL, 8, 16, 1811, 266033, 24754, 0.14376129999999998, 39454, 60, 378630);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2497, 2271, '2026-11-19T03:23:01Z', '2026-11-19T03:29:29Z', 'done', NULL, 0, '557f09e2b4c1d7fe51a611d112858d4e9cf8aded', 'app', 'claude-sonnet-5-5', '2f2dc139-748d-4dd3-98bf-76bcc3a66196', NULL, 28, 52, 8153, 1311883, 53327, 0.42613029999999996, 68099, 60, 378630);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2498, 2272, '2026-11-19T03:29:30Z', '2026-11-19T03:55:00Z', 'failed', 'interrupted', NULL, 'f79b1d23061d98b816a4e37e9e4628d3f2d7b5bb', 'app', NULL, NULL, 2497, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 378630);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2499, 2272, '2026-11-19T03:55:05Z', NULL, 'running', NULL, NULL, '108a1b5836f634b4b6e51118a0b3e42b2564c270', 'app', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
