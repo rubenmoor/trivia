@@ -4,16 +4,17 @@
 // build/data/: app/data/ without topic bundle pools until all five topics have 2000 approved per locale (decision 520).
 // Audio and video sound is levelled to -18 LUFS after the cut (loudness.mjs).
 // Excerpt questions (decision 644): the build's pools point at `<url>#t=start,end`, one cut file per window; the media is cut to it.
+// Encodes run under nice 19, TRIVIA_MEDIA_JOBS workers (default half the cores) with 2 ffmpeg threads each (task 2284).
 // --check: no encoding; build/media against the pools and media-budget.json, exit 1 on ✗.
 // --demo (or TRIVIA_DEMO=1, as the dist:*:demo scripts set it; decision 342): only app/data/demo/ pools (all locales) → build/media-demo/,
 // no packs, no pack-media.json; budget `demo.content`. Also build/data-demo/: app/data/ without bundles/ and the full pools, with demo/.
-import { execFile, execFileSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { copyFileSync, cpSync, existsSync, linkSync, mkdirSync, readdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { availableParallelism } from "node:os";
+import { FFMPEG_THREADS, run } from "./niced.mjs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { promisify } from "node:util";
 import { filter, measure, TARGET_LUFS, TRUE_PEAK } from "./loudness.mjs";
 import { VIDEO } from "./media-formats.mjs";
 import { cacheName, excerptOf, poolUrls, shipPool, shippedName, sourceUrl } from "./resolve.mjs";
@@ -26,8 +27,8 @@ const demo = process.argv.includes("--demo") || process.env.TRIVIA_DEMO === "1";
 const cache = process.env.TRIVIA_MEDIA || path.join(REPO, "media");
 const out = path.join(HERE, "build", demo ? "media-demo" : "media");
 const encoded = path.join(process.env.TRIVIA_WORK || path.join(REPO, "work"), "ship-media");
-const run = promisify(execFile);
 const MB = 1e6;
+const JOBS = Number(process.env.TRIVIA_MEDIA_JOBS) || Math.max(1, Math.floor(availableParallelism() / 2));
 
 const version = (cmd, arg) => {
   try {
@@ -47,7 +48,7 @@ const KIND = { ".webp": "image", ".opus": "audio", ".webm": "video" };
 const LEVEL = `loudnorm ${TARGET_LUFS} ${TRUE_PEAK}`; // in the hash: a new target re-encodes
 const settings = { image: JSON.stringify(IMAGE) + JSON.stringify(GIF), audio: JSON.stringify(AUDIO) + LEVEL, video: JSON.stringify(VIDEO) + LEVEL };
 
-const ffmpeg = (src, args, dst) => run("ffmpeg", ["-nostdin", "-v", "error", "-y", "-i", src, ...args, "-map_metadata", "-1", dst]);
+const ffmpeg = (src, args, dst) => run("ffmpeg", ["-nostdin", "-threads", String(FFMPEG_THREADS), "-v", "error", "-y", "-i", src, ...args, "-map_metadata", "-1", dst]);
 
 async function image(src, dst) {
   const { stdout } = await run("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "json", src]);
@@ -245,7 +246,7 @@ async function worker() {
     }
   }
 }
-await Promise.all(Array.from({ length: availableParallelism() }, worker));
+await Promise.all(Array.from({ length: JOBS }, worker));
 
 // Stale encodes, .part files; not in the demo, whose files are a subset of the full build's cache.
 if (!demo) for (const f of readdirSync(encoded)) if (!kept.has(f)) rmSync(path.join(encoded, f));

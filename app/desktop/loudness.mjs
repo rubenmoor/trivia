@@ -1,10 +1,7 @@
 // EBU R128 levelling of shipped question audio and video sound (task 2058), used by stage-media.mjs.
 // Target -18 LUFS: measured integrated loudness of every music loop in app/client/public/audio (SOUNDTRACKS), all -18.0 ±0.1;
 // question media plays at media volume 1, the music at 0.3 × level, so it sits above the music. True peak ceiling -1.5 dBTP.
-import { execFile } from "node:child_process";
-import { promisify } from "node:util";
-
-const run = promisify(execFile);
+import { FFMPEG_THREADS, run } from "./niced.mjs";
 export const TARGET_LUFS = -18;
 export const TRUE_PEAK = -1.5;
 const LRA = 11;
@@ -14,7 +11,7 @@ const BASE = `loudnorm=I=${TARGET_LUFS}:TP=${TRUE_PEAK}:LRA=${LRA}`;
 export async function measure(src, cut = []) {
   let stderr;
   try {
-    ({ stderr } = await run("ffmpeg", ["-nostdin", "-hide_banner", "-i", src, ...cut, "-vn", "-af", `${BASE}:print_format=json`, "-f", "null", "-"]));
+    ({ stderr } = await run("ffmpeg", ["-nostdin", "-threads", String(FFMPEG_THREADS), "-hide_banner", "-i", src, ...cut, "-vn", "-af", `${BASE}:print_format=json`, "-f", "null", "-"]));
   } catch (e) {
     ({ stderr } = e);
     if (!stderr?.includes("input_i")) return null;

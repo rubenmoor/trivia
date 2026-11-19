@@ -88,7 +88,7 @@
         # `--dir`: also the dir target (release/{win,linux}-unpacked/, plan 89); `--demo` (after `--dir`): the demo (plan 173).
         trivia-desktop-build = pkgs.writeShellApplication {
           name = "trivia-desktop-build";
-          runtimeInputs = [ pkgs.git pkgs.nodejs_22 qgen pkgs.ffmpeg-headless pkgs.libwebp ];  # stage-media encodes (decision 185)
+          runtimeInputs = [ pkgs.git pkgs.nodejs_22 qgen pkgs.ffmpeg-headless pkgs.libwebp pkgs.coreutils ];  # stage-media encodes (decision 185)
           text = ''
             root=$(git rev-parse --show-toplevel 2>/dev/null) || {
               echo "trivia-desktop-build: run this inside the trivia repository" >&2; exit 2; }
