@@ -84,7 +84,7 @@ or null; plans 16, 57), `media_aids` (media-first: probe aids, picture URLs, mec
 (providers.licence_verdict, plan 53) and `played`: per age group with played data
 [{group, n, right, rated, observed, bound}] (played.review_data, state/played/stats.json; [] without, plan 109).
 """
-import argparse, json, re, sys
+import argparse, re, sys
 from http.server import ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
@@ -107,7 +107,7 @@ import reviews  # noqa: E402  (authoring/tools/reviews.py)
 from reviews import (NoQuestion, POOL, load_pool, save_pool, set_review,  # noqa: E402
                      update_question, update_translation)
 import save_file  # noqa: E402  (authoring/tools/save_file.py)
-from qgen import PROBLEMS  # noqa: E402  (authoring/tools/qgen.py; first, it loads the command modules)
+from qgen import PROBLEMS, load_age_groups, load_bundles  # noqa: E402  (authoring/tools/qgen.py; first, it loads the command modules)
 from audit import audit_of, is_major, translation_audit_of  # noqa: E402  (authoring/tools/audit.py)
 from translate import demo_listed  # noqa: E402  (authoring/tools/translate.py)
 from validate import run_ids  # noqa: E402  (authoring/tools/validate.py)
@@ -185,29 +185,51 @@ def played_outliers(items, data, key_of=lambda x: (x["id"], translations.source_
     return [by_key[(i, l)] for i, l, _ in (data or {"outliers": []})["outliers"] if (i, l) in by_key]
 
 
+def filter_pairs(pairs, query, audit_fn):
+    """pairs of (item, source question): the query's filters, the same for translations and sources (plan 67).
+    batch, status, reviewer, audit read the item; bundle, subcategory, media, licence, demo the source."""
+    def keep(pred):
+        return [p for p in pairs if pred(*p)]
+    if "batch" in query:
+        want = None if query["batch"] == "none" else query["batch"]
+        pairs = keep(lambda x, q: x.get("batch") == want)
+    if "run" in query:
+        ids = run_ids(query["run"]) or []
+        by_id = {q["id"]: (x, q) for x, q in pairs}
+        pairs = [by_id[i] for i in ids if i in by_id]
+    if "status" in query:
+        pairs = keep(lambda x, q: matches_status(x, query["status"]))
+    if "reviewer" in query:
+        want = None if query["reviewer"] == "none" else query["reviewer"]
+        pairs = keep(lambda x, q: (x.get("review") or {}).get("reviewer") == want)
+    if "bundle" in query:
+        pairs = keep(lambda x, q: q.get("bundle") == query["bundle"])
+    if "subcategory" in query:
+        pairs = keep(lambda x, q: q["subcategory"] == sub_of(query))
+    if query.get("media") == "missing":
+        pairs = keep(lambda x, q: not q["media"].get("file_url"))
+    if query.get("licence") == "replace":
+        pairs = keep(lambda x, q: media.to_replace(q))
+    if query.get("demo") == "1":
+        listed = set(demo_listed())
+        pairs = keep(lambda x, q: q["id"] in listed)
+    if query.get("audit") == "flagged":
+        pairs = keep(lambda x, q: (a := audit_fn(x)) and is_major(a))
+    return pairs
+
+
+def sample_pairs(pairs, query, group):
+    if query.get("sample") and group:
+        by_id = {q["id"]: (x, q) for x, q in pairs}
+        pairs = [by_id[i] for i in spot_checks.sample(group) if i in by_id]
+    return pairs
+
+
 def locale_questions(locale, query):
     """GET /api/questions?locale=…: the translations as items, filtered (plan 67)."""
     src = {q["id"]: q for q in load_pool()["questions"]}
     pairs = [(t, src[t["id"]]) for t in translations.load(locale)["questions"] if t["id"] in src]
-    if "batch" in query:
-        want = None if query["batch"] == "none" else query["batch"]
-        pairs = [(t, q) for t, q in pairs if t.get("batch") == want]
-    if "status" in query:
-        pairs = [(t, q) for t, q in pairs if matches_status(t, query["status"])]
-    if "reviewer" in query:
-        want = None if query["reviewer"] == "none" else query["reviewer"]
-        pairs = [(t, q) for t, q in pairs if (t.get("review") or {}).get("reviewer") == want]
-    if "bundle" in query:
-        pairs = [(t, q) for t, q in pairs if q.get("bundle") == query["bundle"]]
-    if "subcategory" in query:
-        pairs = [(t, q) for t, q in pairs if q["subcategory"] == sub_of(query)]
-    if query.get("media") == "missing":
-        pairs = [(t, q) for t, q in pairs if not q["media"].get("file_url")]
-    if query.get("licence") == "replace":
-        pairs = [(t, q) for t, q in pairs if media.to_replace(q)]
-    if query.get("demo") == "1":
-        listed = set(demo_listed())
-        pairs = [(t, q) for t, q in pairs if q["id"] in listed]
+    pairs = filter_pairs(pairs, {k: v for k, v in query.items() if k != "run"}, translation_audit_of)
     if query.get("stale") == "1":
         pairs = [(t, q) for t, q in pairs if translations.is_stale(t, q)]
     if query.get("plays") == "1":
@@ -215,11 +237,7 @@ def locale_questions(locale, query):
     data = played.review_data(locale)
     if query.get("played") == "outliers":
         pairs = played_outliers(pairs, data, lambda p: (p[0]["id"], locale))
-    if query.get("sample") and query.get("batch"):
-        by_id = {t["id"]: (t, q) for t, q in pairs}
-        pairs = [by_id[i] for i in spot_checks.sample(query["batch"]) if i in by_id]
-    if query.get("audit") == "flagged":
-        pairs = [(t, q) for t, q in pairs if (a := translation_audit_of(t)) and is_major(a)]
+    pairs = sample_pairs(pairs, query, query.get("batch"))
     items = [locale_item(t, q, locale, data) for t, q in pairs]
     if query.get("plays") == "1":  # the pool for the locale also has its own sources (decision 235)
         own = {k: query[k] for k in ("bundle", "subcategory", "media", "licence") if k in query}
@@ -229,39 +247,12 @@ def locale_questions(locale, query):
 
 def source_questions(query):
     """GET /api/questions without a locale: the source pool, filtered."""
-    qs = load_pool()["questions"]
-    if "batch" in query:
-        want = None if query["batch"] == "none" else query["batch"]
-        qs = [q for q in qs if q.get("batch") == want]
-    if "run" in query:
-        ids = run_ids(query["run"]) or []
-        by_id = {q["id"]: q for q in qs}
-        qs = [by_id[i] for i in ids if i in by_id]
-    if "status" in query:
-        qs = [q for q in qs if matches_status(q, query["status"])]
-    if "bundle" in query:
-        qs = [q for q in qs if q.get("bundle") == query["bundle"]]
-    if "reviewer" in query:
-        want = None if query["reviewer"] == "none" else query["reviewer"]
-        qs = [q for q in qs if (q.get("review") or {}).get("reviewer") == want]
-    if "subcategory" in query:
-        qs = [q for q in qs if q["subcategory"] == sub_of(query)]
-    if query.get("media") == "missing":
-        qs = [q for q in qs if not q["media"].get("file_url")]
-    if query.get("sample") and (group := query.get("batch") or query.get("run")):
-        by_id = {q["id"]: q for q in qs}
-        qs = [by_id[i] for i in spot_checks.sample(group) if i in by_id]
-    if query.get("licence") == "replace":
-        qs = [q for q in qs if media.to_replace(q)]
-    if query.get("demo") == "1":
-        listed = set(demo_listed())
-        qs = [q for q in qs if q["id"] in listed]
-    if query.get("audit") == "flagged":
-        qs = [q for q in qs if (a := audit_of(q)) and is_major(a)]
+    pairs = filter_pairs([(q, q) for q in load_pool()["questions"]], query, audit_of)
     data = played.review_data()
     if query.get("played") == "outliers":
-        qs = played_outliers(qs, data)
-    return [with_extras(q, data) for q in qs]
+        pairs = played_outliers(pairs, data, lambda p: (p[0]["id"], translations.source_locale(p[0])))
+    pairs = sample_pairs(pairs, query, query.get("batch") or query.get("run"))
+    return [with_extras(q, data) for q, _ in pairs]
 
 
 def questions_of(query):
@@ -325,10 +316,6 @@ def search_media(qid, query, slot, every=False):
     return q
 
 
-def load_bundles():
-    return json.loads(layout.BUNDLES.read_text(encoding="utf-8"))["bundles"]
-
-
 def set_bundle(qid, bundle):
     if bundle not in {b["id"] for b in load_bundles()}:
         raise ValueError(f"unknown bundle {bundle!r} (app/data/bundles.json)")
@@ -336,7 +323,7 @@ def set_bundle(qid, bundle):
 
 
 def set_difficulty(qid, difficulty, update=update_question):
-    lo, hi = json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8"))["scale"]
+    lo, hi = load_age_groups()["scale"]
     if type(difficulty) is not int or not lo <= difficulty <= hi:  # bool is an int subclass
         raise ValueError(f"difficulty must be an integer from {lo} to {hi}")
 
@@ -379,13 +366,7 @@ def apply_flags():
     done = []
     for qid, flag in pending.items():
         locale = flag.get("locale") or "es"
-        where = ", ".join([*filter(None, [flag.get("player"), flag["flagged_on"][:10]]),
-                           *([locale] if locale != "es" else [])])
-        note = f": {flag['note']}" if flag.get("note") else "."
-        shown = flag.get("shown")
-        seen = (f" · Vista: «{shown['question']}» Respuesta: «{shown['answer']}»; otras: "
-                f"{' / '.join(f'«{w}»' for w in shown['wrong_answers'])}." if shown else "")
-        if reviews.needs_work(qid, locale, f"Marcada en el juego ({where}){note}{seen}", known) is None:
+        if reviews.needs_work(qid, locale, reviews.flag_feedback(flag), known) is None:
             print(f"Flag for unknown question {qid} ({locale}) dropped", file=sys.stderr)
             continue
         done.append(qid if reviews.landing(qid, locale, known)[0] is None else f"{qid} ({locale})")
@@ -405,7 +386,7 @@ GET_API = {
     "/api/spot-checks": lambda query: {"size": spot_checks.size(), "problems": PROBLEMS, "checks": spot_checks.load()},
     "/api/overview": lambda query: overview.build(load_pool()["questions"], load_bundles()),
     "/api/stats/media": media_stats_of,
-    "/api/age-groups": lambda query: json.loads(layout.AGE_GROUPS.read_text(encoding="utf-8")),
+    "/api/age-groups": lambda query: load_age_groups(),
     "/api/bundles": lambda query: load_bundles(),
     "/api/names": names_of,
     "/api/targets": lambda query: targets.load_all(),
