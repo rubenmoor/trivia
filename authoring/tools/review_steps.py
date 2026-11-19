@@ -185,7 +185,7 @@ def cmd_review(args):
     ratings, checks = collect(d)
     locale = run_locale(d)
     pool = in_locale(locale) if locale else load_json(POOL)["questions"]
-    pool_en = None if locale else as_locale(pool, "en")
+    pool_en = as_locale(pool, "en")
     names = ["house-style", "review", *(["translate-review"] if locale else [])]
     notes = translator_notes(d) if locale else {}
     mode = run_mode(args.run)
@@ -217,7 +217,7 @@ def cmd_review(args):
             "notes": notes.get(q["id"], ""),
             "rater_notes": (ratings.get(tmp) or {}).get("notes"),
             "fact_check": {k: check[k] for k in ["verdict", "problem", "correction"]} if check else "not needed",
-            "related": related_questions(q, pool),
+            "related": related_questions(q, pool, pool_en),
             "media": {**{k: q["media"].get(k) for k in ["type", "role", "query", "note"]}, "title": media_title(q)},
             "background": {"title": media_title(q, "background")} if q.get("background") else None,
             "can_search_again": False,
