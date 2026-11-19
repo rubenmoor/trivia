@@ -13,7 +13,7 @@ The steps run in order; a pm worker raises each decision and never waits on it (
    - Per source locale (plan 148): a batch's questions are in its source locale (`base` ≤ batch-8 `es`, from batch-9 `en`; a regional bundle its region's), checked in that language; batch-9 and batch-10 keep 30 (decision 234); `qgen report --qc` shows each batch's source locale, so en agreement is read apart from es.
    - Larger check of one run (decision 228: batch-8, 120): its `"size"` in `authoring/data/spot-checks.json`; the first 30 stay a prefix; `qgen audit --batch <batch>` audits up to that size.
    - The LLM decision, feedback and audit stay hidden until you decide; then they show next to yours. Mark the problem kinds in the feedback box.
-   - Recorded in `authoring/data/spot-checks.json`; undo removes the item; a back-audit or neutralize run also keeps its `ids` there (`qgen validate` needs no `work/`).
+   - Recorded in `authoring/data/spot-checks.json`; undo removes the item; a back-audit run also keeps its `ids` there (`qgen validate` needs no `work/`).
    - pm worker: can't do this. `pm decision add "Spot check <batch> done?"` (body: the link, the size, `trivia-authoring`; option "done"), no `pm task-pending-decision`, no stop; the next QC task reads the answer.
 3. **QC report.** `qgen report --qc <batch>`: rewrites "## Quality control" in `authoring/reports/<batch>.md`.
    - Agreement (both accept or both don't) against `quality.min_agreement` (90 %), false approves, false needs_work, difficulty |Δ| ≥ 2, media changed, audit/human agreement.
@@ -44,16 +44,6 @@ The steps run in order; a pm worker raises each decision and never waits on it (
 - `qgen report --qc` trend: a "mode" row marks each column; below the table one row sums agreement across all media-first runs (✓/✗ against the bar) and counts their disagreements per problem kind.
 - Batch health (`batch_health.media-first` in `targets.json`, over the base thresholds): `media share` not applied; new rows `giveaway-step drop rate` (drafts the giveaway step removed, of those designed) and `mechanical-check rate` (questions with a hard mechanical finding at record); `$ per approved` ≤ $0.60. Starting numbers from the pilot and trial: adjust after the first runs.
 - Findings → proposals (step 4) as above; the media prompts are `review.md` and `audit.md` media-first sections and `media-design.md`.
-
-## Neutralize runs
-
-A `qgen neutralize` run (D-83) changes approved questions, so it gets the same steps as a batch, with `neutralize-<n>` in place of `<batch>`.
-
-- Report: `authoring/reports/neutralize-<n>.md` (Audit section included).
-- Flagged audit findings: `http://127.0.0.1:8001/review?run=neutralize-<n>&audit=flagged`.
-- Spot check: `http://127.0.0.1:8001/review?run=neutralize-<n>&sample=1`.
-- QC report: `qgen report --qc neutralize-<n>`; the trend table has a column per run.
-- Extra check in the spot check: the wording is neutral, the meaning unchanged.
 
 ## Translation runs
 

@@ -57,7 +57,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
   | "is an unfinished … run; this command doesn't finish it" | `Unfinished run of the other mode: run the named command?` | the message |
   | step 1: dirty tree | `Dirty tree before <task>'s batch: what to do?` | `git status --porcelain` |
 
-- **Step 4:** run exactly the printed `git add` line(s); don't run the printed `git commit` (pm commits as "task N: …"). Same for `qgen rework`, `tighten`, `neutralize`, `video-window`, `audit --backlog`.
+- **Step 4:** run exactly the printed `git add` line(s); don't run the printed `git commit` (pm commits as "task N: …"). Same for `qgen rework`, `tighten`, `video-window`, `audit --backlog`.
 - **Step 5:** `pm task done <task> "<YYYY-MM-DD>, Done: <the Done: line>, <the claude: line>, report <path>"`.
 - **Every stop** (decision, fix task, `pm task done`): the `claude:` line of each `qgen` run in the task goes into the task's note or the decision's body (decision 208).
 
@@ -68,7 +68,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Change prompts, `qgen.py`, `media.py` or the subcategory list to get past a failure.
 - Run `qgen concepts`, or pass arguments to `qgen batch` other than a `--bundle`, `--translate` or `--media-first` the user named. `--files` and `--until` (media-first) are the developer's. They exist for the developer's debugging.
 - Create bundles (`qgen bundle new`), run `qgen taxonomy`, or edit any bundle's categories or category names (`names.<locale>.json`). That is the developer's call.
-- Approve, reject or revise questions that `qgen batch` marked `needs_work`. The developer decides those in the review tool, or asks for `qgen rework`: then run exactly that (with `--batch` only if the user names one), act on the exit code as in step 3, and commit what it prints. The same goes for `qgen tighten`, `qgen neutralize` and `qgen video-window` (no arguments; it cuts video questions to their 30 s window and re-checks the clue, `--dry-run` first) when the developer asks for them.
+- Approve, reject or revise questions that `qgen batch` marked `needs_work`. The developer decides those in the review tool, or asks for `qgen rework`: then run exactly that (with `--batch` only if the user names one), act on the exit code as in step 3, and commit what it prints. The same goes for `qgen tighten` and `qgen video-window` (no arguments; it cuts video questions to their 30 s window and re-checks the clue, `--dry-run` first) when the developer asks for them.
 - Run `qgen audit --backlog` unless the developer asks for it (with `--slice N` only if they name a size); act on the exit code as in step 3 and commit what it prints.
 
 ## Media-first batches
@@ -82,7 +82,7 @@ A pm worker (environment `PM_WORKER=1`) follows the steps above with these chang
 - Questions with `media.excerpt` go into the playable pools with it (`pool_export.MEDIA_PLAY_FIELDS`).
 - Never touch the ledger `work/media-first/files.jsonl` or the survey `work/media-survey/`; the batch maintains them.
 - After the merge the run deletes the cached files it downloaded that no pool pick (any checkout's pools, `app/data/`, `mods/`) or other unfinished run uses (task 2140; prints count and GB freed); `trivia-media sync --prune` does the same for the whole cache (picks of every git worktree incl. `../trivia-review`, `app/data/` and `mods/` are kept).
-- After a batch's spot check and QC (`authoring/QC.md`), `qgen gc` (`--dry-run` first) deletes that batch's `work/<batch>/sheets/` (finished rework, tighten and neutralize runs too, once every question they touched has a human review or a later one) and the frames, thumbs and pictures of probes only finished, checked batches use (`probe.json`, `speech.txt`, `ocr.txt` stay); the review page then shows no picture for them.
+- After a batch's spot check and QC (`authoring/QC.md`), `qgen gc` (`--dry-run` first) deletes that batch's `work/<batch>/sheets/` (finished rework and tighten runs too, once every question they touched has a human review or a later one) and the frames, thumbs and pictures of probes only finished, checked batches use (`probe.json`, `speech.txt`, `ocr.txt` stay); the review page then shows no picture for them.
 
 ## What the batch does (for reference)
 
