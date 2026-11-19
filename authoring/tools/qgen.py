@@ -23,7 +23,6 @@ It runs its steps in a fixed order (concepts, draft, rate, factcheck, revise, me
     qgen health ack <batch> <note>  # clears a failing batch's stop of `qgen batch` (D-55)
     qgen rework [--batch <batch>] [--model fable]   # needs_work questions once more through fix and review (QG-23)
     qgen video-window [--dry-run] [--model opus]   # every video question cut to its 30 s window and re-checked (plan 216)
-    qgen tighten                    # find long-winded questions in the whole pool, shorten and review them (QG-24)
     qgen export                     # app/data/pool.json (+ packs' bundles/<id>/pool.json) from authoring/data/questions.json
     qgen report [--run <run>] [--bundle <id>] [--locale <locale>] [--subcategories] [--calibration [<batch>…]]
                 [--overlaps] [--batches [<batch>…]] [--exit-check]
@@ -1782,7 +1781,7 @@ def media_first_steps(run, jobs, files, ns):
     ]
 
 
-# --- health ack, rework, scans: tighten ---------------------------
+# --- health ack, rework ---------------------------
 
 def cmd_gc(args):
     import work_gc  # authoring/tools/work_gc.py
@@ -1954,9 +1953,6 @@ def main():
     rw.add_argument("--model", choices=["opus", "fable"],
                     help="model for fix and review 1 (default opus; plan 58); review 2 stays opus")
     rw.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
-    tg = sub.add_parser("tighten", help="find long-winded questions in the whole pool, shorten and review them (QG-24)")
-    tg.set_defaults(fn=cmd_tighten)
-    tg.add_argument("--jobs", type=int, default=3, help=argparse.SUPPRESS)
     dm = sub.add_parser("demo", help="the demo's question list: size, propose, check (plan 174)")
     dm.set_defaults(fn=demo.main)
     dmx = dm.add_mutually_exclusive_group(required=True)
@@ -1997,7 +1993,7 @@ from audit import BACKAUDIT_SLICE, audit_section, cmd_audit
 from player_reports import cmd_flag, cmd_telemetry
 from report import REVIEW_GAP_MIN, cmd_report, count, qc_section
 from review_steps import BATCH_SLOTS, REVIEW_MODEL, batch_questions, cmd_fix, cmd_media, cmd_record, cmd_research, cmd_review, cmd_sheets, slots_of
-from rework import cmd_rework, cmd_tighten
+from rework import cmd_rework
 from taxonomy import cmd_bundle_new, cmd_remap, cmd_taxonomy
 from translate import LANGUAGES, cmd_translate, cmd_translate_batch, in_locale, merge_translations, run_bundle, run_locale, text_locale, translated_drafts
 from validate import cmd_validate, validate_pool

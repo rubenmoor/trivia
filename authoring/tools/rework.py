@@ -1,5 +1,5 @@
-"""`qgen rework` and `tighten`: scans and revisions of the whole pool (QG-23, QG-24). Never ships (D-35)."""
-import argparse, datetime, json, sys, time
+"""`qgen rework`: needs_work questions once more through fix and review (QG-23). Never ships (D-35)."""
+import argparse, datetime, sys, time
 
 import layout  # paths (D-35)
 from layout import REPO as ROOT, SOURCE_POOL as POOL, WORK
@@ -8,12 +8,11 @@ import flag_loop  # authoring/tools/flag_loop.py
 import progress  # authoring/tools/progress.py: the plain log (QG-18, task 1131)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
-from qgen import STR, claude, cmd_export, cmd_sync_run, load_json, locale_chunks, parallel, prompt, run_dir, run_steps, save_json  # authoring/tools/qgen.py
+from qgen import cmd_export, cmd_sync_run, load_json, run_steps, save_json  # authoring/tools/qgen.py
 
 
 def revise_steps(ns, model, review_model):
-    """fix → fact check → review with a new media search (a media-first question: background only) → record: rework and the scan modes (QG-23);
-    a scan run searches only slots without a kept pick (kept_slots)."""
+    """fix → fact check → review with a new media search (a media-first question: background only) → record: rework (QG-23)."""
     return [
         ("fix", cmd_fix, ns(model=model, check_model="sonnet")),
         ("giveaway", lambda a: media_first.check_fixed(a.run), ns()),  # media-first questions only (plan 203)
@@ -83,75 +82,6 @@ def record_flag_causes(run, flagged):
         print(line)
 
 
-SCAN_SCHEMA = {"type": "object", "required": ["flagged"], "properties": {"flagged": {"type": "array", "items": {
-    "type": "object", "required": ["id", "issue"], "properties": {"id": STR, "issue": STR}}}}}
-SCAN_CHUNK = 50
-SCANS = {  # run mode: scan prompt, questions read, their input, the reviser's issue prefix (QG-24)
-    "tighten": {"prompt": "tighten", "bundle": None, "issue": "too long", "schema": SCAN_SCHEMA,
-                "item": lambda q: {"id": q["id"], "clue": (q.get("axes") or {}).get("clue"), "question": q["question"]}},
-}
-
-
-def cmd_scan(args):
-    """Claude reads every approved and needs_work question of the run's scope in chunks of SCAN_CHUNK and flags
-    those its mode's prompt asks for (SCANS); run.json gets their ids and issues."""
-    d = run_dir(args)
-    cfg = load_json(d / "run.json", {})
-    if "issues" in cfg:
-        return []
-    scan, only = SCANS[cfg["mode"]], set(cfg.get("only") or [])
-    qs = [q for q in load_json(POOL)["questions"] if q["status"] in ("approved", "needs_work")
-          and (not scan["bundle"] or (q.get("bundle") or "base") == scan["bundle"]) and (not only or q["id"] in only)]
-    groups = [g for g in locale_chunks(qs, SCAN_CHUNK) if not (d / "scan" / f"{g[0]['id']}.json").exists()]
-
-    def work(group):
-        items = [scan["item"](q) for q in group]
-        system = prompt("house-style", scan["prompt"], locale=translations.source_locale(group[0]))
-        out = claude(system, "## Questions\n" + json.dumps(items, ensure_ascii=False), scan["schema"], args.model, d)
-        ids = {q["id"] for q in group}
-        save_json(d / "scan" / f"{group[0]['id']}.json", [f for f in out["flagged"] if f["id"] in ids])
-
-    errors = parallel(work, groups, args.jobs, "scan", "calls")
-    if not errors:
-        issues = {f["id"]: f["issue"] for p in sorted((d / "scan").glob("*.json")) for f in load_json(p)}
-        save_json(d / "run.json", {**cfg, "ids": list(issues), "scanned": len(qs), "issues": issues})
-        print(f"  {len(issues)} of {len(qs)} questions flagged", flush=True)
-    return errors
-
-
-def cmd_tighten(args):
-    """Find long-winded questions in the whole pool, approved ones included, then shorten, fact-check,
-    review and record them like `qgen rework` (QG-24). Kept and dropped ones stay as they were."""
-    run, resuming = mode_run("tighten")
-    if resuming:
-        print(f"Resuming {run}.", flush=True)
-    else:
-        save_json(WORK / run / "run.json", {"mode": "tighten", "started": datetime.date.today().isoformat()})
-        print(f"Starting {run}: reading the whole pool.", flush=True)
-    d = WORK / run
-    progress.verbose = False
-
-    def ns(**kw):
-        return argparse.Namespace(run=run, jobs=args.jobs, **kw)
-
-    t0 = run_steps([
-        ("scan", cmd_scan, ns(model="opus")),
-        *revise_steps(ns, "opus", REVIEW_MODEL),
-        ("export", lambda a: cmd_export(a) or [], ns()),
-        ("sync", cmd_sync_run, ns()),
-    ], "qgen tighten")
-    cfg = load_json(d / "run.json")
-    save_json(d / "run.json", {**cfg, "done": datetime.date.today().isoformat()})
-    revised = [p.stem for p in (d / "reviews").glob("*.json") if fixed(load_json(p))]
-    by_id = {q["id"]: q for q in load_json(POOL)["questions"]}
-    n_ok = sum(by_id[i]["status"] == "approved" for i in revised if i in by_id)
-    print(f"\nDone: {run}: {len(cfg.get('ids', []))} flagged, {len(revised)} shortened, {n_ok} of those approved, "
-          f"{len(revised) - n_ok} need work (took {progress.duration(time.monotonic() - t0)}).")
-    files = ["authoring/data/questions.json", "app/data/pool.json", "app/data/bundles/", "app/data/demo/", *stale_lines(revised, by_id)]
-    print(f"Commit exactly this:\n  git add {' '.join(files)}\n"
-          f"  git commit -m \"{run}: {len(revised)} long-winded questions shortened, {n_ok} approved (qgen tighten)\"")
-
-
 def stale_lines(revised, by_id):
     """Prints per locale how many translations the rewritten questions staled (D-81); returns the
     base pool paths (`es`: pool.json) export rewrote."""
@@ -166,5 +96,5 @@ def stale_lines(revised, by_id):
 
 
 # the other command groups, after everything here is defined (they import each other)
-from audit import cmd_audit, mode_run  # authoring/tools/audit.py
-from review_steps import REVIEW_MODEL, batch_questions, cmd_fix, cmd_media, cmd_record, cmd_research, cmd_review, cmd_sheets, fixed  # authoring/tools/review_steps.py
+from audit import mode_run  # authoring/tools/audit.py
+from review_steps import REVIEW_MODEL, batch_questions, cmd_fix, cmd_media, cmd_record, cmd_research, cmd_review, cmd_sheets  # authoring/tools/review_steps.py
