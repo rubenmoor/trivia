@@ -1,11 +1,11 @@
 {
  "name": "acierto-4",
- "library": "Kenney Digital Audio",
- "title": "powerUp3",
+ "library": "Kenney Casino Audio",
+ "title": "chips-collide-3",
  "author": "Kenney",
- "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "page": "https://opengameart.org/content/54-casino-sound-effects-cards-dice-chips",
  "download": "",
- "sha256": "1f1092292b31a41a2bb0e4338ab53e5665f37771b3d3de101ac1433ebfa40a23",
+ "sha256": "1c5e885f72b64c38fff7ef05579e49310e7acf026cf123ffb65fffb57fb06e1c",
  "downloaded": "2026-11-18",
  "licence": {
   "spdx": "CC0-1.0",
@@ -14,7 +14,7 @@
  "cues": [
   "fanfare"
  ],
- "class": "jingle",
+ "class": "effect",
  "stereo": false,
  "cut": {
   "start": null,
@@ -22,5 +22,5 @@
   "gain_db": null
  },
  "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
- "credit": "\"powerUp3\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+ "credit": "\"chips-collide-3\" by Kenney (https://opengameart.org/content/54-casino-sound-effects-cards-dice-chips), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
 }

@@ -1,11 +1,11 @@
 {
  "name": "impacto",
- "library": "Kenney Digital Audio",
- "title": "lowThreeTone",
+ "library": "Kenney RPG Audio",
+ "title": "doorClose_2",
  "author": "Kenney",
- "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "page": "https://opengameart.org/content/50-rpg-sound-effects",
  "download": "",
- "sha256": "d9d30d3b2b34e3f05f489813a59b15745150f41b0c07c1dd93912c89ce338fc1",
+ "sha256": "4aa4fe79836c53cd6d0cb0b22ddc33b9901429463ae1bb75131f072683f63f21",
  "downloaded": "2026-11-18",
  "licence": {
   "spdx": "CC0-1.0",
@@ -22,5 +22,5 @@
   "gain_db": null
  },
  "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
- "credit": "\"lowThreeTone\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+ "credit": "\"doorClose_2\" by Kenney (https://opengameart.org/content/50-rpg-sound-effects), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
 }

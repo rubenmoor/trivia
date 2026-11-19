@@ -70,7 +70,7 @@ const EFFECT_NAMES = [
   "cohete-sube", "explosion-1", "explosion-2", "explosion-3", "confeti-pum", "chispas", "brillo-estrellas",
   "disolver", "derretir", "agujero-negro", "pajaros", "gelatina",
   "maquina-escribir",
-  "acierto-1", "acierto-2", "acierto-3", "acierto-4", "acierto-5", "error", "golpe-torre", "impacto",
+  "acierto-1", "acierto-2", "acierto-3", "acierto-4", "error", "golpe-torre", "impacto",
   "pop-1", "pop-2", "pop-3", "tic", "whoosh-pantalla", "swoosh-pregunta", "pagina",
   "comodin-listo", "comodin-despliega", "comodin-activa", "varita-magica", "campanilla", "escoba-suave", "carta-gira",
   "corcho-sale", "cinta-atras", "sello-seco", "triturado", "latido-grave", "cristal-roto", "susurro-nota", "ficha-vuelve",
@@ -88,7 +88,7 @@ let samplesReady = false;
 const SAMPLE_FOR: Partial<Record<Cue, [Sample | readonly Sample[], ((level: number) => number)?]>> = {
   "applause-big": ["aplausos-gran"],
   applause: ["aplausos"],
-  fanfare: [["acierto-1", "acierto-2", "acierto-3", "acierto-4", "acierto-5"]],
+  fanfare: [["acierto-1", "acierto-2", "acierto-3", "acierto-4"], () => 0.95 + Math.random() * 0.1],
   "sad-trombone": ["error"],
   boom: ["impacto"],
   "padlock-close": ["candado-cierra"],

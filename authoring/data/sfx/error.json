@@ -1,11 +1,11 @@
 {
  "name": "error",
- "library": "Kenney Digital Audio",
- "title": "lowDown",
+ "library": "Kenney RPG Audio",
+ "title": "dropLeather",
  "author": "Kenney",
- "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "page": "https://opengameart.org/content/50-rpg-sound-effects",
  "download": "",
- "sha256": "7cb72968216a27079304ecc78d1993ddee2dc88fd6a0bba3c76617745889f233",
+ "sha256": "097e1d3b74949b0145fda0519d40b7e0773ab82ec4858727f95be830927e1a45",
  "downloaded": "2026-11-18",
  "licence": {
   "spdx": "CC0-1.0",
@@ -22,5 +22,5 @@
   "gain_db": null
  },
  "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
- "credit": "\"lowDown\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+ "credit": "\"dropLeather\" by Kenney (https://opengameart.org/content/50-rpg-sound-effects), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
 }

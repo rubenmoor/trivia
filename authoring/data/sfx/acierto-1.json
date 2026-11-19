@@ -1,11 +1,11 @@
 {
  "name": "acierto-1",
- "library": "Kenney Digital Audio",
- "title": "threeTone1",
+ "library": "Kenney RPG Audio",
+ "title": "handleCoins",
  "author": "Kenney",
- "page": "https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc",
+ "page": "https://opengameart.org/content/50-rpg-sound-effects",
  "download": "",
- "sha256": "8d074d428a4df9e28b7b9b3ec90f98b166aa2813e5ec1d467a4c1e985558d0e8",
+ "sha256": "8a91f969e932df709df80ee124d86a51389eed9b67f22e5e716bc2bbf60d8dab",
  "downloaded": "2026-11-18",
  "licence": {
   "spdx": "CC0-1.0",
@@ -14,7 +14,7 @@
  "cues": [
   "fanfare"
  ],
- "class": "jingle",
+ "class": "effect",
  "stereo": false,
  "cut": {
   "start": null,
@@ -22,5 +22,5 @@
   "gain_db": null
  },
  "adapted": "Adapted: cut, silence trimmed, faded, loudness changed.",
- "credit": "\"threeTone1\" by Kenney (https://opengameart.org/content/63-digital-sound-effects-lasers-phasers-space-etc), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
+ "credit": "\"handleCoins\" by Kenney (https://opengameart.org/content/50-rpg-sound-effects), licensed under CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/ . Adapted: cut, silence trimmed, faded, loudness changed."
 }
