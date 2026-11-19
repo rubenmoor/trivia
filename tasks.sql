@@ -619,7 +619,7 @@ INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, qu
 - A flag sent from the released game under Steam arrives via `qgen flag --pull` as a needs_work review; without the server the copy fallback works.
 
 Plan files: `plans/11-steam.md`.', '2026-10-11T21:55:09Z', NULL, 0);
-INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'Conquer the world', 'on-hold', 'add chinese lanaguage to the game. first evaluate, which language exactly and what each entails. I can think of two or three main dialects of mainland china and taiwanese in addition.
+INSERT INTO milestone (id, subject, status, body, created_at, implemented_at, queue_index) VALUES (12, 'To China!', 'on-hold', 'add chinese lanaguage to the game. first evaluate, which language exactly and what each entails. I can think of two or three main dialects of mainland china and taiwanese in addition.
 
 this implies translation of the game and the whole interface, but also: the translation of questions, which is far more translation work. We will start with the base bundle, i.e. when selecting a chinese language in the game, the current logic applies and only those bundles that offer this language will be shown resulting in only the base bundle until we add the translation of other bundles.
 
@@ -38299,7 +38299,7 @@ leave it as it is if it still fits. An edit queues the revision of the plans bel
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1365, 153, 'write the masterplan of milestone 17: Remote Play Together', 'masterplan', 'done', NULL, '2026-10-16, tasks.sql (plan 153 body and intro; decisions 283, 284)', 'Write plan 153, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-16T17:05:30Z', '2026-10-16T21:01:50Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1366, 60, 'revise the masterplan of milestone 12: Conquer the world', 'revise', 'open', 1000, NULL, '`milestone 12: Conquer the world` changed. Bring `plan 60: masterplan`, the masterplan, in line with it (`pm plan edit 60 --body -`), or
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1366, 60, 'revise the masterplan of milestone 12: To China!', 'revise', 'open', 1000, NULL, '`milestone 12: To China!` changed. Bring `plan 60: masterplan`, the masterplan, in line with it (`pm plan edit 60 --body -`), or
 leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T17:32:08Z', NULL, NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1367, 154, 'write the masterplan of milestone 18: Playable demo', 'masterplan', 'done', NULL, '2026-10-17, plan 154 body and intro, decision 335', 'Write plan 154, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
