@@ -40,6 +40,7 @@ A trivia/Q&A party game that runs locally and offline; the code and question poo
 | [`23-media-providers.md`](23-media-providers.md) | Free media providers next to Commons (Openverse, Pexels, Freesound, NASA), licence allowlist, per-slot order (D-45) | draft |
 | [`24-career.md`](24-career.md) | Career: 7 subjects, grades, 39 badges, score and rank, Steam live order (milestone 20) | agreed |
 | [`25-sound.md`](25-sound.md) | Sound: inventory of every cue, track and file; the sound brief (milestone 22) | draft |
+| [`26-china.md`](26-china.md) | Chinese variants (zh-Hans, zh-Hant), fonts, translation cost, the Chinese audience: licence, sensitivity, reachability, PIPL (milestone 12) | draft |
 | [`project.md`](project.md) | Milestones; all open tasks and questions grouped by milestone | living |
 | [`backlog.md`](backlog.md) | Additional tasks found along the way | living |
 | [`open-questions.md`](open-questions.md) | Questions and answers up to 2026-10-12; new questions are `pm` decisions | frozen |
