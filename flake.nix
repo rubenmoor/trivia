@@ -214,7 +214,7 @@
         let tools = authoringTools pkgs; in {
           default = pkgs.mkShell {
             packages = [
-              pkgs.nodejs_22 (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile ])) pkgs.ruff pkgs.imagemagick pkgs.claude-code pkgs.electron
+              pkgs.nodejs_22 (pkgs.python3.withPackages (p: [ p.numpy p.librosa p.soundfile p.fonttools p.brotli ])) pkgs.ruff pkgs.imagemagick pkgs.claude-code pkgs.electron
               tools.qgen tools.trivia-media tools.trivia-authoring tools.trivia-dev tools.trivia-desktop
               tools.trivia-music tools.trivia-sfx tools.trivia-desktop-build tools.trivia-report-server tools.trivia-gallery tools.trivia-trailer
               pkgs.xvfb  # authoring/store/screenshots.mjs, authoring/steam/smoke.mjs
