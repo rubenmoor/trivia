@@ -38,7 +38,7 @@ A **bundle** is a named set of questions that players can switch on or off befor
 - The build keeps topic pools out until then: `stage-media.mjs` writes `app/desktop/build/data/` (the build's `resources/data/`) without a topic `pool[.<locale>].json` unless all five topics have 2000 approved in that locale (counted in the exported pools); `trivia-steam stage` fails if a topic pool below the bar is in `win-unpacked`/`linux-unpacked`; no pool = not offered, no DLC depot (plan 89, `task 2033: Keep topic bundle pools out of builds until all five are at 2000 approved`)
 
 ## In the pipeline
-- **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The developer checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
+- **Existing pool:** every question gets `bundle: "base"`; then `qgen bundles` (an LLM pass, removed in plan 229 after its one run, about 20 questions per call) proposes `colombia` where the rule fits and writes it into the pool. The developer checks the proposals in the review tool (`/review?bundle=colombia`) and changes any that are wrong there.
 - **New questions:** until BN-8 the drafter picked the bundle by the rules. Since BN-8 the batch's bundle is set by the command (see "Batches per bundle"); the developer can still change it in the review tool.
 - **Checks and output:** `validate` (bundle must exist), `export` (the game needs `bundle`), `report` (questions and supply per bundle).
 - **Theme bundles** (plan 184, `kind: theme`: `stem`, `sports`, `history`, `movies`, `geography`; 2000 approved per question locale each, free DLC like the regional packs):
@@ -139,7 +139,7 @@ Players choose bundles on their own screen, Bundles (Player → Choice → Bundl
 ## Tasks
 - [x] BN-1 Decision D-39 and this plan; 15c's `region` replaced by bundles
 - [x] BN-2 `app/data/bundles.json` (base, colombia); `bundle` on every question (`base`); `validate` and `export`
-- [x] BN-3 `qgen bundles`: an LLM pass proposes `colombia` for existing questions and writes it. *2026-10-07: 504 questions (rejected ones skipped), 26 calls; 84 moved to `colombia`. Proposals and reasons in `work/bundles/proposals.json`. For the developer to check: `/review?bundle=colombia`. 2026-10-13: checked by the developer (decision 7): 84 kept in `colombia`, 0 moved to `base`.*
+- [x] BN-3 `qgen bundles` (removed in plan 229): an LLM pass proposes `colombia` for existing questions and writes it. *2026-10-07: 504 questions (rejected ones skipped), 26 calls; 84 moved to `colombia`. Proposals and reasons in `work/bundles/proposals.json`. For the developer to check: `/review?bundle=colombia`. 2026-10-13: checked by the developer (decision 7): 84 kept in `colombia`, 0 moved to `base`.*
 - [x] BN-4 `draft` picks the bundle by the rules; house style explains bundles
 - [x] BN-5 `report` per bundle; review tool shows the bundle, filters by it (`?bundle=`) and lets the developer change it. *Key `n` moves a question to the next bundle. The server also accepts difficulty 1–15 now (D-38); the review tool's digit keys still set 1–10.*
 - [x] BN-6 The game: choose bundles before a session; selection filters by them. *2026-10-15: engine plan 27 (bundle filter, «Cambiazo» groups of active bundles only), Choice screen plan 29, `languages` and base bundles plan 71 (D-85), play-test fixes plan 125 (D-97); play-tested (pm decisions 50, 155, 206).*

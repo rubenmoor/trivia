@@ -9,7 +9,6 @@ import atomic  # authoring/tools/atomic.py: .tmp + replace writes, cross-process
 import concepts  # authoring/tools/concepts.py: concept lists and question axes (D-37)
 import categories  # authoring/tools/categories.py: every bundle's categories (D-19, D-43)
 import targets  # authoring/tools/targets.py: pool targets (D-53)
-import rekey  # authoring/tools/rekey.py: `qgen rekey` (plan 149)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
 from qgen import INT, STR, bundle_row, bundle_text, claude, cmd_export, load_age_groups, load_bundles, load_json, save_json, slug, voice_locale  # authoring/tools/qgen.py
@@ -202,9 +201,9 @@ def cmd_taxonomy(args):
     save_json(d / "proposal.json", p)
     subs = {s["slug"] for c in p["categories"] for s in c["subcategories"]}
     (d / "proposal.md").write_text(taxonomy_md(p, off_list(args.bundle, subs)), encoding="utf-8")
-    print(f"{len(p['categories'])} categories, {len(subs)} subcategories → {rekey.rel(d / 'proposal.md')}; "
+    print(f"{len(p['categories'])} categories, {len(subs)} subcategories → {d / 'proposal.md'.relative_to(ROOT)}; "
           f"edit proposal.json to the developer's answer, then `qgen taxonomy --bundle {args.bundle} --apply "
-          f"{rekey.rel(d / 'proposal.json')}`")
+          f"{d / 'proposal.json'.relative_to(ROOT)}`")
 
 
 def cat_name(c, locale):
@@ -428,8 +427,8 @@ def cmd_remap(args):
     save_json(d / "proposal.json", p)
     errors, new, cats = remap_errors(p, args.bundle)
     (d / "proposal.md").write_text(remap_md(p, new, cats, {q["id"]: q for q in qs}), encoding="utf-8")
-    print(f"{rekey.rel(d / 'proposal.md')}: {len(new)} new subcategories; then `qgen remap --bundle "
-          f"{args.bundle} --apply {rekey.rel(d / 'proposal.json')}`")
+    print(f"{d / 'proposal.md'.relative_to(ROOT)}: {len(new)} new subcategories; then `qgen remap --bundle "
+          f"{args.bundle} --apply {d / 'proposal.json'.relative_to(ROOT)}`")
     if errors:
         sys.exit("proposal has problems (edit proposal.json or rerun):\n" + "\n".join(f"  {e}" for e in errors))
 
