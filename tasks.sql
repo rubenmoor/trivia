@@ -3972,81 +3972,106 @@ INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, 
 - A gamemaster-mode game starts from the configure screen.
 - The menu offers the decided cheats; each is refused outside gamemaster mode.
 - The family''s game with defaults plays as today (fixture replay passes, Enter straight through).', '', '2026-10-12T16:44:17Z', 370, NULL);
-INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (60, 12, 'masterplan', 1000, 'The game ships in Simplified Chinese (`zh-Hans`), Russian (`ru`) and Brazilian Portuguese (`pt-BR`) on top of the launch languages (`decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?`), each with its own approved pool of 5000 in D-53''s mix (`decision 21: Content target per player and language (OQ-32)?`). Russian and Portuguese play translated `base`; the zh game plays a new base bundle, `chinese-base`. Everything reuses the launch languages'' pipeline (`qgen batch --translate`, D-87), review tool (plan 67) and UI path (plans 69, 100); no new pipeline per language.
+INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (60, 12, 'masterplan', 1000, 'Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
 
-This masterplan''s own tasks are not implementation work: each of them writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for.
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
 
-## Names and terms
-- Locale tags: `zh-Hans`, `ru`, `pt-BR` (D-78; Steam `schinese`, `russian`, `brazilian` already map to them in `STEAM_LANGS`, `app/client/src/lib/engine.ts`); "zh" in the milestone = `zh-Hans`.
-- New locales are translation locales like `en`, `de`: `authoring/data/questions.<locale>.json`, `app/data/pool.<locale>.json`, `names.<locale>.json` (D-81); the Spanish `questions.json` stays the only source unless decision 218 says otherwise.
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
 
-## Decisions raised by this masterplan
-- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` (D-39 vs. D-81): part 2''s plan waits for it.
-- `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?`: part 6''s plan waits for it.
-- Native reviewers (who, how, cost): raised by part 4''s plan, answered before any generation (milestone constraint).
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
 
-## Part 1: New locales in data and pipeline
-- `authoring/tools/translations.py` `LANGUAGES` (comment already names milestone 12), `qgen validate`, `export`, `report`, `--simulate`, `--cost`, `health`, `flag` (report locale), `targets.py` deficits and source shortfall (D-84 "largest over `en`/`de`" → over every translation locale), review tool locale switch and stats, start page rows, `trivia-release-check` pool hashes (decision 100), telemetry and report server locale fields, `lib/data.ts` / `lib/i18n.ts` `LOCALES`.
-- `app/data/bundles.json`: `base` `languages` += `ru`, `pt-BR` (not `zh-Hans`); `qgen validate` "each language has a base bundle" covers the new ones (`chinese-base` from part 2 for `zh-Hans`).
-- Names files `names.{zh-Hans,ru,pt-BR}.json` (categories, subcategories, bundles, age groups).
-- Done when: `qgen validate` and `report` handle all three locales with empty pools; nothing changes for es/en/de.
-- Plan priority: ~900 (data layout).
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
 
-## Part 2: `chinese-base` bundle: model and setup
-- Waits for decision 217; implements its answer in the translation layout, `export` and `validate` (D-81 amended, a new D-entry in `plans/decisions.md`).
-- `qgen bundle new chinese-base --kind base`, `languages: ["zh-Hans"]`, `voice`, `rule` (what a Chinese family knows; what doesn''t fit: the Spanish-speaking world, Spanish wordplay); `targets.json` entry 5000 in D-53''s mix (like `base`, not the regional 2000).
-- Own taxonomy and concept lists (D-43, D-99, D-100): reuse `base`''s subcategories and concepts where they fit, add China-centric categories (Chinese history, places, food, festivals, people, language, pop culture); a pm decision for the developer to approve the list (as for `colombia`, plan 138).
-- Base bundles per language (D-85, milestone 5): zh offers only `chinese-base`; `bundlesFor`, the default base bundle, the Choice screen, `qgen report --simulate --bundles` default for zh; other bundles in zh only if translated (not required).
-- Achievements: `ALL_CATEGORIES` (our base''s categories) in a `chinese-base` game; `BUNDLE_*` stays regional only (decision 73, decision 146).
-- Plan priority: ~880, after part 1.
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
 
-## Part 3: Translation prompts and markets per locale
-- `authoring/tools/prompts/locale-{zh-Hans,ru,pt-BR}.md` like `locale-en.md` / `locale-de.md` (decisions 35, 160, 167: no player location, address, quotes): Simplified characters and Chinese punctuation, names as Chinese speakers know them, 万 vs. Western grouping; Russian case endings fitting all options (like German articles), «ёлочки» quotes, Cyrillic transliteration; Brazilian spelling and usage (not European Portuguese), «você»; numbers and units per locale.
-- `chinese-base` fit pass prompt (by decision 217''s answer): which `base` questions work for a Chinese family.
-- Prompts are the developer''s (D-36): one pm decision per locale to approve the drafts.
-- Plan priority: ~700.
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
 
-## Part 4: Native reviewers
-- No native speaker in the family (milestone constraint): plan who reviews and how, before any `tr-zh-Hans-*`, `tr-ru-*`, `tr-pt-BR-*` or `chinese-base` run.
-- Who: paid (freelance, per sample or per hour) or volunteer (community, Steam forum after launch); one per language, also for the UI playtest (part 5) and store texts (part 8). A pm decision with options, costs and the recommended one.
-- How: the review tool runs on the developer''s machine (`trivia-authoring`, :8001); a reviewer outside needs a path in and back (e.g. an exported spot-check sheet per run imported back as verdicts, or a reachable review page); the per-run native spot check (`authoring/QC.md`, D-87) and the pilot''s go/no-go read it.
-- What they check: the spot check of each run (size: release bar D-79), every `chinese-base` China-centric source if decision 218 makes them Chinese-only, the fit pass sample.
-- Plan priority: ~720 (before the content runs, after parts 1–3 can be planned in parallel).
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
 
-## Part 5: UI in the new languages
-- Fonts: Baloo 2 has no Cyrillic, neither font has CJK (15a "Fonts"); pick fonts per script (licence, file size: subset CJK; `app/desktop/media-budget.json`), fallback chain per locale in `theme.css`.
-- Catalogs `app/client/src/locales/{zh-Hans,ru,pt-BR}.ts` and style guides `locales/style/<locale>.md` (glossary, address, Steam''s own terms, bad patterns); joker names translated from the English names, one symbol each (decision 188); key letters per catalog (decision 53; Latin letters on a Chinese keyboard), `check:literals`.
-- Layout: CJK line breaking (no `hyphens`, `word-break`/`line-break`), Russian length (as German), language picker endonyms, `/comodines?lang=` paper size, `trivia-gallery` locales and the developer''s gallery check (plan 100''s flag → fix loop).
-- Achievement texts (`schinese`, `russian`, `brazilian`), Steam rich presence strings.
-- Native playtest per language: a pm decision "Playtest passed? (<lang>)" like decisions 62–65, by part 4''s reviewers.
-- Plan priority: ~400.
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
 
-## Part 6: `chinese-base` content
-- Fit pass over `base`''s zh translations (part 2''s model): `tr-zh-Hans-*` runs translate `base` sources, the fit pass marks what fits, the developer corrects; a sample to the native reviewer.
-- New China-centric questions per decision 218 (`qgen batch --bundle chinese-base` + `--translate zh-Hans --bundle chinese-base`, or the answer''s path).
-- Pilot first (QT-5: 50, `qgen health ack`), its cost and reject rate → budget pm decision (as plan 70), then runs to 5000 approved: `qgen report --bundle chinese-base --locale zh-Hans`, `--simulate` ✓ for zh.
-- Runs follow `authoring/RUNBOOK.md` (`qgen batch …` only); batch tasks like plan 17 / plan 84.
-- Plan priority: ~-120 (content runs after the milestone''s code, as plan 84).
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
 
-## Part 7: Russian and Portuguese pools
-- `qgen batch --translate ru` and `--translate pt-BR` on `base`: pilot `tr-<locale>-1`, native spot check, `qgen health ack`, budget pm decision, full runs to 5000 approved each.
-- Source supply: 5000 per locale needs more translatable `es` sources than 5000 at a yield below 1 (D-84 source shortfall, part 1); whether `es` drafting grows for it goes into the budget decision.
-- Waits for the launch languages'' runs (plan 84) so `base` sources are stable (D-81: whole-pool rewrites stale translations).
-- Plan priority: ~-130.
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
 
-## Part 8: Store page and Steam
-- Store texts, short description, AI disclosure, capsules with text, screenshots and trailer per new language (plans 88, 94; decisions 79, 80: rendered late, after UI wording and pools; `trivia-trailer --lang`, `trivia-gallery`); store names (PUB-7 check, plan 129) in Chinese, Russian, Portuguese.
-- Steamworks: supported languages (interface, subtitles = question content once a pool ships, decision 90), achievement localization, store language entries; texts approved by the developer and the native reviewers (pm decisions per language).
-- Plan priority: ~300.
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
 
-## Part 9: Release and close-out
-- Ship path: the new languages arrive as a full patch (fonts, catalogs) and content patches after it (`plans/11-steam.md` "Content updates (ST-5)", decision 96); `trivia-release-check` (pool hashes, smoke game per new locale, media budget with the fonts), `trivia-steam upload`.
-- Docs: `plans/15-i18n.md` (launch languages + later), `15a`, `15b` (QT-6 later languages), `16-content-target.md` (later-language targets now 5000), `22-bundles.md` (`chinese-base`), `decisions.md` D-entries, `README.md`, `directory.md`, `AGENTS.md` if commands change.
-- Done when (milestone): all three languages playable in the released game, store pages localized, `qgen report --simulate` ✓ for `zh-Hans` (`chinese-base`), `ru`, `pt-BR`.
-- Plan priority: ~-200 (last).
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
 
 ## Out of scope
-- Languages beyond these three; own base bundles for `ru` or `pt-BR`; translating `colombia` or other bundles into the new languages.', '', '2026-10-12T16:46:08Z', NULL, NULL);
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', 'The game gets a Chinese edition: its whole interface in Chinese and a second set of starter questions centred on China, its culture, history, society and schooling, offered in Chinese and in English. The new set starts from the existing questions minus those that only make sense to Europeans or Latin Americans, and grows with new questions about China until it is as large as the original set. Before any of that, the question-writing and translation tools get a thorough review and cleanup, and the Chinese variants (mainland, Taiwan, Hong Kong) are compared so the developer can pick which ones to offer.', '2026-10-12T16:46:08Z', NULL, NULL);
 INSERT INTO plan (id, milestone_id, subject, priority, body, intro, created_at, created_by_task, archived_by_decision) VALUES (61, 7, 'Competitive timed: record the revised spec (OQ-37 follow-up)', 580, 'Task 394 revised masterplan parts 5 and 8: competitive (timed) is now the milestone''s version and replaces decision 23''s timed part (own tracks, three levels behind, timeout ends the game). The recorded files still describe the old version. Plans 38 and 41 are done, so this plan brings the files in line. No new pm decisions: the milestone text ("Game modes", "Competitive (timed)") is the answer. Check stale spots with `grep -n -i timed plans/`.
 
 ## Spec to record (from milestone 7)
@@ -38299,8 +38324,8 @@ leave it as it is if it still fits. An edit queues the revision of the plans bel
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1365, 153, 'write the masterplan of milestone 17: Remote Play Together', 'masterplan', 'done', NULL, '2026-10-16, tasks.sql (plan 153 body and intro; decisions 283, 284)', 'Write plan 153, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-16T17:05:30Z', '2026-10-16T21:01:50Z', NULL, 0, NULL, NULL);
-INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1366, 60, 'revise the masterplan of milestone 12: To China!', 'revise', 'open', 1000, NULL, '`milestone 12: To China!` changed. Bring `plan 60: masterplan`, the masterplan, in line with it (`pm plan edit 60 --body -`), or
-leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T17:32:08Z', NULL, NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1366, 60, 'revise the masterplan of milestone 12: To China!', 'revise', 'done', 1000, '2026-11-19, plan 60 body and intro rewritten (Chinese only, 12 parts); decision 750 raised (English drafting vs. decision 218), task 1152 waits for it', '`milestone 12: To China!` changed. Bring `plan 60: masterplan`, the masterplan, in line with it (`pm plan edit 60 --body -`), or
+leave it as it is if it still fits. An edit queues the revision of the plans below it and of its own open tasks.', '2026-10-16T17:32:08Z', '2026-11-19T17:55:17Z', NULL, 0, NULL, NULL);
 INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (1367, 154, 'write the masterplan of milestone 18: Playable demo', 'masterplan', 'done', NULL, '2026-10-17, plan 154 body and intro, decision 335', 'Write plan 154, the masterplan of this milestone: expand on everything that needs to be done to achieve it,
 divided into parts. State in the masterplan that its own tasks are not implementation work: each of them writes the
 plan for one part.', '2026-10-16T17:38:48Z', '2026-10-17T13:21:01Z', NULL, 0, NULL, NULL);
@@ -50375,6 +50400,750 @@ INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, crea
 let''s introduce additional configuration: "hectic" with all the current timers, and normal: all timers specific to the game mode get double the time.
 
 the choice between hectic and normal must appear on the "how to play" screen only for this specific mode.', '2026-11-19T17:35:01Z', '2026-11-19T17:41:44Z', NULL, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2286, 60, 'create tasks for plan 60: masterplan', 'split', 'open', 1000, NULL, 'Split plan 60 into tasks and identify all decisions that need to be made. If the plan already has tasks,
+bring them in line with the plan. A task that writes a plan gets `--kind plan`.', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2287, 139, 'revise plan 139: New locales in data and pipeline', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 139: New locales in data and pipeline`, changed; it is quoted below. Bring `plan 139: New locales in data and pipeline` in line with it
+(`pm plan edit 139 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 60: masterplan
+
+Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
+
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
+
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
+
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
+
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
+
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
+
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
+
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
+
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
+
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
+
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
+
+## Out of scope
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2288, 140, 'revise plan 140: Translation prompts and markets per locale', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 140: Translation prompts and markets per locale`, changed; it is quoted below. Bring `plan 140: Translation prompts and markets per locale` in line with it
+(`pm plan edit 140 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 60: masterplan
+
+Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
+
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
+
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
+
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
+
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
+
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
+
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
+
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
+
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
+
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
+
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
+
+## Out of scope
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2289, 141, 'revise plan 141: Native reviewers', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 141: Native reviewers`, changed; it is quoted below. Bring `plan 141: Native reviewers` in line with it
+(`pm plan edit 141 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 60: masterplan
+
+Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
+
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
+
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
+
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
+
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
+
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
+
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
+
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
+
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
+
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
+
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
+
+## Out of scope
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2290, 142, 'revise plan 142: UI in the new languages', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 142: UI in the new languages`, changed; it is quoted below. Bring `plan 142: UI in the new languages` in line with it
+(`pm plan edit 142 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 60: masterplan
+
+Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
+
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
+
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
+
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
+
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
+
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
+
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
+
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
+
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
+
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
+
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
+
+## Out of scope
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2291, 143, 'revise plan 143: Russian and Portuguese pools', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 143: Russian and Portuguese pools`, changed; it is quoted below. Bring `plan 143: Russian and Portuguese pools` in line with it
+(`pm plan edit 143 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 60: masterplan
+
+Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
+
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
+
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
+
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
+
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
+
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
+
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
+
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
+
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
+
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
+
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
+
+## Out of scope
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2292, 144, 'revise plan 144: Store page and Steam for the new languages', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 144: Store page and Steam for the new languages`, changed; it is quoted below. Bring `plan 144: Store page and Steam for the new languages` in line with it
+(`pm plan edit 144 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 60: masterplan
+
+Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
+
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
+
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
+
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
+
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
+
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
+
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
+
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
+
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
+
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
+
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
+
+## Out of scope
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
+INSERT INTO task (id, plan_id, subject, kind, status, priority, note, body, created_at, retired_at, created_by_task, web, model, worktree) VALUES (2293, 145, 'revise plan 145: Release and close-out of the new languages', 'revise', 'open', 1000, NULL, '`plan 60: masterplan`, the plan above `plan 145: Release and close-out of the new languages`, changed; it is quoted below. Bring `plan 145: Release and close-out of the new languages` in line with it
+(`pm plan edit 145 --body -`), or leave it as it is if it still fits. An edit queues the revision of the plans
+below it and of its own open tasks; its done and dropped tasks stay as they are.
+
+# Plan 60: masterplan
+
+Milestone 12 (as edited by the developer): Chinese only. The game gets a Chinese UI and a second base bundle, `chinese-base`, centred on China, offered in the chosen Chinese locale(s) and in English. `chinese-base` = (step 1) `base` questions that aren''t euro-centric, copied, plus (step 2) new China-centric questions drafted in English; both translated into Chinese. Size target: as `base` (6000 approved, `decision 730: Base tile count: «6000+»`). Reuses the existing pipeline (`qgen batch`, `--translate`, D-87, D-107), review tool and UI path; no new pipeline per language.
+
+This masterplan''s own tasks are not implementation work: each writes the plan for one part below (`pm plan add 12 …`), with its own tasks, priority and pm decisions. Parts are in dependency order; a part''s plan names the parts it waits for. Existing plans of this milestone are rewritten to fit (mapping at the end); what no part needs is dropped.
+
+## Binding inputs
+- `decision 217: chinese-base membership: how does a translated base question count for chinese-base?` → copies: a fitting `base` question becomes a new `chinese-base` source question (own id, `bundle: chinese-base`), its wording free to diverge (milestone: "duplicating the wording").
+- `decision 750: New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?` (open; recommended option 1, the milestone''s text): English sources reviewed by the developer, then `--translate`. Parts 6 and 7 wait for it; `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` holds until it''s answered.
+- D-107: `base` drafts in English, source `locale` per question; `chinese-base` sources are `locale: en` (copies take the `en` text: an `en` source''s own, an `es` source''s approved `en` translation).
+- D-85 amended (milestone 8): base bundles toggle in any combination. Milestone 12 reverses that: exactly one base bundle per session; picking one deselects the others (part 4; D-85 amended again).
+- Russian and Portuguese (`ru`, `pt-BR`; `decision 26: Launch languages (OQ-31): which languages at Steam launch, and which comes first after?` named them for this milestone) are no longer part of it: no locale, prompt, pool or store work for them here.
+
+## Part 1: Chinese variants and the Chinese audience (evaluation)
+- Compare the candidates, what each entails, and recommend: Simplified Mandarin (`zh-Hans`, mainland, Singapore; Steam `schinese`), Traditional for Taiwan (`zh-Hant`/`zh-TW`, Taiwan vocabulary and usage; Steam `tchinese`), Hong Kong (Traditional, written standard Chinese, Cantonese colloquial only in speech; no Steam language of its own); spoken "dialects" (Mandarin, Cantonese, Wu, Min) don''t map to separate written languages for a text game.
+- Per candidate: Steam language and audience share, fonts (CJK subset size), translation path (own translation vs. Simplified→Traditional conversion such as OpenCC plus a vocabulary pass), reviewer need, cost per question (`qgen report --cost`), effect on the content (Taiwan and mainland differ in history and civics framing).
+- The Chinese audience, implications to report to the developer (in `plans/15-i18n.md` or a new `plans/26-china.md`), each with a pm decision where only the developer can choose:
+  - Mainland sales: games sold in mainland China need an NPPA licence (版号); global Steam is reachable there but unlicensed and may be blocked any time; Steam China (蒸汽平台) is a separate, licensed store. Target: global Steam only?
+  - Content sensitivity: Taiwan''s status, Tibet, Xinjiang, 1989, Cultural Revolution judgements, maps with disputed borders (Arunachal, South China Sea, Aksai Chin), flags; one rule for `chinese-base` drafting, the fit pass and the zh translation of everything (a pm decision: avoid contested political topics, or neutral facts only).
+  - Taiwan vs. mainland: one bundle can''t frame history and politics for both; consequences for which variants share `chinese-base`.
+  - Reachability: Wikimedia Commons is blocked in mainland (no effect: media ship with the game); the report server and telemetry (Cloudflare) may be slow or blocked; PIPL rules on cross-border personal data for opt-in telemetry.
+  - Language and numbers: 万/亿, dates 年月日, names in Chinese order and in their Chinese form (foreign names transliterated), pinyin for the English pool''s Chinese terms.
+- Decisions raised: which variant(s) (recommended: `zh-Hans` first; `zh-Hant` later or by conversion), sensitivity rule, store targets. Every later part uses "the zh locale(s)" for the answer.
+- Research plan (`--web` for its task); priority ~960.
+
+## Part 2: Pipeline review and cleanup (before any China work)
+- A thorough review of question authoring and translation: `authoring/tools/qgen.py` and its modules, `qgen batch` steps and `--translate`, prompts, `targets.py`, `translations.py`, review tool (`authoring/server`, `authoring/ui`), `authoring/RUNBOOK.md`, `authoring/QC.md`.
+- Improve the code, remove features we don''t use (find them by usage: `work/*/` runs, `costs.log`, the RUNBOOK; candidates listed for the developer before deletion where unsure), simplify; behaviour may change as long as the pipeline still drafts, translates and reviews `base`/regional/topic questions as today.
+- Aimed at this milestone''s needs: a bundle with source `locale: en` and languages {zh, en} but not es/de; copies of questions with shared media; a fit pass over existing questions; new locales with non-Latin script.
+- Split: one review task writes findings and the cleanup list; one task per cleanup; each task''s checks (`npm run check`, `npm test`, `npm run build`, `qgen validate`) and an unchanged `qgen report` for the four current locales unless the change says why.
+- Worktree `questions`; priority ~940 (before parts 3–8''s code).
+
+## Part 3: Chinese locales in data and pipeline (rewrites `plan 139: New locales in data and pipeline`)
+- The zh locale(s) from part 1 become translation locales (D-78, D-81): `translations.py` `LANGUAGES`, `data.ts` `LOCALES`, `check-mod.mjs`, `qgen validate` / `export` / `report` / `--simulate` / `--cost` / `health` / `flag`, review tool locale switch and stats, start page rows, `patch_notes.EVENT`, release-check pool hashes, telemetry / report server locale fields.
+- A zh locale never drives `base` drafting (`targets.py`): only bundles that list it.
+- `names.<zh>.json`; "a locale without a base bundle" stays a warning until part 4.
+- Done when: `qgen validate` and `report` handle the zh locale(s) with empty pools; nothing changes for es, es-ES, en, de.
+- Priority ~900; after part 2, waits for part 1''s variant decision.
+
+## Part 4: `chinese-base`: model and setup (task 1148)
+- Copies (decision 217): a `chinese-base` source has its own id, `bundle: chinese-base`, `locale: en`, `copied_from: <base id>` (provenance; fit pass, stats, `qgen validate` checks it exists); no link afterwards: fixes don''t propagate, wording may diverge.
+- Media not duplicated: the copy keeps its source''s `media` record; the cache is keyed by URL (`authoring/tools/media_cache.py` `cache_path`), so the file is shared; shipped staging (`app/desktop/stage-media.mjs`, encode cache) and `trivia-media sync` must store it once too (check, fix if not).
+- Bundle: `qgen bundle new chinese-base --kind base`, `languages: [<zh locale(s)>, "en"]`, `rule`, `voice`; `targets.json` 6000 in base''s mix; taxonomy from part 6 plus `base`''s reused subcategories (D-99, D-100: keys bundle + name).
+- Game: English offers two base bundles; exactly one base bundle per session, picking one deselects the others (Choice screen, `bundlesFor`, stored choices, presets, mods'' base bundles; D-85 amended in `plans/decisions.md`); zh offers only `chinese-base` (+ bundles translated later, none now); default base per locale.
+- Seen counts by id (D-82): a copy is a new question; an English player who switches base bundles meets duplicates (accepted by the milestone); the plan says whether `copied_from` should share the seen counter.
+- Career and achievements: `chinese-base` categories map onto the 7 subjects (`plans/24-career.md`; unmapped refused by `qgen validate`); `ALL_CATEGORIES`-style achievements in a `chinese-base` game; `BUNDLE_*` stays for add-ons (decision 73, decision 146).
+- Priority ~880; after parts 2, 3.
+
+## Part 5: Step 1: euro-centric filter and copies
+- A fit pass over `base`''s approved questions (all source locales, on the English text): keep what a Chinese family can know and enjoy; drop euro-centric (and Latin-American-centric) ones, one-language wordplay, anything against part 1''s sensitivity rule. Prompt `authoring/tools/prompts/fit.md` (prompts are the developer''s, D-36: a pm decision approves the draft).
+- Output: copies into `chinese-base` (part 4''s model) with the source''s subcategory mapped to `chinese-base`''s; a light English adaptation only where the fit pass says so (e.g. units, comparisons), marked for review.
+- The developer reviews the result: kept/dropped lists per subcategory and a sample (`/review?bundle=chinese-base`), corrections flip it.
+- `qgen` command (one command per RUNBOOK, e.g. `qgen batch --bundle chinese-base --from base`); runs in `RUNBOOK.md`.
+- Priority ~-100 (content, ahead of drafting); after part 4.
+
+## Part 6: China-centric taxonomy from school curricula
+- Research Chinese school curricula (义务教育课程标准: 语文, 数学, 历史, 地理, 道德与法治, 科学/物理/化学/生物, 音乐, 美术, 体育) and what families share (festivals, food, places, dynasties, poetry 唐诗, idioms 成语, inventions, people, sport, pop culture, TV, games).
+- Propose `chinese-base` categories and subcategories, each mapped to a career subject; reused `base` subcategories where they fit (the copies need them); concept lists (D-43); scopes against overlap with the copied questions.
+- A pm decision for the developer to approve the list (like `decision 404: movies taxonomy: categories and subcategories`); `qgen taxonomy --bundle chinese-base --apply`.
+- Research task `--web`; priority ~850; before part 4''s taxonomy step and part 7.
+
+## Part 7: Step 2: new China-centric questions in English
+- `qgen batch --bundle chinese-base` drafts English sources for part 6''s subcategories (decision 750); voice: English for a Chinese family, with Chinese names and terms; the developer reviews in English ("for me to review").
+- Pilot first (50, `qgen health ack`), its cost and reject rate → budget decision, then runs until `chinese-base` has 6000 approved (copies + new) in the difficulty mix: `qgen report --bundle chinese-base --locale en`.
+- Priority ~-120; after parts 4, 5, 6.
+
+## Part 8: Translation into Chinese (rewrites `plan 140: Translation prompts and markets per locale`)
+- Locale prompt per zh locale (`authoring/tools/prompts/locale-<zh>.md`, like `locale-en.md`; decisions 35, 160, 167): characters, Chinese punctuation, 万/亿, names as Chinese speakers know them, units, terms of the curriculum; approval decision per prompt (D-36).
+- Runs: `qgen batch --translate <zh> --bundle chinese-base` for copies and new questions alike, pilot + native spot check + budget decision, then to 6000 approved per zh locale; `qgen report --simulate` ✓ for zh.
+- Prompts priority ~700; runs ~-130, after part 9''s reviewer path.
+
+## Part 9: Native reviewers (rewrites `plan 141: Native reviewers`)
+- No Chinese reader in the family: who (paid or volunteer, per zh locale), how they reach the review (export/import sheet or a reachable review page), what they check (spot checks of each translation run, Chinese-language questions, UI playtest, store texts). A pm decision with costs.
+- Priority ~720.
+
+## Part 10: UI in Chinese (rewrites `plan 142: UI in the new languages`)
+- CJK fonts (none of today''s fonts has CJK): pick per script, licence, subset size, `media-budget.json`; fallback chain in `theme.css`.
+- Catalogs `app/client/src/locales/<zh>.ts`, style guides `locales/style/<zh>.md`; joker names (decision 188); key letters (decision 53; Latin keys on a Chinese keyboard); CJK line breaking; language picker endonym; career texts (grades 小学/初中/高中/大学, badges, ranks); achievement texts (`schinese`/`tchinese`), rich presence; `trivia-gallery` locale(s); native playtest decision.
+- Priority ~400.
+
+## Part 11: Store page and Steam (rewrites `plan 144: Store page and Steam for the new languages`)
+- Store texts, capsules, screenshots, trailer (`trivia-trailer --lang`, `trivia-gallery`) per zh locale; Steamworks languages and achievement localization; store name in Chinese (PUB-7 check, plan 129); `chinese-base` presented in the English store text too; part 1''s store-target decision.
+- Priority ~300.
+
+## Part 12: Release, career check and close-out (rewrites `plan 145: Release and close-out of the new languages`)
+- Career once `chinese-base` is full (milestone): every badge reachable with `chinese-base` alone (questions per subject × band, as `plans/24-career.md`), thresholds adjusted by a decision if not; `qgen report --simulate --bundles chinese-base` for zh and en.
+- Ship path: full patch (fonts, catalogs, bundle) then content patches (decision 96); `trivia-release-check` with the zh locale(s), `trivia-steam upload`.
+- Docs: `plans/15-i18n.md`, `15a`, `15b`, `16-content-target.md`, `22-bundles.md` (`chinese-base`, one base per session), `24-career.md`, `decisions.md`, `README.md`, `directory.md`, `AGENTS.md`, `authoring/RUNBOOK.md`.
+- Done when (milestone): the zh locale(s) playable in the released game with `chinese-base`; English offers both base bundles, one per session; store localized.
+- Priority ~-200 (last).
+
+## Existing plans of this milestone
+- `plan 139: New locales in data and pipeline` → part 3 (zh only, no `ru`/`pt-BR`, no `DRIVES_DRAFTING` for them).
+- `plan 140: Translation prompts and markets per locale` → part 8 (zh prompt only; the `ru`/`pt-BR` prompts and the old fit-pass-on-translations task go: fit pass is part 5 on copies).
+- `plan 141: Native reviewers` → part 9 (Chinese only; the old fit-sample sheet becomes part 5''s review).
+- `plan 142: UI in the new languages` → part 10 (no Cyrillic font, no `ru`/`pt-BR` catalogs).
+- `plan 143: Russian and Portuguese pools`: no part; its open tasks are dropped.
+- `plan 144: Store page and Steam for the new languages` → part 11; `plan 145: Release and close-out of the new languages` → part 12.
+- New plans: parts 1, 2, 4 (task 1148), 5, 6, 7 (old task 1152 `chinese-base content` splits into parts 5 and 7).
+
+## Out of scope
+- Russian, Portuguese and other languages; translating `colombia`, regional or topic bundles into Chinese; `chinese-base` in es, es-ES or de; a Steam China release (unless part 1''s decision says so).', '2026-11-19T17:55:13Z', NULL, 1366, 0, NULL, NULL);
 
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (1, 'Target count per difficulty (1–15) for 5000 approved base questions?', 'answered', '["1: 250 · 2: 350 · 3–8: 450 each · 9–11: 330 each · 12–13: 230 each · 14–15: 125 each (sum 5000)", "masterplan draft: 1–2: 490 each · 3–8: 420 each · 9–11: 300 each · 12–13: 200 each · 14–15: 100 each (sum 5000)", "flat: 333 per level (5 extra at 6–10)"]', 'Milestone 1, part 1 (D-52). Today (2026-10-11) approved base by difficulty: 1: 36 · 2: 67 · 3: 96 · 4: 104 · 5: 112 · 6: 147 · 7: 101 · 8: 67 · 9: 74 · 10: 57 · 11: 61 · 12: 38 · 13: 48 · 14: 19 · 15: 8.
 The targets steer `draft` (part 2: aim at the gaps) and are the milestone''s exit check.
@@ -57894,6 +58663,9 @@ INSERT INTO decision (id, subject, status, options, body, intro, answer, reason,
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (747, 'Multiplayer polish: Player screen only in single player, turn handover and tower screens in round-robin, key picker, elimination', 'answered', '[]', 'Overrides in part decision 291: Local multiplayer setup: flow and where each setting lives and decision 355: Mode and age screens: design: the Player screen comes only after picking single player; a local multiplayer mode skips it and the Join screen names the first seat. Overrides in part decision 279: Round-robin screens: the Level screen is the turn handover, no screen of its own: in rr-coop and rr-competitive every change of turn gets its own transition screen (last player small and gray, replaced by the new one big and bright, held about 1 s), and after a right answer a screen shows only the answering player''s tower. The rr-competitive wrong-answer and victory rules of decisions 278 and 279 stay, except a timed-out player now sees ''you ran out of time'' with no answer marked, then an elimination animation, and a last-one-standing win says so. Key chips stay fixed labels per decision 679: Key chips are fixed shortcut labels: Enter/A only on a scope''s primary, a letter or pad button elsewhere, nothing focus-bound. The unified option button keeps the icon, caption, text, shortcut scheme and follows decision 518: Topic bundles in the game reviewed in /gallery? (icon and title in two columns, vertically centered).', 'After trying the local multiplayer modes, the developer asked for several changes to how setup and turns look and flow. Some of these replace earlier choices, for instance when the ''who is playing'' screen appears and whether a turn change gets a screen of its own. This records the new rules so later work follows them.', 'Developer''s wishes in task 2268 stand', NULL, '2026-11-19T03:07:22Z', '2026-11-19T03:07:22Z', 2268, NULL, 'rule', 2268, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (748, 'Round-robin competitive Level screen: only the turn player''s tower, their jokers inside its track', 'answered', '[]', 'Follows the developer''s request in `task 2268: improvements for multiplayer modes` (''this way we never need to show all towers on one and the same screen in multiplayer round-robin'') and `decision 747`; the joker request (move the vertical joker list into the track) then applies to the one track shown. Overrides in part `decision 279: Round-robin screens: the Level screen is the turn handover, no screen of its own` (every player''s track on the Level screen).', 'In the turn-based competitive mode every player builds their own tower. Until now the screen between questions showed all towers side by side, with the current player''s jokers in a separate list. The developer asked that no turn screen show all towers at once, so this settles what that screen shows instead and where the jokers go.', 'rr-competitive Level screen shows only the turn player''s tower (full size, their name and seat colour in the track), their jokers inside that track; no all-towers row and no separate joker list with a name chip; after a right answer the answering player''s tower (stone drop), then the turn transition, then the next player''s Level screen; the Victory screen''s final overview of the other players may keep several towers (no jokers there); rr-coop keeps its one team tower and shared joker list', NULL, '2026-11-19T03:12:38Z', '2026-11-19T03:12:38Z', 2269, NULL, 'rule', 2269, '');
 INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (749, 'Mode screen preset once Mode comes before the Player screen', 'answered', '[]', 'Keeps the ''only press Enter'' walk meaningful (plans/14-input.md section 2, task 2107) after decision 747 moved the Player screen behind Mode. engine/game.ts lastMode replaces playerMode; authoring/tools/menu_check.mjs step ''last'' checks it.', 'The screen where the family picks how to play used to remember the last way that person played, because it came after choosing who plays. Now the mode is picked before anyone is named, so it can no longer know whose habit to remember. The choice was between dropping the memory (always offering the standard mode first) or remembering the last mode played on this machine by anyone.', 'Preset the last mode played on this machine (the newest game in the save, any player), else the standard mode', NULL, '2026-11-19T05:56:31Z', '2026-11-19T05:56:31Z', 2272, NULL, 'rule', 2272, '');
+INSERT INTO decision (id, subject, status, options, body, intro, answer, reason, created_at, closed_at, created_by_task, signoff, kind, decided_by_task, consequences) VALUES (750, 'New China-centric questions: drafted in English (milestone 12 as edited) instead of Chinese (decision 218)?', 'pending', '["1: drafted in English, reviewed by the developer, translated into Chinese; supersedes decision 218", "2: keep decision 218: drafted in Chinese"]', 'Milestone 12 now says: ''draft the new questions of the second step in english first (for me to review)'', and offers the Chinese base bundle in English too. `decision 218: New China-centric questions for chinese-base: drafted in Spanish and translated, or drafted in Chinese?` answered ''drafted in Chinese'' (2026-10-16), before the edit. `plan 60: masterplan` (revised by task 1366) assumes option 1; the content parts wait for this answer.
+Option 1: English sources like `base` since D-107 (`qgen batch --bundle chinese-base`, `locale: en`), the developer reviews in English, then `qgen batch --translate <zh locale> --bundle chinese-base`; English text ships as chinese-base''s English pool; Chinese-language questions (characters, idioms) drafted in English with the Chinese term quoted, checked by the native reviewers in the translation review.
+Option 2: keep decision 218: Chinese source language for the new questions (a second drafting path); the developer can''t review them; English then comes by translation from Chinese.', 'The Chinese edition of the game gets its own set of new questions about China. Earlier the answer was to write them directly in Chinese; the goal as rewritten since says to draft them in English first so the developer can review them. This choice settles which language the new questions are written and reviewed in, and so whether a second writing language is needed at all.', NULL, NULL, '2026-11-19T17:53:51Z', NULL, 1366, NULL, 'rule', NULL, '');
 
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (1, 1, '2026-10-11T23:14:36Z', '2026-10-11T23:16:05Z', 'done', NULL, 0, 'd7fb13f0580397cd7e3cb79641c26f1f67ace8b0', NULL, 'claude-opus-5-5[1m]', '102a6d61-be2f-483e-83e1-57951f33bbef', NULL, 14, 28, 8375, 677422, 59914, 0.78240839999999989, NULL, NULL, 73367);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2, 12, '2026-10-11T23:16:05Z', '2026-10-11T23:17:00Z', 'done', NULL, 0, 'c4bab21ed411ec2cadb1435ebb3fa8c838bbca71', NULL, 'claude-opus-5-5[1m]', 'e075f121-119b-411e-af9c-9034110e6417', NULL, 6, 12, 5681, 191036, 29983, 0.3917392, NULL, NULL, 73367);
@@ -60504,6 +61276,7 @@ INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, b
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2509, 2281, '2026-11-19T07:40:35Z', '2026-11-19T07:46:20Z', 'done', NULL, 0, 'bf5769271f53e60d9d42fef8767bd761afb4c4d0', 'app', 'claude-sonnet-5-5', '3d66202f-fe69-4a27-8475-0ac3756c2cec', 2508, 9, 20, 4597, 661954, 28429, 0.5515713, 90128, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2510, 2282, '2026-11-19T07:46:20Z', '2026-11-19T07:52:51Z', 'done', NULL, 0, '0cd1846efeee54fab24f91aa97157d12f118518e', 'app', 'claude-sonnet-5-5', '085ed9c9-e47e-4797-abb8-b0066fe460a0', NULL, 23, 40, 7568, 1060504, 53824, 0.39710639999999997, 68616, 60, 473050);
 INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2511, 2285, '2026-11-19T17:35:05Z', '2026-11-19T17:41:50Z', 'done', NULL, 0, '291e4122e4e94c30cfcf49c15dca823ac95bf0d4', NULL, 'claude-sonnet-5-5', '073cd727-4f78-472d-ae7b-f1aede38fbe1', NULL, 31, 54, 13119, 1596268, 72118, 0.57939679999999993, 85276, 60, 473050);
+INSERT INTO run (id, task_id, started_at, ended_at, result, reason, exit_code, base_commit, worktree, model, session_id, continues_run, turns, input_tokens, output_tokens, cache_read_tokens, cache_creation_tokens, cost_usd, context_tokens, cache_minutes, pid) VALUES (2512, 1366, '2026-11-19T17:51:51Z', '2026-11-19T17:55:35Z', 'done', NULL, 0, 'c8ac4a89a3dfd8037b3ea209c3f20b185a28d1af', NULL, 'claude-opus-5-5', 'a356bddd-9880-4d2c-be34-b7e47e200264', NULL, 19, 38, 17146, 1186283, 85573, 1.2649125999999997, 85581, 60, 473050);
 
 INSERT INTO task_decision (task_id, decision_id) VALUES (25, 1);
 INSERT INTO task_decision (task_id, decision_id) VALUES (26, 1);
@@ -60924,6 +61697,7 @@ INSERT INTO task_decision (task_id, decision_id) VALUES (1140, 249);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1144, 216);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1148, 217);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1152, 218);
+INSERT INTO task_decision (task_id, decision_id) VALUES (1152, 750);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1169, 217);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1173, 217);
 INSERT INTO task_decision (task_id, decision_id) VALUES (1174, 220);
