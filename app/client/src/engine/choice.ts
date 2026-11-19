@@ -14,6 +14,13 @@ export const QUESTION_MS = 30000;
 export const HINT_MS = 8000;
 export const CLAIM_MS = 6000;
 export const LIVES = 3;
+/** Timed pace: hectic = the times above, normal = double. */
+export type Pace = "hectic" | "normal";
+export const PACES: readonly Pace[] = ["hectic", "normal"];
+export function paceMs(pace: Pace | undefined): { question: number; hint: number; claim: number } {
+  const k = pace === "normal" ? 2 : 1;
+  return { question: QUESTION_MS * k, hint: HINT_MS * k, claim: CLAIM_MS * k };
+}
 
 /** The age group of a game that doesn't name one (D-22's ranges). */
 export const DEFAULT_AGE_GROUP = "young_teens";
@@ -31,7 +38,7 @@ export function defaultChoice(data: EngineData): Choice {
   return {
     age_group: DEFAULT_AGE_GROUP, difficulty: null,
     bundles: offered.filter((b) => b === base || b.kind !== "base").map((b) => b.id),
-    levels: LEVELS, cards: PER_LEVEL, video: true, audio: true, answers: true, jokers: { ...STANDARD_JOKERS },
+    levels: LEVELS, cards: PER_LEVEL, video: true, audio: true, answers: true, pace: "hectic", jokers: { ...STANDARD_JOKERS },
   };
 }
 
@@ -39,7 +46,7 @@ export function defaultChoice(data: EngineData): Choice {
  * defaults (jokers: the game's budget), resolved here and never written back. */
 export function gameChoice(state: Pick<GameState, "settings">, data: EngineData): Choice {
   const d = defaultChoice(data);
-  const { age_group, bundles, difficulty, levels, cards, video, audio, answers, jokers } = state.settings;
+  const { age_group, bundles, difficulty, levels, cards, video, audio, answers, jokers, pace } = state.settings;
   let out = d.bundles;
   if (bundles !== undefined) {
     try {
@@ -52,7 +59,7 @@ export function gameChoice(state: Pick<GameState, "settings">, data: EngineData)
     age_group: difficulty ? null : age_group !== undefined && data.groupById.has(age_group) ? age_group : d.age_group,
     difficulty: difficulty ? { ...difficulty } : null, bundles: out,
     levels: levels ?? d.levels, cards: cards ?? d.cards, video: video !== false, audio: audio !== false,
-    answers: answers !== false, jokers: { ...jokers },
+    answers: answers !== false, pace: pace === "normal" ? "normal" : "hectic", jokers: { ...jokers },
   };
 }
 
@@ -80,11 +87,13 @@ export interface ChoiceInput {
   audio?: unknown;
   /** Gamemaster mode only (D-105). */
   answers?: unknown;
+  /** Timed mode only: `hectic` or `normal`. */
+  pace?: unknown;
   /** Merged into `base.jokers`. */
   jokers?: unknown;
 }
 
-export const CHOICE_KEYS = ["age_group", "difficulty", "bundles", "levels", "cards", "video", "audio", "answers", "jokers"] as const;
+export const CHOICE_KEYS = ["age_group", "difficulty", "bundles", "levels", "cards", "video", "audio", "answers", "pace", "jokers"] as const;
 
 const isInt = (v: unknown): v is number => Number.isInteger(v);
 
@@ -139,6 +148,10 @@ export function resolveChoice(data: EngineData, input: ChoiceInput, base: Choice
     video: or(input.video, base.video, (v) => checkSwitch(v, "video")),
     audio: or(input.audio, base.audio, (v) => checkSwitch(v, "audio")),
     answers: or(input.answers, base.answers, (v) => checkSwitch(v, "answers")),
+    pace: or(input.pace, base.pace ?? "hectic", (v) => {
+      if (!PACES.includes(v as Pace)) throw new GameError("pace_invalid");
+      return v as Pace;
+    }),
     jokers: or(input.jokers, base.jokers, (v) => ({ ...base.jokers, ...checkBudget(v) })),
   };
 }

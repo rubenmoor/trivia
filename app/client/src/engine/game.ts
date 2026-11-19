@@ -2,7 +2,7 @@
 // (save, data, io, …) → {save, …}; inside, they mutate a transact() copy like the Python port.
 import type { Choice, Game, GameMode, JokerBudget, JokerEvent, JokerName, JokerState, Jokers, Player, Supply } from "../lib/types.ts";
 import type { ChoiceInput } from "./choice.ts";
-import { CLAIM_MS, HINT_MS, JOKERS, LIVES, QUESTION_MS, STANDARD_JOKERS, checkBudget, checkCount, defaultChoice, gameChoice, mediaAllowed, rangesFor, resolveChoice } from "./choice.ts";
+import { JOKERS, LIVES, STANDARD_JOKERS, checkBudget, checkCount, defaultChoice, gameChoice, mediaAllowed, paceMs, rangesFor, resolveChoice } from "./choice.ts";
 import type { LevelRanges, PoolQuestion } from "./pool.ts";
 import { catKey, categoryOf, subKey, subOf } from "./pool.ts";
 import { casefold, pyLen, pySplitJoin, pyTruthy } from "./pycompat.ts";
@@ -12,7 +12,7 @@ import { GameError, UNLIMITED, gameLocale, isSeatDevice, newest, nextId, rowPlay
 
 export { GameError, UNLIMITED };
 export {
-  CARDS_MAX, CHOICE_KEYS, CLAIM_MS, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, QUESTION_MS, STANDARD_JOKERS, defaultChoice,
+  CARDS_MAX, CHOICE_KEYS, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, LEVELS_MAX, QUESTION_MS, CLAIM_MS, STANDARD_JOKERS, defaultChoice,
   gameChoice, rangesFor, resolveChoice,
 } from "./choice.ts";
 
@@ -328,6 +328,7 @@ function freshState(args: ChoiceArgs, choice: Choice, mode: GameMode, overrides:
   if (!choice.video) state.settings.video = false;
   if (!choice.audio) state.settings.audio = false;
   if (!choice.answers) state.settings.answers = false;
+  if (mode === "timed" && choice.pace === "normal") state.settings.pace = "normal";
   if (args.mode !== undefined) state.settings.mode = mode;
   if (mode === "gamemaster") Object.assign(state.settings.jokers, overrides);
   else {
@@ -913,7 +914,7 @@ function questionEnd(c: Timed, e: Ending): void {
   const q = question(data, state.current);
   const { at, ...rest } = e;
   see(work, q.id, row.id, io);
-  state.history.push({ level: state.level, question_id: q.id, ...rest, hints: Math.min(q.hints.length, Math.floor((at - t.shown_at!) / HINT_MS)) });
+  state.history.push({ level: state.level, question_id: q.id, ...rest, hints: Math.min(q.hints.length, Math.floor((at - t.shown_at!) / paceMs(state.settings.pace).hint)) });
   const { correct: _, ...flags } = rest;
   state.last = { ...flags, question_id: q.id, correct: e.correct ?? false, correct_index: state.answers.indexOf(q.answer) };
   t.claim = null;
@@ -948,22 +949,23 @@ function roundEnd(c: Timed): void {
   nextQuestion(c);
 }
 
-/** A passed deadline first in every timed action: a claim past `CLAIM_MS` is a wrong answer, an unclaimed question past
- * `QUESTION_MS` ends (deadlines inclusive); true if one did. Not while paused. */
+/** A passed deadline first in every timed action: a claim past its time is a wrong answer, an unclaimed question past
+ * the question time ends (deadlines inclusive); true if one did. Not while paused. */
 function settle(c: Timed): boolean {
   const { t } = c;
   if (t.paused_at !== null) return false;
+  const ms = paceMs(c.state.settings.pace);
   if (t.claim) {
-    if (c.ms <= t.claim.at + CLAIM_MS) return false;
+    if (c.ms <= t.claim.at + ms.claim) return false;
     questionEnd(c, { seat: t.claim.seat, chosen: null, correct: false, at: t.claim.at, timeout: true });
   } else {
-    if (t.shown_at === null || c.ms <= t.shown_at + QUESTION_MS) return false;
-    questionEnd(c, { chosen: null, at: t.shown_at + QUESTION_MS, unclaimed: true });
+    if (t.shown_at === null || c.ms <= t.shown_at + ms.question) return false;
+    questionEnd(c, { chosen: null, at: t.shown_at + ms.question, unclaimed: true });
   }
   return true;
 }
 
-/** Claim the question on screen: `CLAIM_MS` to answer, the question clock stops; too late: the settled flow, no error. */
+/** Claim the question on screen: the claim time to answer, the question clock stops; too late: the settled flow, no error. */
 export function claim(save: SaveData, data: EngineData, io: Io, seat?: unknown): { save: SaveData; state: GameState } {
   return action(save, (work) => {
     const { row } = running(work);
@@ -999,7 +1001,8 @@ export function expire(save: SaveData, data: EngineData, io: Io): { save: SaveDa
     const c = timedOf(work, running(work).row, data, io, "expire");
     if (!settle(c)) {
       if (c.t.paused_at !== null) throw new GameError("paused");
-      const deadline = c.t.claim ? c.t.claim.at + CLAIM_MS : (c.t.shown_at ?? c.ms) + QUESTION_MS;
+      const ms = paceMs(c.state.settings.pace);
+      const deadline = c.t.claim ? c.t.claim.at + ms.claim : (c.t.shown_at ?? c.ms) + ms.question;
       throw new GameError("not_expired", { ms: deadline - c.ms });
     }
     return timedSave(c);
@@ -1042,9 +1045,9 @@ export function show(save: SaveData, data: EngineData, io: Io): { save: SaveData
   });
 }
 
-/** Hints shown at `ms`: one per `HINT_MS` of the question's clock (it stops at a claim), at most the question's. */
-const timedHints = (t: TimedState, ms: number, count: number): number =>
-  t.shown_at === null ? 0 : Math.min(count, Math.max(0, Math.floor(((t.claim?.at ?? ms) - t.shown_at) / HINT_MS)));
+/** Hints shown at `ms`: one per hint time of the question's clock (it stops at a claim), at most the question's. */
+const timedHints = (t: TimedState, ms: number, count: number, hintMs: number): number =>
+  t.shown_at === null ? 0 : Math.min(count, Math.max(0, Math.floor(((t.claim?.at ?? ms) - t.shown_at) / hintMs)));
 
 // Gamemaster cheats (MD-12, D-88) --------------------------------------------------------------
 
@@ -1255,13 +1258,15 @@ function timedView(row: GameRow, t: TimedState, state: GameState, data: EngineDa
   const q = state.current === null ? undefined : data.byId.get(state.current);
   const chance = (i: number) => t.round_done === t.round_size - 1 && !t.round_correct.includes(i);
   const left = seatsIn(row);
+  const ms = paceMs(state.settings.pace);
   return {
+    question_ms: ms.question, hint_ms: ms.hint, claim_ms: ms.claim,
     round: state.level, sudden_death: state.level >= levelCount(state), repeat: t.repeat,
     round_size: t.round_size, question_in_round: Math.min(t.round_done + 1, t.round_size),
     shown: t.shown_at !== null,
-    deadline: live && !paused && !t.claim && t.shown_at !== null ? t.shown_at + QUESTION_MS : null,
-    claim: live && !paused && t.claim ? { seat: t.claim.seat, deadline: t.claim.at + CLAIM_MS, question_left: Math.max(0, QUESTION_MS - (t.claim.at - (t.shown_at ?? t.claim.at))) } : null,
-    paused, hints_shown: live && !paused && q ? timedHints(t, msOf(io), q.hints.length) : null,
+    deadline: live && !paused && !t.claim && t.shown_at !== null ? t.shown_at + ms.question : null,
+    claim: live && !paused && t.claim ? { seat: t.claim.seat, deadline: t.claim.at + ms.claim, question_left: Math.max(0, ms.question - (t.claim.at - (t.shown_at ?? t.claim.at))) } : null,
+    paused, hints_shown: live && !paused && q ? timedHints(t, msOf(io), q.hints.length, ms.hint) : null,
     all_at_risk: live && left.length > 0 && left.every((i) => row.seats![i].lives === 1 && chance(i)),
   };
 }
@@ -1310,7 +1315,7 @@ export function view(save: SaveData, data: EngineData, io: Io): Game | null {
     // Only the hints shown through «Soplo» (D-26, D-27); no description (04, "Question").
     out.question = {
       id: q.id, question: q.question, media: q.media, background: q.background,
-      answers: state.answers, hints: q.hints.slice(0, t ? timedHints(t, msOf(io), q.hints.length) : state.hints_shown),
+      answers: state.answers, hints: q.hints.slice(0, t ? timedHints(t, msOf(io), q.hints.length, paceMs(state.settings.pace).hint) : state.hints_shown),
       struck: state.struck, swapped_to: state.swapped_to,
     };
   }

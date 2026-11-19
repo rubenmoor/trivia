@@ -3,7 +3,7 @@
   // one press answers (decision 295), the reveal; the next question of the round flips in here. The engine decides
   // every outcome; this screen only counts down and asks (`show`, `claim`, `answer`, `expire`).
   import { onDestroy, onMount, untrack } from "svelte";
-  import { CLAIM_MS, HINT_MS, LIVES, QUESTION_MS } from "../../engine/choice.ts";
+  import { LIVES } from "../../engine/choice.ts";
   import { fetchGame, gameAction } from "../../lib/api.ts";
   import { errorText } from "../../lib/errors.ts";
   import { claimLabel, seatDevice } from "../../lib/gamepad.svelte.ts";
@@ -103,14 +103,14 @@
   const left = (deadline: number, span: number) => Math.min(1, Math.max(0, (deadline - now) / span));
   const bar = $derived.by(() => {
     const d = held ? null : timedOf(game).deadline;
-    if (d !== null) return left(d, QUESTION_MS);
+    if (d !== null) return left(d, timedOf(game).question_ms);
     const c = held ? null : timedOf(game).claim;
-    return c ? c.question_left / QUESTION_MS : frozen;
+    return c ? c.question_left / timedOf(game).question_ms : frozen;
   });
   $effect(() => {
     if (!held && timedOf(game).deadline !== null) frozen = bar;
   });
-  const claimLeft = $derived(claim ? left(claim.deadline, CLAIM_MS) : 0);
+  const claimLeft = $derived(claim ? left(claim.deadline, timedOf(game).claim_ms) : 0);
   const claimSeconds = $derived(claim ? Math.max(0, Math.ceil((claim.deadline - now) / 1000)) : 0);
 
   let timers: ReturnType<typeof setTimeout>[] = [];
@@ -177,8 +177,9 @@
   $effect(() => {
     const d = timedOf(game).deadline;
     if (d === null || held) return;
-    const start = d - QUESTION_MS;
-    const at = start + (Math.floor((Date.now() - start) / HINT_MS) + 1) * HINT_MS;
+    const { question_ms, hint_ms } = timedOf(game);
+    const start = d - question_ms;
+    const at = start + (Math.floor((Date.now() - start) / hint_ms) + 1) * hint_ms;
     if (at >= d) return;
     const id = setTimeout(reread, at - Date.now() + 50);
     return () => clearTimeout(id);

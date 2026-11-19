@@ -122,6 +122,7 @@ export interface GameActionBody {
   cards?: number;
   video?: boolean;
   audio?: boolean;
+  pace?: "hectic" | "normal";
   answers?: boolean;
   seen?: boolean;
   id?: string;
@@ -129,7 +130,7 @@ export interface GameActionBody {
 }
 
 /** A configuration for `choice` and `new` (D-88): a missing field comes from the player's newest game. */
-export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bundles" | "levels" | "cards" | "video" | "audio" | "answers" | "jokers">;
+export type ChoiceBody = Pick<GameActionBody, "age_group" | "difficulty" | "bundles" | "levels" | "cards" | "video" | "audio" | "answers" | "pace" | "jokers">;
 
 /** What the Choice screen offers (plan 29): age groups in file order, the new game's locale's bundles
  * (plan 71), both with their names in that locale; `scope` "game": the running game's locale (MD-12). */

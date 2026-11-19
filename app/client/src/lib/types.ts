@@ -67,6 +67,8 @@ export interface Choice {
   audio: boolean;
   /** «Select answer to advance to next level» (D-105): false = the padlock reveals. */
   answers: boolean;
+  /** Timed mode: hectic = the base times, normal = double. */
+  pace?: "hectic" | "normal";
   jokers: JokerBudget;
 }
 
@@ -167,6 +169,8 @@ export interface Game {
   settings: {
     jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean;
     difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false; answers?: false;
+    /** timed only; missing = hectic. */
+    pace?: "normal";
   };
   /** Uses left in this game per joker, null = unlimited (MD-1). */
   jokers_left: JokerBudget;
@@ -217,6 +221,8 @@ export interface Game {
       shown: boolean;
       deadline: number | null; claim: { seat: number; deadline: number; /** ms of the question's clock left at the claim */ question_left: number } | null; paused: boolean;
       hints_shown: number | null; all_at_risk: boolean;
+      /** The clocks in ms (the game's pace). */
+      question_ms: number; hint_ms: number; claim_ms: number;
     };
   };
 }

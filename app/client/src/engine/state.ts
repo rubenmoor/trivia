@@ -191,7 +191,7 @@ export interface GameState {
    * age_group), `levels` (missing 12), `cards` (missing 4), `video` / `audio` (only false; missing = allowed); D-105: `answers` (only false; missing = on). */
   settings: {
     jokers: JokerBudget; age_group?: string; bundles?: string[]; mode?: GameMode; customized?: boolean;
-    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false; answers?: false;
+    difficulty?: Difficulty; levels?: number; cards?: number; video?: false; audio?: false; answers?: false; pace?: "normal";
   };
 }
 

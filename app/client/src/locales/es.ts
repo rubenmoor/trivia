@@ -308,6 +308,10 @@ const es = {
     /** Title in the multiplayer modes: no single name. */
     titleMany: "¿Cómo juegan?",
     groups: "Dificultad",
+    /** Timed mode: the clocks, normal = double hectic. */
+    pace: "Ritmo",
+    paceNormal: "tranquilo",
+    paceHectic: "frenético",
     groupAbout: { kids: "Empezando con las trivias", young_teens: "Disfrutando del reto", young_adults: "Al límite de tus fuerzas", adults: "Te gusta sufrir" },
     on: "activado",
     off: "desactivado",
@@ -789,6 +793,7 @@ const es = {
     no_questions: "no hay preguntas para esta elección: elige algún paquete con preguntas",
     difficulty_invalid: "dificultad a medida: de 1 a 15, el final no menor que el inicio",
     levels_invalid: "número de niveles: de {min} a {max}",
+    pace_invalid: "ritmo: normal o frenético",
     cards_invalid: "cartas por nivel: de {min} a {max}",
     switch_invalid: "valor no válido para {field}",
     mode_unknown: "modo desconocido: '{mode}'",

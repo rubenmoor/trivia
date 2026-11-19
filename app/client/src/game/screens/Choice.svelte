@@ -61,6 +61,7 @@
   let video = $state(start.video);
   let audio = $state(start.audio);
   let answers = $state(start.answers);
+  let pace = $state(start.pace);
   let budget = $state(start.budget);
   let error = $state<string | null>(null);
   let section = $state<HTMLElement>();
@@ -116,6 +117,7 @@
     else if (id === "video") video = !video;
     else if (id === "audio") audio = !audio;
     else if (id === "answers") answers = !answers;
+    else if (id === "pace") pace = pace === "normal" ? "hectic" : "normal";
     else if (id === "preset") return void (budget = stepPreset(budget, by));
     else if (id.startsWith("joker-")) return stepJoker(id.slice(6) as JokerName, by);
   }
@@ -145,7 +147,7 @@
   /** «Seguir»: the Join screen (a multiplayer mode) or the Bundles screen, with these picks kept. */
   function next() {
     if (busy || !options) return;
-    onnext({ mode, group, jokers, custom, difficulty, levels, cards, video, audio, answers, budget });
+    onnext({ mode, group, jokers, custom, difficulty, levels, cards, video, audio, answers, pace, budget });
   }
 
   const session = $derived(mode !== "solo" && mode !== "gamemaster");
@@ -255,6 +257,9 @@
       <div class="lines switches">
         {@render toggle("video", t("configure.video"), video, "film", VIDEO_KEY)}
         {@render toggle("audio", t("configure.audio"), audio, "speaker", AUDIO_KEY)}
+        {#if mode === "timed"}
+          {@render toggle("pace", t("choice.pace"), pace === "normal", "refresh", undefined, [t("choice.paceNormal"), t("choice.paceHectic")])}
+        {/if}
       </div>
       {#if jokerMode}
       <div class="row" data-line>

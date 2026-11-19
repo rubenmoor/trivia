@@ -1,6 +1,7 @@
 // The Choice screen's picks, kept in Game.svelte while the Bundles screen follows (plan 151).
 import { CARDS_MAX, DEFAULT_AGE_GROUP, DIFFICULTY_MAX, STANDARD_JOKERS, type ChoiceBody } from "../lib/api.ts";
 export { isSession } from "../lib/api.ts";
+import type { Pace } from "../engine/choice.ts";
 import type { Difficulty, GameMode, JokerBudget } from "../lib/types.ts";
 import { presetOf } from "./jokers.ts";
 import { DEFAULT_LEVELS } from "./levels.ts";
@@ -18,13 +19,15 @@ export interface ChoiceDraft {
   video: boolean;
   audio: boolean;
   answers: boolean;
+  /** Timed mode (Choice screen). */
+  pace: Pace;
   budget: JokerBudget;
 }
 
 /** A fresh draft for the Mode screen's pick (the mode is never defaulted here, task 2114). */
 export const defaultDraft = (mode: GameMode): ChoiceDraft => ({
   mode, group: DEFAULT_AGE_GROUP, jokers: { ...STANDARD_JOKERS }, custom: false,
-  difficulty: { start: 1, end: DIFFICULTY_MAX }, levels: DEFAULT_LEVELS, cards: CARDS_MAX, video: true, audio: true, answers: true,
+  difficulty: { start: 1, end: DIFFICULTY_MAX }, levels: DEFAULT_LEVELS, cards: CARDS_MAX, video: true, audio: true, answers: true, pace: "normal",
   budget: { ...STANDARD_JOKERS },
 });
 
@@ -38,7 +41,7 @@ export function bodyOf(d: ChoiceDraft, bundles: string[]): ChoiceBody {
   }
   const jokers = d.mode !== "timed" && presetOf(d.jokers) !== "standard" ? { jokers: { ...d.jokers } } : {};
   // rr-competitive: every seat picks its own age group on the Join screen
-  return { ...(d.mode === "rr-competitive" ? {} : { age_group: d.group }), bundles: [...bundles], video: d.video, audio: d.audio, ...jokers };
+  return { ...(d.mode === "rr-competitive" ? {} : { age_group: d.group }), bundles: [...bundles], video: d.video, audio: d.audio, ...(d.mode === "timed" ? { pace: d.pace } : {}), ...jokers };
 }
 
 export const choiceOf = (d: ChoiceDraft, bundles: string[]): ChoiceBody & { mode: GameMode } => ({ mode: d.mode, ...bodyOf(d, bundles) });
