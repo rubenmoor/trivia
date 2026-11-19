@@ -804,10 +804,10 @@ def review_time(pool, bundle=None, run=None):
     """The developer's review time (plan 98, decision 110): human verdicts of the sources and every translation
     with `reviewed_at`, gaps on the whole timeline (filters don't make gaps), a session's first verdict has none."""
     src = {q["id"]: q for q in pool}
-    items = [(q, q, "es") for q in pool] + [(t, src.get(t["id"], {}), l) for l in translations.LOCALES
-                                            for t in translations.load(l)["questions"]]
+    items = [(q, q) for q in pool] + [(t, src.get(t["id"], {})) for l in translations.LOCALES
+                                      for t in translations.load(l)["questions"]]
     stamped, untimed = [], 0
-    for x, q, l in items:
+    for x, q in items:
         rv = x.get("review") or {}
         if rv.get("reviewer") != "human":
             continue

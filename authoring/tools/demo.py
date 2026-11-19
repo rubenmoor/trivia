@@ -5,6 +5,7 @@ Candidates: base, approved, translatable; every picked file in the media cache w
 `licence_of`, as `trivia-media licenses`); no human spot check that didn't approve it. Per launch locale the question
 plays when it is the source's locale or a playing translation (translations.plays) that no spot check turned down;
 full = plays in all four, pending = some missing. Health has no per-question mark (batch level only, D-55)."""
+import atomic  # authoring/tools/atomic.py
 import json
 import sys
 from collections import Counter, defaultdict
@@ -22,7 +23,7 @@ MAX_SEATS = 5  # milestone 16: 4 pads + keyboard and mouse
 
 
 def load(path, default=None):
-    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else default
+    return atomic.read_json(path, default)
 
 
 def turned_down():

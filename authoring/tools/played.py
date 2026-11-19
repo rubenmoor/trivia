@@ -33,9 +33,9 @@ def empty():
 
 
 def load():
-    if not STATS.exists():
+    stats = atomic.read_json(STATS)
+    if stats is None:
         return empty()
-    stats = json.loads(STATS.read_text(encoding="utf-8"))
     if stats.get("version") != 1:
         raise SystemExit(f"{STATS}: unknown version {stats.get('version')}")
     return stats

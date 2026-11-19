@@ -3,6 +3,7 @@
 Counts only (added / fixed / dropped per locale and category), never question text, answers or ids.
 A ref is a git rev; None = the working tree. A file missing at a ref = an empty pool for that locale.
 """
+import atomic  # authoring/tools/atomic.py
 import json
 import re
 import subprocess
@@ -61,7 +62,7 @@ def read(ref, path):
     """Parsed JSON of path at ref, None if missing."""
     if ref is None:
         p = ROOT / path
-        return json.loads(p.read_text(encoding="utf-8")) if p.exists() else None
+        return atomic.read_json(p)
     r = git("show", f"{ref}:{path}")
     return json.loads(r.stdout) if r.returncode == 0 else None
 

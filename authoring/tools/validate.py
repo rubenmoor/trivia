@@ -105,10 +105,11 @@ def validate_pool():
     e, w = translation_problems(data)
     errors += e
     warnings += w
-    for path, text in pool_export.exports(data).items():
+    exports = translations.exports(data)
+    for path, text in exports.items():
         if (path.read_text(encoding="utf-8") if path.exists() else None) != text:
             errors.append(f"{path.relative_to(ROOT)} is not the current export of the pool: run `qgen export`")
-    for p in pool_export.stale_packs(pool_export.exports(data)):
+    for p in pool_export.stale_packs(exports):
         errors.append(f"{p.relative_to(ROOT)}: not written by `qgen export` (pack without questions); delete it")
     for l in translations.LOCALES:
         if layout.POOL_FILE(l).exists() and not translations.exported(l, data):
@@ -184,30 +185,26 @@ def playable_problem(slot, kind):
     return None
 
 
-def _num(x):
-    return isinstance(x, (int, float)) and not isinstance(x, bool)
-
-
 def media_first_problems(q):
     """Problems of the media-first fields (plan 203, decisions 640, 644): media.excerpt, duration, work; media_first."""
     m, mf, out = q.get("media") or {}, q.get("media_first"), []
     timed = m.get("type") in {"audio", "video"}
     d = m.get("duration")
-    if "duration" in m and not (timed and _num(d) and d > 0):
+    if "duration" in m and not (timed and targets.number(d) and d > 0):
         out.append("media.duration must be a number > 0 on audio/video media")
     if m.get("excerpt") is not None:
         x = m["excerpt"]
         if not timed:
             out.append("media.excerpt only on audio/video media")
-        elif not (isinstance(x, dict) and set(x) == {"start", "end"} and _num(x["start"]) and _num(x["end"])):
+        elif not (isinstance(x, dict) and set(x) == {"start", "end"} and targets.number(x["start"]) and targets.number(x["end"])):
             out.append("media.excerpt must be {start, end} numbers")
         elif not 0 <= x["start"] < x["end"]:
             out.append("media.excerpt needs 0 <= start < end")
         elif x["end"] - x["start"] > max_seconds(m["type"]):
             out.append(f"media.excerpt longer than {max_seconds(m['type'])} s")
-        elif _num(d) and x["end"] > d:
+        elif targets.number(d) and x["end"] > d:
             out.append("media.excerpt ends after media.duration")
-    if m.get("type") == "video" and m.get("excerpt") is None and not (_num(d) and 0 < d <= max_seconds("video")):
+    if m.get("type") == "video" and m.get("excerpt") is None and not (targets.number(d) and 0 < d <= max_seconds("video")):
         out.append(f"video without media.excerpt needs a media.duration of at most {max_seconds('video')} s")
     cls = mf.get("class") if isinstance(mf, dict) else None
     if mf is not None:
