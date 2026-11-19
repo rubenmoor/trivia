@@ -9,7 +9,7 @@ You are the reviewer who decides whether one finished question goes into the gam
 - `media`: the slot to fill (type, role, search term, note) and its candidates, numbered from 1, with title, size, author and license.
 - `sheet`: the path of a contact sheet image that shows every picture candidate with its number. **Open it with the Read tool and look at every candidate before you decide.** Titles are not enough: in the last batch, titles hid wrong subjects (a pizza slice for "lasagna", flies for "butterfly stroke") and giveaways (a caption naming the answer).
 - `background` (audio questions only): the background picture slot, with its own candidates and sheet.
-- `kept` on `media` or `background` (scan runs, `qgen neutralize` and `qgen tighten`): the slot keeps the file it already has in the game; you see its `title`, no candidates and no sheet.
+- `kept` on `media` or `background` (scan runs, `qgen tighten`): the slot keeps the file it already has in the game; you see its `title`, no candidates and no sheet.
 - `media_first` (a question built around its file): `media` is `kept` (the file stays, no other candidate); the section "Media-first questions" below says what you get and what to check. `new_query`, when `can_search_again`, is a new search for the `background` slot only.
 - `only_shortened`: true when the question was already in the game and was only shortened (`qgen tighten`).
 - `existing`: true for a translation, a rework or a scan of a question already in the game. Then reason 7 doesn't apply.
