@@ -684,8 +684,11 @@ def cost_report(pool):
     runs, skipped = cost_runs(pool)
     rated = lambda rs: (sum(r["cost"] for r in rs) / n if (n := sum(r["approved"] or 0 for r in rs)) else None)
     batches = [r for r in runs if r["kind"] == "batch" and r["merged"]]
-    last3 = {l: [r for r in batches if r["locale"] == l][-3:] for l in translations.LOCALES}
-    tr = {l: [r for r in runs if r["kind"] == "translation" and r["locale"] == l] for l in translations.LOCALES}
+    # base's rates: its own plain batches (media-first has its own block) and its translations
+    plain = [r for r in batches if r["bundle"] == "base" and r["mode"] != "media-first"]
+    last3 = {l: [r for r in plain if r["locale"] == l][-3:] for l in translations.LOCALES}
+    tr = {l: [r for r in runs if r["kind"] == "translation" and r["bundle"] == "base" and r["locale"] == l]
+          for l in translations.LOCALES}
     batch_cost = sum(r["cost"] for r in batches)
     overhead = sum(r["cost"] + r["audit"] for r in runs if r["kind"] not in ("batch", "translation")) \
         + sum(r["audit"] for r in batches)
@@ -695,7 +698,7 @@ def cost_report(pool):
              "overhead_cost": overhead, "overhead_ratio": ratio,
              "translation": {l: rated(rs) for l, rs in tr.items()}}
     budget = targets.load_all().get("budget") or {}
-    spent = {l: sum(r["cost"] + r["audit"] for r in batches + tr[l] if r["locale"] == l) for l in translations.LOCALES}
+    spent = {l: sum(r["cost"] + r["audit"] for r in [*plain, *tr[l]] if r["locale"] == l) for l in translations.LOCALES}
     draft = "en"  # base's draft locale (decision 236)
     en_rate = rates["draft"].get(draft, rates["draft"].get("es"))  # es batches' rate until an en batch is merged
     gaps = targets.draft_gaps(pool, "base") or {}
@@ -723,23 +726,27 @@ def cost_report(pool):
 
 
 def bundle_costs(pool, runs, rates, ratio):
-    """Rows per non-base bundle (decision 110; base is the projection): a region × es, en; a theme × en (its drafting,
-    deficit = the draft gap, decision 236) and es, es-ES, de (its translations). $ per approved of its --bundle and
-    --translate --bundle runs, deficit to its target, projection; no own run yet → base's rate."""
+    """Rows per non-base bundle (decision 110; base is the projection): its draft locale (translations.draft_locale),
+    the other `languages`, and any locale it has translation runs for. $ per approved of its plain --bundle batches
+    (media-first apart) and --translate --bundle runs, deficit to its target (a theme's draft row: its draft gap,
+    decision 236), projection; no own run yet → base's rate."""
     rows = []
     for b in load_bundles():
         theme = b.get("kind") == "theme"
         if b.get("kind") != "region" and not theme:
             continue
+        draft = translations.draft_locale(b)
+        extra = sorted({r["locale"] for r in runs if r["bundle"] == b["id"] and r["kind"] == "translation"} - {draft, *b["languages"]})
         gap = sum((targets.draft_gaps(pool, b["id"]) or {}).values()) if theme else None
-        for l in (translations.LOCALES if theme else ["es", "en"]):
-            drafting = l == "en" if theme else l == "es"
+        for l in dict.fromkeys([draft, *b["languages"], *extra]):
+            drafting = l == draft
             own = [r for r in runs if r["bundle"] == b["id"] and r["merged"]
-                   and (r["kind"] == "batch" and (not theme or r["locale"] == l) if drafting else r["locale"] == l)]
+                   and ((r["kind"] == "batch" and r["mode"] != "media-first") if drafting
+                        else r["kind"] == "translation" and r["locale"] == l)]
             n = sum(r["approved"] or 0 for r in own)
             rate = sum(r["cost"] for r in own) / n if n else None
-            fallback = (rates["draft"].get("en", rates["draft"].get("es")) if theme else rates["draft"].get("es")) \
-                if drafting else rates["translation"].get(l)
+            fallback = rates["draft"].get(l, rates["draft"].get("en", rates["draft"].get("es"))) if drafting \
+                else rates["translation"].get(l)
             use = rate if rate is not None else fallback
             deficit = gap if theme and drafting else sum((targets.deficits(pool, b["id"], l) or {}).values())
             rows.append({"bundle": b["id"], "kind": b["kind"], "locale": l, "runs": [r["run"] for r in own], "approved": n,
