@@ -16,10 +16,13 @@ import engine  # authoring/tools/engine.py
 import media  # authoring/tools/media.py: licence_of
 import media_cache  # authoring/tools/media_cache.py: cache_path
 import translations  # authoring/tools/translations.py
-from layout import AUTHORING, DEMO_LIST, DEMO_WORK, REPO, SOURCE_POOL, SPOT_CHECKS
+from layout import AUTHORING, BUNDLES, DEMO_LIST, DEMO_WORK, REPO, SOURCE_POOL, SPOT_CHECKS
 
 SCRIPT = AUTHORING / "tools" / "demo.ts"
 MAX_SEATS = 5  # milestone 16: 4 pads + keyboard and mouse
+
+# the demo's locales: those base lists (chinese-base's zh joins with plan 60 part 12)
+LOCALES = next(b["languages"] for b in json.loads(BUNDLES.read_text())["bundles"] if b["id"] == "base")
 
 
 def load(path, default=None):
@@ -46,7 +49,7 @@ def candidates(pool=None):
     shares over the approved base pool: per category, audio + video."""
     pool = pool or load(SOURCE_POOL)["questions"]
     cat_of = {s: c["slug"] for c in categories.load("base") for s in c["subcategories"]}
-    by_locale = {l: {t["id"]: t for t in translations.load(l)["questions"]} for l in translations.LOCALES}
+    by_locale = {l: {t["id"]: t for t in translations.load(l)["questions"]} for l in LOCALES}
     down = turned_down()
     base = [q for q in pool if (q.get("bundle") or "base") == "base" and q["status"] == "approved"]
     out = []
@@ -54,7 +57,7 @@ def candidates(pool=None):
         if not translations.translatable(q) or q["id"] in down[None] or not shippable(q):
             continue
         diff, missing = {}, []
-        for l in translations.LOCALES:
+        for l in LOCALES:
             t = by_locale[l].get(q["id"])
             if translations.source_locale(q) == l:
                 diff[l] = q["difficulty"]
@@ -72,7 +75,7 @@ def candidates(pool=None):
 
 
 def run(cmd, cands, shares, **opts):
-    return engine.node(SCRIPT, {"cmd": cmd, "candidates": cands, "locales": list(translations.LOCALES), "shares": shares,
+    return engine.node(SCRIPT, {"cmd": cmd, "candidates": cands, "locales": list(LOCALES), "shares": shares,
                                 **opts})
 
 
@@ -85,10 +88,10 @@ def rows_md(rows):
     by = defaultdict(dict)
     for r in rows:
         by[r["config"]][r["locale"]] = r
-    out = ["| configuration | " + " | ".join(translations.LOCALES) + " |", "|---|" + "---|" * len(translations.LOCALES)]
+    out = ["| configuration | " + " | ".join(LOCALES) + " |", "|---|" + "---|" * len(LOCALES)]
     for config, per in by.items():
         cells = [f"{mark(r['engine'])} / {mark(r['reserve'])}" + (f" ({r['reserve_short']} short)" if r["reserve_short"] else "")
-                 for r in (per[l] for l in translations.LOCALES)]
+                 for r in (per[l] for l in LOCALES)]
         out.append(f"| {config} | " + " | ".join(cells) + " |")
     return out
 

@@ -553,7 +553,8 @@ def bundle_problems(bundles):
     listed = {l: {b["id"] for b in bundles if l in (b.get("languages") or [])} for l in translations.LOCALES}
     for l in translations.LOCALES:
         path = layout.POOL_FILE(l, "base")
-        if not (listed[l] or path.exists()):  # a locale without pool nor bundle, e.g. es-ES before its pool
+        if not (listed[l] or path.exists()):  # a locale without pool nor bundle: only a warning (decision 236)
+            warnings.append(f"{l}: no bundle lists it yet (chinese-base, plan 60 part 4)")
             continue
         if not any(b.get("kind") == "base" and b["id"] in listed[l] for b in bundles):
             errors.append(f"{rel}: no base bundle for {l}")

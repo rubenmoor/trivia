@@ -140,7 +140,10 @@ def source_supply(pool_questions, bundle="base", draft="en"):
     """Per question locale (plan 70, decision 236): yield, the deficit, and per level the approved, translatable
     sources in another locale not yet translated into it (or stale); `draft`: the drafting locale."""
     out = {}
+    listed = next((b.get("languages") for b in json.loads(BUNDLES.read_text())["bundles"] if b["id"] == bundle), None)
     for l in translations.LOCALES:
+        if listed is not None and l not in listed:
+            continue  # decision 236: only locales the bundle lists steer its drafting
         ts = {t["id"]: t for t in translations.load(l)["questions"]}
         untranslated = Counter(q["difficulty"] for q in pool_questions
                                if q["status"] == "approved" and q.get("bundle") == bundle and translations.translatable(q)

@@ -1649,6 +1649,9 @@ def cmd_batch(args):
     """The whole pipeline in a fixed order (D-36). Rerunning it continues where it stopped.
     `--media-first` (plan 203): from surveyed Commons files instead of topics, base only."""
     if args.translate:
+        f = PROMPTS / f"locale-{args.translate}.md"
+        if not (args.dry_run or f.exists() or (PROMPTS / f"locale-{args.translate.split('-')[0]}.md").exists()):
+            sys.exit(f"no translation prompt for {args.translate}: {f.relative_to(ROOT)} is missing (plan 140)")
         return cmd_translate_batch(args)
     if args.ids or args.dry_run:
         sys.exit("--ids and --dry-run need --translate")

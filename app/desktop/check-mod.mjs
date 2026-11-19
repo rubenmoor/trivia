@@ -6,7 +6,7 @@ import { BUNDLE_ICONS, bundleRows, readManifest } from "./mods.mjs";
 import { contained } from "./resolve.mjs";
 
 // LOCALES in app/client/src/lib/data.ts.
-const LOCALES = ["es", "es-ES", "en", "de"];
+const LOCALES = ["es", "es-ES", "en", "de", "zh-Hans", "zh-Hant"];
 
 const ERRORS = {
   not_a_folder: () => "not a folder",
