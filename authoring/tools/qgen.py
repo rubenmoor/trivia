@@ -97,12 +97,7 @@ PROBLEMS = ["giveaway", "fact", "ambiguity", "overlap", "media", "difficulty", "
 # --- helpers ------------------------------------------------------------------
 
 def load_json(path, default=None):
-    if not path.exists():
-        return default
-    try:
-        return json.loads(path.read_text(encoding="utf-8"))
-    except json.JSONDecodeError as e:
-        raise json.JSONDecodeError(f"{path}: {e.msg}", e.doc, e.pos) from None
+    return atomic.read_json(path, default)
 
 _save_lock = threading.Lock()
 
@@ -760,12 +755,7 @@ def target_weights(pool_questions, bundle):
 
 def level_counts(n, weights):
     """How many of n slots get each level, in proportion to the weights."""
-    total = sum(weights.values())
-    exact = {lvl: n * w / total for lvl, w in weights.items()}
-    counts = {lvl: int(x) for lvl, x in exact.items()}
-    for lvl in sorted(exact, key=lambda l: exact[l] - counts[l], reverse=True)[:n - sum(counts.values())]:
-        counts[lvl] += 1
-    return counts
+    return targets.apportion(n, weights)
 
 
 def assign_difficulties(free, fresh, weights, seed, rounds=50):

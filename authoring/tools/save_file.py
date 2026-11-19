@@ -111,10 +111,7 @@ def stamp(flag):
 
 
 def applied():
-    try:
-        return json.loads(APPLIED.read_text(encoding="utf-8"))
-    except FileNotFoundError:
-        return {}
+    return atomic.read_json(APPLIED, {})
 
 
 def record_applied(entries):

@@ -34,6 +34,16 @@ def write_text(path, text):
     tmp.replace(path)
 
 
+def read_json(path, default=None):
+    """Parsed JSON of path, `default` if it doesn't exist; a parse error names the file."""
+    if not path.exists():
+        return default
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as e:
+        raise json.JSONDecodeError(f"{path}: {e.msg}", e.doc, e.pos) from None
+
+
 def write_json(path, data):
     """Indented, UTF-8 as written, trailing newline: the format of every authoring JSON file."""
     write_text(path, json.dumps(data, ensure_ascii=False, indent=2) + "\n")

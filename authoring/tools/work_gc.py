@@ -10,6 +10,8 @@ after the batch's QC (authoring/QC.md); nothing can tell it that the QC is finis
 A deleted picture: the review page lists none; `rm <probe>/probe.json`, then `qgen media-probe` makes it again."""
 import json, re, shutil
 
+import atomic  # authoring/tools/atomic.py
+
 
 import audit  # authoring/tools/audit.py
 from layout import SOURCE_POOL, SPOT_CHECKS, WORK
@@ -21,7 +23,7 @@ _SHA = re.compile(r"\b[0-9a-f]{16}\b")
 
 
 def _read(p):
-    return json.loads(p.read_text(encoding="utf-8")) if p.is_file() else None
+    return atomic.read_json(p) if p.is_file() else None
 
 
 def qualifies(name, unchecked=False):

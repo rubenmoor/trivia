@@ -24,14 +24,19 @@ def load_targets(bundle):
     return {"total": t["total"], "difficulty": {int(k): v for k, v in t["difficulty"].items()}}
 
 
+def apportion(n, weights):
+    """{key: count}: n split in proportion to the weights, largest remainder."""
+    total = sum(weights.values())
+    exact = {k: n * w / total for k, w in weights.items()}
+    out = {k: int(x) for k, x in exact.items()}
+    for k in sorted(exact, key=lambda k: exact[k] - out[k], reverse=True)[:n - sum(out.values())]:
+        out[k] += 1
+    return out
+
+
 def scaled(total, like="base"):
     """{"total": total, "difficulty": {level (str): n}}: `like`'s mix scaled to total (largest remainder)."""
-    diff = load_all()[like]["difficulty"]
-    exact = {k: v * total / sum(diff.values()) for k, v in diff.items()}
-    out = {k: int(x) for k, x in exact.items()}
-    for k in sorted(exact, key=lambda k: exact[k] - out[k], reverse=True)[:total - sum(out.values())]:
-        out[k] += 1
-    return {"total": total, "difficulty": out}
+    return {"total": total, "difficulty": apportion(total, load_all()[like]["difficulty"])}
 
 
 MEDIA_FIRST = "media-first"  # run.json mode with its own quality and health numbers (plan 204, decision 647)
@@ -48,7 +53,7 @@ def load_quality(mode=None):
     return {**base, **{k: v for k, v in own.items() if k != "about"}}
 
 
-def _number(x, lo=None):
+def number(x, lo=None):
     return isinstance(x, (int, float)) and not isinstance(x, bool) and (lo is None or x >= lo)
 
 
@@ -67,7 +72,7 @@ def quality_problems():
             if not isinstance(d.get(k), int) or isinstance(d.get(k), bool) or d[k] < 1:
                 out.append(f"{REL}: {where}: {k} must be an integer ≥ 1")
         rate = d.get("min_agreement")
-        if not _number(rate) or not 0 < rate <= 1:
+        if not number(rate) or not 0 < rate <= 1:
             out.append(f"{REL}: {where}: min_agreement must be a fraction in (0, 1]")
     own = t.get("media_first")
     check("quality", {k: v for k, v in t.items() if k != "media_first"}, {"spot_check_size", "min_agreement"})
@@ -98,7 +103,7 @@ def health_problems(metrics):
                 out.append(f"{REL}: {where}: unknown metric {k!r}")
             elif v is None and where != "batch_health":
                 continue
-            elif not isinstance(v, dict) or not v or set(v) - {"min", "max"} or not all(_number(x) for x in v.values()):
+            elif not isinstance(v, dict) or not v or set(v) - {"min", "max"} or not all(number(x) for x in v.values()):
                 out.append(f"{REL}: {where}: {k}: must be {{\"min\": n, \"max\": n}} (one or both)")
     return out
 

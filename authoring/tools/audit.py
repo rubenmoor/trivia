@@ -10,7 +10,7 @@ import media as media_tool  # authoring/tools/media.py: candidates, sheets, pick
 import targets  # authoring/tools/targets.py: pool targets (D-53)
 import translations  # authoring/tools/translations.py: translated questions (D-81)
 
-from qgen import PROBLEMS, INT, QUESTION_FIELDS, REVIEW_URL, STR, UsageLimit, as_locale, claude, costs, failed, load_age_groups, load_json, named, parallel, prompt, save_json, write_report  # authoring/tools/qgen.py
+from qgen import PROBLEMS, INT, QUESTION_FIELDS, REVIEW_URL, STR, UsageLimit, as_locale, claude, costs, failed, load_age_groups, load_json, named, natural_key, parallel, prompt, save_json, write_report  # authoring/tools/qgen.py
 
 
 # --- audit and back-audit (plan 16, D-56) -------------------------------------
@@ -52,7 +52,7 @@ def is_media_first(run):
 def first_media_first_run():
     """The oldest media-first run in work/ (plan 204, decision 647: its check is larger while new)."""
     runs = [p.parent.name for p in WORK.glob("*/run.json") if is_media_first(p.parent.name)]
-    return min(runs, key=lambda r: [int(x) if x.isdigit() else x for x in re.split(r"(\d+)", r)], default=None)
+    return min(runs, key=natural_key, default=None)
 
 
 def spot_check_size(run=None):

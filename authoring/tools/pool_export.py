@@ -38,12 +38,6 @@ def split(entries, locale="es"):
     return {layout.POOL_FILE(locale, b): pool_text(es) for b, es in by.items()}
 
 
-def exports(pool):
-    """{path: text}: every locale with a pool (translations.exports)."""
-    import translations  # authoring/tools/translations.py (imports this module)
-    return translations.exports(pool)
-
-
 def demo_ids():
     """The demo list's ids, or None without a list (decision 339)."""
     if not layout.DEMO_LIST.exists():
@@ -85,8 +79,9 @@ def write_texts(texts, locale=None):
 
 def write(pool):
     """Write the exports for this source pool (the parsed authoring/data/questions.json)."""
+    import translations  # authoring/tools/translations.py (imports this module)
     with atomic.locked(layout.SOURCE_POOL):  # one writer of the exports at a time
-        write_texts(exports(pool))
+        write_texts(translations.exports(pool))
         demo = demo_exports(pool)
         for path, text in demo.items():
             atomic.write_text(path, text)

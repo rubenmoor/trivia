@@ -60,7 +60,7 @@ def open_lines(today=None):
 
 
 def causes():
-    return json.loads(CAUSES_FILE.read_text(encoding="utf-8")) if CAUSES_FILE.exists() else []
+    return atomic.read_json(CAUSES_FILE, [])
 
 
 def record_causes(run, results):
